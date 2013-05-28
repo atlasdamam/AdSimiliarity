@@ -1,0 +1,1644 @@
+<head>
+   <title>StarBuys | Malaysian Online Shopping Hub</title>
+
+   <meta name="robots" content="no index, no follow">
+   
+	<meta name="description" content="StarBuys | Malaysian Online Shopping Hub. We make it easy for you to shop online, offering you some of the most awesome deals you'll find in Malaysia. Take a gander, you won't regret it!">
+	<meta name="keyword" content="StarBuys, deal, deals, flash sales, online shopping, hub">
+
+   
+   <link rel="icon" type="image/x-icon" href="/Images/favicon.ico">
+   <link rel="stylesheet" type="text/css" href="/Content/base.css">
+   <link rel="stylesheet" type="text/css" href="/Content/font/facekit/stylesheet.css">
+   
+   <link href="../../Content/skitter.styles.css" type="text/css" media="all" rel="stylesheet">
+   <style>
+      .box_skitter .image img { max-width:654px !important; }
+      .box_skitter .box_clone img { max-width:654px !important; }
+      .categoryDeals { float: none !important; padding-bottom:10px;}
+   </style>
+
+   <!--[if IE]>
+      <style>
+            #globalMenu { margin-top:-25px !important; }
+            #checkout #step_item .rotate { margin-left:170px !important; }
+            #globalMenuSafeAndSecure { margin-top:20px !important; margin-left:-133px !important;}
+            .checkoutUpdateBtn { filter:none !important; }
+            .selectWebsiteDropDown.dropDownMenu {margin:0 0 0 32px !important;}
+          #ddLogin { margin-top:-5px !important;}
+          #ddSignUp { margin-top:-5px !important;}
+          #ddAccount { margin-top:-5px !important;}
+          .userLoginButton { filter:none !important; }
+      </style>
+    <![endif]-->
+   
+   <script src="http://www.google-analytics.com/ga.js" async="" type="text/javascript"></script><script src="//connect.facebook.net/en_US/all.js#xfbml=1&amp;appId=357964037625219" async="" id="facebook-jssdk"></script><script async="" src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en_US.x24Uvac0oLg.O/m=plusone/rt=j/sv=1/d=1/ed=1/am=IQ/rs=AItRSTP8xiwRcm-U_d0aPYjKcZGh8X4wVQ/cb=gapi.loaded_0"></script><script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+   <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery.validate/1.7/jquery.validate.min.js"></script>
+   <script type="text/javascript" src="/Scripts/jquery.color.js"></script>
+   <script type="text/javascript" src="/Scripts/dm.js"></script>
+   <script type="text/javascript">
+       $(document).ready(function () {
+           hovermenu($('.changecity'), $('.cityDropDown')); hovermenu($('#lnkAccount'), $('#ddAccount')); hovermenu($('#lnkRegister'), $('#ddSignUp'));
+           hovermenu($('.selectWebsite'), $('.selectWebsiteDropDown'));
+
+
+           hovermenu($('#lnkLogin'), $('#ddLogin'));
+           $('#ddLogin').mouseenter(function () {
+               $('#lnkLogin').addClass('hover');
+           }).mouseleave(function () {
+               $('#lnkLogin').removeClass('hover');
+           });
+           $('#ddSignUp').mouseenter(function () {
+               $('#lnkRegister').addClass('hover');
+           }).mouseleave(function () {
+               $('#lnkRegister').removeClass('hover');
+           });
+           $('#ddAccount').mouseenter(function () {
+               $('#lnkAccount').addClass('hover');
+           }).mouseleave(function () {
+               $('#lnkAccount').removeClass('hover');
+           });
+
+           $('#ddLogin').css('cursor', 'default');
+           $('#ddAccount').css('cursor', 'default');
+           $('#ddSignUp').css('cursor', 'default');
+           $('#login-menubar').click(function () {
+               var useremail = $('#user-email-menubar').val();
+               var userpassword = $('#user-passwd-menubar').val();
+               var rememberme = $('#remember-me-menubar').is(':checked');
+               if ($('#user-email-menubar').valid() && $('#user-passwd-menubar').valid()) {
+                   $.post('/users/ajaxlogin',
+                        { 'UserEmail': useremail, 'UserPasswd': userpassword, 'UserIsRemembered': rememberme },
+                        function (data) {
+                            if (data.status == 1) {
+                                window.location.reload();
+                            }
+                            if (data.status == 0) {
+                                $('#login-msg').fadeIn(1000).delay(5000).slideUp().fadeOut(5000);
+                                $('#login-msg').html(data.message);
+                            }
+                        }
+               );
+               }
+           });
+
+           $("#user-passwd-menubar").keypress(function (e) {
+               if (e.which == 13) $("#login-menubar").click();
+           });
+
+           $('#login-form').validate({
+               rules: {
+                   'user-email-menubar': { required: true, email: true },
+                   'user-passwd-menubar': { required: true, minlength: 6 }
+               },
+               messages: {
+                   'user-email-menubar': { required: "Email Address is required" },
+                   'user-passwd-menubar': { required: "Password is required" }
+               }
+           });
+
+           $('.nav-left').bind('mouseenter', function () {
+               $(this).find('img').removeClass('invisible');
+               $(this).find('a').addClass('selected');
+           }).bind('mouseleave', function () {
+               if (!$(this).find('a').hasClass('current')) {
+                   $(this).find('img').addClass('invisible');
+                   $(this).find('a').removeClass('selected');
+               }
+           })
+           $('.nav-right').bind('mouseenter', function () {
+               $(this).find('img').removeClass('invisible');
+               $(this).find('a').addClass('selected');
+           }).bind('mouseleave', function () {
+               if (!$(this).find('a').hasClass('current')) {
+                   $(this).find('img').addClass('invisible');
+                   $(this).find('a').removeClass('selected');
+               }
+           })
+       });
+   </script>
+   
+
+
+
+<style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}
+.fb_invisible{display:none}
+.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}
+.fb_reset > div{overflow:hidden}
+.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}
+.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}
+.fb_dialog_content{background:#fff;color:#333}
+.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px;top:8px\9;right:7px\9}
+.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}
+.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}
+.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}
+.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}
+.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}
+.fb_dialog_top_left,
+.fb_dialog_top_right,
+.fb_dialog_bottom_left,
+.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}
+/* @noflip */
+.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}
+/* @noflip */
+.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}
+/* @noflip */
+.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}
+/* @noflip */
+.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right,
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right{width:10px;height:100%}
+.fb_dialog_vert_left{margin-left:-10px}
+.fb_dialog_vert_right{right:0;margin-right:-10px}
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{width:100%;height:10px}
+.fb_dialog_horiz_top{margin-top:-10px}
+.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}
+.fb_dialog_iframe{line-height:0}
+.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}
+.fb_dialog_content .dialog_title > span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif)
+no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}
+body.fb_hidden{-webkit-transform:none;height:100%;margin:0;left:-10000px;overflow:visible;position:absolute;top:-10000px;width:100%
+}
+.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif)
+white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}
+.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}
+#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}
+#fb-root #fb_dialog_ipad_overlay.hidden{display:none}
+.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}
+.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0 0, 0 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}
+.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%
+}
+.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0 0, 0 100%, from(#4966A6),
+color-stop(0.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset,
+rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}
+.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}
+.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}
+.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}
+#fb_dialog_loader_close{float:left}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}
+.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}
+.fb_iframe_widget iframe{position:absolute}
+.fb_iframe_widget_lift{z-index:1}
+.fb_hide_iframes iframe{position:relative;left:-10000px}
+.fb_iframe_widget_loader{position:relative;display:inline-block}
+.fb_iframe_widget_fluid{display:inline}
+.fb_iframe_widget_fluid span{width:100%}
+.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}
+.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_connect_bar_container div,
+.fb_connect_bar_container span,
+.fb_connect_bar_container a,
+.fb_connect_bar_container img,
+.fb_connect_bar_container strong{background:none;border-spacing:0;border:0;direction:ltr;font-style:normal;font-variant:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal;vertical-align:baseline}
+.fb_connect_bar_container{position:fixed;left:0 !important;right:0 !important;height:42px !important;padding:0 25px !important;margin:0 !important;vertical-align:middle !important;border-bottom:1px solid #333 !important;background:#3b5998 !important;z-index:99999999 !important;overflow:hidden !important}
+.fb_connect_bar_container_ie6{position:absolute;top:expression(document.compatMode=="CSS1Compat"? document.documentElement.scrollTop+"px":body.scrollTop+"px")}
+.fb_connect_bar{position:relative;margin:auto;height:100%;width:100%;padding:6px 0 0 0 !important;background:none;color:#fff !important;font-family:"lucida grande", tahoma, verdana, arial, sans-serif !important;font-size:13px !important;font-style:normal !important;font-variant:normal !important;font-weight:normal !important;letter-spacing:normal !important;line-height:1 !important;text-decoration:none !important;text-indent:0 !important;text-shadow:none !important;text-transform:none !important;white-space:normal !important;word-spacing:normal !important}
+.fb_connect_bar a:hover{color:#fff}
+.fb_connect_bar .fb_profile img{height:30px;width:30px;vertical-align:middle;margin:0 6px 5px 0}
+.fb_connect_bar div a,
+.fb_connect_bar span,
+.fb_connect_bar span a{color:#bac6da;font-size:11px;text-decoration:none}
+.fb_connect_bar .fb_buttons{float:right;margin-top:7px}
+.fb_edge_widget_with_comment{position:relative;*z-index:1000}
+.fb_edge_widget_with_comment span.fb_edge_comment_widget{position:absolute}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget{z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget .FB_Loader{left:0;top:1px;margin-top:6px;margin-left:0;background-position:50% 50%;background-color:#fff;height:150px;width:394px;border:1px #666 solid;border-bottom:2px solid #283e6c;z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.dark .FB_Loader{background-color:#000;border-bottom:2px solid #ccc}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.siderender
+.FB_Loader{margin-top:0}
+.fbpluginrecommendationsbarleft,
+.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}
+/* @noflip */
+.fbpluginrecommendationsbarleft{left:10px}
+/* @noflip */
+.fbpluginrecommendationsbarright{right:10px}</style></head>
+<body>
+   <div id="header">
+        <div class="nav" style="background-color:#020202;height:20px;">
+            <div class="content" style="width:990px;margin:0 auto;">
+                <div style="display:table-cell;vertical-align:middle;float:left;">
+                    <div style="background-color:#4A4A4A;width:2px;display:table-cell;"></div>
+                    <font id="global_selectWebsiteLabel">SELECT WEBSITE</font>
+                    <a href="#" class="selectWebsite" id="global_selectWebsiteLink"></a>
+                    <div class="selectWebsiteDiv">
+                    <div class="selectWebsiteDropDown dropDownMenu" style="margin:0px 0px 0px 37px">
+                       <ul style="font-size:10px;font-family:Arial;">
+                                <li><a href="http://thestar.com.my/">The Star Online </a></li>
+                                <li><a href="http://www.starproperty.my">StarProperty </a></li>
+                                <li><a href="http://mystarjob.com/">myStarjob.com   </a></li>
+                                <li><a href="http://star-motoring.com/">StarMotoring  </a></li>
+                       </ul>
+                    </div>
+                    </div>
+
+                </div>
+                <div style="float:right;">
+                    <a href="/pages/aboutstarbuys" class="global_selectWebsiteLinks">ABOUT STARBUYS</a>
+                    <a href="/pages/learnstarbuys" class="global_selectWebsiteLinks">HOW STARBUYS WORKS</a>
+                    <a href="/pages/contact" class="global_selectWebsiteLinks">CONTACT US</a>
+                    <img src="/images/asset/safe-and-secure.png" style="position:absolute;margin-left:223px;margin-top:2px;" id="globalMenuSafeAndSecure">
+                </div>
+            </div>
+        </div>
+      <div class="center">
+         <div class="content-body">
+                <table style="width:100%;" id="globalNav" cellpadding="0" cellspacing="0">
+                    <tbody><tr>
+                        <td class="nav-left"><h2><img src="/images/asset/shape-star-red.png" class=""><div><a href="/kuala-lumpur" class="selected current">HOME</a></div></h2></td>
+                        <td class="nav-left"><h2><img src="/images/asset/shape-star-red.png" class="invisible"><div><a href="/kuala-lumpur/deals/all" class="">ALL DEALS</a></div></h2></td>
+                   <td class="nav-left"><h2><img src="/images/asset/shape-star-red.png" class="invisible"><div><a href="/kuala-lumpur/deals/fashion" class="">FASHION</a></div></h2></td>
+                   <td class="nav-left" style="width:105px"><h2><img src="/images/asset/shape-star-red.png" class="invisible"><div><a href="/kuala-lumpur/deals/living" class="">HOME &amp; LIVING</a></div></h2></td>
+                        <td style="width:190px;"><a href="/"><img src="/images/asset/starbuys-logo.png"></a></td>
+                        <td class="nav-left"><h2><img src="/images/asset/shape-star-red.png" class="invisible"><div><a href="/kuala-lumpur/deals/stuff" class="">STUFF</a></div></h2></td>
+                   <td class="nav-right"><h2><img src="/images/asset/shape-star-red.png" class="invisible"><div><a href="/kuala-lumpur/deals/beauty" class="">BEAUTY</a></div></h2></td>
+                   
+                   <td class="nav-right"><h2><img src="/images/asset/shape-star-red.png" class="invisible"><div><a href="/kuala-lumpur/deals/mumsnkids" class="">MUMS &amp; KIDS</a></div></h2></td>
+                        <td class="nav-right"><h2><img src="/images/asset/shape-star-red.png" class="invisible"><div><a href="/kuala-lumpur/deals/lastcall" class="">LAST CALL</a></div></h2></td>
+                    </tr>
+                </tbody></table>
+         </div>
+         <div class="content-body" style="margin-top:-22px;display:table;" id="globalMenu">
+            <div id="menu">
+               <div id="myaccount" style="height:21px;">
+                  <div class="staticMenu">
+                       <a href="/users/login" id="lnkLogin"></a>  <a href="/users/register" id="lnkRegister"></a>
+                     <a href="/cart" id="lnkCart"></a> <a href="/cart" id="lnkCount"><span style="display:table-cell;vertical-align:middle;color:White;font-family:Arial;">0 items</span></a>
+                  </div>
+                     <div style="cursor: default;" id="ddLogin" class="ddMenubar">
+                           <div class="row"><a href="https://www.facebook.com/dialog/oauth?client_id=357964037625219&amp;redirect_uri=http%3a%2f%2fstarbuys.thestar.com.my%2ffblogin&amp;scope=email,user_birthday,offline_access,publish_stream" style="width:230px;"><img src="/images/asset/btn-login-facebook.png">  </a></div>
+                           <div style="background:url('/images/asset/divider-or.png') no-repeat;width:240px;height:15px;margin:2px 0 7px 0;"></div>
+                           <div id="login-msg" class="hide"></div>
+                           <form id="login-form" action="/" method="post">
+                              <div class="field"><input id="user-email-menubar" name="user-email-menubar" placeholder="Email Address" type="text"></div>
+                              <div class="field"><input id="user-passwd-menubar" name="user-passwd-menubar" placeholder="Password" type="password"></div>
+                              <div class="field" style="margin-left:-4px;"><input id="remember-me-menubar" name="remember-me-menubar" checked="checked" style="vertical-align:middle;" type="checkbox"><label for="remember-me-menubar" style="font-size:12px;vertical-align:middle">Remember me on this computer</label></div>
+                              <div style="text-align:center"><a href="/users/forgotpassword" style="font-size:11px;color:gray;">Forgot Your Password?</a> | <a href="/users/register" style="font-size:11px;color:gray;">Sign Up Now</a></div>
+                        
+                                        <div class="row" style="height:25px;text-align:right;"><input class="btn" id="login-menubar" type="button"></div>
+                                 </form>
+                     </div>
+                     <div style="cursor: default;" id="ddSignUp" class="ddMenubar">
+                        <div class="container" style="text-align:center;">
+                           <div class="row">
+                              <a href="https://www.facebook.com/dialog/oauth?client_id=357964037625219&amp;redirect_uri=http%3a%2f%2fstarbuys.thestar.com.my%2ffblogin&amp;scope=email,user_birthday,offline_access,publish_stream" style="width:230px;">
+                                 <img src="/images/asset/btn-connect-facebook.png" alt="Facebook Connect">  
+                              </a>
+                              <div style="font-size:11px;color:gray;font-family:Arial;">*we don't post anything without your permission.</div>
+                           </div>
+                           <div><iframe src="//www.facebook.com/plugins/facepile.php?appId=357964037625219&amp;size=small&amp;max_rows=1&amp;width=230&amp;colorscheme=dark&amp;" style="border:none; overflow:hidden; width:230px;height: 57px;" allowtransparency="true" frameborder="0" scrolling="no"></iframe></div>
+                           <div style="background:url('/images/asset/divider-or.png') no-repeat;width:240px;height:15px;margin:7px 0 7px 0;"></div>
+                           <div class="customSignUp"><a href="/users/register" id="register-menubar"></a><span style="font-size:11px;color:gray;font-family:Arial;">Create an account with your email address</span></div>
+                        </div>
+                     </div>
+               </div>
+            </div>
+         
+                <div id="cityChangeDiv">
+                    <div style="background:url('/images/asset/navigation-title-dailydeals.png') no-repeat;width:110px;height:20px;float:left;"></div>
+                    <div id="currentCity"><div style="vertical-align:middle;display:table-cell;color:White;height:20px;font-family:Arial;">Kuala Lumpur</div></div>
+                    <a href="/malaysia/cities" class="changecity" style="color:White;background:url('/images/asset/navigation-dropdown-arrow.png') no-repeat;display:inline-block;width:25px;height:20px;margin-left:-4px;float:left;"></a>
+                 <div class="cityDropDownBase">
+                    <div class="cityDropDown dropDownMenu">
+                       <div class="header">Browse by cities:</div>
+                       <ul>
+                             <li><div class="arrow">› </div><a href="/kuala-lumpur">Kuala Lumpur</a></li>
+                             <li><div class="arrow">› </div><a href="/penang">Penang</a></li>
+                             <li><div class="arrow">› </div><a href="/johor-bahru">Johor Bahru</a></li>
+                             <li><div class="arrow">› </div><a href="/ipoh">Ipoh</a></li>
+                             <li><div class="arrow">› </div><a href="/kota-kinabalu">Kota Kinabalu</a></li>
+                             <li><div class="arrow">› </div><a href="/kuching">Kuching</a></li>
+                             <li><div class="arrow">› </div><a href="/melaka">Melaka</a></li>
+                             <li><div class="arrow">› </div><a href="/miri">Miri</a></li>
+                             <li><div class="arrow">› </div><a href="/kuantan">Kuantan</a></li>
+                             <li><div class="arrow">› </div><a href="/seremban">Seremban</a></li>
+                       </ul>
+                    </div>
+                    </div>
+                </div>
+
+            </div>
+      </div>
+   </div>
+   <div id="body">
+      <div class="center">
+         <div class="content-body">
+            
+
+
+
+
+   <script gapi_processed="true" type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+   <script type="text/javascript" src="../../Scripts/skitter/jquery.skitter.js"></script>
+   <script type="text/javascript" src="../../Scripts/skitter/jquery.easing.1.3.js"></script> 
+   <script type="text/javascript">
+
+      $(document).ready(function () {
+         $(".home-slideshow").skitter({ dots: true, label: true, interval: 5000 });
+
+         function blink(selector) {
+            $(selector).fadeToggle('slow', 'linear', function () {
+               $(this).fadeToggle('slow', 'linear', function () {
+                  blink(this);
+               });
+            });
+         }
+
+         blink('#right-arrow');
+      });
+
+   </script>
+
+<div itemscope="" itemtype="http://schema.org/Product">
+   <h1 itemprop="name" style="display:none">StarBuys | Malaysian Online Shopping Hub</h1>
+   <img itemprop="image" src="http://starbuys.thestar.com.my/images/asset/starbuys-logo.png" alt="StarBuys logo" style="display:none">
+   <p itemprop="description" style="display:none">We make it easy for you to shop online, offering you some of the most awesome deals you'll find in Malaysia. Take a gander, you won't regret it!</p>
+</div>
+
+<div class="main-featured">
+    <div class="featured-top">
+
+        <div class="featured-left">    
+            <a href="/pages/guaranteestarbuys">
+                <img src="/images/asset/our-promises.png" alt="Our Promises">
+            </a>
+            <a href="/pages/starbuys-referrals">
+                <img src="/images/asset/banner-referral-3.png" alt="" style="padding-top:10px;">
+            </a>
+            <a href="/users/register" style="padding-top:10px;"><img src="/Images/asset/banner_credit.png" alt=""></a>
+            
+            <div style="width:320px;display:table;">
+                <div style="padding: 0;">
+                    
+                    <div style="display:table-cell;vertical-align:middle;padding-top:2px;">
+                        <div id="share-panel" style="display:block;padding:0;width:36px;">
+		                    <div class="share-ico" style="height:29px;">
+                                <a class="share-btn-fb-share" type="button_count" onclick="confirmreferral();" href="http://www.facebook.com/dialog/feed?app_id=357964037625219
+                                                  &amp;picture=http://starbuys.dealmates.com.my/images/asset/starbuys-logo.png
+							                      &amp;link=http://starbuys.thestar.com.my
+							                      &amp;caption=http://starbuys.thestar.com.my
+							                      &amp;name=StarBuys+%7c+Malaysian+Online+Shopping+Hub&amp;description=We+make+it+easy+for+you+to+shop+online%2c+offering+you+some+of+the+most+awesome+deals+you%27ll+find+in+Malaysia.+Take+a+gander%2c+you+won%27t+regret+it!
+							                      &amp;message=I love StarBuys&amp;redirect_uri=http%3a%2f%2fstarbuys.thestar.com.my" target="_blank"></a>
+			                </div>
+                        </div>
+                    </div>
+                    <div style="display:table-cell;vertical-align:middle;padding-top:2px;">
+                        
+                        <div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 70px; height: 15px;"><iframe title="+1" data-gapiattached="true" allowtransparency="true" src="https://plusone.google.com/_/+1/fastbutton?bsv&amp;action=share&amp;size=small&amp;hl=en-US&amp;origin=http%3A%2F%2Fstarbuys.thestar.com.my&amp;url=http%3A%2F%2Fstarbuys.thestar.com.my%2Fkuala-lumpur&amp;gsrc=3p&amp;ic=1&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en_US.x24Uvac0oLg.O%2Fm%3D__features__%2Fam%3DIQ%2Frt%3Dj%2Fd%3D1%2Frs%3DAItRSTP8xiwRcm-U_d0aPYjKcZGh8X4wVQ#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled&amp;id=I0_1369183666636&amp;parent=http%3A%2F%2Fstarbuys.thestar.com.my&amp;rpctoken=86379174" name="I0_1369183666636" id="I0_1369183666636" vspace="0" tabindex="0" style="position: static; top: 0px; width: 70px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 15px;" marginwidth="0" marginheight="0" hspace="0" frameborder="0" scrolling="no" width="100%"></iframe></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="featured-right">
+            <div class="box_skitter home-slideshow" style="margin-left:6px;">
+                <ul style="display: none;">
+                            <li><a href="http://starbuys.thestar.com.my/deals/May-Exabyte-Toshiba-1TB-Portable-Hard-Drive-RM199"><img src="http://dm-asset.s3-ap-southeast-1.amazonaws.com/Img/Deals/frontend665/toshiba_main.png" class="showBars"></a>
+                            <div class="label_text" style="height:70px;display:table;width:654px;">
+                                    <div style="height:70px;vertical-align:middle;display:table-cell;width:654px;padding-right:15px;padding-left:15px;">
+                                        <span style="float:left;"><b style="font-size:16px;font-family:Arial;">Toshiba 1TB Portable Hard Drive with USB 3.0</b> : <font style="font-size:16px;font-family:Arial">Only RM199 </font></span>
+                                        <span style="float:right;"><a href="http://starbuys.thestar.com.my/deals/May-Exabyte-Toshiba-1TB-Portable-Hard-Drive-RM199" style="background:url('/images/asset/btn-find-out-more.png') no-repeat;width:140px;height:20px;display:table-cell;"></a></span>
+                                    </div>
+                            </div></li>
+                            <li><a href="http://starbuys.thestar.com.my/deals/May-20000Mah-Powerbank-RM78-star"><img src="http://dm-asset.s3-ap-southeast-1.amazonaws.com/Img/Deals/frontend660/powerbankBanner.jpg" class="showBars"></a>
+                            <div class="label_text" style="height:70px;display:table;width:654px;">
+                                    <div style="height:70px;vertical-align:middle;display:table-cell;width:654px;padding-right:15px;padding-left:15px;">
+                                        <span style="float:left;"><b style="font-size:16px;font-family:Arial;">20000mAh Powerbank</b> : <font style="font-size:16px;font-family:Arial">Only RM55 </font></span>
+                                        <span style="float:right;"><a href="http://starbuys.thestar.com.my/deals/May-20000Mah-Powerbank-RM78-star" style="background:url('/images/asset/btn-find-out-more.png') no-repeat;width:140px;height:20px;display:table-cell;"></a></span>
+                                    </div>
+                            </div></li>
+                            <li><a href="http://starbuys.thestar.com.my/Deals/May-Anna-Sui-Fragrances-Women-RM55/Catalog"><img src="http://dm-asset.s3-ap-southeast-1.amazonaws.com/Img/Deals/frontend671/annasui_main.png" class="showBars"></a>
+                            <div class="label_text" style="height:70px;display:table;width:654px;">
+                                    <div style="height:70px;vertical-align:middle;display:table-cell;width:654px;padding-right:15px;padding-left:15px;">
+                                        <span style="float:left;"><b style="font-size:16px;font-family:Arial;">Anna Sui Fragrances for Women</b> : <font style="font-size:16px;font-family:Arial">Up to 37% OFF </font></span>
+                                        <span style="float:right;"><a href="http://starbuys.thestar.com.my/Deals/May-Anna-Sui-Fragrances-Women-RM55/Catalog" style="background:url('/images/asset/btn-find-out-more.png') no-repeat;width:140px;height:20px;display:table-cell;"></a></span>
+                                    </div>
+                            </div></li>
+                            <li><a href="http://starbuys.thestar.com.my/Deals/May-Castle-Automatic-Sensor-Rubbish-Bin-RM199/Catalog"><img src="http://dm-asset.s3-ap-southeast-1.amazonaws.com/Img/Deals/frontend676/castle_dustbin_main.png" class="showBars"></a>
+                            <div class="label_text" style="height:70px;display:table;width:654px;">
+                                    <div style="height:70px;vertical-align:middle;display:table-cell;width:654px;padding-right:15px;padding-left:15px;">
+                                        <span style="float:left;"><b style="font-size:16px;font-family:Arial;">Castle Brand Automatic Sensor Rubbish Bin</b> : <font style="font-size:16px;font-family:Arial">Up to 47% OFF </font></span>
+                                        <span style="float:right;"><a href="http://starbuys.thestar.com.my/Deals/May-Castle-Automatic-Sensor-Rubbish-Bin-RM199/Catalog" style="background:url('/images/asset/btn-find-out-more.png') no-repeat;width:140px;height:20px;display:table-cell;"></a></span>
+                                    </div>
+                            </div></li>
+                            <li><a href="http://starbuys.thestar.com.my/Deals/May-Tory-Burch-Nylon-Ella-Tote-Collections-RM530/Catalog"><img src="http://dm-asset.s3-ap-southeast-1.amazonaws.com/Img/Deals/frontend681/toryburch_main2.png" class="showBars"></a>
+                            <div class="label_text" style="height:70px;display:table;width:654px;">
+                                    <div style="height:70px;vertical-align:middle;display:table-cell;width:654px;padding-right:15px;padding-left:15px;">
+                                        <span style="float:left;"><b style="font-size:16px;font-family:Arial;">Tory Burch Nylon Ella Tote Collections</b> : <font style="font-size:16px;font-family:Arial">42% OFF </font></span>
+                                        <span style="float:right;"><a href="http://starbuys.thestar.com.my/Deals/May-Tory-Burch-Nylon-Ella-Tote-Collections-RM530/Catalog" style="background:url('/images/asset/btn-find-out-more.png') no-repeat;width:140px;height:20px;display:table-cell;"></a></span>
+                                    </div>
+                            </div></li>
+                            <li><a href="http://starbuys.thestar.com.my/Deals/May-Microsoft-Computer-Accessories-RM49/Catalog"><img src="http://dm-asset.s3-ap-southeast-1.amazonaws.com/Img/Deals/frontend682/microsoft_acces_main.png" class="showBars"></a>
+                            <div class="label_text" style="height:70px;display:table;width:654px;">
+                                    <div style="height:70px;vertical-align:middle;display:table-cell;width:654px;padding-right:15px;padding-left:15px;">
+                                        <span style="float:left;"><b style="font-size:16px;font-family:Arial;">Microsoft Computer Accessories</b> : <font style="font-size:16px;font-family:Arial">Up to 40% OFF </font></span>
+                                        <span style="float:right;"><a href="http://starbuys.thestar.com.my/Deals/May-Microsoft-Computer-Accessories-RM49/Catalog" style="background:url('/images/asset/btn-find-out-more.png') no-repeat;width:140px;height:20px;display:table-cell;"></a></span>
+                                    </div>
+                            </div></li>
+                            <li><a href="http://starbuys.thestar.com.my/Deals/May-Tory-Burch-Robinson-Wallet-RM530/Catalog"><img src="http://dm-asset.s3-ap-southeast-1.amazonaws.com/Img/Deals/frontend685/toryburch_wallet.png" class="showBars"></a>
+                            <div class="label_text" style="height:70px;display:table;width:654px;">
+                                    <div style="height:70px;vertical-align:middle;display:table-cell;width:654px;padding-right:15px;padding-left:15px;">
+                                        <span style="float:left;"><b style="font-size:16px;font-family:Arial;">Tory Burch Robinson Zip Continental Wallet Collections</b> : <font style="font-size:16px;font-family:Arial">38% OFF! </font></span>
+                                        <span style="float:right;"><a href="http://starbuys.thestar.com.my/Deals/May-Tory-Burch-Robinson-Wallet-RM530/Catalog" style="background:url('/images/asset/btn-find-out-more.png') no-repeat;width:140px;height:20px;display:table-cell;"></a></span>
+                                    </div>
+                            </div></li>
+                            <li><a href="http://starbuys.thestar.com.my/Deals/May-Keds-Shoes-RM139/Catalog"><img src="http://dm-asset.s3-ap-southeast-1.amazonaws.com/Img/Deals/frontend664/keds.png" class="showBars"></a>
+                            <div class="label_text" style="height:70px;display:table;width:654px;">
+                                    <div style="height:70px;vertical-align:middle;display:table-cell;width:654px;padding-right:15px;padding-left:15px;">
+                                        <span style="float:left;"><b style="font-size:16px;font-family:Arial;">Keds Shoes for Women</b> : <font style="font-size:16px;font-family:Arial">Up to 64% OFF </font></span>
+                                        <span style="float:right;"><a href="http://starbuys.thestar.com.my/Deals/May-Keds-Shoes-RM139/Catalog" style="background:url('/images/asset/btn-find-out-more.png') no-repeat;width:140px;height:20px;display:table-cell;"></a></span>
+                                    </div>
+                            </div></li>
+                            <li><a href="http://starbuys.thestar.com.my/Deals/May-Ferrari-Scents-Men-RM116/Catalog"><img src="http://dm-asset.s3-ap-southeast-1.amazonaws.com/Img/Deals/frontend677/ferrariPerfume_main.png" class="showBars"></a>
+                            <div class="label_text" style="height:70px;display:table;width:654px;">
+                                    <div style="height:70px;vertical-align:middle;display:table-cell;width:654px;padding-right:15px;padding-left:15px;">
+                                        <span style="float:left;"><b style="font-size:16px;font-family:Arial;">Ferrari Scents for Men</b> : <font style="font-size:16px;font-family:Arial">Up to 52% OFF </font></span>
+                                        <span style="float:right;"><a href="http://starbuys.thestar.com.my/Deals/May-Ferrari-Scents-Men-RM116/Catalog" style="background:url('/images/asset/btn-find-out-more.png') no-repeat;width:140px;height:20px;display:table-cell;"></a></span>
+                                    </div>
+                            </div></li>
+				</ul>
+            <a style="display: block; opacity: 0.878896;" href="#" class="prev_button">prev</a><a style="display: block; opacity: 0.878896;" href="#" class="next_button">next</a><span style="display: block; opacity: 0.878896;" class="info_slide_dots"><span style="background-color: rgb(204, 51, 51); color: rgb(255, 255, 255);" class="image_number image_number_select" rel="0" id="image_n_1_0">1</span> <span style="background-color: rgb(51, 51, 51); color: rgb(255, 255, 255);" class="image_number" rel="1" id="image_n_2_0">2</span> <span style="background-color: rgb(51, 51, 51); color: rgb(255, 255, 255);" class="image_number" rel="2" id="image_n_3_0">3</span> <span style="background-color: rgb(51, 51, 51); color: rgb(255, 255, 255);" class="image_number" rel="3" id="image_n_4_0">4</span> <span style="background-color: rgb(51, 51, 51); color: rgb(255, 255, 255);" class="image_number" rel="4" id="image_n_5_0">5</span> <span style="background-color: rgb(51, 51, 51); color: rgb(255, 255, 255);" class="image_number" rel="5" id="image_n_6_0">6</span> <span style="background-color: rgb(51, 51, 51); color: rgb(255, 255, 255);" class="image_number" rel="6" id="image_n_7_0">7</span> <span style="background-color: rgb(51, 51, 51); color: rgb(255, 255, 255);" class="image_number" rel="7" id="image_n_8_0">8</span> <span style="background-color: rgb(51, 51, 51); color: rgb(255, 255, 255);" class="image_number" rel="8" id="image_n_9_0">9</span> </span><div style="width: 654px; height: 404px;" class="container_skitter"><div class="image"><a target="_self" href="http://starbuys.thestar.com.my/deals/May-Exabyte-Toshiba-1TB-Portable-Hard-Drive-RM199" rel="lightbox[roadtrip]"><img style="opacity: 0.387433; display: inline;" src="http://dm-asset.s3-ap-southeast-1.amazonaws.com/Img/Deals/frontend665/toshiba_main.png" class="image_main"></a><div style="width: 654px; display: block;" class="label_skitter">
+                                    <div style="height:70px;vertical-align:middle;display:table-cell;width:654px;padding-right:15px;padding-left:15px;">
+                                        <span style="float:left;"><b style="font-size:16px;font-family:Arial;">Toshiba 1TB Portable Hard Drive with USB 3.0</b> : <font style="font-size:16px;font-family:Arial">Only RM199 </font></span>
+                                        <span style="float:right;"><a href="http://starbuys.thestar.com.my/deals/May-Exabyte-Toshiba-1TB-Portable-Hard-Drive-RM199" style="background:url('/images/asset/btn-find-out-more.png') no-repeat;width:140px;height:20px;display:table-cell;"></a></span>
+                                    </div>
+                            </div></div></div></div>
+        </div>
+
+    </div>
+    <div class="featured-bottom">
+        <ul style="min-width:990px;padding-top:10px;padding-bottom:6px;">
+                    <li style="float:left;padding:0px;line-height:0px;width:330px;">
+                        <a href="http://starbuys.thestar.com.my/Deals/May-North-Wolf-Polarized-Sunglasses-RM70/Catalog" style="display:block;">
+                            <img src="http://dm-asset.s3-ap-southeast-1.amazonaws.com/Img/Deals/frontend658/NorthWolfMAINMAIN.jpg" style="width:318px;height:153px;border:1px solid #ddd;">
+                        </a>
+                    </li>
+                    <li style="float:left;padding:0px;line-height:0px;width:330px;">
+                        <a href="http://starbuys.thestar.com.my/deals/May-Ukelele-Hawaiian-Mini-Guitar-RM100" style="display:block;text-align:center;">
+                            <img src="http://dm-asset.s3-ap-southeast-1.amazonaws.com/Img/Deals/frontend659/ukulele_thumb.jpg" style="width:318px;height:153px;border:1px solid #ddd;">
+                        </a>
+                    </li>
+                    <li style="float:left;padding:0px;line-height:0px;width:330px;">
+                        <a href="http://starbuys.thestar.com.my/Deals/May-Austrian-Element-Jewellery-RM58/Catalog" style="display:block;text-align:right;">
+                            <img src="http://dm-asset.s3-ap-southeast-1.amazonaws.com/Img/Deals/frontend666/Swarovski_Element_thumb.jpg" style="width:318px;height:153px;border:1px solid #ddd;">
+                        </a>
+                    </li>
+        </ul>
+        
+    </div>
+</div>
+
+<div style="background:url(/Images/asset/divider-long.png) repeat-x;height:1px;"></div>
+
+<div class="latest-deals">
+		<div id="boutiqueDeals" class="latest-deal-category">
+			<div class="header">
+                <a href="/kuala-lumpur/deals/fashion" class="headerLink">
+                    <span class="headerLink_left">
+                        <img src="/images/asset/shape-star-gray.png">
+                        <b style="font-size:16px;">FASHION</b>
+                    </span>
+                    <span class="headerLink_right" style="">
+                        <div><img src="/images/asset/btn-view-more-deals.png"></div>
+                    </span>
+                </a>
+			</div>
+
+<script>
+
+    $(document).ready(function () {
+        $('.categoryDeals .latest-deal').live("mouseenter", function () {
+            $(this).find('.content').stop().animate({ backgroundColor: 'rgba(0, 76, 144, 0.9)' }, 500);
+        })
+        .live("mouseleave", function () {
+            $(this).find('.content').stop().animate({ backgroundColor: 'rgba(0, 0, 0, 0.75)' }, 500);
+        });
+    });
+</script>
+
+<div class="categoryDeals">
+    <table style="width:990px;" cellpadding="0" cellspacing="0">
+
+<tbody><tr><td style="width:330px;">        
+            <div class="latest-deal cat6">
+			    <div class="newDeal"></div>
+            <div class="discountDiv">
+                <font style=""> - 58% OFF</font>
+            </div>
+            <div class="image">
+                    <a href="/deals/May-Shoulder-Bag-Men-RM55"><img src="http://dm-asset.s3-ap-southeast-1.amazonaws.com/Img/Deals/11221/main.png" alt="Casual Shoulder Bag for Men"></a>
+            </div>
+            <div class="content">
+                <h4><a href="/deals/May-Shoulder-Bag-Men-RM55">Casual Shoulder Bag for Men</a></h4>
+                <div class="closing">
+                    <font style="color:white;font-size: 16px;font-family: Arial;font-weight:bold;">RM 55.00</font>
+			    </div>
+                    <a href="/deals/May-Shoulder-Bag-Men-RM55" class="shopnowbtn"></a>
+            </div>
+            </div>
+            
+        </td>
+        
+<td style="width:330px;">        
+            <div class="latest-deal cat6" style="margin-left:4px;">
+			    <div class="newDeal"></div>
+            <div class="discountDiv">
+                <font style=""> - 54% OFF</font>
+            </div>
+            <div class="image">
+                    <a href="/deals/May-Fashionable-Wallets-RM55"><img src="http://dm-asset.s3-ap-southeast-1.amazonaws.com/Img/Deals/11223/Main.jpg" alt="Fashionable Leather Wallets"></a>
+            </div>
+            <div class="content">
+                <h4><a href="/deals/May-Fashionable-Wallets-RM55">Fashionable Leather Wallets</a></h4>
+                <div class="closing">
+                    <font style="color:white;font-size: 16px;font-family: Arial;font-weight:bold;">RM 55.00</font>
+			    </div>
+                    <a href="/deals/May-Fashionable-Wallets-RM55" class="shopnowbtn"></a>
+            </div>
+            </div>
+            
+        </td>
+        
+<td style="width:330px;">        
+            <div class="latest-deal cat6" style="margin-left:7px;">
+            <div class="discountDiv">
+                <font style=""> - 54% OFF</font>
+            </div>
+            <div class="image">
+                    <a href="/deals/May-Korean-Leopard-Print-Handbag-RM65"><img src="http://dm-asset.s3-ap-southeast-1.amazonaws.com/Img/Deals/11163/mainkoreanbags.jpg" alt="Trendy Korean Leopard Handbag"></a>
+            </div>
+            <div class="content">
+                <h4><a href="/deals/May-Korean-Leopard-Print-Handbag-RM65">Trendy Korean Leopard Handbag</a></h4>
+                <div class="closing">
+                    <font style="color:white;font-size: 16px;font-family: Arial;font-weight:bold;">RM 65.00</font>
+			    </div>
+                    <a href="/deals/May-Korean-Leopard-Print-Handbag-RM65" class="shopnowbtn"></a>
+            </div>
+            </div>
+            
+        </td>
+ </tr>         
+            <tr><td style="width:327px">
+        
+            <div class="latest-deal cat6">
+		        <div class="hotseller"></div>
+            <div class="discountDiv">
+                <font style=""> - 92% OFF</font>
+            </div>
+            <div class="image">
+                    <a href="/deals/May-Gold-Solitaire-Zirconia-Engagement-Ring-RM27"><img src="http://dm-asset.s3-ap-southeast-1.amazonaws.com/Img/Deals/10828/main1.jpg" alt="Genuine 18KGP Yellow or White Gold Solitaire Engagement Zirconia  Ring + Free velvet Pouch"></a>
+            </div>
+            <div class="content">
+                <h4><a href="/deals/May-Gold-Solitaire-Zirconia-Engagement-Ring-RM27">Genuine 18KGP Yellow or White Gold Solitaire Engagement Zirconia  Ring + Free velvet Pouch</a></h4>
+                <div class="closing">
+                    <font style="color:white;font-size: 16px;font-family: Arial;font-weight:bold;">RM 27.90</font>
+			    </div>
+                    <a href="/deals/May-Gold-Solitaire-Zirconia-Engagement-Ring-RM27" class="shopnowbtn"></a>
+            </div>
+            </div>
+            
+        </td>
+        
+<td style="width:330px;">        
+            <div class="latest-deal cat13" style="margin-left:4px;">
+		        <div class="hotseller"></div>
+            <div class="discountDiv">
+                <font style=""> - 44% OFF</font>
+            </div>
+            <div class="image">
+                    <a href="/deals/May-Korean-Canvas-Bag-RM42"><img src="http://dm-asset.s3-ap-southeast-1.amazonaws.com/Img/Deals/10850/mn.jpg" alt="Back by Popular Demand: Trendy Korean Canvas Bag"></a>
+            </div>
+            <div class="content">
+                <h4><a href="/deals/May-Korean-Canvas-Bag-RM42">Back by Popular Demand: Trendy Korean Canvas Bag</a></h4>
+                <div class="closing">
+                    <font style="color:white;font-size: 16px;font-family: Arial;font-weight:bold;">RM 45.00</font>
+			    </div>
+                    <a href="/deals/May-Korean-Canvas-Bag-RM42" class="shopnowbtn"></a>
+            </div>
+            </div>
+            
+        </td>
+        
+<td style="width:330px;">        
+            <div class="latest-deal cat6" style="margin-left:7px;">
+		        <div class="hotseller"></div>
+            <div class="discountDiv">
+                <font style=""> - 84% OFF</font>
+            </div>
+            <div class="image">
+                    <a href="/deals/May-North-Wolf-Polarized-Sunglasses-RM70"><img src="http://dm-asset.s3-ap-southeast-1.amazonaws.com/Img/Deals/10836/NorthWolfMAINMAIN.jpg" alt="Back by Popular Demand: North Wolf Polarized Sunglasses"></a>
+            </div>
+            <div class="content">
+                <h4><a href="/deals/May-North-Wolf-Polarized-Sunglasses-RM70">Back by Popular Demand: North Wolf Polarized Sunglasses</a></h4>
+                <div class="closing">
+                    <font style="color:white;font-size: 16px;font-family: Arial;font-weight:bold;">RM 70.00</font>
+			    </div>
+                    <a href="/deals/May-North-Wolf-Polarized-Sunglasses-RM70" class="shopnowbtn"></a>
+            </div>
+            </div>
+            
+        </td>
+ </tr>         
+    
+    </tbody></table>
+</div>		</div>
+
+    <div style="background:url(/Images/asset/divider-long.png) repeat-x;height:1px;"></div>
+		<div id="stuffDeals" class="latest-deal-category">
+			<div class="header">
+                <a href="/kuala-lumpur/deals/stuff" class="headerLink">
+                    <span class="headerLink_left">
+                        <img src="/images/asset/shape-star-gray.png">
+                        <b style="font-size:16px;">STUFF</b>
+                    </span>
+                    <span class="headerLink_right" style="">
+                        <div><img src="/images/asset/btn-view-more-deals.png"></div>
+                    </span>
+                </a>
+			</div>
+
+<script>
+
+    $(document).ready(function () {
+        $('.categoryDeals .latest-deal').live("mouseenter", function () {
+            $(this).find('.content').stop().animate({ backgroundColor: 'rgba(0, 76, 144, 0.9)' }, 500);
+        })
+        .live("mouseleave", function () {
+            $(this).find('.content').stop().animate({ backgroundColor: 'rgba(0, 0, 0, 0.75)' }, 500);
+        });
+    });
+</script>
+
+<div class="categoryDeals">
+    <table style="width:990px;" cellpadding="0" cellspacing="0">
+
+<tbody><tr><td style="width:330px;">        
+            <div class="latest-deal cat3">
+            <div class="discountDiv">
+                <font style=""> - 42% OFF</font>
+            </div>
+            <div class="image">
+                    <a href="/deals/May-Mini-Paper-Shredder-RM52"><img src="http://dm-asset.s3-ap-southeast-1.amazonaws.com/Img/Deals/11148/Main.jpg" alt="Mini Paper Shredder"></a>
+            </div>
+            <div class="content">
+                <h4><a href="/deals/May-Mini-Paper-Shredder-RM52">Mini Paper Shredder</a></h4>
+                <div class="closing">
+                    <font style="color:white;font-size: 16px;font-family: Arial;font-weight:bold;">RM 52.00</font>
+			    </div>
+                    <a href="/deals/May-Mini-Paper-Shredder-RM52" class="shopnowbtn"></a>
+            </div>
+            </div>
+            
+        </td>
+        
+<td style="width:330px;">        
+            <div class="latest-deal cat3" style="margin-left:4px;">
+            <div class="discountDiv">
+                <font style=""> - 50% OFF</font>
+            </div>
+            <div class="image">
+                    <a href="/deals/May-4-Port-USB-Adapter-RM75"><img src="http://dm-asset.s3-ap-southeast-1.amazonaws.com/Img/Deals/11160/medium_big_thumb.jpg" alt="4-Port USB Adapter"></a>
+            </div>
+            <div class="content">
+                <h4><a href="/deals/May-4-Port-USB-Adapter-RM75">4-Port USB Adapter</a></h4>
+                <div class="closing">
+                    <font style="color:white;font-size: 16px;font-family: Arial;font-weight:bold;">RM 75.00</font>
+			    </div>
+                    <a href="/deals/May-4-Port-USB-Adapter-RM75" class="shopnowbtn"></a>
+            </div>
+            </div>
+            
+        </td>
+        
+<td style="width:330px;">        
+            <div class="latest-deal cat3" style="margin-left:7px;">
+            <div class="discountDiv">
+                <font style=""> - 35% OFF</font>
+            </div>
+            <div class="image">
+                    <a href="/deals/May-iPhone-4-Retro-Camera-Case-RM64"><img src="http://dm-asset.s3-ap-southeast-1.amazonaws.com/Img/Deals/11189/Main.jpg" alt="iPhone 4/4S Retro Camera Case"></a>
+            </div>
+            <div class="content">
+                <h4><a href="/deals/May-iPhone-4-Retro-Camera-Case-RM64">iPhone 4/4S Retro Camera Case</a></h4>
+                <div class="closing">
+                    <font style="color:white;font-size: 16px;font-family: Arial;font-weight:bold;">RM 64.00</font>
+			    </div>
+                    <a href="/deals/May-iPhone-4-Retro-Camera-Case-RM64" class="shopnowbtn"></a>
+            </div>
+            </div>
+            
+        </td>
+ </tr>         
+            <tr><td style="width:327px">
+        
+            <div class="latest-deal cat3">
+		        <div class="hotseller"></div>
+            <div class="discountDiv">
+                <font style=""> - 57% OFF</font>
+            </div>
+            <div class="image">
+                    <a href="/deals/May-Ukelele-Hawaiian-Mini-Guitar-RM100"><img src="http://dm-asset.s3-ap-southeast-1.amazonaws.com/Img/Deals/10835/main.jpg" alt="Back by Popular Demand: Ukulele with soft case and pick; The Hawaiian Mini Guitar"></a>
+            </div>
+            <div class="content">
+                <h4><a href="/deals/May-Ukelele-Hawaiian-Mini-Guitar-RM100">Back by Popular Demand: Ukulele with soft case and pick; The Hawaiian Mini Guitar</a></h4>
+                <div class="closing">
+                    <font style="color:white;font-size: 16px;font-family: Arial;font-weight:bold;">RM 100.00</font>
+			    </div>
+                    <a href="/deals/May-Ukelele-Hawaiian-Mini-Guitar-RM100" class="shopnowbtn"></a>
+            </div>
+            </div>
+            
+        </td>
+        
+<td style="width:330px;">        
+            <div class="latest-deal cat3" style="margin-left:4px;">
+		        <div class="hotseller"></div>
+            <div class="discountDiv">
+                <font style=""> - 79% OFF</font>
+            </div>
+            <div class="image">
+                    <a href="/deals/May-Spy-Pen-RM66"><img src="http://dm-asset.s3-ap-southeast-1.amazonaws.com/Img/Deals/10840/main.jpg" alt="Back by Popular Demand: Super Cool Spy Pen "></a>
+            </div>
+            <div class="content">
+                <h4><a href="/deals/May-Spy-Pen-RM66">Back by Popular Demand: Super Cool Spy Pen </a></h4>
+                <div class="closing">
+                    <font style="color:white;font-size: 16px;font-family: Arial;font-weight:bold;">RM 66.00</font>
+			    </div>
+                    <a href="/deals/May-Spy-Pen-RM66" class="shopnowbtn"></a>
+            </div>
+            </div>
+            
+        </td>
+        
+<td style="width:330px;">        
+            <div class="latest-deal cat3" style="margin-left:7px;">
+		        <div class="hotseller"></div>
+            <div class="discountDiv">
+                <font style=""> - 50% OFF</font>
+            </div>
+            <div class="image">
+                    <a href="/deals/May-Bag-Organiser-RM45"><img src="http://dm-asset.s3-ap-southeast-1.amazonaws.com/Img/Deals/11167/Main.jpg" alt="Handbag Organisers"></a>
+            </div>
+            <div class="content">
+                <h4><a href="/deals/May-Bag-Organiser-RM45">Handbag Organisers</a></h4>
+                <div class="closing">
+                    <font style="color:white;font-size: 16px;font-family: Arial;font-weight:bold;">RM 45.00</font>
+			    </div>
+                    <a href="/deals/May-Bag-Organiser-RM45" class="shopnowbtn"></a>
+            </div>
+            </div>
+            
+        </td>
+ </tr>         
+    
+    </tbody></table>
+</div>		</div>
+    
+
+        <div style="background:url(/Images/asset/divider-long.png) repeat-x;height:1px;"></div>
+		<div id="beautyDeals" class="latest-deal-category">
+			<div class="header">
+                <a href="/kuala-lumpur/deals/beauty" class="headerLink">
+                    <span class="headerLink_left">
+                        <img src="/images/asset/shape-star-gray.png">
+                        <b style="font-size:16px;">BEAUTY</b>
+                    </span>
+                    <span class="headerLink_right" style="">
+                        <div><img src="/images/asset/btn-view-more-deals.png"></div>
+                    </span>
+                </a>
+			</div>
+
+<script>
+
+    $(document).ready(function () {
+        $('.categoryDeals .latest-deal').live("mouseenter", function () {
+            $(this).find('.content').stop().animate({ backgroundColor: 'rgba(0, 76, 144, 0.9)' }, 500);
+        })
+        .live("mouseleave", function () {
+            $(this).find('.content').stop().animate({ backgroundColor: 'rgba(0, 0, 0, 0.75)' }, 500);
+        });
+    });
+</script>
+
+<div class="categoryDeals">
+    <table style="width:990px;" cellpadding="0" cellspacing="0">
+
+<tbody><tr><td style="width:330px;">        
+            <div class="latest-deal cat1">
+            <div class="discountDiv">
+                <font style=""> - 64% OFF</font>
+            </div>
+            <div class="image">
+                    <a href="/deals/May-Fragrances-Women-Elizabeth-Arden-RM93"><img src="http://dm-asset.s3-ap-southeast-1.amazonaws.com/Img/Deals/11104/ElizabethArdenScentsMainMain.jpg" alt="Elegant Elizabeth Arden's Fragrances"></a>
+            </div>
+            <div class="content">
+                <h4><a href="/deals/May-Fragrances-Women-Elizabeth-Arden-RM93">Elegant Elizabeth Arden's Fragrances</a></h4>
+                <div class="closing">
+                    <font style="color:white;font-size: 16px;font-family: Arial;font-weight:bold;">RM 93.00</font>
+			    </div>
+                    <a href="/deals/May-Fragrances-Women-Elizabeth-Arden-RM93" class="shopnowbtn"></a>
+            </div>
+            </div>
+            
+        </td>
+        
+<td style="width:330px;">        
+            <div class="latest-deal cat1" style="margin-left:4px;">
+            <div class="discountDiv">
+                <font style=""> - 54% OFF</font>
+            </div>
+            <div class="image">
+                    <a href="/deals/May-Mont-Blanc-Fragrances-Men-Women-RM120"><img src="http://dm-asset.s3-ap-southeast-1.amazonaws.com/Img/Deals/11039/Main.jpg" alt="Genuine Mont Blanc Fragrances for Him &amp; Her (8 Scents)"></a>
+            </div>
+            <div class="content">
+                <h4><a href="/deals/May-Mont-Blanc-Fragrances-Men-Women-RM120">Genuine Mont Blanc Fragrances for Him &amp; Her (8 Scents)</a></h4>
+                <div class="closing">
+                    <font style="color:white;font-size: 16px;font-family: Arial;font-weight:bold;">RM 120.00</font>
+			    </div>
+                    <a href="/deals/May-Mont-Blanc-Fragrances-Men-Women-RM120" class="shopnowbtn"></a>
+            </div>
+            </div>
+            
+        </td>
+        
+<td style="width:330px;">        
+            <div class="latest-deal cat1" style="margin-left:7px;">
+            <div class="discountDiv">
+                <font style=""> - 52% OFF</font>
+            </div>
+            <div class="image">
+                    <a href="/deals/May-Ferrari-Scents-Men-RM116"><img src="http://dm-asset.s3-ap-southeast-1.amazonaws.com/Img/Deals/10959/Main.jpg" alt="5 Ferrari Scents for Men"></a>
+            </div>
+            <div class="content">
+                <h4><a href="/deals/May-Ferrari-Scents-Men-RM116">5 Ferrari Scents for Men</a></h4>
+                <div class="closing">
+                    <font style="color:white;font-size: 16px;font-family: Arial;font-weight:bold;">RM 116.00</font>
+			    </div>
+                    <a href="/deals/May-Ferrari-Scents-Men-RM116" class="shopnowbtn"></a>
+            </div>
+            </div>
+            
+        </td>
+ </tr>         
+            <tr><td style="width:327px">
+        
+            <div class="latest-deal cat1">
+		        <div class="hotseller"></div>
+            <div class="discountDiv">
+                <font style=""> - 78% OFF</font>
+            </div>
+            <div class="image">
+                    <a href="/deals/May-Kinoki-Foot-Detox-Patch-RM28"><img src="http://dm-asset.s3-ap-southeast-1.amazonaws.com/Img/Deals/10879/kinoki-detox-foot-patch686.jpg" alt="Back by Popular Demand: Kinoki Detox Foot Patches [As Seen On TV]"></a>
+            </div>
+            <div class="content">
+                <h4><a href="/deals/May-Kinoki-Foot-Detox-Patch-RM28">Back by Popular Demand: Kinoki Detox Foot Patches [As Seen On TV]</a></h4>
+                <div class="closing">
+                    <font style="color:white;font-size: 16px;font-family: Arial;font-weight:bold;">RM 28.00</font>
+			    </div>
+                    <a href="/deals/May-Kinoki-Foot-Detox-Patch-RM28" class="shopnowbtn"></a>
+            </div>
+            </div>
+            
+        </td>
+        
+<td style="width:330px;">        
+            <div class="latest-deal cat1" style="margin-left:4px;">
+		        <div class="hotseller"></div>
+            <div class="discountDiv">
+                <font style=""> - 83% OFF</font>
+            </div>
+            <div class="image">
+                    <a href="/deals/May-24K-Gold-Ion-Beauty-Bar-RM85"><img src="http://dm-asset.s3-ap-southeast-1.amazonaws.com/Img/Deals/10940/main.jpg" alt="Back by Popular Demand: 24K Gold Ion Beauty Bar"></a>
+            </div>
+            <div class="content">
+                <h4><a href="/deals/May-24K-Gold-Ion-Beauty-Bar-RM85">Back by Popular Demand: 24K Gold Ion Beauty Bar</a></h4>
+                <div class="closing">
+                    <font style="color:white;font-size: 16px;font-family: Arial;font-weight:bold;">RM 85.00</font>
+			    </div>
+                    <a href="/deals/May-24K-Gold-Ion-Beauty-Bar-RM85" class="shopnowbtn"></a>
+            </div>
+            </div>
+            
+        </td>
+        
+<td style="width:330px;">        
+            <div class="latest-deal cat1" style="margin-left:7px;">
+            <div class="discountDiv">
+                <font style=""> - 53% OFF</font>
+            </div>
+            <div class="image">
+                    <a href="/deals/May-Syn-Ake-Peeling-Sheet-RM50"><img src="http://dm-asset.s3-ap-southeast-1.amazonaws.com/Img/Deals/10962/main.jpg" alt="Syn-Ake Peeling Sheet"></a>
+            </div>
+            <div class="content">
+                <h4><a href="/deals/May-Syn-Ake-Peeling-Sheet-RM50">Syn-Ake Peeling Sheet</a></h4>
+                <div class="closing">
+                    <font style="color:white;font-size: 16px;font-family: Arial;font-weight:bold;">RM 50.00</font>
+			    </div>
+                    <a href="/deals/May-Syn-Ake-Peeling-Sheet-RM50" class="shopnowbtn"></a>
+            </div>
+            </div>
+            
+        </td>
+ </tr>         
+    
+    </tbody></table>
+</div>		</div>
+    
+
+        <div style="background:url(/Images/asset/divider-long.png) repeat-x;height:1px;"></div>
+		<div id="livingDeals" class="latest-deal-category">
+			<div class="header">
+                <a href="/kuala-lumpur/deals/living" class="headerLink">
+                    <span class="headerLink_left">
+                        <img src="/images/asset/shape-star-gray.png">
+                        <b style="font-size:16px;">HOME &amp; LIVING</b>
+                    </span>
+                    <span class="headerLink_right" style="">
+                        <div><img src="/images/asset/btn-view-more-deals.png"></div>
+                    </span>
+                </a>
+			</div>
+
+<script>
+
+    $(document).ready(function () {
+        $('.categoryDeals .latest-deal').live("mouseenter", function () {
+            $(this).find('.content').stop().animate({ backgroundColor: 'rgba(0, 76, 144, 0.9)' }, 500);
+        })
+        .live("mouseleave", function () {
+            $(this).find('.content').stop().animate({ backgroundColor: 'rgba(0, 0, 0, 0.75)' }, 500);
+        });
+    });
+</script>
+
+<div class="categoryDeals">
+    <table style="width:990px;" cellpadding="0" cellspacing="0">
+
+<tbody><tr><td style="width:330px;">        
+            <div class="latest-deal cat4">
+			    <div class="newDeal"></div>
+            <div class="discountDiv">
+                <font style=""> - 38% OFF</font>
+            </div>
+            <div class="image">
+                    <a href="/deals/May-Brinno-Digital-Peephole-RM283"><img src="http://dm-asset.s3-ap-southeast-1.amazonaws.com/Img/Deals/11204/Main.jpg" alt="Brinno Digital Peephole"></a>
+            </div>
+            <div class="content">
+                <h4><a href="/deals/May-Brinno-Digital-Peephole-RM283">Brinno Digital Peephole</a></h4>
+                <div class="closing">
+                    <font style="color:white;font-size: 16px;font-family: Arial;font-weight:bold;">RM 283.00</font>
+			    </div>
+                    <a href="/deals/May-Brinno-Digital-Peephole-RM283" class="shopnowbtn"></a>
+            </div>
+            </div>
+            
+        </td>
+        
+<td style="width:330px;">        
+            <div class="latest-deal cat4" style="margin-left:4px;">
+			    <div class="newDeal"></div>
+            <div class="discountDiv">
+                <font style=""> - 48% OFF</font>
+            </div>
+            <div class="image">
+                    <a href="/deals/May-Stainless-Steel-Cooking-Utensils-RM105"><img src="http://dm-asset.s3-ap-southeast-1.amazonaws.com/Img/Deals/11236/deal.png" alt="A 7-Piece Set of Stainless Steel Cooking Utensils"></a>
+            </div>
+            <div class="content">
+                <h4><a href="/deals/May-Stainless-Steel-Cooking-Utensils-RM105">A 7-Piece Set of Stainless Steel Cooking Utensils</a></h4>
+                <div class="closing">
+                    <font style="color:white;font-size: 16px;font-family: Arial;font-weight:bold;">RM 105.00</font>
+			    </div>
+                    <a href="/deals/May-Stainless-Steel-Cooking-Utensils-RM105" class="shopnowbtn"></a>
+            </div>
+            </div>
+            
+        </td>
+        
+<td style="width:330px;">        
+            <div class="latest-deal cat4" style="margin-left:7px;">
+			    <div class="newDeal"></div>
+            <div class="discountDiv">
+                <font style=""> - 57% OFF</font>
+            </div>
+            <div class="image">
+                    <a href="/deals/May-Animal-Themed-Mats-RM65"><img src="http://dm-asset.s3-ap-southeast-1.amazonaws.com/Img/Deals/11242/main111.jpg" alt="2 Cute Animal Themed Bath Mats"></a>
+            </div>
+            <div class="content">
+                <h4><a href="/deals/May-Animal-Themed-Mats-RM65">2 Cute Animal Themed Bath Mats</a></h4>
+                <div class="closing">
+                    <font style="color:white;font-size: 16px;font-family: Arial;font-weight:bold;">RM 65.00</font>
+			    </div>
+                    <a href="/deals/May-Animal-Themed-Mats-RM65" class="shopnowbtn"></a>
+            </div>
+            </div>
+            
+        </td>
+ </tr>         
+            <tr><td style="width:327px">
+        
+            <div class="latest-deal cat4">
+		        <div class="hotseller"></div>
+            <div class="discountDiv">
+                <font style=""> - 52% OFF</font>
+            </div>
+            <div class="image">
+                    <a href="/deals/May-Magic-Bullet-Blender-RM106"><img src="http://dm-asset.s3-ap-southeast-1.amazonaws.com/Img/Deals/10888/main.jpg" alt="Back By Popular Demand: Magic Bullet Blender"></a>
+            </div>
+            <div class="content">
+                <h4><a href="/deals/May-Magic-Bullet-Blender-RM106">Back By Popular Demand: Magic Bullet Blender</a></h4>
+                <div class="closing">
+                    <font style="color:white;font-size: 16px;font-family: Arial;font-weight:bold;">RM 106.00</font>
+			    </div>
+                    <a href="/deals/May-Magic-Bullet-Blender-RM106" class="shopnowbtn"></a>
+            </div>
+            </div>
+            
+        </td>
+        
+<td style="width:330px;">        
+            <div class="latest-deal cat4" style="margin-left:4px;">
+		        <div class="hotseller"></div>
+            <div class="discountDiv">
+                <font style=""> - 55% OFF</font>
+            </div>
+            <div class="image">
+                    <a href="/deals/May-SellInCost-Table-Mate-RM45"><img src="http://dm-asset.s3-ap-southeast-1.amazonaws.com/Img/Deals/11022/lead_image-1346058101-large.jpg" alt="Back by Popular Demand: Table Mate II"></a>
+            </div>
+            <div class="content">
+                <h4><a href="/deals/May-SellInCost-Table-Mate-RM45">Back by Popular Demand: Table Mate II</a></h4>
+                <div class="closing">
+                    <font style="color:white;font-size: 16px;font-family: Arial;font-weight:bold;">RM 45.00</font>
+			    </div>
+                    <a href="/deals/May-SellInCost-Table-Mate-RM45" class="shopnowbtn"></a>
+            </div>
+            </div>
+            
+        </td>
+        
+<td style="width:330px;">        
+            <div class="latest-deal cat4" style="margin-left:7px;">
+		        <div class="hotseller"></div>
+            <div class="discountDiv">
+                <font style=""> - 61% OFF</font>
+            </div>
+            <div class="image">
+                    <a href="/deals/May-Automatic-Can-Opener-RM30"><img src="http://dm-asset.s3-ap-southeast-1.amazonaws.com/Img/Deals/9995/4763_RG9lcy10aGUtT25lLVRvdWNoLUNhbi1PcGVuZXItd29yaw==.jpg" alt="Automatic Can Opener"></a>
+            </div>
+            <div class="content">
+                <h4><a href="/deals/May-Automatic-Can-Opener-RM30">Automatic Can Opener</a></h4>
+                <div class="closing">
+                    <font style="color:white;font-size: 16px;font-family: Arial;font-weight:bold;">RM 30.00</font>
+			    </div>
+                    <a href="/deals/May-Automatic-Can-Opener-RM30" class="shopnowbtn"></a>
+            </div>
+            </div>
+            
+        </td>
+ </tr>         
+    
+    </tbody></table>
+</div>		</div>
+    
+
+    
+
+    
+        <div style="background:url(/Images/asset/divider-long.png) repeat-x;height:1px;"></div>
+		<div id="mumsNKidsDeals" class="latest-deal-category">
+			<div class="header">
+                <a href="/kuala-lumpur/deals/mumsnkids" class="headerLink">
+                    <span class="headerLink_left">
+                        <img src="/images/asset/shape-star-gray.png">
+                        <b style="font-size:16px;">MUMS &amp; KIDS</b>
+                    </span>
+                    <span class="headerLink_right" style="">
+                        <div><img src="/images/asset/btn-view-more-deals.png"></div>
+                    </span>
+                </a>
+			</div>
+
+<script>
+
+    $(document).ready(function () {
+        $('.categoryDeals .latest-deal').live("mouseenter", function () {
+            $(this).find('.content').stop().animate({ backgroundColor: 'rgba(0, 76, 144, 0.9)' }, 500);
+        })
+        .live("mouseleave", function () {
+            $(this).find('.content').stop().animate({ backgroundColor: 'rgba(0, 0, 0, 0.75)' }, 500);
+        });
+    });
+</script>
+
+<div class="categoryDeals">
+    <table style="width:990px;" cellpadding="0" cellspacing="0">
+
+<tbody><tr><td style="width:330px;">        
+            <div class="latest-deal cat12">
+            <div class="discountDiv">
+                <font style=""> - 35% OFF</font>
+            </div>
+            <div class="image">
+                    <a href="/deals/May-Rilakkuma-Plush-Comforter-RM69"><img src="http://dm-asset.s3-ap-southeast-1.amazonaws.com/Img/Deals/11043/Main.jpg" alt="Rilakkuma and Friends 2-in-1 Plush Toy with Comforter"></a>
+            </div>
+            <div class="content">
+                <h4><a href="/deals/May-Rilakkuma-Plush-Comforter-RM69">Rilakkuma and Friends 2-in-1 Plush Toy with Comforter</a></h4>
+                <div class="closing">
+                    <font style="color:white;font-size: 16px;font-family: Arial;font-weight:bold;">RM 69.00</font>
+			    </div>
+                    <a href="/deals/May-Rilakkuma-Plush-Comforter-RM69" class="shopnowbtn"></a>
+            </div>
+            </div>
+            
+        </td>
+        
+<td style="width:330px;">        
+            <div class="latest-deal cat11" style="margin-left:4px;">
+            <div class="discountDiv">
+                <font style=""> - 40% OFF</font>
+            </div>
+            <div class="image">
+                    <a href="/deals/May-Foldable-Carrycase-Babies-RM105"><img src="http://dm-asset.s3-ap-southeast-1.amazonaws.com/Img/Deals/11151/newmain.jpg" alt="2-in-1 Foldable Carrycase for Babies"></a>
+            </div>
+            <div class="content">
+                <h4><a href="/deals/May-Foldable-Carrycase-Babies-RM105">2-in-1 Foldable Carrycase for Babies</a></h4>
+                <div class="closing">
+                    <font style="color:white;font-size: 16px;font-family: Arial;font-weight:bold;">RM 105.00</font>
+			    </div>
+                    <a href="/deals/May-Foldable-Carrycase-Babies-RM105" class="shopnowbtn"></a>
+            </div>
+            </div>
+            
+        </td>
+        
+<td style="width:330px;">        
+            <div class="latest-deal cat12" style="margin-left:7px;">
+            <div class="discountDiv">
+                <font style=""> - 60% OFF</font>
+            </div>
+            <div class="image">
+                    <a href="/deals/May-GA-Blue-Watches-Kids-RM45"><img src="http://dm-asset.s3-ap-southeast-1.amazonaws.com/Img/Deals/10811/main.jpg" alt="GA Blue Watches for Kids"></a>
+            </div>
+            <div class="content">
+                <h4><a href="/deals/May-GA-Blue-Watches-Kids-RM45">GA Blue Watches for Kids</a></h4>
+                <div class="closing">
+                    <font style="color:white;font-size: 16px;font-family: Arial;font-weight:bold;">RM 45.00</font>
+			    </div>
+                    <a href="/deals/May-GA-Blue-Watches-Kids-RM45" class="shopnowbtn"></a>
+            </div>
+            </div>
+            
+        </td>
+ </tr>         
+            <tr><td style="width:327px">
+        
+            <div class="latest-deal cat12">
+		        <div class="hotseller"></div>
+            <div class="discountDiv">
+                <font style=""> - 82% OFF</font>
+            </div>
+            <div class="image">
+                    <a href="/deals/May-Touch-Pad-Learning-Computer-RM39"><img src="http://dm-asset.s3-ap-southeast-1.amazonaws.com/Img/Deals/11136/Main.jpg" alt="Back by Popular Demand: Children Touch Pad Learning Computer"></a>
+            </div>
+            <div class="content">
+                <h4><a href="/deals/May-Touch-Pad-Learning-Computer-RM39">Back by Popular Demand: Children Touch Pad Learning Computer</a></h4>
+                <div class="closing">
+                    <font style="color:white;font-size: 16px;font-family: Arial;font-weight:bold;">RM 39.90</font>
+			    </div>
+                    <a href="/deals/May-Touch-Pad-Learning-Computer-RM39" class="shopnowbtn"></a>
+            </div>
+            </div>
+            
+        </td>
+        
+    
+    </tr></tbody></table>
+</div>		</div>
+
+    <div style="background:url(/Images/asset/divider-long.png) repeat-x;height:1px;"></div>
+		<div id="expiringDeals" class="latest-deal-category">
+			<div class="header">
+                <a href="/kuala-lumpur/deals/lastcall" class="headerLink">
+                    <span class="headerLink_left">
+                        <img src="/images/asset/shape-star-gray.png">
+                        <b style="font-size:16px;">LAST CALL</b>
+                    </span>
+                    <span class="headerLink_right" style="">
+                        <div><img src="/images/asset/btn-view-more-deals.png"></div>
+                    </span>
+                </a>
+			</div>
+
+<script>
+
+    $(document).ready(function () {
+        $('.categoryDeals .latest-deal').live("mouseenter", function () {
+            $(this).find('.content').stop().animate({ backgroundColor: 'rgba(0, 76, 144, 0.9)' }, 500);
+        })
+        .live("mouseleave", function () {
+            $(this).find('.content').stop().animate({ backgroundColor: 'rgba(0, 0, 0, 0.75)' }, 500);
+        });
+    });
+</script>
+
+<div class="categoryDeals">
+    <table style="width:990px;" cellpadding="0" cellspacing="0">
+
+<tbody><tr><td style="width:330px;">        
+            <div class="latest-deal cat10">
+		        <div class="hotseller"></div>
+            <div class="discountDiv">
+                <font style=""> - 68% OFF</font>
+            </div>
+            <div class="image">
+                    <a href="/deals/goodwell-car-detailer-may-professionals-wash-and-waxing"><img src="http://dm-asset.s3-ap-southeast-1.amazonaws.com/Img/Deals/9528/main-image-01.jpg" alt="Goodwell Car Meguiar's Professionals Wash &amp; Waxing"></a>
+            </div>
+            <div class="content">
+                <h4><a href="/deals/goodwell-car-detailer-may-professionals-wash-and-waxing">Goodwell Car Meguiar's Professionals Wash &amp; Waxing</a></h4>
+                <div class="closing">
+                    <font style="color:white;font-size: 16px;font-family: Arial;font-weight:bold;">RM 29.00</font>
+			    </div>
+                    <a href="/deals/goodwell-car-detailer-may-professionals-wash-and-waxing" class="shopnowbtn"></a>
+            </div>
+            </div>
+            
+        </td>
+        
+<td style="width:330px;">        
+            <div class="latest-deal cat10" style="margin-left:4px;">
+		        <div class="hotseller"></div>
+            <div class="discountDiv">
+                <font style=""> - 75% OFF</font>
+            </div>
+            <div class="image">
+                    <a href="/deals/my-garage-city-auto-link-may-computerized-engine-diagnostic"><img src="http://dm-asset.s3-ap-southeast-1.amazonaws.com/Img/Deals/10653/main-image-01.jpg" alt="Latest Computerized Engine Diagnostic for ALL Car Types"></a>
+            </div>
+            <div class="content">
+                <h4><a href="/deals/my-garage-city-auto-link-may-computerized-engine-diagnostic">Latest Computerized Engine Diagnostic for ALL Car Types</a></h4>
+                <div class="closing">
+                    <font style="color:white;font-size: 16px;font-family: Arial;font-weight:bold;">RM 20.00</font>
+			    </div>
+                    <a href="/deals/my-garage-city-auto-link-may-computerized-engine-diagnostic" class="shopnowbtn"></a>
+            </div>
+            </div>
+            
+        </td>
+        
+<td style="width:330px;">        
+            <div class="latest-deal cat10" style="margin-left:7px;">
+		        <div class="hotseller"></div>
+            <div class="discountDiv">
+                <font style=""> - 80% OFF</font>
+            </div>
+            <div class="image">
+                    <a href="/deals/goodwell-car-detailer-may-meguiar-professional-8-step-car-detailing"><img src="http://dm-asset.s3-ap-southeast-1.amazonaws.com/Img/Deals/10707/main-image-01.jpg" alt="Meguiar's Professionals 8-Step Car Detailing"></a>
+            </div>
+            <div class="content">
+                <h4><a href="/deals/goodwell-car-detailer-may-meguiar-professional-8-step-car-detailing">Meguiar's Professionals 8-Step Car Detailing</a></h4>
+                <div class="closing">
+                    <font style="color:white;font-size: 16px;font-family: Arial;font-weight:bold;">RM 69.00</font>
+			    </div>
+                    <a href="/deals/goodwell-car-detailer-may-meguiar-professional-8-step-car-detailing" class="shopnowbtn"></a>
+            </div>
+            </div>
+            
+        </td>
+ </tr>         
+    
+    </tbody></table>
+</div>		</div>
+
+</div>
+
+
+<script>
+
+    $(document).ready(function () {
+
+        var options = {
+            success: function (data) {
+                if (data.Status == 1) {
+                    $("#subsribe_info").html(data.Message);
+                    $("#subsribe_info").fadeIn(1000).delay(5000).slideUp().fadeOut(5000);
+                    $("#subsribe_error").hide();
+                }
+                else {
+                    $("#subsribe_error").html(data.Message);
+                    $("#subsribe_error").fadeIn(1000).delay(5000).slideUp().fadeOut(5000);
+                    $("#subsribe_info").hide();
+                }
+            }
+        };
+
+        var v = $("#subscribeForm").validate({
+            rules: {
+                subscribe_email: {
+                    email: true,
+                    required: true
+                }
+            },
+            messages: {
+                subscribe_email: {
+                    required: "Email is needed for subscription.",
+                    email: "Invalid email."
+                }
+            }, errorContainer: "#errorContainer",errorLabelContainer: "#errorContainer", 
+                            errorElement: "span",
+            submitHandler: function (form) {
+                $(form).ajaxSubmit(options); // Designer styling
+                return false;
+            }
+        });
+
+    });
+</script>
+<script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery.validate/1.7/jquery.validate.min.js"></script>
+<script type="text/javascript" src="/Scripts/jqModal.js"></script>
+<script type="text/javascript" src="/Scripts/jquery.form.min.js"></script>
+
+<script type="text/javascript">
+
+   $(document).ready(function () {
+      $('#modal').jqm({
+         overlay: 58,
+         // modal: true,
+         trigger: false,
+         onShow: function (h) { h.w.fadeIn(888); },
+         onHide: function (h) {
+               h.w.fadeOut(888); // hide window
+               h.o.remove(); // remove overlay
+
+      }
+   });
+
+      if (!checkVisiting()) {
+         setTimeout(myconfirm, 4000);
+         return false;}
+      });
+
+      function myconfirm() {
+         var timer = $('#modal').jqmShow();
+      }
+
+      function checkVisiting() {
+         if (!navigator.cookieEnabled)
+               return true;
+
+         var first = getCookie('first');
+         var pvisit = getCookie('pvisit');
+
+         if (first != "yes") {
+               setCookie('first', "yes", 1);
+               return true;
+         }
+
+         if (pvisit == "yes") {
+               return true;
+         }
+         else {
+               setCookie('pvisit', "yes", 1);
+               return false;
+         }
+      }
+
+      function setCookie(c_name, value, expiredays) {
+         var exdate = new Date();
+         exdate.setDate(exdate.getDate() + expiredays);
+         document.cookie = c_name + "=" + escape(value) + ((expiredays == null) ? "" : ";expires=" + exdate.toUTCString()) + ";path=/";
+      }
+
+      function getCookie(c_name) {
+         var i, x, y, ARRcookies = document.cookie.split(";");
+         for (i = 0; i < ARRcookies.length; i++) {
+               x = ARRcookies[i].substr(0, ARRcookies[i].indexOf("="));
+               y = ARRcookies[i].substr(ARRcookies[i].indexOf("=") + 1);
+               x = x.replace(/^\s+|\s+$/g, "");
+               if (x == c_name) {
+                  return unescape(y);
+               }
+         }
+      }
+</script>
+<script type="text/javascript">
+
+   $(document).ready(function () {
+      var options = {
+         success: function (data) {
+               if (data.Status == 1) {
+                  $("#successMessage").fadeIn('fast');
+                  $("#successMessage").attr("class", "message");
+                  $("#successMessage").html(data.Message);
+                  $("#successMessage").fadeOut(8000);
+                  //$("#successMessage").hide();
+               }
+               else if (data.Status == 0) {
+                  $("#errorMessage").fadeIn('fast');
+                  $("#errorMessage").attr("class", "message");
+                  $("#errorMessage").html(data.Message);
+                  $("#errorMessage").fadeOut(8000);
+                  //$("#errorMessage").hide();
+               }
+               if (data.post_subscribed == 1)
+                  $('#postSubscribe').jqmShow();
+         }
+      };
+
+      var v = $("#modalSubscriptionFrom").validate({
+         rules: {
+               homeEmail: {
+                  required: true,
+                  email: true
+               },
+               homeCityId: {
+                  required: true
+               }
+         },
+         messages: {
+               homeEmail: {
+                  required: "Email is required",
+                  email: "Invalid Email Address"
+               },
+               homeCityId: {
+                  required: "City is required"
+               }
+         }
+         //            ,
+         //            submitHandler: function (form) {
+         //                $(form).ajaxSubmit(options);
+         //                $('#confirm').jqmHide();
+         //                return false;
+         //            }
+      });
+
+   });
+</script>
+
+
+<!-- Almost Done Modal Start Here -->
+<div class="jqmWindow jqmID1" id="modal">
+    <div class="center">
+        <div class="modalContent" style="height: 422px;background-color:#F3F3F3;">
+            <a href="#" class="jqmClose">
+                <div class="modalClose" style="left:559px;top:-15px;"></div>
+            </a>
+            <div class="modalHeader"></div>
+            <h3 style="padding:13px 100px 0px;font-size:24px;margin:0 0 8px;">
+               Welcome to <br>starbuys.thestar.com.my
+            </h3>
+            <div style="padding:1px 50px 25px;font-size:14px;">
+                Soon you'll be receiving the most awesome deals from us, in the meantime:
+            </div>
+            
+            <div style="padding:1px 70px 20px;line-height:42px;text-align:center;">
+                <a href="/pages/starbuys-referrals"><img src="/images/asset/btn-refer-your-friend.png"></a>
+                <a href="/users/myaccount"><img src="/images/asset/btn-set-up-profile.png"></a>
+                <a href="/"><img src="/images/asset/btn-view-recent-deal.png"></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Start End -->
+      </div>
+
+
+                     
+       </div>
+   </div>
+
+    
+   <div id="footer">
+      <div id="contact" class="center">
+
+         <div style="margin-top:10px;color:#1e1e1e;">
+            <div style="display:inline-block;position:relative;top:-30px;">
+               <table>
+                  <tbody><tr>
+                     <td style="vertical-align:middle;"><img src="/images/asset/footer-icon-starbuys-care.png" alt="StarBuys Care Icon"></td>
+                     <td style="padding-left:15px;">
+                        <b style="font-size:23px;color:#343434">StarBuys Care</b><br>
+                        Do you have a question or problem<br>
+                        that you need our help with? We're<br>
+                        here for you!<br>
+                     </td>
+                  </tr>
+               </tbody></table>
+            </div>
+            <div style="background:url('/images/asset/divider-vertical-dotted-line.png') repeat-y;width:1px;height:140px;margin: 0 10px;display:inline-block;"></div>
+            <div style="display:inline-block;position:relative;top:-40px;">
+               <b>Monday to Friday:</b> 9am - 6pm
+               <br>Phone, Email
+               <br>
+               <b>Saturday &amp; Sunday:</b> 12pm - 5pm
+               <br>Email
+            </div>
+            <div style="background:url('/images/asset/divider-footer-mid-vertical.png') repeat-y;width:2px;height:150px;margin: 0 15px;display:inline-block;"></div>
+            <div style="display:inline-block;position:relative;top:-10px;">
+               <table>
+                  <tbody><tr>
+                     <td style="vertical-align:middle;"><img src="/images/asset/footer-icon-contact-us.png" alt="Contact Us Icon"></td>
+                     <td style="padding-left:15px;color:#1e1e1e">
+                        <b style="font-size:23px;color:#343434">Contact Us</b><br>
+                        <b style="color:#343434">Address:</b>
+                        <br>15-2 The Boulevard
+                        <br>59200 Mid Valley City, Kuala Lumpur.
+                        <br><br>
+                        <b style="color:#343434">Collection Center:</b>
+                        <br>32, Jalan Kemuja,
+                        <br>59000 Bangsar, Kuala Lumpur
+                     </td>
+                  </tr>
+               </tbody></table>
+            </div>
+            <div style="background:url('/images/asset/divider-vertical-dotted-line.png') repeat-y;width:1px;height:140px;margin: 0 10px;display:inline-block;"></div>
+            <div style="display:inline-block;position:relative;top:-55px;">
+               <b style="color:#343434">Tel</b> 03-2282 8130<br>
+               <b style="color:#343434">Fax</b> 03-2201 8412<br>
+               <b style="color:#343434">Email</b> starbuys@dealmates.com<br>
+            </div>
+         </div>
+
+         <div style="background:url(/Images/asset/divider-footer-horizontal.png) repeat-x;min-height:8px;margin-top:10px;"></div>
+
+         <div style="color:#1e1e1e;margin-top:6px;">
+               <div style="float:left">
+                  <a href="/pages/guaranteestarbuys">Our Promises</a> | <a href="/pages/starbuys-referrals">Referral Program</a> | <a href="/pages/faqstarbuys">FAQ</a> | <a href="/pages/termsstarbuys">Terms &amp; Policies</a> | <a href="/pages/privacystarbuys">Privacy Policy</a>
+               </div>
+               <div style="float:right;font-size:11px;font-weight:lighter;font-family:Arial;">
+                  Powered by Dealmates
+               </div>
+         </div>
+         <div style="background-color:#AEAEAE;min-height:1px;margin-top:30px;"></div>
+         <div class="bottom"></div>
+         <div style="text-align:center;padding-top:3px;"><img src="/images/asset/footer-payment-method.png"></div>
+
+      </div>
+   </div>
+<!-- facebook start -->
+<div class=" fb_reset" id="fb-root"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe src="http://static.ak.facebook.com/connect/xd_arbiter.php?version=24#channel=f3ea7d515ac18ec&amp;origin=http%3A%2F%2Fstarbuys.thestar.com.my&amp;channel_path=%2Fkuala-lumpur%3Ffb_xd_fragment%23xd_sig%3Df19f7c7371c6702%26" style="border: medium none;" tab-index="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_http" allowtransparency="true" name="fb_xdm_frame_http" frameborder="0" scrolling="no"></iframe><iframe src="https://s-static.ak.facebook.com/connect/xd_arbiter.php?version=24#channel=f3ea7d515ac18ec&amp;origin=http%3A%2F%2Fstarbuys.thestar.com.my&amp;channel_path=%2Fkuala-lumpur%3Ffb_xd_fragment%23xd_sig%3Df19f7c7371c6702%26" style="border: medium none;" tab-index="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_https" allowtransparency="true" name="fb_xdm_frame_https" frameborder="0" scrolling="no"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
+<script type="text/javascript">
+   window.fbAsyncInit=function(){
+      FB.init({
+         appId:'357964037625219',status:true,cookie:true,xfbml:true,oauth:true,
+      });
+   };
+   (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id; js.async = true;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=357964037625219";
+      fjs.parentNode.insertBefore(js, fjs);
+   } (document, 'script', 'facebook-jssdk'));
+</script>
+<!-- facebook end -->
+<!-- GA Tracking start -->
+<script type="text/javascript">
+
+
+  var _gaq = _gaq || [];
+  _gaq.push(
+  ['_setAccount', 'UA-196443-10'],
+  ['_trackPageview'],
+  ['b._setAccount', 'UA-19639245-6'],
+  ['b._trackPageview']
+);
+
+  (function () {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<!-- GA Tracking end -->
+
+<!-- Zendesk start -->
+<script type="text/javascript" src="//asset0.zendesk.com/external/zenbox/v2.4/zenbox.js"></script>
+<style type="text/css" media="screen, projection">
+  @import url(//asset0.zendesk.com/external/zenbox/v2.4/zenbox.css);
+</style>
+<script type="text/javascript">
+  if (typeof (Zenbox) !== "undefined") {
+    Zenbox.init({
+      dropboxID: "20112917",
+      url:         "https://starbuys.zendesk.com",
+      tabID:       "support",
+      tabColor:    "black",
+      tabPosition: "Right"
+    });
+  }
+</script><div classname="ZenboxTabRight" class="ZenboxTabRight" title="Support" style="display: block; background-image: url(&quot;//assets.zendesk.com/external/zenbox/images/tab_support_right.png&quot;); background-color: black; border-color: black;" href="#" id="zenbox_tab">Support</div><div style="display: none;" id="zenbox_overlay"><div id="zenbox_container">  <div class="zenbox_header"><img src="//assets.zendesk.com/external/zenbox/images/close_big.png" id="zenbox_close"></div>  <iframe src="//assets.zendesk.com/external/zenbox/v2.1/loading.html" id="zenbox_body" allowtransparency="true" frameborder="0" scrolling="auto"></iframe></div><div id="zenbox_scrim">&nbsp;</div></div>
+<!-- Zendesk end -->
+
+</body>

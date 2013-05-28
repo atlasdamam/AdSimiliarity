@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+Copyright (c) 2005 The Hertz Corporation
+All Rights Reserved.  (Unpublished.)
+
+The information contained herein is confidential and
+proprietary to The Hertz Corporation and may not be
+duplicated, disclosed to third parties, or used for any
+purpose not expressly authorized by it.  Any unauthorized
+use, duplication, or disclosure is prohibited by law.
+-->
+<html>
+ <head> 
+  <title>The Hertz Corporation -- link.hertz.com redirect</title> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+  <meta http-equiv="Content-Style-Type" content="text/css" /> 
+ </head> 
+ <body> 
+  <noscript>
+   We're Sorry 
+   <br />
+   <br /> We notice that you do not have scripting/JavaScript enabled on your browser. Hertz.com uses scripting/JavaScript in order to provide increased functionality as well as to ensure that the data you enter into this site remains secure. 
+   <br />
+   <br /> In order to utilize the site, please change your browser preferences/options to enable scripting/JavaScript functionality. If you require assistance, please reference your browser's Help function. 
+   <br />
+   <br /> If you would like more information about the protection of your personal information, please refer to our 
+   <a href="https://www.hertz.com/rentacar/navigation/enUS/privacyPolicyView.html">Privacy Policy</a>. 
+  </noscript> 
+  <script language="javascript" type="text/javascript">
+
+	function getQueryString(url, key) {
+		var result;
+		if ((url)&&(url.indexOf("?") != -1)) {
+			result = url.slice(url.indexOf("?") + 1);
+			if (result.indexOf(key) != -1){
+				result = url.slice(url.indexOf(key) + key.length);
+				if (result.indexOf("&") != -1) {
+					result = result.substring(0, (result.indexOf("&")));
+					return result;
+				}
+				else
+					return result;
+			}
+		}
+	}
+
+
+	var redirect = "http://link.hertz.com/link/index.jsp?";
+	var ref, documentURL, linkId, linkType, searchString;
+	ref = document.referrer;
+	documentURL=document.URL;
+
+	if (documentURL.indexOf("?") != -1){
+	              		redirect += documentURL.slice(documentURL.indexOf("?")+1)+"&";
+			}
+	
+	(getQueryString(documentURL, 'id=')) ? linkId = '&id=' + getQueryString(documentURL, 'id=') : linkId = '&id=';
+	(getQueryString(documentURL, 'LinkType=')) ? linkType = '&LinkType=' + getQueryString(documentURL, 'LinkType=') : linkType = '&linkType=';
+	
+	searchString = getQueryString(ref, 'q=') || getQueryString(ref, 'p=');
+	(searchString) ? searchString = '&searchString=' + searchString.split('+').join('_') : searchString = '&searchString=';
+	
+	(ref) ? ref = ref.substring(0, ref.indexOf('.com')+4) : ref = '';
+	
+	(redirect.indexOf('?') != -1) ? (redirect += 'refererUrl=' + ref) : (redirect += '?refererUrl=' + ref);
+	redirect = redirect + searchString;
+
+
+	document.location.replace(redirect);
+	//alert(redirect);
+</script>   
+ </body>
+</html>

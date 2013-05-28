@@ -1,76 +1,107 @@
 import urllib2
 import re
 import unicodedata
-from bs4 import BeautifulSoup
+from BeautifulSoup import BeautifulSoup
 from gensim import corpora, models, similarities
+import os
 
+#Global Variables
+count_keywords = 0
+count_description = 0
 
 def getHeadText():
+    global count_keywords
+    global count_description
+
     headText = ""
-    #get title
+    #Get title
     t = soup.find("title").__str__()
     title = t[t.find('>')+1:t.find('<',t.find('>')+1,len(t))]
-    #print title
+    #Add title text to headText
     headText += title
 
-    #get Keywords
+    #Get keywords from meta tag with name=keywords. The actual keywords lie in the content field.
     keywords = soup.findAll("meta", attrs ={'name' : 'keywords'})
-    #print keywords
+    print "KEYWORDS: "
     for k in keywords:
-        #print k['content']
-        
-        headText += unicodedata.normalize('NFKD',k['content']).encode('ascii','ignore')
+        try: 
+            print k['content']
+        except:
+            print "There exists a keywords meta tag in this file which has no content"
+        try: 
+            headText += unicodedata.normalize('NFKD',k['content']).encode('ascii','ignore')
+            count_keywords = count_keywords + 1
+        except: 
+            print "Error in keywords' unicode.normalize."
 
-    #get Description
+    #Get description from meta tag with name=description. Likewise, the actual description text lies in the content field.
     description = soup.findAll("meta", attrs ={'name' : 'description'})
-    #print description
+    print "DESCRIPTION: "
     for d in description:
-        #print d
-        headText += unicodedata.normalize('NFKD',d['content']).encode('ascii','ignore')
-
+        try:
+            print d['content']
+        except:
+            print "There exists a description meta tag in this file which has no content"
+        try: 
+            headText += unicodedata.normalize('NFKD',d['content']).encode('ascii','ignore')
+            count_description = count_description + 1
+        except: 
+            print "Error in description's unicode.normalize."
+        
     return headText.replace('\n' , ' ')
 
-def getBodyText():
-    b = soup.find('body')
-    [s.extract() for s in b('iframe', 'script', 'select' , 'input')]
-    #body = b.find(text = True)
-    body = b.findAll(text = True)
-    bodyText = ''
-    for bo in body:
-        bodyText += bo
 
-    print bodyText
+#We are not currently using text from the body of the webpage.
+
+#def getBodyText():
+#    b = soup.find('body')
+#    [s.extract() for s in b('iframe', 'script', 'select' , 'input')]
+#    #body = b.find(text = True)
+#    body = b.findAll(text = True)
+#    bodyText = ''
+#    for bo in body:
+#        bodyText += bo
+#
+#    print bodyText
+#        
+#    '''
+#    #print b
+#    print b.find('<')
+#    print b.find('>')
+#    print b[b.find('>')+1:b.find('<',b.find('>')+5,len(b))]
+#'''
         
-    '''
-    #print b
-    print b.find('<')
-    print b.find('>')
-    print b[b.find('>')+1:b.find('<',b.find('>')+5,len(b))]
-'''
-        
-
-
 #with open("ClearHtml.txt", "w") as text_file:
     
         #text_file.write(headText)
         #getBodyText()
 
+
 listofAds = []
-for i in range (0,100):
-    html_file = open("ads/"+str(i)+".html","r")
+path = "/Users/scottneaves/Desktop/Online Advertising/AdSimiliarity/ads_new"
+listing = os.listdir(path)
+for infile in listing:
+    print "html filename is: " + infile
+    html_file = open(os.path.join(path, infile), "r")
     data = html_file.read()
     soup = BeautifulSoup(data)
     headText = getHeadText()
-    #print i
-    #print headText
+    print
     try:
         listofAds.append(unicodedata.normalize('NFKD',headText).encode('ascii','ignore'))
     except:
         listofAds.append(headText)
 
-print "DONE"
+
+print "Done reading files."    
+print "Number of files with keyword meta tags (which have content): " 
+print count_keywords
+print "Number of files with description meta tags (which have content): "
+print count_description
 
 
+
+'''
 # remove common words and tokenize
 stoplist = set('for a of the and to in you on - your else'.split()) # we need to add more words like you , on , - , your , else
 texts = [[word for word in ads.lower().split() if word not in stoplist]
@@ -94,18 +125,20 @@ corpus_tfidf = tfidf[corpus]
 
 lsi = models.LsiModel(corpus_tfidf, id2word=dictionary, num_topics=100) # initialize an LSI transformation
 corpus_lsi = lsi[corpus_tfidf] # create a double wrapper over the original corpus: bow->tfidf->fold-in-lsi
+for doc in corpus_lsi:
+    print doc
 
-'''
+
 lsi.save('model.lsi') # same for tfidf, lda, ...
 lsi = models.LsiModel.load('model.lsi')
 
 model = ldamodel.LdaModel(corpus, id2word=dictionary, num_topics=100)
 
-'''
+
 
 print "Done"
 
-
+'''
 
 
 

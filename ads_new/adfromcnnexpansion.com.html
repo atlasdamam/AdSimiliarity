@@ -1,0 +1,603 @@
+<head>
+<title>UNIFINANCIAR.COM</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="shortcut icon" href="http://www.unifinanciar.com/favicon.ico">
+<style type="text/css"> 
+
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color:#FFF;
+}
+td img {
+	display: block;
+}
+.input_personales {
+	margin-left: 7px;
+	width: 165px;
+	color: #49B49A;
+	background-color: #E7E7E5;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	font-size: 15px;
+	height: 17px;
+	padding: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+.input_personaless {
+	display:none;
+	visibility:hidden;
+}
+.celda_checkbox {
+	text-align: center;
+	vertical-align: top;
+}
+.celda_checkbox input {
+	background-color: #FAFAFA;
+}
+.input_largo {
+	margin-left: 0px;
+	width: 250px;
+	color: #019273;
+	background-color: #FFFFFF;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	font-size: 13px;
+}
+#comentarios {
+	margin-left: 0px;
+	width: 240px;
+	color: #019273;
+	background-color: #FFFFFF;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	font-size: 13px;
+	font-family:Arial, Helvetica, sans-serif;
+	margin-top:5px;
+	height: 30px;
+	padding: 5px;
+}
+#enviar {
+	height: 56px;
+	width: 88px;
+}
+
+#mascara {
+	text-align: center;
+	vertical-align: middle;
+	height: 100%;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	display:none;
+	position:fixed;
+	left:0;
+	top:0;
+	z-index:1000;
+	background-color: 2E9495;
+}
+#mascara table,tr,td,img{
+	vertical-align: middle;;
+}
+#formulario #tablacontendio #pie_menu img {
+	float: left;
+}
+.terminos{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:10px;
+	color:#000;
+	padding-right: 10px;
+	padding-top: 8px;
+}
+a:link {
+	color: #000;
+}
+a:visited {
+	color: #000;
+}
+a:hover {
+	color: #000;
+}
+a:active {
+	color: #000;
+}
+</style>
+<script src="http://www.google-analytics.com/ga.js" async="" type="text/javascript"></script><script src="Scripts/AC_RunActiveContent.js" type="text/javascript"></script>
+<script type="text/javascript" src="Scripts/SpryEffects.js"></script>
+<script language="JavaScript1.2" type="text/javascript"> 
+<!--
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+ 
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+ 
+//-->
+</script>
+<script language="javascript"> 
+function slc(cual){
+	document.formulario.lista.value = document.formulario.lista.value + '|' + cual.value;
+	//alert(document.formulario.lista.value);
+}
+function validarEmail(valor) {
+	if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(valor)){
+		return (true)
+	} else {
+		return (false);
+	}
+}
+function validaForma(){
+	total = 0;
+	for(i=0;i<document.formulario.res.length;i++){
+		if(document.formulario.res[i].checked) {
+			total++;
+		}
+	}
+	if( document.getElementById("nombre").value == "" ){
+		alert("Es indispensable tu nombre");
+		document.getElementById("nombre").focus();
+		return false;
+	}else if( document.getElementById("email").value == "" ){
+		alert("Es indispensable tu correo electrónico");
+		document.getElementById("email").focus();
+		return false;
+	}else if( !validarEmail(document.getElementById("email").value) ){
+		alert("El formato de tu correo electrónico es incorrecto");
+		document.getElementById("email").focus();
+		return false;
+	}else if( document.getElementById("tel").value == "" ){
+		alert("Es indispensable tu teléfono");
+		document.getElementById("tel").focus();
+		return false;
+	}else if( total == 0 ){
+		alert("Es indispensable que nos digas qué necesitas para tu negocio");
+		return false;
+	}else if( document.getElementById("como").value == "" ){
+		alert("Es indispendable que nos digas cómo te enteraste de nosotros");
+		document.getElementById("como").focus();
+		return false;
+	}else if( document.getElementById("como").value == "TV" || 
+		document.getElementById("como").value == "IMAGEN RADIO" || 
+		document.getElementById("como").value == "RADIO FORMULA" || 
+		document.getElementById("como").value == "PRENSA" || 
+		document.getElementById("como").value == "ONLINE" || 
+		document.getElementById("como").value == "REVISTAS"){ 
+		var tipo_como = document.getElementById("como").value;
+		alert("No es posible seleccionar "+tipo_como+", elige una categoría.");
+		document.getElementById("como").focus();
+		return false;
+	}else if(document.getElementById("acepto").checked == 0){
+		alert("Es indispendable que aceptes las políticas de privacidad.");
+		return false;
+		}
+		else{
+		return true;
+	}
+}
+function gup( name )
+{
+  name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+  var regexS = "[\\?&]"+name+"=([^&#]*)";
+  var regex = new RegExp( regexS );
+  var results = regex.exec( window.location.href );
+  if( results == null )
+    return "";
+  else
+    return results[1];
+}
+function iniciar(){
+	if( gup('p') ){
+		//resultado correcto
+		alert('Tus datos fueron recibidos correctamente.');
+	}
+} 
+</script>
+
+<script language="javascript"> 
+function cambiaSplash(){
+setTimeout("cambiaSplasher()",3000)
+}
+
+function cambiaSplasher(){
+if(document.getElementById('imgSplash').src == 'imagenes/sp01.jpg'){
+document.getElementById('imgSplash').setAttribute("src", "imagenes/sp02.jpg");
+}else{
+document.getElementById('imgSplash').setAttribute("src", "imagenes/sp01.jpg");
+}
+}
+</script>
+<script language="javascript"> 
+banOculta = true;
+modoSplash = 0;
+indBanner = 0;
+function animation_stop(){
+	document.getElementById('mascara').style.display = 'none';
+	StopTheClock_imgp_bansup();
+	if( modoSplash == 1 ){
+		if( indBanner >= (arrImgsMascara.length - 1) ){
+			indBanner = 0;
+		}else{
+			indBanner++;
+		}
+		document.getElementById('imgSplash').src = arrImgsMascara[indBanner];
+	}
+}
+
+function muestraSplash( idTemp ){
+	var imagenFadeInSpry = new Spry.Effect.Fade(idTemp,{duration: 1200,from: 0, to: 100,toggle: false});
+	imagenFadeInSpry.start();
+	InitializeTimer_imgp_bansup();
+}
+
+function ocultaSplash( idTemp ){
+	if( banOculta ){
+		modoSplash = 0;
+		banOculta = false;
+		var imagenFadeOutSpry = new Spry.Effect.Fade(idTemp,{finish:animation_stop, duration: 1200,from: 100, to: 0,toggle: false});
+		imagenFadeOutSpry.start();
+		document.getElementById('tablacontendio').style.display = '';
+		document.getElementById('nombre').focus();
+		document.body.style.background = '#FFFFFF';
+	}
+}
+function cambiaSplash( idTemp ){
+	if( banOculta ){
+		modoSplash = 1;
+		var imagenFadeOutSpry = new Spry.Effect.Fade(idTemp,{finish:animation_stop, duration: 200,from: 100, to: 0,toggle: false});
+		imagenFadeOutSpry.start();
+		InitializeTimer_imgp_bansup();
+	}
+}
+
+arrImgsMascara = Array();
+arrImgsMascara.push('imagenes/sp01.jpg');
+arrImgsMascara.push('imagenes/sp02.jpg');
+
+var secs_bp_bansup;
+var timerID_imgp_bansup = null;
+var timerRunning_bp_bansup = false;
+var delay_bp_bansup = 6000;
+var ini_banSup = true;
+
+function InitializeTimer_imgp_bansup(){
+	secs_bp_bansup = 1;
+	StopTheClock_imgp_bansup();
+	StartTheTimer_imgp_bansup();
+}
+
+function StopTheClock_imgp_bansup(){
+	if(timerRunning_bp_bansup)
+		clearTimeout(timerID_imgp_bansup)
+	timerRunning_bp_bansup = false
+}
+
+function StartTheTimer_imgp_bansup(){
+	if (secs_bp_bansup==0){
+		StopTheClock_imgp_bansup();
+		if( modoSplash == 1 ){
+			cambiaSplash("mascara");
+		}else{
+			ocultaSplash("mascara");
+		}
+	}else{
+		self.status = secs_bp_bansup
+		secs_bp_bansup = secs_bp_bansup - 1
+		timerRunning_bp_bansup = true
+		timerID_imgp_bansup = self.setTimeout("StartTheTimer_imgp_bansup()", delay_bp_bansup)
+	}
+}
+
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30494855-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+</head>
+<body onload="MM_preloadImages('img/unifinanciar_r1_c7_f2.jpg','img/unifinanciar_r1_c12_f2.jpg','img/unifinanciar_r3_c15_f2.jpg','img/unifinanciar_r21_c3_f2.jpg','img/unifinanciar_r21_c9_f2.jpg','img/unifinanciar_r21_c13_f2.jpg', 'img/footer_r1_c1_s2.jpg','img/footer_r1_c3_s2.jpg','img/footer_r1_c5_s2.jpg','img/footer_r1_c6_s2.jpg','img/footer_r1_c7_s2.jpg','img/footer_r1_c8_s2.jpg','img/footer_r1_c9_s2.jpg','img/header_r1_c3_s2.jpg','img/header_r1_c5_s2.jpg','img/header_r1_c7_s2.jpg','img/header_r1_c9_s2.jpg','img/header_r1_c11_s2.jpg'); iniciar()">
+<div style="visibility: visible; display: block; opacity: 0.170639;" id="mascara">
+    <table height="100%" width="100%" bgcolor="#00233D">
+    	<tbody><tr bgcolor="#2E9495">
+    		<td valign="middle" align="center" bgcolor="#00233D">
+    			<div id="mascaraContenido">
+    				<img id="imgSplash" src="imagenes/sp01.jpg" usemap="#splash" onload="muestraSplash('mascara');" height="540" width="940" border="0">
+					<map name="splash" id="splash">
+                      <area shape="rect" coords="624,416,867,444" href="javascript:cambiaSplash('mascara');">
+                      <area shape="rect" coords="883,13,926,74" href="javascript:ocultaSplash('mascara', 0);">
+                    </map>
+    			</div>
+    		</td>
+    	</tr>
+    </tbody></table>
+</div><form name="formulario" id="formulario" action="resultados.php" method="post" onsubmit="return validaForma()">
+<table id="tablacontendio" style="display:none;" width="982" align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0">
+<!-- fwtable fwsrc="unifinanciar.png" fwpage="Page 1" fwbase="unifinanciar.jpg" fwstyle="Dreamweaver" fwdocid = "159139507" fwnested="0" -->
+  <tbody><tr>
+   <td><img src="img/spacer.gif" alt="" height="1" width="89" border="0"></td>
+   <td><img src="img/spacer.gif" alt="" height="1" width="24" border="0"></td>
+
+   <td><img src="img/spacer.gif" alt="" height="1" width="151" border="0"></td>
+   <td><img src="img/spacer.gif" alt="" height="1" width="21" border="0"></td>
+   <td><img src="img/spacer.gif" alt="" height="1" width="119" border="0"></td>
+   <td><img src="img/spacer.gif" alt="" height="1" width="5" border="0"></td>
+   <td><img src="img/spacer.gif" alt="" height="1" width="112" border="0"></td>
+   <td><img src="img/spacer.gif" alt="" height="1" width="27" border="0"></td>
+   <td><img src="img/spacer.gif" alt="" height="1" width="82" border="0"></td>
+   <td><img src="img/spacer.gif" alt="" height="1" width="32" border="0"></td>
+   <td><img src="img/spacer.gif" alt="" height="1" width="61" border="0"></td>
+
+   <td><img src="img/spacer.gif" alt="" height="1" width="13" border="0"></td>
+   <td><img src="img/spacer.gif" alt="" height="1" width="57" border="0"></td>
+   <td><img src="img/spacer.gif" alt="" height="1" width="9" border="0"></td>
+   <td><img src="img/spacer.gif" alt="" height="1" width="36" border="0"></td>
+   <td><img src="img/spacer.gif" alt="" height="1" width="4" border="0"></td>
+   <td><img src="img/spacer.gif" alt="" height="1" width="22" border="0"></td>
+   <td><img src="img/spacer.gif" alt="" height="1" width="26" border="0"></td>
+   <td><img src="img/spacer.gif" alt="" height="1" width="2" border="0"></td>
+   <td><img src="img/spacer.gif" alt="" height="1" width="90" border="0"></td>
+
+   <td><img src="img/spacer.gif" alt="" height="1" width="1" border="0"></td>
+  </tr>
+  <tr>
+   <td colspan="20">
+   <table border="0" cellpadding="0" cellspacing="0">
+	<tbody><tr>
+		<td><img src="img/space.gif" height="1" width="306" border="0"></td>
+		<td><img src="img/space.gif" height="1" width="126" border="0"></td>
+		<td><img src="img/space.gif" height="1" width="122" border="0"></td>
+		<td><img src="img/space.gif" height="1" width="146" border="0"></td>
+		<td><img src="img/space.gif" height="1" width="121" border="0"></td>
+		<td><img src="img/space.gif" height="1" width="37" border="0"></td>
+		<td><img src="img/space.gif" height="1" width="102" border="0"></td>
+		<td><img src="img/space.gif" height="1" width="21" border="0"></td>
+	</tr>
+	<tr>
+		<td rowspan="2"><img src="img/hdr_1.jpg" height="145" width="306" border="0"></td>
+		<td><a href="pdf/UNIFIN_Leasing.pdf" onmouseout="MM_swapImgRestore();" onmouseover="MM_swapImage('headerbtn1','','img/hdrb_2.jpg',1);"><img src="img/hdr_2.jpg" name="headerbtn1" height="41" width="126" border="0"></a></td>
+		<td><a href="pdf/UNIFIN_Credit.pdf" onmouseout="MM_swapImgRestore();" onmouseover="MM_swapImage('headerbtn2','','img/hdrb_3.jpg',1);"><img src="img/hdr_3.jpg" name="headerbtn2" height="41" width="122" border="0"></a></td>
+		<td><a href="pdf/UNIFIN_Factoring.pdf" onmouseout="MM_swapImgRestore();" onmouseover="MM_swapImage('headerbtn3','','img/hdrb_4.jpg',1);"><img src="img/hdr_4.jpg" name="headerbtn3" height="41" width="146" border="0"></a></td>
+		<td><a href="pdf/UNIFIN_Autos.pdf" onmouseout="MM_swapImgRestore();" onmouseover="MM_swapImage('headerbtn4','','img/hdrb_5.jpg',1);"><img src="img/hdr_5.jpg" name="headerbtn4" height="41" width="121" border="0"></a></td>
+		<td colspan="3"><a href="pdf/UNIFIN_Seguros.pdf" onmouseout="MM_swapImgRestore();" onmouseover="MM_swapImage('headerbtn5','','img/hdrb_6.jpg',1);"><img src="img/hdr_6.jpg" name="headerbtn5" height="41" width="160" border="0"></a></td>
+	</tr>
+	<tr>
+		<td colspan="5" bgcolor="#00233D"><div style="padding-left:50px; vertical-align:top">
+       <script type="text/javascript">
+AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0','width','420','height','100','src','promocion_oct2011_honda_hino','quality','high','pluginspage','http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash','wmode','transparent','movie','promocion_oct2011_honda_hino' ); //end AC code
+     </script><embed src="promocion_oct2011_honda_hino.swf" quality="high" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" wmode="transparent" type="application/x-shockwave-flash" height="100" width="420"> 
+        <noscript><img src="imagenes/banner_honda.jpg" alt="Honda Accord LX AT 2011 / Llévatelo por sólo $164 al día." />       </noscript>
+      </div></td>
+		<td><img src="img/hdr_8.jpg" height="104" width="102" border="0"></td>
+		<td><img src="img/hdr_9.jpg" height="104" width="21" border="0"></td>
+	</tr>
+	</tbody></table>
+   </td>
+  </tr>
+  <tr>
+   <td colspan="14"><img name="unifinanciar_r3_c1_" src="img/unifinanciar_r3_c1_.jpg" id="unifinanciar_r3_c1_" alt="" height="40" width="802" border="0"></td>
+   <td colspan="6"><a href="http://www.unifin.com.mx/web/wp-webim/client.php?locale=sp" onmouseout="MM_swapImgRestore();" onmouseover="MM_swapImage('unifinanciar_r3_c15_','','img/unifinanciar_r3_c15_f2.jpg',1);" target="_blank" onclick"if(navigator.useragent.tolowercase().indexof('opera')="" !="-1&amp;&amp;" window.event.preventdefault)window.event.preventdefault();this.newwindow="window.open('http://www.unifin.com.mx/web/wp-webim/client.php?locale=sp&amp;url='+escape(document.location.href)+'&amp;referrer='+escape(document.referrer),'webim','toolbar=0,scrollbars=0,location=0,status=1,menubar=0,width=640,height=480,resizable=1');this.newWindow.focus();this.newWindow.opener=window;return" false;"=""><img name="unifinanciar_r3_c15_" src="img/unifinanciar_r3_c15_.jpg" id="unifinanciar_r3_c15_" alt="Chat online" height="40" width="180" border="0"></a></td>
+   <td><img src="img/spacer.gif" alt="" height="40" width="1" border="0"></td>
+  </tr>
+  <tr>
+   <td rowspan="3" colspan="3"><img name="unifinanciar_r4_c1_" src="img/unifinanciar_r4_c1_.jpg" id="unifinanciar_r4_c1_" alt="" height="112" width="264" border="0"></td>
+
+   <td rowspan="14" colspan="4"><img name="unifinanciar_r4_c4_" src="img/unifinanciar_r4_c4_.jpg" id="unifinanciar_r4_c4_" alt="¿Qué necesitas para tu negocio?" height="387" width="257" border="0"></td>
+   <td class="celda_checkbox" style="padding-top: 12px;" bgcolor="#F2F2F2"><input name="res[]" id="res" value="1" onclick="slc(this);" tabindex="4" type="checkbox"></td>
+   <td colspan="6"><img name="unifinanciar_r4_c9_" src="img/unifinanciar_r4_c9_.jpg" id="unifinanciar_r4_c9_" alt="Arrendar algún tipo de vehículo o equipo" height="51" width="254" border="0"></td>
+   <td rowspan="13" colspan="6"><img src="img/unifinanciar_r4_c15_.jpg" alt="" name="unifinanciar_r4_c15_" usemap="#unifinanciar_r4_c15_Map" id="unifinanciar_r4_c15_" height="331" width="180" border="0"></td>
+   <td><img src="img/spacer.gif" alt="" height="51" width="1" border="0"></td>
+  </tr>
+  <tr>
+    <td class="celda_checkbox" style="padding-top: 5px;" bgcolor="#EEEEEE">      <input name="res[]" id="res" value="2" onclick="slc(this);" tabindex="5" type="checkbox">    </td>
+
+   <td colspan="6"><img name="unifinanciar_r5_c9_" src="img/unifinanciar_r5_c9_.jpg" id="unifinanciar_r5_c9_" alt="Capital de trabajo para que la operación no se interrumpa" height="48" width="254" border="0"></td>
+   <td><img src="img/spacer.gif" alt="" height="48" width="1" border="0"></td>
+  </tr>
+  <tr>
+   <td rowspan="3" class="celda_checkbox" style="padding-top: 2px;" bgcolor="#EAEAEA"><input name="res[]" id="res" value="3" onclick="slc(this);" tabindex="6" type="checkbox"></td>
+   <td rowspan="3" colspan="6"><img name="unifinanciar_r6_c9_" src="img/unifinanciar_r6_c9_.jpg" id="unifinanciar_r6_c9_" alt="Apoyar al personal mediante algún tipo de crédito" height="43" width="254" border="0"></td>
+   <td><img src="img/spacer.gif" alt="" height="13" width="1" border="0"></td>
+  </tr>
+  <tr>
+
+   <td rowspan="9"><img name="unifinanciar_r7_c1_" src="img/unifinanciar_r7_c1_.jpg" id="unifinanciar_r7_c1_" alt="" height="140" width="89" border="0"></td>
+   <td colspan="2"><img name="unifinanciar_r7_c2_" src="img/unifinanciar_r7_c2_.jpg" id="unifinanciar_r7_c2_" alt="Tu nombre" height="26" width="175" border="0"></td>
+   <td><img src="img/spacer.gif" alt="" height="26" width="1" border="0"></td>
+  </tr>
+  <tr>
+  <td colspan="2" rowspan="2" bgcolor="#E7E7E5"><input name="nombre" class="input_personales" id="nombre" tabindex="1" size="32" maxlength="100" type="text"></td>
+   <td><img src="img/spacer.gif" alt="" height="4" width="1" border="0"></td>
+  </tr>
+  <tr>
+
+  <td rowspan="3" class="celda_checkbox" style="padding-top: 4px;" bgcolor="#E8E8E8"><input name="res[]" id="res" value="6" onclick="slc(this);" tabindex="7" type="checkbox"></td>
+   <td rowspan="3" colspan="6"><img name="unifinanciar_r9_c9_" src="img/unifinanciar_r9_c9_.jpg" id="unifinanciar_r9_c9_" alt="Asesoría gratuita y ofertas para adquirir vehículos" height="45" width="254" border="0"></td>
+   <td><img src="img/spacer.gif" alt="" height="15" width="1" border="0"></td>
+  </tr>
+  <tr>
+   <td colspan="2"><img name="unifinanciar_r10_c2_" src="img/unifinanciar_r10_c2_.jpg" id="unifinanciar_r10_c2_" alt="Tu correo electrónico" height="28" width="175" border="0"></td>
+   <td><img src="img/spacer.gif" alt="" height="28" width="1" border="0"></td>
+  </tr>
+  <tr>
+
+  <td colspan="2" rowspan="2" bgcolor="#E7E7E5"><input name="email" class="input_personales" id="email" tabindex="2" size="32" maxlength="100" type="text"><input name="emails" class="input_personaless" id="emails" size="32" maxlength="100" type="text"></td>
+   <td><img src="img/spacer.gif" alt="" height="2" width="1" border="0"></td>
+  </tr>
+  <tr>
+<td rowspan="2" class="celda_checkbox" style="padding-top: 4px;" bgcolor="#E5E7E6"><input name="res[]" id="res" value="4" onclick="slc(this);" tabindex="8" type="checkbox"></td>
+   <td rowspan="2" colspan="6"><img name="unifinanciar_r12_c9_" src="img/unifinanciar_r12_c9_.jpg" id="unifinanciar_r12_c9_" alt="Asegurar bienes" height="31" width="254" border="0"></td>
+   <td><img src="img/spacer.gif" alt="" height="18" width="1" border="0"></td>
+  </tr>
+  <tr>
+
+   <td rowspan="2" colspan="2"><img name="unifinanciar_r13_c2_" src="img/unifinanciar_r13_c2_.jpg" id="unifinanciar_r13_c2_" alt="Tu teléfono (opcional)" height="28" width="175" border="0"></td>
+   <td><img src="img/spacer.gif" alt="" height="13" width="1" border="0"></td>
+  </tr>
+  <tr>
+      <td rowspan="2" class="celda_checkbox" style="padding-top: 2px;" bgcolor="#E3E5E4"><input name="res[]" id="res" value="5" onclick="slc(this);" tabindex="9" type="checkbox"></td>
+   <td rowspan="2" colspan="6"><img name="unifinanciar_r14_c9_" src="img/unifinanciar_r14_c9_.jpg" id="unifinanciar_r14_c9_" alt="Una fianza empresarial o personal" height="34" width="254" border="0"></td>
+   <td><img src="img/spacer.gif" alt="" height="15" width="1" border="0"></td>
+  </tr>
+  <tr>
+
+     <td colspan="2" bgcolor="#E7E7E5"><input name="tel" class="input_personales" id="tel" tabindex="3" size="32" maxlength="20" type="text"></td>
+   <td><img src="img/spacer.gif" alt="" height="19" width="1" border="0"></td>
+  </tr>
+  <tr>
+   <td rowspan="2" colspan="3"><img name="unifinanciar_r16_c1_" src="img/unifinanciar_r16_c1_.jpg" id="unifinanciar_r16_c1_" alt="" height="135" width="264" border="0"></td>
+   <td rowspan="2" colspan="7" valign="top" background="img/unifinanciar_r16_c8_.jpg"><select name="como" class="input_largo" id="como" tabindex="10">
+     <option value="">¿Cómo te enteraste de nosotros?</option>
+    <option value=""></option>
+<option value="TV">TV:</option>
+	<option value="Milenio TV">&nbsp;&nbsp;Milenio TV</option>
+	<option value="Cadena Tres">&nbsp;&nbsp;Cadena Tres</option>
+	<option value=""></option>
+<option value="IMAGEN RADIO">IMAGEN RADIO:</option>
+	<option value="Pedro Ferriz de Con">&nbsp;&nbsp;Pedro Ferriz de Con</option>
+<option value="RADIO FORMULA">RADIO FORMULA:</option>
+	<option value="M. Beteta">&nbsp;&nbsp;M. Beteta</option>
+	<option value="López Dóriga">&nbsp;&nbsp;López Dóriga</option>
+	<option value="Maricarmen Cortés">&nbsp;&nbsp;Maricarmen Cortés</option>	
+	<option value="Paola Rojas">&nbsp;&nbsp;Paola Rojas</option>
+	<option value="Loret de Mola">&nbsp;&nbsp;Loret de Mola</option>
+	<option value=""></option>
+<option value="PRENSA">PRENSA:</option>
+	<option value="Reforma">&nbsp;&nbsp;Reforma</option>
+	<option value="Milenio">&nbsp;&nbsp;Carlos Mota</option>
+	<option value="Excelsior">&nbsp;&nbsp;Excelsior</option>
+	<option value="El Economista">&nbsp;&nbsp;El Economista</option>
+	<option value="El Financiero">&nbsp;&nbsp;El Financiero</option>
+	<option value="24 Hrs">&nbsp;&nbsp;24 Hrs</option>
+	<option value=""></option>
+<option value="ONLINE">ONLINE:</option>
+	<option value="reforma.com">&nbsp;&nbsp;reforma.com</option>
+	<option value="milenio.com">&nbsp;&nbsp;milenio.com</option>
+	<option value="cnnexpansion.com">&nbsp;&nbsp;cnnexpansion.com</option>
+	<option value=""></option>
+<option value="REVISTAS">REVISTAS:</option>
+	<option value="Expansion">&nbsp;&nbsp;Expansion</option>
+	<option value="Escala">&nbsp;&nbsp;Escala</option>
+	<option value="Interjet">&nbsp;&nbsp;Interjet</option>
+	<option value="Volaris">&nbsp;&nbsp;Volaris</option>
+	<option value="Automovil">&nbsp;&nbsp;Automovil</option>
+	<option value="Dinero Inteligente">&nbsp;&nbsp;Dinero Inteligente</option>
+	<option value="Chilango">&nbsp;&nbsp;Chilango</option>
+	<option value=""></option>
+	<option value="Recomendación">&nbsp;&nbsp;Recomendación</option>	
+   </select>
+
+     <textarea name="comentarios" id="comentarios" cols="45" rows="" onfocus="this.value=''">Comentarios</textarea>
+     <div class="terminos"><input name="acepto" id="acepto" value="" onclick="slc(this);" type="checkbox">
+       Acepto las 
+       <a href="http://www.unifinanciar.com/unifinanciar_legal.html" target="_blank">condiciones de uso y las políticas de privacidad.</a></div>   <input name="lista" id="lista" value="" type="hidden"></td>
+   <td><img src="img/spacer.gif" alt="" height="79" width="1" border="0"></td>
+  </tr>
+  <tr>
+   <td colspan="4"><input name="enviar" id="enviar" value="enviar" src="img/unifinanciar_r17_c15_.jpg" alt="Enviar" tabindex="11" type="image"></td>
+
+   <td colspan="2"><img name="unifinanciar_r17_c19_" src="img/unifinanciar_r17_c19_.jpg" id="unifinanciar_r17_c19_" alt="" height="56" width="92" border="0"></td>
+   <td><img src="img/spacer.gif" alt="" height="56" width="1" border="0"></td>
+  </tr>
+  <tr>
+   <td colspan="3"><img name="unifinanciar_r18_c1_" src="img/unifinanciar_r18_c1_.jpg" id="unifinanciar_r18_c1_" alt="" height="190" width="264" border="0"></td>
+   <td colspan="4"><img name="unifinanciar_r18_c4_" src="img/unifinanciar_r18_c4_.jpg" id="unifinanciar_r18_c4_" alt="" height="190" width="257" border="0"></td>
+   <td colspan="13" background="img/unifinanciar_r18_c8_.jpg">    <script type="text/javascript">
+AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0','width','461','height','190','src','ipod','quality','high','pluginspage','http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash','movie','ipod','wmode','transparent' ); //end AC code
+   </script><embed src="ipod.swf" quality="high" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" wmode="transparent" type="application/x-shockwave-flash" height="190" width="461"> 
+       <noscript>
+ <img name="unifinanciar_r18_c8_" src="img/unifinanciar_r18_c8_.jpg" width="461" height="190" border="0" id="unifinanciar_r18_c8_" alt="" />
+  </noscript>
+</td>
+   <td><img src="img/spacer.gif" alt="" height="190" width="1" border="0"></td>
+  </tr>
+  <tr>
+   <td colspan="3"><img name="unifinanciar_r19_c1_" src="img/unifinanciar_r19_c1_.jpg" id="unifinanciar_r19_c1_" alt="" height="242" width="264" border="0"></td>
+   <td colspan="4"><img name="unifinanciar_r19_c4_" src="img/unifinanciar_r19_c4_.jpg" id="unifinanciar_r19_c4_" alt="" height="242" width="257" border="0"></td>
+   <td colspan="13"><img name="unifinanciar_r19_c8_" src="img/unifinanciar_r19_c8_.jpg" id="unifinanciar_r19_c8_" alt="" height="242" width="461" border="0"></td>
+   <td><img src="img/spacer.gif" alt="" height="242" width="1" border="0"></td>
+  </tr>
+
+  <tr>
+   <td colspan="20"><img name="unifinanciar_r20_c1_" src="img/unifinanciar_r20_c1_.jpg" id="unifinanciar_r20_c1_" alt="Unifin | |Soluciones financieras a tu medida" height="137" width="982" border="0"></td>
+   <td><img src="img/spacer.gif" alt="" height="137" width="1" border="0"></td>
+  </tr>
+  <tr>
+   <td colspan="20">
+   
+   <table style="display: inline-table;" width="982" border="0" cellpadding="0" cellspacing="0">
+    <tbody><tr>
+        <td><img src="img/footerb_1.jpg" height="40" width="36" border="0"></td>
+        <td><a href="http://www.unifinanciar.com/unifinanciar_legal.html" target="_blank" onmouseout="MM_swapImgRestore();" onmouseover="MM_swapImage('footer_r1_c1_s1','','img/footerb_2.jpg',1);"><img name="footer_r1_c1_s1" src="img/footer_2.jpg" height="40" width="101" border="0"></a></td>
+        <td><img src="img/footerb_3.jpg" height="40" width="178" border="0"></td>
+        <td><a href="http://www.unifin.com.mx/" target="_blank" onmouseout="MM_swapImgRestore();" onmouseover="MM_swapImage('footer_r1_c3_s1','','img/footerb_4.jpg',1);"><img name="footer_r1_c3_s1" src="img/footer_4.jpg" height="40" width="135" border="0"></a></td>
+        <td><img src="img/footerb_5.jpg" height="40" width="253" border="0"></td>
+        <td><a href="http://www.unifin.com.mx/web/unileasing.php" target="_blank" onmouseout="MM_swapImgRestore();" onmouseover="MM_swapImage('footer_r1_c5_s1','','img/footerb_6.jpg',1);"><img name="footer_r1_c5_s1" src="img/footer_6.jpg" height="40" width="47" border="0"></a></td>
+        <td><a href="http://www.unifin.com.mx/web/unifactoring.php" target="_blank" onmouseout="MM_swapImgRestore();" onmouseover="MM_swapImage('footer_r1_c7_s1','','img/footerb_7.jpg',1);"><img name="footer_r1_c7_s1" src="img/footer_7.jpg" height="40" width="57" border="0"></a></td>
+        <td><a href="http://www.unifin.com.mx/web/unifincredit.php" target="_blank" onmouseout="MM_swapImgRestore();" onmouseover="MM_swapImage('footer_r1_c6_s1','','img/footerb_8.jpg',1);"><img name="footer_r1_c6_s1" src="img/footer_8.jpg" height="40" width="38" border="0"></a></td>
+        <td><a href="http://www.unifin.com.mx/web/uniauto.php" target="_blank" onmouseout="MM_swapImgRestore();" onmouseover="MM_swapImage('footer_r1_c8_s1','','img/footerb_9.jpg',1);"><img name="footer_r1_c8_s1" src="img/footer_9.jpg" height="40" width="36" border="0"></a></td>
+        <td><a href="http://www.unifin.com.mx/web/uniseguros.php" target="_blank" onmouseout="MM_swapImgRestore();" onmouseover="MM_swapImage('footer_r1_c9_s1','','img/footerb_10.jpg',1);"><img name="footer_r1_c9_s1" src="img/footer_10.jpg" height="40" width="49" border="0"></a></td>
+        <td><img src="img/footerb_11.jpg" height="40" width="52" border="0"></td>
+    </tr>
+    </tbody></table>
+
+</td>
+   <td><img src="img/spacer.gif" alt="" height="34" width="1" border="0"></td>
+  </tr>
+</tbody></table>
+</form>
+<map name="unifinanciar_r4_c15_Map" id="unifinanciar_r4_c15_Map">
+  <area shape="rect" coords="51,33,81,69" href="http://twitter.com/#%21/Unifinanciar" target="_blank" alt="Twitter">
+  <area shape="rect" coords="85,33,120,69" href="http://www.facebook.com/pages/Unifin-Financiera/139771439372160" target="_blank" alt="Facebook">
+  <area shape="rect" coords="122,33,153,69" href="http://maps.google.com.mx/maps/place?cid=11758226933237058182&amp;q=unifin+mexico&amp;hl=es&amp;sll=21.533726,-100.862801&amp;sspn=5.041861,4.055958&amp;ie=UTF8&amp;ll=24.47715,-105.941162&amp;spn=0,0&amp;z=7" target="_blank" alt="Google maps">
+</map>
+
+
+
+
+</body>

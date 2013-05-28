@@ -1,0 +1,861 @@
+<head>
+		<title>GoToMeeting : Online Meetings Made Easy</title>
+
+<script type="text/javascript">
+	var device = false;
+		var referrer = document.referrer;
+	if(referrer.indexOf('?') > 0)
+		referrer = referrer.substring(0,referrer.indexOf('?'))
+	var sameDomain = false;
+	var locale = "";
+	if( referrer ) {
+		if( referrer.indexOf('www3.gotomeeting.com') != -1 )
+			sameDomain = true;
+	}
+	if( device && !sameDomain )
+		location.replace( 'http://m.gotomeeting.com/fec/' );
+</script>
+		<link rel="Shortcut Icon" href="/images/g2m_favicon.ico">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="robots" content="noindex,nofollow">
+		<script type="text/javascript" src="/images/fe/js/jquery/jquery-1.3.2.js"></script>
+		<style type="text/css">
+			body {
+	background: #e8e8e8 url('https://www.citrixonlinecdn.com/g2mimages/ad/g2t/g2t_lp_bg_4x700.png') repeat-x;
+	font: 12px arial,verdana,helvetica,sans-serif;
+	margin: 0 auto;
+	width: 766px;
+}
+a img {
+	border: 0;
+}
+div.clearBoth {
+	clear: both;
+}
+a {
+	color: #fd8a0b;
+}
+p {
+	margin: 0 0 15px;
+}
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+h2 {
+	font-size: 20px;
+	font-weight: normal;
+	margin: 30px 0 15px;
+}
+h3 {
+	font-size: 16px;
+	font-weight: bold;
+	margin: 20px 0;
+}
+h4 {
+	font-size: 14px;
+	font-weight: bold;
+	margin: 0;
+	padding: 0;
+}
+.header {
+	margin: 15px 0 0;
+}
+.header .customerLinks {
+	float: right;
+	font-size: 11px;
+	margin: 0 35px 10px 0;
+}
+.header .customerLinks a {
+		color: #999;
+}
+.header .logo {
+	float: left;
+	margin-top: -6px;
+}
+.header .tagline {
+	float: right;
+	margin: 20px 25px;
+}
+.header .subHead {
+	background: url('https://www.citrixonlinecdn.com/g2mimages/ad/csslp/g2m_sidelp_sprite.png') -716px -236px no-repeat #fd8a0b;
+	color: #fff;
+	font-size: 22px;
+	height: 46px;
+	line-height: 43px;
+	margin: 0;
+	padding: 0 0 0 20px;
+}
+.header .subHead .cornerRt {
+	background: url('https://www.citrixonlinecdn.com/g2mimages/ad/csslp/g2m_sidelp_sprite.png') -686px -236px no-repeat;
+	display: block;
+	float:right;
+	height:46px;
+	width: 20px;
+}
+.content {
+	background: url("https://www.citrixonlinecdn.com/g2mimages/ad/csslp/g2m_form_bg_2x102.jpg") repeat-x scroll 0 bottom #fff;
+	border-bottom: 4px solid #000;
+	font-size: 14px;
+	margin-top: 10px;
+	padding: 0 30px 20px;
+}
+.content div.leftColumn {
+	float: left;
+}
+.content div.rightColumn {
+	margin: 0;
+}
+div.rightColumn h2 {
+	color: #ed7f1e;
+	font-size: 29px;
+	margin: 0 0 5px;
+	padding: 20px 0 0;
+}
+.content ul {
+	margin: 0 0 0 10px;
+}
+.content ul li {
+	background: url('https://www.citrixonlinecdn.com/g2mimages/ad/csslp/g2m_sidelp_sprite.png') no-repeat -765px -12px;
+	padding: 0 0 7px 15px;
+}
+.content .adminFeature {
+	float: left;
+	margin: 30px 30px 20px;
+}
+.questions {
+	color: #000;
+	float: right;
+	font-size: 13px;
+	font-weight: bold;
+	margin: 20px 0 0;
+	width: 207px;
+}
+.questions .phone {
+	color: #7d7d7d;
+	display: block;
+	font-weight: normal;
+}
+.noWrap {
+	white-space: nowrap;
+}
+.questions div {
+	background: url('https://www.citrixonlinecdn.com/g2mimages/ad/csslp/g2m_sidelp_sprite.png') -530px -17px no-repeat;
+	padding: 10px 10px 0;
+}
+.questions div.queEnd {
+	background-position: -530px -151px;
+	height: 10px;
+	padding: 0;
+}
+.adminFeature {
+	color: #6a6a6a;
+	float: right;
+	font-size: 12px;
+	margin: 40px 20px 20px;
+}
+.adminFeature a {
+	color: #6a6a6a;
+	font-size: 14px;
+	font-weight: bold;
+}
+.learnMore {
+	background: url('https://www.citrixonlinecdn.com/g2mimages/ad/csslp/g2m_sidelp_sprite.png') -607px -172px no-repeat;
+	float: left;
+	height: 50px;
+	margin: 25px 0 0 -30px;
+	width: 135px;
+}
+.learnMore a {
+	color: #fff;
+	display: block;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 44px;
+	text-align: center;
+}
+.content h3 {
+	margin-top: 0;
+}
+.meetingNew {
+	color: #fd8a0b;
+}
+.learnMoreContent {
+	background: url("https://www.citrixonlinecdn.com/g2mimages/ad/csslp/g2m_content_bg_2x193.png") repeat-x 0 bottom;
+	border-bottom: 4px solid #000000;
+	padding: 0 0 15px 15px;
+}
+.learnMoreContent div.leftColumn {
+	float: left;
+	font-size: 13px;
+	line-height: 150%;
+	width: 305px;
+}
+.learnMoreContent div.rightColumn {
+	clear: both;
+}
+ul.lmButton li {
+	float: left;
+	margin: 0 28px 0 13px;
+	padding: 20px 0 0;
+}
+ul.lmButton li a{
+	background: url('https://www.citrixonlinecdn.com/g2mimages/ad/g2t/lm_btn_bg_163x56.png') no-repeat;
+	color: #fd8a0b;
+	display: block;
+	font-size: 15px;
+	font-weight: bold;
+	height: 56px;
+	line-height: 54px;
+	text-align: center;
+	text-decoration: none;
+	text-indent: -5px;
+	width: 163px;
+}
+.learnMoreContent .questions {
+	margin: 30px 30px 20px;
+}
+.learnMoreContent .form {
+	background:none;
+	border: none;
+	float: right;
+	margin-right: -6px;
+	padding:0;
+}
+.learnMoreContent .logoQuotes {
+	float: right;
+	margin: 20px;
+}
+.learnMoreContent .logoQuotes ul li {
+	float: left;
+	margin: 0 40px;
+}
+.learnMoreContent .logoQuotes ul li.pcWorld {
+	padding: 20px 0;
+}
+.form {
+	background: url('https://www.citrixonlinecdn.com/g2mimages/ad/csslp/g2m_woman_285x362.png') no-repeat 0 10px;
+	font-size: 11px;
+	padding-left: 261px;
+	position: relative;
+}
+div.formTab {
+	display: inline;
+}
+.formTab .formTabText {
+	background: #fd8a0b url('https://www.citrixonlinecdn.com/g2mimages/ad/csslp/g2m_tab_bg_4x31.gif') repeat-x;
+	color: #ffffff;
+	float: left;
+	font-size: 16px;
+	height: 31px;
+	line-height: 30px;
+	padding: 0 40px 0 20px;
+}
+.formTab .tabEnd {
+	background: url('https://www.citrixonlinecdn.com/g2mimages/ad/csslp/g2m_sidelp_sprite.png') no-repeat -145px -521px;
+	float: left;
+	height: 31px;
+	width: 25px;
+}
+.form h4 {
+	font-size: 20px;
+	margin: 0 0 20px;
+}
+.form h4 div, .form h4 span {
+	display: block;
+	font-size: 17px;
+	font-weight: normal;
+}
+form {
+	margin-top: -10px;
+}
+form, .formEnd {
+	background: url('https://www.citrixonlinecdn.com/g2mimages/ad/csslp/g2m_sidelp_sprite.png') no-repeat -4px -15px;
+	padding: 23px 0 0 40px;
+	width: 470px;
+}
+.form ul {
+	margin: 0;
+	padding: 0 0 19px;
+}
+
+.form ul li {
+	display: inline;
+	list-style-type: none;
+	padding: 0 0 15px 0;
+}
+ul.leftContent {
+	float: left;
+	width: 460px;
+}
+ul.rightContent {
+	float: right;
+	margin: 0 0 -60px;
+	width: 180px;
+}
+.form ul.rightContent li {
+	padding: 0;
+}
+.form ul li.leftColumn {
+	float: left;
+	width: 235px;
+}
+.form ul li.rightColumn {
+	clear: right;
+	float: left;
+	width: 200px;
+}
+.form ul li.singleColumn {
+	clear: both;
+	display: block;
+	padding: 4px 0 3px;
+}
+.form ul li.leftColumn select {
+	float: left;
+	width: 150px;
+}
+.tos {
+	font-weight: bold;
+}
+.formtext {
+	color: #393838;
+	font-weight: bold;
+}
+.fields {
+	border: 1px solid #a5acb2;
+	margin-top: 5px;
+	padding: 6px;
+	width: 190px;
+}
+label.first {
+	color: #fd8a0b;
+}
+input.first {
+	border: 1px solid #fd8a0b;
+}
+.checkbox input {
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+.checkbox div {
+	display: inline;
+	margin: 0 0 0 5px;
+}
+label.error, div.error {
+	color: #c00;
+}
+input.error {
+	border-color: #c00;
+}
+div.errorText {
+	color: #c00;
+	padding: 0 0 15px;
+}
+.autoSetup {
+	background: url('https://www.citrixonlinecdn.com/g2mimages/ad/csslp/g2m_sidelp_sprite.png') no-repeat -541px -246px;
+	float: right;
+	height: 30px;
+	margin: 7px 40px 0 0;
+	width: 90px;
+}
+.continue {
+	background: url('https://www.citrixonlinecdn.com/g2mimages/ad/csslp/g2m_continue_sprite.png') no-repeat 0 0;
+	height: 38px;
+	width: 145px;
+}
+.continue:hover {
+	background-position: 0 -40px;
+}
+.continue:active {
+	background-position: 0 -80px;
+}
+.disclaimer, .disclaimer a {
+	color: #757575;
+	font-size: 10px;
+}
+img.trusteLogo {
+	margin: 0 0 10px 0;
+	display: block;
+}
+.formEnd {
+	background-position: -4px -570px;
+	height: 30px;
+	padding-top: 0;
+}
+.extraBodyContent {
+	color: #fd8a0b;
+	font-weight: bold;
+	padding-left: 15px;
+}
+.form .disclaimer {
+	padding-right: 20px;
+}
+.form .disclaimer a:first-child {
+	display: block;
+	width: 120px;
+}
+#validationError {
+	color: #CC0000;
+	margin-bottom: 5px;
+}
+.formTabForYou, .formTabForCompany {
+	cursor: pointer;
+}
+.formTabForCompany {
+	display: none;
+}
+.footer {
+	margin: 15px 25px 0 0;
+}
+.footer .copyright {
+	float: left;
+	width: 600px;
+}
+.footer .disclaimer {
+	margin-bottom: 5px;
+}
+.footer .companyLogo {
+	color: #696969;
+	float: right;
+	font-size: 11px;
+}
+.imgTagline {
+	margin: 28px 0 10px 10px;
+}
+.partner.logo {
+	float: left;
+	margin-top: 10px;
+}
+.partnerLogo {
+	float: right;
+	margin: 12px 35px 0;
+}
+.rightLogo {
+    float: right;
+    margin-right: 25px;
+}
+/* Form Validation*/
+input.validation-failed[type="text"], select.validation-failed, textarea.validation-failed, input.validation-failed[type="checkbox"], .invalid {
+	background-color: #fff0f0;
+	border: 1px solid #c00;
+	margin: 1px;
+}
+.validation-advice, .error-label {
+	color: #c00;
+	font-weight: bold;
+	line-height: 14px;
+	margin: 5px 0;
+	position: inline;
+	white-space: nowrap;
+	width: 150px;
+}
+.error-field label {
+	color: #c00;
+}
+.prefill {
+	color: #858585;
+}
+
+									.form { background: url(/images/ad/csslp/ipad_ltlp_bg.png) no-repeat bottom left;}
+						form { margin-top: -5px;}
+						.formEnd { height: 25px;}
+						div.rightColumn h2 { color: #000; font-size: 22px;}
+						div.rightColumn p { font-size: 16px;}
+						.questions { display: none; }
+						.learnMore { background: #a2a2a2; border-radius: 7px 0 0 7px; float: right; margin: 25px -30px 0 0; }
+						.learnMore a { line-height: 48px; }
+						.collab { color: #e87926; float: left; margin: 20px 0 0; width: 500px; }
+						.collab .quest{ color: #000; font-size: 14px; }
+						.content .adminFeature { margin: 0 }
+						.setupIcon { background: url(/images/ad/csslp/2min-setup.gif) no-repeat; float: left; height: 97px; width: 55px; margin-right: 20px;}
+						.form ul li.singleColumn { clear: none;} 
+						.form .disclaimer { margin: -40px 0 0 77px; } 
+						ul.leftContent { padding: 3px }
+					</style>
+		<!--[if lte IE 8]>
+			<style type="text/css">
+												.form { position: static; }
+							</style>
+		<![endif]-->
+		<!--[if IE 7]>
+			<style type="text/css">
+							.clearBoth, .formEnd {
+				margin-top: -19px;
+			}
+			.content .clearBoth, .learnMoreContent .clearBoth {
+				margin-top: 0;
+			}
+			.disclaimerError {
+				padding-top: 19px;
+			}
+			.checkbox input {
+				float: none;
+			}
+			#corpForm {
+				margin-top: 19px;
+			}
+			.formArrows {
+				margin-top: 19px;
+			}
+												.formEnd { margin-top: -20px;}
+								.form ul li.singleColumn { padding: 1px 0;}
+								img.trusteLogo { margin: 18px 0px 10px;}
+							</style>
+		<![endif]-->
+		<!--[if IE 6]>
+			<style type="text/css">
+										.autoSetup, form, .formEnd, .header .subHead, .formTab .tabEnd, .content ul li {
+				background-image: url('/images/ad/g2t/ie6/g2t_lp_sprite.png');
+			}
+			.continue, .continue:hover, .continue:active {
+				background-image: url('/images/ad/csslp/ie6/g2m_continue_sprite.png');
+			}
+			.content div.image {
+				background-image: url('/images/ad/csslp/ie6/g2m_woman_347x296.png');
+			}
+			ul.lmButton li a{
+				background-image: url('/images/ad/g2t/ie6/lm_btn_bg_163x56.png');
+			}
+			.clearBoth, .formEnd {
+				margin-top: -19px;
+			}
+			.content .clearBoth, .learnMoreContent .clearBoth {
+				margin-top: 0;
+			}
+			.disclaimerError {
+				padding-top: 19px;
+			}
+			.checkbox input {
+				float: none;
+			}
+														</style>
+		<![endif]-->
+		<script type="text/javascript">
+<!--
+jQuery( document ).ready( function(){
+	updateLinks();
+	setInterval( updateLinks, 1000);
+	jQuery("a[rel='fill']").click(function() {
+		jQuery('.navlink').removeClass('current');
+		jQuery(this).addClass('current');
+		var wrap = jQuery("#dynamicContent");
+		if(this.href.indexOf("?")!=-1)
+			wrap.load(this.href+"&dynamic=true");
+		else
+			wrap.load(this.href+"?dynamic=true");
+		updateLinks();
+		return false;
+	});
+	// For Partner Pages //
+	jQuery('.formTabForCompany').show();
+	jQuery(".formTabForYou").click(function(){
+			jQuery(".formTabForCompany").removeClass('active');
+			jQuery(this).addClass('active');
+			jQuery("div#corpForm").hide();
+			jQuery('div#persForm').show();
+			jQuery('.formArrows').css('margin-left','48px');
+		});
+	jQuery(".formTabForCompany").click(function(){
+			jQuery(".formTabForYou").removeClass('active');
+			jQuery(this).addClass('active');
+			jQuery('div#persForm').hide();
+			jQuery("div#corpForm").show();
+			jQuery('.formArrows').css('margin-left','193px');
+		});
+
+})
+function updateLinks() {
+	jQuery("a[rel='external']").unbind('click');
+	jQuery("a[rel='external']").click(function() {
+		window.open(this.href);
+		return false;
+	});
+	jQuery("a[rel='popup']").click(function() {
+		var delim = (this.href.indexOf('?') >= 0) ? '&' : '?';
+		var h = parseInt(getParameterByNameFromURL('height', this.href));
+		var w = parseInt(getParameterByNameFromURL('width',  this.href));
+		if (!h) { h = 500; }
+		if (!w) { w = 600; }
+		var features = "height=" + h + ",width=" + w + ",menubar=0,status=0,location=0,toolbar=0,scrollbars=yes,resizable=yes";
+		newwindow = window.open(this.href , 'newPopup', features);
+		return false;
+	});
+}
+function getParameterByNameFromURL(name, url) {
+	name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+	var regexS = "[\\?&]" + name + "=([^&#]*)";
+	var regex = new RegExp(regexS);
+	var results = regex.exec(url);
+	if(results == null) {
+		return "";
+	}
+	else {
+		return results[1];
+	}
+}
+$(function() {
+	$('.pullLink').removeClass('hiddenLink');
+});
+$(function() {
+	$('.hideLink').addClass('hiddenLink');
+});
+function popupHelp(url) {
+	return popup(url, "help", 350, 200);
+}
+function popup(url) {
+	return popup(url, "popup");
+}
+function popup(url, title) {
+	return popup(url, title, 400, 500);
+}
+function popup(url, title, width, height) {
+	window.open(url, "help", "width=" + width + ",height=" + height + ",scrollbars=yes,toolbar=no;locationbar=no;statusbar=no,resizable=yes");
+	return false;
+}
+function popupNoScrollBar(url, title, width, height) {
+	window.open(url, "help", "width=" + width + ",height=" + height + ",scrollbars=no,toolbar=no;locationbar=no;statusbar=no,resizable=no");
+	return false;
+}
+
+var spu=true;
+var noSubmit=true;
+
+
+function chkIt() {
+	spu=false;
+}
+var clickTime = 0;
+function clickTimer() {
+	if (clickTime + 1000 < new Date().getTime()) {
+		clickTime = new Date().getTime();
+		return true;
+	} else {
+		return false;
+	}
+}
+
+function getCenter(retNum) {
+	x = 300; y = 50;
+	if (window.screen) {
+		if(screen.availWidth) {
+			x = screen.availWidth / 2 - 150;
+			y = screen.availHeight / 2 - 200;
+		} else if (screen && screen.width) {
+			x = screen.width / 2 - 150;
+			y = screen.height / 2 - 200;
+		}
+	}
+	if (x < 0) { x = 10; } else if (x > 800) { x = 500; }
+	if (y < 0) { y = 10; } else if (y > 600) { y = 500; }
+	if (retNum)
+		return new Array(x, y);
+	else
+		return 'screenX='+x+ ',left='+x+ ',screenY='+y+ ',top='+y;
+}
+
+
+function getMouseCoords(e) {
+	var coordX = 0;
+	var coordY = 0;
+	if (!e) var e = window.event;
+	if (e.pageX || e.pageY) {
+		coordX = e.pageX;
+		coordY = e.pageY;
+	} else if (e.clientX || e.clientY) {
+		coordX = e.clientX + document.body.scrollLeft;
+		coordY = e.clientY + document.body.scrollTop;
+	} else { return null;	}
+	if (coordX < 0)	coordX = 0;
+	if (coordY < 0)	coordY = 0;
+	return (new Array(coordX, coordY));
+}
+
+function popup(_url, _ttl, _wid, _hig, _lft, _top, _sbr, _tbr, _lbr, _stt, _mbr, _rsz) {
+	if(!_url) _url="/en_US/entry/entry.tmpl";
+	if(!_ttl) _ttl="popup";
+	if(!_wid) _wid="200";
+	if(!_hig) _hig="200";
+	if(!_lft) _pos=getCenter();
+	else _pos=",screenX=" + _lft + ",left=" + _lft + ",screenY" + _top + ",top=" + _top;
+	if(!_sbr) _sbr="yes";
+	if(!_tbr) _tbr="no";
+	if(!_lbr) _lbr="no";
+	if(!_stt) _stt="no";
+	if(!_mbr) _mbr="no";
+	if(!_rsz) _rsz="no";
+	popupWin = window.open(_url, _ttl, "width=" + _wid + ",height=" + _hig + _pos + ",scrollbars=" + _sbr + ",toolbar=" + _tbr + ",location=" + _lbr + ",status=" + _stt + ",menubar=" + _mbr + ",resizable=" + _rsz);
+	setTimeout('popupWin.focus()', 100);
+	return false;
+}
+
+function goUrl(_url) {
+	if((window.opener) && (!window.opener.closed))
+		window.opener.location.href=_url
+	else
+		newWin = window.open(_url, "newWin")
+	return false;
+}
+
+var disableFocus = false;
+function disFoc() {
+	disableFocus = true;
+}
+function goFocus() {
+  var theForm = document.forms[0];
+	for(i=0;i<theForm.length;i++)
+		if(((theForm.elements[i].type=="text") || (theForm.elements[i].type=="password") || (theForm.elements[i].type=="textarea")) && (theForm.elements[i].value=="") && (!disableFocus)) {
+			theForm.elements[i].focus();
+			break;
+		}
+}
+function formSubmit() {
+	document.forms[0].submit()
+}
+//-->
+</script>
+	<script id="utag_citrix.collaboration-lp_1" src="//tags.tiqcdn.com/utag/citrix/collaboration-lp/prod/utag.1.js?utv=ut4.002.201305170613" type="text/javascript"></script><script id="utag_citrix.collaboration-lp_2" src="//tags.tiqcdn.com/utag/citrix/collaboration-lp/prod/utag.2.js?utv=ut4.002.201305170613" type="text/javascript"></script><script id="utag_citrix.collaboration-lp_3" src="//tags.tiqcdn.com/utag/citrix/collaboration-lp/prod/utag.3.js?utv=ut4.002.201305170613" type="text/javascript"></script><script id="utag_citrix.collaboration-lp_30" src="//tags.tiqcdn.com/utag/citrix/collaboration-lp/prod/utag.30.js?utv=ut4.002.201305170613" type="text/javascript"></script><script id="utag_citrix.collaboration-lp_70" src="//tags.tiqcdn.com/utag/citrix/collaboration-lp/prod/utag.70.js?utv=ut4.002.201305170613" type="text/javascript"></script></head>
+	<body onload="goFocus();">
+		<div class="container">
+			<div class="header">
+							<div class="customerLinks">
+		<a href="/island/login.tmpl">Customer Log In</a>
+		|
+		<a href="http://www.joingotomeeting.com/?__col_mkt_cookies=__col_visit%3Dd887c7f4-7a35-4c40-a619-1d33a93e6239%3B%20__col_first_track_GoToMeeting%3Dtrue%3B%20__col_mkt_GoToMeeting%3DFIS_name%253Ddirect%2526FIS_leg%253D%252Ft%252Fdirect%252Fsite%252FDEFAULT%2526LST_name%253DMIB00334_gcont%2526LST_leg%253D%252Ft%252Fdirect%252Fsite%252FDEFAULT%3B%20__col_track_GoToMeeting%3D1%3B%20__col_first_track_GoToWebinar%3Dtrue%3B%20__col_mkt_GoToWebinar%3DFIS_name%253Ddirect%2526FIS_leg%253D%252Ft%252Fdirect%252Fsite%252FDEFAULT%2526LST_name%253DMIB00334_gcont%2526LST_leg%253D%252Ft%252Fdirect%252Fsite%252FDEFAULT%3B%20__col_track_GoToWebinar%3D1%3B%20__col_first_track_GoToTraining%3Dtrue%3B%20__col_mkt_GoToTraining%3DFIS_name%253Ddirect%2526FIS_leg%253D%252Ft%252Fdirect%252Fsite%252FDEFAULT%2526LST_name%253DMIB00334_gcont%2526LST_leg%253D%252Ft%252Fdirect%252Fsite%252FDEFAULT%3B%20__col_track_GoToTraining%3D1">Join a Meeting</a>
+			</div>
+			<div class="clearBoth"></div>
+
+			<div class="logo">
+				<img src="https://www.citrixonlinecdn.com/g2mimages/ad/csslp/g2mlogo_black.gif" alt="GoToMeeting">
+			</div>
+				<div class="tagline">
+				<img src="https://www.citrixonlinecdn.com/g2mimages/ad/csslp/g2m_tagline_210x18.gif" alt="Online Meetings Made Easy">
+			</div>
+				<div class="clearBoth"></div>
+			<noscript>
+				<div id="noscriptMsg">
+					<div class="container"></div>
+				</div>
+			</noscript>
+			<h1 class="subHead">
+				<span class="cornerRt"></span>Communicate Better. Build Trust. Get More Done.			</h1>
+
+			</div>
+				<div class="form">
+			<a name="form"></a>
+
+	
+																						
+	
+		
+	<div class="g2mBadge"></div>
+	<form method="POST" action="https://secure.citrixonline.com/commerce/buy" id="form">
+		<div class="autoSetup"></div>
+		<h4>Try it free for 30 days. <span>Create your GoToMeeting account.</span></h4>
+		<div class="errorText"></div>
+<div id="regForm">
+		<input name="catalog" value="1" type="hidden">
+		<input name="region" value="US" type="hidden">
+		<input name="language" value="en" type="hidden">
+		<input name="promotion" value="" type="hidden">
+		<ul class="leftContent">
+			<li class="leftColumn">
+				<label class="formtext" for="firstName">Start Here - First Name:</label><br>
+				<input name="firstName" id="firstName" value="" size="13" class="required fields" tabindex="1" title="This field is required." type="text">
+			</li>
+			<li class="rightColumn">
+				<label class="formtext" for="lastName">Last Name:</label><br>
+				<input name="lastName" id="lastName" value="" size="13" class="required fields" tabindex="2" title="This field is required." type="text">
+			</li>
+			<li class="leftColumn">
+				<label class="formtext" for="emailAddress">Email Address:</label><br>
+				<input name="emailAddress" id="emailAddress" value="" size="13" class="required email fields" tabindex="3" title="Please enter a valid email address." type="text">
+			</li>
+			<li class="rightColumn">
+				<label class="formtext" for="emailVerification">Re-Type Email Address:</label><br>
+				<input name="emailVerification" id="emailVerification" value="" size="13" class="retype-email fields" tabindex="4" title="Email Addresses do not match." type="text">
+			</li>
+		</ul>
+		<div class="setupIcon"></div>
+		<ul>
+			<li class="singleColumn checkbox">
+				<input name="mailingListOptIn" value="true" checked="" type="checkbox"><div>Keep me informed about GoToMeeting and Citrix.</div>
+			</li>
+		</ul>
+		<ul class="rightContent">
+			<li>
+				<input src="https://www.citrixonlinecdn.com/g2mimages/ad/1x1.gif" value="Continue" class="continue" tabindex="5" type="image">
+			</li>
+		</ul>
+		<div class="clearBoth"></div>
+		<div class="disclaimer">
+			<a href="http://clicktoverify.truste.com/pvr.php?page=validate&amp;companyName=Citrix%20Systems,%20Inc.&amp;sealid=102" onclick="return popup(this.href, false, 730, 500);"><img src="/images/ad/csslp/truste_gradient_120x35.jpg" alt="TRUSTe EU SAFE HARBOR" class="trusteLogo"></a>Protecting your privacy is important to us. Your email address and personal information are confidential and will not be sold or rented. See our <a href="http://www.citrixonline.com/collaboration/privacy_overview_popup?__col_mkt_cookies=__col_visit%3Dd887c7f4-7a35-4c40-a619-1d33a93e6239%3B%20__col_first_track_GoToMeeting%3Dtrue%3B%20__col_mkt_GoToMeeting%3DFIS_name%253Ddirect%2526FIS_leg%253D%252Ft%252Fdirect%252Fsite%252FDEFAULT%2526LST_name%253DMIB00334_gcont%2526LST_leg%253D%252Ft%252Fdirect%252Fsite%252FDEFAULT%3B%20__col_track_GoToMeeting%3D1%3B%20__col_first_track_GoToWebinar%3Dtrue%3B%20__col_mkt_GoToWebinar%3DFIS_name%253Ddirect%2526FIS_leg%253D%252Ft%252Fdirect%252Fsite%252FDEFAULT%2526LST_name%253DMIB00334_gcont%2526LST_leg%253D%252Ft%252Fdirect%252Fsite%252FDEFAULT%3B%20__col_track_GoToWebinar%3D1%3B%20__col_first_track_GoToTraining%3Dtrue%3B%20__col_mkt_GoToTraining%3DFIS_name%253Ddirect%2526FIS_leg%253D%252Ft%252Fdirect%252Fsite%252FDEFAULT%2526LST_name%253DMIB00334_gcont%2526LST_leg%253D%252Ft%252Fdirect%252Fsite%252FDEFAULT%3B%20__col_track_GoToTraining%3D1" onclick="return popup('http://www.citrixonline.com/collaboration/privacy_overview_popup?popup=true', false, 500, 400)">Privacy Policy</a> for more details.
+		</div>
+</div>
+<input name="__col_mkt_cookies" value="__col_visit=d887c7f4-7a35-4c40-a619-1d33a93e6239; __col_first_track_GoToMeeting=true; __col_mkt_GoToMeeting=FIS_name%3Ddirect%26FIS_leg%3D%2Ft%2Fdirect%2Fsite%2FDEFAULT%26LST_name%3DMIB00334_gcont%26LST_leg%3D%2Ft%2Fdirect%2Fsite%2FDEFAULT; __col_track_GoToMeeting=1; __col_first_track_GoToWebinar=true; __col_mkt_GoToWebinar=FIS_name%3Ddirect%26FIS_leg%3D%2Ft%2Fdirect%2Fsite%2FDEFAULT%26LST_name%3DMIB00334_gcont%26LST_leg%3D%2Ft%2Fdirect%2Fsite%2FDEFAULT; __col_track_GoToWebinar=1; __col_first_track_GoToTraining=true; __col_mkt_GoToTraining=FIS_name%3Ddirect%26FIS_leg%3D%2Ft%2Fdirect%2Fsite%2FDEFAULT%26LST_name%3DMIB00334_gcont%26LST_leg%3D%2Ft%2Fdirect%2Fsite%2FDEFAULT; __col_track_GoToTraining=1" id="h_form" type="hidden"></form>
+<div class="formEnd"></div>
+
+			</div>
+				<div class="content">
+													<div class="questions">
+						<div>Questions?
+							<span class="phone">Call toll-free <span class="noWrap">1 800 263 6317</span></span>
+						</div>
+						<div class="queEnd"></div>
+					</div>
+				
+			<div class="rightColumn">
+				<h2>GET HD VIDEO NOW.</h2><p>GoToMeeting is the simple way for people to meet and collaborate online.</p><ul><li>Hold unlimited meetings (including HD video conferencing) for one flat rate.</li><li>Attend meetings from a Mac, PC, iPad, iPhone or Android device.</li><li>Join the conversation via integrated VoIP and phone conferencing.</li></ul>
+				 <div class="collab"><p>Collaborate without boundaries.</p><p class="quest"><b>Questions?</b> Call toll-free 1 800 263 6317</p></div> 			</div>
+				<div class="learnMore"><a href="/m/g2mab-rsideLMlp.tmpl">Learn More</a></div>
+			<div class="clearBoth"></div>
+			</div>
+			<div class="footer">
+							<div class="copyright">
+				<div class="disclaimer">Mac, iPad and iPhone are trademarks of Apple Inc., registered in the U.S. and other countries. Android is a trademark of Google, Inc.</div>
+				<div class="disclaimer">©2013 Citrix Online, LLC. All rights reserved.</div>
+			</div>
+			<div class="companyLogo"><a href="http://www.citrixonline.com/?__col_mkt_cookies=__col_visit%3Dd887c7f4-7a35-4c40-a619-1d33a93e6239%3B%20__col_first_track_GoToMeeting%3Dtrue%3B%20__col_mkt_GoToMeeting%3DFIS_name%253Ddirect%2526FIS_leg%253D%252Ft%252Fdirect%252Fsite%252FDEFAULT%2526LST_name%253DMIB00334_gcont%2526LST_leg%253D%252Ft%252Fdirect%252Fsite%252FDEFAULT%3B%20__col_track_GoToMeeting%3D1%3B%20__col_first_track_GoToWebinar%3Dtrue%3B%20__col_mkt_GoToWebinar%3DFIS_name%253Ddirect%2526FIS_leg%253D%252Ft%252Fdirect%252Fsite%252FDEFAULT%2526LST_name%253DMIB00334_gcont%2526LST_leg%253D%252Ft%252Fdirect%252Fsite%252FDEFAULT%3B%20__col_track_GoToWebinar%3D1%3B%20__col_first_track_GoToTraining%3Dtrue%3B%20__col_mkt_GoToTraining%3DFIS_name%253Ddirect%2526FIS_leg%253D%252Ft%252Fdirect%252Fsite%252FDEFAULT%2526LST_name%253DMIB00334_gcont%2526LST_leg%253D%252Ft%252Fdirect%252Fsite%252FDEFAULT%3B%20__col_track_GoToTraining%3D1" rel="external"><img src="https://www.citrixonlinecdn.com/g2mimages/ad/citrix-logo-69x27.png" alt="Citrix"></a></div>
+			<div class="clearBoth"></div>
+			</div>
+		</div>
+		
+            
+																	 																
+		<script type="text/javascript" src="https://marketing.citrixonline.com/marketing/api/2009/lib.js"></script>
+		<script type="text/javascript" src="https://marketing.citrixonline.com/marketing/api/2009/api.js"></script>
+		<script type="text/javascript" src="https://marketing.citrixonline.com/api/2009/ChannelTrackingConverter.js"></script>
+		<script type="text/javascript">
+			var trkDomain = new Array('gotomeeting.at','gotomeeting.be','gotomeeting.ch','gotomeeting.ca','gotomeeting.com.au','gotomeeting.com.es','gotomeeting.com.hk','gotomeeting.com.mx','gotomeeting.com.my','gotomeeting.com.ph','gotomeeting.com.sg','gotomeeting.com.tw','gotomeeting.co.nz','gotomeeting.co.uk','gotomeeting.de','gotomeeting.dk','gotomeeting.es','gotomeeting.eu','gotomeeting.fi','gotomeeting.fr','gotomeeting.gr','gotomeeting.hu','gotomeeting.ie','gotomeeting.in','gotomeeting.is','gotomeeting.it','gotomeeting.jp','gotomeeting.lt','gotomeeting.lu','gotomeeting.ms','gotomeeting.mx','gotomeeting.ph','gotomeeting.pt','gotomeeting.ro','gotomeeting.ru','gotomeeting.se','joingotomeeting.com','joinwebinar.com','jointraining.com','secure.citrixonline.com','citrixonline.com');
+			var tracker1 = new ChannelTracker('GoToMeeting');
+			tracker1.appendTrackingHosts = trkDomain;
+			trackLegacyChannels(tracker1, "/t/direct/site/DEFAULT");
+			tracker1.trackChannel();
+			var tracker2 = new ChannelTracker('GoToWebinar');
+			tracker2.appendTrackingHosts = trkDomain;
+			trackLegacyChannels(tracker2, "/t/direct/site/DEFAULT");
+			tracker2.trackChannel();
+			var tracker3 = new ChannelTracker('GoToTraining');
+			tracker3.appendTrackingHosts = trkDomain;
+			trackLegacyChannels(tracker3, "/t/direct/site/DEFAULT");
+			tracker3.trackChannel();
+		</script>
+														 <script type="text/javascript">
+	var utag_data = {
+		product:"g2m",language:"en",website_country:"us",section:"lp",sub_section:"meeting",template:"g2mab-rsidelp.tmpl"
+	}
+</script>
+<script type="text/javascript" src="//tealium.hs.llnwd.net/o43/utag/citrix/collaboration-lp/prod/utag.js"></script>
+ 
+
+		<script type="text/javascript" src="https://www.citrixonlinecdn.com/g2mimages/ad/js/jquery.validate.js"></script>
+		<script type="text/javascript">
+			jQuery( document ).ready( function(){enableValidation();});
+		</script>
+	
+
+
+
+
+<iframe src="//fls.doubleclick.net/activityi;src=2870544;type=landi745;cat=g2mab119;ord=2060390242173.9905" style="display:none" id="utag_30_iframe" height="1" width="1"></iframe></body>

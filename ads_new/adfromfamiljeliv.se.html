@@ -1,0 +1,35 @@
+<head><script type="text/javascript">
+
+var url = window.location.href;
+var qparts = url.split("Fusionclick=");
+var destlink = "";
+destlink = qparts[1];
+var qpartsB = destlink.split("?url=");
+
+
+if(qpartsB[2])
+{
+destlink=qpartsB[1]+qpartsB[2];
+}
+else
+{
+destlink=qpartsB[1]
+}
+
+
+var countClick=qpartsB[0];
+if(countClick != "")
+{
+countClickTracking = new Image();
+countClickTracking.src = qpartsB[0];
+}
+
+function Lankavidare(){
+document.location.href = destlink;
+}
+setTimeout("Lankavidare()",500);
+</script>
+
+
+
+</head><body></body>

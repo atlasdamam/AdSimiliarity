@@ -1,0 +1,1545 @@
+<head>
+
+    
+<title>Honda Cars - New and Certified Used Cars from American Honda</title>
+
+<meta name="keywords" content="honda cars new certified used cars american honda Cars New American Honda Certified Used HONDA CARS">
+
+<meta name="description" content="Honda Cars - Home of information on the latest Honda cars and SUV models, Certified Used Cars. Photos, videos, and technical specs for all car models from American Honda.">
+<meta name="robots" content="NOODP">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="imagetoolbar" content="false">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+
+<meta property="og:image" content="http://automobiles.honda.com/images/_global/icons/honda-facebook-icon.png">
+
+
+    <link rel="Stylesheet" type="text/css" href="/css/spanish/main.css">
+    <link rel="Stylesheet" type="text/css" href="/css/standard.css">
+    <script language="javascript" type="text/javascript" src="/js/spanish/main.js"></script>
+    <script language="javascript" type="text/javascript" src="/js/clientdetection.js"></script>
+    <script language="javascript" type="text/javascript" src="/js/validation.js"></script>
+
+
+    <script language="javascript" type="text/javascript">
+        var isHondaHomePage=true;
+        function ClickSpotlight(SpotlightNum){
+            var CurrentSpotlight=SpotlightArray[SpotlightNum];
+            if(typeof(IsLanguagePageAvailable)=="function"){
+                if(!IsLanguagePageAvailable(CurrentSpotlight.link)){
+                    if(ConfirmEnglishPage()){
+                        TrackSpotlightClick(CurrentSpotlight.id);
+                        ForwardToEnglish(CurrentSpotlight.link);
+                    }
+                    var e=null;
+                    if(document.all){
+                        e=event;
+                    }
+                    if(e){
+                        e.cancelBubble=true;
+                        if(e.stopPropagration) e.stopPropagation();
+                    }
+                    return false;
+                }
+            }
+            TrackSpotlightClick(CurrentSpotlight.id);
+        }
+        function init(){
+            var oDetection=new ClientDetection();
+            var oSEDiv=document.getElementById("HomepageSearchEngineLayer");
+            var oFlashDiv=document.getElementById("HomepageFlashLayer");
+                for(var i=0; i<Panos.length; i++){
+                    var Pano=Panos[i];
+                    if(Pano.weight=="") Pano.weight=0;
+                    Pano.weight=Math.round(Pano.weight)
+                    MaxWeight+=Pano.weight;
+                }
+                var PanoRnd=Math.round(Math.random()*MaxWeight);
+                var PanoSelection=0;
+                var PanoCount=0;
+                for(var i=0; i<Panos.length; i++){
+                    var Pano=Panos[i];
+                    if(PanoCount<=PanoRnd && PanoCount+Pano.weight>=PanoRnd){
+                        PanoSelection=i;
+                    }
+                    PanoCount+=Pano.weight;
+                }
+                var Pano=Panos[PanoSelection];
+                var Html="<div id='HomepagePano'><div id='HomepagePanoImage'><a href=\"" + Pano.link + "\"><img src=\"" + Pano.src + "\" width=\"963\" height=\"367\" /></a></div>" +
+                    "<div id='HomepagePanoJellies'>";
+                for(var i=0; i<Jellys.length; i++){
+                    var Jelly=Jellys[i];
+                    var style='';
+                    if (i == 0) style = 'style="margin-left: 0px !important;"';
+                    else if (i < 4) style = 'style="margin-left: 1px !important;"';
+                   
+                    Html+="<div class='HomepageJelly' " + style + "><a href=\"" + Jelly.link + "\" onclick=\"JellyClick('" + Jelly.name + "' , 'jelly_" + Jelly.name.toLowerCase() + "');\" onmouseover=\"SwitchImg('Jelly" + Jelly.name + "', '/images/home-page/pano/home-" + Jelly.name.toLowerCase() + "-over.png')\" onmouseout=\"SwitchImg('Jelly" + Jelly.name + "', '/images/home-page/pano/home-" + Jelly.name.toLowerCase() + "-off.png')\" id=\"jelly_" + Jelly.name.toLowerCase() + "\"><img src=\"/images/home-page/pano/home-" + Jelly.name.toLowerCase() + "-off.png\" width=\"86\" height=\"69\" id=\"Jelly" + Jelly.name + "\" /></a></div>";
+                }
+                Html+="</div></div>";
+                oFlashDiv.innerHTML=Html;
+
+            oSEDiv.style.display="none";
+            oFlashDiv.style.display="";
+
+            // Spotlight dots
+            var sDotsContent = '';
+            for (var i = 0; i < SpotlightArray.length; i++) {
+                sDotsContent += '<a href="javascript: UpdateSpotlight(\'' + i + '\');"><img src="/images/trans.gif" width="7" height="7" border="0" class="SpotlightDotOff" id="SpotlightDot' + i + '"  /></a>';
+            }
+            document.getElementById('HomepageSpotlightDots').innerHTML = sDotsContent;
+
+
+
+            UpdateSpotlight();
+            SpotlightRotation=setInterval("UpdateSpotlight()", SpotlightWait);
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        }
+        
+   
+        
+        function GetEmailUpdates(){
+            if(typeof(IsLanguagePageAvailable)=="function"){
+                if(!IsLanguagePageAvailable("http://automobiles.honda.com/information/e-mail-updates.aspx")){
+                    if(!ConfirmEnglishPage()) return;
+                }
+            }
+            var oField=document.getElementById("EmailUpdatesModuleEmailField");
+            ClearDefaultText(oField);
+            top.location.href="http://automobiles.honda.com/information/e-mail-updates.aspx?email=" + oField.value;
+        }
+
+        function UpdateSpotlight(num){
+            if(SpotlightArray.length>0 && LastSpotlight!=SpotlightCount){
+               
+               if (typeof num != 'undefined') SpotlightCount = num;
+            
+                var oDetection=new ClientDetection();
+                var Html="";
+                var Spotlight=SpotlightArray[SpotlightCount];
+                LastSpotlight=SpotlightCount;
+                var Target = Spotlight.target;
+                var HasFlash=oDetection.HasFlash();
+                while(!HasFlash && Spotlight.type=="flash" && Spotlight.image==""){
+                    SpotlightCount++;
+                    if(SpotlightCount>=SpotlightArray.length) SpotlightCount=0;
+                    Spotlight=SpotlightArray[SpotlightCount];
+                }
+                if(Spotlight.type=="image"){
+                    Html="<a href=\"" + Spotlight.link + "\" onclick=\"return ClickSpotlight(" + SpotlightCount + ");\" target=\""+ Target +"\"><img src=\"" + Spotlight.src + "\" id=\"HomepageSpotlightImage\" width=\"293\" height=\"137\" /></a>";
+                    var oDiv=document.getElementById("HomepageSpotlightI")
+                    oDiv.innerHTML=Html;
+                }
+                if(Spotlight.type=="flash"){
+                    if(HasFlash){
+                        Html="<div id='TrackSPLClick' style='position:absolute;z-index:800;width:1px;height:1px;'><a href='" + Spotlight.link + "' onclick=\"return ClickSpotlight(" + SpotlightCount + ");\"><img src='/images/trans.gif' width='1px' height='1px' border='0'></a></div>"+
+                          "<object classid=\"clsid:d27cdb6e-ae6d-11cf-96b8-444553540000\" codebase=\"http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0\" width=\"293\" height=\"137\" align=\"middle\" >"+
+                          "<param name=\"allowScriptAccess\" value=\"sameDomain\" />" +
+                          "<param name=\"movie\" value=\"" + Spotlight.src + "\" />" +
+                          "<param name=\"quality\" value=\"high\" />" +
+                          "<param name=\"loop\" value=\"false\" />" +
+                          "<param name=\"bgcolor\" value=\"#ffffff\" />" +
+                          "<param name=\"menu\" value=\"false\" />" +
+                          "<param name=\"wmode\" value=\"transparent\">" +
+                          "<embed src=\"" + Spotlight.src + "\" menu=\"false\" loop=\"false\" quality=\"high\" bgcolor=\"#ffffff\" width=\"293\" height=\"137\" align=\"middle\" allowscriptaccess=\"sameDomain\" type=\"application/x-shockwave-flash\" pluginspage=\"http://www.macromedia.com/go/getflashplayer\" wmode=\"transparent\"></embed>" +
+                          "</object>"
+                        EmbededObjectWriteContent("HomepageSpotlightI", Html);
+                        
+                    }else{
+                        Html="<a href=\"" + Spotlight.link + "\" onclick=\"return ClickSpotlight(" + SpotlightCount + ");\"><img src=\"" + Spotlight.image + "\" id=\"HomepageSpotlightImage\" width=\"293\" height=\"137\" /></a>";
+                        var oDiv=document.getElementById("HomepageSpotlightI")
+                        oDiv.innerHTML=Html;
+                    }
+                }
+                // Rotate dots
+                for (var i = 0; i < SpotlightArray.length; i++) {
+                    if (i == (SpotlightCount)) {
+                        document.getElementById('SpotlightDot' + i).className = 'SpotlightDotOn';
+                    } else {
+                        document.getElementById('SpotlightDot' + i).className = 'SpotlightDotOff';
+                    }
+                }
+
+                SpotlightCount++;
+                if(SpotlightCount>=SpotlightArray.length) SpotlightCount=0;
+            }
+        }
+        
+        var SpotlightArray=new Array();
+        var SpotlightRotation=null;
+        var SpotlightCount=0;
+        var SpotlightWait=18000;
+        var MaxWeight=0;
+        var LastSpotlight=-1;
+        
+        
+        SpotlightArray[0]=new Object();
+            
+        SpotlightArray[0].id="2013OdysseyClearanceSpotlight";
+            
+        SpotlightArray[0].src="/images/home-page/spotlight/2013OdysseyClearanceSpotlight.swf";
+            
+        SpotlightArray[0].type="flash";
+            
+        SpotlightArray[0].image="/images/home-page/spotlight/2013OdysseyClearanceSpotlight.jpg";
+            
+        SpotlightArray[0].link="/tools/dealer-locator/";
+
+        
+        
+        SpotlightArray[0].target="_self";
+            
+        
+        var Panos=new Array();
+    
+        Panos[0]=new Object();
+        
+        Panos[0].src="/images/spanish/home-page/pano/home-pano-accord-coupe.jpg";
+        
+        Panos[0].link="/spanish/accord-coupe/";
+        
+        Panos[0].weight="25";
+    
+        Panos[1]=new Object();
+        
+        Panos[1].src="/images/spanish/home-page/pano/home-pano-accord-sedan.jpg";
+        
+        Panos[1].link="/spanish/accord-sedan/";
+        
+        Panos[1].weight="60";
+    
+    
+        var Jellys=new Array();
+    
+        Jellys[0]=new Object();
+        
+        Jellys[0].name="Accord";
+        
+        Jellys[0].link="/spanish/accord/";
+    
+        Jellys[1]=new Object();
+        
+        Jellys[1].name="Civic";
+        
+        Jellys[1].link="/spanish/civic/";
+    
+        Jellys[2]=new Object();
+        
+        Jellys[2].name="Crosstour";
+        
+        Jellys[2].link="/spanish/crosstour/";
+    
+        Jellys[3]=new Object();
+        
+        Jellys[3].name="CR_V";
+        
+        Jellys[3].link="/spanish/cr-v/";
+    
+        Jellys[4]=new Object();
+        
+        Jellys[4].name="CR_Z";
+        
+        Jellys[4].link="/spanish/cr-z/";
+    
+        Jellys[5]=new Object();
+        
+        Jellys[5].name="FCX_Clarity";
+        
+        Jellys[5].link="/spanish/fcx-clarity/";
+    
+        Jellys[6]=new Object();
+        
+        Jellys[6].name="Fit";
+        
+        Jellys[6].link="/spanish/fit/";
+    
+        Jellys[7]=new Object();
+        
+        Jellys[7].name="Insight";
+        
+        Jellys[7].link="/spanish/insight-hybrid/";
+    
+        Jellys[8]=new Object();
+        
+        Jellys[8].name="Odyssey";
+        
+        Jellys[8].link="/spanish/odyssey/";
+    
+        Jellys[9]=new Object();
+        
+        Jellys[9].name="Pilot";
+        
+        Jellys[9].link="/spanish/pilot/";
+    
+        Jellys[10]=new Object();
+        
+        Jellys[10].name="Ridgeline";
+        
+        Jellys[10].link="/spanish/ridgeline/";
+            
+        
+        
+        // This function will redirect to the dealer locator results page.
+        function FindDealer(){
+            var oValidation=new Validation();
+            var oField=document.getElementById("ShoppingToolsDealerText");
+            if (oField.value=="" || !oValidation.IsZip(oField.value)) {
+                alert("Entre un codigo postal de 5 dígitos")
+            }else {
+                if(typeof(IsLanguagePageAvailable)=="function"){
+                    if(!IsLanguagePageAvailable("http://automobiles.honda.com/tools/dealer-locator/results.aspx")){
+                        if(ConfirmEnglishPage()){
+                            top.location.href = "http://automobiles.honda.com/tools/dealer-locator/results.aspx?address=&city=&state=&zip="+escape(document.getElementById("ShoppingToolsDealerText").value)+"&dealername=&filters=";
+                        }
+                    }
+                }else{
+                    top.location.href = "http://automobiles.honda.com/tools/dealer-locator/results.aspx?address=&city=&state=&zip="+escape(document.getElementById("ShoppingToolsDealerText").value)+"&dealername=&filters=";
+                }
+            }
+        }
+        
+        function TrackSpotlightClick(PromoID) {
+          var s=s_gi(s_account);
+          s.linkTrackVars='eVar1,events,products,prop21,prop23,prop24,prop25,eVar21,eVar23,eVar24,eVar25';
+          s.linkTrackEvents='event2';
+          s.prop21=Currentprop21;
+          s.prop23=Currentprop23;
+          s.prop24=Currentprop24;
+          s.prop25=Currentprop25;
+          s.eVar21=s.prop21;
+          s.eVar23=s.prop23;
+          s.eVar24=s.prop24;
+          s.eVar25=s.prop25;
+          s.products=';'+PromoID;
+          s.events='event2';
+          s.eVar1=PromoID;
+          s.tl(this,'o','Spotlight Click');
+        }
+        
+        function PanoClick(sPanoName , sLink) {
+
+          // Tracking Code
+          var s=s_gi(s_account);
+          s.linkTrackVars='prop16,prop21,prop23,prop24,prop25,eVar31,eVar21,eVar23,eVar24,eVar25';
+          s.prop21=Currentprop21;
+          s.prop23=Currentprop23;
+          s.prop24=Currentprop24;
+          s.prop25=Currentprop25;
+          s.eVar21=s.prop21;
+          s.eVar23=s.prop23;
+          s.eVar24=s.prop24;
+          s.eVar25=s.prop25;
+          s.prop16=sPanoName + ":Click";
+          s.eVar31=sPanoName + ":Click";
+          s.tl(this,'o','MODEL PANO CLICK');
+          
+          // Redirect user
+          document.location = sLink;
+        }
+
+        function ModelClick(sModelName , sLink) {
+        
+          // Tracking code
+          var s=s_gi(s_account);
+          s.linkTrackVars='prop16,prop21,prop23,prop24,prop25,eVar31,eVar21,eVar23,eVar24,eVar25';
+          s.prop21=Currentprop21;
+          s.prop23=Currentprop23;
+          s.prop24=Currentprop24;
+          s.prop25=Currentprop25;
+          s.eVar21=s.prop21;
+          s.eVar23=s.prop23;
+          s.eVar24=s.prop24;
+          s.eVar25=s.prop25;
+          s.prop16=sModelName + ":Roll-Over Click";
+          s.eVar31=sModelName + ":Roll-Over Click";
+          s.tl(this,'o','MODEL ROLL-OVER CLICK');
+          
+          // Redirect user
+          document.location = sLink;
+        }
+        
+        
+        function JellyClick(sModelName , sHrefID) {
+
+            // Remove onclick from JellyBean or this won't get picked up by the leaving Spanish popup
+            document.getElementById(sHrefID).onclick = '';
+
+            var axel = Math.random() + "";
+            var a = axel * 10000000000000;
+
+            switch (sModelName) {
+                case 'Accord':
+                    document.getElementById('TrackingTags').innerHTML = '<iframe src="http://fls.doubleclick.net/activityi;src=1722531;type=accor809;cat=honda156;ord=1;num=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>';
+                    break;
+                case 'Crosstour':
+                    document.getElementById('TrackingTags').innerHTML = '<iframe src="http://fls.doubleclick.net/activityi;src=1722531;type=cross899;cat=honda028;ord=1;num=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>';
+                    break;
+                case 'Civic':
+                    document.getElementById('TrackingTags').innerHTML = '<iframe src="http://fls.doubleclick.net/activityi;src=1722531;type=civic321;cat=honda787;ord=1;num=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>';
+                    break;
+                case 'CR_V':
+                    document.getElementById('TrackingTags').innerHTML = '<iframe src="http://fls.doubleclick.net/activityi;src=1722531;type=cr-vm993;cat=honda486;ord=1;num=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>';
+                    break;
+                case 'CR_Z':
+                    document.getElementById('TrackingTags').innerHTML = '<iframe src="http://fls.doubleclick.net/activityi;src=1722531;type=cr-zh100;cat=honda169;ord=1;num=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>';
+                    break;
+                case 'Element':
+                    document.getElementById('TrackingTags').innerHTML = '<img src="http://ad.doubleclick.net/activity;src=1722531;type=eleme075;cat=honda834;ord=1;num=' + a + '?" width="1" height="1" alt=""/>'
+                    break;
+                case 'FCX_Clarity':
+                    document.getElementById('TrackingTags').innerHTML = '<iframe src="http://fls.doubleclick.net/activityi;src=1722531;type=fcxcl807;cat=honda866;ord=1;num=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>';
+                    break;
+                case 'Fit':
+                    document.getElementById('TrackingTags').innerHTML = '<iframe src="http://fls.doubleclick.net/activityi;src=1722531;type=fitxs685;cat=honda152;ord=1;num=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>';
+                    break;
+                case 'Insight':
+                    document.getElementById('TrackingTags').innerHTML = '<iframe src="http://fls.doubleclick.net/activityi;src=1722531;type=insig491;cat=honda522;ord=1;num=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>';
+                    break;
+                case 'Odyssey':
+                    document.getElementById('TrackingTags').innerHTML = '<iframe src="http://fls.doubleclick.net/activityi;src=1722531;type=odyss711;cat=honda963;ord=1;num=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>';
+                    break;
+                case 'Pilot':
+                    document.getElementById('TrackingTags').innerHTML = '<iframe src="http://fls.doubleclick.net/activityi;src=1722531;type=pilot301;cat=honda851;ord=1;num=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>';
+                    break;
+                case 'Ridgeline':
+                    document.getElementById('TrackingTags').innerHTML = '<iframe src="http://fls.doubleclick.net/activityi;src=1722531;type=ridge482;cat=honda596;ord=1;num=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>';
+                    break;
+               
+
+            }
+            return false;
+        }
+
+
+
+        // Show Facebook layer
+        var bFBLoaded = false;
+        function ShowFacebookLayer() {
+
+            if ( document.getElementById('SocialMediaLayer').style.visibility == 'visible' )
+                return;
+
+            document.getElementById('SocialMediaLayer').style.width = '516px';
+            document.getElementById('SocialMediaLayer').style.height = '148px';
+            document.getElementById('SocialMediaLayer').style.marginTop = '-210px';
+            document.getElementById('SocialMediaLayer').style.marginLeft = '250px';
+            document.getElementById('SocialMediaLayer').style.backgroundImage = 'url(/images/home-page/layer-facebook.png)';
+            document.getElementById('SocialMediaLayer').innerHTML = ' \
+                    <div style="margin-left: 482px; margin-top: 7px; width: 20px; height: 20px;"><a href="javascript: CloseSocialLayer();"><img src="/images/trans.gif" width="20" height="20" border="0"></a></div> \
+                    <div id="fb-root" style="margin-top: 15px; margin-left: 40px;" ></div>';
+
+        
+                    
+		    var likebtn = document.createElement('div');
+		    likebtn.innerHTML = '<fb:like href="http://www.facebook.com/honda" show_faces="true" send="false" width="460"></fb:like>';
+		    document.getElementById('fb-root').appendChild(likebtn);
+
+
+            if (!bFBLoaded) {
+            
+            	var e = document.createElement('script');
+			    e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js#xfbml=1';			
+			    e.async = true;
+			    var shead = document.getElementsByTagName("script")[0];
+			    shead.parentNode.insertBefore(e, shead);
+
+		        window.fbAsyncInit = function() {
+    		        
+		            bFBLoaded = true;
+
+			        FB.init({appId: '101654119923935', status: true, cookie: true, xfbml: true});
+
+			        FB.Event.subscribe('edge.create', function(response) {
+        			    s.linkTrackVars = 'prop37';
+				        CallSDotTL(s , true , 'HOME:LIKE THIS PAGE ON FACEBOOK' , 'o');
+			        });
+
+			        FB.Event.subscribe('edge.remove', function(response) {
+        			    s.linkTrackVars = 'prop37';
+				        CallSDotTL(s , true , 'HOME:UNLIKE THIS PAGE ON FACEBOOK' , 'o');
+			        });
+    		    
+		        };
+            
+
+            } else {
+            
+                FB.XFBML.parse(); 
+
+            }
+
+
+
+            document.getElementById('SocialMediaLayer').style.visibility = 'visible';
+        
+        }
+        
+        
+        // Show Twitter layer
+        function ShowTwitterLayer() {
+
+            if ( document.getElementById('SocialMediaLayer').style.visibility == 'visible' )
+                return;
+
+            document.getElementById('SocialMediaLayer').style.width = '195px';
+            document.getElementById('SocialMediaLayer').style.height = '89px';
+            document.getElementById('SocialMediaLayer').style.marginTop = '-180px';
+            document.getElementById('SocialMediaLayer').style.marginLeft = '395px';
+            document.getElementById('SocialMediaLayer').style.backgroundImage = 'url(/images/home-page/layer-twitter.png)';
+            document.getElementById('SocialMediaLayer').innerHTML = ' \
+                    <div style="margin-left: 165px; margin-top: 7px; width: 20px; height: 20px;"><a href="javascript: CloseSocialLayer();"><img src="/images/trans.gif" width="20" height="20" border="0"></a></div> \
+                    <div style="margin-left: 0; margin-top: 7px;"> \
+                        <a href="https://twitter.com/Honda" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @Honda</a> \
+                    </div>';
+
+            // need to remove the twitter script first so that it can be readded since it needs to run AFTER the html code is on the page
+            if (document.getElementById('twitter-wjs')) {
+                document.getElementById('twitter-wjs').parentNode.removeChild(document.getElementById('twitter-wjs'));
+            }
+            !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+
+
+            document.getElementById('SocialMediaLayer').style.visibility = 'visible';
+        
+        }
+        
+
+        // Show YouTube layer
+        function ShowYouTubeLayer() {
+
+            if ( document.getElementById('SocialMediaLayer').style.visibility == 'visible' )
+                return;
+
+            document.getElementById('SocialMediaLayer').style.width = '364px';
+            document.getElementById('SocialMediaLayer').style.height = '164px';
+            document.getElementById('SocialMediaLayer').style.marginTop = '-230px';
+            document.getElementById('SocialMediaLayer').style.marginLeft = '315px';
+            document.getElementById('SocialMediaLayer').style.backgroundImage = 'url(/images/home-page/layer-youtube.png)';
+            document.getElementById('SocialMediaLayer').innerHTML = ' \
+                    <div style="margin-left: 332px; margin-top: 7px; width: 20px; height: 20px;"><a href="javascript: CloseSocialLayer();"><img src="/images/trans.gif" width="20" height="20" border="0"></a></div> \
+                    <div style="margin-left: 0; margin-top: 7px;"> \
+                        <iframe src="http://www.youtube.com/subscribe_widget?p=honda" style="overflow:hidden;height:105px;width:300px;border:0;" scrolling="no" frameBorder="0"></iframe> \
+                    </div>';
+                    
+
+
+            document.getElementById('SocialMediaLayer').style.visibility = 'visible';
+        
+        }
+
+
+        // Show Pinterest layer
+        function ShowPinterestLayer() {
+
+            if ( document.getElementById('SocialMediaLayer').style.visibility == 'visible' )
+                return;
+
+            document.getElementById('SocialMediaLayer').style.width = '265px';
+            document.getElementById('SocialMediaLayer').style.height = '97px';
+            document.getElementById('SocialMediaLayer').style.marginTop = '-200px';
+            document.getElementById('SocialMediaLayer').style.marginLeft = '315px';
+            document.getElementById('SocialMediaLayer').style.backgroundImage = 'url(/images/home-page/layer-pinterest.png)';
+            document.getElementById('SocialMediaLayer').innerHTML = ' \
+                    <div style="margin-left: 233px; margin-top: 7px; width: 20px; height: 20px;"><a href="javascript: CloseSocialLayer();"><img src="/images/trans.gif" width="20" height="20" border="0"></a></div> \
+                    <div style="margin-left: 0; margin-top: 7px;"> \
+                        <a href="http://pinterest.com/Honda/" onclick="s.linkTrackVars = \'prop37\'; CallSDotTL(s , true , \'HOME:OPEN PINTEREST SITE FROM SOCIAL LAYER ON HOME PAGE\' , \'o\');"><img src="http://passets-ec.pinterest.com/images/about/buttons/follow-me-on-pinterest-button.png" width="169" height="28" alt="Follow Me on Pinterest" border="0" /></a> \
+                    </div>';
+                    
+
+
+            document.getElementById('SocialMediaLayer').style.visibility = 'visible';
+        
+        }
+
+
+        // Show Google Plus layer
+        function ShowGooglePlusLayer() {
+
+                var bShowLayer = true;
+                
+                // The g+ widget isn't compatable with IE < 9. For those browsers, just open
+                //  the Honda g+ page in a new window.
+                if (navigator.userAgent.toLowerCase().indexOf('msie') > 0) {
+                    try {
+                        var re  = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+                        if (re.exec(navigator.userAgent) != null) {
+                            rv = parseFloat( RegExp.$1 );
+                            if (rv < 9) bShowLayer = false;
+                        }
+                    } catch (ex) {
+                    }
+                }
+
+                if (bShowLayer) {
+
+                    if ( document.getElementById('SocialMediaLayer').style.visibility == 'visible' )
+                        return;
+
+                    document.getElementById('SocialMediaLayer').style.width = '361px';
+                    document.getElementById('SocialMediaLayer').style.height = '189px';
+                    document.getElementById('SocialMediaLayer').style.marginTop = '-230px';
+                    document.getElementById('SocialMediaLayer').style.marginLeft = '315px';
+                    document.getElementById('SocialMediaLayer').style.backgroundImage = 'url(/images/home-page/layer-googleplus.png)';
+                    document.getElementById('SocialMediaLayer').innerHTML = ' \
+                            <div style="margin-left: 325px; margin-top: 12px; width: 20px; height: 20px;"><a href="javascript: CloseSocialLayer();"><img src="/images/trans.gif" width="20" height="20" border="0"></a></div> \
+                            <div style="margin-left: 0; margin-top: 2px;"> \
+                                <div class="g-plus" data-height="225" data-href="//plus.google.com/110355594819754396833?rel=author"></div> \
+                            </div>';
+
+                    var po = document.createElement("script");
+                    po.type = "text/javascript"; po.async = true;po.src = "https://apis.google.com/js/plusone.js";
+                    var s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(po, s);
+
+
+                    document.getElementById('SocialMediaLayer').style.visibility = 'visible';
+                    
+                } else {
+                    window.open('https://plus.google.com/110355594819754396833/');
+                }
+            
+        }
+        
+        
+        // Close Social layer
+        function CloseSocialLayer() {
+
+            document.getElementById('SocialMediaLayer').style.visibility = 'hidden';
+            document.getElementById('SocialMediaLayer').innerHTML = '';
+
+        }
+
+
+
+
+    </script>
+
+
+
+    <style type="text/css">
+        #HomepageFlashStage			{float:left; width:963px; height:367px; overflow:hidden; position:relative;}
+		    #HomepageSearchEngineLayer			{float:left; width:963px; height:367px;}
+		        .HomepageModelUnit  {float:left; padding:10px; text-align:left; font-size:12px; color:#cccccc;}
+		            .HomepageModelUnit a, .HomepageModelUnit a:hover, .HomepageModelUnit a:active, .HomepageModelUnit a:visited {color:#cccccc;}
+		    #HomepageFlashLayer					{float:left; width:963px; height:367px; position:relative;}
+			    #HomepageGetFlash				{float:left; text-align:left; margin:10px; font-size:12px;}
+			    #HomepagePano				{float:left; position:relative; width:963px; height:367px;}
+			        #HomepagePano img   {border:0px;}
+			        #HomepagePanoImage  {position:absolute; width:963px; height:367px; top:0; left:0;}
+			        #HomepagePanoJellies    {position:absolute; top:287; left:0px;}
+			            .HomepageJelly  {position:relative; float:left; width:86px; height:69px; margin-left:2px;}
+			                .HomepageJelly img  {border:0px;}
+	    #HomepageBottom				{float:left; width:963px;}
+		   		    #ShoppingToolsContainer	{float:left; width:166px; margin-top:3px;}
+			    #ShoppingToolsForm		{padding:0px; margin:0px;}
+				    #ShoppingToolsTop		{width:166px; float:left;}
+				    #ShoppingToolsContent	{width:166px; float:left; background-image:url('/images/home-page/shoppingtools-bg.gif'); text-align:left; height:123px;}
+					    #ShoppingToolsLinks		{float:left; width:155px;  font-size:11px; font-weight:bold; color: #000000; }
+					    #ShoppingToolsLinks a		{font-size:11px; font-weight:bold; color: #000000; text-decoration:none;}
+					    #ShoppingToolsLinks a:hover	{font-size:11px; font-weight:bold; text-decoration:underline;}
+					    #ShoppingToolsDealerField	{float:left; padding-left:15px;}
+						    #ShoppingToolsDealerText	{font-size:10px; color: #000000; width:100px; margin-left:30px; background-color:#EAEBEA; font-family:Arial;}
+					    #ShoppingToolsFindDealerButton	{margin-left: 10px;float:left; padding-left:17px;}
+						    #ShoppingToolsFindDealer	{border:0px;}
+				    #ShoppingToolsBottom	{width:166px; float:left;}
+					.shoppingToolsItem { height:19px; border-bottom:1px solid #c8c8c8; padding-left:3px; margin-top:2px; margin-left:5px; margin-right:0px;  font-weight:bold; }				    
+		    #HomepageOptionsPanel		{float:left; width:491px;}
+			    #HomepageButtons			{float:left; padding-top:3px; margin-left:5px; width:790px;}
+				    #HomepageAllModelsButton	{float:left;}
+					    #HomepageAllModels			{border:0px;}
+					    #HomepageAltFuelVehicles			{float:left;}
+				    #AltFuelVehicles			{border:0px;}
+				    #HomepageCUCButton			{float:left; margin-left:3px; margin-right:3px;}
+					    #HomepageCUC				{border:0px;}
+				    #HomepageFutureButton		{float:left;}
+					    #HomepageFuture				{border:0px;}
+			    #HomepagePanel				{float:left; width:481px; margin-left:5px;}
+				    #HomepagePanelTop			{float:left; width:481px; padding-top:5px;}
+					    #HomepagePanelContent		{float:left; width:481px; background-image:url('/images/home-page/homepage-panel-bg.gif'); height:126px;}
+						    #HomepagePanelLeftColumn	{float:left; padding:0px 3px 0px 10px; width:225px;}
+							    .HomepagePanelUnitLeft		{float:left; width:210px; padding-bottom:5px;}
+								    .HomepagePanelIcon			{float:left; margin:0px 10px 0px 0px; width:22px;}
+								        .HomepagePanelIcon img  {border:0px;}
+								    .HomepagePanelLinkLeft			{float:left; text-align:left; font-size:11px; color: #000000; width:175px;}
+								    .HomepagePanelLinkLeft a		{font-size:11px; color: #000000; text-decoration:none;}
+								    .HomepagePanelLinkLeft a:hover	{font-size:11px; text-decoration:underline;}
+								    .HomepagePanelLinkLeft a b		{color: #0066CC; font-weight:bold;}
+						    #HomepagePanelRightColumn	{float:left; padding:0px 3px 0px 0px; width:240px;}
+							    .HomepagePanelUnitRight		{float:left; width:240px; padding-bottom:5px;}
+								    .HomepagePanelLinkRight			{float:left; text-align:left; font-size:11px; color: #000000; width:200px;}
+								    .HomepagePanelLinkRight a		{font-size:11px; color: #000000; text-decoration:none;}
+								    .HomepagePanelLinkRight a:hover	{font-size:11px; text-decoration:underline;}
+								    .HomepagePanelLinkRight a b		{color: #0066CC; font-weight:bold;}
+								    .HomepagePanelLinkRight b		{color: #0066CC; font-weight:bold;}
+								    #EmailUpdateForm	{padding:0px; margin:0px;}
+									    #HomepagePanelEmailField	{float:left; padding-top:5px;}
+										    #EmailUpdatesModuleEmailField		{font-size:10px; color: #000000; width:100px; background-color:#EAEBEA; font-family:Arial;}
+									    #HomepagePanelSignUpButton	{float:left; margin-top:3px;width:96px;}
+										    #HomepageSignup				{border:0px;}
+								.SocialIconsPanel { float: left; text-align: left; }
+								    .SocialIconsPanel a { margin-right: 6px; border: 0; outline: 0; }
+						    #HomepagePanelBottomLinks	{float:left; width:481px; text-align:center; padding-bottom:5px;}
+							    .HomepagePanelBottomLink	{float:left; padding-left:7px; padding-right:7px; font-size:10px; color: #D3D3D3; font-weight:bold;}
+							    .HomepagePanelBottomLink a, .HomepagePanelBottomLink a:visited, .HomepagePanelBottomLink a:active			{font-size:10px; color: #666666; font-weight:bold; text-decoration:none;}
+							    .HomepagePanelBottomLink a:hover	{font-size:10px; font-weight:bold; text-decoration:underline;}
+							    .HomepagePanelBottomDiv		{float:left;}
+					    #HomepagePanelBottom		{float:left; width:481px;}
+					    
+		    #HomepageSpotlightI	{float:left; padding-top:6px; padding-left:5px;}
+			    #HomepageSpotlightImage{border:0px;}
+			    #HomepageSpotlightDots{ margin-top: 4px; width: 200px; float: left; padding-left:5px;}			    
+			    .SpotlightDotOff { background: url(/images/home-page/spotlight-dots.gif) 0px 7px; float: left; margin-right: 4px; }
+			    .SpotlightDotOn { background: url(/images/home-page/spotlight-dots.gif) 0px 0px; float: left; margin-right: 4px; }
+
+			#SocialMediaLayer { visibility: hidden; float: left; }
+			    #SocialMediaLayer .twitter-follow-button { width: 108px !important; }
+
+			 
+    </style>
+</head>
+<body bgcolor="white">
+    <div id="PageContainer">
+        <div id="PageLeftColumn"><img src="/images/_controls/global-header/background-header-left.png" height="51" width="17"></div>
+        <div id="PageCenterColumn">
+            
+<script language="javascript" type="text/javascript">
+    function GlobalNavigationChangeModel(){
+        var oField=document.getElementById("HeaderModelSelector");
+        var sUrl=oField.options[oField.selectedIndex].value;
+        var sUrlSiteSection=oField.options[oField.selectedIndex].text;
+        if(sUrl!=""){
+            if(typeof(IsLanguagePageAvailable)=="function"){
+                if(!IsLanguagePageAvailable(sUrl)){
+                    if(ConfirmEnglishPage()){
+                        ForwardToEnglish(sUrl);
+                    }else{
+                        oField.selectedIndex=0;
+                    }
+                    return false;
+                }
+            }
+            if(typeof isHondaHomePage !=="undefined"){
+                if(isHondaHomePage==true) TrackNavigationClick(sUrlSiteSection);
+            }
+            top.location.href="http://automobiles.honda.com" + sUrl;
+        }
+    }
+    // This function will redirect to search results page.
+    function GlobalNavigationSearchSite(){
+      if (document.getElementById("HeaderSearchText").value.replace(/ /g,'').length > 0) {
+        if(typeof(IsLanguagePageAvailable)=="function"){
+            if(!IsLanguagePageAvailable("http://automobiles.honda.com/search-results.aspx")){
+                if(ConfirmEnglishPage()){
+                    top.location = "http://automobiles.honda.com/search-results.aspx?question="+escape(document.getElementById("HeaderSearchText").value);
+                }
+            }
+        }else{
+            top.location = "http://automobiles.honda.com/search-results.aspx?question="+escape(document.getElementById("HeaderSearchText").value);
+        }
+      }else {
+        alert("You must enter a question before submitting");
+      }    
+    }
+    function TrackNavigationClick(SiteSection){
+        var s=s_gi(s_account);
+        s.linkTrackVars='prop16,prop21,prop23,prop24,prop25,eVar31,eVar21,eVar23,eVar24,eVar25';
+        s.prop21=Currentprop21;
+        s.prop23=Currentprop23;
+        s.prop24=Currentprop24;
+        s.prop25=Currentprop25;
+        s.eVar21=s.prop21;
+        s.eVar23=s.prop23;
+        s.eVar24=s.prop24;
+        s.eVar25=s.prop25;
+        s.prop16="Home Page Site Nav DropDown : "+SiteSection;
+        s.eVar31="Home Page Site Nav DropDown : "+SiteSection;
+        s.tl(this,'o','GLOBAL NAVIGATION CLICK');
+    }
+    
+    function TrackTopNavToolClick(elem) {
+        if (!document.getElementById('GlobalNavTrackingTags')) {
+            var div = document.createElement('div');
+            div.id = 'GlobalNavTrackingTags';
+            document.body.appendChild(div);
+        }
+        
+        document.getElementById('GlobalNavTrackingTags').innerHTML = '';
+        document.getElementById('GlobalNavTrackingTags').innerHTML = '<img src="http://media.fastclick.net/w/roitrack.cgi?aid=14088" width=1 height=1 border=0>';
+
+        var Url = elem.href;
+        if (Url.indexOf('spanish') <= 0) {
+            if(ConfirmEnglishPage()){
+                ForwardToEnglish(Url);
+            }
+        } else {
+            return true;
+        }
+        return false;
+
+    }
+</script>
+
+<div id="HeaderContainer">
+    <form id="HeaderForm" onsubmit="GlobalNavigationSearchSite(); return false;">
+        <div id="HeaderLogo"><a href="http://automobiles.honda.com/spanish/" target="_top" onmouseover="SwitchImg('HondaLogo', '/images/_controls/global-header/honda-logo-over.gif')" onmouseout="SwitchImg('HondaLogo', '/images/_controls/global-header/honda-logo-off.gif')"><img src="/images/_controls/global-header/honda-logo-off.gif" id="HondaLogo" height="51" width="73"></a></div>
+        <div id="HeaderModelSelect">
+            <select name="HeaderModelSelector" id="HeaderModelSelector" class="HeaderModelSelector" onchange="GlobalNavigationChangeModel()">
+                <option value="">Seleccionar un modelo</option>
+            
+                <option value="/spanish/accord-coupe/">Accord Coupé</option>
+            
+                <option value="/spanish/accord-sedan/">Accord Sedán</option>
+            
+                <option value="/spanish/civic-coupe/">Civic Coupé</option>
+            
+                <option value="/spanish/civic-hybrid/">Civic Sedán Hybrid</option>
+            
+                <option value="/spanish/civic-sedan/">Civic Sedán</option>
+            
+                <option value="/spanish/civic-hf/">Civic HF Sedán</option>
+            
+                <option value="/spanish/civic-natural-gas/">Civic a Gas Natural</option>
+            
+                <option value="/spanish/civic-si-coupe/">Civic Si Coupé</option>
+            
+                <option value="/spanish/civic-si-sedan/">Civic Si Sedán</option>
+            
+                <option value="/spanish/crosstour/">Crosstour</option>
+            
+                <option value="/spanish/cr-v/">SUV CR-V</option>
+            
+                <option value="/spanish/cr-z/">CR-Z Sport Hybrid</option>
+            
+                <option value="/spanish/fcx-clarity/">FCX Clarity</option>
+            
+                <option value="/spanish/fit/">Fit de 5 puertas</option>
+            
+                <option value="/spanish/insight-hybrid/">Insight Hybrid</option>
+            
+                <option value="/spanish/odyssey/">Miniván Odyssey</option>
+            
+                <option value="/spanish/pilot/">SUV Pilot</option>
+            
+                <option value="/spanish/ridgeline/">Pickup Ridgeline</option>
+            
+                <option value="/alternative-fuel-vehicles/">Vehículos híbridos y combustible alternativo</option>
+                <option value="/all-models.aspx">Todos los modelos</option>
+                <option value="/certified-used/">Automóviles usados certificados</option>
+                <option value="/spanish/future-cars/">Modelos futuros y prototipos</option>
+            </select>
+        </div>
+        <div class="HeaderLink"><a href="http://automobiles.honda.com/tools/dealer-locator/" onclick="return TrackTopNavToolClick(this);" target="_top">Buscar concesionario</a></div>
+        <div class="HeaderDiv"><img src="/images/_controls/global-header/header-div.gif" height="31" width="1"></div>
+        <div class="HeaderLink"><a href="http://automobiles.honda.com/tools/build-price/" onclick="return TrackTopNavToolClick(this);" target="_top">Tu Honda</a></div>
+        <div class="HeaderDiv"><img src="/images/_controls/global-header/header-div.gif" height="31" width="1"></div>
+        <div class="HeaderLink"><a href="http://automobiles.honda.com/tools/price-quote.aspx" onclick="return TrackTopNavToolClick(this);" target="_top">Solicitar cotización</a></div>
+        <div class="HeaderDiv"><img src="/images/_controls/global-header/header-div.gif" height="31" width="1"></div>
+        <div class="HeaderLink"><a href="http://automobiles.honda.com/spanish/tools/compare/" onclick="return TrackTopNavToolClick(this);" target="_top">Comparar vehículos</a></div>
+        <div id="HeaderSearchField"><input id="HeaderSearchText" type="text"></div>
+        <div id="HeaderSearchButton"><a href="javascript:GlobalNavigationSearchSite();" onmouseover="SwitchImg('HeaderSearch', '/images/spanish/_global/buttons/btn-search-over.gif')" onmouseout="SwitchImg('HeaderSearch', '/images/spanish/_global/buttons/btn-search-off.gif')"><img src="/images/spanish/_global/buttons/btn-search-off.gif" id="HeaderSearch" height="18" width="67"></a></div>
+    </form>
+</div>
+
+
+            <div id="HomepageFlashStage">
+                <div style="display: none;" id="HomepageSearchEngineLayer"></div>
+                <script language="JavaScript">document.getElementById('HomepageSearchEngineLayer').innerHTML = '';</script>
+                <div id="HomepageFlashLayer" style=""><div id="HomepagePano"><div id="HomepagePanoImage"><a href="/spanish/accord-sedan/"><img src="/images/spanish/home-page/pano/home-pano-accord-sedan.jpg" height="367" width="963"></a></div><div id="HomepagePanoJellies"><div class="HomepageJelly" style="margin-left: 0px !important;"><a href="/spanish/accord/" onclick="JellyClick('Accord' , 'jelly_accord');" onmouseover="SwitchImg('JellyAccord', '/images/home-page/pano/home-accord-over.png')" onmouseout="SwitchImg('JellyAccord', '/images/home-page/pano/home-accord-off.png')" id="jelly_accord"><img src="/images/home-page/pano/home-accord-off.png" id="JellyAccord" height="69" width="86"></a></div><div class="HomepageJelly" style="margin-left: 1px !important;"><a href="/spanish/civic/" onclick="JellyClick('Civic' , 'jelly_civic');" onmouseover="SwitchImg('JellyCivic', '/images/home-page/pano/home-civic-over.png')" onmouseout="SwitchImg('JellyCivic', '/images/home-page/pano/home-civic-off.png')" id="jelly_civic"><img src="/images/home-page/pano/home-civic-off.png" id="JellyCivic" height="69" width="86"></a></div><div class="HomepageJelly" style="margin-left: 1px !important;"><a href="/spanish/crosstour/" onclick="JellyClick('Crosstour' , 'jelly_crosstour');" onmouseover="SwitchImg('JellyCrosstour', '/images/home-page/pano/home-crosstour-over.png')" onmouseout="SwitchImg('JellyCrosstour', '/images/home-page/pano/home-crosstour-off.png')" id="jelly_crosstour"><img src="/images/home-page/pano/home-crosstour-off.png" id="JellyCrosstour" height="69" width="86"></a></div><div class="HomepageJelly" style="margin-left: 1px !important;"><a href="/spanish/cr-v/" onclick="JellyClick('CR_V' , 'jelly_cr_v');" onmouseover="SwitchImg('JellyCR_V', '/images/home-page/pano/home-cr_v-over.png')" onmouseout="SwitchImg('JellyCR_V', '/images/home-page/pano/home-cr_v-off.png')" id="jelly_cr_v"><img src="/images/home-page/pano/home-cr_v-off.png" id="JellyCR_V" height="69" width="86"></a></div><div class="HomepageJelly"><a href="/spanish/cr-z/" onclick="JellyClick('CR_Z' , 'jelly_cr_z');" onmouseover="SwitchImg('JellyCR_Z', '/images/home-page/pano/home-cr_z-over.png')" onmouseout="SwitchImg('JellyCR_Z', '/images/home-page/pano/home-cr_z-off.png')" id="jelly_cr_z"><img src="/images/home-page/pano/home-cr_z-off.png" id="JellyCR_Z" height="69" width="86"></a></div><div class="HomepageJelly"><a href="/spanish/fcx-clarity/" onclick="JellyClick('FCX_Clarity' , 'jelly_fcx_clarity');" onmouseover="SwitchImg('JellyFCX_Clarity', '/images/home-page/pano/home-fcx_clarity-over.png')" onmouseout="SwitchImg('JellyFCX_Clarity', '/images/home-page/pano/home-fcx_clarity-off.png')" id="jelly_fcx_clarity"><img src="/images/home-page/pano/home-fcx_clarity-off.png" id="JellyFCX_Clarity" height="69" width="86"></a></div><div class="HomepageJelly"><a href="/spanish/fit/" onclick="JellyClick('Fit' , 'jelly_fit');" onmouseover="SwitchImg('JellyFit', '/images/home-page/pano/home-fit-over.png')" onmouseout="SwitchImg('JellyFit', '/images/home-page/pano/home-fit-off.png')" id="jelly_fit"><img src="/images/home-page/pano/home-fit-off.png" id="JellyFit" height="69" width="86"></a></div><div class="HomepageJelly"><a href="/spanish/insight-hybrid/" onclick="JellyClick('Insight' , 'jelly_insight');" onmouseover="SwitchImg('JellyInsight', '/images/home-page/pano/home-insight-over.png')" onmouseout="SwitchImg('JellyInsight', '/images/home-page/pano/home-insight-off.png')" id="jelly_insight"><img src="/images/home-page/pano/home-insight-off.png" id="JellyInsight" height="69" width="86"></a></div><div class="HomepageJelly"><a href="/spanish/odyssey/" onclick="JellyClick('Odyssey' , 'jelly_odyssey');" onmouseover="SwitchImg('JellyOdyssey', '/images/home-page/pano/home-odyssey-over.png')" onmouseout="SwitchImg('JellyOdyssey', '/images/home-page/pano/home-odyssey-off.png')" id="jelly_odyssey"><img src="/images/home-page/pano/home-odyssey-off.png" id="JellyOdyssey" height="69" width="86"></a></div><div class="HomepageJelly"><a href="/spanish/pilot/" onclick="JellyClick('Pilot' , 'jelly_pilot');" onmouseover="SwitchImg('JellyPilot', '/images/home-page/pano/home-pilot-over.png')" onmouseout="SwitchImg('JellyPilot', '/images/home-page/pano/home-pilot-off.png')" id="jelly_pilot"><img src="/images/home-page/pano/home-pilot-off.png" id="JellyPilot" height="69" width="86"></a></div><div class="HomepageJelly"><a href="/spanish/ridgeline/" onclick="JellyClick('Ridgeline' , 'jelly_ridgeline');" onmouseover="SwitchImg('JellyRidgeline', '/images/home-page/pano/home-ridgeline-over.png')" onmouseout="SwitchImg('JellyRidgeline', '/images/home-page/pano/home-ridgeline-off.png')" id="jelly_ridgeline"><img src="/images/home-page/pano/home-ridgeline-off.png" id="JellyRidgeline" height="69" width="86"></a></div></div></div></div>
+            </div>
+            <div id="HomepageBottom">
+                
+	
+	<script language="javascript" type="text/javascript">
+	function findDealerDiv() {
+	   
+	   var oDiv = document.getElementById("FindDealerDiv");
+	   if(oDiv.style.display == "block") {
+		  oDiv.style.display = "none"
+		  }
+	   else {
+		  oDiv.style.display = "block"
+		  }
+	   }
+	   
+	</script>
+   
+   
+      <div id="ShoppingToolsContainer">
+	 
+          <form id="ShoppingToolsForm" onsubmit="FindDealer(); return false;">
+              <div id="ShoppingToolsTop"><img src="/images/spanish/home-page/shoppingtools-top.gif" id="ShoppingToolsTopImage" alt="Herramientas de compra" height="37" width="166"></div>
+              <div id="ShoppingToolsContent">
+                  <div id="ShoppingToolsLinks">
+                      <div class="shoppingToolsItem"><a style="color:#0066CC;" href="/tools/build-price/">Personalizar tu Honda</a></div>
+                      <div class="shoppingToolsItem"><a href="/tools/price-quote.aspx">Solicitar una cotización</a></div>
+                      <div class="shoppingToolsItem"><a href="/spanish/tools/compare/">Comparar vehículos</a></div>
+						<div class="shoppingToolsItem"><a href="/tools/shopping.aspx?Function=new_finance_calculator_spanish">Calcular pagos</a></div>
+                      <div class="shoppingToolsItem"><a href="/finance-tools/">Financiamiento</a></div>
+					  <div class="shoppingToolsItem" style="border-bottom:0px;"><a style="color:#0066CC;" href="#" onclick="findDealerDiv(); return false;">Buscar concesionario&nbsp;<img src="/images/home-page/shoppingtools-arrow.gif" border="0"></a></div>
+									  <div id="FindDealerDiv" style="margin-top:-165px;text-align:left;display:none;position:absolute;width:199px;height:175px;background:url('/images/spanish/home-page/shoppingtools-dealer.jpg');">
+				<div id="closeBtn" style="position:absolute;margin-left:132px;"><a href="#" onmouseout="SwitchImg('DealerClose' , '/images/spanish/home-page/shoppingtools-dealer-close-off.jpg');" onmouseover="SwitchImg('DealerClose' , '/images/spanish/home-page/shoppingtools-dealer-close-over.jpg');" onclick="findDealerDiv(); return false;"><img id="DealerClose" src="/images/spanish/home-page/shoppingtools-dealer-close-off.jpg" border="0"></a></div>
+				<div id="FindDealerDiv2" style="text-align:center;">
+				  <div id="ShoppingToolsDealerTxt" style="margin:20px;font-size:11px;font-weight:bold; margin-top:40px;">Ingresa tu código postal y luego haz clic en Buscar un concesionario para obtener resultados</div>
+							   </div>
+				  <div id="ShoppingToolsDealerField"><input name="ShoppingToolsDealerText" id="ShoppingToolsDealerText" title="Código postal" value="Código postal" onfocus="ClearDefaultText(this); this.maxLength=5;" type="text"></div>
+                  <div id="ShoppingToolsFindDealerButton"><a href="javascript:FindDealer()" onclick="ClearDefaultText(document.getElementById('ShoppingToolsDealerText'))" onmouseover="SwitchImg('ShoppingToolsFindDealer', '/images/spanish/home-page/btn-findadealer-over.gif')" onmouseout="SwitchImg('ShoppingToolsFindDealer', '/images/spanish/home-page/btn-findadealer-off.gif')"><img src="/images/spanish/home-page/btn-findadealer-off.gif" id="ShoppingToolsFindDealer" alt="Buscar un Concesionario" height="23" width="138"></a></div>
+                  </div>
+                  </div>
+              </div>
+              <div id="ShoppingToolsBottom"><img src="/images/home-page/shoppingtools-bottom.gif" id="ShoppingToolsBottomImage" height="13" width="166"></div>
+          </form>
+      </div>
+	   <div id="HomepageButtons">
+              <div id="HomepageAllModelsButton"><a href="/all-models.aspx" onmouseover="SwitchImg('HomepageAllModels', '/images/spanish/home-page/btn-allmodels-over.gif')" onmouseout="SwitchImg('HomepageAllModels', '/images/spanish/home-page/btn-allmodels-off.gif')"><img src="/images/spanish/home-page/btn-allmodels-off.gif" id="HomepageAllModels" alt="Todos los modelos" height="24" width="129"></a></div>
+              <div id="HomepageAltFuelVehicles" style="margin-left:3px;"><a href="/alternative-fuel-vehicles/" onmouseover="SwitchImg('AltFuelVehicles', '/images/spanish/home-page/btn-AltFuelVehicles-over.gif')" onmouseout="SwitchImg('AltFuelVehicles', '/images/spanish/home-page/btn-AltFuelVehicles-off.gif')"><img src="/images/spanish/home-page/btn-AltFuelVehicles-off.gif" id="AltFuelVehicles" alt="Vehículos hibridos y combustible alternativo" height="24" width="267"></a></div>
+              <div id="HomepageFutureButton" style="margin-left:3px;"><a href="/spanish/future-cars/" onmouseover="SwitchImg('HomepageFuture', '/images/spanish/home-page/btn-future-over.gif')" onmouseout="SwitchImg('HomepageFuture', '/images/spanish/home-page/btn-future-off.gif')"><img src="/images/spanish/home-page/btn-future-off.gif" id="HomepageFuture" alt="Vehículos futuros y prototipos" height="24" width="213"></a></div>
+			  <div id="HomepageCUCButton" style="margin-left:3px;"><a href="/certified-used/" onmouseover="SwitchImg('HomepageCUC', '/images/spanish/home-page/btn-cuc-over.gif')" onmouseout="SwitchImg('HomepageCUC', '/images/spanish/home-page/btn-cuc-off.gif')"><img src="/images/spanish/home-page/btn-cuc-off.gif" id="HomepageCUC" alt="Autos usados certificados" height="24" width="167"></a></div>
+          </div>
+      <div id="HomepageOptionsPanel">
+          <div id="HomepagePanel">
+              <div id="HomepagePanelTop"><img src="/images/home-page/homepage-panel-top.gif" id="HomepagePanelTopImage" height="9" width="481"></div>
+              <div id="HomepagePanelContent">
+                  <div id="HomepagePanelLeftColumn">
+                      <div class="HomepagePanelUnitLeft">
+                          <div class="HomepagePanelIcon"><a href="/current-offers.aspx"><img src="/images/_global/icons/icon-currentoffers.gif" id="HomepagePanelCurrentOffersImage" height="21" width="22"></a></div>
+                          <div class="HomepagePanelLinkLeft">
+                              <a href="/current-offers.aspx">
+                                  <b>Ofertas actuales</b><br>
+                                  Buscar ofertas de arrendamiento y financiamiento
+                              </a>
+                          </div>
+                      </div>
+                      <div class="HomepagePanelUnitLeft">
+                          <div class="HomepagePanelIcon"><a href="/news/news.aspx"><img src="/images/_global/icons/icon-newsroom.gif" id="HomepagePanelNewsroomImage" height="21" width="22"></a></div>
+                          <div class="HomepagePanelLinkLeft">
+                              <a href="/spanish/news/press-releases.aspx">
+                                  <b>Noticias</b><br>
+                                  Última información y prensa
+                              </a>
+                          </div>
+                      </div>
+                      <div class="HomepagePanelUnitLeft">
+                          <div class="HomepagePanelIcon"><a href="#"><img src="/images/_global/icons/icon-espanol.gif" id="HomepagePanelEspanolImage" height="21" width="22"></a></div>
+                          <div class="HomepagePanelLinkLeft">
+                              <a href="/" onclick="return true;">
+                                  <b>Honda in English</b>
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+                  <div id="HomepagePanelRightColumn">
+                      <div class="HomepagePanelUnitRight">
+                          <div class="HomepagePanelIcon"><a href="/information/owner-resources.aspx"><img src="/images/_global/icons/icon-ownerresources.gif" id="HomepagePanelOwnerResourcesImage" height="21" width="22"></a></div>
+                          <div class="HomepagePanelLinkRight">
+                              <a href="/information/owner-resources.aspx">
+                                  <b>Recursos para propietarios</b><br>
+                                  Ayuda con partes de garantía y servicio
+                              </a>
+                          </div>
+                      </div>
+                      <form id="EmailUpdateForm" onsubmit="GetEmailUpdates(); return false;">
+                          <div class="HomepagePanelUnitRight">
+                              <div class="HomepagePanelIcon"><img src="/images/_global/icons/icon-emailupdates.gif" id="HomepagePanelEmailUpdatesImage" height="21" width="22"></div>
+                              <div class="HomepagePanelLinkRight">
+                                      <b>Correo electrónico</b><br>
+									  Obtén información sobre modelos, ofertas y más
+                              </div>
+                          </div>
+                      </form>
+                      <div class="SocialIconsPanel">
+                          <a href="javascript: ShowFacebookLayer();" onclick="s.linkTrackVars = 'prop37'; CallSDotTL(s , true , 'HOME:FACEBOOK LAYER LINK' , 'o');"><img src="/images/_global/icons/icon-facebook.gif" height="21" width="21" border="0"></a>
+						  <a href="javascript: ShowTwitterLayer();" onclick="s.linkTrackVars = 'prop37'; CallSDotTL(s , true , 'HOME:TWITTER LAYER LINK' , 'o');"><img src="/images/_global/icons/icon-twitter.gif" height="21" width="21" border="0"></a>
+						  <a href="javascript: ShowYouTubeLayer();" onclick="s.linkTrackVars = 'prop37'; CallSDotTL(s , true , 'HOME:YOUTUBE LAYER LINK' , 'o');"><img src="/images/_global/icons/icon-youtube.gif" height="21" width="21" border="0"></a>
+						  <a href="javascript: ShowGooglePlusLayer();" onclick="s.linkTrackVars = 'prop37'; CallSDotTL(s , true , 'HOME:GOOGLE PLUS LAYER LINK' , 'o');"><img src="/images/_global/icons/icon-googleplus.gif" height="21" width="21" border="0"></a>
+						  <a href="javascript: ShowPinterestLayer();" onclick="s.linkTrackVars = 'prop37'; CallSDotTL(s , true , 'HOME:PINTEREST LAYER LINK' , 'o');"><img src="/images/_global/icons/icon-pinterest.gif" height="21" width="21" border="0"></a>
+                      </div>
+				  </div>
+                  <div id="HomepagePanelBottomLinks">
+                      <div class="HomepagePanelBottomLink">&nbsp;<a href="http://racing.honda.com/">IndyCar</a></div>
+                      <div class="HomepagePanelBottomDiv"><img src="/images/home-page/homepage-panel-bottom-div.gif" height="13" width="1"></div>
+                      <div class="HomepagePanelBottomLink"><a href="http://corporate.honda.com/careers/">Empleos</a></div>
+                      <div class="HomepagePanelBottomDiv"><img src="/images/home-page/homepage-panel-bottom-div.gif" height="13" width="1"></div>
+                      <div class="HomepagePanelBottomLink"><a href="/information/customer-relations.aspx">Servicio al consumidor</a></div>
+                      <div class="HomepagePanelBottomDiv"><img src="/images/home-page/homepage-panel-bottom-div.gif" height="13" width="1"></div>
+                      <div class="HomepagePanelBottomLink"><a href="http://www.honda.com/">Todos los sitios de Honda</a></div>
+                      <div class="HomepagePanelBottomDiv"><img src="/images/home-page/homepage-panel-bottom-div.gif" height="13" width="1"></div>
+                      <div class="HomepagePanelBottomLink"><a href="/site-map.aspx">Mapa del sitio</a></div>
+                  </div>
+              </div>
+              <div id="HomepagePanelBottom"><img src="/images/home-page/homepage-panel-bottom.gif" id="HomepagePanelBottomImage" height="9" width="481"></div>
+          </div>
+      </div>
+    
+                <div id="HomepageSpotlightI"><a href="/tools/dealer-locator/" onclick="return ClickSpotlight(0);"><img src="/images/home-page/spotlight/2013OdysseyClearanceSpotlight.jpg" id="HomepageSpotlightImage" height="137" width="293"></a></div>
+                    <div id="HomepageSpotlightDots"><a href="javascript: UpdateSpotlight('0');"><img src="/images/trans.gif" class="SpotlightDotOn" id="SpotlightDot0" height="7" width="7" border="0"></a></div>
+            </div>
+            
+
+<div id="FooterContainer">
+
+    <div id="FooterCopyright" class="FooterHomepageCopyright">
+        <span class="DottedLink">©2013 <b class="FooterCorporateLink"><a href="http://www.honda.com/">American Honda Motor Co.</a></b>, Inc. Toda la información que se incluye aquí es válida únicamente para los vehículos de EE.UU. Lee nuestra <a href="http://automobiles.honda.com/information/consumer-privacy-policy.aspx">Política de Privacidad</a><br> 
+        y nuestros <a href="http://automobiles.honda.com/information/legal-terms.aspx">Términos y Condiciones Legales</a>. Para información sobre distribuidores fuera de Estados Unidos, visita el sitio <a id="A1" href="http://world.honda.com/link/">world.honda.com</a>.
+    </span></div>
+
+</div>
+            <div id="SocialMediaLayer"></div>
+        </div>
+        <div id="PageRightColumn"><img src="/images/_controls/global-header/background-header-right.png" height="51" width="20"></div>
+    </div>
+    
+    <script language="javascript">
+    // This shouldn't be onload because you can see the text behind the Flash
+    init();
+    </script>
+
+
+    
+<div id="TrackingTags">
+
+<!-- SiteCatalyst code version: H.22.1.
+Copyright 1997-2007 Omniture, Inc. More info available at
+http://www.omniture.com -->
+
+<script language="JavaScript">
+/* Specify the Report Suite ID(s) to track here */
+
+
+var s_account = 'ahmautomobilesprod';
+
+
+
+</script>
+
+<script language="JavaScript" src="/js/tracking/global_code.js"></script>
+<script language="javascript" type="text/javascript">
+
+    /* Custom Functions */
+
+    // Sometimes we want to track links on a page as specific page names.
+    // This function will help accomodate for that.
+    function TrackPageClick(sPageName) {
+
+        var s=s_gi(s_account);
+        s.pageName = sPageName;
+        s.events = '';
+        s.products = '';
+        
+        CallSDotT(s);
+    }
+
+    function TrackLinkClick(sLinkName) {
+
+        var s=s_gi(s_account);
+     
+        s.linkTrackVars = '';
+        s.linkTrackEvents='';
+        
+        CallSDotTL(s , this , sLinkName , "o");
+
+    }
+    
+    function CallSDotT(s) {
+    
+        // Nothing should call s.t() directly. Everything should go through this function.
+
+        s = FormatVars(s);
+
+        var s_code=s.t();if(s_code)document.write(s_code)
+
+    }
+    
+    function CallSDotTL(s , sObject , sLinkName , sLinkType) {
+  
+        // Nothing should call s.t() directly. Everything should go through this function.
+    
+        s = FormatVars(s);
+        
+        s.tl(sObject , sLinkType , sLinkName);
+
+    }
+    
+    function FormatVars(s) {
+        // The purpose of this function is to provide sort of a Vista layer for ensuring
+        //  that data is formatted as desired no matter how it is programmed.
+        
+        s.prop28 = 'Spanish';
+        
+        
+        
+        s.prop12 = 'JS';
+        
+
+        if(s.prop1) s.eVar10 = s.prop1;
+        if(s.prop2) s.eVar11 = s.prop2;
+        if(s.prop3) s.eVar12 = s.prop3;
+        if(s.prop4) s.eVar13 = s.prop4;
+        if(s.prop5) s.eVar14 = s.prop5;
+        if(s.prop6) s.eVar15 = s.prop6;
+        if(s.prop7) s.eVar22 = s.prop7;
+        if(s.prop17) s.eVar17 = s.prop17;
+        if(s.prop18) s.eVar18 = s.prop18;
+        if(s.prop19) s.eVar24 = s.prop19;
+        if(s.prop22) s.eVar25 = s.prop22;
+        if(s.prop26)s.eVar26 = s.prop26;
+        if(s.prop27)s.eVar27 = s.prop27;
+        if(s.prop33)s.eVar16 = s.prop33;
+        if(s.prop34)s.eVar34 = s.prop34;
+        if(s.prop39)s.eVar7 = s.prop39;
+
+        s.prop25 = document.location.pathname.toUpperCase() + '' + window.location.search.toUpperCase();
+
+        // Certain props and eVars have been disabled. Make sure they are always empty.
+        s.prop21 = '';
+        s.prop24 = '';
+
+        s.eVar21 = '';
+        s.eVar23 = '';
+        s.eVar28 = '';
+        s.eVar35 = '';
+
+        s.hier1 = '';
+        s.hier2 = '';
+        
+        // Trim whitespace off the end of values and uppercase values
+        for (var sKey in s) {
+            if ( (sKey.substr(0,4) == 'prop') || (sKey.substr(0,4) == 'eVar') || (sKey.substr(0,8) == 'pageName') || (sKey.substr(0,8) == 'linkName') || (sKey.substr(0,8) == 'channel') ) {
+                if (s[sKey] != '') {
+                    s[sKey] = (s[sKey] + '').replace(/^\s+|\s+$/g, '');
+                    s[sKey] = s[sKey].toUpperCase();
+                }
+            } 
+        }
+        
+
+        return s;
+    }
+    
+    // for s.products
+    function GetModelProductType(sModel) {
+        switch (sModel.toUpperCase()) {
+            case 'ACCORD SEDAN': case 'ACCORD COUPE': case 'CIVIC SEDAN': case 'CIVIC COUPE': case 'CIVIC GX': case 'CIVIC GX NGV': case 'CIVIC GX FLEET': case 'CIVIC HYBRID': case 'CIVIC SI COUPE': case 'CIVIC SI SEDAN': case 'CR-Z': case 'FCX': case 'FIT': case 'INSIGHT': case 'S2000': case 'ACCORD PLUG-IN':
+                return 'CARS'; break;
+            case 'CR-V': case 'ELEMENT': case 'ELEMENT SC': case 'PILOT': case 'ODYSSEY': case 'RIDGELINE': case 'ACCORD CROSSTOUR': case 'CROSSTOUR':
+                return 'TRUCKS'; break;             
+        }
+        return '';
+    }
+    
+   
+
+/* You may give each page an identifying name, server, and channel on
+the next lines. */
+s.linkInternalFilters="javascript:,rpa.com,honda.com,redesign.automobiles.honda.com,automobiles.honda.com"
+s.servers='10.100.71.110';
+
+var CurrentPageName='Home Page';
+if(CurrentPageName=='')CurrentPageName="Honda Automobiles - " + document.location.href;
+var Currentprop21='';
+var Currentprop23='';
+var Currentprop24='';
+var Currentprop25='';
+//ModelName and ModelYear For Model Sections
+
+//PageName, ModelName and ModelYear For HCUC Sections
+if(typeof CurrentModelName !=="undefined")s.prop1=CurrentModelName;
+if(typeof CurrentModelYear !=="undefined")s.prop2=CurrentModelYear;
+
+
+
+
+s.pageName = 'HOME PAGE - SPANISH';
+s.channel="HOME - SPANISH"
+s.prop28="NotSetYet"
+
+var AllSpotLightPromoIDs=";";
+for(i=0;i<SpotlightArray.length;i++){
+    AllSpotLightPromoIDs+=SpotlightArray[i].id;
+    if(i!=SpotlightArray.length-1) AllSpotLightPromoIDs+=",;";
+  }
+s.events="event1";
+s.products=AllSpotLightPromoIDs;
+
+
+//Setting s.pageName
+//Special Case pageName For News Article Detail
+if(typeof CurrentNewsTitle!=="undefined") {
+    s.pageName=CurrentPageName+" Detail - "+CurrentNewsTitle;
+}
+//Special Case pageName For FAQ Questions
+else if(typeof CurrentFAQ!=="undefined") {
+    s.pageName=CurrentPageName+" Question "+CurrentFAQ;
+}
+//Special Case pageName For HCUC Section
+else if(typeof CurrentModelName !=="undefined"){
+    var tmpPageName=(s.prop26) ? s.prop26.split(":")[1] : "";
+    s.pageName="Certified Used " + CurrentModelYear+" "+CurrentModelName+" "+tmpPageName;
+    s.prop26 = "Certified Used Model Library";
+    s.prop27 = "Certified Used " + CurrentModelYear+" "+CurrentModelName;
+}
+else {
+    if (!s.pageName) s.pageName=CurrentPageName;
+}
+
+//Setting prop37
+if (!s.prop37) s.prop37=s.channel + ":" + s.prop26 + ":" + s.prop27 + ":" + s.pageName;
+/*
+if (!s.prop37) {
+    if (s.channel) {
+        s.prop37 = s.channel;
+    }    
+    if (s.prop26) {
+        if (s.prop37) { s.prop37 += ':'; }
+        s.prop37 += s.prop26;
+    }
+    if (s.prop27) {
+        if (s.prop37) { s.prop37 += ':'; }
+        s.prop37 += s.prop27;
+    }    
+    if (s.pageName) {
+        if (s.prop37) { s.prop37 += ':'; }
+        s.prop37 += s.pageName;
+    }
+}
+*/
+
+
+
+// Setting Portal Referral prop29 eVar29 if is from honda.com or www.honda.com
+
+
+
+
+
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+try {
+    if ( (typeof(DO_NOT_TRACK_ON_LOAD) != 'undefined') && (DO_NOT_TRACK_ON_LOAD) ) {
+    } else {
+        CallSDotT(s);
+    }
+} catch (ex) {
+    // This is here as a just in case since this line of code is so important
+    CallSDotT(s);
+}
+
+//--></script>
+
+
+
+<script language="JavaScript" type="text/javascript"><!--
+if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+//--></script><noscript><img src="http://honda.112.2o7.net/b/ss/ahmautomobilesprod/5/H.22.1--NS/0?pageName=HOME PAGE - NON-JS&c12=NON-JS" height="1" width="1" border="0" alt="" /></noscript><!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst code version: H.22.1 -->
+
+
+
+
+
+
+
+
+
+
+<script language="JavaScript">
+
+// -------------------------------------
+// Dynamically add tracking code to page
+// -------------------------------------
+var xmlHttp = false;
+
+
+function AddTrackingTagsToPage (url) {
+
+    // Create http object
+    try {
+        xmlHttp=new XMLHttpRequest();
+    } catch (e) {
+        try {
+            xmlHttp=new ActiveXObject("Msxml2.XMLHTTP");
+        } catch (e) {
+            xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+    }
+
+    if (xmlHttp) {
+        xmlHttp.onreadystatechange = ProcessTrackingTags;
+        xmlHttp.open ('GET', url, true);
+        xmlHttp.send (null);
+    }
+
+}
+
+function ProcessTrackingTags() {
+
+    var sUserTrackingHTML = '';
+
+    if (xmlHttp.readyState == 4) {
+
+        if (xmlHttp.status == 200) {
+
+            var sUserTrackingHTML = xmlHttp.responseText;
+
+	        ParseTrackingHTML(sUserTrackingHTML);
+                    
+        } else {
+                // The request could not be fulfilled.
+        }
+    }
+
+}
+    
+    
+// This function will separate out the HTML and JavaScript from the HTML block.
+// The JavaScript code will be passed into an eval() statement.
+// The HTML code will be added to a new DIV.
+function ParseTrackingHTML(sValue) {
+
+		var sTempValue = sValue;
+
+		var sTempString = sTempValue.toLowerCase();
+		
+        // Pull JavaScript code out of HTML block
+		while (sTempString.indexOf("<scr" + "ipt") > 0) {
+		
+			var iIndex1 = sTempString.indexOf("<scr" + "ip" + "t");
+			var iIndex2 = iIndex1 + sTempString.substr(iIndex1).indexOf(">") + 1;
+			var iIndex3 = sTempString.substr(iIndex1).indexOf("</s" + "cr" + "ipt>");
+			
+			var sJS = sTempValue.substr(iIndex2   , iIndex3 - (iIndex2 - iIndex1));
+
+            // document.write won't work, so we need to replace it with a call to CreateDivAndWriteContent
+            sJS = sJS.replace(/document.write/g , 'CreateDivAndWriteContent');
+            // Get rid of comment tags
+            sJS = sJS.replace("<!--" , "");
+            sJS = sJS.replace("//-->" , "");
+
+            // Execute JS code
+			eval(sJS);
+
+            // Remove this JS block from sTempValue to look for next instance
+			sTempValue = sTempValue.substr(0 , iIndex1) + '' + sTempValue.substr(iIndex1 + iIndex3 + 9);
+
+			var sTempString = sTempValue.toLowerCase();			
+		
+		}
+
+    // What's remaining from sTempValue is just HTML. Write it to a <div>
+    CreateDivAndWriteContent(sTempValue);
+		
+}
+	
+// This function will dynamically create a div, populate it with passed in content, 
+//  and append it to the current document.
+function CreateDivAndWriteContent(sText) {
+
+    var oNewDiv = document.createElement('div');
+    oNewDiv.innerHTML = sText;
+    document.body.appendChild(oNewDiv);
+
+}
+
+
+
+// Create URL for tracking tags page
+// This should use javascript to retrieve the domain and protocol since we don't want to get a security violation by accessing the wrong domain.
+var sTrackingTagsPageURL = location.protocol + '//' + location.host + '/feeds/tracking-data.aspx?PageID=homepage&ModelName=&ModelYear=&Language=spanish';
+
+if(window.onload){
+    
+    
+    if (window.onload.toString().indexOf('oldonload') >= 0) {
+        window.onload = function() { }        
+    }
+    if(typeof(OnLoadExecute)=="function"){
+        if(window.onload!=OnLoadExecute){
+            var OldWindowOnLoadFunction=window.onload;
+            OnLoadAppend("OldWindowOnLoadFunction()");
+            window.onload=OnLoadExecute;
+        }else{
+        }
+        OnLoadAppend("AddTrackingTagsToPage(sTrackingTagsPageURL)");
+    }else{
+        var OldWindowOnLoadFunction=window.onload;
+        var TrackingOnLoadFunction=new Function("AddTrackingTagsToPage(sTrackingTagsPageURL); OldWindowOnLoadFunction();");
+        window.onload=TrackingOnLoadFunction;
+    }
+
+
+
+
+
+
+
+
+
+}else{
+    var TrackingOnLoadFunction=new Function("AddTrackingTagsToPage(sTrackingTagsPageURL)");
+    window.onload=TrackingOnLoadFunction;
+}
+</script>
+
+
+
+        
+        
+         
+
+<!-- OPTIMOST GLOBAL MODULE AND COUNTER CODE -->
+<script type="text/javascript">
+if (typeof(opContentUrls)!='undefined' && typeof(opModulesArray)!='undefined' && opContentUrls.length>0 && opModulesArray.length>0) {
+	for(var i=0;i<opModulesArray.length;i++){
+		optimost.displayModule(opModulesArray[i]);
+	}
+}
+if(typeof opRunCounters=='function'){
+	opRunCounters();
+}
+</script>
+<!-- END OPTIMOST GLOBAL MODULE AND COUNTER CODE -->
+
+
+
+
+
+<!-- Begin Visual IQ Tags -->
+<script type="text/javascript" src="/js/IQ-SEOTag.js"></script>
+<script type="text/javascript">
+
+(function (){
+
+    var CURRENT_URL=document.URL;
+    var REFERRER_URL=document.referrer;
+    var additionalParameters={
+		     CUSTOM_ACCESS_MODES_BY_REFERRER:{
+	        	        	    SOCIAL:["facebook.com","twitter.com","plus.google.com","pinterest.com","instagram.com"]
+	        	        }
+	    }
+
+    var result =new IQSeoTag(REFERRER_URL,CURRENT_URL,null,additionalParameters);
+    var currentParams="false";
+    if(result.current_page_params && result.current_page_params.queryKey){
+
+
+			    for(key in result.current_page_params.queryKey){
+			    currentParams="true";		
+				    if(key.toLowerCase() != key){
+					    result.current_page_params.queryKey[key.toLowerCase()] = result.current_page_params.queryKey[key];
+					    delete result.current_page_params.queryKey[key];
+				    }
+			    }
+		    }
+    		
+    var imageURL;
+
+    if(result.modeOfAccess == "ORGANIC") {
+	    if(result.current_page_params.queryKey["kwid"] || CURRENT_URL.indexOf("kwid")>0 || CURRENT_URL.indexOf("KWID")>0){
+
+	    }else{
+		    imageURL = "http://ad.doubleclick.net/ad/N2958.547841.VISUALIQ.COM/B7362620.2;sz=1x1;u=" + result.source + "-" + result.query + "-" + result.current_page_params.query + "|" + REFERRER_URL + ";ord=[" + result.timestamp + "]?";
+	    }
+    	
+    }else if(result.modeOfAccess == "SOCIAL"){
+
+	    if(currentParams == "false"){
+    	
+		    imageURL = "http://ad.doubleclick.net/ad/N2958.547841.VISUALIQ.COM/B7362620.3;sz=1x1;u=" + result.current_page_params.query + "|" + REFERRER_URL + ";ord=[" + result.timestamp + "]?";
+	    }
+    }
+
+
+    if(result.current_page_params.queryKey["sp_mid"]){
+	       imageURL = "http://ad.doubleclick.net/ad/N2958.547841.VISUALIQ.COM/B7362620.4;sz=1x1;u=" + result.current_page_params.query + "|" + REFERRER_URL + ";ord=[" + result.timestamp + "]?";
+    }
+
+
+    if(CURRENT_URL.indexOf("kwid")>0 || CURRENT_URL.indexOf("KWID")>0){
+    	
+	    var params=CURRENT_URL.split("?");
+						    imageURL = "http://ad.doubleclick.net/ad/N2958.547841.VISUALIQ.COM/B7362620;sz=1x1;u=" + result.source + "-" + result.query + "-" + params[1] + "|" + REFERRER_URL + ";ord=[" + result.timestamp + "]?";
+    		
+	    }
+
+    if(REFERRER_URL.indexOf("youtube")>0){
+    if(currentParams == "false"){
+    		
+		    imageURL = "http://ad.doubleclick.net/ad/N2958.547841.VISUALIQ.COM/B7362620.3;sz=1x1;u=" + result.current_page_params.query + "|" + REFERRER_URL + ";ord=[" + result.timestamp + "]?";
+	    }
+    }
+    if (imageURL) {
+	    var image = new Image();
+	    image.src = imageURL;
+    }
+
+}());
+</script>
+<!-- End Visual IQ Tags -->
+
+
+
+</div>
+    <div id="TrackingTags">
+    <!-- La Agencia de Orci - Honda - Q1 Civic - retargeting -->
+<!--AudienceScience Page Tag-->
+<script type="text/javascript" src="http://js.revsci.net/gateway/gw.js?csid=|10981&amp;rtid=10350&amp;auto=t"></script>
+<!--
+Start of DoubleClick Floodlight Tag: Please do not remove
+Activity name of this tag: BT: Spanish Language Autos Home Page (UNI)
+URL of the webpage where the tag is expected to be placed: http://tbd.com
+This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+Creation Date: 08/08/2012
+-->
+<script type="text/javascript">
+var axel = Math.random() + "";
+var a = axel * 10000000000000;
+document.write('<iframe src="http://fls.doubleclick.net/activityi;src=675026;type=fy04n873;cat=btspa601;ord=1;num=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+</script><iframe src="http://fls.doubleclick.net/activityi;src=675026;type=fy04n873;cat=btspa601;ord=1;num=9255255857905.018?" style="display:none" frameborder="0" height="1" width="1"></iframe>
+<noscript>
+<iframe src="http://fls.doubleclick.net/activityi;src=675026;type=fy04n873;cat=btspa601;ord=1;num=1?" width="1" height="1" frameborder="0" style="display:none"></iframe>
+</noscript>
+
+    </div>
+    
+
+
+<script src="/js/spanish/languagepages.aspx" type="text/javascript"></script><div><iframe src="http://fls.doubleclick.net/activityi;src=675026;type=fy04n873;cat=newho202;ord=1;num=4026243589519.2427?" frameborder="0" height="1" width="1"></iframe></div><div><!-- //-->
+      <!-- Start of DoubleClick Spotlight Tag: Please do not remove-->
+<!-- Activity Name for this tag is:BT: Autos Home Page (UNI) -->
+<!-- Web site URL where tag should be placed: http://automobiles.honda.com -->
+<!-- This tag must be placed within the opening <body> tag, as close to the beginning of it as possible-->
+<!-- Creation Date:04/30/07 -->
+
+<noscript>
+<IFRAME SRC="http://fls.doubleclick.net/activityi;src=675026;type=fy04n873;cat=newho202;ord=1;num=1?" WIDTH=1 HEIGHT=1 FRAMEBORDER=0></IFRAME>
+</noscript>
+<!-- End of DoubleClick Spotlight Tag: Please do not remove-->
+
+    <!-- Begin ad tag --> 
+    <!-- List Id = 11892 and DataCenter = United States --> 
+    <img src="http://ad.doubleclick.net/activity;src=1270268;dcnet=4155;boom=11892;sz=1x1;ord=1?" height="1" width="1" border="0">
+    <!-- End ad tag --> 
+
+
+
+
+
+
+</div></body>

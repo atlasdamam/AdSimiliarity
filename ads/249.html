@@ -1,0 +1,4840 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml">
+ <head> 
+  <title>Ask.com - What's Your Question?</title> 
+  <meta name="description" content="Ask.com is the #1 question answering service that delivers the best answers from the web and real people - all in one place." /> 
+  <link rel="shortcut icon" href="http://sp.ask.com/sh/i/a16/favicon/favicon.ico" /> 
+  <link href="http://sp.ask.com/sh/ui-assets/inc/css/a16/reset.r87850-02.css" type="text/css" rel="stylesheet" /> 
+  <link rel="stylesheet" href="http://sp.ask.com/sh/ui-assets/dcss/a14/shared/jquery-ui-1.7.2.custom.r91904-02.css" type="text/css" /> 
+  <style type="text/css">
+    .blue-btn-right, .blue-fBtn-right, .gray-btn-right, .gray-fBtn-right, .blue-btn-title, .blue-fBtn-title,
+    .gray-btn-title, .gray-fBtn-title, .blue-sbtn-right, .gray-sbtn-right, .blue-sfBtn-right, .gray-sfBtn-right,
+    .blue-sbtn-title, .gray-sbtn-title, .blue-sfBtn-title, .gray-sfBtn-title {
+        background-image:url('http://sp.ask.com/sh/i/a16/serp/SERP_sprite_19.png');
+    }
+</style> 
+  <link rel="stylesheet" href="http://sp.ask.com/sh/ui-assets/dcss/a16/reply.r106500-02.css" type="text/css" /> 
+  <link href="http://sp.ask.com/sh/css/saservice/1.0.31/sas.css" rel="stylesheet" type="text/css" /> 
+  <style type="text/css">
+
+
+
+
+
+
+
+
+    
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+    
+    
+    .cmn-h{
+        height:30px;
+        overflow:hidden;
+        background-position: -1px -165px;
+        background-repeat:repeat-x;
+        color:#FFFFFF;
+    }
+
+    .nbsp {
+        background-image: url("http://sp.ask.com/sh/i/a14/navbar_sprite.png");
+    }
+
+    .iconsp {
+        background-image: url("http://sp.ask.com/sh/i/a14/sprites/ask_icon_sprites_20.png");
+    }
+
+    .rcap {
+        height:30px;
+        width:6px;
+        background-position: -2px -84px;
+    }
+
+    .lcap {
+        height:30px;
+        width:6px;
+        background-position: -1px -126px;
+    }
+
+
+    .hpthm .cmn-h {
+        background-position: -1px -284px;
+        background-repeat:repeat-x;
+    }
+
+    .hpthm .rcap {
+        background-position: -2px -206px;
+    }
+
+    .hpthm .lcap {
+        background-position: -1px -249px;
+    }
+
+    .cmn-h a, .cmn-h a:visited {
+        color:#ffffff;
+        text-decoration: none;
+        cursor:pointer;
+    }
+
+    .cmn-h .mi .tu:hover {
+        text-decoration:underline;
+        cursor:pointer;
+    }
+
+    .cmn-h .lm {
+        margin-left: 5px;
+        overflow:hidden;
+        height:27px;
+        margin-top:1px;
+        height:30px;
+    }
+
+    .cmn-h .rm {
+        float:right;
+        overflow:hidden;
+        height:27px;
+        margin-top:1px;
+    }
+
+    .cmn-h .mi {
+        margin-right:5px;
+        padding: 3px 10px;
+        margin-top: 2px;
+        overflow:hidden;
+        height:17px;
+    }
+
+    .mi .rcap {
+        height:25px;
+        background-position: -1px -1px;
+        margin-top:-3px;
+    }
+
+    .mi .lcap {
+        height:25px;
+        background-position: -1px -24px;
+        margin-top:-5px;
+    }
+
+    .mi .fill {
+        height:25px;
+        background-position: -2px -51px;
+        background-repeat: repeat-x;
+        margin-top:-3px;
+        padding-top: 2px;
+    }
+
+    .rm .mi .fill {
+        padding:3px;
+    }
+
+    .lm .rm .mi {
+        float: right;
+
+    }
+
+    .lm .mi {
+        float:left;
+    }
+
+    .cmn-h .mli {
+        display:none;
+        border:2px solid #56BBDD;
+        background-color:#ffffff;
+        z-index:1001;
+        position:absolute;
+        border-radius:7px;
+        -moz-border-radius:7px;
+        border-radius: 7px;
+        padding-left: 15px;
+        width: 153px;
+    }
+
+    .mli a {
+        display:block;
+        margin-top: 5px;
+        padding-bottom:5px;
+        color:#0055cc;
+    }
+
+    .ml a:visited {
+        color:#0055cc;
+        text-decoration:none;
+    }
+
+    .mli a:hover {
+        text-decoration:underline;
+        color:#0055cc;
+    }
+
+    .a16 .nbsp {
+        background-image: url("http://sp.ask.com/sh/i/a16/serp/SERP_sprite_19.png");
+    }
+
+    .a16 .cmn-h {
+        height:30px;
+        overflow:hidden;
+        background-position: 0 -54px;
+        background-repeat:repeat-x;
+        color:#FFFFFF;
+    }
+
+    .a16 .cmn-h .lm {
+        margin:2px 4px 0;
+    }
+
+    .a16 .cmn-h .rm {
+        margin:0;
+    }
+
+    .a16 .lcap {
+        background-position: 0 -54px;
+    }
+
+    .a16 .rcap {
+        background-position: 0 -54px;
+    }
+
+    .a16 .cmn-h .mi {
+        height:21px;
+        margin-right: 0;
+        text-shadow: 0 1px 1px #727779;
+    }
+
+    .a16 .mi .fill {
+        height:25px;
+        background-position:0 -334px;
+        color:#000000;
+        padding: 2px 12px 0;
+        text-shadow: none;
+    }
+
+    .a16 .mi .lcap {
+        background-position:-20px -54px;
+        height:29px;
+        width:8px;
+        margin-top:-3px;
+    }
+
+    .a16 .mi .rcap {
+        background-position:-30px -54px;
+        height:29px;
+        width:8px;
+    }
+
+    .a16 .cmn-h .mli {
+        border: 2px solid #898F91;
+        text-shadow: 0 1px 1px #727779;
+    }
+
+    #nmSignInAvatar a {
+        cursor:auto;
+    }
+
+    .a16 #nmSignInAvatar, .a16 #nmAvatar {
+        margin-top:3px;
+        
+    }
+    
+
+
+
+
+        
+    
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+        
+            
+
+
+
+
+
+
+
+
+
+
+        
+    
+        
+            
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+    .lnav a, .lnav a:visited {
+        text-decoration:none;
+        color:#0022CC;
+    }
+
+    .lnav a:hover {
+        text-decoration:underline;
+    }
+
+    .lnav .slink {
+    
+        padding:8px 0 7px 10px;
+        color:#333333;
+        margin-bottom: 2px;
+    }
+
+    .lnav .slink .arr {
+    
+        
+        
+        background-position: -100px -30px;
+        
+    
+        float: right;
+        height: 9px;
+        margin: 4px 4px 0 0;
+        width: 4px;
+    }
+
+    .lnav .link {
+    
+        padding:8px 0 8px 10px;
+        margin-bottom: 2px;
+    }
+    .lnavMore{
+        background-position: 135px 0;
+        float: right;
+        height: 12px;
+        width: 13px;
+        margin-top: 3px;
+    }
+    .lnavLess{
+        background-position: 135px -15px;
+        float: right;
+        height: 12px;
+        width: 13px;
+        margin-top: 3px;
+    }
+    .tu:hover {
+        cursor:pointer;
+        text-decoration:underline;
+    }
+
+    a.ntu:hover {
+        cursor:pointer;
+        text-decoration:none;
+    }
+
+
+
+
+
+        
+    
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .a16nb {
+        height:30px;
+        overflow:hidden;
+        color:#FFFFFF;
+        padding:0 0 0 12px;
+        background-color:#abb2b5;
+        background:-moz-linear-gradient(top, #abb2b5, #9ea7aa);
+        background:-webkit-linear-gradient(top, #abb2b5, #9ea7aa);
+        background:-o-linear-gradient(top, #abb2b5, #9ea7aa);
+        background:-ms-linear-gradient(top, #abb2b5, #9ea7aa);
+        background:linear-gradient(top, #abb2b5, #9ea7aa);
+    }
+
+    .a16nb a, .a16nb a:visited {
+        color:#ffffff;
+        text-decoration: none;
+        cursor:pointer;
+    }
+
+    .a16nb .mi .tu:hover {
+        text-decoration:underline;
+        cursor:pointer;
+    }
+
+    .a16nb .lm, .a16nb .rm {
+        overflow:hidden;
+        height:30px;
+    }
+
+    .a16nb .lm {
+        float:left;
+        font-weight:bold;
+    }
+
+    .a16nb .rm {
+        float:right;
+    }
+
+    .a16nb .mi {
+        margin:3px 0 0 3px;
+        padding: 4px 15px 8px;
+        overflow:hidden;
+        height:16px;
+    }
+
+    .a16nb .lm .mi {
+        float:left;
+        background-color:#8e9699;
+        border-radius:2px 2px 0 0;
+        background:-moz-linear-gradient(top, #8e9699, #7a8184);
+        background:-webkit-linear-gradient(top, #8e9699, #7a8184);
+        background:-o-linear-gradient(top, #8e9699, #7a8184);
+        background:-ms-linear-gradient(top, #8e9699, #7a8184);
+        background:linear-gradient(top, #8e9699, #7a8184);
+    }
+
+    .a16nb .rm .mi {
+        float: right;
+        padding:3px 10px 8px;
+    }
+
+    .community .a16nb {
+        background-color:#4d889b;
+        background:-moz-linear-gradient(top,#86aebb 2%, #6d9dad 4%, #35788e 100%);
+        background:-webkit-gradient(linear, left top, left bottom, color-stop(2%,#86aebb),color-stop(4%,#6d9dad),color-stop(100%,#35788e));
+        background:-webkit-linear-gradient(top,#86aebb 2%, #6d9dad 4%, #35788e 100%);
+        background:-o-linear-gradient(top,#86aebb 2%, #6d9dad 4%, #35788e 100%);
+        background:-ms-linear-gradient(top,#86aebb 2%, #6d9dad 4%, #35788e 100%);
+        background:linear-gradient(top,#86aebb 2%, #6d9dad 4%, #35788e 100%);
+    }
+
+    .community .a16nb .lm .mi {
+        background-color:#1d5d72;
+        background:-moz-linear-gradient(top, #1d5d72, #2c6374);
+        background:-webkit-linear-gradient(top, #1d5d72, #2c6374);
+        background:-o-linear-gradient(top, #1d5d72, #2c6374);
+        background:-ms-linear-gradient(top, #1d5d72, #2c6374);
+        background:linear-gradient(top, #1d5d72, #2c6374);
+    }
+
+    .a16nb .lm .smi,  .community .a16nb .lm .smi, .a16nb .rm .smi,  .community .a16nb .rm .smi {
+        color:#333333;
+        background:none;
+        background-color:#FFFFFF;
+        border-radius:2px 2px 0 0;
+    }
+
+    .a16nb .rm .smi,  .community .a16nb .rm .smi {
+        padding:3px 15px 8px;
+        font-weight:bold;
+    }
+
+    .a16nb #nmSignInAvatar {
+        padding:0px;
+        margin-top:7px;
+    }
+
+    .a16nb #nmAvatar {
+        margin-top:1px;
+    }
+
+    .a16nb #nmAvatar img {
+        vertical-align:top;
+    }
+
+    .a16nb #a16CnbNanoMe {
+        padding-left:0;
+        padding-right:0;
+    }
+    .a16nb #nmgNotifcation {
+        background-color:orange;
+        text-align:center;
+        font-weight:bold;
+        cursor:pointer;
+    }
+
+    .a16nb #nmNotifyDropDown {
+        display:none;
+        background-color:white;
+        position:absolute;
+        top:30px;
+        right:65px;
+        width:300px;
+        border:solid 1px #A1B7C2;
+        z-index:5000;
+        font-size:11px;
+        color:#666;
+    }
+
+    #nmNotifyDropDown {
+        border: 1px #A1B7C2 solid;
+        box-shadow: 0px 1px 3px #8FAAB3;
+    }
+
+    #ddHeader {
+        clear:both;
+        padding:15px 10px;
+        height:50px;
+    }
+
+    #ddProfileName {
+        font-size:16px;
+        color: #115A99;
+        font-weight:bold;
+        float:left;
+        margin-left:10px;
+        width:200px;
+    }
+
+    #ddProfileDetails {
+        font-size:12px;
+        color: #333;
+        float:left;
+        margin:10px;
+        width:200px;
+    }
+
+    #ddBody {
+        clear:both;
+        border-top:solid 1px #A1B7C2;
+        padding:15px 10px;
+    }
+
+    .ddToastItem {
+        clear:both;
+        padding:10px;
+        font-size:13px;
+        font-weight:bold;
+        color:#115A99;
+    }
+
+    .growlNotifications {
+        background-color: #e4f3fa;
+        background:-moz-linear-gradient(top,#e4f3fa 0%,#c5e6f2 100%);
+        background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#e4f3fa),color-stop(100%,#c5e6f2));
+        background:-webkit-linear-gradient(top,#e4f3fa 0%,#c5e6f2 100%);
+        background:-o-linear-gradient(top,#e4f3fa 0%,#c5e6f2 100%);
+        background:-ms-linear-gradient(top,#e4f3fa 0%,#c5e6f2 100%);
+        background:linear-gradient(top,#e4f3fa 0%,#c5e6f2 100%);
+        border:1px #a0c9d9 solid;
+        border-radius: 3px;
+        box-shadow:0px 2px 3px rgba(255,255,255,.85) inset;
+        box-shadow:0px 2px 4px #fff;
+    }
+
+    .dropBox{
+        display: inline-block;
+        position: absolute;
+        top: 32px;
+        background-color: #FFFFFF;
+        border: 1px solid #CCCCCC;
+        width: 127px;
+    }
+    .filterDrop{
+        left: 238px;
+    }
+    .moreDrop{
+        left: 558px;
+    }
+    .moreDropBox {
+        background-color: #FFFFFF;
+        border: 1px solid #CCCCCC;
+        display: inline-block;
+        left: 626px;
+        position: absolute;
+        width: 95px;
+    }
+    .dropItem {
+        display: inline-block;
+        padding: 8px 0 8px 8px;
+        width: 112px;
+        color: #666666;
+        font-weight:bold;
+        text-decoration:none;
+    }
+    .downArrow {
+        background-position: -77px -29px;
+        height: 7px;
+        width: 12px;
+        margin-left: 5px;
+        margin-top: 5px;
+        float:right;
+    }
+    
+
+
+
+
+
+
+        
+    
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+        
+            
+
+
+
+
+
+
+
+
+
+
+        
+    
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+    
+        
+            
+
+
+
+
+
+
+
+
+    .cft {
+        margin:5px 0 5px 0;
+    }
+
+    
+
+    
+
+    .cft, .cft a, .cft a:visited {
+        color:#999999;
+    }
+
+    .cft a {
+        text-decoration:none;
+    }
+
+    .cft a:hover {
+        text-decoration:underline;
+        cursor:pointer;
+    }
+    .cft .separator {
+        padding:0 3px;
+    }
+
+
+
+        
+    
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+    
+            
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+.ptbs{
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.pbs{
+    padding-bottom: 8px;
+}
+
+
+
+
+
+
+.a16 .c2s{
+    margin: 0 20px;
+    min-width: 902px;
+    max-width: 1080px;
+    overflow: hidden;
+    position: fixed;
+    top: 106px;
+    width: 84.5%;
+    z-index: 2;
+}
+.a16 .c2s1{
+    margin: 0 20px;
+    min-width: 800px;
+    max-width: 967px;
+    overflow: hidden;
+    position: fixed;
+    top: 106px;
+    width: 77.5%;
+    z-index: 2;
+}
+
+
+
+
+
+
+
+.saMargin,.toMargin{margin-top: 10px;margin-left: 10px;}
+.topFrameV2 {background-color: #EFF5FA;padding: 8px;}
+.topFrameV1 {border: 1px solid #E7E7E7;background-color: #FBFBFB;padding: 8px;}
+
+
+.fnt_enlarge{
+    font-size:15px;
+}
+
+    /*smartAnswers.jsp supporting tako rolling updates.*/
+.re_submid{
+    background-image:url('http://sp.ask.com/sh/i/a16/serp/SERP_sprite_19.png');
+    background-position: 0 -693px ;
+}
+.re_subright{
+    background-image:url('http://sp.ask.com/sh/i/a16/serp/SERP_sprite_19.png');
+
+
+
+    background-position:-221px -305px;
+
+
+    background-color:transparent;
+    background-repeat:no-repeat;
+}
+
+.quiz-opt1{
+    background-image:url(http://sp.ask.com/sh/i/a16/serp/SERP_sprite_19.png);
+    background-position: 0 -85px;
+}
+.quiz-opt2{
+    background-image:url(http://sp.ask.com/sh/i/a16/serp/SERP_sprite_19.png);
+    background-position: -23px -85px;
+}
+.quiz-opt3{
+    background-image:url(http://sp.ask.com/sh/i/a16/serp/SERP_sprite_19.png);
+    background-position: -45px -85px;
+}
+.quiz-opt4{
+    background-image:url(http://sp.ask.com/sh/i/a16/serp/SERP_sprite_19.png);
+    background-position: -67px -85px;
+}
+
+
+
+#searchBoxId {
+    background: url('http://sp.ask.com/sh/i/a16/healthline/searchbox_sprite.png') no-repeat 0 -55px;
+    width: 278px;
+    height: 36px;
+    float: right;
+    margin-top: 43px;
+    margin-right: -64px;
+}
+#header_logo a {
+    margin-left: 22px;
+    margin-right: 8px;
+    margin-top: 15px;
+    float: left;
+    width: 72px;
+    height: 53px;
+    background: url('http://sp.ask.com/sh/i/a16/healthline/SERP_sprite_17.png') no-repeat 0 0;
+    cursor:pointer;
+}
+
+.top-img{
+    width:946px;
+    height:122px;
+    text-align: left;
+    background-image:url('http://sp.ask.com/sh/i/a16/healthline/Mastheadbackground.jpg');
+}
+.searchButton {
+    background-position: 39px -58px;
+    border: 0 none;
+    cursor: pointer;
+    float: right;
+    height: 25px;
+    margin-right: -275px;
+    margin-top: 46px;
+    width: 36px;
+
+
+}
+#sbutton {
+        background: none repeat scroll 0 0 transparent;
+        border: 0 none;
+        cursor: pointer;
+        height: 27px;
+        width: 35px;
+
+    }
+
+#searchbuttonheader {
+    background: url('http://sp.ask.com/sh/i/a16/healthline/SERP_sprite_17.png') no-repeat -185px -111px;
+}
+#searchbuttonheader:hover{
+    background: url('http://sp.ask.com/sh/i/a16/healthline/SERP_sprite_17.png') no-repeat -185px -143px;
+}
+#searchbuttonheader:hover,#searchbuttonheader {
+    height: 29px;
+    margin-top: 20px;
+    width: 41px;
+    float: left;
+    margin-left: 10px;
+
+}
+.footer_logo {
+    background: url('http://sp.ask.com/sh/i/a16/healthline/ask_logo.png') no-repeat 0 0;
+    width: 47px;
+    height: 39px;
+}
+#queryBox {
+    margin-top: 22px;
+
+    width: 380px;
+    border-color:#6ACAE2;
+    border-radius:3px;
+    height:27px;
+    color:#000000;
+}
+
+
+
+    .txt_lg, .fnt_enlarge, .sa_headline {
+        font-size:15px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.spl_shd_plus, .spl_unshd{
+    margin-left: 10px;
+}
+
+.sa{
+    min-width: 502px;
+}
+
+
+    
+    
+    .fnt_enlarge{
+        font-size:15px;
+    }
+    
+
+
+
+
+
+</style> 
+  <script type="text/javascript">
+    var WZInfo = WZInfo||{};
+    var ss=function(){},cs=function(){};
+    var _docReadyFns = [];
+    $j = function(){
+        return {ready:function(fn){_docReadyFns.push(fn);}};
+    };
+</script> 
+ </head> 
+ <body class="a16"> 
+  <div class="nav"> 
+   <div id="a16Cnb" style="" class=""> 
+    <div class="a16nb"> 
+     <div class="lm"> 
+      <div id="a16CnbSearchWeb" style="" class="mi smi "> 
+       <div id="a16CnbSearchWebText" style="float:left;">
+        Answers
+       </div> 
+       <div style="clear:both;"></div> 
+      </div> 
+      <div class="mi " style=""> 
+       <a id="a16CnbAskPeople" style="display:block;" href="http://www.ask.com/answers/browse?o=5118&amp;l=dir&amp;qsrc=167&amp;q=best+digital+cameras" class=""> 
+        <div id="a16CnbAskPeopleText" class="tu" style="float:left;">
+         Q&amp;A Community
+        </div> 
+        <div style="clear:both;"></div> </a> 
+      </div> 
+     </div> 
+     <div class="rm"> 
+      <div class="mi " style=""> 
+       <a id="a16CnbSignIn" style="display:block;" href="javascript:void(0);" class=""> 
+        <div id="a16CnbSignInText" class="tu" style="float:left;">
+         Sign In
+        </div> 
+        <div style="clear:both;"></div> </a> 
+      </div> 
+      <div id="a16CnbNanoMe" class="mi nanome" style="overflow:hidden;height:23px;"> 
+      </div> 
+      <div id="nmSignInAvatar" class="mi" style="width:16px;height:16px;display:block;padding-left:0px;"> 
+       <img src="http://sp.ask.com/sh/i/a14/c/generic.png" alt="" style="width:16px;height:16px" /> 
+      </div> 
+      <div id="a16CnbNanoMeSeparator" style="float:right;height:21px;border-left:1px solid #898F91;border-right:1px solid #B8BFC1;margin:5px 5px 0 5px;width:0;"></div> 
+      <div class="mi " style=""> 
+       <a id="a16CnbSettings" style="display:block;" href="http://www.ask.com/settings?o=5118&amp;l=dir&amp;qsrc=167&amp;q=best+digital+cameras" class=""> 
+        <div id="a16CnbSettingsText" class="tu" style="float:left;">
+         Settings
+        </div> 
+        <div style="clear:both;"></div> </a> 
+      </div> 
+      <div class="mi " style=""> 
+       <a id="a16CnbAdvancedSearch" style="display:block;" href="http://www.ask.com/advancedsearch?o=5118&amp;l=dir&amp;qsrc=167&amp;q=best+digital+cameras" class=""> 
+        <div id="a16CnbAdvancedSearchText" class="tu" style="float:left;">
+         Advanced Search
+        </div> 
+        <div style="clear:both;"></div> </a> 
+      </div> 
+     </div> 
+     <div style="clear:both;"></div> 
+    </div> 
+   </div> 
+  </div> 
+  <style type="text/css">
+    #sbut{
+        background-position: 0px -604px;
+    }
+    #sbut:hover {
+        background-position: 0px -637px;
+    }
+</style> 
+  <div id="top_search"> 
+   <div id="top_navbar_logo" class="ssp"> 
+    <a href="http://www.ask.com/?o=5118&amp;l=dir&amp;qsrc=14137" title="Ask.com" onmousedown="return ct(this,30733);"></a> 
+   </div> 
+   <div id="searchBox" name="searchBoxContainer" style=""> 
+    <form action="http://www.ask.com/web" id="topform"> 
+     <div id="sb" class="sb-wr"> 
+      <input type="hidden" id="qsrc_top" name="qsrc" value="1" /> 
+      <input type="hidden" id="origin" name="o" value="5118" /> 
+      <input type="hidden" id="partnerID" name="l" value="dir" /> 
+      <input maxlength="2048" autocomplete="off" type="text" name="q" value="best digital cameras" id="top_q_comm" /> 
+     </div> 
+     <input id="sbut" type="submit" value="" onmousedown="sct(58);" style="" /> 
+    </form> 
+   </div> 
+  </div> 
+  <div class="c3c">
+   <div class="main">
+    <div class="c3"> 
+     <div class="lefNav popupoverride"> 
+      <div id="cnb" class="lnav"> 
+       <div id="majorLinks"> 
+        <div id="cnbWeb" class="slink b f12" style=""> 
+         <div class="arr ssp"></div> 
+         <div style="margin-right:6px;">
+          Everything
+         </div> 
+        </div> 
+        <div id="cnbImages" class="link f12" style=""> 
+         <a id="cnbImagesText" href="http://www.ask.com/pictures?o=5118&amp;l=dir&amp;qsrc=167" style="" class="txt4">Images</a> 
+        </div> 
+        <div id="cnbNews" class="link f12" style=""> 
+         <a id="cnbNewsText" href="http://www.ask.com/news?o=5118&amp;l=dir&amp;qsrc=167" style="" class="txt4">News</a> 
+        </div> 
+        <div id="cnbVideos" class="link f12" style=""> 
+         <a id="cnbVideosText" href="http://www.ask.com/videos?o=5118&amp;l=dir&amp;qsrc=167" style="" class="txt4">Video</a> 
+        </div> 
+        <div id="cnbQA" class="link f12" style=""> 
+         <a id="cnbQAText" href="http://www.ask.com/ans?o=5118&amp;l=dir&amp;qsrc=167" style="" class="txt4">Q&amp;A</a> 
+        </div> 
+        <div id="cnbRef" class="link f12" style=""> 
+         <a id="cnbRefText" href="http://www.ask.com/ref?o=5118&amp;l=dir&amp;qsrc=167" style="" class="txt4">Reference</a> 
+        </div> 
+        <div id="cnbApp" class="link f12" style=""> 
+         <a id="cnbAppText" href="http://www.ask.com/apps/search?o=5118&amp;l=dir&amp;qsrc=167" style="" class="txt4">Apps</a> 
+        </div> 
+        <div id="cnbShop" class="link f12" style=""> 
+         <a id="cnbShopText" href="http://www.ask.com/shopping?o=5118&amp;l=dir&amp;qsrc=167" style="" class="txt4">Shopping</a> 
+        </div> 
+        <div id="cnbMore" class="link f12" style="background:none;"> 
+         <a id="cnbMoreText" href="javascript:void(0);" style="overflow:hidden;display:block;width:47px;" class="txt4"><span class="fl tu">More</span><span class="ssp lnavMore ntu">&nbsp;&nbsp;</span></a> 
+        </div> 
+       </div> 
+       <div id="moreLinks" style="display:none;"> 
+        <div id="cnbMoreLocal" class="link f12" style=""> 
+         <a id="cnbMoreLocalText" href="http://www.ask.com/local?o=5118&amp;l=dir&amp;qsrc=167" style="" class="txt4">Local</a> 
+        </div> 
+        <div id="cnbMoreMaps" class="link f12" style=""> 
+         <a id="cnbMoreMapsText" href="http://www.ask.com/maps?o=5118&amp;l=dir&amp;qsrc=167" style="" class="txt4">Maps</a> 
+        </div> 
+        <div id="cnbMoreGames" class="link f12" style=""> 
+         <a id="cnbMoreGamesText" href="http://www.ask.com/games?o=5118&amp;l=dir&amp;qsrc=167" style="" class="txt4">Games</a> 
+        </div> 
+        <div id="cnbLess" class="link f12" style="background:none;"> 
+         <a id="cnbLessText" href="javascript:void(0);" style="overflow:hidden;display:block;width:47px;" class="txt4"><span class="fl tu">Less</span><span class="ssp lnavLess ntu">&nbsp;&nbsp;</span></a> 
+        </div> 
+       </div> 
+       <div id="minorLinks"> 
+       </div> 
+      </div> 
+     </div>
+    </div>
+    <div class="c2"> 
+     <span style="display:none"> <script type="text/javascript">
+    var st = new Image();
+    st.height = 1;
+    st.width = 1;
+    st.id = "SessionTracker";
+    st.src = "http://wzus1.ask.com/i/i.gif?t=v&d=us&s=a&c=a&app=a16&dqi=&askid=327e87bb-ff17-4d20-bc2c-7cdf0d770640-0-us_msb&l=dir&o=5118&oo=5118&sv=0a5ca9d6&p=web&ord=3562450&cu.wz=0";
+    
+    
+    
+    </script> 
+      <noscript>
+       <img src="http://wzus1.ask.com/i/i.gif?t=v&amp;d=us&amp;s=a&amp;c=a&amp;app=a16&amp;dqi=&amp;askid=327e87bb-ff17-4d20-bc2c-7cdf0d770640-0-us_msb&amp;l=dir&amp;o=5118&amp;oo=5118&amp;sv=0a5ca9d6&amp;p=web&amp;ord=3562450&amp;cu.wz=0" height="1" width="1" id="SessionTracker" />
+      </noscript> </span> 
+     <div id="psa-teoma-result" style="clear:both;"> 
+      <div id="lindm" class="mrpl pr30 rmwi" style=""> 
+       <div class="tsrc_blb"> 
+        <div class="ptbs"> 
+         <div class="txt_lg abstract">
+          <span class="speech fl"></span> 
+          <span class="ofh" style="padding-left: 4px;"><b>best</b> <b>digital</b> <b>cameras</b> 2011</span> 
+         </div> 
+         <div class="cl"></div> 
+         <div class="attrib txt3">
+          <span class="b">Source: </span>
+          <span>http://www.digitalcamera-hq.com/best</span>
+         </div> 
+         <div class="txt3 abstract">
+          The many features of 
+          <b>digital</b> 
+          <b>cameras</b> are compared by reviewers, surveys are conducted, consumer testing and responses are recorded to help find the 
+          <b>best</b> 
+          <b>digital</b> 
+          <b>camera</b> of 2011. The more information a consumer has, the better the buying experience.
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div style="clear:both"></div> 
+     </div> 
+     <div id="magic1"></div> 
+     <style type="text/css">
+    
+        .spl_shd_plus {
+            background-color:#F9FCFF;
+        }
+    
+</style> 
+     <div class="leftLabel">
+      Ads related to 
+      <b>best digital cameras</b>
+     </div> 
+     <div id="spl_img_top" class="spl_unshd" measuretype="ad" measuredata="GSLTop#mid#gg#3"> 
+      <div class="spl_ad_plus"> 
+       <a id="lindp" class="ptbs pl10 pr30 ptsp pxl" href="http://www.google.com/aclk?sa=l&amp;ai=C_qOaJtd6UYCYB4LigQeOo4HQD87E3vECvrHR6kf3oY0NCAAQASCx3-0XKANQipe4E2DJtoSI8KPsEqAByo6D3gPIAQGqBCZP0GYiloin5AAWJBI6blk09YEFF9jJXHEpD6xZ9nIjFdnl1Of-RoAHnvH8IQ&amp;sig=AOD64_0CDtPfFDpM1Ch5Y6qSojYli_3Oww&amp;adurl=http://dms.netmng.com/si/cm/tracking/clickredirect.aspx%3Fsidevicemodel%3D%26sidevice%3Dc%26siplacement%3D%26simobile%3D%26sinetwork%3Ds%26sicontent%3D0%26sicreative%3D19187537126%26sitrackingid%3D527811394" rel="nofollow" target="_blank" onmousedown="triggerAdsSEMPixel(this,'gsl','0','5','999','www.canon.com/PowerShot');if (typeof cstmclk != 'undefined') cstmclk(12); if (typeof efclk != 'undefined') efclk(12); return pk(this,{en:'gg',io:'0',b:'spl',tp:'top',ec:'3',ex:'sgst%3D1%26sgcl%3D7daeTY-ZURwXamJnD-cm7Wbb11%26sgch%3Df18eszeuxsjboRYnM_WBWMeO8M_RXVmPihc_De%26sgmd%3D1%26sgurl%3Dwww.canon.com%252FPowerShot'},'gg_0');" onmouseover="return ss('www.canon.com/PowerShot');" onmouseout="cs()" style="display:block;padding-bottom: 0px; "> <span class="txt_lg title sp_hvr fnt_enlarge splTitle" id="gg_0">PowerShot <b>Cameras</b> | Canon.com</span> <br /> 
+        <div class="attrib">
+         www.canon.com/PowerShot
+        </div> 
+        <div class="txt3 abstract">
+         Official Site: Buy Direct &amp; Save on Stylish, High-Performing 
+         <b>Cameras</b>.
+        </div> </a> 
+       <div class="pl30 ptbs"> 
+        <div class="fl"> 
+         <div>
+          <a class="txt3 title siteLink_hover pxl" href="http://www.google.com/aclk?sa=l&amp;ai=CVI-4Jtd6UYCYB4LigQeOo4HQD87E3vECvrHR6kf3oY0NCAAQASCx3-0XKANQsuHFigNgybaEiPCj7BKgAcqOg94DyAEBqgQmT9BmIpaIp-QAFiQSOm5ZNPWBBRfYyVxxKQ-sWfZyIxXZ5dTn_kb6BQoIAxDOkYDOARgBgAee8fwh&amp;ctype=4&amp;sig=AOD64_3iRyEEwoM6hvphgyv3s008seZdPA&amp;adurl=http://dms.netmng.com/si/cm/tracking/clickredirect.aspx%3FsiclientId%3D8168%26IOGtrID%3D6.567413%26sitrackingid%3D527811394%26sicreative%3D19187537126%26redirectUrl%3Dhttp%253a%252f%252fshop.usa.canon.com%252fwebapp%252fwcs%252fstores%252fservlet%252fPromoDesc_10051_10051_-1" rel="nofollow" target="_blank" onmousedown="triggerAdsSEMPixel(this,'gsl','0','5','999','www.canon.com/PowerShot');if (typeof cstmclk != 'undefined') cstmclk(12); if (typeof efclk != 'undefined') efclk(12); return pk(this,{en:'gg',io:'0',b:'spl',tp:'top',ec:'3',ex:'sgst%3D1%26sgcl%3D7daeTY-ZURwXamJnD-cm7Wbb11%26sgch%3Df18eszeuxsjboRYnM_WBWMeO8M_RXVmPihc_De%26sgmd%3D1%26sgurl%3Dwww.canon.com%252FPowerShot'},'gg_0');">Camera Acccessories</a>
+         </div> 
+         <div>
+          <a class="txt3 title siteLink_hover pxl" href="http://www.google.com/aclk?sa=l&amp;ai=C1bNLJtd6UYCYB4LigQeOo4HQD87E3vECvrHR6kf3oY0NCAAQASCx3-0XKANQs4HExgRgybaEiPCj7BKgAcqOg94DyAEBqgQmT9BmIpaIp-QAFiQSOm5ZNPWBBRfYyVxxKQ-sWfZyIxXZ5dTn_kb6BQoIAxDOkYDOARgDgAee8fwh&amp;ctype=4&amp;sig=AOD64_3i8GQh4tPDLUVnjqqBm00TaYqxLg&amp;adurl=http://dms.netmng.com/si/cm/tracking/clickredirect.aspx%3FsiclientId%3D8168%26IOGtrID%3D6.595374%26sitrackingid%3D527811394%26sicreative%3D19187537126%26redirectUrl%3Dhttp%253a%252f%252fshop.usa.canon.com%252fwebapp%252fwcs%252fstores%252fservlet%252fsubCategory_10051_10051_-1_145259" rel="nofollow" target="_blank" onmousedown="triggerAdsSEMPixel(this,'gsl','0','5','999','www.canon.com/PowerShot');if (typeof cstmclk != 'undefined') cstmclk(12); if (typeof efclk != 'undefined') efclk(12); return pk(this,{en:'gg',io:'0',b:'spl',tp:'top',ec:'3',ex:'sgst%3D1%26sgcl%3D7daeTY-ZURwXamJnD-cm7Wbb11%26sgch%3Df18eszeuxsjboRYnM_WBWMeO8M_RXVmPihc_De%26sgmd%3D1%26sgurl%3Dwww.canon.com%252FPowerShot'},'gg_0');">20% OFF Refurbished Cameras</a>
+         </div> 
+        </div> 
+        <div class="fl pl15"> 
+         <div>
+          <a class="txt3 title siteLink_hover pxl" href="http://www.google.com/aclk?sa=l&amp;ai=CmUcRJtd6UYCYB4LigQeOo4HQD87E3vECvrHR6kf3oY0NCAAQASCx3-0XKANQ6uOsuv7_____AWDJtoSI8KPsEqAByo6D3gPIAQGqBCZP0GYiloin5AAWJBI6blk09YEFF9jJXHEpD6xZ9nIjFdnl1Of-RvoFCggDEM6RgM4BGAKAB57x_CE&amp;ctype=4&amp;sig=AOD64_2I_hJmcsiAvzbI8jG373mbqpMlwA&amp;adurl=http://dms.netmng.com/si/cm/tracking/clickredirect.aspx%3FsiclientId%3D8168%26IOGtrID%3D6.567415%26sitrackingid%3D527811394%26sicreative%3D19187537126%26redirectUrl%3Dhttp%253a%252f%252fshop.usa.canon.com%252fwebapp%252fwcs%252fstores%252fservlet%252fsubCategory_10051_10051_-1_146757" rel="nofollow" target="_blank" onmousedown="triggerAdsSEMPixel(this,'gsl','0','5','999','www.canon.com/PowerShot');if (typeof cstmclk != 'undefined') cstmclk(12); if (typeof efclk != 'undefined') efclk(12); return pk(this,{en:'gg',io:'0',b:'spl',tp:'top',ec:'3',ex:'sgst%3D1%26sgcl%3D7daeTY-ZURwXamJnD-cm7Wbb11%26sgch%3Df18eszeuxsjboRYnM_WBWMeO8M_RXVmPihc_De%26sgmd%3D1%26sgurl%3Dwww.canon.com%252FPowerShot'},'gg_0');">Up to $80 OFF PowerShot Cameras</a>
+         </div> 
+        </div> 
+        <div class="cl"></div> 
+       </div> 
+      </div> 
+      <div class="spl_ad_plus"> 
+       <a id="lindp" class="ptbs pl10 pr30 ptsp pxl" href="http://www.google.com/aclk?sa=L&amp;ai=CdZBvJtd6UYCYB4LigQeOo4HQD5-B9KoEt-Co6Wfx3MQFCAAQAiCx3-0XKANQ5ZShwfn_____AWDJtoSI8KPsEsgBAaoEJE_QBjyyiKTsAK4n2_CzA3U0ct-DxNFmWvofWg4VeVMz_nT5JoAH_8-iHA&amp;sig=AOD64_10D-_vVC1hS-HLdhkr7ThzoZnAcg&amp;adurl=http://phototronicsinc.com/rd/%3Fdku%3Dhttp%253A%252F%252Fphototronicsinc.com%26dkid%3D170072%26source%3D736%26mkt%3D61001%26mkw%3Ds%255Fdigital%2520cameras%255F27778325391%26dkgeo%3Dm-north_shore-il%26dkcat%3D745B720E-F708-4259-925A-B938E6E7CEBB%26dkatt%3Dcameras" rel="nofollow" target="_blank" onmousedown="triggerAdsSEMPixel(this,'gsl','1','5','999','www.phototronicsinc.com/');if (typeof cstmclk != 'undefined') cstmclk(90); if (typeof efclk != 'undefined') efclk(90); return pk(this,{en:'gg',io:'1',b:'spl',tp:'top',ec:'3',ex:'sgst%3D1%26sgcl%3D7daeTY-ZURwXamJnD-cm7Wbb11%26sgch%3Df18eszeuxsjboRYnM_WBWMeO8M_RXVmPihc_De%26sgmd%3D1%26sgurl%3Dwww.phototronicsinc.com%252F'},'gg_1');" onmouseover="return ss('www.phototronicsinc.com/');" onmouseout="cs()" style="display:block; "> <span class="txt_lg title sp_hvr fnt_enlarge splTitle" id="gg_1"><b>Digital Cameras</b> - Get the Latest Camera Technology</span> <br /> 
+        <div class="attrib">
+         www.phototronicsinc.com/
+        </div> 
+        <div class="txt3 abstract">
+         Call us today at (847)-450-7583!
+        </div> </a> 
+      </div> 
+      <div class="spl_ad_plus"> 
+       <a id="lindp" class="ptbs pl10 pr30 ptsp pxl" href="http://www.google.com/aclk?sa=L&amp;ai=CLMyLJtd6UYCYB4LigQeOo4HQD4KhzLsCwt-utzL5lvkFCAAQAyCx3-0XKANQvraa2Pr_____AWDJtoSI8KPsEsgBAaoEJE_QJnqUiKXsAK4n2_DOVQs6ct-DxNFmWvofWg4VY1Mz82WpC4AHiuO1MA&amp;sig=AOD64_1EvbjsaJXzx8FjvqXTqYR0d74qEw&amp;adurl=http://www.amazon.com/s/%3Fie%3DUTF8%26keywords%3Ddigital%2Bcamera%2Bcomparison%26tag%3Dgooghydr-20%26index%3Daps%26hvadid%3D13445996130%26hvpos%3D1t3%26hvexid%3D%26hvnetw%3Ds%26hvrand%3D1835099856546339483%26hvpone%3D%26hvptwo%3D%26hvqmt%3Db%26hvdev%3Dc%26ref%3Dpd_sl_2vnh8kqa6f_b" rel="nofollow" target="_blank" onmousedown="triggerAdsSEMPixel(this,'gsl','2','5','999','www.amazon.com/&lt;b&gt;Cameras&lt;/b&gt;');if (typeof cstmclk != 'undefined') cstmclk(5); if (typeof efclk != 'undefined') efclk(5); return pk(this,{en:'gg',io:'2',b:'spl',tp:'top',ec:'3',ex:'sgst%3D1%26sgcl%3D7daeTY-ZURwXamJnD-cm7Wbb11%26sgch%3Df18eszeuxsjboRYnM_WBWMeO8M_RXVmPihc_De%26sgmd%3D1%26sgurl%3Dwww.amazon.com%252F%253Cb%253ECameras%253C%252Fb%253E'},'gg_2');" onmouseover="return ss('www.amazon.com/&lt;b&gt;Cameras&lt;/b&gt;');" onmouseout="cs()" style="display:block;padding-bottom: 0px; "> <span class="txt_lg title sp_hvr fnt_enlarge splTitle" id="gg_2"><b>Digital</b> Camera Comparison | Amazon.com</span> <br /> 
+        <div class="attrib">
+         www.amazon.com/
+         <b>Cameras</b>
+        </div> 
+        <div class="txt3 abstract">
+         Save on 
+         <b>Digital</b> camera comparison Free Shipping Available with Amazon
+        </div> </a> 
+       <div id="seller" class="txt3 pl10 pb8"> 
+        <span class="grey"> amazon.com is rated <img src="//www.google.com/images/4_5_stars.gif" id="ratingImgUrl" /> (<a onmousedown="triggerAdsSEMPixel(this,'gsl','2','5','999','www.amazon.com/&lt;b&gt;Cameras&lt;/b&gt;');if (typeof cstmclk != 'undefined') cstmclk(5); if (typeof efclk != 'undefined') efclk(5); return pk(this,{en:'gg',io:'2',b:'spl',tp:'top',ec:'3',ex:'sgst%3D1%26sgcl%3D7daeTY-ZURwXamJnD-cm7Wbb11%26sgch%3Df18eszeuxsjboRYnM_WBWMeO8M_RXVmPihc_De%26sgmd%3D1%26sgurl%3Dwww.amazon.com%252F%253Cb%253ECameras%253C%252Fb%253E'},'gg_2');" href="http://www.google.com/products/seller?zmi=amazon.com" class="pxl" style="color:#4272DB;" target="_blank">736 reviews</a>) </span> 
+       </div> 
+      </div> 
+     </div> 
+     <span style="display:none"> <script type="text/javascript">
+    var st = new Image();
+    st.height = 1;
+    st.width = 1;
+    st.id = "SessionTracker";
+    st.src = "http://wzus1.ask.com/i/i.gif?t=v&d=us&s=a&c=a&app=a16&dqi=&askid=327e87bb-ff17-4d20-bc2c-7cdf0d770640-0-us_msb&l=dir&o=5118&oo=5118&sv=0a5ca9d6&p=web&ord=3562450&cu.wz=0";
+    
+    
+    
+    </script> 
+      <noscript>
+       <img src="http://wzus1.ask.com/i/i.gif?t=v&amp;d=us&amp;s=a&amp;c=a&amp;app=a16&amp;dqi=&amp;askid=327e87bb-ff17-4d20-bc2c-7cdf0d770640-0-us_msb&amp;l=dir&amp;o=5118&amp;oo=5118&amp;sv=0a5ca9d6&amp;p=web&amp;ord=3562450&amp;cu.wz=0" height="1" width="1" id="SessionTracker" />
+      </noscript> </span> 
+     <span style="display:none"> <script type="text/javascript">
+    var st = new Image();
+    st.height = 1;
+    st.width = 1;
+    st.id = "SessionTracker";
+    st.src = "http://wzus1.ask.com/i/i.gif?t=v&d=us&s=a&c=a&app=a16&dqi=&askid=327e87bb-ff17-4d20-bc2c-7cdf0d770640-0-us_msb&l=dir&o=5118&oo=5118&sv=0a5ca9d6&p=web&ord=3562450&cu.wz=0";
+    
+    
+    
+    </script> 
+      <noscript>
+       <img src="http://wzus1.ask.com/i/i.gif?t=v&amp;d=us&amp;s=a&amp;c=a&amp;app=a16&amp;dqi=&amp;askid=327e87bb-ff17-4d20-bc2c-7cdf0d770640-0-us_msb&amp;l=dir&amp;o=5118&amp;oo=5118&amp;sv=0a5ca9d6&amp;p=web&amp;ord=3562450&amp;cu.wz=0" height="1" width="1" id="SessionTracker" />
+      </noscript> </span> 
+     <div id="psa-teoma-result" style="clear:both;"> 
+      <div id="lindm" class="mrpl pr30 rmwi" style=""> 
+       <div class="ptb5">
+        More Answers
+       </div> 
+       <div class="tsrc_answ"> 
+        <div class="ptbs" style="" data-foresee="ANSW" data-zen="true"> 
+         <div id="r_t0" style="padding-bottom: 2px;">
+          <span class="speech fl"></span>
+          <span class="ofh txt_lg" style="padding-left: 4px;">When was the <b>Digital</b> <b>Camera</b> Invented?</span>
+         </div> 
+         <div class="cl"></div> 
+         <div class="attrib txt3">
+          <span class="b">Source: </span>
+          <span>http://answers.ask.com/Computers/Hardware/when_was_the_...</span>
+         </div> 
+         <div class="txt3 abstract">
+          The first 
+          <b>digital</b> 
+          <b>camera</b> was the Fuji DS-1P, invented in 1988. 
+          <b>Digital</b> 
+          <b>cameras</b> are so named because they record images as computer information.
+          <a onmousedown="return pk(this,{en:'af',io:'0',b:'a002',tp:'d',ec:'1',ex:'tsrc%3Dansw'});" href="http://answers.ask.com/Computers/Hardware/when_was_the_digital_camera_invented" class="tdn title dsib pl5" target="_blank"> More &raquo;</a>
+         </div> 
+        </div> 
+       </div> 
+       <div class="tsrc_answ"> 
+        <div class="ptbs" style="" data-foresee="ANSW" data-zen="true"> 
+         <div id="r_t1" style="padding-bottom: 2px;">
+          <span class="speech fl"></span>
+          <span class="ofh txt_lg" style="padding-left: 4px;">How to Fix a <b>Digital</b> <b>Camera</b>?</span>
+         </div> 
+         <div class="cl"></div> 
+         <div class="attrib txt3">
+          <span class="b">Source: </span>
+          <span>http://answers.ask.com/Computers/Hardware/how_to_fix_a_...</span>
+         </div> 
+         <div class="txt3 abstract">
+          The 
+          <b>best</b> way to fix a 
+          <b>digital</b> 
+          <b>camera</b> is to get a warranty or have a service play a the time of purchase so when you need repair you can get it done for free by the manufacture.
+          <a onmousedown="return pk(this,{en:'af',io:'0',b:'a003',tp:'d',ec:'1',ex:'tsrc%3Dansw'});" href="http://answers.ask.com/Computers/Hardware/how_to_fix_a_digital_camera" class="tdn title dsib pl5" target="_blank"> More &raquo;</a>
+         </div> 
+        </div> 
+       </div> 
+       <div class="tsrc_SAS"> 
+        <div class="ptbs ofh" style="" data-picksuffix="t=p&amp;d=us&amp;s=a&amp;c=a&amp;app=a16&amp;dqi=&amp;askid=327e87bb-ff17-4d20-bc2c-7cdf0d770640-0-us_msb&amp;l=dir&amp;o=5118&amp;oo=5118&amp;sv=0a5ca9d6&amp;ip=a57c910b&amp;id=02425D73AB45323D3C3755FD19E753FC&amp;q=best+digital+cameras&amp;p=1&amp;qs=999&amp;ac=864&amp;g=04bewB9dasdtlz&amp;cu.wz=0&amp;en=cssa&amp;io=1&amp;b=a004&amp;tp=130&amp;ec=9&amp;pt=&amp;ex=da_origin%3Draw%26da_lhx%3DConsumer+Search+Subcat%26da_sro%3D2243532%26da_cat%3D16%26da_sn%3D00090%26da_lhp%3D1%26da_partner%3D24%26da_lhs%3D2243529&amp;url=&amp;u=" data-wzdomain="wzus1.ask.com" data-foresee="SA" data-zen="true"> 
+         <div class="sa" data-origin="raw" data-sn="00090" data-sro="2243532" data-lhs="2243529" data-desc="Consumer Search Subcat"> 
+          <a href="http://www.consumersearch.com/digital-camera-reviews" class="sa_headline sa_ext" target="_blank">Digital Cameras Review</a> 
+          <div class="sa_cs_desc">
+            Conveniently small -- but capable of impressive photos and videos -- the best digital cameras strike a middle ground between bulky digital SLR (single-lens reflex) cameras and point-and-shoot cheapies. Waterproofing,... 
+           <a href="http://www.consumersearch.com/digital-camera-reviews" class="sa_ext" target="_blank">Read More &raquo;</a> 
+           <div class="sa_cs_sl"> 
+            <span class="sa_label">See Also:</span> 
+            <a href="http://www.consumersearch.com/digital-camera-reviews/waterproof-cameras" class="sa_ext" target="_blank">Full Report</a> 
+           </div> 
+          </div> 
+          <div class="sa_cs_toph">
+           Top Digital Cameras Reviews
+          </div> 
+          <div class="sa_content_block"> 
+           <div class="sa_cs_btprd"> 
+            <div class="sa_col1"> 
+             <a href="http://www.consumersearch.com/digital-camera-reviews/canon-powershot-g15" class="sa_cs_imgsm_wrp sa_ext" target="_blank"> <img src="http://www.consumersearch.com/files/cs/images/products/canon_powershot_g15.jpg" border="0" class="sa_cs_imgsm" /> </a> 
+            </div> 
+            <div class="sa_col2"> 
+             <a href="http://www.consumersearch.com/digital-camera-reviews/canon-powershot-g15" class="sa_ext" target="_blank" style="font-size:15px;">Canon PowerShot G15</a> 
+             <div>
+              <span class="sa_label">Est. Price: </span>
+              <span class="=" style="font-weight:bold;">$460</span>
+             </div> 
+             <div class="sa_content_block">
+              A serious camera that fits into a jacket pocket, the Canon PowerShot G15... 
+              <a href="http://www.consumersearch.com/digital-camera-reviews/canon-powershot-g15" class="sa_ext" target="_blank">Read More &raquo;</a> 
+             </div> 
+            </div> 
+           </div> 
+           <div class="sa_cs_btprd"> 
+            <div class="sa_col1"> 
+             <a href="http://www.consumersearch.com/digital-camera-reviews/sony-cyber-shot-dsc-rx100" class="sa_cs_imgsm_wrp sa_ext" target="_blank"> <img src="http://www.consumersearch.com/files/cs/images/products/sony_cyber-shot_dsc-rx100_0.jpg" border="0" class="sa_cs_imgsm" /> </a> 
+            </div> 
+            <div class="sa_col2"> 
+             <a href="http://www.consumersearch.com/digital-camera-reviews/sony-cyber-shot-dsc-rx100" class="sa_ext" target="_blank" style="font-size:15px;">Sony Cyber-shot DSC-RX100</a> 
+             <div>
+              <span class="sa_label">Est. Price: </span>
+              <span class="" style="font-weight:bold;">$650</span>
+             </div> 
+             <div class="sa_content_block">
+              Dubbed &quot;the best pocket camera ever made&quot; by The New York Times, the Sony... 
+              <a href="http://www.consumersearch.com/digital-camera-reviews/sony-cyber-shot-dsc-rx100" class="sa_ext" target="_blank">Read More &raquo;</a> 
+             </div> 
+            </div> 
+           </div> 
+           <div class="sa_cs_btprd sa_cs_btprd3"> 
+            <div class="sa_col1"> 
+             <a href="http://www.consumersearch.com/digital-camera-reviews/olympus-om-d-e-m5" class="sa_cs_imgsm_wrp sa_ext" target="_blank"> <img src="http://www.consumersearch.com/files/cs/images/products/olympus_om-d_e-m5.jpg" border="0" class="sa_cs_imgsm" /> </a> 
+            </div> 
+            <div class="sa_col2"> 
+             <a href="http://www.consumersearch.com/digital-camera-reviews/olympus-om-d-e-m5" class="sa_ext" target="_blank" style="font-size:15px;">Olympus OM-D E-M5</a> 
+             <div>
+              <span class="sa_label">Est. Price: </span>
+              <span class="" style="font-weight:bold;">$1100</span>
+             </div> 
+             <div class="sa_content_block">
+              The Olympus OM-D E-M5 lets you swap lenses and capture outstanding photos and... 
+              <a href="http://www.consumersearch.com/digital-camera-reviews/olympus-om-d-e-m5" class="sa_ext" target="_blank">Read More &raquo;</a> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+          <div style="clear:both;"></div> 
+          <span class="sa_attr">Source:</span> 
+          <span class="sa_site_attr">Consumersearch.com</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="tsrc_answ"> 
+        <div class="ptbs" style="" data-foresee="ANSW" data-zen="true"> 
+         <div id="r_t3" style="padding-bottom: 2px;">
+          <span class="speech fl"></span>
+          <span class="ofh txt_lg" style="padding-left: 4px;">What are the <b>Best</b> <b>Digital</b> <b>Cameras</b>?</span>
+         </div> 
+         <div class="cl"></div> 
+         <div class="attrib txt3">
+          <span class="b">Source: </span>
+          <span>http://answers.ask.com/Computers/Hardware/what_are_the_...</span>
+         </div> 
+         <div class="txt3 abstract">
+          With so many 
+          <b>digital</b> 
+          <b>cameras</b> to choose from, it might be difficult to find the 
+          <b>best</b>. Go to the Consumer Reports website and read what they have written about the various 
+          <b>digital</b> 
+          <b>cameras</b>. You can find more information here: http://www.consum...
+          <a onmousedown="return pk(this,{en:'af',io:'0',b:'a005',tp:'d',ec:'1',ex:'tsrc%3Dansw'});" href="http://answers.ask.com/Computers/Hardware/what_are_the_best_digital_cameras" class="tdn title dsib pl5" target="_blank"> More &raquo;</a>
+         </div> 
+        </div> 
+       </div> 
+       <div class="tsrc_answ"> 
+        <div class="ptbs" style="" data-foresee="ANSW" data-zen="true"> 
+         <div id="r_t4" style="padding-bottom: 2px;">
+          <span class="speech fl"></span>
+          <span class="ofh txt_lg" style="padding-left: 4px;">What is a <b>Digital</b> Slr <b>Camera</b>?</span>
+         </div> 
+         <div class="cl"></div> 
+         <div class="attrib txt3">
+          <span class="b">Source: </span>
+          <span>http://answers.ask.com/Education/Other/what_is_a_digita...</span>
+         </div> 
+         <div class="txt3 abstract">
+          SLR stands for single lens reflex. This type of 
+          <b>camera</b> uses a mirror and prism which allows you to see through the actual lens when taking a picture.
+          <a onmousedown="return pk(this,{en:'af',io:'0',b:'a006',tp:'d',ec:'1',ex:'tsrc%3Dansw'});" href="http://answers.ask.com/Education/Other/what_is_a_digital_slr_camera" class="tdn title dsib pl5" target="_blank"> More &raquo;</a>
+         </div> 
+        </div> 
+       </div> 
+       <div class="tsrc_tled"> 
+        <div class="ptbs" style="" data-foresee="DELTA" data-zen="true"> 
+         <div id="r_t5"> 
+          <a id="r5_t" href="http://www.pcmag.com/article2/0,2817,2369450,00.asp" onmousedown="return pk(this,{en:'te',io:'0',b:'a007',tp:'d',ec:'1',ex:'tsrc%3Dtled'})" class="title txt_lg algo_hvr" target="_blank">The 10 <b>Best Digital Cameras</b> | PCMag.com</a> 
+         </div> 
+         <div id="r_b5"> 
+          <span id="r5_u" class="txt3 attrib">www.pcmag.com/article2/0,2817,2369450,00.asp</span> 
+         </div> 
+         <div class="txt3 abstract" id="r5_a">
+          Apr 3, 2013 
+          <b>...</b> From simple compact models up to full-featured 
+          <b>digital</b> SLRs, here's a look at the top 
+          <b>cameras</b> we've tested recently. 
+         </div> 
+        </div> 
+       </div> 
+       <div class="tsrc_seo"> 
+        <div class="ptbs" style="" data-foresee="SEO" data-zen="true"> 
+         <div id="r_t6"> 
+          <a id="r6_t" href="http://www.directhit.com/shopping-answers/what_are_the_best_digital_cameras" onmousedown="return pk(this,{en:'seob',io:'0',b:'a008',tp:'d',ec:'3',ex:'tsrc%3Dseo'})" class="title txt_lg algo_hvr" target="_blank">what are the <b>best</b> <b>digital</b> <b>cameras</b> | www.directhit.com</a> 
+         </div> 
+         <div id="r_b6"> 
+          <span id="r6_ud" class="txt3 attrib">www.directhit.com/shopping-answers/what_are_the_best_di...</span> 
+         </div> 
+         <div class="txt3 abstract" id="r6_a">
+          What are the best digital cameras? - What are the best digital cameras is contingent upon who will be using the camera and for what purpose. If shopping for a young c
+         </div> 
+        </div> 
+       </div> 
+       <div class="tsrc_seo"> 
+        <div class="ptbs" style="" data-foresee="SEO" data-zen="true"> 
+         <div id="r_t7"> 
+          <a id="r7_t" href="http://www.directhit.com/shopping-answers/what_is_best_digital_camera" onmousedown="return pk(this,{en:'seob',io:'0',b:'a009',tp:'d',ec:'3',ex:'tsrc%3Dseo'})" class="title txt_lg algo_hvr" target="_blank">what is <b>best</b> <b>digital</b> <b>camera</b> | www.directhit.com</a> 
+         </div> 
+         <div id="r_b7"> 
+          <span id="r7_ud" class="txt3 attrib">www.directhit.com/shopping-answers/what_is_best_digital...</span> 
+         </div> 
+         <div class="txt3 abstract" id="r7_a">
+          What is best digital camera? - The best digital cameras are based on the types of photos, size, cost, and desired features. Among the top digital cameras accor
+         </div> 
+        </div> 
+       </div> 
+       <div class="tsrc_seo"> 
+        <div class="ptbs" style="" data-foresee="SEO" data-zen="true"> 
+         <div id="r_t8"> 
+          <a id="r8_t" href="http://www.ask.com/question/what-is-the-best-digital-camera-on-the-market" onmousedown="return pk(this,{en:'seob',io:'0',b:'a010',tp:'d',ec:'3',ex:'tsrc%3Dseo'})" class="title txt_lg algo_hvr" target="_blank">What is the <b>Best</b> <b>Digital</b> <b>Camera</b> on the Market? - Ask.com</a> 
+         </div> 
+         <div id="r_b8"> 
+          <span id="r8_ud" class="txt3 attrib">www.ask.com/question/what-is-the-best-digital-camera-on...</span> 
+         </div> 
+         <div class="txt3 abstract" id="r8_a">
+          To get the best digital camera on the market, visit the 'which' UK company website and go to the digital camera section. The digital camera market is a crowded
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div style="clear:both"></div> 
+     </div> 
+     <div id="magic2"></div> 
+     <style type="text/css">
+    
+        .spl_shd_plus {
+            background-color:#F9FCFF;
+        }
+    
+</style> 
+     <div class="leftLabel">
+      Ads related to 
+      <b>best digital cameras</b>
+     </div> 
+     <div class="spl_unshd" data-lm="spl:bot"> 
+      <div class="spl_ad_plus" data-lc="gg"> 
+       <a id="lindp" class="ptbs pl10 pr30 ptsp pxl" href="http://www.google.com/aclk?sa=l&amp;ai=C_qOaJtd6UYCYB4LigQeOo4HQD87E3vECvrHR6kf3oY0NCAAQASCx3-0XKANQipe4E2DJtoSI8KPsEqAByo6D3gPIAQGqBCZP0GYiloin5AAWJBI6blk09YEFF9jJXHEpD6xZ9nIjFdnl1Of-RoAHnvH8IQ&amp;sig=AOD64_0CDtPfFDpM1Ch5Y6qSojYli_3Oww&amp;adurl=http://dms.netmng.com/si/cm/tracking/clickredirect.aspx%3Fsidevicemodel%3D%26sidevice%3Dc%26siplacement%3D%26simobile%3D%26sinetwork%3Ds%26sicontent%3D0%26sicreative%3D19187537126%26sitrackingid%3D527811394&amp;ba=1" rel="nofollow" target="_blank" onmousedown="triggerAdsSEMPixel(this,'gsl','3','5','999','www.canon.com/PowerShot');if (typeof cstmclk != 'undefined') cstmclk(48); if (typeof efclk != 'undefined') efclk(48); return pk(this,{en:'gg',io:'0',b:'spl',tp:'bot',ec:'5',ex:'sgst%3D1%26sgcl%3D7daeTY-ZURwXamJnD-cm7Wbb11%26sgch%3Df18eszeuxsjboRYnM_WBWMeO8M_RXVmPihc_De%26sgmd%3D1%26sgurl%3Dwww.canon.com%252FPowerShot'},'gg_0');" onmouseover="return ss('www.canon.com/PowerShot');" onmouseout="cs()" style="display:block;padding-bottom: 0px;"> <span class="txt_lg title sp_hvr fnt_enlarge splTitle" id="gg_0">PowerShot <b>Cameras</b> | Canon.com</span> <br /> 
+        <div class="attrib">
+         www.canon.com/PowerShot
+        </div> 
+        <div class="txt3 abstract">
+         Official Site: Buy Direct &amp; Save on Stylish, High-Performing 
+         <b>Cameras</b>.
+        </div> </a> 
+       <div class="pl30 ptbs"> 
+        <div class="fl"> 
+         <div>
+          <a class="txt3 title siteLink_hover pxl" href="http://www.google.com/aclk?sa=l&amp;ai=CVI-4Jtd6UYCYB4LigQeOo4HQD87E3vECvrHR6kf3oY0NCAAQASCx3-0XKANQsuHFigNgybaEiPCj7BKgAcqOg94DyAEBqgQmT9BmIpaIp-QAFiQSOm5ZNPWBBRfYyVxxKQ-sWfZyIxXZ5dTn_kb6BQoIAxDOkYDOARgBgAee8fwh&amp;ctype=4&amp;sig=AOD64_3iRyEEwoM6hvphgyv3s008seZdPA&amp;adurl=http://dms.netmng.com/si/cm/tracking/clickredirect.aspx%3FsiclientId%3D8168%26IOGtrID%3D6.567413%26sitrackingid%3D527811394%26sicreative%3D19187537126%26redirectUrl%3Dhttp%253a%252f%252fshop.usa.canon.com%252fwebapp%252fwcs%252fstores%252fservlet%252fPromoDesc_10051_10051_-1&amp;ba=1" rel="nofollow" target="_blank" onmousedown="triggerAdsSEMPixel(this,'gsl','3','5','999','www.canon.com/PowerShot');if (typeof cstmclk != 'undefined') cstmclk(48); if (typeof efclk != 'undefined') efclk(48); return pk(this,{en:'gg',io:'0',b:'spl',tp:'bot',ec:'5',ex:'sgst%3D1%26sgcl%3D7daeTY-ZURwXamJnD-cm7Wbb11%26sgch%3Df18eszeuxsjboRYnM_WBWMeO8M_RXVmPihc_De%26sgmd%3D1%26sgurl%3Dwww.canon.com%252FPowerShot'},'gg_0');">Camera Acccessories</a>
+         </div> 
+         <div>
+          <a class="txt3 title siteLink_hover pxl" href="http://www.google.com/aclk?sa=l&amp;ai=C1bNLJtd6UYCYB4LigQeOo4HQD87E3vECvrHR6kf3oY0NCAAQASCx3-0XKANQs4HExgRgybaEiPCj7BKgAcqOg94DyAEBqgQmT9BmIpaIp-QAFiQSOm5ZNPWBBRfYyVxxKQ-sWfZyIxXZ5dTn_kb6BQoIAxDOkYDOARgDgAee8fwh&amp;ctype=4&amp;sig=AOD64_3i8GQh4tPDLUVnjqqBm00TaYqxLg&amp;adurl=http://dms.netmng.com/si/cm/tracking/clickredirect.aspx%3FsiclientId%3D8168%26IOGtrID%3D6.595374%26sitrackingid%3D527811394%26sicreative%3D19187537126%26redirectUrl%3Dhttp%253a%252f%252fshop.usa.canon.com%252fwebapp%252fwcs%252fstores%252fservlet%252fsubCategory_10051_10051_-1_145259&amp;ba=1" rel="nofollow" target="_blank" onmousedown="triggerAdsSEMPixel(this,'gsl','3','5','999','www.canon.com/PowerShot');if (typeof cstmclk != 'undefined') cstmclk(48); if (typeof efclk != 'undefined') efclk(48); return pk(this,{en:'gg',io:'0',b:'spl',tp:'bot',ec:'5',ex:'sgst%3D1%26sgcl%3D7daeTY-ZURwXamJnD-cm7Wbb11%26sgch%3Df18eszeuxsjboRYnM_WBWMeO8M_RXVmPihc_De%26sgmd%3D1%26sgurl%3Dwww.canon.com%252FPowerShot'},'gg_0');">20% OFF Refurbished Cameras</a>
+         </div> 
+        </div> 
+        <div class="fl pl15"> 
+         <div>
+          <a class="txt3 title siteLink_hover pxl" href="http://www.google.com/aclk?sa=l&amp;ai=CmUcRJtd6UYCYB4LigQeOo4HQD87E3vECvrHR6kf3oY0NCAAQASCx3-0XKANQ6uOsuv7_____AWDJtoSI8KPsEqAByo6D3gPIAQGqBCZP0GYiloin5AAWJBI6blk09YEFF9jJXHEpD6xZ9nIjFdnl1Of-RvoFCggDEM6RgM4BGAKAB57x_CE&amp;ctype=4&amp;sig=AOD64_2I_hJmcsiAvzbI8jG373mbqpMlwA&amp;adurl=http://dms.netmng.com/si/cm/tracking/clickredirect.aspx%3FsiclientId%3D8168%26IOGtrID%3D6.567415%26sitrackingid%3D527811394%26sicreative%3D19187537126%26redirectUrl%3Dhttp%253a%252f%252fshop.usa.canon.com%252fwebapp%252fwcs%252fstores%252fservlet%252fsubCategory_10051_10051_-1_146757&amp;ba=1" rel="nofollow" target="_blank" onmousedown="triggerAdsSEMPixel(this,'gsl','3','5','999','www.canon.com/PowerShot');if (typeof cstmclk != 'undefined') cstmclk(48); if (typeof efclk != 'undefined') efclk(48); return pk(this,{en:'gg',io:'0',b:'spl',tp:'bot',ec:'5',ex:'sgst%3D1%26sgcl%3D7daeTY-ZURwXamJnD-cm7Wbb11%26sgch%3Df18eszeuxsjboRYnM_WBWMeO8M_RXVmPihc_De%26sgmd%3D1%26sgurl%3Dwww.canon.com%252FPowerShot'},'gg_0');">Up to $80 OFF PowerShot Cameras</a>
+         </div> 
+        </div> 
+        <div class="cl"></div> 
+       </div> 
+      </div> 
+      <div class="spl_ad_plus" data-lc="gg"> 
+       <a id="lindp" class="ptbs pl10 pr30 ptsp pxl" href="http://www.google.com/aclk?sa=L&amp;ai=CdZBvJtd6UYCYB4LigQeOo4HQD5-B9KoEt-Co6Wfx3MQFCAAQAiCx3-0XKANQ5ZShwfn_____AWDJtoSI8KPsEsgBAaoEJE_QBjyyiKTsAK4n2_CzA3U0ct-DxNFmWvofWg4VeVMz_nT5JoAH_8-iHA&amp;sig=AOD64_10D-_vVC1hS-HLdhkr7ThzoZnAcg&amp;adurl=http://phototronicsinc.com/rd/%3Fdku%3Dhttp%253A%252F%252Fphototronicsinc.com%26dkid%3D170072%26source%3D736%26mkt%3D61001%26mkw%3Ds%255Fdigital%2520cameras%255F27778325391%26dkgeo%3Dm-north_shore-il%26dkcat%3D745B720E-F708-4259-925A-B938E6E7CEBB%26dkatt%3Dcameras&amp;ba=1" rel="nofollow" target="_blank" onmousedown="triggerAdsSEMPixel(this,'gsl','4','5','999','www.phototronicsinc.com/');if (typeof cstmclk != 'undefined') cstmclk(13); if (typeof efclk != 'undefined') efclk(13); return pk(this,{en:'gg',io:'1',b:'spl',tp:'bot',ec:'5',ex:'sgst%3D1%26sgcl%3D7daeTY-ZURwXamJnD-cm7Wbb11%26sgch%3Df18eszeuxsjboRYnM_WBWMeO8M_RXVmPihc_De%26sgmd%3D1%26sgurl%3Dwww.phototronicsinc.com%252F'},'gg_1');" onmouseover="return ss('www.phototronicsinc.com/');" onmouseout="cs()" style="display:block;"> <span class="txt_lg title sp_hvr fnt_enlarge splTitle" id="gg_1"><b>Digital Cameras</b> - Get the Latest Camera Technology</span> <br /> 
+        <div class="attrib">
+         www.phototronicsinc.com/
+        </div> 
+        <div class="txt3 abstract">
+         Call us today at (847)-450-7583!
+        </div> </a> 
+      </div> 
+      <div class="spl_ad_plus" data-lc="gg"> 
+       <a id="lindp" class="ptbs pl10 pr30 ptsp pxl" href="http://www.google.com/aclk?sa=L&amp;ai=CLMyLJtd6UYCYB4LigQeOo4HQD4KhzLsCwt-utzL5lvkFCAAQAyCx3-0XKANQvraa2Pr_____AWDJtoSI8KPsEsgBAaoEJE_QJnqUiKXsAK4n2_DOVQs6ct-DxNFmWvofWg4VY1Mz82WpC4AHiuO1MA&amp;sig=AOD64_1EvbjsaJXzx8FjvqXTqYR0d74qEw&amp;adurl=http://www.amazon.com/s/%3Fie%3DUTF8%26keywords%3Ddigital%2Bcamera%2Bcomparison%26tag%3Dgooghydr-20%26index%3Daps%26hvadid%3D13445996130%26hvpos%3D1t3%26hvexid%3D%26hvnetw%3Ds%26hvrand%3D1835099856546339483%26hvpone%3D%26hvptwo%3D%26hvqmt%3Db%26hvdev%3Dc%26ref%3Dpd_sl_2vnh8kqa6f_b&amp;ba=1" rel="nofollow" target="_blank" onmousedown="triggerAdsSEMPixel(this,'gsl','5','5','999','www.amazon.com/&lt;b&gt;Cameras&lt;/b&gt;');if (typeof cstmclk != 'undefined') cstmclk(56); if (typeof efclk != 'undefined') efclk(56); return pk(this,{en:'gg',io:'2',b:'spl',tp:'bot',ec:'5',ex:'sgst%3D1%26sgcl%3D7daeTY-ZURwXamJnD-cm7Wbb11%26sgch%3Df18eszeuxsjboRYnM_WBWMeO8M_RXVmPihc_De%26sgmd%3D1%26sgurl%3Dwww.amazon.com%252F%253Cb%253ECameras%253C%252Fb%253E'},'gg_2');" onmouseover="return ss('www.amazon.com/&lt;b&gt;Cameras&lt;/b&gt;');" onmouseout="cs()" style="display:block;padding-bottom: 0px;"> <span class="txt_lg title sp_hvr fnt_enlarge splTitle" id="gg_2"><b>Digital</b> Camera Comparison | Amazon.com</span> <br /> 
+        <div class="attrib">
+         www.amazon.com/
+         <b>Cameras</b>
+        </div> 
+        <div class="txt3 abstract">
+         Save on 
+         <b>Digital</b> camera comparison Free Shipping Available with Amazon
+        </div> </a> 
+       <div id="seller" class="txt3 pl10 pb8"> 
+        <span class="grey"> amazon.com is rated <img src="//www.google.com/images/4_5_stars.gif" id="ratingImgUrl" /> (<a onmousedown="triggerAdsSEMPixel(this,'gsl','5','5','999','www.amazon.com/&lt;b&gt;Cameras&lt;/b&gt;');if (typeof cstmclk != 'undefined') cstmclk(56); if (typeof efclk != 'undefined') efclk(56); return pk(this,{en:'gg',io:'2',b:'spl',tp:'bot',ec:'5',ex:'sgst%3D1%26sgcl%3D7daeTY-ZURwXamJnD-cm7Wbb11%26sgch%3Df18eszeuxsjboRYnM_WBWMeO8M_RXVmPihc_De%26sgmd%3D1%26sgurl%3Dwww.amazon.com%252F%253Cb%253ECameras%253C%252Fb%253E'},'gg_2');" href="http://www.google.com/products/seller?zmi=amazon.com" class="pxl" style="color:#4272DB;" target="_blank">736 reviews</a>) </span> 
+       </div> 
+      </div> 
+      <div class="spl_ad_plus" data-lc="gg"> 
+       <a id="lindp" class="ptbs pl10 pr30 ptsp pxl" href="http://www.google.com/aclk?sa=l&amp;ai=C8I5EJtd6UYCYB4LigQeOo4HQD_Pev5wC2-mRgie_trcJEAEgsd_tFygCUMCF49ECYMm2hIjwo-wSoAGRyobvA8gBAaoEIk_QFmWGiKLkABYkEjpuVHebhAUX2MlccSkPrFn2dzSrzvKAB9e1-RA&amp;num=4&amp;sig=AOD64_0Dz_i3f0wMRNwiYcPoO5XwXkG7IQ&amp;adurl=http://www.intellireview.com/Top-Cameras/%3Faid%3D11%26top%3D11%26track%3DDigital_Cameras%26kw%3Dbest%2520digital%2520cameras%26ad%3D1%26campaign%3DelectronicsBsearch%26src%3Dgoogle%26expandable%3D0" rel="nofollow" target="_blank" onmousedown="triggerAdsSEMPixel(this,'gsl','6','5','999','www.intellireview.com/');if (typeof cstmclk != 'undefined') cstmclk(80); if (typeof efclk != 'undefined') efclk(80); return pk(this,{en:'gg',io:'3',b:'spl',tp:'bot',ec:'5',ex:'sgst%3D1%26sgcl%3D7daeTY-ZURwXamJnD-cm7Wbb11%26sgch%3Df18eszeuxsjboRYnM_WBWMeO8M_RXVmPihc_De%26sgmd%3D1%26sgurl%3Dwww.intellireview.com%252F'},'gg_3');" onmouseover="return ss('www.intellireview.com/');" onmouseout="cs()" style="display:block;padding-bottom: 0px;"> <span class="txt_lg title sp_hvr fnt_enlarge splTitle" id="gg_3"><b>Top</b> 10 <b>Digital Cameras</b></span> <br /> 
+        <div class="attrib">
+         www.intellireview.com/
+        </div> 
+        <div class="txt3 abstract">
+         Voted By Consumer Reviewers. Compare Reviews, Ratings &amp; Prices.
+        </div> </a> 
+       <div class="pl30 ptbs"> 
+        <div class="fl"> 
+         <div>
+          <a class="txt3 title siteLink_hover pxl" href="http://www.google.com/aclk?sa=l&amp;ai=CpqfrJtd6UYCYB4LigQeOo4HQD_Pev5wC2-mRgie_trcJEAEgsd_tFygCUNC5orIEYMm2hIjwo-wSoAGRyobvA8gBAaoEIk_QFmWGiKLkABYkEjpuVHebhAUX2MlccSkPrFn2dzSrzvL6BQkIAxCrm895GAGAB9e1-RA&amp;num=4&amp;ctype=4&amp;sig=AOD64_2RqtqRbtLzKcpYx23Pdy2Up5JCOw&amp;adurl=http://www.intellireview.com/category/giftguide/" rel="nofollow" target="_blank" onmousedown="triggerAdsSEMPixel(this,'gsl','6','5','999','www.intellireview.com/');if (typeof cstmclk != 'undefined') cstmclk(80); if (typeof efclk != 'undefined') efclk(80); return pk(this,{en:'gg',io:'3',b:'spl',tp:'bot',ec:'5',ex:'sgst%3D1%26sgcl%3D7daeTY-ZURwXamJnD-cm7Wbb11%26sgch%3Df18eszeuxsjboRYnM_WBWMeO8M_RXVmPihc_De%26sgmd%3D1%26sgurl%3Dwww.intellireview.com%252F'},'gg_3');">Gift Finder</a>
+         </div> 
+         <div>
+          <a class="txt3 title siteLink_hover pxl" href="http://www.google.com/aclk?sa=l&amp;ai=CzDriJtd6UYCYB4LigQeOo4HQD_Pev5wC2-mRgie_trcJEAEgsd_tFygCUN_Vq-P______wFgybaEiPCj7BKgAZHKhu8DyAEBqgQiT9AWZYaIouQAFiQSOm5Ud5uEBRfYyVxxKQ-sWfZ3NKvO8voFCQgDEKubz3kYA4AH17X5EA&amp;num=4&amp;ctype=4&amp;sig=AOD64_2jyNsDnMF1TUXIXPV_k6PvmdG-Sg&amp;adurl=http://www.intellireview.com/category/d2065/%3Fsrc%3Dgoogle%26aid%3D999" rel="nofollow" target="_blank" onmousedown="triggerAdsSEMPixel(this,'gsl','6','5','999','www.intellireview.com/');if (typeof cstmclk != 'undefined') cstmclk(80); if (typeof efclk != 'undefined') efclk(80); return pk(this,{en:'gg',io:'3',b:'spl',tp:'bot',ec:'5',ex:'sgst%3D1%26sgcl%3D7daeTY-ZURwXamJnD-cm7Wbb11%26sgch%3Df18eszeuxsjboRYnM_WBWMeO8M_RXVmPihc_De%26sgmd%3D1%26sgurl%3Dwww.intellireview.com%252F'},'gg_3');">Top 10 Blu-Ray Players</a>
+         </div> 
+        </div> 
+        <div class="fl pl15"> 
+         <div>
+          <a class="txt3 title siteLink_hover pxl" href="http://www.google.com/aclk?sa=l&amp;ai=CeqchJtd6UYCYB4LigQeOo4HQD_Pev5wC2-mRgie_trcJEAEgsd_tFygCUPy75KD8_____wFgybaEiPCj7BKgAZHKhu8DyAEBqgQiT9AWZYaIouQAFiQSOm5Ud5uEBRfYyVxxKQ-sWfZ3NKvO8voFCQgDEKubz3kYAoAH17X5EA&amp;num=4&amp;ctype=4&amp;sig=AOD64_0A4w4nVvKEVGYmue1zBOietFCzOw&amp;adurl=http://www.intellireview.com/category/d530/%3Fsrc%3Dgoogle%26aid%3D999" rel="nofollow" target="_blank" onmousedown="triggerAdsSEMPixel(this,'gsl','6','5','999','www.intellireview.com/');if (typeof cstmclk != 'undefined') cstmclk(80); if (typeof efclk != 'undefined') efclk(80); return pk(this,{en:'gg',io:'3',b:'spl',tp:'bot',ec:'5',ex:'sgst%3D1%26sgcl%3D7daeTY-ZURwXamJnD-cm7Wbb11%26sgch%3Df18eszeuxsjboRYnM_WBWMeO8M_RXVmPihc_De%26sgmd%3D1%26sgurl%3Dwww.intellireview.com%252F'},'gg_3');">Top Rated Vacuums</a>
+         </div> 
+         <div>
+          <a class="txt3 title siteLink_hover pxl" href="http://www.google.com/aclk?sa=l&amp;ai=CX_YcJtd6UYCYB4LigQeOo4HQD_Pev5wC2-mRgie_trcJEAEgsd_tFygCUPy75KD8_____wFgybaEiPCj7BKgAZHKhu8DyAEBqgQiT9AWZYaIouQAFiQSOm5Ud5uEBRfYyVxxKQ-sWfZ3NKvO8voFCQgDEKubz3kYBIAH17X5EA&amp;num=4&amp;ctype=4&amp;sig=AOD64_1tIe2LJuDEIfmtGkybjPuF0OUD_g&amp;adurl=http://www.intellireview.com/category/d530/%3Fsrc%3Dgoogle%26aid%3D999" rel="nofollow" target="_blank" onmousedown="triggerAdsSEMPixel(this,'gsl','6','5','999','www.intellireview.com/');if (typeof cstmclk != 'undefined') cstmclk(80); if (typeof efclk != 'undefined') efclk(80); return pk(this,{en:'gg',io:'3',b:'spl',tp:'bot',ec:'5',ex:'sgst%3D1%26sgcl%3D7daeTY-ZURwXamJnD-cm7Wbb11%26sgch%3Df18eszeuxsjboRYnM_WBWMeO8M_RXVmPihc_De%26sgmd%3D1%26sgurl%3Dwww.intellireview.com%252F'},'gg_3');">Bestselling HDTVs</a>
+         </div> 
+        </div> 
+        <div class="cl"></div> 
+       </div> 
+      </div> 
+      <div class="spl_ad_plus" data-lc="gg"> 
+       <a id="lindp" class="ptbs pl10 pr30 ptsp pxl" href="http://www.google.com/aclk?sa=L&amp;ai=CYOu4Jtd6UYCYB4LigQeOo4HQD_PBvYUD44W_gk3x3MQFEAIgsd_tFygCUNe25swHYMm2hIjwo-wSyAEBqgQkT9AmDaKIo-wArifb8L80TSty34PE0WZa-h9aDhV5UzPqGeUagAfb8Ikg&amp;num=5&amp;sig=AOD64_3x6oY3UWbNMlPE_R2dLn2bToNOcA&amp;adurl=http://tccamerarepair.net/rd/%3Fdku%3Dhttp%253A%252F%252Ftccamerarepair.net%26dkid%3D181441%26source%3D736%26mkt%3D61001%26mkw%3Ds%255Fdigital%2520cameras%255F20599863547%26dkgeo%3Dcustom%26dkcat%3D745B720E-F708-4259-925A-B938E6E7CEBB%26dkatt%3Dcameras" rel="nofollow" target="_blank" onmousedown="triggerAdsSEMPixel(this,'gsl','7','5','999','www.tccamerarepair.net/');if (typeof cstmclk != 'undefined') cstmclk(97); if (typeof efclk != 'undefined') efclk(97); return pk(this,{en:'gg',io:'4',b:'spl',tp:'bot',ec:'5',ex:'sgst%3D1%26sgcl%3D7daeTY-ZURwXamJnD-cm7Wbb11%26sgch%3Df18eszeuxsjboRYnM_WBWMeO8M_RXVmPihc_De%26sgmd%3D1%26sgurl%3Dwww.tccamerarepair.net%252F'},'gg_4');" onmouseover="return ss('www.tccamerarepair.net/');" onmouseout="cs()" style="display:block;"> <span class="txt_lg title sp_hvr fnt_enlarge splTitle" id="gg_4"><b>Digital Cameras</b></span> <br /> 
+        <div class="attrib">
+         www.tccamerarepair.net/
+        </div> 
+        <div class="txt3 abstract">
+         Great deals on quality 
+         <b>cameras</b>. Located in the Yorkville area.
+        </div> </a> 
+      </div> 
+     </div> 
+    </div>
+   </div>
+   <div class="c1"> 
+    <script type="text/javascript">
+         var myJson = {};
+</script> 
+    <div class="rrmod" measuretype="content" measuredata="RelatedSearch#right##" data-foresee="RLT"> 
+     <div> 
+      <div class="orange b txt4">
+       Explore Answers About
+      </div> 
+      <div class="rrItem">
+       <a href="?qsrc=6&amp;q=Top+10+Best+Digital+Cameras&amp;o=5118&amp;l=dir" class="txt4 title " onmousedown="return pk(this,{en:'z1',io:'0',b:'rlt',tp:'d',ec:'3'});">Top 10 <b>Best</b> <b>Digital</b> <b>Cameras</b></a>
+      </div> 
+      <div class="rrItem">
+       <a href="?qsrc=6&amp;q=Best+Digital+Camera+Ratings&amp;o=5118&amp;l=dir" class="txt4 title " onmousedown="return pk(this,{en:'z1',io:'1',b:'rlt',tp:'d',ec:'3'});"><b>Best</b> <b>Digital</b> <b>Camera</b> Ratings</a>
+      </div> 
+      <div class="rrItem">
+       <a href="?qsrc=6&amp;q=Best+Digital+Camera+2012&amp;o=5118&amp;l=dir" class="txt4 title " onmousedown="return pk(this,{en:'z1',io:'2',b:'rlt',tp:'d',ec:'3'});"><b>Best</b> <b>Digital</b> <b>Camera</b> 2012</a>
+      </div> 
+      <div class="rrItem">
+       <a href="?qsrc=6&amp;q=Digital+Camera+Reviews&amp;o=5118&amp;l=dir" class="txt4 title " onmousedown="return pk(this,{en:'zs2',io:'3',b:'rlt',tp:'d',ec:'17'});"><b>Digital</b> <b>Camera</b> Reviews</a>
+      </div> 
+      <div class="rrItem">
+       <a href="?qsrc=6&amp;q=Best+Digital+Camera+for+under+500&amp;o=5118&amp;l=dir" class="txt4 title " onmousedown="return pk(this,{en:'zs2',io:'4',b:'rlt',tp:'d',ec:'17'});"><b>Best</b> <b>Digital</b> <b>Camera</b> for under 500</a>
+      </div> 
+      <div class="rrItem">
+       <a href="?qsrc=6&amp;q=Best+Digital+Cameras+Review&amp;o=5118&amp;l=dir" class="txt4 title " onmousedown="return pk(this,{en:'zs2',io:'5',b:'rlt',tp:'d',ec:'17'});"><b>Best</b> <b>Digital</b> <b>Cameras</b> Review</a>
+      </div> 
+      <div class="rrItem">
+       <a href="?qsrc=6&amp;q=Comparison+of+Best+Digital+Cameras&amp;o=5118&amp;l=dir" class="txt4 title " onmousedown="return pk(this,{en:'zs2',io:'6',b:'rlt',tp:'d',ec:'17'});">Comparison of <b>Best</b> <b>Digital</b> <b>Cameras</b></a>
+      </div> 
+      <div class="rrItem">
+       <a href="?qsrc=6&amp;q=Digital+Cameras+Best+Buys&amp;o=5118&amp;l=dir" class="txt4 title " onmousedown="return pk(this,{en:'zs2',io:'7',b:'rlt',tp:'d',ec:'17'});"><b>Digital</b> <b>Cameras</b> <b>Best</b> Buys</a>
+      </div> 
+      <div class="rrItem">
+       <a href="?qsrc=6&amp;q=Compare+Digital+Cameras&amp;o=5118&amp;l=dir" class="txt4 title " onmousedown="return pk(this,{en:'zs2',io:'8',b:'rlt',tp:'d',ec:'17'});">Compare <b>Digital</b> <b>Cameras</b></a>
+      </div> 
+      <div class="rrItem">
+       <a href="?qsrc=6&amp;q=Digital+Cameras+Ratings&amp;o=5118&amp;l=dir" class="txt4 title " onmousedown="return pk(this,{en:'za2',io:'9',b:'rlt',tp:'d',ec:'3'});"><b>Digital</b> <b>Cameras</b> Ratings</a>
+      </div> 
+      <div class="rrItem">
+       <a href="?qsrc=6&amp;q=10+Top+Selling+Digital+Cameras&amp;o=5118&amp;l=dir" class="txt4 title " onmousedown="return pk(this,{en:'za2',io:'10',b:'rlt',tp:'d',ec:'3'});">10 Top Selling <b>Digital</b> <b>Cameras</b></a>
+      </div> 
+      <div class="rrItem">
+       <a href="?qsrc=6&amp;q=Top+Rated+Digital+Cameras&amp;o=5118&amp;l=dir" class="txt4 title " onmousedown="return pk(this,{en:'za2',io:'11',b:'rlt',tp:'d',ec:'3'});">Top Rated <b>Digital</b> <b>Cameras</b></a>
+      </div> 
+     </div> 
+    </div> 
+    <div class="rrmod" measuretype="content" measuredata="PopularQA#right#pqa#"> 
+     <div class="orange b txt4">
+      Other People Asked
+     </div> 
+     <div class="ptbs"> 
+      <div> 
+       <span class="q-ico grey b">Q</span> 
+       <span class="q-txt b">How to Use a 
+        <kw>
+         Digital
+        </kw> 
+        <kw>
+         Camera
+        </kw>?</span> 
+      </div> 
+      <div class="txt3">
+       Using a 
+       <kw>
+        digital
+       </kw> 
+       <kw>
+        camera
+       </kw> can be just as easy as using a non 
+       <kw>
+        digital
+       </kw> 
+       <kw>
+        camera
+       </kw> with just more features. The instruction guide ...
+       <a onmousedown="return pk(this,{en:'pqa',io:'0',b:'qai',tp:'d',ec:'3',ex:'tsrc%3Dansw'});" href="http://answers.ask.com/Computers/Hardware/how_to_use_a_digital_camera" class="title tdn" target="_blank"> Read More &raquo;</a>
+      </div> 
+      <div class="txt3"> 
+       <span class="b pr5 grey">Source:</span> 
+       <span class="grey">answers.ask.com</span> 
+      </div> 
+     </div> 
+     <div class="ptbs"> 
+      <div> 
+       <span class="q-ico grey b">Q</span> 
+       <span class="q-txt b">What are 
+        <kw>
+         Digital
+        </kw> 
+        <kw>
+         Cameras
+        </kw>?</span> 
+      </div> 
+      <div class="txt3">
+       <kw>
+        Digital
+       </kw> 
+       <kw>
+        cameras
+       </kw> are 
+       <kw>
+        cameras
+       </kw> that run off of batteries, and can be used through a computer. These are more expensive than...
+       <a onmousedown="return pk(this,{en:'pqa',io:'1',b:'qai',tp:'d',ec:'3',ex:'tsrc%3Dansw'});" href="http://answers.ask.com/Business/Other/what_are_digital_cameras" class="title tdn" target="_blank"> Read More &raquo;</a>
+      </div> 
+      <div class="txt3"> 
+       <span class="b pr5 grey">Source:</span> 
+       <span class="grey">answers.ask.com</span> 
+      </div> 
+     </div> 
+     <div class="ptbs"> 
+      <div> 
+       <span class="q-ico grey b">Q</span> 
+       <span class="q-txt b">How are 
+        <kw>
+         Digital
+        </kw> 
+        <kw>
+         Cameras
+        </kw> Used?</span> 
+      </div> 
+      <div class="txt3">
+       <kw>
+        Digital
+       </kw> 
+       <kw>
+        cameras
+       </kw> are used by snapping a photo of an image and uploading it to a computer for viewing, printing, or sharin...
+       <a onmousedown="return pk(this,{en:'pqa',io:'2',b:'qai',tp:'d',ec:'3',ex:'tsrc%3Dansw'});" href="http://answers.ask.com/Business/Other/how_are_digital_cameras_used" class="title tdn" target="_blank"> Read More &raquo;</a>
+      </div> 
+      <div class="txt3"> 
+       <span class="b pr5 grey">Source:</span> 
+       <span class="grey">answers.ask.com</span> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="rrmod"> 
+     <div class="orange b txt4">
+       Want A Personal Answer? 
+     </div> 
+     <div id="askCommunity" class="ssp mgt15" style="cursor:pointer;" data-qotd="false"></div> 
+     <div class="avtsp mgt15" style="background-position: 0 -40px;"></div> 
+     <div class="txt2 grey mgt10">
+       1,802,299 people are answering. 
+     </div> 
+     <img src="http://wzus1.ask.com/i/i.gif?t=a&amp;d=us&amp;s=a&amp;c=a&amp;app=a16&amp;ti=2&amp;ai=56&amp;dqi=&amp;askid=327e87bb-ff17-4d20-bc2c-7cdf0d770640-0-us_msb&amp;l=dir&amp;o=5118&amp;oo=5118&amp;sv=0a5ca9d6&amp;ip=a57c910b&amp;ord=3562450&amp;cu.wz=0" border="0" width="1" height="1" style="display:block;" /> 
+    </div> 
+    <div id="rrqotd" class="rrmod qotd-rr"> 
+     <div class="hda"> 
+      <a id="qotdHeaderLink" onmousedown="return pk(this,{en:'rrq',io:'0',b:'rrq',tp:'d',ec:'1'});" href="http://www.ask.com/questionoftheday" class="orange b txt4">Quizzes</a> 
+     </div> 
+     <div class="body"> 
+      <div class="question b txt4"> 
+       <span>Where are the world's tallest trees?</span> 
+      </div> 
+      <div class="left"> 
+       <img src="http://sp.ask.com/qotdxdict/i/20130426.jpg" alt="QOTD" /> 
+      </div> 
+      <div class="right"> 
+       <div id="qotdopts"> 
+        <div id="qotdopt1" class="qotdopt correct txt4 title"> 
+         <a style="cursor:pointer" onmousedown="return pk(this,{en:'rrq',io:'0',b:'rrq',tp:'d',ec:'1'});" href="http://quizzes.ask.com/Where_are_the_world's_tallest_trees?&amp;qqa=California"> 
+          <div id="qotdoptimg1" class="quiz-opt1 serpSprite qotdoptimg" alt="" style="color: #115A99;"></div> </a>
+         <a onmousedown="return pk(this,{en:'rrq',io:'0',b:'rrq',tp:'d',ec:'1'});" href="http://quizzes.ask.com/Where_are_the_world's_tallest_trees?&amp;qqa=California" class="qotdopttxt title txt4">California</a>  
+        </div> 
+        <div id="qotdopt2" class="qotdopt incorrect txt4 title"> 
+         <a style="cursor:pointer" onmousedown="return pk(this,{en:'rrq',io:'0',b:'rrq',tp:'d',ec:'1'});" href="http://quizzes.ask.com/Where_are_the_world's_tallest_trees?&amp;qqa=Washington"> 
+          <div id="qotdoptimg2" class="quiz-opt2 serpSprite qotdoptimg" alt="" style="color: #115A99;"></div> </a>
+         <a onmousedown="return pk(this,{en:'rrq',io:'0',b:'rrq',tp:'d',ec:'1'});" href="http://quizzes.ask.com/Where_are_the_world's_tallest_trees?&amp;qqa=Washington" class="qotdopttxt title txt4">Washington</a>  
+        </div> 
+        <div id="qotdopt3" class="qotdopt incorrect txt4 title"> 
+         <a style="cursor:pointer" onmousedown="return pk(this,{en:'rrq',io:'0',b:'rrq',tp:'d',ec:'1'});" href="http://quizzes.ask.com/Where_are_the_world's_tallest_trees?&amp;qqa=Australia"> 
+          <div id="qotdoptimg3" alt="" class="quiz-opt3 serpSprite qotdoptimg"></div> </a>
+         <a class="qotdopttxt title txt4" onmousedown="return pk(this,{en:'rrq',io:'0',b:'rrq',tp:'d',ec:'1'});" href="http://quizzes.ask.com/Where_are_the_world's_tallest_trees?&amp;qqa=Australia">Australia</a>  
+        </div> 
+        <div id="qotdopt4" class="qotdopt incorrect txt4 title"> 
+         <a style="cursor:pointer" onmousedown="return pk(this,{en:'rrq',io:'0',b:'rrq',tp:'d',ec:'1'});" href="http://quizzes.ask.com/Where_are_the_world's_tallest_trees?&amp;qqa=Canada"> 
+          <div id="qotdoptimg4" alt="" class="quiz-opt4 serpSprite qotdoptimg"></div> </a>
+         <a class="qotdopttxt title txt4" onmousedown="return pk(this,{en:'rrq',io:'0',b:'rrq',tp:'d',ec:'1'});" href="http://quizzes.ask.com/Where_are_the_world's_tallest_trees?&amp;qqa=Canada">Canada</a>  
+        </div> 
+       </div> 
+      </div> 
+      <div class="controls" style="clear:both;margin-top:8px;"> 
+       <span class="txt3 pollText"> 62% of users knew the answer. <span class="b">Do you?</span></span> 
+      </div> 
+     </div> 
+    </div> 
+   </div>
+  </div> 
+  <div id="serp_ftr" class="footer"> 
+   <div id="cft" class="txt2 cft"> 
+    <a id="ftAbout" href="http://www.ask.com/about?o=5118&amp;l=dir" style="" class="">About</a> 
+    <span class="separator">-</span> 
+    <a id="ftPrivacy" href="http://www.ask.com/about/legal/privacy?o=5118&amp;l=dir" style="" class="">Privacy</a> 
+    <span class="separator">-</span> 
+    <a id="ftEraser" href="http://www.ask.com/settings?settingType=askeraser&amp;o=5118&amp;l=dir" style="" class="">AskEraser</a> 
+    <span class="separator">-</span> 
+    <a id="ftAdvertise" href="http://www.ask.com/products/display?o=5118&amp;l=dir" style="" class="">Advertise</a> 
+    <span class="separator">-</span> 
+    <a id="ftCareers" href="http://hire.jobvite.com/CompanyJobs/Careers.aspx?c=qXY9VfwJ&amp;su=fsY9Vfwe&amp;cs=93q9Vfwh" style="" class="">Careers</a> 
+    <span class="separator">-</span> 
+    <a id="ftBlog" href="http://blog.ask.com" style="" class="" target="_blank">Ask Blog</a> 
+    <span class="separator">-</span> 
+    <a id="ftiPhoneLink" href="http://www.ask.com/questions-about" style="" class="">Q&amp;A</a> 
+    <span class="separator">-</span> 
+    <a id="ftAndroidLink" href="http://www.ask.com/mobile?o=5118&amp;l=dir" style="" class="">Mobile</a> 
+    <span class="separator">-</span> 
+    <a id="ftHelp" href="http://help.ask.com" style="" class="" target="_blank">Help</a> 
+    <span class="separator">-</span> 
+    <a id="ftFeedback" href="http://feedback.ask.com" style="" class="" target="_blank">Feedback</a> 
+    <span style="margin-left:30px;">&copy;2013 Ask.com</span> 
+   </div> 
+   <div id="ask_question_dialog"></div> 
+   <div id="ask_question_dialog_container" style="display:none"></div> 
+   <div id="asDlgWrap" style="overflow:hidden"></div> 
+  </div> 
+  <span style="display:none"> <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-5081537-3']);
+  _gaq.push(['_trackPageview']);
+  _gaq.push(['_trackPageLoadTime']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> </span> 
+  <span style="display:none"> <script type="text/javascript">
+            function addEvent(obj, evType, fn){
+                if (obj.addEventListener){
+                    obj.addEventListener(evType, fn, false);
+                    return true;
+                } else if (obj.attachEvent){
+                    var r = obj.attachEvent("on"+evType, fn);
+                    return r;
+                } else {
+                    return false;
+                }
+            }
+
+            function comScore(){
+                var host = (("https:" == document.location.protocol) ? "https://sb" : "http://b");
+                var headTag = document.getElementsByTagName("head")[0];
+                var scanalytics = document.createElement("script");
+                scanalytics.setAttribute("type", "text/javascript");
+                scanalytics.setAttribute("src", host + ".scorecardresearch.com/beacon.js");
+                scanalytics.onload = scanalytics.onreadystatechange = function(){
+                    try {
+                        COMSCORE.beacon({
+                            c1:2,
+                            c2:6034776,
+                            c3:"",
+                            c4:"",
+                            c5:"",
+                            c6:"",
+                            c15:""
+                        });
+                    } catch(err) {
+                    }
+                };
+                headTag.appendChild(scanalytics);
+            }
+            addEvent(window, 'load', comScore);
+        </script> 
+   <noscript> 
+    <img src="http://b.scorecardresearch.com/p?c1=2&amp;c2=6034776&amp;c3=&amp;c4=&amp;c5=&amp;c6=&amp;c15=&amp;cj=1" /> 
+   </noscript> </span> 
+  <script type="text/javascript">
+
+            $j(document).ready(function(){
+                
+                if($j.cookie("fsf") == null && true && false){
+                    $j.cookie("fsf", "0", {path:'/', domain:"ask.com"});
+                }
+                
+                if($j.cookie("fsf") == '1' || false){
+                if($j.cookie("fsr.r")== null){
+                
+                
+                
+                    $j.getScript("/inc/js/foresee/v1/foresee-trigger.js")
+                    
+                
+                }
+                JASK.namespace('foresee');
+                JASK.foresee.surveyCallback = function() {
+                    if($j.cookie("fsr.r")== null){
+                        FSR.CPPS.set('QID','02425D73AB45323D3C3755FD19E753FC');
+                        FSR.CPPS.set('SID','');
+                        FSR.CPPS.set('UID','');
+                        FSR.CPPS.set('c','a');
+                        FSR.CPPS.set('o','5118');
+                        FSR.CPPS.set('oo','5118');
+                        FSR.CPPS.set('Term',"best digital cameras");
+                        FSR.CPPS.set('OCQ','0');
+                        FSR.CPPS.set('ADCAT','864');
+                        FSR.CPPS.set('CU','0');
+                        FSR.CPPS.set('ADDEP','3');
+                        FSR.CPPS.set('TTYPE','1');
+                        FSR.CPPS.set('app','a16');
+                        FSR.CPPS.set('ANSWTYPE','7');
+                        FSR.CPPS.set('ld','');
+                        FSR.CPPS.set('MATCH','6');
+                        FSR.CPPS.set('CHANNEL','web');
+                        FSR.CPPS.set('Ad_ID','327e87bb-ff17-4d20-bc2c-7cdf0d770640-0-us_msb');
+                        FSR.CPPS.set('clientid','aj-dictionary-testing5');
+                        FSR.CPPS.set('QSOURCE','999');
+                        FSR.CPPS.set('DQI_term','');
+                        FSR.CPPS.set('Spell_Display','false');
+                        FSR.CPPS.set('Partner_ID','');
+                        FSR.CPPS.set('SA_Area','');
+                        FSR.CPPS.set('SA',JASK.foresee.getCPPValue('SA'));
+                        FSR.CPPS.set('NAF',JASK.foresee.getCPPValue('ANSW'));
+                        FSR.CPPS.set('RELSearch',JASK.foresee.getCPPValue('RLT'));
+                        FSR.CPPS.set('ABOUT',JASK.foresee.getCPPValue('ABTI'));
+                        FSR.CPPS.set('SEO',JASK.foresee.getCPPValue('SEO'));
+                    }
+                }
+               }
+            });
+
+        </script> 
+  <script src="http://sp.ask.com/sh/ui-assets/inc/js/lib/jquery/jquery-1.6.2-1.8.14.r86826-02.js" type="text/javascript"></script> 
+  <script src="http://sp.ask.com/sh/ui-assets/inc/js/jask/common_c.r106559-02.js" type="text/javascript"></script> 
+  <script src="http://sp.ask.com/sh/ui-assets/inc/js/jask/a14serp_c.r105565-02.js" type="text/javascript"></script> 
+  <script src="http://sp.ask.com/sh/ui-assets/inc/js/a14/sempixel_c.r104329-02.js" type="text/javascript"></script> 
+  <script type="text/javascript">
+    JASK.social.conf = {
+        enabledProviders: "facebook,linkedin,google,yahoo",
+        APIKey : "2_kF3uRGWN0bDCn_y8GPWYEQPm_IzHqFvA4P0E2loB9eB0TfwsC2Zjd08EOqXYbqcu"
+    };
+</script> 
+  <noscript> 
+   <meta http-equiv="refresh" content="0;URL=web?q=best+digital+cameras&amp;o=5118&amp;l=dir&amp;jss=0" /> 
+  </noscript> 
+  <script type="text/javascript">
+
+        JASK.communityCfg = {
+            "sessionTracker1":"http://wzus1.ask.com/i/i.gif?t=v&d=us&s=a&c=a&app=a16&dqi=&askid=327e87bb-ff17-4d20-bc2c-7cdf0d770640-0-us_msb&l=dir&o=5118&oo=5118&sv=0a5ca9d6&p=web&ord=3562450&cu.wz=0",
+            "sessionTracker2":"http://wzus1.ask.com/i/i.gif?t=v&d=us&s=a&c=a&app=a16&dqi=&askid=327e87bb-ff17-4d20-bc2c-7cdf0d770640-0-us_msb&l=dir&o=5118&oo=5118&sv=0a5ca9d6&p=web&ord=3562450&cu.wz=0",
+            "sessionTracker3":"http://wzus1.ask.com/i/i.gif?t=v&d=us&s=a&c=a&app=a16&dqi=&askid=327e87bb-ff17-4d20-bc2c-7cdf0d770640-0-us_msb&l=dir&o=5118&oo=5118&sv=0a5ca9d6&p=web&ord=3562450&cu.wz=0",
+            "sessionTracker4":"http://wzus1.ask.com/i/i.gif?t=v&d=us&s=a&c=a&app=a16&dqi=&askid=327e87bb-ff17-4d20-bc2c-7cdf0d770640-0-us_msb&l=dir&o=5118&oo=5118&sv=0a5ca9d6&p=web&ord=3562450&cu.wz=0",
+            "sessionTracker5":"http://wzus1.ask.com/i/i.gif?t=v&d=us&s=a&c=a&app=a16&dqi=&askid=327e87bb-ff17-4d20-bc2c-7cdf0d770640-0-us_msb&l=dir&o=5118&oo=5118&sv=0a5ca9d6&p=web&ord=3562450&cu.wz=0",
+            "sessionTracker6":"http://wzus1.ask.com/i/i.gif?t=v&d=us&s=a&c=a&app=a16&dqi=&askid=327e87bb-ff17-4d20-bc2c-7cdf0d770640-0-us_msb&l=dir&o=5118&oo=5118&sv=0a5ca9d6&p=web&ord=3562450&cu.wz=0",
+            "sessionTracker7":"http://wzus1.ask.com/i/i.gif?t=v&d=us&s=a&c=a&app=a16&dqi=&askid=327e87bb-ff17-4d20-bc2c-7cdf0d770640-0-us_msb&l=dir&o=5118&oo=5118&sv=0a5ca9d6&p=web&ord=3562450&cu.wz=0",
+            "sessionTracker8":"http://wzus1.ask.com/i/i.gif?t=v&d=us&s=a&c=a&app=a16&dqi=&askid=327e87bb-ff17-4d20-bc2c-7cdf0d770640-0-us_msb&l=dir&o=5118&oo=5118&sv=0a5ca9d6&p=web&ord=3562450&cu.wz=0",
+            "EMAIL_UNAVAILABLE":"Sorry, that email is unavailable.",
+            "EMAIL_INVALID":"Sorry, that email format is invalid.",
+            "USER_TOOSHORT":"Sorry, that username is too short.",
+            "USER_UNAVAILABLE":"Sorry, that username is unavailable.",
+            "USER_INVALID":"Sorry, you can only use letters/numbers (no spaces).",
+            "USER_NONEXISTENT":"Sorry, that username does not exist.",
+            "PASS_TOOSHORT":"Sorry, your password is too short.",
+            "PASS_HASSPACE":"Sorry, no spaces in your password.",
+            "PASS_NOMATCH":"Sorry, this does not match. Please try again.",
+            "CAPTCHA_INCORRECT":"Sorry, you incorrectly typed the words. Try again.",
+            "USER_UNDERSCORE":"Sorry, usernames may not start or end with an underscore.",
+            "USER_CONS_UNDERSCORES":"Sorry, usernames cannot have more than one consecutive underscore.",
+            "EMAIL_HELP":"Required to send answers to you.<br>We will not share your email.",
+            "USER_HELP":"What do you want to be called?",
+            "PASS_HELP":"Six characters or more, please.",
+            "CAPTCHA_HELP":"Just making sure you're human!",
+            "TOPICS_EMPTY":"<p>Please enter keywords that describe your question. It will help us find the right person to provide an answer.</p><ul><li>Use keywords or phrases.</li><li>Enter one at a time.</li><p>Ex: little league, baseball gloves, sporting goods</p>",
+            "TOPICS_EXCEEDS":"<p>That should be enough keywords to get you a good answer to your question.</p>",
+            "DUPLICATE_TOPIC":"<p>Topic already exists. Please enter another topic.</p>",
+            "TOPICS_CHARACTER_LIMIT":"<p>Please limit your entry to 30 characters or less.</p>",
+            "QUESTION_EMPTY":"Please enter a question.",
+            "QUESTION_CAPS":"Please do not use all capital letters in your question, that makes it harder for people to read.",
+            "QUESTION_LEN":"Your question must be less than 140 characters.",
+            "DETAILS_LONG":"Details too long",
+            "DETAILS_LEN":"Sorry, the details for your question needs to be limited to only 1,200 characters.",
+            "NOT_A_QUESTION":"That seems too short to be a question. Please rephrase.",
+            "AS_A_QUESTION":"<p>Please write this as a question.</p><ul><li>Start with words like Who, What, Did, etc.",
+            "ANALYZING":"       "+"Analyzing your question...",
+            "NO_HTML":"HTML is not allowed.",
+            "SIGNIN_EMPTY":"Please complete all fields.",
+            "SIGNIN_FAIL":"Username and password do not match.",
+            "ADD_PLACE":"Add a place",
+            "ADD_INTEREST":"Add interest",
+            "OOPS":"An error has occurred.",
+            "AJAXERR":"Oops! Looks like the system timed out. Please try again now or come back in a few minutes.",
+            "ALREADY_LINKED":"Sorry, this Ask account is already linked. Please close the dialog and try again.",
+            "QUESTION_POST_ERROR":"You've asked a lot of questions recently. Please take a short break. You can ask more questions in 30 minutes.",
+            "QUESTION_DAILY_THROTTLE_ERROR":"Wow, that’s a lot of questions today! You should take a break. You can ask questions again in 3 hours.",
+            "QUESTION_MULTI_QUES_MARK":"Please don't use multiple question marks in your question such as &#34;???&#34;",
+            "QUESTION_SHORT_TEXT":"Please avoid informal shorthand like &#34;gr8&#34;,&#34;b4&#34;,&#34;u r&#34;, etc.",
+            "QUESTION_CAPS_LIMITED":"Sorry, not more than 40% of words in the question can be all caps.",
+            "threshold1":"0",
+            "threshold2":"0.3",
+            "threshold3":"0.6",
+            "qBoxCharLimit":"140",
+            "thinHeaderEnabled":"false",
+            "fullFlexEnabled":"false",
+            "resultsDomain":"www.ask.com",
+            "protocol":"https",
+            "secureDomain":"secure.ask.com",
+            "spellcheckDomain":"spellchk.ask.com",
+            "learnMoreVideoURL":"http://player.vimeo.com/video/14121087?byline=0&portrait=0&color=55bbdd&autoplay=1",
+            "qid":"02425D73AB45323D3C3755FD19E753FC",
+            "INVALID_SHORTHAND_WORDS":"gr8,fne,ur,u,2nite,2moro,4ever,4eva,b4,some1",
+            "spellcheckEnabled":"true",
+            "recaptchaEnabled":"true",
+            "answerThrottleError":"You've given a lot of answers recently. Please take a short break. You can answer more questions in 30 minutes.",
+            "answerDailyThrottleError":"Wow, that's a lot of answers today! You should take a break. You can answer questions again in 3 hours.",
+            "answerMaxUrlAllowedCount":"3",
+            "answerSpamLinksError":"Sorry, you cannot have more than 3 links in your answer.",
+            "answerCharLimitExceedError":"Sorry, please limit your answers to 1200 characters.",
+            "answerCharLimit": "1200",
+            "badgevillePlayerId":""
+        };
+
+    </script> 
+  <script type="text/javascript">
+    $j(document).ready(function(){
+        $j.each(_docReadyFns,function(i,fn){
+            fn.call( document, jQuery );
+        });
+        delete _docReadyFns;
+        
+    });
+
+</script> 
+  <script type="text/javascript">
+
+    JASK.ssCfg = (function(){
+
+        return {
+            
+            "width":616,
+            
+            
+            "top":4,
+            
+            
+            "left":-9,
+            
+            "channel":"web",   
+            "path":"web",      
+            "disableSS": false,  
+            "server":"ss.ask.com",  
+            "ldomain":"http://www.ask.com/",
+            "ssBold":"false", 
+            "clearSearchHistory":"Clear search history",
+            "ssFromQueryHistory":"false", 
+            "queryHistory":"best digital cameras",
+            "queryHistoryContentColor":"", 
+            "ssContentColor":"false",
+            "ssContentColorCode":"",
+            "ssItems":"",
+            "cid":"",
+            "token":"",
+            "lang":"",
+            "appendParams":(function(){  
+                var appendParams = new Array();
+                appendParams["deals"] = "dealsPgType=search";
+                return appendParams;
+            })()
+        };
+    })();
+
+</script> 
+  <script type="text/javascript">
+    
+    
+    
+    
+    
+    var WZInfo = window.WZInfo || {};
+    WZInfo.pickRedirectDefault = "http://wzus1.ask.com/r?t=p&d=us&s=a&c=a&app=a16&dqi=&askid=327e87bb-ff17-4d20-bc2c-7cdf0d770640-0-us_msb&l=dir&o=5118&oo=5118&sv=0a5ca9d6&ip=a57c910b&id=02425D73AB45323D3C3755FD19E753FC&q=best+digital+cameras&p=1&qs=999&ac=864&g=04bewB9dasdtlz&cu.wz=0";
+    WZInfo.pickDefault = "http://wzus1.ask.com/i/b.html?t=p&d=us&s=a&c=a&app=a16&dqi=&askid=327e87bb-ff17-4d20-bc2c-7cdf0d770640-0-us_msb&l=dir&o=5118&oo=5118&sv=0a5ca9d6&ip=a57c910b&id=02425D73AB45323D3C3755FD19E753FC&q=best+digital+cameras&p=1&qs=999&ac=864&g=04bewB9dasdtlz&cu.wz=0";
+    WZInfo.pickRedirectPrefix = "http://wzus1.ask.com/r?t=p&d=us&s=a&c=a&app=a16&dqi=&askid=327e87bb-ff17-4d20-bc2c-7cdf0d770640-0-us_msb&l=dir&o=5118&oo=5118&sv=0a5ca9d6&ip=a57c910b&id=02425D73AB45323D3C3755FD19E753FC&q=best+digital+cameras&p=1&qs=999&ac=864&g=04bewB9dasdtlz&cu.wz=0"; 
+    WZInfo.pickPrefix = "http://wzus1.ask.com/i/b.html?t=p&d=us&s=a&c=a&app=a16&dqi=&askid=327e87bb-ff17-4d20-bc2c-7cdf0d770640-0-us_msb&l=dir&o=5118&oo=5118&sv=0a5ca9d6&ip=a57c910b&id=02425D73AB45323D3C3755FD19E753FC&q=best+digital+cameras&p=1&qs=999&ac=864&g=04bewB9dasdtlz&cu.wz=0"; 
+    WZInfo.pickObjConversion = function(po) { return "&en="+h(po.en)+"&io="+h(po.io)+"&ep="+h(po.ep)+"&eo="+h(po.eo)+"&b="+h(po.b)+"&bc="+h(po.bc)+"&br="+h(po.br)+"&tp="+h(po.tp)+"&ec="+h(po.ec)+"&pt="+enc(h(po.pt))+"&ex="+h(po.ex)+"&url="+enc(h(po.url))+"&u="+h(po.u);}; 
+    WZInfo.ctRedirectPrefix = function(id, url) {return "http://wzus1.ask.com/r?t=a&d=us&s=a&c=a&app=a16&ti=1&ai="+enc(id)+"&dqi=&askid=327e87bb-ff17-4d20-bc2c-7cdf0d770640-0-us_msb&l=dir&o=5118&oo=5118&sv=0a5ca9d6&ip=a57c910b&cu.wz=0&u="+enc(url)+"";}; 
+    WZInfo.ctPrefix = function(id, url) {return "http://wzus1.ask.com/i/b.html?t=a&d=us&s=a&c=a&app=a16&ti=1&ai="+enc(id)+"&dqi=&askid=327e87bb-ff17-4d20-bc2c-7cdf0d770640-0-us_msb&l=dir&o=5118&oo=5118&sv=0a5ca9d6&ip=a57c910b&cu.wz=0&u="+enc(url)+"";}; 
+    WZInfo.framedPickDomainRE = /^(http:\/\/www.ask.com\/fr\?)u=(.*)$/i;
+    WZInfo.framedPickDomain = "www.ask.com";
+    WZInfo.framedPickTitle = "This page was translated automatically from";
+    WZInfo.framedPickAbstract = "Translation of";
+    WZInfo.framedPickSearchDomain = "";
+    WZInfo.framedPickAdvLang = "";
+    WZInfo.framedPickAdvCtry = "";
+    WZInfo.framedPickUrlPrefix = "http://www.ask.com/web?q=best+digital+cameras&o=5118&l=dir&page=1";
+    WZInfo.framedPickUrlPrefix2 = "&q=best+digital+cameras&o=5118&l=dir&qt=&ac=864";
+
+
+
+
+    var _debugEnabled = false;
+    var _sharedSprite = "http://sp.ask.com/sh/i/a11/shared_sprite_06.png";
+
+    
+    var _limitedDeployID = "";
+    var _hotspotURL = "http://sp.ask.com/sh/i/a10f/stamp_shareskin.png";
+
+    
+    var _skinUserId = "";
+    
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+
+    JASK.sempixel.visitAttributionEnabled = false;
+    JASK.sempixel.addDQIToSemPixel = false;
+
+    
+
+    JASK.sempixel.semPixelOrigin = '5118';
+    JASK.sempixel.semPixelOriginatingOrigin = '5118';
+    JASK.sempixel.semPixelDomain = 'tracking.asksemtools.com';
+    JASK.sempixel.semPixelUserIP = 'a57c910b';
+    JASK.sempixel.semPixelPartnerId = 'dir';
+    JASK.sempixel.semPixelLdId = '';
+    
+
+    
+
+
+
+
+    var _invokeRR = false;
+    var _rrCached = false; 
+     
+    var _symantecPartner = false;
+    
+  
+    
+
+
+
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+        
+    
+    
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+
+    var GlobalNav = {};
+
+    GlobalNav.Constants = {
+        webURL : "http://www.ask.com/web?qsrc=0&o=5118&l=dir&q=",
+        imageURL :  "http://images.ask.com/pictures?qsrc=0&o=5118&l=dir&q=",
+        blogURL : "http://www.ask.com/blogsearch?qsrc=0&o=5118&l=dir&q=",
+        videoURL : "http://www.ask.com/video?qsrc=0&o=5118&l=dir&q=",
+        myStuffJsUrl : "http://mystuff.ask.com/jslib/com/m/auth.js",
+        askDomain: "www.ask.com",
+        myStuffDomain : "mystuff.ask.com",
+        settingsTabBgUrl: "http://sp.ask.com/sh/i/a10f/binoc_tab.png",
+        relative: false
+    };
+
+    GlobalNav.Messages = {
+        msDefaultTitle : 'MyStuff',
+        msGuestTitle : 'Guest',
+        msStuff : 'Stuff',
+        msRecent: 'Recent Searches',
+        msSavedResults: 'Saved Results',
+        msFolders: 'My Folders',
+        msTags: 'My Tags',
+        msNoResult: 'No result to display',
+        advSearchTitle: 'Advanced Search',
+        msSave: 'Save to MyStuff',
+        msSaving: 'Saving to MyStuff',
+        msSaved: 'Saved to MyStuff',
+        msSaveWeb: 'Save Web Page',
+        msSaveImg: 'Save Picture',
+        msSaveVid: 'Save Video',
+        msSaveBlg: 'Save Blog',
+        msSaveDef: 'Save to MyStuff',
+        msWelcome: 'Welcome Guest.',
+        msSignIn: 'Sign In',
+        msCreateAcct: 'Create an account',
+        msOr: 'or',
+        msSignOut: 'sign out',
+        msSIErr: 'Please enter your email and password.',
+        msSIErrPassword: 'You forgot to enter your password.',
+        msSIErrEmail: 'You forgot to enter your email.',
+        msSIErrUnknownEmail: 'Oops, unknown user email.&#160;',
+        msSIErrHave: 'Have you&#160;',
+        msSIErrSignedUp: 'signed up',
+        msSIErrYet: '&#160;yet?',
+        msSIErrWrongPwd: 'The password is incorrect. Make sure Caps Lock is turned off.',
+        msSIErrFolder: 'Failed to create a root folder.',
+        msLoggedInAs: 'Logged in as',
+        msTitleDefault: "{0}&#39;s Stuff",
+        msTitleSpecial: "{0}&#39; Stuff",
+        msLocale: 'en_US',
+        askeraserin: 'AskEraser',
+        sharecustomskin: 'Share your Custom Theme',
+        sharefriendcustomskin:  'Add Ask.com Custom Theme',
+        forgotpasswdmessage: 'Forgot Your Password?',
+        forgotemailpasswdmessage: 'Forgot Your Password?',
+        msFPass: 'Please enter your email and password.',
+        msFCPass: 'Please confirm your password.',
+        mystuffFPass: 'Please enter your passwords.',
+        mystuffFCPass: 'Please confirm your password.',
+        mystuffsFPass: 'Please enter your password between 6-32 Characters.',
+        mystuffFCCPass: 'Your passwords do not match.',
+        mystuffvalEmail:'Please provide a valid email address.' 
+    };
+
+    GlobalNav.Links = {
+        msCreateAcct : 'http://mystuff.ask.com/user/DisplaySignup?prod='
+    };
+
+    GlobalNav.Variables = {
+        _isEraser : false,
+        _isEraserOptOutEligible : false,
+        _locale : 
+                      'us'
+                      
+                      
+                      
+                      
+                      
+                      
+                    
+                   ,
+        
+        _staticDomain : 'sp.ask.com',
+        _optionsDialogWidth : 470,
+        _privacyDialogWidth : 410,
+        _komen : false,
+        _isSymantec : 'false'
+    };
+
+    
+
+  
+    
+    
+    var _resOpenNewWindow = "0";
+    var _claraAdcat =  864;
+    var _wzRedirDomain = 'www.ask.com';
+    
+        _wzRedirDomain = 'dir.ask.com';
+    
+</script> 
+  <script type="text/javascript">
+    
+    JASK.cfg = (function() {
+    
+        
+            
+        
+        
+    
+    
+    
+    
+    
+        return {
+        
+            
+            
+            "ldomain":"http://www.ask.com",
+            "_ldomain":"www.ask.com",
+            
+        
+            "enablePromoButton":"",
+            "enablePromoText":"",
+            "secureDomain":"secure.ask.com",
+            "staticDomain":"sp.ask.com",
+            "scDomain":"http://spellchk.ask.com",
+            "uid":"",
+            "poll":"false",
+            "username":"",
+            "avatarurl":"",
+            "excludedCategories":[],
+            "totalCategories":0,
+            "queryid":"02425D73AB45323D3C3755FD19E753FC",
+            "isQuestion":false,
+            "protocol":"https",
+            "cleanusername":"",
+            "feedbackUrl":"http://feedback.ask.com",
+            "thinHeader":"false",
+            "fullFlex":"false",
+            "viewerIsOwner":"false",
+            "trackerImpressionUri":"http://www.ask.com/tracker/i/",
+            "trackerActivityUri":"http://www.ask.com/tracker/a/",
+            "trackerData":{"ld":"","qsrc":"999","o":"5118","l":"dir"},
+            "gigyaAPIKey":'2_kF3uRGWN0bDCn_y8GPWYEQPm_IzHqFvA4P0E2loB9eB0TfwsC2Zjd08EOqXYbqcu',
+            "isAnswerExchangePartner":'',
+            "isSignUpEnabled": true,
+            "isCommunityEnabled": true,
+            "nanoMeNotificationIconUrl": 'http://sp.ask.com/sh/i/a14/c/note_icon_20.png',
+            "isFixedZoomEnabled": false,
+            "cdm":"",
+            "tool":"",
+            "enableListView":"false",
+            "askEraserEnabled": false,
+            "isLocaleUK" : false
+        };
+    })();
+
+
+
+
+
+</script> 
+  <script type="text/javascript">
+    
+
+
+
+
+
+
+    
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+JASK.namespace("navbar.dialogs");
+$j(document).ready(function() {
+    $j.each(JASK.navbar.dialogs, function() {
+        var dlgId = this.id;
+        var dlgData = this;
+
+        $j('#'+this.openId).click(function(event){
+            event.preventDefault();
+            if (!$j('#'+dlgId).data('instantiated')) {
+                $j('body').append('<div id="dialog_'+dlgId+'"></div>');
+                $j('#dialog_'+dlgId).load(dlgData.path, function() {
+                    $j('#'+dlgId).dialog({
+                        width:dlgData.width,
+                        height:dlgData.height,
+                        position:JASK.getDialogOffset(dlgData.width,dlgData.height),
+                        autoOpen:false,
+                        modal:dlgData.modal
+                    });
+                    $j('#'+dlgId).data('instantiated',true);
+                    $j('#'+dlgId).dialog('open');
+                    $j('#'+dlgId+' .closeDialog').click(function(event){
+                        $j('#'+dlgId).dialog('close');
+                    });
+                });
+            } else {
+                $j('#'+dlgId).dialog('open');
+            }
+        });
+
+    });
+});
+
+
+
+        
+    
+        
+            
+
+
+
+
+
+
+
+
+
+
+        
+    
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    $j(document).ready(function (){
+        $j('#cnbMore a').click(function() {
+            $j('#cnbMore').hide();
+            $j('#moreLinks').show();
+        });
+        $j('#cnbLess a').click(function() {
+            $j('#cnbMore').show();
+            $j('#moreLinks').hide();
+        });
+    });
+
+        
+    
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    $j(document).ready(function (){
+
+        $j('#cnbMore a').click(function() {
+            $j('#cnbMore').hide();
+            $j('#moreLinks').show();
+        });
+        $j('#cnbLess a').click(function() {
+            $j('#cnbMore').show();
+            $j('#moreLinks').hide();
+        });
+
+    });
+
+
+        
+    
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+        
+            
+
+
+
+
+
+
+
+
+
+
+        
+    
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        $j(document).ready(function() {
+            $j('#cnbWeb').cnb_addClickId(53221);
+        });
+    
+
+    
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        $j(document).ready(function() {
+            $j('#cnbImages').cnb_addClickId(53221);
+        });
+    
+
+    
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        $j(document).ready(function() {
+            $j('#cnbNews').cnb_addClickId(52452);
+        });
+    
+
+    
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        $j(document).ready(function() {
+            $j('#cnbVideos').cnb_addClickId(53222);
+        });
+    
+
+    
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        $j(document).ready(function() {
+            $j('#cnbSignIn').cnb_addClickId(51143);
+        });
+    
+
+    
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        $j(document).ready(function() {
+            $j('#cnbSettings').cnb_addClickId(54183);
+        });
+    
+
+    
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+JASK.navbar.dialogs['cnbDlgAdvancedSearch'] = {
+    id : 'asDlg',
+    width : 650,
+    height : 700,
+    modal : true,
+    openId : 'cnbAdvancedSearch',
+    path : '/hpas'
+};
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        $j(document).ready(function() {
+            $j('#cnbAdvancedSearch').cnb_addClickId(43452);
+        });
+    
+
+    
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        $j(document).ready(function() {
+            $j('#cnbCommunity').cnb_addClickId(54174);
+        });
+    
+
+    
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        $j(document).ready(function() {
+            $j('#lnavWeb').cnb_addClickId(53221);
+        });
+    
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        $j(document).ready(function() {
+            $j('#lnavImages').cnb_addClickId(53221);
+        });
+    
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        $j(document).ready(function() {
+            $j('#lnavNews').cnb_addClickId(52452);
+        });
+    
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        $j(document).ready(function() {
+            $j('#lnavVideos').cnb_addClickId(53222);
+        });
+    
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+        $j(document).ready(function() {
+            if ($j.fn.bgiframe) {
+                $j('#collapsibleLinkmenu-cnbMore_control').bgiframe();
+            }
+            $j('#collapsibleLink-cnbMore_control').click(function (event) {
+                event.preventDefault();
+                var menuCount = $j("#collapsibleLinkmenu-cnbMore_control").find("a").length;
+                if(menuCount!=0) {
+                    var offset=$j('#collapsibleLink-cnbMore_control').position();
+                    var top = offset.top + $j('#collapsibleLink-cnbMore_control').height() + 5;
+                    var left = offset.left;
+                    $j('#collapsibleLinkmenu-cnbMore_control').css('top',top+'px');
+                    $j('#collapsibleLinkmenu-cnbMore_control').css('left',left+'px');
+                } else {
+                    $j('#collapsibleLinkmenu-cnbMore_control').hide();
+                }
+            });
+        });
+    
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+    $j(document).ready(function() {
+        $j('#a16CnbSearchWeb').cnb_addClickId(53221);
+    });
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+    $j(document).ready(function() {
+        $j('#a16CnbAskPeople').cnb_addClickId(54174);
+    });
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+    $j(document).ready(function() {
+        $j('#a16CnbSignIn').cnb_addClickId(51138);
+    });
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+    $j(document).ready(function() {
+        $j('#a16CnbSettings').cnb_addClickId(54183);
+    });
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+    $j(document).ready(function() {
+        $j('#a16CnbAdvancedSearch').cnb_addClickId(43452);
+    });
+
+    
+
+
+    
+
+
+
+
+
+
+    
+        
+            
+
+
+
+
+
+
+
+
+
+
+        
+    
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+    
+            
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    $j(document).ready(function() {
+        $j('#ftAbout').cnb_addClickId(10596);
+    });
+    
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    $j(document).ready(function() {
+        $j('#ftPrivacy').cnb_addClickId(51260);
+    });
+    
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    $j(document).ready(function() {
+        $j('#ftEraser').cnb_addClickId(43954);
+    });
+    
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    $j(document).ready(function() {
+        $j('#ftAdvertise').cnb_addClickId(10321);
+    });
+    
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    $j(document).ready(function() {
+        $j('#ftCareers').cnb_addClickId(5015);
+    });
+    
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    $j(document).ready(function() {
+        $j('#ftBlog').cnb_addClickId(85);
+    });
+    
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    $j(document).ready(function() {
+        $j('#ftiPhoneLink').cnb_addClickId(54499);
+    });
+    
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    $j(document).ready(function() {
+        $j('#ftAndroidLink').cnb_addClickId(54453);
+    });
+    
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    $j(document).ready(function() {
+        $j('#ftHelp').cnb_addClickId(54387);
+    });
+    
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    $j(document).ready(function() {
+        $j('#ftFeedback').cnb_addClickId(55);
+    });
+    
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    $j(document).ready(function() {
+        $j('#ftpInsider').cnb_addClickId(284);
+    });
+    
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    $j(document).ready(function() {
+        $j('#ftpMerchant').cnb_addClickId(284);
+    });
+    
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    $j(document).ready(function() {
+        $j('#ftpUrban').cnb_addClickId(284);
+    });
+    
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    $j(document).ready(function() {
+        $j('#ftpKids').cnb_addClickId(284);
+    });
+    
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    $j(document).ready(function() {
+        $j('#ftpLife').cnb_addClickId(284);
+    });
+    
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    $j(document).ready(function() {
+        $j('#ftpRef').cnb_addClickId(284);
+    });
+    
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    $j(document).ready(function() {
+        $j('#ftpSendori').cnb_addClickId(284);
+    });
+    
+
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    $j(document).ready(function() {
+        $j('#ftpThesaurus').cnb_addClickId(284);
+    });
+    
+
+    
+
+
+    
+    
+    
+
+</script> 
+  <script type="text/javascript">
+    var _isOOSEM = false;
+    var _isOOSemAgency = false;
+    var _downstreamOOCode = '';
+</script> 
+  <script type="text/javascript">
+
+    $j(document).ready(function() {
+        $j('#askCommunity').mousedown(function () {
+            sct(57);
+        });
+
+        $j('#askCommunity').click(function() {
+            var query = $j.trim($j("#top_q_comm").val());
+            var href = $j('#a16CnbAskPeople').attr("href");
+            if(query != '' && $j(this).attr('data-qotd') == 'false') {
+                href = $j.param.querystring(href, {"q" : query, "qsrc" : 303});
+                href = $j.param.fragment(href,"#askq=1");
+                window.location = href;
+
+            } else {
+                href = $j.param.querystring(href, {"q" : '', "qsrc" : 303});
+                window.location = href;
+            }
+        });
+
+        
+
+        $j('.youTubeToggle').click(function(){
+            var src = $j(this).parents('.youTubeResult').find('iframe').attr('src').replace('autoplay=0','autoplay=1');
+            $j(this).parents('.youTubeResult').find('iframe').attr('src',src);
+            $j(this).parents('.youTubeResult').find('.youClose,.youCloseTxt').show();
+        });
+        $j('.youClose,.youCloseTxt').click(function(){
+            var src = $j(this).parents('.youTubeResult').find('iframe').attr('src').replace('autoplay=1','autoplay=0');
+            $j(this).parents('.youTubeResult').find('iframe').attr('src',src);
+            $j(this).parents('.youTubeResult').find('.youClose,.youCloseTxt').hide();
+        });
+        if(JASK.serp != null && JASK.serp.youtube != null)  {
+            $j('.youClose,.youCloseTxt').click(JASK.serp.youtube.toggleVideo);
+        }
+
+        $j(".aboutImage").load(function(){
+            $j('.spinnerContainer').hide();
+            $j('.aboutComLogo').show();
+        }).error(function(){
+            $j('.spinnerContainer').hide();
+        }).each(function() {
+            $j(this).attr("src", $j(this).attr('data-imagesrc'));
+        });
+
+        $j(".authorImage").load(function(){
+            $j('.spinnerContainer').hide();
+            $j(this).show();
+        }).error(function(){
+            $j('.spinnerContainer').hide();
+        }).each(function() {
+            $j(this).attr("src", $j(this).attr('data-imagesrc'));
+        });
+    });
+
+    /**
+     * YouTube result related functions
+     */
+    JASK.youtube = {
+        playVideo: function(event){
+            var t = event.currentTarget;
+            $j('.videos a').removeClass('selected');
+            $j(t).addClass('selected');
+
+            var player = $j('.videoplayer iframe');
+            if (player.length === 0) {
+                player = $j('<iframe style="margin-top:4px;" width="628" height="390" frameborder="0" allowfullscreen></iframe>');
+                $j('.videoplayer').append(player);
+            }
+            $j('.videoplayer').show();
+            player.attr("src", $j(t).attr("data-src"));
+            event.preventDefault();
+        }
+    };
+    $j(document).ready(function(){
+        $j('.playVideo').click(JASK.youtube.playVideo);
+        $j('.videoplayer a').click(function(){
+            sct(491);
+            $j('.videoplayer').hide();
+            $j('.videoplayer iframe').remove();
+            $j('.videos a').removeClass('selected');
+            return false;
+        });
+    });
+</script> 
+  <script type="text/javascript">
+        $j(document).ready(function() {
+
+            
+
+            $j(".sa").each(function() {  //find all smart answers
+                var sa = $j(this);
+                //links
+                sa.delegate("a", "mousedown", function() {
+                    if(!this.wz && this.href) {
+                        this.href= "http://" + sa.parent().data("wzdomain") + "/r?" + sa.parent().data("picksuffix") + enc(this.href); //rewrite url
+                        this.wz = 1;
+                    }
+                });
+
+                var pixelUrl = "http://" + sa.parent().data("wzdomain") +"/i/b.html?" + sa.parent().data("picksuffix");
+
+                sa.delegate(".sa_action_btn", "mousedown", function() {
+                    new Image().src = pixelUrl;//fire off pixel
+                });
+
+                var parts = sa.parent().data("picksuffix").split("&");
+                var data = {};
+                for(var i = 0; i < parts.length; i++) {
+                    var pairParts = parts[i].split("=");
+                    if(pairParts && pairParts.length == 2) {
+                        data[pairParts[0]] = pairParts[1];
+
+                        if(pairParts[0] == "ex") {
+                            var exParts = pairParts[1].split("%26");
+                            for(var j = 0; j < exParts.length; j++) {
+                                var exPairParts = exParts[j].split("%3D");
+                                if(exPairParts && exPairParts.length == 2) {
+                                    data[exPairParts[0].substring(3)] = exPairParts[1];
+                                }
+                            }
+                        }
+                    }
+                }
+
+                //forms
+                sa.find("form").each(function() {
+                    var form = $j(this);
+                    var input = form.find('[name="flwup"]');
+                    if(input.length == 1) { //inject logging params
+                        var keys = ["en", "lhx", "lhs", "sro"];
+                        for(var i = 0; i < keys.length; i++) {
+                            if(data[keys[i]]) {
+                                form.append("<input type=\"hidden\" name=\"" + keys[i] + "\" value=\"" + data[keys[i]] + "\">");
+                            }
+                        }
+                    } else {
+                        form.submit(function() {
+                            new Image().src = pixelUrl; //fire off pixel
+                        });
+                    }
+                });
+            });
+        });
+    </script>  
+ </body>
+</html>

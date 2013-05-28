@@ -1,0 +1,868 @@
+<head><meta id="ctl00_metaContentType" http-equiv="Content-Type" content="utf-8">
+    <title>
+	Titleist - #1 ball in golf | Golf Company | Golf Balls - Titleist.com
+</title>
+    <link rel="stylesheet" type="text/css" href="/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/css/shell.css?v=1.2">
+    <script src="http://www.google-analytics.com/ga.js" async="" type="text/javascript"></script><script type="text/javascript" src="/js/prototype.js"></script>
+    <script type="text/javascript" src="/js/effects.js"></script>
+    <script type="text/javascript" src="/js/shell.js?v=1.1"></script>
+    <script type="text/javascript" src="/js/swfObject2.2.js"></script>
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/js/jquery-ui-1.8.10.custom.min.js"></script>
+    <script type="text/javascript">
+        $.noConflict();
+    </script>
+    <meta id="ctl00_fbSiteName" property="og:site_name" content="Titleist.com"><meta id="ctl00_fbTitle" property="og:title" content="Titleist - #1 ball in golf | Golf Company | Golf Balls">
+    <link rel="stylesheet" href="/css/home.css">
+    
+    <script type="text/javascript">
+        jQuery(function () {
+            setup_analytics();
+        });
+
+        function setup_analytics() {
+            if (window._gaq === undefined)
+                return;
+
+//            jQuery('#banner-wrapper ul#banners li a').click(function () {
+//                var href = jQuery(this).attr('href');
+//                if (href == '')
+//                    return true;
+
+//                var type = ''
+//                var $li;
+
+//                if (jQuery(this).hasClass('right_feature_link')) {
+//                    type = 'Right';
+//                    $li = jQuery(this).parent().parent().parent();
+//                }
+//                else if (jQuery(this).parent().hasClass('BannerText')) {
+//                    type = 'Text';
+//                    $li = jQuery(this).parent().parent();
+//                }
+//                else {
+//                    type = 'Image';
+//                    $li = jQuery(this).parent();
+//                }
+
+//                var bannerName = jQuery.trim($li.find('strong').text());
+
+//                var bannerNum = jQuery(this).parent().index() + 1;
+
+//                if (bannerName == '')
+//                    return true;
+
+//                var len = 25;
+
+//                if (bannerName.length > len)
+//                    bannerName = bannerName.substring(0, len) + '...';
+
+//                bannerName = bannerName + ' - ' + type;
+//                var action = 'Banner ' + bannerNum + ' - Click';
+//                _gaq.push(['_trackEvent', 'Homepage Banner', action, bannerName, bannerNum]);
+//                return true;
+//            });
+
+            jQuery('#home_features ul li a').click(function () {
+                var href = jQuery(this).attr('href');
+                if (href == '')
+                    return true;
+                var subName = jQuery(this).find('b').text();
+
+                var pageNum = jQuery(this).parent().parent().index();
+                var subNum = jQuery(this).parent().index() + 1;
+
+                for (j = 0; j < pageNum; j++) {
+                    pages = jQuery('#home_features div#contentPagination div ul');
+                    if (pages.length > j) {
+                        pageItems = jQuery(pages[j]).children().length;
+                        subNum += pageItems;
+                    }
+                }
+
+                if (subName == '')
+                    subName = jQuery(this).find('span').text();
+
+                if (subName == '')
+                    return true;
+
+                var len = 50;
+
+                if (subName.length > len)
+                    subName = subName.substring(0, len) + '...';
+
+                var action = 'Sub ' + subNum + ' - Click';
+
+                _gaq.push(['_trackEvent', 'Homepage Subfeature', action, subName, subNum]);
+                return true;
+            });
+        }
+
+
+    </script>
+    
+            
+        <link type="text/css" href="/css/jquery.jscrollpane.css" rel="stylesheet" media="all">
+        <script type="text/javascript" src="/js/jquery.jscrollpane.min.js"></script>
+        <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+        <script type="text/javascript">
+            jQuery(function () {
+                var api = jQuery('#feeds').jScrollPane(
+		            {
+		                maintainPosition: false,
+		                verticalDragMinHeight: 80,
+		                verticalDragMaxHeight: 80
+		            }
+	            ).data('jsp');
+
+                jQuery('#homepageFeeds > div > div:first-child ul li a').bind('click', function () {
+                    jQuery('#homepageFeeds > div > div:first-child ul li').removeClass('selected');
+                    jQuery(this).parent().addClass('selected');
+                    jQuery('#twitterFollowLink').hide();
+                    jQuery('#fbLikeLink').hide();
+                    
+                    if (jQuery(this).parent().attr('id') == 'twitterFeed')
+                        jQuery('#twitterFollowLink').show();
+                    if (jQuery(this).parent().attr('id') == 'fbFeed')
+                        jQuery('#fbLikeLink').show();                    
+
+                    api.getContentPane().load(
+				        '/ajax/HomepageFeeds.aspx?feed=' + jQuery(this).text(),
+				        function () {
+				            api.reinitialise();
+				        }
+			        );
+                    return false;
+                });
+
+            });
+        </script>
+    
+
+    <link rel="stylesheet" type="text/css" href="/css/localized.css?v=1.2">
+    
+<script type="text/javascript">
+    var loggedIn = 'false';
+        
+    var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-12127098-1']); if(window.loggedIn !== undefined) _gaq.push(['_setCustomVar', 1,'Logged In', loggedIn, 3]); _gaq.push(['_trackPageview']); (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })();
+
+    
+    
+</script><meta name="description" content="Titleist Official Site: learn about Titleist golf balls, golf clubs and accessories"><meta name="keywords" content="Titleist Official Site: learn about Titleist golf balls, golf clubs and accessories"><style media="screen" type="text/css">#bannerContent {visibility:hidden}</style><style type="text/css">a.PIN_1367822778326_pin_it_button {  background-image: url(http://passets.pinterest.com/images/pidgets/bps1.png)!important; background-repeat: none!important; background-size: 40px 60px!important; height: 20px!important; margin: 0!important; padding: 0!important; vertical-align: baseline!important; text-decoration: none!important; width: 40px!important; background-position: 0 -20px }
+a.PIN_1367822778326_pin_it_button:hover { background-position: 0 0px }
+a.PIN_1367822778326_pin_it_button:active, a.PIN_1367822778326_pin_it_button.PIN_1367822778326_hazClick { background-position: 0 -40px }
+a.PIN_1367822778326_pin_it_button_inline { position: relative!important; display: inline-block!important; }
+a.PIN_1367822778326_pin_it_button_floating { position: absolute!important; }
+a.PIN_1367822778326_pin_it_button span.PIN_1367822778326_pin_it_button_count { position: absolute!important; color: #777!important; text-align: center!important; text-indent: 0!important; }
+a.PIN_1367822778326_pin_it_above span.PIN_1367822778326_pin_it_button_count { background: transparent url(http://passets.pinterest.com/images/pidgets/fpa1.png) 0 0 no-repeat!important; background-size: 40px 29px!important; position: absolute!important; bottom: 21px!important; left: 0px!important; height: 29px!important; width: 40px!important; font: 12px Arial, Helvetica, sans-serif!important; line-height: 24px!important; text-indent: 0!important;}
+a.PIN_1367822778326_pin_it_beside span.PIN_1367822778326_pin_it_button_count, a.PIN_1367822778326_pin_it_beside span.PIN_1367822778326_pin_it_button_count i { background-color: transparent!important; background-repeat: no-repeat!important; background-image: url(http://passets.pinterest.com/images/pidgets/fpb1.png)!important; }
+a.PIN_1367822778326_pin_it_beside span.PIN_1367822778326_pin_it_button_count { padding: 0 3px 0 10px!important; background-size: 45px 20px!important; background-position: 0 0!important; position: absolute!important; top: 0!important; left: 41px!important; height: 20px!important; font: 10px Arial, Helvetica, sans-serif!important; line-height: 20px!important; }
+a.PIN_1367822778326_pin_it_beside span.PIN_1367822778326_pin_it_button_count i { background-position: 100% 0!important; position: absolute!important; top: 0!important; right: -2px!important; height: 20px!important; width: 2px!important; }
+a.PIN_1367822778326_pin_it_button.PIN_1367822778326_pin_it_above { margin-top: 20px!important; }
+a.PIN_1367822778326_follow_me_button, a.PIN_1367822778326_follow_me_button i { background: transparent url(http://passets.pinterest.com/images/pidgets/bfs1.png) 0 0 no-repeat }
+a.PIN_1367822778326_follow_me_button { color: #444!important; display: inline-block!important; font: bold normal normal 11px/20px "Helvetica Neue",helvetica,arial,san-serif!important; height: 20px!important; margin: 0!important; padding: 0!important; position: relative!important; text-decoration: none!important; text-indent: 19px!important; vertical-align: baseline!important;}
+a.PIN_1367822778326_follow_me_button:hover { background-position: 0 -20px}
+a.PIN_1367822778326_follow_me_button:active  { background-position: 0 -40px}
+a.PIN_1367822778326_follow_me_button b { position: absolute!important; top: 3px!important; left: 3px!important; height: 14px!important; width: 14px!important; background-size: 14px 14px!important; background-image: url(http://passets.pinterest.com/images/pidgets/log1.png)!important; }
+a.PIN_1367822778326_follow_me_button i { position: absolute!important; top: 0!important; right: -4px!important; height: 20px!important; width: 4px!important; background-position: 100% 0px!important; }
+a.PIN_1367822778326_follow_me_button:hover i { background-position: 100% -20px!important;  }
+a.PIN_1367822778326_follow_me_button:active i { background-position: 100% -40px!important; }
+span.PIN_1367822778326_embed_pin { display: inline-block!important; text-align: center!important; width: 237px!important; overflow: hidden!important; vertical-align: top!important; }
+span.PIN_1367822778326_embed_pin.PIN_1367822778326_fancy { background: #fff!important; box-shadow: 0 0 3px #aaa!important; border-radius: 3px!important; }
+span.PIN_1367822778326_embed_pin a.PIN_1367822778326_embed_pin_link { display: block!important;  margin: 0 auto!important; padding: 0!important; position: relative!important;  line-height: 0}
+span.PIN_1367822778326_embed_pin img { border: 0!important; margin: 0!important; padding: 0!important;}
+span.PIN_1367822778326_embed_pin a.PIN_1367822778326_embed_pin_link i.PIN_1367822778326_repin { left: 10px!important; top: 10px!important; position: absolute!important; height: 33px!important; width: 64px!important; background-size: 64px 99px!important; background: transparent url(http://passets.pinterest.com/images/pidgets/repin1.png)!important; }
+span.PIN_1367822778326_embed_pin a.PIN_1367822778326_embed_pin_link i.PIN_1367822778326_repin:hover { background-position: 0 -33px!important; }
+span.PIN_1367822778326_embed_pin a.PIN_1367822778326_embed_pin_link i.PIN_1367822778326_repin.PIN_1367822778326_hazClick { background-position: 0 -66px!important; }
+span.PIN_1367822778326_embed_pin a.PIN_1367822778326_embed_pin_link i.PIN_1367822778326_getThis { display: none }
+span.PIN_1367822778326_embed_pin a.PIN_1367822778326_embed_pin_link:hover i.PIN_1367822778326_getThis, span.PIN_1367822778326_embed_pin a.PIN_1367822778326_embed_pin_link:hover i.PIN_1367822778326_getThis i { background: transparent url(http://passets.pinterest.com/images/pidgets/bfs1.png) }
+span.PIN_1367822778326_embed_pin a.PIN_1367822778326_embed_pin_link:hover i.PIN_1367822778326_getThis { color: #555!important; display: inline-block!important; font: normal normal normal 11px/20px "Helvetica Neue",helvetica,arial,san-serif!important; height: 20px!important; margin: 0!important; padding: 0 1px 0 5px!important; position: absolute!important; bottom: 10px!important; right: 10px!important; text-decoration: none!important;  }
+span.PIN_1367822778326_embed_pin a.PIN_1367822778326_embed_pin_link:hover i.PIN_1367822778326_getThis:hover { background-position: 0 -20px }
+span.PIN_1367822778326_embed_pin a.PIN_1367822778326_embed_pin_link:hover i.PIN_1367822778326_getThis i { position: absolute!important; top: 0!important; right: -4px!important; height: 20px!important; width: 5px!important; background-position: 100% 0px }
+span.PIN_1367822778326_embed_pin a.PIN_1367822778326_embed_pin_link:hover i.PIN_1367822778326_getThis:hover i { background-position: 100% -20px }
+span.PIN_1367822778326_embed_pin span.PIN_1367822778326_embed_pin_desc { color: #333!important; border-bottom: 1px solid #eee!important; display: block!important; font-family: "Helvetica Neue", arial, sans-serif!important; font-size: 12px!important; line-height: 17px!important; padding: 10px!important; text-align: left!important; }
+span.PIN_1367822778326_embed_pin span.PIN_1367822778326_embed_pin_attrib, span.PIN_1367822778326_embed_pin span.PIN_1367822778326_embed_pin_text_container { color: #a7a7a7!important; font-family: "Helvetica", sans-serif!important; font-size: 10px!important; line-height: 18px!important; font-weight: bold!important; display: block!important;}
+span.PIN_1367822778326_embed_pin span.PIN_1367822778326_embed_pin_attrib img.PIN_1367822778326_embed_pin_attrib_icon { height: 16px!important; width: 16px!important; vertical-align: middle!important; margin-right: 5px!important; float: left!important;}
+span.PIN_1367822778326_embed_pin span.PIN_1367822778326_embed_pin_attrib a { color: #a7a7a7!important; text-decoration: none!important;}
+span.PIN_1367822778326_embed_pin a.PIN_1367822778326_embed_pin_text, span.PIN_1367822778326_embed_pin a.PIN_1367822778326_embed_pin_text span.PIN_1367822778326_embed_pin_text_container { position: relative!important; text-decoration: none!important; display: block!important; font-weight: bold!important; color: #b7b7b7!important; font-family: "Helvetica Neue", arial, sans-serif!important; font-size: 11px!important; line-height: 14px!important; height: 39px!important; text-align: left!important; }
+span.PIN_1367822778326_embed_pin a.PIN_1367822778326_embed_pin_text { padding: 5px 0 0 7px!important; }
+span.PIN_1367822778326_embed_pin a.PIN_1367822778326_embed_pin_text:hover { background: #eee!important;}
+span.PIN_1367822778326_embed_pin a.PIN_1367822778326_embed_pin_text img.PIN_1367822778326_embed_pin_text_avatar { border-radius: 2px!important; overflow: hidden!important; height: 30px!important; width: 30px!important; vertical-align: middle!important; margin-right: 5px!important; float: left!important;}
+span.PIN_1367822778326_embed_pin a.PIN_1367822778326_embed_pin_text span.PIN_1367822778326_embed_pin_text_container em.PIN_1367822778326_embed_pin_text_container_em { font-family: inherit!important; display: block!important; color: #717171!important; font-style: normal!important; width: 180px!important; text-overflow: ellipsis!important; overflow: hidden!important; white-space: nowrap!important; }
+span.PIN_1367822778326_embed_pin a.PIN_1367822778326_embed_pin_text b.PIN_1367822778326_embed_pin_link_shield { position: absolute!important; top: 0!important; left: 0!important; height: 100%!important; width: 100%!important; }
+span.PIN_1367822778326_embed_board { display: inline-block!important; margin: 0!important; padding:10px 0!important; position: relative!important; text-align: center}
+span.PIN_1367822778326_embed_board.PIN_1367822778326_fancy { background: #fff!important; box-shadow: 0 0 3px #aaa!important; border-radius: 3px!important; }
+span.PIN_1367822778326_embed_board span.PIN_1367822778326_embed_board_hd { display: block!important; margin: 0 10px!important; padding: 0!important; line-height: 20px!important; height: 25px!important; position: relative!important;  }
+span.PIN_1367822778326_embed_board span.PIN_1367822778326_embed_board_hd a { cursor: pointer!important; background: inherit!important; text-decoration: none!important; width: 48%!important; white-space: nowrap!important; position: absolute!important; top: 0!important; overflow: hidden!important;  text-overflow: ellipsis!important; }
+span.PIN_1367822778326_embed_board span.PIN_1367822778326_embed_board_hd a:hover { text-decoration: none!important; background: inherit!important; }
+span.PIN_1367822778326_embed_board span.PIN_1367822778326_embed_board_hd a:active { text-decoration: none!important; background: inherit!important; }
+span.PIN_1367822778326_embed_board span.PIN_1367822778326_embed_board_hd a.PIN_1367822778326_embed_board_title { width: 100%!important; position: absolute!important; left: 0!important; text-align: left!important; font-family: Georgia!important; font-size: 16px!important; color:#2b1e1e!important;}
+span.PIN_1367822778326_embed_board span.PIN_1367822778326_embed_board_hd a.PIN_1367822778326_embed_board_name { position: absolute!important; left: 0!important; text-align: left!important; font-family: Georgia!important; font-size: 16px!important; color:#2b1e1e!important;}
+span.PIN_1367822778326_embed_board span.PIN_1367822778326_embed_board_hd a.PIN_1367822778326_embed_board_author { position: absolute!important; right: 0!important; text-align: right!important; font-family: Helvetica!important; font-size: 11px!important; color: #746d6a!important; font-weight: bold!important;}
+span.PIN_1367822778326_embed_board span.PIN_1367822778326_embed_board_hd a.PIN_1367822778326_embed_board_author::before { content:"by "!important; font-weight: normal!important; }
+span.PIN_1367822778326_embed_board span.PIN_1367822778326_embed_board_bd { display:block!important; margin: 0 10px!important; overflow: hidden!important; border-radius: 2px!important; position: relative!important; }
+span.PIN_1367822778326_embed_board span.PIN_1367822778326_embed_board_bd a.PIN_1367822778326_embed_board_th { cursor: pointer!important; display: inline-block!important; position: absolute!important; overflow: hidden!important; }
+span.PIN_1367822778326_embed_board span.PIN_1367822778326_embed_board_bd a.PIN_1367822778326_embed_board_th::before { position: absolute!important; content:""!important; z-index: 2!important; top: 0!important; left: 0!important; right: 0!important; bottom: 0!important; box-shadow: inset 0 0 2px #888!important; }
+span.PIN_1367822778326_embed_board span.PIN_1367822778326_embed_board_bd a.PIN_1367822778326_embed_board_th img.PIN_1367822778326_embed_board_img { border: none!important; position: absolute!important; top: 50%!important; left: 0!important; }
+a.PIN_1367822778326_embed_board_ft { text-shadow: 0 1px #fff!important; display: block!important; text-align: center!important; border: 1px solid #ccc!important; margin: 10px 10px 0!important; height: 31px!important; line-height: 30px!important;border-radius: 2px!important; text-decoration: none!important; font-family: Helvetica!important; font-weight: bold!important; font-size: 13px!important; color: #746d6a!important; background: #f4f4f4 url(http://passets.pinterest.com/images/pidgets/board_button_link.png) 0 0 repeat-x}
+a.PIN_1367822778326_embed_board_ft:hover { text-decoration: none!important; background: #fefefe url(http://passets.pinterest.com/images/pidgets/board_button_hover.png) 0 0 repeat-x}
+a.PIN_1367822778326_embed_board_ft:active { text-decoration: none!important; background: #e4e4e4 url(http://passets.pinterest.com/images/pidgets/board_button_active.png) 0 0 repeat-x}
+a.PIN_1367822778326_embed_board_ft span.PIN_1367822778326_embed_board_ft_logo { vertical-align: top!important; display: inline-block!important; margin-left: 2px!important; height: 30px!important; width: 66px!important; background: transparent url(http://passets.pinterest.com/images/pidgets/board_button_logo.png) 50% 48% no-repeat!important; }
+.PIN_1367822778326_hidden { display:none!important; }</style><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}
+.fb_invisible{display:none}
+.fb_reset{background:none;border-spacing:0;border:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}
+.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}
+.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}
+.fb_dialog_content{background:#fff;color:#333}
+.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px;top:8px\9;right:7px\9}
+.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}
+.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}
+.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}
+.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}
+.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}
+.fb_dialog_top_left,
+.fb_dialog_top_right,
+.fb_dialog_bottom_left,
+.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}
+/* @noflip */
+.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}
+/* @noflip */
+.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}
+/* @noflip */
+.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}
+/* @noflip */
+.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right,
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right{width:10px;height:100%}
+.fb_dialog_vert_left{margin-left:-10px}
+.fb_dialog_vert_right{right:0;margin-right:-10px}
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{width:100%;height:10px}
+.fb_dialog_horiz_top{margin-top:-10px}
+.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}
+.fb_dialog_iframe{line-height:0}
+.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}
+.fb_dialog_content .dialog_title > span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif)
+no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}
+body.fb_hidden{-webkit-transform:none;height:100%;margin:0;left:-10000px;overflow:visible;position:absolute;top:-10000px;width:100%
+}
+.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif)
+white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}
+.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}
+#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}
+#fb-root #fb_dialog_ipad_overlay.hidden{display:none}
+.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}
+.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0 0, 0 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}
+.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%
+}
+.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0 0, 0 100%, from(#4966A6),
+color-stop(0.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset,
+rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}
+.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}
+.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}
+.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}
+#fb_dialog_loader_close{float:left}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}
+.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}
+.fb_iframe_widget iframe{position:absolute}
+.fb_iframe_widget_lift{z-index:1}
+.fb_hide_iframes iframe{position:relative;left:-10000px}
+.fb_iframe_widget_loader{position:relative;display:inline-block}
+.fb_iframe_widget_fluid{display:inline}
+.fb_iframe_widget_fluid span{width:100%}
+.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}
+.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_connect_bar_container div,
+.fb_connect_bar_container span,
+.fb_connect_bar_container a,
+.fb_connect_bar_container img,
+.fb_connect_bar_container strong{background:none;border-spacing:0;border:0;direction:ltr;font-style:normal;font-variant:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal;vertical-align:baseline}
+.fb_connect_bar_container{position:fixed;left:0 !important;right:0 !important;height:42px !important;padding:0 25px !important;margin:0 !important;vertical-align:middle !important;border-bottom:1px solid #333 !important;background:#3b5998 !important;z-index:99999999 !important;overflow:hidden !important}
+.fb_connect_bar_container_ie6{position:absolute;top:expression(document.compatMode=="CSS1Compat"? document.documentElement.scrollTop+"px":body.scrollTop+"px")}
+.fb_connect_bar{position:relative;margin:auto;height:100%;width:100%;padding:6px 0 0 0 !important;background:none;color:#fff !important;font-family:"lucida grande", tahoma, verdana, arial, sans-serif !important;font-size:13px !important;font-style:normal !important;font-variant:normal !important;font-weight:normal !important;letter-spacing:normal !important;line-height:1 !important;text-decoration:none !important;text-indent:0 !important;text-shadow:none !important;text-transform:none !important;white-space:normal !important;word-spacing:normal !important}
+.fb_connect_bar a:hover{color:#fff}
+.fb_connect_bar .fb_profile img{height:30px;width:30px;vertical-align:middle;margin:0 6px 5px 0}
+.fb_connect_bar div a,
+.fb_connect_bar span,
+.fb_connect_bar span a{color:#bac6da;font-size:11px;text-decoration:none}
+.fb_connect_bar .fb_buttons{float:right;margin-top:7px}
+.fb_edge_widget_with_comment{position:relative;*z-index:1000}
+.fb_edge_widget_with_comment span.fb_edge_comment_widget{position:absolute}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget{z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget .FB_Loader{left:0;top:1px;margin-top:6px;margin-left:0;background-position:50% 50%;background-color:#fff;height:150px;width:394px;border:1px #666 solid;border-bottom:2px solid #283e6c;z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.dark .FB_Loader{background-color:#000;border-bottom:2px solid #ccc}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.siderender
+.FB_Loader{margin-top:0}
+.fbpluginrecommendationsbarleft,
+.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}
+/* @noflip */
+.fbpluginrecommendationsbarleft{left:10px}
+/* @noflip */
+.fbpluginrecommendationsbarright{right:10px}</style></head>
+<body data-twttr-rendered="true">
+    
+    
+    <div id="main_wrapper">
+        <div id="header" class="cover">
+            
+                <ul id="utility_nav">
+<li><a href="/find-a-golf-shop">Golf Shop Locator</a></li>
+<li><a href="/myaccount/register.aspx">Newsletter</a></li>
+<li><a href="/myaccount">My Profile</a></li>
+<li><a href="/myaccount/login.aspx">Login</a></li>
+<li id="intl_nav"><a id="cur_flag" href="#" style="background-image: url('/images/shell/flags/flag_US_large_over.gif');"><img src="/images/shell/flags/flag_US_large.gif" alt="Titleist US"></a>
+<ul id="intl_dropdown">
+<li><a href="http://www.titleist.com.au"><img src="/images/shell/flags/flag_au.jpg" alt="Titleist Australia"> Australia</a></li>
+<li><a href="http://www.titleist.de"><img src="/images/shell/flags/flag_at.jpg" alt="Titleist Austria"> Austria</a></li>
+<li><a href="http://www.titleist.ca"><img src="/images/shell/flags/flag_ca.jpg" alt="Titleist Canada"> Canada</a></li>
+<li><a href="http://www.titleist.com.cn"><img src="/images/shell/flags/flag_cn.jpg" alt="Titleist China"> China</a></li>
+<li><a href="http://www.titleist.com.fr"><img src="/images/shell/flags/flag_fr.jpg" alt="Titleist France"> France</a></li>
+<li><a href="http://www.titleist.de"><img src="/images/shell/flags/flag_de.jpg" alt="Titleist Germany"> Germany</a></li>
+<li><a href="http://www.titleist.co.jp"><img src="/images/shell/flags/flag_jp.jpg" alt="Titleist Japan"> Japan</a></li>
+<li><a href="http://www.titleist.co.kr"><img src="/images/shell/flags/flag_kr.jpg" alt="Titleist Korea"> Korea</a></li>
+<li><a href="http://www.titleist.com.my"><img src="/images/shell/flags/flag_my.jpg" alt="Titleist Malaysia"> Malaysia</a></li>
+<li><a href="http://www.titleist.nl"><img src="//media.titleist.com/images/titleist/files/US/nav/flag_nl.jpg" alt="Titleist Netherlands"> The Netherlands</a></li>
+<li><a href="http://www.titleist.com.sg"><img src="/images/shell/flags/flag_sg.jpg" alt="Titleist Singapore"> Singapore</a></li>
+<li><a href="http://www.titleist.com.es"><img src="/images/shell/flags/flag_es.jpg" alt="Titleist Spanish"> Spanish</a></li>
+<li><a href="http://www.titleist.se"><img src="/images/shell/flags/flag_se.jpg" alt="Titleist Sweden"> Sweden</a></li>
+<li><a href="http://www.titleist.de"><img src="/images/shell/flags/flag_ch.jpg" alt="Titleist Switzerland"> Switzerland</a></li>
+<li><a href="http://www.titleist.co.th"><img src="/images/shell/flags/flag_th.jpg" alt="Titleist Thailand"> Thailand</a></li>
+<li><a href="http://www.titleist.co.uk"><img src="/images/shell/flags/flag_uk.jpg" alt="Titleist United Kingdom"> United Kingdom</a></li>
+</ul>
+</li>
+</ul>
+
+
+
+            
+            
+                
+    <h1 id="logo">
+        <a href="/" id="logo_container">
+            <img src="/images/shell/logo.jpg" alt="Titleist"></a></h1>
+    <ul id="top_nav">
+        <li id="balls">
+            <a href="/golf-balls/" title="Titleist Golf Balls" class="top_level_nav"><img src="/images/shell/nav/golfballs.jpg" alt="Titleist Golf Balls"></a>
+<div>
+<div>
+<div>
+<ul>
+<li class="first"><a href="/golf-balls/Pro-V1.aspx"><img src="//acushnet.scene7.com/is/image/titleist/2013_US_T2023S_NAV?wid=87&amp;fmt=png-alpha&amp;op_sharpen=0" alt="titleist pro v1" height="79" width="87"></a>
+<h5><a href="/golf-balls/Pro-V1.aspx">Titleist Pro V1</a></h5>
+</li>
+<li><a href="/golf-balls/Pro-V1x.aspx"><img src="//acushnet.scene7.com/is/image/titleist/2013_US_T2043S_NAV?wid=87&amp;fmt=png-alpha&amp;op_sharpen=0" alt="Titleist Pro V1x" height="79" width="87"></a>
+<h5><a href="/golf-balls/Pro-V1x.aspx">Titleist Pro V1x</a></h5>
+</li>
+<li><a href="/golf-balls/NXT-Tour.aspx"><img src="//acushnet.scene7.com/is/image/titleist/2012_nav_nxt_tour?wid=87&amp;fmt=png-alpha&amp;op_sharpen=0" alt="titleist nxt tour" height="79" width="87"></a>
+<h5><a href="/golf-balls/NXT-Tour.aspx">NXT Tour</a></h5>
+</li>
+<li><a href="/golf-balls/NXT-Tour-S.aspx"><img src="//acushnet.scene7.com/is/image/titleist/2012_nav_nxt_tour_s?wid=87&amp;fmt=png-alpha&amp;op_sharpen=0" alt="Titleist NXT Tour S" height="79" width="87"></a>
+<h5><a href="/golf-balls/NXT-Tour-S.aspx">NXT Tour S</a></h5>
+</li>
+<li><a href="/golf-balls/Velocity.aspx"><img src="//acushnet.scene7.com/is/image/titleist/2012_nav_velocity?wid=87&amp;fmt=png-alpha&amp;op_sharpen=0" alt="Titleist NXT Tour S" height="79" width="87"></a>
+<h5><a href="/golf-balls/Velocity.aspx">Velocity</a></h5>
+</li>
+<li><a href="/golf-balls/DT-Solo.aspx"><img src="//acushnet.scene7.com/is/image/titleist/2012_nav_dt_solo?wid=87&amp;fmt=png-alpha&amp;op_sharpen=0" alt="titleist dt solo" height="79" width="87"></a>
+<h5><a href="/golf-balls/DT-Solo.aspx">DT SoLo</a></h5>
+</li>
+<li><a href="/golf-ball-fitting/" title="Golf Ball Fitting"><img src="//acushnet.scene7.com/is/image/titleist/2013_nav_golfball_fitting?wid=87&amp;fmt=png-alpha&amp;op_sharpen=0" alt="Titleist Golf Ball Fitting" height="79" width="87"></a>
+<h5><a href="/golf-ball-fitting/" title="Golf Ball Fitting">Golf Ball Fitting</a></h5>
+</li>
+<li id="custom_ball" class="last"><a href="/golf-balls/other-golf-balls.aspx"><img src="//acushnet.scene7.com/is/image/titleist/2012_nav_other_golfballs?wid=106&amp;fmt=png-alpha&amp;op_sharpen=0" alt="Titleist other golf ball models" height="55" width="106"></a>
+<h5><a href="/golf-balls/other-golf-balls.aspx">Other Golf Ball Models</a></h5>
+<hr><a href="/custom-imprinting/"><img src="//acushnet.scene7.com/is/image/titleist/2012_nav_custom_imprinting?wid=106&amp;fmt=png-alpha&amp;op_sharpen=0" alt="Titleist custom imprinting" style="margin-top: 8px;" height="55" width="106"></a>
+<h5><a href="/custom-imprinting/">Custom Imprinting</a></h5>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+        </li><li id="clubs">
+            <a href="/913/" title="Titleist Golf Clubs" class="top_level_nav"><img src="/images/shell/nav/golfclubs.jpg" alt="Titleist Golf Clubs"></a>
+<div>
+<div>
+<div>
+<ul>
+<li class="first"><a href="/913/"><img src="/images/products/topnav/nav_driver.png" alt="Titleist drivers" height="64" width="52"></a>
+<h5><a href="/913/">DRIVERS</a></h5>
+<ul>
+<li><a href="/golf-clubs/drivers/default.aspx">Overview</a></li>
+<li><a href="/golf-clubs/drivers/913D2.aspx">913D2</a></li>
+<li><a href="/golf-clubs/drivers/913D3.aspx">913D3</a></li>
+</ul>
+</li>
+<li><a href="/golf-clubs/fairways/default.aspx"><img src="/images/products/topnav/nav_fairway.png" alt="Titleist fairways &amp; hybrids" height="64" width="46"></a>
+<h5><a href="/golf-clubs/fairways/default.aspx">LONG GAME</a></h5>
+<ul>
+<li><a href="/golf-clubs/fairways/default.aspx">Overview</a></li>
+<li><a href="/golf-clubs/fairways/913F.aspx">913F</a></li>
+<li><a href="/golf-clubs/fairways/913Fd-Low-Spin.aspx">913F.d Low Spin</a></li>
+<li><a href="/golf-clubs/fairways/913H.aspx">913H</a></li>
+<li><a href="/golf-clubs/custom/913Hd.aspx">913H.d</a></li>
+</ul>
+</li>
+<li><a href="/golf-clubs/irons/default.aspx"><img src="/images/products/topnav/nav_irons.png" alt="Titleist irons" height="64" width="58"></a>
+<h5><a href="/golf-clubs/irons/default.aspx">IRONS</a></h5>
+<ul>
+<li><a href="/golf-clubs/irons/default.aspx">Overview</a></li>
+<li><a href="/golf-clubs/irons/AP1.aspx">AP1</a></li>
+<li><a href="/golf-clubs/irons/AP2.aspx">AP2</a></li>
+<li><a href="/golf-clubs/irons/CB.aspx">CB</a></li>
+<li><a href="/golf-clubs/irons/MB.aspx">MB</a></li>
+<li><a href="/golf-clubs/custom/712U.aspx">712U</a></li>
+</ul>
+</li>
+<li><a href="/golf-clubs/wedges/default.aspx"><img src="/images/products/topnav/nav_wedges.png" alt="vokey wedges" height="64" width="56"></a>
+<h5><a href="/golf-clubs/wedges/default.aspx">VOKEY DESIGN WEDGES</a></h5>
+<ul>
+<li><a href="/golf-clubs/wedges/default.aspx">Overview</a></li>
+<li><a href="/golf-clubs/wedges/spin-milled-sm4.aspx">Spin Milled SM4</a></li>
+</ul>
+</li>
+<li><a href="/golf-clubs/putters/default.aspx"><img src="/images/products/topnav/nav_putters.png" alt="scotty cameron putters" height="64" width="48"></a>
+<h5><a href="/golf-clubs/putters/default.aspx">SCOTTY CAMERON PUTTERS</a></h5>
+<ul>
+<li><a href="/golf-clubs/putters/default.aspx">Overview</a></li>
+<li><a href="/golf-clubs/putters/cameron-select.aspx">Select</a></li>
+<li><a href="/golf-clubs/putters/cameron-select-golo.aspx">Select GoLo</a></li>
+<li><a href="/golf-clubs/putters/cameron-select-mid-long.aspx">Select Mid &amp; Long</a></li>
+<li><a href="/golf-clubs/putters/california.aspx">California</a></li>
+</ul>
+</li>
+<li class="last"><a href="/golf-clubs/custom/"><img src="//media.titleist.com/images/titleist/files/US/clubs/nav_img_custom_clubs.png" alt="Golf Club Fitting" height="64" width="122"></a>
+<h5><a href="/golf-clubs/custom/">CUSTOM PRODUCTS</a></h5>
+<hr><a href="/golf-club-fitting/"><img src="/images/shell/nav/clubfitting_previous/nav_img_golfclubfitting.png" alt="Golf Club Fitting" height="64" width="122"></a>
+<h5><a href="/golf-club-fitting/">GOLF CLUB FITTING</a></h5>
+<hr><a href="/previous-models/"><img src="/images/shell/nav/clubfitting_previous/nav_img_previousmodel.png" alt="Previous Models" height="64" width="122"></a>
+<h5><a href="/previous-models/">PREVIOUS MODELS</a></h5>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+        </li><li id="accessories">
+            <a href="/accessories/" title="Titleist Accessories" class="top_level_nav"><img src="/images/shell/nav/golfaccess.jpg" alt="Titleist Accessories"></a>
+<div>
+<div>
+<div>
+<ul>
+<li class="first"><a href="/accessories/gloves/default.aspx"><img src="/images/shell/nav/accessories/nav_gloves.png" alt="Gloves" height="70" width="64"></a>
+<h5><a href="/accessories/gloves/default.aspx">GLOVES</a></h5>
+<ul>
+<li><a href="/accessories/gloves/players.aspx">Players™</a></li>
+<li><a href="/accessories/gloves/players-flex.aspx">Players-Flex™</a></li>
+<li><a href="/accessories/gloves/perma-soft.aspx">Perma-Soft®</a></li>
+</ul>
+</li>
+<li><a href="/accessories/bags/default.aspx"><img src="/images/shell/nav/accessories/nav_bags.png" alt="Bags" height="70" width="48"></a>
+<h5><a href="/accessories/bags/default.aspx">BAGS</a></h5>
+<ul>
+<li><a href="/accessories/bags/default.aspx?tab=1">Cart</a></li>
+<li><a href="/accessories/bags/default.aspx?tab=2">Carry</a></li>
+</ul>
+</li>
+<li><a href="/accessories/headwear/default.aspx"><img src="/images/shell/nav/accessories/nav_headwear.png" alt="Headwear" height="70" width="112"></a>
+<h5><a href="/accessories/headwear/default.aspx">HEADWEAR</a></h5>
+<ul>
+<li><a href="/accessories/headwear/default.aspx?tab=1">Fitted</a></li>
+<li><a href="/accessories/headwear/default.aspx?tab=2">Adjustable</a></li>
+<li><a href="/accessories/headwear/default.aspx?tab=3">Visors &amp; Sun</a></li>
+<li><a href="/accessories/headwear/default.aspx?tab=4">Women's</a></li>
+<li><a href="/accessories/headwear/default.aspx?tab=5">Junior's</a></li>
+<li><a href="/accessories/headwear/default.aspx?tab=6">Team</a></li>
+</ul>
+</li>
+<li><a href="/accessories/overview.aspx"><img src="/images/shell/nav/accessories/nav_accessories.png" alt="Accessories" height="70" width="52"></a>
+<h5><a href="/accessories/overview.aspx">ACCESSORIES</a></h5>
+<ul>
+<li><a href="/accessories/overview.aspx?tab=1">Travel Gear</a></li>
+<li><a href="/accessories/overview.aspx?tab=2">Wheeled Travel Gear</a></li>
+<li><a href="/accessories/overview.aspx?tab=3">Essentials Gear</a></li>
+<li><a href="/accessories/overview.aspx?tab=4">Elements Gear</a></li>
+</ul>
+</li>
+<li class="last"><a href="/accessories/custom/default.aspx"><img src="/images/shell/nav/accessories/nav_custom.png" alt="Custom" height="70" width="70"></a>
+<h5><a href="/accessories/custom/default.aspx">CUSTOM</a></h5>
+<ul>
+<li><a href="/accessories/custom/default.aspx?tab=1">Gloves &amp; Headwear</a></li>
+<li><a href="/accessories/custom/default.aspx?tab=2">Bags</a></li>
+<li><a href="/accessories/custom/default.aspx?tab=3">Tournament Bags</a></li>
+<li><a href="/accessories/custom/default.aspx?tab=4">Accessories</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+        </li><li id="players">
+            <a href="/players/" title="Players" class="top_level_nav"><img src="/images/shell/nav/players.jpg" alt="Players"></a>
+
+        </li><li id="videos">
+            <a href="/videos/" title="Videos" class="top_level_nav"><img src="/images/shell/nav/videos.jpg" alt="Videos"></a>
+
+
+        </li>
+            <li id="teamtitleist">
+                <a href="/teamtitleist" title="Team Titleist" class="top_level_nav"><img src="/images/shell/nav/teamtitleist.jpg" alt="Titleist Team Titleist"></a>
+					      
+
+            </li>
+        
+    </ul>
+
+
+            
+            
+                <form action="/search/default.aspx" method="get" id="search"><input value="Search" name="q" id="text" type="text"><input src="/images/shell/search_bt.jpg" id="go" type="image"></form>
+
+            
+        </div>
+        <div id="body" class="">
+            <div class="wrapper cover ">
+                
+    
+        <div style="visibility: visible;" id="bannerContent">
+            <p>
+                <a id="ctl00_BodyPlaceHolder_aNonFlashNannerLink"><img src="//media.titleist.com/images/titleist/homepage/banners/US/Online-Homepage-WeeklyTourWin_966x364_04292013_1.jpg" alt="Titleist Wins"></a>
+            </p>
+        </div>
+        <script type="text/javascript">
+            var params = { wmode: "opaque", flashvars: "xpath=/flash/xml/HomepageBannersXml.aspx", allowScriptAccess: "always" };
+            swfobject.embedSWF("/flash/TFJ_hmpg_banner.swf", "bannerContent", "966", "377", "9.0.0", false, false, params);
+        </script>
+    
+    
+    
+    <div id="home_features">
+        
+<div id="contentPagination" class="content">
+    <div id="two-col-subfeatures">
+        <ul>
+            
+                    <li id="ctl00_BodyPlaceHolder_ctl00_rptSubfeatures_ctl00_liSubfeature">
+                        <a href="/videos/3852/2013 Making of a Titleist.aspx" id="ctl00_BodyPlaceHolder_ctl00_rptSubfeatures_ctl00_subfeatureLink">
+                        <img src="//media.titleist.com/images/titleist//homepage/subfeatures/US/makingofproV1_home_sub.jpg" id="ctl00_BodyPlaceHolder_ctl00_rptSubfeatures_ctl00_subfeatureImage">
+                        <span id="ctl00_BodyPlaceHolder_ctl00_rptSubfeatures_ctl00_subfeatureText"><div>
+<p><b>Making of a Titleist</b><br>There's a difference between a golf ball and the #1 ball in golf. &nbsp;Find out why.</p>
+</div></span></a>
+                    </li>
+                    
+                
+                    <li id="ctl00_BodyPlaceHolder_ctl00_rptSubfeatures_ctl01_liSubfeature">
+                        <a href="http://www.titleist.com/teamtitleist/b/tourblog/archive/2013/04/15/celebrate-mother-39-s-amp-father-39-s-day-with-a-gift-of-titleist-golf-balls-with-free-personalization.aspx" id="ctl00_BodyPlaceHolder_ctl00_rptSubfeatures_ctl01_subfeatureLink">
+                        <img src="//media.titleist.com/images/titleist//homepage/subfeatures/US/2013_Mothers_Day_3_041513.jpg" id="ctl00_BodyPlaceHolder_ctl00_rptSubfeatures_ctl01_subfeatureImage">
+                        <span id="ctl00_BodyPlaceHolder_ctl00_rptSubfeatures_ctl01_subfeatureText"><p><b>Mother's &amp; Father's Day</b><br>Celebrate Mother's and Father's Day with the gift of Titleist Golf Balls including Free Personalization.</p></span></a>
+                    </li>
+                    
+                
+                    <li id="ctl00_BodyPlaceHolder_ctl00_rptSubfeatures_ctl02_liSubfeature">
+                        <a href="http://www.titleist.com/teamtitleist/b/tourblog/archive/2013/04/17/performance-is-new-2013-titleist-pro-v1-limited-edition-golf-balls.aspx" id="ctl00_BodyPlaceHolder_ctl00_rptSubfeatures_ctl02_subfeatureLink">
+                        <img src="//media.titleist.com/images/titleist//homepage/subfeatures/US/ld_sub_1.jpg" id="ctl00_BodyPlaceHolder_ctl00_rptSubfeatures_ctl02_subfeatureImage">
+                        <span id="ctl00_BodyPlaceHolder_ctl00_rptSubfeatures_ctl02_subfeatureText"><b>Limited Edition Pro V1</b><br>Pro V1 performance with a pink sidestamp and play number.</span></a>
+                    </li>
+                    
+                
+                    <li id="ctl00_BodyPlaceHolder_ctl00_rptSubfeatures_ctl03_liSubfeature" class="clear">
+                        <a href="http://www.titleist.com/videos/#4293" id="ctl00_BodyPlaceHolder_ctl00_rptSubfeatures_ctl03_subfeatureLink">
+                        <img src="//media.titleist.com/images/titleist//homepage/subfeatures/US/videothumb_1.jpg" id="ctl00_BodyPlaceHolder_ctl00_rptSubfeatures_ctl03_subfeatureImage">
+                        <span id="ctl00_BodyPlaceHolder_ctl00_rptSubfeatures_ctl03_subfeatureText"><b>Bill Safrin Fitters' Forum</b><br><span>Bill Safrin spends a few moments talking about driver fitting.</span></span></a>
+                    </li>
+                    
+                
+                    <li id="ctl00_BodyPlaceHolder_ctl00_rptSubfeatures_ctl04_liSubfeature">
+                        <a href="http://www.titleist.com/my-titleist" id="ctl00_BodyPlaceHolder_ctl00_rptSubfeatures_ctl04_subfeatureLink">
+                        <img src="//media.titleist.com/images/titleist//homepage/subfeatures/US/mytitlest_home_sub.jpg" id="ctl00_BodyPlaceHolder_ctl00_rptSubfeatures_ctl04_subfeatureImage">
+                        <span id="ctl00_BodyPlaceHolder_ctl00_rptSubfeatures_ctl04_subfeatureText"><b>My Titleist<br></b>Connect your Instagram account and share your favorite golfing moments on #MyTitleist</span></a>
+                    </li>
+                    
+                
+                    <li id="ctl00_BodyPlaceHolder_ctl00_rptSubfeatures_ctl05_liSubfeature">
+                        <a href="http://www.titleist.com/golf-ball-fitting/" id="ctl00_BodyPlaceHolder_ctl00_rptSubfeatures_ctl05_subfeatureLink">
+                        <img src="//media.titleist.com/images/titleist//homepage/subfeatures/US/proV1-golfballed-homesub.jpg" id="ctl00_BodyPlaceHolder_ctl00_rptSubfeatures_ctl05_subfeatureImage">
+                        <span id="ctl00_BodyPlaceHolder_ctl00_rptSubfeatures_ctl05_subfeatureText"><div><b>Golf Ball Education</b><br>Play the best performing golf ball to help you shoot your best score.</div></span></a>
+                    </li>
+                    
+                            
+        </ul>
+        <div id="pagination-wrapper">
+            
+        </div>
+    </div>
+</div>
+
+        <div id="homepageFeeds">
+	
+            <div>
+                <div>
+                    <form>                   
+                        <ul>
+                            <li id="ttFeed" class="selected"><a href="">Blog-Forum</a></li>
+                            <li id="twitterFeed"><a href="">Tweet</a></li>
+                            <li id="fbFeed"><a href="">Facebook</a></li>
+                        </ul>
+                        <a id="twitterFollowLink" href="https://twitter.com/intent/user?screen_name=titleist" style="display:none;"><span></span>Follow @titleist</a>
+                        <div id="fbLikeLink"><iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.titleist.com&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=21&amp;appId=193419028200" style="border:none; overflow:hidden; width:100px; height:21px;" allowtransparency="true" frameborder="0" scrolling="no"></iframe></div>
+                    </form>
+                </div>
+                <div id="feed-wrapper">
+                    <div tabindex="0" class="jspScrollable" style="overflow: hidden; padding: 0px; width: 340px;" id="feeds">
+                    
+        
+    <div style="width: 340px; height: 428px;" class="jspContainer"><div style="padding: 0px; width: 321px; top: 0px;" class="jspPane"><ul>
+    
+        
+            <li>
+                <a href="http://www.titleist.com/teamtitleist/team-titleist/f/9/t/21101.aspx#92964" id="ctl00_BodyPlaceHolder_ctl01_rptHomepageFeedItems_ctl01_feedItemAvatar"><img src="/teamtitleist/themes/titleist/images/forums/discussion-icon.png" alt="" height="34" width="34"></a>
+                <span><a href="http://www.titleist.com/teamtitleist/members/kevinb168/default.aspx">kevin b</a> commented on <a href="http://www.titleist.com/teamtitleist/team-titleist/f/9/t/21101.aspx#92964">Re: Ball marker visor</a></span>
+            </li>
+        
+        
+    
+        
+            <li>
+                <a href="http://www.titleist.com/teamtitleist/team-titleist/f/5/t/20944.aspx#92963" id="ctl00_BodyPlaceHolder_ctl01_rptHomepageFeedItems_ctl02_feedItemAvatar"><img src="/teamtitleist/themes/titleist/images/forums/discussion-icon.png" alt="" height="34" width="34"></a>
+                <span><a href="http://www.titleist.com/teamtitleist/members/keiths24/default.aspx">Keith S</a> commented on <a href="http://www.titleist.com/teamtitleist/team-titleist/f/5/t/20944.aspx#92963">Re: Processing time for the "Loyalty Rewarded" ProV1 promotion?</a></span>
+            </li>
+        
+        
+    
+        
+            <li>
+                <a href="http://www.titleist.com/teamtitleist/b/tourblog/archive/2013/05/03/video-on-the-range-with-the-1-ball-at-the-wells-fargo-championship.aspx" id="ctl00_BodyPlaceHolder_ctl01_rptHomepageFeedItems_ctl03_feedItemAvatar"><img src="/teamtitleist/themes/titleist/images/weblogs/icon_tourBlog_tourBlog.jpg" alt="" height="34" width="34"></a>
+                <span><a class="postTitle" href="http://www.titleist.com/teamtitleist/b/tourblog/archive/2013/05/03/video-on-the-range-with-the-1-ball-at-the-wells-fargo-championship.aspx">Video: On the Range with the #1 Ball at the Wells Fargo Championship</a></span>
+            </li>
+        
+        
+    
+        
+            <li>
+                <a href="http://www.titleist.com/teamtitleist/team-titleist/f/5/t/21098.aspx#92961" id="ctl00_BodyPlaceHolder_ctl01_rptHomepageFeedItems_ctl04_feedItemAvatar"><img src="/teamtitleist/themes/titleist/images/forums/discussion-icon.png" alt="" height="34" width="34"></a>
+                <span><a href="http://www.titleist.com/teamtitleist/members/dono15/default.aspx">Don O</a> commented on <a href="http://www.titleist.com/teamtitleist/team-titleist/f/5/t/21098.aspx#92961">Re: Which one is the best</a></span>
+            </li>
+        
+        
+    
+        
+            <li>
+                <a href="http://www.titleist.com/teamtitleist/team-titleist/f/5/t/20865.aspx#92960" id="ctl00_BodyPlaceHolder_ctl01_rptHomepageFeedItems_ctl05_feedItemAvatar"><img src="/teamtitleist/themes/titleist/images/forums/discussion-icon.png" alt="" height="34" width="34"></a>
+                <span><a href="http://www.titleist.com/teamtitleist/members/dono15/default.aspx">Don O</a> commented on <a href="http://www.titleist.com/teamtitleist/team-titleist/f/5/t/20865.aspx#92960">Re: Limited Edition ProV1</a></span>
+            </li>
+        
+        
+    
+        
+            <li>
+                <a href="http://www.titleist.com/teamtitleist/team-titleist/f/5/t/20944.aspx#92959" id="ctl00_BodyPlaceHolder_ctl01_rptHomepageFeedItems_ctl06_feedItemAvatar"><img src="/teamtitleist/themes/titleist/images/forums/discussion-icon.png" alt="" height="34" width="34"></a>
+                <span><a href="http://www.titleist.com/teamtitleist/members/jeffv12/default.aspx">Jeff V</a> commented on <a href="http://www.titleist.com/teamtitleist/team-titleist/f/5/t/20944.aspx#92959">Re: Processing time for the "Loyalty Rewarded" ProV1 promotion?</a></span>
+            </li>
+        
+        
+    
+        
+            <li>
+                <a href="http://www.titleist.com/teamtitleist/team-titleist/f/7/t/20658.aspx#92958" id="ctl00_BodyPlaceHolder_ctl01_rptHomepageFeedItems_ctl07_feedItemAvatar"><img src="/teamtitleist/themes/titleist/images/forums/discussion-icon.png" alt="" height="34" width="34"></a>
+                <span><a href="http://www.titleist.com/teamtitleist/members/cathid1/default.aspx">Cathi, Titleist Club Concierge</a> commented on <a href="http://www.titleist.com/teamtitleist/team-titleist/f/7/t/20658.aspx#92958">Re: Getting fit at expo?</a></span>
+            </li>
+        
+        
+    
+        
+            <li>
+                <a href="http://www.titleist.com/teamtitleist/team-titleist/f/7/t/21089.aspx#92957" id="ctl00_BodyPlaceHolder_ctl01_rptHomepageFeedItems_ctl08_feedItemAvatar"><img src="/teamtitleist/themes/titleist/images/forums/discussion-icon.png" alt="" height="34" width="34"></a>
+                <span><a href="http://www.titleist.com/teamtitleist/members/curtism17/default.aspx">Curtis M</a> commented on <a href="http://www.titleist.com/teamtitleist/team-titleist/f/7/t/21089.aspx#92957">RE: Turn around time and pricing when being fitted</a></span>
+            </li>
+        
+        
+    
+        
+            <li>
+                <a href="http://www.titleist.com/teamtitleist/team-titleist/f/5/t/21098.aspx#92956" id="ctl00_BodyPlaceHolder_ctl01_rptHomepageFeedItems_ctl09_feedItemAvatar"><img src="/teamtitleist/themes/titleist/images/forums/discussion-icon.png" alt="" height="34" width="34"></a>
+                <span><a href="http://www.titleist.com/teamtitleist/members/denniso3/default.aspx">Deno</a> commented on <a href="http://www.titleist.com/teamtitleist/team-titleist/f/5/t/21098.aspx#92956">Re: Which one is the best</a></span>
+            </li>
+        
+        
+    
+        
+            <li>
+                <a href="http://www.titleist.com/teamtitleist/team-titleist/f/5/t/21098.aspx#92955" id="ctl00_BodyPlaceHolder_ctl01_rptHomepageFeedItems_ctl10_feedItemAvatar"><img src="/teamtitleist/themes/titleist/images/forums/discussion-icon.png" alt="" height="34" width="34"></a>
+                <span><a href="http://www.titleist.com/teamtitleist/members/edwardd27/default.aspx">Edward D</a> commented on <a href="http://www.titleist.com/teamtitleist/team-titleist/f/5/t/21098.aspx#92955">Re: Which one is the best</a></span>
+            </li>
+        
+        
+    
+        
+            <li>
+                <a href="http://www.titleist.com/teamtitleist/team-titleist/f/10/t/21095.aspx#92954" id="ctl00_BodyPlaceHolder_ctl01_rptHomepageFeedItems_ctl11_feedItemAvatar"><img src="/teamtitleist/themes/titleist/images/forums/discussion-icon.png" alt="" height="34" width="34"></a>
+                <span><a href="http://www.titleist.com/teamtitleist/members/christianj3/default.aspx">Christian J</a> commented on <a href="http://www.titleist.com/teamtitleist/team-titleist/f/10/t/21095.aspx#92954">Re: Alignment Sticks</a></span>
+            </li>
+        
+        
+    
+        
+            <li>
+                <a href="http://www.titleist.com/teamtitleist/team-titleist/f/5/t/20944.aspx#92953" id="ctl00_BodyPlaceHolder_ctl01_rptHomepageFeedItems_ctl12_feedItemAvatar"><img src="/teamtitleist/themes/titleist/images/forums/discussion-icon.png" alt="" height="34" width="34"></a>
+                <span><a href="http://www.titleist.com/teamtitleist/members/timt2/default.aspx">T.Tiger</a> commented on <a href="http://www.titleist.com/teamtitleist/team-titleist/f/5/t/20944.aspx#92953">Re: Processing time for the "Loyalty Rewarded" ProV1 promotion?</a></span>
+            </li>
+        
+        
+    
+        
+            <li>
+                <a href="http://www.titleist.com/teamtitleist/team-titleist/f/5/t/21098.aspx#92952" id="ctl00_BodyPlaceHolder_ctl01_rptHomepageFeedItems_ctl13_feedItemAvatar"><img src="/teamtitleist/themes/titleist/images/forums/discussion-icon.png" alt="" height="34" width="34"></a>
+                <span><a href="http://www.titleist.com/teamtitleist/members/timt2/default.aspx">T.Tiger</a> commented on <a href="http://www.titleist.com/teamtitleist/team-titleist/f/5/t/21098.aspx#92952">Re: Which one is the best</a></span>
+            </li>
+        
+        
+    
+        
+            <li>
+                <a href="http://www.titleist.com/teamtitleist/team-titleist/f/9/t/21101.aspx" id="ctl00_BodyPlaceHolder_ctl01_rptHomepageFeedItems_ctl14_feedItemAvatar"><img src="/teamtitleist/themes/titleist/images/forums/discussion-icon.png" alt="" height="34" width="34"></a>
+                <span><a href="http://www.titleist.com/teamtitleist/members/thomasc51/default.aspx">Thomas C</a> posted <a href="http://www.titleist.com/teamtitleist/team-titleist/f/9/t/21101.aspx">Ball marker visor</a></span>
+            </li>
+        
+        
+    
+        
+            <li>
+                <a href="http://www.titleist.com/teamtitleist/team-titleist/f/6/t/21091.aspx#92951" id="ctl00_BodyPlaceHolder_ctl01_rptHomepageFeedItems_ctl15_feedItemAvatar"><img src="/teamtitleist/themes/titleist/images/forums/discussion-icon.png" alt="" height="34" width="34"></a>
+                <span><a href="http://www.titleist.com/teamtitleist/members/keithm87/default.aspx">Keith M</a> commented on <a href="http://www.titleist.com/teamtitleist/team-titleist/f/6/t/21091.aspx#92951">Re: Swear I saw Sparks...</a></span>
+            </li>
+        
+        
+    
+        
+            <li>
+                <a href="http://www.titleist.com/teamtitleist/team-titleist/f/9/t/21097.aspx#92950" id="ctl00_BodyPlaceHolder_ctl01_rptHomepageFeedItems_ctl16_feedItemAvatar"><img src="/teamtitleist/themes/titleist/images/forums/discussion-icon.png" alt="" height="34" width="34"></a>
+                <span><a href="http://www.titleist.com/teamtitleist/members/denniso3/default.aspx">Deno</a> commented on <a href="http://www.titleist.com/teamtitleist/team-titleist/f/9/t/21097.aspx#92950">Re: MYTPI.COM REVAMP</a></span>
+            </li>
+        
+        
+    
+        
+            <li>
+                <a href="http://www.titleist.com/teamtitleist/team-titleist/f/5/t/20865.aspx#92949" id="ctl00_BodyPlaceHolder_ctl01_rptHomepageFeedItems_ctl17_feedItemAvatar"><img src="/teamtitleist/themes/titleist/images/forums/discussion-icon.png" alt="" height="34" width="34"></a>
+                <span><a href="http://www.titleist.com/teamtitleist/members/patrickm4/default.aspx">Patrick M</a> commented on <a href="http://www.titleist.com/teamtitleist/team-titleist/f/5/t/20865.aspx#92949">Re: Limited Edition ProV1</a></span>
+            </li>
+        
+        
+    
+        
+            <li>
+                <a href="http://www.titleist.com/teamtitleist/team-titleist/f/9/t/21097.aspx#92948" id="ctl00_BodyPlaceHolder_ctl01_rptHomepageFeedItems_ctl18_feedItemAvatar"><img src="/teamtitleist/themes/titleist/images/forums/discussion-icon.png" alt="" height="34" width="34"></a>
+                <span><a href="http://www.titleist.com/teamtitleist/members/TTManager/default.aspx">Mike D., Team Titleist Manager</a> commented on <a href="http://www.titleist.com/teamtitleist/team-titleist/f/9/t/21097.aspx#92948">Re: MYTPI.COM REVAMP</a></span>
+            </li>
+        
+        
+    
+        
+            <li>
+                <a href="http://www.titleist.com/teamtitleist/team-titleist/f/5/t/21098.aspx#92947" id="ctl00_BodyPlaceHolder_ctl01_rptHomepageFeedItems_ctl19_feedItemAvatar"><img src="/teamtitleist/themes/titleist/images/forums/discussion-icon.png" alt="" height="34" width="34"></a>
+                <span><a href="http://www.titleist.com/teamtitleist/members/edwardd27/default.aspx">Edward D</a> commented on <a href="http://www.titleist.com/teamtitleist/team-titleist/f/5/t/21098.aspx#92947">Re: Which one is the best</a></span>
+            </li>
+        
+        
+    
+        
+            <li>
+                <a href="http://www.titleist.com/teamtitleist/team-titleist/f/5/t/20865.aspx#92946" id="ctl00_BodyPlaceHolder_ctl01_rptHomepageFeedItems_ctl20_feedItemAvatar"><img src="/teamtitleist/themes/titleist/images/forums/discussion-icon.png" alt="" height="34" width="34"></a>
+                <span><a href="http://www.titleist.com/teamtitleist/members/edwardd27/default.aspx">Edward D</a> commented on <a href="http://www.titleist.com/teamtitleist/team-titleist/f/5/t/20865.aspx#92946">Re: Limited Edition ProV1</a></span>
+            </li>
+        
+        
+    
+        </ul></div><div class="jspVerticalBar"><div class="jspCap jspCapTop"></div><div style="height: 428px;" class="jspTrack"><div style="height: 80px;" class="jspDrag"><div class="jspDragTop"></div><div class="jspDragBottom"></div></div></div><div class="jspCap jspCapBottom"></div></div></div></div>
+                </div>
+            </div>
+        
+</div>
+    </div>
+
+            </div>
+        </div>
+        <div id="bottom_cap">
+        </div>
+    </div>
+    
+        <div id="footer_wide">
+<div id="footer_boxes_2" class="cover"><!-- Features -->
+<div id="left_box">
+<h2 id="outside-heading">Outside Links</h2>
+.
+<p id="outside"><a href="http://www.mytpi.com"><img src="//media.titleist.com/images/titleist/files/US/footer/icon_pi_logo.png" alt=""></a> <a href="http://www.scottycameron.com"><img src="/images/shell/footer/icon_sc_logo.png" alt=""></a> <a href="http://www.vokey.com"><img src="/images/shell/footer/icon_vokey_logo.png" alt=""></a></p>
+<h2 id="facebook_h2">Facebook</h2>
+<div class=" fb_reset" id="fb-root"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe src="http://static.ak.facebook.com/connect/xd_arbiter.php?version=24#channel=f2cfb462571537&amp;origin=http%3A%2F%2Fwww.titleist.com&amp;channel_path=%2F%3Ffb_xd_fragment%23xd_sig%3Df2fb9e06d529852%26" style="border: medium none;" tab-index="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_http" allowtransparency="true" name="fb_xdm_frame_http" frameborder="0" scrolling="no"></iframe><iframe src="https://s-static.ak.facebook.com/connect/xd_arbiter.php?version=24#channel=f2cfb462571537&amp;origin=http%3A%2F%2Fwww.titleist.com&amp;channel_path=%2F%3Ffb_xd_fragment%23xd_sig%3Df2fb9e06d529852%26" style="border: medium none;" tab-index="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_https" allowtransparency="true" name="fb_xdm_frame_https" frameborder="0" scrolling="no"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
+<script type="text/javascript" src="//connect.facebook.net/en_US/all.js#appId=227397550606165&amp;xfbml=1"></script>
+<fb:like class="fb_edge_widget_with_comment fb_iframe_widget" fb-xfbml-state="rendered" href="http://www.titleist.com" send="false" width="404" show_faces="false" colorscheme="dark" font="arial"><span style="height: 24px; width: 404px;"><iframe src="http://www.facebook.com/plugins/like.php?api_key=227397550606165&amp;locale=en_US&amp;sdk=joey&amp;channel_url=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D24%23cb%3Df29247f516b3362%26origin%3Dhttp%253A%252F%252Fwww.titleist.com%252Ff2cfb462571537%26domain%3Dwww.titleist.com%26relation%3Dparent.parent&amp;href=http%3A%2F%2Fwww.titleist.com&amp;node_type=link&amp;width=404&amp;font=arial&amp;layout=standard&amp;colorscheme=dark&amp;show_faces=false&amp;send=false&amp;extended_social_context=false" class="fb_ltr" title="Like this content on Facebook." style="border: medium none; overflow: hidden; height: 24px; width: 404px;" name="f2a1d2e4f959052" id="f1eebd19c8002b2" scrolling="no"></iframe></span></fb:like></div>
+<!-- Connect -->
+<div class="connect box_sm">
+<h4>Connect</h4>
+<ul>
+<li><a href="/teamtitleist" class="teamtitleist_2">Team Titleist</a></li>
+<li><a href="http://www.facebook.com/titleist" class="facebook_2">Facebook</a></li>
+<li><a href="http://twitter.com/titleist" class="twitter_2">Twitter</a></li>
+<li><a href="http://www.youtube.com/titleist" class="youtube_2">YouTube</a></li>
+<li><a href="/myaccount/register.aspx" class="newsletter_2">Newsletter</a></li>
+</ul>
+</div>
+<div class="features box_lg">
+<h4>Features</h4>
+<ul class="left">
+<li><a href="/technology/">Technology</a></li>
+<li><a href="/myaccount/productregistration.aspx">Product Registration</a></li>
+<li><a href="/myaccount/holeinone.aspx">Hole-in-One</a></li>
+<li><a href="/videos/">Videos</a></li>
+<li><a href="/players/">Players</a></li>
+<li><a href="/golf-ball-fitting/">Ball Fitting</a></li>
+<li><a href="/golf-club-fitting/">Club Fitting</a></li>
+<li><a href="/teamtitleist/b/default.aspx?sb=News">Press Releases/News</a></li>
+<li><a href="/news-archive/">News Archive</a></li>
+<li><a href="/previous-models/">Club Archive</a></li>
+</ul>
+</div>
+<!-- About Titleist -->
+<div class="about box_lg">
+<h4>About Titleist</h4>
+<ul class="left">
+<li><a href="/customer-service/default.aspx">Customer Service</a></li>
+<li><a href="/company/Mission.aspx">Company</a></li>
+<li><a href="/company/Contact-Us.aspx">Contact</a></li>
+<li><a href="http://employment.acushnetgolf.com/">Employment</a></li>
+<li><a href="/security-label-program/">Brand Protection</a></li>
+<li><a href="/patents/">Patents</a></li>
+<li><a href="/myaccount/unsubscribe.aspx">Unsubscribe</a></li>
+<li><a href="/company/Privacy.aspx">Privacy</a></li>
+<li><a href="/company/Legal.aspx">Legal</a></li>
+<li><a href="/company/Supplier-Citizenship.aspx">Supplier Citizenship</a></li>
+<li><a href="/company/Community-Policy.aspx">Community Policy</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+    
+    
+    
+    
+    
+       
+    
+
+
+<iframe style="position: absolute; top: -1px; left: -1px;" src="//assets.pinterest.com/pidget.html#via=http%3A%2F%2Fwww.titleist.com%2F&amp;type=pidget" frameborder="0" height="0" width="0"></iframe></body>

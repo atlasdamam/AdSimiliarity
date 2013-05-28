@@ -1,0 +1,125 @@
+<head>
+  <meta name="robots" content="index, follow">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="language" content="en">
+  <meta name="description" content="Download your favorite YouTube videos as mp3 files without registration.">
+  <meta name="google" content="notranslate">
+  <title>YouTube to mp3 Converter</title>
+  <link rel="stylesheet" href="/style.css">
+
+  <script src="http://www.google-analytics.com/ga.js" async="" type="text/javascript"></script><script type="text/javascript" src="/lang/en.js?v=39"></script>
+  <script type="text/javascript" src="/client.js?v=42"></script>
+  <script type="text/javascript">
+    adcc = '55b7e8b';
+    enableBetaAds = true;
+  </script>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-9749996-5']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</head>
+
+<body onload="init(); loadAds()">
+<div id="content" style="width:700px; padding-left:160px;">
+  <div style="width:480px; float:left;">
+  <h1><a href="/"><img src="/logo.gif" alt="YouTube mp3" height="59" width="290"></a></h1>
+
+  <div id="progress_info">
+    <div id="error_text"></div>
+    <div id="image"></div>
+    
+    <div style="float:left; max-width:330px">
+      <div id="status_text"></div>
+      <div id="title"></div>
+      <div id="length"></div>
+      <div id="link_box" style="display:none">
+        <div id="link_box_title" style="font-weight:bold; text-decoration:underline">Link this mp3</div>
+        <div class="row">
+          <div id="link_box_bb_code_title" style="font-weight:bold">BB Code (Forums)</div>
+          <input id="BBCodeLink" onclick="sAll(this)" type="text">
+        </div>
+        <div class="row">
+          <div id="link_box_html_code_title" style="font-weight:bold">HTML Code</div>
+          <input id="HTMLLink" onclick="sAll(this)" type="text">
+        </div>
+        <div class="row">
+          <div id="link_box_direct_code_title" style="font-weight:bold">Direct Link</div>
+          <input id="DirectLink" onclick="sAll(this)" type="text">
+        </div>
+      </div>
+      <div id="v-ads"></div>
+      <div id="dl_link"></div>
+      <div id="progress"></div>
+      <div id="loader"><img src="ajax-loader-b.gif" alt="loading.." height="11" width="16"></div>
+    </div>
+    <div class="clear"></div>
+  </div>
+
+    
+  <noscript>
+    <div class="warning">You have to enable JavaScript to use this Service!</div>
+  </noscript>
+  
+  <div id="form">
+    <form method="get" action="/" id="submit-form">
+      <input id="youtube-url" value="http://www.youtube.com/watch?v=KMU0tzLwhbE" onclick="sAll(this)" autocomplete="off" style="width:466px;" type="text">          
+      <div style="text-align:center; margin-top:3px">
+        <input id="submit" value="Convert Video" style="float:none; width:175px" type="submit">
+      </div>
+    </form>
+  </div>
+  
+  
+    
+        <div style="margin-top: 43px; text-align: center; padding: 6px 0px 5px; background: none repeat scroll 0% 0% rgb(238, 238, 238); border-top: 1px solid rgb(204, 204, 204);" id="rad">
+        <iframe src="http://edge.youtube-mp3.org/acode/55b7e8b/rectangle.htm" style="border: 0px none;" id="radiiFrm" frameborder="0" height="250px" scrolling="no" width="300px"></iframe></div>
+    
+  
+  
+  <div class="clear"></div>
+
+  <div id="description">
+    <h2>What is YouTube mp3?</h2>
+    <p>YouTube-mp3.org is the easiest online service for converting videos to mp3. You do not need an account, the only thing you need is a YouTube URL. We will start to convert the audiotrack of your videofile to mp3 as soon as you have submitted it and you will be able to download it. Different from other services the whole conversion process will be perfomed by our infrastructure and you only have to download the audio file from our servers. Because of this our software is platform-independent: You can use it with your Mac, a Linux PC or even an iPhone. All our conversions will be perfomed in high quality mode with a bitrate of at least 128 kBit/s. Do not worry, our service is completely free. We need approximately 3 to 4 minutes per video.</p>
+  </div>
+
+  <div id="footer">
+    <div style="float:right; text-align:right">
+      <a href="http://blog.youtube-mp3.org/">Blog</a> · <a href="/addons">Addons</a> · <a href="/privacy" rel="nofollow">Privacy</a> · <a href="/impress?" rel="nofollow">Impress</a>
+
+    </div>
+    <a href="/">English</a> · <a href="/de">Deutsch</a> · <a href="/tr">Türkçe</a> · <a href="/pl">Polski</a> · <a href="/fr">Français</a> · <a href="/ka">???????</a><br><a href="/eu">Euskara</a> · <a href="/es">Español</a> · <a href="/gr">????????</a> · <a href="/nl">Nederlands</a> · <a href="/zh">????</a><br><a href="/it">Italiano</a> · <a href="/sv">Svenska</a> · <a href="/sk">Slovensky</a> · <a href="/sr">??????</a> · <a href="/ar">???????</a><br><a href="/pt">Português</a> · <a href="/sl">Slovenš?ina</a>
+
+  </div>
+  </div>
+  
+  
+    
+      <div style="float: left; width: 160px; padding: 6px 5px 5px; background: none repeat scroll 0% 0% rgb(238, 238, 238); border-left: 1px solid rgb(204, 204, 204); border-top: 1px solid rgb(204, 204, 204); margin-left: 15px; text-align: left;" id="sad">
+      <iframe src="http://edge.youtube-mp3.org/acode/55b7e8b/skyscraper.htm" style="border: 0px none;" id="sadiiFrm" frameborder="0" height="600px" scrolling="no" width="160px"></iframe></div>
+    
+  
+</div>
+
+<script type="text/javascript">
+  function fc(){
+      try{
+      if (top.location != location) {
+        bFrame = true;
+        var i = new Image();
+        i.src = '/_stat.gif?i='+document.referrer;
+      }
+      } catch(e){}
+  }
+  fc();
+</script>
+
+
+</body>

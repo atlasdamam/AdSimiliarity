@@ -1,0 +1,226 @@
+<head><script src="http://www.google-analytics.com/ga.js" async="" type="text/javascript"></script><script type="text/javascript">
+function vidEntry(id, vid, title, shorttitle, desc, shortdesc){
+this.id = id;
+this.vidid = vid;
+this.title = title;
+this.shorttitle = shorttitle;
+this.description = desc;
+this.shortdescription = shortdesc;}
+var vidData = [
+new vidEntry('1291', '9VKVJBmxbHU', 'Robert Pattinson and Kristen Stewart are Done Again!', 'Robert Pattinson and Kristen Stewart are Done Again!', '\"The Twilight Saga\" co-stars have reportedly broken up again, and Demi Moore is moving on to a new beau too!', '' ),
+new vidEntry('1290', 'VEwtJGN0cVM', 'Ja Rule Gets Buff in Jail!', 'Ja Rule Gets Buff in Jail!', 'The rapper spent two years behind bars and now he looks like an action figure!', '' ),
+new vidEntry('1289', 'qqGt--afZbk', 'Beyonce Pregnancy Rumors -- Is She or Isn\'t She?', 'Beyonce Pregnancy Rumors -- Is She or Isn\'t She?', 'Is Beyonce carrying baby number 2 or not? We don\'t think so!', '' ),
+new vidEntry('1288', 'jEvmlaZh15s', '\'Dish Nation\' Episode 180', '\'Dish Nation\' Episode 180', 'Victoria\'s secret sexy list, a deer takes a bus ride and the celebs hit Cannes!', '' ),
+new vidEntry('1287', 'VZ-tgvEBbMM', 'The Stars Shine at the Cannes Film Festival!', 'The Stars Shine at the Cannes Film Festival!', 'The cast of \"The Great Gatsby,\" Justin Timberlake, Cindy Crawford and more hit the red carpet at the Cannes Film Festival! Who was hot, and who was not?', '' ),
+new vidEntry('1286', 'JMjzGnhXYVA', 'Man Goes Missing During Honeymoon!', 'Man Goes Missing During Honeymoon!', 'A bride reported her groom missing while on their honeymoon. He ended up in jail after attempting to meet a hooker!', '' ),
+new vidEntry('1285', 'kJ6-K5lzePs', 'Teen Heartthrobs -- Hotter Then or Now?', 'Teen Heartthrobs -- Hotter Then or Now?', 'We do a \"Then & Now\" comparison for some former teenage heartthrobs!', '' ),
+new vidEntry('1284', 'cQPujJtvCEY', 'Deer Goes for a Bus Ride!', 'Deer Goes for a Bus Ride!', 'A deer accidentally hitched a ride on a public bus and had a little bit of difficulty getting off!<br><br>Click here to watch the full video: http://www.youtube.com/watch?v=FxHEwr-yXDs', '' ),
+new vidEntry('1283', 'DrLs2hU3_fQ', 'HeadKrack\'s Rap of the Week -- 5/17/13', 'HeadKrack\'s Rap of the Week -- 5/17/13', 'HeadKrack is on the mic rapping about Kanye West, Beyonce\'s rumored baby, Chris Brown and more!', '' ),
+new vidEntry('1282', 'qgD72czzzCY', '\'Dish Nation\' Episode 179', '\'Dish Nation\' Episode 179', 'Stalker swims 2 miles to Taylor Swifts home, Beckham is retiring and Star Trek Ticket or Skip it!', '' )
+];
+</script>
+
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Dish Nation Airing Weekdays</title>
+	<meta property="og:title" content="Dish Nation Airing Weekdays">
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<!--[if IE ]>
+	<link href="ie.css" rel="stylesheet" type="text/css" />
+	<![endif]-->
+	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.json-2.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
+	<script type="text/javascript" src="js/fetch_youtube.js"></script>
+	<script type="text/javascript" src="js/videoPanel.js"></script>
+	<script type="text/javascript" src="js/latestNews.js"></script>
+	<script>
+		var dateFuture1 = new Date(2012,8,10,0,00,00);	
+
+		var setVideoPanel = true;
+
+
+
+		$(document).ready(function() {
+			passedVideoID = 0;	
+			var tmp1 = "";
+			if (tmp1)
+			{
+				passedVideoID = tmp1;
+			}
+			getURLHash();
+			populateVideoList();
+			//GetCount(dateFuture1, 'countDownClock');
+
+			$('#scroll_this li').live('click', function() { 
+				$("#scroll_this li").removeClass("active");
+				$(this).addClass("active");						//hilight the clicked link
+		 	});
+
+			jQuery('#scroll_shows').jcarousel({
+				scroll: 1
+			});
+
+			//get our tweet of the day
+			$.ajax({
+			  url: 'http://api.twitter.com/1/statuses/show/336919822032060416.json',
+			  dataType: 'jsonp',
+			  data: null,
+			  success: function (data) {
+			    var tweetText = data.text;
+			    $("#thetweet").html(tweetText);
+			  }
+			});
+
+		});
+
+	</script>
+
+	
+</head>
+<body data-twttr-rendered="true" class="home">
+<div id="wrapper">
+	<div id="container">
+		<div id="header"></div>
+
+		<div id="nav">
+			<div class="buttons home"><a href="index.php"><img src="images/spacer.gif" height="34" width="91"></a></div>
+<div class="buttons newsbtn"><a href="news.php"><img src="images/spacer.gif" height="34" width="165"></a></div>
+<div class="buttons where"><a href="wheretowatch.php"><img src="images/spacer.gif" height="34" width="234"></a></div>
+<div class="buttons meet"><a href="meetthehosts.php"><img src="images/spacer.gif" height="34" width="212"></a></div>
+<div class="buttons videos"><a href="videos.php"><img src="images/spacer.gif" height="34" width="120"></a></div>
+<div class="share">
+	<div style="float: left;">
+		<script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+		<a href="https://twitter.com/intent/tweet?related=dishnation&amp;url=http://www.dishnation.com&amp;text=Breaking Entertainment News And All The Rules!"><img src="images/twitter_btn.png" height="25" width="25"></a>
+	</div>
+	<div style="float: left; margin-left:5px;">
+		<a rel="nofollow" href="https://www.facebook.com/DishNation" target="_blank"><img src="images/facebook_btn.png" height="25" width="25"></a>
+	</div>
+</div>
+		</div>
+
+		<div id="features"><div class="item"><a href="https://www.facebook.com/DishNation/app_449229671818195" target="_blank"><div class="feat_hover"></div></a><a href="https://www.facebook.com/DishNation/app_449229671818195" target="_blank"><div class="feat_img"><img src="assets/dish-nation-200x150.jpg"></div></a><a href="https://www.facebook.com/DishNation/app_449229671818195" target="_blank"><div class="feat_desc">Enter to Win 'Dish Nation's' CO-Host for a Day Contest!</div></a>
+</div><div class="item"><a href="http://www.dishnation.com/videos.php#1290" target="_self" onclick="setTimeout('location.reload()', 1000);"><div class="feat_hover"></div></a><a href="http://www.dishnation.com/videos.php#1290" target="_self" onclick="setTimeout('location.reload()', 1000);"><div class="feat_img"><img src="assets/JaRule.jpg"></div></a><a href="http://www.dishnation.com/videos.php#1290" target="_self" onclick="setTimeout('location.reload()', 1000);"><div class="feat_desc">Ja Rule Gets Buff in Jail!</div></a>
+</div><div class="item"><a href="http://www.dishnation.com/videos.php#1285" target="_self" onclick="setTimeout('location.reload()', 1000);"><div class="feat_hover"></div></a><a href="http://www.dishnation.com/videos.php#1285" target="_self" onclick="setTimeout('location.reload()', 1000);"><div class="feat_img"><img src="assets/ACSlater.jpg"></div></a><a href="http://www.dishnation.com/videos.php#1285" target="_self" onclick="setTimeout('location.reload()', 1000);"><div class="feat_desc">Teen Heartthrobs -- Hotter Then or Now?</div></a>
+</div><div class="item"><a href="http://www.dishnation.com/videos.php#1289" target="_self" onclick="setTimeout('location.reload()', 1000);"><div class="feat_hover"></div></a><a href="http://www.dishnation.com/videos.php#1289" target="_self" onclick="setTimeout('location.reload()', 1000);"><div class="feat_img"><img src="assets/BeyonceMaybe.jpg"></div></a><a href="http://www.dishnation.com/videos.php#1289" target="_self" onclick="setTimeout('location.reload()', 1000);"><div class="feat_desc">Beyonce Pregnancy Rumors -- Is She or Isn't She?</div></a>
+</div></div>
+		<div id="totd">
+			<div id="callout">
+				<a href="tweetoftheday.php"><img src="images/totd_callout.png" alt="TWEET OF THE DAY - SEE MORE TWEETS" border="0"></a>
+			</div>
+			<div id="tweetoftheday">
+				<div id="thetweet">Bieber is reportedly shopping for a engagement ring for Selena Gomez! #DishNation, if they walk down the aisle, how long do you give 'em?</div>
+			</div>
+		</div>
+		<div id="content">
+			<div id="main_content">
+				<div id="youtube_player">
+					<iframe style="display: inline;" id="thevideo" src="http://www.youtube.com/embed/9VKVJBmxbHU" allowfullscreen="" frameborder="0" height="353" width="561"></iframe>
+				</div>
+				<div id="youtube_description">
+					<div style="display: block;" id="video_title"><h3>Robert Pattinson and Kristen Stewart are Done Again!</h3></div>
+	                <div id="video_length">
+	                	<!--<div id="durationscript"></div>-->
+					<div id="video_twitter" style="float: left; display: block;"><a href="https://twitter.com/intent/tweet?related=dishnation&amp;text=Dish%20Nation%20%7C%20Robert%20Pattinson%20and%20Kristen%20Stewart%20are%20Done%20Again&amp;url=http://www.dishnation.com/"><img src="images/twitter_btn_sml.png" height="21" width="21"></a></div>
+					<div id="video_facebook" style="float: left; display: block;"><a onclick="window.open('http://www.facebook.com/sharer.php?s=100&amp;p[title]=Dish Nation Airing Weekdays&amp;p[summary]=Robert%20Pattinson%20and%20Kristen%20Stewart%20are%20Done%20Again&amp;p[url]=http%3A%2F%2Fwww.dishnation.com%2F&amp;&amp;p[images][0]=http://i4.ytimg.com/vi/9VKVJBmxbHU/0.jpg','sharer','toolbar=0,status=0,width=548,height=325');" href="javascript: void(0)"><img src="images/facebook_btn_sml.png" height="21" width="21"></a></div>
+	                </div><!-- EOD video_length -->
+	                <!--<div id="video_views"></div> EOD video_views -->
+	                <div style="display: block;" id="video_description">"The Twilight Saga" co-stars have reportedly broken up again, and Demi Moore is moving on to a new beau too!</div><!-- EOD video_description -->
+				</div><!-- EOD youtube_description -->
+			</div><!-- EOD main_content -->
+			<div id="video_list" class="unselectable" unselectable="on">
+				<div style="position: relative; display: block;" class="jcarousel-container jcarousel-container-vertical" id="video_scroll">
+					<div style="position: relative;" class="jcarousel-clip jcarousel-clip-vertical"><ul style="overflow: hidden; position: relative; top: 0px; margin: 0px; padding: 0px; left: 0px; height: 1673px;" class="jcarousel-list jcarousel-list-vertical" id="scroll_this"><li jcarouselindex="1" style="float: left; list-style: none outside none;" class="active jcarousel-item jcarousel-item-vertical jcarousel-item-1 jcarousel-item-1-vertical" id="vid-1291"><a href="javascript:youtubeFetchData( '9VKVJBmxbHU', '0', '1291', 'Robert%2520Pattinson%2520and%2520Kristen%2520Stewart%2520are%2520Done%2520Again%2521')"><div class="video_thumb"><div class="contain"><div class="thumber"><div class="video_hover"><img src="images/spacer.gif" height="56" width="103"></div><div class="video_img"><img src="http://i4.ytimg.com/vi/9VKVJBmxbHU/default.jpg" height="64" width="110"></div></div><div id="short"><h3 id="short_title-0">Robert Pattinson and Kristen Stewart are Done Again!</h3></div><div id="title-0" class="longdescriptions"><h3>Robert Pattinson and Kristen Stewart are Done Again!</h3></div><div id="vid-0" class="longdescriptions">"The Twilight Saga" co-stars have reportedly broken up again, and Demi Moore is moving on to a new beau too!</div></div></div></a></li><li jcarouselindex="2" style="float: left; list-style: none outside none;" class="jcarousel-item jcarousel-item-vertical jcarousel-item-2 jcarousel-item-2-vertical" id="vid-1290"><a href="javascript:youtubeFetchData( 'VEwtJGN0cVM', '1', '1290', 'Ja%2520Rule%2520Gets%2520Buff%2520in%2520Jail%2521')"><div class="video_thumb"><div class="contain"><div class="thumber"><div class="video_hover"><img src="images/spacer.gif" height="56" width="103"></div><div class="video_img"><img src="http://i4.ytimg.com/vi/VEwtJGN0cVM/default.jpg" height="64" width="110"></div></div><div id="short"><h3 id="short_title-1">Ja Rule Gets Buff in Jail!</h3></div><div id="title-1" class="longdescriptions"><h3>Ja Rule Gets Buff in Jail!</h3></div><div id="vid-1" class="longdescriptions">The rapper spent two years behind bars and now he looks like an action figure!</div></div></div></a></li><li jcarouselindex="3" style="float: left; list-style: none outside none;" class="jcarousel-item jcarousel-item-vertical jcarousel-item-3 jcarousel-item-3-vertical" id="vid-1289"><a href="javascript:youtubeFetchData( 'qqGt--afZbk', '2', '1289', 'Beyonce%2520Pregnancy%2520Rumors%2520--%2520Is%2520She%2520or%2520Isn%2527t%2520She%253F')"><div class="video_thumb"><div class="contain"><div class="thumber"><div class="video_hover"><img src="images/spacer.gif" height="56" width="103"></div><div class="video_img"><img src="http://i4.ytimg.com/vi/qqGt--afZbk/default.jpg" height="64" width="110"></div></div><div id="short"><h3 id="short_title-2">Beyonce Pregnancy Rumors -- Is She or Isn't She?</h3></div><div id="title-2" class="longdescriptions"><h3>Beyonce Pregnancy Rumors -- Is She or Isn't She?</h3></div><div id="vid-2" class="longdescriptions">Is Beyonce carrying baby number 2 or not? We don't think so!</div></div></div></a></li><li jcarouselindex="4" style="float: left; list-style: none outside none;" class="jcarousel-item jcarousel-item-vertical jcarousel-item-4 jcarousel-item-4-vertical" id="vid-1288"><a href="javascript:youtubeFetchData( 'jEvmlaZh15s', '3', '1288', '%2527Dish%2520Nation%2527%2520Episode%2520180')"><div class="video_thumb"><div class="contain"><div class="thumber"><div class="video_hover"><img src="images/spacer.gif" height="56" width="103"></div><div class="video_img"><img src="http://i4.ytimg.com/vi/jEvmlaZh15s/default.jpg" height="64" width="110"></div></div><div id="short"><h3 id="short_title-3">'Dish Nation' Episode 180</h3></div><div id="title-3" class="longdescriptions"><h3>'Dish Nation' Episode 180</h3></div><div id="vid-3" class="longdescriptions">Victoria's secret sexy list, a deer takes a bus ride and the celebs hit Cannes!</div></div></div></a></li><li jcarouselindex="5" style="float: left; list-style: none outside none;" class="jcarousel-item jcarousel-item-vertical jcarousel-item-5 jcarousel-item-5-vertical" id="vid-1287"><a href="javascript:youtubeFetchData( 'VZ-tgvEBbMM', '4', '1287', 'The%2520Stars%2520Shine%2520at%2520the%2520Cannes%2520Film%2520Festival%2521')"><div class="video_thumb"><div class="contain"><div class="thumber"><div class="video_hover"><img src="images/spacer.gif" height="56" width="103"></div><div class="video_img"><img src="http://i4.ytimg.com/vi/VZ-tgvEBbMM/default.jpg" height="64" width="110"></div></div><div id="short"><h3 id="short_title-4">The Stars Shine at the Cannes Film Festival!</h3></div><div id="title-4" class="longdescriptions"><h3>The Stars Shine at the Cannes Film Festival!</h3></div><div id="vid-4" class="longdescriptions">The cast of "The Great Gatsby," Justin Timberlake, Cindy Crawford and more hit the red carpet at the Cannes Film Festival! Who was hot, and who was not?</div></div></div></a></li><li jcarouselindex="6" style="float: left; list-style: none outside none;" class="jcarousel-item jcarousel-item-vertical jcarousel-item-6 jcarousel-item-6-vertical" id="vid-1286"><a href="javascript:youtubeFetchData( 'JMjzGnhXYVA', '5', '1286', 'Man%2520Goes%2520Missing%2520During%2520Honeymoon%2521')"><div class="video_thumb"><div class="contain"><div class="thumber"><div class="video_hover"><img src="images/spacer.gif" height="56" width="103"></div><div class="video_img"><img src="http://i4.ytimg.com/vi/JMjzGnhXYVA/default.jpg" height="64" width="110"></div></div><div id="short"><h3 id="short_title-5">Man Goes Missing During Honeymoon!</h3></div><div id="title-5" class="longdescriptions"><h3>Man Goes Missing During Honeymoon!</h3></div><div id="vid-5" class="longdescriptions">A bride reported her groom missing while on their honeymoon. He ended up in jail after attempting to meet a hooker!</div></div></div></a></li><li jcarouselindex="7" style="float: left; list-style: none outside none;" class="jcarousel-item jcarousel-item-vertical jcarousel-item-7 jcarousel-item-7-vertical" id="vid-1285"><a href="javascript:youtubeFetchData( 'kJ6-K5lzePs', '6', '1285', 'Teen%2520Heartthrobs%2520--%2520Hotter%2520Then%2520or%2520Now%253F')"><div class="video_thumb"><div class="contain"><div class="thumber"><div class="video_hover"><img src="images/spacer.gif" height="56" width="103"></div><div class="video_img"><img src="http://i4.ytimg.com/vi/kJ6-K5lzePs/default.jpg" height="64" width="110"></div></div><div id="short"><h3 id="short_title-6">Teen Heartthrobs -- Hotter Then or Now?</h3></div><div id="title-6" class="longdescriptions"><h3>Teen Heartthrobs -- Hotter Then or Now?</h3></div><div id="vid-6" class="longdescriptions">We do a "Then &amp; Now" comparison for some former teenage heartthrobs!</div></div></div></a></li><li jcarouselindex="8" style="float: left; list-style: none outside none;" class="jcarousel-item jcarousel-item-vertical jcarousel-item-8 jcarousel-item-8-vertical" id="vid-1284"><a href="javascript:youtubeFetchData( 'cQPujJtvCEY', '7', '1284', 'Deer%2520Goes%2520for%2520a%2520Bus%2520Ride%2521')"><div class="video_thumb"><div class="contain"><div class="thumber"><div class="video_hover"><img src="images/spacer.gif" height="56" width="103"></div><div class="video_img"><img src="http://i4.ytimg.com/vi/cQPujJtvCEY/default.jpg" height="64" width="110"></div></div><div id="short"><h3 id="short_title-7">Deer Goes for a Bus Ride!</h3></div><div id="title-7" class="longdescriptions"><h3>Deer Goes for a Bus Ride!</h3></div><div id="vid-7" class="longdescriptions">A deer accidentally hitched a ride on a public bus and had a little bit of difficulty getting off!<br><br>Click here to watch the full video: http://www.youtube.com/watch?v=FxHEwr-yXDs</div></div></div></a></li><li jcarouselindex="9" style="float: left; list-style: none outside none;" class="jcarousel-item jcarousel-item-vertical jcarousel-item-9 jcarousel-item-9-vertical" id="vid-1283"><a href="javascript:youtubeFetchData( 'DrLs2hU3_fQ', '8', '1283', 'HeadKrack%2527s%2520Rap%2520of%2520the%2520Week%2520--%25205/17/13')"><div class="video_thumb"><div class="contain"><div class="thumber"><div class="video_hover"><img src="images/spacer.gif" height="56" width="103"></div><div class="video_img"><img src="http://i4.ytimg.com/vi/DrLs2hU3_fQ/default.jpg" height="64" width="110"></div></div><div id="short"><h3 id="short_title-8">HeadKrack's Rap of the Week -- 5/17/13</h3></div><div id="title-8" class="longdescriptions"><h3>HeadKrack's Rap of the Week -- 5/17/13</h3></div><div id="vid-8" class="longdescriptions">HeadKrack is on the mic rapping about Kanye West, Beyonce's rumored baby, Chris Brown and more!</div></div></div></a></li><li jcarouselindex="10" style="float: left; list-style: none outside none;" class="jcarousel-item jcarousel-item-vertical jcarousel-item-10 jcarousel-item-10-vertical" id="vid-1282"><a href="javascript:youtubeFetchData( 'qgD72czzzCY', '9', '1282', '%2527Dish%2520Nation%2527%2520Episode%2520179')"><div class="video_thumb"><div class="contain"><div class="thumber"><div class="video_hover"><img src="images/spacer.gif" height="56" width="103"></div><div class="video_img"><img src="http://i4.ytimg.com/vi/qgD72czzzCY/default.jpg" height="64" width="110"></div></div><div id="short"><h3 id="short_title-9">'Dish Nation' Episode 179</h3></div><div id="title-9" class="longdescriptions"><h3>'Dish Nation' Episode 179</h3></div><div id="vid-9" class="longdescriptions">Stalker swims 2 miles to Taylor Swifts home, Beckham is retiring and Star Trek Ticket or Skip it!</div></div></div></a></li><li jcarouselindex="11" style="float: left; list-style: none outside none;" class="jcarousel-item jcarousel-item-vertical jcarousel-item-11 jcarousel-item-11-vertical"><a href="videos.php"><div class="thumb_link"><img src="images/btn_seeallvideos.jpg" height="118" width="182"></div></a></li></ul></div>
+				<div disabled="disabled" style="display: block;" class="jcarousel-prev jcarousel-prev-vertical jcarousel-prev-disabled jcarousel-prev-disabled-vertical"></div><div style="display: block;" class="jcarousel-next jcarousel-next-vertical"></div></div><!-- EOD video_scroll -->
+			</div><!-- EOD video_list -->
+		</div><!-- EOD content -->
+		<div id="secondary_content">
+
+      <!-- Begin MailChimp Signup Form -->
+      <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+      <style type="text/css">
+        #mc_embed_signup{clear:left; font:14px Helvetica,Arial,sans-serif; }
+        #mc_embed_signup input { float:left; padding-right:20px; }
+        #mc_embed_signup input.button { clear:none; float:left !important; }
+        #mc_embed_signup form { margin-top: -30px; padding-bottom: 10px; }
+        #mc_embed_signup { padding-bottom: 20px; }
+        /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+           We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+      </style>
+      <div id="mc_embed_signup">
+      <form action="http://dishnation.us4.list-manage.com/subscribe/post?u=46b8dcf2a810dce9968bc8c0f&amp;id=416f02c2db" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+      	<label for="mce-EMAIL">Subscribe to our mailing list for an extra dose of Dish!</label>
+      	<input value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required="" type="email">
+      	<input value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" type="submit">
+      </form>
+      </div>
+      <!--End mc_embed_signup-->
+
+			<div id="hosts">
+				<div id="show_scroll" class="unselectable" unselectable="on">
+					<div style="position: relative; display: block;" class="jcarousel-container jcarousel-container-horizontal"><div style="position: relative;" class="jcarousel-clip jcarousel-clip-horizontal"><ul style="overflow: hidden; position: relative; top: 0px; margin: 0px; padding: 0px; left: 0px; width: 448px;" class="jcarousel-list jcarousel-list-horizontal" id="scroll_shows">
+				          					<li jcarouselindex="1" style="float: left; list-style: none outside none;" class="jcarousel-item jcarousel-item-horizontal jcarousel-item-1 jcarousel-item-1-horizontal" unselectable="on"><a href="showhosts.php?showid=6">
+						<div class="show">
+							<div class="show-hover"></div>
+							<div class="show-img"><img src="images/shows/showThumb_Atlanta.png"></div>
+							<div class="show-name"><h3>Rickey Smiley Morning Show</h3></div>
+						</div>
+						</a>
+					</li>
+  								          					<li jcarouselindex="2" style="float: left; list-style: none outside none;" class="jcarousel-item jcarousel-item-horizontal jcarousel-item-2 jcarousel-item-2-horizontal" unselectable="on"><a href="showhosts.php?showid=7">
+						<div class="show">
+							<div class="show-hover"></div>
+							<div class="show-img"><img src="images/shows/showThumb_Texas.png"></div>
+							<div class="show-name"><h3>Kidd Kraddick in the Morning</h3></div>
+						</div>
+						</a>
+					</li>
+  								          				          				
+											</ul></div><div disabled="disabled" style="display: block;" class="jcarousel-prev jcarousel-prev-horizontal jcarousel-prev-disabled jcarousel-prev-disabled-horizontal"></div><div disabled="disabled" style="display: block;" class="jcarousel-next jcarousel-next-horizontal jcarousel-next-disabled jcarousel-next-disabled-horizontal"></div></div>
+				</div>
+				<div class="caption">
+					<a href="meetthehosts.php">learn more about your hosts</a>
+				</div>
+			</div>
+			<div id="wheretowatch">
+			<a href="wheretowatch.php">
+				<img src="images/us_map.png">
+				<div class="caption">
+					check for local listing
+				</div>
+			</a>
+			</div>
+		</div>
+		<div id="submitTipsHere">
+			<a href="submit-tip.php"><img src="images/submitTips_homepage.png" alt="Got breaking news? submit a tip to dish nation!" border="0"></a>
+		</div>
+		<div id="news">
+			<div style="position: relative; display: block;" id="main_content_news" class="unselectable jcarousel-container jcarousel-container-horizontal"><div style="position: relative;" class="jcarousel-clip jcarousel-clip-horizontal"><ul style="overflow: hidden; position: relative; top: 0px; margin: 0px; padding: 0px; left: 0px; width: 2980px;" class="jcarousel-list jcarousel-list-horizontal" id="stories"><li jcarouselindex="1" style="float: left; list-style: none outside none;" id="story-322" class="story jcarousel-item jcarousel-item-horizontal jcarousel-item-1 jcarousel-item-1-horizontal"><div class="story-info"><h3><a href="http://www.huffingtonpost.com/2013/05/19/tan-mom-music-video_n_3303126.html?utm_hp_ref=entertainment&amp;ir=Entertainment" target="_blank">Tan Mom Releases Music Video</a></h3><div class="newsImg"><a href="http://www.huffingtonpost.com/2013/05/19/tan-mom-music-video_n_3303126.html?utm_hp_ref=entertainment&amp;ir=Entertainment" target="_blank"><img class="main" src="assets/Krentcil.jpg"></a></div><div class="excerpt">Not to be outdone by Octomom, "Tan Mom" Patricia Krentcil has launched her own music career, releasing her first single earlier...</div><h3 class="links"><a href="http://www.huffingtonpost.com/2013/05/19/tan-mom-music-video_n_3303126.html?utm_hp_ref=entertainment&amp;ir=Entertainment" target="_blank">READ MORE</a></h3></div></li><li jcarouselindex="2" style="float: left; list-style: none outside none;" id="story-321" class="story jcarousel-item jcarousel-item-horizontal jcarousel-item-2 jcarousel-item-2-horizontal"><div class="story-info"><h3><a href="http://www.celebuzz.com/2013-05-20/justin-bieber-and-selena-gomez-kiss-backstage-at-the-2013-billboard-awards/" target="_blank">Selena Gomez and Justin Bieber's Awkward Billboard...</a></h3><div class="newsImg"><a href="http://www.celebuzz.com/2013-05-20/justin-bieber-and-selena-gomez-kiss-backstage-at-the-2013-billboard-awards/" target="_blank"><img class="main" src="assets/Bieber.jpg"></a></div><div class="excerpt">Just a week after Selena Gomez confirmed she's single, the "Come &amp; Get It" singer shared a kiss with on-and-off beau Justin...</div><h3 class="links"><a href="http://www.celebuzz.com/2013-05-20/justin-bieber-and-selena-gomez-kiss-backstage-at-the-2013-billboard-awards/" target="_blank">READ MORE</a></h3></div></li><li jcarouselindex="3" style="float: left; list-style: none outside none;" id="story-320" class="story jcarousel-item jcarousel-item-horizontal jcarousel-item-3 jcarousel-item-3-horizontal"><div class="story-info"><h3><a href="http://globalgrind.com/style/kim-kardashian-swollen-feet-pregnant-givenchy-clear-shoes-white-dress-photos" target="_blank">Kim Kardashian Needs to Wear More Sensible Shoes Going...</a></h3><div class="newsImg"><a href="http://globalgrind.com/style/kim-kardashian-swollen-feet-pregnant-givenchy-clear-shoes-white-dress-photos" target="_blank"><img class="main" src="assets/KimFeet.jpg"></a></div><div class="excerpt">This little piggy went to the market...and Kim Kardashian's little piggy got to cry “wee wee wee let me out” all the way home, as...</div><h3 class="links"><a href="http://globalgrind.com/style/kim-kardashian-swollen-feet-pregnant-givenchy-clear-shoes-white-dress-photos" target="_blank">READ MORE</a></h3></div></li><li jcarouselindex="4" style="float: left; list-style: none outside none;" id="story-319" class="story jcarousel-item jcarousel-item-horizontal jcarousel-item-4 jcarousel-item-4-horizontal"><div class="story-info"><h3><a href="http://www.celebuzz.com/2013-05-17/ooh-la-la-britney-spears-drops-new-song/" target="_blank">Britney Spears' New Song for 'Smurfs 2' Leaked</a></h3><div class="newsImg"><a href="http://www.celebuzz.com/2013-05-17/ooh-la-la-britney-spears-drops-new-song/" target="_blank"><img class="main" src="assets/Britney.jpg"></a></div><div class="excerpt">It's Britney, b*tch! The singer is back at it with brand new...</div><h3 class="links"><a href="http://www.celebuzz.com/2013-05-17/ooh-la-la-britney-spears-drops-new-song/" target="_blank">READ MORE</a></h3></div></li><li jcarouselindex="5" style="float: left; list-style: none outside none;" id="story-318" class="story jcarousel-item jcarousel-item-horizontal jcarousel-item-5 jcarousel-item-5-horizontal"><div class="story-info"><h3><a href="http://www.thesuperficial.com/courtney-stodden-sex-tape-05-2013" target="_blank">Teen Bride Courtney Stodden Says She Has A Sex Tape</a></h3><div class="newsImg"><a href="http://www.thesuperficial.com/courtney-stodden-sex-tape-05-2013" target="_blank"><img class="main" src="assets/Stodden.jpg"></a></div><div class="excerpt">For reasons that I’m sure have nothing to do with a former Teen Mom star squirting all over James Deen being a popular topic for...</div><h3 class="links"><a href="http://www.thesuperficial.com/courtney-stodden-sex-tape-05-2013" target="_blank">READ MORE</a></h3></div></li><li jcarouselindex="6" style="float: left; list-style: none outside none;" id="story-317" class="story jcarousel-item jcarousel-item-horizontal jcarousel-item-6 jcarousel-item-6-horizontal"><div class="story-info"><h3><a href="http://www.celebdirtylaundry.com/2013/kate-middleton-due-date-leaked-july-13-prince-william-0512/" target="_blank">Kate Middleton's Alleged Due Date Revealed</a></h3><div class="newsImg"><a href="http://www.celebdirtylaundry.com/2013/kate-middleton-due-date-leaked-july-13-prince-william-0512/" target="_blank"><img class="main" src="assets/KateMiddleton.jpg"></a></div><div class="excerpt">As usual with the Duke and Duchess of Cambridge, private news doesn’t tend to stay private very...</div><h3 class="links"><a href="http://www.celebdirtylaundry.com/2013/kate-middleton-due-date-leaked-july-13-prince-william-0512/" target="_blank">READ MORE</a></h3></div></li><li jcarouselindex="7" style="float: left; list-style: none outside none;" id="story-316" class="story jcarousel-item jcarousel-item-horizontal jcarousel-item-7 jcarousel-item-7-horizontal"><div class="story-info"><h3><a href="http://www.huffingtonpost.com/2013/05/13/chris-brown-art-frightening-goblin-paintings-irk-los-angeles-neighbors_n_3265262.html?utm_hp_ref=entertainment&amp;ir=Entertainment" target="_blank">Chris Brown's Street Art Not Welcomed By Neighbors</a></h3><div class="newsImg"><a href="http://www.huffingtonpost.com/2013/05/13/chris-brown-art-frightening-goblin-paintings-irk-los-angeles-neighbors_n_3265262.html?utm_hp_ref=entertainment&amp;ir=Entertainment" target="_blank"><img class="main" src="assets/ChrisBrownGraf.jpg"></a></div><div class="excerpt">Grammy-winning musician Chris Brown's neighbors are unhappy with what some are calling frightening art he's chosen to have...</div><h3 class="links"><a href="http://www.huffingtonpost.com/2013/05/13/chris-brown-art-frightening-goblin-paintings-irk-los-angeles-neighbors_n_3265262.html?utm_hp_ref=entertainment&amp;ir=Entertainment" target="_blank">READ MORE</a></h3></div></li><li jcarouselindex="8" style="float: left; list-style: none outside none;" id="story-315" class="story jcarousel-item jcarousel-item-horizontal jcarousel-item-8 jcarousel-item-8-horizontal"><div class="story-info"><h3><a href="http://www.celebuzz.com/2013-05-12/miley-cyrus-has-a-message-for-her-haters/" target="_blank">Miley Cyrus Tweets Message to Haters</a></h3><div class="newsImg"><a href="http://www.celebuzz.com/2013-05-12/miley-cyrus-has-a-message-for-her-haters/" target="_blank"><img class="main" src="assets/MileyHaters.jpg"></a></div><div class="excerpt">Miley Cyrus has taken to her Twitter to address some of her haters out there -- in particular, haters who are also Taylor Swift...</div><h3 class="links"><a href="http://www.celebuzz.com/2013-05-12/miley-cyrus-has-a-message-for-her-haters/" target="_blank">READ MORE</a></h3></div></li><li jcarouselindex="9" style="float: left; list-style: none outside none;" id="story-314" class="story jcarousel-item jcarousel-item-horizontal jcarousel-item-9 jcarousel-item-9-horizontal"><div class="story-info"><h3><a href="http://www.huffingtonpost.com/2013/05/08/britney-spears-bikini_n_3236494.html?utm_hp_ref=entertainment&amp;ir=Entertainment" target="_blank">Britney Spears Bikini Body -- Hard Work or Photoshop?</a></h3><div class="newsImg"><a href="http://www.huffingtonpost.com/2013/05/08/britney-spears-bikini_n_3236494.html?utm_hp_ref=entertainment&amp;ir=Entertainment" target="_blank"><img class="main" src="assets/BritMom.jpg"></a></div><div class="excerpt">Britney Spears is back in a bikini and on the cover of Shape magazine's June...</div><h3 class="links"><a href="http://www.huffingtonpost.com/2013/05/08/britney-spears-bikini_n_3236494.html?utm_hp_ref=entertainment&amp;ir=Entertainment" target="_blank">READ MORE</a></h3></div></li><li jcarouselindex="10" style="float: left; list-style: none outside none;" id="story-313" class="story jcarousel-item jcarousel-item-horizontal jcarousel-item-10 jcarousel-item-10-horizontal"><div class="story-info"><h3><a href="http://socialitelife.com/gwyneth-paltrow-launches-goop-app-disses-the-met-ball-by-saying-it-was-un-fun-05-2013" target="_blank">Gwyneth Paltrow Disses Met Gala</a></h3><div class="newsImg"><a href="http://socialitelife.com/gwyneth-paltrow-launches-goop-app-disses-the-met-ball-by-saying-it-was-un-fun-05-2013" target="_blank"><img class="main" src="assets/GwynethMet.jpg"></a></div><div class="excerpt">Gwyneth Paltrow launched her new app Tuesday called...</div><h3 class="links"><a href="http://socialitelife.com/gwyneth-paltrow-launches-goop-app-disses-the-met-ball-by-saying-it-was-un-fun-05-2013" target="_blank">READ MORE</a></h3></div></li></ul></div><a href="news.php"><div class="caption">click to view more news</div></a><div disabled="disabled" style="display: block;" class="jcarousel-prev jcarousel-prev-horizontal jcarousel-prev-disabled jcarousel-prev-disabled-horizontal"></div><div style="display: block;" class="jcarousel-next jcarousel-next-horizontal"></div></div><!-- EOD main_content -->
+		</div>
+	</div><!-- EOD container -->
+	<div id="footer">
+			<div id="footer_center">
+<div id="links">
+			<a href="about.php">ABOUT</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="terms-of-use.php">TERMS OF SERVICE</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="privacy-policy.php">PRIVACY POLICY</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="online-submission-release.php">ONLINE SUBMISSION RELEASE</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://www.tourgeorgiafilm.com/" target="_blank">TOUR GEORGIA FILM</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/cohost_contest_rules.php" target="_blank">Cohost Contest Rules</a><br>TM and ©2011-2012 Twentieth Century Fox Film Corporation. All Rights Reserved.
+</div>
+</div>	</div>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32627056-1']);
+  _gaq.push(['_setDomainName', 'dishnation.com']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script> 
+</div><!-- wrapper -->
+
+
+
+</body>

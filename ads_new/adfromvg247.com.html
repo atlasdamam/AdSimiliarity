@@ -1,0 +1,941 @@
+<head>
+	<title>Options Trading, Stock Trading &amp; Futures Trading at optionsXpress</title>
+	
+		<!-- start /static/inc/components/global_meta.inc -->
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+	<meta name="viewport" content="width=1024">
+	<meta name="apple-touch-fullscreen" content="YES">
+	<meta name="google-site-verification" content="VK-rDt7WghlrOD3PYxpuia_qzg3gygw7kino1JnvMt0">
+	<!-- end /static/inc/components/global_meta.inc -->
+	
+	<meta name="description" content="Trade stocks, options, futures and more in one optionsXpress account. Take advantage of free education, powerful tools and excellent service.">
+	<meta name="keywords" content="options, options trading, stock trading, futures trading, commodities trading, ETF trading, online trading, options strategies, best online broker, trading tools, trading strategies, trading ideas, practice trading, online trading help, streaming quotes, online broker, stock option investing, stock option trading, option trading strategies, advanced trading software, options trading system">
+
+		<!-- start /static/inc/components/global_js_head.inc -->
+	<script type="text/javascript" src="http://images.optionsxpress.com/inc/js/plugins/jquery.newest.min.js"></script>
+	<script type="text/javascript" src="http://images.optionsxpress.com/inc/js/plugins/modernizr-plr.js"></script>
+	<script type="text/javascript" src="http://images.optionsxpress.com/static/inc/js/application.js"></script>
+	
+	
+	<script type="text/javascript">
+		var firm = "OX";
+	</script>
+	 
+	<!-- end /static/inc/components/global_js_head.inc -->
+
+	<script type="text/javascript">
+		// Read a page's GET URL variables and return them as an associative array.
+		function getUrlVars()
+		{
+			 var vars = [], hash;
+			 var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+			 
+			 for ( var i = 0 ; i < hashes.length ; i++ )
+			 {
+				  hash = hashes[i].split('=');
+				  vars.push(hash[0]);
+				  vars[hash[0]] = hash[1];
+			 }
+			 
+			 return vars;
+			 
+		}
+
+		// Check for mobile and redirect
+		if (navigator.userAgent.match(/iPhone/i) ||
+            navigator.userAgent.match(/iPod/i)   ||
+           (navigator.userAgent.match(/Android/i) && navigator.userAgent.match(/mobile/i)) || 
+            navigator.userAgent.match(/BlackBerry/i) )
+		{
+			var goto = "nowhere";
+			var v = getUrlVars();
+			
+			// redirect to mobile splash page
+			if ( getCookie('mobileSplash') != 'bypass' && firm == "OX" )
+			{
+				goto = "/smallScreen/";
+			}
+			// check URL params to bypass redirect
+			else if ( typeof v['origin'] === "undefined" || (typeof v['origin'] !== "undefined" && v['origin'] != "oxmobile") )
+			{
+				goto = "https://m.optionsxpress.com/"; 
+			}
+			
+			if ( goto != "nowhere" )
+			{
+				window.location = goto;
+			}
+		} // end if mobile
+		
+		
+    
+	</script>
+	
+	<link rel="canonical" href="/">
+	<link rel="stylesheet" href="http://images.optionsxpress.com/inc/css/plr-common.css?d=130226" type="text/css" media="screen">
+	<link rel="stylesheet" href="http://images.optionsxpress.com/inc/css/homepage.css?d=130226" type="text/css" media="screen">
+
+</head>
+
+<body class="OX" id="homepage">
+	<div class="mboxDefault"></div>
+<script type="text/javascript">
+//	mboxCreate('ox_global');
+</script>
+
+    <input name="hidDisableSiteStats" id="hidDisableSiteStats" value="0" type="hidden">
+
+<ul class="hidden" id="jump-menu">
+	<li><a href="#content">Skip to content</a></li>
+	<li><a href="#main-navigation">Skip to navigation</a></li>
+	<li><a href="#site-search">Skip to search</a></li>
+</ul> <!-- /.hidden #jump-menu -->
+<header id="header" role="banner">
+	<div class="container">
+		<!-- BEGIN: LOGOS -->	
+				<h1 class="logo_ox hide-text"><a href="/" title="Return to optionsXpress homepage">optionsXpress » Stocks, Options &amp; Futures</a></h1>		
+		<!-- END: LOGOS -->	
+	<ul id="utility-navigation">
+		
+		<li class="phone-number"><a href="/about_us/contact_us.aspx" title="Contact us">(888) 280-8020<em></em></a></li>
+		<li class="live-help"><a href="http://server.iad.liveperson.net/hc/LPoptionsxpress/?cmd=file&amp;file=visitorWantsToChat&amp;site=LPoptionsxpress" rel="live_help" title="Live Chat with Customer Service">Live Chat<em></em></a></li>
+		<!-- BEGIN: AB PATHS TO LOG IN -->	
+				<li class="log-in"><a href="https://www.optionsxpress.com/login.asp" title="Log in to optionsXpress">Login <em></em></a></li>
+		<!-- END: AB PATHS TO LOG IN -->
+		<li class="search">
+			<form id="site-search" action="http://search.optionsxpress.com/search" method="get">
+				<fieldset>
+					<legend>Site Search</legend>
+					<input class="clear-field text" name="q" value="Enter search term" type="search">
+					<input class="submit" id="submit" value="Search" type="submit">
+						
+						<input name="site" value="ox_prelogin" type="hidden">
+						<input name="client" value="ox_prelogin" type="hidden">
+						<input name="proxystylesheet" value="ox_prelogin" type="hidden">
+					
+					<input name="output" value="xml_no_dtd" type="hidden">
+					<input name="proxyreload" value="1" type="hidden">
+				</fieldset>
+			</form>
+		</li>
+	</ul>
+	</div>
+	<nav id="global-nav">
+		<ul id="main-navigation" class="container">
+			<li id="why-ox"><a class="site-asset" href="/why_ox/" rel="TopNav_WhyOX_Top1">Why optionsXpress?</a></li>
+			<li id="products"><a class="site-asset" href="/our_products/options.aspx" rel="TopNav_Products_Top2">Investment Products</a></li>
+			<li id="free-education"><a class="site-asset" href="/free_education/education_center.aspx" rel="TopNav_FreeEducation_Top3">Free Education</a></li>
+			<li id="tools-research"><a class="site-asset" href="/tools_research/powerful_tools.aspx" rel="TopNav_ToolsResearch_Top4">Tools &amp; Research</a></li>
+		<!-- BEGIN: AB PATHS TO NEW ACCNT APP -->	
+					<li id="open-account"><a class="site-asset" href="https://www.optionsxpress.com/new_account.asp" rel="TopNav_OpenAccount_Top5">Open an Account</a></li>
+					<!---->
+					<!---->
+					
+		<!-- END: AB PATHS TO NEW ACCNT APP -->		
+		</ul>
+	</nav>
+</header> <!-- /#header -->
+	
+	<article id="main-article">
+		<div class="container">
+			<div class="masthead">
+				
+				<div class="carousel two-col-carousel">
+					<div class="carousel-display tile-1-active">
+						<ul class="carousel-tiles">
+							<li class="carousel-tile tile-1 trading-patterns-carousel">
+								<hgroup>
+									<h1>Save Time Researching! by Analyzing What <br>the Crowd is Trading</h1>
+									<h2>Get insights for Stocks, Options, Futures, ETFs and Index symbols</h2>
+								</hgroup>
+								<a href="/promos/trade_patterns.aspx" class="button cta-button" onclick="var s=s_gi('oxpressprodus' );s.tl(this,'o','hm_rotating_TradingPatterns');">Learn More about Trading Patterns</a>
+							</li>
+							<li class="carousel-tile tile-2 idea-hub-carousel">
+								<hgroup>
+									<h1>100+ Trading Ideas at Your Fingertips</h1>
+									<h2>Find Ideas for Big Movers, Earnings, Covered Calls and Spreads</h2>
+								</hgroup>
+								<a href="/promos/idea_hub.aspx" class="button cta-button" onclick="var s=s_gi('oxpressprodus' );s.tl(this,'o','hm_rotating_ideahub');">Explore Idea Hub™</a>
+							</li>
+							<li class="carousel-tile tile-3 walklimit-carousel">
+								<hgroup>
+									<h1>Between the <br><b class="letteringjs" title="Bid/Ask"><span class="char1">B</span><span class="char2">i</span><span class="char3">d</span><span class="char4">/</span><span class="char5">A</span><span class="char6">s</span><span class="char7">k</span></b> <br>Lies Walk Limit</h1>
+									<h2>Built to save time and improve execution</h2>
+								</hgroup>
+								<a href="/promos/walk_limit.aspx" class="button cta-button" onclick="var s=s_gi('oxpressprodus' );s.tl(this,'o','hm_rotating_walklimit');">Learn More About Walk Limit</a>
+							</li>
+							<!--<li class="carousel-tile tile-4 ira-carousel">
+								<hgroup>
+									<h1 class="letteringjs" title="Trade Income Strategies in Your IRA">Trade Income Strategies in Your IRA</h1>
+									<h2>More options in your retirement account</h2>
+								</hgroup>
+								<a href="/promos/ira.aspx" class="button cta-button" onClick="var s=s_gi('oxpressprodus' );s.tl(this,'o','hm_rotating_IRA');">Learn More</a>
+							</li>-->
+						</ul>
+					</div>
+					<ul class="carousel-next-prev">
+						<li class="prev"><a href="#" class="carousel-change" rel="tile-3">‹</a></li>
+						<li class="next"><a href="#" class="carousel-change" rel="tile-2">›</a></li>
+					</ul>
+					<ul class="carousel-nav">
+						<!--<li><a href="#" class="hide-text carousel-change change-tile-4" rel="tile-4">Tile 4</a></li>-->
+						<li><a href="#" class="hide-text carousel-change change-tile-3" rel="tile-3">Tile 3</a></li>
+						<li><a href="#" class="hide-text carousel-change change-tile-2" rel="tile-2">Tile 2</a></li>
+						<li><a href="#" class="hide-text carousel-change change-tile-1 active" rel="tile-1">Tile 1</a></li>
+					</ul>
+				</div>
+			
+				<script type="text/javascript">
+
+/*
+	Masked Input plugin for jQuery
+	Copyright (c) 2007-2011 Josh Bush (digitalbush.com)
+	Licensed under the MIT license (http://digitalbush.com/projects/masked-input-plugin/#license) 
+	Version: 1.3
+*/
+
+// addied user agent sniffer to replace obsolete jQuery .browser detect - nar
+(function(a){var msie=false;if(navigator.userAgent.match(/MSIE/i))msie=true;var b=(msie?"paste":"input")+".mask",c=window.orientation!=undefined;a.mask={definitions:{9:"[0-9]",a:"[A-Za-z]","*":"[A-Za-z0-9]"},dataName:"rawMaskFn"},a.fn.extend({caret:function(a,b){if(this.length!=0){if(typeof a=="number"){b=typeof b=="number"?b:a;return this.each(function(){if(this.setSelectionRange)this.setSelectionRange(a,b);else if(this.createTextRange){var c=this.createTextRange();c.collapse(!0),c.moveEnd("character",b),c.moveStart("character",a),c.select()}})}if(this[0].setSelectionRange)a=this[0].selectionStart,b=this[0].selectionEnd;else if(document.selection&&document.selection.createRange){var c=document.selection.createRange();a=0-c.duplicate().moveStart("character",-1e5),b=a+c.text.length}return{begin:a,end:b}}},unmask:function(){return this.trigger("unmask")},mask:function(d,e){if(!d&&this.length>0){var f=a(this[0]);return f.data(a.mask.dataName)()}e=a.extend({placeholder:"_",completed:null},e);var g=a.mask.definitions,h=[],i=d.length,j=null,k=d.length;a.each(d.split(""),function(a,b){b=="?"?(k--,i=a):g[b]?(h.push(new RegExp(g[b])),j==null&&(j=h.length-1)):h.push(null)});return this.trigger("unmask").each(function(){function v(a){var b=f.val(),c=-1;for(var d=0,g=0;d<k;d++)if(h[d]){l[d]=e.placeholder;while(g++<b.length){var m=b.charAt(g-1);if(h[d].test(m)){l[d]=m,c=d;break}}if(g>b.length)break}else l[d]==b.charAt(g)&&d!=i&&(g++,c=d);if(!a&&c+1<i)f.val(""),t(0,k);else if(a||c+1>=i)u(),a||f.val(f.val().substring(0,c+1));return i?d:j}function u(){return f.val(l.join("")).val()}function t(a,b){for(var c=a;c<b&&c<k;c++)h[c]&&(l[c]=e.placeholder)}function s(a){var b=a.which,c=f.caret();if(a.ctrlKey||a.altKey||a.metaKey||b<32)return!0;if(b){c.end-c.begin!=0&&(t(c.begin,c.end),p(c.begin,c.end-1));var d=n(c.begin-1);if(d<k){var g=String.fromCharCode(b);if(h[d].test(g)){q(d),l[d]=g,u();var i=n(d);f.caret(i),e.completed&&i>=k&&e.completed.call(f)}}return!1}}function r(a){var b=a.which;if(b==8||b==46||c&&b==127){var d=f.caret(),e=d.begin,g=d.end;g-e==0&&(e=b!=46?o(e):g=n(e-1),g=b==46?n(g):g),t(e,g),p(e,g-1);return!1}if(b==27){f.val(m),f.caret(0,v());return!1}}function q(a){for(var b=a,c=e.placeholder;b<k;b++)if(h[b]){var d=n(b),f=l[b];l[b]=c;if(d<k&&h[d].test(f))c=f;else break}}function p(a,b){if(!(a<0)){for(var c=a,d=n(b);c<k;c++)if(h[c]){if(d<k&&h[c].test(l[d]))l[c]=l[d],l[d]=e.placeholder;else break;d=n(d)}u(),f.caret(Math.max(j,a))}}function o(a){while(--a>=0&&!h[a]);return a}function n(a){while(++a<=k&&!h[a]);return a}var f=a(this),l=a.map(d.split(""),function(a,b){if(a!="?")return g[a]?e.placeholder:a}),m=f.val();f.data(a.mask.dataName,function(){return a.map(l,function(a,b){return h[b]&&a!=e.placeholder?a:null}).join("")}),f.attr("readonly")||f.one("unmask",function(){f.unbind(".mask").removeData(a.mask.dataName)}).bind("focus.mask",function(){m=f.val();var b=v();u();var c=function(){b==d.length?f.caret(0,b):f.caret(b)};(msie?c:function(){setTimeout(c,0)})()}).bind("blur.mask",function(){v(),f.val()!=m&&f.change()}).bind("keydown.mask",r).bind("keypress.mask",s).bind(b,function(){setTimeout(function(){f.caret(v(!0))},0)}),v()})}})})(jQuery)
+
+function SubmitLeadGenForm()
+{
+	var mktformdata = $('#mktForm_1043').serialize();
+	//console.log(mktformdata);
+	
+	// Check form
+	// name [\w'-]+
+	// phone /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/
+	// email /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/
+	
+	var $fn = $('#FirstName'),
+		fn  = $fn.val(),
+		$ln = $('#LastName'),
+		ln  = $ln.val(),
+		$ph = $('#DayPhone'),
+		ph  = $ph.val().replace(/\(/g, "").replace(/\)/g, "").replace(/-/g, "").replace(/ /g, ""),
+		$em = $('#Email'),
+		em  = $em.val(),
+		$ci = $('input[name="CustomerIndicator"]'),
+		ci  = $ci.val(),
+		$xp = $('#XpoundOpt-in'),
+		xp  = $xp.val(),
+		$ds = $('#RiskDisclosureStmtforFuturesandOptions'),
+		ds  = $ds.val(),
+		$sfForm = $('#sfForm_1043');
+	var $mainform = $('#mktForm_1043'),
+		dontSubmit = false;
+		
+	$ph.val(ph);
+	
+	//console.log('fn=' + fn + ';ln=' + ln + ';ph=' + ph + ';em=' + em + ';ci=' + ci + ';xp=' + xp + ';ds=' + ds);
+	
+	// Validate form
+	$('.form-error').hide();
+	
+	$('.text-input').each( function(i) {
+		if ( $(this).val() == "" || $(this).val() == "*First Name" || $(this).val() == "*Last Name" || $(this).val() == "*Phone" || $(this).val() == "*Email" )
+		{
+			$(this).parent('.lead-gen-field-container').find('.form-error').show();
+			$(this).focus( function(e) {
+				$(this).parent('.lead-gen-field-container').find('.form-error').hide();
+			});
+			
+			dontSubmit = true;
+		}
+		
+		if ( $(this).attr('id') == "Email" && $em.val().match(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/) == null )
+		{
+			$(this).parent('.lead-gen-field-container').find('.form-error').show();
+			$(this).focus( function(e) {
+				$(this).parent('.lead-gen-field-container').find('.form-error').hide();
+			});
+			
+			dontSubmit = true;
+		}
+	});
+
+	if (!$ci.is(':checked')) {
+		$ci.parent().siblings('.form-error').css('top', '17em').css('left', '1.5em').show();
+		$ci.click( function(e) {
+			$(this).parent().siblings('.form-error').hide();
+		});
+		
+		dontSubmit = true;
+	}
+	
+	/*
+	if ( fn == '' || fn == '*First Name' )
+	{
+		$fn.parent('.lead-gen-field-container').find('.form-error').show();
+		$fn.focus( function(e) {
+			
+		});
+	}
+	
+	if ( ln == '' || ln == '*Last Name' )
+	{
+		$ln.parent('.lead-gen-field-container').find('.form-error').show();
+	}
+	
+	if ( ph == '' || ph == '*Phone' )
+	{
+		$ph.parent('.lead-gen-field-container').find('.form-error').show();
+	}
+	
+	if ( em == '' || em == '*Email' )
+	{
+		$em.parent('.lead-gen-field-container').find('.form-error').show();
+	}*/
+	
+	// Get form data and package it up for Marketo and Salesforce
+	$sfForm.find('#first_name').val(fn);
+	$sfForm.find('#last_name').val(ln);
+	$sfForm.find('#email').val(em);
+	$sfForm.find('#phone').val(ph);
+	
+	var sfformdata = $sfForm.serialize();
+	//console.log(sfformdata);
+	
+	// Submit data
+	var mktUrl = $('#mktForm_1043').attr('action'),
+		sfUrl  = $('#sfForm_1043').attr('action');
+	//console.log(mktUrl);
+	//console.log(sfUrl);
+		
+	/*
+	$.ajax({
+		type: 'POST',
+		url: mktUrl,
+		data: mktformdata,
+		crossDomain: true,
+		success: function(r) {
+			$mainform.removeClass('focused').find('.disclaimer').fadeOut('fast');
+			console.log(r);
+		},
+		error: function(r) {
+			$mainform.removeClass('focused').find('.disclaimer').fadeOut('fast');
+			console.log('oops mkt');
+		}
+	});
+	
+	$.ajax({
+		type: 'POST',
+		url: sfUrl,
+		data: sfformdata,
+		crossDomain: true,
+		sucess: function(r) {
+			$mainform.removeClass('focused').find('.disclaimer').fadeOut('fast');
+			console.log(r);
+		},
+		error: function(r) {
+			$mainform.removeClass('focused').find('.disclaimer').fadeOut('fast');
+			console.log('oops sf');
+		}
+	});
+	*/
+	
+	if ( !dontSubmit ) {
+		$('#mktForm_1043').submit();
+	}
+}
+
+$(document).ready( function() {
+
+	var $root = $('html');
+	
+	$('#DayPhone').mask('(999) 999-9999');
+
+	$('#lead-gen-submit').click( function(e) {
+		e.preventDefault();
+		SubmitLeadGenForm();
+	});
+	
+	// Setup lead gen form expansion on focus
+	var $mainform = $('#mktForm_1043');
+	
+	$('html').click(function() {
+	 	$mainform.find('.disclaimer').fadeOut('fast');
+		$mainform.removeClass('focused');
+	 });
+	
+	 $mainform.click(function(e){
+		e.stopPropagation();
+		$mainform.find('.disclaimer').fadeIn('slow');
+		$mainform.addClass('focused');
+	 });
+	 
+	 $mainform.find('input').focus( function() {
+	 	$mainform.find('.disclaimer').fadeIn('slow');
+		$mainform.addClass('focused');
+	 });
+	
+	// insert form values for browsers that don't understand placeholder
+	if ( $root.hasClass('m-no-placeholder') )
+	{
+		var $labels = $('#mktForm_1043').find('label');
+		$labels.each( function(i) {
+			var l = $(this).html();
+			
+			switch(l) {
+				case "First Name":
+					$('#FirstName').attr('value', '*' + l).click( function() {
+						$(this).attr('value', '');
+					});
+					break;
+				
+				case "Last Name":
+					$('#LastName').attr('value', '*' + l).click( function() {
+						$(this).attr('value', '');
+					});
+					break;
+					
+				case "Phone":
+					$('#DayPhone').attr('value', '*' + l).click( function() {
+						$(this).attr('value', '');
+					});
+					break;
+					
+				case "Email":
+					$('#Email').attr('value', '*' + l).click( function() {
+						$(this).attr('value', '');
+					});
+					break;
+					
+				default:
+					break;
+			}
+		});
+	}  // end inserting form labels
+
+	if (getCookie('customer') == 'true') {
+		$('input[name="CustomerIndicator"]')[0].checked = true;
+	}
+
+});
+
+</script>
+
+<form class="lead-gen" id="mktForm_1043" name="mktForm_1043" method="post" enctype="application/x-www-form-urlencoded" action="http://marketing.optionsxpress.com/index.php/leadCapture/save">
+
+	<h2>Free Daily Options Market Commentary</h2>
+	<p>Get XPOUND, your free, twice-daily insight on what’s happening right now in the market.</p>
+	
+	<span class="lead-gen-field-container">
+		<label for="FirstName" class="display-none">First Name</label>
+		<input id="FirstName" name="FirstName" class="text-input" maxlength="255" autocorrect="off" placeholder="*First Name" required="" type="text">
+		<p class="form-error">This is a required field</p>
+	</span>
+	
+	<span class="lead-gen-field-container">
+		<label for="LastName" class="display-none">Last Name</label>
+		<input id="LastName" name="LastName" class="text-input" maxlength="255" autocorrect="off" placeholder="*Last Name" required="" type="text">
+		<p class="form-error">This is a required field</p>
+	</span>
+	
+	<span class="lead-gen-field-container">
+		<label for="DayPhone" class="display-none">Phone</label>
+		<input id="DayPhone" name="DayPhone" class="text-input" maxlength="255" placeholder="*Phone" required="" type="tel">
+		<p class="form-error">This is a required field</p>
+	</span>
+	
+	<span class="lead-gen-field-container">
+		<label for="Email" class="display-none">Email</label>
+		<input id="Email" name="Email" class="text-input" maxlength="255" autocapitalize="off" autocorrect="off" placeholder="*Email" required="" type="email">
+		<p class="form-error">This is a required field</p>
+	</span>
+	
+	<p>
+		*Are you a client?
+		<input name="CustomerIndicator" id="CustomerIndicatorYes" value="1" type="radio"><label for="CustomerIndicatorYes">&nbsp;Yes</label>
+		<input name="CustomerIndicator" id="CustomerIndicatorNo" value="0" type="radio"><label for="CustomerIndicatorNo">&nbsp;No</label>
+	</p>
+	<p class="form-error">This is a required field</p>
+	
+	<input id="XpoundOpt-in" name="XpoundOpt-in" value="1" type="hidden">
+	
+	<input class="display-none" name="RiskDisclosureStmtforFuturesandOptions" id="RiskDisclosureStmtforFuturesandOptions" value="1" checked="checked" type="checkbox">
+	
+	<!--<input type="submit" id="leadgensubmit" value="Sign Up">-->
+	<a href="#" class="button submit-button" id="lead-gen-submit">Sign Up</a>
+	
+	<p class="disclaimer">We respect your privacy. By submitting the information above, you consent to optionsXpress using the information you provide to communicate with you and to provide more information about our products and services.</p>
+	<p class="disclaimer"><a href="/security_risks/docs/privacy.aspx">Read more about online privacy at optionsXpress.</a></p>
+	
+	<input name="lpId" value="1530" type="hidden">
+	<input name="subId" value="77" type="hidden">
+	<input name="kw" value="" type="hidden">
+	<input name="cr" value="" type="hidden">
+	<input name="searchstr" value="" type="hidden">
+	<input name="lpurl" value="http://marketing.optionsxpress.com/XPOUNDHomepage.html?cr={creative}&amp;kw={keyword}" type="hidden">
+	<input name="formid" value="1043" type="hidden">
+	<input name="returnURL" value="http://marketing.optionsxpress.com/ThankYou.html" type="hidden">
+	<input name="retURL" value="http://marketing.optionsxpress.com/ThankYou.html" type="hidden">
+	<input name="returnLPId" value="1116" type="hidden">
+	<input name="_mkt_disp" value="return" type="hidden">
+	<input name="_mkt_trk" value="id:004-ZGY-012" type="hidden">
+
+</form>
+
+
+<script type="text/javascript">
+/* 
+<form id="sfForm_1043" name="sfForm_1043" class="lead-gen display-none" action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+
+	<!--  ----------------------------------------------------------------------  -->
+	<!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+	<!--  these lines if you wish to test in debug mode.                          -->
+	<!--  <input type="hidden" name="debug" value=1                               -->
+	<!--  <input type="hidden" name="debugEmail"                                  -->
+	<!--  value="fcadena@optionsxpress.com"                                       -->
+	<!--  ----------------------------------------------------------------------  -->
+	
+	<label for="first_name">First Name</label>
+	<input  id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br>
+	
+	<label for="last_name">Last Name</label>
+	<input id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>
+	
+	<label for="email">Email</label>
+	<input id="email" maxlength="80" name="email" size="20" type="text" /><br>
+	
+	<label for="phone">Phone</label><input  id="phone" maxlength="40" name="phone" size="20" type="text" /><br>
+	
+	Customer:<input  id="00N70000002zvG5" name="00N70000002zvG5" type="checkbox" value="1" /><br>
+	
+	<input type=hidden name="oid" value="00D70000000JUwV">
+	<input type=hidden name="retURL" value="http://">
+	<input type="hidden"  id="lead_source" name="lead_source" value="Lead Gen Program">
+	<input type="hidden" id="00N70000002zvGA" maxlength="50" name="00N70000002zvGA" size="20" type="text" value="name of Webinar"/>
+	<input type="hidden"  id="recordType" name="recordType" value="012700000005mSP">
+	<input type="hidden" id="zip" name="zip" value="" >
+	<input type="submit" name="submit">
+
+</form>
+*/
+</script>
+			</div>
+			
+			<ul class="marketing-boxes three">
+				<li class="marketing-box marketing-virtual-trade">
+					<h4>Practice Virtual Trading</h4>
+					<p>Trade Stocks, Options and Futures with $25,000 in a virtual trade account.</p>
+					<a href="/tools_research/virtual_trade.aspx" class="fancy-link" onclick="s_objectID='hm_promo_virtualtrade'">Start Virtual Trading</a>
+				</li>
+				<li class="marketing-box marketing-right-for-you">
+					<h4>Is optionsXpress right for you?</h4>
+					<p>Learn more about our Trading Tools, Education and Customer Service with an interactive tour.</p>
+					<a href="/check_us_out/right_for_you.aspx" class="fancy-link" onclick="s_objectID='hm_promo_rightforyou'">Get Started</a>
+				</li>
+				
+					<li class="marketing-box marketing-amazon">
+						<h4>Open an account<br>and get a $150<br>Amazon.com<br>Gift Card*</h4>
+						<a href="/promos/giftcard.aspx?cmpid=off_pre_giftcard" class="fancy-link positioned-link" onclick="s_objectID='hm_promo_amazon'">Learn More</a>
+						<p class="restrictions">* Restrictions apply. See details.</p>
+					</li>
+				
+			</ul>
+			
+			<section id="news-updates">
+				<h3>News &amp; Updates
+					<div class="underline"></div></h3>
+				<ul class="list-block">
+					
+					<li><a href="/promos/mini_options.aspx" class="fancy-link" onclick="s_objectID='hm_news_minioptions'">Mini Options - Smaller investments, more flexibility</a></li>
+					<li><a href="http://pressroom.aboutschwab.com/press-release/optionsxpress-news/optionsxpress-reduces-commissions-futures-products-and-introduces-s" class="fancy-link" target="_blank" onclick="s_objectID='hm_news_futurespricing'">New, Lower Pricing for Futures and Options on Futures</a></li>
+					<li><a href="/promos/idea_hub.aspx" class="fancy-link" onclick="s_objectID='hm_news_ideahub'">optionsXpress Releases IdeaHub™</a></li>
+					
+					<!--<li><a href="#" class="fancy-link">Schwab Integration Update</a></li>-->
+				</ul>
+				<div class="ticker-container">
+					<ul class="ticker">
+						<li class="djia">
+							<ul class="symbol-data">
+								<li class="symbol">DJIA</li>
+								<li class="price">15354.40</li>
+								<li class="change up">0.00&nbsp;(0.00%)</li>
+							</ul>
+						</li>
+						<li class="nasdaq">
+							<ul class="symbol-data">
+								<li class="symbol">NASDAQ</li>
+								<li class="price">3498.97</li>
+								<li class="change up">0.00&nbsp;(0.00%)</li>
+							</ul>
+						</li>
+						<li class="sp">
+							<ul class="symbol-data">
+								<li class="symbol">S&nbsp;&amp;&nbsp;P</li>
+								<li class="price">1666.17</li>
+								<li class="change up">15.70&nbsp;(0.93%)</li>
+							</ul>
+						</li>
+					</ul>
+					<small class="ticker-delayed">Quotes Delayed 15 Minutes</small>
+					<hr class="clear">
+				</div>
+			</section>
+			
+			<section id="upcoming-events">
+				<h3>Upcoming Events
+					<div class="underline"></div></h3>
+				<ul class="list-block extended">
+					<li class="edu-li webinar-li">
+						<a href="/free_education/webinars.aspx" onclick="s_objectID='hm_edu_webinars'">
+							<b class="faux-link fancy-link">Check out our upcoming webinars with industry specialists</b>
+							<strong>Join us for free options and futures webinars–live and on-demand</strong>
+						</a>
+					</li>
+					<li class="edu-li video-li">
+						<a href="/free_education/on_demand_videos.aspx" onclick="s_objectID='hm_edu_videos'">
+							<b class="faux-link fancy-link">Watch live demos in the Education Center video library</b>
+							<strong>Get access to platform demos, trading education and strategy videos</strong>
+						</a>
+					</li>
+					
+					<li class="edu-li workshop-li">
+						<a href="/free_education/ustream.aspx" onclick="s_objectID='hm_edu_workshops'">
+							<b class="faux-link fancy-link">Attend in-person workshops &amp; industry events</b>
+							<strong>Expand your trading knowledge and network with fellow traders</strong>
+						</a>
+					</li>
+					
+				</ul>
+			</section>
+			
+			<!--
+			<footer class="article-footer">
+				<ul>
+					<li>
+						<h5></h5>
+						<ul class="list-block simple">
+							<li></li>
+						</ul>
+					</li>
+				</ul>
+			</footer>
+			-->
+		</div>  <!-- /#container -->
+	</article>  <!-- /#main-article -->
+	
+	<hr class="clear">
+<input value="OX" id="_FirmName" type="hidden">
+<footer id="footer" role="contentinfo">
+<div class="sitemap">
+	<ul class="container">
+		<li class="sitemap-category">
+			<h5>About Us
+				<div class="underline"></div></h5>
+			<ul>
+				<li><a href="/corporate/about_us.aspx">optionsXpress, Inc.</a></li>
+				<li><a href="/about_us/pricing_commissions.aspx">Pricing &amp; Commissions</a></li>
+				<li><a href="/about_us/contact_us.aspx">Contact Us</a></li>
+				<li><a href="/about_us/faq.aspx">FAQ</a></li>
+			</ul>
+		</li>
+		<li class="sitemap-category">
+			<h5>Check Us Out
+				<div class="underline"></div></h5>
+			<ul>
+		<!-- BEGIN: AB PATHS TO NEW ACCNT APP -->	
+				<li><a href="https://www.optionsxpress.com/new_account.asp">Open an Account</a></li>
+		<!-- END: AB PATHS TO NEW ACCNT APP -->
+				<li><a href="/check_us_out/right_for_you.aspx">Is OX Right for You?</a></li>
+				<li><a href="/free_education/webinars.aspx">Live Events</a></li>
+				<li><a href="/check_us_out/site_map.aspx">Site Map</a></li>
+			</ul>
+		</li>
+		<li class="sitemap-category">
+			<h5>Products
+				<div class="underline"></div></h5>
+			<ul>
+				<li><a href="/our_products/options.aspx">Online Options Trading</a></li>
+				<li><a href="/our_products/futures.aspx">Online Futures Trading</a></li>
+				<li><a href="/our_products/stocks.aspx">Online Stock Trading</a></li>
+				<li><a href="/our_products/more_choices.aspx">More Product Choices</a></li>
+				<!-- OX and OXI Cash Sweep Link -->
+					<li><a href="/sweep/index.aspx">Cash Features</a></li>
+				<!-- OX and OXI Cash Sweep Link -->
+			</ul>
+		</li>
+		<li class="sitemap-category">
+			<h5>What We Offer
+				<div class="underline"></div></h5>
+			<ul>
+				<li><a href="/free_education/education_center.aspx">Free Investing Education</a></li>
+				<li><a href="/what_we_offer/free_account_transfers.aspx">Free Account Transfers</a></li>
+				<li><a href="/tools_research/virtual_trade.aspx">Free Virtual Trading</a></li>
+				<li><a href="/tools_research/powerful_tools.aspx">Free Powerful Tools</a></li>
+				<!-- OX and OXI Cash Sweep Link -->
+					<li><a href="/cash/index.aspx">Cash Products &amp; Rates</a></li>
+				<!-- OX and OXI Cash Sweep Link -->
+			</ul>
+		</li>
+		<li class="sitemap-category">
+			<h5>Security &amp; Risks
+				<div class="underline"></div></h5>
+			<ul>
+				<li><a href="/security_risks/security_center.aspx">Security Center</a></li>
+				<li><a href="/security_risks/risks_policies.aspx">Risks &amp; Policies</a></li>
+			<!-- Begin: HIDE FOR ALL INTERNATIONAL SITES -->	
+				<li><a href="/security_risks/financial_statement.aspx">Financial Statement</a></li>
+			<!--  End: HIDE FOR ALL INTERNATIONAL SITES -->
+				<li><a href="/security_risks/docs/privacy.aspx">Privacy Notice</a></li>
+			</ul>
+		</li>
+	</ul> <!-- /.container -->
+	<hr class="clear">
+</div> <!-- /.sitemap -->
+
+<div class="disclaimer-wrapper">
+	<p id="feedback-link" class="container">
+		Didn't find what you needed? 
+		<!-- BEGIN: AB PATHS TO CUSTOMER SERVICE -->
+		<a class="customer-service" href="https://www.optionsxpress.com/welcome.asp?PageID=customerservice&amp;src=plr" rel="customer_service">Let us know.</a>
+		<!-- END: AB PATHS TO CUSTOMER SERVICE -->
+	</p>
+	<p class="bpDisclaimer container" style="display:none;"><span>Brokerage Products: Not FDIC Insured · No Bank Guarantee · May Lose Value</span></p>
+	<div class="disclaimer container">
+		
+				<p>optionsXpress, Inc. makes no investment recommendations and does not provide financial, tax or legal advice. Content and tools are provided for educational and informational purposes only. Any stock, options, or futures symbols displayed are for illustrative purposes only and are not intended to portray a recommendation to buy or sell a particular security. Products and services intended for U.S. customers and may not be available or offered in other jurisdictions.</p><p>Online trading has inherent risk. System response and access times that may vary due to market conditions, system performance, volume and other factors. Options and futures involve risk and are not suitable for all investors. Please read <a target="_blank" href="http://www.optionsclearing.com/about/publications/character-risks.jsp">Characteristics and Risks of Standardized Options</a> and <a class="pdf" href="https://images.optionsxpress.com/static/pdf/risks_futures_options.pdf" target="_blank" title="Risk Disclosure Statement for Futures and Options">Risk Disclosure Statement for Futures and Options<em></em></a> on our website, prior to applying for an account, also available by calling 888.280.8020 or 312.629.5455. An investor should understand these and additional risks before trading.</p>
+				<p>Charles Schwab &amp; Co., Inc., optionsXpress, Inc., and Charles Schwab Bank are separate but affiliated companies and subsidiaries of The Charles Schwab Corporation. Brokerage products are offered by Charles Schwab &amp; Co., Inc. (Member <a href="http://www.sipc.org/" target="_blank">SIPC</a>) ("Schwab") and optionsXpress, Inc. (Member <a href="http://www.sipc.org/" target="_blank">SIPC</a>) ("optionsXpress"). Deposit and lending products and services are offered by Charles Schwab Bank, Member FDIC and an Equal Housing Lender ("Schwab Bank").</p>
+				<p>© 2013 optionsXpress, Inc. All rights reserved. Member <a target="_blank" href="http://www.finra.org/index.htm">FINRA</a>, <a target="_blank" href="http://www.sipc.org/">SIPC</a>, <a href="http://www.nyse.com/futuresoptions/nyseamex/1218155409117.html" target="_blank">AMEX</a>, <a href="http://www.nasdaqtrader.com/Micro.aspx?id=nasdaqoptions" target="_blank">NOM</a>, <a target="_blank" href="http://www.cboe.com/">CBOE</a>, <a target="_blank" href="http://www.iseoptions.com/">ISE</a>, <a target="_blank" href="http://www.arcaex.com">ArcaEX</a>, <a target="_blank" href="http://www.phlx.com/">PHLX</a> and <a target="_blank" href="http://www.nfa.futures.org/">NFA</a>.</p>
+			
+	</div>
+</div>
+</footer><!-- /#footer -->
+	
+	<script type="text/javascript">
+    <!--
+    
+	$(document).ready(function() {
+    
+    	var $root = $('html'),
+    		$carouselTiles = $('.carousel-display'),
+    		$carouselChange = $('.carousel-change'),
+    		$next = $('.carousel-next-prev .next a'),
+			$prev = $('.carousel-next-prev .prev a');
+    
+    	if ( navigator.userAgent.match(/Windows\ NT/i) )
+    	{
+    		$('html').addClass('windows');
+    	}
+    	
+    	if ( $(".quoteIndices") ) {
+			$.ajax({
+				url: '/accountservice/accountinternal.asmx/GetQuoteTicker?sSymbolList=DJI,1,COMP,1,SPX,1',
+				cache: false,
+				type: 'GET',
+				dataType: "xml",
+				error: function(xhr, errorText, errorCode) {
+					var $errorbox = '<div class="statusError">';
+					$errorbox.append(': ' + errorCode + ' ' + errorText);
+					$('.quoteIndices').append($errorbox);
+				},
+				success: function(xml) {
+					$(xml).find('Instruments').each( function(i) {
+						//console.log( $(this).find('Symbol').text() );
+						var s = $(this).find('Symbol').text(),
+						    p = $(this).find('Price').text().replace(',', ''),
+						    $djia = $('.djia'),
+						    $nasdaq = $('.nasdaq'),
+						    $sp = $('.sp');
+						    
+						if ( $(this).find('ChangeUp').length > 0 ) 
+						{
+							var c = $(this).find('ChangeUp').text(),
+								change = 'up';
+						}
+						else
+						{
+							var c = $(this).find('ChangeDown').text(),
+								change = 'down';
+						}
+						
+						var pc = ( ( Math.abs(parseFloat(c)) / ( parseFloat(p) + Math.abs(parseFloat(c)) ) ) * 100).toFixed(2);
+						
+						/*console.log( 'c: ' + c );
+						console.log( 'p: ' + p );
+						console.log( 'pc: ' + pc );
+						console.log( 'Math.abs(parseFloat(c)): ' + Math.abs(parseFloat(c)) );
+						console.log( 'parseFloat(p): ' + parseFloat(p) );
+						console.log( 'Math.abs(parseFloat(c)): ' + Math.abs(parseFloat(c)) );
+						console.log( '( parseFloat(p) + Math.abs(parseFloat(c)): ' + ( parseFloat(p) + Math.abs(parseFloat(c)) ) );*/
+						    
+						switch( s )
+						{
+							case 'COMP':
+								$nasdaq.find('.price').html(p);
+								$nasdaq.find('.change').addClass(change).html(c + '&nbsp;(' + pc + '%)');
+								break;
+								
+							case 'SPX':
+								$sp.find('.price').html(p);
+								$sp.find('.change').addClass(change).html(c + '&nbsp;(' + pc + '%)');
+								break;
+								
+							case 'DJI':
+							default:
+								$djia.find('.price').html(p);
+								$djia.find('.change').addClass(change).html(c + '&nbsp;(' + pc + '%)');
+								break;
+						}
+					});
+				}
+			});
+		} // end quotes
+		
+		// Carousel navigation setup
+		$carouselChange.click( function(e) {
+			e.preventDefault();
+			
+			$carouselChange.removeClass('active');
+						
+			var currentSlide = $(this).attr('rel');
+			//$carouselTiles.removeClass().addClass('carousel-display').addClass(currentSlide + '-active');
+			$carouselTiles.removeClass('tile-1-active tile-2-active tile-3-active tile-4-active').addClass(currentSlide + '-active');
+			
+			switch ( currentSlide )
+			{
+				case 'tile-1':
+				default:
+					$next.attr('rel', 'tile-2');
+					$prev.attr('rel', 'tile-3');
+					var $activeLink = $('.change-tile-1');
+					break;
+					
+				case 'tile-2':
+					$next.attr('rel', 'tile-3');
+					$prev.attr('rel', 'tile-1');
+					var $activeLink = $('.change-tile-2');
+					break;
+					
+				case 'tile-3':
+					$next.attr('rel', 'tile-1');
+					$prev.attr('rel', 'tile-2');
+					var $activeLink = $('.change-tile-3');
+					break;
+					
+				case 'tile-4':
+					$next.attr('rel', 'tile-1');
+					$prev.attr('rel', 'tile-3');
+					var $activeLink = $('.change-tile-4');
+					break;
+			}
+			
+			//$carouselTiles.removeClass().addClass('carousel-display').addClass(currentSlide + '-active');
+			$activeLink.addClass('active');
+		});
+		
+		// Auto change carousel function
+		function changeCarousel()
+		{
+			// change class to trigger transition
+			//console.log('change' + test++);
+			
+			if ( $carousel.hasClass('tile-1-active') )
+			{
+				$carousel.removeClass('tile-1-active').addClass('tile-2-active');
+				$carouselNav.find('.change-tile-1').removeClass('active');
+				$carouselNav.find('.change-tile-2').addClass('active');
+				$cNext.attr('rel', 'tile-3');
+				$cPrev.attr('rel', 'tile-1');
+				//console.log('activate tile 2');
+			}
+			else if ( $carousel.hasClass('tile-2-active') )
+			{
+				$carousel.removeClass('tile-2-active').addClass('tile-3-active');
+				$carouselNav.find('.change-tile-2').removeClass('active');
+				$carouselNav.find('.change-tile-3').addClass('active');
+				$cNext.attr('rel', 'tile-1');
+				$cPrev.attr('rel', 'tile-2');
+				//console.log('activate tile 3');
+			}
+			else if ( $carousel.hasClass('tile-3-active') )
+			{
+				$carousel.removeClass('tile-3-active').addClass('tile-1-active');
+				$carouselNav.find('.change-tile-3').removeClass('active');
+				$carouselNav.find('.change-tile-1').addClass('active');
+				$cNext.attr('rel', 'tile-1');
+				$cPrev.attr('rel', 'tile-3');
+				//console.log('activate tile 1');
+			}
+			else if ( $carousel.hasClass('tile-4-active') )
+			{
+				$carousel.removeClass('tile-4-active').addClass('tile-1-active');
+				$carouselNav.find('.change-tile-4').removeClass('active');
+				$carouselNav.find('.change-tile-1').addClass('active');
+				$cNext.attr('rel', 'tile-2');
+				$cPrev.attr('rel', 'tile-4');
+			}
+			
+			if ( carouselTimer != null )
+			{
+				carouselTimer = window.setTimeout( changeCarousel, timeinterval );
+			}
+		}
+		
+		// set timer for caraousel change
+		var timeinterval = 7000,
+			$carousel = $('.carousel-display'),
+			$carouselNav = $('.carousel-nav'),
+			$cNext = $('.carousel-next-prev').find('.next a'),
+			$cPrev = $('.carousel-next-prev').find('.prev a'),
+			carouselTimer = window.setTimeout( changeCarousel, timeinterval );
+		//console.log('INIT timer');
+		
+		// Carousel Auto Rotate setup
+		$('.carousel').mouseenter( function() {
+			// cancel carouselTimer
+			window.clearTimeout(carouselTimer);
+			carouselTimer = null;
+			//console.log('ENTER: clear timer');
+		}).mouseleave( function() {
+			// start timer again
+			if ( carouselTimer == null )
+			{
+				carouselTimer = window.setTimeout( changeCarousel, timeinterval );
+				//console.log('LEAVE: re-enable timer');
+			}
+		});
+		
+		// Lettering.js init
+		var ljsTitle = "";
+		$('.letteringjs').lettering().mouseover( function() {
+			ljsTitle = $(this).attr('title');
+			$(this).attr('title', "");
+		}).mouseout( function() {
+			$(this).attr('title', ljsTitle);
+		});
+		
+	});
+    //-->
+    </script>
+    
+    	<!-- start /static/inc/components/global_js_bottom.inc -->
+	<script type="text/javascript" src="http://images.optionsxpress.com/inc/js/plugins/jquery.lettering.js"></script>
+	<!-- end /static/inc/components/global_js_bottom.inc -->	<!-- start /static/inc/components/tracking.inc -->
+	<script type="text/javascript" src="http://images.optionsxpress.com/inc/site_stats.js"></script>
+	<script type="text/javascript" src="http://images.optionsxpress.com/static/inc/js/tools/tracking.js"></script>
+	<div id="dtmdiv" style="display:none;"></div>
+	<!-- end /static/inc/components/tracking.inc -->	<!-- start /static/inc/components/mbox.inc -->
+	<script type="text/javascript" src="http://images.optionsxpress.com/inc/mbox.js"></script><style>.mboxDefault { visibility:hidden; }</style>
+	<!-- end /static/inc/components/mbox.inc -->
+    <script type="text/javascript">
+	<!--
+		s.pageName = 'Pre:Home';
+    	s.channel = 'Pre:Home';
+		s.prop18 = 'PLR';
+		if (typeof(oTracking) != "undefined") {
+			oTracking.LoadOmniture();
+		}
+		else {
+			var s_code = s.t(); if (s_code) document.write(s_code);
+		}
+	//-->
+	</script>
+    
+
+
+</body>

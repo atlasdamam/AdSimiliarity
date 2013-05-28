@@ -1,0 +1,1070 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <title>Scottrade</title> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+  <script language="JavaScript" src="/Includes/CheckGzip/Off.asp"></script> 
+  <script>
+	  var env = 'Production';
+	  var siteTier = 'public';
+	  var prefix = 'https';
+	  var sttrade = 'trading.scottrade.com/';
+			var wsod_Translations = {"Close":"Close"};
+	</script> 
+  <script src="/includes/jslib/jquery/jquery-1.4.2.js" type="text/javascript"></script> 
+  <script src="/includes/jslib/jQuery/serializer/jquery.serializer-1.js" type="text/javascript"></script> 
+  <script src="/public/common/js/lib.js" type="text/javascript"></script> 
+  <script src="/public/common/js/commonFunc.js" type="text/javascript"></script> 
+  <script src="/scottrade/lib/js/jquery.extensions.js" type="text/javascript"></script> 
+  <script src="/Includes/jslib/jquery/jquery-ui-1.8.6/jquery-ui-1.8.6.js" type="text/javascript"></script> 
+  <script src="/Includes/jslib/jquery/jquery-ui-1.8.6/jquery.ui.widget.js" type="text/javascript"></script> 
+  <script src="/Includes/jslib/jquery/jquery-ui-1.8.6/jquery.ui.mouse.js" type="text/javascript"></script> 
+  <script src="/Includes/jslib/jquery/jquery-ui-1.8.6/jquery.ui.position.js" type="text/javascript"></script> 
+  <script src="/Includes/jslib/jquery/jquery-ui-1.8.6/jquery.ui.draggable.js" type="text/javascript"></script> 
+  <script src="/Includes/jslib/jquery/jquery-ui-1.8.6/jquery.ui.sortable.js" type="text/javascript"></script> 
+  <script src="/Includes/jslib/jquery/jquery-ui-1.8.6/jquery.ui.accordion.js" type="text/javascript"></script> 
+  <script src="/Includes/jslib/jquery/jquery-ui-1.8.6/jquery.ui.autocomplete.js" type="text/javascript"></script> 
+  <script src="/Includes/jslib/jquery/jquery-ui-1.8.6/jquery.ui.slider.js" type="text/javascript"></script> 
+  <script src="/Includes/jslib/jquery/jquery-ui-1.8.6/jquery.ui.datepicker.js" type="text/javascript"></script> 
+  <script src="/KnowledgeCenter/Content/Scripts/RightRail/VideosAndCalculatorsRail_Class.js" type="text/javascript"></script> 
+  <link href="https://www.scottrade.com/favicon.ico" rel="shortcut icon" /> 
+  <link href="/public/common/style/publicmain_beta.css?v=2" rel="stylesheet" type="text/css" media="all" /> 
+  <script src="/public/common/js/publiccommon.js" type="text/javascript"></script> 
+  <script type="text/javascript">
+		
+		if (typeof(lpUnit)=='undefined')  var lpUnit='knowledgecenter';
+		
+		if (typeof(lpLanguage)=='undefined')  var lpLanguage='english';
+	  </script> 
+  <script src="/scottrade/lib/js/mtagconfig.js" type="text/javascript"></script> 
+  <script src="../../common/js/knowledge.js" type="text/javascript"></script> 
+  <link href="/public/common/style/knowledge.css" rel="stylesheet" type="text/css" media="all" /> 
+  <link href="/public/common/style/knowledge_new.css" rel="stylesheet" type="text/css" media="all" /> 
+  <link href="MediaCenterStyle.css" rel="stylesheet" type="text/css" media="all" /> 
+  <script src="../../common/js/WebcastMediaCenter.js?v=1" type="text/javascript"></script> 
+  <script src="/scottrade/research/common/js/commonFunc.js" type="text/javascript"></script> 
+  <script src="/scottrade/research/common/js/swfobject/swfobject.js" type="text/javascript"></script> 
+  <link href="../../../lib/kcNAV/reset.min.css" rel="stylesheet" type="text/css" media="all" /> 
+  <link href="../../../lib/kcNAV/navCSS.css" rel="stylesheet" type="text/css" media="all" /> 
+  <script src="../../../lib/kcNAV/navJS.js" type="text/javascript"></script> 
+ </head> 
+ <body> 
+  <noscript> 
+   <iframe src="//www.googletagmanager.com/ns.html?id=GTM-XKRL" height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+  </noscript> 
+  <script>searchSeparator=(document.location.search.indexOf('?')>-1?'&':'?');dataLayer=[{'pagePath':document.location.pathname,'pageSearch':document.location.search,'paramKey':searchSeparator,'pageHash':document.location.hash}];(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-XKRL');
+		</script> 
+  <div id="topMain">
+   <div class="Public">
+    <div id="main" class="hasLayout"> 
+     <script type="text/javascript">
+	// Variables submission using lpAddVars
+	lpAddVars('page','lpOrderTotal','');
+	lpAddVars('page','lpLeadCreated','');
+	lpAddVars('page','lpAppStarted','');
+	lpAddVars('page','lpErrorName','');
+	lpAddVars('page','lpErrorCounter','');
+	lpAddVars('page','lpApplicationID','');
+	lpAddVars('page','lpConversionStage','');
+	lpAddVars('page','lpSection','knowledgecenter');
+	lpAddVars('page','lpAccountType','');
+	lpAddVars('page','lpState','');
+	lpAddVars('page','lpBranchID','');
+	lpAddVars('session','lpReturnedVisitor>','');
+	lpAddVars('page','lpFirstName','');
+	lpAddVars('page','lpLastName','');
+	lpAddVars('page','lpSelectedLanguage','');
+	lpAddVars('page','lpPreferredLanguage','');
+  </script> 
+     <!-- SiteCatalyst code version: H.8. Copyright 1997-2006 Omniture, Inc. More info available at https://www.omniture.com --> 
+     <!--script language="JavaScript" src="/public/common/js/s_code.js"></script--> 
+     <script language="JavaScript" src="//www.scottrade.com/library/js/s_code.js"></script> 
+     <script language="JavaScript">
+		<!--
+		/* You may give each page an identifying name, server, and channel on the next lines. */
+		if (typeof(s) != 'undefined') {
+		  s.pageName = "Research:knowledgecenter:media"
+		  s.server = ""
+		  s.channel = ""
+		  s.pageType = ""
+		  s.prop1 = ""
+		  s.prop2 = ""
+		  s.prop3 = ""
+		  s.prop4 = ""
+		  s.prop5 = ""
+		  /* E-commerce Variables */
+		  s.campaign = ""
+		  s.state = ""
+		  s.zip = ""
+		  s.events = ""
+		  s.products = ""
+		  s.purchaseID = ""
+		  s.eVar1 = ""
+		  s.eVar2 = ""
+		  /************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+		  var s_code = s.t();
+		  if (s_code) document.write(s_code)
+		}
+		//-->
+	  </script> 
+     <!--/DO NOT REMOVE/--> 
+     <!-- End SiteCatalyst code version: H.8. --> 
+     <script src="https://www.scottrade.com/library/js/newWindow.js" type="text/javascript" charset="utf-8" language="javascript"></script> 
+     <!--PROACTIVE START--> 
+     <script type="text/javascript" src="https://proactivechat.scottrade.com/netagent/proactive/proactive.aspx" defer="defer"></script> 
+     <!--PROACTIVE END--> 
+     <link type="text/css" href="//www.scottrade.com/etc/designs/scottrade/css/wsod.css" rel="stylesheet" />
+     <script type="text/javascript" src="//www.scottrade.com/LP/WSOD/common/js/loader.js"></script>
+     <div class="hasLayout" id="ST-header">
+      <!-- Begin Header --> 
+      <div id="header2"> 
+       <!-- Site Logo --> 
+       <div class="logo site-logo2"> 
+        <a href="http://www.scottrade.com/" title="Visit Scottrade"><img src="//www.scottrade.com/LP/WSOD/common/images/scottrade-logo.png" alt="Scottrade" title="Scottrade" width="206" height="50" style="float: left; margin-top: 10px;" /></a> 
+       </div> 
+       <div class="logo page-id2 siteID"> 
+       </div> 
+       <!-- End Site Logo --> 
+       <!-- Start Top Links and Search --> 
+       <div id="top-links-container"> 
+        <div class="header-links headerLinks"> 
+         <ul> 
+          <li><a href="http://www.scottrade.com/contact.html" title="Contact Us">Contact Us</a>&nbsp;&nbsp;|&nbsp;&nbsp;</li> 
+          <li><a href="http://www.scottrade.com/locations/index.html" title="Find a Scottrade Branch">Find a Branch</a>&nbsp;&nbsp;|&nbsp;&nbsp;</li> 
+          <li><a href="http://about.scottrade.com/" title="About Scottrade" target="_blank">About Us</a>&nbsp;&nbsp;|&nbsp;&nbsp;</li> 
+          <li><a href="https://trading.scottrade.com/default.aspx" title="Customer Login" class="login">Customer Login</a></li> 
+         </ul> 
+        </div> 
+        <!-- Begin Search Form --> 
+        <!-- Begin Search Form --> 
+        <div class="topLinksButton"> 
+         <div id="search-form"> 
+          <div class="search-field"> 
+           <form class="geo" action="http://www.scottrade.com/Search.html" id="form"> 
+            <div class="search-box"> 
+             <input name="q" type="text" id="searchBox" maxlength="100" value="Search Website" onfocus="this.value=''; style.color='#000000';" /> 
+            </div> 
+            <input type="submit" value="" id="activate" class="search2" /> 
+           </form> 
+           <div class="clear">
+            <!-- -->
+           </div> 
+          </div> 
+          <a class="open-account" href="https://apply.scottrade.com/"></a> 
+          <div class="clear">
+           <!-- -->
+          </div> 
+         </div> 
+        </div> 
+        <!-- End Search Form --> 
+        <div class="clear">
+         <!-- -->
+        </div> 
+       </div> 
+       <!-- End Top Links and Search --> 
+      </div> 
+      <!-- End Header --> 
+      <!-- Begin Navigation --> 
+      <div> 
+       <div id="navigation2"> 
+        <ul class="nav-list" id="dd-menu"> 
+         <li><a href="http://www.scottrade.com/online-brokerage.html">Why Scottrade?</a> 
+          <ul> 
+           <li><a href="http://www.scottrade.com/online-brokerage/reasons-to-choose.html">Reasons To Choose</a></li> 
+           <li><a href="http://www.scottrade.com/online-brokerage/online-broker-comparison.html">Online Broker Comparison</a></li> 
+           <li><a href="http://www.scottrade.com/online-brokerage/trading-fees-commissions.html">Fees &amp; Commissions</a></li> 
+           <li><a href="http://www.scottrade.com/online-brokerage/interest-margin-rates.html">Margin &amp; Interest Rates</a></li> 
+           <li><a href="http://www.scottrade.com/online-brokerage/secure-trading.html">Security &amp; ID Theft Protection</a></li> 
+           <li><a href="http://www.scottrade.com/online-brokerage/company-overview.html">Company Overview</a></li> 
+           <li><a href="http://www.scottrade.com/online-brokerage/online-community.html">Online Community</a></li> 
+           <li><a href="http://www.scottrade.com/online-brokerage/referall.html">Referral Program</a></li> 
+           <li><a href="http://www.scottrade.com/online-brokerage/switch.html">Switch to Scottrade</a></li> 
+          </ul> </li> 
+         <li><img src="//www.scottrade.com/LP/WSOD/common/images/nav-divider.gif" class="nav-divider" /></li> 
+         <li><a href="http://www.scottrade.com/online-trading.html">Online Trading</a> 
+          <ul> 
+           <li><a href="http://www.scottrade.com/online-trading/trading-website.html">Trading Website</a></li> 
+           <li><a href="http://www.scottrade.com/online-trading/trading-platform-scottrader.html">Scottrader Streaming Quotes</a></li> 
+           <li><a href="http://www.scottrade.com/online-trading/online-trading-platform-scottradeelite.html">ScottradeELITE</a></li> 
+           <li><a href="http://www.scottrade.com/online-trading/options-trading-platform-optionsfirst.html">OptionsFirst</a></li> 
+           <li><a href="http://www.scottrade.com/online-trading/fund-your-account.html">Ways to Fund Your Account</a></li> 
+          </ul> </li> 
+         <li><img src="//www.scottrade.com/LP/WSOD/common/images/nav-divider.gif" class="nav-divider" /></li> 
+         <li><a href="http://www.scottrade.com/mobile-trading.html" target="_self">Mobile Trading</a> 
+          <ul class="submenu"> 
+           <li><a href="http://www.scottrade.com/mobile-trading/iPhone.html" target="_self">iPhone&reg; Trading App</a></li> 
+           <li><a href="http://www.scottrade.com/mobile-trading/android.html" target="_self">Android™ Trading App</a></li> 
+           <li><a href="http://www.scottrade.com/mobile-trading/blackberry.html" target="_self">BlackBerry&reg; Trading App </a></li> 
+           <li><a href="http://www.scottrade.com/mobile-trading/mobile-trading-website.html" target="_self">Mobile Trading Website</a></li> 
+          </ul> </li> 
+         <li><img src="//www.scottrade.com/LP/WSOD/common/images/nav-divider.gif" class="nav-divider" /></li> 
+         <li><a href="http://www.scottrade.com/online-banking.html">Online Banking</a></li> 
+         <li><img src="//www.scottrade.com/LP/WSOD/common/images/nav-divider.gif" class="nav-divider" /></li> 
+         <li><a href="http://www.scottrade.com/investment-products.html">Investment Products</a> 
+          <ul> 
+           <li><a href="http://www.scottrade.com/investment-products/ira.html">Retirement &amp; IRAs</a></li> 
+           <li><a href="http://www.scottrade.com/investment-products/stocks.html">Stocks</a></li> 
+           <li><a href="http://www.scottrade.com/investment-products/options-trading.html">Options</a></li> 
+           <li><a href="http://www.scottrade.com/investment-products/mutual-funds.html">Mutual Funds</a></li>
+           <li><a href="http://www.scottrade.com/investment-products/etfs.html">ETFs</a></li> 
+           <li><a href="http://www.scottrade.com/investment-products/bonds.html">Bonds</a></li> 
+           <li><a href="http://www.scottrade.com/investment-products/cds.html">CDs</a></li> 
+           <li><a href="http://www.scottrade.com/investment-products/treasuries.html">Treasuries</a></li> 
+           <li><a href="http://www.scottrade.com/investment-products/esas.html">ESAs</a></li> 
+           <li><a href="http://www.scottrade.com/investment-products/international-investing.html">International Investing</a></li> 
+           <li><a href="http://www.scottrade.com/investment-products/account-types.html">Account Types/Features &amp; Benefits</a></li> 
+          </ul> </li> 
+         <li><img src="//www.scottrade.com/LP/WSOD/common/images/nav-divider.gif" class="nav-divider" /></li> 
+         <li><a href="http://research.scottrade.com/qnr/Public/Markets/Overview">Quotes &amp; Research</a></li> 
+         <li><img src="//www.scottrade.com/LP/WSOD/common/images/nav-divider.gif" class="nav-divider" /></li> 
+         <li><a href="http://research.scottrade.com/public/knowledgecenter/overview/overview.asp">Knowledge Center</a></li> 
+        </ul> 
+       </div> 
+      </div> 
+     </div> 
+     <div id="container" class="hasLayout"> 
+      <div id="background"> 
+       <div id="rightRail_public" class="hasLayout publicPage">
+        <div class="mediaCenterSubheader">
+         <div id="headerDiv_public" class="hasLayout"> 
+          <div class="floatLft hasLayout" style="width:720px;"> 
+           <div id="kcHeader">
+            Media Center
+           </div> 
+           <div class="mt5">
+            <a href="http://research.scottrade.com/public/knowledgecenter/overview/overview.asp" target="">Knowledge Center Home</a>&nbsp;
+            <img src="../../../lib/kcNAV/images/kcNavArrow.png" border="0" />&nbsp;
+            <a class="linkOff" href="http://research.scottrade.com/public/knowledgecenter/learning/interactiveLearning.asp" target="">Videos &amp; Calculators</a>&nbsp;
+            <img src="../../../lib/kcNAV/images/kcNavArrow.png" border="0" />&nbsp;
+            <a class="linkOff" href="http://research.scottrade.com/public/knowledgecenter/media/MediaCenter.asp?spokenLanguage=" target="">Media Center</a>&nbsp;
+            <img src="../../../lib/kcNAV/images/kcNavArrow.png" border="0" />&nbsp;
+            <span class="linkOn" href="">New &amp; Featured</span> 
+           </div> 
+          </div>
+          <div class="hasLayout">
+           <div class="floatRt mb5 mt5">
+            <a target="_blank" href="http://community.scottrade.com"><img src="../../common/img/kc/community/community.logo.2.en.png" alt="Scottrade Online Community" border="0" /></a>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div id="WebcastGalleryPage" class="hasLayout"> 
+         <div id="preNavLeft"> 
+          <div id="navContainer"> 
+           <ul id="main_ul"> 
+            <li class="top_li" style=""> 
+             <div class="titleTop_cont "> 
+              <div class="title bold hasLayout" style="border-bottom:none;"> 
+               <a href="http://research.scottrade.com/public/events/overview/overview.asp" target=""><span>Client Education Events</span></a> 
+               <div class="btns">
+                <img src="../../../lib/kcNAV/images/navPlus.gif" alt="" class="editBtns" />
+               </div> 
+              </div> 
+             </div> </li> 
+            <li class="top_li" style=""> 
+             <div class="titleTop_cont "> 
+              <div class="title bold hasLayout" style="border-bottom:none;"> 
+               <a href="http://research.scottrade.com/public/knowledgecenter/education/education.asp" target=""><span>Investment Education</span></a> 
+               <div class="btns">
+                <img src="../../../lib/kcNAV/images/navPlus.gif" alt="" class="editBtns" />
+               </div> 
+              </div> 
+             </div> </li> 
+            <li class="top_li" style=""> 
+             <div class="titleTop_cont "> 
+              <div class="title bold hasLayout" style="border-bottom:none;"> 
+               <a href="http://research.scottrade.com/public/knowledgecenter/dictionary/dictionary.asp" target=""><span>Dictionary</span></a> 
+               <div class="btns">
+                <img src="../../../lib/kcNAV/images/navPlus.gif" alt="" class="editBtns" />
+               </div> 
+              </div> 
+             </div> </li> 
+            <li class="top_li" style=""> 
+             <div class="titleTop_cont "> 
+              <div class="title bold hasLayout" style="border-bottom:none;"> 
+               <a href="http://research.scottrade.com/public/knowledgecenter/knowhownews/overview.asp" target=""><span>KnowHow&reg; News</span></a> 
+               <div class="btns">
+                <img src="../../../lib/kcNAV/images/navPlus.gif" alt="" class="editBtns" />
+               </div> 
+              </div> 
+             </div> </li> 
+            <li class="top_li" style="border:none"> 
+             <div class="titleTop_cont on"> 
+              <div class="title bold hasLayout" style="border-bottom:none;"> 
+               <a href="http://research.scottrade.com/public/knowledgecenter/learning/interactiveLearning.asp" target=""><span>Videos &amp; Calculators</span></a> 
+               <div class="btns">
+                <img src="../../../lib/kcNAV/images/navPlus.gif" alt="" class="editBtns" />
+               </div> 
+              </div> 
+             </div> 
+             <ul class="level1"> 
+              <li class="MediaCenterNav"> 
+               <div class="title level0 hasLayout"> 
+                <a href="http://research.scottrade.com/public/knowledgecenter/media/MediaCenter.asp" target="">Media Center</a> 
+               </div> </li>
+              <li class="MediaCenterListItem MediaCenterSearch">
+               <div class="searchBar">
+                <span class="SearchTitle">Browse Videos</span>
+                <form name="frmWebcastSearch" action="MediaCenter.asp" method="get">
+                 <div class="title hasLayout">
+                  <input class="mediaSearch" type="text" size="15" name="searchterm" value="Search Videos" onfocus="this.value=(this.value==&quot;Search Videos&quot;)?&quot;&quot;:this.value" onblur="this.value=this.value||&quot;Search Videos&quot;" />
+                  <a href="javascript:void(0)" onclick="document.frmWebcastSearch.submit();return false;"><span>Go</span></a>
+                 </div>
+                </form>
+               </div></li>
+              <li class="MediaCenterListItem topItem level1">
+               <div class="orange title hasLayout">
+                <a href="http://research.scottrade.com/public/knowledgecenter/media/MediaCenter.asp?view=NewNFeatured" target="">New &amp; Featured</a>
+               </div></li>
+              <li class="MediaCenterListItem level1">
+               <div class="title hasLayout">
+                <a href="http://research.scottrade.com/public/knowledgecenter/media/MediaCenter.asp?view=All" target="">All Videos</a>
+               </div></li>
+              <li class="MediaCenterListItem level1">
+               <div class="title hasLayout" style="font-weight: bold; color: #333;">
+                Browse by Topic
+               </div></li>
+              <li class="MediaCenterListItem level2">
+               <div class="title hasLayout" style="margin-left: 10px;">
+                <div class="navArrows hasLayout">
+                 <img style="margin-left: 4px;" alt="arrorw" src="../../../lib/kcNAV/images/kcNavArrow.png" class="mt5" />
+                </div>
+                <a href="http://research.scottrade.com/public/knowledgecenter/media/MediaCenter.asp?topic=PlacingOrders&amp;view=topic" target="">Placing Orders</a>
+               </div></li>
+              <li class="MediaCenterListItem level2">
+               <div class="title hasLayout" style="margin-left: 10px;">
+                <div class="navArrows hasLayout">
+                 <img style="margin-left: 4px;" alt="arrorw" src="../../../lib/kcNAV/images/kcNavArrow.png" class="mt5" />
+                </div>
+                <a href="http://research.scottrade.com/public/knowledgecenter/media/MediaCenter.asp?topic=Accounts&amp;view=topic" target="">Accounts</a>
+               </div></li>
+              <li class="MediaCenterListItem level2">
+               <div class="title hasLayout" style="margin-left: 10px;">
+                <div class="navArrows hasLayout">
+                 <img style="margin-left: 4px;" alt="arrorw" src="../../../lib/kcNAV/images/kcNavArrow.png" class="mt5" />
+                </div>
+                <a href="http://research.scottrade.com/public/knowledgecenter/media/MediaCenter.asp?topic=InvestmentProducts&amp;view=topic" target="">Investment Products</a>
+               </div></li>
+              <li class="MediaCenterListItem level2">
+               <div class="title hasLayout" style="margin-left: 10px;">
+                <div class="navArrows hasLayout">
+                 <img style="margin-left: 4px;" alt="arrorw" src="../../../lib/kcNAV/images/kcNavArrow.png" class="mt5" />
+                </div>
+                <a href="http://research.scottrade.com/public/knowledgecenter/media/MediaCenter.asp?topic=Taxes&amp;view=topic" target="">Taxes</a>
+               </div></li>
+              <li class="MediaCenterListItem level2">
+               <div class="title hasLayout" style="margin-left: 10px;">
+                <div class="navArrows hasLayout">
+                 <img style="margin-left: 4px;" alt="arrorw" src="../../../lib/kcNAV/images/kcNavArrow.png" class="mt5" />
+                </div>
+                <a href="http://research.scottrade.com/public/knowledgecenter/media/MediaCenter.asp?topic=ResearchNTools&amp;view=topic" target="">Research &amp; Tools</a>
+               </div></li>
+              <li class="MediaCenterListItem level2">
+               <div class="title hasLayout" style="margin-left: 10px;">
+                <div class="navArrows hasLayout">
+                 <img style="margin-left: 4px;" alt="arrorw" src="../../../lib/kcNAV/images/kcNavArrow.png" class="mt5" />
+                </div>
+                <a href="http://research.scottrade.com/public/knowledgecenter/media/MediaCenter.asp?topic=ScottradeMobile&amp;view=topic" target="">Scottrade Mobile</a>
+               </div></li>
+              <li class="MediaCenterListItem level2">
+               <div class="title hasLayout" style="margin-left: 10px;">
+                <div class="navArrows hasLayout">
+                 <img style="margin-left: 4px;" alt="arrorw" src="../../../lib/kcNAV/images/kcNavArrow.png" class="mt5" />
+                </div>
+                <a href="http://research.scottrade.com/public/knowledgecenter/media/MediaCenter.asp?topic=StreamingQuotes&amp;view=topic" target="">Scottrader&reg; Streaming Quotes</a>
+               </div></li>
+              <li class="MediaCenterListItem lastItem level2">
+               <div class="title hasLayout" style="margin-left: 10px;">
+                <div class="navArrows hasLayout">
+                 <img style="margin-left: 4px;" alt="arrorw" src="../../../lib/kcNAV/images/kcNavArrow.png" class="mt5" />
+                </div>
+                <a href="http://research.scottrade.com/public/knowledgecenter/media/MediaCenter.asp?topic=ScottradeELITE&amp;view=topic" target="">ScottradeELITE</a>
+               </div></li>  
+              <li class="pl10"> 
+               <div class="title level0 hasLayout"> 
+                <a href="http://research.scottrade.com/public/knowledgecenter/community/community.asp" target="">Online Community</a> 
+               </div> </li> 
+              <li class="calcLi pl10" style="border-bottom:none;"> 
+               <div class="title level0 hasLayout">
+                <a href="javascript:void(0);">Calculators</a>
+               </div> 
+               <ul id="1" class="level1 calcOff">
+                <li>
+                 <div class="title level1">
+                  <div class="navArrows">
+                   <img src="../../../lib/kcNAV/images/kcNavArrow.png" alt="arrorw" style="margin-top:4px;" />
+                  </div>
+                  <a class="" href="/public/calculators/costofwaiting/costofwaiting.asp">Investment Calculator</a>
+                  <div class="clear"></div>
+                 </div></li>
+                <li>
+                 <div class="title level1">
+                  <div class="navArrows">
+                   <img src="../../../lib/kcNAV/images/kcNavArrow.png" alt="arrorw" style="margin-top:4px;" />
+                  </div>
+                  <a class="" href="/public/calculators/retirement/retirement.asp">Retirement Calculator</a>
+                  <div class="clear"></div>
+                 </div></li>
+                <li>
+                 <div class="title level1">
+                  <div class="navArrows">
+                   <img src="../../../lib/kcNAV/images/kcNavArrow.png" alt="arrorw" style="margin-top:4px;" />
+                  </div>
+                  <a class="" href="/public/calculators/ira/ira.asp">IRA Calculator</a>
+                  <div class="clear"></div>
+                 </div></li>
+                <li>
+                 <div class="title level1" style="border-bottom:none;">
+                  <div class="navArrows">
+                   <img src="../../../lib/kcNAV/images/kcNavArrow.png" alt="arrorw" style="margin-top:4px;" />
+                  </div>
+                  <a class="" href="/public/calculators/collegesavings/collegesavings.asp">College Savings Calculator</a>
+                  <div class="clear"></div>
+                 </div></li>
+               </ul></li>
+             </ul></li> 
+            <li class="top_li" style=""> 
+             <div class="titleTop_cont "> 
+              <div class="title bold hasLayout" style="border-bottom:none;"> 
+               <a href="http://research.scottrade.com/public/knowledgecenter/help/help.asp" target=""><span>Help &amp; How To</span></a> 
+               <div class="btns">
+                <img src="../../../lib/kcNAV/images/navPlus.gif" alt="" class="editBtns" />
+               </div> 
+              </div> 
+             </div> </li> 
+            <li class="top_li" style=""> 
+             <div class="titleTop_cont "> 
+              <div class="title bold hasLayout" style="border-bottom:none;"> 
+               <a href="http://research.scottrade.com/public/knowledgecenter/taxguide/taxguide.asp" target=""><span>Tax Guide</span></a> 
+               <div class="btns">
+                <img src="../../../lib/kcNAV/images/navPlus.gif" alt="" class="editBtns" />
+               </div> 
+              </div> 
+             </div> </li> 
+           </ul> 
+          </div> 
+         </div> 
+         <div id="mediaCenterContent" class="contentMid mediaCenter hasLayout publicPlayer">
+          <div id="FeaturedVideoContent" class="hasLayout">
+           <div class="FeaturedVideoHeading hasLayout">
+            <span>New &amp; Featured</span>
+            <h3>Cost Basis Overview</h3>
+           </div>
+           <div id="FeaturedVideo" class="hasLayout">
+            <div class="WebcastInfoModule hasLayout" field="a51b5924b7b945d3b8e4193c446988b9">
+             <a href="http://research.scottrade.com/public/knowledgecenter/media/MediaCenter.asp?view=play&amp;video=STWC11-17%2520Cost%2520Basis%2520Overview%25203m57s_1325525883652.flv&amp;kcid=a51b5924b7b945d3b8e4193c446988b9&amp;spokenLanguage=" target="">
+              <div class="previewImage">
+               <img src="http://media.scottrade.wallst.com/WTSTWC11_17_Cost_Basis_Overview_3m57s_1325525883652.JPG" alt="&nbsp;" width="100%" height="100%" title="Video Thumbnail" />
+               <div class="PlayIconContainer">
+                <div class="PlayIcon"></div>
+               </div>
+              </div>
+              <div class="HostedBy">
+               &nbsp;Hosted By:Oscar Pineda-Madrid
+              </div></a>
+             <div class="cellDesc">
+              <div class="name">
+               <a href="http://research.scottrade.com/public/knowledgecenter/media/MediaCenter.asp?view=play&amp;video=STWC11-17%2520Cost%2520Basis%2520Overview%25203m57s_1325525883652.flv&amp;kcid=a51b5924b7b945d3b8e4193c446988b9&amp;spokenLanguage=" target="">Cost Basis Overview</a>
+               <em>(English)</em>
+              </div>
+              <div class="duration">
+               Duration: 3:57
+              </div>
+              <div class="level">
+               Beginner
+              </div>
+              <div class="StarRating Stars2 descriptionItem">
+               <a class="StarRating Stars1 starHover" data="{&quot;numStars&quot;:&quot;1&quot;,&quot;cmsid&quot;:&quot;a51b5924b7b945d3b8e4193c446988b9&quot;}" href="javascript:void(&quot;oneStarRating&quot;)" title="Overall rating"></a>
+               <a class="StarRating Stars2 starHover" data="{&quot;numStars&quot;:&quot;2&quot;,&quot;cmsid&quot;:&quot;a51b5924b7b945d3b8e4193c446988b9&quot;}" href="javascript:void(&quot;twoStarRating&quot;)" title="Overall rating"></a>
+               <a class="StarRating Stars3 starHover" data="{&quot;numStars&quot;:&quot;3&quot;,&quot;cmsid&quot;:&quot;a51b5924b7b945d3b8e4193c446988b9&quot;}" href="javascript:void(&quot;threeStarRating&quot;)" title="Overall rating"></a>
+               <a class="StarRating Stars4 starHover" data="{&quot;numStars&quot;:&quot;4&quot;,&quot;cmsid&quot;:&quot;a51b5924b7b945d3b8e4193c446988b9&quot;}" href="javascript:void(&quot;fourStarRating&quot;)" title="Overall rating"></a>
+               <a class="StarRating Stars5 starHover" data="{&quot;numStars&quot;:&quot;5&quot;,&quot;cmsid&quot;:&quot;a51b5924b7b945d3b8e4193c446988b9&quot;}" href="javascript:void(&quot;fiveStarRating&quot;)" title="Overall rating"></a>
+              </div>
+             </div>
+             <div class="WebcastItemBorder">
+              <div class="WebcastItemBorderEnd"></div>
+             </div>
+            </div>
+           </div>
+           <div class="abstract hasLayout">
+            <p style="margin: 0in 0in 10pt;">Take a look at the new changes to the way cost basis is reported to the IRS, and find out how they may impact your tax filings this April.</p>
+           </div>
+           <div class="RelatedWebcasts splitColumn">
+            <h3>Related Videos</h3>
+            <ul id="RelatedWebcastsList">
+             <li class="featuredItem"><a href="http://research.scottrade.com/public/knowledgecenter/media/MediaCenter.asp?view=play&amp;video=undefined&amp;kcid=5bc11368836b418e80cb73724f36a9b5&amp;spokenLanguage=" target="">Add Purchase Price to Set Cost Basis</a></li>
+             <li class="featuredItem"><a href="http://research.scottrade.com/public/knowledgecenter/media/MediaCenter.asp?view=play&amp;video=undefined&amp;kcid=ed66aaa5e42743e99b95d8e751fe5478&amp;spokenLanguage=" target="">Cost Basis &amp; Wash Sales</a></li>
+             <li class="featuredItem"><a href="http://research.scottrade.com/public/knowledgecenter/media/MediaCenter.asp?view=play&amp;video=undefined&amp;kcid=f5f00394fb234157b07b1a44716a8fdc&amp;spokenLanguage=" target="">Corporate Actions</a></li>
+            </ul>
+           </div>
+           <div class="SimilarWebcasts splitColumn">
+            <h3>More Featured Videos</h3>
+            <ul id="MoreFeaturedWebcastsList">
+             <li class="featuredItem"><a href="http://research.scottrade.com/public/knowledgecenter/media/MediaCenter.asp?view=play&amp;video=STWC11-18%20Cost%20Basis%20Tax%20Strategies%204m31s_1325526754359.flv&amp;kcid=add5b7e8c53b4255bb40dc43bc7bcf7f&amp;spokenLanguage=" target="">Tax Strategies</a></li>
+             <li class="featuredItem"><a href="http://research.scottrade.com/public/knowledgecenter/media/MediaCenter.asp?view=play&amp;video=STWC11-19_Cost%20Basis%20Setting%20Tax%20Strategies%204m10s_1325527700297.flv&amp;kcid=6087a3211fa04ea2951efe05cbcf1dc7&amp;spokenLanguage=" target="">Setting Tax Strategies</a></li>
+             <li class="featuredItem"><a href="http://research.scottrade.com/public/knowledgecenter/media/MediaCenter.asp?view=play&amp;video=STWC11-21_Cost%20Basis%20Corp%20Action%20Adjustments%206m47s_1325528359151.flv&amp;kcid=f5f00394fb234157b07b1a44716a8fdc&amp;spokenLanguage=" target="">Corporate Actions</a></li>
+            </ul>
+           </div>
+          </div>
+          <div id="WebcastSearchFilters" class="hasLayout"> 
+           <input type="hidden" id="PageView" name="pageView" value="newnfeatured" /> 
+           <input type="hidden" id="TopicFilter" name="topic" value="" /> 
+           <input type="hidden" id="LanguageFilter" name="spokenLanguage" value="" /> 
+           <input type="hidden" id="GalleryViewType" name="viewType" value="table" /> 
+           <input type="hidden" id="FeaturedOnly" name="featuredOnly" value="false" /> 
+           <input type="hidden" id="RelatedOnly" name="relatedOnly" value="false" /> 
+           <input type="hidden" id="SortInput" name="sortInput" value="rating" /> 
+           <input type="hidden" id="SortDirection" name="sortDirection" value="descending" /> 
+           <input type="hidden" id="SearchTerm" name="searchTerm" value="" /> 
+           <div class="LanguageFilter WebcastFilter"> 
+            <label for="LanguageSelection">Spoken Language</label> 
+            <select id="WebcastLanguageSelector" class="MediaCenterPageControl" name="LanguageSelection"> <option value="all" selected="selected"> All </option> <option value="Ch">Chinese</option> <option value="En">English</option> <option value="Sp">Spanish</option> </select> 
+           </div> 
+           <div class="SortFilter WebcastFilter"> 
+            <label for="SortSelect"> Sort By </label> 
+            <select id="WebcastSortSelector" class="MediaCenterPageControl" name="SortSelect"> <option value="rating">----</option> <option value="level"> Level </option> <option value="rating" selected="selected"> Rating </option> <option value="speakers"> Speaker </option> <option value="duration"> Length </option> <option value="popularity"> Most Viewed </option> </select> 
+           </div> 
+           <div class="PageResultsFilter WebcastFilter"> 
+            <label for="PageResults"> Results Per Page </label> 
+            <select id="PageResultsSelector" class="MediaCenterPageControl" name="PageResults"> <option value="9" selected="selected">9</option> <option value="21">21</option> <option value="45">45</option> </select> 
+           </div> 
+          </div>
+          <div id="WebcastGallery">
+           <table id="mediaGalleryTable" cellspacing="10">
+            <tbody>
+             <tr>
+              <td colspan="2">
+               <div class="GalleryHeading">
+                Videos by Overall Rating
+               </div></td>
+              <td colspan="1">
+               <div class="GalleryViewSelector">
+                <span class="orange">Thumbnails</span> | 
+                <a href="?view=newnfeatured&amp;video=&amp;kcid=&amp;spokenLanguage=&amp;pageResults=9&amp;sortOrder=descending&amp;sort=rating&amp;viewType=list" class="">List View</a>
+               </div></td>
+             </tr>
+             <tr>
+              <td colspan="3">
+               <div id="SearchDirectionInputs">
+                <input type="radio" name="SortOrder" value="Ascending" />
+                <div class="AscendingRadioText">
+                 Ascending
+                </div>
+                <input type="radio" name="SortOrder" value="Descending" checked="checked" style="margin-left: 20px;" />
+                <div class="DescendingRadioText">
+                 Descending
+                </div>
+               </div></td>
+             </tr>
+             <tr>
+              <td>
+               <div class="WebcastInfoModule hasLayout" field="08c05095a076413fad0ddaa8931de89a">
+                <a href="http://research.scottrade.com/public/knowledgecenter/media/MediaCenter.asp?view=play&amp;video=STWC11-10How2MobileAppWatchLists720_1315502074421.flv&amp;kcid=08c05095a076413fad0ddaa8931de89a&amp;spokenLanguage=" target="">
+                 <div class="previewImage">
+                  <div style="background: url(&quot;http://media.scottrade.wallst.com/WTSTWC11_10How2MobileAppWatchLists720_1315502074421.JPG&quot;); width:100%; height:100%;"></div>
+                  <div class="PlayIconContainer">
+                   <div class="PlayIcon"></div>
+                  </div>
+                 </div>
+                 <div class="HostedBy">
+                  &nbsp;Hosted By:Michelle Paasch
+                 </div></a>
+                <div class="cellDesc">
+                 <div class="name">
+                  <a href="http://research.scottrade.com/public/knowledgecenter/media/MediaCenter.asp?view=play&amp;video=STWC11-10How2MobileAppWatchLists720_1315502074421.flv&amp;kcid=08c05095a076413fad0ddaa8931de89a&amp;spokenLanguage=" target="">How2: Mobile App Watch Lists</a>
+                  <em>(English)</em>
+                 </div>
+                 <div class="duration">
+                  Duration: 2:08
+                 </div>
+                 <div class="level">
+                  Beginner
+                 </div>
+                 <div class="StarRating Stars4 descriptionItem">
+                  <a class="StarRating Stars1 starHover" data="{&quot;numStars&quot;:&quot;1&quot;,&quot;cmsid&quot;:&quot;08c05095a076413fad0ddaa8931de89a&quot;}" href="javascript:void(&quot;oneStarRating&quot;)" title="Overall rating"></a>
+                  <a class="StarRating Stars2 starHover" data="{&quot;numStars&quot;:&quot;2&quot;,&quot;cmsid&quot;:&quot;08c05095a076413fad0ddaa8931de89a&quot;}" href="javascript:void(&quot;twoStarRating&quot;)" title="Overall rating"></a>
+                  <a class="StarRating Stars3 starHover" data="{&quot;numStars&quot;:&quot;3&quot;,&quot;cmsid&quot;:&quot;08c05095a076413fad0ddaa8931de89a&quot;}" href="javascript:void(&quot;threeStarRating&quot;)" title="Overall rating"></a>
+                  <a class="StarRating Stars4 starHover" data="{&quot;numStars&quot;:&quot;4&quot;,&quot;cmsid&quot;:&quot;08c05095a076413fad0ddaa8931de89a&quot;}" href="javascript:void(&quot;fourStarRating&quot;)" title="Overall rating"></a>
+                  <a class="StarRating Stars5 starHover" data="{&quot;numStars&quot;:&quot;5&quot;,&quot;cmsid&quot;:&quot;08c05095a076413fad0ddaa8931de89a&quot;}" href="javascript:void(&quot;fiveStarRating&quot;)" title="Overall rating"></a>
+                 </div>
+                </div>
+                <div class="WebcastItemBorder">
+                 <div class="WebcastItemBorderEnd"></div>
+                </div>
+               </div></td>
+              <td>
+               <div class="WebcastInfoModule hasLayout" field="40a6da2747d746bfae8be9d683911af9">
+                <a href="http://research.scottrade.com/public/knowledgecenter/media/MediaCenter.asp?view=play&amp;video=CHPodcast_MoneyDirect_1309355873799.flv&amp;kcid=40a6da2747d746bfae8be9d683911af9&amp;spokenLanguage=" target="">
+                 <div class="previewImage">
+                  <div style="background: url(&quot;http://media.scottrade.wallst.com/WTCHPodcast_MoneyDirect_1309355873799.JPG&quot;); width:100%; height:100%;"></div>
+                  <div class="PlayIconContainer">
+                   <div class="PlayIcon"></div>
+                  </div>
+                 </div>
+                 <div class="HostedBy">
+                  &nbsp;Hosted By:Sabina Yuan
+                 </div></a>
+                <div class="cellDesc">
+                 <div class="name">
+                  <a href="http://research.scottrade.com/public/knowledgecenter/media/MediaCenter.asp?view=play&amp;video=CHPodcast_MoneyDirect_1309355873799.flv&amp;kcid=40a6da2747d746bfae8be9d683911af9&amp;spokenLanguage=" target="">Money Direct</a>
+                  <em>(Chinese)</em>
+                 </div>
+                 <div class="duration">
+                  Duration: 6:30
+                 </div>
+                 <div class="level">
+                  Advanced
+                 </div>
+                 <div class="StarRating Stars4 descriptionItem">
+                  <a class="StarRating Stars1 starHover" data="{&quot;numStars&quot;:&quot;1&quot;,&quot;cmsid&quot;:&quot;40a6da2747d746bfae8be9d683911af9&quot;}" href="javascript:void(&quot;oneStarRating&quot;)" title="Overall rating"></a>
+                  <a class="StarRating Stars2 starHover" data="{&quot;numStars&quot;:&quot;2&quot;,&quot;cmsid&quot;:&quot;40a6da2747d746bfae8be9d683911af9&quot;}" href="javascript:void(&quot;twoStarRating&quot;)" title="Overall rating"></a>
+                  <a class="StarRating Stars3 starHover" data="{&quot;numStars&quot;:&quot;3&quot;,&quot;cmsid&quot;:&quot;40a6da2747d746bfae8be9d683911af9&quot;}" href="javascript:void(&quot;threeStarRating&quot;)" title="Overall rating"></a>
+                  <a class="StarRating Stars4 starHover" data="{&quot;numStars&quot;:&quot;4&quot;,&quot;cmsid&quot;:&quot;40a6da2747d746bfae8be9d683911af9&quot;}" href="javascript:void(&quot;fourStarRating&quot;)" title="Overall rating"></a>
+                  <a class="StarRating Stars5 starHover" data="{&quot;numStars&quot;:&quot;5&quot;,&quot;cmsid&quot;:&quot;40a6da2747d746bfae8be9d683911af9&quot;}" href="javascript:void(&quot;fiveStarRating&quot;)" title="Overall rating"></a>
+                 </div>
+                </div>
+                <div class="WebcastItemBorder">
+                 <div class="WebcastItemBorderEnd"></div>
+                </div>
+               </div></td>
+              <td>
+               <div class="WebcastInfoModule hasLayout" field="b2db03f9848047ffa6f1a7dc3cf6188e">
+                <a href="http://research.scottrade.com/public/knowledgecenter/media/MediaCenter.asp?view=play&amp;video=Podcast_IRA%2520Conversion_1285607719391.flv&amp;kcid=b2db03f9848047ffa6f1a7dc3cf6188e&amp;spokenLanguage=" target="">
+                 <div class="previewImage">
+                  <div style="background: url(&quot;http://media.scottrade.wallst.com/WTPodcast_IRA_Conversion_1285607719391.JPG&quot;); width:100%; height:100%;"></div>
+                  <div class="PlayIconContainer">
+                   <div class="PlayIcon"></div>
+                  </div>
+                 </div>
+                 <div class="HostedBy">
+                  &nbsp;Hosted By:Jaci Kueker
+                 </div></a>
+                <div class="cellDesc">
+                 <div class="name">
+                  <a href="http://research.scottrade.com/public/knowledgecenter/media/MediaCenter.asp?view=play&amp;video=Podcast_IRA%2520Conversion_1285607719391.flv&amp;kcid=b2db03f9848047ffa6f1a7dc3cf6188e&amp;spokenLanguage=" target="">IRA Conversions</a>
+                  <em>(English)</em>
+                 </div>
+                 <div class="duration">
+                  Duration: 8:27
+                 </div>
+                 <div class="level">
+                  Intermediate
+                 </div>
+                 <div class="StarRating Stars4 descriptionItem">
+                  <a class="StarRating Stars1 starHover" data="{&quot;numStars&quot;:&quot;1&quot;,&quot;cmsid&quot;:&quot;b2db03f9848047ffa6f1a7dc3cf6188e&quot;}" href="javascript:void(&quot;oneStarRating&quot;)" title="Overall rating"></a>
+                  <a class="StarRating Stars2 starHover" data="{&quot;numStars&quot;:&quot;2&quot;,&quot;cmsid&quot;:&quot;b2db03f9848047ffa6f1a7dc3cf6188e&quot;}" href="javascript:void(&quot;twoStarRating&quot;)" title="Overall rating"></a>
+                  <a class="StarRating Stars3 starHover" data="{&quot;numStars&quot;:&quot;3&quot;,&quot;cmsid&quot;:&quot;b2db03f9848047ffa6f1a7dc3cf6188e&quot;}" href="javascript:void(&quot;threeStarRating&quot;)" title="Overall rating"></a>
+                  <a class="StarRating Stars4 starHover" data="{&quot;numStars&quot;:&quot;4&quot;,&quot;cmsid&quot;:&quot;b2db03f9848047ffa6f1a7dc3cf6188e&quot;}" href="javascript:void(&quot;fourStarRating&quot;)" title="Overall rating"></a>
+                  <a class="StarRating Stars5 starHover" data="{&quot;numStars&quot;:&quot;5&quot;,&quot;cmsid&quot;:&quot;b2db03f9848047ffa6f1a7dc3cf6188e&quot;}" href="javascript:void(&quot;fiveStarRating&quot;)" title="Overall rating"></a>
+                 </div>
+                </div>
+                <div class="WebcastItemBorder">
+                 <div class="WebcastItemBorderEnd"></div>
+                </div>
+               </div></td>
+             </tr>
+             <tr>
+              <td>
+               <div class="WebcastInfoModule hasLayout" field="4aa893c4e97947499127f7098d17bfac">
+                <a href="http://research.scottrade.com/public/knowledgecenter/media/MediaCenter.asp?view=play&amp;video=STWC12-19_OptionBasics-Call(720p)_1349209847915.flv&amp;kcid=4aa893c4e97947499127f7098d17bfac&amp;spokenLanguage=" target="">
+                 <div class="previewImage">
+                  <div style="background: url(&quot;http://media.scottrade.wallst.com/WTSTWC12_19_OptionBasics_Call_720p__1349209847915.JPG&quot;); width:100%; height:100%;"></div>
+                  <div class="PlayIconContainer">
+                   <div class="PlayIcon"></div>
+                  </div>
+                 </div>
+                 <div class="HostedBy">
+                  &nbsp;Hosted By:Rey
+                 </div></a>
+                <div class="cellDesc">
+                 <div class="name">
+                  <a href="http://research.scottrade.com/public/knowledgecenter/media/MediaCenter.asp?view=play&amp;video=STWC12-19_OptionBasics-Call(720p)_1349209847915.flv&amp;kcid=4aa893c4e97947499127f7098d17bfac&amp;spokenLanguage=" target="">Option Basics Part I: Calls</a>
+                  <em>(English)</em>
+                 </div>
+                 <div class="duration">
+                  Duration: 4:14
+                 </div>
+                 <div class="level">
+                  Intermediate
+                 </div>
+                 <div class="StarRating Stars3 descriptionItem">
+                  <a class="StarRating Stars1 starHover" data="{&quot;numStars&quot;:&quot;1&quot;,&quot;cmsid&quot;:&quot;4aa893c4e97947499127f7098d17bfac&quot;}" href="javascript:void(&quot;oneStarRating&quot;)" title="Overall rating"></a>
+                  <a class="StarRating Stars2 starHover" data="{&quot;numStars&quot;:&quot;2&quot;,&quot;cmsid&quot;:&quot;4aa893c4e97947499127f7098d17bfac&quot;}" href="javascript:void(&quot;twoStarRating&quot;)" title="Overall rating"></a>
+                  <a class="StarRating Stars3 starHover" data="{&quot;numStars&quot;:&quot;3&quot;,&quot;cmsid&quot;:&quot;4aa893c4e97947499127f7098d17bfac&quot;}" href="javascript:void(&quot;threeStarRating&quot;)" title="Overall rating"></a>
+                  <a class="StarRating Stars4 starHover" data="{&quot;numStars&quot;:&quot;4&quot;,&quot;cmsid&quot;:&quot;4aa893c4e97947499127f7098d17bfac&quot;}" href="javascript:void(&quot;fourStarRating&quot;)" title="Overall rating"></a>
+                  <a class="StarRating Stars5 starHover" data="{&quot;numStars&quot;:&quot;5&quot;,&quot;cmsid&quot;:&quot;4aa893c4e97947499127f7098d17bfac&quot;}" href="javascript:void(&quot;fiveStarRating&quot;)" title="Overall rating"></a>
+                 </div>
+                </div>
+                <div class="WebcastItemBorder">
+                 <div class="WebcastItemBorderEnd"></div>
+                </div>
+               </div></td>
+              <td>
+               <div class="WebcastInfoModule hasLayout" field="4aeb179040ed4bf0b69755ae4503f7a0">
+                <a href="http://research.scottrade.com/public/knowledgecenter/media/MediaCenter.asp?view=play&amp;video=STWC12-17%2520Margin%2520Borrowing_1348593954395.flv&amp;kcid=4aeb179040ed4bf0b69755ae4503f7a0&amp;spokenLanguage=" target="">
+                 <div class="previewImage">
+                  <div style="background: url(&quot;http://media.scottrade.wallst.com/WTSTWC12_17_Margin_Borrowing_1348593954395.JPG&quot;); width:100%; height:100%;"></div>
+                  <div class="PlayIconContainer">
+                   <div class="PlayIcon"></div>
+                  </div>
+                 </div>
+                 <div class="HostedBy">
+                  &nbsp;Hosted By:Gene P.
+                 </div></a>
+                <div class="cellDesc">
+                 <div class="name">
+                  <a href="http://research.scottrade.com/public/knowledgecenter/media/MediaCenter.asp?view=play&amp;video=STWC12-17%2520Margin%2520Borrowing_1348593954395.flv&amp;kcid=4aeb179040ed4bf0b69755ae4503f7a0&amp;spokenLanguage=" target="">Margin Borrowing Basics</a>
+                  <em>(English)</em>
+                 </div>
+                 <div class="duration">
+                  Duration: 4:57
+                 </div>
+                 <div class="level">
+                  Beginner
+                 </div>
+                 <div class="StarRating Stars3 descriptionItem">
+                  <a class="StarRating Stars1 starHover" data="{&quot;numStars&quot;:&quot;1&quot;,&quot;cmsid&quot;:&quot;4aeb179040ed4bf0b69755ae4503f7a0&quot;}" href="javascript:void(&quot;oneStarRating&quot;)" title="Overall rating"></a>
+                  <a class="StarRating Stars2 starHover" data="{&quot;numStars&quot;:&quot;2&quot;,&quot;cmsid&quot;:&quot;4aeb179040ed4bf0b69755ae4503f7a0&quot;}" href="javascript:void(&quot;twoStarRating&quot;)" title="Overall rating"></a>
+                  <a class="StarRating Stars3 starHover" data="{&quot;numStars&quot;:&quot;3&quot;,&quot;cmsid&quot;:&quot;4aeb179040ed4bf0b69755ae4503f7a0&quot;}" href="javascript:void(&quot;threeStarRating&quot;)" title="Overall rating"></a>
+                  <a class="StarRating Stars4 starHover" data="{&quot;numStars&quot;:&quot;4&quot;,&quot;cmsid&quot;:&quot;4aeb179040ed4bf0b69755ae4503f7a0&quot;}" href="javascript:void(&quot;fourStarRating&quot;)" title="Overall rating"></a>
+                  <a class="StarRating Stars5 starHover" data="{&quot;numStars&quot;:&quot;5&quot;,&quot;cmsid&quot;:&quot;4aeb179040ed4bf0b69755ae4503f7a0&quot;}" href="javascript:void(&quot;fiveStarRating&quot;)" title="Overall rating"></a>
+                 </div>
+                </div>
+                <div class="WebcastItemBorder">
+                 <div class="WebcastItemBorderEnd"></div>
+                </div>
+               </div></td>
+              <td>
+               <div class="WebcastInfoModule hasLayout" field="432209070c9547eda9a4cae77d0e33ad">
+                <a href="http://research.scottrade.com/public/knowledgecenter/media/MediaCenter.asp?view=play&amp;video=STWC12-11_STQ_TheLinkerTool%2520(720p)_1333031880462.flv&amp;kcid=432209070c9547eda9a4cae77d0e33ad&amp;spokenLanguage=" target="">
+                 <div class="previewImage">
+                  <div style="background: url(&quot;http://media.scottrade.wallst.com/WTSTWC12_11_STQ_TheLinkerTool__720p__1333031880462.JPG&quot;); width:100%; height:100%;"></div>
+                  <div class="PlayIconContainer">
+                   <div class="PlayIcon"></div>
+                  </div>
+                 </div>
+                 <div class="HostedBy">
+                  &nbsp;Hosted By:Seamus Rowan
+                 </div></a>
+                <div class="cellDesc">
+                 <div class="name">
+                  <a href="http://research.scottrade.com/public/knowledgecenter/media/MediaCenter.asp?view=play&amp;video=STWC12-11_STQ_TheLinkerTool%2520(720p)_1333031880462.flv&amp;kcid=432209070c9547eda9a4cae77d0e33ad&amp;spokenLanguage=" target="">The Linker Tool</a>
+                  <em>(English)</em>
+                 </div>
+                 <div class="duration">
+                  Duration: 3:23
+                 </div>
+                 <div class="level">
+                  Beginner
+                 </div>
+                 <div class="StarRating Stars3 descriptionItem">
+                  <a class="StarRating Stars1 starHover" data="{&quot;numStars&quot;:&quot;1&quot;,&quot;cmsid&quot;:&quot;432209070c9547eda9a4cae77d0e33ad&quot;}" href="javascript:void(&quot;oneStarRating&quot;)" title="Overall rating"></a>
+                  <a class="StarRating Stars2 starHover" data="{&quot;numStars&quot;:&quot;2&quot;,&quot;cmsid&quot;:&quot;432209070c9547eda9a4cae77d0e33ad&quot;}" href="javascript:void(&quot;twoStarRating&quot;)" title="Overall rating"></a>
+                  <a class="StarRating Stars3 starHover" data="{&quot;numStars&quot;:&quot;3&quot;,&quot;cmsid&quot;:&quot;432209070c9547eda9a4cae77d0e33ad&quot;}" href="javascript:void(&quot;threeStarRating&quot;)" title="Overall rating"></a>
+                  <a class="StarRating Stars4 starHover" data="{&quot;numStars&quot;:&quot;4&quot;,&quot;cmsid&quot;:&quot;432209070c9547eda9a4cae77d0e33ad&quot;}" href="javascript:void(&quot;fourStarRating&quot;)" title="Overall rating"></a>
+                  <a class="StarRating Stars5 starHover" data="{&quot;numStars&quot;:&quot;5&quot;,&quot;cmsid&quot;:&quot;432209070c9547eda9a4cae77d0e33ad&quot;}" href="javascript:void(&quot;fiveStarRating&quot;)" title="Overall rating"></a>
+                 </div>
+                </div>
+                <div class="WebcastItemBorder">
+                 <div class="WebcastItemBorderEnd"></div>
+                </div>
+               </div></td>
+             </tr>
+             <tr>
+              <td>
+               <div class="WebcastInfoModule hasLayout" field="7e4c70d73f134964b29b7162daf177b5">
+                <a href="http://research.scottrade.com/public/knowledgecenter/media/MediaCenter.asp?view=play&amp;video=STWC12-04_ScottradeBankTransferFunds(720p)rev3-19-12_1332260894643.flv&amp;kcid=7e4c70d73f134964b29b7162daf177b5&amp;spokenLanguage=" target="">
+                 <div class="previewImage">
+                  <div style="background: url(&quot;http://media.scottrade.wallst.com/WTSTWC12_04_ScottradeBankTransferFunds_720p_rev3_19_12_1332260894643.JPG&quot;); width:100%; height:100%;"></div>
+                  <div class="PlayIconContainer">
+                   <div class="PlayIcon"></div>
+                  </div>
+                 </div>
+                 <div class="HostedBy">
+                  &nbsp;Hosted By:Tim Zyk
+                 </div></a>
+                <div class="cellDesc">
+                 <div class="name">
+                  <a href="http://research.scottrade.com/public/knowledgecenter/media/MediaCenter.asp?view=play&amp;video=STWC12-04_ScottradeBankTransferFunds(720p)rev3-19-12_1332260894643.flv&amp;kcid=7e4c70d73f134964b29b7162daf177b5&amp;spokenLanguage=" target="">Funds Transfers with Scottrade Bank</a>
+                  <em>(English)</em>
+                 </div>
+                 <div class="duration">
+                  Duration: 4:32
+                 </div>
+                 <div class="level">
+                  Beginner
+                 </div>
+                 <div class="StarRating Stars3 descriptionItem">
+                  <a class="StarRating Stars1 starHover" data="{&quot;numStars&quot;:&quot;1&quot;,&quot;cmsid&quot;:&quot;7e4c70d73f134964b29b7162daf177b5&quot;}" href="javascript:void(&quot;oneStarRating&quot;)" title="Overall rating"></a>
+                  <a class="StarRating Stars2 starHover" data="{&quot;numStars&quot;:&quot;2&quot;,&quot;cmsid&quot;:&quot;7e4c70d73f134964b29b7162daf177b5&quot;}" href="javascript:void(&quot;twoStarRating&quot;)" title="Overall rating"></a>
+                  <a class="StarRating Stars3 starHover" data="{&quot;numStars&quot;:&quot;3&quot;,&quot;cmsid&quot;:&quot;7e4c70d73f134964b29b7162daf177b5&quot;}" href="javascript:void(&quot;threeStarRating&quot;)" title="Overall rating"></a>
+                  <a class="StarRating Stars4 starHover" data="{&quot;numStars&quot;:&quot;4&quot;,&quot;cmsid&quot;:&quot;7e4c70d73f134964b29b7162daf177b5&quot;}" href="javascript:void(&quot;fourStarRating&quot;)" title="Overall rating"></a>
+                  <a class="StarRating Stars5 starHover" data="{&quot;numStars&quot;:&quot;5&quot;,&quot;cmsid&quot;:&quot;7e4c70d73f134964b29b7162daf177b5&quot;}" href="javascript:void(&quot;fiveStarRating&quot;)" title="Overall rating"></a>
+                 </div>
+                </div>
+                <div class="WebcastItemBorder">
+                 <div class="WebcastItemBorderEnd"></div>
+                </div>
+               </div></td>
+              <td>
+               <div class="WebcastInfoModule hasLayout" field="cdd56a52cefb4c5fa6368964c5334a24">
+                <a href="http://research.scottrade.com/public/knowledgecenter/media/MediaCenter.asp?view=play&amp;video=STWC11-12How2MobileAppResearch720_1315505116089.flv&amp;kcid=cdd56a52cefb4c5fa6368964c5334a24&amp;spokenLanguage=" target="">
+                 <div class="previewImage">
+                  <div style="background: url(&quot;http://media.scottrade.wallst.com/WTSTWC11_12How2MobileAppResearch720_1315505116089.JPG&quot;); width:100%; height:100%;"></div>
+                  <div class="PlayIconContainer">
+                   <div class="PlayIcon"></div>
+                  </div>
+                 </div>
+                 <div class="HostedBy">
+                  &nbsp;Hosted By:Michelle Paasch
+                 </div></a>
+                <div class="cellDesc">
+                 <div class="name">
+                  <a href="http://research.scottrade.com/public/knowledgecenter/media/MediaCenter.asp?view=play&amp;video=STWC11-12How2MobileAppResearch720_1315505116089.flv&amp;kcid=cdd56a52cefb4c5fa6368964c5334a24&amp;spokenLanguage=" target="">How2: Research with the Mobile App</a>
+                  <em>(English)</em>
+                 </div>
+                 <div class="duration">
+                  Duration: 3:20
+                 </div>
+                 <div class="level">
+                  Beginner
+                 </div>
+                 <div class="StarRating Stars3 descriptionItem">
+                  <a class="StarRating Stars1 starHover" data="{&quot;numStars&quot;:&quot;1&quot;,&quot;cmsid&quot;:&quot;cdd56a52cefb4c5fa6368964c5334a24&quot;}" href="javascript:void(&quot;oneStarRating&quot;)" title="Overall rating"></a>
+                  <a class="StarRating Stars2 starHover" data="{&quot;numStars&quot;:&quot;2&quot;,&quot;cmsid&quot;:&quot;cdd56a52cefb4c5fa6368964c5334a24&quot;}" href="javascript:void(&quot;twoStarRating&quot;)" title="Overall rating"></a>
+                  <a class="StarRating Stars3 starHover" data="{&quot;numStars&quot;:&quot;3&quot;,&quot;cmsid&quot;:&quot;cdd56a52cefb4c5fa6368964c5334a24&quot;}" href="javascript:void(&quot;threeStarRating&quot;)" title="Overall rating"></a>
+                  <a class="StarRating Stars4 starHover" data="{&quot;numStars&quot;:&quot;4&quot;,&quot;cmsid&quot;:&quot;cdd56a52cefb4c5fa6368964c5334a24&quot;}" href="javascript:void(&quot;fourStarRating&quot;)" title="Overall rating"></a>
+                  <a class="StarRating Stars5 starHover" data="{&quot;numStars&quot;:&quot;5&quot;,&quot;cmsid&quot;:&quot;cdd56a52cefb4c5fa6368964c5334a24&quot;}" href="javascript:void(&quot;fiveStarRating&quot;)" title="Overall rating"></a>
+                 </div>
+                </div>
+                <div class="WebcastItemBorder">
+                 <div class="WebcastItemBorderEnd"></div>
+                </div>
+               </div></td>
+              <td>
+               <div class="WebcastInfoModule hasLayout" field="79cd1f6404fb4b56bfbbd3eb70b9b985">
+                <a href="http://research.scottrade.com/public/knowledgecenter/media/MediaCenter.asp?view=play&amp;video=CHPodcast_OrderTypes_1312299095246.flv&amp;kcid=79cd1f6404fb4b56bfbbd3eb70b9b985&amp;spokenLanguage=" target="">
+                 <div class="previewImage">
+                  <div style="background: url(&quot;http://media.scottrade.wallst.com/WTCHPodcast_OrderTypes_1312299095246.JPG&quot;); width:100%; height:100%;"></div>
+                  <div class="PlayIconContainer">
+                   <div class="PlayIcon"></div>
+                  </div>
+                 </div>
+                 <div class="HostedBy">
+                  &nbsp;Hosted By:Bruce Ji
+                 </div></a>
+                <div class="cellDesc">
+                 <div class="name">
+                  <a href="http://research.scottrade.com/public/knowledgecenter/media/MediaCenter.asp?view=play&amp;video=CHPodcast_OrderTypes_1312299095246.flv&amp;kcid=79cd1f6404fb4b56bfbbd3eb70b9b985&amp;spokenLanguage=" target="">Order Types</a>
+                  <em>(Chinese)</em>
+                 </div>
+                 <div class="duration">
+                  Duration: 8'51&quot;
+                 </div>
+                 <div class="level">
+                  Beginner
+                 </div>
+                 <div class="StarRating Stars3 descriptionItem">
+                  <a class="StarRating Stars1 starHover" data="{&quot;numStars&quot;:&quot;1&quot;,&quot;cmsid&quot;:&quot;79cd1f6404fb4b56bfbbd3eb70b9b985&quot;}" href="javascript:void(&quot;oneStarRating&quot;)" title="Overall rating"></a>
+                  <a class="StarRating Stars2 starHover" data="{&quot;numStars&quot;:&quot;2&quot;,&quot;cmsid&quot;:&quot;79cd1f6404fb4b56bfbbd3eb70b9b985&quot;}" href="javascript:void(&quot;twoStarRating&quot;)" title="Overall rating"></a>
+                  <a class="StarRating Stars3 starHover" data="{&quot;numStars&quot;:&quot;3&quot;,&quot;cmsid&quot;:&quot;79cd1f6404fb4b56bfbbd3eb70b9b985&quot;}" href="javascript:void(&quot;threeStarRating&quot;)" title="Overall rating"></a>
+                  <a class="StarRating Stars4 starHover" data="{&quot;numStars&quot;:&quot;4&quot;,&quot;cmsid&quot;:&quot;79cd1f6404fb4b56bfbbd3eb70b9b985&quot;}" href="javascript:void(&quot;fourStarRating&quot;)" title="Overall rating"></a>
+                  <a class="StarRating Stars5 starHover" data="{&quot;numStars&quot;:&quot;5&quot;,&quot;cmsid&quot;:&quot;79cd1f6404fb4b56bfbbd3eb70b9b985&quot;}" href="javascript:void(&quot;fiveStarRating&quot;)" title="Overall rating"></a>
+                 </div>
+                </div>
+                <div class="WebcastItemBorder">
+                 <div class="WebcastItemBorderEnd"></div>
+                </div>
+               </div></td>
+             </tr>
+            </tbody>
+           </table>
+          </div>
+          <div class="paging haslayout">
+           <a href="?view=newnfeatured&amp;video=&amp;kcid=&amp;spokenLanguage=&amp;pageResults=9&amp;sortOrder=descending&amp;sort=rating&amp;FirstRow=0" class="currentPage">1</a>
+           <a href="?view=newnfeatured&amp;video=&amp;kcid=&amp;spokenLanguage=&amp;pageResults=9&amp;sortOrder=descending&amp;sort=rating&amp;FirstRow=9">2</a>
+           <a href="?view=newnfeatured&amp;video=&amp;kcid=&amp;spokenLanguage=&amp;pageResults=9&amp;sortOrder=descending&amp;sort=rating&amp;FirstRow=18">3</a>
+           <a href="?view=newnfeatured&amp;video=&amp;kcid=&amp;spokenLanguage=&amp;pageResults=9&amp;sortOrder=descending&amp;sort=rating&amp;FirstRow=27">4</a>
+           <a href="?view=newnfeatured&amp;video=&amp;kcid=&amp;spokenLanguage=&amp;pageResults=9&amp;sortOrder=descending&amp;sort=rating&amp;FirstRow=36">5</a>
+           <a href="?view=newnfeatured&amp;video=&amp;kcid=&amp;spokenLanguage=&amp;pageResults=9&amp;sortOrder=descending&amp;sort=rating&amp;FirstRow=45">6</a>
+           <a href="?view=newnfeatured&amp;video=&amp;kcid=&amp;spokenLanguage=&amp;pageResults=9&amp;sortOrder=descending&amp;sort=rating&amp;FirstRow=54">7</a>
+           <a href="?view=newnfeatured&amp;video=&amp;kcid=&amp;spokenLanguage=&amp;pageResults=9&amp;sortOrder=descending&amp;sort=rating&amp;FirstRow=63">8</a>
+           <a href="?view=newnfeatured&amp;video=&amp;kcid=&amp;spokenLanguage=&amp;pageResults=9&amp;sortOrder=descending&amp;sort=rating&amp;FirstRow=72">9</a>
+           <a href="?view=newnfeatured&amp;video=&amp;kcid=&amp;spokenLanguage=&amp;pageResults=9&amp;sortOrder=descending&amp;sort=rating&amp;FirstRow=81">10</a>
+          </div>
+         </div>
+        </div>
+        <div id="generalContentOutput"></div>
+       </div>
+       <div id="footerContainer" class="disclaimers specialFooter">
+        The information and content provided in the Scottrade&reg; Knowledge Center is for informational and/or educational purposes only. The information presented or discussed is not, and should not be considered, a recommendation or an offer of, or solicitation of an offer by, Scottrade or its affiliates to buy, sell or hold any security or other financial product or an endorsement or affirmation of any specific investment strategy. You are fully responsible for your investment decisions. Your choice to engage in a particular investment or investment strategy should be based solely on your own research and evaluation of the risks involved, your financial circumstances and your investment objectives. Scottrade, Inc. and its affiliates are not offering or providing, and will not offer or provide, any advice, opinion or recommendation of the suitability, value or profitability of any particular investment or investment strategy.
+       </div>
+      </div>
+     </div>
+     <link type="text/css" href="//www.scottrade.com/etc/designs/scottrade/css/wsod.css" rel="stylesheet" />
+     <script type="text/javascript" src="//www.scottrade.com/LP/WSOD/common/js/loader.js"></script>
+     <div class="hasLayout" id="ST-footer">
+      <!-- Begin Contact Icon --> 
+      <div id="contact-bar"> 
+       <ul> 
+        <li><span class="call-us-footer contact-icon">Call Us At (800) 619-7283</span></li> 
+        <li><a href="http://www.scottrade.com/contact/contact-form.html" title="Email Us" class="email-footer contact-icon">Email</a> Customer Support</li> 
+        <li><a href="https://trading.scottrade.com/default.aspx" title="Login" class="login-footer contact-icon">Login</a> and Trade</li> 
+        <li><span class="branch-footer contact-icon">500+ <a href="http://www.scottrade.com/locations/index.html" title="Visit a Local Scottrade Branch">Local Branches</a></span></li> 
+       </ul> 
+      </div> 
+      <!-- End Contact Icon --> 
+      <!-- Begin Footer --> 
+      <div id="footer2"> 
+       <div class="footer-content"> 
+        <span class="title2">Quick Links</span> 
+        <div class="footer-column-container"> 
+         <div class="footer-column">
+          <strong>Online Brokerage</strong> 
+          <ul> 
+           <li><a href="http://www.scottrade.com/online-brokerage/reasons-to-choose.html">Reasons to Choose/Switch</a></li> 
+           <li><a href="http://www.scottrade.com/online-brokerage/online-broker-comparison.html">Online Broker Comparison</a></li> 
+           <li><a href="http://www.scottrade.com/online-brokerage/referall.html">Free Trades</a></li> 
+           <li><a href="http://research.scottrade.com/qnr/Public/Markets/Overview">Market Overview</a></li> 
+           <li><a href="http://research.scottrade.com/qnr/Public/Markets/Commentary">Stock Market News</a></li> 
+           <li><a href="http://research.scottrade.com/qnr/Public/Stocks/Overview">Stock Research</a></li> 
+          </ul> 
+         </div> 
+         <div class="footer-column">
+          <img src="//www.scottrade.com/LP/WSOD/common/images/footer-divider.gif" />
+         </div> 
+         <div class="footer-column">
+          <strong>Online Trading</strong> 
+          <ul> 
+           <li><a href="http://www.scottrade.com/online-trading/trading-website.html">Web Trading</a></li> 
+           <li><a href="http://www.scottrade.com/online-trading/trading-platform-scottrader.html">Real-Time Trading</a></li> 
+           <li><a href="http://www.scottrade.com/online-trading/online-trading-platform-scottradeelite.html">Advanced Online Trading</a></li> 
+           <li><a href="http://www.scottrade.com/online-trading/options-trading-platform-optionsfirst.html">Online Options Trading</a></li> 
+           <li><a href="http://www.scottrade.com/mobile-trading.html">Mobile Stock Trading</a></li> 
+           <li><a href="http://research.scottrade.com/public/knowledgecenter/overview/overview.asp">Investment Education</a></li> 
+          </ul> 
+         </div> 
+         <div class="footer-column">
+          <img src="//www.scottrade.com/LP/WSOD/common/images/footer-divider.gif" />
+         </div> 
+         <div class="footer-column">
+          <strong>Investment Products</strong> 
+          <ul> 
+           <li><a href="http://www.scottrade.com/investment-products/ira.html">IRAs</a></li> 
+           <li><a href="http://www.scottrade.com/investment-products/stocks.html">Stocks</a></li> 
+           <li><a href="http://www.scottrade.com/investment-products/etfs.html">ETFs</a></li> 
+           <li><a href="http://www.scottrade.com/investment-products/options-trading.html">Options Trading</a></li> 
+           <li><a href="http://www.scottrade.com/investment-products/mutual-funds.html">Mutual Funds</a></li> 
+           <li><a href="http://www.scottrade.com/investment-products/account-types.html">Account Types</a></li> 
+          </ul> 
+         </div> 
+         <div class="footer-column">
+          <img src="//www.scottrade.com/LP/WSOD/common/images/footer-divider.gif" />
+         </div> 
+         <div class="footer-column">
+          <strong>Contact Us</strong> 
+          <ul> 
+           <li><a href="http://www.scottrade.com/contact.html">Customer Support</a></li> 
+           <li><a href="http://chinese.scottrade.com/www/index.aspx">Chinese</a><img src="//www.scottrade.com/LP/WSOD/common/images/icon-chinese-footer.gif" class="chinese" /></li> 
+           <li><a href="https://advisor.scottrade.com/">RIA Services</a></li> 
+           <li><a href="http://www.scottrade.com/careers/index.asp">Scottrade Careers</a></li> 
+           <li><a href="http://about.scottrade.com/blog.html">Scottrade Blog</a></li> 
+           <li><a href="http://about.scottrade.com/">About Scottrade</a></li> 
+          </ul> 
+         </div> 
+         <div class="footer-column">
+          <img src="//www.scottrade.com/LP/WSOD/common/images/footer-divider.gif" />
+         </div> 
+         <div class="footer-column">
+          <strong>Follow Us</strong> 
+          <ul> 
+           <li><a href="http://community.scottrade.com" class="footer-link sc" target="_blank">Scottrade Community</a></li> 
+           <li><a href="http://www.facebook.com/Scottrade" class="footer-link fb" target="_blank">Facebook</a></li> 
+           <li><a href="http://twitter.com/scottrade" class="footer-link twitter" target="_blank">Twitter</a></li> 
+           <li><a href="http://about.scottrade.com/rss.html" class="footer-link rss" target="_blank">RSS</a></li> 
+           <li><a href="http://www.youtube.com/scottradeinc" class="footer-link yt" target="_blank">YouTube</a></li> 
+          </ul> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <!-- End Footer --> 
+      <!-- Begin Bottom Links --> 
+      <div id="bottom-links"> 
+       <div id="legal-links"> 
+        <ul> 
+         <li><a href="http://www.scottrade.com/forms-center.html">Forms Center</a></li> 
+         <li class="bullet"></li> 
+         <li><a href="http://www.scottrade.com/disclosures/privacy.html">Privacy Statement</a></li> 
+         <li class="bullet"></li> 
+         <li><a href="http://www.scottrade.com/online-brokerage/secure-trading.html">Security Center</a></li> 
+         <li class="bullet"></li> 
+         <li><a href="http://www.scottrade.com/disclosures/terms-conditions.html">Terms &amp; Conditions</a></li> 
+         <li class="bullet"></li> 
+         <li><a href="http://www.scottrade.com/disclosures/business-continuity.html">Business Continuity</a></li> 
+         <li class="bullet"></li> 
+         <li><a href="http://research.scottrade.com/public/knowledgecenter/policies/disclosures.asp">Agreements &amp; Disclosure</a></li> 
+         <li class="bullet"></li> 
+         <li><a href="http://www.scottrade.com/investment-products/account-types/asset-protection.html">Asset Protection</a></li> 
+         <li class="bullet"></li> 
+         <li><a href="http://www.scottrade.com/site-map.html">Site Map</a></li> 
+        </ul> 
+        <img src="//www.scottrade.com/LP/WSOD/common/images/7-online-trades.png" class="online-trades-badge" /> 
+       </div> 
+      </div> 
+      <!-- End Bottom Links --> 
+      <script type="text/javascript">
+            $(document).ready(function() {
+                $(".fb").click(function() { sTracklink("FooterFacebook")}); 
+                $(".twitter").click(function() { sTracklink("FooterTwitter")}); 
+                $(".linkedin").click(function() { sTracklink("FooterLinkedIn")}); 
+                $(".flickr").click(function() { sTracklink("FooterFlickr")}); 
+                $(".yt").click(function() { sTracklink("FooterYouTube")}); 
+            });
+        </script> 
+      <!-- End Footer --> 
+      <!-- Begin Copyrights --> 
+      <div id="copyright-container"> 
+       <div id="copyright2"> 
+        <div> 
+         <p>Authorized account login and access indicates customer's consent to the Brokerage Account Agreement. Such consent is effective at all times when using this site.<br /> Unauthorized access is prohibited.</p> 
+         <p>Scottrade, Inc. and Scottrade Bank are separate but affiliated companies and are wholly-owned subsidiaries of Scottrade Financial Services, Inc. Brokerage products and services offered by Scottrade, Inc. - Member <a href="http://www.finra.org/">FINRA</a> and <a href="http://www.sipc.org/">SIPC</a>. Deposit products and services offered by Scottrade Bank, Member <a target="_blank" href="http://www.fdic.gov/">FDIC</a>.</p> 
+         <p><b>Brokerage Products Not FDIC-Insured - Not Bank Guaranteed - May Lose Value.</b></p> 
+         <p>Online market and limit stock trades are just $7 for stocks priced $1 and above.</p> 
+         <p>* May 2012, Smart Money recognized Scottrade as its overall second-highest ranking broker, with the highest score for fees and commissions and banking services.</p> 
+         <p>Scottrade does not charge setup, inactivity or annual maintenance fees. Applicable transaction fees still apply.</p> 
+         <p>Scottrade does not provide tax advice. The material provided is for informational purposes only. Please consult your tax, or legal, advisor for questions concerning your personal tax or financial situation.</p> 
+         <p>Select investments are commission free to those using Scottrade's online platforms. Other fees and charges may apply.</p> 
+         <p>Any specific securities, or types of securities, used as examples are for demonstration purposes only. None of the information provided should be considered a recommendation or solicitation to invest in, or liquidate, a particular security or type of security.</p> 
+         <p>Investors should consider the investment objectives, charges, expense, and unique risk profile of an Exchange Traded Fund (ETF) carefully before investing. Leveraged and Inverse ETFs may not be suitable for all investors and may increase exposure to volatility through the use of leverage, short sales of securities, derivatives and other complex investment strategies. These funds' performance will likely be significantly different than their benchmark over periods of more than one day, and their performance over time may in fact trend opposite of their benchmark. Investors should monitor these holdings, consistent with their strategies, as frequently as daily. A prospectus contains this and other information about the ETF and should be obtained from the issuer. The prospectus should be read carefully before investing.</p> 
+         <p>Investors should consider the investment objectives, risks, charges and expenses of a mutual fund carefully before investing. A mutual fund's prospectus contains this and other information about the mutual fund. Prospectuses may be ordered through <a href="http://www.scottrade.com">Scottrade.com</a> or through a <a href="http://www.scottrade.com/locations/index.html">Scottrade branch office</a>. The prospectus should be read carefully before investing. No transaction fee (NTF) funds are subject to the terms and conditions of the NTF funds program. Scottrade is compensated by the funds participating in the NTF program through recordkeeping, shareholder, or SEC 12b-1 fees.</p> 
+         <p>Margin trading involves interest charges and risks, including the potential to lose more than deposited or the need to deposit additional collateral in a falling market. The <a target="_blank" href="http://www.scottrade.com/documents/formscenter/SF1011_Margin_Agreement.pdf">Margin Disclosure Statement and Agreement</a> (PDF) is available for download, or it is available at one of <a href="http://www.scottrade.com/locations/index.html">our branch offices</a>. It contains information on our lending policies, interest charges, and the risks associated with margin accounts.</p> 
+         <p>Options involve risk and are not suitable for all investors. Detailed information on our policies and the risks associated with options can be found in the <a href="http://www.scottrade.com/forms-center/OptionsForms.html">Scottrade Options Application and Agreement</a>, <a target="_blank" href="http://www.scottrade.com/documents/alt/111_BrokAccAgreement.pdf">Brokerage Account Agreement</a>, and by downloading the <a target="_blank" href="http://www.optionsclearing.com/about/publications/character-risks.jsp">Characteristics and Risks of Standardized Options and Supplements (PDF)</a> from The Options Clearing Corporation, or by requesting a copy from a <a href="http://www.scottrade.com/locations/index.html">Scottrade branch office</a>. Supporting documentation for any claims will be supplied upon request.</p> 
+         <p>Market volatility, volume, and system availability may impact account access and trade execution.</p> 
+         <p>Testimonials may not be representative of the experience of other clients and are no guarantee of future performance or success.</p> 
+         <p>Scottrade&reg; and the Scottrade&reg; logo are the registered and unregistered trademarks of Scottrade, Inc. and its affiliates.</p> 
+         <p>&copy; 2013 Scottrade, Inc. All rights reserved.</p> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div id="PopupConfirmationBoxContainer"> 
+     <div id="PopupConfirmationHeader"> 
+      <h3>Scottrade Media Center</h3> 
+      <div class="CloseButtonIcon CloseButton"></div> 
+     </div> 
+     <div id="PopupConfirmationBox" class="hasLayout"> 
+      <div class="Message hasLayout"> 
+      </div> 
+      <div class="Button CloseButton">
+       <div class="close">
+        Ok
+       </div>
+      </div> 
+     </div> 
+    </div>
+   </div>
+  </div>   
+ </body>
+</html>

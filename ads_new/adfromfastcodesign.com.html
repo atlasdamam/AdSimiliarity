@@ -1,0 +1,286 @@
+<head>
+<meta content="IE=EmulateIE7, IE=9" http-equiv="X-UA-Compatible">
+<meta content="application/xhtml+xml; charset=UTF-8" http-equiv="Content-Type">
+<meta content="Autodesk Fusion 360" name="title">
+<meta content="123112" name="site-id">
+<meta content="noydir, noodp" name="robots">
+<meta content="Autodesk Fusion 360 is the first complete 3D CAD tool powered by the cloud, combining industrial design with mechanical engineering in one collaborative, accessible solution." name="description">
+<meta content="3D CAD, industrial design, mechanical engineering" name="keywords">
+<meta content="2013-05-10" name="date">
+<style type="text/css">
+<!--
+                @import url("http://images.autodesk.com/adsk/s128/css/main.css");
+            -->
+</style>
+<link href="http://images.autodesk.com/adsk/s128/css/pc.css" type="text/css" rel="stylesheet">
+<link href="http://images.autodesk.com/adsk/s128/css/l2l.css" type="text/css" rel="stylesheet">
+<link href="http://images.autodesk.com/adsk/s128/css/pc-print.css" media="print" type="text/css" rel="stylesheet">
+<!--[if IE 7]>
+            <link rel="stylesheet" type="text/css" href="http://images.autodesk.com/adsk/s128/css/ie7.css"/>
+        <![endif]-->
+<!--[if IE 6]>
+            <link rel="stylesheet" type="text/css" href="http://images.autodesk.com/adsk/s128/css/ie6.css"/>
+        <![endif]-->
+<!--[if IE 7]>
+            <link rel="stylesheet" type="text/css" href="http://images.autodesk.com/adsk/s128/css/pc-ie7.css"/>
+            <link rel="stylesheet" type="text/css" href="http://images.autodesk.com/adsk/s128/css/l2l-ie7.css"/>
+        <![endif]-->
+<!--[if IE 6]>
+            <link rel="stylesheet" type="text/css" href="http://images.autodesk.com/adsk/s128/css/pc-ie6.css"/>
+            <link rel="stylesheet" type="text/css" href="http://images.autodesk.com/adsk/s128/css/l2l-ie6.css"/>
+        <![endif]-->
+<script src="http://js.bizographics.com/insight.min.js" async="" type="text/javascript"></script><script src="http://www.google.com/jsapi" type="text/javascript"> </script>
+<script src="http://images.autodesk.com/adsk/s128/js/wac.js" type="text/javascript"> </script>
+<script src="http://images.autodesk.com/adsk/s128/js/pc.js" type="text/javascript"> </script><script type="text/javascript" src="http://images.autodesk.com/flashassets/staticassets/project_forge/scrollbar/script/jquery.mousewheel.js"></script><script type="text/javascript">$('<link rel="stylesheet" type="text/css" href="http://images.autodesk.com/flashassets/staticassets/project_forge/projectforge.css" />').appendTo($('head'));
+$('<link rel="stylesheet" type="text/css" href="http://images.autodesk.com/flashassets/staticassets/project_forge/scrollbar/style/jquery.jscrollpane.css" />').appendTo($('head'));
+
+//preload images for tabs
+var images = [];
+function preload(imgs) {
+	for (i = 0; i < imgs.length; i++) {
+	images[i] = new Image()
+	images[i].src = imgs[i];
+	}
+}
+preload([ "http://images.autodesk.com/flashassets/staticassets/project_forge/powerful_off.jpg", "http://images.autodesk.com/flashassets/staticassets/project_forge/collaborative_on.jpg", "http://images.autodesk.com/flashassets/staticassets/project_forge/accessible_on.jpg" ]);
+
+var is_chrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
+
+/**** videos ****/
+var videos = [];
+
+function videoClick() {
+	var selectedVideo = $(this).parent().attr("id");
+	$("#videoTitle").html(videos[selectedVideo].title);
+	$("#featuredVideo").empty();
+	if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)){
+		$(videos[selectedVideo].element.html()).appendTo("#featuredVideo");
+	} else {
+		$(videos[selectedVideo].element).appendTo("#featuredVideo");
+	}
+
+	return false;
+}	
+	
+/**** tabs ****/
+function manageTabs() {
+	var selectedTab = $(this).parent().attr("id");
+	$('div[id*="_content"]').hide();
+	$('div[id*="tab"]').removeClass("selected");
+	$("#" + selectedTab).addClass("selected");
+	$("#" + selectedTab + "_content").show();
+	$('div[id*="tab"]').each(function(index, element) {
+		$(element).removeClass($(element).attr("id") + "_background_on");
+		$(element).addClass($(element).attr("id") + "_background_off");
+	});
+	$("#" + selectedTab).removeClass(selectedTab + "_background_off");
+	$("#" + selectedTab).addClass(selectedTab + "_background_on");
+	return false;
+}
+
+$(document).ready( function() {
+	//grab the videos
+	if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)){
+		var elementSrc = "#section5 object";
+		var process = function(e){ return e.parent();};
+	} else {
+		var elementSrc = "#section5 video";
+		var process = function(e){ return e;};
+	}
+
+	//data setup
+	videos["video0"] = {title : $("#video0").find("img").attr("alt"), element : process($(elementSrc + ":eq(0)"))}; 
+	videos["video1"] = {title : $("#video1").find("img").attr("alt"), element : process($(elementSrc + ":eq(1)"))};
+	videos["video2"] = {title : $("#video2").find("img").attr("alt"), element : process($(elementSrc + ":eq(2)"))};
+	videos["video3"] = {title : $("#video3").find("img").attr("alt"), element : process($(elementSrc + ":eq(3)"))};
+	$("video").remove();
+	
+	//banner
+	$("#adsk91-main-banner img:eq(0)").hide();
+	$("#adsk91-main-wrapper").css({"background":"url(" + $("#adsk91-main-banner img:eq(0)").attr("src") + ") no-repeat #fff"});
+	var newBanner = "<div id='bannerContent'><div id='bannerHeader'></div><div id='bannerVideos'><div id='videoTitle'></div><div id='featuredVideo'></div><div id='videoList' 	class='scroll-pane'><div id='videoThumbs'></div></div><div style='clear: both;'></div></div>"
+	$("#adsk91-main-banner").html(newBanner);
+	$("#bannerHeader").html($("#section4").html());
+	$("#section6").appendTo("#videoThumbs");
+	
+	//overlay
+	var overlays = "<div id='boxes'> <div id='form1' class='window'> <a href='#' class='close'>X</a> <div class='overlay_content'><div id='form1_title'></div><iframe src='http://proc.autodesk.com/projectForge/short.html' scrolling='no' frameborder='0'></iframe> </div></div> <div id='form2' class='window'> <a href='#' class='close'>X</a> <div class='overlay_content'><div id='form2_title'></div><iframe src='http://proc.autodesk.com/projectForge/long.html' frameborder='0'></iframe> </div></div><div id='mask'></div></div>";
+
+	$(overlays).appendTo($("body"));
+	$("#section7 a:eq(0)").addClass("modal");
+	$("#section7 a:eq(1)").addClass("modal");
+	$("#form1_title").html($("#section11").html());
+	$("#form2_title").html($("#section12").html());
+	
+	//add overlay
+	$('a[class=modal]').click(function(e) {
+		//Cancel the link behavior
+		e.preventDefault();
+		//Get the A tag
+		var id = $(this).attr('href');
+
+	
+		//transition effect
+		$('#mask').fadeIn(1000);
+		$('#mask').fadeTo("slow", 0.8);
+	
+		//Get the window height and width
+		var winH = $(window).height();
+		var winW = $(window).width();
+		var scrollTop = $(window).scrollTop();
+	
+		//Set the popup window to center
+		$(id).css('top', winH / 2 - $(id).height() / 2 + scrollTop) ;
+		$(id).css('left', winW / 2 - $(id).width() / 2);
+	
+		//transition effect
+		$(id).fadeIn(2000);
+	
+		});
+		//if close button is clicked
+		$('.window .close').click(function(e) {
+		//Cancel the link behavior
+		e.preventDefault();
+		$('#mask, .window').hide();
+		});
+		//if mask is clicked
+		$('#mask').click(function() {
+		$(this).hide();
+		$('.window').hide();
+	});
+	
+	//IE7 css exceptions
+	if ($.browser.msie && $.browser.version.substr(0,1)<8) {
+		$(".contentbox").css("top","-41");
+		$("#adsk91-maincontent").css("padding-top","0px");
+	}
+	
+	//chrome exceptions
+	if (is_chrome) {
+		$("#videoTitle").css("margin-bottom","0px");
+	}
+	
+	//IE video exceptions
+	if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)){
+		$("#videoList").css("margin-top","0px");
+		$("#videoList").css("height","329px");
+	} 
+	
+	//get default video ready
+	if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)){
+		$(videos["video0"].element.html()).appendTo("#featuredVideo");
+	} else {
+		$(videos["video0"].element).appendTo("#featuredVideo");
+	}
+	$("#videoTitle").html(videos["video0"].title);
+	
+	$("#videoList a").click(videoClick);
+	
+	//buttons
+	var color = "118888";
+	var width = "150";
+	var carretUrl = "http://images.autodesk.com/adsk/images/carret0.gif"
+	var targets = [$("#section7 a:eq(0), #section7 a:eq(1)")];
+	$.each(targets,function(i,v){ 
+		$(this).css({"display":"block","width":(width-10)+"px","background":"#"+color+" url('"+ carretUrl  +"') no-repeat right center","color":"white","padding":"5px","text-decoration":		"none","font-size":"12px"});
+	});
+	
+	//hides stuff
+	$("#tab2_content").hide();
+	$("#tab3_content").hide();
+	$("#section4").hide();
+	
+	$("#menuBar a").click(manageTabs);
+		
+	$('.scroll-pane').jScrollPane({
+		showArrows: true,
+		verticalDragMinHeight: 100,
+		verticalDragMaxHeight: 100
+	});
+	
+	//fix for Firefox not loading page correctly sometimes
+	setTimeout(function(){
+		if (!$("#videoList").hasClass("jspScrollable")) {
+			$('.scroll-pane').jScrollPane({
+				showArrows: true,
+				verticalDragMinHeight: 100,
+				verticalDragMaxHeight: 100
+			});
+		}
+	},2000);
+	
+	//add google event tracking code
+	$("#section7 a:eq(0)").click(function() {
+		trackerB._trackEvent('cta', 'let me know button', 'Fusion 360 Email Signup');
+	});
+	
+	$("#section7 a:eq(1)").click(function() {
+		trackerB._trackEvent('cta', 'im interested button', 'Fusion 360 Beta Signup');
+	});
+});</script><link rel="stylesheet" type="text/css" href="http://images.autodesk.com/flashassets/staticassets/project_forge/projectforge.css"><link rel="stylesheet" type="text/css" href="http://images.autodesk.com/flashassets/staticassets/project_forge/scrollbar/style/jquery.jscrollpane.css"><script type="text/javascript" src="http://images.autodesk.com/flashassets/staticassets/project_forge/scrollbar/script/jquery.jscrollpane.min.js"></script><script type="text/javascript" src="http://images.autodesk.com/foresee/us/foresee-trigger.js"></script>
+<title>Fusion 360 - Cloud-Enabled 3D CAD - Autodesk</title>
+<script src="http://images.autodesk.com/foresee/us/foresee-surveydef.js" type="text/javascript"></script></head>
+<!--stopindex-->
+<body onload=";init();scrollTV();adsk.geotag.banner.trackBannerDisplay();">
+<fieldset style="display: none;">
+<input value="123112" id="adsk91-el-id-site" type="hidden">
+<input value="en" id="adsk91-el-id-site-lang" type="hidden">
+<input value="http://images.autodesk.com/adsk/s128" id="adsk91-el-static-fp-prefix" type="hidden">
+<input value="20884205" id="adsk91-el-id-cont" type="hidden">
+<input value="20888269" id="adsk91-el-id-cat" type="hidden">
+</fieldset><script type="text/javascript">wa = new Object;window.adsk = window.adsk || {};adsk.s = adsk.s || {};</script>
+<div id="adsk91-page"><div id="adsk91-header" class="clearfix"><div id="adsk91-logo"><a href="/adsk/servlet/home?siteID=123112&amp;id=129446">Autodesk 2D and 3D Design and Engineering Software</a></div><input value="9268479" id="adsk91-el-id-nav-cont" type="hidden"><ul id="adsk91-mainNav" class="clearfix"><li><a href="http://www.autodesk.com/products">Products</a></li><li><a href="http://www.autodesk.com/industries">Solutions</a></li><li><a href="http://www.autodesk.com/purchaseoptions">Purchase</a></li><li><a href="http://www.autodesk.com/support">Support</a></li><li><a href="http://www.autodesk.com/community">Community</a></li><li><a href="http://store.autodesk.com/store?Action=DisplayHomePage&amp;SiteID=adskus&amp;Locale=en_US&amp;Env=BASE&amp;mktvar004=none_wwm_amer_us_nc__estorehomepage____">Store</a></li></ul><ul id="adsk91-secNav" class="clearfix"><li id="adsk91-cart"><a href="https://store.autodesk.com/store/adskus/en_US/DisplayShoppingCartPage" id="ecartLnk" onclick="adsk.geotagstore.trackCartLink('null', 'widget nav cart');">Cart</a><input value="https://store.autodesk.com/store/adskus/en_US/DisplayShoppingCartPage" id="adsk91-cartwidget-url" type="hidden"><input value="Items in Cart :" id="adsk91-cartwidget-lineitems" type="hidden"><input value="Subtotal :" id="adsk91-cartwidget-subtotal" type="hidden"><input value="There are 0 items in your cart." id="adsk91-cartwidget-zeroitems" type="hidden"><input value="View Cart" id="adsk91-cartwidget-viewcart" type="hidden"><div id="adsk91-cartwidget"></div></li><li><a href="/company/">Company</a></li><li><a href="/adsk/servlet/index?siteID=123112&amp;id=1073074">Contact Us</a></li><li><a href="/adsk/servlet/index?siteID=123112&amp;id=2910589">Partners</a></li><li id="adsk91-headerSearch" class="last"><form id="adsk91-headerSearch-form" action="/adsk/servlet/u/gsearch/results" method="get"><div><input name="siteID" value="123112" type="hidden"><input name="catID" value="123155" type="hidden"><input name="id" value="2088334" type="hidden"><input name="qt" value="" id="searchBox" class="textField fsrVisible" onfocus="wac_srchTypeAhead(&quot;010471233368948520856:lwe2s6te65g&quot;);" autocomplete="off" type="text"><input alt="?" src="http://images.autodesk.com/adsk/s128/images/top_search_icon_20x18.gif" value="?" class="submit" onmouseover="wac_srchBtn(this , true);" onmouseout="wac_srchBtn(this , false);" type="image"></div></form></li></ul><ul id="adsk91-location" class="clearfix"><li id="currentCountry">United States</li><li id="adsk91-locWorld"><a href="#">Worldwide Sites</a><div style="" id="adsk91-countryFlyout">&nbsp;</div></li></ul></div>
+<ul class="clearfix" id="adsk91-breadcrumbs">
+<li class="first">
+<a href="/adsk/servlet/home?siteID=123112&amp;id=129446">Home</a>
+</li>
+<li>
+<a href="/products/">Products</a>
+</li>
+</ul>
+<div id="adsk91-title"><div id="adsk103-share" class="group" onmouseover="shareMouse(1, 'Share this page on {0}');" onmouseout="shareMouse(0);"><a href="#">Share</a><div id="adsk103-share-inner" class="group ss-col-2"><ul><li class="facebook"><a href="http://www.facebook.com/sharer.php">Facebook</a></li><li class="twitter"><a href="http://twitter.com/home">Twitter</a></li><li class="linkedin"><a href="http://www.linkedin.com/shareArticle">LinkedIn</a></li><li class="googleplus"><a href="https://plus.google.com/share">Google +1</a></li></ul><ul><li class="stumbleupon"><a href="http://www.stumbleupon.com/submit">StumbleUpon</a></li><li class="tumblr"><a href="http://www.tumblr.com/share">Tumblr</a></li><li class="delicious"><a href="http://delicious.com/save">Delicious</a></li></ul></div></div>Autodesk Fusion 360</div>
+<div style="background: url(&quot;http://images.autodesk.com/adsk/images/project_forge_bg_960x1045_white.jpg&quot;) no-repeat scroll 0% 0% rgb(255, 255, 255);" id="adsk91-main-wrapper" class="nosash notitle navless"><div id="adsk91-main-nav" class="group"></div>
+<div id="adsk91-main-banner" class="group"><div id="bannerContent"><div id="bannerHeader"><table class="adsk91-image-section"><tbody><tr><td class="image"><table class="image"><tbody><tr><td><div class="image"><img src="http://images.autodesk.com/adsk/images/fusion360_title_960x96.gif" alt="" height="96" width="960"></div></td></tr></tbody></table><table class="image"><tbody><tr><td><div class="image"><img src="http://images.autodesk.com/adsk/images/fusion360_subtitle_960x53.gif" alt="" height="58" width="960"></div></td></tr></tbody></table><div class="section normal"><p></p></div></td></tr></tbody></table></div><div id="bannerVideos"><div id="videoTitle">Stop Dreaming. Start Designing.</div><div id="featuredVideo"><video tabindex="0" id="id-adsk-video-9778071f8852" controls="controls" height="329" width="533"> <!-- HTML5 video --> <source src="http://videos.autodesk.com/112820121200_dreaming_by_design_v2_fusion360.mp4" type="video/mp4"> <source src="http://videos.autodesk.com/112820121200_dreaming_by_design_v2_fusion360.webm" type="video/webm"><object codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,0,0" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="swfobject_95af3dfdbdf0" name="swfobject_95af3dfdbdf0" height="329" width="533"><param name="MOVIE" value="http://images.autodesk.com/adsk/s128/images/FlashAssetShell.swf"><param name="FlashVars" value="template=http://images.autodesk.com/adsk/s128/images/VideoPlayer_var.swf&amp;source=http://videos.autodesk.com/112820121200_dreaming_by_design_v2_fusion360.flv"><param name="QUALITY"><param name="menu" value="false"><param name="allowscriptaccess" value="always"><param name="wmode" value="transparent"><param name="SeamlessTabbing" value="true"><param name="allowFullScreen" value="true"><embed pluginspage="http://www.adobe.com/go/getflashplayer" type="application/x-shockwave-flash" id="embedobject_95af3dfdbdf0" name="embedobject_95af3dfdbdf0" src="http://images.autodesk.com/adsk/s128/images/FlashAssetShell.swf" flashvars="template=http://images.autodesk.com/adsk/s128/images/VideoPlayer_var.swf&amp;source=http://videos.autodesk.com/112820121200_dreaming_by_design_v2_fusion360.flv" allowscriptaccess="always" allowfullscreen="true" wmode="transparent" height="329" width="533"><!-- --></object> </video></div><div tabindex="0" style="overflow: hidden; padding: 0px; width: 175px;" id="videoList" class="scroll-pane jspScrollable"><div style="width: 175px; height: 314px;" class="jspContainer"><div style="padding: 0px; width: 156px; top: 0px;" class="jspPane"><div id="videoThumbs"><div id="section6" class="section normal"><div id="video0" class="video_thumbs"><a href="#"><img src="http://images.autodesk.com/adsk/images/stop_dreaming_start_designing_thumb_122x100.jpg" alt="Stop Dreaming. Start Designing." height="100" width="122"></a><br>The Inspiration (0:60) </div><div id="video1" class="video_thumbs"><a href="#"><img src="http://images.autodesk.com/adsk/images/industrial_design_thumb_122x100.jpg" alt="Industrial Design with Autodesk Fusion 360" height="100" width="122"></a><br>Industrial Design (0:54)</div><div id="video2" class="video_thumbs"><a href="#"><img src="http://images.autodesk.com/adsk/images/mechanical_design_thumb_122x100.jpg" alt="Mechanical Design with Autodesk Fusion 360" height="100" width="122"></a><br>Mechanical Design (0:50)</div><div id="video3" class="video_thumbs"><a href="#"><img src="http://images.autodesk.com/adsk/images/collaboration_access_thumb_122x100.jpg" alt="Collaboration and Access with Autodesk Fusion 360" height="100" width="122"></a><br>Collaboration (0:42)</div></div></div></div><div class="jspVerticalBar"><div class="jspCap jspCapTop"></div><a class="jspArrow jspArrowUp jspDisabled"></a><div style="height: 276px;" class="jspTrack"><div style="height: 100px;" class="jspDrag"><div class="jspDragTop"></div><div class="jspDragBottom"></div></div></div><a class="jspArrow jspArrowDown"></a><div class="jspCap jspCapBottom"></div></div></div></div><div style="clear: both;"></div></div></div></div>
+<div class="group" id="adsk91-maincontent">
+<div class="group" id="adsk91-main-sections">
+<div class="content-wrapper">
+<div class="primary_content">
+<div id="l2l-indicator">
+<!--Container for Link-to-Local Indicator-->
+</div><div style="display: none;" id="section4"><table class="adsk91-image-section"><tbody><tr><td class="image"><table class="image"><tbody><tr><td><div class="image"><img src="http://images.autodesk.com/adsk/images/fusion360_title_960x96.gif" alt="" height="96" width="960"></div></td></tr></tbody></table><table class="image"><tbody><tr><td><div class="image"><img src="http://images.autodesk.com/adsk/images/fusion360_subtitle_960x53.gif" alt="" height="58" width="960"></div></td></tr></tbody></table><div class="section normal"><p></p></div></td></tr></tbody></table></div><div class="clear"> </div><div id="section5"><table class="adsk91-image-section"><tbody><tr><td class="images"><table class="image leftcol"><tbody><tr><td><div class="image">  <!--[if gte IE 9]><script>wac_removeSource( 'id-adsk-video-9778071f8852' );</script><![endif]--></div></td></tr></tbody></table><table class="image leftcol"><tbody><tr><td><div class="image">  <!--[if gte IE 9]><script>wac_removeSource( 'id-adsk-video-1eb90f0aebdc' );</script><![endif]--></div></td></tr></tbody></table><table class="image leftcol"><tbody><tr><td><div class="image">  <!--[if gte IE 9]><script>wac_removeSource( 'id-adsk-video-61c8f6fbd70e' );</script><![endif]--></div></td></tr></tbody></table><table class="image leftcol"><tbody><tr><td><div class="image">  <!--[if gte IE 9]><script>wac_removeSource( 'id-adsk-video-3a034f158f9d' );</script><![endif]--></div></td></tr></tbody></table></td><td class="body"><div class="section normal"><p></p></div></td></tr></tbody></table></div><div class="clear"> </div><div class="clear"> </div><div id="section7" class="section normal"><p class="header">3D CAD the way you want it.<br>Powerful. Collaborative. Accessible.</p><p class="subheader">Be the first to know.</p><p><a style="display: block; width: 140px; background: url(&quot;http://images.autodesk.com/adsk/images/carret0.gif&quot;) no-repeat scroll right center rgb(17, 136, 136); color: white; padding: 5px; text-decoration: none; font-size: 12px;" class="modal" href="#form1">Let me know!</a></p><p class="subheader">Get in on the beta.</p><p><a style="display: block; width: 140px; background: url(&quot;http://images.autodesk.com/adsk/images/carret0.gif&quot;) no-repeat scroll right center rgb(17, 136, 136); color: white; padding: 5px; text-decoration: none; font-size: 12px;" class="modal" href="https://beta.autodesk.com/oid/login.html?msg=&amp;ref=/callout/apply%2Ehtml%3Fcallid%3D%7BAA3E5FFE%2D10C9%2D4EB4%2DA769%2D0AED6983A688%7D" onclick="return openPopup(this.href,null,null);">I’m interested.</a></p><p class="subheader">Join the conversation.</p><p><a href="https://www.facebook.com/Fusion360" onclick="return openPopup(this.href,null,null);"><img src="http://images.autodesk.com/adsk/images/facebook_32x32.jpg" alt="" height="32" width="32"></a><a href="https://twitter.com/adskFusion360" onclick="return openPopup(this.href,null,null);"><img src="http://images.autodesk.com/adsk/images/twitter_32x32.jpg" alt="" height="32" width="32"></a></p></div><div class="clear"> </div><div id="section8" class="section normal"><p class="call_out">Create amazing designs with the first complete cloud-based 3D CAD solution for product design.</p></div><div class="clear"> </div><div id="section9" class="section normal"><div id="menuBar"><div id="tab1" class="menu_tab selected tab1_background_on"><a href="#"> </a></div><div id="tab2" class="menu_tab tab2_background_off"><a href="#"> </a></div><div id="tab3" class="menu_tab tab3_background_off"><a href="#"> </a></div></div><div style="clear: both; "></div><div id="tab1_content" class="contentbox"><p class="headline">Complete 3D design powered by the cloud:</p><p></p><ul><li>Design with 3D organic free-form modeling, surfaces, and solids in one integrated solution.</li><li>Let the cloud do the heavy lifting so your Mac or PC can perform like it's supposed to.</li><li>Open, edit, and save designs in all common formats.</li></ul><p></p></div><div style="display: none;" id="tab2_content" class="contentbox"><p class="headline">Connect people with the information they need:</p><p></p><ul><li>Share your design ideas using the latest built-in social collaboration tools.</li><li>Create better products using the combined creativity and experience of your network.</li><li>Access your data anytime, anywhere, with secure cloud storage.</li></ul><p></p></div><div style="display: none;" id="tab3_content" class="contentbox"><p class="headline">An affordable, easy, and fast solution that delivers:</p><p></p><ul><li>Reduce your up-front expense with flexible and predictable term-based subscription options.</li><li>Realize your design ideas faster using an intuitive interface and built in guidance.</li><li>Go from downloading to designing in a matter of minutes on your Mac or PC.</li></ul><p></p></div></div><div class="clear"> </div><div id="section10" class="section normal"><p></p></div><div class="clear"> </div><div id="section11" class="section normal"><p class="subheader">Be the first to know.</p><p>Sign up to receive updates about Fusion 360 and other Autodesk offerings. </p></div><div class="clear"> </div><div id="section12" class="section normal"><p class="subheader">Get in on the Beta.</p></div><div class="clear"> </div>
+<div id="adsk91-maincontent-footer"> </div>
+</div>
+</div>
+</div>
+</div>
+</div><div id="adsk91-footer"><a href="http://www.autodesk.com/rss" class="rss floatRight"><img src="http://images.autodesk.com/adsk/s128/css/images/rss_icon.png" alt="" height="14" width="14"></a><ul id="adsk91-footNav" class="clearfix"><li id="tnt-pflnk1" class="first"><a href="/adsk/servlet/u/oc/offer?siteID=123112&amp;id=8155525">Sign Up For Email</a></li><li id="tnt-pflnk2"><a href="/adsk/servlet/index?siteID=123112&amp;id=1060484">Careers</a></li><li id="tnt-pflnk3"><a href="http://m.autodesk.com/">Mobile Site</a></li></ul><div id="adsk91-copyright" class="clearfix">© Copyright 2013 Autodesk, Inc. All rights reserved.&nbsp;&nbsp;&nbsp;<a href="http://www.autodesk.com/privacy">Privacy</a>&nbsp;—&nbsp;<a href="/legal-notices-trademarks/">Legal Notices &amp; Trademarks</a>&nbsp;—&nbsp;<a href="/adsk/servlet/index?siteID=123112&amp;id=340446">Report Noncompliance</a>&nbsp;—&nbsp;<a href="http://www.autodesk.com/sitemap">Site Map</a></div></div></div>
+<!-- SiteCatalyst code version: H.15.1. Copyright 1997-2008 Omniture, Inc. More info available at http://www.omniture.com -->
+<script type="text/javascript">adsk.s.account="autodesk-new-gl,autodesk-new-us";
+adsk.s.pageName="adsk:am-us:products:fusion 360:20884205";
+adsk.s.prop2="fusion 360";
+adsk.s.eVar25="+1";
+adsk.s.eVar26="adsk:am-us";
+adsk.s.eVar30="+1";
+adsk.s.eVar24="adsk:am-us:products:fusion 360:20884205:fusion 360";
+adsk.s.events = ( !adsk.s.events ) ? "event1" : ( adsk.s.events + ",event1" );
+ adsk.s.events += ",prodView";
+adsk.s.products=";fusion 360";
+adsk.s.prop31="fusion 360";
+adsk.s.prop47="product view";
+adsk.s.prop46= ( ( adsk.s.products ) ? adsk.s.products : 'null' ) + ' | ' + adsk.s.prop47
+</script><script type="text/javascript" src="http://images.autodesk.com/adsk/s128/js/s_code_adsk_complete.js"></script>
+<!-- End SiteCatalyst code version: H.15.1. -->
+<script type="text/javascript" src="http://www.google-analytics.com/ga.js"></script>
+<script language="javascript1.1" defer="defer" src="http://images.autodesk.com/analytics/analyticsg.js"></script><script type="text/javascript" src="http://images.autodesk.com/flashassets/staticassets/widgets/metrics/v21tracking.js"></script><script type="text/javascript">_bizo_data_partner_id = "3768";
+
+(function() {
+  var s = document.getElementsByTagName("script")[0];
+  var b = document.createElement("script");
+  b.type = "text/javascript";
+  b.async = true;
+  b.src = (window.location.protocol === "https:" ? "https://sjs" : "http://js") + ".bizographics.com/insight.min.js";
+  s.parentNode.insertBefore(b, s);
+})();
+</script>
+
+<div id="boxes"> <div id="form1" class="window"> <a href="#" class="close">X</a> <div class="overlay_content"><div id="form1_title"><p class="subheader">Be the first to know.</p><p>Sign up to receive updates about Fusion 360 and other Autodesk offerings. </p></div><iframe src="http://proc.autodesk.com/projectForge/short.html" frameborder="0" scrolling="no"></iframe> </div></div> <div id="form2" class="window"> <a href="#" class="close">X</a> <div class="overlay_content"><div id="form2_title"><p class="subheader">Get in on the Beta.</p></div><iframe src="http://proc.autodesk.com/projectForge/long.html" frameborder="0"></iframe> </div></div><div id="mask"></div></div><script type="text/javascript" src="http://www.bizographics.com/collect/?time=1368855337738&amp;pid=3768&amp;url=http%3A%2F%2Fusa.autodesk.com%2Fadsk%2Fservlet%2Fpc%2Findex%3Fid%3D20884205%26siteID%3D123112%26mktvar001%3D527209%26mktvar002%3D527209&amp;pageUrl=http%3A%2F%2Fusa.autodesk.com%2Fadsk%2Fservlet%2Fpc%2Findex%3Fid%3D20884205%26siteID%3D123112%26mktvar001%3D527209%26mktvar002%3D527209&amp;ref=&amp;fmt=js"></script></body>

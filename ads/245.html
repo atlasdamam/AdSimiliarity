@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head> 
+  <meta charset="utf-8" /> 
+  <title>Best Buy Deal of the Day Apr 26</title> 
+  <!-- CANONICAL URL --> 
+  <!-- TOP SCRIPTS --> 
+  <script>
+var apiURLS = new Object();
+
+apiURLS.stats_base_path = 'https://deals.bbystatic.com/web/042113/';
+
+apiURLS.baseImagePath = 'https://deals.bbystatic.com/web/042113/img/';
+apiURLS.basePath = 'https://deals.bbystatic.com/web/042113/';
+apiURLS.catalogInfo = 'https://deals.bestbuy.com/api/grid/store';
+apiURLS.catalogInfoInitial = 'https://deals.bestbuy.com/api//grid/firstpage';
+apiURLS.storeModalDetails = 'https://deals.bestbuy.com/modal/modalStoreDetails';
+apiURLS.storeModalLocate = 'https://deals.bestbuy.com/modal/modalStoreLocate';
+apiURLS.storeModalForce = 'https://deals.bestbuy.com/modal/modalForceLocate';
+apiURLS.modalCompare = 'https://deals.bestbuy.com/modal/modalCompare';
+apiURLS.modalGallery = 'https://deals.bestbuy.com/modal/modalGallery';
+apiURLS.modalLatestTech = 'https://deals.bestbuy.com/modal/modalLatestTech';
+apiURLS.storeSearch = 'https://deals.bestbuy.com/api//stores?size=10';
+apiURLS.storeSearchSingle = 'https://deals.bestbuy.com/api//stores?size=1';
+apiURLS.storeInfo = 'https://deals.bestbuy.com/api//store';
+apiURLS.siteHost = 'https://deals.bestbuy.com/';
+apiURLS.sitePath = 'https://deals.bestbuy.com/'; 
+apiURLS.previewSitePath = 'https://blackfriday.bestbuy.com';
+apiURLS.apiPath = 'https://deals.bestbuy.com/api/';
+apiURLS.actionPath = 'https://deals.bestbuy.com/api//action';
+apiURLS.autoLocate = 'https://deals.bestbuy.com/api//stores';
+apiURLS.statPathTopDeal = 'https://deals.bestbuy.com/api//stats/top_deals';
+apiURLS.statPathMostViewed = 'https://deals.bestbuy.com/api//stats/most_viewed';
+apiURLS.comparePath = 'https://deals.bestbuy.com/api//compare';
+apiURLS.productPath = 'https://deals.bestbuy.com/api//product';
+apiURLS.autoLocate = 'https://deals.bestbuy.com/api//stores';
+apiURLS.identity = 'https://deals.bestbuy.com/profile';
+apiURLS.profileProductPath = apiURLS.identity + '/product';
+apiURLS.watchlist = apiURLS.identity + '/lists';
+apiURLS.otherDeals = 'https://deals.bestbuy.com/api//deal/otherdeals/';
+apiURLS.stockSearchModalResults = 'https://deals.bestbuy.com/modal/modalStockSearchResults';
+
+var imgServer="https://images-ssl.bestbuy.com/BestBuy_US/";
+var bbyUrl="http://www.bestbuy.com/site/olspage.jsp?";
+var fb_app_id='258100450951199';
+bbyAds = true;
+// analytics flag
+var trackingEnabled=true;
+var enableMonetate=true;
+var blueKaiTrackingEnabled = true;
+var atlasTrackingEnabled = true; 
+
+var image_base_path = "https://deals.bbystatic.com/web/042113/img/";
+var main_image_path = "https://deals.bbystatic.com/web/042113/";
+
+var dotdEndTime = new Date(Date.UTC(2013,3,27,5,0,0));
+
+var dotdStatus = 'active';
+
+// global variables per page
+var is_catalogpage = false;
+var is_minify = true;
+
+var is_multiple_deals = false;
+var isTrend = false;
+var is_watchlist = false;
+var isPDP = false;
+var isLatestTech = false;
+var isDOTD = false;
+var is_previewsite = false;
+var isInStore = false;
+
+	is_multiple_deals = true;
+	isDOTD = true;
+
+
+<!-- OMNITURE UNIVERSAL TRACKING TAG -->
+var track = new Object();
+var pageName = 'BBYWI:dealoftheday';
+
+/*track.page = pageName;
+*/
+track.weeklyAdLoc = 'BBYWI';
+
+
+
+	track.uberCatName =  'BBYWI: Deal of the Day';
+	track.templateName = 'BBYWI: DealOfTheDay';
+
+
+
+</script> 
+  <!-- VIEWPORT --> 
+  <meta name="viewport" content="user-scalable=no" /> 
+  <!-- MINIFIED CSS FILES --> 
+  <link href="https://deals.bbystatic.com/web/042113/css-minified/bby-deals-common.min.css" rel="stylesheet" type="text/css" /> 
+  <link href="https://deals.bbystatic.com/web/042113/css-minified/bby-deals-dotd.min.css" rel="stylesheet" type="text/css" /> 
+  <script data-main="https://deals.bbystatic.com/web/042113/js/load" src="https://deals.bbystatic.com/web/042113/js/lib/require-jquery.min.js"></script> 
+  <script type="text/javascript" src="https://d2vxgxvhgubbj8.cloudfront.net/scripts/jquery.liveclicker.v1-24.6_c.js"></script> 
+  <!-- FACEBOOK OPENGRAPH/META TAGS --> 
+  <meta property="fb:app_id" content="203315336416496" /> 
+  <meta property="og:type" content="website" /> 
+  <meta property="og:site_name" content="Best Buy" /> 
+  <meta name="keywords" content="best buy deal of the day, deal of the day, daily deals" /> 
+  <meta name="description" content="The Best Buy Deal of the Day features great online-only daily deals.  Don't miss out on today's special offer at Best Buy" /> 
+ </head> 
+ <body> 
+  <h1 id="siteTitle">Best Buy Weekly Ad &amp; Deal of the Day</h1> 
+  <div id="topBar" class="windowWidth"> 
+   <div class="innerWrapper"> 
+    <span class="tabletDotComSpecSpace"> </span> 
+    <span class="tabletDotComSpec"><a class="bblink tabletDotCom" id="bbyDotCom" href="http://www.bestbuy.com/" target="bbyDotCom">Go to BestBuy.com</a></span> 
+    <ul id="locationInfo"> 
+     <li class="location-dropdown ddtrigger tabletLocationSpec" id="tabletLocationInfo"> <a href="#" class="location-dropdown-toggle" id="currentLocation">Store Location: <span id="currentLocationName">
+        <!--populated by javascript --></span></a> <img src="https://deals.bbystatic.com/web/042113/img/icon.pin.white.png" class="pinIcon hideOnDropdown" /> <img src="https://deals.bbystatic.com/web/042113/img/icon.pin.darkblue.png" class="pinIcon showOnDropdownDesktop" /> <img src="https://deals.bbystatic.com/web/042113/img/icon.pin.darkblue.png" class="pinIcon showOnDropdownTablet" /> <img src="https://deals.bbystatic.com/web/042113/img/icon.nav.arrow.white.png" class="dropDownIcon hideOnDropdown" /> <img src="https://deals.bbystatic.com/web/042113/img/icon.nav.arrow.darkBlue.png" class="dropDownIcon showOnDropdownDesktop" /> <img src="https://deals.bbystatic.com/web/042113/img/icon.nav.arrow.blue.up.png" class="dropDownIcon showOnDropdownTablet" /> 
+      <ul class="location-dropdown-menu dropMeDown"> 
+       <li id="locationHoverBox"></li> 
+      </ul> </li> 
+     <li class="tabletChangeLocationSpec"> 
+      <div class="social_header"> 
+       <div class="addthis_toolbox addthis_default_style"> 
+        <a class="addthis_button_facebook_like" fb:like:layout="button_count" addthis:url="http://deals.bestbuy.com/"></a> 
+       </div> 
+       <script type="text/javascript" src="https://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4e8b442868a506ef"></script> 
+       <!-- AddThis Button END --> 
+      </div> </li> 
+    </ul>
+    <!-- /locationInfo --> 
+   </div> 
+  </div>
+  <!-- /topBar --> 
+  <div id="header" class=" windowWidth"> 
+   <div class="innerWrapper clearfix"> 
+    <a id="header-logo-bby" class="header-logo" href="http://www.bestbuy.com/"> <img src="https://deals.bbystatic.com/web/042113/img/site_logo.png" /> </a> 
+    <a id="header-logo-deals" class="header-logo" href="https://deals.bestbuy.com/"> <img src="https://deals.bbystatic.com/web/042113/img/site_logo_latest_deals.png" /> </a> 
+    <div id="topTabs"> 
+     <span id="thisWeek">APRIL 21-27, 2013</span> 
+     <div id="tabWeeklyDeals" class="topTab inactive"> 
+      <a href="https://deals.bestbuy.com/" class="topTabLink"> <span id="weeklyDealsTitle">Weekly Deals</span> <span id="weeklyDealsDate" style="display:none;">APRIL 21-27, 2013</span> </a> 
+     </div>
+     <!-- /tabWeeklyDeals --> 
+     <div id="tabDealOfTheDay" class="topTab active ddtrigger"> 
+      <a href="https://deals.bestbuy.com/dealoftheday/20130426" class="topTabLink">Deal Of The Day</a> 
+      <div id="tabDealOfTheDayFakeBorder" class="hideOnDropdown">
+       &nbsp;
+      </div> 
+      <div id="dealHover" class="dropMeDown"> 
+       <img src="https://deals.bbystatic.com/web/042113/img/dotdhover.close.png" class="tabletCloseDropdown" /> 
+       <div id="tabDealOfTheDayHoverSub">
+        A great deal, every day.
+       </div> 
+      </div>
+      <!-- /dealHover --> 
+     </div>
+     <!-- /tabDealOfTheDay --> 
+     <div id="tabTrends" class="topTab inactive"> 
+      <a href="https://deals.bestbuy.com/trends" class="topTabLink"> <span>This Week's Trends</span> </a> 
+     </div> 
+     <div id="tabWatchList" class="topTab inactive"> 
+      <a href="https://deals.bestbuy.com/watchlist" class="topTabLink"> <span id="tab-watchlist-text">Watch list</span> <span id="tab-watchlist-item-counter"></span> </a> 
+      <p id="tab-watchlist-notification-counter"></p> 
+     </div>
+     <!-- /tabWatchlist --> 
+     <div class="topTab inactive"> 
+      <a href="https://deals.bestbuy.com/latesttech" class="topTabLink">Latest Tech</a> 
+     </div>
+     <!-- /tabLatestTech --> 
+    </div>
+    <!-- /topTabs --> 
+   </div>
+   <!-- /innerWrapper --> 
+  </div>
+  <!-- /header --> 
+  <div id="content" class="windowWidth "> 
+   <div id="grid-background"></div> 
+   <!-- MAIN PAGE CONTENT GOES HERE --> 
+   <div class="innerWrapper clearfix" id="dotdPage"> 
+    <!-- clearance, store_id   --> 
+    <div id="dotdExpiredBox"> 
+     <div class="dotdExpiredText" id="dotdExpiredTextWeekend"> 
+      <p>Sorry, there's no Deal of the Day on weekends. But check back Monday for the latest deal!</p> 
+     </div> 
+     <div class="dotdExpiredText" id="dotdExpiredTextWeekday"> 
+      <p>Sorry, today's deal has not yet started. Check back at 5 am Central.</p> 
+     </div> 
+     <div class="dotdExpiredText" id="dotdExpiredTextSoldOut"> 
+      <p>This great deal has sold out...<br />But check out this week's latest deals.</p> 
+     </div> 
+     <div class="emailContainer"> 
+      <iframe src="https://pages.emailinfo2.bestbuy.com/page.aspx?QS=773ed3059447707d89d8f63c1fa88c853c1ab561fcd9290c&amp;t=BLUE" scrolling="no" style="width:314px; height:92px; border-width: 0px;" frameborder="0" width="314" height="92"></iframe> 
+     </div> 
+    </div> 
+    <div id="productTable" class="clearfix"> 
+     <!-- OMNITURE UNIVERSAL TRACKING TAG --> 
+     <script>
+			var skuList = [];
+		</script> 
+     <!-- IS MULTIPLE DEALS --> 
+     <div class="wide-left"> 
+      <h2 id="deals-header"> <img src="https://deals.bbystatic.com/web/042113/img/title.deal-of-the-day.png" /> <span id="deals-product-count">3</span> deals </h2> 
+      <div id="deals-top-description"></div> 
+      <!-- add skus to skuList before adding to tracking tag --> 
+      <script>
+				skuList.push(4858797);
+			</script> 
+      <div data-product-sku="4858797" class="deals-product-item active"> 
+       <div id="dealsProductContainer" class="deals-product-item-left"> 
+        <a href="https://deals.bestbuy.com//dealoftheday/20130426/deal/01"> 
+         <div id="deal-product-item-image-4858797" class="deals-product-item-image" data-imgsrc="https://deals.bbystatic.com/web/042113/img/dotd/2013_04_26/2013_04_26_dotd_01_deals_reg_420x350.jpg"></div> </a> 
+       </div> 
+       <div class="deals-product-item-right"> 
+        <p class="deals-small-header deals-today">Today's Price</p> 
+        <div class="deals-price-info"> 
+         <div class="deals-product-item-price"> 
+          <p class="deals-product-item-pricetag">$79.99</p> 
+          <p class="deals-small-header deals-shipping">+ Free shipping</p> 
+         </div> 
+         <div class="deals-product-item-savings deals-product-item-small"> 
+          <div class="deals-product-item-savings-wrap"> 
+          </div> 
+          <div class="deals-product-item-savings-wrap"> 
+           <span class="deals-left-span"> Reg. Price: </span> 
+           <span class="deals-right-span">$119.99</span> 
+          </div> 
+          <div class="deals-product-item-save deals-product-item-savings-wrap"> 
+           <span class="deals-left-span"> <strong>YOU SAVE:</strong> </span> 
+           <span class="deals-right-span"> <strong class="format-decimals">$40.00 (33%)</strong> </span> 
+          </div> 
+         </div> 
+        </div>
+        <!-- /deals-price-info --> 
+        <h3 class="deals-product-item-name">Barnes &amp; Noble - NOOK Simple Touch with GlowLight - Gray</h3> 
+        <p class="deals-product-item-model deals-product-item-small"> <strong>Model:</strong> BNRV350 <strong>SKU:</strong> 4858797 </p> 
+        <a id="dealOn-4858797" class="deals-product-item-view-deal" href="https://deals.bestbuy.com//dealoftheday/20130426/deal/01"><span>VIEW THE DEAL</span></a> 
+        <div id="dealSoldoutMessage-4858797" class="deals-product-item-soldout" style="display:none;">
+         <span>SOLD OUT</span>
+        </div> 
+        <div class="deals-product-item-description deals-product-item-small"></div> 
+       </div>
+       <!-- End product-item-right --> 
+      </div>
+      <!-- /deals-product-item --> 
+      <!-- add skus to skuList before adding to tracking tag --> 
+      <script>
+				skuList.push(9999201100050001);
+			</script> 
+      <div data-product-sku="9999201100050001" class="deals-product-item active"> 
+       <div id="dealsProductContainer" class="deals-product-item-left"> 
+        <a href="https://deals.bestbuy.com//dealoftheday/20130426/deal/02"> 
+         <div id="deal-product-item-image-9999201100050001" class="deals-product-item-image" data-imgsrc="https://deals.bbystatic.com/web/042113/img/dotd/2013_04_26/2013_04_26_dotd_02_deals_reg_420x350.jpg"></div> </a> 
+       </div> 
+       <div class="deals-product-item-right"> 
+        <p class="deals-small-header deals-today">Today's Price</p> 
+        <div class="deals-price-info"> 
+         <div class="deals-product-item-price"> 
+          <p class="deals-product-item-pricetag">$24.99</p> 
+          <p class="deals-small-header deals-shipping">+ Free shipping</p> 
+         </div> 
+         <div class="deals-product-item-savings deals-product-item-small"> 
+          <div class="deals-product-item-savings-wrap"> 
+          </div> 
+          <div class="deals-product-item-savings-wrap"> 
+           <span class="deals-left-span"> Reg. Price: </span> 
+           <span class="deals-right-span">$24.99</span> 
+          </div> 
+          <div class="deals-product-item-save deals-product-item-savings-wrap"> 
+          </div> 
+         </div> 
+        </div>
+        <!-- /deals-price-info --> 
+        <h3 class="deals-product-item-name">3+1 Month Xbox LIVE Gold Membership &amp; 400 Free Points</h3> 
+        <p class="deals-product-item-model deals-product-item-small"> <strong>SKU:</strong> 9999201100050001 </p> 
+        <a id="dealOn-9999201100050001" class="deals-product-item-view-deal" href="https://deals.bestbuy.com//dealoftheday/20130426/deal/02"><span>VIEW THE DEAL</span></a> 
+        <div id="dealSoldoutMessage-9999201100050001" class="deals-product-item-soldout" style="display:none;">
+         <span>SOLD OUT</span>
+        </div> 
+        <div class="deals-product-item-description deals-product-item-small"></div> 
+       </div>
+       <!-- End product-item-right --> 
+      </div>
+      <!-- /deals-product-item --> 
+      <!-- add skus to skuList before adding to tracking tag --> 
+      <script>
+				skuList.push(1649249);
+			</script> 
+      <div data-product-sku="1649249" class="deals-product-item active"> 
+       <div id="dealsProductContainer" class="deals-product-item-left"> 
+        <a href="https://deals.bestbuy.com//dealoftheday/20130426/deal/03"> 
+         <div id="deal-product-item-image-1649249" class="deals-product-item-image" data-imgsrc="https://deals.bbystatic.com/web/042113/img/dotd/2013_04_26/2013_04_26_dotd_03_deals_reg_420x350.jpg"></div> </a> 
+       </div> 
+       <div class="deals-product-item-right"> 
+        <p class="deals-small-header deals-today">Today's Price</p> 
+        <div class="deals-price-info"> 
+         <div class="deals-product-item-price"> 
+          <p class="deals-product-item-pricetag">$39.99</p> 
+          <p class="deals-small-header deals-shipping">+ Free shipping</p> 
+         </div> 
+         <div class="deals-product-item-savings deals-product-item-small"> 
+          <div class="deals-product-item-savings-wrap"> 
+          </div> 
+          <div class="deals-product-item-savings-wrap"> 
+           <span class="deals-left-span"> Reg. Price: </span> 
+           <span class="deals-right-span">$79.99</span> 
+          </div> 
+          <div class="deals-product-item-save deals-product-item-savings-wrap"> 
+           <span class="deals-left-span"> <strong>YOU SAVE:</strong> </span> 
+           <span class="deals-right-span"> <strong class="format-decimals">$40.00 (50%)</strong> </span> 
+          </div> 
+         </div> 
+        </div>
+        <!-- /deals-price-info --> 
+        <h3 class="deals-product-item-name">Gunnar Eyewear - Gunnar Gaming Eyewear &#x2014; MLG Phantom Snow/Onyx Frame</h3> 
+        <p class="deals-product-item-model deals-product-item-small"> <strong>Model:</strong> 8073071 <strong>SKU:</strong> 1649249 </p> 
+        <a id="dealOn-1649249" class="deals-product-item-view-deal" href="https://deals.bestbuy.com//dealoftheday/20130426/deal/03"><span>VIEW THE DEAL</span></a> 
+        <div id="dealSoldoutMessage-1649249" class="deals-product-item-soldout" style="display:none;">
+         <span>SOLD OUT</span>
+        </div> 
+        <div class="deals-product-item-description deals-product-item-small"></div> 
+       </div>
+       <!-- End product-item-right --> 
+      </div>
+      <!-- /deals-product-item --> 
+      <div id="deals-more-category-offers"> 
+       <h3 id="more-category-header">MORE CATEGORY OFFERS</h3> 
+       <a href="http://www.bestbuy.com/site/null/Featured-Offers/pcmcat164600050001.c?id=pcmcat164600050001"> View All &raquo; </a> 
+       <ul id="more-category-icon-list"> 
+        <li class="more-category-icon-list-li"> <img src="https://deals.bbystatic.com/web/042113/img//icon-category-ipod-and-mp3-players.png" /> <a href="http://www.bestbuy.com/site/Electronics-Promotions/iPod-Sale-MP3-Player-Sale/pcmcat88400050003.c?id=pcmcat88400050003" class="more-category-icon-list-a more-category-icon-item"> iPod &amp; MP3 Players <img src="https://deals.bbystatic.com/web/042113/img/icon.new.window.darkblue.png" /> </a> </li> 
+        <li class="more-category-icon-list-li"> <img src="https://deals.bbystatic.com/web/042113/img//icon-category-computers.png" /> <a href="http://www.bestbuy.com/site/Computers-Promotions/Computer-Laptop-Sale/pcmcat37600050023.c?id=pcmcat37600050023" class="more-category-icon-list-a more-category-icon-item"> Computers <img src="https://deals.bbystatic.com/web/042113/img/icon.new.window.darkblue.png" /> </a> </li> 
+        <li class="more-category-icon-list-li"> <img src="https://deals.bbystatic.com/web/042113/img//icon-category-home-theater.png" /> <a href="http://www.bestbuy.com/site/Televisions/Home-Theater-Sale/pcmcat65700050010.c?id=pcmcat65700050010" class="more-category-icon-list-a more-category-icon-item"> Home Theater <img src="https://deals.bbystatic.com/web/042113/img/icon.new.window.darkblue.png" /> </a> </li> 
+        <li class="more-category-icon-list-li"> <img src="https://deals.bbystatic.com/web/042113/img//icon-category-tablets-and-e-readers.png" /> <a href="http://www.bestbuy.com/site/Computers-Promotions/This+Week%27s+Tablets+and+eReaders+Offers/pcmcat255100050016.c?id=pcmcat255100050016%3E" class="more-category-icon-list-a more-category-icon-item"> Tablets &amp; E-Readers <img src="https://deals.bbystatic.com/web/042113/img/icon.new.window.darkblue.png" /> </a> </li> 
+        <li class="more-category-icon-list-li"> <img src="https://deals.bbystatic.com/web/042113/img//icon-category-cameras-and-camcorders.png" /> <a href="http://www.bestbuy.com/site/Cameras-Camcorder-Promotions/Digital-Imaging-Offers/pcmcat37600050025.c?id=pcmcat37600050025" class="more-category-icon-list-a more-category-icon-item"> Cameras &amp; Camcorders <img src="https://deals.bbystatic.com/web/042113/img/icon.new.window.darkblue.png" /> </a> </li> 
+        <li class="more-category-icon-list-li"> <img src="https://deals.bbystatic.com/web/042113/img//icon-category-video-games-and-toys.png" /> <a href="http://www.bestbuy.com/site/Games-Promotions/Video-Game-Toy-Sale/pcmcat8400050004.c?id=pcmcat8400050004" class="more-category-icon-list-a more-category-icon-item"> Video Games &amp; Toys <img src="https://deals.bbystatic.com/web/042113/img/icon.new.window.darkblue.png" /> </a> </li> 
+        <li class="more-category-icon-list-li"> <img src="https://deals.bbystatic.com/web/042113/img//icon-category-car-and-gps.png" /> <a href="http://www.bestbuy.com/site/Electronics-Promotions/Car-Audio-Video-Special-Offers/pcmcat88800050003.c?id=pcmcat88800050003" class="more-category-icon-list-a more-category-icon-item"> Car &amp; GPS <img src="https://deals.bbystatic.com/web/042113/img/icon.new.window.darkblue.png" /> </a> </li> 
+        <li class="more-category-icon-list-li"> <img src="https://deals.bbystatic.com/web/042113/img//icon-category-appliances.png" /> <a href="http://www.bestbuy.com/site/olspage.jsp?id=pcmcat77600050007&amp;type=category" class="more-category-icon-list-a more-category-icon-item"> Appliances <img src="https://deals.bbystatic.com/web/042113/img/icon.new.window.darkblue.png" /> </a> </li> 
+        <li class="more-category-icon-list-li"> <img src="https://deals.bbystatic.com/web/042113/img//icon-category-home.png" /> <a href="http://www.bestbuy.com/site/Appliances-Promotions/null/pcmcat261600050003.c?id=pcmcat261600050003" class="more-category-icon-list-a more-category-icon-item"> Home <img src="https://deals.bbystatic.com/web/042113/img/icon.new.window.darkblue.png" /> </a> </li> 
+        <li class="more-category-icon-list-li"> <img src="https://deals.bbystatic.com/web/042113/img//icon-category-movies-and-tv-shows.png" /> <a href="http://www.bestbuy.com/site/Movies-Promotions/DVD-Movie-Sale/pcmcat9400050001.c?id=pcmcat9400050001" class="more-category-icon-list-a more-category-icon-item"> Movies &amp; TV Shows <img src="https://deals.bbystatic.com/web/042113/img/icon.new.window.darkblue.png" /> </a> </li> 
+        <li class="more-category-icon-list-li"> <img src="https://deals.bbystatic.com/web/042113/img//icon-category-music.gif" /> <a href="http://www.bestbuy.com/site/Music/Music-CD-Sale/pcmcat11400050003.c?id=pcmcat11400050003" class="more-category-icon-list-a more-category-icon-item"> Music <img src="https://deals.bbystatic.com/web/042113/img/icon.new.window.darkblue.png" /> </a> </li> 
+        <li class="more-category-icon-list-li"> <img src="https://deals.bbystatic.com/web/042113/img//icon-category-musical-instruments.gif" /> <a href="http://www.bestbuy.com/site/Music-Promotions/Musica-Iinstrument-Sale/pcmcat168500050002.c?id=pcmcat168500050002" class="more-category-icon-list-a more-category-icon-item"> Musical Instruments <img src="https://deals.bbystatic.com/web/042113/img/icon.new.window.darkblue.png" /> </a> </li> 
+        <li class="more-category-icon-list-li"> <img src="https://deals.bbystatic.com/web/042113/img//icon-category-mobile-phones.gif" /> <a href="http://www.bestbuy.com/site/Phones-Communication-Promotions/Mobile-Phone-Cell-Phone-Sale/pcmcat125500050005.c?id=pcmcat125500050005" class="more-category-icon-list-a more-category-icon-item"> Mobile Phones <img src="https://deals.bbystatic.com/web/042113/img/icon.new.window.darkblue.png" /> </a> </li> 
+        <li class="more-category-icon-list-li"> <img src="https://deals.bbystatic.com/web/042113/img//icon-category-health-fitness.gif" /> <a href="http://www.bestbuy.com/site/Appliances-Promotions/null/pcmcat261600050004.c?id=pcmcat261600050004" class="more-category-icon-list-a more-category-icon-item"> Health &amp; Fitness <img src="https://deals.bbystatic.com/web/042113/img/icon.new.window.darkblue.png" /> </a> </li> 
+       </ul> 
+      </div> 
+      <!-- /deals-more-category-offers --> 
+      <!-- ADDITIONAL TRACKIMG TAG MODIFICATIONS --> 
+      <script>
+				track.skuList = skuList.join(',');	
+				track.conversion = 'event80,event44';
+			</script> 
+     </div>
+     <!-- /wide-left --> 
+     <div class="prodRightRail"> 
+      <div id="dealEmailSignUp"> 
+       <iframe scrolling="no" frameborder="0" src="https://pages.emailinfo2.bestbuy.com/page.aspx?QS=330c754b5e92df746553d285979a7d17a57b2ce5b263cbc5"></iframe> 
+      </div>
+      <!-- /dealEmailSignUp --> 
+      <div class="dealtimer"> 
+       <div class="timertext"> 
+        <img src="https://deals.bbystatic.com/web/042113/img/time.left.png" /> 
+        <div id="bigCountdownTimer" class="timer"> 
+         <span id="hours">00</span>:
+         <span id="minutes">00</span>:
+         <span id="seconds">00</span> 
+        </div> 
+       </div> 
+       <div class="tomorrowsdeals">
+         Tomorrow's deal is from: 
+        <div class="category">
+         PC Software, iPad Accessories, Personal Care
+        </div> 
+       </div> 
+      </div> 
+      <!-- /dealtimer --> 
+      <div class="deals-more-on-sale_HoganWrapper"> 
+       <!-- Populated via Hogan --> 
+      </div> 
+      <!-- /deals-more-on-sale --> 
+      <div id="deals-visit-us"> 
+       <div class="visit-us-item"> 
+        <a href="http://www.bestbuy.com/site/Electronics/Outlet-Center/pcmcat142300050026.c?id=pcmcat142300050026" target="_blank">Clearance &amp; More &raquo;</a> 
+        <span>Find great deals on everything from refurbished electronics to last chance products.</span> 
+       </div> 
+       <div class="visit-us-item"> 
+        <a id="localClearance" href="" target="_blank">In-Store Clearance &raquo;</a> 
+        <span>Find great deals by Zip code.</span> 
+       </div> 
+       <div class="visit-us-item"> 
+        <a href="#" id="dotdLaunchFaq">Deal of the Day FAQs &raquo;</a> 
+       </div> 
+      </div> 
+      <!--  /deals-visit-us --> 
+     </div>
+     <!-- prodRightRail --> 
+    </div>
+    <!-- productTable --> 
+   </div> 
+  </div>
+  <!-- /content --> 
+  <div id="footer" class="windowWidth"> 
+   <!-- change this to opposite when preview site is good to go, VALUE = ^instore_enabled --> 
+   <!-- change this to opposite when preview site is good to go, VALUE = ^preview_site --> 
+   <div class="innerWrapper"> 
+    <div id="footerPromos"> 
+     <div id="signup"> 
+      <iframe src="https://pages.emailinfo2.bestbuy.com/page.aspx?QS=773ed3059447707d89d8f63c1fa88c853c1ab561fcd9290c" width="314" height="92" marginwidth="0" marginheight="0" align="top" scrolling="No" frameborder="0" hspace="0" vspace="0"> </iframe> 
+     </div>
+     <!-- /signup --> 
+     <a class="geekFooterHref" href="http://www.bestbuy.com/geeksquad" target="_blank"> 
+      <div class="geekFooter"></div> </a> 
+    </div>
+    <!-- /footerPromos --> 
+    <div id="footerBottomLeft"> 
+     <ul class="tabsFooter"> 
+      <li class="tabFooter active" id="topdeals" tabcontentidfooter="statTopDeals"> <a href="#"> <span class="tabFooterTitle">Top Deals</span> 
+        <div class="tabFooterTooltip"> 
+         <img alt="" src="https://deals.bbystatic.com/web/042113/img/questionMarkIcon.png" /> 
+         <span>We've done the math - you'll get the biggest savings on these Top Deals.</span> 
+        </div> </a> </li> 
+      <!--<li class='tabFooter' id="bestSelling" tabcontentidfooter='bestSellingContent'><a href="#">Best Selling</a></li>--> 
+      <li class="tabFooter" id="mostviewed" tabcontentidfooter="statMostViewed"> <a href="#"> <span class="tabFooterTitle">Most Popular</span> 
+        <div class="tabFooterTooltip"> 
+         <img alt="" src="https://deals.bbystatic.com/web/042113/img/questionMarkIcon.png" /> 
+         <span>The most viewed deals this week, updated hourly.</span> 
+        </div> </a> </li> 
+     </ul> 
+     <div class="tabContentFooter"> 
+      <div id="statTopDeals" class="tabContentPaneFooter"> 
+       <!-- Content loaded via javascript --> 
+      </div> 
+      <!-- END TOP DEALS TAB CONTENT --> 
+      <!--
+    <div id='bestSellingContent' class='tabContentPaneFooter'>
+    	<div class="topProducts">
+        	<img alt="" src="https://deals.bbystatic.com/web/042113/img/img1.png"/>
+        	<p>
+            	<a class="ellipsis" title="" href="#">AMD&trade; Dual-Core E-350 Accelerated Processor</a>
+                <span class="savePrice">Save $140</span>
+                <span class="price"><strong>$299.99</strong> after savings</span>
+            </p>
+        </div>
+    </div>
+    <!-- END BEST SELLING TAB CONTENT --> 
+      <div id="statMostViewed" class="tabContentPaneFooter"> 
+       <!-- Content loaded via javascript --> 
+      </div> 
+      <!-- END MOST VIEWED TAB CONTENT --> 
+     </div> 
+    </div>
+    <!-- /footerBottomLeft --> 
+    <div id="footerBottomCenter"> 
+     <style type="text/css">
+	#00_trade_in_get_it_footer {
+		background:#29292a;
+		position: relative;
+	}
+	img#trade_in_footer {
+		position: absolute;
+		top: 0;
+		left: 0;
+		border-bottom: 10px #29292a solid;
+	}
+	img#get_it_footer {
+		position: absolute;
+		top: 176px;
+		left: 0;
+	}
+</style> 
+     <div id="00_trade_in_get_it_footer"> 
+      <a href="http://www.bestbuy.com/tradein" target="_blank"> <img id="trade_in_footer" class="hover" src="https://deals.bbystatic.com/web/042113/img/modules/00_trade_in_get_it_footer/00_trade_in_today_footer_1x1.png" hoversrc="https://deals.bbystatic.com/web/042113/img/modules/00_trade_in_get_it_footer/00_trade_in_today_footer_1x1_hover.png" alt="" /> </a> 
+      <img id="get_it_footer" src="https://deals.bbystatic.com/web/042113/img/modules/00_trade_in_get_it_footer/00_get_it_today_footer_1x1.png" /> 
+     </div> 
+     <!-- /00_trade_in_get_it_footer --> 
+    </div>
+    <!-- /footerBottomCenter --> 
+    <div id="footerBottomRight"> 
+     <!-- advertisement goes here --> 
+     <div id="ad" class="section"> 
+      <div id="dart-container-300x250"> 
+       <script type="text/javascript">
+			var ad300250 = ['digins0100000', 'digins0100000'];
+		</script> 
+       <div id="admon-300x250"></div> 
+      </div> 
+     </div>
+     <!-- end #ad --> 
+     <script src="https://deals.bbystatic.com/web/042113/js/dart-min-secure.js" type="text/javascript"></script> 
+    </div>
+    <!-- /footerBottomRight --> 
+    <div id="footerFinePrint"> 
+     <p id="footerHelp">Need help? We're available 24/7 at<span>1-888-BEST-BUY (1-888-237-8289)</span></p> 
+     <p id="footerCopyright"> Copyright &copy;1999-2013 Best Buy. All Rights Reserved. By continuing past this page and/or using this site, you agree<br /> to abide by the <a href="http://www.bestbuy.com/site/Help-Topics/Conditions-of-Use/pcmcat204400050067.c?id=pcmcat204400050067">Terms of Use</a> for this site, which prohibit commercial use of any information on this site. View our<br /> <a href="http://www.bestbuy.com/site/Help-Topics/Privacy-Policy/pcmcat204400050062.c?id=pcmcat204400050062">Privacy Policy</a> / <a href="http://www.bestbuy.com/site/Help-Topics/California-Privacy-Rights/pcmcat204400050063.c?id=pcmcat204400050063">California Privacy Rights</a> </p> 
+    </div>
+    <!-- /footerFinePrint --> 
+   </div>
+   <!-- /innerWrapper --> 
+  </div>
+  <!-- /footer --> 
+  <!-- begin call to omniture analytics engine --> 
+  <script type="text/javascript" src="https://images-ssl.bestbuy.com/BestBuy_US/js/tracking/other/weeklyad_digitalinsert/analytics-min.js"></script> 
+  <!--  end call to omniture analytics engine --> 
+  <!-- Begin BlueKai Tag--> 
+  <iframe name="__bkframe" height="0" width="0" frameborder="0" src="javascript:void(0)"></iframe> 
+  <script type="text/javascript" src="https://tags.bkrtx.com/js/bk-coretag.js"></script> 
+  <!-- End BlueKai Tag --> 
+  <!-- Begin Atlas Tag --> 
+  <iframe id="atlasTag" width="0" height="0" frameborder="0" scrolling="No" marginheight="0" marginwidth="0" topmargin="0" leftmargin="0"></iframe> 
+  <!-- End Atlas Tag -->   
+ </body>
+</html>
