@@ -8,47 +8,93 @@ import os
 #Global Variables
 count_keywords = 0
 count_description = 0
+count_title = 0
+count_key_desc_and = 0
+count_key_desc_or = 0
 
-def getHeadText():
+def getHeadText(soup):
     global count_keywords
     global count_description
+    global count_title
+    global count_key_desc_and
+    global count_key_desc_or
 
     headText = ""
     #Get title
     t = soup.find("title").__str__()
     title = t[t.find('>')+1:t.find('<',t.find('>')+1,len(t))]
+    if title!="": 
+        count_title += 1
+    #print title
     #Add title text to headText
     headText += title
 
     #Get keywords from meta tag with name=keywords. The actual keywords lie in the content field.
     keywords = soup.findAll("meta", attrs ={'name' : 'keywords'})
-    print "KEYWORDS: "
+    if keywords!=[]:
+        count_keywords += 1
+    #print "KEYWORDS: "
     for k in keywords:
         try: 
-            print k['content']
+            doNothing = True
+            #print k['content']
         except:
             print "There exists a keywords meta tag in this file which has no content"
         try: 
             headText += unicodedata.normalize('NFKD',k['content']).encode('ascii','ignore')
-            count_keywords = count_keywords + 1
+            #count_keywords = count_keywords + 1
         except: 
             print "Error in keywords' unicode.normalize."
 
     #Get description from meta tag with name=description. Likewise, the actual description text lies in the content field.
     description = soup.findAll("meta", attrs ={'name' : 'description'})
-    print "DESCRIPTION: "
+    if description!=[]:
+        count_description += 1
+    #print "DESCRIPTION: "
     for d in description:
         try:
-            print d['content']
+            doNothing = True
+            #print d['content']
         except:
             print "There exists a description meta tag in this file which has no content"
         try: 
             headText += unicodedata.normalize('NFKD',d['content']).encode('ascii','ignore')
-            count_description = count_description + 1
+            #count_description = count_description + 1
         except: 
             print "Error in description's unicode.normalize."
         
+    if keywords!=[] and description!=[]:
+        count_key_desc_and += 1
+
+    if keywords!=[] or description!=[]:
+        count_key_desc_or += 1
+
     return headText.replace('\n' , ' ')
+
+def slamAd(filepath):
+    singleAdFile = open(filepath, "r")
+    singleData = singleAdFile.read()
+    singlesoup = BeautifulSoup(singleData)
+    try:
+        singleHeadText = unicodedata.normalize('NFKD', getHeadText(singlesoup)).encode('ascii', 'ignore')
+    except:
+        singleHeadText = getHeadText(singlesoup)
+
+    # remove common words and tokenize
+    #text = [word for word in headText.lower().split() if word not in stoplist]
+    print singleHeadText
+    adDictionary = corpora.Dictionary.load("adsDic.dict")
+    vec_bow = adDictionary.doc2bow(singleHeadText.lower().split())
+    vec_lsi = lsi[vec_bow]
+
+    max = -4
+    maxTopic = -1
+    for pair in vec_lsi:
+        if abs(pair[1]) > max:
+            max = abs(pair[1])
+            maxTopic = pair[0]
+    print "Max topic number: " + str(maxTopic)
+    print lsi.print_topics(100)[maxTopic]
 
 
 #We are not currently using text from the body of the webpage.
@@ -81,12 +127,12 @@ listofAds = []
 path = "/Users/scottneaves/Desktop/Online Advertising/AdSimiliarity/ads_new"
 listing = os.listdir(path)
 for infile in listing:
-    print "html filename is: " + infile
+    #print "html filename is: " + infile
     html_file = open(os.path.join(path, infile), "r")
     data = html_file.read()
-    soup = BeautifulSoup(data)
-    headText = getHeadText()
-    print
+    adsoup = BeautifulSoup(data)
+    headText = getHeadText(adsoup)
+    #print
     try:
         listofAds.append(unicodedata.normalize('NFKD',headText).encode('ascii','ignore'))
     except:
@@ -98,6 +144,12 @@ print "Number of files with keyword meta tags (which have content): "
 print count_keywords
 print "Number of files with description meta tags (which have content): "
 print count_description
+print "Number of files with keywords and descriptions"
+print count_key_desc_and
+print "Number of files with keywords or descriptions"
+print count_key_desc_or
+print "Number of files with titles"
+print count_title
 
 
 
