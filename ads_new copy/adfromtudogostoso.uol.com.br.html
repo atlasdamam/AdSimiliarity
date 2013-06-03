@@ -1,0 +1,894 @@
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Dice.com - Job Search for Technology Professionals</title>
+    <meta name="Description" content="Dice is the #1 technology job board. If you are a technology expert in areas such as Information Technology (IT), software, high tech, security, biotech, aerospace or engineering, Dice will assist you with finding your next great career opportunity.">
+    <link rel="stylesheet" href="http://assets.dice.com/assets/diceYUI/assets/skins/dice/skin2.css" type="text/css">
+    <link rel="stylesheet" href="http://assets.dice.com/assets/stylesheets/DiceV4.css" type="text/css">
+    <link rel="stylesheet" href="/content/www/homepage/css/takeover.css" type="text/css">
+    <link type="text/css" href="http://assets.dice.com/assets/stylesheets/jquery-ui-1.8.20.custom.css" rel="stylesheet">
+    <script src="http://www.google-analytics.com/ga.js" async="" type="text/javascript"></script><script src="http://www.googletagservices.com/tag/js/gpt.js" type="text/javascript" async=""></script><script type="text/javascript" src="/content/www/homepage/js/takeover.js"></script>
+    <script type="text/javascript" src="http://assets.dice.com/yui/build/utilities/utilities.js"></script>
+    <script type="text/javascript" src="http://assets.dice.com/yui/build/button/button-min.js"></script>
+    <script type="text/javascript" src="http://assets.dice.com/yui/build/container/container_core-min.js"></script>
+    <script type="text/javascript" src="http://assets.dice.com/yui/build/menu/menu-min.js"></script>
+    <script type="text/javascript" src="http://assets.dice.com/yui/build/datasource/datasource-min.js"></script>
+    <script type="text/javascript" src="http://assets.dice.com/yui/build/autocomplete/autocomplete-min.js"></script>
+	<script type="text/javascript" src="http://assets.dice.com/assets/scripts/jQuery.js"></script>
+
+    <script type="text/javascript" src="/assets/scripts/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="/assets/scripts/jquery-ui-1.8.20.custom.min.js"></script>
+    <script type="text/javascript">
+
+        $(function() {
+
+            $("#zipCodeCity").autocomplete({
+                source: function(request, response) {
+                    $.ajax({
+                        type: "POST",
+                        url: "job/ajax/zipCityTypeAhead.xml",
+                        dataType: "xml",
+                        data: "f=" + document.getElementById("zipCodeCity").value,
+                        success: function(xml) {
+                            var count = 0;
+                            var data = [];
+                            $(xml).find('desc').each(function() {
+                                data.push($(this).text())
+                            });
+                            response(data.slice(0, 10));                        }
+                    }) },
+                minLength : 1
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        if (self != top) {
+            top.location.href = self.location.href;
+        }
+    </script>
+	<script type="text/javascript">
+		if (self != top) {
+			top.location.href = self.location.href;
+		}
+	</script>
+
+	<script type="text/javascript">
+		var googletag = googletag || {};
+		googletag.cmd = googletag.cmd || [];
+		(function() {
+			var gads = document.createElement("script");
+			gads.async = true;
+			gads.type = "text/javascript";
+			var useSSL = "https:" == document.location.protocol;
+			gads.src = (useSSL ? "https:" : "http:") +
+			"//www.googletagservices.com/tag/js/gpt.js";
+			var node = document.getElementsByTagName("script")[0];
+			node.parentNode.insertBefore(gads, node);
+		})();
+	</script>
+	<style type="text/css">
+		#WHEREDiv{position:absolute;visibility:hidden;z-index:50;}
+		#WHEREList{width:20em;z-index:75;verflow:hidden;background:#FFF none;border:1px solid #888;}
+		#WHEREList option{width:100%;margin:0;padding:2px 5px;white-space:nowrap;cursor:pointer;color:#555;outline:transparent 0 none;border:0 none;}
+		#WHEREList option:hover{background:#06C none;color:#FFF;}
+	</style>
+<script src="http://fls.doubleclick.net/json?spot=3240192&amp;src=1524237&amp;var=s_1_Integrate_DFA_get_0&amp;host=integrate.112.2o7.net%2Fdfa_echo%3Fvar%3Ds_1_Integrate_DFA_get_0%26AQE%3D1%26A2S%3D1&amp;ord=8675715018207" defer="" id="s_s:0:Integrate:s_1_Integrate_DFA_get_0" type="text/javascript"></script><script src="http://partner.googleadservices.com/gampad/google_ads_gpt.js" type="text/javascript" async=""></script><script src="http://pagead2.googlesyndication.com/pagead/osd.js" type="text/javascript"></script></head>
+
+
+<body class=" yui-skin-sam" onload="checkCookie();"><iframe style="position: absolute; visibility: visible; background-color: transparent; border-width: 0px; width: 2em; height: 2em; left: 0px; top: -27px;" role="presentation" tabindex="-1" title="Text Resize Monitor" id="_yuiResizeMonitor"></iframe>
+    <div style="display: none;" id="adpopupbox" class="adpopupbox">
+    <!--<img src="/content/www/homepage/images/dice_com_takeover_v2A.gif"  usemap="#admap"/>
+
+     <map name="admap">
+         <area shape="rect" coords="0,0,250,50" href="http://www.dice.com/mobile" alt="Mobile" />
+         <area shape="circle" coords="270,30,25" href="javascript:void(0)" onclick="timeoutMsg();" alt="Close" />
+         <area shape="rect" coords="0,50,300,550" href="http://www.dice.com/mobile" alt="Mobile" />
+    </map>-->
+
+</div>
+
+
+
+
+<div id="doc4" class="yui-t7 homePage">
+<div id="hd">
+    <div style="z-index: 2; position: static; display: block; visibility: visible;" id="diceMainNav" class="yuimenubar yuimenubarnav yui-module yui-overlay visible">
+        <div class="bd">
+            <a class="diceLogoLink" href="http://www.dice.com"><img src="http://www.dice.com/assets/stylesheets/images/Dice_navBG.png" alt="Dice"></a>
+            <ul id="navLeft" class="first-of-type">
+                <li index="0" groupindex="0" id="yui-gen4" class="yuimenubaritem yuimenubaritem-hassubmenu first-of-type">
+                    <a class="yuimenubaritemlabel yuimenubaritemlabel-hassubmenu" href="http://www.dice.com/profman/servlet/ProfMan?op=3000">MyDice</a>
+                    <div style="z-index: 2; position: absolute; visibility: hidden;" id="mydicesubmenu" class="yuimenu yui-module yui-overlay yui-overlay-hidden">
+                        <div class="bd">
+                            <ul>
+                                <li class="yuimenubaritem"><a class="yuimenubaritemlabel" href="http://www.dice.com/profman/servlet/ProfMan?op=3000">Dashboard</a></li>
+                                <li class="yuimenubaritem"><a class="yuimenubaritemlabel" href="http://www.dice.com/profman/servlet/ProfMan?op=1040">My Resumes</a></li>
+                                <li class="yuimenubaritem"><a class="yuimenubaritemlabel" href="http://www.dice.com/profman/servlet/ProfMan?op=3003">My Search Agents</a></li>
+                                <li class="yuimenubaritem"><a class="yuimenubaritemlabel" href="http://www.dice.com/profman/servlet/ProfMan?op=3005">My Saved Jobs</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li index="1" groupindex="0" id="yui-gen5" class="yuimenubaritem yuimenubaritem-hassubmenu">
+                    <a class="yuimenubaritemlabel yuimenubaritemlabel-hassubmenu" href="http://news.dice.com/talent-community-landing-page">Talent Communities</a>
+                    <div style="z-index: 2; position: absolute; visibility: hidden;" id="talentcommunitysubmenu" class="yuimenu yui-module yui-overlay yui-overlay-hidden">
+                        <div class="bd">
+                            <ul>
+                                
+                                    <li class="yuimenubaritem"><a class="yuimenubaritemlabel" href="http://www.dice.com/profman/servlet/ProfMan?op=3020">My Tech Feed&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li index="2" groupindex="0" id="yui-gen6" class="yuimenubaritem yuimenubaritem-hassubmenu">
+                    <a class="yuimenubaritemlabel yuimenubaritemlabel-hassubmenu" href="http://news.dice.com/">Tech News &amp; Advice</a>
+                    <div style="z-index: 2; position: absolute; visibility: hidden;" id="newsadvicesubmenu" class="yuimenu yui-module yui-overlay yui-overlay-hidden">
+                        <div class="bd">
+                            <ul>
+                                <li class="yuimenubaritem"><a class="yuimenubaritemlabel" href="http://news.dice.com/">Dice Blog Network&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                                <li class="yuimenubaritem"><a class="yuimenubaritemlabel" href="http://techtalk.dice.com/">Discussions</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                
+                    
+                
+            </ul>
+            
+                
+                
+                
+                    <ul id="empLogin">
+                        <label>Employers</label>
+                        <li index="0" groupindex="1" id="yui-gen2" class="yuimenubaritem first-of-type"><a class="yuimenubaritemlabel" href="http://employer.dice.com/">Login</a></li>
+							<li index="1" groupindex="1" id="yui-gen3" class="yuimenubaritem"><a class="yuimenubaritemlabel" href="http://employer.dice.com/common/content/postJobs/index2.jsp">Post Jobs</a></li>
+                    </ul>
+                    <ul id="seekerLogin">
+                        <label>Job Seekers</label>
+                        <li index="0" groupindex="2" id="yui-gen0" class="yuimenubaritem first-of-type"><a class="yuimenubaritemlabel" href="http://www.dice.com/profman/servlet/ProfMan?op=3000&amp;pg=1000">Login</a></li>
+							<li index="1" groupindex="2" id="yui-gen1" class="yuimenubaritem"><a class="yuimenubaritemlabel" href="https://secure.dice.com/regman/register.html">Sign Up</a></li>
+                    </ul>
+                
+            
+        </div>
+    </div>
+</div>
+<div id="bd">
+    <div class="yui-g">
+        <!-- BEGIN HOMEPAGE SEARCH AREA -->
+        <div id="homeSearch">
+            <a class="uploadResumeLink" href="http://www.dice.com/profman/servlet/ProfMan?op=1032&amp;source=102">Upload Your Resume</a>
+            <h1>Search <span class="jobCount">83,956</span> tech jobs</h1>
+            <div class="pane">
+                <form id="search" action="/job/wwwSearch.html" method="post" onsubmit="return fixSearch();">
+					<div id="homeSearchForm">
+						<div class="homeSearchInputContainer">
+							<input class="homeSearchInput" name="FREE_TEXT" id="FREE_TEXT" onkeypress="return submitEnter(event);" type="text">
+                            <input name="CALLER" value="basic" type="hidden">
+						</div>
+						<div class="homeSearchInputContainer">
+							<input aria-haspopup="true" aria-autocomplete="list" role="textbox" name="WHERE" id="zipCodeCity" class="homeSearchInput ui-autocomplete-input" maxlength="250" autocomplete="off" type="text">
+						</div>
+						<input class="searchSubmit" value="Find Jobs" id="searchSubmit" name="searchSubmit" onclick="return submitSearchForm();" type="button">
+						<div class="clear"></div>
+						<div class="searchLabels">
+							<label>Job Title, Keywords or Company Name</label>
+							<label>City and State or Zip Code</label>
+							<a href="http://www.dice.com/job/advancedSearch.html">Advanced Job Search</a>
+						</div>
+                        <div class="homeSearchOptions">
+                            <label>Browse Jobs:</label><a href="http://www.dice.com/job/browse/skill.html">By Skill/Job Title</a>|<a href="http://www.dice.com/employerDirectory/servlet/EmployerDirectory?op=1000">By Company</a>|<a href="/job/metro.html">By Location</a>|<a href="/job/results?x=all&amp;g=fulltime,parttime,con_corp,con_ind,con_hire_corp,con_w2,con_hire_ind,con_hire_w2">By Employment Type</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- END HOMEPAGE SEARCH AREA -->
+    </div>
+    <div id="siteMessageArea" align="center"><!--<div>This is a test of the Dice messaging system, I repeat, this is only a test.</div>--></div>
+    <div class="yui-gc">
+        <div class="yui-u first">
+            <!--BEGIN MAIN CONTENT AREA-->
+				<div id="DiceNewsAdvice">
+	<h2>Today's Tech News &amp; Career Advice on Dice</h2>
+	<div class="html_carousel">
+		<div style="display: block; text-align: left; float: none; position: relative; top: auto; right: auto; bottom: auto; left: auto; z-index: auto; width: 520px; height: 250px; margin: 0px; overflow: hidden;" class="caroufredsel_wrapper"><div style="text-align: left; float: none; position: absolute; top: 0px; right: auto; bottom: auto; left: 0px; margin: 0px; width: 3640px; height: 250px;" id="newsCarousel">
+			<div class="slide">
+				<div class="inset">
+
+	<!--BEGIN ARTICLE 01-->
+
+					<!--BEGIN CATEGORY LINK 01-->
+					<a class="blogCategory" href="http://news.dice.com/category/working-in-tech/" target="_top"><span>Working in Tech</span></a>
+					<!--END CATEGORY LINK 01-->
+
+					<!--BEGIN LINK - IMAGE 01-->
+					<a href="http://news.dice.com/2013/05/03/oracle-invests-in-ingestible-sensors/" target="_top" class="newsCarouselIMG"><img src="/content/www/homepage/images/newsArticle01.jpg" alt="carousel 1" height="200" width="250"></a>
+					<!--END LINK - IMAGE 01-->
+
+					<div class="newsText">
+
+						<!--BEGIN THUMBNAIL HEADLINE 01-->
+						<h4>Oracle Sensor Investment</h4>
+						<!--END THUMBNAIL HEADLINE 01-->
+
+						<!--BEGIN ARTICLE HEADLINE 01-->
+						<h3><a href="http://news.dice.com/2013/05/03/oracle-invests-in-ingestible-sensors/" target="_top" class="newsCarouselHD">Oracle Invests in Ingestible Sensors</a></h3>
+						<!--END ARTICLE HEADLINE 01-->
+
+						<!--BEGIN ARTICLE TEXT 01-->
+						<p>Oracle tempers its voracious appetite for acquisitions and takes a minority stake in digital-health firm Proteus, a builder of ingestible sensors. Learn how Oracle plans to leverage its investment.</p>
+						<!--END ARTICLE TEXT 01-->
+
+						<!--BEGIN ARTICLE CONTINUE LINK 01-->
+						<a href="http://news.dice.com/2013/05/03/oracle-invests-in-ingestible-sensors/" target="_top" class="newsCarouselContinue">continue...</a>
+						<!--END ARTICLE CONTINUE LINK 01-->
+
+					</div>
+
+	<!--END ARTICLE 01-->
+
+				</div>
+			</div>
+			<div class="slide">
+				<div class="inset">
+
+	<!--BEGIN ARTICLE 02-->
+
+					<!--BEGIN CATEGORY LINK 02-->
+					<a class="blogCategory" href="http://news.dice.com/category/living-in-tech/" target="_top"><span>Living in Tech</span></a>
+					<!--END CATEGORY LINK 02-->
+
+					<!--BEGIN LINK - IMAGE 02-->
+					<a href="http://news.dice.com/2013/05/03/cool-skin-a-digital-libarians-tells-a-story/" target="_top" class="newsCarouselIMG"><img src="/content/www/homepage/images/newsArticle02.jpg" alt="carousel 2" height="200" width="250"></a>
+					<!--END LINK - IMAGE 02-->
+
+					<div class="newsText">
+
+						<!--BEGIN THUMBNAIL HEADLINE 02-->
+						<h4>Librarian's Meaningful Tattoos</h4>
+						<!--END THUMBNAIL HEADLINE 02-->
+
+						<!--BEGIN ARTICLE HEADLINE 02-->
+						<h3><a href="http://news.dice.com/2013/05/03/cool-skin-a-digital-libarians-tells-a-story/" target="_top" class="newsCarouselHD">Cool Skin: A Digital Librarian Tells a Story</a></h3>
+						<!--END ARTICLE HEADLINE 02-->
+
+						<!--BEGIN ARTICLE TEXT 02-->
+						<p>A digital collections librarian at a major Boston-area university not only curates online collections, but she has assembled her own personal collection of meaningful tattoos.</p>
+						<!--END ARTICLE TEXT 02-->
+
+						<!--BEGIN ARTICLE CONTINUE LINK 02-->
+						<a href="http://news.dice.com/2013/05/03/cool-skin-a-digital-libarians-tells-a-story/" target="_top" class="newsCarouselContinue">continue...</a>
+						<!--END ARTICLE CONTINUE LINK 02-->
+
+					</div>
+
+	<!--END ARTICLE 02-->
+
+				</div>
+			</div>
+			<div class="slide">
+				<div class="inset">
+
+	<!--BEGIN ARTICLE 03-->
+
+					<!--BEGIN CATEGORY LINK 03-->
+					<a class="blogCategory" href="http://news.dice.com/category/looking-in-tech/" target="_top"><span>Looking in Tech</span></a>
+					<!--END CATEGORY LINK 03-->
+
+					<!--BEGIN LINK - IMAGE 03-->
+					<a href="http://news.dice.com/2013/05/03/4-financial-points-to-consider-before-changing-jobs/" target="_top" class="newsCarouselIMG"><img src="/content/www/homepage/images/newsArticle03.jpg" alt="carousel 3" height="200" width="250"></a>
+					<!--END LINK - IMAGE 03-->
+
+					<div class="newsText">
+
+						<!--BEGIN THUMBNAIL HEADLINE 03-->
+						<h4>Weighing New Job Costs</h4>
+						<!--END THUMBNAIL HEADLINE 03-->
+
+						<!--BEGIN ARTICLE HEADLINE 03-->
+						<h3><a href="http://news.dice.com/2013/05/03/4-financial-points-to-consider-before-changing-jobs/" target="_top" class="newsCarouselHD">Planning for the Financial Impact of Your New Job</a></h3>
+						<!--BEGIN ARTICLE HEADLINE 03-->
+
+						<!--BEGIN ARTICLE TEXT 03-->
+						<p>Are you among the many job seekers who don't pay attention to the financial implications of a job search, or the change itself? Here's how to avoid falling into that trap.</p>
+						<!--END ARTICLE TEXT 03-->
+
+						<!--BEGIN ARTICLE CONTINUE LINK 03-->
+						<a href="http://news.dice.com/2013/05/03/4-financial-points-to-consider-before-changing-jobs/" target="_top" class="newsCarouselContinue">continue...</a>
+						<!--END ARTICLE CONTINUE LINK 03-->
+
+					</div>
+
+	<!--END ARTICLE 03-->
+
+				</div>
+			</div>
+		</div></div>
+		<div class="clear"></div>
+		<div style="display: block;" class="thumbnails" id="newsCarousel_pag"><span class="selected"><label>Oracle Sensor Investment</label><img src="/content/www/homepage/images/newsArticle01.jpg" alt="" height="50" width="62"></span><span><label>Librarian's Meaningful Tattoos</label><img src="/content/www/homepage/images/newsArticle02.jpg" alt="" height="50" width="62"></span><span><label>Weighing New Job Costs</label><img src="/content/www/homepage/images/newsArticle03.jpg" alt="" height="50" width="62"></span></div>
+	</div>
+	<ul class="contentPromoList">
+		<li><a href="http://news.dice.com/2013/05/02/yahoos-family-leave-draws-questions-about-fatherhood-equality/" target="_top">Fatherhood Equality: Yahoo Policy Raises Questions</a></li>
+		<li><a href="http://news.dice.com/2013/05/02/intel-names-brian-krzanich-new-ceo/" target="_top">Intel Names Brian Krzanich New CEO</a></li>
+		<li><a href="http://news.dice.com/2013/05/02/interview-questions-sharepoint-architects/" target="_top">Interview Questions for SharePoint Architects</a></li>
+		<li><a href="http://news.dice.com/2013/05/01/lucasarts-final-layoff-numbers/" target="_top">Tech Jobs: Hiring in Fla., Northwest; Layoffs at Northrop</a></li>
+		<li><a href="http://news.dice.com/2013/04/26/5-stories-to-get-smart-on-it-degrees-and-certifications/" target="_top">5 Stories on Tech Degrees and Certifications</a></li>
+	</ul>
+	<div class="moreLink"><a class="seeMore" href="http://news.dice.com/">More Tech News and Advice</a></div>
+</div>
+
+<style type="text/css">
+#DiceNewsAdvice{padding:2.25em 0 1em 0;z-index:0;}
+#DiceNewsAdvice em{font-style:italic;}
+#DiceNewsAdvice h2{font-size:24px;margin:0;padding:0 0 .25em 0;}
+
+.html_carousel {width:520px;height:315px;padding:0;margin:0;background:transparent url(/content/www/homepage/images/carouselBG.png) no-repeat 0 0;}
+.html_carousel div.slide{position:relative;float:left;width:520px;height:250px;margin:0;padding:0;overflow:hidden;}
+.html_carousel div.slide .inset{width:500px;height:240px;margin:10px 10px 0 10px;}
+.html_carousel div.slide a.newsCarouselIMG{display:block;float:left;width:250px;height:200px;margin:0 10px 0 0;padding:0;border:0 none;text-decoration:none;}
+.html_carousel div.slide a.newsCarouselIMG img{width:250px;height:200px;margin:0;padding:0;border:0 none;}
+.html_carousel div.slide .newsText{float:left;width:240px;height:200px;margin:0;padding:0;font-size:13px;overflow:hidden;}
+.html_carousel div.slide h4 {display:none;}
+.html_carousel div.slide h3{display:block;margin:0;padding:0 0 5px 0;font-size:18px;line-height:22px;}
+.html_carousel div.slide p {display:block;margin:0;padding:0 0 1em 0;}
+.html_carousel div.slide a.newsCarouselContinue{display:block;text-align:right;margin:0;padding:0;font-size:11px;font-weight:bold;width:240px;height:15px;overflow:hidden;}
+a.blogCategory{display:block;margin:0 0 8px 0;border-bottom:1px solid #FFF;}
+a.blogCategory span{display:block;padding:0 0 7px 0;font-size:15px;line-height:15px;border-bottom:1px solid #DDD;font-family:"Trebuchet MS",Tahoma,Arial,sans-serif;font-weight:bold;}
+
+div.thumbnails{text-align:left;clear:both;}
+div.thumbnails img{cursor:pointer;border:0 none;padding:0;margin:10px 0 0 10px;display:inline-block;}
+div.thumbnails img:hover {}
+div.thumbnails img.selected{}
+div.thumbnails span{cursor:pointer;display:inline-block;width:173px;height:65px;margin:0;padding:0;background:transparent url(/content/www/homepage/images/carouselBG.png) no-repeat 0 -300px;}
+div.thumbnails span.selected{background-position:0 -400px;}
+div.thumbnails span label{cursor:pointer;display:block;float:right;width:90px;margin:10px 0 0 0;padding:0 5px 0 0;color:#069;font-family:"Trebuchet MS",Tahoma,Arial,sans-serif;font-weight:bold;font-size:14px;line-height:16px;}
+div.thumbnails span.selected label{color:#FFF;}
+
+#DiceNewsAdvice ul.contentPromoList{margin:0;padding:.5em 0;list-style:none;border-bottom:1px solid #CCC;}
+#DiceNewsAdvice ul.contentPromoList li{display:block;margin:0;padding:.5em 0 .5em 2px;list-style:none;}
+#DiceNewsAdvice ul.contentPromoList li a{display:block;margin:0;padding:0;font-family:"Trebuchet MS",Tahoma,Arial,sans-serif;font-size:16px;font-weight:bold;}
+#DiceNewsAdvice .moreLink{border-top:1px solid #FFF;padding:1em 0 0 0;}
+#carousel_container{width:500px;}
+.homePage .yui-gc .yui-u.first{z-index:0;}
+
+.yui-skin-sam .homePage #bd .yui-g #homeSearch #homeSearchForm #ysearchcontainer.yui-ac-container{position:absolute;width:20em;top:37px !important;}
+.yui-skin-sam .homePage #bd .yui-g #homeSearch #homeSearchForm .yui-ac-content{position:absolute;}
+.homePage #bd .yui-g #homeSearch{z-index:9;}#ysearchautocomplete{z-index:10;}#ysearchautocomplete #ysearchcontainer{z-index:11;}#ysearchautocomplete #ysearchcontainer .yui-ac-content{}
+</style>
+<script type="text/javascript" language="javascript" src="/content/www/homepage/js/jquery.carouFredSel-6.2.0-packed.js"></script>
+<script type="text/javascript" language="javascript">
+
+	$(function() {
+		$("#newsCarousel .slide div").show();
+		$("#newsCarousel").carouFredSel({
+			items		: 1,
+			align: "left",
+			scroll		: {
+				//fx			: "crossfade"
+				easing: "linear",
+				pauseOnHover: true
+			},
+			auto		: 8000,
+			pagination	: {
+				container		: "#newsCarousel_pag",
+				anchorBuilder	: function( nr ) {
+					var title = $(this).find( "h4" ).text();
+					var src = $("img", this).attr( "src" );
+						//src = src.replace( "/large/", "/small/");
+					return '<span><label>' +title+ '</label><img src="' + src + '" width="62" height="50" alt="" /></span>';
+				}
+			}
+		});
+		//var timerWidth = 870;
+	});
+</script>
+
+				<div id="talentCommunitiesPromo">
+	<h2>Talent Communities on Dice</h2>
+	<div class="contentPromo">
+		<div class="contentPromoBG">
+			<div class="contentPromoBD">
+				<ul class="TCpromoList lCol">
+					<li><a href="http://news.dice.com/project-management-talent-community/" target="_top"><span class="TCpromoLink-1">Project&nbsp;Management</span></a></li>
+					<li><a href="http://news.dice.com/android-talent-community/" target="_top"><span class="TCpromoLink-2">Android</span></a></li>
+				</ul>
+				<ul class="TCpromoList rCol">
+					<li><a href="http://news.dice.com/mobile-development-talent-community/" target="_top"><span class="TCpromoLink-3">Mobile&nbsp;Development</span></a></li>
+					<li><a href="http://news.dice.com/cloud-computing-talent-community/" target="_top"><span class="TCpromoLink-4">Cloud&nbsp;Computing</span></a></li>
+				</ul>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+	<p>Dice Talent Communities bring together like-minded techs in specific fields. Find your community to follow industry news, focused job postings, and learn Best Practices.</p>
+	<div class="moreLink"><a class="seeMore" href="http://news.dice.com/talent-community-landing-page/">See All Talent Communities</a></div>
+</div>
+<style type="text/css">
+#talentCommunitiesPromo{padding:2em 0 1em 0;}
+#talentCommunitiesPromo h2{font-size:24px;margin:0;padding:0 0 .25em 0;}
+
+#talentCommunitiesPromo .contentPromoBG{width:520px;}
+#talentCommunitiesPromo ul.TCpromoList{display:block;width:255px;margin:0;padding:0;list-style:none;}
+#talentCommunitiesPromo ul.TCpromoList.lCol{float:left;}
+#talentCommunitiesPromo ul.TCpromoList.rCol{float:right;}
+#talentCommunitiesPromo ul.TCpromoList li{display:block;float:left;width:255px;height:90px;list-style:none;margin:0;padding:0;overflow:hidden;}
+#talentCommunitiesPromo ul.TCpromoList li a,#talentCommunitiesPromo ul.TCpromoList li a:visited{display:block;margin:0;padding:0;width:255px;height:80px;font-size:17px;font-family:"Trebuchet MS",Tahoma,Arial,sans-serif;font-weight:bold;color:#069;background:transparent url(/assets/stylesheets/images/DiceHomepageBGsprite.png) no-repeat 0 -270px;overflow:hidden;}
+#talentCommunitiesPromo ul.TCpromoList li a:hover,#talentCommunitiesPromo ul.TCpromoList li a:active{background-position:0 -350px;color:#6CF;}
+
+#talentCommunitiesPromo ul.TCpromoList li a span{display:block;padding:1.5em .25em 1.5em 80px;margin:0;background-image:url(/content/www/homepage/images/DiceTCpromoLinkSprite.png);background-repeat:no-repeat;background-position:8px 0;}
+#talentCommunitiesPromo ul.TCpromoList li a span.TCpromoLink-1{background-position:8px 0;/*padding:1em .25em 1em 80px;/*(add padding rule if TC title takes two lines)*/}
+#talentCommunitiesPromo ul.TCpromoList li a span.TCpromoLink-2{background-position:8px -100px;/*padding:1em .25em 1em 80px;/*(add padding rule if TC title takes two lines)*/}
+#talentCommunitiesPromo ul.TCpromoList li a span.TCpromoLink-3{background-position:8px -200px;/*padding:1em .25em 1em 80px;/*(add padding rule if TC title takes two lines)*/}
+#talentCommunitiesPromo ul.TCpromoList li a span.TCpromoLink-4{background-position:8px -300px;/*padding:1em .25em 1em 80px;/*(add padding rule if TC title takes two lines)*/}
+
+#talentCommunitiesPromo p{display:block;margin:0;padding:0 0 1em 0;border-bottom:1px solid #CCC;}
+#talentCommunitiesPromo .moreLink{border-top:1px solid #FFF;padding:1em 0 0 0;}
+
+</style>
+
+
+                
+
+				<!--END MAIN CONTENT AREA-->
+                </div>
+			<div class="yui-u">
+				<!--BEGIN RIGHT COLUMN-->
+				<div id="sponsorPane"><script type="text/javascript">
+	googletag.cmd.push(function() {
+		googletag.defineSlot("/2247/dice.dart/homead", [300, 250], "div-gpt-ad-1343060705883-0").addService(googletag.pubads());
+		googletag.pubads().enableSingleRequest();
+		googletag.enableServices();
+	});
+
+	googletag.cmd.push(function() {
+		googletag.defineSlot("/2247/dice.dart/Homepage_logo", [300, 55], "div-gpt-ad-1343835040698-0").addService(googletag.pubads());
+		googletag.pubads().enableSingleRequest();
+		googletag.enableServices();
+	});
+	googletag.cmd.push(function() {
+		googletag.defineSlot("/2247/dice.dart/Homepage_logo2", [300, 55], "div-gpt-ad-1343916997359-0").addService(googletag.pubads());
+		googletag.pubads().enableSingleRequest();
+		googletag.enableServices();
+	});
+	googletag.cmd.push(function() {
+		googletag.defineSlot("/2247/dice.dart/Homepage_logo3", [300, 55], "div-gpt-ad-1343917121213-0").addService(googletag.pubads());
+		googletag.pubads().enableSingleRequest();
+		googletag.enableServices();
+	});
+	googletag.cmd.push(function() {
+		googletag.defineSlot("/2247/dice.dart/Homepage_logo4", [300, 55], "div-gpt-ad-1343917292754-0").addService(googletag.pubads());
+		googletag.pubads().enableSingleRequest();
+		googletag.enableServices();
+	});
+	googletag.cmd.push(function() {
+		googletag.defineSlot("/2247/dice.dart/Homepage_logo5", [300, 55], "div-gpt-ad-1343917395808-0").addService(googletag.pubads());
+		googletag.pubads().enableSingleRequest();
+		googletag.enableServices();
+	});
+	googletag.cmd.push(function() {
+		googletag.defineSlot("/2247/dice.dart/Homepage_logo6", [300, 55], "div-gpt-ad-1343917455503-0").addService(googletag.pubads());
+		googletag.pubads().enableSingleRequest();
+		googletag.enableServices();
+	});
+</script>
+
+
+<div id="DiceSponsors">
+	<div id="div-gpt-ad-1343060705883-0" class="sponsorContainer1">
+		<script type="text/javascript">
+			googletag.cmd.push(function() { googletag.display("div-gpt-ad-1343060705883-0"); });
+		</script>
+	<iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none;" marginheight="0" marginwidth="0" name="google_ads_iframe_/2247/dice.dart/homead_0" id="google_ads_iframe_/2247/dice.dart/homead_0" frameborder="0" height="250" scrolling="no" width="300"></iframe><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; visibility: hidden; display: none;" marginheight="0" marginwidth="0" name="google_ads_iframe_/2247/dice.dart/homead_0__hidden__" id="google_ads_iframe_/2247/dice.dart/homead_0__hidden__" frameborder="0" height="0" scrolling="no" width="0"></iframe></div>
+	<div id="div-gpt-ad-1343835040698-0" class="sponsorContainer2">
+		<script type="text/javascript">
+			googletag.cmd.push(function() { googletag.display("div-gpt-ad-1343835040698-0"); });
+		</script>
+	<iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none;" marginheight="0" marginwidth="0" name="google_ads_iframe_/2247/dice.dart/Homepage_logo_0" id="google_ads_iframe_/2247/dice.dart/Homepage_logo_0" frameborder="0" height="55" scrolling="no" width="300"></iframe></div>
+	<div id="div-gpt-ad-1343916997359-0" class="sponsorContainer2">
+		<script type="text/javascript">
+			googletag.cmd.push(function() { googletag.display("div-gpt-ad-1343916997359-0"); });
+		</script>
+	<iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none;" marginheight="0" marginwidth="0" name="google_ads_iframe_/2247/dice.dart/Homepage_logo2_0" id="google_ads_iframe_/2247/dice.dart/Homepage_logo2_0" frameborder="0" height="55" scrolling="no" width="300"></iframe></div>
+	<div id="div-gpt-ad-1343917121213-0" class="sponsorContainer2">
+		<script type="text/javascript">
+			googletag.cmd.push(function() { googletag.display("div-gpt-ad-1343917121213-0"); });
+		</script>
+	<iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none;" marginheight="0" marginwidth="0" name="google_ads_iframe_/2247/dice.dart/Homepage_logo3_0" id="google_ads_iframe_/2247/dice.dart/Homepage_logo3_0" frameborder="0" height="55" scrolling="no" width="300"></iframe></div>
+	<div id="div-gpt-ad-1343917292754-0" class="sponsorContainer2">
+		<script type="text/javascript">
+			googletag.cmd.push(function() { googletag.display("div-gpt-ad-1343917292754-0"); });
+		</script>
+	<iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none;" marginheight="0" marginwidth="0" name="google_ads_iframe_/2247/dice.dart/Homepage_logo4_0" id="google_ads_iframe_/2247/dice.dart/Homepage_logo4_0" frameborder="0" height="55" scrolling="no" width="300"></iframe></div>
+	<div id="div-gpt-ad-1343917395808-0" class="sponsorContainer2">
+		<script type="text/javascript">
+			googletag.cmd.push(function() { googletag.display("div-gpt-ad-1343917395808-0"); });
+		</script>
+	<iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none;" marginheight="0" marginwidth="0" name="google_ads_iframe_/2247/dice.dart/Homepage_logo5_0" id="google_ads_iframe_/2247/dice.dart/Homepage_logo5_0" frameborder="0" height="55" scrolling="no" width="300"></iframe></div>
+	<div id="div-gpt-ad-1343917455503-0" class="sponsorContainer2">
+		<script type="text/javascript">
+			googletag.cmd.push(function() { googletag.display("div-gpt-ad-1343917455503-0"); });
+		</script>
+	<iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none;" marginheight="0" marginwidth="0" name="google_ads_iframe_/2247/dice.dart/Homepage_logo6_0" id="google_ads_iframe_/2247/dice.dart/Homepage_logo6_0" frameborder="0" height="55" scrolling="no" width="300"></iframe></div>
+</div>
+<style type="text/css">
+#doc4.homePage #bd #sponsorPane{padding:0;}
+#DiceSponsors{}
+#DiceSponsors .sponsorContainer1{width:300px;margin:0;}
+#DiceSponsors .sponsorContainer1 iframe{margin:5.25em 0 10px 0;}
+#DiceSponsors .sponsorContainer2{width:300px;margin:0;}
+</style>
+</div>
+				<div id="trendingPromo" class="pane"><div id="trendingPromoContent">
+	<h2>Trending on Dice</h2>
+	<ul class="trendingPromoArticleList">
+		<li><a href="http://news.dice.com/2013/04/29/sweet-spot-for-salary-increases-may-not-be-where-you-think/" target="_top">The Sweet Spot for Raises May Not Be Where You Think</a></li>
+	</ul>
+	<div class="trendingPromoListContainer">
+		<h2>Top Search Terms</h2>
+		<ul class="col01">
+			<li><a href="/job/results/us/business-analyst?p=wk">Business Analyst</a></li>
+			<li><a href="/job/results/us/java?p=wk">Java</a></li>
+			<li><a href="/job/results/us/qa?p=wk">QA</a></li>
+			<li><a href="/job/results/us/project-manager?p=wk">Project Manager</a></li>
+			<li><a href="/job/results/us/.net?p=wk">.NET</a></li>
+			<li><a href="/job/results/us/oracle-dba?p=wk">Oracle DBA</a></li>
+			<li><a href="/job/results/us/cobol?p=wk">Cobol</a></li>
+			<li><a href="/job/results/us/informatica?p=wk">Informatica</a></li>
+		</ul>
+		<ul class="col02">
+			<li><a href="/job/results/us/peoplesoft?p=wk">Peoplesoft</a></li>
+			<li><a href="/job/results/us/desktop-support?p=wk">Desktop Support</a></li>
+			<li><a href="/job/results/us/sap?p=wk">SAP</a></li>
+			<li><a href="/job/results/us/c%23?p=wk">C#</a></li>
+			<li><a href="/job/results/us/qa-tester?p=wk">QA Tester</a></li>
+			<li><a href="/job/results/us/business-objects?p=wk">Business Objects</a></li>
+			<li><a href="/job/results/us/c%2B%2B?p=wk">C++</a></li>
+			<li><a href="/job/results/us?p=w&amp;q=mobile">Mobile</a></li>
+		</ul>
+		<div class="clear"></div>
+	</div>
+	<div class="moreLink"><a class="seeMore" href="/job/browse/skill.html">More Jobs by Title/Skill</a></div>
+</div>
+<style type="text/css">
+	#trendingPromoContent{}
+	#trendingPromoContent h2{display:block;font-size:24px;margin:0;padding:0;background:transparent url(/assets/stylesheets/images/DiceHomepageBGsprite.png) no-repeat 100% -498px;}
+	#trendingPromoContent .trendingPromoListContainer h2{font-size:16px;color:#666;background:transparent none;padding:0 0 3px 0;}
+	#trendingPromoContent ul.trendingPromoArticleList{margin:0;padding:0 0 7px 0;}
+	#trendingPromoContent ul.trendingPromoArticleList li{display:block;margin:0;padding:7px 0;list-style:none;font-size:15px;font-family:"Trebuchet MS",Tahoma,Arial,sans-serif;font-weight:bold;}
+	#trendingPromoContent .trendingPromoListContainer{position:relative;width:100%;margin:0;padding:0 0 .75em 0;border-bottom:1px solid #CCC;}
+	#trendingPromoContent .trendingPromoListContainer ul{display:block;margin:0;padding:0;list-style:none;width:47%;float:left;}
+	#trendingPromoContent .trendingPromoListContainer ul.col2{float:right;}
+	#trendingPromoContent .trendingPromoListContainer ul li{display:block;margin:0;padding:.25em 0;list-style:none;font-family:"Trebuchet MS",Tahoma,Arial,sans-serif;font-weight:bold;}
+	#trendingPromoContent .moreLink{margin:0;padding:1em 0 0 0;border-top:1px solid #FFF;}
+</style>
+</div>
+				
+					<div id="diceAdvisor" name="diceAdvisor" class="pane">
+						<h2>Dice Advisor Newsletter</h2>
+							<div id="diceAdvisorValidate" style="display:none;">
+								<div>Check your email to validate your subscription</div>
+								<div id="diceAdvisorValidateEmail">Sent to:</div>
+							</div>
+							<div id="diceAdvisorError" name="diceAdvisorError" class="error" style="display:none;"></div>
+							<div id="diceAdvisorSignUp" style="">
+							<div id="diceAdvisorText">Stay ahead. Get the weekly Dice Advisor with a digest of freshly posted jobs, tech news headlines &amp; career advice, and the latest from our Talent Communities.</div>
+							<div id="diceAdvisorForm">
+								<div class="diceAdvisorEmailInput">
+									<div class="diceAdvisorEmailInputBorder">
+										<input style="font-style: italic;" class="mailICO" id="diceAdvisorEmail" name="diceAdvisorEmail" onfocus="clearInitialText();" type="text">
+									</div>
+								</div>
+								<div class="diceAdvisorEmailSubmit"><span class="arrowRight"><span id="diceAdvisorSubmit" class="yui-button yui-push-button"><span class="first-child"><button id="diceAdvisorSubmit-button" tabindex="0" type="button">Sign Up Now</button></span></span></span></div>
+								<div class="clear"></div>
+							</div>
+							<div id="diceAdvisorConfirm" style="display:none;">
+								<div>You are signed up for our weekly career newsletter</div>
+								<div id="diceAdvisorConfirmEmail"></div>
+							</div>
+						</div>
+						<div class="moreLink diceAdvisorLinks">
+							<a class="seeMore" href="http://www.dice.com/common/seeker/docs/privacy.jsp" target="_blank">Privacy Policy</a>&nbsp;&nbsp;
+							<a class="seeMore" style="" href="#" onclick="window.open('/content/www/homepage/diceAdvisorSample.html','','width=700,height=600,toolbar=0,scrollbars=1,menubar=0,location=0')" id="diceAdvisorSample" name="diceAdivsorSample">Dice Advisor Sample</a>
+							<a class="seeMore" style="display:none;" href="http://www.dice.com/daf/seeker/optOut.jsp?email=&amp;campaign=1" id="diceAdvisorCancel" name="diceAdivsorCancel">Cancel subscription</a>
+						</div>
+					</div>
+				
+				<!--
+				<div class="pane">
+					<a class="uploadResumeLink" href="http://www.dice.com/profman/servlet/ProfMan?op=1032&source=102">Upload Your Resume</a>
+					<div class="clear"></div>
+				</div>
+				-->
+				<!--END RIGHT COLUMN-->
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="http://www.dice.com/assets/scripts/googleAnalytics/google.js"></script>
+	<div id="ft">
+		<div class="ftColLogo">
+			<a class="footerLogo" href="#">Dice</a>
+			<ul>
+				<li><a href="http://twitter.com/dicetechjobs" title="@Dicetechjobs" class="FTSMtwitter" target="_blank">@Dicetechjobs</a></li>
+				<li><a href="http://www.facebook.com/dice" title="Like Dice" class="FTSMfacebook" target="_blank">Like Dice</a></li>
+				<li><a href="http://www.youtube.com/dicenews" title="As Seen on YouTube" class="FTSMyoutube" target="_blank">As Seen on YouTube</a></li>
+			</ul>
+		</div>
+		<div class="ftColContainer">
+			<div class="ftCol">
+				<ul>
+	<li>
+		<h2>Talent Communities</h2>
+	</li>
+	<li><a href="http://news.dice.com/android-talent-community/">Android</a></li>
+	<li><a href="http://news.dice.com/big-data-talent-community/">Big Data</a></li>
+	<li><a href="http://news.dice.com/cloud-computing-talent-community/">Cloud Computing</a></li>
+	<li><a href="http://news.dice.com/ios-talent-community/">iOS</a></li>
+	<li><a href="http://news.dice.com/linux-talent-community/">Linux</a></li>
+	<li><a href="http://news.dice.com/mobile-development-talent-community/">Mobile Development</a></li>
+	<li><a href="http://news.dice.com/online-game-development-talent-community/">Online Games</a></li>
+	<li><a href="http://news.dice.com/project-management-talent-community/">Project Management</a></li>
+	<li><a href="http://news.dice.com/ruby-on-rails-talent-community/">Ruby on Rails</a></li>
+	<li><a href="http://news.dice.com/security-talent-community/">Security</a></li>
+	<li><a href="http://news.dice.com/silicon-valley-talent-community/">Silicon Valley</a></li>
+	<li><a href="http://news.dice.com/software-engineering-talent-community/">Software Engineering</a></li>
+	<li><a href="http://news.dice.com/tag/dicetv/">DiceTV</a></li>
+</ul>
+
+				<ul>
+					<li><h2>About Dice</h2></li>
+					<li><a href="http://media.dice.com" target="_blank">Company Profile</a></li>
+					<li><a href="http://employer.dice.com/common/provider/contactSales.jsp">Contact Sales</a></li>
+					<li><a href="http://www.dice.com/common/seeker/docs/siteAdvertising.jsp">Advertising</a></li>
+                    <li><a href="http://www.dice.com/social">Social Recruiting with Dice</a></li>
+                    <li><a href="http://media.dice.com/diceinthenews/">Dice in the News</a></li>
+					<li><a href="http://media.dice.com">Media Contact</a></li>
+					<li><a href="http://media.dice.com/category/the-dice-report/">The Dice Report</a></li>
+				</ul>
+				<ul>
+					<li><h2>Related Dice Sites</h2></li>
+					<li><a href="http://www.diceholdingsinc.com">Dice Holdings, Inc.</a></li>
+                    <li><a href="http://sourceforge.net">SourceForge</a></li>
+                    <li><a href="http://slashdot.org">Slashdot</a></li>
+                    <li><a href="http://freecode.com">free(code):</a></li>
+					<li><a href="http://www.efinancialcareers.com">eFinancialCareers</a></li>
+					<li><a href="http://www.clearancejobs.com">ClearanceJobs</a></li>
+					<li><a href="http://www.rigzone.com">RIGZONE</a></li>
+					<li><a href="http://www.healthcallings.com">Health Callings</a></li>
+					<li><a href="http://www.targetedjobfairs.com">Targeted Job Fairs</a></li>
+				</ul>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="ftLinks"><a href="http://assets.dice.com/assets/help/help_seeker/help_seeker.htm" target="_blank">Help</a>|<a href="http://media.dice.com" target="_blank">About Us</a>|<a href="http://www.dice.com/profman/servlet/ProfMan?op=1045">Contact Us</a>|<a href="http://www.dice.com/common/seeker/docs/privacy.jsp">Your Privacy@Dice</a>|<a href="http://www.dice.com/common/seeker/docs/dice_jobs.jsp">Work@Dice</a>|<a href="http://www.dice.com/mobile">Free Mobile Apps</a></div>
+	</div>
+</div>
+<script type="text/javascript">
+    var submitAsyncRequest = function(type, url, callBack, postData){
+        var d = new Date();
+        var bigNumber = " " + d.getYear() + d.getDay() + d.getHours() + d.getMinutes() + d.getSeconds() + d.getMilliseconds();
+        if(postData == ""){
+            postData = 'random=' + (Math.floor(Math.random() * bigNumber));
+        }else{
+            postData += '&random=' + (Math.floor(Math.random() * bigNumber));
+        }
+        if(type == 'POST'){
+            YAHOO.util.Connect.asyncRequest(type, url, callBack, postData);
+        }else{
+            YAHOO.util.Connect.asyncRequest(type, url, callBack);
+        }
+    }
+
+    function sendDiceAdvisor(p_oEvent) {
+        var email = document.getElementById("diceAdvisorEmail").value;
+        if(email == "email address" || email == "") {
+            alert("Please enter a valid email address.")
+        } else {
+            var x = "?op=105" + "&email=" + document.getElementById("diceAdvisorEmail").value;
+            submitAsyncRequest('GET',
+                    '/servlet/WWWController' + x,
+                    returnedDiceAdvisorCallback);
+        }
+    }
+
+    var returnedDiceAdvisorCallback = {
+        cache:false,
+        success: function(o) {
+            if(o.responseXML){
+//                        alert("JRP - xml? " + o.responseText);
+                var returnedXML = o.responseXML;
+                document.getElementById("diceAdvisorError").style.display = "none";
+                if(o.responseXML.getElementsByTagName("error")[0].firstChild.nodeValue == 1 || o.responseXML.getElementsByTagName("error")[0].firstChild == null){
+                    if (returnedXML.getElementsByTagName("errorMessage").length > 0) {
+                        document.getElementById("diceAdvisorError").innerHTML = returnedXML.getElementsByTagName("errorMessage")[0].firstChild.nodeValue;
+                        document.getElementById("diceAdvisorError").style.display = "inline";
+                    }
+                } else {
+                    if (returnedXML.getElementsByTagName("email") != null && returnedXML.getElementsByTagName("email").length > 0) {
+                        if(returnedXML.getElementsByTagName("confirm") != null && returnedXML.getElementsByTagName("confirm").length > 0
+                                && returnedXML.getElementsByTagName("confirm")[0].firstChild.nodeValue == 1) {
+                            document.getElementById("diceAdvisorConfirmEmail").innerHTML = returnedXML.getElementsByTagName("email")[0].firstChild.nodeValue;
+                            document.getElementById("diceAdvisorSignUp").style.display = "none";
+                            document.getElementById("diceAdvisorValidate").style.display = "none";
+                            document.getElementById("diceAdvisorConfirm").style.display = "inline";
+                            document.getElementById("diceAdvisorCancel").style.display = "inline";
+                            document.getElementById("diceAdvisorSample").style.display = "none";
+                        }
+                        if(returnedXML.getElementsByTagName("validate") != null && returnedXML.getElementsByTagName("validate").length > 0
+                                && returnedXML.getElementsByTagName("validate")[0].firstChild.nodeValue == 1) {
+                            document.getElementById("diceAdvisorValidateEmail").innerHTML = "Sent to: " + returnedXML.getElementsByTagName("email")[0].firstChild.nodeValue;
+                            document.getElementById("diceAdvisorSignUp").style.display = "none";
+                            document.getElementById("diceAdvisorValidate").style.display = "inline";
+                            document.getElementById("diceAdvisorConfirm").style.display = "none";
+                            document.getElementById("diceAdvisorCancel").style.display = "none";
+                            document.getElementById("diceAdvisorSample").style.display = "inline";
+                        }
+                    }
+                }
+            }
+        },
+        failure: function(o) {
+            document.getElementById("diceAdvisorError").innerHTML = "There has been an error sending your request.  We apologize for the inconvenience.";
+            document.getElementById("diceAdvisorError").style.display = "inline";
+        }
+    };
+
+
+    YAHOO.util.Event.onContentReady("diceAdvisor", function () {
+        var nextButton = new YAHOO.widget.Button("diceAdvisorSubmit", { value: "Sign Up", onclick: { fn: sendDiceAdvisor } });
+
+        
+        
+        
+        document.getElementById("diceAdvisorEmail").value = "email address";
+        
+        
+        document.getElementById("diceAdvisorEmail").style.fontStyle = "italic";
+
+    });
+
+    YAHOO.util.Event.onContentReady("diceMainNav", function () {
+        var oMenuBar = new YAHOO.widget.MenuBar("diceMainNav", { autosubmenudisplay: true, hidedelay: 750, lazyload: true });
+        oMenuBar.render();
+    });
+
+    function clearInitialText() {
+        if(document.getElementById("diceAdvisorEmail").value == "email address") {
+            document.getElementById("diceAdvisorEmail").value = "";
+            document.getElementById("diceAdvisorEmail").style.fontStyle="normal";
+        }
+    }
+
+    function searchSubmit() {document.getElementById("search").submit();}
+    function submitSearchForm() {searchSubmit();return true;}
+    function submitEnter(e) {
+        var keycode;
+        if (window.event) keycode = window.event.keyCode
+        else if (e) keycode = e.which;
+        else return true;
+        if (keycode == 13 ) {
+            //submit form
+            submitSearchForm();
+            return false;
+        } else {
+            return true
+        }
+    }
+    var interceptLink = function(e) {YAHOO.util.Event.preventDefault(e);searchSubmit();}
+    YAHOO.util.Event.addListener("searchNow", "click", interceptLink);
+    function fixSearch() {
+        if (document.getElementById("WHERE").value == "Location (City and State or Zip)" || document.getElementById("WHERE").value == "(Begin typing here)") {
+            document.getElementById("WHERE").value = "";
+        }
+        return true;
+    }
+</script>
+<!-- SiteCatalyst code version: H.10. Copyright 1997-2007 Omniture, Inc. More info available at http://www.omniture.com -->
+<script language="JavaScript" src="http://assets.dice.com/assets/scripts/omniture/s_code.js"></script>
+<script language="JavaScript"><!--
+/* You may give each page an identifying name, server, and channel on the next lines. */
+s.pageName="homePage"
+s.channel="HOMEPAGE"
+s.pageType="COOL"
+/* s.propX="" */
+/* E-commerce Variables */
+/* s.events="" */
+/* s.eVarX="" */
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)//--></script>
+<script language="JavaScript"><!--
+if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+//--></script>
+<noscript><a href="http://www.omniture.com" title="Web Analytics"><img src="http://diceinc.112.2o7.net/b/ss/dice/1/H.10--NS/0" height="1" width="1" border="0" alt=""></a></noscript><!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst code version: H.10. -->
+<div style="font-size:1px;line-height:1px;background:transparent none;border:0 none;margin:0;padding:0;height:1px;width:1px;overflow:hidden;">
+
+<!-- Start of Tracking Tags for the Homepage -->
+
+<!-- Start of DoubleClick Spotlight Tag: Please do not remove-->
+<!-- Activity Name for this tag is:DiceMainLandingPage_2007 -->
+<!-- Web site URL where tag should be placed: http://dice.com -->
+<!-- This tag must be placed within the opening <body> tag, as close to the beginning of it as possible-->
+<!-- Creation Date:12/11/06 -->
+<script language="JavaScript">
+        var axel = Math.random()+"";
+        var a = axel * 10000000000000;
+        document.write('<IFRAME SRC="http://fls.doubleclick.net/activityi;src=982522;type=dicec050;cat=dicem975;ord=1;num='+ a + '?" WIDTH=1 HEIGHT=1 FRAMEBORDER=0></IFRAME>');
+</script><iframe src="http://fls.doubleclick.net/activityi;src=982522;type=dicec050;cat=dicem975;ord=1;num=8110396076690.325?" frameborder="0" height="1" width="1"></iframe>
+<noscript>
+        <IFRAME SRC="http://fls.doubleclick.net/activityi;src=982522;type=dicec050;cat=dicem975;ord=1;num=1?" WIDTH=1 HEIGHT=1 FRAMEBORDER=0></IFRAME>
+</noscript>
+<!-- End of DoubleClick Spotlight Tag: Please do not remove-->
+
+<!-- Segment Pixel - Dice_HomePage_RMKT - DO NOT MODIFY -->
+<script src="http://go.accmgr.com/seg?add=179652,179663&amp;t=1" type="text/javascript"></script><img src="https://ad.yieldmanager.com/pixel?id=1465505&amp;t=2" style="display:none" height="1" width="1">
+<!-- End of Segment Pixel -->
+
+
+<!-- Google Code for Homepage Visitor - Dice.com Remarketing List -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 971479003;
+var google_conversion_language = "en";
+var google_conversion_format = "3";
+var google_conversion_color = "ffffff";
+var google_conversion_label = "57goCO2e0wMQ26-ezwM";
+var google_conversion_value = 0;
+/* ]]> */
+</script>
+<script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js">
+</script><img src="http://www.googleadservices.com/pagead/conversion/971479003/?random=1367708951392&amp;cv=7&amp;fst=1367708951392&amp;num=1&amp;fmt=3&amp;value=0&amp;label=57goCO2e0wMQ26-ezwM&amp;bg=ffffff&amp;hl=en&amp;guid=ON&amp;u_h=1024&amp;u_w=1280&amp;u_ah=984&amp;u_aw=1280&amp;u_cd=24&amp;u_his=50&amp;u_tz=-300&amp;u_java=false&amp;u_nplug=0&amp;u_nmime=0&amp;url=http%3A//www.dice.com/%3FCMPID%3DDM__PD_JS_Au_OG__gadg300250%26utm_source%3D%26utm_medium%3DDisplay+Media%26utm_content%3Dgadg300250%26utm_campaign%3DAuthority_Ongoing%26DFA%3D1&amp;frm=0" height="1" width="1" border="0">
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/971479003/?label=57goCO2e0wMQ26-ezwM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+<!-- Start Quantcast Tag -->
+<script type="text/javascript"> 
+_qoptions={qacct:"p-47J7rwq_VoNXI",labels:"_fp.event.Homepage"};
+</script>
+<script type="text/javascript" src="http://edge.quantserve.com/quant.js"></script>
+<noscript>
+<img src="http://pixel.quantserve.com/pixel/p-47J7rwq_VoNXI.gif?labels=_fp.event.Homepage" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/>
+</noscript>
+<!-- End Quantcast tag -->
+
+<img src="http://a.triggit.com/px?u=VE&amp;rtv=dice,dicehome" height="1" width="1"> 
+
+<!--<c:if test="${displayAtlas}">
+        <!--BEGIN ROI TRACKING Code-->
+<!--        <script language="javascript" src="http://track.roiservice.com/track/track.aspx?ROIID=933824107000018"></script>
+        <script language="javascript">
+                <!--
+                if (typeof(ROIID) + '' != 'undefined') {
+                        TrackEvent('HomePage', 0);
+                }
+                //-->
+<!--        </script>
+        <!--END ROI TRACKING Code-->
+<!--</c:if>-->
+<!-- END of Tracking Tags for the Homepage -->
+<!--<script src="http://marketing.dice.com/survey.min.js" type="text/javascript"></script>-->
+</div>
+
+
+<div id="subFT">
+    <div class="subFTmargin" style="width: 64em;">
+        <div style="padding: 0; margin: 5px 0 0 0; float:left; width: 54em;">
+            <a class="subFTlogo" href="#">Dice</a><p>Copyright ©1990 - 2013 Dice. All rights reserved. Use of this site is subject to certain <a href="http://www.dice.com/common/seeker/docs/terms_and_conditions.jsp">Terms and Conditions</a>. </p>
+        </div>
+        <div style="float:right; padding: 0; margin: 0;">
+            <a href="//privacy-policy.truste.com/click-with-confidence/wps/en/www.dice.com/seal_s" title="TRUSTe online privacy certification" target="_blank"><img style="border: none" src="//privacy-policy.truste.com/certified-seal/wps/en/www.dice.com/seal_s.png" alt="TRUSTe online privacy certification"></a>
+        </div>
+		<div class="clear"></div>
+    </div>
+</div>
+
+
+
+
+
+<ul style="z-index: 1; top: 0px; left: 0px; display: none;" aria-activedescendant="ui-active-menuitem" role="listbox" class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all"></ul></body>

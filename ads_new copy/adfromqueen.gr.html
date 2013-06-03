@@ -1,0 +1,1056 @@
+<head>
+	  <base href="http://www.queen.gr/">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="robots" content="index, follow">
+  <meta name="keywords" content="Queen, queen.gr, ???????, gynaika, woman, women, fashion, celebrities, stars, ????????????, ??????????,  ???, sex, ???????, tips, deco,?????????, ??????, ???????, ????, ???????????">
+  <meta name="description" content="???? ??????? ?????? ???? ??? ??? ?????????. ?? ???????? on line ????????? ??? ??? ????, ??? ???????, ???? ?????????. ?? ???, ??? ???????, ??? ????? ??? ?????????, ??? ?????????? ??? ?? ?????">
+  <meta name="generator" content="Joomla! 1.5 - Open Source Content Management">
+  <title>??????? | Queen.gr</title>
+  <link href="/templates/queen/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link rel="stylesheet" href="/templates/queen/css/template.css?v62" type="text/css">
+  <link rel="stylesheet" href="/templates/queen/css/modules.css?v=63" type="text/css">
+  <link rel="stylesheet" href="/templates/queen/css/menus.css?v=9" type="text/css">
+  <link rel="stylesheet" href="/templates/queen/css/plugins.css?v=2" type="text/css">
+  <link rel="stylesheet" href="/templates/queen/css/k2.css?v=2" type="text/css">
+  <link rel="stylesheet" href="/templates/queen/css/footer.css?v=5" type="text/css">
+  <link rel="stylesheet" href="/templates/queen/css/fpss.css?v=2" type="text/css">
+  <link rel="stylesheet" href="/templates/queen/css/pharmaboots.css?vs87" type="text/css">
+  <link rel="stylesheet" href="/modules/mod_dpgcampaignmonitor/assets/css/dpgcm.css?ver=1" type="text/css">
+  <script src="http://connect.facebook.net/en_US/all.js#xfbml=1&amp;appId=454368887940455" id="facebook-jssdk"></script><script src="https://d31qbv1cthcecs.cloudfront.net/atrk.js" async="" type="text/javascript"></script><script src="http://www.google-analytics.com/ga.js" async="" type="text/javascript"></script><script type="text/javascript" src="/media/system/js/mootools.js"></script>
+  <script type="text/javascript" src="/media/system/js/modal.js"></script>
+  <script type="text/javascript" src="/media/k2/assets/js/jquery-1.6.3.min.js"></script>
+  <script type="text/javascript" src="/components/com_k2/js/k2.js?v=2"></script>
+  <script type="text/javascript" src="/media/system/js/validate.js"></script>
+  <script type="text/javascript" src="/media/system/js/tabs.js"></script>
+  <script type="text/javascript">
+
+		window.addEvent('domready', function() {
+
+			SqueezeBox.initialize({});
+
+			$$('a.modal').each(function(el) {
+				el.addEvent('click', function(e) {
+					new Event(e).stop();
+					SqueezeBox.fromElement(el);
+				});
+			});
+		});
+var K2SitePath = '/';
+		window.addEvent('domready', function() {
+
+			SqueezeBox.initialize({});
+
+			$$('a.modal-button').each(function(el) {
+				el.addEvent('click', function(e) {
+					new Event(e).stop();
+					SqueezeBox.fromElement(el);
+				});
+			});
+		});
+		window.addEvent('domready', function(){ $$('dl.tabs').each(function(tabs){ new JTabs(tabs, {display: 1}); }); });
+		window.addEvent('domready', function(){ new Accordion($$('.panel h3.jpane-toggler'), $$('.panel div.jpane-slider'), {onActive: function(toggler, i) { toggler.addClass('jpane-toggler-down'); toggler.removeClass('jpane-toggler'); },onBackground: function(toggler, i) { toggler.addClass('jpane-toggler'); toggler.removeClass('jpane-toggler-down'); },duration: 300,opacity: false}); });
+
+/* <![CDATA[ */
+	$K2(function(){$K2(".dpgNewsletter").hover(function(){$K2(".dpgNewsletter").stop().animate({right:0},500);},function(){$K2(".dpgNewsletter").stop().animate({right:-270},500);});});
+
+
+function getXMLHttpRequest() 
+{
+    if (window.XMLHttpRequest) {
+        return new window.XMLHttpRequest;
+    }
+    else {
+        try {
+            return new ActiveXObject("MSXML2.XMLHTTP.3.0");
+        }
+        catch(ex) {
+            return null;
+        }
+    }
+}
+
+function validateNewsletterForm(f) 
+{
+	var name = document.getElementById("jcm-name");
+	var email = document.getElementById("jcm-mail");
+	var msg = document.getElementById("messagejcm");
+	var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+	var formFields = new Array();
+
+	var formData = "";
+	for (i=0;i<f.elements.length;i++) {
+		if (f.elements[i].name == undefined) {
+			continue;	
+		}
+		formFields.push(f.elements[i].name+"="+f.elements[i].value);
+	}
+	formData = formFields.join("&");
+
+	//data += "jcm-name=" + f.elements["jcm-name"].value;
+	//data += "&jcm-mail=" + f.elements["jcm-mail"].value;
+	//data += "&jcm-list=" + f.elements["jcm-list"].value;
+	//data += "&jcm-module-id=" + f.elements["jcm-module-id"].value;
+
+	if (name.value == "" || name.value == "Your name here...") {
+		msg.innerHTML = "";
+		msg.innerHTML="?? ????? ??? ?????? ??? ????? ?????.";
+		name.focus();
+		return false;
+	}
+    
+	if (email.value == "" || email.value == "Your email here..." || !filter.test(email.value) ) {
+		msg.innerHTML = "";
+		msg.innerHTML="?? email ??? ????? ?????.";
+		email.focus();
+		return false;
+	}
+    
+	msg.innerHTML = "";
+	var oReq = getXMLHttpRequest();
+
+	if (oReq != null) {
+    	oReq.open("POST", "index.php?option=com_dpgnewsletter&view=tools&task=newsletter&format=raw&t=" + Math.random(), true);
+    	// Sent additional request headers
+    	oReq.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+    	//oReq.setRequestHeader("Content-Length","+ formData.length +");
+    	//oReq.setRequestHeader("Connection","close");
+    	
+    	oReq.onreadystatechange = function() {
+    		if (oReq.readyState == 4) {
+        		if (oReq.status == 200) {
+            		document.getElementById("messagejcm").innerHTML=oReq.responseText;
+        			document.getElementById("formFields").style.visibility = 'hidden';
+					document.getElementById("jcm-pretext").style.visibility = 'hidden';
+				}
+    		}	
+    	}
+    	oReq.send(formData);
+	}
+	else {
+    	window.console.log("AJAX not supported.");
+	}
+	return false;
+}
+/* ]]> */
+
+  </script>
+  <!-- JoomlaWorks "Google Ad Manager" Plugin (v1.0) starts here -->
+
+<script type="text/javascript" src="http://partner.googleadservices.com/gampad/google_service.js"></script>
+<script type="text/javascript">
+	GS_googleAddAdSenseService("ca-pub-3302020578652719");
+	GS_googleEnableAllServices();
+</script><script src="http://partner.googleadservices.com/gampad/google_ads.js"></script>
+
+<!-- JoomlaWorks "Google Ad Manager" Plugin (v1.0) ends here -->
+  <link rel="stylesheet" href="/components/com_jce/editor/libraries/css/editor.css?version=231" type="text/css">
+  <script type="text/javascript" src="/components/com_jce/editor/tiny_mce/tiny_mce.js?version=231"></script>
+  <script type="text/javascript" src="/components/com_jce/editor/libraries/js/editor.js?version=231"></script>
+  <script type="text/javascript" src="/index.php?option=com_jce&amp;view=editor&amp;layout=editor&amp;task=loadlanguages&amp;component_id=14&amp;wfaa92d5dd45de017387fea76fdff32e1f=1&amp;version=231"></script>
+  <script type="text/javascript">
+		try{WFEditor.init({
+			token: "wfaa92d5dd45de017387fea76fdff32e1f",
+			base_url: "http://www.queen.gr/",
+			language: "en",
+			directionality: "ltr",
+			theme: "none",
+			language_load: false,
+			compress: {"javascript":0,"css":0}
+        });}catch(e){console.debug(e);}
+</script>
+  <style type="text/css">/* @font-face and Google Font rules for JCE */
+@font-face {
+    font-family: 'FuturaGreekCondensedBold';
+    src: url('/templates/queen/css/../fonts/futuragreekcondensed-bold-webfont.eot');
+    src: local('futuragreekcondensed-bold-webfont'), url('/templates/queen/css/../fonts/futuragreekcondensed-bold-webfont.woff') format('woff'), url('/templates/queen/css/../fonts/futuragreekcondensed-bold-webfont.ttf') format('truetype'), url('/templates/queen/css/../fonts/futuragreekcondensed-bold-webfont.svg#webfontFIoXjW3V') format('svg');
+}@font-face {
+    font-family: 'FuturaGreekCondensedLight';
+    src: url('/templates/queen/css/../fonts/futuragreekcondensed-light-webfont.eot');
+    src: local('futuragreekcondensed-light-webfont'), url('/templates/queen/css/../fonts/futuragreekcondensed-light-webfont.woff') format('woff'), url('/templates/queen/css/../fonts/futuragreekcondensed-light-webfont.ttf') format('truetype'), url('/templates/queen/css/../fonts/futuragreekcondensed-light-webfont.svg#webfontY3aEvmRC') format('svg');
+}@font-face {
+    font-family: 'FuturaGreekLight';
+    src: url('/templates/queen/css/../fonts/futuragreek-thin-webfont.eot');
+    src: local('futuragreek-thin-webfont'), url('/templates/queen/css/../fonts/futuragreek-thin-webfont.woff') format('woff'), url('/templates/queen/css/../fonts/futuragreek-thin-webfont.ttf') format('truetype'), url('/templates/queen/css/../fonts/futuragreek-thin-webfont.svg#webfonta4hpcc5U') format('svg');
+}@font-face {
+    font-family: 'FuturaGreekBold';
+    src: url('/templates/queen/css/../fonts/futuragreek-bold-webfont.eot');
+    src: local('futuragreek-bold-webfont'), url('/templates/queen/css/../fonts/futuragreek-bold-webfont.woff') format('woff'), url('/templates/queen/css/../fonts/futuragreek-bold-webfont.ttf') format('truetype'), url('/templates/queen/css/../fonts/futuragreek-bold-webfont.svg#webfontP4e4Ir05') format('svg');
+}</style>
+  <script type="text/javascript">GA_googleAddSlot("ca-pub-3302020578652719","300x250_HomePage_4"); /* DFP 300x250_Homepage_4 */</script>
+  <script type="text/javascript">GA_googleAddSlot("ca-pub-3302020578652719","728x90_ROS_Header"); /* DFP 728x90_ROS_Header */</script>
+
+	
+	 
+	<!--[if lte IE 9]>
+	<link href="/templates/queen/css/template_ie.css?v=201103211232" rel="stylesheet" type="text/css" />
+	<![endif]-->
+	<!--[if IE 7]>
+	<link href="/templates/queen/css/template_ie7.css?v2" rel="stylesheet" type="text/css" />
+	<![endif]-->
+	<!--[if lte IE 7]>
+	<link href="http://www.queen.gr/templates/queen/html/mod_fpss/Queen/css/template_css_ie.css" rel="stylesheet" type="text/css" />
+	<![endif]-->
+	
+		
+	<script type="text/javascript" src="/templates/queen/javascript/template.js?vs=1"></script>
+	<script type="text/javascript" src="/templates/queen/javascript/jquery.tools.min.js"></script>
+
+	    
+
+    
+    	<script type="text/javascript">
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-20847258-1']);
+	  _gaq.push(['_setDomainName', '.queen.gr']);
+	  _gaq.push(['_trackPageview']);
+	  
+	  		
+				
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	</script>
+	
+		
+	
+		
+	<script type="text/javascript">
+	GA_googleFetchAds();
+	</script>
+
+
+<script src="http://pagead2.googlesyndication.com/pagead/osd.js" type="text/javascript"></script><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}
+.fb_invisible{display:none}
+.fb_reset{background:none;border-spacing:0;border:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}
+.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}
+.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}
+.fb_dialog_content{background:#fff;color:#333}
+.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px;top:8px\9;right:7px\9}
+.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}
+.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}
+.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}
+.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}
+.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}
+.fb_dialog_top_left,
+.fb_dialog_top_right,
+.fb_dialog_bottom_left,
+.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}
+/* @noflip */
+.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}
+/* @noflip */
+.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}
+/* @noflip */
+.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}
+/* @noflip */
+.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right,
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right{width:10px;height:100%}
+.fb_dialog_vert_left{margin-left:-10px}
+.fb_dialog_vert_right{right:0;margin-right:-10px}
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{width:100%;height:10px}
+.fb_dialog_horiz_top{margin-top:-10px}
+.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}
+.fb_dialog_iframe{line-height:0}
+.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}
+.fb_dialog_content .dialog_title > span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif)
+no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}
+body.fb_hidden{-webkit-transform:none;height:100%;margin:0;left:-10000px;overflow:visible;position:absolute;top:-10000px;width:100%
+}
+.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif)
+white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}
+.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}
+#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}
+#fb-root #fb_dialog_ipad_overlay.hidden{display:none}
+.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}
+.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0 0, 0 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}
+.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%
+}
+.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0 0, 0 100%, from(#4966A6),
+color-stop(0.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset,
+rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}
+.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}
+.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}
+.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}
+#fb_dialog_loader_close{float:left}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}
+.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}
+.fb_iframe_widget iframe{position:absolute}
+.fb_iframe_widget_lift{z-index:1}
+.fb_hide_iframes iframe{position:relative;left:-10000px}
+.fb_iframe_widget_loader{position:relative;display:inline-block}
+.fb_iframe_widget_fluid{display:inline}
+.fb_iframe_widget_fluid span{width:100%}
+.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}
+.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_connect_bar_container div,
+.fb_connect_bar_container span,
+.fb_connect_bar_container a,
+.fb_connect_bar_container img,
+.fb_connect_bar_container strong{background:none;border-spacing:0;border:0;direction:ltr;font-style:normal;font-variant:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal;vertical-align:baseline}
+.fb_connect_bar_container{position:fixed;left:0 !important;right:0 !important;height:42px !important;padding:0 25px !important;margin:0 !important;vertical-align:middle !important;border-bottom:1px solid #333 !important;background:#3b5998 !important;z-index:99999999 !important;overflow:hidden !important}
+.fb_connect_bar_container_ie6{position:absolute;top:expression(document.compatMode=="CSS1Compat"? document.documentElement.scrollTop+"px":body.scrollTop+"px")}
+.fb_connect_bar{position:relative;margin:auto;height:100%;width:100%;padding:6px 0 0 0 !important;background:none;color:#fff !important;font-family:"lucida grande", tahoma, verdana, arial, sans-serif !important;font-size:13px !important;font-style:normal !important;font-variant:normal !important;font-weight:normal !important;letter-spacing:normal !important;line-height:1 !important;text-decoration:none !important;text-indent:0 !important;text-shadow:none !important;text-transform:none !important;white-space:normal !important;word-spacing:normal !important}
+.fb_connect_bar a:hover{color:#fff}
+.fb_connect_bar .fb_profile img{height:30px;width:30px;vertical-align:middle;margin:0 6px 5px 0}
+.fb_connect_bar div a,
+.fb_connect_bar span,
+.fb_connect_bar span a{color:#bac6da;font-size:11px;text-decoration:none}
+.fb_connect_bar .fb_buttons{float:right;margin-top:7px}
+.fb_edge_widget_with_comment{position:relative;*z-index:1000}
+.fb_edge_widget_with_comment span.fb_edge_comment_widget{position:absolute}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget{z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget .FB_Loader{left:0;top:1px;margin-top:6px;margin-left:0;background-position:50% 50%;background-color:#fff;height:150px;width:394px;border:1px #666 solid;border-bottom:2px solid #283e6c;z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.dark .FB_Loader{background-color:#000;border-bottom:2px solid #ccc}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.siderender
+.FB_Loader{margin-top:0}
+.fbpluginrecommendationsbarleft,
+.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}
+/* @noflip */
+.fbpluginrecommendationsbarleft{left:10px}
+/* @noflip */
+.fbpluginrecommendationsbarright{right:10px}</style></head>
+
+<body data-twttr-rendered="true" id="com_user" class=" register section337 itemid337"><iframe id="LOCSTORAGE" src="http://secure-uk.imrworldwide.com/storageframe.html" style="width: 1px; height: 1px; position: absolute; top: -7px; left: -7px; border: 0px none;" scrolling="no"></iframe>
+
+<!-- Start Alexa Certify Javascript -->
+<script type="text/javascript">
+_atrk_opts = { atrk_acct:"NULmh1aMQV00gx", domain:"queen.gr",dynamic: true};
+(function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();
+</script>
+<noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=NULmh1aMQV00gx" style="display:none" height="1" width="1" alt="" /></noscript>
+<!-- End Alexa Certify Javascript -->
+
+
+
+
+<div class=" fb_reset" id="fb-root"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe src="http://static.ak.facebook.com/connect/xd_arbiter.php?version=24#channel=f22a7042f53ff78&amp;origin=http%3A%2F%2Fwww.queen.gr&amp;channel_path=%2Fregistration%3Ffb_xd_fragment%23xd_sig%3Df21cb0b819d8a78%26" style="border: medium none;" tab-index="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_http" allowtransparency="true" name="fb_xdm_frame_http" frameborder="0" scrolling="no"></iframe><iframe src="https://s-static.ak.facebook.com/connect/xd_arbiter.php?version=24#channel=f22a7042f53ff78&amp;origin=http%3A%2F%2Fwww.queen.gr&amp;channel_path=%2Fregistration%3Ffb_xd_fragment%23xd_sig%3Df21cb0b819d8a78%26" style="border: medium none;" tab-index="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_https" allowtransparency="true" name="fb_xdm_frame_https" frameborder="0" scrolling="no"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe src="https://www.facebook.com/connect/ping?client_id=454368887940455&amp;response_type=token%2Csigned_request%2Ccode&amp;display=none&amp;domain=www.queen.gr&amp;origin=1&amp;redirect_uri=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D24%23cb%3Df24e2eed79b7a4a%26origin%3Dhttp%253A%252F%252Fwww.queen.gr%252Ff22a7042f53ff78%26domain%3Dwww.queen.gr%26relation%3Dparent&amp;sdk=joey" style="display: none;" allowtransparency="true" name="f1e840986aa6a1c" frameborder="0" scrolling="no"></iframe></div></div></div>
+
+<div class="skin-bg">
+
+
+		
+	
+	<div id="pageContainer">
+		<div id="headerWrapper">	
+	    	<div id="header">
+	    	
+		   				        <div id="homeMenu">
+	        		<div class="module ">
+			            <div class="moduleContent stat">
+							<ul class="menu">
+								<li class="item1"><a href="http://www.queen.gr"><span>?????? ??????</span></a></li>
+							</ul>
+						</div>
+						<div class="clr"></div>
+					</div>
+					<div class="clr"></div>
+			    </div>
+		        		         
+	            <div class="headerTopRight">
+	            	 
+	            	<div class="headerDate">???????, 22 ????? 2013</div>    	    
+	            	<div class="clr"></div>
+	            </div>
+	                   
+	            <div class="clr"></div> 
+	                   
+	            <div class="headerMiddle">
+	        		<h1 id="logo">
+	            		<a href="http://www.queen.gr" title="Queen.gr | ?????? ??????">
+	            		  <span>Queen.gr</span>
+	            		</a>
+	        		</h1>	
+	        		<div class="headerMiddleRight">	
+	        		    <a class="logoQueen" title="Queen.gr | ?????? ??????" href="http://www.queen.gr"><span>Queen.gr</span></a>
+        		    	            		    <div class="searchAndSocial" style="position:relative;">
+                		                                  		<div class="module searchMod">
+			            <div class="moduleContent">
+			<form action="http://www.queen.gr/index.php" method="post">
+	<div class="searchsearchMod">
+		<input name="searchword" id="mod_search_searchword" maxlength="50" class="inputboxsearchMod" size="50" value="Search" onblur="if(this.value=='') this.value='Search';" onfocus="if(this.value=='Search') this.value='';" type="text"><input value="&nbsp;" class="buttonsearchMod" onclick="this.form.searchword.focus();" type="submit">	</div>
+	<input name="task" value="search" type="hidden">
+	<input name="option" value="com_search" type="hidden">
+	<input name="Itemid" value="22" type="hidden">
+</form>            </div>
+		<div class="clr"></div>
+		</div>
+	
+                              <span class="connectLinks">
+							  	<a href="http://www.queen.gr/registration/logged-in" title="Connect" class="futura-link">???????</a> | 
+                              	<a href="http://www.queen.gr/Epikoinwnia" title="Mail" class="futura-link">???????????</a> | 
+                              	<a href="http://www.queen.gr/Schetika-me-mas" title="Mail" class="futura-link">?????????</a>
+                              </span> 
+                             
+                                                          		<div class="module socialLinks">
+			            <div class="moduleContent">
+			
+<!-- JoomlaWorks "Custom Code" Module (v1.1) starts here -->
+<div class="jwcc" id="module-35">
+	<div class="clr"></div>
+
+<a class="bookBtn socialIcons" href="javascript: bookmarkThis();" title="Add to favorites"><span>Add to favorites</span></a>
+
+<a class="rssBtn socialIcons" href="http://feeds.feedburner.com/queen/oeGS" target="_blank" title="RSS"><span>RSS</span></a>
+<a class="facebookBtn socialIcons" href="http://www.facebook.com/pages/Queengr/102549033154905" target="_blank" title="Facebook"><span>Facebook</span></a>
+<a class="twitterBtn socialIcons" href="http://www.twitter.com/Queen_gr" target="_blank" title="Twitter"><span>Twitter</span></a>
+<!--<a class="facebookBtn socialIcons" href="#" target="_blank" title="Facebook"><span>Facebook</span></a>
+<a class="twitterBtn socialIcons" href="#" target="_blank" title="Twitter"><span>Twitter</span></a>-->
+<div class="clr"></div></div>
+<!-- JoomlaWorks "Custom Code" Module (v1.1) ends here -->
+            </div>
+		<div class="clr"></div>
+		</div>
+	       
+                             
+                            
+							<a class="homePageBtn" title="Set as Homepage - Queen.gr" href="javascript:void(0);">HOMEPAGE</a>
+							
+                        </div>
+						 
+						<div class="clr"></div>
+	                    
+                    	                    	<div class="banner728x90header">
+		                			<div class="module banner728x90 bannerBox">
+			            <div class="moduleContent">
+			
+<!-- Google Ad Manager for position: DFP 728x90_ROS_Header -->
+<div class="googleAdManager">
+	<script type="text/javascript">GA_googleFillSlot("728x90_ROS_Header");</script><script src="http://pubads.g.doubleclick.net/gampad/ads?correlator=1701571864282178&amp;output=json_html&amp;callback=GA_googleSetAdContentsBySlotForSync&amp;impl=s&amp;client=ca-pub-3302020578652719&amp;slotname=728x90_ROS_Header&amp;page_slots=728x90_ROS_Header&amp;cookie=ID%3D1788c240953dbb69%3AT%3D1369181137%3AS%3DALNI_MamqbE4TkdcA3-SJk-FCtgSa3mPKQ&amp;url=http%3A%2F%2Fwww.queen.gr%2Fregistration&amp;lmt=1369181107&amp;dt=1369181109237&amp;cc=100&amp;biw=1264&amp;bih=423&amp;adk=2189649876&amp;adx=348&amp;ady=149&amp;ifi=1&amp;oid=3&amp;u_tz=-300&amp;u_his=50&amp;u_h=1024&amp;u_w=1280&amp;u_ah=984&amp;u_aw=1280&amp;u_cd=24&amp;flash=0&amp;gads=v2&amp;ga_vid=2286378.1369181109&amp;ga_sid=1369181109&amp;ga_hid=835175193"></script><div id="google_ads_div_728x90_ROS_Header_ad_wrapper">
+<div id="google_ads_div_728x90_ROS_Header_ad_container" style="display:inline-block;">
+<ins style="width: 728px; height: 90px; display: inline-table; position: relative; border: 0px none;"><ins style="width: 728px; height: 90px; display: block; position: relative; border: 0px none;"><iframe style="border: 0px none; position: absolute; top: 0px; left: 0px;" marginheight="0" marginwidth="0" name="google_ads_iframe_728x90_ROS_Header" id="google_ads_iframe_728x90_ROS_Header" frameborder="0" height="90" scrolling="no" width="728"></iframe></ins></ins></div>
+</div>
+<script>GA_googleCreateDomIframe("google_ads_div_728x90_ROS_Header_ad_container" ,"728x90_ROS_Header");</script>
+</div>
+            </div>
+		<div class="clr"></div>
+		</div>
+	
+                    	</div>
+		                	            		<div class="clr"></div>
+	        		</div>
+					<div class="clr"></div>
+	    		
+	    		
+	    				    			<div class="wide-menu">
+	            		<div id="menuCont">
+	            		  <div id="menu">
+	            		      		<div class="module mainmenu">
+			            <div class="moduleContent">
+			<ul class="menu"><li class="parent item4"><a href="/MODA"><span>????</span></a></li><li class="parent item5"><a href="/OMORFIA"><span>???????</span></a></li><li class="parent item6"><a href="/YGEIA-FITNESS"><span>?????&amp;FITNESS</span></a></li><li class="parent item7"><a href="/SEX-SChESEIS"><span>???&amp;???????</span></a></li><li class="parent item8"><a href="/SPITI"><span>?????</span></a></li><li class="parent item9"><a href="/CELEBRITY-SPOTTING"><span>CELEBRITY SPOTTING</span></a></li><li class="item43"><a href="/Tests"><span>TESTS</span></a></li><li class="item246"><a href="/DIAGWNISMOI"><span>???????????</span></a></li><li class="parent item12"><a href="/PANTREYOMAI"><span>???????????</span></a></li><li class="parent item11"><a href="/OIKOGENEIA"><span>??????????</span></a></li><li class="parent item13"><a href="/MAGEIRIKH"><span>?????????</span></a></li><li class="parent item14"><a href="/KALYTERH-ZWH"><span>???????? ???</span></a></li><li class="parent item15"><a href="/ZWDIA"><span>?????</span></a></li></ul>            </div>
+		<div class="clr"></div>
+		</div>
+	
+	            		      <div class="clr"></div>
+	            		  </div>  		 
+	            		</div> 
+	    			</div>
+	        			
+					<div class="clr"></div>
+				</div>
+			
+				<div class="headerBottom-wide">
+				
+	        		  
+	                    	                        <div id="subMenu">
+	                          
+	                          <div class="clr"></div>
+	                        </div>            
+	                     
+	                    <div class="clr"></div>
+	                    	                        <div id="moreMenuCont" class="moreMenuBorderTop">                     
+	                          		<div class="module moreMenu">
+							<h3><span>??????????? ??? QUEEN.GR</span></h3>
+			            <div class="moduleContent">
+			<ul class="menu"><li class="item16"><a href="/SYNENTEYXEIS"><span>????????????</span></a></li><li class="item322"><a href="/apopsh"><span>?????</span></a></li><li class="item240"><a href="/VIDEO"><span>VIDEO</span></a></li><li class="item21"><a href="/SYMBAINEI-STON-KOSMO"><span>????????? ???? ?????</span></a></li></ul>            </div>
+		<div class="clr"></div>
+		</div>
+			<div class="module popCultureTestsMenu">
+			            <div class="moduleContent">
+			<ul class="menu"><li class="parent item42"><a href="/around-town"><span>Around Town</span></a><ul><li class="item145"><a href="/around-town/Kinhmatografos"><span>??????????????</span></a></li><li class="item146"><a href="/around-town/Thleorash"><span>?????????</span></a></li><li class="item147"><a href="/around-town/Theatro-Choros"><span>?????? - ?????</span></a></li><li class="item148"><a href="/around-town/Moysikh"><span>???????</span></a></li><li class="item149"><a href="/around-town/Technes"><span>??????</span></a></li><li class="item150"><a href="/around-town/Events-Exodos"><span>Events - ??????</span></a></li><li class="item151"><a href="/around-town/Biblio"><span>??????</span></a></li></ul></li></ul>            </div>
+		<div class="clr"></div>
+		</div>
+	
+	                          <div class="clr"></div>
+	                        </div>            
+	                                     
+	                	                <div class="clr"></div>
+		                
+		        </div>
+		        
+		        	    	
+	    	
+			</div>
+	    	
+	    	
+		</div>
+		
+			    <div id="contentWrapper">
+	        <div id="contentContainer">
+	            <div id="content" class="cols2"> 
+	            	
+	            	<!-- Blog Header Start -->
+									
+										<!-- Blog Header End -->
+					
+					
+										
+					<!-- sidebar left start -->
+										<!-- sidebar left end -->
+	                        
+					
+          
+                	<!-- main area start -->
+                	<div style="min-height: 643px;" class="contentTopRightCenter equal_h">
+                	
+                    	
+						
+						
+						
+						                            
+						
+							
+												
+													
+							   
+							<noscript><meta http-equiv="refresh" content="1;url=error.html"></noscript>
+<script type="text/javascript">
+	//<![CDATA[
+	window.onDomReady(function(){
+	/*	
+		document.formvalidator.setHandler('passverify', function (value){
+			return ($('password').value == value);
+		});
+	*/	
+		$('josForm').setProperty('action', '/registration?tm='+$time() + $random(0, 100));
+	/*	
+		//Fix token issue caused by AKAMAI
+		var forms = $$('form');
+		if(forms.length > 0){
+			new Ajax('http://www.queen.gr/index.php?option=com_queen&view=user&task=token' + '&t=' + $time() + $random(0, 100), { 
+        		method: 'get',
+				onComplete: function(response) {
+					forms.each(function(form){
+						new Element('input',{'name':response, 'type':'hidden', 'value':'1'}).injectInside(form);
+					});
+           }
+       		}).request();
+   		}
+
+		$$('#josForm input[name=return]').each(function(element){
+	    	element.setProperty('value', '/registration?tm='+$time() + $random(0, 100));
+	    });
+	 */   
+	});
+	
+	//]]>
+</script>
+
+<!-- K2 user register form -->
+
+
+<form action="/registration?tm=136918110963765" enctype="multipart/form-data" method="post" id="josForm" name="josForm" class="form-validate">
+
+    <div class="module redTitleBg smallTitle componentheading">
+  	<h3><span>???????</span></h3>
+  </div>
+  
+  <div id="k2Container" class="k2AccountPage">
+	  <table cellpadding="0" cellspacing="0">
+	<tbody><tr><td colspan="2">
+		<p>?????????? ?? ???????? ??? ??? ???? ????? ??? ?? ????????? ???????????? ????????? ??? ?? ??? ????????? ???, ???? ??? ???????????? ??? DPG Group of Companies ??? ??? ???????????? ????? ????????.</p>
+		</td></tr>
+
+	  	<tr>
+	  		<th colspan="2">???????? ???????????</th>
+	  	</tr>
+	    <tr>
+	      <td class="labels"><label id="namemsg" for="name">????? *</label></td>
+	      <td><input name="name" id="name" size="40" value="" class="inputbox required" maxlength="50" type="text">
+	      </td>
+	    </tr>
+	    <tr>
+	      <td class="labels"><label id="usernamemsg" for="username">????? ?????? *</label></td>
+	      <td><input id="username" name="username" size="40" value="" class="inputbox required validate-username" maxlength="25" type="text">
+	      </td>
+	    </tr>
+	    <tr>
+	      <td class="labels"><label id="emailmsg" for="email">??????????? ??????????? *</label></td>
+	      <td><input id="email" name="email" size="40" value="" class="inputbox required validate-email" maxlength="100" type="text">
+	      </td>
+	    </tr>
+	    <tr>
+	      <td class="labels"><label id="pwmsg" for="password">??????? ?????????</label> *</td>
+	      <td><input class="inputbox required validate-password" id="password" name="password" size="40" value="" type="password">
+	      </td>
+	    </tr>
+	    <tr>
+	      <td class="labels"><label id="pw2msg" for="password2">??????????? ??????? ????????? *</label></td>
+	      <td><input class="inputbox required validate-passverify" id="password2" name="password2" size="40" value="" type="password">
+	      </td>
+	    </tr>
+	  	<tr>
+	  		<th colspan="2">?????????? ???????????</th>
+	  	</tr>
+			<!-- K2 attached fields -->
+	    <tr>
+	      <td class="labels"><label id="gendermsg" for="gender">????</label></td>
+	      <td>	
+	
+		<input name="gender" id="genderm" value="m" checked="checked" type="radio">
+		<label for="genderm">??????</label>
+		<input name="gender" id="genderf" value="f" type="radio">
+		<label for="genderf">???????</label>
+
+	</td>
+	    </tr>
+	    <!-- <tr>
+	      <td class="labels"><label id="descriptionmsg" for="description"></label></td>
+	      <td></td>
+	    </tr> -->
+			    <!-- <tr>
+	      <td class="labels"><label id="urlmsg" for="url"></label></td>
+	      <td class="labels"><input type="text" size="50" value="" name="url" id="url"/></td>
+	    </tr> -->
+	    
+
+</tbody></table>
+	      <!-- Captcha like -->
+	      <script type="text/javascript">
+	        var $K2 = jQuery.noConflict();
+	      	
+			$K2(document).ready(function(){
+				var num1 = Math.floor((Math.random()*10)+1);
+				var num2 = Math.floor((Math.random()*10)+1);
+				var res  = (num1 + num2);
+				
+				$K2('#big_num').html(num1);
+				$K2('#small_num').html(num2);
+				
+				function checkResult(result){
+					if (result == res){
+						return true;
+					}
+					else
+					{
+						return false;
+					}	
+				}	
+				
+				$K2('#josForm').submit(function() {
+				  var result = $K2('#captcha_result').val();
+				  if(checkResult(result)){
+				  	return true;
+				  }else{
+				  	alert('????? ?????');
+				  	return false;
+				  }
+				});
+			});      
+	      </script>
+	     
+	      <div id="captcha_like" style="float:left; padding:4px; width:630px; height: 40px;">
+	      	<span style="margin-top:3px; margin-left:14px; float:left; width: 280px; font-color:#000000;">??????????? ?? ?????????? ??? ?????????</span>
+	      	<div id="big_num" style="float:left; width:20px;">4</div> 
+	      	<div id="operator" style="float:left; width:20px;">+</div>
+	      	<div id="small_num" style="float:left; width:20px;">9</div>
+	      	<div id="equal" style="float:left; width:20px;">=</div>
+	      	<input name="result" id="captcha_result" value="" style="width:40px;" type="text">
+	      </div>
+	      <!-- End Captcha like -->
+	  <div class="k2AccountPageNotice">?? ????? ??? ?????????????? ?? ????????? (*) ????? ???????????.
+	  	&nbsp;?? ??? ??????? ??? ?????????? ???? 
+	
+
+	  	<a style="font-weight:bold; color:#027acc;" class="modal" rel="{handler:'iframe',size:{x:990,y:650}}" href="/Oroi-Chrhshs?tmpl=component">
+	  	????? ??????
+	  	</a>
+</div>
+
+	  <div class="k2AccountPageUpdate">
+	  	<button class="button validate" type="submit">
+	  		???????	  	</button>
+	   <div class="clr"></div>	
+	  </div>
+  <div class="clr"></div>
+  </div>
+
+  <input name="task" value="register_save" type="hidden">
+<input name="return" value="" type="hidden">
+  <input name="id" value="0" type="hidden">
+  <input name="gid" value="0" type="hidden">
+  <input name="K2UserForm" value="1" type="hidden">
+  <input name="b018af8c7e4cd43b317e10943fbbd844" value="1" type="hidden">
+</form>
+ 
+							 
+							 
+						
+												
+					</div>
+					<!-- main area end -->
+					
+					<!-- sidebar right start -->
+	                						
+                    <div style="min-height: 643px;" class="contentTopRightRight equal_h ">
+                    	
+                    	
+                    	<!-- split -->
+                        		<div class="module redTitleBg smallTitle gallop defaultPadding">
+							<h3><span>???????? ??????</span></h3>
+			            <div class="moduleContent">
+			
+<div id="k2ModuleBox900" class="k2LoginBlock redTitleBg smallTitle gallop defaultPadding">
+	<form action="/registration" method="post" name="login" id="form-login">
+				<p class="preText">?? ????? ??? ????????????? ???????? ?? ?????????? ???.
+
+</p>
+	  	  
+	  <fieldset class="input">
+	    <p id="form-login-username">
+	      <label for="modlgn_username">Username</label>
+	      <input id="modlgn_username" name="username" class="inputbox" size="18" type="text">
+	    </p>
+	    <p id="form-login-password">
+	      <label for="modlgn_passwd">Password</label>
+	      <input id="modlgn_passwd" name="passwd" class="inputbox" size="18" type="password">
+	    </p>
+	    	    
+	    <input name="Submit" class="button" value="???????" type="submit">
+	  </fieldset>
+	  
+	  <ul>
+	    <li><a href="/registration/reset">?????????? Password</a></li>
+	    <li><a href="/registration/remind">?????????? Username</a></li>
+	    
+	  </ul>
+	  
+	  	  
+	  <input name="option" value="com_user" type="hidden">
+	  <input name="task" value="login" type="hidden">
+	  <input name="return" value="L3JlZ2lzdHJhdGlvbi9sb2dnZWQtaW4=" type="hidden">
+	  <input name="b018af8c7e4cd43b317e10943fbbd844" value="1" type="hidden">	</form>
+</div>
+            </div>
+		<div class="clr"></div>
+		</div>
+			<div class="module bannerBox noPadding noBorder">
+			            <div class="moduleContent">
+			
+<!-- Google Ad Manager for position: DFP 300x250_Homepage_4 -->
+<div class="googleAdManager">
+	<script type="text/javascript">GA_googleFillSlot("300x250_HomePage_4");</script><script src="http://pubads.g.doubleclick.net/gampad/ads?correlator=1701571864282178&amp;output=json_html&amp;callback=GA_googleSetAdContentsBySlotForSync&amp;impl=s&amp;pstok=8LE_aKa56LAKDgoMCOWcvh4Qtd-5j4QB&amp;client=ca-pub-3302020578652719&amp;slotname=300x250_HomePage_4&amp;page_slots=728x90_ROS_Header%2C300x250_HomePage_4&amp;cookie=ID%3D1788c240953dbb69%3AT%3D1369181137%3AS%3DALNI_MamqbE4TkdcA3-SJk-FCtgSa3mPKQ&amp;url=http%3A%2F%2Fwww.queen.gr%2Fregistration&amp;lmt=1369181107&amp;dt=1369181109428&amp;cc=100&amp;biw=1247&amp;bih=423&amp;adk=2451216924&amp;adx=780&amp;ady=683&amp;ifi=2&amp;oid=3&amp;u_tz=-300&amp;u_his=50&amp;u_h=1024&amp;u_w=1280&amp;u_ah=984&amp;u_aw=1280&amp;u_cd=24&amp;flash=0&amp;gads=v2&amp;ga_vid=2286378.1369181109&amp;ga_sid=1369181109&amp;ga_hid=835175193"></script><div id="google_ads_div_300x250_HomePage_4_ad_wrapper">
+<div id="google_ads_div_300x250_HomePage_4_ad_container" style="display:inline-block;">
+<ins style="width: 300px; height: 250px; display: inline-table; position: relative; border: 0px none;"><ins style="width: 300px; height: 250px; display: block; position: relative; border: 0px none;"><iframe style="border: 0px none; position: absolute; top: 0px; left: 0px;" marginheight="0" marginwidth="0" name="google_ads_iframe_300x250_HomePage_4" id="google_ads_iframe_300x250_HomePage_4" frameborder="0" height="250" scrolling="no" width="300"></iframe></ins></ins></div>
+</div>
+<script>GA_googleCreateDomIframe("google_ads_div_300x250_HomePage_4_ad_container" ,"300x250_HomePage_4");</script>
+</div>
+            </div>
+		<div class="clr"></div>
+		</div>
+	                 
+                    </div>
+	                	                <!-- sidebar right end -->
+	                
+					
+					<div class="clr"></div>
+					
+	            			
+							                  
+		            		            
+		            <div class="contentMiddleBlock">
+		                           
+		                
+		                <div class="clr"></div>
+		            </div>
+		            
+		            		            
+		            <div class="clr"></div>
+	            
+	            </div>
+	        </div>      
+	    </div>
+	    	</div>
+</div>
+<!-- end of skin -->
+	
+	
+<div class="topfooterZone" style="position:relative">
+	<div class="g990 cntrlwrap">
+		<p class="sitemapopen">open</p>
+		<p class="sitemapclose">Close</p>
+	</div>
+	<div id="topfooter" class="g990">
+		<ul>
+			<li class="parent notopborder"><a href="http://www.queen.gr/MODA">????</a></li>
+		  	<li><a href="http://www.queen.gr/MODA/SChOLEIO-MODAS">??????? ?????</a></li>
+			<li><a href="http://www.queen.gr/MODA/FASHION-QUEEN-LOVES">FASHION QUEEN LOVES</a></li>
+		 	<li><a href="http://www.queen.gr/MODA/PASARELES">?????????</a></li>
+			<li><a href="http://www.queen.gr/MODA/CELEBRITY-STYLE">CELEBRITY STYLE</a></li>
+			<li><a href="http://www.queen.gr/MODA/MODA-STO-DROMO">???? ??? ?????</a></li>
+			<li><a href="http://www.queen.gr/VIDEO">VIDEO</a></li>
+			<li><a href="http://www.queen.gr/MODA/FASHION-NEWS">FASHION NEWS</a></li>
+			<li class="parent"><a href="http://www.queen.gr/OMORFIA">???????</a></li>
+			<li><a href="http://www.queen.gr/OMORFIA/BEAUTY-QUEEN-LOVES">BEAUTY QUEEN LOVES</a></li>
+			<li><a href="http://www.queen.gr/OMORFIA/TRENDS">TRENDS</a></li>
+			<li><a href="http://www.queen.gr/OMORFIA/BEAUTY-PEOPLE">BEAUTY PEOPLE</a></li>
+		 	<li><a href="http://www.queen.gr/OMORFIA/BEAUTY-FACE-OFF">BEAUTY FACE OFF</a></li>
+			<li><a href="http://www.queen.gr/OMORFIA/DIY">DIY</a></li>
+			<li class="parent"><a href="http://www.queen.gr/Tests">TESTS</a></li>
+			<li class="parent nobtmborder"><a href="http://www.queen.gr/VIDEO">VIDEO</a></li>
+		</ul>
+		<ul>
+			<li class="parent notopborder"><a href="http://www.queen.gr/YGEIA-FITNESS">????? &amp; FITNESS</a></li>
+			<li><a href="http://www.queen.gr/YGEIA-FITNESS/TO-DIATROFIKO-TIP-THS-HMERAS">TO ?????????? TIP ??? ??????</a></li>
+			<li><a href="http://www.queen.gr/YGEIA-FITNESS/TO-HEALTH-TIP-THS-HMERAS">TO HEALTH TIP ??? ??????</a></li>
+			<li><a href="http://www.queen.gr/YGEIA-FITNESS/TO-FITNESS-TIP-THS-HMERAS">?? FITNESS TIP ??? ??????</a></li>
+			<li><a href="http://www.queen.gr/YGEIA-FITNESS/DIATROFH-DIAITES">???????? &amp; ???????</a></li>
+			<li><a href="http://www.queen.gr/YGEIA-FITNESS/YGEIA">?????</a></li>
+			<li><a href="http://www.queen.gr/YGEIA-FITNESS/FITNESS-EYEXIA">FITNESS &amp; ??????</a></li>
+			<li class="parent"><a href="http://www.queen.gr/SEX-SChESEIS">SEX &amp; ???????</a></li>
+			<li><a href="http://www.queen.gr/SEX-SChESEIS/H-MAChH-TWN-FYLWN">? ???? ??? ?????</a></li>
+			<li><a href="http://www.queen.gr/SEX-SChESEIS/STO-MYALO-TOY-ANDRA">??? ????? ??? ?????</a></li>
+			<li><a href="http://www.queen.gr/SEX-SChESEIS/ESY-TO-PAIDI">??? &amp; ?? ?????</a></li>
+			<li><a href="http://www.queen.gr/SEX-SChESEIS/PEThERIKA-VS-NYFES">???????? VS ?????</a></li>
+		 	<li><a href="http://www.queen.gr/SEX-SChESEIS/SEX-KAI-SChESEIS">??? ??? ???????</a></li>
+			<li><a href="http://www.queen.gr/SEX-SChESEIS/SYMBOYLOS-SChESEWN">????????? ??????? </a></li>
+			<li><a href="http://www.queen.gr/SEX-SChESEIS/SEX-OMOLOGHSEIS">???-???????????</a></li>
+			<li><a href="http://www.queen.gr/SEX-SChESEIS/SEXRERTS">SEXRERTS</a></li>
+			<li class="parent nobtmborder"><a href="http://www.queen.gr/SHOPPING">SHOPPING</a></li>
+		</ul>
+		<ul>
+			<li class="parent notopborder"><a href="http://www.queen.gr/SPITI">????? </a></li>
+			<li><a href="http://www.queen.gr/SPITI/HOW-TO">HOW TO</a></li>
+			<li><a href="http://www.queen.gr/SPITI/DECO">DECO</a></li>
+			<li><a href="http://www.queen.gr/SPITI/DECO-QUEEN-LOVES">DECO QUEEN LOVES</a></li>
+			<li class="parent"><a href="http://www.queen.gr/CELEBRITY-SPOTTING">CELEBRITY SPOTTING</a></li>
+			<li><a href="http://www.queen.gr/CELEBRITY-SPOTTING/TALK-OF-THE-TOWN">TALK OF THE TOWN</a></li>
+			<li><a href="http://www.queen.gr/CELEBRITY-SPOTTING/JUICY-NEWS">JUICY NEWS	</a></li>
+			<li><a href="http://www.queen.gr/CELEBRITY-SPOTTING/SYNENTEYXEIS">???????????? </a></li>
+			<li class="parent">	<a href="http://www.queen.gr/PANTREYOMAI">???????????</a></li>
+			<li><a href="http://www.queen.gr/PANTREYOMAI/HMEROLOGIO-NYFHS">?????????? ?????</a></li>
+			<li><a href="http://www.queen.gr/PANTREYOMAI/OLA-TOY-GAMOY-DYSKOLA">??? ??? ????? ???????</a></li>
+			<li><a href="http://www.queen.gr/PANTREYOMAI/HXERES-OTI">?????? ???...</a></li>
+			<li><a href="http://www.queen.gr/PANTREYOMAI/SAVOIR-VIVRE">SAVOIR VIVRE</a></li>
+			<li><a href="http://www.queen.gr/PANTREYOMAI/TO-HOT-TIP-THS-HMERAS">?? HOT TIP ??? ??????</a></li>
+			<li><a href="http://www.queen.gr/PANTREYOMAI/CELEBRITY-GAMOI">CELEBRITY ?????</a></li> 
+			<li><a href="http://www.queen.gr/PANTREYOMAI/RWTA-ME-OTI-ThES">???? ?? ??? ???</a></li>
+			<li class="nobtmborder"><a href="http://www.queen.gr/PANTREYOMAI/EYRETHRIO">?????????</a></li>
+		</ul>
+		
+		<ul>
+			<li class="parent notopborder"><a href="http://www.queen.gr/MAGEIRIKH">?????????</a></li>
+			<li><a href="http://www.queen.gr/MAGEIRIKH/PERI-OREXEWS">???? ???????</a></li>
+			<li><a href="http://www.queen.gr/MAGEIRIKH/SYNTAGES">????????</a></li>
+			<li><a href="http://www.queen.gr/MAGEIRIKH/THS-TEMPELAS">??? ????????</a></li>
+			<li><a href="http://www.queen.gr/MAGEIRIKH/KATI-GLYKO">???? ?????</a></li>
+			<li><a href="http://www.queen.gr/MAGEIRIKH/COOK-TIP-THS-HMERAS">COOK TIP ??? ??????</a></li>
+			<li><a href="http://www.queen.gr/MAGEIRIKH/SYNTAGES-DIASHMWN">???????? ????????</a></li>
+			<li class="parent"><a href="http://www.queen.gr/KALYTERH-ZWH">???????? ???</a></li>
+			<li><a href="http://www.queen.gr/KALYTERH-ZWH/KARIERA">???????</a></li>
+			<li><a href="http://www.queen.gr/KALYTERH-ZWH/GADGETS">GADGETS</a></li>
+			<li><a href="http://www.queen.gr/KALYTERH-ZWH/SAVE-TIME-SAVE-MONEY">SAVE TIME - SAVE MONEY</a></li>
+			<li><a href="http://www.queen.gr/KALYTERH-ZWH/OIKOLOGIA-PERIBALLON">????????? &amp; ??????????</a></li>
+			<li><a href="http://www.queen.gr/KALYTERH-ZWH/KATOIKIDIA">??????????</a></li>
+			<li class="parent"><a href="http://www.queen.gr/ZWDIA">?????</a></li>
+			<li><a href="http://www.queen.gr/ZWDIA/ZWDIA-CELEBRITIES">????? &amp; CELEBRITIES</a></li>
+			<li><a href="http://www.queen.gr/ZWDIA/ASTRA-ZWH">????? &amp; ???</a></li>
+			<li class="nobtmborder"><a href="http://www.queen.gr/ZWDIA/ONEIROKRITHS">????????????</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="footerZone" style="position:relative">
+	<div id="footernew" class="g960">
+		<div id="network-placehold"></div>
+	</div>
+</div>
+
+
+<div class="btmfooterZone" style="position:relative">
+	<div id="subfooter" class="g960">
+		<div class="w7" id="copyrights">
+			Copyright © 2013 Queen.gr | <a href="http://www.queen.gr/Oroi-Chrhshs">???? ??????</a> | <a href="http://www.queen.gr/Schetika-me-mas">??????? ?? ????</a> | <a href="http://www.queen.gr/Epikoinwnia">???????????</a> | <a href="http://www.queen.gr/sitemap_pages.xml" target="_blank"> Sitemap</a>
+		</div>
+		<div class="w3" id="credits">
+			Monetized by DPG DIGITAL MEDIA
+		</div>
+	</div>
+</div>
+
+	
+<script type="text/javascript">	
+	$K2(".sitemapopen").click(function () {
+		$K2("#topfooter").animate({
+		    height: 520
+		  }, 1500, function() {
+		  });
+		$K2(".sitemapopen").toggle();
+		$K2(".sitemapclose").toggle();
+	});
+	
+	$K2(".sitemapclose").click(function () {
+		$K2("#topfooter").animate({
+		    height: 1
+		  }, 1500, function() {
+		  });
+	
+		$K2(".sitemapclose").toggle();
+		$K2(".sitemapopen").toggle();
+	});
+</script>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+function bookmarkThis() {
+    bookmarkurl = "http://www.queen.gr/?my=homepage"
+    bookmarktitle = "Queen.gr"
+    if (window.sidebar) {
+        window.sidebar.addPanel(bookmarktitle, bookmarkurl, "");
+    } else if (document.all) {
+        if (document.all)
+            window.external.AddFavorite(bookmarkurl, bookmarktitle)
+    } else if (window.opera && window.print) {
+        return true;
+    }
+}
+/* ]]> */
+</script>	
+
+		<div class="module dpgNewsletter">
+			            <div class="moduleContent">
+			<form action="http://www.queen.gr/registration" method="post" id="formcm" class="form-validate" onsubmit="return validateNewsletterForm(this);">
+	
+	  	<div class="jcm-pretext" id="jcm-pretext">???? ?? e-mail ??? ??? ???? click ??? ?? ????????? ???????????? ????????? ??? ?? ??? ????????? ???, ???? ??? ????????????
+??? DPG Group of Companies ??? ??? ???????????? ????? ????????.</div>
+  	
+	<div id="messagejcm"></div>
+  	<div id="formFields">
+		<fieldset class="nameFields">
+	  	<label for="jcm-name">ONOMA</label>
+	  	<input name="jcm-name" id="jcm-name" value="Your name here..." onblur="if(this.value=='') this.value='Your name here...';" onfocus="if(this.value=='Your name here...') this.value='';" size="20" class="inputbox " type="text">
+	</fieldset>
+		
+	<fieldset class="emailFields">
+		<label for="jcm-mail">EMAIL</label>
+		<input name="jcm-mail" id="jcm-mail" value="Your email here..." onblur="if(this.value=='') this.value='Your email here...';" onfocus="if(this.value=='Your email here...') this.value='';" size="20" class="inputbox required validate-email" type="text">
+	</fieldset>
+	
+	  		<input name="jcm-list" id="jcm-list" value="1" type="hidden">
+  	  	
+  	<fieldset class="buttonField">
+		<input name="submit" id="start" value="???????" class="jcm-submit" type="submit">
+  	</fieldset>
+  	</div>
+  	  	
+  	<input name="jcm-module-id" id="jcm-module-id" value="959" type="hidden">
+  	<input name="b018af8c7e4cd43b317e10943fbbd844" value="1" type="hidden"></form>            </div>
+		<div class="clr"></div>
+		</div>
+	
+
+<div class="setHomePage">
+	<div class="moduleContent">
+		<p>???? ?? ????????? ??? site Homepage</p>
+		<div style="margin: 0 auto;">
+			<a class="homePageButton" title="Set as Homepage - Queen.gr" href="javascript:void(0);"></a>
+		</div>
+	</div>
+</div>
+
+
+
+<script type="text/javascript">
+
+(function($){
+    $(document).ready(function() {
+    
+    	if(navigator.userAgent.indexOf('Mac') > 0){
+    		$('body').addClass('mac-os');
+    	}
+    	
+    	$(".homePageBtn").click(function(event){
+			event.preventDefault();
+			
+			if ($.browser.msie) {
+				document.body.style.behavior='url(#default#homepage)';
+				document.body.setHomePage('http://www.queen.gr/?my=homepage');
+			}else{
+				alert("? ?????????? ???? ????? ????????? ???? ?? Internet Explorer.");
+				return false;
+			}
+			
+		});
+    
+    	var loaded = false;
+    	
+    	$(window).scroll(function (oEvent) {
+    	
+    	var s = $(window).scrollTop();
+    	
+    	
+    	var tmpl = "bottom";
+    	var param = {tmpl: tmpl, version: 15, template: 'bomb'};
+    	
+    		if(loaded) return;
+    	
+    		if( s > 1000){
+				
+				var html = '<iframe src="http://apps.bbend.com/network/index.html?v5" height="600" width="100%" scrolling="no" frameborder="0" hspace="0" vspace="0" style="border:0;padding:0;margin:0"><\/iframe>';
+				$('#network-placehold').empty().append(html);	
+				
+				loaded = true;
+				
+    		}
+    		
+		});
+		
+		
+ 		
+	});
+})(window.jQuery);
+
+</script>
+
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "http://connect.facebook.net/en_US/all.js#xfbml=1&appId=454368887940455";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+<!-- START Nielsen Online SiteCensus V6.0 -->
+<!-- COPYRIGHT 2010 Nielsen Online -->
+<script type="text/javascript" src="//secure-uk.imrworldwide.com/v60.js">
+</script>
+<script type="text/javascript">
+	var pvar = { cid: "gr-dpg", content: "0", server: "secure-uk" };
+	var feat = { surveys_enabled: 1, sample_rate: 0.05 };
+	var trac = nol_t(pvar, feat);
+	trac.record().post().do_sample();
+</script>
+<noscript>
+	<div><img src="//secure-uk.imrworldwide.com/cgi-bin/m?ci=gr-dpg&amp;cg=0&amp;cc=1&amp;ts=noscript" width="1" height="1" alt="" /></div>
+</noscript>
+<!-- END Nielsen Online SiteCensus V6.0 -->
+
+
+<div style="display: none; z-index: 65555; position: fixed; top: 0px; left: 0px; visibility: hidden; opacity: 0;" id="sbox-overlay"></div><div style="display: none; z-index: 65557; position: fixed; top: 50%; left: 50%;" id="sbox-window"><a href="#" id="sbox-btn-close"></a><div style="visibility: hidden; opacity: 0;" id="sbox-content"></div></div></body>

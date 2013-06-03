@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html xml:lang="en">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+  <meta http-equiv="Pragma" content="no-cache" /> 
+  <meta http-equiv="Cache-Control" content="no-cache" /> 
+  <meta name="viewport" content=" initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" /> 
+  <link type="text/css" rel="stylesheet" href="https://preview.digby.com/ui/svn/hp4.0/css/small.css" /> 
+  <link type="text/css" rel="stylesheet" media="all and (orientation:portrait)" href="https://preview.digby.com/ui/svn/hp4.0/css/portrait.css" /> 
+  <link type="text/css" rel="stylesheet" media="all and (orientation:landscape)" href="https://preview.digby.com/ui/svn/hp4.0/css/landscape.css" /> 
+  <script type="text/javascript">
+			if (top.frames.length!=0)
+  			top.location=self.document.location;
+	    </script> 
+  <script type="text/javascript">
+	// JavaScript Document
+var a1 = navigator.userAgent;
+var a2 = a1.substring(0,10);
+/*for all BB*/
+if(navigator.userAgent.indexOf("BlackBerry") >= 0 ){
+	document.write("<link href='<link href='https://preview.digby.com/ui/svn/hp4.0/css/forbb.css' rel='stylesheet' type='text/css' />")
+}
+/*for all BB set*/
+if((navigator.platform.indexOf("BlackBerry") >= 0)){
+	if((navigator.userAgent.indexOf("VendorID/378") > 0)){
+		document.write("<link href='https://preview.digby.com/ui/svn/hp4.0/css/forbb5.0.css' rel='stylesheet' type='text/css' />")
+	}
+	if((navigator.userAgent.indexOf("VendorID/120") > 0)){
+		document.write("<link href='https://preview.digby.com/ui/svn/hp4.0/css/forbb4.0.css' rel='stylesheet' type='text/css' />")
+	}
+	if((navigator.userAgent.indexOf("VendorID/100") > 0)){
+		document.write("<link href='https://preview.digby.com/ui/svn/hp4.0/css/forbb4.0Min.css' rel='stylesheet' type='text/css' />")
+	}
+	if((navigator.userAgent.indexOf("BlackBerry") >= 0)){
+		if((navigator.userAgent.indexOf("VendorID/124") > 0)){
+			document.write("<link href='https://preview.digby.com/ui/svn/hp4.0/css/forbb4.6.css' rel='stylesheet' type='text/css' />")
+		}
+	}
+}
+if(navigator.userAgent.indexOf("BlackBerry 9780") >= 0 ){
+	document.write("<link href='https://preview.digby.com/ui/svn/hp4.0/css/forbb9780.css' rel='stylesheet' type='text/css' />")
+}
+if(navigator.userAgent.indexOf("BlackBerry 9900") >= 0 ){
+	document.write("<link href='https://preview.digby.com/ui/svn/hp4.0/css/forbb9900.css' rel='stylesheet' type='text/css' />")
+}
+if(navigator.userAgent.indexOf("BlackBerry9700/5.0") >= 0 ){
+	document.write("<link href='https://preview.digby.com/ui/svn/hp4.0/css/forbb9700_5.0.css' rel='stylesheet' type='text/css' />")
+}
+
+/*for Android*/
+if(navigator.userAgent.indexOf("Android") >= 0  || navigator.platform.indexOf("Android") >= 0){
+	document.write("<link href='https://preview.digby.com/ui/svn/hp4.0/css/android.css' rel='stylesheet' type='text/css' />")
+}
+/*for all Windows Phone*/
+if(navigator.userAgent.indexOf("Windows Phone") >= 0  || navigator.platform.indexOf("Windows Phone") >= 0){
+	//alert("true");
+	document.write("<link href='https://preview.digby.com/ui/svn/hp4.0/css/winphone.css' rel='stylesheet' type='text/css' />")
+}	
+
+
+		</script> 
+  <title>hp Mobile Store</title> 
+ </head> 
+ <body> 
+  <div class="container"> 
+   <div id="header"> 
+    <div class="cartbar">
+     <a href="/hp/accountlogin.do">Sign in</a> 
+     <a href="/hp/cart/list.do" class="cartbar_home">items in cart</a>(0)
+    </div>
+    <div class="logoarea">
+     <div class="logo">
+      <a href="/hp"></a>
+     </div>
+    </div> 
+   </div> 
+   <div id="search"> 
+    <script type="text/javascript">
+<!--
+function searchs()
+{
+
+ if(document.search.keyword1.value=='Enter keyword or item #'|| document.search.keyword1.value==null)
+ {
+
+  document.search.keyword.value="";
+
+
+ }
+ else
+ {
+    document.search.keyword.value=document.search.keyword1.value.replace(/[ ]/g,"%20");
+ }
+ return true;
+}
+//-->
+</script> 
+    <div class="search"> 
+     <form action="/hp/catalog/searchList.do" name="search" id="search" method="post" onsubmit="return searchs();"> 
+      <fieldset> 
+       <input type="hidden" name="keyword" /> 
+       <dl> 
+        <dt> 
+         <input type="text" name="keyword1" class="search_text" maxlength="100" value="Enter keyword or item #" onblur="if (this.value == '') {this.value = 'Enter keyword or item #';}" onfocus="if (this.value == 'Enter keyword or item #') { this.value = ''; }" /> 
+        </dt> 
+        <dd>
+         <input type="submit" class="search_btn_go" name="Submit" value="search" />
+        </dd> 
+       </dl> 
+      </fieldset> 
+     </form> 
+    </div> 
+   </div> 
+   <div id="nav"> 
+    <ul class="nav_title"> 
+     <li> <a href="/hp/catalog.do;jsessionid=ECC6532ACBF107F9A69C24C4C9FF88FF?cid=0&amp;p=0&amp;pno=12">Home</a></li> 
+     <li class="nav_arrow">|</li> 
+     <li>Laptops</li> 
+    </ul> 
+   </div> 
+   <div id="main"> 
+    <script language="JavaScript">
+
+
+
+
+
+ 
+
+
+window.hpmmd=window.hpmmd|| {
+page:{
+  name:		"ec:hhos:us:en-us:Laptops:landing:Laptops",
+  sectiontaxonomy:"hhos:Laptops",
+  
+  store: 	  	"[gen]",
+  
+  
+  login:		"[n]",
+  
+hierarchy:      ["hhos","Laptops" ,"Laptops"],
+platform:	"mobile",
+events: 	["pageview"]
+} 
+}
+</script> 
+    <script language="JavaScript" type="text/javascript" src="//www.hp.com/cma/ng/lib/bootstrap/metrics.js">
+</script> 
+    <!-- Added by Xiangwei on Mar 22, 2011 for supporting hero image --> 
+    <div id="banner"> 
+     <img class="banner_img" src="//d2ghmmjkyfysio.cloudfront.net/images/hp/images/mws_banner_laptops_envy4tts_660x420.jpg" /> 
+    </div> 
+    <!--Pages start--> 
+    <ul class="category"> 
+     <li class="category_link"> 
+      <!--list start--> 
+      <!-- set temp cid for toner search tools --> <a href="/hp/catalog.do;jsessionid=ECC6532ACBF107F9A69C24C4C9FF88FF?cid=1750381&amp;path=Home%257CLaptops%257CEveryday%2Bcomputing"><span class="category_title">Everyday computing</span><span class="clear"></span></a> </li> 
+     <!--list end--> 
+     <li class="category_link"> 
+      <!--list start--> 
+      <!-- set temp cid for toner search tools --> <a href="/hp/catalog.do;jsessionid=ECC6532ACBF107F9A69C24C4C9FF88FF?cid=1750383&amp;path=Home%257CLaptops%257CHigh%2Bperformance"><span class="category_title">High performance</span><span class="clear"></span></a> </li> 
+     <!--list end--> 
+     <li class="category_link"> 
+      <!--list start--> 
+      <!-- set temp cid for toner search tools --> <a href="/hp/catalog.do;jsessionid=ECC6532ACBF107F9A69C24C4C9FF88FF?cid=2774178&amp;path=Home%257CLaptops%257CUltrabook%2B%2526%2BSleekbook"><span class="category_title">Ultrabook &amp; Sleekbook</span><span class="clear"></span></a> </li> 
+     <!--list end--> 
+     <li class="category_link"> 
+      <!--list start--> 
+      <!-- set temp cid for toner search tools --> <a href="/hp/catalog.do;jsessionid=ECC6532ACBF107F9A69C24C4C9FF88FF?cid=2832901&amp;path=Home%257CLaptops%257CTouchscreen"><span class="category_title">Touchscreen</span><span class="clear"></span></a> </li> 
+     <!--list end--> 
+     <li class="category_link"> 
+      <!--list start--> 
+      <!-- set temp cid for toner search tools --> <a href="/hp/catalog.do;jsessionid=ECC6532ACBF107F9A69C24C4C9FF88FF?cid=2133547&amp;path=Home%257CLaptops%257CBusiness"><span class="category_title">Business</span><span class="clear"></span></a> </li> 
+     <!--list end--> 
+     <li class="category_link"> 
+      <!--list start--> 
+      <!-- set temp cid for toner search tools --> <a href="/hp/catalog.do;jsessionid=ECC6532ACBF107F9A69C24C4C9FF88FF?cid=2854539&amp;path=Home%257CLaptops%257CStudents"><span class="category_title">Students</span><span class="clear"></span></a> </li> 
+     <!--list end--> 
+     <li class="category_link"> 
+      <!--list start--> 
+      <!-- set temp cid for toner search tools --> <a href="/hp/catalog.do;jsessionid=ECC6532ACBF107F9A69C24C4C9FF88FF?cid=2854545&amp;path=Home%257CLaptops%257CWindows%2B7%2BPCs%2B-%2Blimited%2Bdeals"><span class="category_title">Windows 7 PCs - limited deals</span><span class="clear"></span></a> </li> 
+     <!--list end--> 
+     <li class="category_link"> 
+      <!--list start--> 
+      <!-- set temp cid for toner search tools --> <a href="/hp/catalog.do;jsessionid=ECC6532ACBF107F9A69C24C4C9FF88FF?cid=2539065&amp;path=Home%257CLaptops%257CAll%2BAMD%2Blaptops"><span class="category_title">All AMD laptops</span><span class="clear"></span></a> </li> 
+     <!--list end--> 
+     <li class="category_link"> 
+      <!--list start--> 
+      <!-- set temp cid for toner search tools --> <a href="/hp/catalog.do;jsessionid=ECC6532ACBF107F9A69C24C4C9FF88FF?cid=2538904&amp;path=Home%257CLaptops%257CAll%2BIntel%2Blaptops"><span class="category_title">All Intel laptops</span><span class="clear"></span></a> </li> 
+     <!--list end--> 
+     <li class="category_link"> 
+      <!--list start--> 
+      <!-- set temp cid for toner search tools --> <a href="/hp/catalog.do;jsessionid=ECC6532ACBF107F9A69C24C4C9FF88FF?cid=2796425&amp;path=Home%257CLaptops%257CAll%2BLaptops"><span class="category_title">All Laptops</span><span class="clear"></span></a> </li> 
+     <!--list end--> 
+    </ul> 
+    <!--category end--> 
+   </div> 
+   <div id="footer">
+    <div class="footer_menu">
+     <a href="tel:8009206947">Call 1 (800) 920-6947</a>|
+     <a href="http://www.shopping.hp.com/?stop_mobi=yes" target="_blank">View HP Direct full Web site</a>|
+     <a href="/hp/privacyPolicy.do">Privacy Policy</a>|
+     <a href="/hp/faq.do">Frequently Asked Questions</a>|
+     <a href="/hp/term.do">Terms Of Use</a>|
+     <a href="/hp/orderTrack.do">Order Status</a>|
+     <a href="https://shopping.hp.com/webapp/shopping/newsletter.do?destPage=news_sub&amp;%3bs=3&amp;%3bl=null" target="_blank">Subscribe to our newsletter</a>
+    </div>
+    <div class="copyright">
+     &copy; 2013 Hewlett-Packard Development Co., L.P.
+    </div>
+   </div> 
+  </div> 
+  <br />  
+ </body>
+</html>

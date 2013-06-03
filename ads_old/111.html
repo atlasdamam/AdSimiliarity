@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<!--[if IE 7 ]>    <html lang="en" class="ie ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="ie ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="ie ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en">
+ <!--<![endif]-->
+ <head> 
+  <title class="pageTitle"> Rental Car Deals on Priceline.com</title> 
+  <meta name="description" class="metaDescription" content="Search for  Rental Cars on Priceline.com.  Shop Priceline.com and compare great deals on rental cars, flights, hotels, vacation packages, cruises, last minute deals, weekend deals, and more!" /> 
+  <meta name="keywords" class="metaKeywords" content=",  rental cars, Priceline.com, rental cars, car rentals, discount rental cars, travel, car reservations, cheap car rentals, discount travel" /> 
+  <meta charset="utf-8" /> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+  <meta name="viewport" content="width=device-width, maximum-scale=1" /> 
+  <meta name="apple-itunes-app" content="app-id=336381998" /> 
+  <meta name="language" content="english" /> 
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" /> 
+  <script type="text/javascript" src="/landing/content/js/resp/jquery-1.7.2.min.js"></script> 
+  <!--[if lt IE 9]>
+	<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]--> 
+  <script type="text/javascript" src="/landing/content/js/resp/ajaxinclude.jquery.js"></script> 
+  <script type="text/javascript" src="/landing/content/js/resp/jquery-ui-1.8.21.custom.min.js"></script> 
+  <script type="text/javascript" src="/landing/content/js/resp/respond.min.js"></script> 
+  <script type="text/javascript" src="/landing/content/js/resp/jquery.pageslide.min.js"></script> 
+  <script type="text/javascript" src="/landing/content/js/resp/jquery.placeholder.min.js"></script> 
+  <script type="text/javascript" src="/landing/content/js/resp/framework.js?v=4045002"></script> 
+  <script type="text/javascript" src="/landing/content/js/resp/autoComplete.js?v=4045002"></script> 
+  <script type="text/javascript" src="/landing/content/js/resp/datePicker.js?v=4045001"></script> 
+  <link rel="stylesheet" type="text/css" href="/landing/content/css/resp/framework.css?v=nav2404500" /> 
+  <!--[if lt IE 9]>
+	<link rel="stylesheet" type="text/css" href="/landing/content/css/resp/ie-only/framework-ie.css?v=404500"/>
+	<![endif]--> 
+  <link rel="stylesheet" type="text/css" href="/landing/content/css/resp/sem-rentalcars.css?v=4045001" /> 
+  <link rel="stylesheet" type="text/css" href="/landing/content/css/resp/redmond/jquery-ui-1.8.21.custom.css" /> 
+  <!--[if lt IE 9]>
+	<link rel="stylesheet" type="text/css" href="/landing/content/css/resp/ie-only/rc-sem-ie.css?v=404500"/>
+	<![endif]--> 
+  <script type="text/javascript">
+		// some useful globals 
+		var Landing = (Landing) ? Landing : {};
+		Landing.rc = (Landing.rc) ? Landing.rc : {};
+		
+		 	
+		//Uniform Takeover
+		var monthsToShow = 1;
+		
+		var validCount = 0;
+		$(function() {
+			// attach click tracking
+			new Landing.tracking('RC Generic Retail');
+			
+			displayDiscountCodes(false);
+			Landing.rc.pickupAirportAutoComplete = new Landing.autoComplete($('#pickUpSearchAirportString'), {fieldDescription: "pickUpSearchAirportString"});
+			Landing.rc.dropOffAirportAutoComplete = new Landing.autoComplete($('#dropOffSearchAirportString'), {fieldDescription: "pickUpSearchAirportString"});
+			Landing.rc.pickupCityAutoComplete = new Landing.autoComplete($('#pickUpSearchCityString'), {type: "city", fieldDescription: "pickUpSearchCityString"});
+			Landing.rc.dropOffCityAutoComplete = new Landing.autoComplete($('#dropOffSearchCityString'), {type: "city", fieldDescription: "dropOffSearchCityString"});
+		
+			// create an instance of the date pair with the pick up and drop off date
+			var options = {	focusAfterDateIn  : $('#pickUpTime'),
+							focusAfterDateOut : $('#dropOffTime'),
+							rangeInDays       : 310};
+			new Landing.datePair($('#pickUpDate'), $('#dropOffDate'), options, {numberOfMonths: monthsToShow}, {numberOfMonths: monthsToShow});
+		
+			$("#car_retail_form input:radio[name=pickUpSearchLocationType]").change(carCheckPU);
+			$("#car_retail_form input:radio[name=dropOffSearchLocationType]").change(carCheckDO);
+			carCheckPU();
+		});
+		
+		function carCheckPU() {
+			carSwitchPU($("#car_retail_form input:radio[name=pickUpSearchLocationType]:checked").val());
+		}
+		function carSwitchPU(puType) {
+			$("#car_retail_form .car_pu_loc").hide();
+			$("#car_retail_form .car_pu_loc").find("input,select").each(function() {
+				clearErrorField($(this));
+			});
+			$("#car_retail_form #car_pu_"+puType).show();
+			
+			carSwitchDO("same");
+		}
+		
+		function carCheckDO() {
+			carSwitchDO($("#car_retail_form input:radio[name=dropOffSearchLocationType]:checked").val());
+		}
+		
+		function carCheckDCode() {
+			if ($("#car_retail_form #discount-code").is(":visible")) {
+				$("#car_retail_form #discount-code").hide();
+				$("input#preferredPartnerCode").show();
+			} else {
+				$("#car_retail_form #discount-code").show();
+				$("input#preferredPartnerCode").hide();
+				displayDiscountCodes(false);
+			}
+		}
+		
+		function carSwitchDO(doType) {
+			$("#car_retail_form .car_do_loc").hide();
+			$("#car_retail_form .car_do_loc").find("input,select").each(function() {
+				clearErrorField($(this));
+			});
+			$("#car_retail_form #car_do_"+doType).show();
+			switch (doType) {
+			case "city":
+			case "address":
+			case "airport":
+				$("#car_retail_form #car_do_select").show();
+				if ($("#car_retail_form input:radio[name=pickUpSearchLocationType]:checked").val()=="airport") {
+					$("#car_retail_form #car_do_select_choices").show();
+				} else {
+					//$("#car_retail_form #car_do_select_choices").hide();
+				}
+				break;
+			default:
+				$("#car_retail_form input:radio[name=dropOffSearchLocationType]").filter("[value=airport]").attr("checked","checked");
+				break;			
+			}
+		
+		}
+		
+		function carValidate($fObj) {
+			var carFmValid = baseValidate($fObj);
+			if (carFmValid) {
+				gf_CallExitTracker('/search/cars/validation/success/'+validCount);
+				carPreSubmit();
+				return true;
+			}
+			gf_CallTracker('/search/cars/validation/fail/'+validCount);
+			validCount++;
+			return false;
+		}
+		
+		function carPreSubmit() {
+			$("#car_retail_form .emptyIfHidden").each(function(idx, theEl) {
+				if (!$(theEl).is(":visible")) {
+					$(theEl).val("");
+				} 
+			});
+			if ($("#car_do_same").is(":visible")) {
+				$("#drop-off-location-0").attr("checked","checked");
+			}		
+			$("#car_retail_form #searchRadius").val($("#car_retail_form .sr_pu").filter(":visible").val());
+			$("#car_retail_form #dropOffSearchRadius").val($("#car_retail_form .sr_do").filter(":visible").val());
+		}
+		
+		
+		function displayDiscountCodes(bResetValues) {
+		
+			if(bResetValues) {	
+				$("#discountCodeSearch").val("");
+				$("#rateCodeSearch").val("");
+				$("#promoCodeSearch").val("");
+			}	
+			
+			var strPartnerCode = $("#discountPartnerCode").val();
+			
+			$("#car_retail_form #DiscountCode").hide();
+			$("#car_retail_form #RateCode").hide();
+			$("#car_retail_form #PromoCode").hide();
+			$("#car_retail_form #discount-drop-down").hide();
+			$(".rental-car-partners").show();
+			$("#rcheader").text("Search For  Rental Cars");
+			
+			
+			for (var partnerType in arrDiscount) {
+				
+				if (strPartnerCode == partnerType) {
+					$("#DiscountCodeText").html(arrDiscount[partnerType]);
+					$("#car_retail_form #DiscountCode").show();
+					$("#car_retail_form #discount-drop-down").show();
+					$(".rental-car-partners").hide();
+				}			
+			}
+			for (var partnerType in arrRateCode) {
+				if (strPartnerCode == partnerType) {
+					$("#RateCodeText").html(arrRateCode[partnerType]);			
+					$("#car_retail_form #RateCode").show();
+					$("#car_retail_form #discount-drop-down").show();
+					$(".rental-car-partners").hide();
+				}	
+			}
+			for (var partnerType in arrPromoCode) {
+				if (strPartnerCode == partnerType) {
+					$("#PromoCodeText").html(arrPromoCode[partnerType]);				
+					$("#car_retail_form #PromoCode").show();
+					$("#car_retail_form #discount-drop-down").show();
+					$(".rental-car-partners").hide();
+				}	
+			}
+			for (var partnerType in arrLogo) {
+				if (strPartnerCode == partnerType) {
+					$("#rc-logo").html("<img src='/landing/content/graphics/rc/partners/rc/" + arrLogo[partnerType] + ".png' alt='" + arrLogoAlt[partnerType] + "' width='140' height='50'>");
+					$("#rcheader").text("Search For " + arrNameShort[partnerType] + " Rental Cars");
+					$(".rental-car-partners").hide();
+				}	
+			}
+		}
+		
+		
+		var arrDiscount = new Object();
+		var arrRateCode = new Object();
+		var arrPromoCode = new Object();
+		var arrtest = new Object();
+		var arrLogo = new Object();
+		var arrLogoAlt = new Object();
+		var arrNameShort = new Object();
+		
+		// TODO: Have to get this in some other way, hard coded for now, was RCStaticData.getArrDiscount()
+		arrDiscount["AD"] = "Corporate Discount:";arrRateCode["AD"] = "Rate Code:";arrPromoCode["AD"] = "Promotional Coupon (PC):";arrDiscount["AL"] = "Alamo Corporate ID:";arrRateCode["AL"] = "Rate/Product Code:";arrPromoCode["AL"] = "Coupon Code:";arrDiscount["AV"] = "Corporate Avis Worldwide Discount (AWD):";arrRateCode["AV"] = "Rate Code:";arrPromoCode["AV"] = "Coupon Number:";arrDiscount["BU"] = "Budget CorpRate Discount (BDC):";arrRateCode["BU"] = "Rate Plan:";arrPromoCode["BU"] = "Coupon Code:";arrDiscount["ZR"] = "Corporate Discount (CD):";arrRateCode["ZR"] = "Promotion Code:";arrDiscount["ET"] = "Corporate or Association Discount:";arrPromoCode["ET"] = "Coupon Code:";arrDiscount["HZ"] = "Corporate Discount (CDP, AAA Discount Number):";arrRateCode["HZ"] = "Rate Code (RQ):";arrPromoCode["HZ"] = "Promotional Coupon (PC):";arrDiscount["NA"] = "National Corporate or Contracted Rate:";arrRateCode["NA"] = "Rate Code:";arrPromoCode["NA"] = "Coupon Code:";arrDiscount["ZH"] = "Corporate Discount (CDP, AAA Discount Number):";arrDiscount["ZT"] = "Corporate Discount:";arrRateCode["ZT"] = "PC# or Rate Code:";arrDiscount["SX"] = "Corporate Discount:";arrtest["10"] = "|SX|:";
+		arrLogo["AC"] = "ace-rental-a-car-logo";arrLogo["AD"] = "advantage-rent-a-car-logo";arrLogo["AL"] = "alamo-logo";arrLogo["AV"] = "avis-logo";arrLogo["EP"] = "europcar-logo";arrLogo["BU"] = "budget-logo";arrLogo["ZR"] = "dollar-logo";arrLogo["EY"] = "economy-rent-a-car-logo";arrLogo["ET"] = "enterprise-logo";arrLogo["EZ"] = "ez-rental-car-logo";arrLogo["FX"] = "fox-rental-car-logo";arrLogo["HZ"] = "hertz-logo";arrLogo["NA"] = "national-car-rental-logo";arrLogo["ZA"] = "payless-car-rental-logo";arrLogo["SX"] = "sixt-rental-car-logo";arrLogo["ZT"] = "thrifty-car-rental-logo";arrLogo["SV"] = "u-save-logo";
+		arrLogoAlt["AC"] = "Ace Rent A Car";arrLogoAlt["AD"] = "Advantage Rent A Car";arrLogoAlt["AL"] = "Alamo Rent A Car";arrLogoAlt["AV"] = "Avis Rent A Car";arrLogoAlt["EP"] = "Europcar";arrLogoAlt["BU"] = "Budget";arrLogoAlt["ZR"] = "Dollar";arrLogoAlt["EY"] = "Economy Rent A Car";arrLogoAlt["ET"] = "Enterprise Rent-A-Car";arrLogoAlt["EZ"] = "EZ Rent-A-Car";arrLogoAlt["FX"] = "Fox Rent A Car";arrLogoAlt["HZ"] = "Hertz";arrLogoAlt["NA"] = "National Car Rental";arrLogoAlt["ZA"] = "Payless Car Rental";arrLogoAlt["SX"] = "Sixt Rental Car";arrLogoAlt["ZT"] = "Thrifty Car Rental";arrLogoAlt["SV"] = "U-Save Car And Truck Rental";
+		arrNameShort["AC"] = "Ace";arrNameShort["AD"] = "Advantage";arrNameShort["AL"] = "Alamo";arrNameShort["AV"] = "Avis";arrNameShort["EP"] = "Europcar";arrNameShort["BU"] = "Budget";arrNameShort["ZR"] = "Dollar";arrNameShort["EY"] = "Economy";arrNameShort["ET"] = "Enterprise";arrNameShort["EZ"] = "E-Z";arrNameShort["FX"] = "Fox";arrNameShort["HZ"] = "Hertz";arrNameShort["NA"] = "National";arrNameShort["ZA"] = "Payless";arrNameShort["SX"] = "Sixt";arrNameShort["ZT"] = "Thrifty";arrNameShort["SV"] = "U-Save";
+
+		// methods that come from main.js
+		function clearErrorField($eObj) {
+			$eObj.removeClass("fm-error");
+			if ($eObj.attr("errTextDivId")!=undefined) {
+				$("#"+$eObj.attr("errTextDivId")).hide();
+			} else {
+				$("#"+$eObj.attr("id")+"_errTextDiv").remove();
+			}
+		}		
+	</script> 
+  <script type="text/javascript" src="/landing/content/js/resp/tracking.js?v=4045002"></script> 
+ </head> 
+ <body lang="en" data-section="RentalCars"> 
+  <div class="outter-masthead"> 
+   <header class="masthead"> 
+    <a href="/" id="logo"><img src="http://s2.pclncdn.com/landing/content/graphics/resp/priceline-logo-2012.png" alt="Priceline.com" width="231" height="42" class="logo" /></a> 
+    <!-- <a id="show-search" class="search-icon"></a> --> 
+    <nav class="primary-nav" role="navigation"> 
+     <h3>Sections:</h3> 
+     <ul id="main-nav"> 
+      <li class="hotels" product="hotels"><a href="/hotels/">Hotels</a></li> 
+      <li class="rentalcars" product="rentalcars"><a href="/rentalcars/">Cars</a></li> 
+      <li class="flights" product="flights"><a href="/flights/">Flights</a></li> 
+      <li class="packages" product="packages"><a href="/vacationpackages/">Vacation Packages</a></li> 
+      <li class="cruises" product="cruises"><a href="http://cruises.priceline.com/">Cruises</a></li> 
+      <!-- <li class="cruises" product="cruises"><a href="http://cruises.priceline.com/">Cruises</a></li> --> 
+      <li class="toursandattractions" product="toursandattractions"><a href="/toursandattractions/">Tours &amp; Attractions</a></li> 
+      <li class="pricebreakers" product="pricebreakers"><a href="/pricebreakers/">Pricebreaker Deals</a></li> 
+      <li class="hotelguides" product="hotelguides"><a href="/hotel-reviews-hotel-guides/">Hotel Guides</a></li> 
+      <li class="groups" product="groups"><a href="http://findgroupdeals.hotelplanner.com/Priceline.cfm">Hotels for Groups</a></li> 
+      <div id="more-nav"> 
+       <a id="trigger">More <sub>&#x25bc;</sub></a> 
+       <ul id="submenu" class="submenu" style="display: none;"> 
+        <div id="close-submenu">
+         Close
+        </div>
+       </ul> 
+      </div> 
+     </ul> 
+    </nav> 
+    <nav class="secondary-nav" role="navigation"> 
+     <ul> 
+      <li><a id="trigger2">My Trips <sub>&#x25bc;</sub></a> 
+       <ul id="submenu2" class="submenu" style="display: none;"> 
+        <li><a rel="nofollow" href="/myprofile/myProfileHome.do">review my trips</a></li> 
+        <li><a href="#" onclick="window.open('http://www.flightstats.com/go/FlightTracker/flightTracker.do?guid=c228b59beca1b817:70571e5c:117ec951a19:10f0', '_blank', 'location=yes,height=640,width=780,scrollbars=no,status=no');">check your flight status</a></li> 
+        <li><a rel="nofollow" href="/myprofile/checkRequest.do">view, print or email your itinerary</a></li> 
+        <li class="last"><a rel="nofollow" href="/myprofile/checkRequest.do">check your request status</a></li> 
+        <div id="close-submenu2">
+         Close
+        </div> 
+       </ul> </li> 
+      <li><a id="trigger3">Help <sub>&#x25bc;</sub></a> 
+       <ul id="submenu3" class="submenu" style="display: none;"> 
+        <li><a rel="nofollow" href="/customerservice/customerservice.do">self-service</a></li> 
+        <li><a rel="nofollow" href="/customerservice/customerservice.do?selectedTab=faq">frequently asked questions</a></li> 
+        <li><a rel="nofollow" href="/myprofile/checkRequest.do">find your request number</a></li> 
+        <li><a rel="nofollow" href="/myprofile/setupSignInCC.do">profile password help</a></li> 
+        <li class="last"><a rel="nofollow" href="/customerservice/customerservice.do?selectedTab=contact">contact us</a></li> 
+        <div id="close-submenu3">
+         Close
+        </div> 
+       </ul> </li> 
+      <li><a id="trigger4"><span class="globe"></span> English <sub>&#x25bc;</sub></a> 
+       <ul id="submenu4" class="submenu" style="display: none;"> 
+        <li><a href="/intl/?lang=en_GB">English</a></li> 
+        <li><a href="/intl/?lang=es">Espa&ntilde;ol</a></li> 
+        <li class="last"><a href="/intl/?lang=fr">Fran&ccedil;ais</a></li> 
+        <div id="close-submenu4">
+         Close
+        </div> 
+       </ul> </li> 
+     </ul> 
+    </nav> 
+   </header> 
+  </div> 
+  <script type="text/javascript">
+$("#main-nav li.rentalcars").addClass("activeOn");
+</script> 
+  <!-- Contents --> 
+  <div class="skin"> 
+   <div class="outter-wrapper"> 
+    <div class="wrapper"> 
+     <form name="car_retail_form" id="car_retail_form" method="post" onsubmit="carPreSubmit();return true;" action="/rentalcars/rcSearch.do?jsk=5064010a5463010a201304261932018BAf01561288&amp;plf=PCLN" data-section="SearchForm"> 
+      <input type="hidden" name="irefid" value="HPCARSEM" /> 
+      <input type="hidden" name="irefclickid" value="SEARCHFORM" /> 
+      <input type="hidden" name="searchRadius" id="searchRadius" value="" /> 
+      <input type="hidden" name="dropOffSearchRadius" id="dropOffSearchRadius" value="" /> 
+      <input type="hidden" name="preferredPartnerCode" id="preferredPartnerCode" value="" /> 
+      <h1>Search for Rental Cars </h1> 
+      <!-- Step One Form Option --> 
+      <div class="form-group"> 
+       <div class="form-step one"></div> 
+       <label for="pickup-option" id="pickup-option" name="pickup-option">Choose a Pick-up location: 
+        <ul> 
+         <li><label for="pick-up-location-1" class="clickTrack" data-clicktracklabel="pickupRadioAirport"><input type="radio" name="pickUpSearchLocationType" id="pick-up-location-1" value="airport" checked="checked" />Airport</label></li> 
+         <li><label for="pick-up-location-2" class="clickTrack" data-clicktracklabel="pickupRadioCity"><input type="radio" name="pickUpSearchLocationType" id="pick-up-location-2" value="city" />City</label></li> 
+         <li><label for="pick-up-location-3" class="clickTrack" data-clicktracklabel="pickupRadioAddress"><input type="radio" name="pickUpSearchLocationType" id="pick-up-location-3" value="address" />U.S. Address</label></li> 
+        </ul> </label> 
+      </div> 
+      <!-- Step Two --> 
+      <div class="form-group"> 
+       <div class="form-step two"></div> 
+       <!-- Airport --> 
+       <label for="pickUpSearchAirportString" id="car_pu_airport" class="car_pu_loc"> Which Airport are you picking up from? <input type="text" errtextdivid="puLocErrText" name="pickUpSearchAirportString" id="pickUpSearchAirportString" class="emptyIfHidden loc_input" loctype="airport" placeholder="Enter Airport" value="" x-webkit-speech="" /> </label> 
+       <!-- City --> 
+       <div class="form-group-option car_pu_loc" id="car_pu_city" style="display: none;"> 
+        <label for="pickUpSearchCityString"> Which City are you picking up from? <input type="text" errtextdivid="puLocErrText" name="pickUpSearchCityString" id="pickUpSearchCityString" class="emptyIfHidden loc_input" loctype="city" placeholder="Enter City" value="" x-webkit-speech="" /> </label> 
+        <label for="sr_pu_city" id="search_car_radius"> Find cars within <select id="sr_pu_city" name="sr_pu_city" class="sr_pu"> <option value="2">2 miles</option> <option value="5" selected="">5 miles</option> <option value="10">10 miles</option> <option value="15">15 miles</option> <option value="20">20 miles</option> <option value="25">25 miles</option> </select> </label> 
+       </div> 
+       <!-- U.S. Address --> 
+       <div class="form-group-option car_pu_loc" id="car_pu_address" style="display: none;"> 
+        <label for="searchAddress" class="address-label"> Which Address are you picking up from? <input type="text" errtextdivid="puLocErrText" name="searchAddress" id="searchAddress" class="emptyIfHidden loc_input" loctype="street address" placeholder="Enter Street Address" value="" /> </label> 
+        <label for="searchCity" class="city-label"> City <input type="text" errtextdivid="puLocErrText" name="searchCity" id="searchCity" class="emptyIfHidden loc_input" loctype="street address" placeholder="City" value="" /> </label> 
+        <label for="searchState" class="state-label"> State <select errtextdivid="puLocErrText" name="searchState" id="searchState" class="emptyIfHidden" loctype="street address"> <option selected="true" value="">- Choose -</option> <option value="AL">Alabama</option> <option value="AK">Alaska</option> <option value="AZ">Arizona</option> <option value="AR">Arkansas</option> <option value="CA">California</option> <option value="CO">Colorado</option> <option value="CT">Connecticut</option> <option value="DE">Delaware</option> <option value="FL">Florida</option> <option value="GA">Georgia</option> <option value="HI">Hawaii</option> <option value="ID">Idaho</option> <option value="IL">Illinois</option> <option value="IN">Indiana</option> <option value="IA">Iowa</option> <option value="KS">Kansas</option> <option value="KY">Kentucky</option> <option value="LA">Louisiana</option> <option value="ME">Maine</option> <option value="MD">Maryland</option> <option value="MA">Massachusetts</option> <option value="MI">Michigan</option> <option value="MN">Minnesota</option> <option value="MS">Mississippi</option> <option value="MO">Missouri</option> <option value="MT">Montana</option> <option value="NE">Nebraska</option> <option value="NV">Nevada</option> <option value="NH">New Hampshire</option> <option value="NJ">New Jersey</option> <option value="NM">New Mexico</option> <option value="NY">New York</option> <option value="NC">North Carolina</option> <option value="ND">North Dakota</option> <option value="OH">Ohio</option> <option value="OK">Oklahoma</option> <option value="OR">Oregon</option> <option value="PA">Pennsylvania</option> <option value="RI">Rhode Island</option> <option value="SC">South Carolina</option> <option value="SD">South Dakota</option> <option value="TN">Tennessee</option> <option value="TX">Texas</option> <option value="UT">Utah</option> <option value="VT">Vermont</option> <option value="VA">Virginia</option> <option value="WA">Washington</option> <option value="DC">Washington DC</option> <option value="WV">West Virginia</option> <option value="WI">Wisconsin</option> <option value="WY">Wyoming</option> </select> </label> 
+        <label for="searchZipCode" class="zip-label"> Zip code <input errtextdivid="puLocErrText" type="text" name="searchZipCode" id="searchZipCode" class="emptyIfHidden" placeholder="Zip" loctype="street address" value="" /> </label> 
+        <label for="sr_pu_address" class="car-radius-label"> Find cars within <select id="sr_pu_address" name="sr_pu_address" class="sr_pu"> <option value="2">2 miles</option> <option value="5" selected="">5 miles</option> <option value="10">10 miles</option> <option value="15">15 miles</option> <option value="20">20 miles</option> <option value="25">25 miles</option> </select> </label> 
+       </div> 
+       <span id="car_do_same" class="different-dropoff car_do_loc"> <a href="javascript:carSwitchDO('airport');">different drop-off location or one way rental</a> </span> 
+       <!-- End of Pickup Location fields --> 
+      </div> 
+      <!-- Finish Up drop off form fields --> 
+      <!-- custom content and default content--> 
+      <div class="dropoff-container car_do_loc" id="car_do_select" style="display: none;" data-section="differentDropoff"> 
+       <div id="car_do_select_choices" class="car_do_loc car_do_clr_this"> 
+        <label id="dropoff-option-label" class="car_do_clr_this">Choose a Drop-off location:</label> 
+        <div id="dropoff-option" name="dropoff-option" class="car_do_clr_this"> 
+         <ul> 
+          <li style="display:none;"><label for="drop-off-location-0"><input type="radio" name="dropOffSearchLocationType" id="drop-off-location-0" value="" />Same as pickup</label></li> 
+          <li><label for="drop-off-location-1" class="clickTrack" data-clicktracklabel="dropOffRadioAirport"><input type="radio" name="dropOffSearchLocationType" id="drop-off-location-1" value="airport" checked="checked" />Airport</label></li> 
+          <li><label for="drop-off-location-2" class="clickTrack" data-clicktracklabel="dropOffRadioCity"><input type="radio" name="dropOffSearchLocationType" id="drop-off-location-2" value="city" />City</label></li> 
+          <li><label for="drop-off-location-3" class="clickTrack" data-clicktracklabel="dropOffRadioAddress"><input type="radio" name="dropOffSearchLocationType" id="drop-off-location-3" value="address" />U.S. Address</label></li> 
+         </ul> 
+        </div> 
+       </div> 
+       <div>
+        <label for="dropOffSearchAirportString" id="car_do_airport" class="airport-label car_do_loc"> Which Airport are you dropping off to? <input type="text" errtextdivid="doLocErrText" name="dropOffSearchAirportString" id="dropOffSearchAirportString" class="emptyIfHidden loc_input" placeholder="Enter Airport" loctype="airport" value="" x-webkit-speech="" /> </label>
+       </div> 
+       <div class="form-group-option car_do_loc car_do_clr_this" id="car_do_city"> 
+        <label for="dropOffSearchCityString" class="city-label"> Which City are you dropping off to? <input type="text" errtextdivid="doLocErrText" name="dropOffSearchCityString" id="dropOffSearchCityString" class="emptyIfHidden loc_input" placeholder="Enter City" loctype="city" value="" x-webkit-speech="" /> </label> 
+        <label for="sr_do_city" id="search_car_radius" class="car-radius-label"> Find cars within <select id="sr_do_city" class="sr_do"> <option value="2">2 miles</option> <option value="5" selected="">5 miles</option> <option value="10">10 miles</option> <option value="15">15 miles</option> <option value="20">20 miles</option> <option value="25">25 miles</option> </select> </label> 
+       </div> 
+       <div class="form-group-option car_do_loc car_do_clr_this" id="car_do_address"> 
+        <label for="dropOffSearchAddress" id="car_do_address" class="address-label"> Which Address are you dropping off to? <input type="text" errtextdivid="doLocErrText" name="dropOffSearchAddress" id="dropOffSearchAddress" class="emptyIfHidden loc_input" loctype="street address" placeholder="Enter Street Address" value="" /> </label> 
+        <label for="dropOffSearchCity" class="city-label"> City <input type="text" errtextdivid="doLocErrText" name="dropOffSearchCity" id="dropOffSearchCity" class="emptyIfHidden loc_input" loctype="street address" placeholder="City" value="" /> </label> 
+        <label for="dropOffSearchState" class="state-label"> State <select errtextdivid="doLocErrText" name="dropOffSearchState" id="dropOffSearchState" class="emptyIfHidden" loctype="street address"> <option selected="true" value="">- Choose -</option> <option value="AL">Alabama</option> <option value="AK">Alaska</option> <option value="AZ">Arizona</option> <option value="AR">Arkansas</option> <option value="CA">California</option> <option value="CO">Colorado</option> <option value="CT">Connecticut</option> <option value="DE">Delaware</option> <option value="FL">Florida</option> <option value="GA">Georgia</option> <option value="HI">Hawaii</option> <option value="ID">Idaho</option> <option value="IL">Illinois</option> <option value="IN">Indiana</option> <option value="IA">Iowa</option> <option value="KS">Kansas</option> <option value="KY">Kentucky</option> <option value="LA">Louisiana</option> <option value="ME">Maine</option> <option value="MD">Maryland</option> <option value="MA">Massachusetts</option> <option value="MI">Michigan</option> <option value="MN">Minnesota</option> <option value="MS">Mississippi</option> <option value="MO">Missouri</option> <option value="MT">Montana</option> <option value="NE">Nebraska</option> <option value="NV">Nevada</option> <option value="NH">New Hampshire</option> <option value="NJ">New Jersey</option> <option value="NM">New Mexico</option> <option value="NY">New York</option> <option value="NC">North Carolina</option> <option value="ND">North Dakota</option> <option value="OH">Ohio</option> <option value="OK">Oklahoma</option> <option value="OR">Oregon</option> <option value="PA">Pennsylvania</option> <option value="RI">Rhode Island</option> <option value="SC">South Carolina</option> <option value="SD">South Dakota</option> <option value="TN">Tennessee</option> <option value="TX">Texas</option> <option value="UT">Utah</option> <option value="VT">Vermont</option> <option value="VA">Virginia</option> <option value="WA">Washington</option> <option value="DC">Washington DC</option> <option value="WV">West Virginia</option> <option value="WI">Wisconsin</option> <option value="WY">Wyoming</option> </select> </label> 
+        <label for="dropOffSearchZipCode" class="zip-label"> Zip code <input type="text" errtextdivid="doLocErrText" name="dropOffSearchZipCode" id="dropOffSearchZipCode" class="emptyIfHidden" loctype="street address" placeholder="Zip" value="" /> </label> 
+        <label for="sr_do_address" id="search_car_radius" class="car-radius-label"> Find cars within <select id="sr_do_address" name="sr_do_address" class="sr_do"> <option value="2">2 miles</option> <option value="5" selected="">5 miles</option> <option value="10">10 miles</option> <option value="15">15 miles</option> <option value="20">20 miles</option> <option value="25">25 miles</option> </select> </label> 
+       </div> 
+      </div> 
+      <!-- Step 3 --> 
+      <div class="form-group no-border"> 
+       <div class="form-step three"></div> 
+       <label for="pickUpDate" class="calendar-input pickup"> Pick-up Date <input type="text" id="pickUpDate" name="pickUpDate" tabindex="2" placeholder="mm/dd/yyyy" autocomplete="off" /> </label> 
+       <label for="pickupTime"> Pickup-Time <select id="pickupTime" name="pickupTime" tabindex="3"> <option value="00:05">Midnight</option> <option value="00:30">12:30 AM</option> <option value="01:00">1:00 AM</option> <option value="01:30">1:30 AM</option> <option value="02:00">2:00 AM</option> <option value="02:30">2:30 AM</option> <option value="03:00">3:00 AM</option> <option value="03:30">3:30 AM</option> <option value="04:00">4:00 AM</option> <option value="04:30">4:30 AM</option> <option value="05:00">5:00 AM</option> <option value="05:30">5:30 AM</option> <option value="06:00">6:00 AM</option> <option value="06:30">6:30 AM</option> <option value="07:00">7:00 AM</option> <option value="07:30">7:30 AM</option> <option value="08:00">8:00 AM</option> <option value="08:30">8:30 AM</option> <option value="">Select</option> <option value="09:00">9:00 AM</option> <option value="09:30">9:30 AM</option> <option value="10:00">10:00 AM</option> <option value="10:30">10:30 AM</option> <option value="11:00">11:00 AM</option> <option value="11:30">11:30 AM</option> <option selected="true" value="12:00">Noon</option> <option value="12:30">12:30 PM</option> <option value="13:00">1:00 PM</option> <option value="13:30">1:30 PM</option> <option value="14:00">2:00 PM</option> <option value="14:30">2:30 PM</option> <option value="15:00">3:00 PM</option> <option value="15:30">3:30 PM</option> <option value="16:00">4:00 PM</option> <option value="16:30">4:30 PM</option> <option value="17:00">5:00 PM</option> <option value="17:30">5:30 PM</option> <option value="18:00">6:00 PM</option> <option value="18:30">6:30 PM</option> <option value="19:00">7:00 PM</option> <option value="19:30">7:30 PM</option> <option value="20:00">8:00 PM</option> <option value="20:30">8:30 PM</option> <option value="21:00">9:00 PM</option> <option value="21:30">9:30 PM</option> <option value="22:00">10:00 PM</option> <option value="22:30">10:30 PM</option> <option value="23:00">11:00 PM</option> <option value="23:30">11:30 PM</option> </select> </label> 
+       <label for="dropOffDate" class="calendar-input dropOff"> Drop-off Date <input type="text" id="dropOffDate" name="dropOffDate" tabindex="5" placeholder="mm/dd/yyyy" autocomplete="off" /> </label> 
+       <label for="dropOffTime"> Drop-off Time <select id="dropOffTime" name="dropOffTime" tabindex="6"> <option value="00:05">Midnight</option> <option value="00:30">12:30 AM</option> <option value="01:00">1:00 AM</option> <option value="01:30">1:30 AM</option> <option value="02:00">2:00 AM</option> <option value="02:30">2:30 AM</option> <option value="03:00">3:00 AM</option> <option value="03:30">3:30 AM</option> <option value="04:00">4:00 AM</option> <option value="04:30">4:30 AM</option> <option value="05:00">5:00 AM</option> <option value="05:30">5:30 AM</option> <option value="06:00">6:00 AM</option> <option value="06:30">6:30 AM</option> <option value="07:00">7:00 AM</option> <option value="07:30">7:30 AM</option> <option value="08:00">8:00 AM</option> <option value="08:30">8:30 AM</option> <option value="">Select</option> <option value="09:00">9:00 AM</option> <option value="09:30">9:30 AM</option> <option value="10:00">10:00 AM</option> <option value="10:30">10:30 AM</option> <option value="11:00">11:00 AM</option> <option value="11:30">11:30 AM</option> <option selected="true" value="12:00">Noon</option> <option value="12:30">12:30 PM</option> <option value="13:00">1:00 PM</option> <option value="13:30">1:30 PM</option> <option value="14:00">2:00 PM</option> <option value="14:30">2:30 PM</option> <option value="15:00">3:00 PM</option> <option value="15:30">3:30 PM</option> <option value="16:00">4:00 PM</option> <option value="16:30">4:30 PM</option> <option value="17:00">5:00 PM</option> <option value="17:30">5:30 PM</option> <option value="18:00">6:00 PM</option> <option value="18:30">6:30 PM</option> <option value="19:00">7:00 PM</option> <option value="19:30">7:30 PM</option> <option value="20:00">8:00 PM</option> <option value="20:30">8:30 PM</option> <option value="21:00">9:00 PM</option> <option value="21:30">9:30 PM</option> <option value="22:00">10:00 PM</option> <option value="22:30">10:30 PM</option> <option value="23:00">11:00 PM</option> <option value="23:30">11:30 PM</option> </select> </label> 
+       <span class="discount" id="discount-drop-down"><a href="javascript:carCheckDCode();">Have a Discount Code</a></span> 
+      </div> 
+      <div id="discount-container"> 
+       <input type="hidden" name="discountPartnerCode" id="discountPartnerCode" value="" /> 
+       <div class="discount-code" id="discount-code" style="display: none;"> 
+        <div class="discount-col" id="DiscountCode"> 
+         <label for="discountCodeSearch"><span id="DiscountCodeText"></span> <input type="text" name="discountCodeSearch" id="discountCodeSearch" value="" /></label> 
+        </div> 
+        <div class="discount-col" id="PromoCode"> 
+         <label for="promoCodeSearch"><span id="PromoCodeText"></span> <input type="text" name="promoCodeSearch" id="promoCodeSearch" value="" /> </label> 
+        </div> 
+        <div class="discount-col-rate" id="RateCode"> 
+         <label for="rateCodeSearch"><span id="RateCodeText"></span> <input type="text" name="rateCodeSearch" id="rateCodeSearch" value="" /> </label> 
+        </div> 
+       </div> 
+      </div> 
+      <button id="search-btn" class="b-grn" tabindex="7" type="submit">Search Rental Cars Now</button> 
+     </form> 
+     <article id="rc-pcln-content"> 
+      <h2>Why use priceline?</h2> 
+      <ul> 
+       <li><h3>Best Prices Guaranteed!</h3><p>Compare Lowest Rates from up to 17 Rental Car Brands</p></li> 
+       <li><h3>Rent The Perfect Car</h3><p>Choose from All Major Car Types including Luxury Cars, Vans, &amp; SUVs</p></li> 
+       <li><h3>Save Big with Rental Car Promotions</h3><p>No Credit Card Required for Most Published-price Rates</p></li> 
+       <li class="no-border"><h3>Search Airport, City, or One-Way Car Rentals</h3><p>18,500+ Rental Car Locations Worldwide</p></li> 
+      </ul> 
+     </article> 
+     <div class="rental-car-partners"> 
+      <ul> 
+       <li><img src="/landing/content/graphics/rc/partners/alamo-logo.gif" alt="Alamo Rental Car logo" width="71" height="44" /></li> 
+       <li><img src="/landing/content/graphics/rc/partners/avis-logo.gif" alt="Avis Car Rental logo" width="71" height="44" /></li> 
+       <li><img src="/landing/content/graphics/rc/partners/budget-logo.gif" alt="Budget Rent A Car logo" width="71" height="44" /></li> 
+       <li><img src="/landing/content/graphics/rc/partners/hertz-logo.gif" alt="Hertz Rental Car logo" width="71" height="44" /></li> 
+       <li><img src="/landing/content/graphics/rc/partners/national-logo.gif" alt="National Rental Car logo" width="71" height="44" /></li> 
+       <li><img src="/landing/content/graphics/rc/partners/dollar-logo.gif" alt="Dollar Rental Car logo" width="71" height="44" /></li> 
+       <li><img src="/landing/content/graphics/rc/partners/enterprise-logo.gif" alt="Enterprise Rental Car logo" width="71" height="44" /></li> 
+       <li><img src="/landing/content/graphics/rc/partners/europcar-logo.gif" alt="Europcar Rental Car logo" width="71" height="44" /></li> 
+       <li><img src="/landing/content/graphics/rc/partners/fox-logo.gif" alt="Fox Rent A Car logo" width="71" height="44" /></li> 
+       <li><img src="/landing/content/graphics/rc/partners/economy-logo.gif" alt="Economy Rental Car logo" width="71" height="44" /></li> 
+       <li><img src="/landing/content/graphics/rc/partners/ez-logo.gif" alt="EZ Rental Car logo" width="71" height="44" /></li> 
+       <li><img src="/landing/content/graphics/rc/partners/sixt-logo.gif" alt="Sixt Rental Car logo" width="71" height="44" /></li> 
+       <li><img src="/landing/content/graphics/rc/partners/payless-logo.gif" alt="Payless Rental Car logo" width="71" height="44" /></li> 
+       <li><img src="/landing/content/graphics/rc/partners/thrifty-logo.gif" alt="Thrifty Rental Car logo" width="71" height="44" /></li> 
+       <!-- <li><img src="/landing/content/graphics/rc/partners/usave-logo.gif" alt="U-Save Rental Car logo" width="71" height="44" /></li> --> 
+       <li><img src="/landing/content/graphics/rc/partners/advantage-logo.gif" alt="Advantage Rental Car logo" width="71" height="44" /></li> 
+       <li><img src="/landing/content/graphics/rc/partners/ace-rental-car.png" alt="Ace Rental Car logo" width="71" height="44" /></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <script type="text/javascript">
+function termsAndConditions(){
+     var tcURL = "http://www.priceline.com/privacypolicy/terms_en.html";   
+     window.open(tcURL,'TC','toolbar=no,location=no,directories=no,status=yes,menubar=no,scrollbars=yes,resizable=yes,width=625,height=550');
+}
+</script> 
+  <footer role="contentinfo"> 
+   <div class="inner-footer"> 
+    <nav role="navigation"> 
+     <ul> 
+      <li><a href="http://www.priceline.com/sitemap.htm">site map</a></li> 
+      <li><a href="/promo/tv-ads-shatner-priceline-negotiator">tv ads</a></li> 
+      <li><a href="http://ir.priceline.com/">investor relations</a></li> 
+      <li><a rel="nofollow" href="javascript:termsAndConditions();">terms and conditions</a></li> 
+      <li><a href="http://www.priceline.com/privacypolicy/privacypolicy.asp">privacy policy</a></li> 
+      <li><a href="http://www.priceline.com/affiliates/">travel affiliate program</a></li> 
+      <li><a href="http://www.priceline.com/mediakit/about.asp">advertise</a></li> 
+      <li class="last"><a href="http://www.priceline.com/careers/">careers at priceline</a></li> 
+     </ul> 
+    </nav> 
+    <p class="pclnCopyright">All material herein &copy; 1998-2013 priceline.com Incorporated, all rights reserved.</p> 
+    <p class="pclnServiceMarks">PRICELINE, PRICELINE.COM, NAME YOUR OWN PRICE, NEGOTIATOR, PRICEBREAKERS and NO ONE DEALS LIKE WE DO are registered service marks and, NOFEE and BIG DEAL are service marks of priceline.com Incorporated.</p> 
+    <p class="pclnPatents">U.S. Patents 5,794,207; 5,897,620; 6,085,169; 6,510,418; 6,553,346; 6,993,503; 7,188,176; 7,203,660; 7,386,508; 7,472,074; 7,516,089; 7,617,491; 7,620,619; 7,664,672 and 7,848,940</p> 
+    <p class="pclnCaliforniaSellerOfTravel">(CST 2040530-50)</p> 
+    <p class="pclnWebServerId">ws-11</p> 
+    <p class="pclnDebugInfo"><a href="?refid=PLMSN&amp;refclickid=High|Volume|Generic|31_NEW&amp;dbg=B525CD073163200B168E2D2050921622F7AF83387196AD4EBAAE342A78F09CCD99C96529D36273E6451BB2027809CF158160CF98D1CFBF9E4863C345761E12EA1654C7DCA48C5F60E518308AA20846DCAD3C5BB88E9AFAF01A35A9750FE19062E0698BB4734EE9CBF4AB0CEDE7E3DAF96320697FBE76AEEC" onclick="return(false);" rel="nofollow">dg</a></p> 
+   </div> 
+  </footer>   
+ </body>
+</html>

@@ -1,0 +1,58 @@
+<head>
+<title>Untitled</title>
+<script language="JavaScript">
+var secs;
+var timerID = null;
+var timerRunning = false;
+var delay = 1000;
+//Override for KCA 2012 App. Remove After 3/31/12.
+if (location.search.indexOf('jivox')!=-1){
+if (location.search.indexOf('27503')!=-1){
+top.location.href = "http://www.nick.com/common/bumpers/bumperFrameless.jhtml?wBumper=sponsor&advertiser=http%3A%2F%2Falias.jivox.com%2Fplayer%2FmobileUnit.php%3FsiteId%3D64f202a20bae53%26campaignId%3D27503%26objectName%3Djvxobj_27503";
+}
+if (location.search.indexOf('27502')!=-1){
+top.location.href = "http://www.nick.com/common/bumpers/bumperFrameless.jhtml?wBumper=sponsor&advertiser=http%3A%2F%2Falias%2Ejivox%2Ecom%2Fplayer%2FmobileUnit%2Ephp%3FsiteId%3D64f202a20bae53%26campaignId%3D27502%26objectName%3Djvxobj%5F27502";
+}
+}
+
+function InitializeTimer()
+{
+// Set the length of the timer, in seconds
+secs = 10;
+//StopTheClock()
+StartTheTimer()
+}
+
+function StopTheClock()
+{
+if(timerRunning)
+clearTimeout(timerID)
+timerRunning = false
+}
+
+function StartTheTimer()
+{
+if (secs == 0)
+{	
+top.location.href = "http://bit.ly/DrawNPlayHDHSAD728x90";
+}
+else
+{
+defaultStatus = "Redirecting to advertiser in: " + secs + " seconds";
+secs = secs - 1
+timerRunning = true
+timerID = self.setTimeout("StartTheTimer()", delay)
+}
+}
+
+InitializeTimer(); //start the countdown.
+</script></head>
+
+
+<frameset rows="171,*">
+<frame name="bumper" src="flash_bumpers.jhtml?wBumper=sponsor&amp;advertiser=http://bit.ly/DrawNPlayHDHSAD728x90&amp;uri=" frameborder="0" marginwidth="0" marginheight="0" scrolling="No">
+
+<frame name="advertiser" src="http://bit.ly/DrawNPlayHDHSAD728x90" frameborder="0" marginwidth="0" marginheight="0" scrolling="Auto">
+</frameset>
+
+

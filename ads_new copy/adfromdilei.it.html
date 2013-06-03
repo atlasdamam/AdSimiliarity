@@ -1,0 +1,209 @@
+<head><script src="http://www.adobetag.com/d2/vodafoneit/live/VodafoneMainSite.js" async="async" type="text/javascript"></script>
+<!-- Google Analytics Content Experiment code -->
+<script src="https://track.adform.net/serving/scripts/trackpoint/async/" async="" type="text/javascript"></script><script src="http://www.google-analytics.com/ga.js" async="" type="text/javascript"></script><script>function utmx_section(){}function utmx(){}(function(){var
+k='69064163-0',d=document,l=d.location,c=d.cookie;
+if(l.search.indexOf('utm_expid='+k)>0)return;
+function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
+indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
+length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
+'<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
+'://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
+'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
+valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
+'" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
+</script><script src="http://www.google-analytics.com/ga_exp.js?utmxkey=69064163-0&amp;utmx=&amp;utmxx=&amp;utmxtime=1368855740776" type="text/javascript" charset="utf-8"></script><script>utmx('url','A/B');</script>
+<!-- End of Google Analytics Content Experiment code -->
+	<title>Vodafone UNLIMITED</title>
+	<meta name="description" content="Passa a Vodafone UNLIMITED: Internet e SMS verso tutti illimitatamente a 11,90 euro al mese, per sempre." lang="it">
+	<meta name="keywords" content="mobile internet, internet cellulare, vodafone mobile, internet vodafone, tariffa internet, facebook sul cellulare, navigare cellulare, youtube sul cellulare, posta sul cellulare, calcio gratis" lang="it">
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link href="/favicon.ico" rel="shortcut icon" type="image/ico">
+	<link href="/favicon.ico" rel="icon" type="image/ico">
+	<link href="./web/css/reset.css" rel="stylesheet" type="text/css">
+	<link href="./web/css/style.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="./web/js/jquery-1.9.0.min.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-38474651-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>	
+	<script>
+		
+$(document).ready(function() {	
+	
+	$('#passanonclienti3').bind('click', function() {
+  	
+  	
+  	if ($('#telefono').val()!='' &&   $('#telefono').val().length>7 &&  $.isNumeric($('#telefono').val()))
+  	{
+  	
+				    $.ajax({
+				      url: "./web/check.php",
+				      type: "post",
+				      data: {"desc": '|519714b79d463',"telefono": $('#telefono').val()},
+				      success: function(data){
+				          
+				          //alert(data);
+				          $('#apriR').attr('src',"./web/img/passanonclienti3void.png");
+				          $('#imgTop').attr('src', "./web/img/passanonclienti1B.png");
+				          $('#msg').html('');
+				          
+				          if (data=='CMN')
+				          {
+										_gaq.push(['_trackEvent', 'CTC','MNP','Call']); // non clienti	
+								  	$('#traking').attr('src','./web/nc_cliente_no_tp_ric.php?ecmp=|519714b79d463');
+				          	$('#passanonclienti2').css('background','url("./web/img/passanonclienti2B.png") repeat scroll center top transparent');
+				          }
+				          else if (data=='CMB')
+				          {
+				          	_gaq.push(['_trackEvent', 'CTC','MNP','Call']); // non clienti	
+				          	$('#traking').attr('src','./web/nc_cliente_no_tp_ric.php?ecmp=|519714b79d463');	
+				          	$('#passanonclienti2').css('background','url("./web/img/passanonclienti2B.png") repeat scroll center top transparent');
+				          }
+				          else if (data=='VODAFONE')
+				          {
+				          		_gaq.push(['_trackEvent', 'CTC','CB','Call']); // clienti
+									  	$('#traking').attr('src','./web/nc_cliente_si_tp.php?ecmp=|519714b79d463');
+									  	$('#body').html('<div id="passacli"><a href="javascript:void(0);" onClick="$(\'#traking\').attr(\'src\',\'nc_cliente_si.php?ecmp=|519714b79d463\');adf.track(108632,2393859,{});document.location.href=\'http://www.vodafone.it/190/trilogy/jsp/programView.do?channelId=-1073879468&programId=1073754371&programPage=%2Fjsp%2Fcontent%2Fty_editorialBody.jsp%3FcontentKey%3D66041&pageTypeId=9894&tk=1073874972,l&precPage=%5Bnochange%5D+Perche%27+registrarsi\'"><img src="./web/img/grazie.png" border="0" /></a></div>');
+				          }
+				          else
+				          {
+				          	_gaq.push(['_trackEvent', 'CTC','Unknown','Call']); // non classificabili	
+				          	$('#passanonclienti2').css('background','url("./web/img/passanonclienti2E.png") repeat scroll center top transparent');
+				          }
+				          	
+				          
+				           
+				      },
+				      error:function(){
+				          alert("Servizio non disponibile.");
+				          
+				      }   
+				    }); 
+				}
+				else
+			 {
+			 			$('#telefono').css("border","1px solid red");
+			 			$('#telefono').css("background","#FF9999");
+			 			$('#error').css("visibility","visible");
+			 	
+			 }
+			
+	});	
+	
+
+	$('#telefono').bind('focus', function() {
+			 			$('#telefono').css("border","1px solid #95755E");
+			 			$('#telefono').css("background","url(./web/img/input.gif) repeat scroll 0 0 transparent");
+			 			$('#error').css("visibility","hidden");
+	});
+	
+	
+	$('#close').bind('click', function() {
+  	$('#reg').css('display','none');
+	});	
+	
+	
+	
+});
+
+
+
+
+	</script>	
+
+<script async="" src="http://track.adform.net/Serving/TrackPoint/?pm=108632&amp;lid=2360247&amp;ord=878874690933&amp;Set1=en-US%7Cen-US%7C1280x1024&amp;Set2=0%7C0%7C24%7C0%7C0%7C0%7C0%7C0%7C0%7C0&amp;ADFtpmode=2&amp;loc=http%3A%2F%2Fwww.vodafoneunlimitedadv.vodafone.it%2F%3Futm_source%3DVirgilio.it%26utm_medium%3DVodafone_Unlimited_R"></script><script src="http://survey.122.2o7.net/survey/dynamic/suites/109/vodafonegroupitprod/list.js?28034373519" type="text/javascript"></script><script src="http://survey.122.2o7.net/survey/dynamic/common/pIteURwb3nP8dyWmGWYLBpQ/trigger.js" type="text/javascript"></script></head>
+<body>
+	<!-- Adform Tracking Code BEGIN -->
+<!-- Point: "UNLIMITED - DESK - Unknown (Landing Page)" (Desktop/) -->
+<script type="text/javascript">
+var _adftrack = {
+    pm: 108632,
+    id: 2360247
+};
+(function(){var s=document.createElement('script');s.type='text/javascript';s.async=true;s.src='https://track.adform.net/serving/scripts/trackpoint/async/';var x = document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s, x);})();
+</script>
+<noscript>
+    <p style="margin:0;padding:0;border:0;">
+        <img src="https://track.adform.net/Serving/TrackPoint/?pm=108632&amp;lid=2360247" width="1" height="1" alt="" />
+    </p>
+</noscript>
+<!-- Adform Tracking Code END -->
+	<div id="container">
+		<div id="content">
+			<div id="reg">
+					<div id="popup">
+						<img src="./web/img/close.png" id="close" style="cursor:pointer;">
+						<iframe src="about:blank" id="ifrreg" frameborder="0" height="340" scrolling="No" width="465"></iframe>
+					</div>
+			</div>
+			<div id="header">
+				
+				
+			</div>
+			<div id="body">
+				<div id="error">Inserisci un numero valido</div>
+				<div id="passanonclienti1"><img src="./web/img/passanonclienti1.png" id="imgTop" border="0"></div>
+				<div id="passanonclienti2">
+					<span id="msg">
+						<form method="post" action="" name="InsertCode" id="form1" "="">
+	      						<input name="telefono" id="telefono" class="codice" maxlength="16" value="" type="text">
+	   				</form>
+	   				
+	   			</span>	
+				</div>
+				<div id="passanonclienti3"><img src="./web/img/passanonclienti3.png" id="apriR"></div>
+<div id="passanonclienti4" style="position: absolute; top:258px; left:626px; width:300px; font-size:9px; font-family: arial, sans-serif; color: #333;">Ai sensi del D.l.gs 196/2003 sulla <a style="color:#000;" href="https://assistenza.vodafone.it/cmb/ctc_adv/infoprivacy.html" target="_blank">privacy</a>, autorizzo Vodafone a contattarmi per ricevere informazioni sulle offerte per internet e telefono di Vodafone</div>
+			</div>
+			<div id="footer" style="top:408px; width:640px;">
+				Promozione valida per chi attiva Vodafone UNLIMITED dal 14 aprile al 31 maggio.<br>
+				Oltre 1GB velocità a 32kbps. Per i già clienti Vodafone è previsto un costo di attivazione di 19 euro.<br>
+				Per le condizioni di uso del servizio vai su <a href="http://unlimited.vodafone.it/">unlimited.vodafone.it</a>.
+			</div>
+			<div id="footer2">
+
+					<a href="javascript:void(0);" onclick="window.open('./web/termsandconditions.html','Termini e condizioni','scrollbars=yes,resizable=yes, width=610,height=350,status=no,location=no,toolbar=no');">Termini e condizioni</a><br>
+					<br>
+					<ul class="copyright">
+						<li><span>Copyright © 2013 Vodafone Group</span></li>
+						<li>|</li>
+						<li><a style="text-decoration:none;" href="http://www.vodafone.it/vodafone/trilogy/jsp/dispatcher.do?ty_key=privacy_partitaIva" target="_blank">Privacy &amp; P.IVA</a></li>
+					</ul>
+				
+			</div>
+			
+		</div>
+	</div>
+
+
+<iframe src="about:blank" id="traking" frameborder="0" height="0" width="0"></iframe>
+<!-- Adobe Digital Marketing Suite Tag Management code
+Copyright 1996-2011 Adobe, Inc. All Rights Reserved
+More info available at http://www.adobe.com -->
+<script type="text/javascript" src="https://assistenza.vodafone.it/scatalyst/s_code_main.js"></script><div id="mboxScriptContainer" style="display:none;visibility:hidden;"></div><style>.mboxDefault{visibility:hidden;}</style>
+<script type="text/javascript">//<![CDATA[
+if(s){
+	s.pageName="Privati - Vodafone Unlimited - Landing SEM"
+	s.channel="Tariffe e Smartphone"
+	s.hier1="Privati/Tariffe e Smartphone/Vodafone Unlimited/Landing SEM"
+	s.prop5="Content"
+	s.prop6="IT"
+	s.prop7="logged out"
+	s.prop20="Privati"
+	s.eVar21="Acquisition"
+	s.t();
+}
+//]]></script>
+<!-- End Adobe Digital Marketing Suite Tag Management code -->
+
+
+<iframe src="http://track.adform.net/serving/container/?pm=108632&amp;lid=2360247&amp;msid=306346&amp;ctype=1&amp;rnd=1472300530&amp;cpref=&amp;loc=http%3a%2f%2fwww.vodafoneunlimitedadv.vodafone.it%2f%3futm_source%3dVirgilio.it%26utm_medium%3dVodafone_Unlimited_Re-targeting_300x250_3" style="position: absolute; border: 0px none; width: 0px; height: 0px;"></iframe></body>

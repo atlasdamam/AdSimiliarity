@@ -12,7 +12,7 @@ count_title = 0
 count_key_desc_and = 0
 count_key_desc_or = 0
 
-def getHeadText(soup):
+def getHeadText(soup, file_path):
     global count_keywords
     global count_description
     global count_title
@@ -25,7 +25,7 @@ def getHeadText(soup):
     title = t[t.find('>')+1:t.find('<',t.find('>')+1,len(t))]
     if title!="": 
         count_title += 1
-    #print title
+    print title
     #Add title text to headText
     headText += title
 
@@ -33,15 +33,15 @@ def getHeadText(soup):
     keywords = soup.findAll("meta", attrs ={'name' : 'keywords'})
     if keywords!=[]:
         count_keywords += 1
-    #print "KEYWORDS: "
+    print "KEYWORDS: "
     for k in keywords:
         try: 
             doNothing = True
-            #print k['content']
+            print k['content']
         except:
             print "There exists a keywords meta tag in this file which has no content"
         try: 
-            headText += unicodedata.normalize('NFKD',k['content']).encode('ascii','ignore')
+            headText += unicodedata.normalize('NFKD',k['content']).encode('ascii','strict')
             #count_keywords = count_keywords + 1
         except: 
             print "Error in keywords' unicode.normalize."
@@ -50,15 +50,15 @@ def getHeadText(soup):
     description = soup.findAll("meta", attrs ={'name' : 'description'})
     if description!=[]:
         count_description += 1
-    #print "DESCRIPTION: "
+    print "DESCRIPTION: "
     for d in description:
         try:
             doNothing = True
-            #print d['content']
+            print d['content']
         except:
             print "There exists a description meta tag in this file which has no content"
         try: 
-            headText += unicodedata.normalize('NFKD',d['content']).encode('ascii','ignore')
+            headText += unicodedata.normalize('NFKD',d['content']).encode('ascii','strict')
             #count_description = count_description + 1
         except: 
             print "Error in description's unicode.normalize."
@@ -66,19 +66,23 @@ def getHeadText(soup):
     if keywords!=[] and description!=[]:
         count_key_desc_and += 1
 
+    if not(keywords!=[] and description!=[]):
+        os.remove(file_path)
+
     if keywords!=[] or description!=[]:
         count_key_desc_or += 1
 
     return headText.replace('\n' , ' ')
 
 def slamAd(filepath):
+    file_path = "nopath"
     singleAdFile = open(filepath, "r")
     singleData = singleAdFile.read()
     singlesoup = BeautifulSoup(singleData)
     try:
-        singleHeadText = unicodedata.normalize('NFKD', getHeadText(singlesoup)).encode('ascii', 'ignore')
+        singleHeadText = unicodedata.normalize('NFKD', getHeadText(singlesoup, file_path)).encode('ascii', 'strict')
     except:
-        singleHeadText = getHeadText(singlesoup)
+        singleHeadText = getHeadText(singlesoup, file_path)
 
     # remove common words and tokenize
     #text = [word for word in headText.lower().split() if word not in stoplist]
@@ -131,10 +135,10 @@ for infile in listing:
     html_file = open(os.path.join(path, infile), "r")
     data = html_file.read()
     adsoup = BeautifulSoup(data)
-    headText = getHeadText(adsoup)
+    headText = getHeadText(adsoup, os.path.join(path, infile))
     #print
     try:
-        listofAds.append(unicodedata.normalize('NFKD',headText).encode('ascii','ignore'))
+        listofAds.append(unicodedata.normalize('NFKD',headText).encode('ascii','strict'))
     except:
         listofAds.append(headText)
 
@@ -153,9 +157,9 @@ print count_title
 
 
 
-'''
+
 # remove common words and tokenize
-stoplist = set('for a of the and to in you on - your else'.split()) # we need to add more words like you , on , - , your , else
+stoplist = set('for a of the and to in you on - your else money free deal website discount online system or with be'.split()) # we need to add more words like you , on , - , your , else
 texts = [[word for word in ads.lower().split() if word not in stoplist]
           for ads in listofAds]
 
@@ -180,17 +184,17 @@ corpus_lsi = lsi[corpus_tfidf] # create a double wrapper over the original corpu
 for doc in corpus_lsi:
     print doc
 
-
+'''
 lsi.save('model.lsi') # same for tfidf, lda, ...
 lsi = models.LsiModel.load('model.lsi')
 
 model = ldamodel.LdaModel(corpus, id2word=dictionary, num_topics=100)
-
+'''
 
 
 print "Done"
 
-'''
+
 
 
 

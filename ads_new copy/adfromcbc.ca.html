@@ -1,0 +1,331 @@
+<head id="Head1"><meta name="ROBOTS" content="INDEX, FOLLOW, NOODP, noydir"><meta name="Description" content="Canada's free digital music service. Home of CBC Radio 2, CBC Radio 3, 50 streaming web radio stations, articles, videos, concerts, playlists &amp; much more."><meta name="keywords" content="CBC, Music, CBC Music"><meta name="author" content="CBC Music">
+
+    <!--[if lte IE 8]>
+        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <![endif]-->
+    <title>CBC Music - Free Streaming Radio, Videos, Songs, Concerts &amp; Playlists</title>
+    <style type="text/css">
+        html, body{ padding:0px; margin:0px; height:100%; overflow:hidden;}
+        #server{ width:100%; height:1px; border:none; }
+        #client, #noscriptclient{ width:100%; height:100%; border:none; }	                              
+	</style>
+	<!-- ClientIpAddress: 0:0:0:0:0:0:0:1, 98.220.233.171, 98.220.233.171 -->
+	
+	<script src="http://www.google-analytics.com/ga.js" async="" type="text/javascript"></script><script language="javascript" type="text/javascript">
+	    
+	    var myDomain = window.location.hostname;
+	    var isLive = myDomain.indexOf("cbc.ca");
+	    if (isLive > -1) { document.domain = "cbc.ca"; }
+	    
+	</script>
+    
+    <script src="/lib/prototype/1.7/prototype.js?v=10487020282" type="text/javascript"></script><script src="/lib/cbcmusic/js/parent-min.js?v=10487020282" type="text/javascript"></script><script src="/lib/swfaddress/js/swfaddress.js?v=10487020282" type="text/javascript"></script><script src="/modules/cbc-music-player/js/r3playerframeset.js?v=10487020282" type="text/javascript"></script><script src="/lib/gacookies.js?v=10487020282" type="text/javascript"></script>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27878110-1']);
+  
+  _gaq.push(['_setAllowLinker', true]);
+  var _utma; var _utmb; var _utmc; var _utmx; var _utmz; var _utmv; var _utmk;
+
+_gaq.push(function() {   
+  var pageTracker = _gat._getTrackerByName();   
+  var iframe = document.getElementById('client');  
+ var linkerString = pageTracker._getLinkerUrl('home.aspx', true);
+
+  var regex = /__utma=(.+?)&__utmb=(.+?)&__utmc=(.+?)&__utmx=(.?)&__utmz=(.+?)&__utmv=(.+?)&__utmk=(.*)/g;
+  var googleCodes = regex.exec(linkerString);
+
+  _utma= googleCodes[1];
+  _utmb= googleCodes[2];
+  _utmc= googleCodes[3];
+  _utmx= googleCodes[4];
+  _utmz= googleCodes[5];
+  _utmv= googleCodes[6];
+  _utmk= googleCodes[7];
+
+});
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();</script>
+
+
+<!-- Begin chartbeat Tag -->
+<script type="text/javascript">
+    var _sf_async_config={};
+    /** CONFIGURATION START **/
+    _sf_async_config.uid = 36494; //probably need a seperate dev and live accounts for this
+    _sf_async_config.domain = 'music.cbc.ca';
+    _sf_async_config.sections = 'music';
+    _sf_async_config.authors = '';
+    
+    
+    /** CONFIGURATION END **/
+    (function(){
+        function loadChartbeat() {
+            window._sf_endpt=(new Date()).getTime();
+            var e = document.createElement('script');
+            e.setAttribute('language', 'javascript');
+            e.setAttribute('type', 'text/javascript');
+            e.setAttribute('src',
+                (('https:' == document.location.protocol) ? 'https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/' : 'http://static.chartbeat.com/') +
+                    'js/chartbeat.js');
+            document.body.appendChild(e);
+        }
+        var oldonload = window.onload;
+        window.onload = (typeof window.onload != 'function') ?
+            loadChartbeat : function () {  oldonload(); loadChartbeat(); };
+    })();
+</script>
+<noscript>
+</noscript>
+<!-- End chartbeat Tag -->
+	<script type="text/javascript">   
+        
+        //docDomain(); // gets document.domain
+	    var r3PlayerBootStrap = null;
+	    var deepLinkController = null;
+	    var currentPage = "radio3Player:Loading";
+	    var clientLoaded = false;
+	    var serverLoaded = false;
+	    
+	    document.observe("dom:loaded", function(event)
+	    {
+	        getDeepLinkController();
+	    });
+	    
+	    function ReadCookie(name)
+	    {
+	        name += '=';
+	        var parts = document.cookie.split(/;\s*/);
+	        for (var i = 0; i < parts.length; i++)
+	        {
+	            var part = parts[i];
+	            if (part.indexOf(name) == 0)
+	                return part.substring(name.length);
+	        }
+	        return null;
+	    }
+	    
+	    function getDeepLinkController() {
+	        if(deepLinkController == null)
+	        {
+	            deepLinkController = new CBCR3.Commons.DeepLinkController("home.aspx", "/");                               
+	            deepLinkController.setInstance(SWFAddress);
+	        }
+	        return deepLinkController;
+	    }
+
+	    function getR3PlayerBootStrap()
+	    {
+	        if(r3PlayerBootStrap == null)
+	        {
+	            r3PlayerBootStrap = new CBCR3.Player.Application.R3PlayerBootStrap({ autoStart:true, permalink:"/stream/radio",cbcmusicpermalink:"/stream/station/radio2/eastern", fromPlayPermalink: false });
+	            r3PlayerBootStrap.setIsIphone( false );
+	        }
+	        return r3PlayerBootStrap;
+	    }
+
+	    function onServerLoaded()
+	    {	        
+	        try{
+	            Trace.write("On Server LOADED",true);
+                
+	            getR3PlayerBootStrap().setServerFrame(server);
+	        }catch(err)
+	        {
+	            Trace.write("ERROR in index.aspx: " + err,true);
+	        }
+            
+	        try{
+	            getR3PlayerBootStrap().loadPlayer();	
+	        }catch(e)
+	        {
+	            Trace.error(e);
+	            Trace.write("ERROR in loadplayer index.aspx: " + e,true);
+	        }
+	        serverLoaded = true;
+	        server.setLoaded(true);
+	    }
+
+	    function onClientLoaded()
+	    {	        
+	        Trace.write("onClientLoaded()", true);
+	        try{
+	            getR3PlayerBootStrap().setClientFrame(client);
+
+	        }catch(error)
+	        {
+	            Trace.write("OnClientLoaded ERROR setclientFrame:" + error,true);
+	        }
+	        try
+	        {
+	            getR3PlayerBootStrap().loadPlayer(); 
+	        }catch(error)
+	        {
+	            Trace.error(error);
+	            Trace.write("OnClientLoaded ERROR LoadPlayer:" + error,true);
+	        }
+                               	        
+	        try
+	        {
+	            // mobile support for index page
+                getDeepLinkController().setValue(CBCR3.environment().permalink,true);
+	            getDeepLinkController().listenForChange();
+                
+	            currentPage = client.getCurrentPage();
+                
+	            var clientFrame = getR3PlayerBootStrap().clientFrame;
+
+	            //ChartBeat calls
+	            if(typeof _cbq != 'undefined' && _cbq != null){
+
+	                // check for blog post and clean up statsPageName if true
+	                var statsPageName = getStatsPageName();
+	                var isBlog = statsPageName.search(":blog:");
+	                var isGenre = statsPageName.search(":genres:");
+	                var isR3 = statsPageName.search(":radio3:");
+	                var isIndex = statsPageName.search(":index");
+	                
+	                if (isBlog > -1 && isGenre > -1 && isIndex == -1 || isBlog > -1 && isR3 > -1 && isIndex == -1) {
+	                    var nameArray = statsPageName.split(":");
+	                    if (isR3 > -1) {
+	                        nameArray.splice(1, 1);
+	                    } else {
+	                        nameArray.splice(1, 2);
+	                    }
+	                    statsPageName = nameArray.join(":");
+	                }
+
+	                _cbq.push(['sections', statsPageName]);
+	                _cbq.push(['authors', getStatsAuthors()]);
+	            }
+                
+	            if (typeof pSUPERFLY != 'undefined' && pSUPERFLY != null) {
+	                
+	                var statsPageNameStr = document.location.href;
+	                var isHash = statsPageNameStr.slice(-1);
+	                
+	                if (isHash == "#") {
+	                    var urlArray = statsPageNameStr.split("#");
+	                    statsPageNameStr = urlArray[0];
+	                }
+	                
+	                var isGenrePage = statsPageNameStr.indexOf("genres");
+	                var isBlogPage = statsPageNameStr.indexOf("blog");
+	                var isStream = statsPageNameStr.indexOf("stream");
+	                var strArray = statsPageNameStr.split("/");
+
+	                if (isGenrePage > -1 && isBlogPage > -1 && strArray.length > 8) {
+	                    statsPageNameStr = "http://" + strArray[2] + "/#/" + strArray[6] + "/" + strArray[7] + "/" + strArray[8] + "/" + strArray[9];
+                    }
+	                if (isStream > -1) {
+	                    var titleArray = currentPage.split("-");
+	                    var newTitle = titleArray[0] + " - Streaming " + strArray[7];
+	                    currentPage = newTitle;
+	                }
+	                pSUPERFLY.virtualPage(statsPageNameStr, currentPage); 
+	            }
+                
+	            // testing 
+	            //clientFrame.$('utmz').value = _utmz;
+	            //alert ("_utmz:" + _utmz);
+
+	            // overwrite google cookies with referral values
+	            clientFrame.document.cookie = '__utma=' + _utma + '; path=/';
+	            clientFrame.document.cookie = '__utmb=' + _utmb + '; path=/';
+	            clientFrame.document.cookie = '__utmc=' + _utmc + '; path=/';
+	            clientFrame.document.cookie = '__utmx=' + _utmx + '; path=/';
+	            clientFrame.document.cookie = '__utmz=' + _utmz + '; path=/';
+	            clientFrame.document.cookie = '__utmv=' + _utmv + '; path=/';
+	            clientFrame.document.cookie = '__utmk=' + _utmk + '; path=/';
+
+	            Trace.write("utma cookie: " + ReadCookie('__utma'),true);
+                
+	            if(server){
+	                server.setPage(currentPage);
+	                server.setLoaded(true);
+	                server.reloadData();
+	            }
+	        }catch(error)
+	        {
+	            Trace.write("OnClientLoaded ERROR:" + error,true);
+	        }
+	        clientLoaded = true;
+	    }
+        
+	    function getCurrentPage()
+	    {
+	        var currentPage = "CBCMusicHome"
+	        if(getR3PlayerBootStrap().clientFrame != null) 
+	        {
+	            if(client.getCurrentPage() != null)
+	                currentPage = client.getCurrentPage();
+	        }
+	        return currentPage;
+	    }
+        
+	    function getStatsPageName()
+	    {
+	        if(client)
+	            return client.getStatsPageName();
+	        return null;
+	    }
+        
+	    function getStatsAuthors() {
+	        if (client)
+	            return client.getStatsAuthors();
+	        return null;
+	    }
+
+	    var _nodeListenerService = null;
+        
+	    function getNodeListenerService() {
+	        if (_nodeListenerService == null && server) {
+	            _nodeListenerService = new CBCR3.Services.NodeListenerService(server.getNodeService());
+	        }
+	       
+	        return _nodeListenerService;
+	    }
+	    
+	    function onClientUnloaded() {
+	        Trace.write("onClientUnloaded()", true);
+	        server.unload();
+	        clientLoaded = false;
+	        _nodeListenerService.clearEventListeners();
+	        _nodeListenerService = null;
+	        
+	        getDeepLinkController().stopListenForChange();
+	    }
+        
+	    function getAudioStreamManager()
+	    {
+	        return server.getAudioStreamManager();
+	    }
+
+	    /*to handle old permalink play buttons*/
+
+	    function callFlashProxy(method, permalink) {
+	        client.playPermalinkHandler({ data: { permalink: permalink } });
+	    }
+
+
+	    if (Prototype.Browser.MobileSafari){
+	        document.write('<style type="text/css">html, body{ overflow:visible; }<\/style>');            
+	    }
+
+	    
+	</script>	
+        
+</head>	
+<body>
+      
+    <noscript>
+    
+    <iframe id="noscriptclient" name="noscriptclient" scrolling="auto" src="home.aspx"></iframe></noscript>
+    <iframe src="home.aspx" id="client" name="client" marginwidth="0" marginheight="0" frameborder="0" scrolling="auto"></iframe>
+    <iframe id="server" name="server" src="modules/r3playerserver.aspx" marginwidth="0" marginheight="0" frameborder="0" scrolling="no"></iframe>
+ 
+<script src="http://static.chartbeat.com/js/chartbeat.js" type="text/javascript" language="javascript"></script></body>

@@ -1,0 +1,573 @@
+<!--<![endif]--><head><title>Casino | Play Online Casino | Nuts Casino | Nuts Games</title><meta content="Apache Tapestry Framework (version 5.3.3)" name="generator"><meta content="Nuts Online Casino. Join Now &amp; Get &amp;#163;200 FREE. Play  online slots and casino games at Nuts Casino &amp;#9733; &amp;#9733; &amp;#9733; &amp;#9733; &amp;#9733; &amp;#38; " name="description"><meta content="casino, online casino, play casino, play online casino, deal or no deal, casino game, casino site, uk casino, casino online, casino games, which casino, price is right bingo, nuts, nuts magazine" name="keywords"><link href="http://www.jackpotjoy.com/" rel="canonical"><meta content="text/html;charset=utf-8" http-equiv="Content-Type"><meta content="NOODP" name="ROBOTS"><link rel="image_src" href="http://static.gamesys.co.uk/upload/design/live/RAF/nuts.gif"><script src="http://www.google-analytics.com/ga.js" async="" type="text/javascript"></script><script src="/assets/1.64.11/stack/en/core.js" type="text/javascript"></script><script src="/assets/1.64.11/stack/en/jackpotjoy.js" type="text/javascript"></script><script src="/assets/1.64.11/toolbox/mixins/js/conditional/validators.js" type="text/javascript"></script><script src="/assets/1.64.11/toolbox/components/lightbox/lightwindow.js" type="text/javascript"></script><script src="/assets/1.64.11/layout/js/flash/PlaceholderTextBox.js" type="text/javascript"></script><script src="/assets/1.64.11/toolbox/components/dialog/js/NotificationPopup.js" type="text/javascript"></script><script src="/assets/1.64.11/toolbox/components/js/conditional/KeepAlive.js" type="text/javascript"></script><script src="/assets/1.64.11/toolbox/components/dialog/js/Control.Modal.js" type="text/javascript"></script><script src="/assets/1.64.11/toolbox/components/dialog/js/Control.Modal.Window.js" type="text/javascript"></script><script src="/assets/1.64.11/toolbox/components/dialog/js/Control.Modal.Dialog.js" type="text/javascript"></script><script src="http://www.google-analytics.com/ga.js" type="text/javascript"></script><script type="text/javascript">
+		function launchLobby(url, demo, isIframeCall) {
+		
+			splitedUrl = url.split(";");
+			url = splitedUrl[0];
+			if(self!=top) {
+				window.parent.launchLobby(url,demo,false);
+				window.close();
+			}
+			else {
+				if (demo || false ){
+					if (top.document.myLightWindow) {
+						top.window.location.reload();
+					}				
+					var lobbyWindow = window.open(url,'Lobby','width=' + screen.width + ',height=' + screen.height + ',scrollbars=yes,resizable=yes,toolbar=no,menubar=no');
+					// only switch focus if lobby opened successfully 
+					if (!popupBlockerActive(lobbyWindow)) {
+						lobbyWindow.focus();
+					} 
+				} else {
+					var context = findGameContext(escape(url));
+					if(top.document.myLightWindow) {
+						top.window.location = 'http://www.jackpotjoy.com/nuts/index.popups/'+context+'?t:cp=whitelabel/layout'; 
+					} else {
+						if(isIframeCall){
+							window.parent.location = 'http://www.jackpotjoy.com/nuts/index.popups/'+context+'?t:cp=whitelabel/layout';
+						}
+						else{
+							window.location = 'http://www.jackpotjoy.com/nuts/index.popups/'+context+'?t:cp=whitelabel/layout';
+						}
+					} 
+				}
+			}
+		}
+		
+		function findGameContext(url) {
+			var context = url.split("game/");
+			return context[1];
+		}
+		
+		function helpPopup(url) {
+			var helpWindow = window.open(url,'Help','width=850,height=550,scrollbars=1');
+			helpWindow.focus();
+			return false;
+		}
+		
+		function showGameInfo(url, title){
+			myLightWindow.activateWindow({
+				href: url, 
+				type: 'external',
+				width: 865,
+				height: 570,
+				title: title,
+				animation: false,
+				isIframeCall : true
+			});
+		}
+		
+		function popupBlockerActive(popup) { 
+			return !popup || popup.closed || typeof popup == 'undefined' || typeof popup.closed=='undefined';
+		}
+
+		function pageLinkOpenInNewWindow(url) {
+		    window.open(url, null, "location=1,menubar=1,scrollbars=1,status=1,titlebar=1,toolbar=1,height="+screen.height+"px,width="+screen.width+"px");    
+		}
+		
+	</script><script src="http://use.typekit.com/uen1tww.js" type="text/javascript"></script><style type="text/css">.tk-dederon-sans-web{font-family:"dederon-sans-web",sans-serif;}.tk-bree{font-family:"bree",sans-serif;}.tk-salsbury{font-family:"salsbury",sans-serif;}</style><link href="http://use.typekit.com/c/91f591/bree:n4,dederon-sans-web:i5:i7:n5:n7,salsbury:n4.Mzg:F:2,NTC:F:2,NTF:F:2,NTB:F:2,NTD:F:2,N2T:F:2/d?3bb2a6e53c9684ffdc9a99f01d5b2a628c587c9e86d9bca70b215244bc549944edaaacd9674ce901594f7ede2876a4fe7938ffc21e0502eb3cd28af58b6f7273a0427b1792c91a981751f45f84c4db1734aca6525d41c0e9219475d23b31954d17aaed3c03b51fe6ee59210cb0c37c00f19cd078757cdc72c600c38fd343491e2e367c10ba8bdb05c1d6e43acebeac5d6e27357d122a313cde5da237c320e3f1adc3bae1a76b32a7f9d506a920c4745871dfb9ab17a690a83dd3e1212bf35a75561e35def22bf451dfe618f7af65dfe280827d348e34de3bb9db86faa37b3287f0bcb5aff3b0fd523e2df384068321b2622ed36f188a47fa42d9094a9a3879cb9f2677bd9c524c85ce62b2113947b9d3d7fb8937469b3794b31c913e19eab9b0fb2e6055278dc2fb496158296a8333f7c45afd8e7aaff18a879db62bedb375090b2578b6a49893bf9e7946a08361283190783227fde9e20a22922fd2772afe904658fc5bc4e51edf5d08e8dce8b2fa" rel="stylesheet"><script type="text/javascript">try{Typekit.load();}catch(e){}</script><meta content="en" http-equiv="Content-Language"><link type="text/css" rel="stylesheet" href="/assets/1.64.11/core/default.css"><link type="text/css" rel="stylesheet" href="/assets/1.64.11/stack/en/core.css"><link type="text/css" rel="stylesheet" href="/assets/1.64.11/stack/en/jackpotjoy.css"><link type="text/css" rel="stylesheet" href="/assets/1.64.11/toolbox/components/lightbox/css/lightwindow.css"><style type="text/css">/* Nuts Header CSS Starts here */
+div#nuts_main {
+	margin: 0;
+	padding: 0;
+	background: #fff;
+	text-align:center;
+}
+div#nuts_header {
+	margin: 0 auto;
+	width:992px;
+	background-image:url(/content/managedasset/jackpotjoy/nuts/nuts_header/image/84b0b90f-c90d-4b1e-8e97-9c9727781e5e/nuts_header.png);
+	height:120px;
+}
+div#nuts_navbg {
+	width:992px;
+	background: #C00 url(/content/managedasset/jackpotjoy/nuts/nuts_navbar/image/8e1ca46b-a939-45a8-aa42-6d5498b78941/nuts_navbar.png) 0px -110px repeat-x;
+	height: 28px;
+	margin: 0 auto;	
+}
+div#nuts_primary_nav ul, div#nuts_secondary_nav ul {
+	list-style: none;
+	clear: left;
+	float: left;
+	margin:0px;
+	padding:0px;
+}
+div#nuts_primary_nav li, div#nuts_secondary_nav li {
+	float: left;
+	font-size: 85%;
+	font-weight: bold;
+	font-family: verdana, arial, helvetica, sans-serif;
+}
+div#nuts_primary_nav ul li a:link, div#nuts_primary_nav ul li a:visited, div#nuts_primary_nav ul li a:hover,
+div#nuts_secondary_nav ul li a:link, div#nuts_secondary_nav ul li a:visited, div#nuts_primary_nav ul li a:hover,
+div#nuts_secondary_nav ul li.selected, div#nuts_secondary_nav ul li p {
+	display: block;
+	padding: 7px 7px 7px;
+	text-decoration: none;
+}
+div#nuts_secondary_nav ul li p 
+{
+	font-size: 100%;
+	color: #FFF;
+}
+div#nuts_primary_nav li a:link, div#nuts_primary_nav li a:visited, div#nuts_primary_nav li.selected,
+div#nuts_secondary_nav li a:link, div#nuts_secondary_nav li a:visited, div#nuts_secondary_nav li.selected  {
+	color: #FFF;
+}
+div#nuts_primary_nav 
+{
+	background: #C00 url (/content/managedasset/jackpotjoy/nuts/nuts_navbar/image/8e1ca46b-a939-45a8-aa42-6d5498b78941/nuts_navbar.png) 0px -110px repeat-x;
+	width: 980px;
+	height: 28px;
+	margin: 0 auto;
+}
+div#nuts_primary_nav li a:hover {
+	background-color: #300;
+}
+div#nuts_primary_nav li.selected {
+	background-color: #300;
+}
+/* Nuts Header CSS Ends here */
+
+body {
+      background: #600;
+}
+
+.game_jackpot {
+	width: 120px;
+}
+
+
+div#page {
+	border-color:#000 #000 #000;
+}
+
+div#gameListC div.box_content {
+	background-image: url(/content/managedasset/jackpotjoy/gameboxicons/gameschoosericoncasino/image/36e58f56-adbd-41a0-9dbf-3a60eabd1e7e/GamesChooserIconCasino.png) ;
+}
+
+div#gameListD div.box_content {
+	background-image: url(/content/managedasset/jackpotjoy/gameboxicons/gameschoosericonclassic/image/6c21fcc5-35ac-4284-aebe-e1002dab64fd/GamesChooserIconClassic.png) ;
+}
+
+div#gameListE div.box_content {
+	background-image: url(/content/managedasset/jackpotjoy/gameboxicons/gameschoosericonmultilineslots/image/26ffb3f4-8f83-4c51-8cec-440f407c3949/GamesChooserIconMultilineSlots.png) ;
+}
+
+div#gameListF div.box_content {
+	background-image: url(/content/managedasset/jackpotjoy/gameboxicons/gameschoosericonvideopoker/image/2c0dad35-d65a-441d-be46-8e707fbf48e1/GamesChooserIconVideoPoker.png) ;
+}
+
+div#gameListG div.box_content {
+	background-image: url(/content/managedasset/jackpotjoy/gameboxicons/gameschoosericonjackpots/image/395864cf-baa3-46d5-95f0-2368e3e426c3/GamesChooserIconJackpots.png) ;
+}
+
+div#gameListH div.box_content {
+	background-image: url(/content/managedasset/jackpotjoy/gameboxicons/gameschoosericoninstants/image/472902ce-8664-495a-af26-befdca907de3/GamesChooserIconInstants.png) ;
+}
+
+div#gameListI div.box_content {
+	background-image: url(/content/managedasset/jackpotjoy/gameboxicons/gameschoosericonbingo/image/b3b3bf9f-129d-4389-971d-1570ca722168/GamesChooserIconBingo.png) ;
+}
+
+/* box corners */
+.corner_top_left,
+.corner_top_right,
+.corner_bottom_left,
+.corner_bottom_right {
+	background-image:url(/content/managedasset/jackpotjoy/nuts/boxcorners/image/2f3ac35c-ace4-459b-9e52-ef64881c96d8/boxcorners.png);
+}
+
+.box,
+.headerbox_container {
+	background-image: url(/content/managedasset/jackpotjoy/nuts/boxborderbottom/image/aef4fe7d-354a-4e89-96fe-0df73d77166e/boxborderbottom.png);
+}
+
+.box,
+.headerbox_container,
+div#submenuContent,
+div.toggle_content,
+form.purchaseUi div.buttons,
+div.toggle_switch_area,
+div#myAccountHeader,
+.headerbox-heading {
+	border-color: #999;
+}
+
+div#login_window div#modal_login_links a {
+	color: #fff;
+}
+
+/* menu */
+#menu .expanded,
+#menu .expanded a:hover {
+	background-color: #fff;
+	background-image: url(/content/managedasset/jackpotjoy/nuts/menuiconexpanded/image/c2a27fdd-0488-4c6f-b230-93e905071224/menuiconexpanded.png);
+}
+
+#menu a:hover,
+#menu .inner a:hover {
+	background-color: #f5d2d4;
+}
+
+#menu .inner a {
+	background-color: #fae8e9;
+}
+
+#menu .inner a:hover {
+	background-image: none;
+}
+
+#menu .highlight a,
+#menu .highlight a:hover {
+	background-color: transparent;
+	background-image: url(/content/managedasset/jackpotjoy/nuts/menuicon/image/54aa8d4e-fa67-4e70-ac5d-2535c6118604/menuicon.png);
+	color: #fff;
+}
+
+#menu .highlight {
+	background: #cb2027;
+}
+
+.game-list a {
+	color: #333;
+}
+
+.game-list-links {
+    background: #999;
+}
+
+.game-list-links a {
+	color: #333;
+}
+
+/* headings */
+.content-heading,
+.content-heading span {
+	background-image: url(/content/managedasset/jackpotjoy/nuts/bodytabheader/image/30db9541-b2c3-4aa5-af86-3581a23c9479/bodytabheader.png);
+}
+
+ul#subMenu,
+ul#subMenu li.first a {
+	background-image: url(/content/managedasset/jackpotjoy/nuts/bodytabheader/image/30db9541-b2c3-4aa5-af86-3581a23c9479/bodytabheader.png);
+}
+
+ul#subMenu li {
+	border-color:#000 #af2e31 #000 #bd484b;
+}
+
+/****JOYSHOP, CHAT, HELP *********/
+div#contactChat, div#contactPhone, div#contactFaq, div#contactEmail {
+	background-image: url(/content/managedasset/jackpotjoy/nuts/helpiconssmall/image/939e0f78-d47c-4540-8599-ab2f7c42388d/helpiconssmall.png);
+}
+.help div.image a, .help div.image span.helpImage {
+	background-image:url(/content/managedasset/jackpotjoy/nuts/helpiconslarge/image/c3e14454-e77c-43ec-a699-5381aac937d2/helpiconslarge.png);
+}
+
+/*******FOOTER****/
+div#footer div#links {
+	padding:7px 7px 1px;
+}
+div#footer div#links, div#footer {
+	background: #fff;	
+}
+
+/*******BUTTONS****/
+div.buttons input {
+  background-image: url(/content/managedasset/jackpotjoy/nuts/genericbutton1/image/06fcb68f-c2c0-4704-8962-4f41b475394f/genericbutton1.png);
+}
+
+div#login_container div.buttons input {
+  background-image: url(/content/managedasset/jackpotjoy/nuts/genericbutton2/image/08808b2a-d937-40ec-9c8e-7756f86527e3/genericbutton2.png);
+}
+
+a.largeButton,
+a.largeButton span {
+  background-image: url(/content/managedasset/jackpotjoy/nuts/genericbutton1stretch/image/4fa3d8c3-5d12-43cc-81fd-8688991d73a4/genericbutton1stretch.png);
+}
+
+a.smallButton,
+a.smallButton span {
+  background-image: url(/content/managedasset/jackpotjoy/nuts/genericbutton2stretch/image/62d32d7a-2e89-4513-878c-aba742c309e7/genericbutton2stretch.png);
+}
+
+a.mediumButton,
+a.mediumButton span{
+  background-image: url(/content/managedasset/jackpotjoy/nuts/genericbutton3stretch/image/e6e7cc54-4cee-4b59-b4a7-ac765f874c46/genericbutton3stretch.png);
+}
+
+#joinNowBtn { 
+            background-image:url(/content/managedasset/jackpotjoy/nuts/join_now_nuts/image/d00d3eb5-a7cc-4a60-805e-b45afc992662/join-now-nuts.png);
+}
+
+/****Login Page style override****/
+#login_page .buttons input[type="submit"] {
+	background:url(/content/managedasset/jackpotjoy/nuts/genericbutton1/image/06fcb68f-c2c0-4704-8962-4f41b475394f/genericbutton1.png);
+}
+
+/****Queens Honours style override****/
+a.stayPressed,
+a.stayPressed span,
+a.mediumWhiteBorderButtonAnchor,
+a.mediumWhiteBorderButtonAnchor span {
+  background:url(/content/managedasset/jackpotjoy/nuts/genericbutton2stretch/image/62d32d7a-2e89-4513-878c-aba742c309e7/genericbutton2stretch.png) no-repeat left top;
+height:23px;
+line-height:23px;
+}
+
+a.mediumWhiteBorderButtonAnchor {
+  background-position:left top;
+}
+
+a.mediumWhiteBorderButtonAnchor span {
+  background-position:right top;
+}
+
+a.stayPressed,
+a.mediumWhiteBorderButtonAnchor:hover {
+  background-position:left -23px;
+}
+
+a.stayPressed span,
+a.mediumWhiteBorderButtonAnchor:hover span {
+  background-position:right -23px;
+}
+
+.mediumWhiteBorderSubmitButton {
+  background-image: url(/content/managedasset/jackpotjoy/nuts/genericbutton1/image/06fcb68f-c2c0-4704-8962-4f41b475394f/genericbutton1.png);
+  height:36px;
+  line-height:36px;
+  font-size:131%;
+  width:142px;
+}
+
+.toggle_content .box .corner_top_left,
+.toggle_content .box .corner_top_right,
+.toggle_content .box .corner_bottom_left,
+.toggle_content .box .corner_bottom_right {
+  background-image:url(/content/managedasset/jackpotjoy/nuts/boxcorners/image/2f3ac35c-ace4-459b-9e52-ef64881c96d8/boxcorners.png);
+
+#bookingform .expandable-subsection
+{
+	background-color:   #F5D2D4;
+}
+
+.even-row
+{
+	background-color:   #F5D2D4;
+}
+
+.waitinglist-table + .t-data-grid-pager > a.previous, .waitinglist-table + .t-data-grid-pager > a.next {
+	background-image:  background-image: url(/content/managedasset/jackpotjoy/nuts/genericbutton1/image/06fcb68f-c2c0-4704-8962-4f41b475394f/genericbutton1.png); }
+
+/** Shop of Joy **/
+
+DIV#shop-of-joy DIV.box
+{
+	border-color: #d9d9d9;
+	background-image: url(/content/managedasset/jackpotjoy/box_bottom/image/dbce03c2-7714-4d07-bc37-1b0aee3176c9/boxBorderBottom.png);
+}
+DIV#event-description + DIV.buttons { 
+display: none;
+}
+
+DIV#shop-of-joy .box DIV[class^=corner]
+{
+	background-image: url(/content/managedasset/jackpotjoy/box_corners_grey/image/35552152-db35-4160-8eec-dd6b552d4ad9/boxCorners.png);
+}
+
+DIV#shop-of-joy DIV.toggle_switch_area
+{
+	border-color: #d9d9d9;
+}
+
+div#withdrawlboxfix {
+    overflow: auto;
+    height: 483px;
+}
+
+.rn_ButtonInput {
+    background: url("../img/buttons/genericbutton3.png") no-repeat scroll left top transparent; }
+
+#slideshow.thumbnail .timers .timer:hover {
+    background-color: [#CB2027];
+    background: -moz-linear-gradient(top, [#CB2027], [#CB2027]);
+    background: -webkit-gradient(linear, left top, left bottom, from([#CB2027]), to([#CB2027]));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='[#CB2027]', endColorstr='[#CB2027]');
+}
+
+</style>
+<script type="text/javascript">
+
+document.observe("dom:loaded", function(){
+
+var waitingOption = $$("OPTION[value='WAITING']");
+
+if (waitingOption.length > 0)
+{
+	waitingOption[0].remove();
+}
+
+});
+
+</script>
+
+<style type="text/css">
+
+BODY.help {
+    display: block;
+    width: auto;
+    float:  none;
+margin: 0;
+    position: static;
+    height: auto;
+}
+BODY.games LI { background: none; }
+.footer-copy .footer-copy { 
+	display: none;
+}
+body.console_window { height: 100%; }</style></head><body class="standalone index loggedout" id="jackpotjoy"><!-- DoubleClick DART Natural Search Standard Tracking Tag for DSUK : DFA Network - Mice&Dice-DFA EMEA(5684) : DS Agency - Mice and Dice Limited(605) : DFA Advertiser - JackpotJoy_Search(2353160) : DS Advertiser - Jackpotjoy - mice and dice limited(K4826): Please do not remove
+--><!-- Web site URL to be tracked: http://www.jackpotjoy.com --><!-- Tag should be placed at the top of the page, after opening body tag and before DoubleClick Spotlight or Floodlight tag(s)--><!-- Creation Date: 05-06-2010 --><script type="text/javascript">
+			// DoubleClick DART Natural Search Tracking Code
+			if (document.referrer)	{
+				var ord = Math.random()*1000000000000;
+				var doubleclickJs = document.createElement('script');
+    			doubleclickJs.setAttribute('language', 'JavaScript1.1');
+			    doubleclickJs.setAttribute('type', 'text/javascript');
+			    doubleclickJs.setAttribute('src', 'http://ad.doubleclick.net/adj/N5684.nso.codesrv/B4505382;dcadv=2756408;sz=1x2;ord=' + ord + '?');
+				document.body.appendChild(doubleclickJs);
+			}
+		</script><!-- DFA Tag --><iframe src="http://fls.uk.doubleclick.net/activityi;src=;type=jpj2_048;cat=jpj2_250;u1=787663;u2=;u3=;u4=262230080;u5=0;u6=1;u7=;u8=;u9=;u10=;ord=1;num=958338762?" id="floodLightTracker" frameborder="0" height="1" scrolling="auto" width="1">
+ </iframe><script type="text/javascript">
+    GAMESYS = GAMESYS || {};  
+    GAMESYS.RAF = new GAMESYS.RAF('http://www.jackpotjoy.com/nuts/promotions/referafriend');
+  </script><div id="page"><div role="banner" id="header"><div id="nuts_main">
+ <div id="nuts_header"></div>
+ <div id="nuts_navbg">
+ <div id="nuts_primary_nav">
+ <ul>
+ <li><a href="http://www.nuts.co.uk/" target="_blank">Home</a></li>
+ <li><a href="http://www.nuts.co.uk/girls" target="_blank">Girls</a></li>
+ <li><a href="http://www.nuts.co.uk/covergirls" target="_blank">Cover Girls</a></li>
+ <li><a href="http://www.nuts.co.uk/mynuts" target="_blank">MyNuts</a></li>
+ <li><a href="http://www.nuts.co.uk/vote" target="_blank">Vote</a></li>
+ <li><a href="http://www.nuts.co.uk/jokes" target="_blank">Jokes</a></li>
+ <li><a href="http://www.nuts.co.uk/news" target="_blank">News</a></li>
+ <li><a href="http://www.nuts.co.uk/video" target="_blank">Nuts TV</a></li>
+ <li><a href="http://www.nuts.co.uk/reviews" target="_blank">Reviews</a></li>
+ <li><a href="http://www.nuts.co.uk/spambank" target="_blank">Spambank</a></li>
+ <li><a href="http://www.nuts.co.uk/football" target="_blank">Football</a></li>
+ <li><a href="http://www.nuts.co.uk/win" target="_blank">Win</a></li>
+ <li><a href="http://www.nuts.co.uk/boards/" target="_blank">Boards</a></li>
+ <li><a href="http://www.nuts.co.uk/web-games" target="_blank">Games</a></li>
+ <li><a href="http://nuts.datingdirect.com/index.php?mtcmk=082478" target="_blank" onclick="s.tl(this,'o','Nav: Dating');">Dating</a></li>
+ <li><a href="http://clk.tradedoubler.com/click?p=22435&amp;a=1443637&amp;g=17049902" target="_blank" onclick="s.tl(this,'o','Nav: Jackpot Joy');">Win Cash</a></li>
+ </ul>
+ </div>
+ </div>
+</div>
+<div class="welcome"><div class="t-zone" id="loginComponent"><div id="welcomeLoggedOut"><div id="login_container"><form class="gamesysForm" action="https://www.jackpotjoy.com/nuts/index.welcome.logincontrol.loginform.login" method="post" id="login"><div style="display: none;" class=""><input value="whitelabel/layout" name="t:cp" type="hidden"><input value="H4sIAAAAAAAAAK2PMU7DQBBFh0ipIhokbgDtuiENSIg0VBZCsjjAeD12Fq13lpk1ThqOwgkQl0hBxx04AC0VBQ4hBSUR5Xxp3n//6R3G/QWc93OXyGNJPstxyV067clbbsl4blywHJKw3xw1S2s6JQnYUu3IVyowZWkMRrRzMgkjaZLl1FgW8q40JSqZWTmEaNPl+uWooNTF45vV5O3w5XMEezlMflquBmyCg/wW7zHzGJqsSOJCc7aICfa3xd+Uf1Gf/VX9WtiSatGVrVN1HFbP1Un98fg6AljEnZwiqvYs1cbpDh4Ahq3bdPetv7hr7PgLd2zHsPIBAAA=" name="t:formdata" type="hidden"></div><div class="box" id="login_content"><div class="corner_top_left"></div><div class="corner_top_right"></div><div class="corner_bottom_left"></div><div class="corner_bottom_right"></div><div class="box_content"><div class="modal_form"><div class="username"><span><label for="usernameField">Username or Email</label><input placeholder="Username or Email..." maxlength="60" tabindex="5" autocomplete="off" id="usernameField" name="usernameField" type="text"></span></div><div class="password"><span><label for="passwordField">Password</label><input placeholder="Password..." maxlength="16" tabindex="6" value="" id="passwordField" name="passwordField" type="password"></span><p><a id="forgottenUsernamePasswordText" href="https://www.jackpotjoy.com/nuts/forgottenusernamepassword">Forgotten username/password?</a></p></div></div><p id="caseSensitivityReminder">* Please remember your password is case-sensitive.</p></div></div><div class="buttons"><button class="loginButton" tabindex="7" type="submit" id="loginSubmit"><span class="loginSubmitLeft">Login</span><span class="loginSubmitRight v2-hidden"></span></button></div><p class="v2-hidden" id="login_joinNow"><span id="welcomeMessage">New here? <b>Get your Welcome Bonus!</b></span><a href="https://www.jackpotjoy.com/nuts/register"><span id="notMemeber">Not a member? </span><span id="joinNow">Join Now!</span></a></p></form></div></div></div></div></div><div id="main"><div id="navigation"><div class="box" id="menu"><div class="corner_top_left"></div><div class="corner_top_right"></div><div class="corner_bottom_left"></div><div class="corner_bottom_right"></div><div class="navigation"><div class="box_content"><ul class="v2-first-level"><li class="highlight" id="HomeMenuItem"><a href="http://www.jackpotjoy.com/nuts/">Home</a></li><li id="GettingStartedMenuItem"><a href="http://www.jackpotjoy.com/nuts/gettingstarted">Getting Started</a></li><li id="gamesMenuItem"><a href="http://www.jackpotjoy.com/nuts/viewgames/top">Games</a><ul style="display: none;" class="inner" id="gamesSubMenu"><li id="menuitemMenuItem"><a href="http://www.jackpotjoy.com/nuts/viewgames/top">Nuts Man Picks</a></li><li id="menuitemMenuItem"><a href="http://www.jackpotjoy.com/nuts/viewgames/partner-new">New Games</a></li><li id="menuitemMenuItem"><a href="http://www.jackpotjoy.com/nuts/viewgames/casino">Casino Games</a></li><li id="menuitemMenuItem"><a href="http://www.jackpotjoy.com/nuts/viewgames/classic">Classic Slots</a></li><li id="menuitemMenuItem"><a href="http://www.jackpotjoy.com/nuts/viewgames/multiline">Multiline Slots</a></li><li id="menuitemMenuItem"><a href="http://www.jackpotjoy.com/nuts/viewgames/videopoker">Video Poker</a></li><li id="menuitemMenuItem"><a href="http://www.jackpotjoy.com/nuts/viewgames/jackpots">Jackpots</a></li><li id="menuitemMenuItem"><a href="http://www.jackpotjoy.com/nuts/viewgames/partner-instant">Instants</a></li><li id="menuitemMenuItem"><a href="http://www.jackpotjoy.com/nuts/viewgames/partner-bingo">Bingo Games</a></li></ul></li><li id="PromotionsMenuItem"><a href="http://www.jackpotjoy.com/nuts/promotions/current">Promotions</a></li><li id="ReferAFriendMenuItem"><a href="http://www.jackpotjoy.com/nuts/promotions/referafriend">Refer a Friend</a></li><li id="winnersMenuItem"><a href="http://www.jackpotjoy.com/nuts/winners/stories">Winners</a></li><li id="ShopOfJoyMenuItem"><a href="http://www.jackpotjoy.com/nuts/shopofjoy">Shop of Joy</a></li><li id="communityMenuItem"><a href="http://www.jackpotjoy.com/nuts/community/socialclub">Community</a></li><li id="vipMenuItem"><a href="http://www.jackpotjoy.com/nuts/vip">VIP</a></li><li id="helpMenuItem"><a href="http://www.jackpotjoy.com/nuts/help/help">Help &amp; FAQ</a></li></ul></div></div></div><div class="headerbox"><img src="/content/managedasset/jackpotjoy/winners-gif/image/b64e2c48-7285-4608-9675-cfac5bc2a6af/winners.gif"></div></div><div id="content"><div class="logged-out" id="mainContent"><div class="banner-promotion" id="mainPromotion"><div id="homepage-banner-container" class="logged_out_banner_display"><div class="small-banner" id="homepage-banner"><img src="/content/homepage-banner/jackpotjoy/partners/dec_nuts-homepage/backgroundImage/c8062856-83fd-4bc3-9878-33ce091d6dcb/nuts-loggedout-781x265.jpg" id="homepage-banner-bg"><div id="homepage-banner-content"><a shape="rect" href="https://www.jackpotjoy.com/nuts/register" style="background-image: url(/content/homepage-banner/jackpotjoy/partners/dec_nuts-homepage/firstButtonImage/c8062856-83fd-4bc3-9878-33ce091d6dcb/JPJ-sm-joinnow.png)" id="first-banner-link"></a><a shape="rect" href="http://www.jackpotjoy.com/nuts/viewgames/top" style="background-image: url(/content/homepage-banner/jackpotjoy/partners/dec_nuts-homepage/secondButtonImage/c8062856-83fd-4bc3-9878-33ce091d6dcb/JPJ-sm-viewgames.png)" id="second-banner-link"></a></div></div><div id="tabbed-gamelist-display"><div id="tabbed-game-list" class="tabbed_game_list box"><div class="corner_top_left"></div><div class="corner_top_right"></div><div class="corner_bottom_left"></div><div class="corner_bottom_right"></div><div class="t-zone" id="gameCategoryZone"><ul class="col-3" id="subMenu"><li class="selected "><span class="selected "><a id="changeTab" onclick="javascript:return Tapestry.waitForPage(event);" href="http://www.jackpotjoy.com/nuts/index.standardmaincontent.loggedoutbanner.acquisitionbanner.tabbedgamelist.changetab/0">What everyone's playing </a></span></li><li class=" "><span class=" "><a id="changeTab_0" onclick="javascript:return Tapestry.waitForPage(event);" href="http://www.jackpotjoy.com/nuts/index.standardmaincontent.loggedoutbanner.acquisitionbanner.tabbedgamelist.changetab/1">Recommended Games</a></span></li><li class=" lastTab"><span class=" lastTab"><a id="changeTab_1" onclick="javascript:return Tapestry.waitForPage(event);" href="http://www.jackpotjoy.com/nuts/index.standardmaincontent.loggedoutbanner.acquisitionbanner.tabbedgamelist.changetab/2">New Games</a></span></li></ul></div><div class="t-zone" id="publishedGameSetZone"><div class="box_content"><div id="games"><div class="game"><div class="image"><span class="corner-top-left"></span><span class="corner-top-right"></span><span class="corner-bottom-left"></span><span class="corner-bottom-right"></span><img src="/content/game/jackpotjoy/tiki-island/tabbedGameImage/996b1212-002e-43ac-a9ed-3e5be482aaac/Tabbed-TikiIsland.png" alt="tiki-island"><div class="image-hoverOver-status"></div><span class="category category-SLOT">SLOT</span></div><ul><li><a title="Play Tiki Island" class="play" href="http://www.jackpotjoy.com/nuts/game/slot-tiki/tiki-island?gameType=SLOT" id="gamelink"><span>Play </span></a></li><li><a title="Play Tiki Island" class="demo" href="http://www.jackpotjoy.com/nuts/game/slot-tiki/tiki-island/demo?gameType=SLOT" id="gamelink_0">
+Demo
+</a></li><li><a shape="rect" class="info" href="http://www.jackpotjoy.com/nuts/games/tiki-island" title="Get more information about Tiki Island" onclick="showGameInfo(this.href, 'tiki-island'); return false;">
+Game Info
+</a></li></ul></div><div class="game"><div class="image"><span class="corner-top-left"></span><span class="corner-top-right"></span><span class="corner-bottom-left"></span><span class="corner-bottom-right"></span><img src="/content/game/jackpotjoy/jungle-jump/tabbedGameImage/d0b181a4-07eb-4268-9637-16d412460f60/Tabbed-Jump.png" alt="jungle-jump"><div class="image-hoverOver-status"></div><span class="category category-SLOT">SLOT</span></div><ul><li><a title="Play Jungle Jump!" class="play" href="http://www.jackpotjoy.com/nuts/game/super-slot-jump/jungle-jump?gameType=SLOT" id="gamelink_1"><span>Play </span></a></li><li><a title="Play Jungle Jump!" class="demo" href="http://www.jackpotjoy.com/nuts/game/super-slot-jump/jungle-jump/demo?gameType=SLOT" id="gamelink_0_0">
+Demo
+</a></li><li><a shape="rect" class="info" href="http://www.jackpotjoy.com/nuts/games/jungle-jump" title="Get more information about Jungle Jump!" onclick="showGameInfo(this.href, 'jungle-jump'); return false;">
+Game Info
+</a></li></ul></div><div class="game"><div class="image"><span class="corner-top-left"></span><span class="corner-top-right"></span><span class="corner-bottom-left"></span><span class="corner-bottom-right"></span><img src="/content/game/jackpotjoy/tiki-temple/tabbedGameImage/20da1dcb-a41f-4247-9fd3-c11705713481/Tabbed-TikiTemple.png" alt="tiki-temple"><div class="image-hoverOver-status"></div><span class="category category-SLOT">SLOT</span></div><ul><li><a title="Play Tiki Temple" class="play" href="http://www.jackpotjoy.com/nuts/game/super-slot-tiki-temple/tiki-temple?gameType=SLOT" id="gamelink_2"><span>Play </span></a></li><li><a title="Play Tiki Temple" class="demo" href="http://www.jackpotjoy.com/nuts/game/super-slot-tiki-temple/tiki-temple/demo?gameType=SLOT" id="gamelink_0_1">
+Demo
+</a></li><li><a shape="rect" class="info" href="http://www.jackpotjoy.com/nuts/games/tiki-temple" title="Get more information about Tiki Temple" onclick="showGameInfo(this.href, 'tiki-temple'); return false;">
+Game Info
+</a></li></ul></div><div class="game"><div class="image"><span class="corner-top-left"></span><span class="corner-top-right"></span><span class="corner-bottom-left"></span><span class="corner-bottom-right"></span><img src="/content/game/jackpotjoy/wonderland/tabbedGameImage/6b735658-95bf-4b88-bb18-8c94b0810efc/208x208Wonderland.png" alt="wonderland"><div class="image-hoverOver-status"></div><span class="category category-SLOT">SLOT</span></div><ul><li><a title="Play Wonderland" class="play" href="http://www.jackpotjoy.com/nuts/game/super-slot-wonderland-progressive/wonderland?gameType=SLOT" id="gamelink_3"><span>Play </span></a></li><li><a title="Play Wonderland" class="demo" href="http://www.jackpotjoy.com/nuts/game/super-slot-wonderland-progressive/wonderland/demo?gameType=SLOT" id="gamelink_0_2">
+Demo
+</a></li><li><a shape="rect" class="info" href="http://www.jackpotjoy.com/nuts/games/wonderland" title="Get more information about Wonderland" onclick="showGameInfo(this.href, 'wonderland'); return false;">
+Game Info
+</a></li></ul></div><div class="game"><div class="image"><span class="corner-top-left"></span><span class="corner-top-right"></span><span class="corner-bottom-left"></span><span class="corner-bottom-right"></span><img src="/content/game/jackpotjoy/houdini/tabbedGameImage/0b7ad79d-98a7-4d73-97ad-6b3fd45ad3f6/Tabbed-Houdini.png" alt="houdini"><div class="image-hoverOver-status"></div><span class="category category-SLOT">SLOT</span></div><ul><li><a title="Play Houdini" class="play" href="http://www.jackpotjoy.com/nuts/game/slot-houdini/houdini?gameType=SLOT" id="gamelink_4"><span>Play </span></a></li><li><a title="Play Houdini" class="demo" href="http://www.jackpotjoy.com/nuts/game/slot-houdini/houdini/demo?gameType=SLOT" id="gamelink_0_3">
+Demo
+</a></li><li><a shape="rect" class="info" href="http://www.jackpotjoy.com/nuts/games/houdini" title="Get more information about Houdini" onclick="showGameInfo(this.href, 'houdini'); return false;">
+Game Info
+</a></li></ul></div><div class="game"><div class="image"><span class="corner-top-left"></span><span class="corner-top-right"></span><span class="corner-bottom-left"></span><span class="corner-bottom-right"></span><img src="/content/game/jackpotjoy/double-bubble/tabbedGameImage/8b7cbc77-f41d-41d8-bf32-6c225594f7f9/206x206double-bubble.png" alt="double-bubble"><div class="image-hoverOver-status"></div><span class="category category-SLOT">SLOT</span></div><ul><li><a title="Play Double Bubble" class="play" href="http://www.jackpotjoy.com/nuts/game/slot-double-bubble/double-bubble?gameType=SLOT" id="gamelink_5"><span>Play </span></a></li><li><a title="Play Double Bubble" class="demo" href="http://www.jackpotjoy.com/nuts/game/slot-double-bubble/double-bubble/demo?gameType=SLOT" id="gamelink_0_4">
+Demo
+</a></li><li><a shape="rect" class="info" href="http://www.jackpotjoy.com/nuts/games/double-bubble" title="Get more information about Double Bubble" onclick="showGameInfo(this.href, 'double-bubble'); return false;">
+Game Info
+</a></li></ul></div></div></div></div></div></div></div></div></div><script type="text/javascript">
+		function sendVerification(args) {
+			var resendEmailAjax = new Ajax.Request (
+			"",
+			{
+				method: 'get'
+			});
+			return true;
+		}
+	</script><div class="doubleoptinmodal_container" style="display: none; margin: 0px; position: absolute; z-index: 500;" id="doubleoptinmodal_container"><div id="doubleOptInHeading">Email Verification</div><div id="doubleOptInClose">Close</div><div id="doubleOptInWindow"><div class="v2-lightwindow-content" id="doubleOptInContent"><div class="box"><div class="corner_top_left"></div><div class="corner_top_right"></div><div class="corner_bottom_left"></div><div class="corner_bottom_right"></div><div class="box_content"><h2 class="double-opt-heading">
+You are ready to play!
+</h2><p>
+To protect your identity and for added security, you'll need to verify your email address before you can request any withdrawals.
+</p><p>
+We've sent a message to<strong> you</strong>. Please check your inbox and click the link provided.
+</p><p><strong>Incorrect email? </strong>Update your email address in <a href="https://www.jackpotjoy.com/nuts/myaccount/managedetails">My Account </a>.
+</p><p><strong>Can't see our emails? </strong>Please check your spam or junk folder in case our emails have been redirected. You can send this email again by clicking the button below. 
+</p></div></div><div class="buttons"><form onsubmit="javascript:return Tapestry.waitForPage(event);" action="http://www.jackpotjoy.com/nuts/index.emailconfirmation.doubleoptin.nosessionform" method="post" id="nosessionform"><div style="display: none;" class=""><input value="H4sIAAAAAAAAAEWOvYoCQRCEW0EQLjMzN571AhE0EYyERYR9gKN3tm+ddWZ6nGn/kot8Cd/B8O6xLrkncNHgoqqCr4q6/0LvNIVJg3oXWBq+ZCtf0XlGDo3V7D9NdCiGvar4UFriIMardCidkRRhwbFWGFBvSQkGShIvE6U5kjVlqy6wJy9JFc/GaBNZU0rPlFI7eyv+hj/f12UXujn0tTUtvaoEBnmDR8ws+jorJBpfz3N4I0uuBdboaA9f0DkHgf7rzMf7vx0/AM/yHNrXAAAA" name="t:formdata" type="hidden"></div><p><input alt="Resend Email" value="Resend Email" class="v2-button-medium" id="submit_1" name="submit_0" type="submit"></p></form></div></div></div></div></div></div><div role="contentinfo" id="footer"><img src="/content/managedasset/jackpotjoy/footer-trusted-symbols/image/bf434c7c-61c7-4586-9b18-99f910fd7f29/trusted_symbols_hp_noRoB.png"><div class="footer" id="footer_links_logos"><div class="footer_logos"><ul class="paymentMethods"><li><img alt="Visa Debit" src="/assets/1.64.11/toolbox/components/img/footer/trust/visadebit.png" id="VISA_DEBIT"></li><li><img alt="Visa" src="/assets/1.64.11/toolbox/components/img/footer/trust/visa.png" id="VISA"></li><li><img alt="Visa Electron" src="/assets/1.64.11/toolbox/components/img/footer/trust/electron.png" id="VISA_ELECTRON"></li><li><img alt="PayPal" src="/assets/1.64.11/toolbox/components/img/footer/trust/paypal.png" id="PAYPAL"></li><li><img alt="Mastercard" src="/assets/1.64.11/toolbox/components/img/footer/trust/mastercard.png" id="MASTERCARD"></li><li><img alt="Maestro" src="/assets/1.64.11/toolbox/components/img/footer/trust/maestro.png" id="MAESTRO"></li><li><img alt="Laser" src="/assets/1.64.11/toolbox/components/img/footer/trust/laser.png" id="LASER"></li><li><img alt="Neteller" src="/assets/1.64.11/toolbox/components/img/footer/trust/neteller.png" id="NETELLER"></li><li><img alt="Ukash" src="/assets/1.64.11/toolbox/components/img/footer/trust/ukash.png" id="UKASH"></li><li><img alt="Mastercard SecureCode" src="/assets/1.64.11/toolbox/components/img/footer/trust/securecode.png" id="UKASH"></li><li class="footer_links_logos_separator"></li><li><img alt="18+" src="/assets/1.64.11/toolbox/components/img/footer/trust/over18.png" id="footer-eighteenplus"></li><li><a shape="rect" target="_blank" href="http://www.gamcare.org.uk/" id="footer-link-gamcare"><img alt="Gamcare" src="/assets/1.64.11/toolbox/components/img/footer/trust/gamcare.png" id="footer-gamcare"></a></li><li><a shape="rect" target="_blank" href="http://www.gamcare.org.uk/" id="footer-link-gamcare-cert"><img alt="Gamcare Certification" src="/assets/1.64.11/toolbox/components/img/footer/trust/gamcareCert.png" id="footer-gamcare-cert"></a></li><li><a shape="rect" target="_blank" href="http://www.gibraltar.gov.gi/remotegambling" id="footer-link-gibraltar"><img alt="Licensed and registered by the Government of Gibraltar" src="/assets/1.64.11/toolbox/components/img/footer/trust/gibraltar.png" id="footer-gibraltar"></a></li><li><a shape="rect" target="_blank" href="http://www.gambleaware.co.uk/" id="footer-link-gambleaware"><img alt="gambleaware.co.uk" src="/assets/1.64.11/toolbox/components/img/footer/trust/gambleaware.png" id="footer-gambleaware"></a></li></ul></div><div id="links"><p id="page_links"><a href="http://www.jackpotjoy.com/nuts/aboutus">About Us</a>
+|
+<a href="https://www.jackpotjoy.com/nuts/terms">Terms and Conditions</a>
+|
+<a href="https://www.jackpotjoy.com/nuts/terms#privacy">Privacy Policy</a>
+|
+<a href="http://www.jackpotjoy.com/nuts/responsiblegaming">Responsible Gaming</a></p></div><p id="get_flash" class="footer_copy">
+   If you can't see this page <a href="http://get.adobe.com/flashplayer/" target="_blank">click here to get the latest Flash player</a>
+</p><p class="footer_copy" id="licensing">
+Operated by Profitable Play Limited of Suite 2, Floor 2, Waterport Place Gibraltar.<br clear="none">Licensed by the Government of Gibraltar (RGL No. 46 and No. 63) and regulated by the Gibraltar Gambling Commissioner.</p></div><div class="footer-copy" id="bonus-footer"> 
+
+ <div id="footer-terms-list"><p align="center">This site uses cookies. By continuing to browse the site you are agreeing to our use of cookies. <u><a href="https://www.jackpotjoy.com/nuts/terms#privacy">Find out more here.</a></u></p><div class="footer-copy" id="bonus-footer"> 
+	      <div id="footer-terms-header">Welcome Bonus Terms and Conditions</div>
+	      <div id="footer-terms-list">
+		      <ul>
+		        <li>The Welcome Deposit Bonus is an optional one time only offer made available to all new members on their first successful deposit.</li>
+		        <li>To qualify for the Welcome Deposit Bonus members must opt to choose the bonus when prompted on the deposit page.</li>
+		        <li>The Welcome Deposit Bonus is offered as a 250% percentage match of the members first deposit value up to £100. </li>
+		        <li>Minimum deposit value is £10</li>
+		        <li>Only one Welcome Deposit Bonus is available per member account.</li>
+		        <li>Qualifying members will have their bonus account balance credited providing their deposit meets the minimum and maximum deposit requirements.  All bonus funds are subject to normal wagering requirements prior to withdrawal.</li>
+		        <li>The Welcome Deposit Bonus offer cannot be combined with any other bonus or promotion nor can it be given to future deposits. </li>
+		      </ul>
+		    </div>
+
+		     Full terms and conditions including details of wagering requirements prior to withdrawal can be found <a href="/nuts/terms">here</a>.</div></div><div class="switch-device"></div><script type="text/javascript">
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', "UA-6148020-8"]);
+		  _gaq.push(['_trackPageview']);
+		  _gaq.push(['_setDomainName', "jackpotjoy.com"]);
+		  _gaq.push(['_setAllowAnchor', true]);
+		 
+		 
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+	</script><script type="text/javascript">Tapestry.onDOMLoaded(function() {
+Tapestry.init({"formEventManager":[{"formId":"login","validate":{"submit":false,"blur":false}},{"formId":"nosessionform","validate":{"submit":true,"blur":true}}]});
+new GAMESYS.components.PlaceholderTextBox ('usernameField', 'Username or Email...');
+new GAMESYS.components.PlaceholderTextBox ('passwordField', 'Password...');
+$('gamelink').observe('click', function(event) { launchLobby('http://www.jackpotjoy.com/nuts/game/slot-tiki/tiki-island?gameType=SLOT', false, false); event.stop(); return false; });
+$('gamelink_0').observe('click', function(event) { launchLobby('http://www.jackpotjoy.com/nuts/game/slot-tiki/tiki-island/demo?gameType=SLOT', true, false); event.stop(); return false; });
+$('gamelink_1').observe('click', function(event) { launchLobby('http://www.jackpotjoy.com/nuts/game/super-slot-jump/jungle-jump?gameType=SLOT', false, false); event.stop(); return false; });
+$('gamelink_0_0').observe('click', function(event) { launchLobby('http://www.jackpotjoy.com/nuts/game/super-slot-jump/jungle-jump/demo?gameType=SLOT', true, false); event.stop(); return false; });
+$('gamelink_2').observe('click', function(event) { launchLobby('http://www.jackpotjoy.com/nuts/game/super-slot-tiki-temple/tiki-temple?gameType=SLOT', false, false); event.stop(); return false; });
+$('gamelink_0_1').observe('click', function(event) { launchLobby('http://www.jackpotjoy.com/nuts/game/super-slot-tiki-temple/tiki-temple/demo?gameType=SLOT', true, false); event.stop(); return false; });
+$('gamelink_3').observe('click', function(event) { launchLobby('http://www.jackpotjoy.com/nuts/game/super-slot-wonderland-progressive/wonderland?gameType=SLOT', false, false); event.stop(); return false; });
+$('gamelink_0_2').observe('click', function(event) { launchLobby('http://www.jackpotjoy.com/nuts/game/super-slot-wonderland-progressive/wonderland/demo?gameType=SLOT', true, false); event.stop(); return false; });
+$('gamelink_4').observe('click', function(event) { launchLobby('http://www.jackpotjoy.com/nuts/game/slot-houdini/houdini?gameType=SLOT', false, false); event.stop(); return false; });
+$('gamelink_0_3').observe('click', function(event) { launchLobby('http://www.jackpotjoy.com/nuts/game/slot-houdini/houdini/demo?gameType=SLOT', true, false); event.stop(); return false; });
+$('gamelink_5').observe('click', function(event) { launchLobby('http://www.jackpotjoy.com/nuts/game/slot-double-bubble/double-bubble?gameType=SLOT', false, false); event.stop(); return false; });
+$('gamelink_0_4').observe('click', function(event) { launchLobby('http://www.jackpotjoy.com/nuts/game/slot-double-bubble/double-bubble/demo?gameType=SLOT', true, false); event.stop(); return false; });
+var double_optin_modal = new Control.Modal.Dialog($('doubleoptinmodal_container'), {
+  "overlayOpacity" : 0.75,
+  "fade" : true,
+  "closeOnClick" : true,
+  "className" : "doubleoptinmodal_container",
+  "onsubmit" : "sendVerification",
+  "mode" : "contents"
+});
+Control.Overlay.observe('beforeHide', function() { $$('.t-error-popup').each(function(element) { element.remove() });new Ajax.Request('http://www.jackpotjoy.com/nuts/index.emailconfirmation.doubleoptin:close'); });
+Tapestry.init({"footer":[""],"gameLists":[""],"keepAlive":[{"delay":false,"url":"http://www.jackpotjoy.com/nuts/index.keepalive"}],"linkZone":[{"linkId":"changeTab","url":"http://www.jackpotjoy.com/nuts/index.standardmaincontent.loggedoutbanner.acquisitionbanner.tabbedgamelist.changetab/0","zoneId":"publishedGameSetZone"},{"linkId":"changeTab_0","url":"http://www.jackpotjoy.com/nuts/index.standardmaincontent.loggedoutbanner.acquisitionbanner.tabbedgamelist.changetab/1","zoneId":"publishedGameSetZone"},{"linkId":"changeTab_1","url":"http://www.jackpotjoy.com/nuts/index.standardmaincontent.loggedoutbanner.acquisitionbanner.tabbedgamelist.changetab/2","zoneId":"publishedGameSetZone"}],"zone":[{"update":"show","element":"loginComponent","show":"show"},{"update":"highlight","element":"gameCategoryZone","show":"show"},{"update":"show","element":"publishedGameSetZone","show":"show"}]});
+});
+</script></div></div></div><div style="position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; z-index: 499; display: none;" id="control_overlay"></div><iframe src="javascript:void(0);" style="position:absolute;filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);display:none" frameborder="0"></iframe><iframe src="javascript:void(0);" style="position:absolute;filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);display:none" frameborder="0"></iframe><div style="display:none" id="keepAlive">{"redirectURL":"http://www.jackpotjoy.com/nuts/"}</div><div style="height: 983px;" id="lightwindow_overlay"></div><div style="top: 161.5px; left: 583.5px;" role="dialog" id="lightwindow"><div style="height: 250px; width: 250px; left: -125px; top: -125px;" id="lightwindow_container"><div id="lightwindow_title_bar"><div id="lightwindow_tl"></div><span id="lightwindow_title_bar_title"></span><div id="lightwindow_tr"></div><a id="lightwindow_title_bar_close_link">close</a><div id="lightwindow_title_bar_inner"></div></div><div id="lightwindow_stage"><div style="height: 250px;" id="lightwindow_l" class="fullheight"></div><div id="lightwindow_stage_inner"><div style="height: 250px; width: 250px;" id="lightwindow_contents" class="v2-lightwindow-content"></div><div id="lightwindow_data_slide"><div id="lightwindow_data_slide_inner"><div id="lightwindow_data_details"><div id="lightwindow_data_author_container">by <span id="lightwindow_data_author"></span></div></div><div id="lightwindow_data_caption"></div></div></div><div id="lightwindow_galleries"><div id="lightwindow_galleries_tab_container"><a href="#" id="lightwindow_galleries_tab"><span id="lightwindow_galleries_tab_span" class="up">Galleries</span></a></div><div id="lightwindow_galleries_list"></div></div><div style="height: 250px;" id="lightwindow_r" class="fullheight"></div><div id="lightwindow_navigation"><div id="lightwindow_navigation_inner"><div class="l"></div><div id="lightwindow_slideshow"><a id="lightwindow_toggle_slideshow">Start Slideshow</a></div><div id="lightwindow_link"><a id="lightwindow_original_link">Flickr</a></div><div id="lightwindow_navigation_controls"><span id="lightwindow_data_gallery_container"><a href="#" id="lightwindow_next"><span id="lightwindow_next_title"></span></a><a href="#" id="lightwindow_previous"><span id="lightwindow_previous_title"></span></a><span id="lightwindow_data_gallery_current"></span>&nbsp;of&nbsp;<span id="lightwindow_data_gallery_total"></span></span><iframe name="lightwindow_navigation_shim" id="lightwindow_navigation_shim" src="about:blank" frameborder="0" scrolling="no"></iframe></div><div class="r"></div></div></div></div></div><div id="lightwindow_footer"><div id="lightwindow_bl"></div><div id="lightwindow_b"></div><div id="lightwindow_br"></div></div></div></div></body>

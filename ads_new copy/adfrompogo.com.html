@@ -1,0 +1,536 @@
+<!-- Show the desired slide based on the offer code--><!--  End of show the desired slide based on the offer code --><head><link media="all" href="//ct1.addthis.com/static/r07/widget113.css" type="text/css" rel="stylesheet">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="Content-Language" content="en-us">
+	<meta name="robots" content="NOODP">
+	<title>Cell Phones For Kids | Kids Cell Phones | Prepaid Cells For Kids from Kajeet</title> 
+		<meta name="description" content="Find cell phones for kids at Kajeet.&nbsp; Kajeet offers the latest models, prepaid options, parental controls and GPS tracking capabilities on all kids cell phones">
+	
+	
+	
+		<meta name="keywords" content="kids cell phones, cell phones for kids, cells for kids, prepaid cell phones for kids, kids cell phone">
+	
+	
+
+
+	<!-- Add jQuery library -->
+	<script src="http://www.google-analytics.com/ga.js" async="" type="text/javascript"></script><script type="text/javascript" src="/4u/docroot/kajeet/scripts2/jquery-1.7.1.min.js"></script>
+	<link type="text/css" href="/4u/docroot/kajeet/css/bx_styles.css" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="/4u/docroot/kajeet/css/reset-fonts-grids.css">
+	<link rel="stylesheet" type="text/css" href="/4u/docroot/kajeet/css/superfish.css" media="screen">
+		<link type="text/css" rel="stylesheet" href="/4u/docroot/kajeet/css/styles.css">
+		<!--[if IE 6]>
+<link type="text/css" rel="stylesheet" href="css/wf-ie6.css"/>
+<![endif]-->
+		<script type="text/javascript" src="/4u/docroot/kajeet/scripts2/jquery-ui-1.8.17.custom.min.js"></script>
+		<script type="text/javascript" src="/4u/docroot/kajeet/scripts2/superfish.js"></script>
+		<script type="text/javascript" src="/4u/docroot/kajeet/scripts2/jquery.bxSlider.min.js"></script>
+		<script type="text/javascript" src="/4u/docroot/kajeet/scripts2/jquery.easing.1.3.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('.sf-menu').superfish();
+
+				// Tabs
+				$('#tabs').tabs();
+
+				$('#slider1').bxSlider({
+					displaySlideQty : 4,
+					moveSlideQty : 4
+				});
+
+			});
+			$(function() {
+				var zIndexNumber = 1000;
+				$('div').each(function() {
+					$(this).css('zIndex', zIndexNumber);
+					zIndexNumber -= 10;
+				});
+			});
+			$(function() {
+				var el = $('input[type=text], textarea');
+				el.focus(function(e) {
+					if (e.target.value == e.target.defaultValue)
+						e.target.value = '';
+				});
+				el.blur(function(e) {
+					if (e.target.value == '')
+						e.target.value = e.target.defaultValue;
+				});
+
+			});
+		</script>
+
+		<!-- Add mousewheel plugin (this is optional) -->
+		<script type="text/javascript" src="/4u/docroot/kajeet/scripts2/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+
+		<!-- Add fancyBox main JS and CSS files -->
+		<script type="text/javascript" src="/4u/docroot/kajeet/scripts2/source/jquery.fancybox.js"></script>
+		<link rel="stylesheet" type="text/css" href="/4u/docroot/kajeet/scripts2/source/jquery.fancybox.css" media="screen">
+
+		<!-- Add Button helper (this is optional) -->
+		<link rel="stylesheet" type="text/css" href="/4u/docroot/kajeet/scripts2/source/helpers/jquery.fancybox-buttons.css">
+		<script type="text/javascript" src="/4u/docroot/kajeet/scripts2/source/helpers/jquery.fancybox-buttons.js"></script>
+
+		<!-- Add Thumbnail helper (this is optional) -->
+		<link rel="stylesheet" type="text/css" href="/4u/docroot/kajeet/scripts2/source/helpers/jquery.fancybox-thumbs.css">
+		<script type="text/javascript" src="/4u/docroot/kajeet/scripts2/source/helpers/jquery.fancybox-thumbs.js"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+				/*
+					Simple image gallery. Use default settings
+				 */
+
+				$('.fancybox').fancybox({
+					//maxWidth	: 840,
+					//maxHeight	: 460,
+					//fitToView	: false, 
+					autoSize : true
+				});
+
+			});
+		</script>
+		<style type="text/css">
+.fancybox-custom .fancybox-outer {
+	box-shadow: 0 0 50px #222;
+}
+</style>
+		<script type="text/javascript" src="/4u/docroot/kajeet/scripts2/jquery.cycle.all.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				var selectedPanel = '#panels'+  $('#offerCodeDiv').html();
+				$(selectedPanel).css("display","block");
+				$(selectedPanel).before('<div id="pager">').cycle({
+					fx : 'fade',
+					timeout : 4000,
+					pager : '#pager',
+					pause : true,
+					startingSlide: 1
+				});
+			});
+			function readCookie(name) {
+				var nameEQ = name + "=";
+				var ca = document.cookie.split(';');
+				for(var i=0;i < ca.length;i++) {
+					var c = ca[i];
+					while (c.charAt(0)==' ') c = c.substring(1,c.length);
+					if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+				}
+				return null;
+			}
+
+			var offerCode= readCookie("O_CODE");
+			 $.ajax({
+				cache:false,
+				timeout:8000, 
+				type:"POST",
+				url:"/kajeetStore/phones/index.html?o="+ offerCode,
+				data:null,
+				error:function(){  },
+				success:function(response){  }
+			  });
+		</script>
+<div id="_atssh" style="visibility: hidden; height: 1px; width: 1px; position: absolute; z-index: 1000;"><iframe src="//ct1.addthis.com/static/r07/sh114.html#" style="height: 1px; width: 1px; position: absolute; z-index: 100000; border: 0px none; left: 0px; top: 0px;" title="AddThis utility frame" id="_atssh540"></iframe></div><script src="http://ct1.addthis.com/static/r07/core074.js" type="text/javascript"></script><script type="text/javascript" src="//dev.visualwebsiteoptimizer.com/j.php?a=32327&amp;u=http%3A%2F%2Fwww.kajeet.com%2F4u%2Findex.html%3Fc%3DGTP%26o%3DH51%26utm_medium%3DTP%26utm_source%3DGoogTP&amp;r=0.9860366945140943"></script></head>
+<body class="home">
+<div id="offerCodeDiv" style="display: none; z-index: 990;">H51</div>
+	
+	<div style="z-index: 980;"></div>
+	<div style="z-index: 970;" id="outer-wrap">
+		
+
+
+<!--  Set offer and campaign code in session -->
+
+	
+
+
+
+	
+
+<!--  End of Set offer and campaign code in session -->
+
+
+
+<div style="z-index: 960;" class="top-tab-nav">
+    <div style="z-index: 950;" class="top-tab-nav-inner">
+<!-- AddThis Button BEGIN -->
+        <div class="addthis_toolbox addthis_default_style addthis_16x16_style" style="z-index: 940;">
+            <a href="#" title="Tweet" class="addthis_button_twitter at300b"><span class="at16nc at300bs at15nc at15t_twitter at16t_twitter"><span class="at_a11y">Share on twitter</span></span></a>
+            <a href="#" title="Facebook" class="addthis_button_facebook at300b"><span class="at16nc at300bs at15nc at15t_facebook at16t_facebook"><span class="at_a11y">Share on facebook</span></span></a>
+            <a href="#" title="Email" class="addthis_button_email at300b"><span class="at16nc at300bs at15nc at15t_email at16t_email"><span class="at_a11y">Share on email</span></span></a>
+            <a href="#" title="Print" class="addthis_button_print at300b"><span class="at16nc at300bs at15nc at15t_print at16t_print"><span class="at_a11y">Share on print</span></span></a>
+            <a href="#" class="addthis_button_compact at300m"><span class="at16nc at300bs at15nc at15t_compact at16t_compact"><span class="at_a11y">More Sharing Services</span></span></a>
+        <div class="atclear"></div></div>
+        <script type="text/javascript" src="https://s7.addthis.com/js/250/addthis_widget.js#pubid=kajeet"></script>
+<!-- AddThis Button END -->
+        <ul>
+            <li id="topnav-family"><a href="/4u/index.html">Kids</a></li>
+            <li id="topnav-education"><a href="/education/index.html">Education</a></li>
+        </ul>
+        <div style="z-index: 930;" id="loginbutton"><a href="../kajeetStore/phones/index.html;jsessionid=5E4B24143C41A15C8658E0D99AA1840D?o=H51&amp;c=GTP">View Cart</a> <span>|</span>  <a href="/activation.html">Activate Phone</a> <span>|</span>
+        </div>
+    </div>
+</div>
+
+		
+
+
+<!-- Start Visual Website Optimizer Asynchronous Code -->
+<script type="text/javascript">
+var _vwo_code=(function(){
+var account_id=32327,
+settings_tolerance=2000,
+library_tolerance=1500,
+use_existing_jquery=false,
+// DO NOT EDIT BELOW THIS LINE
+f=false,d=document;return{use_existing_jquery:function(){return use_existing_jquery;},library_tolerance:function(){return library_tolerance;},finish:function(){if(!f){f=true;var a=d.getElementById('_vis_opt_path_hides');if(a)a.parentNode.removeChild(a);}},finished:function(){return f;},load:function(a){var b=d.createElement('script');b.src=a;b.type='text/javascript';b.innerText;b.onerror=function(){_vwo_code.finish();};d.getElementsByTagName('head')[0].appendChild(b);},init:function(){settings_timer=setTimeout('_vwo_code.finish()',settings_tolerance);this.load('//dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&r='+Math.random());var a=d.createElement('style'),b='body{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}',h=d.getElementsByTagName('head')[0];a.setAttribute('id','_vis_opt_path_hides');a.setAttribute('type','text/css');if(a.styleSheet)a.styleSheet.cssText=b;else a.appendChild(d.createTextNode(b));h.appendChild(a);return settings_timer;}};}());_vwo_settings_timer=_vwo_code.init();
+</script>
+<!-- End Visual Website Optimizer Asynchronous Code -->
+
+
+
+<!--  Set offer and campaign code in session -->
+
+	
+
+
+
+	
+
+<!--  End of Set offer and campaign code in session -->
+
+
+
+
+
+<div style="z-index: 920;" id="hd-wrap">
+    <div style="z-index: 910;" id="hd" class="mainContainer">
+        <div style="z-index: 900;" id="hd-inner">
+            <div style="z-index: 890;" id="logo"><a href="/">Kajeet</a></div>
+            <div style="z-index: 880;" id="tagline"><a href="/">The smart phone for kids<sup>®</sup></a></div>
+			<div style="z-index: 870;" id="icontactForm">
+					<form method="post" action="https://app.icontact.com/icp/signup.php" name="icpsignup" id="icpsignup8895" accept-charset="UTF-8" onsubmit="return verifyRequired8895();" style=""> 
+						<input name="redirect" value="http://www.kajeet.com/kajeetStore/phones/index.html" type="hidden"> 
+						<input name="errorredirect" value="http://www.icontact.com/www/signup/error.html" type="hidden"> 
+						<div style="z-index: 860;" id="SignUp"> 
+							<table class="signupframe" border="0" cellpadding="5" cellspacing="0"> 
+								<tbody><tr> <td valign="top" align="left"> <span class="required"></span><b>Enter Your Email For kajeet Special Offers! </b> </td> </tr> 
+								<tr> <td align="left"><input name="fields_email" value="Email Address" type="text" width="29"> 
+									<input name="Submit" value="Sign-Up!" style="background-color: #FF6600; color: #fff;" hidden"="" type="submit"> 
+									<input name="listid" value="122134" type="hidden"> 
+									<input name="specialid:122134" value="MIOK" type="hidden"> 
+									<input name="clientid" value="650795" type="hidden"> 
+									<input name="formid" value="8895" type="hidden"> 
+									<input name="reallistid" value="1" type="hidden"> 
+									<input name="doubleopt" value="0" type="hidden"> 
+								</td> 
+								</tr> 
+								<tr></tr> 
+							</tbody></table> 
+						</div> 
+					</form> 
+				<script type="text/javascript">				
+					var icpForm8895 = document.getElementById('icpsignup8895');
+					if (document.location.protocol === "https:")
+						icpForm8895.action = "https://app.icontact.com/icp/signup.php";
+
+					function verifyRequired8895() {
+						if (icpForm8895["fields_email"].value == "") {
+							icpForm8895["fields_email"].focus();
+							alert("The Email field is required.");
+							return false;
+						}
+						return true;
+					}
+				</script>
+			</div>
+		</div>
+        <div style="z-index: 850;" id="nav">
+            <ul class="sf-menu sf-js-enabled sf-shadow">
+                <li class="nav-why"><a class="sf-with-ul" href="/kajeetStore/whyKajeet.do" id="nav-why">Why kajeet<span class="sf-sub-indicator"> »</span></a><span class="arrow"></span>
+                    <ul style="display: none; visibility: hidden;">
+                        <li><a href="/4u/customer-testimonials.html">Testimonials</a>
+                        </li>
+                        <li><a href="/4u/news.html">News</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-shop"><a href="../kajeetStore/phones/index.html;jsessionid=5E4B24143C41A15C8658E0D99AA1840D?o=H51&amp;c=GTP" id="nav-shop">Shop Phones</a><span class="arrow"></span></li>
+                <li class="nav-byosd"><a href="/4u/BYOSD" id="nav-byosd">Bring Your Own Device</a><span class="arrow"></span></li>
+                <li><a href="/kajeetStore/serviceplans.do" id="nav-plans">Service Plans</a><span class="arrow"></span>
+                </li>
+                <li class="nav-account"><a class="sf-with-ul" href="../login.html;jsessionid=5E4B24143C41A15C8658E0D99AA1840D?o=H51&amp;c=GTP" id="nav-account">My Account<span class="sf-sub-indicator"> »</span></a><span class="arrow"></span>
+                    <ul style="display: none; visibility: hidden;">
+                        <li><a href="../login.html;jsessionid=5E4B24143C41A15C8658E0D99AA1840D?o=H51&amp;c=GTP">Log In</a> </li>
+                        <li><a href="/kajeetStore/order-track.do">View Order</a> </li>
+                        <li><a href="/gift-refill.html">Buy Refills</a> </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+		<div style="z-index: 840;" id="page-wrap">
+			<div style="z-index: 830;" id="page-content">
+				<div style="z-index: 820;" class="home-dashboard">
+				
+					
+						<div class="panels" style="display: none; z-index: 810;" id="panelsH31"><div style="background: url(&quot;/4u/index/mainPageOfferCodesTxt/0/mainPromoTextImg/04/imageBinary/1205209_HPT_ORANGE.jpg&quot;) repeat scroll 0% 0% transparent; z-index: 800;" class="panel-slide slide7"><h1><font color="white">the safest cell phone for kids<br> just became the smartest.</font></h1> <p>Now available - Android™ smartphones on kajeet!</p><a class="button-startnow-large clear" href="/kajeetStore/phones/index.html?o=H31">Start Now</a></div><div style="background: url(&quot;/4u/index/mainPageOfferCodesTxt/0/mainPromoTextImg/07/imageBinary/1204122_HPT_SETB-UNDER-100.jpg&quot;) repeat scroll 0% 0% transparent; z-index: 790;" class="panel-slide slide1"><a class="button-startnow-large clear" href="/kajeetStore/phones/index.html?o=H31">Start Now</a></div><div style="background: url(&quot;/4u/index/mainPageOfferCodesTxt/0/mainPromoTextImg/00/imageBinary/1204120_HPT_SETB-GALAXY.jpg&quot;) repeat scroll 0% 0% transparent; z-index: 780;" class="panel-slide slide3"><a class="button-startnow-large clear" href="/kajeetStore/phones/index.html?o=H31">Start Now</a></div><div style="background: url(&quot;/4u/index/mainPageOfferCodesTxt/0/mainPromoTextImg/01/imageBinary/1204119_HPT_SETB-ELITE.jpg&quot;) repeat scroll 0% 0% transparent; z-index: 770;" class="panel-slide slide4"><a class="button-startnow-large clear" href="/kajeetStore/phones/index.html?o=H31">Start Now</a></div><div style="background: url(&quot;/4u/index/mainPageOfferCodesTxt/0/mainPromoTextImg/02/imageBinary/1204121_HPT_SETB-INTERCEPT.jpg&quot;) repeat scroll 0% 0% transparent; z-index: 760;" class="panel-slide slide5"><a class="button-startnow-large clear" href="/kajeetStore/phones/index.html?o=H31">Start Now</a></div></div>
+					
+						<div class="panels" style="display: none; z-index: 750;" id="panelsH32"><div style="background: url(&quot;/4u/index/mainPageOfferCodesTxt/02/mainPromoTextImg/0/imageBinary/1205207_HPT_GREEN.jpg&quot;) repeat scroll 0% 0% transparent; z-index: 740;" class="panel-slide slide7"><h1><font color="white">the safest cell phone for kids<br> just became the smartest.</font></h1> <p>Now available - Android™ smartphones on kajeet!</p><a class="button-startnow-large clear" href="/kajeetStore/phones/index.html?o=H32">Start Now</a></div><div style="background: url(&quot;/4u/index/mainPageOfferCodesTxt/02/mainPromoTextImg/00/imageBinary/1204118_HPT_SETA-PARENTAL-CONTROLS.jpg&quot;) repeat scroll 0% 0% transparent; z-index: 730;" class="panel-slide slide1"><a class="button-startnow-large clear" href="/kajeetStore/phones/index.html?o=H32">Start Now</a></div><div style="background: url(&quot;/4u/index/mainPageOfferCodesTxt/02/mainPromoTextImg/01/imageBinary/smartblocker-tile.jpg&quot;) repeat scroll 0% 0% transparent; z-index: 720;" class="panel-slide slide3"><a class="button-startnow-large clear" href="/kajeetStore/phones/index.html?o=H32">Start Now</a></div><div style="background: url(&quot;/4u/index/mainPageOfferCodesTxt/02/mainPromoTextImg/03/imageBinary/1204116_HPT_SETA-GPS-LOCATOR.jpg&quot;) repeat scroll 0% 0% transparent; z-index: 710;" class="panel-slide slide4"><a class="button-startnow-large clear" href="/kajeetStore/phones/index.html?o=H32">Start Now</a></div><div style="background: url(&quot;/4u/index/mainPageOfferCodesTxt/02/mainPromoTextImg/04/imageBinary/1204117_HPT_SETA-TEXTING-LATE.jpg&quot;) repeat scroll 0% 0% transparent; z-index: 700;" class="panel-slide slide5"><a class="button-startnow-large clear" href="/kajeetStore/phones/index.html?o=H32">Start Now</a></div></div>
+					
+						<div class="panels" style="display: none; z-index: 690;" id="panelsH30"><div style="background: url(&quot;/4u/index/mainPageOfferCodesTxt/04/mainPromoTextImg/0/imageBinary/1205210_HPT_RED.jpg&quot;) repeat scroll 0% 0% transparent; z-index: 680;" class="panel-slide slide1"><h1><font color="white">the safest cell phone for kids<br> just became the smartest.</font></h1> <p>Now available - Android™ smartphones on kajeet!</p><a class="button-startnow-large clear" href="/kajeetStore/whyKajeet.do?o=H30">Start Now</a></div><div style="background: url(&quot;/4u/index/mainPageOfferCodesTxt/04/mainPromoTextImg/00/imageBinary/1204118_HPT_SETA-PARENTAL-CONTROLS.jpg&quot;) repeat scroll 0% 0% transparent; z-index: 670;" class="panel-slide slide2"><a class="button-startnow-large clear" href="/kajeetStore/whyKajeet.do?o=H30">Start Now</a></div><div style="background: url(&quot;/4u/index/mainPageOfferCodesTxt/04/mainPromoTextImg/02/imageBinary/smartblocker-tile.jpg&quot;) repeat scroll 0% 0% transparent; z-index: 660;" class="panel-slide slide4"><a class="button-startnow-large clear" href="/kajeetStore/whyKajeet.do?o=H30">Start Now</a></div><div style="background: url(&quot;/4u/index/mainPageOfferCodesTxt/04/mainPromoTextImg/03/imageBinary/1204116_HPT_SETA-GPS-LOCATOR.jpg&quot;) repeat scroll 0% 0% transparent; z-index: 650;" class="panel-slide slide5"><a class="button-startnow-large clear" href="/kajeetStore/whyKajeet.do?o=H30">Start Now</a></div><div style="background: url(&quot;/4u/index/mainPageOfferCodesTxt/04/mainPromoTextImg/04/imageBinary/1204120_HPT_SETB-GALAXY_green-H30.jpg&quot;) repeat scroll 0% 0% transparent; z-index: 640;" class="panel-slide slide6"><a class="button-startnow-large clear" href="/kajeetStore/phones/index.html?o=H30">Start Now</a></div></div>
+					
+						<div class="panels" style="display: none; z-index: 630;" id="panelsH50"><div style="background: url(&quot;/4u/index/mainPageOfferCodesTxt/05/mainPromoTextImg/00/imageBinary/Parental-Control-Tiles-H1V2.jpg&quot;) repeat scroll 0% 0% transparent; z-index: 620;" class="panel-slide slide1"><h1><font color=" rgb(51, 102, 204);">the safest cell phone for </font><br> <font color=" rgb(51, 102, 204);">kids is now the smartest.</font></h1><a class="button-startnow-large clear" href="/kajeetStore/phones/index.html?o=H50">Start Now</a></div><div style="background: url(&quot;/4u/index/mainPageOfferCodesTxt/05/mainPromoTextImg/0/imageBinary/banner2-parental-controls.jpg&quot;) repeat scroll 0% 0% transparent; z-index: 610;" class="panel-slide slide2"><a class="button-startnow-large clear" href="/kajeetStore/phones/index.html?o=H50">Start Now</a></div><div style="background: url(&quot;/4u/index/mainPageOfferCodesTxt/05/mainPromoTextImg/01/imageBinary/banner3-BYOSD.jpg&quot;) repeat scroll 0% 0% transparent; z-index: 600;" class="panel-slide slide3"><a class="button-startnow-large clear" href="4u/BYOSD?o=H50">Start Now</a></div><div style="background: url(&quot;/4u/index/mainPageOfferCodesTxt/05/mainPromoTextImg/02/imageBinary/banner4-summer-fun.jpg&quot;) repeat scroll 0% 0% transparent; z-index: 590;" class="panel-slide slide4"><a class="button-startnow-large clear" href="/kajeetStore/phones/index.html?o=H50">Start Now</a></div><div style="background: url(&quot;/4u/index/mainPageOfferCodesTxt/05/mainPromoTextImg/03/imageBinary/banner6-GRAD15.jpg&quot;) repeat scroll 0% 0% transparent; z-index: 580;" class="panel-slide slide5"><a class="button-startnow-large clear" href="/kajeetStore/phones/index.html?o=H50">Start Now</a></div><div style="background: url(&quot;/4u/index/mainPageOfferCodesTxt/05/mainPromoTextImg/04/imageBinary/banner5-GPS.jpg&quot;) repeat scroll 0% 0% transparent; z-index: 570;" class="panel-slide slide6"><a class="button-startnow-large clear" href="/kajeetStore/phones/index.html?o=H50">Start Now</a></div></div>
+					
+						<div id="pager"><a href="#">1</a><a class="activeSlide" href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a><a href="#">6</a></div><div class="panels" style="display: block; z-index: 560;" id="panelsH51"><div style="background: url(&quot;/4u/index/mainPageOfferCodesTxt/00/mainPromoTextImg/0/imageBinary/Parental-Control-Tiles-H1V2.jpg&quot;) repeat scroll 0% 0% transparent; z-index: 1; position: absolute; top: 0px; left: 0px; display: none; opacity: 0;" class="panel-slide slide1"><h1><font color=" rgb(51, 102, 204);">the safest cell phone for </font><br> <font color=" rgb(51, 102, 204);">kids is now the smartest.</font></h1><a class="button-startnow-large clear" href="/kajeetStore/phones/index.html?o=H51">Start Now</a></div><div style="background: url(&quot;/4u/index/mainPageOfferCodesTxt/00/mainPromoTextImg/00/imageBinary/banner2-parental-controls.jpg&quot;) repeat scroll 0% 0% transparent; z-index: 7; position: absolute; top: 0px; left: 0px; display: block; opacity: 1;" class="panel-slide slide2"><a class="button-startnow-large clear" href="/kajeetStore/phones/index.html?o=H51">Start Now</a></div><div style="background: url(&quot;/4u/index/mainPageOfferCodesTxt/00/mainPromoTextImg/01/imageBinary/banner3-BYOSD.jpg&quot;) repeat scroll 0% 0% transparent; z-index: 5; position: absolute; top: 0px; left: 0px; display: none; opacity: 0;" class="panel-slide slide3"><a class="button-startnow-large clear" href="4u/BYOSD?o=H51">Start Now</a></div><div style="background: url(&quot;/4u/index/mainPageOfferCodesTxt/00/mainPromoTextImg/02/imageBinary/banner4-summer-fun.jpg&quot;) repeat scroll 0% 0% transparent; z-index: 4; position: absolute; top: 0px; left: 0px; display: none; opacity: 0;" class="panel-slide slide4"><a class="button-startnow-large clear" href="/kajeetStore/phones/index.html?o=H51">Start Now</a></div><div style="background: url(&quot;/4u/index/mainPageOfferCodesTxt/00/mainPromoTextImg/04/imageBinary/banner6-GRAD15.jpg&quot;) repeat scroll 0% 0% transparent; z-index: 3; position: absolute; top: 0px; left: 0px; display: none; opacity: 0;" class="panel-slide slide5"><a class="button-startnow-large clear" href="/kajeetStore/phones/index.html?o=H51">Start Now</a></div><div style="background: url(&quot;/4u/index/mainPageOfferCodesTxt/00/mainPromoTextImg/03/imageBinary/banner5-GPS.jpg&quot;) repeat scroll 0% 0% transparent; z-index: 2; position: absolute; top: 0px; left: 0px; display: none; opacity: 0;" class="panel-slide slide6"><a class="button-startnow-large clear" href="/kajeetStore/phones/index.html?o=H51">Start Now</a></div></div>
+					
+						<div class="panels" style="display: none; z-index: 490;" id="panelsH52"><div style="background: url(&quot;/4u/index/mainPageOfferCodesTxt/01/mainPromoTextImg/00/imageBinary/Parental-Control-Tiles-H1V2.jpg&quot;) repeat scroll 0% 0% transparent; z-index: 480;" class="panel-slide slide1"><h1><font color=" rgb(51, 102, 204);">the safest cell phone for </font><br> <font color=" rgb(51, 102, 204);">kids is now the smartest.</font></h1><a class="button-startnow-large clear" href=" /kajeetStore/phones/index.html?o=H53">Start Now</a></div><div style="background: url(&quot;/4u/index/mainPageOfferCodesTxt/01/mainPromoTextImg/0/imageBinary/banner2-parental-controls.jpg&quot;) repeat scroll 0% 0% transparent; z-index: 470;" class="panel-slide slide2"><a class="button-startnow-large clear" href="/kajeetStore/phones/index.html?o=H52">Start Now</a></div><div style="background: url(&quot;/4u/index/mainPageOfferCodesTxt/01/mainPromoTextImg/01/imageBinary/banner3-BYOSD.jpg&quot;) repeat scroll 0% 0% transparent; z-index: 460;" class="panel-slide slide3"><a class="button-startnow-large clear" href="4u/BYOSD?o=H52">Start Now</a></div><div style="background: url(&quot;/4u/index/mainPageOfferCodesTxt/01/mainPromoTextImg/04/imageBinary/banner4-summer-fun.jpg&quot;) repeat scroll 0% 0% transparent; z-index: 450;" class="panel-slide slide4"><a class="button-startnow-large clear" href="/kajeetStore/phones/index.html?o=H52">Start Now</a></div><div style="background: url(&quot;/4u/index/mainPageOfferCodesTxt/01/mainPromoTextImg/03/imageBinary/banner6-GRAD15.jpg&quot;) repeat scroll 0% 0% transparent; z-index: 440;" class="panel-slide slide5"><a class="button-startnow-large clear" href="/kajeetStore/phones/index.html?o=H52">Start Now</a></div><div style="background: url(&quot;/4u/index/mainPageOfferCodesTxt/01/mainPromoTextImg/02/imageBinary/banner5-GPS.jpg&quot;) repeat scroll 0% 0% transparent; z-index: 430;" class="panel-slide slide6"><a class="button-startnow-large clear" href="/kajeetStore/phones/index.html?o=H52">Start Now</a></div></div>
+					
+						<div class="panels" style="display: none; z-index: 420;" id="panelsH53"><div style="background: url(&quot;/4u/index/mainPageOfferCodesTxt/03/mainPromoTextImg/05/imageBinary/Parental-Control-Tiles-H1V2.jpg&quot;) repeat scroll 0% 0% transparent; z-index: 410;" class="panel-slide slide1"><h1><font color=" rgb(51, 102, 204);">the safest cell phone for </font><br> <font color=" rgb(51, 102, 204);">kids is now the smartest.</font></h1><a class="button-startnow-large clear" href="/kajeetStore/phones/index.html?o=H53">Start Now</a></div><div style="background: url(&quot;/4u/index/mainPageOfferCodesTxt/03/mainPromoTextImg/0/imageBinary/banner2-parental-controls.jpg&quot;) repeat scroll 0% 0% transparent; z-index: 400;" class="panel-slide slide2"><a class="button-startnow-large clear" href="/kajeetStore/phones/index.html?o=H53">Start Now</a></div><div style="background: url(&quot;/4u/index/mainPageOfferCodesTxt/03/mainPromoTextImg/00/imageBinary/banner3-BYOSD.jpg&quot;) repeat scroll 0% 0% transparent; z-index: 390;" class="panel-slide slide3"><a class="button-startnow-large clear" href="4u/BYOSD?o=H53">Start Now</a></div><div style="background: url(&quot;/4u/index/mainPageOfferCodesTxt/03/mainPromoTextImg/01/imageBinary/banner4-summer-fun.jpg&quot;) repeat scroll 0% 0% transparent; z-index: 380;" class="panel-slide slide4"><a class="button-startnow-large clear" href="/kajeetStore/phones/index.html?o=H53">Start Now</a></div><div style="background: url(&quot;/4u/index/mainPageOfferCodesTxt/03/mainPromoTextImg/03/imageBinary/banner6-GRAD15.jpg&quot;) repeat scroll 0% 0% transparent; z-index: 370;" class="panel-slide slide5"><a class="button-startnow-large clear" href="/kajeetStore/phones/index.html?o=H53">Start Now</a></div><div style="background: url(&quot;/4u/index/mainPageOfferCodesTxt/03/mainPromoTextImg/02/imageBinary/banner5-GPS.jpg&quot;) repeat scroll 0% 0% transparent; z-index: 360;" class="panel-slide slide6"><a class="button-startnow-large clear" href="/kajeetStore/phones/index.html?o=H53">Start Now</a></div></div>
+					
+						<div class="panels" style="display: none; z-index: 350;" id="panelsH54"><div style="background: url(&quot;/4u/index/mainPageOfferCodesTxt/06/mainPromoTextImg/00/imageBinary/Parental-Control-Tiles-H1V2.jpg&quot;) repeat scroll 0% 0% transparent; z-index: 340;" class="panel-slide slide1"><h1><font color=" rgb(51, 102, 204);">the safest cell phone for </font><br> <font color=" rgb(51, 102, 204);">kids is now the smartest.</font></h1><a class="button-startnow-large clear" href="/kajeetStore/phones/index.html?o=H53">Start Now</a></div><div style="background: url(&quot;/4u/index/mainPageOfferCodesTxt/06/mainPromoTextImg/0/imageBinary/banner2-parental-controls.jpg&quot;) repeat scroll 0% 0% transparent; z-index: 330;" class="panel-slide slide2"><a class="button-startnow-large clear" href="/kajeetStore/phones/index.html?o=H54">Start Now</a></div><div style="background: url(&quot;/4u/index/mainPageOfferCodesTxt/06/mainPromoTextImg/01/imageBinary/banner3-BYOSD.jpg&quot;) repeat scroll 0% 0% transparent; z-index: 320;" class="panel-slide slide3"><a class="button-startnow-large clear" href="4u/BYOSD?o=H54">Start Now</a></div><div style="background: url(&quot;/4u/index/mainPageOfferCodesTxt/06/mainPromoTextImg/02/imageBinary/banner4-summer-fun.jpg&quot;) repeat scroll 0% 0% transparent; z-index: 310;" class="panel-slide slide4"><a class="button-startnow-large clear" href="/kajeetStore/phones/index.html?o=H54">Start Now</a></div><div style="background: url(&quot;/4u/index/mainPageOfferCodesTxt/06/mainPromoTextImg/04/imageBinary/banner6-GRAD15.jpg&quot;) repeat scroll 0% 0% transparent; z-index: 300;" class="panel-slide slide5"><a class="button-startnow-large clear" href="/kajeetStore/phones/index.html?o=H54">Start Now</a></div><div style="background: url(&quot;/4u/index/mainPageOfferCodesTxt/06/mainPromoTextImg/03/imageBinary/banner5-GPS.jpg&quot;) repeat scroll 0% 0% transparent; z-index: 290;" class="panel-slide slide6"><a class="button-startnow-large clear" href="/kajeetStore/phones/index.html?o=H54">Start Now</a></div></div>
+					
+						<div class="panels" style="display: none; z-index: 280;" id="panelsH55"><div style="background: url(&quot;/4u/index/mainPageOfferCodesTxt/07/mainPromoTextImg/04/imageBinary/Parental-Control-Tiles-H1V2.jpg&quot;) repeat scroll 0% 0% transparent; z-index: 270;" class="panel-slide slide1"><h1><font color=" rgb(51, 102, 204);">the safest cell phone for </font><br> <font color=" rgb(51, 102, 204);">kids is now the smartest.</font></h1><a class="button-startnow-large clear" href="/kajeetStore/phones/index.html?o=H55">Start Now</a></div><div style="background: url(&quot;/4u/index/mainPageOfferCodesTxt/07/mainPromoTextImg/0/imageBinary/banner2-parental-controls.jpg&quot;) repeat scroll 0% 0% transparent; z-index: 260;" class="panel-slide slide2"><a class="button-startnow-large clear" href="/kajeetStore/phones/index.html?o=H55">Start Now</a></div><div style="background: url(&quot;/4u/index/mainPageOfferCodesTxt/07/mainPromoTextImg/00/imageBinary/banner3-BYOSD.jpg&quot;) repeat scroll 0% 0% transparent; z-index: 250;" class="panel-slide slide3"><a class="button-startnow-large clear" href="4u/BYOSD?o=H55">Start Now</a></div><div style="background: url(&quot;/4u/index/mainPageOfferCodesTxt/07/mainPromoTextImg/01/imageBinary/banner4-summer-fun.jpg&quot;) repeat scroll 0% 0% transparent; z-index: 240;" class="panel-slide slide4"><a class="button-startnow-large clear" href="/kajeetStore/phones/index.html?o=H55">Start Now</a></div><div style="background: url(&quot;/4u/index/mainPageOfferCodesTxt/07/mainPromoTextImg/02/imageBinary/banner6-GRAD15.jpg&quot;) repeat scroll 0% 0% transparent; z-index: 230;" class="panel-slide slide5"><a class="button-startnow-large clear" href="/kajeetStore/phones/index.html?o=H50">Start Now</a></div><div style="background: url(&quot;/4u/index/mainPageOfferCodesTxt/07/mainPromoTextImg/03/imageBinary/banner5-GPS.jpg&quot;) repeat scroll 0% 0% transparent; z-index: 220;" class="panel-slide slide6"><a class="button-startnow-large clear" href="/kajeetStore/phones/index.html?o=H55">Start Now</a></div></div>
+					
+						<div class="panels" style="display: none; z-index: 210;" id="panelsH51"></div>
+					
+						<div class="panels" style="display: none; z-index: 200;" id="panelsH51"></div>
+					
+				
+				</div>
+
+				<div style="z-index: 190;" class="home-buckets">
+					<div style="z-index: 180;" class="bucket how">
+						
+						
+				<h2>Learn more about kajeet:</h2>
+			<div onclick="javascript:document.location.href='/feature-demo.html?utm_campaign=Feature%20Demo&amp;utm_medium=promo&amp;utm_source=&amp;utm_content=Learn%20More';" style="background: url(&quot;/4u/index/bucketPromoTile1/imageBinary/bucket-how.jpg&quot;) no-repeat scroll 0px 0px transparent; z-index: 170;" class="img-panel">
+						
+						
+						
+					</div>
+					</div>
+					<div style="z-index: 160;" class="bucket parents">
+						
+						
+				<h2 class="blue"><strong>Activate Your Device Today!</strong></h2>
+			<div onclick="javascript:document.location.href='http://blog.kajeet.com/2012/12/03/activating-or-replacing-your-phone/';" style="background: url(&quot;/4u/index/bucketPromoTile2/imageBinary/replacing-upgrading-small-tile.gif&quot;) no-repeat scroll 0px 0px transparent; z-index: 150;" class="img-panel quote">
+						
+						
+						
+					</div>
+					</div>
+					<div style="z-index: 140;" class="bucket easy">
+						
+						
+				<h2><br></h2>
+			<div onclick="javascript:document.location.href='/kajeetStore/phones/index.html';" style="background: url(&quot;/4u/index/bucketPromoTile3/imageBinary/get-started-homepage-tile-espanol.png&quot;) no-repeat scroll 0px 0px transparent; z-index: 130;" class="img-panel">
+						
+						
+						
+					</div>
+					</div>
+				</div>
+
+			</div>
+			<!-- End Page Content -->
+		</div>
+
+		<div style="z-index: 120;" id="ft-outer">
+			
+
+
+
+
+
+
+
+
+<div style="z-index: 110;" id="ft-wrap">
+	<div style="z-index: 100;" class="ft-cols">
+		<div style="z-index: 90;" class="cols left">
+			<a class="seolink" href="/blog">The kajeet Blog</a>
+			<p>
+				Get breaking news and helpful tips about kids and technology and
+				find out about hot deals and cool features on kajeet phones and
+				plans. Check out our blog. It could save you time <em>and</em>
+				money. <br>
+			</p>
+		</div>
+		<div style="z-index: 80;" class="cols middle">
+			<a class="seolink" href="/4u/aboutUs.html"> About Us</a>
+			<p>Kajeet, the smart phone for kids, empowers kids with
+				technology and gives parents tools to keep them safe. Kajeet is the
+				only wireless service provider in America dedicated to kids and
+				education.</p>
+		</div>
+		<div style="z-index: 70;" class="cols right">
+		    <a class="seolink">Stay Connected</a>
+			<div style="z-index: 60;" class="social-box">
+				<a href="http://www.facebook.com/kajeet" class="facebook" target="_blank"><img src="/4u/docroot/kajeet/images2/fbicon.png" alt="fbicon" height="28" width="28"></a> <a href="https://twitter.com/#!/kajeet" class="twitter" target="_blank"><img src="/4u/docroot/kajeet/images2/twittericon.png" alt="twittericon" height="28" width="28"></a> <a href=" https://plus.google.com/107277528047464372227/posts" class="email" target="_blank"><img src="/4u/docroot/kajeet/images2/googleicon.png" alt="googleicon" height="28" width="28"></a> 
+					<a href="http://www.youtube.com/kajeetinc" class="print" target="_blank"><img src="/4u/docroot/kajeet/images2/youtubeicon.png" alt="youtubeicon" height="28" width="29"></a> 
+			</div>
+			<ul>
+				<li><a href="/kajeetStore/phones/index.html">Shop Phones</a></li>
+				<li><a href="/kajeetStore/serviceplans.do">Service Plans</a></li>
+				<li><a href="/kajeetStore/whyKajeet.do">Why kajeet</a></li>
+				<li><a href="/smsMessage.html">Text Your Kid</a></li>
+			</ul>
+		</div>
+		 <!-- START SCANALERT CODE -->
+    <a target="_blank" href="https://www.scanalert.com/RatingVerify?ref=www.kajeet.com"><img src="//images.scanalert.com/meter/www.kajeet.com/12.gif" alt="HACKER SAFE certified sites prevent over 99.9% of hacker crime." oncontextmenu="alert('Copying Prohibited by Law - HACKER SAFE is a Trademark of ScanAlert'); return false;" height="32" width="115" border="0">
+	</a>
+    <!-- END SCANALERT CODE -->
+	</div>
+	<br> <a href="/4u/aboutUs.html">About Us</a> | <a href="http://blog.kajeet.com/">Blog</a> | <a href="/4u/news.html">In the News</a> | <a href="/contactUs.html">Contact Us</a> | <a href="/4u/faq/services.html">FAQ</a> | <a href="/kajeetStore/guarantee.do">Satisfaction Guarantee</a> | <a href="/kajeetStore/shippingPolicy.do">Shipping Policy</a> | <a href="/4u/jobs.html">Careers</a> | <a href="/siteMap.html">Site Map</a> <br> <a href="/privacyPolicy.html">Privacy
+		Policy</a> | <a href="/4u/service-terms.html">Kajeet Terms
+		of Service</a> | <a href="/termsOfUse.html">Website Terms of Use</a> | <a href="/4u/other-resources.html">Kid Cell Phone
+		Resources</a> | <a href="/4u/categories.html">Top Kid Cell Phone Categories </a>
+</div>
+<div style="z-index: 50;" class="copyright">
+	<div style="z-index: 40;" class="ft-logo"></div>
+	© Copyright 2013, Kajeet, Inc. <br> <a href="http://www.arterramobility.com" target="_blank">Powered by Arterra Mobility®</a>		
+</div>
+
+
+
+
+	
+	
+		
+		<script type="text/javascript">
+			var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl."
+					: "http://www.");
+			document
+					.write(unescape("%3Cscript src='"
+							+ gaJsHost
+							+ "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		</script><script src="http://www.google-analytics.com/ga.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			acctNum = "UA-609638-1";
+			_gaq.push(['_setAccount', acctNum]);
+			_gaq.push(['_setDomainName', '.kajeet.com']);
+			_gaq.push(['_trackPageview']);
+			(function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })();
+		</script>
+	
+	
+
+
+
+
+
+
+<!-- Google Code for Main List -->
+<!-- Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. For instructions on adding this tag and more information on the above requirements, read the setup guide: google.com/ads/remarketingsetup -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1056489792;
+var google_conversion_label = "ouvyCNTk3AMQwILj9wM";
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js">
+</script><iframe name="google_conversion_frame" src="http://googleads.g.doubleclick.net/pagead/viewthroughconversion/1056489792/?random=1367612874041&amp;cv=7&amp;fst=1367612874041&amp;num=1&amp;fmt=1&amp;label=ouvyCNTk3AMQwILj9wM&amp;guid=ON&amp;u_h=1024&amp;u_w=1280&amp;u_ah=984&amp;u_aw=1280&amp;u_cd=24&amp;u_his=50&amp;u_tz=-300&amp;u_java=false&amp;u_nplug=0&amp;u_nmime=0&amp;url=http%3A//www.kajeet.com/4u/index.html%3Fc%3DGTP%26o%3DH51%26utm_medium%3DTP%26utm_source%3DGoogTP&amp;frm=0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" frameborder="0" height="13" scrolling="no" width="300"><img height="1" width="1" border="0" src="http://googleads.g.doubleclick.net/pagead/viewthroughconversion/1056489792/?frame=0&random=1367612874041&cv=7&fst=1367612874041&num=1&fmt=1&label=ouvyCNTk3AMQwILj9wM&guid=ON&u_h=1024&u_w=1280&u_ah=984&u_aw=1280&u_cd=24&u_his=50&u_tz=-300&u_java=false&u_nplug=0&u_nmime=0&url=http%3A//www.kajeet.com/4u/index.html%3Fc%3DGTP%26o%3DH51%26utm_medium%3DTP%26utm_source%3DGoogTP&frm=0" /></iframe>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="http://googleads.g.doubleclick.net/pagead/viewthroughconversion/1056489792/?value=0&label=ouvyCNTk3AMQwILj9wM&guid=ON&script=0"/>
+</div>
+</noscript>
+
+<!--
+    Start of DoubleClick Floodlight Tag: Please do not remove
+    Activity name of this tag: Universal Landing Page
+    URL of the webpage where the tag is expected to be placed: http://www.kajeet.com
+    This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+    Creation Date: 10/24/2012
+-->
+<script type="text/javascript">
+    var axel = Math.random() + "";
+    var a = axel * 10000000000000;
+    document.write('<iframe src="http://3862347.fls.doubleclick.net/activityi;src=3862347;type=landi749;cat=unive578;ord=1;num=' 
+            + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+</script><iframe src="http://3862347.fls.doubleclick.net/activityi;src=3862347;type=landi749;cat=unive578;ord=1;num=9259176873129.203?" style="display:none" frameborder="0" height="1" width="1"></iframe>
+<noscript>
+    <iframe src="http://3862347.fls.doubleclick.net/activityi;src=3862347;type=landi749;cat=unive578;ord=1;num=1?" 
+            width="1" height="1" frameborder="0" style="display:none"></iframe>
+</noscript>
+
+<!-- End of DoubleClick Floodlight Tag: Please do not remove -->
+
+		</div>
+	</div>
+
+	
+	
+	<!-- begin ad tag-->
+	<script language="JavaScript" type="text/javascript">
+		if (typeof ord == 'undefined') {
+			ord = Math.random() * 10000000000000000;
+		}
+		document
+				.write('<script language="JavaScript" src="https://ad.doubleclick.net/adj/x1.cont/kajeet/hp;sz=1x1;ord='
+						+ ord + '?" type="text/javascript"><\/script>');
+	</script><script language="JavaScript" src="https://ad.doubleclick.net/adj/x1.cont/kajeet/hp;sz=1x1;ord=9814524354394104?" type="text/javascript"></script>
+	<noscript>
+		<a
+			href="https://ad.doubleclick.net/jump/x1.cont/kajeet/hp;sz=1x1;ord=123456789?"
+			target="_blank"><img
+			src="https://ad.doubleclick.net/ad/x1.cont/kajeet/hp;sz=1x1;ord=123456789?"
+			width="1" height="1" border="0" alt=""></a>
+	</noscript>
+	<!-- End ad tag -->
+
+	<!-- Google Code for Home page Remarketing List -->
+	<script type="text/javascript">
+		/*           */
+		var google_conversion_id = 1056489792;
+		var google_conversion_language = "en";
+		var google_conversion_format = "3";
+		var google_conversion_color = "666666";
+		var google_conversion_label = "L8p7CLi-1gEQwILj9wM";
+		var google_conversion_value = 0;
+		/*     */
+	</script>
+	<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+		
+	</script><img src="http://www.googleadservices.com/pagead/conversion/1056489792/?random=1367612874294&amp;cv=7&amp;fst=1367612874041&amp;num=2&amp;fmt=3&amp;value=0&amp;label=L8p7CLi-1gEQwILj9wM&amp;bg=666666&amp;hl=en&amp;guid=ON&amp;u_h=1024&amp;u_w=1280&amp;u_ah=984&amp;u_aw=1280&amp;u_cd=24&amp;u_his=50&amp;u_tz=-300&amp;u_java=false&amp;u_nplug=0&amp;u_nmime=0&amp;url=http%3A//www.kajeet.com/4u/index.html%3Fc%3DGTP%26o%3DH51%26utm_medium%3DTP%26utm_source%3DGoogTP&amp;frm=0" height="1" width="1" border="0">
+	<noscript>
+		<div style="display: inline;">
+			<img height="1" width="1" style="border-style: none;" alt=""
+				src="https://www.googleadservices.com/pagead/conversion/1056489792/?label=L8p7CLi-1gEQwILj9wM&guid=ON&script=0" />
+		</div>
+	</noscript>
+
+
+	<script type="text/javascript" src="/4u/docroot/kajeet/scripts/criteoLoader.js" async="true"></script>
+	<script type="text/javascript">var CRITEO_CONF = [[{
+	    pageType: 'home'
+	}], [6902, 'pjl', 'us.', '010', [[7722456, 7722457]]]];
+	if (typeof (CRITEO) != "undefined") { CRITEO.Load(false); }
+	</script>
+
+
+	<!--
+	   Start of DoubleClick Floodlight Tag: Please do not remove
+	   Activity name of this tag: Kajeet TLD
+	   URL of the webpage where the tag is expected to be placed: http://www.kajeet.com
+	   This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+	   Creation Date: 10/24/2012
+	-->
+		<script type="text/javascript">
+		  var axel = Math.random() + "";
+		   	var a = axel * 10000000000000;
+		   	document.write('<iframe src="http://3862347.fls.doubleclick.net/activityi;src=3862347;type=tldug789;cat=kajee672;ord=1;num=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+		</script><iframe src="http://3862347.fls.doubleclick.net/activityi;src=3862347;type=tldug789;cat=kajee672;ord=1;num=7951133521738.044?" style="display:none" frameborder="0" height="1" width="1"></iframe>
+		<noscript>
+    		<iframe src="http://3862347.fls.doubleclick.net/activityi;src=3862347;type=tldug789;cat=kajee672;ord=1;num=1?" width="1" height="1" frameborder="0" style="display:none"></iframe>
+		</noscript>
+	<!-- End of DoubleClick Floodlight Tag: Please do not remove -->
+
+
+
+<img src="http://widget.criteo.com/pjl/display.js?resptype=gif&amp;t1=sendEvent&amp;p1=v%3D2%26pt1%3D0%26pt2%3D1%26wi%3D7722456" style="display: none;" height="0" width="0"><iframe src="http://dis.us.criteo.com/dis/dis.aspx?p=6902&amp;cb=34723363129&amp;ref=&amp;sc_r=1280x1024&amp;sc_d=24" style="display: none;" height="1px" width="1px"></iframe></body>

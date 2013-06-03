@@ -1,0 +1,73 @@
+<head>
+<title>GazzaQuote</title>
+<script type="text/javascript">
+<!--
+function delayer(){
+
+   var URL=location.search.substr(1);
+   var destination= URL.substr(URL.indexOf("URL=")+4);
+   if (destination.search("http://www.snai.it/")!=-1){
+		//alert("SNAI: "+destination.search("http://www.snai.it/"));
+		var http = destination.substr(0,destination.indexOf("?cod_programma="));
+		var cod_programma = destination.substr(destination.indexOf("?cod_programma=")+15,destination.indexOf("&num_avvenimento=")-destination.indexOf("?cod_programma=")-15);
+		var num_avvenimento = destination.substr(destination.indexOf("&num_avvenimento=")+17,destination.indexOf("&sport=")-destination.indexOf("&num_avvenimento=")-17);
+		var sport = destination.substr(destination.indexOf("&sport=")+7,destination.indexOf("&des_manif=")-destination.indexOf("&sport=")-7);
+		var des_manif = destination.substr(destination.indexOf("&des_manif=")+11,destination.indexOf("&comando=")-destination.indexOf("&des_manif=")-11);
+		var comando = destination.substr(destination.indexOf("&comando=")+9);
+		document.snai.cod_programma.value = cod_programma;
+		document.snai.num_avvenimento.value = num_avvenimento;
+		document.snai.sport.value = sport;
+		document.snai.des_manif.value = des_manif;
+		document.snai.comando.value = comando;
+		document.snai.action = http;
+		document.snai.submit();
+   /*}else if (destination.search("https://adserver.itsfogo.com/")!=-1){
+	   //alert("BWIN: "+destination.search("https://adserver.itsfogo.com/"));
+	   
+	   
+		var http = destination.substr(0,destination.indexOf("?zoneid="));
+		var zoneid = destination.substr(destination.indexOf("?zoneid=")+8,destination.indexOf("%26ResultIDs=")-destination.indexOf("?zoneid=")-8);
+		var ResultIDs = destination.substr(destination.indexOf("%26ResultIDs=")+13,destination.indexOf("%26GameIDs=")-destination.indexOf("%26ResultIDs=")-13);
+		var GameIDs = destination.substr(destination.indexOf("%26GameIDs=")+11,destination.indexOf("%26ResultOdds=")-destination.indexOf("%26GameIDs=")-11);
+		var ResultOdds = destination.substr(destination.indexOf("%26ResultOdds=")+14,destination.indexOf("%26Stake=")-destination.indexOf("%26ResultOdds=")-14);
+		var Stake = destination.substr(destination.indexOf("%26Stake=")+9);
+		//alert(http);
+		document.bwin.zoneid.value = zoneid;
+		document.bwin.ResultIDs.value = ResultIDs;
+		document.bwin.GameIDs.value = GameIDs;
+		document.bwin.ResultOdds.value = ResultOdds;
+		document.bwin.Stake.value = Stake;
+		document.bwin.action = http;
+		document.bwin.submit();
+*/	   
+   }else{
+		//alert("ALTRO: "+destination.search("http://www.snai.it/"));
+		window.location = destination;
+   }
+   
+   
+   
+	
+   
+   
+}
+//-->
+</script>
+</head>
+<body onload="delayer()">
+ <form name="snai" method="post">
+	<input name="cod_programma" value="" type="hidden">
+	<input name="num_avvenimento" value="" type="hidden">
+	<input name="sport" value="" type="hidden">
+	<input name="des_manif" value="" type="hidden">
+	<input name="comando" value="" type="hidden">
+ </form>
+ <form name="bwin" method="get">
+	<input name="zoneid" value="" type="hidden">
+	<input name="ResultIDs" value="" type="hidden">
+	<input name="GameIDs" value="" type="hidden">
+	<input name="ResultOdds" value="" type="hidden">
+	<input name="Stake" value="" type="hidden">
+ </form>
+
+</body>

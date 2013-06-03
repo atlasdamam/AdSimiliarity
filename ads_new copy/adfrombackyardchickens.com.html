@@ -1,0 +1,1873 @@
+<!--<![endif]--><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Home | Chick Days</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="shortcut icon" href="http://purinapoultry.com/wp-content/themes/chickdays/favicon.ico">
+  <style data-href="http://purinapoultry.com/wp-content/themes/chickdays/css/style.css" media="screen">/*
+  Author:     Andrew Pautler (http://pautlerdesign.com/)
+  Copyright:  (c) 2012 Pautler Design. All rights reserved.
+*/
+/*Imports*/
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ *
+ * Detailed information about this CSS: h5bp.com/css
+ *
+ * ==|== normalize ==========================================================
+ */
+/* =============================================================================
+   HTML5 display definitions
+   ========================================================================== */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block;
+}
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+audio:not([controls]) {
+  display: none;
+}
+[hidden] {
+  display: none;
+}
+/* =============================================================================
+   Base
+   ========================================================================== */
+/*
+ * 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
+ * 2. Prevent iOS text size adjust on device orientation change, without disabling user zoom: h5bp.com/g
+ */
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+  color: #222;
+}
+body {
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.4;
+}
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate
+ * Also: hot pink! (or customize the background color to match your design)
+ */
+::-moz-selection {
+  background: #ae1b12;
+  color: #fff;
+  text-shadow: none;
+}
+::-moz-selection {
+  background: #ae1b12;
+  color: #fff;
+  text-shadow: none;
+}
+/* =============================================================================
+   Links
+   ========================================================================== */
+a {
+  color: #00e;
+}
+a:visited {
+  color: #551a8b;
+}
+a:hover {
+  color: #06e;
+}
+a:focus {
+  outline: thin dotted;
+}
+/* Improve readability when focused and hovered in all browsers: h5bp.com/h */
+a:hover,
+a:active {
+  outline: 0;
+}
+/* =============================================================================
+   Typography
+   ========================================================================== */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+blockquote {
+  margin: 1em 40px;
+}
+dfn {
+  font-style: italic;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+ins {
+  background: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+/* Redeclare monospace font family: h5bp.com/j */
+pre,
+code,
+kbd,
+samp {
+  font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
+  font-size: 1em;
+}
+/* Improve readability of pre-formatted text in all browsers */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+q {
+  quotes: none;
+}
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+small {
+  font-size: 85%;
+}
+/* Position subscript and superscript content without affecting line-height: h5bp.com/k */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+/* =============================================================================
+   Lists
+   ========================================================================== */
+ul,
+ol {
+  margin: 1em 0;
+  padding: 0 0 0 40px;
+}
+dd {
+  margin: 0 0 0 40px;
+}
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+  margin: 0;
+  padding: 0;
+}
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
+/*
+ * 1. Improve image quality when scaled in IE7: h5bp.com/d
+ * 2. Remove the gap between images and borders on image containers: h5bp.com/i/440
+ */
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+  vertical-align: middle;
+}
+/*
+ * Correct overflow not hidden in IE9
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+/* =============================================================================
+   Figures
+   ========================================================================== */
+figure {
+  margin: 0;
+}
+/* =============================================================================
+   Forms
+   ========================================================================== */
+form {
+  margin: 0;
+}
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+/* Indicate that 'label' will shift focus to the associated form element */
+label {
+  cursor: pointer;
+}
+/*
+ * 1. Correct color not inheriting in IE6/7/8/9
+ * 2. Correct alignment displayed oddly in IE6/7
+ */
+legend {
+  border: 0;
+  *margin-left: -7px;
+  padding: 0;
+  white-space: normal;
+}
+/*
+ * 1. Correct font-size not inheriting in all browsers
+ * 2. Remove margins in FF3/4 S5 Chrome
+ * 3. Define consistent vertical alignment display in all browsers
+ */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+/*
+ * 1. Define line-height as normal to match FF3/4 (set using !important in the UA stylesheet)
+ */
+button,
+input {
+  line-height: normal;
+}
+/*
+ * 1. Display hand cursor for clickable form elements
+ * 2. Allow styling of clickable form elements in iOS
+ * 3. Correct inner spacing displayed oddly in IE7 (doesn't effect IE6)
+ */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+  *overflow: visible;
+}
+/*
+ * Re-set default cursor for disabled elements
+ */
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+/*
+ * Consistent -moz-box sizing and appearance
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  -moz-box-sizing: border-box;
+  padding: 0;
+  *width: 13px;
+  *height: 13px;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+/*
+ * Remove inner padding and border in FF3/4: h5bp.com/l
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+/*
+ * 1. Remove default vertical scrollbar in IE6/7/8/9
+ * 2. Allow only vertical resizing
+ */
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+/* Colors for form validity */
+input:invalid,
+textarea:invalid {
+  background-color: #f0dddd;
+}
+/* =============================================================================
+   Tables
+   ========================================================================== */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td {
+  vertical-align: top;
+}
+/* =============================================================================
+   Chrome Frame Prompt
+   ========================================================================== */
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: black;
+  padding: 0.2em 0;
+}
+/*LESS Variables*/
+/*Fonts*/
+/*Colors*/
+.text-shadow {
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+}
+/*!
+ * Bootstrap Responsive v2.0.3
+ *
+ * Copyright 2012 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world @twitter by @mdo and @fat.
+ */
+@media (max-width: 768px) {
+  body {
+    padding-top: 0;
+  }
+  .navbar-fixed-top {
+    position: static;
+    margin-bottom: 18px;
+  }
+  .navbar-fixed-top .navbar-inner {
+    padding: 5px;
+  }
+  .navbar .container {
+    width: auto;
+    padding: 0;
+  }
+  .navbar .brand {
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: 0 0 0 -5px;
+  }
+  .nav-collapse {
+    clear: both;
+  }
+  .nav-collapse .nav {
+    float: none;
+    margin: 0 0 9px;
+  }
+  .nav-collapse .nav > li {
+    float: none;
+  }
+  .nav-collapse .nav > li > a {
+    margin-bottom: 2px;
+  }
+  .nav-collapse .nav > .divider-vertical {
+    display: none;
+  }
+  .nav-collapse .nav .nav-header {
+    color: #999999;
+    text-shadow: none;
+  }
+  .nav-collapse .nav > li > a,
+  .nav-collapse .dropdown-menu a {
+    padding: 6px 15px;
+    font-weight: bold;
+    color: #999999;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+  }
+  .nav-collapse .btn {
+    padding: 4px 10px 4px;
+    font-weight: normal;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+  }
+  .nav-collapse .dropdown-menu li + li a {
+    margin-bottom: 2px;
+  }
+  .nav-collapse .nav > li > a:hover,
+  .nav-collapse .dropdown-menu a:hover {
+    background-color: #222222;
+  }
+  .nav-collapse.in .btn-group {
+    padding: 0;
+    margin-top: 5px;
+  }
+  .nav-collapse .dropdown-menu {
+    position: static;
+    top: auto;
+    left: auto;
+    display: block;
+    float: none;
+    max-width: none;
+    padding: 0;
+    margin: 0 15px;
+    background-color: transparent;
+    border: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+  .nav-collapse .dropdown-menu:before,
+  .nav-collapse .dropdown-menu:after {
+    display: none;
+  }
+  .nav-collapse .dropdown-menu .divider {
+    display: none;
+  }
+  .nav-collapse .navbar-form,
+  .nav-collapse .navbar-search {
+    float: none;
+    padding: 9px 15px;
+    margin: 9px 0;
+    border-top: 1px solid #222222;
+    border-bottom: 1px solid #222222;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+  .navbar .nav-collapse .nav.pull-right {
+    float: none;
+    margin-left: 0;
+  }
+  .nav-collapse,
+  .nav-collapse.collapse {
+    height: 0;
+    overflow: hidden;
+  }
+  .navbar .btn-navbar {
+    display: block;
+  }
+  .navbar-static .navbar-inner {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+@media (min-width: 768px) {
+  .nav-collapse.collapse {
+    height: auto !important;
+    overflow: visible !important;
+  }
+}
+/****************************************/
+/*               Body                   */
+/****************************************/
+html {
+  background: #f2ecdc url("http://purinapoultry.com/wp-content/themes/chickdays/css/../assets/image-background.jpg") repeat;
+  color: #363636;
+}
+body {
+  font-size: 100%;
+  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  height: 100%;
+}
+.wrapper {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+}
+img,
+a,
+body,
+footer,
+input {
+  -o-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+img {
+  max-width: 100%;
+  width: 100%;
+}
+p,
+#main ul,
+#main ol {
+  font-size: 1.25em;
+  margin-top: 0;
+}
+#main {
+  margin-top: 2em;
+}
+i {
+  font-size: 70%;
+}
+/*Links/Buttons*/
+a,
+a:visited {
+  color: #ae1b12;
+  text-decoration: none;
+}
+a:hover {
+  color: #8b150f;
+}
+a.overlay-link {
+  position: absolute;
+  bottom: 1em;
+  left: 1em;
+  padding: 0.5em;
+  background: #827349;
+  background: rgba(142, 131, 94, 0.8);
+  color: #fff;
+  text-transform: lowercase;
+  font-size: 1.5em;
+  z-index: 10;
+}
+a.overlay-link:hover {
+  background: rgba(142, 131, 94, 0.95);
+}
+a.overlay-link i {
+  font-size: 0.5em;
+  padding-left: 1em;
+}
+.button {
+  text-transform: uppercase;
+  font-weight: bold;
+  background: rgba(180, 167, 128, 0.2);
+  border: 1px solid #827349;
+  color: #ae1b12;
+  border-radius: 20px;
+  padding: 0.65em 1em;
+}
+.button:hover {
+  background: rgba(180, 167, 128, 0.4);
+  border-radius: 5px;
+}
+/*Headings*/
+h2,
+h3,
+h4 {
+  font-weight: normal;
+  text-transform: lowercase;
+  padding-bottom: 0.25em;
+  border-bottom: 1px solid #b9b4a7;
+  margin-bottom: 0.5em;
+}
+h2 {
+  font-size: 2em;
+}
+h3 {
+  font-size: 1.66em;
+}
+h4 {
+  font-size: 1.33em;
+}
+/*Tables*/
+table {
+  width: 100%;
+  border: 1px solid #bebaac;
+  padding: 0.5em;
+  text-align: left;
+  margin: 0 0 1em;
+}
+table td,
+table th {
+  padding: 0.5em;
+  border: 1px solid #bebaac;
+  min-width: 20%;
+}
+table th {
+  background: #e2d9c1;
+  text-transform: uppercase;
+}
+/****************************************/
+/*             Header/Nav               */
+/****************************************/
+/*Nav Top*/
+.top-bar {
+  background: #8b150f;
+  padding: 1em 0;
+  /*Search*/
+
+}
+.top-bar form {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 300px;
+}
+.top-bar form input {
+  width: 90%;
+  border: 1px solid #5d0e0a;
+  border-radius: 15px;
+  padding: 2% 5%;
+  font-size: 0.8em;
+  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.top-bar form i {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  font-size: 1em;
+}
+#nav-top ul {
+  display: none;
+}
+/*Logo*/
+h1#logo {
+  float: left;
+  display: block;
+  margin: -0.25em 0 0.5em;
+}
+h1#logo a {
+  background: url("http://purinapoultry.com/wp-content/themes/chickdays/css/../assets/logo.png") no-repeat;
+  background-size: 170px 94px;
+  width: 170px;
+  height: 94px;
+}
+/*Main Nav*/
+.nav-main {
+  background: #ae1b12;
+  z-index: 1000;
+}
+a.menu-link {
+  float: right;
+  display: block;
+  margin: 1em 0 0;
+  padding: 1em 1.25em 0.75em;
+  border: 2px solid #827349;
+  border-radius: 3px;
+  background: #dad2bd;
+  color: #827349;
+}
+a.menu-link:hover {
+  color: #615637;
+  background: #c8bc9c;
+}
+.menu,
+.menu > ul ul {
+  clear: both;
+  transition: all 0.3s ease-out;
+}
+.js .menu,
+.js .menu > ul ul {
+  overflow: hidden;
+  max-height: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+.menu.active,
+.js .menu > ul ul.active {
+  max-height: 55em;
+}
+.menu > ul {
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  margin: 0 0 1em;
+}
+.menu li a {
+  color: #fff;
+  display: block;
+  padding: 0.8em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  position: relative;
+}
+.menu li a:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+.menu li.has-subnav > a:after {
+  content: '+';
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  font-size: 1.5em;
+  padding: 0.25em 0.5em;
+}
+.menu li.has-subnav > a.active:after {
+  content: "-";
+}
+/****************************************/
+/*              Homepage                */
+/****************************************/
+.purina-story h2 {
+  text-transform: none;
+}
+.image-section figure {
+  position: relative;
+  margin: 1em 0;
+}
+.image-section img.chicken-and-egg {
+  display: none;
+}
+.image-section figure img {
+  width: 100%;
+  transform: rotate(0deg);
+}
+.image-section p {
+  font-size: 1.25em;
+}
+.image-section p a {
+  color: #ae1b12;
+  font-size: 80%;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.image-section p a:hover {
+  color: #8b150f;
+}
+.image-section p a i {
+  font-size: 60%;
+}
+.purina-story {
+  margin-top: 3em;
+}
+.purina-story img {
+  float: right;
+  width: 50%;
+  margin: 0 0 1em 1em;
+}
+/****************************************/
+/*              Subpages                */
+/****************************************/
+.main-content p.small {
+  font-size: 80%;
+}
+.main-content ul li {
+  margin-bottom: 1em;
+}
+.main-content form ul {
+  padding: 0;
+}
+.main-content form li {
+  margin: 0 0 1em 0;
+  list-style-type: none;
+}
+.main-content form label {
+  text-transform: lowercase;
+  font-weight: bold;
+  display: block;
+}
+.main-content form input[type="text"],
+.main-content form input[type="email"],
+.main-content form textarea {
+  border: 1px solid #827349;
+  padding: 2%;
+  width: 96%;
+  border-radius: 2px;
+}
+.main-content form select {
+  border: 1px solid #827349;
+  width: 100%;
+}
+.sidebar {
+  margin-top: 1em;
+  padding-top: 1em;
+  border-top: 2px solid #827349;
+  /*Form Elements*/
+
+}
+.sidebar .sidebar-button {
+  display: block;
+  border: 2px solid #8b150f;
+  background: #ae1b12;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #a61810), color-stop(1, #b91f15));
+  background: -ms-linear-gradient(bottom, #a61810, #b91f15);
+  background: -moz-linear-gradient(center bottom, #a61810 0%, #b91f15 100%);
+  color: #fff;
+  padding: 0.5em 1em;
+  border-radius: 40px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.25em;
+  text-shadow: 0px -1px 0 rgba(0, 0, 0, 0.25);
+  line-height: 1.2;
+}
+.sidebar .sidebar-button span {
+  font-family: Georgia, Times, serif;
+  text-transform: lowercase;
+  font-weight: normal;
+  display: block;
+  font-style: italic;
+}
+.sidebar .sidebar-button i {
+  padding-left: 2em;
+}
+.sidebar .sidebar-button:hover {
+  border-radius: 10px;
+  opacity: 0.9;
+}
+.sidebar section {
+  background: #e2d9c1;
+  background: rgba(226, 217, 193, 0.7);
+  padding: 1em;
+  margin: 1em 0;
+  position: relative;
+  font-size: 105%;
+  line-height: 1.5;
+  /*Testimonial Sidebar*/
+
+  /*Product Info Sidebar*/
+
+  /*Feather Fact Sidebar*/
+
+  /*Featured Product Sidebar*/
+
+  /*Contact Info*/
+
+}
+.sidebar section.hide,
+.sidebar section .hide {
+  display: none;
+}
+.sidebar section h2,
+.sidebar section h3,
+.sidebar section h4 {
+  border-bottom: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0 0 0.5em;
+  padding: 0;
+}
+.sidebar section h4 {
+  font-size: 100%;
+}
+.sidebar section .button {
+  margin: 1em auto 0;
+  display: block;
+  width: 150px;
+  text-align: center;
+}
+.sidebar section p {
+  font-size: 100%;
+}
+.sidebar section blockquote {
+  margin: 0;
+}
+.sidebar section cite {
+  margin-top: 1.5em;
+  display: block;
+  font-weight: bold;
+  font-style: normal;
+  text-transform: uppercase;
+  text-align: right;
+  font-size: 80%;
+  padding-right: 70px;
+}
+.sidebar section cite span {
+  font-weight: normal;
+  text-transform: none;
+  display: block;
+}
+.sidebar section img {
+  width: inherit;
+}
+.sidebar section.testimonial {
+  margin-bottom: 2em;
+  background: rgba(226, 217, 193, 0.7) url("http://purinapoultry.com/wp-content/themes/chickdays/css/../assets/image-quotes.png") top left no-repeat;
+}
+.sidebar section.testimonial img {
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  border: 2px solid #827349;
+  border-radius: 40px;
+}
+.sidebar section.product-info {
+  margin-top: 10em;
+}
+.sidebar section.product-info img {
+  margin: -10em auto 1em;
+  display: block;
+  width: 70%;
+  max-width: 230px;
+}
+.sidebar section.product-info p {
+  text-align: center;
+}
+.sidebar section.product-info td,
+.sidebar section.product-info th {
+  width: 50%;
+}
+.sidebar section.product-info th {
+  font-weight: bold;
+  background: none;
+}
+.sidebar section.feather-fact {
+  margin-top: 5em;
+}
+.sidebar section.feather-fact img {
+  border-radius: 100px;
+  margin: -5em auto 1em;
+  display: block;
+  width: 70%;
+  max-width: 150px;
+  box-shadow: 0px 0px 0px 2px #827349;
+}
+.sidebar section.feather-fact p {
+  margin-bottom: 0;
+}
+.sidebar section.featured-product {
+  margin-top: 10em;
+}
+.sidebar section.featured-product img {
+  margin: -10em auto 1em;
+  display: block;
+  width: 50%;
+  max-width: 150px;
+}
+.sidebar section.featured-product span.top-border-left {
+  position: absolute;
+  top: 1em;
+  width: 10%;
+  height: 8px;
+  border-top: 1px solid #b9b4a4;
+  border-bottom: 1px solid #b9b4a4;
+}
+.sidebar section.featured-product span.top-border-right {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  width: 10%;
+  height: 8px;
+  border-top: 1px solid #b9b4a4;
+  border-bottom: 1px solid #b9b4a4;
+}
+.sidebar section.contact-info {
+  margin-top: 5em;
+}
+.sidebar section.contact-info em {
+  text-align: center;
+  display: block;
+  padding: 0.5em 0;
+  margin-bottom: 0;
+}
+.sidebar section.contact-info img {
+  width: 100%;
+  margin: 0.5em 0;
+}
+.sidebar section.contact-info figure {
+  margin: -5em 0 1em;
+}
+.sidebar form {
+  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.sidebar input[type="email"],
+.sidebar input[type="text"] {
+  background: #f3efe4;
+  border: none;
+  border-radius: 2px;
+  padding: 2%;
+  display: block;
+  width: 96%;
+}
+/*Product Pages*/
+.the-purina-story h2 {
+  text-transform: none;
+}
+.product h2 {
+  text-transform: none;
+}
+.product img {
+  transform: rotate(0deg);
+}
+/*Event Listing*/
+.event {
+  margin: 1em 0;
+  border-bottom: 1px solid #cac6b9;
+}
+.event .date {
+  font-weight: bold;
+  text-transform: lowercase;
+  margin: 0;
+  line-height: 1;
+}
+.event h3 {
+  margin: 0;
+  color: #ae1b12;
+  border-bottom: none;
+  padding: 0;
+}
+/****************************************/
+/*               Footer                 */
+/****************************************/
+footer {
+  color: #7e7b72;
+  font-size: 0.65em;
+  text-align: center;
+  padding-top: 3.5em;
+  margin-top: 4em;
+  background: url("http://purinapoultry.com/wp-content/themes/chickdays/css/../assets/pattern-checker.png") top repeat-x;
+}
+footer a {
+  color: #7e7b72;
+  border-bottom: 1px dotted #7e7b72;
+}
+footer a:hover,
+footer a:visited {
+  color: #7e7b72;
+  border-bottom: 1px solid #7e7b72;
+}
+footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+footer ul li {
+  font-size: 2em;
+}
+footer ul li a,
+footer ul li a:hover {
+  border-bottom: none;
+}
+/****************************************/
+/*              IE8 Styles              */
+/****************************************/
+.ie8 h1#logo a {
+  background: url("http://purinapoultry.com/wp-content/themes/chickdays/css/../assets/logo_ie8.png") no-repeat;
+}
+/*Media Queries*/
+/*480px __________________________________________________________________________________________________________ */
+@media only screen and (min-width: 30em) {
+  /****************************************/
+  /*               Body                   */
+  /****************************************/
+  /****************************************/
+  /*             Header/Nav               */
+  /****************************************/
+  /****************************************/
+  /*              Homepage                */
+  /****************************************/
+  /****************************************/
+  /*              Subpages                */
+  /****************************************/
+  /*Portfolio*/
+  /****************************************/
+  /*               Footer                 */
+  /****************************************/
+}
+/*768px __________________________________________________________________________________________________________ */
+@media only screen and (min-width: 48.25em) {
+  /****************************************/
+  /*               Body                   */
+  /****************************************/
+  /****************************************/
+  /*             Header/Nav               */
+  /****************************************/
+  .top-bar {
+    padding: 0.5em 0;
+    /*Search*/
+  
+  }
+  .top-bar form {
+    float: right;
+    position: relative;
+    margin: 0 0 0 1em;
+    width: 10em;
+  }
+  .top-bar form i {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 0.75em;
+  }
+  #nav-top ul {
+    display: block;
+    float: right;
+  }
+  #nav-top ul li {
+    float: left;
+    list-style-type: none;
+  }
+  #nav-top ul a {
+    font-size: 0.75em;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 1em;
+  }
+  #nav-top ul a:hover {
+    background: #74120d;
+  }
+  /****************************************/
+  /*              Homepage                */
+  /****************************************/
+  .image-section {
+    position: relative;
+  }
+  .image-section div {
+    float: left;
+    width: 48%;
+    margin: 0 1%;
+  }
+  .image-section img.chicken-and-egg {
+    position: absolute;
+    z-index: 10;
+    display: block;
+    width: 200px;
+    left: 50%;
+    top: 3em;
+    margin-left: -100px;
+  }
+  .image-section .egg a.overlay-link {
+    right: 1em;
+    left: inherit;
+  }
+  .image-section p {
+    padding: 0 0.5em;
+  }
+  .purina-story img {
+    width: 20%;
+  }
+  /****************************************/
+  /*              Subpages                */
+  /****************************************/
+  .main-content {
+    width: 63%;
+    float: left;
+    /*Photo Corners*/
+  
+  }
+  .main-content figure {
+    position: relative;
+    float: right;
+    width: 45%;
+    margin: 1em 0 1.5em 1.5em;
+  }
+  .main-content figure.hide-corners {
+    margin: 0 0 1em 1em;
+  }
+  .main-content figure.hide-corners span,
+  .main-content figure.full-width span {
+    display: none;
+  }
+  .main-content figure.full-width {
+    float: none;
+    width: 100%;
+    margin: 1em 0;
+  }
+  .main-content .main-content figure img {
+    transform: rotate(2deg);
+    margin: 0;
+  }
+  .main-content span.top-corner {
+    position: absolute;
+    z-index: 10;
+    width: 45px;
+    height: 45px;
+    top: -0.7em;
+    left: -0.75em;
+    background: url("http://purinapoultry.com/wp-content/themes/chickdays/css/../assets/image-photo-corner-top.png") top left no-repeat;
+  }
+  .main-content span.bottom-corner {
+    position: absolute;
+    z-index: 10;
+    width: 45px;
+    height: 45px;
+    bottom: -0.8em;
+    right: -0.4em;
+    background: url("http://purinapoultry.com/wp-content/themes/chickdays/css/../assets/image-photo-corner-bottom.png") bottom right no-repeat;
+  }
+  .main-content form .name-field {
+    margin-right: 4%;
+  }
+  .main-content form .name-field,
+  .main-content form .email-field {
+    width: 48%;
+    float: left;
+  }
+  .main-content form .name-field input,
+  .main-content form .email-field input {
+    padding: 3%;
+    width: 94%;
+  }
+  .sidebar {
+    width: 30%;
+    float: right;
+    border-top: none;
+    /*Form Elements*/
+  
+  }
+  .sidebar input[type="email"],
+  .sidebar input[type="text"] {
+    padding: 5%;
+    width: 90%;
+  }
+  .sidebar section {
+    /*Product Info Sidebar*/
+  
+  }
+  .sidebar section.product-info img {
+    float: none;
+  }
+  /*Product Pages*/
+  .product img {
+    float: right;
+    width: 45%;
+    margin: 0em 0 1em 1em;
+  }
+  /****************************************/
+  /*               Footer                 */
+  /****************************************/
+  footer {
+    text-align: left;
+  }
+  footer div.copyright {
+    float: left;
+    width: 49%;
+  }
+  footer div.social {
+    float: right;
+    width: 49%;
+    text-align: right;
+  }
+  footer ul li {
+    float: right;
+    margin: 0 0.25em;
+  }
+}
+/*992px __________________________________________________________________________________________________________ */
+@media only screen and (min-width: 62em) {
+  /****************************************/
+  /*               Body                   */
+  /****************************************/
+  /****************************************/
+  /*             Header/Nav               */
+  /****************************************/
+  /*Logo*/
+  h1#logo {
+    margin-bottom: -0.5em;
+    z-index: 1000;
+    position: relative;
+  }
+  h1#logo a {
+    background-size: 216px 120px;
+    width: 216px;
+    height: 120px;
+  }
+  /*Main Nav*/
+  .nav-main {
+    overflow: visible;
+    background: #ae1b12;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #a61810), color-stop(1, #b91f15));
+    background: -ms-linear-gradient(bottom, #a61810, #b91f15);
+    background: -moz-linear-gradient(center bottom, #a61810 0%, #b91f15 100%);
+  }
+  .checker {
+    background: url("http://purinapoultry.com/wp-content/themes/chickdays/css/../assets/pattern-checker.png") repeat-x;
+    height: 28px;
+    overflow: visible;
+  }
+  #menu {
+    float: right;
+    clear: none;
+  }
+  a.menu-link {
+    display: none;
+  }
+  .js .menu,
+  .js .menu > ul ul {
+    max-height: none;
+    overflow: visible;
+    background: none;
+  }
+  .js .menu > ul ul {
+    background: #770b06;
+    display: none;
+  }
+  .js .menu > ul li:hover ul {
+    display: block;
+  }
+  .menu ul {
+    margin: 0 0 0 -0.25em;
+    border: 0;
+  }
+  .menu li a {
+    border: 0;
+    text-transform: lowercase;
+    font-family: Georgia, Times, serif;
+    font-style: italic;
+    font-size: 0.875em;
+  }
+  .menu li a span {
+    display: block;
+    font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.25em;
+    font-style: normal;
+  }
+  .level-1 > li > a {
+    padding: 3em 2.5em 0.7em 1.25em;
+    margin: 0 0 0 0em;
+    border-right: 1px solid #8b150f;
+  }
+  .level-1 > li.has-subnav > a {
+    background: url("http://purinapoultry.com/wp-content/themes/chickdays/css/../assets/icon-nav-arrow.png") bottom right no-repeat;
+    background-orgin: bottom right;
+  }
+  .level-1 > li {
+    margin-left: -0.3em;
+  }
+  .level-1 > li.current-menu-item,
+  .level-1 > li.current-menu-ancestor {
+    background: #8b150f;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #64100c), color-stop(1, #bc241c));
+    background: -ms-linear-gradient(bottom, #64100c, #bc241c);
+    background: -moz-linear-gradient(center bottom, #64100c 0%, #bc241c 100%);
+  }
+  .level-1 > li > a:hover {
+    background: #770b06;
+  }
+  .level-1 > li.has-subnav > a:hover,
+  .level-1 > li.active.has-subnav > a {
+    background: #770b06 url("http://purinapoultry.com/wp-content/themes/chickdays/css/../assets/icon-nav-arrow-hover.png") bottom right no-repeat;
+  }
+  .menu .mobile-only {
+    display: none;
+  }
+  .menu .has-subnav > a:after {
+    content: "";
+    font-size: 1em;
+    padding: 0.8em 0.5em;
+  }
+  .menu .level-1 > li.has-subnav > a:after,
+  .menu li.has-subnav > a:after {
+    content: "";
+  }
+  .menu > ul > li {
+    display: inline-block;
+    position: relative;
+  }
+  .menu > ul ul {
+    position: absolute;
+  }
+  .menu > ul ul li {
+    position: relative;
+  }
+  .menu > ul #menu-item-16 ul,
+  .menu > ul #menu-item-17 ul {
+    right: 0;
+    left: inherit;
+  }
+  .menu > ul ul.level-2 {
+    top: 6em;
+    left: 0;
+    width: 300px;
+    padding: 1%;
+    margin-left: 0;
+    z-index: 100;
+  }
+  .menu > ul ul.level-2 li.has-subnav > a {
+    cursor: default;
+  }
+  .menu > ul ul.level-2 li.has-subnav > a:hover {
+    background: none;
+  }
+  .menu > ul ul.level-2 li a {
+    font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 0.875em;
+    text-transform: none;
+    font-style: normal;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0.6em 0.8em;
+  }
+  .menu > ul ul.level-3 {
+    position: relative;
+    margin-bottom: 0.5em;
+    margin-left: 0;
+  }
+  .menu > ul ul.level-3 li {
+    margin-left: 0.8em;
+  }
+  .menu > ul ul.level-3 li a {
+    font-weight: normal;
+    border-top: none;
+    padding: 0.4em 0.4em 0.4em 0.8em;
+  }
+  /****************************************/
+  /*              Homepage                */
+  /****************************************/
+  .image-section img.chicken-and-egg {
+    width: 300px;
+    margin-left: -150px;
+  }
+  /****************************************/
+  /*              Subpages                */
+  /****************************************/
+  /****************************************/
+  /*               Footer                 */
+  /****************************************/
+  /****************************************/
+  /*              IE8 Styles              */
+  /****************************************/
+  .ie8 h1#logo a {
+    background: url("http://purinapoultry.com/wp-content/themes/chickdays/css/../assets/logo.png") no-repeat;
+  }
+}
+/*1382px __________________________________________________________________________________________________________ */
+@media only screen and (min-width: 1200px) {
+  /****************************************/
+  /*               Body                   */
+  /****************************************/
+  /****************************************/
+  /*             Header/Nav               */
+  /****************************************/
+  .level-1 > li > a {
+    padding-right: 4.5em;
+    padding-left: 1.25em;
+  }
+  /****************************************/
+  /*              Homepage                */
+  /****************************************/
+  #featured-slider div.iphone {
+    right: 13%;
+  }
+  /****************************************/
+  /*              Subpages                */
+  /****************************************/
+  /****************************************/
+  /*               Footer                 */
+  /****************************************/
+}
+/*Retina CSS Styles*/
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  h1#logo a {
+    background: url("http://purinapoultry.com/wp-content/themes/chickdays/css/../assets/logo@2x.png");
+    background-size: 170px 94px;
+    width: 170px;
+    height: 94px;
+  }
+}
+@media only screen and (min-width: 48.25em) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 48.25em) and (min-device-pixel-ratio: 2), only screen and (min-width: 48.25em) and (-o-min-device-pixel-ratio: 2/1), only screen and (min-width: 48.25em) and (min-device-pixel-ratio: 2), only screen and (min-width: 48.25em) and (min-resolution: 192dpi), only screen and (min-width: 48.25em) and (min-resolution: 2dppx) {
+  h1#logo a {
+    background: url("http://purinapoultry.com/wp-content/themes/chickdays/css/../assets/logo@2x.png");
+    background-size: 216px 120px;
+    width: 216px;
+    height: 120px;
+  }
+}
+/*Imports*/
+/* ==|== non-semantic helper classes ========================================
+   Please define your styles before this section.
+   ========================================================================== */
+/* For image replacement */
+.ir {
+  display: block;
+  border: 0;
+  text-indent: -999em;
+  overflow: hidden;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  text-align: left;
+  direction: ltr;
+  *line-height: 0;
+}
+.ir br {
+  display: none;
+}
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible {
+  visibility: hidden;
+}
+/* Contain floats: h5bp.com/q */
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+}
+/* ==|== print styles =======================================================
+   Print styles.
+   ========================================================================== */
+.print-only {
+  display: none !important;
+}
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+  }
+  /* Black prints faster: h5bp.com/s */
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+  /* Don't show links for images, or javascript/internal links */
+  pre,
+  blockquote {
+    border: 1px solid #999999;
+    page-break-inside: avoid;
+  }
+  thead {
+    display: table-header-group;
+  }
+  /* h5bp.com/t */
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  img {
+    max-width: 100% !important;
+  }
+  @page  {
+    margin: 0.5cm;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+  .hide-on-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .hide-for-print {
+    display: none !important;
+  }
+  .show-for-print {
+    display: inherit !important;
+  }
+}
+</style>
+  <style type="text/css">@import url("http://purinapoultry.com/wp-content/themes/chickdays/webfonts/ss-social.css");</style> 
+  <style type="text/css">@import url("http://purinapoultry.com/wp-content/themes/chickdays/webfonts/ss-standard.css");</style> 
+
+  <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link rel="pingback" href="http://purinapoultry.com/xmlrpc.php">
+
+  
+  
+<!-- This site is optimized with the Yoast WordPress SEO plugin v1.4.7 - http://yoast.com/wordpress/seo/ -->
+<link rel="canonical" href="http://purinapoultry.com/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Home - Chick Days">
+<meta property="og:url" content="http://purinapoultry.com/">
+<meta property="og:site_name" content="Chick Days">
+<!-- / Yoast WordPress SEO plugin. -->
+
+<link rel="alternate" type="application/rss+xml" title="Chick Days » Feed" href="http://purinapoultry.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Chick Days » Comments Feed" href="http://purinapoultry.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Chick Days » Home Comments Feed" href="http://purinapoultry.com/home/feed/">
+<script src="http://www.google-analytics.com/ga.js" async="" type="text/javascript"></script><script type="text/javascript" src="http://purinapoultry.com/wp-includes/js/comment-reply.min.js?ver=3.5.1"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://purinapoultry.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://purinapoultry.com/wp-includes/wlwmanifest.xml"> 
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-38017384-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script><style type="text/css">.tk-proxima-nova{font-family:"proxima-nova",sans-serif;}</style><link data-inprogress="" href="http://use.typekit.net/c/8f5ebb/proxima-nova:i4:i7:n4:n7.W0W:H:2,W0Z:H:2,W0V:H:2,W0Y:H:2/d?3bb2a6e53c9684ffdc9a98f4135b2a62d7ad2c805d37e76a8d7c97f0842e0fa60a93761be0a5198d65ff558dceb97f7099399a1710aa0d48d9cc7f5993ed7242b428d1f205e2735926fe765f0483becb3a8555937cdb07b15089e3ec6a3a338396e78b8b1ca68e461a57d0c4241cef2b7c90c6a84da159b33b5d383f50e8dbf255e3c663240d13d6fb19e865c5049d0e5ff71ff64ee25e5b3f6fbb1ad42f32973b415c1088faad5618f5cb588b4836e2c11fc426cf00c8e02a611fe512e21334b061da57c5b4753f4e9dbf369442c26544e04ca0c5cb8db4fc6efb07262cdc5fed223d9756" rel="stylesheet">
+</head>
+
+
+
+<body id="chick-days" class="home js">
+  <!-- Google Code for Find a Purina Retailer Conversion Page -->
+  <script type="text/javascript">
+    /* <![CDATA[ */
+    goog_snippet_vars = function() {
+      var w = window;
+      w.google_conversion_id = 993317184;
+      w.google_conversion_label = "iGgYCJC8yQQQwKLT2QM";
+      w.google_conversion_value = 0;
+    }
+    // DO NOT CHANGE THE CODE BELOW.
+    goog_report_conversion = function(url) {
+      goog_snippet_vars();
+      window.google_conversion_format = "3";
+      window.google_is_call = true;
+      var opt = new Object();
+      opt.onload_callback = function() {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    }
+    var conv_handler = window['google_trackConversion'];
+    if (typeof(conv_handler) == 'function') {
+      conv_handler(opt);
+    }
+  }
+  /* ]]> */
+  </script>
+  <script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion_async.js">
+  </script>
+
+
+  <div id="container">
+    <header>
+      <div class="top-bar">
+        <div class="wrapper clearfix">
+          <nav id="nav-top">
+            <form accept-charset="UTF-8" action="http://purinapoultry.com/" method="get">
+              <input class="searchfield" id="search" name="s" placeholder="Search the site..." type="text">
+              <i class="ss-icon">Search</i>
+            </form>
+
+            
+            <ul>
+              <li id="menu-item-271" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-271"><a href="http://poultry.purinamills.com/CONTACTUS/default.aspx">Contact Us</a></li>
+            </ul>
+          </nav>
+        </div> <!-- .wrapper -->
+      </div> <!-- #nav-top -->
+
+      <div class="nav-main clearfix">
+        <div class="wrapper">
+          <h1 id="logo"><a class="ir" href="/">Purina Poultry Feed</a></h1>
+
+          <!-- Main Navigation -->
+          <a href="#menu" class="menu-link ss-icon">Rows</a>
+
+          <nav id="menu" class="menu" role="navigation">
+            <ul class="level-1">
+              <li id="menu-item-21" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21 has-subnav"><a href="http://purinapoultry.com/all-about-chickens/">All About <span>Chickens</span></a>
+<ul class="sub-menu level-2">
+	<li id="menu-item-26" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26"><a href="http://purinapoultry.com/all-about-chickens/thinking-of-chickens/">Thinking of Chickens?</a></li>
+	<li id="menu-item-68" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-68"><a href="http://purinapoultry.com/all-about-chickens/preparing-their-coop/">Preparing Their Coop</a></li>
+	<li id="menu-item-62" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-62 has-subnav"><a href="http://purinapoultry.com/all-about-chickens/bringing-home-your-chicks/">Bringing Home Your Chicks</a>
+	<ul class="sub-menu level-3">
+		<li id="menu-item-242" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-242"><a href="http://purinapoultry.com/all-about-chickens/bringing-home-your-chicks/preparing-for-your-new-chicks/">Preparing for Your New Chicks</a></li>
+		<li id="menu-item-244" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-244"><a href="http://purinapoultry.com/all-about-chickens/bringing-home-your-chicks/your-chicks-weeks-2-3/">Your Chicks’ Weeks 2-3</a></li>
+		<li id="menu-item-243" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-243"><a href="http://purinapoultry.com/all-about-chickens/bringing-home-your-chicks/your-chicks-weeks-4-5/">Your Chicks’ Weeks 4-5</a></li>
+		<li id="menu-item-256" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-256"><a href="http://purinapoultry.com/all-about-chickens/bringing-home-your-chicks/your-chicks-week-6/">Your Chicks’ Week 6</a></li>
+		<li id="menu-item-257" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-257"><a href="http://purinapoultry.com/all-about-chickens/your-chicks-3rd-month/">Your Chicks’ 3rd Month</a></li>
+		<li id="menu-item-253" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-253"><a href="http://purinapoultry.com/all-about-chickens/bringing-home-your-chicks/your-chicks-4-%c2%bd-month/">Your Chicks’ 4 ½ Month</a></li>
+		<li id="menu-item-255" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-255"><a href="http://purinapoultry.com/all-about-chickens/bringing-home-your-chicks/your-chicks-6th-month/">Your Chicks’ 6th Month</a></li>
+		<li id="menu-item-254" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-254"><a href="http://purinapoultry.com/all-about-chickens/bringing-home-your-chicks/your-chicks-7th-month/">Your Chicks’ 7th Month</a></li>
+	</ul>
+</li>
+	<li id="menu-item-63" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-63 has-subnav"><a href="http://purinapoultry.com/all-about-chickens/nutrition/">Nutrition</a>
+	<ul class="sub-menu level-3">
+		<li id="menu-item-66" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-66"><a href="http://purinapoultry.com/all-about-chickens/nutrition/feeding-for-lifestyle/">Feeding for Lifestyle</a></li>
+		<li id="menu-item-64" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-64"><a href="http://purinapoultry.com/all-about-chickens/nutrition/feed-types/">Feed Types</a></li>
+		<li id="menu-item-67" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-67"><a href="http://purinapoultry.com/all-about-chickens/nutrition/nutrients-energy/">Nutrients &amp; Energy</a></li>
+		<li id="menu-item-207" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-207"><a href="http://purinapoultry.com/all-about-chickens/nutrition/feeding-chart/">Feeding Chart</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20 has-subnav"><a href="http://purinapoultry.com/all-about-eggs/">All About <span>Eggs</span></a>
+<ul class="sub-menu level-2">
+	<li id="menu-item-203" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-203"><a href="http://purinapoultry.com/all-about-eggs/why-homegrown-eggs-are-better/">Why Homegrown Eggs Are Better</a></li>
+	<li id="menu-item-71" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-71"><a href="http://purinapoultry.com/all-about-eggs/healthy-chicken-means-healthy-eggs/">Healthy Chickens Mean Healthy Eggs</a></li>
+	<li id="menu-item-72" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-72"><a href="http://purinapoultry.com/all-about-eggs/recipes/">Recipes</a></li>
+	<li id="menu-item-73" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-73"><a href="http://purinapoultry.com/all-about-eggs/taste-tests/">Taste Tests</a></li>
+</ul>
+</li>
+<li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19 has-subnav"><a href="http://purinapoultry.com/what-to-feed/">What to <span>Feed</span></a>
+<ul class="sub-menu level-2">
+	<li id="menu-item-201" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-201"><a href="http://purinapoultry.com/what-to-feed/the-purina-story/">The Purina Story</a></li>
+	<li id="menu-item-76" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-76 has-subnav"><a href="http://purinapoultry.com/what-to-feed/products/">Products</a>
+	<ul class="sub-menu level-3">
+		<li id="menu-item-84" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-84"><a href="http://purinapoultry.com/what-to-feed/products/start-and-grow/">Start &amp; Grow®</a></li>
+		<li id="menu-item-79" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-79"><a href="http://purinapoultry.com/what-to-feed/products/flock-raiser/">Flock Raiser®</a></li>
+		<li id="menu-item-80" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80"><a href="http://purinapoultry.com/what-to-feed/products/layena/">Layena®</a></li>
+		<li id="menu-item-119" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-119"><a href="http://purinapoultry.com/what-to-feed/products/layena-plus-omega-3/">Layena® Plus Omega-3</a></li>
+		<li id="menu-item-83" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-83"><a href="http://purinapoultry.com/what-to-feed/products/scratch-grains/">Scratch Grains</a></li>
+		<li id="menu-item-78" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78"><a href="http://purinapoultry.com/what-to-feed/products/flock-block/">Flock Block</a></li>
+		<li id="menu-item-77" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-77"><a href="http://purinapoultry.com/what-to-feed/products/chick-grit/">Chick Grit</a></li>
+		<li id="menu-item-82" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-82"><a href="http://purinapoultry.com/what-to-feed/products/poultry-grit/">Poultry Grit</a></li>
+		<li id="menu-item-81" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-81"><a href="http://purinapoultry.com/what-to-feed/products/oyster-shell/">Oyster Shell</a></li>
+	</ul>
+</li>
+	<li id="menu-item-75" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75"><a href="http://purinapoultry.com/what-to-feed/feeding-chart/">Feeding Chart</a></li>
+</ul>
+</li>
+<li id="menu-item-208" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-208"><a href="http://poultry.purinamills.com/EVENTSPROMOTIONS/Events/default.aspx">Chick Days <span>Events</span></a></li>
+<li id="menu-item-17" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17 has-subnav"><a href="http://purinapoultry.com/partners-links/">Partners &amp; <span>Links</span></a>
+<ul class="sub-menu level-2">
+	<li id="menu-item-93" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-93"><a href="http://purinapoultry.com/partners-links/faqs/">FAQs</a></li>
+	<li id="menu-item-90" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-90"><a href="http://purinapoultry.com/partners-links/articles/">Articles</a></li>
+	<li id="menu-item-96" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-96"><a href="http://purinapoultry.com/partners-links/glossary-of-terms/">Glossary of Terms</a></li>
+	<li id="menu-item-92" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-92"><a href="http://purinapoultry.com/partners-links/e-newsletters-archive/">E-Newsletters Archive</a></li>
+</ul>
+</li>
+<li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16 has-subnav"><a href="http://purinapoultry.com/just-for-fun/">Just for <span>Fun</span></a>
+<ul class="sub-menu level-2">
+	<li id="menu-item-87" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-87"><a href="http://purinapoultry.com/just-for-fun/coloring-pages/">Coloring Pages</a></li>
+	<li id="menu-item-164" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-164"><a href="/all-about-eggs/recipes/">Recipes</a></li>
+	<li id="menu-item-88" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-88"><a href="http://purinapoultry.com/just-for-fun/egg-carton-wrappers/">Egg Carton Wrappers</a></li>
+</ul>
+</li>
+<li id="menu-item-271" class="mobile-only menu-item menu-item-type-custom menu-item-object-custom menu-item-271"><a href="http://poultry.purinamills.com/CONTACTUS/default.aspx">Contact <span>Us</span></a></li>
+            </ul>
+          </nav>
+
+        </div> <!-- .wrapper -->
+      </div> <!-- .nav-main -->
+      <div class="checker clearfix"></div> <!-- .checker -->
+    </header>
+  <div id="main" class="homepage" role="main">
+    <div class="wrapper clearfix">
+
+      <div class="image-section clearfix">
+        <div class="chicken">
+          <figure>
+            <a class="overlay-link" href="/all-about-chickens/thinking-of-chickens/">All About Chickens <i class="ss-icon">navigateright</i> </a>
+            <img src="/wp-content/themes/chickdays/assets/image-chicken.jpg" alt="Chicken">
+          </figure>
+          <p>Chickens are full of personality. Learn more about raising these beautiful, lively birds and get rewarded with fresh, homegrown eggs.&nbsp;&nbsp;<a title="Why Homegrown Eggs Are Better" href="/all-about-chickens/thinking-of-chickens/">More About Chickens <i class="ss-icon">navigateright</i></a></p>
+        </div>
+
+        <img src="/wp-content/themes/chickdays/assets/image-chicken-and-egg.png" alt="It's all about the chicken and the egg" class="chicken-and-egg">
+
+        <div class="egg">
+          <figure>
+            <a class="overlay-link" href="/all-about-eggs/why-homegrown-eggs-are-better/">All About Eggs <i class="ss-icon">navigateright</i> </a>
+            <img src="/wp-content/themes/chickdays/assets/image-eggs.jpg" alt="Basket of Eggs">
+          </figure>
+          <p>Eggs are the most perfect source of protein in the world. Learn more about why homegrown means the best eggs possible.&nbsp;<a title="Why Homegrown Eggs Are Better" href="all-about-eggs/why-homegrown-eggs-are-better/">More About Eggs <i class="ss-icon">navigateright</i></a></p>
+        </div>
+      </div>
+
+      <div class="purina-story">
+      <h2>The Purina Story</h2>       
+      <img src="/wp-content/themes/chickdays/assets/image-purina-chow.jpg" alt="Vintage Purina chow bag">
+      <p></p><p>Purina has been nourishing flocks across the country for more than 80 years. For fresh eggs and healthy chickens, our customers have always depended on us to provide advice and resources to help ensure the wellbeing of their flocks.</p>
+<p></p>
+      <a href="/what-to-feed/the-purina-story/" class="button">Learn More <i class="ss-icon">navigateright</i></a>
+      </div> <!-- .purina-story -->
+
+
+    </div> <!-- .wrapper -->
+  </div> <!-- #main -->
+
+
+      <footer class="clearfix">
+        <div class="wrapper">
+          <div class="copyright">
+            <p>Purina and the Chow Brand marks are used by Purina Animal Nutrition LLC under license only in the United States and its territories (excluding Puerto Rico).</p> 
+            <p>© 2013 Purina Animal Nutrition LLC</p>
+          </div>
+  
+          <div class="social">
+            <p>All rights reserved. | <a href="http://poultry.purinamills.com/Terms/index.htm" target="_blank">Terms &amp; Conditions</a> | <a href="http://poultry.purinamills.com/Privacy/index.htm" target="_blank">Privacy Policy</a> </p>
+            <!-- <ul>
+              <li class="ss-social-circle ss-icon"><a href="#">Facebook</a></li>
+              <li class="ss-social-circle ss-icon"><a href="#">YouTube</a></li>
+              <li class="ss-social-circle ss-icon"><a href="#">Twitter</a></li>
+            </ul> -->
+          </div>
+  
+        </div> <!-- .wrapper -->
+      </footer>
+
+    </div> <!-- eo #container -->
+
+		
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="http://purinapoultry.com/wp-content/themes/chickdays/js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
+    <script src="http://purinapoultry.com/wp-content/themes/chickdays/js/plugins-min.js"></script>
+    <script src="http://purinapoultry.com/wp-content/themes/chickdays/js/script-min.js"></script>
+    <script data-noprefix="" src="http://purinapoultry.com/wp-content/themes/chickdays/webfonts/ss-standard.js"></script>
+    <script data-noprefix="" src="http://purinapoultry.com/wp-content/themes/chickdays/webfonts/ss-social.js"></script>
+
+
+    <!-- Typekit -->
+    <script type="text/javascript" src="//use.typekit.net/fap3iid.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+	
+
+</body>

@@ -1,0 +1,23 @@
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+        <title>Untitled Document</title>
+        <script language="javascript" type="text/javascript">
+            function init() {
+                var exdate = new Date();
+                exdate.setTime(exdate.getTime() + document.getElementById("cookie-expire").value*1000);
+
+                document.cookie= document.getElementById("cookie-name").value + "=" + document.getElementById("cookie-value").value + "; Domain=" +  document.getElementById("cookie-domain").value + "; Expires=" + exdate.toGMTString() +  "; Path=" + document.getElementById("cookie-path").value;
+                location.href = document.getElementById('url-redir').value;
+            }
+        </script>
+
+    </head>
+    <body onload="init()">
+        <input id="cookie-name" value="SIGA_TRK" type="hidden">
+        <input id="cookie-value" value="Z504b03041400080008001b22b242000000000000000000000000010000003015c9b11180300805d05da82d3e248071152f0546b284e7eec6f2dd7b68d27116466358df682cb16815c852fc4962f794028de15e11d1709534df13192a99d4df0f504b0708050296794100000047000000" type="hidden">
+        <input id="cookie-path" value="/" type="hidden">
+        <input id="cookie-domain" value="siga.uol.com.br" type="hidden">
+        <input id="cookie-expire" value="2592000" type="hidden">
+        <input id="url-redir" value="http://ad.doubleclick.net/clk;272214011;98013828;y" type="hidden">
+    
+</body>

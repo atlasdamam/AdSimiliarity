@@ -1,0 +1,2200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:pas="http://www.intel.com/2009/pluckApplicationServer">
+ <head> 
+  <title>Big Data Analytics: Intelligence Begins with Intel</title> 
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+  <meta name="keywords" content="big data analytics, big data cloud, big data security, big data storage, big data technologies, Hadoop performance, data integration best practices,big data analytics" /> 
+  <meta name="description" content="Learn more about big data analytics, from optimizing Hadoop* and Intel technologies to data integration best practices, big data security, and more." /> 
+  <meta name="robots" content="index,follow" /> 
+  <meta name="robots" content="noarchive" /> 
+  <meta name="language" content="en" /> 
+  <meta name="location" content="us" /> 
+  <meta name="X-Server" content="PRD1PCQAPP06" /> 
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" /> 
+  <meta property="og:title" content="Big Data Analytics: Intelligence Begins with Intel" /> 
+  <meta property="og:type" content="company" /> 
+  <meta property="og:url" content="http://www.intel.com/content/www/us/en/big-data/big-data-analytics-turning-big-data-into-intelligence.html?cid=sem116p19262&amp;gclid=COnP5teG6bYCFQFnOgodxXEAyw" /> 
+  <meta property="og:image" content="http://www.intel.com/content/dam/www/global/icons/page-types/Collection-Content-Library-Icon.png" /> 
+  <meta property="og:site_name" content="Intel" /> 
+  <meta property="fb:admins" content="186774301373559" /> 
+  <meta property="og:description" content="Learn more about big data analytics, from optimizing Hadoop* and Intel technologies to data integration best practices, big data security, and more." /> 
+  <link rel="icon" type="image/vnd.microsoft.icon" href="/etc/designs/ver/3.1.151/intel/default/favicon.ico" /> 
+  <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/etc/designs/ver/3.1.151/intel/default/favicon.ico" /> 
+  <!--[if gte IE 7]><!--> 
+  <script type="text/javascript">
+
+    var gomez = {
+        gs: new Date().getTime(),
+        acctId: '8B3439',
+        pgId: '',
+        grpId: 'CQ'
+    };
+
+/*Gomez tag version: 7.0.1*/var gomez=gomez?gomez:{};gomez.h3=function(d, s){for(var p in s){d[p]=s[p];}return d;};gomez.h3(gomez,{b3:function(r){if(r<=0)return false;return Math.random()<=r&&r;},b0:function(n){var c=document.cookie;var v=c.match(new RegExp(';[ ]*'+n+'=([^;]*)'));if(!v)v=c.match(new RegExp('^'+n+'=([^;]*)'));if(v)return unescape(v[1]);return '';},c2:function(n,v,e,p,d,s){try{var t=this,a=t.domain?t.domain:location.hostname;var c=n+'='+escape(v)+(e?';expires='+e.toGMTString():'')+(p?';path='+p:';path=/')+(d?';domain='+d:';domain='+a)+(s?';secure':'');document.cookie=c;}catch(e){}},z0:function(n){var t=this;if(n){var s =t.b0("__g_c");if(!s)return '';var v=s.match(new RegExp(n+':([^\|]*)'));if(v)return unescape(v[1]);return '';}else return '';},z1:function(n,m){var t=this;if(n){var s=t.b0("__g_c");if(s){if(s.indexOf(n+':')!=-1)s=s.replace(new RegExp('('+n+':[^\|]*)'),n+':'+m);else s=s==' '?n+':'+m:s+'|'+n+':'+m;t.c2("__g_c",s);}else t.c2("__g_c",n+':'+m);};},b2:function(v,s){var t=this,f=new Date(t.gt()+946080000000),g=''+v+'_'+s;t.c2('__g_u',g,f);t.gc.c=v;t.gc.d=s;t.z1('c',v);t.z1('d',s);},gt:function(){return new Date().getTime()},b5:function(){return new Date().getTime()-gomez.gs},j1:function(h){if(h){if(h.indexOf('<')!=-1||h.indexOf('%3C')!=-1||h.indexOf('%3c')!=-1)return null;if(window.decodeURIComponent)return decodeURIComponent(h);else return unescape(h);}return null;},f1:function(u,t){try{if(u){if(!/(^http|^https)/.test(u)){if(t==1)return gomez.j1(location.hostname);else return u;}var p=new RegExp('(^http|^https|):\/{2}([^\?#;]*)');if(t==1)p=new RegExp('(^http|^https|):\/{2}([^\/\?]*)');var r=u.match(p);if(r&&t==1)return gomez.j1(r[2]);else if(r)return r[0];}return null;}catch(e){return null;}},j3:function(n){try{var t =this,key=escape((window.location+n).replace(new RegExp("([:\/\.])","gm"),""));if(key&&key.length>100){key=key.substring(0,100);}if(window.localStorage){window.localStorage.setItem(key, t.gt());}else{t.z1('r',key+'___'+t.gt());}}catch(e){return ;}}, j2:function(){try{var m,t =this,key=escape((document.referrer+window.location).replace(new RegExp("([:\/\.])","gm"),""));if(key&&key.length>100){key=key.substring(0,100);}if(window.localStorage){m=window.localStorage.getItem(key);}if(!m){var c=t.z0("r");if(c){var r=c.split('___');if(r &&r[0]==key){m=r[1];}};};t.j4();return m;}catch(e){return ;}}, j4:function(){try{var t =this;if(window.localStorage){var key=escape((document.referrer+window.location).replace(new RegExp("([:\/\.])","gm"),""));if(key&&key.length>100){key=key.substring(0,100);}window.localStorage.removeItem(key);}else{t.z1('r', '');}}catch(e){return ;}}, j5:function(){var ret='';for(var i=0;i<3;i++){ret =ret +(((1+Math.random())*0x10000)|0).toString(16).substring(1);}ret =parseInt(ret, 16);return ret;},j6:function(){var t =this;var g=t.b0("__g_u");if(g&&g!='1'&&g.indexOf('NaN')==-1&&g.indexOf('undefined')==-1){var r =g.split("_");if(r.length>5){if(parseInt(r[5])<new Date().getTime()){return undefined;}else{return parseFloat(r[2]);}}}return undefined;},nameEvent:function(){},startInterval:function(){},endInterval:function(){},customValue:function(){}});gomez.P=function(){};gomez.P.prototype={hash:function(o){if(!o)return '';var t=this,s='{n:'+t.f9(o['n'])+'|';for(var i in o){if(i=='n')continue;if(typeof(o[i])=='string'||typeof(o[i])=='number')s +=i+':'+t.f9(o[i])+'|';};s=s.substring(0,s.length-1);return s+'}';},f9:function(s){s=''+s;s=s.replace('|','#$#').replace(':','$*$').replace('{','@#@').replace('}','*@*').replace('&','!*!');return s;},g0:function(){var t=this,z=gomez;if(z.grpIds)z.h3(z.gc,z.grpIds);if(z.wrate)z.gc.r=z.wrate;z.gc.e=z.grpId;for(var i=1;i<5;i++){if(z["grpId"+i]!=undefined){z.gc["e"+i]=z["grpId"+i];}}z.gc.b=z.pgId;z.gc.l=z.f1(z.m,2);if(self.screen){z.gc.m=screen.width;z.gc.o=screen.height;}else if(self.java){var j=java.awt.Toolkit.getDefaultToolkit();var s=j.getScreenSize();z.gc.m=s.width;z.gc.o=s.height;};z.gc.p=navigator.platform;if(navigator.cpuClass)z.gc.q=navigator.cpuClass;if(!z.gc.f&&!z.gc.g){try{var a=new Array("MSIE","Firefox","Opera","Safari","Chrome"),b=document.createElement('div');if(b.addBehavior&&document.body){b.addBehavior('#default#clientCaps');z.gc.k=b.connectionType;}}catch(e){};for(var i=0;i<a.length;i++){if(navigator.userAgent.indexOf(a[i])!=-1){z.gc.g=a[i];z.gc.f=(new String(navigator.userAgent.substring(navigator.userAgent.indexOf(a[i])).match(/[\d.]+/))).substring(0);}}if(!z.gc.f&&!z.gc.g){z.gc.g=navigator.vendor||navigator.appName;z.gc.f=(new String(navigator.appVersion.match(/[\d.]+/))).substring(0);}}return t.hash(z.gc);}};try{gomez.gc={'n':'c'};var iU=gomez.b0('__g_u');if(iU==undefined||iU==''){gomez.b2(gomez.j5(), 0);}var sR=gomez.j6();if(sR==undefined){sR=1;gomez.isFirstVi=true;}else{gomez.isFirstVi=false;}var wR=gomez.wrate?parseFloat(gomez.wrate):(gomez.wrate==0?0:1);wR=wR<0?0:(wR>1?1:wR);gomez.inSample=gomez.z0('a');if(!gomez.inSample||gomez.inSample==''){if(gomez.b3(wR*sR)){gomez.inSample=1;}else{gomez.inSample=0;}gomez.z1('a', gomez.inSample);}else{gomez.inSample=parseInt(gomez.inSample);}gomez.runFlg=gomez.inSample>0;if(gomez.runFlg){gomez.clickT=gomez.j2();gomez.h1=function(v,d){return v?v:d};gomez.gs=gomez.h1(gomez.gs,new Date().getTime());gomez.acctId=gomez.h1(gomez.acctId,'');gomez.pgId=gomez.h1(gomez.pgId,'');gomez.grpId=gomez.h1(gomez.grpId, '');gomez.E=function(c){this.s=c;};gomez.E.prototype={g1:function(e){var t=gomez,i=t.g6(e);if(i)i.e=t.b5();}};gomez.L=function(m){this.a=m;};gomez.L.prototype={g2:function(m){var t=gomez,n=t.b5();var s=document.getElementsByTagName(m);var e=t.k;if(m=='script')e=t.j;if(m=='iframe')e=t.l;if(s){var l=s.length;for(var i=0;i<l;i++){var u=s[i].src||s[i].href;if(u &&!e[u]){var r =new gomez.E(e);t.grm[u]=r;e[u]=new t.c7(u, n);if(t.gIE&&m=='script')t.e2(s[i],'readystatechange',t.d2,false);else t.e2(s[i],'load',r.g1,false);}}}}};gomez.L.m=new Object;gomez.S=function(){var t=this,h=gomez.acctId+".r.axf8.net";t.x=('https:'==location.protocol?'https:':'http:')+'//'+h+'/mr/b.gif?';t.pvHttpUrl=('https:'==location.protocol?'https:':'http:')+'//'+h+'/mr/e.gif?';t.abHttpUrl=('https:'==location.protocol?'https:':'http:')+'//'+h+'/mr/f.gif?';};gomez.h2=function(){var t=this;t.gIE=false;t.f=new Object;t._h=0;t.j=new Object;t.k=new Object;t.l=new Object;t.m=location.href;t.p=-1;t.q=-1;t.u=new Array;t._w=false;t.gSfr=/KHTML|WebKit/i.test(navigator.userAgent);t.grm=new Object;t.b;t.d=false;t.x=false;t.s=new gomez.S;t._a=false;t.h6=false;t.n1=0;t.c=false;};gomez.h3(gomez,{h5:function(u){try{var s=document.createElement('script');s.async=true;if(navigator.userAgent.indexOf('Firefox/3.5')!=-1){s.defer=true;}s.src=u;s.type='text/javascript';if(document.body)document.body.appendChild(s);else if(document.documentElement.getElementsByTagName('head')[0])document.documentElement.getElementsByTagName('head')[0].appendChild(s);}catch(e){var t=gomez;if(t.gSfr)document.write("<scr"+"ipt src='"+u+"'"+"><\/scr"+"ipt>");}},a9:function(){var t=gomez,i=t.z0('a'),g=t.b0('__g_u'),h=t.z0('h'), b=t.z0('b');t.gc.h=b;if(h)t.n1=parseInt(h);if(!t.gc.h)t.gc.h=1;t.z1('b',parseInt(t.gc.h)+1);if(i){t.a=parseInt(i);if(t.a==1){t._w=true;}else if(t.a==3){t.x=true;t._w=true;};t.d=true;}if(!t.gc.a)return;if(b){t.gc.c=t.z0('c');t.gc.i=t.z0('e');t.gc.j=t.z0('f');t.iFS=false;}else {var s='v=1';t.c2('__g_u','1',new Date(t.gt()+1000));t.iFS=true;if(t.b0('__g_u')&&g&&g!='1'&&g.indexOf('NaN')==-1&&g.indexOf('undefined')==-1){s='v=0';var r=g.split('_');t.b2(parseInt(r[0]),parseInt(r[1])+1);if(r[4]&&r[4]!='0'&&t.gt()<parseInt(r[5])&&r[2]&&r[2]!='0'){t.b1(parseFloat(r[2]),parseFloat(r[3]),parseFloat(r[4]),parseInt(r[5]));if(r[6])t.n0(parseInt(r[6]));};};t.h6=true;};t.gc.d=t.z0('d');if(!t.gc.d||(t.gc.d&&t.gc.d==0)){t.z1('d',1);t.gc.d=1;}t.b=t.z0('g');t.j8();if(i &&!t.isFirstVi&&t._w&&!t._a){t.h7();t._a=true;};},h7:function(){var t=gomez,u=t.tloc?t.tloc:('https:'==location.protocol?'https:':'http:')+'//'+t.acctId+'.t.axf8.net/js/gtag7.0.js';t.h5(u);},n0:function(h){var t=gomez,f=new Date(t.gt()+946080000000),g=t.b0('__g_u');t.n1=h;t.z1('h',h);if(g&&g!='1'&&g.indexOf('NaN')==-1&&g.indexOf('undefined')==-1){var r=g.split('_');g=''+r[0]+'_'+r[1]+'_'+r[2]+'_'+r[3]+'_'+r[4]+'_'+r[5]+'_'+h;t.c2('__g_u',g,f);};},b1:function(v,s,q,f){var t=this;if(s ==undefined)s =1;t.d=true;t.z1('e',v);t.z1('f',s);t.gc.i=v;t.gc.j=s;t.h4(v,s,q,f);},b3:function(i, v, s){var t =this;t.d=true;if(s ==undefined)s =1;if(i==0||i==1){t.a=i;if(i==1){t._w=true;if(!t._a){t.h7();t._a=true;};}else{t.d=false;}t.z1('a',t.a);if(v !=undefined){t.b1(v, s);}}else if(i==2){t.h4(v, s);}},h4:function(o,p,q,d){var t=this,f=new Date(t.gt()+946080000000),g=t.b0('__g_u');if(g&&g!='1'&&g.indexOf('NaN')==-1&&g.indexOf('undefined')==-1){var r=g.split('_'),s;if(d)s=d;else if(q&&q>=0)s=new Date(t.gt()+parseInt(q*86400000)).getTime();else{q=5;s=new Date(t.gt()+432000000).getTime();};g=''+r[0]+'_'+r[1]+'_'+o+'_'+p+'_'+q+'_'+s;t.c2('__g_u',g,f);};},b6:function(){var t=gomez;t.p=t.b5();},f8:function(){var t=this;if(t.pollId1)clearInterval(t.pollId1);},b7:function(){var t =gomez;t.f8();t.q=t.b5();},c7:function(u, s){var t=this;t.m=u;t.s=s;},c8:function(){var t=gomez,n=t.b5(),l=document.images.length;if(l>t._h){for(var i=t._h;i<l;++i){var u=document.images[i].src;if(u){var r =new gomez.E(t.f);t.grm[u]=r;t.f[u]=new t.c7(u, n);t.e2(document.images[i],'load',t.c4,false);t.e2(document.images[i],'error',t.c5,false);t.e2(document.images[i],'abort',t.c6,false);}}}t._h=l;},c4:function(e){var t=gomez,i=t.g6(e);if(i)i.e=t.b5();},c5:function(e){var t=gomez,i=t.g6(e);if(i){i.e=t.b5();i.b=1;}},c6:function(e){var t=gomez,i=t.g6(e);if(i)i.a=t.b5();},g6:function(e){var t=gomez,e=window.event?window.event:e,a=t.d8(e),i;if(t.grm[a.src||a.href]&&t.grm[a.src||a.href].s)i=t.grm[a.src||a.href].s[a.src||a.href];return i;},d2:function(){var t=gomez;var e=window.event?window.event:e,s=t.d8(e);if(s.readyState=='loaded'||s.readyState=='complete'){var o=t.j[s.src];if(o)o.e=t.b5();}},nameEvent:function(n){var t=this;t.f6(n,1);},startInterval:function(n){var t=this;t.f6(n,2,1);},endInterval:function(n){var t=this;t.f6(n,2,2);},f6:function(n,p,b){if(n&&n.length>20)n=n.substring(0,20);var t=this,f=t.u;if(p==3){f[f.length]={'n':'a','a':n,'b':b,'e':p,'f':undefined};}else{f[f.length]={'n':'a','a':n,'b':t.b5(),'e':p,'f':b};}},customValue:function(n,v){var t=this;if(typeof(v)!='number'){return;}t.f6(n,3,v);},d8:function(e){if(gomez.gIE)return e.srcElement||{};else return e.currentTarget||e.target||{};},e2:function(e,p,f,c){var n='on'+p;if(e.addEventListener)e.addEventListener(p,f,c);else if(e.attachEvent)e.attachEvent(n, f);else{var x=e[n];if(typeof e[n]!='function')e[n]=f;else e[n]=function(a){x(a);f(a);};}},i1:function(){var d =window.document, done=false,i2=function (){if(!done){done=true;gomez.b6();gomez.a9();}};(function (){try{d.documentElement.doScroll('left');}catch(e){setTimeout(arguments.callee, 50);return;}i2();})();d.onreadystatechange=function(){if(d.readyState=='complete'){d.onreadystatechange=null;i2();}};},j7:function(s, toUrl){try{var t=this,z=gomez;if(!s)return;s+="{n:u|e:1}";var p ='';if(t.isFirstVi){p='&a='+z.acctId+'&r=1&s=1';}else if(t.iFS){p='&a='+z.acctId+'&r='+t.j6();}if(window.encodeURIComponent)s=encodeURIComponent(s);else s=escape(s);z.h5(z.e(toUrl)+'info='+s+p);}catch(err){}return;},e:function(u){if(!/\?|&/.test(u))if(!/\?/.test(u))u +='?';else u +='&';return u;},j8:function(){var t=gomez, p=new gomez.P();var s=p.g0();t.j7(s, t.s.pvHttpUrl);},g7:function(){try{var t=gomez;t.gc.a=t.acctId;/*@cc_on t.gIE=true;@*/if(!t.gIE)t.gIE=!-[1,];if(t.gIE){t.i1();window.attachEvent('onload', t.b7);}else if(window.addEventListener){window.addEventListener('DOMContentLoaded', t.b6, false);window.addEventListener('load', t.b7, false);}else if(t.gSfr){var m=setInterval(function(){if(/loaded|complete/.test(document.readyState)){clearInterval(m);delete m;t.b6();t.b7();}}, 10);}else return;if(!t.jbo){t.c8();t.pollId1=setInterval(t.c8, 10);}if(!t.gIE)t.a9();}catch(e){return;}}});gomez.h2();gomez.g7();}}catch(e){};
+
+</script> 
+  <script type="text/javascript">
+CQURLInfo = {
+    "contextPath": null,
+    "requestPath": '\/content\/www\/us\/en\/big-data\/big-data-analytics-turning-big-data-into-intelligence',
+    "selectorString": null,
+    "selectors": [],
+    "extension": 'html',
+    "suffix": null,
+    "systemId": '857892c0-228f-4a5a-af84-a18afbd0b7a8',
+    "runModes": 'publish'
+};</script> 
+  <script type="text/javascript" src="/etc/clientlibs/ver/3.1.151/foundation/jquery.js"></script> 
+  <!--<![endif]--> 
+  <!--[if gte IE 7]><!--> 
+  <link rel="stylesheet" href="/etc/designs/ver/3.1.151.4.17/intel/us/en/clientlibs/header-libs.css" type="text/css" /> 
+  <!--<![endif]--> 
+  <link rel="canonical" href="" /> 
+  <script src="/etc/designs/ver/3.1.151.12.13/intel/us/en/js/jquery.1.5.1.min.js" type="text/javascript"></script> 
+  <script type="text/javascript">
+       if ((navigator.userAgent.indexOf('iPad') != -1)) {
+           document.write('<link rel="stylesheet" type="text/css" href="/etc/designs/ver/3.1.151.12.13/intel/us/en/css/intel.iOS.css" media="screen" />');
+       }
+       if (navigator.userAgent.indexOf('MSIE 10')) {
+           document.write('<link rel="stylesheet" type="text/css" href="/etc/designs/ver/3.1.151.12.6/intel/us/en/css/intel.main.ie10.css" />');
+       }
+
+   </script> 
+  <!--[if gte IE 7]><!--> 
+  <script type="text/javascript" src="/etc/designs/ver/3.1.151.4.17/intel/us/en/clientlibs/header-libs.js"></script> 
+  <!--<![endif]--> 
+  <!--[if gte IE 7]><!--> 
+  <link rel="stylesheet" type="text/css" href="/etc/designs/intel/us/en/css/intel.main.override.css" /> 
+  <!--<![endif]--> 
+  <!--[if IE 6]>
+       <link href="/etc/designs/intel/us/en/css/intel.ie6.css" rel="stylesheet" type="text/css" />
+       <link href="/etc/designs/intel/us/en/css/intel.ie6.content.css" rel="stylesheet" type="text/css" />
+       <script type="text/javascript" src="/etc/designs/intel/us/en/js/intel.ie6.cookie.js"></script>
+   <![endif]--> 
+  <!--[if lte IE 7]>
+
+            
+                <style>
+                    div.new.section {
+                        display: none !important;
+                    }
+                </style>
+            
+
+        <![endif]--> 
+  <!-- Will load font files for browsers other than IE7,8 --> 
+  <!--[if gte IE 9]><!--> 
+  <link rel="stylesheet" type="text/css" href="/etc/designs/ver/3.1.151.9.6/intel/us/en/css/latin.monotype.fonts.css" media="screen" /> 
+  <!--<![endif]--> 
+  <!-- Will load font file for browsers IE7,8 --> 
+  <!--[if (gt IE 6)&(lt IE 9)]>
+        <link rel="stylesheet" type="text/css" href="/etc/designs/intel/us/en/css/latin.monotype.fonts.oldie.css" media="screen" />
+        <![endif]--> 
+  <!-- Will load IE specific CSS for IE7 - IE9 --> 
+  <!--[if (gt IE 6)&(lte IE 9)]>
+		<link rel="stylesheet" type="text/css" href="/etc/designs/intel/us/en/css/intel.main.ie.css" media="screen" />
+        <![endif]--> 
+  <script type="text/javascript">
+var referer = "ref";
+document.cookie = referer +"=" +escape(document.referrer)+";path"+"="+"/";
+</script>
+ </head>  
+ <body class="page collectiongeneral collection "> 
+  <noscript> 
+   <style type="text/css">
+            #language-chooser {display:none} 
+            #language:hover + #language-chooser {display:block !important}
+            #language-chooser:hover {display:block !important}      
+        </style> 
+  </noscript> 
+  <div class="wrapper"> 
+   <!--[if gt IE 6]><!--> 
+   <!--<![endif]--> 
+   <script type="text/javascript">
+    //Set cookie for backbutton usage
+    $(function () {
+        var exdate = new Date();
+        exdate.setDate(exdate.getDate() + 1);
+        var url = encodeURI("/content/www/us/en/big-data/big-data-analytics-turning-big-data-into-intelligence.html?cid=sem116p19262&amp;gclid=COnP5teG6bYCFQFnOgodxXEAyw"); //escape() is deprecated!
+        var cookieValue = "collectiongeneral###" + url + ((exdate == null) ? "" : "; expires=" + exdate.toUTCString()) + "; path=/";
+        document.cookie = "backbutton=" + cookieValue;
+    });
+</script> 
+   <div class="uheader header"> 
+    <div class="component" data-component="uheader" data-component-id="1"> 
+     <script>
+    if ((document.cookie.indexOf('SMSESSION') != -1) && (location.protocol == "http:")) {
+        window.location = "https://www-ssl.intel.com/content/www/us/en/big-data/big-data-analytics-turning-big-data-into-intelligence.html?cid=sem116p19262&amp;gclid=COnP5teG6bYCFQFnOgodxXEAyw";
+    }
+</script> 
+     <script>
+    //<![CDATA[
+    $(function(){
+    function showResult(str) {
+        var timestamp = Number(new Date());
+        if (str.length==0) {
+            document.getElementById("livesearch").innerHTML = "";
+            document.getElementById("livesearch").style.border = "0px";
+            return;
+        }
+
+        //Using JQuery
+        $.ajax({
+            type: "GET",
+            url: "/content/intel/proxypage.html?searchPhrase="+str,
+            dataType: "text/html",
+            success: function(result, request) {
+                //alert("Success -- "  + xhr.status + xhr.responseText);
+                if( xhr.status == 200 ) {
+                    procesHSResult(xhr.responseText);
+                }
+            },
+            error: function(xhr) {
+                //alert("Error -- "  + xhr.status + xhr.responseText);
+                if( xhr.status == 200 ) {
+                    procesHSResult(xhr.responseText);
+                }
+            }
+        });
+    }
+
+    function procesHSResult(resultStr)
+    {
+        document.getElementById("livesearch").innerHTML="";
+        document.getElementById("livesearch").style.border="0px";
+
+            resultStr = resultStr.substring(1, resultStr.length - 1);
+            resultStr = resultStr.replace(/\"/g, '');
+            var searchResults = resultStr.split(",");
+            if (searchResults.length > 0) {
+
+                for (k = 0; k < searchResults.length; k++) {
+
+                    document.getElementById("livesearch").innerHTML += "<a href='/content/www/us/en/search.html?allwords=" + searchResults[k] + "'>" + searchResults[k] + "</a><br/>";
+                    document.getElementById("livesearch").style.border = "1px solid #A5ACB2";
+                }
+            }
+        }
+        function onUSubmit() {
+            waTrackSearch(document.getElementById("usearchBox").value, 'text', ''); //analytic tracking - do not remove
+            document.getElementById("uhsform").action = '/content/www/us/en/search.html?allwords=' + document.getElementById("usearchBox").value;
+            document.getElementById("uhsform").submit();
+            return true;
+        }
+    });
+    // ]]>
+</script> 
+     <div id="header"> 
+      <div class="content"> 
+       <ul> 
+        <li class="home"> 
+         <div class="logo"> 
+          <div class="component" data-component="logo" data-component-id="1"> 
+           <a href="/content/www/us/en/homepage.html"> <img src="/content/dam/intel/dm/image/logo.png" alt="" /> </a> 
+          </div>
+         </div> </li> 
+        <li class="newmenu dont-close-menu"> 
+         <div class="uheadernavigationtitle mainmenutitle"> 
+          <div class="component dont-close-menu" data-component="mainmenutitle" data-component-id="1"> 
+           <a href="#" class="dont-close-menu" title="Menu">Menu</a> 
+           <noscript>
+             Menu 
+           </noscript> 
+          </div>
+         </div> </li> 
+       </ul> 
+       <ul class="sign-in-link"> 
+        <li id="sign-in-li" class="link"><a id="profile-sign-in-link" href="#"> <script type="text/javascript">
+
+                    if (document.cookie.indexOf('SMSESSION') == -1) {
+                        document.write('<span class="lock-icon"></span>Sign In');
+                    }
+                    else {
+                        document.write('My Profile<span class="down-arrow"></span>');
+                    }
+                </script> </a></li> 
+       </ul> 
+       <div id="uheaderSearchDiv" class="wapwrapper" data-component="uheadersearch" data-component-id="1"> 
+        <div class="homepagesearch uheadersearch"> 
+         <div class="component" data-component="homepagesearch" data-component-id="1"> 
+          <form class="intel-search" name="hpsform" id="hpsform" action="/content/www/us/en/search.html"> 
+           <input autocomplete="off" id="searchBox" name="keyword" type="text" value="Search" title="Search" class="input clearOnFocus" onkeyup="showHPResult(this.value, &quot;/content/intelutility/proxypage.js?searchPhrase=&quot; + encodeURI(this.value) + &quot;&amp;locale=&quot; + encodeURI(&quot;en_US&quot;) + &quot;&amp;searchRealm=Default&quot;, &quot;/content/www/us/en&quot;, &quot;/content/intelutility/proxypage.js?searchPhrase=&quot; + encodeURI(document.getElementById(&quot;searchBox&quot;).value) + &quot;&amp;operation=bestmatch&amp;locale=&quot; + &quot;en&quot;+&quot;&amp;localecode=&quot;+encodeURI(&quot;en_US&quot;), &quot;Best Match&quot;)" /> 
+           <input type="submit" class="submit" value="Search" onclick="onSubmitHps('Search', '/content/www/us/en', 'en_US')" /> 
+           <div class="predictive-search hideme" id="predictive-search"> 
+            <ul> 
+             <li class="best-match hidden" id="bestMatch"> 
+              <div class="left-col" id="leftCol"> 
+               <h4>Best Match</h4> 
+              </div> 
+              <div class="right-col"> 
+               <ul id="bestResults"> 
+               </ul> 
+              </div> </li> 
+             <li class="other-match hidden" id="otherMatch"> 
+              <div class="left-col"> 
+               <h4>Suggested:</h4> 
+              </div> 
+              <div class="right-col"> 
+               <ul id="otherResults"> 
+               </ul> 
+              </div> </li> 
+            </ul> 
+            <div class="bottom"></div> 
+           </div> 
+          </form> 
+         </div> 
+         <script type="text/javascript">
+ function loadMenuAsync()  { 
+           var po = document.createElement('script');
+           po.type = 'text/javascript'; po.async = true;  po.src = "/etc/designs/intel/us/en/js/predictive-search.js";
+           var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+ }
+ loadMenuAsync();
+ </script>
+        </div> 
+       </div> 
+       <ul class="my-intel"> 
+        <div class="uheaderlinks"> 
+         <li class="link"><a href="/content/www/us/en/library/find-content.html">Find Content</a></li> 
+         <li class="link"><a href="/content/www/us/en/blogs-communities-social.html">Communities</a></li> 
+         <li style="display:none" class="link my-intel-link " alt="Click the Save symbol on any page to capture your favorite content for future reference" data-savehistoryurl="/content/intelutility/savedcontent.html?contentpath=/content/www/us/en/big-data/big-data-analytics-turning-big-data-into-intelligence&amp;contentpagename=Big Data-Intelligence Begins with Intel&amp;action=saveHistory" data-removecontenturl="/content/intelutility/savedcontent.html?contentpath=/content/www/us/en/big-data/big-data-analytics-turning-big-data-into-intelligence&amp;contentpagename=Big Data-Intelligence Begins with Intel"><a href="#">Saved Content</a></li> 
+        </div> 
+       </ul> 
+      </div> 
+      <!--content--> 
+     </div> 
+     <!--header--> 
+     <div class="unavmyintel"> 
+      <div id="menu-wrappermyintel" class="wapwrapper" data-component="myintel" data-component-id="1"> 
+       <div class="myintelbg boxnav savedcontent" style="top:54px; margin-left:-121px; width:520px; display:none"> 
+        <!--left side--> 
+        <!--middle--> 
+        <div class="navigationmyintelmiddle" style="margin: 20px 13px 3px"> 
+         <div class="searchmyintel"> 
+          <ul> 
+           <li class="savedCont"><a href="#" onclick="return false;" title="Saved Content">Saved Content</a></li> 
+           <li class="recentViewed"><a href="#" onclick="return false;" title="Recently Viewed">Recently Viewed</a></li> 
+          </ul> 
+         </div> 
+         <!--dynamic middle section 1--> 
+         <div class="savedcontents">
+          <!-- 
+    Saved Content component
+ --> 
+          <div class="component" data-component="savedcontents" data-component-id="1"> 
+           <div id="top20" class="middlemyintel"> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <script type="text/javascript">
+        $(function(){
+        function removeRecent(id) {           
+            var element = document.getElementById(id);
+            var action = $(element).children('a').attr('saved-content-action-attr');
+            var elementString = $(element).children('a').attr('saved-content-elementString-attr');
+            var url = $('li.my-intel-link').attr('data-removeContentUrl'); 
+            url += "&action="+action+"&elementstring="+elementString; 
+            makeAjaxCall(url);
+        }
+        
+        function removeSaved(id) {
+            var element = document.getElementById(id);  
+               //If element is null, page added to list after page loaded
+
+               if(element == null)
+               {
+                  var action = $('#endListSave').children('li').children('a').attr('saved-content-action-attr');
+                  var elementString = $('#endListSave').children('li').children('a').attr('saved-content-elementString-attr');
+                   var url = $('li.my-intel-link').attr('data-removeContentUrl'); 
+				url += "&action="+action+"&elementstring="+elementString
+               }
+               else
+               {
+				var action = $(element).children('a').attr('saved-content-action-attr');
+           
+				var elementString = $(element).children('a').attr('saved-content-elementString-attr');
+				var url = $('li.my-intel-link').attr('data-removeContentUrl'); 
+				url += "&action="+action+"&elementstring="+elementString;
+				}
+          
+            makeAjaxCall(url);
+        }
+        });
+    </script> 
+      </div> 
+     </div> 
+     <div id="sign-in-form" class="wapwrapper" data-component-id="1" data-component="signin-nav-box"></div> 
+     <div class="newmenu-container"> 
+      <div class="newmenu-contents"> 
+      </div> 
+     </div> 
+     <script>
+    //<![CDATA[
+    $(function () {
+        $("#register-button").click(function () {
+            $(".navigationmyintellogin").hide();
+            $(".navigationmyintelregister").show();
+            return false;
+        });
+    });
+</script> 
+     <script type="text/javascript">
+    $(function () {
+        var signinURL = "/content/www/us/en/homepage/_jcr_content/header.signin.html?redirect=/content/www/us/en/big-data/big-data-analytics-turning-big-data-into-intelligence.html&location=US&lang=en";
+        $(".sign-in-link .link a").bind("click", function (e) {
+            e.preventDefault();
+            if (!$(this).hasClass("selected")) {
+                $("#sign-in-form").load(signinURL, function () {
+                    $(".signin-nav-box").slideDown(function () {
+                        $(".sign-in-link .link a").addClass("selected");
+
+                    });
+                });
+            } else {
+                closeSigninBox();
+            }
+        });
+// ]]>
+    //    console.log("from uheader.jsp");
+        var pageUrl = window.location.pathname;
+        var queryString = window.location.search;
+        var EDC_NEWREG_COOKIE = "edc_newreg";
+    //    console.log("edc_newreg cookie value" + readCookie(EDC_NEWREG_COOKIE));
+        if ((document.cookie.indexOf('SMSESSION') != -1) && (pageUrl.toLowerCase().indexOf("/intelligent-systems") > -1 || (queryString != null && queryString.toLowerCase().indexOf("lstsites=embedded") > -1)) && readCookie(EDC_NEWREG_COOKIE) != null && readCookie(EDC_NEWREG_COOKIE) != "") {
+        //    console.log("Detected first time login edc user. Redirecting.");
+            eraseCookie(EDC_NEWREG_COOKIE);
+            window.location.href = "https://www-ssl.intel.com/p/s/en_US/embedded/get-help"
+        }
+    });
+</script> 
+     <script type="text/javascript">
+ function loadMenuAsync()  { 
+           var po = document.createElement('script');
+           po.type = 'text/javascript'; po.async = true;  po.src = "/content/data/globalelements/US/en/globalnav2.out.js";
+           var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+ }
+ loadMenuAsync();
+</script> 
+    </div> 
+    <div class="parbase oldbrowsersdialog"> 
+     <style type="text/css">
+    .m_safari .browser_detect, .android .browser_detect{display:none!important}
+</style> 
+     <div class="browser_detect" id="browserdetectid" style="display: none;"> 
+      <p>The browser version you are using is not recommended for this site.<br />Please consider upgrading to the latest version of your browser by clicking one of the following links.</p> 
+      <div class="browser_types"> 
+       <ul> 
+        <li><a href="http://support.google.com/chrome/bin/answer.py?hl=en&amp;answer=95346">Chrome</a></li> 
+        <li><a href="http://www.apple.com/safari/download/">Safari</a></li> 
+        <li><a href="http://windows.microsoft.com/en-IN/internet-explorer/products/ie/home">IE</a></li> 
+        <li><a href="http://www.mozilla.org/en-US/firefox/new/">Firefox</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <script type="text/javascript">
+    $(function(){
+var arrayCookie = document.cookie.split(';');
+var flag = 0;
+for(var i=0; i<arrayCookie.length; i++) {
+    var value = arrayCookie[i];
+
+    if(value.indexOf('OldBrowsersCookie') != -1){
+         flag+=1;
+       }
+    else {  flag+=0;}
+}
+if(flag==0)
+    {
+        createCookie('OldBrowsersCookie', 'Cookie for old browser popup message',0.04167);
+    }
+else{ 
+      $('body').addClass('cookie-oldbrowser');
+      $('#browserdetectid, .oldbrowsersdialog').hide();
+    }
+    });
+</script> 
+    </div> 
+    <div class="main-hero"> 
+     <div class="reactbar"> 
+      <div style="height:60px">
+       <br />
+      </div> 
+      <div class="header-title"> 
+       <ul class="page-info"> 
+        <li class="tags" style="width: 620px; padding-right: 20px;"> 
+         <div class="parbase tagged"> 
+          <div class="component" data-component="tagged" data-component-id="1"> 
+          </div> 
+         </div></li> 
+        <li class="tags" style="width: 620px; padding-right: 20px;"> 
+         <div>
+          <div class="parbase tagged2"> 
+           <div class="component" data-component="tagged" data-component-id="2"> 
+            <div> 
+             <ul> 
+              <li> <span class="">Tagged As</span><a href="/content/www/us/en/library/viewmore.results.html?prTag=rtopic:intelwork/bigdata">Big Data</a>, <a href="/content/www/us/en/library/viewmore.results.html?prTag=rintelproduct:intelprocessors/intelxeonprocessors/intelxeonprocessore5family">Intel&reg; Xeon&reg; Processor E5 Family</a>, <a href="/content/www/us/en/library/viewmore.results.html?prTag=rtargetaudience:itmanagers">IT Managers</a> </li> 
+             </ul> 
+            </div> 
+           </div> 
+          </div> 
+         </div></li> 
+        <li> 
+         <div class="wapwrapper" data-component="sharepagetop" data-component-id="1" style="float: left; width: 300px;"> 
+          <ul class="share-page-top less-width" style="margin-top: 8px;"> 
+           <li class="first function" style="float: left;"> 
+            <div class="wapwrapper" data-component="printasset" data-component-id="1"> 
+             <a href="#" onclick="window:print()" class="print" title="Print" data-wap="{&quot;linktype&quot;:&quot;print&quot;}">Print</a> 
+            </div> </li> 
+           <li class="function" style="float: left;"><a href="http://www.facebook.com/share.php?src=bm&amp;u=http%3A%2F%2Fwww.intel.com%2Fcontent%2Fwww%2Fus%2Fen%2Fbig-data%2Fbig-data-analytics-turning-big-data-into-intelligence.html&amp;t=facebook&amp;v=3" class="facebook" title="Facebook" data-wap="{&quot;linktype&quot;:&quot;share&quot;}" target="_blank">Facebook</a></li> 
+           <li class="function" style="float: left;"><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fwww.intel.com%2Fcontent%2Fwww%2Fus%2Fen%2Fbig-data%2Fbig-data-analytics-turning-big-data-into-intelligence.html&amp;t=linkedin&amp;v=3" class="linkedin" title="LinkedIn" data-wap="{&quot;linktype&quot;:&quot;share&quot;}" target="_blank">LinkedIn</a></li> 
+           <li class="function" style="float: left;"><a href="http://twitter.com/share?url=http%3A%2F%2Fwww.intel.com%2Fcontent%2Fwww%2Fus%2Fen%2Fbig-data%2Fbig-data-analytics-turning-big-data-into-intelligence.html&amp;t=twitter&amp;v=3" class="twitter" title="Twitter" data-wap="{&quot;linktype&quot;:&quot;share&quot;}" target="_blank">Twitter</a></li> 
+           <li class="extra" style="float: left;"><a href="http://digg.com/submit/?phase=2&amp;url=http%3A%2F%2Fwww.intel.com%2Fcontent%2Fwww%2Fus%2Fen%2Fbig-data%2Fbig-data-analytics-turning-big-data-into-intelligence.html&amp;t=digg&amp;v=3" class="digg" title="Digg" data-wap="{&quot;linktype&quot;:&quot;share&quot;}" target="_blank">Digg</a></li> 
+           <li class="extra" style="float: left;"><a href="http://del.icio.us/post?&amp;url=http%3A%2F%2Fwww.intel.com%2Fcontent%2Fwww%2Fus%2Fen%2Fbig-data%2Fbig-data-analytics-turning-big-data-into-intelligence.html&amp;t=delicious&amp;v=3" class="delicious" title="Delicious" data-wap="{&quot;linktype&quot;:&quot;share&quot;}" target="_blank">Delicious</a></li> 
+           <li class="extra" style="float: left;"><a href="http://promote.orkut.com/preview?nt=orkut.com&amp;tt=Intel&amp;du=http%3A%2F%2Fwww.intel.com%2Fcontent%2Fwww%2Fus%2Fen%2Fbig-data%2Fbig-data-analytics-turning-big-data-into-intelligence.html&amp;t=orkut&amp;v=3" class="orkut" title="Orkut" data-wap="{&quot;linktype&quot;:&quot;share&quot;}" target="_blank">Orkut</a></li> 
+           <li class="extra" style="float: left;"><a href="http://www.google.com/bookmarks/mark?op=add&amp;title=http%3A%2F%2Fwww.intel.com%2Fcontent%2Fwww%2Fus%2Fen%2Fbig-data%2Fbig-data-analytics-turning-big-data-into-intelligence.html&amp;t=google&amp;v=3" class="google" title="Google" data-wap="{&quot;linktype&quot;:&quot;share&quot;}" target="_blank">Google</a></li> 
+           <!-- <li class="function" style="float: left;"><a href="#" title="Save This View In Your Saved Content" class="save" save-ajaxUrl="/content/intelutility/savedcontent.html?contentpath=/content/www/us/en/big-data/big-data-analytics-turning-big-data-into-intelligence&contentpagename=Big Data-Intelligence Begins with Intel&action=addAsCookie"  data-wap="{&quot;linktype&quot;:&quot;save&quot;}">Save</a></li>  --> 
+          </ul> 
+         </div> 
+         <div class="wapwrapper" style="width: 20px; float: right;"> 
+          <ul class="share-page-top"> 
+           <li class="toggle function" style="margin-top: 8px;"><a href="#" title="Show/hide more options">Show/hide more options</a></li> 
+          </ul> 
+         </div> </li> 
+       </ul> 
+      </div> 
+      <style type="text/css">
+
+</style> 
+     </div> 
+     <div class=""> 
+      <div id="main-hero" class="module"> 
+       <div class="parbase topicslideshow imagetext"> 
+        <!-- This code is for imagetext component --> 
+        <div id="" style="margin-top: 0px; min-height:470px;"> 
+         <div class="component " data-component="imagetext" data-component-id="1"> 
+          <div class="background-carousel-wrapper "> 
+           <div class="background-carousel"> 
+            <img alt="Big Data Analytics" class="carousel-item" src="/content/dam/www/program/it-center/big-data-analytics-overview2.jpg" /> 
+           </div> 
+          </div> 
+          <div class="header " style="padding: 0; margin: 0px 620px auto 0px;  position: absolute; top: 50px; left: 0px; overflow: visible;"> 
+           <h1 class="headingone" style="color:#000000;">Big Data Intelligence Begins with Intel </h1> 
+           <ul> 
+            <li class="blurb-txt" style="background:none;color:#000000;">Get big insights with visualization-based tools</li> 
+           </ul> 
+           <ul> 
+            <li class="last"><a class="blurb-link" href="/content/www/us/en/big-data/big-data-visualization-turning-big-data-into-big-insights.html" title="Read the big data visualization paper"> <span style="color:#086DB6;">Read the big data visualization paper &gt;</span></a> </li> 
+           </ul> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="content"> 
+        <ul> 
+         <li> 
+          <div class="collectionfeature1par intelparsys"> 
+           <div class="parbase showcasefeature section"> 
+            <div class="component" data-component="showcasefeature" data-component-id="1"> 
+             <div class="blue marquee-module showcase"> 
+              <h2>Register Now or Log In</h2> 
+              <a href="/content/www/us/en/it-center/registration-form-b1.html" target="_self" class="showcase-img-link"> <img src="/content/dam/www/program/it-center/join-it-center-badge-3-1.jpg.rendition.cq5dam.webintel.174.58.jpg" alt="Intel IT Center" /></a> 
+              <a class="showcase-link" href="/content/www/us/en/it-center/registration-form-b1.html" title="Gain access to insights, research, and third-party reports &gt;" target="_self">Gain access to insights, research, and third-party reports &gt;</a> 
+             </div> 
+             <style type="text/css">
+            .right{float: right;}
+            .left{float: left;}
+        </style> 
+            </div> 
+           </div> 
+          </div> </li> 
+         <li> 
+          <div class="collectionfeature2par intelparsys"> 
+           <div class="parbase showcasefeature section"> 
+            <div class="component" data-component="showcasefeature" data-component-id="2"> 
+             <div class="blue marquee-module showcase"> 
+              <h2>Live Webinar with Intel IT Experts</h2> 
+              <a href="http://intelitcenterwebinars.adobeconnect.com/may2013/event/registration.html?campaign-id=onlineus" target="_self" class="showcase-img-link"> <img src="/content/dam/www/public/us/en/images/photography-business/overview/MaySpkr_174x58.jpg" alt="Ajay Chandramouly and Rob Kasabian Webinar" /></a> 
+              <a class="showcase-link" href="http://intelitcenterwebinars.adobeconnect.com/may2013/event/registration.html?campaign-id=onlineus" title="Learn to turn big data into big answers &gt;" target="_self">Learn to turn big data into big answers &gt;</a> 
+             </div> 
+             <style type="text/css">
+            .right{float: right;}
+            .left{float: left;}
+        </style> 
+            </div> 
+           </div> 
+          </div> </li> 
+         <li> 
+          <div class="intelparsys collectionfeature3par"> 
+           <div class="parbase showcasefeature section"> 
+            <div class="component" data-component="showcasefeature" data-component-id="3"> 
+             <div class="blue marquee-module showcase"> 
+              <h2>The Big Data Wave is Coming</h2> 
+              <a href="/content/www/us/en/big-data/big-data-intel-distribution-for-apache-hadoop.html" target="_blank" class="showcase-img-link"> <img src="/content/dam/www/program/it-center/intel-distribution-for-hadoop-software-surfers-174x58.jpg" alt="101 on Big Data" /></a> 
+              <a class="showcase-link" href="/content/www/us/en/big-data/big-data-intel-distribution-for-apache-hadoop.html" title="Learn about Intel&reg; Distribution for Apache Hadoop* Software (animation) &gt;" target="_blank">Learn about Intel&reg; Distribution for Apache Hadoop* Software (animation) &gt;</a> 
+             </div> 
+             <style type="text/css">
+            .right{float: right;}
+            .left{float: left;}
+        </style> 
+            </div> 
+           </div> 
+          </div> </li> 
+        </ul> 
+       </div> 
+       <div id="promo-filter" class="filter-lists-container main-hero-sidebar"> 
+        <div class="collectiontoggle toggleview"> 
+         <script type="text/javascript">
+
+        function redirectToBusiness() {
+            setBusinessCookie();
+            window.location = '';
+        }
+        function redirectToHome() {
+            setConsumerCookie();
+            window.location = '';
+        }
+
+</script> 
+         <div class="subtitle" style="height:0px;min-height:0px"></div> 
+        </div> 
+        <div class="titlecollection intelinsidetitle"> 
+         <div class="component" data-component="titlecollection" data-component-id="1"> 
+          <h1 class="title">Intel Big Data</h1> 
+         </div>
+        </div> 
+        <div class="toolscollectionaccordian intelinsidetools1"> 
+         <div class="component" data-component="toolsaccordian" data-component-id="1"> 
+          <div class="filter-list-wrapper no-toggle"> 
+           <p class="filter-list-title no-toggle" style="font-weight: normal; font-size: 12px !important;"></p> 
+           <ul class="filter-list tool-images clearfix" style="margin-bottom:5px;"> 
+           </ul> 
+           <div class="clearboth">
+            &nbsp;
+           </div> 
+          </div> 
+         </div> 
+         <script type="text/javascript">
+    $(document).ready(function(){
+        $('.tool-images li:first').css("margin-left", "0");
+    });
+</script>
+        </div> 
+        <div class="intelparsys accordianparagraph"> 
+         <div class="accordianlinkedlist section"> 
+          <div class="component" data-component="accordianlinkedlist" data-component-id="1"> 
+           <div class="filter-list-wrapper"> 
+            <p class="filter-list-title" title="Content Spotlights"><b> Content Spotlights</b></p> 
+            <ul class="filter-list" style="padding-left: 10px;display:block;"> 
+             <li> <span style="color: white" href="/content/www/us/en/big-data/getting-started-with-hadoop-planning-guide.html" class="pdf-view" data-previewtext="Preview" data-downloadtext="Download" data-size="PDF 3245k" data-preview="/content/www/us/en/big-data/getting-started-with-hadoop-planning-guide.html" data-download="/content/dam/www/public/us/en/documents/guides/getting-started-with-hadoop-planning-guide.pdf" data-titletext="Right-Click to Save As" title="Big data planning guide">Big data planning guide &gt;</span> </li> 
+             <li> <span style="color: white" href="/content/www/us/en/big-data/data-insights-peer-research-report.html" class="pdf-view" data-previewtext="Preview" data-downloadtext="Download" data-size="PDF 3487k" data-preview="/content/www/us/en/big-data/data-insights-peer-research-report.html" data-download="/content/dam/www/public/us/en/documents/reports/data-insights-peer-research-report.pdf" data-titletext="Right-Click to Save As" title="Peer research report">Peer research report &gt;</span> </li> 
+             <li> <a style="color: white" href="/content/www/us/en/big-data/data-insights-peer-research-video.html" title="Peer research video">Peer research video &gt;</a> </li> 
+             <li> <a style="color: white" href="/content/www/us/en/big-data/big-data-101-animation.html" title="Big data 101 video">Big data 101 video &gt;</a> </li> 
+            </ul> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="accordianlinkedlist section"> 
+          <div class="component" data-component="accordianlinkedlist" data-component-id="2"> 
+           <div class="filter-list-wrapper"> 
+            <p class="filter-list-title closed" title="Related Intel IT Topics"><b> Related Intel IT Topics</b></p> 
+            <ul class="filter-list" style="padding-left: 10px;display: none;"> 
+             <li> <span style="color: white" href="/content/www/us/en/it-management/intel-it-best-practices/transforming-intel-business-with-advanced-analytics.html" class="pdf-view" data-previewtext="Preview" data-downloadtext="Download" data-size="PDF 374k" data-preview="/content/www/us/en/it-management/intel-it-best-practices/transforming-intel-business-with-advanced-analytics.html" data-download="/content/dam/www/public/us/en/documents/best-practices/transforming-intel-business-with-advanced-analytics.pdf" data-titletext="Right-Click to Save As" title="Advanced analytics">Advanced analytics &gt;</span> </li> 
+             <li> <span style="color: white" href="/content/www/us/en/it-management/intel-it-best-practices/mining-big-data-In-the-enterprise-for-better-business-intelligence.html" class="pdf-view" data-previewtext="Preview" data-downloadtext="Download" data-size="PDF 418k" data-preview="/content/www/us/en/it-management/intel-it-best-practices/mining-big-data-In-the-enterprise-for-better-business-intelligence.html" data-download="/content/dam/www/public/us/en/documents/white-papers/mining-big-data-In-the-enterprise-for-better-business-intelligence.pdf" data-titletext="Right-Click to Save As" title="Big data mining">Big data mining &gt;</span> </li> 
+             <li> <span style="color: white" href="/content/www/us/en/it-management/intel-it-best-practices/integrating-apache-hadoop-into-intel-big-data-environment.html" class="pdf-view" data-previewtext="Preview" data-downloadtext="Download" data-size="PDF 164k" data-preview="/content/www/us/en/it-management/intel-it-best-practices/integrating-apache-hadoop-into-intel-big-data-environment.html" data-download="/content/dam/www/public/us/en/documents/best-practices/integrating-apache-hadoop-into-intel-big-data-environment.pdf" data-titletext="Right-Click to Save As" title="Intel IT tests Apache Hadoop*">Intel IT tests Apache Hadoop* &gt;</span> </li> 
+             <li> <span style="color: white" href="/content/www/us/en/it-management/intel-it-best-practices/integrating-apache-hadoop-into-intel-big-data-environment.html" class="pdf-view" data-previewtext="Preview" data-downloadtext="Download" data-size="PDF 164k" data-preview="/content/www/us/en/it-management/intel-it-best-practices/integrating-apache-hadoop-into-intel-big-data-environment.html" data-download="/content/dam/www/public/us/en/documents/best-practices/integrating-apache-hadoop-into-intel-big-data-environment.pdf" data-titletext="Right-Click to Save As" title="Intel IT integrates Apache Hadoop*">Intel IT integrates Apache Hadoop* &gt;</span> </li> 
+            </ul> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="accordianlinkedlist_new section"> 
+          <div class="component" data-component="accordianlinkedlist" data-component-id="3"> 
+           <div class="filter-list-wrapper"> 
+            <p class="filter-list-title closed" title="Intel Products"><b> Intel Products</b></p> 
+            <ul class="filter-list" style="padding-left: 10px;display: none;"> 
+             <li> <a style="color: white" href="/content/www/us/en/processors/xeon/xeon-processor-5000-sequence.html" title="Intel&reg; Xeon&reg; processor E5 family">Intel&reg; Xeon&reg; processor E5 family &gt;</a> </li> 
+             <li> <a style="color: white" href="http://hadoop.intel.com/" title="Apache Hadoop* software">Apache Hadoop* software &gt;</a> </li> 
+            </ul> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="accordianlinkedlist section"> 
+          <div class="component" data-component="accordianlinkedlist" data-component-id="4"> 
+           <div class="filter-list-wrapper"> 
+            <p class="filter-list-title closed" title=" Industry Content"><b> Industry Content</b></p> 
+            <ul class="filter-list" style="padding-left: 10px;display: none;"> 
+             <li> <a style="color: white" href="/content/www/us/en/big-data/big-data-at-the-intersection.html" title="Automotive">Automotive &gt;</a> </li> 
+             <li> <a style="color: white" href="/content/www/us/en/big-data/pecan-street-smart-grid-technology-video.html" title="Energy">Energy &gt;</a> </li> 
+             <li> <a style="color: white" href="/content/www/us/en/big-data/renci-peer-story.html" title="Genomics">Genomics &gt;</a> </li> 
+             <li> <span style="color: white" href="/content/www/us/en/big-data/cloud-computing-at-clemson-study.html" class="pdf-view" data-previewtext="Preview" data-downloadtext="Download" data-size="PDF 320k" data-preview="/content/www/us/en/big-data/cloud-computing-at-clemson-study.html" data-download="/content/dam/www/public/us/en/documents/case-studies/cloud-computing-at-clemson-study.pdf" data-titletext="Right-Click to Save As" title="Higher education">Higher education &gt;</span> </li> 
+             <li> <a style="color: white" href="/content/www/us/en/healthcare-it/big-data-in-healthcare.html" title="Life sciences">Life sciences &gt;</a> </li> 
+            </ul> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="accordianlinkedlist section"> 
+          <div class="component" data-component="accordianlinkedlist" data-component-id="5"> 
+           <div class="filter-list-wrapper"> 
+            <p class="filter-list-title closed" title="Intel IT Center"><b> Intel IT Center</b></p> 
+            <ul class="filter-list" style="padding-left: 10px;display: none;"> 
+             <li> <a style="color: white" href="/content/www/us/en/it-management/intel-it/it-managers.html" title="Discover: Intel's IT Center">Discover: Intel's IT Center &gt;</a> </li> 
+             <li> <a style="color: white" href="http://communities.intel.com/community/openportit" title="Engage: peer to peer community">Engage: peer to peer community &gt;</a> </li> 
+             <li> <a style="color: white" href="/content/www/us/en/it-managers/it-center-program-events.html" title="Watch: Intel webinars">Watch: Intel webinars &gt;</a> </li> 
+             <li> <a style="color: white" href="https://itmanagerduels.intel.com/en_us/" title="Play: IT Manager Duels game">Play: IT Manager Duels game &gt;</a> </li> 
+             <li> <a style="color: white" href="/content/www/us/en/it-center/registration-form-b1.html" title="Visit: Intel IT Center program">Visit: Intel IT Center program &gt;</a> </li> 
+            </ul> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="intelparsys collectionaudiencebladepar"> 
+      <div class="b2bbladesigassets section"> 
+       <div class="component" data-component="b2bbladesignatureassets" data-component-id="1"> 
+        <!-- Displaying the component --> 
+        <div class="module module-type-1" id="b2bbladesignatureassets"> 
+         <div class="module-header"> 
+          <h4>Big Data Go-To Resources</h4> 
+         </div>
+         <!--module-header--> 
+         <div class="module-content"> 
+          <ul class="sidebar"> 
+           <li class="first"><a href="#" class="selected">Peer Research: Big Data </a></li> 
+           <li><a href="#">Planning Guide: Big Data</a></li> 
+           <li><a href="#">Big Data and Cloud Solution Brief</a></li> 
+           <li><a href="#">Intel&reg; IT: Big Data Mining</a></li> 
+           <li><a href="#">Optimizing Apache Hadoop* Deployments</a></li> 
+           <li><a href="#">Apache Hadoop* Framework Spotlights</a></li> 
+          </ul> 
+          <div class="panel selected"> 
+           <div class="img-block"> 
+            <img src="/content/dam/www/program/it-center/01_features_benefits_business_intelligence_960x480.jpg.rendition.cq5dam.webintel.320.160.jpg" alt=" Peer Research: Big Data Analysis" title=" Peer Research: Big Data Analysis" /> 
+           </div> 
+           <div class="copy"> 
+            <h1>Big Data Analysis</h1> 
+            <p>The results of a survey of 200 IT managers provide insights into how organizations are using big data analytics today, including what organizations need to move forward and what the research means for the IT industry.</p> 
+            <a href="/content/www/us/en/big-data/data-insights-peer-research-report.html"><span> Read about big data analysis peer research</span> &gt; </a> 
+            <p class="see-all"> </p> 
+           </div> 
+          </div> 
+          <div class="panel"> 
+           <div class="img-block"> 
+            <img src="/content/dam/www/program/it-center/05_features_benefits_hadoop_planning_guide_960x480.jpg.rendition.cq5dam.webintel.320.160.jpg" alt=" Intel Planning Guide for Apache Hadoop*" title=" Intel Planning Guide for Apache Hadoop*" /> 
+           </div> 
+           <div class="copy"> 
+            <h1>Getting Started with Big Data: Planning Guide</h1> 
+            <p>Getting started with Hadoop for your big data analytics projects can be intimidating. This practical guide for IT managers can help you plan and implement big data analytics projects.</p> 
+            <a href="/content/www/us/en/big-data/getting-started-with-hadoop-planning-guide.html"><span>Read about getting started with big data</span> &gt;</a> 
+            <p class="see-all"> </p> 
+           </div> 
+          </div> 
+          <div class="panel"> 
+           <div class="img-block"> 
+            <img src="/content/dam/www/public/us/en/images/photography/server-racks-320x160.jpg.rendition.cq5dam.webintel.320.160.jpg" alt=" Read how to leverage cloud for big data" title=" Read how to leverage cloud for big data" /> 
+           </div> 
+           <div class="copy"> 
+            <h1>Converging Technologies: Big Data and Cloud</h1> 
+            <p>Learn how cloud and big data tech create a competitive advantage in a cost-effective delivery model, and steps to begin an initiative.</p> 
+            <a href="/content/www/us/en/big-data/big-data-cloud-technologies-brief.html"><span>Read how to leverage cloud for big data</span> &gt;</a> 
+            <p class="see-all"> </p> 
+           </div> 
+          </div> 
+          <div class="panel"> 
+           <div class="img-block"> 
+            <img src="/content/dam/www/program/it-center/02_features_benefits_101_animation_960x480.jpg.rendition.cq5dam.webintel.320.160.jpg" alt=" Intel&reg; IT: Big Data Mining" title=" Intel&reg; IT: Big Data Mining" /> 
+           </div> 
+           <div class="copy"> 
+            <h1>Big Data Mining</h1> 
+            <p>The ability to mine and analyze big data gives organizations deeper and richer insights into business patterns and trends, helping drive operational efficiencies and competitive advantage in manufacturing, security, marketing, and IT.</p> 
+            <a href="/content/www/us/en/it-management/intel-it-best-practices/mining-big-data-In-the-enterprise-for-better-business-intelligence.html"><span>Learn about mining big data in the enterprise</span> &gt;</a> 
+            <p class="see-all"> </p> 
+           </div> 
+          </div> 
+          <div class="panel"> 
+           <div class="img-block"> 
+            <img src="/content/dam/www/public/us/en/images/photography-business/2x1/data-center-2-men-standing-angle_2-1.jpg.rendition.cq5dam.webintel.320.160.jpg" alt=" Optimizing Apache Hadoop* Deployments" title=" Optimizing Apache Hadoop* Deployments" /> 
+           </div> 
+           <div class="copy"> 
+            <h1>Optimizing Apache Hadoop* Deployments</h1> 
+            <p>White Paper: Optimize Apache Hadoop* deployments by improving cluster performance and resource utilization while minimizing operation costs.</p> 
+            <a href="/content/www/us/en/cloud-computing/cloud-computing-optimizing-hadoop-deployments-paper.html"><span>Read the white paper on optimizing Apache Hadoop deployments</span> &gt;</a> 
+            <p class="see-all"> </p> 
+           </div> 
+          </div> 
+          <div class="panel"> 
+           <div class="img-block"> 
+            <img src="/content/dam/www/program/it-center/tc-peerresearch_320x160.jpg.rendition.cq5dam.webintel.320.160.jpg" alt=" Apache Hadoop* Framework Spotlights" title=" Apache Hadoop* Framework Spotlights" /> 
+           </div> 
+           <div class="copy"> 
+            <h1>Apache Hadoop* Framework Spotlights</h1> 
+            <p>Open-source community experts explain how four key elements of the Apache Hadoop framework work together to help organizations harness the power of big data analytics and where software development is headed.</p> 
+            <a href="/content/www/us/en/big-data/big-data-apache-hadoop-framework-spotlights-landing.html"><span>Learn about the Apache Hadoop framework</span> &gt;</a> 
+            <p class="see-all"> </p> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="parbase section fetauresandbenefits"> 
+       <div class="module" id="features-benefits"> 
+        <div class="module-header"> 
+         <h4>Intel&reg; Distribution for Apache Hadoop* Software</h4> 
+        </div> 
+        <div class="component" data-component="featuresandbenefits" data-component-id="1"> 
+         <script language="Javascript">
+//<![CDATA[
+
+function show(id) {
+    document.getElementById(id).style.display='block';
+}
+function hide(id) {
+    document.getElementById(id).style.display='none';
+}
+
+$(document).ready(function (){
+    
+    $('.close-btn').click(function (){
+      $('#features-bg-overlay, #features-container-pdf-read').hide();
+    });     
+});
+$(function(){
+function showAsset(title, assetpath){
+    var assetSrc = "";
+    if (assetpath.substr(-4) === ".pdf") {
+       assetSrc = "<object data='"+assetpath+"?#zoom=85&scrollbar=1&toolbar=1&navpanes=0' type='application/pdf' id='featuresEmbedAsset' width='100%' height='575'></object>";
+       $('#featuresAssetTitle').html(title);
+       $('#features-pdf-block').html(assetSrc); 
+       $('#features-bg-overlay, #features-container-pdf-read').show();
+    }
+    else {
+        var pathURL = assetpath;
+        window.open(pathURL, '_blank');
+    }    
+};
+});
+//]]>
+</script> 
+         <div id="features-bg-overlay"></div> 
+         <div id="features-container-pdf-read"> 
+          <div class="features-topBar">
+           <span id="featuresAssetTitle"></span>
+           <a href="javascript:void(0);" class="close-btn">Close <img src="/etc/designs/ver/3.1.151/intel/us/en/images/close.png" alt="Close" /></a>
+          </div> 
+          <div id="features-pdf-block"></div> 
+         </div> 
+         <div class="module-content" style="padding-bottom:20px;"> 
+          <ul class="sidebar"> 
+           <li class="first"><a href="#" class="selected" onclick="show('div1');hide('div2');hide('div3');hide('div4');hide('div5');hide('div6');hide('div7');">Intel&reg; Distribution Resources</a></li> 
+           <li><a href="#" onclick="show('div2');hide('div1');hide('div3');hide('div4');hide('div5');hide('div6');hide('div7');">Next Bio: Case Study</a></li> 
+           <li><a href="#" onclick="show('div3');hide('div1');hide('div2');hide('div4');hide('div5');hide('div6');hide('div7');">Smart Energy Analytics: Pecan Street Video</a></li> 
+           <li><a href="#" onclick="show('div4');hide('div1');hide('div2');hide('div3');hide('div5');hide('div6');hide('div7');">Intel&reg; Distribution: <br />Product Brief</a></li> 
+           <li><a href="#" onclick="show('div5');hide('div1');hide('div2');hide('div3');hide('div4');hide('div6');hide('div7');">Intel&reg; Manager: <br />Product Brief</a></li> 
+           <li><a href="#" onclick="show('div6');hide('div1');hide('div2');hide('div3');hide('div4');hide('div5');hide('div7');">Encryption for Apache Hadoop*: Solution Brief</a></li> 
+           <li><a href="#" onclick="show('div7');hide('div1');hide('div2');hide('div3');hide('div4');hide('div5');hide('div6');">The Big Data Wave is Coming: Animation</a></li> 
+          </ul> 
+          <div class="panel panel1 selected" id="div1"> 
+           <img alt="Intel&reg; Distribution for Apache Hadoop* Software" src="/content/dam/www/program/it-center/intel-distribution-for-apache-hadoop-software-elephant-320x160.jpg" /> 
+           <div class="copy"> 
+            <p>Intel&reg; Distribution includes Apache Hadoop* and other software components optimized by Intel with hardware-enhanced performance and security capabilities. The Intel Distribution resource site features community software edition download, testimonial videos, case studies, technical docs, training, tutorials, and more.<br /><br /> Note: Intel Distribution is available worldwide today for free evaluation. Technical support is provided currently in the US, China, and Singapore, with other geographies expected later in the year.</p> 
+            <a href="http://hadoop.intel.com">Visit hadoop.intel.com &gt;</a> 
+           </div> 
+          </div> 
+          <div class="panel panel2" id="div2"> 
+           <img alt="Intel&reg; Distribution for Apache Hadoop* Software Resources" src="/content/dam/www/public/us/en/images/photography-business/2x1/int-brand-497-cnntdmtrpls-2-1.jpg.rendition.cq5dam.webintel.320.160.jpg" /> 
+           <div class="copy"> 
+            <p>Case study from Next Bio demonstrates how to scale genomic data processing with 90% performance and 6X compression improvement.</p> 
+            <a href="http://hadoop.intel.com/resources">View asset and all Intel&reg; Distribution resources &gt;</a> 
+           </div> 
+          </div> 
+          <div class="panel panel3" id="div3"> 
+           <img alt="Intel&reg; Distribution for Apache Hadoop* Software Resources" src="/content/dam/www/public/us/en/images/photography/developer_network_features_benefits_320x160_2_1.jpg.rendition.cq5dam.webintel.320.160.jpg" /> 
+           <div class="copy"> 
+            <p>Pecan Street Inc. is a nonprofit consortium of universities, technology companies, and utility providers collaborating on smart grid technologies. Video describes use case and experience with the Intel&reg; Distribution.</p> 
+            <a href="http://hadoop.intel.com/resources">View asset and all Intel&reg; Distribution resources &gt;</a> 
+           </div> 
+          </div> 
+          <div class="panel panel4" id="div4"> 
+           <img alt="Intel&reg; Distribution for Apache Hadoop* Software Resources" src="/content/dam/www/public/us/en/images/photography-business/2x1/reflected-city-10434402-2-1.jpg.rendition.cq5dam.webintel.320.160.jpg" /> 
+           <div class="copy"> 
+            <p>The Intel&reg; Distribution for Apache Hadoop* Software product brief describes core capabilities, tech specs, and value-added hardware and software optimizations.</p> 
+            <a href="http://hadoop.intel.com/resources">View asset and all Intel&reg; Distribution resources &gt;</a> 
+           </div> 
+          </div> 
+          <div class="panel panel5" id="div5"> 
+           <img alt="Intel&reg; Distribution for Apache Hadoop* Software Resources" src="/content/dam/www/program/it-center/320x160_VendorSpotlights.jpg.rendition.cq5dam.webintel.320.160.jpg" /> 
+           <div class="copy"> 
+            <p>The Intel&reg; Manager for Apache Hadoop*Software product brief delves into value-added management console core capabilities; tech specs; and packaged software optimizations, such as Intel&reg; Active Tuner for Apache Hadoop* software and Intel&reg; Graph Builder for Apache Hadoop* software.</p> 
+            <a href="http://hadoop.intel.com/resources">View asset and all Intel&reg; Distribution resources &gt;</a> 
+           </div> 
+          </div> 
+          <div class="panel panel6" id="div6"> 
+           <img alt="Intel&reg; Distribution for Apache Hadoop* Software Resources" src="/content/dam/www/public/us/en/images/photography-business/2x1/high-performance-computing-streammind-320x160.jpg" /> 
+           <div class="copy"> 
+            <p>This solution brief describes how the Intel&reg; Distribution uses Intel&reg; AES-NI, which reduces the burden of encryption by up to 19X. This important data protection capability is delivered without sacrificing performance.</p> 
+            <a href="http://hadoop.intel.com/resources">View asset and all Intel&reg; Distribution resources &gt;</a> 
+           </div> 
+          </div> 
+          <div class="panel panel7" id="div7"> 
+           <img alt="The Big Data Wave Animation" src="/content/dam/www/public/emea/eu/en/images/Artwork/idf-generic-pov_320x160.jpg" /> 
+           <div class="copy"> 
+            <p>Intel combined its knowledge of high performance computing, the cloud, and open source to create the Intel&reg; Distribution for Apache Hadoop* Software. It’s engineered from the silicon up to help you get the most out of your hardware for big data analytics.</p> 
+            <a href="/content/www/us/en/big-data/big-data-intel-distribution-for-apache-hadoop.html">Watch the animation &gt;</a> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="b2bbladesigassets section"> 
+       <div class="component" data-component="b2bbladesignatureassets" data-component-id="2"> 
+        <!-- Displaying the component --> 
+        <div class="module module-type-1" id="b2bbladesignatureassets"> 
+         <div class="module-header"> 
+          <h4>Big Data Vendor Spotlights</h4> 
+         </div>
+         <!--module-header--> 
+         <div class="module-content"> 
+          <ul class="sidebar"> 
+           <li class="first"><a href="#" class="selected">IBM</a></li> 
+           <li><a href="#">HP</a></li> 
+           <li><a href="#">Oracle</a></li> 
+           <li><a href="#">Cloudera</a></li> 
+           <li><a href="#">All Spotlights</a></li> 
+           <li><a href="#"></a></li> 
+          </ul> 
+          <div class="panel selected"> 
+           <div class="img-block"> 
+            <img src="/content/dam/www/program/it-center/tc-peerresearch_320x160.jpg.rendition.cq5dam.webintel.320.160.jpg" alt=" IBM Vendor Spotlight" title=" IBM Vendor Spotlight" /> 
+           </div> 
+           <div class="copy"> 
+            <h1>Big Data Vendor Spotlight: IBM</h1> 
+            <p>Bruce D. Weed talks about the key components of the IBM* big data platform—including the Intel&reg; Xeon&reg; processor E5 family. You’ll see how the company is using these solutions to help its customers build a smarter planet. </p> 
+            <a href="/content/www/us/en/big-data/ibm-vendor-spotlight.html"><span> Find out how IBM big data solutions can help you build a smarter organization</span> &gt; </a> 
+            <p class="see-all"> </p> 
+           </div> 
+          </div> 
+          <div class="panel"> 
+           <div class="img-block"> 
+            <img src="/content/dam/www/public/us/en/images/photography/intel-federal-fb-blade-datacenter-320x160.jpg" alt=" HP Vendor Spotlight" title=" HP Vendor Spotlight" /> 
+           </div> 
+           <div class="copy"> 
+            <h1>Big Data Vendor Spotlight: HP</h1> 
+            <p>Irshad Raihan explains how HP* solutions for big data, built on the Intel&reg; Xeon&reg; processor family, deliver value quickly and cost-effectively to companies analyzing both structured and unstructured data.</p> 
+            <a href="/content/www/us/en/big-data/hp-vendor-spotlight.html"><span>Learn how HP big data solutions can help you get return on your big data investment</span> &gt;</a> 
+            <p class="see-all"> </p> 
+           </div> 
+          </div> 
+          <div class="panel"> 
+           <div class="img-block"> 
+            <img src="/content/dam/www/public/us/en/images/photography/30168-man-server-tech-side-8948-5400-960x480.jpg.rendition.cq5dam.webintel.320.160.jpg" alt=" Oracle Vendor Spotlight" title=" Oracle Vendor Spotlight" /> 
+           </div> 
+           <div class="copy"> 
+            <h1>Big Data Vendor Spotlight: Oracle</h1> 
+            <p>Kimberly Billings and Manan Goel from Oracle explain how Oracle* big data solutions deliver a uniquely integrated, end-to-end approach to big data acquisition and analysis. See how Oracle’s technologies help you acquire, organize, analyze your data.</p> 
+            <a href="/content/www/us/en/big-data/oracle-vendor-spotlight.html"><span>Understand the end-to-end approach for Oracle big data analytics</span> &gt;</a> 
+            <p class="see-all"> </p> 
+           </div> 
+          </div> 
+          <div class="panel"> 
+           <div class="img-block"> 
+            <img src="/content/dam/staging/image/Laura/30176_Military-datacenter_8863_5400_320x160.jpg" alt=" Cloudera Vendor Spotlight" title=" Cloudera Vendor Spotlight" /> 
+           </div> 
+           <div class="copy"> 
+            <h1>Big Data Vendor Spotlight: Cloudera Hadoop</h1> 
+            <p>Omer Trajman talks about how Cloudera is making major contributions to Apache* open-source projects, Cloudera’s own Hadoop* distribution, and how these efforts are helping organizations profit from all their data. </p> 
+            <a href="/content/www/us/en/big-data/cloudera-vendor-spotlight.html"><span>Learn about how Cloudera is contributing to open-source big data solutions </span> &gt;</a> 
+            <p class="see-all"> </p> 
+           </div> 
+          </div> 
+          <div class="panel"> 
+           <div class="img-block"> 
+            <img src="/content/dam/www/public/us/en/images/photography/33042_Rack-server-aisle_8273_5400-320x160.jpg" alt=" All Spotlights" title=" All Spotlights" /> 
+           </div> 
+           <div class="copy"> 
+            <h1>Big Data Companies: Vendor Spotlights</h1> 
+            <p>Vendor spotlights on big data companies. Leading vendors describe their enterprise offerings for big data analytics.</p> 
+            <a href="/content/www/us/en/big-data/big-data-companies.html"><span>See all big data companies </span> &gt;</a> 
+            <p class="see-all"> </p> 
+           </div> 
+          </div> 
+          <div class="panel"> 
+           <div class="img-block"> 
+           </div> 
+           <div class="copy"> 
+            <h1></h1> 
+            <p></p> 
+            <p class="see-all"> </p> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="b2bbladepicks parbase section"> 
+       <div class="component" data-component="b2bbladepicks" data-component-id="1"> 
+        <div class="module module-type-5" id="b2bbladepicks"> 
+         <div class="module-header"> 
+          <h4>Big Data Examples: Getting It Done</h4> 
+         </div> 
+         <div class="module-content"> 
+          <div class="module-slider-wrap"> 
+           <div class="module-slider-container clearfix copy" style="width: 2721px;"> 
+            <div class="module-slider-item"> 
+             <ul> 
+              <li class="first"> <h2> Big Data at the Intersection</h2> <p class="meta-data"> Apr 18, 2013</p> <p>Manufacturing customers are turning to Intel technologies to make more efficient use of big data and HPC during all phases of product development.</p> <a href="/content/www/us/en/big-data/big-data-at-the-intersection.html" class="more"> Read More &gt;</a> <br /> </li> 
+              <li class=""> <h2> Speed Big Data Analysis with SoftNet’s Solutions</h2> <p class="meta-data"> Mar 20, 2013</p> <p>Solution Brief: SoftNet Solutions implements an Intel&reg;-based Apache Hadoop* platform for real-time physical and virtual environment big data analysis.</p> <a href="/content/www/us/en/big-data/big-data-xeon-e5-softnet-hadoop-brief.html" class="more"> Read More &gt;</a> <br /> </li> 
+              <li class=""> <h2> Big Data: Energy Management</h2> <h3> Pecan Street uses data-driven analytics to empower consumers</h3> <p class="meta-data"> Feb 11, 2013</p> <p>Pecan Street uses data-intensive analytics to empower consumer energy management, collecting data using a device-to-cloud architecture.</p> <a href="/content/www/us/en/big-data/pecan-street-peer-story.html" class="more"> Read More &gt;</a> <br /> </li> 
+              <li class=""> <h2> Big Data Genomics Driving Better Patient Care</h2> <h3> The University of North Carolina at Chapel Hill is using big data to find better treatments for patients through genomic sequencing technologies </h3> <p class="meta-data"> Feb 11, 2013</p> <p>University of North Carolina at Chapel Hill (UNC) analyzed big data from thousands of individual genomes to improve patient care and support research.</p> <a href="/content/www/us/en/big-data/renci-peer-story.html" class="more"> Read More &gt;</a> <br /> </li> 
+             </ul> 
+            </div> 
+            <div class="module-slider-item"> 
+             <ul> 
+              <li class="first"> <h2> Clemson Balances Big-Data Vision and Small-Budget Reality</h2> <p class="meta-data"> Oct 28, 2012</p> <p>Clemson’s IT leaders discuss how they’re evolving their clusters to clouds and preparing for an era of big data analytics. </p> <a href="/content/www/us/en/big-data/cloud-computing-at-clemson-study.html" class="more"> Read More &gt;</a> <br /> </li> 
+             </ul>
+            </div> 
+           </div> 
+          </div> 
+          <div class="module-slider-controls clearfix" style="padding-left: 421px;"> 
+           <span class="module-slider-left large"><a href="#" style="display: none;">Previous</a></span> 
+           <span class="module-slider-left"><a href="#" style="display: none;">Previous</a></span> 
+           <ul class="module-slider-dots clearfix"></ul> 
+           <span class="module-slider-right"><a href="#">Next</a></span> 
+           <span class="module-slider-right large"><a href="#">Next</a></span> 
+          </div>
+         </div> 
+        </div>
+       </div> 
+       <div class="parbase section fetauresandbenefits"> 
+        <div class="module" id="features-benefits"> 
+         <div class="module-header"> 
+          <h4>Chip Chats: Big Data</h4> 
+          <a href="http://www.intelcloudbuilders.com/podcasts" title="Listen to More Chip Chats" style="position: absolute; right: 10px; bottom: 10px; font-size: 13px;"><span>Listen to More Chip Chats</span> &gt;</a> 
+         </div> 
+         <div class="component" data-component="featuresandbenefits" data-component-id="2"> 
+          <script language="Javascript">
+//<![CDATA[
+
+function show(id) {
+    document.getElementById(id).style.display='block';
+}
+function hide(id) {
+    document.getElementById(id).style.display='none';
+}
+
+$(document).ready(function (){
+    
+    $('.close-btn').click(function (){
+      $('#features-bg-overlay, #features-container-pdf-read').hide();
+    });     
+});
+$(function(){
+function showAsset(title, assetpath){
+    var assetSrc = "";
+    if (assetpath.substr(-4) === ".pdf") {
+       assetSrc = "<object data='"+assetpath+"?#zoom=85&scrollbar=1&toolbar=1&navpanes=0' type='application/pdf' id='featuresEmbedAsset' width='100%' height='575'></object>";
+       $('#featuresAssetTitle').html(title);
+       $('#features-pdf-block').html(assetSrc); 
+       $('#features-bg-overlay, #features-container-pdf-read').show();
+    }
+    else {
+        var pathURL = assetpath;
+        window.open(pathURL, '_blank');
+    }    
+};
+});
+//]]>
+</script> 
+          <div id="features-bg-overlay"></div> 
+          <div id="features-container-pdf-read"> 
+           <div class="features-topBar">
+            <span id="featuresAssetTitle"></span>
+            <a href="javascript:void(0);" class="close-btn">Close <img src="/etc/designs/ver/3.1.151/intel/us/en/images/close.png" alt="Close" /></a>
+           </div> 
+           <div id="features-pdf-block"></div> 
+          </div> 
+          <div class="module-content" style="padding-bottom:20px;"> 
+           <ul class="sidebar"> 
+            <li class="first"><a href="#" class="selected" onclick="show('div8');hide('div9');hide('div10');hide('div11');hide('div12');hide('div13');hide('div14');">Database Appliance</a></li> 
+            <li><a href="#" onclick="show('div9');hide('div8');hide('div10');hide('div11');hide('div12');hide('div13');hide('div14');">Big Data Analytics</a></li> 
+            <li><a href="#" onclick="show('div10');hide('div8');hide('div9');hide('div11');hide('div12');hide('div13');hide('div14');">Database Performance</a></li> 
+            <li><a href="#" onclick="show('div11');hide('div8');hide('div9');hide('div10');hide('div12');hide('div13');hide('div14');">Big Data in the Real World</a></li> 
+            <li><a href="#" onclick="show('div12');hide('div8');hide('div9');hide('div10');hide('div11');hide('div13');hide('div14');">De-mystifying Big Data</a></li> 
+            <li><a href="#" onclick="show('div13');hide('div8');hide('div9');hide('div10');hide('div11');hide('div12');hide('div14');">In Memory Big Data</a></li> 
+           </ul> 
+           <div class="panel panel1 selected" id="div8"> 
+            <img alt="Chip Chat: Database Appliance" src="/content/dam/staging/image/Laura/32647_Blond-man-stand-rack_1862_54-320x160.jpg.rendition.cq5dam.webintel.320.160.jpg" /> 
+            <div class="copy"> 
+             <p><span style="font-size:20px">Oracle Exadata Database Machine</span><br />Allyson chats with Tim Shetler, VP of Exadata Product Management from Oracle, about the Oracle Exadata Database Machine and its use in mission critical computing.</p> 
+             <a href="http://intel.com/design/chipchat.htm?bctid=1411945896001">Listen to Intel&reg; Chip Chat episode 167 &gt;</a> 
+            </div> 
+           </div> 
+           <div class="panel panel2" id="div9"> 
+            <img alt="Chip Chat: Big Data Analytics" src="/content/dam/www/program/it-center/320x160_IntelIT_BuildingPrivateCloud.jpg.rendition.cq5dam.webintel.320.160.jpg" /> 
+            <div class="copy"> 
+             <p><span style="font-size:20px">Oracle Exalytics In-Memory Machine </span><br />Marie-Anne Neimat, VP of Development for Embedded Databases, discusses the Oracle Exalytics real-time analytics product embedded into the hardware appliance and appropriate applications for deployment.</p> 
+             <a href="http://intel.com/design/chipchat.htm?bctid=1411945884001">Listen to Intel&reg; Chip Chat episode 168 &gt;</a> 
+            </div> 
+           </div> 
+           <div class="panel panel3" id="div10"> 
+            <img alt="Chip Chat: Database Performance" src="/content/dam/www/public/us/en/images/photography/intel-federal-fb-blade-highperf-320x160.jpg" /> 
+            <div class="copy"> 
+             <p><span style="font-size:20px">Database Performance on Intel&reg; Xeon&reg; Processor-based Platforms </span><br />Steve Shaw, Database Technology Manager at Intel, chats about database performance testing and engineering an Intel&reg; Xeon&reg; processor based system as a whole for optimal performance and scalability.</p> 
+             <a href="http://intel.com/design/chipchat.htm?bctid=1425838213001">Listen to Intel&reg; Chip Chat episode 170 &gt;</a> 
+            </div> 
+           </div> 
+           <div class="panel panel4" id="div11"> 
+            <img alt="Chip Chat: Big Data in the Real World" src="/content/dam/www/program/it-center/320x160_Real-World-Guide-e5-2.jpg" /> 
+            <div class="copy"> 
+             <p><span style="font-size:20px">Real-world Uses for Big Data</span><br />Pauline Nist, GM of mission critical computing, talks about big data appliances, the Oracle Exalytics product for in-memory database, and real-world uses for analytics and mission-critical computing.</p> 
+             <a href="http://intel.com/design/chipchat.htm?bctid=1437275979001">Listen to Intel&reg; Chip Chat episode 172 &gt;</a> 
+            </div> 
+           </div> 
+           <div class="panel panel5" id="div12"> 
+            <img alt="Chip Chat: De-mystifying Big Data" src="/content/dam/www/public/us/en/images/photography/ttc-planning-guide.jpg" /> 
+            <div class="copy"> 
+             <p><span style="font-size:20px">De-Mystification of Big Data</span><br />Mitch Shults, a mission-critical strategist, discusses the difference in structured databases vs. unstructured, delivering performance while managing latency, federated clouds, and in-memory databases.</p> 
+             <a href="http://intel.com/design/chipchat.htm?bctid=1439243377001">Listen to Intel&reg; Chip Chat episode 171 &gt;</a> 
+            </div> 
+           </div> 
+           <div class="panel panel6" id="div13"> 
+            <img alt="Chip Chat: In Memory Big Data" src="/content/dam/www/program/it-center/320x160_IntelITOvercoming_SecurityChallenges.jpg.rendition.cq5dam.webintel.320.160.jpg" /> 
+            <div class="copy"> 
+             <p><span style="font-size:20px">In-Memory Database Processing with SAP HANA</span><br />Jeff Word, a VP at SAP, stops by to talk about SAP HANA, the first enterprise-scale completely native in-memory database. Keeping the database in RAM means that business data (point of sale, as well as Web 2.0) can be processed in parallel at real-time speeds</p> 
+             <a href="http://intel.com/design/chipchat.htm?track_url=http://soundcloud.com/intelchipchat/in-memory-database-processing">Listen to Intel&reg; Chip Chat episode 193 &gt;</a> 
+            </div> 
+           </div> 
+           <div class="panel panel7" id="div14"> 
+            <div class="copy"> 
+             <p></p> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="parbase section reference"> 
+        <div id="reference_6c27" class="component reference" data-component="reference" data-component-id="1"> 
+         <div class="parbase navigator navigator_f2da"> 
+          <div data-component-id="1" data-component="navigator" class="component"> 
+           <div class="module" id="navigator"> 
+            <div class="module-header"> 
+             <h4>Intel IT Key Initiatives</h4> 
+            </div> 
+            <div class="module-content"> 
+             <!-- Below ul tag will make the left hand side navigation panel --> 
+             <ul class="sidebar"> 
+              <li class="first"><a href="#" rel="panel1" class="selected">Intel IT Annual Report</a></li> 
+              <li><a href="#" rel="panel2">IT@Intel Overview</a></li> 
+              <li><a href="#" rel="panel3">Business Intelligence</a></li> 
+              <li><a href="#" rel="panel4">Enterprise Security</a></li> 
+              <li><a href="#" rel="panel5">IT Consumerization</a></li> 
+             </ul> 
+             <!-- Below java code handles that right side view should be populated for only panels which are existing on left side--> 
+             <div class="panel panel1 selected"> 
+              <div class="imgContainer">
+               <img src="/content/dam/www/program/it-at-intel/2-1-apr-cover-2013.jpg" alt="Intel IT Annual Report" width="262px" />
+              </div> 
+              <div class="textContainer"> 
+               <p class="title">Intel IT Annual Report</p> 
+               <p class="availability">Discover Intel IT’s strategies and initiatives that are accelerating Intel’s business growth in the 2012-13 Intel IT Annual Performance Report. Learn how Intel IT is delivering business value through big data, cloud computing, consumerization of IT, social computing, and much more.</p> 
+               <div class="navigatorButton"> 
+                <span class="left"></span> 
+                <span class="middle">
+                 <div>
+                  <a href="/content/www/us/en/it-management/intel-it-best-practices/intel-it-annual-performance-report-2012-13.html" target="_self">Explore the report</a>
+                 </div></span> 
+                <span class="right"></span> 
+               </div> 
+              </div> 
+             </div> 
+             <div class="panel panel2 "> 
+              <div class="imgContainer">
+               <img src="/content/dam/www/program/it-at-intel/2-1-Indian-man-office-cubes_5151.jpg" alt="IT@Intel: Sharing IT Best Practices" width="262px" />
+              </div> 
+              <div class="textContainer"> 
+               <p class="title">IT@Intel: Sharing IT Best Practices</p> 
+               <p class="availability">IT@Intel connects IT professionals with their peers inside Intel, providing insight, best practices &amp; lessons learned on today’s top technology issues.</p> 
+               <div class="navigatorButton"> 
+                <span class="left"></span> 
+                <span class="middle">
+                 <div>
+                  <a href="/content/www/us/en/it-management/intel-it/intel-it-best-practices.html" target="_self">Go to the IT@Intel main page</a>
+                 </div></span> 
+                <span class="right"></span> 
+               </div> 
+              </div> 
+             </div> 
+             <div class="panel panel3 "> 
+              <div class="imgContainer">
+               <img src="/content/dam/www/program/it-at-intel/2-1-Man-writing-whiteboard_7991.jpg" alt="Enabling Big Data Solutions" width="262px" />
+              </div> 
+              <div class="textContainer"> 
+               <p class="title">Enabling Big Data Solutions</p> 
+               <p class="availability">Intel IT’s BI Data Management team developed solutions that make enterprise data available across the company, enabling more effective use of BI tools to drive operational efficiency and competitive advantage.</p> 
+               <div class="navigatorButton"> 
+                <span class="left"></span> 
+                <span class="middle">
+                 <div>
+                  <a href="/content/www/us/en/it-management/intel-it-best-practices/enabling-big-data-management-solutions-with-centralized-data-management.html" target="_self">Learn more</a>
+                 </div></span> 
+                <span class="right"></span> 
+               </div> 
+              </div> 
+             </div> 
+             <div class="panel panel4 "> 
+              <div class="imgContainer">
+               <img src="/content/dam/www/program/it-at-intel/2-1-Man-desk-server-bkgd_3139.jpg" alt="Can Information Security Survive?" width="262px" />
+              </div> 
+              <div class="textContainer"> 
+               <p class="title">Can Information Security Survive?</p> 
+               <p class="availability">Intel IT is tackling this challenge with a new information security strategy called “Protect to Enable.” Its security architecture is designed to increase productivity and innovation, while actually decreasing risk.</p> 
+               <div class="navigatorButton"> 
+                <span class="left"></span> 
+                <span class="middle">
+                 <div>
+                  <a href="/content/www/us/en/it-management/intel-it-best-practices/protect-to-enable-information-security-strategy-video.html" target="_self">Watch now</a>
+                 </div></span> 
+                <span class="right"></span> 
+               </div> 
+              </div> 
+             </div> 
+             <div class="panel panel5 "> 
+              <div class="imgContainer">
+               <img src="/content/dam/www/program/it-at-intel/2-1-Woman-in-cafe_0961.jpg" alt="Security for Personally Owned Devices" width="262px" />
+              </div> 
+              <div class="textContainer"> 
+               <p class="title">Security for Personally Owned Devices</p> 
+               <p class="availability">Intel IT has developed a security model that calculates which devices can be trusted and moves users to the appropriate security level, improving device security of employee owned devices in the enterprise.</p> 
+               <div class="navigatorButton"> 
+                <span class="left"></span> 
+                <span class="middle">
+                 <div>
+                  <a href="/content/www/us/en/it-management/intel-it-best-practices/improving-security-and-mobility-for-personally-owned-devices-paper.html" target="_self">Learn more</a>
+                 </div></span> 
+                <span class="right"></span> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="parbase section reference"> 
+        <div id="reference_d010" class="component reference" data-component="reference" data-component-id="2"> 
+         <div class="b2bbladebenefits parbase b2bbladebenefits_a36">
+          <!-- 
+This component display IT Center Promotion (Features and Benefits).
+--> 
+          <div class="component" data-component="b2bbladebenefits" data-component-id="1"> 
+           <div class="module module-type-7"> 
+            <div class="module-header"> 
+             <h4>Join the Experts. Join Your Peers. Join the Intel&reg; IT Center.</h4> 
+            </div> 
+            <div class="module-content clearfix"> 
+             <div class="img-block">
+              <img class="" style="clear: both; display: block; float:left" src="/content/dam/www/program/it-center/it-center-benefits-atom-288x144-2-1.jpg" alt="Learn more" title="Learn more" />
+             </div> 
+             <ul> 
+              <li class="first"> <h2>Get Real-World Content</h2> <p> Receive premium (gated) content and the monthly Intel IT Center newsletter to help you move your IT projects forward.</p> </li> 
+              <li> <h2> Compete with Peers</h2> <p> Pit your IT knowledge against your peers in the IT Manager: Duels game—where you can deploy cutting-edge technologies and wield colossal budgets to crush your peers’ IT infrastructures.</p> </li> 
+              <li> <h2>Connect with Intel and Industry Experts</h2> <p> Get your questions answered during Intel IT Center Talk to an Expert webinars and in-person, members-only events.</p> </li> 
+              <li class="module-button-block"><a href="/content/www/us/en/it-managers/it-center-program-membership-benefits.html" class="m-button" target="_self">Learn more</a></li> 
+             </ul> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="conversations section"> 
+        <div class="component" data-component="conversations" data-component-id="1"> 
+         <div class="module" id="conversations"> 
+          <div class="module-header"> 
+           <h4>Conversations</h4> 
+          </div> 
+          <div class="module-content hidden" id="conversations-feeds-carousal-div"></div> 
+          <div id="conversations-feeds-grid-div"></div> 
+          <div class="gallery-controls" id="gallery-controls-div"></div> 
+          <script>
+
+            var feedsDivStr = new String();
+            var isDivClosed = true;
+            var isEditMode = false;
+            var nbrOfResults = 9;
+            var mashupEnabled = "yes";
+            var displayView = "carousel";
+            var ulCount = 0;
+			var IE_BOOL = /MSIE 6/.test(navigator.userAgent); //Used to detect IE6
+
+            function hideConversations()
+            {
+                //alert("Hiding Conversations");
+                $('#conversations').hide();
+            }
+
+
+                function parseResponse(data)
+                {
+                   if(data != undefined && data.response != undefined) {
+                       var response = data.response;
+                       var respJson = JSON.parse(response);
+                       if(respJson != undefined && respJson.mashup != undefined
+                               && respJson.mashup.item != undefined) {
+                           var itemArr = respJson.mashup.item;
+                           if(itemArr != undefined && itemArr.length == undefined) {
+                               populateFeedsDivStr(itemArr, 0);
+                           }
+                           else if(itemArr != undefined && itemArr.length != undefined) {
+                               var len = itemArr.length;
+                               if (nbrOfResults != 0 && nbrOfResults < len){
+                                   len = nbrOfResults;
+                               }
+                               for (var i=0; i < len; i++) {
+                                   populateFeedsDivStr(itemArr[i], i, len);
+                               }
+
+                               if (displayView == "carousel") {
+                                   if (ulCount > 1) {
+										var fType =".png";
+										if (IE_BOOL) fType=".gif";  //Checks if its IE6 and replaces file type to .gif
+                                       var controlsDivStr = new String();
+                                       controlsDivStr = "<div class=\"carousel-controls\" itemContainer=\"#conversations .module-content\">"
+                                           + "<img alt=\"previous\" class=\"carousel-left large\" style=\"visibility: hidden;\" src=\"/etc/designs/ver/3.1.151/intel/us/en/images/carouselLeftLarge"+fType+"\"/>"
+                                           + "<img alt=\"previous\" class=\"carousel-left\" style=\"visibility: hidden\" src=\"/etc/designs/ver/3.1.151/intel/us/en/images/carouselLeft"+fType+"\"/>"
+                                           + "<img alt=\"selector\" class=\"carousel-dot active\" src=\"/etc/designs/ver/3.1.151/intel/us/en/images/blank"+fType+"\" />";
+
+                                       for (var k=1; k < ulCount; k++) {
+                                           controlsDivStr = controlsDivStr + "<img alt=\"selector\" class=\"carousel-dot\" src=\"/etc/designs/ver/3.1.151/intel/us/en/images/blank"+fType+"\" />";
+                                       }
+
+                                       controlsDivStr = controlsDivStr + "<img alt=\"next\" class=\"carousel-right\" src=\"/etc/designs/ver/3.1.151/intel/us/en/images/carouselRight"+fType+"\"/>"
+                                           + "<img alt=\"next\" class=\"carousel-right large\" src=\"/etc/designs/ver/3.1.151/intel/us/en/images/carouselRightLarge"+fType+"\"/></div>";
+
+                                       $("#gallery-controls-div").html(controlsDivStr);
+                                   }
+                               }
+                           }
+                       }
+                   }
+                   if (feedsDivStr.length > 0) {
+                       if (displayView == "carousel") {
+                           if (isDivClosed == false) {
+                               feedsDivStr = feedsDivStr + "</ul>";
+                           }
+                           $('#conversations-feeds-carousal-div').show();
+                           $("#conversations-feeds-carousal-div").html(feedsDivStr);
+                       }
+                       else {
+                           if (isDivClosed == false) {
+                               feedsDivStr = feedsDivStr + "</ul></div>";
+                           }
+                           $("#conversations-feeds-grid-div").html(feedsDivStr);
+                       }
+                   }
+                   else {
+                       if(isEditMode == false){
+                           hideConversations();
+                       }
+                   }
+                }
+
+                function populateFeedsDivStr(item, j, len)
+                {
+                    var twitter_id = item.twitter_id;
+                    var source = item.source;
+                    var aIcon = "";
+                    var linkDisp = "";
+                    var link = "";
+                    var twitter_user="";
+                    if (j == 0 && displayView == "carousel") {
+                        isDivClosed = false;
+                        ulCount++;
+                        feedsDivStr = feedsDivStr + "<ul class=\"carousel-item active\"><li class=\"first\">";
+                    }
+                    else if ((j%3) == 0) {
+                        isDivClosed = false;
+                        ulCount++;
+                        if (displayView == "carousel") {
+                            feedsDivStr = feedsDivStr + "<ul class=\"carousel-item\"><li class=\"first\">";
+                        }
+                        else {
+                            feedsDivStr = feedsDivStr + "<div class=\"module-content\"><ul><li class=\"first\">";
+                        }
+                    }
+                    else {
+                        feedsDivStr = feedsDivStr + "<li>";
+                    }
+
+                    //Link
+                    if (item.link != undefined) {
+                        if (item.link.href != undefined) {
+                            link = item.link.href;
+                        }
+                        else {
+                            link = item.link;
+                        }
+                    }
+
+                    //User 
+                    if(item.twitter_user != undefined){
+                        twitter_user = item.twitter_user;
+                        }
+
+                    if (source == "twitter") {
+                        aIcon = "<a class=\"conversations-icon-twitter\"></a>";
+                        if (link != "") {
+                            if(twitter_id != undefined && twitter_id != "" && twitter_user != undefined && twitter_user != null)
+                            {
+                                linkDisp = "<a class='tweet-links' href='https://www.twitter.com/intent/tweet?in_reply_to=" + twitter_id +"' title='Reply' target='_blank'>Reply</a><a class='tweet-links' href='https://www.twitter.com/intent/retweet?tweet_id=" + twitter_id + "' title='ReTweet' target='_blank'>ReTweet</a><a class='tweet-links' href='https://www.twitter.com/intent/favorite?tweet_id=" + twitter_id + "' title='Favorite' target='_blank'>Favorite</a><a class='tweet-links' href='https://www.twitter.com/intent/user?user_id=" + twitter_user + "' title='Follow' target='_blank'>Follow</a>";
+                            }
+                        }
+                    }
+                    else if (source == "facebook") {
+                        aIcon = "<a class=\"conversations-icon-facebook\"></a>";
+                        if (link != "") {
+                             linkDisp = "<a href=\"" + link + "\" title=\"Full Post\" target=\"_blank\">Full Post</a>";
+                        }
+                    }
+                    else if (source == "feed") {
+                        aIcon = "<a class=\"conversations-icon-community\"></a>";
+                        if (link != "") {
+                            linkDisp = "<a href=\"" + link + "\" title=\"Full Post\" target=\"_blank\">Full Post</a>";
+                        }
+                    }
+                    else if (source == "rss") {
+                        aIcon = "<a class=\"conversations-icon-blog\"></a>";
+                        if (link != "") {
+                            linkDisp = "<a href=\"" + link + "\" title=\"Full Post\" target=\"_blank\">Full Post</a>";
+                        }
+                    }
+
+                    //Source Image
+                    feedsDivStr = feedsDivStr + "<p>" + aIcon;
+
+                    //Author
+                    /*
+                    if (item.author != undefined) {
+                        var author = JSON.stringify(item.author);
+                        if (author != "{}") {
+                            feedsDivStr = feedsDivStr + "<p class=\"author\">" + item.author + "</p>";
+                        }
+                    }
+                    */
+
+                    //Comment
+                    if (item.entry != undefined) {
+                        feedsDivStr = feedsDivStr + "<p class=\"comment\">" + formatLinks(item.entry) + "</p>";
+                    }
+
+                    feedsDivStr = feedsDivStr + "<p class=\"meta-data\">";
+                    
+                    
+                    //Relative Time
+                        if (item.created_time != undefined) {
+                            var date = new Date(item.created_time);
+                            feedsDivStr = feedsDivStr + getTimeDiff(date) + " &nbsp;&bull;&nbsp; ";
+                        }
+                                        
+                    
+                    feedsDivStr = feedsDivStr + linkDisp + "</p></li>";
+
+                    if ((j%3) == 2) {
+                        isDivClosed = true;
+                        if (displayView == "carousel") {
+                            feedsDivStr = feedsDivStr + "</ul>";
+                        }
+                        else {
+                            feedsDivStr = feedsDivStr + "</ul></div>";
+                        }
+                    }
+                }
+                
+                function formatLinks(str)
+                {
+                    var frmIndex = 0;
+                    while(str.indexOf("http://", frmIndex) != -1) {
+                        var startIndex = str.indexOf("http://", frmIndex);
+                        var endIndex = str.indexOf(" ", startIndex);
+                        if (endIndex == -1) {
+                            endIndex = str.length;
+                        }
+                        str = str.substring(0,startIndex)+"<a href=\""+str.substring(startIndex,endIndex)+"\" target=\"_blank\">"+str.substring(startIndex,endIndex)+"</a>"+str.substring(endIndex);
+                        frmIndex = str.indexOf("</a>", startIndex);
+                    }
+                    return str;
+                }
+
+                function getTimeDiff(time)
+                {
+                    var now = new Date();
+                    var diff = now.getTime() - time.getTime();
+                    var isPlural = false;
+                    var timeDiff ;
+                    var time;
+                    var propValue = "";
+                    isPlural = checkPluralUnits(diff,86400000);
+                    time = getTimeDifference(diff,86400000);
+                    if (isPlural) 
+                        {
+                    	if(time >1)
+                    	{
+                        propValue = "$placeholder:number$ days ago";
+                        if(propValue != "")
+                            {
+                             timeDiff = propValue.replace("$placeholder:number$", time);
+                             }
+                        }
+                        }
+                     else
+                        { 
+                         if(time == 1)
+                         {	 
+                    	 propValue = "$placeholder:number$ day ago";
+                         if(propValue != "")
+                         {
+                        	 timeDiff = propValue.replace("$placeholder:number$", time);
+                         }
+                         }
+                        }
+                    if (!timeDiff) {
+                        isPlural = checkPluralUnits(diff,3600000);
+                        time = getTimeDifference(diff,3600000);
+                        if (isPlural) 
+                            {
+                            if(time >= 24)
+                                {
+                                time = (time/24).toFixed(0);
+                                 if(time > 1)
+                                     {
+                                        propValue = "$placeholder:number$ days ago";
+                                        if(propValue != "")
+                                            {
+                                                timeDiff = propValue.replace("$placeholder:number$", time);
+                                            }
+                                     }
+                                 if(time == 1)
+                                     {
+                                        propValue = "$placeholder:number$ day ago";
+                                        if(propValue != "")
+                                            {
+                                                timeDiff = propValue.replace("$placeholder:number$", time);
+                                            }
+                                     }
+                                }
+                            else{
+                                propValue = "$placeholder:number$ hours ago";
+                                if(propValue != "")
+                                    {
+                                        timeDiff = propValue.replace("$placeholder:number$",time);
+                                    }
+                                }
+                          } 
+                        else {
+                              propValue = "$placeholder:number$ hour ago"; 
+                              if(propValue != "")
+                                  {
+                            	     timeDiff = propValue.replace("$placeholder:number$",time);
+                            	  }
+                        }
+                        if (!timeDiff) {
+                            isPlural = checkPluralUnits(diff,60000);
+                            time = getTimeDifference(diff, 60000);
+                            if (isPlural)
+                                 {
+                                if(time >= 60)
+                                    {
+                                    time = (time/60).toFixed(0);
+                                    if(time > 1)
+                                        {
+                                        propValue = "$placeholder:number$ hours ago";
+                                        if(propValue != "")
+                                            {
+                                            timeDiff = propValue.replace("$placeholder:number$", time);
+                                            }
+                                        }
+                                    if(time == 1)
+                                        {
+                                        propValue = "$placeholder:number$ hour ago";
+                                        if(propValue != "")
+                                            {
+                                            timeDiff = propValue.replace("$placeholder:number$", time);
+                                            }
+                                        }
+                                    }
+                                else{
+                                    propValue = "$placeholder:number$ minutes ago";
+                                    if(propValue != "")
+                                        {
+                                        timeDiff = propValue.replace("$placeholder:number$", time);
+                                        }
+                                    }
+                                } 
+                            else 
+                                { 
+                                propValue = "$placeholder:number$ minute ago";
+                                if(propValue != "")
+                                {
+                                    timeDiff = propValue.replace("$placeholder:number$", time);
+                                }
+                            }
+                            if (!timeDiff) {
+                                isPlural = checkPluralUnits(diff,60);
+                                time = getTimeDifference(diff, 60);
+                                if (isPlural)
+                                {
+                                    if(time >= 60)
+                                        {
+                                        time = (time/60).toFixed(0);
+                                        if(time > 1)
+                                            {
+                                            propValue = "$placeholder:number$ minutes ago";
+                                            if(propValue != "")
+                                                {
+                                                timeDiff = propValue.replace("$placeholder:number$", time);
+                                                }
+                                            }
+                                        if(time == 1)
+                                            {
+                                            propValue = "$placeholder:number$ minute ago";
+                                            if(propValue != "")
+                                                {
+                                                timeDiff = propValue.replace("$placeholder:number$", time);
+                                                }
+                                            } 
+                                        }
+                                    else
+                                    {
+                                        propValue = "$placeholder:number$ seconds ago";
+                                        if(propValue != "")
+                                        {
+                                            timeDiff = propValue.replace("$placeholder:number$", time);
+                                        }
+                                    }
+                                } 
+                                else
+                                { 
+                                    propValue = "$placeholder:number$ second ago";
+                                    if(propValue != "")
+                                        {
+                                           timeDiff = propValue.replace("$placeholder:number$", time);
+                                        }
+                                }
+                                if (!timeDiff) 
+                                {
+                                    timeDiff = 'Just Now';
+                                }
+                            }
+                        }
+                    }
+
+                    return timeDiff;
+
+                }
+
+                function getTimeDiffDescription(diff, unit, timeDivisor)
+                {
+
+                    var unitAmount = (diff / timeDivisor).toFixed(0);
+                    if (unitAmount > 0) {
+                        return unitAmount + ' ' + unit + ' ago';
+                    } else if (unitAmount < 0) {
+                        return 'in ' + Math.abs(unitAmount) + ' ' + unit ;
+                    } else {
+                        return null;
+                    }
+
+                }
+                /*
+                    function to calculate the timeDifference so as to display in duration
+                    @param created_time, timeDivisor
+                    @returns timeDifference
+                */
+                function getTimeDifference(diff,timeDivisor){
+                       var timeDifference;
+                       timeDifference = (diff/timeDivisor).toFixed(0);
+                       if(timeDifference > 0)
+                           {
+                            return timeDifference;
+                           }
+                       else{
+                            return Math.abs(timeDifference);
+                           }
+                    }
+
+                function checkPluralUnits(diff,timeDivisor){
+                    var unitAmount = (diff / timeDivisor).toFixed(0);
+                    if (unitAmount==1){
+                        return false;
+                    } else {
+                        return true;
+                    }
+                }
+
+     </script> 
+          <script type="text/javascript">
+            //<![CDATA[
+            function loadAsyncScript(httpUrl, httpsUrl)  { $(function() {
+                $(function(){
+                    var url =  (window.parent.document.location.protocol == "http:") ? httpUrl : httpsUrl;
+                    //console.log("Loading Script: " + url);
+                    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;  po.src = url;  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);});
+                 });
+            }
+
+            var mashupUrl = "http://inside.intel.com:80/presto/edge/api/rest/bigdataanalyticsturningbigdataintointelligence_4/runMashup?x-p-anonymous=true&x-presto-resultFormat=json&callback=parseResponse";
+            var secureMashupUrl = "https://secure-inside.intel.com:443/presto/edge/api/rest/bigdataanalyticsturningbigdataintointelligence_4/runMashup?x-p-anonymous=true&x-presto-resultFormat=json&callback=parseResponse";
+            loadAsyncScript(mashupUrl, secureMashupUrl);
+            </script> 
+         </div> 
+        </div>
+       </div> 
+       <div class="parbase videofilmstripgallery section"> 
+        <script src="/etc/designs/ver/3.1.151.3.28/intel/us/en/js/reflection.js" type="text/javascript"></script> 
+        <script type="text/javascript">
+$(function () {
+    // call for image reflection
+    $("#v-carousal-new .video-carousal li img").reflect();
+
+});
+</script>
+       </div> 
+       <div class="parbase section relatedbladevideos2"> 
+        <div class="component" data-component="relatedbladevideos2" data-component-id="1"> 
+         <div class="module v-carousal-new" id="v-carousal-new2"> 
+          <div class="module-header"> 
+           <h4>Videos</h4> 
+           <a id="viewmore" href="/content/www/us/en/library/viewmore.results.html?prTag=rtopic:intelwork/bigdata&amp;seTag=rintelproduct:intelprocessors/intelxeonprocessors/intelxeonprocessore5family&amp;taTag=rtargetaudience:itmanagers&amp;format=assetdetailvid" title="View More Videos"> <span>View More Videos</span> </a> 
+          </div> 
+          <div class="video-carousal"> 
+           <ul class="carousel-item"> 
+            <li> <img src="/content/dam/www/public/us/en/videos/demos/10-gbe-hadoop-demo.mp4.rendition.cq5dam.thumbnail.190.107.jpg" width="190" height="107" alt="Hadoop* Server Clusters with 10 Gigabit Intel&reg; Ethernet" title="Hadoop* Server Clusters with 10 Gigabit Intel&reg; Ethernet" /> <a href="/content/www/us/en/network-adapters/10-gigabit-network-adapters/10-gbe-hadoop-demo.html" class="play-icon" title="Hadoop* Server Clusters with 10 Gigabit Intel&reg; Ethernet"></a>
+             <div class="thumb-shw small"></div> 
+             <div class="vi-txt"> 
+              <strong><a href="/content/www/us/en/network-adapters/10-gigabit-network-adapters/10-gbe-hadoop-demo.html" title="Hadoop* Server Clusters with 10 Gigabit Intel&reg; Ethernet">Hadoop* Server Clusters with 10 Gigabit Intel&reg; Ethernet</a></strong> 
+              <p>Shows how Hadoop* clusters analyze big data more effectively over Intel&reg; 10Gb Ethernet. </p> 
+             </div></li> 
+            <li> <img src="/content/dam/www/public/us/en/videos/animations/intel-distribution-for-apache-hadoop.mp4.rendition.cq5dam.thumbnail.190.107.jpg" width="190" height="107" alt="The Intel&reg; Distribution for Apache Hadoop* Software" title="The Intel&reg; Distribution for Apache Hadoop* Software" /> <a href="/content/www/us/en/big-data/big-data-intel-distribution-for-apache-hadoop.html" class="play-icon" title="The Intel&reg; Distribution for Apache Hadoop* Software"></a>
+             <div class="thumb-shw small"></div> 
+             <div class="vi-txt"> 
+              <strong><a href="/content/www/us/en/big-data/big-data-intel-distribution-for-apache-hadoop.html" title="The Intel&reg; Distribution for Apache Hadoop* Software">The Intel&reg; Distribution for Apache Hadoop* Software</a></strong> 
+              <p>The Intel&reg; Distribution for Apache Hadoop* Software </p> 
+             </div></li> 
+            <li> <img src="/content/dam/www/public/us/en/videos/animations/big-data-101-animation.mp4.rendition.cq5dam.thumbnail.190.107.jpg" width="190" height="107" alt="Big Data 101: How Big Data Makes Big Impacts" title="Big Data 101: How Big Data Makes Big Impacts" /> <a href="/content/www/us/en/big-data/big-data-101-animation.html" class="play-icon" title="Big Data 101: How Big Data Makes Big Impacts"></a>
+             <div class="thumb-shw small"></div> 
+             <div class="vi-txt"> 
+              <strong><a href="/content/www/us/en/big-data/big-data-101-animation.html" title="Big Data 101: How Big Data Makes Big Impacts">Big Data 101: How Big Data Makes Big Impacts</a></strong> 
+              <p>Introduces big data, what it is, why you should care, and how companies gain competitive advantage. </p> 
+             </div></li> 
+            <li> <img src="/content/dam/www/public/us/en/videos/best-practices/inside-it-big-data-for-business-intelligence-podcast.mp4.rendition.cq5dam.thumbnail.190.107.jpg" width="190" height="107" alt="Inside IT: Big Data for Business Intelligence" title="Inside IT: Big Data for Business Intelligence" /> <a href="/content/www/us/en/it-management/intel-it-best-practices/inside-it-big-data-for-business-intelligence-podcast.html" class="play-icon" title="Inside IT: Big Data for Business Intelligence"></a>
+             <div class="thumb-shw small"></div> 
+             <div class="vi-txt"> 
+              <strong><a href="/content/www/us/en/it-management/intel-it-best-practices/inside-it-big-data-for-business-intelligence-podcast.html" title="Inside IT: Big Data for Business Intelligence">Inside IT: Big Data for Business Intelligence</a></strong> 
+              <p>How Intel IT is finding the right platform and developing the skills. </p> 
+             </div></li> 
+           </ul> 
+           <ul class="carousel-item"> 
+            <li> <img src="/content/dam/www/public/us/en/videos/how-to/hadoop-for-common-man-webinar-video.mp4.rendition.cq5dam.thumbnail.190.107.jpg" width="190" height="107" alt="Apache Hadoop* Webinar: Guide to Building Cost-effective 10GBASE-T" title="Apache Hadoop* Webinar: Guide to Building Cost-effective 10GBASE-T" /> <a href="/content/www/us/en/big-data/hadoop-for-common-man-webinar-video.html" class="play-icon" title="Apache Hadoop* Webinar: Guide to Building Cost-effective 10GBASE-T"></a>
+             <div class="thumb-shw small"></div> 
+             <div class="vi-txt"> 
+              <strong><a href="/content/www/us/en/big-data/hadoop-for-common-man-webinar-video.html" title="Apache Hadoop* Webinar: Guide to Building Cost-effective 10GBASE-T">Apache Hadoop* Webinar: Guide to Building Cost-effective 10GBASE-T</a></strong> 
+              <p>Arista and Intel engineers cover Apache Hadoop* advantages, emphasizing compute-network-storage balance. </p> 
+             </div></li> 
+            <li> <img src="/content/dam/www/public/us/en/videos/animations/big-data-sentiment-analysis-video.mp4.rendition.cq5dam.thumbnail.140.100.png" width="190" height="107" alt="Mine Gold from Sentiment Analysis" title="Mine Gold from Sentiment Analysis" /> <a href="/content/www/us/en/big-data/big-data-sentiment-analysis-video.html" class="play-icon" title="Mine Gold from Sentiment Analysis"></a>
+             <div class="thumb-shw small"></div> 
+             <div class="vi-txt"> 
+              <strong><a href="/content/www/us/en/big-data/big-data-sentiment-analysis-video.html" title="Mine Gold from Sentiment Analysis">Mine Gold from Sentiment Analysis</a></strong> 
+              <p>Sentiment analysis on Big Data can be costly, but now that cost can be lowered from thousands to hundreds of dollars per terabyte. </p> 
+             </div></li> 
+            <li> <img src="/content/dam/www/public/us/en/videos/case-studies/big-data-guavus-telecom-analytics-video.mp4.rendition.cq5dam.thumbnail.190.107.jpg" width="190" height="107" alt="Telecom Analytics Unlock Hidden Value" title="Telecom Analytics Unlock Hidden Value" /> <a href="/content/www/us/en/big-data/big-data-guavus-telecom-analytics-video.html" class="play-icon" title="Telecom Analytics Unlock Hidden Value"></a>
+             <div class="thumb-shw small"></div> 
+             <div class="vi-txt"> 
+              <strong><a href="/content/www/us/en/big-data/big-data-guavus-telecom-analytics-video.html" title="Telecom Analytics Unlock Hidden Value">Telecom Analytics Unlock Hidden Value</a></strong> 
+              <p>Learn how Guavus is unlocking transformative opportunities of Big Data and how it helps telecommunication companies gain a competitive advantage. </p> 
+             </div></li> 
+            <li> <img src="/content/dam/www/public/us/en/audio/podcasts/hadoop-spotlight-apache-mapreduce-podcast.mp4.rendition.cq5dam.thumbnail.190.107.png" width="190" height="107" alt="Apache Hadoop* Community Spotlight: Apache MapReduce Podcast" title="Apache Hadoop* Community Spotlight: Apache MapReduce Podcast" /> <a href="/content/www/us/en/big-data/hadoop-spotlight-apache-mapreduce-podcast.html" class="play-icon" title="Apache Hadoop* Community Spotlight: Apache MapReduce Podcast"></a>
+             <div class="thumb-shw small"></div> 
+             <div class="vi-txt"> 
+              <strong><a href="/content/www/us/en/big-data/hadoop-spotlight-apache-mapreduce-podcast.html" title="Apache Hadoop* Community Spotlight: Apache MapReduce Podcast">Apache Hadoop* Community Spotlight: Apache MapReduce Podcast</a></strong> 
+              <p>Apache MapReduce overview. </p> 
+             </div></li> 
+           </ul> 
+           <ul class="carousel-item"> 
+            <li> <img src="/content/dam/www/public/us/en/videos/best-practices/hadoop-spotlight-apache-hdfs-podcast.mp4.rendition.cq5dam.thumbnail.190.107.png" width="190" height="107" alt="Apache Hadoop* Community Spotlight: Apache HDFS* Podcast" title="Apache Hadoop* Community Spotlight: Apache HDFS* Podcast" /> <a href="/content/www/us/en/big-data/hadoop-spotlight-apache-hdfs-podcast.html" class="play-icon" title="Apache Hadoop* Community Spotlight: Apache HDFS* Podcast"></a>
+             <div class="thumb-shw small"></div> 
+             <div class="vi-txt"> 
+              <strong><a href="/content/www/us/en/big-data/hadoop-spotlight-apache-hdfs-podcast.html" title="Apache Hadoop* Community Spotlight: Apache HDFS* Podcast">Apache Hadoop* Community Spotlight: Apache HDFS* Podcast</a></strong> 
+              <p>Apache HDFS* overview. </p> 
+             </div></li> 
+            <li> <img src="/content/dam/www/public/us/en/videos/best-practices/hadoop-spotlight-apache-pig-podcast.mp4.rendition.cq5dam.thumbnail.190.107.png" width="190" height="107" alt="Apache Hadoop* Community Spotlight: Apache Pig* Podcast" title="Apache Hadoop* Community Spotlight: Apache Pig* Podcast" /> <a href="/content/www/us/en/big-data/hadoop-spotlight-apache-pig-podcast.html" class="play-icon" title="Apache Hadoop* Community Spotlight: Apache Pig* Podcast"></a>
+             <div class="thumb-shw small"></div> 
+             <div class="vi-txt"> 
+              <strong><a href="/content/www/us/en/big-data/hadoop-spotlight-apache-pig-podcast.html" title="Apache Hadoop* Community Spotlight: Apache Pig* Podcast">Apache Hadoop* Community Spotlight: Apache Pig* Podcast</a></strong> 
+              <p>Apache Pig* overview. </p> 
+             </div></li> 
+            <li> <img src="/content/dam/www/public/us/en/videos/best-practices/inside-it-intel-cio-perspective-big-data-podcast.mp4.rendition.cq5dam.thumbnail.190.107.jpg" width="190" height="107" alt="Inside IT: Intel CIO’s Perspective on Big Data" title="Inside IT: Intel CIO’s Perspective on Big Data" /> <a href="/content/www/us/en/it-management/intel-it-best-practices/inside-it-intel-cio-perspective-big-data-podcast.html" class="play-icon" title="Inside IT: Intel CIO’s Perspective on Big Data"></a>
+             <div class="thumb-shw small"></div> 
+             <div class="vi-txt"> 
+              <strong><a href="/content/www/us/en/it-management/intel-it-best-practices/inside-it-intel-cio-perspective-big-data-podcast.html" title="Inside IT: Intel CIO’s Perspective on Big Data">Inside IT: Intel CIO’s Perspective on Big Data</a></strong> 
+              <p>How Intel IT is leveraging predictive analytics </p> 
+             </div></li> 
+            <li> <img src="/content/dam/www/public/us/en/videos/best-practices/talk-to-an-expert-apache-hadoop-webinar-video.mp4.rendition.cq5dam.thumbnail.140.100.png" width="190" height="107" alt="Get Expert Insight on the Apache Hadoop* Framework" title="Get Expert Insight on the Apache Hadoop* Framework" /> <a href="/content/www/us/en/it-managers/talk-to-an-expert-apache-hadoop-webinar-video.html" class="play-icon" title="Get Expert Insight on the Apache Hadoop* Framework"></a>
+             <div class="thumb-shw small"></div> 
+             <div class="vi-txt"> 
+              <strong><a href="/content/www/us/en/it-managers/talk-to-an-expert-apache-hadoop-webinar-video.html" title="Get Expert Insight on the Apache Hadoop* Framework">Get Expert Insight on the Apache Hadoop* Framework</a></strong> 
+              <p>Get expert insight on the Apache Hadoop* framework </p> 
+             </div></li> 
+           </ul> 
+           <ul class="carousel-item"> 
+            <li> <img src="/content/dam/www/public/us/en/videos/best-practices/hadoop-spotlight-hcatalog-podcast.mp4.rendition.cq5dam.thumbnail.190.107.png" width="190" height="107" alt="Apache Hadoop* Community Spotlight: HCatalog* Podcast" title="Apache Hadoop* Community Spotlight: HCatalog* Podcast" /> <a href="/content/www/us/en/big-data/hadoop-spotlight-hcatalog-podcast.html" class="play-icon" title="Apache Hadoop* Community Spotlight: HCatalog* Podcast"></a>
+             <div class="thumb-shw small"></div> 
+             <div class="vi-txt"> 
+              <strong><a href="/content/www/us/en/big-data/hadoop-spotlight-hcatalog-podcast.html" title="Apache Hadoop* Community Spotlight: HCatalog* Podcast">Apache Hadoop* Community Spotlight: HCatalog* Podcast</a></strong> 
+              <p>HCatalog* overview. </p> 
+             </div></li> 
+            <li> <img src="/content/dam/www/public/us/en/videos/reports/data-insights-peer-research-video.mp4.rendition.cq5dam.thumbnail.190.107.jpg" width="190" height="107" alt="Intel Peer Research Video: Big Data Analysis" title="Intel Peer Research Video: Big Data Analysis" /> <a href="/content/www/us/en/big-data/data-insights-peer-research-video.html" class="play-icon" title="Intel Peer Research Video: Big Data Analysis"></a>
+             <div class="thumb-shw small"></div> 
+             <div class="vi-txt"> 
+              <strong><a href="/content/www/us/en/big-data/data-insights-peer-research-video.html" title="Intel Peer Research Video: Big Data Analysis">Intel Peer Research Video: Big Data Analysis</a></strong> 
+              <p>Key findings from big data analysis research. </p> 
+             </div></li> 
+            <li> <img src="/content/dam/www/public/us/en/videos/case-studies/big-data-xeon-oracle-engineered-systems-video.mp4.rendition.cq5dam.thumbnail.140.100.png" width="190" height="107" alt="Intel and Oracle Engineered Systems for Big Data" title="Intel and Oracle Engineered Systems for Big Data" /> <a href="/content/www/us/en/big-data/big-data-xeon-oracle-engineered-systems-video.html" class="play-icon" title="Intel and Oracle Engineered Systems for Big Data"></a>
+             <div class="thumb-shw small"></div> 
+             <div class="vi-txt"> 
+              <strong><a href="/content/www/us/en/big-data/big-data-xeon-oracle-engineered-systems-video.html" title="Intel and Oracle Engineered Systems for Big Data">Intel and Oracle Engineered Systems for Big Data</a></strong> 
+              <p>Intel and Oracle work together to help you acquire, organize, and analyze the flood of structured and unstructured big data coming into your business. </p> 
+             </div></li> 
+           </ul>
+          </div> 
+          <!-- Carousal controls --> 
+          <div id="gallery-controls-div-v" class="gallery-controls"> 
+           <div itemcontainer="#v-carousal-new2 .video-carousal" class="carousel-controls"> 
+            <img src="/etc/designs/ver/3.1.151/intel/us/en/images/carouselLeftLarge.png" style="visibility: hidden;" class="carousel-left large" alt="previous" /> 
+            <img src="/etc/designs/ver/3.1.151/intel/us/en/images/carouselLeft.png" style="visibility: hidden" class="carousel-left" alt="previous" /> 
+            <img src="/etc/designs/ver/3.1.151/intel/us/en/images/blank.png" class="carousel-dot active" alt="selector" /> 
+            <img src="/etc/designs/ver/3.1.151/intel/us/en/images/blank.png" class="carousel-dot" alt="selector" /> 
+            <img src="/etc/designs/ver/3.1.151/intel/us/en/images/blank.png" class="carousel-dot" alt="selector" /> 
+            <img src="/etc/designs/ver/3.1.151/intel/us/en/images/blank.png" class="carousel-dot" alt="selector" /> 
+            <img src="/etc/designs/ver/3.1.151/intel/us/en/images/carouselRight.png" class="carousel-right" alt="next" /> 
+            <img src="/etc/designs/ver/3.1.151/intel/us/en/images/carouselRightLarge.png" class="carousel-right large" alt="next" /> 
+           </div> 
+          </div> 
+         </div>
+        </div> 
+        <script src="/etc/designs/ver/3.1.151.3.28/intel/us/en/js/reflection.js" type="text/javascript"></script> 
+        <script type="text/javascript">
+$(function () {
+    // call for image reflection
+    $("#v-carousal-new2 .video-carousal li img").reflect();
+
+});
+</script>
+       </div> 
+       <div class="parbase section related">
+        <!--
+Related Component
+--> 
+       </div> 
+       <div class="parbase related2 section">
+        <!--
+Related Component
+--> 
+        <div class="component" data-component="related2" data-component-id="1"> 
+         <div class="module related-comp" id="related"> 
+          <div class="module-header"> 
+           <h4>Related Materials</h4> 
+           <a id="viewmore" class="relatedViewMore" href="/content/www/us/en/library/viewmore.results.html?prTag=rtopic:intelwork/bigdata&amp;seTag=rintelproduct:intelprocessors/intelxeonprocessors/intelxeonprocessore5family&amp;taTag=rtargetaudience:itmanagers" title="View More" style="" data-viewmoretext="View More" data-viewtopics="View More Topics" data-viewcontent="View More Content" data-viewproducts="" data-urltopics="/content/www/us/en/library/viewmore.results.html?prTag=rtopic:intelwork/bigdata&amp;seTag=rintelproduct:intelprocessors/intelxeonprocessors/intelxeonprocessore5family&amp;taTag=rtargetaudience:itmanagers&amp;format=collectiontopic" data-urlcontent="/content/www/us/en/library/viewmore.results.html?prTag=rtopic:intelwork/bigdata&amp;seTag=rintelproduct:intelprocessors/intelxeonprocessors/intelxeonprocessore5family&amp;taTag=rtargetaudience:itmanagers"> <span>View More Content</span> </a> 
+          </div> 
+          <!--module-header--> 
+          <div class="module-content"> 
+           <ul class="sidebar"> 
+            <li class="first"><a href="#" rel="panel1" class="selected" data-pagetags="" data-name="assetdetail">Related Content</a></li> 
+            <li><a href="#" rel="panel2" data-pagetags="" data-name="topiccollection">Related Topics</a></li> 
+            <li><a href="#" rel="panel3" class="hideViewMore" data-pagetags="" data-name="productcollection">Related Products</a></li> 
+           </ul> 
+           <div class="component" id="relatedcontent1" data-component="relatedcontent" data-component-id="1"> 
+            <ul class="related-ul"> 
+             <li> 
+              <div class="signature-assets  ">
+               <img src="/content/dam/www/global/icons/page-types/PDF-Content-Library-Icon.png.rendition.cq5dam.thumbnail.64.64.png" class="s-icon" style="background: none" /> 
+               <div class="s-flag-it"></div> 
+               <div class="s-flag-lock">
+                <a href="/content/www/us/en/big-data/big-data-xeon-e5-softnet-hadoop-brief.html"></a>
+               </div> 
+              </div> <h2><a href="/content/www/us/en/big-data/big-data-xeon-e5-softnet-hadoop-brief.html" title="Speed Big Data Analysis with SoftNet’s Solutions">Speed Big Data Analysis...</a></h2> <p>Solution Brief: Intel&reg;-based Apache Hadoop* enables real-time physical and virtual big data analysis.<br /><a data-wap="{&quot;linktype&quot;:&quot;previewpdf&quot;}" href="/content/www/us/en/big-data/big-data-xeon-e5-softnet-hadoop-brief.html">Preview</a> | <a data-wap="{&quot;linktype&quot;:&quot;downloadpdf&quot;}" title="Right-Click to Save As" href="/content/dam/www/public/us/en/documents/solution-briefs/big-data-xeon-e5-softnet-hadoop-brief.pdf">Download</a></p> </li> 
+             <li> 
+              <div class="signature-assets s-pdf  "> 
+               <div class="s-icon">
+                <a href="/content/www/us/en/big-data/big-data-xeon-e5-aspera-whitepaper.html"></a>
+               </div> 
+               <div class="s-flag-it"></div> 
+               <div class="s-flag-lock">
+                <a href="/content/www/us/en/big-data/big-data-xeon-e5-aspera-whitepaper.html"></a>
+               </div> 
+              </div> <h2><a href="/content/www/us/en/big-data/big-data-xeon-e5-aspera-whitepaper.html" title="Transfer Solutions Address Big Data Challenges">Transfer Solutions...</a></h2> <p><span class="visualindicator">New!</span> White Paper: Solutions built on Aspera fasp* and Intel&reg; processor-based platforms improve...<br /><a data-wap="{&quot;linktype&quot;:&quot;previewpdf&quot;}" href="/content/www/us/en/big-data/big-data-xeon-e5-aspera-whitepaper.html">Preview</a> | <a data-wap="{&quot;linktype&quot;:&quot;downloadpdf&quot;}" title="Right-Click to Save As" href="/content/dam/www/public/us/en/documents/white-papers/big-data-xeon-e5-aspera-whitepaper.pdf">Download</a></p> </li> 
+             <li> 
+              <div class="signature-assets s-pdf  "> 
+               <div class="s-icon">
+                <a href="/content/www/us/en/big-data/big-data-xeon-e5-apache-hadoop-software-case-study.html"></a>
+               </div> 
+               <div class="s-flag-it"></div> 
+               <div class="s-flag-lock">
+                <a href="/content/www/us/en/big-data/big-data-xeon-e5-apache-hadoop-software-case-study.html"></a>
+               </div> 
+              </div> <h2><a href="/content/www/us/en/big-data/big-data-xeon-e5-apache-hadoop-software-case-study.html" title="Improving Genomic Data Analytics">Improving Genomic Data...</a></h2> <p>Case Study: NextBio uses Intel&reg; technology to expand services and performance of research analytics.<br /><a data-wap="{&quot;linktype&quot;:&quot;previewpdf&quot;}" href="/content/www/us/en/big-data/big-data-xeon-e5-apache-hadoop-software-case-study.html">Preview</a> | <a data-wap="{&quot;linktype&quot;:&quot;downloadpdf&quot;}" title="Right-Click to Save As" href="/content/dam/www/public/us/en/documents/case-studies/big-data-xeon-e5-apache-hadoop-software-case-study.pdf">Download</a></p> </li> 
+             <li> 
+              <div class="signature-assets s-pdf  "> 
+               <div class="s-icon">
+                <a href="/content/www/us/en/big-data/big-data-apache-hadoop-technologies-for-results-whitepaper.html"></a>
+               </div> 
+               <div class="s-flag-it"></div> 
+               <div class="s-flag-lock">
+                <a href="/content/www/us/en/big-data/big-data-apache-hadoop-technologies-for-results-whitepaper.html"></a>
+               </div> 
+              </div> <h2><a href="/content/www/us/en/big-data/big-data-apache-hadoop-technologies-for-results-whitepaper.html" title="Big Data Technologies">Big Data Technologies</a></h2> <p>Optimized hardware and software improve Hadoop* results<br /><a data-wap="{&quot;linktype&quot;:&quot;previewpdf&quot;}" href="/content/www/us/en/big-data/big-data-apache-hadoop-technologies-for-results-whitepaper.html">Preview</a> | <a data-wap="{&quot;linktype&quot;:&quot;downloadpdf&quot;}" title="Right-Click to Save As" href="/content/dam/www/public/us/en/documents/white-papers/big-data-apache-hadoop-technologies-for-results-whitepaper.pdf">Download</a></p> </li> 
+            </ul> 
+           </div> 
+           <div class="component" id="relatedtopics1" data-component="relatedtopics" data-component-id="1"> 
+            <ul> 
+             <li><a href="/content/www/us/en/cloud-computing/cloud-computing-future-data-center-design.html" title="Private Cloud Solutions">Private Cloud Solutions</a></li> 
+             <li><a href="/content/www/us/en/enterprise-reliability/server-reliability.html" title="Business Computing Relies on Intel Servers">Business Computing...</a></li> 
+             <li><a href="/content/www/us/en/enterprise-security/processors-with-built-in-cloud-security.html" title="Cloud Security">Cloud Security</a></li> 
+             <li><a href="/content/www/us/en/high-performance-computing/server-reliability.html" title="Computing Optimized for Intel&reg; Xeon&reg; E7 Processors">Computing Optimized for...</a></li> 
+            </ul> 
+           </div> 
+           <div class="panel panel3" id="relatedproducts1"> 
+            <div id="productsCarousel"> 
+             <ul class="carousel-item active"> 
+              <li class="first"> <a href="/content/www/us/en/servers/server-products.html" title="Intel&reg; Servers and Server Products" class="item"> <span class="img-crop"> <img src="/content/dam/staging/image/ibc_jpg_206/34305_Server rack cables_1562_5400.jpg.rendition.cq5dam.thumbnail.128.128.png" alt=" " /> </span> Intel&reg; Servers and...</a> <p>Intel servers deliver enhanced, energy-efficient performance for intense business applications.</p> </li> 
+              <li> <a href="/content/www/us/en/processors/xeon/xeon-processor-e3-family.html" title="Intel&reg; Xeon&reg; Processor E3 Family" class="item"> <span class="img-crop"> <img src="/content/dam/image/Badges/badge-xeon.png.rendition.cq5dam.thumbnail.128.128.png" alt=" " /> </span> Intel&reg; Xeon&reg; Processor...</a> <p>The Intel&reg; Xeon&reg; processor E3 family servers are built for virtualization and deliver intelligent, adaptive...</p> </li> 
+              <li> <a href="/content/www/us/en/chipsets/server-chipsets/server-workstation-chipsets.html" title="Intel&reg; Server and Workstation Chipsets" class="item"> <span class="img-crop"> <img src="/content/dam/image/Badges/badge-chipset.png.rendition.cq5dam.thumbnail.128.128.png" alt=" " /> </span> Intel&reg; Server and...</a> <p>Intel&reg; server or workstation chipsets maximize the power of your Intel&reg; processor-based system.</p> </li> 
+              <li> <a href="/content/www/us/en/processors/xeon/xeon-processor-5000-sequence.html" title="Intel&reg; Xeon&reg; Processor E5 Family " class="item"> <span class="img-crop"> <img src="/content/dam/image/Badges/badge-xeon.png.rendition.cq5dam.thumbnail.128.128.png" alt=" " /> </span> Intel&reg; Xeon&reg; Processor...</a> <p>See how the Intel&reg; Xeon&reg; Processor E5 Family suits cloud and HPC applications.</p> </li> 
+             </ul> 
+             <ul class="carousel-item"> 
+              <li class="first"> <a href="/content/www/us/en/processors/xeon/xeon-processor-e7-family.html" title="The Intel&reg; Xeon&reg; Processor E7 Family" class="item"> <span class="img-crop"> <img src="/content/dam/image/Badges/badge-xeon.png.rendition.cq5dam.thumbnail.128.128.png" alt=" " /> </span> The Intel&reg; Xeon&reg;...</a> <p>Intel&reg; Xeon&reg; processor E7 family-based servers deliver mission-critical management and security capabilities.</p> </li> 
+             </ul> 
+             <!-- carousal controls --> 
+             <div class="gallery-controls"> 
+              <div itemcontainer="#productsCarousel" class="carousel-controls"> 
+               <img alt="previous" class="carousel-left large" style="visibility: hidden;" src="/etc/designs/ver/3.1.151/intel/us/en/images/carouselLeftLarge.png" /> 
+               <img src="/etc/designs/ver/3.1.151/intel/us/en/images/carouselLeft.png" style="visibility: hidden" class="carousel-left" alt="previous" /> 
+               <img src="/etc/designs/ver/3.1.151/intel/us/en/images/blank.png" class="carousel-dot active" alt="selector" /> 
+               <img src="/etc/designs/ver/3.1.151/intel/us/en/images/blank.png" class="carousel-dot" alt="selector" /> 
+               <img src="/etc/designs/ver/3.1.151/intel/us/en/images/carouselRight.png" class="carousel-right" alt="next" /> 
+               <img alt="next" class="carousel-right large" src="/etc/designs/ver/3.1.151/intel/us/en/images/carouselRightLarge.png" /> 
+              </div> 
+             </div> 
+            </div> 
+            <!-- / carousal controls --> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="disclaimers parbase"> 
+       <style type="text/css">
+#disclaimer-txt-content p{display: block;}
+#disclaimer-txt-content .note-headings{display: block; margin-top: 15px; font-weight: bold;}
+
+</style>
+      </div> 
+      <!-- load dynamic script file for geo specific height issue --> 
+      <!-- Script to create cookie for Recommended For Members Component --> 
+      <script type="text/javascript">
+$(document).ready( function () {
+     
+    jQuery(document).ready(function(){
+        var pageEntry = {
+            'pageName':  '/content/www/us/en/big-data/big-data-analytics-turning-big-data-into-intelligence'.substr( '/content/www/us/en/big-data/big-data-analytics-turning-big-data-into-intelligence'.lastIndexOf('/') + 1),
+            'visitDate': '04-26-2013 12-19',
+            'pageTags': 'Topic%2FIntel%40Work%2FBig+Data%3BIntel+Product%2FIntel%C2%AE+Processors%2FIntel%C2%AE+Xeon%C2%AE+Processors%2FIntel%C2%AE+Xeon%C2%AE+Processor+E5+Family%3BTarget+Audience%2FIT+Managers',
+            'contentAttribute' : 'ProgramLevelIntelITCenterProgram'
+          };
+    //var ids = [pageEntry, pageEntry];
+    //var str = JSON.stringify(ids);
+    //setCookie('RecommendedForMembers', str, 30);
+    
+    var the_cookie = document.cookie.split(';');
+    var jsonObject="";
+    //alert('false');
+    var flag = 'false';
+    if('false'=='true'){
+        for(var i=0; i<the_cookie.length; i++) {
+            var value = the_cookie[i];
+
+            if(value.indexOf('RecommendedForMembers') != -1){
+                jsonObject=value.substr(value.indexOf("=")+1);
+                
+                var obj = jQuery.parseJSON(jsonObject);
+                for(var j=0;j<obj.length;j++){
+                   if(obj[j].pageName=='/content/www/us/en/big-data/big-data-analytics-turning-big-data-into-intelligence')
+                       {
+                       break;
+                       }
+                   else 
+                       {if(j==(obj.length-1))
+                           {jsonObject=jsonObject.substr(0,jsonObject.indexOf("]"))+","+JSON.stringify(pageEntry)+"]";
+                       setCookie("RecommendedForMembers",jsonObject,30);
+                       break;}
+                           }
+               }
+                flag= 'false';
+                break;
+            }
+            else{
+                flag= 'true';
+                }
+        }
+        if(flag=='true'){
+            var ids = [pageEntry];
+            var str = JSON.stringify(ids);
+            setCookie("RecommendedForMembers",str,30);
+        }
+    }else{
+        //alert('No TAGS .. SO cookie is not created for this page');
+    }
+    
+});
+    
+});
+</script> 
+      <!-- End for Recommended For Members Component Cookie creation--> 
+     </div> 
+     <div class="footer globalfooter"> 
+      <div id="footer" class="component" data-component="footer" data-component-id="1"> 
+       <div class="content"> 
+        <div class="proactivechat"> 
+        </div> 
+        <ul> 
+         <li class="latest-news"> <a class="open" href="http://newsroom.intel.com" style="padding-right:12px">Newsroom </a> 
+          <div class="news-wrapper"> 
+          </div> </li> 
+         <li class="social-icons"> 
+          <div class="footersocial footer-icons"> 
+           <a href="https://twitter.com/intel" title="Intel on Twitter" target="_blank" data-wap="{&quot;linktype&quot;:&quot;footersocial&quot;}"> <img class="non-hover" src="/content/dam/www/global/icons/social/twitter.png" alt="Intel on Twitter" width="20" height="20" /> <img class="on-hover" style="display: none;" src="/content/dam/www/global/icons/social/twitter-hover.png" alt="Intel on Twitter" width="20" height="20" /> </a>
+           <a href="https://www.facebook.com/Intel" title="Intel on Facebook" target="_blank" data-wap="{&quot;linktype&quot;:&quot;footersocial&quot;}"> <img class="non-hover" src="/content/dam/www/global/icons/social/facebook.png" alt="Intel on Facebook" width="20" height="20" /> <img class="on-hover" style="display: none;" src="/content/dam/www/global/icons/social/facebook-hover.png" alt="Intel on Facebook" width="20" height="20" /> </a>
+          </div> </li> 
+         <li class="language"> <span>USA (English)</span> </li> 
+        </ul> 
+        <div id="language-chooser" class="hidden"> 
+         <div class="top-border">
+          <img class="close-button" alt="Close Menu" src="/etc/designs/ver/3.1.151/intel/us/en/images/close.png" />
+         </div> 
+         <div class="content"> 
+          <ul class="left-col first"> 
+           <li class="category">Asia Pacific </li> 
+           <li class="lang-option"><a href="http://www.intel.sg/content/www/xa/en/big-data/big-data-analytics-turning-big-data-into-intelligence.html">Asia Pacific (English) </a></li> 
+           <li class="lang-option"><a href="http://www.intel.com.au/content/www/au/en/big-data/big-data-analytics-turning-big-data-into-intelligence.html">Australia (English) </a></li> 
+           <li class="lang-option"><a href="http://www.intel.cn/content/www/cn/zh/big-data/big-data-analytics-turning-big-data-into-intelligence.html">China (简体中文) </a></li> 
+           <li class="lang-option"><a href="http://www.intel.hk/content/www/hk/en/homepage.html">Hong Kong (English) </a></li> 
+           <li class="lang-option"><a href="http://www.intel.in/content/www/in/en/big-data/big-data-analytics-turning-big-data-into-intelligence.html">India (English) </a></li> 
+           <li class="lang-option"><a href="http://www.intel.in/content/www/in/hi/homepage.html">India (हिंदी) </a></li> 
+           <li class="lang-option"><a href="http://www.intel.co.id/content/www/id/id/big-data/big-data-analytics-turning-big-data-into-intelligence.html">Indonesia (Bahasa Indonesia) </a></li> 
+           <li class="lang-option"><a href="http://www.intel.co.jp/content/www/jp/ja/big-data/big-data-analytics-turning-big-data-into-intelligence.html">Japan (日本語) </a></li> 
+           <li class="lang-option"><a href="http://www.intel.co.kr/content/www/kr/ko/big-data/big-data-analytics-turning-big-data-into-intelligence.html">Korea (한국어) </a></li> 
+           <li class="lang-option"><a href="http://www.intel.my/content/www/my/en/big-data/big-data-analytics-turning-big-data-into-intelligence.html">Malaysia (English) </a></li> 
+           <li class="lang-option"><a href="http://www.intel.pk/content/www/pk/en/homepage.html">Pakistan (English) </a></li> 
+           <li class="lang-option"><a href="http://www.intel.co.nz/content/www/nz/en/homepage.html">New Zealand (English) </a></li> 
+           <li class="lang-option"><a href="http://www.intel.ph/content/www/ph/en/big-data/big-data-analytics-turning-big-data-into-intelligence.html">Philippines (English) </a></li> 
+           <li class="lang-option"><a href="http://www.intel.sg/content/www/xa/en/big-data/big-data-analytics-turning-big-data-into-intelligence.html">Singapore (English) </a></li> 
+           <li class="lang-option"><a href="http://www.intel.com.tw/content/www/tw/zh/big-data/big-data-analytics-turning-big-data-into-intelligence.html">Taiwan (繁體中文) </a></li> 
+           <li class="lang-option"><a href="http://thailand.intel.com/content/www/th/th/big-data/big-data-analytics-turning-big-data-into-intelligence.html">Thailand (ไทย) </a></li> 
+           <li class="lang-option"><a href="http://www.intel.vn/content/www/vn/vi/big-data/big-data-analytics-turning-big-data-into-intelligence.html">Vietnam (Ti&ecirc;́ng Vi&ecirc;̣t) </a></li> 
+          </ul> 
+          <ul class="left-col"> 
+           <li class="category">Europe </li> 
+           <li class="lang-option"><a href="http://www.intel.de/content/www/de/de/big-data/big-data-analytics-turning-big-data-into-intelligence.html">Austria (Deutsch) </a></li> 
+           <li class="lang-option"><a href="http://www.intel.fr/content/www/fr/fr/homepage.html">Belgium (Fran&ccedil;ais) </a></li> 
+           <li class="lang-option"><a href="http://www.intel.nl/content/www/nl/nl/homepage.html">Belgium (Nederlands) </a></li> 
+           <li class="lang-option"><a href="http://www.intel.fr/content/www/fr/fr/big-data/big-data-analytics-turning-big-data-into-intelligence.html">France (Fran&ccedil;ais) </a></li> 
+           <li class="lang-option"><a href="http://www.intel.de/content/www/de/de/big-data/big-data-analytics-turning-big-data-into-intelligence.html">Germany (Deutsch) </a></li> 
+           <li class="lang-option"><a href="http://www.intel.eu/content/www/eu/en/big-data/big-data-analytics-turning-big-data-into-intelligence.html">Europe (English) </a></li> 
+           <li class="lang-option"><a href="http://www.intel.ie/content/www/ie/en/big-data/big-data-analytics-turning-big-data-into-intelligence.html">Ireland (English) </a></li> 
+           <li class="lang-option"><a href="http://www.intel.it/content/www/it/it/big-data/big-data-analytics-turning-big-data-into-intelligence.html">Italy (Italiano) </a></li> 
+           <li class="lang-option"><a href="http://www.intel.ru/content/www/ru/ru/big-data/big-data-analytics-turning-big-data-into-intelligence.html">Kazakhstan (Русский) </a></li> 
+           <li class="lang-option"><a href="http://www.intel.nl/content/www/nl/nl/big-data/big-data-analytics-turning-big-data-into-intelligence.html">Netherlands (Nederlands) </a></li> 
+           <li class="lang-option"><a href="http://www.intel.pl/content/www/pl/pl/big-data/big-data-analytics-turning-big-data-into-intelligence.html">Poland (Polski) </a></li> 
+           <li class="lang-option"><a href="http://www.intel.ru/content/www/ru/ru/big-data/big-data-analytics-turning-big-data-into-intelligence.html">Russia (Русский) </a></li> 
+           <li class="lang-option"><a href="http://www.intel.es/content/www/es/es/big-data/big-data-analytics-turning-big-data-into-intelligence.html">Spain (Espa&ntilde;ol) </a></li> 
+           <li class="lang-option"><a href="http://www.intel.se/content/www/se/sv/big-data/big-data-analytics-turning-big-data-into-intelligence.html">Sweden (Svenska) </a></li> 
+           <li class="lang-option"><a href="http://www.intel.ch/content/www/ch/de/homepage.html">Switzerland (Deutsch) </a></li> 
+           <li class="lang-option"><a href="http://www.intel.com.tr/content/www/tr/tr/big-data/big-data-analytics-turning-big-data-into-intelligence.html">Turkey (T&uuml;rk&ccedil;e) </a></li> 
+           <li class="lang-option"><a href="http://www.intel.ua/content/www/ua/uk/big-data/big-data-analytics-turning-big-data-into-intelligence.html">Ukraine (Українська) </a></li> 
+           <li class="lang-option"><a href="http://www.intel.co.uk/content/www/uk/en/big-data/big-data-analytics-turning-big-data-into-intelligence.html">United Kingdom (English) </a></li> 
+          </ul> 
+          <ul class="left-col"> 
+           <li class="category">Latin America </li> 
+           <li class="lang-option"><a href="http://www.intel.la/content/www/xl/es/big-data/big-data-analytics-turning-big-data-into-intelligence.html">Argentina (Espa&ntilde;ol) </a></li> 
+           <li class="lang-option"><a href="http://www.intel.la/content/www/xl/es/big-data/big-data-analytics-turning-big-data-into-intelligence.html">Bolivia (Espa&ntilde;ol) </a></li> 
+           <li class="lang-option"><a href="http://www.intel.com.br/content/www/br/pt/big-data/big-data-analytics-turning-big-data-into-intelligence.html">Brazil (Portugu&ecirc;s) </a></li> 
+           <li class="lang-option"><a href="http://www.intel.la/content/www/xl/es/big-data/big-data-analytics-turning-big-data-into-intelligence.html">Chile (Espa&ntilde;ol) </a></li> 
+           <li class="lang-option"><a href="http://www.intel.la/content/www/xl/es/big-data/big-data-analytics-turning-big-data-into-intelligence.html">Colombia (Espa&ntilde;ol) </a></li> 
+           <li class="lang-option"><a href="http://www.intel.la/content/www/xl/es/big-data/big-data-analytics-turning-big-data-into-intelligence.html">Costa Rica (Espa&ntilde;ol) </a></li> 
+           <li class="lang-option"><a href="http://www.intel.la/content/www/xl/es/big-data/big-data-analytics-turning-big-data-into-intelligence.html">Latin America (Espa&ntilde;ol) </a></li> 
+           <li class="lang-option"><a href="http://www.intel.la/content/www/xl/es/big-data/big-data-analytics-turning-big-data-into-intelligence.html">Mexico (Espa&ntilde;ol) </a></li> 
+           <li class="lang-option"><a href="http://www.intel.la/content/www/xl/es/big-data/big-data-analytics-turning-big-data-into-intelligence.html">Peru (Espa&ntilde;ol) </a></li> 
+           <li class="lang-option"><a href="http://www.intel.la/content/www/xl/es/big-data/big-data-analytics-turning-big-data-into-intelligence.html">Uruguay (Espa&ntilde;ol) </a></li> 
+           <li class="lang-option"><a href="http://www.intel.la/content/www/xl/es/big-data/big-data-analytics-turning-big-data-into-intelligence.html">Venezuela (Espa&ntilde;ol) </a></li> 
+          </ul> 
+          <ul class="left-col"> 
+           <li class="category">Middle East/Africa </li> 
+           <li class="lang-option"><a href="http://www.intel.com/content/www/xr/en/big-data/big-data-analytics-turning-big-data-into-intelligence.html">Egypt (English) </a></li> 
+           <li class="lang-option"><a href="http://www.intel.com/content/www/xr/ar/big-data/big-data-analytics-turning-big-data-into-intelligence.html">Egypt (ة العربية) </a></li> 
+           <li class="lang-option"><a href="http://www.intel.com/cd/corporate/europe/emea/heb/287256.htm">Israel (עברית) </a></li> 
+           <li class="lang-option"><a href="http://www.intel.com/content/www/xr/en/big-data/big-data-analytics-turning-big-data-into-intelligence.html">Middle East (English) </a></li> 
+           <li class="lang-option"><a href="http://www.intel.com/content/www/xr/ar/big-data/big-data-analytics-turning-big-data-into-intelligence.html">Middle East (اللغة العربية) </a></li> 
+           <li class="lang-option"><a href="http://www.intel.com/content/www/xr/en/big-data/big-data-analytics-turning-big-data-into-intelligence.html">Saudi Arabia (English) </a></li> 
+           <li class="lang-option"><a href="http://www.intel.com/content/www/xr/ar/big-data/big-data-analytics-turning-big-data-into-intelligence.html">Saudi Arabia (اللغة العربية) </a></li> 
+           <li class="lang-option"><a href="http://www.intel.co.za/content/www/za/en/big-data/big-data-analytics-turning-big-data-into-intelligence.html">South Africa (English) </a></li> 
+           <li class="lang-option"><a href="http://www.intel.com/content/www/xr/en/big-data/big-data-analytics-turning-big-data-into-intelligence.html">United Arab Emirates (English) </a></li> 
+           <li class="lang-option"><a href="http://www.intel.com/content/www/xr/ar/big-data/big-data-analytics-turning-big-data-into-intelligence.html">United Arab Emirates (اللغة العربية) </a></li> 
+           <li class="category"><br />North America </li> 
+           <li class="lang-option"><a href="http://www.intel.com/content/www/us/en/big-data/big-data-analytics-turning-big-data-into-intelligence.html">United States (English) </a></li> 
+           <li class="lang-option"><a href="http://www.intel.com/en_CA/index.htm">Canada (English) </a></li> 
+           <li class="lang-option"><a href="http://www.intel.com/fr_CA/index.htm">Canada (Fran&ccedil;ais) </a></li> 
+          </ul> 
+         </div> 
+        </div> 
+        <div id="tools-chooser" class="hidden"> 
+         <div class="footertools"> 
+          <div class="content" data-component="footertools" data-component-id="1"> 
+           <div class="top-border"> 
+            <img class="close-button" alt="Close Menu" src="/etc/designs/ver/3.1.151/intel/us/en/images/close.png" />
+           </div> 
+           <h2>Tools</h2> 
+           <ul class="items"> 
+           </ul> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <script type="text/javascript">
+    jQuery(function () {
+
+        var iconsWidth = $("#footer li.social-icons").outerWidth("true");
+        var newsWidth = 960;
+        var toolsWidth = 0;
+        var languageWidth = $("#footer li.language").outerWidth("true");
+        var padding = parseInt($("#footer li.latest-news").css("padding-right"), 10) +
+                parseInt($("#footer li.latest-news").css("padding-left"), 10) +
+                parseInt($("#footer li.latest-news").css("margin-left"), 10) +
+                parseInt($("#footer li.latest-news").css("margin-right"), 10);
+        if ($("#footer li.tools").length > 0) {
+            toolsWidth = 145;
+            $("#footer li.tools").css("width", toolsWidth);
+        }
+        $("#footer li.latest-news").css("width", newsWidth - iconsWidth - toolsWidth - padding - languageWidth - 5);
+        $("#footer li.social-icons div.footer-icons a").hover(
+                function () {
+                    $("img.non-hover", this).hide();
+                    $("img.on-hover", this).show();
+                },
+                function () {
+                    $("img.non-hover", this).show();
+                    $("img.on-hover", this).hide();
+                }
+        );
+
+        var newsRoomUrl = "http://feeds.feedburner.com/IntelNewsroom";
+        var newsRoomSecureUrl = "https://secure-inside.intel.com/presto/edge/api/rest/IntelNewsroomFeedburner/runMashup?x-presto-resultFormat=rss&x-p-anonymous=true";
+        if (window.parent.document.location.protocol == "http:") {
+            jQuery('.news-wrapper').rssfeed(newsRoomUrl, {
+                limit: 5
+            });
+        }
+        else if ((window.parent.document.location.protocol == "https:") && (newsRoomSecureUrl != '')) {
+            jQuery('.news-wrapper').rssfeed(newsRoomSecureUrl, {
+                limit: 5
+            });
+        }
+    });
+
+    /*
+     $(document).ready(function (){
+     $('.clearOnFocus').clearOnFocus();
+     });
+     */
+</script> 
+     </div> 
+     <div class="footerlinks"> 
+      <div id="legal" class="component" data-component="footerlinks" data-component-id="1"> 
+       <ul class="links"> 
+        <li style="float:left;margin:0px;"><span class="copyright">&copy;</span> Intel Corporation</li> 
+        <li><a href="/content/www/us/en/company-overview/company-overview.html">Company Information</a></li> 
+        <li><a href="http://www.intel.com/p/en_US/support/">Support</a></li> 
+        <li><a href="/content/www/us/en/company-overview/contact-us.html">Contact Us</a></li> 
+        <li><a href="http://www.intel.com/jobs/">Jobs</a></li> 
+        <li><a href="http://www.intc.com">Investor Relations</a></li> 
+        <li><a href="/content/www/us/en/siteindex.html">Site Map</a></li> 
+        <li><a href="/content/www/us/en/legal/terms-of-use.html">Terms of Use</a></li> 
+        <li><a href="/content/www/us/en/legal/trademarks.html">*Trademarks</a></li> 
+        <li><a href="/content/www/us/en/privacy/intel-online-privacy-notice-summary.html">Privacy</a></li> 
+        <li><a href="/content/www/us/en/privacy/intel-cookie-notice.html">Cookies</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <script type="text/javascript">
+    /*{
+        window.setTimeout(function() {
+            $CQ.getScript("http://localhost:4502/libs/wcm/stats/tracker.js?path=/content/www/us/en/big-data/big-data-analytics-turning-big-data-into-intelligence");
+        }, 1);
+    } */
+    </script> 
+     <script type="text/javascript">function trackMVTImpression() {
+    
+    }</script> 
+     <script type="text/javascript" src="/etc/designs/ver/3.1.151.4.17/intel/us/en/clientlibs/footer-libs.js"></script> 
+     <!--[if IE 6]>
+<script type="text/javascript" src="/etc/designs/intel/us/en/js/intel.ie6.footer.js"></script>
+<![endif]--> 
+    </div> 
+    <div class="parbase clientcontext">
+     <script type="text/javascript" src="/etc/clientlibs/ver/3.1.151/foundation/librarymanager.js"></script> 
+     <script type="text/javascript">
+CQClientLibraryManager.write([{"p":"/etc/clientlibs/foundation/shared.js","c":[]},{"p":"/etc/clientlibs/foundation/jquery-ui.js","c":[]},{"p":"/etc/clientlibs/foundation/personalization/jcarousel.js","c":[]},{"p":"/etc/clientlibs/foundation/personalization/jcarousel.css","c":[]},{"p":"/etc/clientlibs/foundation/personalization.js","c":[]},{"p":"/etc/clientlibs/foundation/jquery-ui/themes/default.css","c":[]},{"p":"/etc/clientlibs/foundation/personalization/themes/default.css","c":[]},{"p":"/etc/clientlibs/foundation/personalization/ie6/themes/default.css","c":["ie6"]}],false);
+</script> 
+     <script type="text/javascript">
+    $CQ(function() {
+        CQ_Analytics.SegmentMgr.loadSegments("/etc/segmentation");
+        CQ_Analytics.ClientContextUtils.init("/etc/clientcontext/intel","/content/www/us/en/big-data/big-data-analytics-turning-big-data-into-intelligence");
+        CQ_Analytics.ClientContextUtils.initUI("/etc/clientcontext/intel","/content/www/us/en/big-data/big-data-analytics-turning-big-data-into-intelligence");
+    });
+</script>
+    </div> 
+    <div class="analytics"> 
+     <!-- Added getAnalyticsResource for secured content  --> 
+     <!-- Added getAnalyticsResource for secured content --> 
+     <!-- SiteCatalyst code version: H.22.1.
+Copyright 1996-2010 Adobe, Inc. All Rights Reserved
+More info available at http://www.omniture.com --> 
+     <script language="JavaScript" type="text/javascript" src="/content/www/_jcr_content/analytics.sitecatalyst.js"></script> 
+     <script type="text/javascript">
+    //<![CDATA[
+    var wapsslURL = "https://www-ssl.intel.com/sites/wap/global/wap.js";
+    var wapURL = "http://www.intel.com/sites/wap/global/wap.js";
+    var url =  (window.parent.document.location.protocol == "http:") ? wapURL : wapsslURL;
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;  po.src = url;
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    // ]]>
+</script> 
+     <!-- End SiteCatalyst code version: H.22.1. --> 
+    </div> 
+    <div class="hidden"> 
+     <!--
+More detailed timing info is available by uncommenting some code in the timing.jsp component
+Timing chart URL:
+http://chart.apis.google.com/chart?chtt=big-data-analytics-turning-big-data-into-intelligence.html+%286119ms%29&cht=bhs&chxt=x&chco=c6d9fd,4d89f9&chbh=a&chds=0,6119,0,6119&chxr=0,0,6119&chd=t:17,189,189,189,189,206,206,206,223,223,240,240,240,240,240,241,257,257,275,275,275,292,292,292,309,326,395,395,446,463,532,532,601,618,618,618,618,722,877,894,981,998,998,1015,1153,1291,1360,1411,1480,1480,1481,1497,1497,1497,1516,1549,1549,2468,2485,5912,5912,5912,5912,5929,5929,6101,6101,6101,6101,6119,6119,6119,6119|189,0,0,0,0,0,69,69,0,2,0,0,0,0,1,34,18,18,0,0,5637,0,17,17,689,69,51,51,86,69,69,69,1,0,0,103,380,155,17,87,17,4914,4914,138,138,69,51,69,1,17,16,0,18,18,33,0,919,17,3427,0,0,189,207,0,0,0,0,0,18,0,0,0,0&chly=head.jsp|gomez.jsp|headlibs.jsp|init.jsp|headcustom.jsp|header.html%29|uheader.jsp|header.jsp|logo.html%29|logo.jsp|uheadernavigationtitle...|mainmenutitle.jsp|homepagesearch.jsp|uheaderlinks.html%29|uheaderlinks.jsp|unavmyintel.jsp|savedcontents.jsp|unavmyintel.jsp|oldbrowsersdialog.jsp|redirect.jsp|content.jsp|tagged.jsp|tagged2.jsp|reactbar.jsp|dashboard.jsp|imagetext.jsp|showcasefeature.jsp|intelparsys.jsp|intelparsys.jsp|showcasefeature.jsp|showcasefeature.jsp|intelparsys.jsp|toggleview.jsp|titlecollection.jsp|toolscollectionaccordi...|accordianlinkedlist.jsp|intelparsys.jsp|accordianlinkedlist.jsp|accordianlinkedlist_ne...|accordianlinkedlist.jsp|accordianlinkedlist.jsp|intelparsys.jsp|main.jsp|b2bbladesigassets.jsp|fetauresandbenefits.jsp|b2bbladesigassets.jsp|b2bbladepicks.jsp|fetauresandbenefits.jsp|navigator_f2da%29|reference.jsp|navigator.jsp|b2bbladebenefits_a36%29|b2bbladebenefits.jsp|reference.jsp|conversations.jsp|videofilmstripgallery.jsp|relatedbladevideos2.jsp|related.jsp|related2.jsp|disclaimers.jsp|globalfooter.html%29|footer.jsp|footer.jsp|proactivechat.jsp|footersocial.jsp|footertools.jsp|footerlinks.html%29|footerlinks.jsp|stats.jsp|mvt_stats.jsp|clientcontext.jsp|sitecatalyst.jsp|analytics.jsp&chs=600x500
+--> 
+    </div> 
+    <link rel="stylesheet" type="text/css" href="//fast.fonts.com/t/1.css?apiType=css&amp;projectid=75738e54-c2a7-470f-99bb-8f1e8ffb49a2" />  
+   </div>
+  </div>
+ </body>
+</html>

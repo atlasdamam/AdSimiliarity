@@ -1,0 +1,506 @@
+<head>
+
+<link rel="stylesheet" type="text/css" href="http://www.payscale.com/css/main.css?version=100211">
+<link rel="stylesheet" type="text/css" href="http://www.payscale.com/css/payscale_v2.css?version=100211">
+<link rel="stylesheet" type="text/css" href="http://www.payscale.com/css/dhtmldropdown.css?version=100211">
+<link rel="stylesheet" type="text/css" href="http://www.payscale.com/css/header.css?version=100211">
+<link rel="stylesheet" type="text/css" href="http://www.payscale.com/css/header_procolors.css?version=100211">
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<!-- SYSTEM CSS - DO NOT EDIT -->
+<link rel="stylesheet" type="text/css" media="screen" href="/css/mktLPSupport.css">
+<style type="text/css">
+#bodyId {
+  background: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+}
+
+div#outerWrapDiv {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+div#innerWrapDiv {
+  position: relative;
+  background: #ffffff;
+  padding: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  margin-bottom: 0px;
+  text-align: left;
+}
+
+</style>
+
+<!-- START TEMPLATE CSS - EDIT THIS SECTION -->
+
+<style>
+/* Note: You can also change these in the specific Landing Pages*/
+
+/* Width of Full Page */
+div#innerWrapDiv {
+  width: 775px;
+  }
+
+/* Main Content Area - Controls height of page */
+div#mktContent {
+  background: #ffffff;
+  position: relative;
+  height: 650px;
+  width: 100%; }
+
+/* Thin Column in Content */
+div#mktColumn {
+  height: 100%;
+  width: 200px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  background: #dddddd;
+}
+div#mktHeader {position:realtive;  height: 100px;background: #ffffff;}
+div#mktFooter {position: relative; height: 50px;background: #ffffff;}
+
+
+
+
+/* Start fancy button */
+
+div.buttonSubmit {
+  position:relative;
+  float:left;
+}
+
+
+div.buttonSubmit input, div.buttonSubmit span {
+  background-image:url(https://www.marketo.com/buttons/button-submit10.gif); /* change button and path to correct customer partition */
+  background-position:right 0px;
+  background-repeat:no-repeat;
+  border:0px none;
+  color:#FFFFFF;
+  cursor:pointer;
+  float:left;
+  font-weight:bold;
+  height:36px;
+  margin:0px;
+  padding:0px 15px 2px;
+  position:relative;
+  z-index:5;
+}
+div.buttonSubmit span {
+  background-position:left -36px;
+  left:0px;
+  padding:0px;
+  position:absolute;
+  top:0px;
+  width:4px;
+  z-index:10;
+}
+div.buttonSubmit input {
+  width:auto;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+
+}
+
+#mktFrmSubmit{
+    color: #FFFFFF !important;
+}
+
+div.buttonSubmit:hover input {  background-position: right -72px;}
+div.buttonSubmit:hover span {  background-position: left -108px;}
+
+#mktFrmReset {
+  display:none;
+}
+
+/* end fancy button */
+
+
+</style>
+
+
+<!-- END TEMPLATE CSS -->
+
+<!-- START COOKIE TRACKING -->
+
+<script src="http://www.googletagservices.com/tag/js/gpt.js" type="text/javascript" async=""></script><script src="http://www.google-analytics.com/ga.js" async="" type="text/javascript"></script><script>
+(function(){
+    function GetUrlParameterInsensitive(name)
+    {
+         var regexS = "[\\?&]"+name+"=([^&#]*)";
+         var regex = new RegExp( regexS, "i" );
+         var tmpURL = window.location.href;
+         var results = regex.exec( tmpURL );
+         if( results == null )
+           return null;
+         else
+           return results[1];
+    }
+
+    var srcValue = GetUrlParameterInsensitive('src');
+    if (srcValue !== null)
+    {
+        // Want cookies set at payscale.com, not resources.payscale.com so the cookie can be used sitewide
+        document.cookie = "src=" + srcValue + ';path=/;domain=payscale.com';
+    }
+})();
+</script>
+
+  
+<!-- END COOKIE TRACKING -->
+
+<!-- SYSTEM JAVASCRIPT - DO NOT EDIT -->
+<script type="text/javascript">
+function fieldValidate(field) {
+  /* call Mkto.setError(field, message) and return false to mark a field value invalid */
+  /* return 'skip' to bypass the built-in validations */
+  return true;
+}
+function getRequiredFieldMessage(domElement, label) {
+  return "This field is required";
+}
+function getTelephoneInvalidMessage(domElement, label) {
+  return "Please enter a valid telephone number";
+}
+function getEmailInvalidMessage(domElement, label) {
+  return "Please enter a valid email address";
+}
+</script>
+
+
+<!-- Jquery for fancy things!-->
+
+<script type="text/javascript" src="/js/public/jquery-latest.min.js"></script>
+<script type="text/javascript" src="http://resources.payscale.com/rs/payscale/images/fullStateCountry.js"></script>
+
+<script language="JavaScript" src="https://app.marketo.com/js/public/jquery-latest.min.js" type="text/javascript"></script>
+   <script>
+    // to make fancy buttons.  Uses noConflict just in case
+     var $jQ = jQuery.noConflict();
+
+     // Use jQuery via $j(...)
+     $jQ(document).ready(function(){
+
+       $jQ("#mktFrmSubmit").wrap("<div class='buttonSubmit'></div>");
+       $jQ(".buttonSubmit").prepend("<span></span>");
+
+     });
+   </script>
+  
+
+
+
+
+
+<!-- SYSTEM INCLUDES - DO NOT EDIT -->
+<link rel="stylesheet" type="text/css" media="screen" href="/css/mktLPSupport.css">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<title>2013 Compensation Best Practices Report</title>
+<meta name="description" content="Are your competitors growing and giving raises in 2013? Find out. Download PayScale's free 2013 compensation best practices report.">
+<meta name="keywords" content="compensation best practices, compensation, 2013 compensation best practices report, compensation report">
+<meta name="robots" content="index, follow">
+<style type="text/css"> div#lpeCDiv_15953 {position: absolute; left: -73px; top: 116px; width: 370px; z-index: 15; height: 438px; }
+   div#lpeCDiv_15953 span.lpContentsItem { }
+
+ div#lpeCDiv_15954 {position: absolute; left: 545px; top: 70px; z-index: 15; width: 318px; height: 502px; }
+   div#lpeCDiv_15954 span.lpContentsItem { }
+
+ div#lpeCDiv_15955 {position: absolute; height: 614px; left: 539px; top: 11px; width: 309px; z-index: 10; }
+   div#lpeCDiv_15955 div.lpContentsItem { height: 612px; width: 307px; background-color: ; border-style: solid; border-width: 1px; border-color: gray; }
+
+ div#lpeCDiv_15956 {position: absolute; left: 550px; top: 28px; width: 300px; z-index: 15; }
+   div#lpeCDiv_15956 span.lpContentsItem { }
+
+ div#lpeCDiv_15957 {position: absolute; left: -142px; top: 11px; min-width: 50px; z-index: 15; min-height: 50px; }
+   div#lpeCDiv_15957 div.lpContentsItem { }
+
+ div#lpeCDiv_15958 {position: absolute; height: 75px; width: 583px; z-index: 15; left: -77px; top: 12px; }
+ div#lpeCDiv_15958 span.lpContentsItem img.lpimg{width:100%; height:100%; }
+  div#lpeCDiv_15958 span.lpContentsItem { }
+
+ div#lpeCDiv_15959 {position: absolute; height: 246px; width: 198px; z-index: 15; left: 310px; top: 125px; }
+ div#lpeCDiv_15959 span.lpContentsItem img.lpimg{width:100%; height:100%; }
+  div#lpeCDiv_15959 span.lpContentsItem { }
+
+ div#lpeCDiv_15960 {position: absolute; left: -45px; top: 632px; min-width: 50px; z-index: 15; min-height: 50px; }
+   div#lpeCDiv_15960 div.lpContentsItem { }
+
+ div#lpeCDiv_15961 {position: absolute; left: 310px; top: 384px; width: 200px; z-index: 15; }
+   div#lpeCDiv_15961 span.lpContentsItem { }
+
+</style>
+<style type="text/css"> .marketoContent {position: relative;} </style>
+
+<script src="http://munchkin.marketo.net/jquery-latest.min.js" async="" type="text/javascript"></script><script data-cfasync="false" defer="" async="" src="http://static.olark.com/jsclient/application.js?v=d8974a5d5dcb8b909d809406db50f521"></script></head>
+<body id="bodyId" class="mktEditable" align="center"><div id="olark" style="display: none;"><olark><iframe id="olark-loader" frameborder="0"></iframe></olark></div>
+<div style="text-align:center; background-image: url(http://www.payscale.com/content/comptoday_header_bkg01.gif); background-repeat: repeat-x; height:120px; width:100%"> <div style="text-align:left"><script type="text/javascript" src="http://www.payscale.com/Header.aspx?type=new&amp;pagetype=5&amp;js=1&amp;SelectedTab=none"></script><!-- START STANDARD HEADER --><!--[if IE 6]><style>#Payscale_Header{display: none;}#Payscale_Header_IE6{display: block;}</style><div id="Payscale_Header_IE6"><div>You are using an internet browser that PayScale does not support.</div><div>In order to view the site with normal functionality, please download the latest version of <a href="http://windows.microsoft.com/ie">Internet Explorer</a>, <a href="http://www.firefox.com">FireFox</a> or <a href="http://www.google.com/chrome">Chrome</a>.</div></div><![endif]--><link rel="stylesheet" type="text/css" href="http://p1.pscdn.me/css/header_procolors.css?version=130423"><div class="container-fluid payscale-header payscale-header-background" id="Payscale_Header"><!-- Page type: PspVanity --><div class="row-fluid first-row"><div class="span4 logos-div PspVanity"><a href="http://www.payscale.com/hr/default" class="standard-payscale-logo"><img src="http://p1.pscdn.me/images/ps_logo_tag_150.png" alt="PayScale Home" title="PayScale Home" id="headerlogo" height="50px" width="150px" border="0px"></a></div><div class="span4 tabs-div"><ul class="nav nav-tabs top-level-nav"><li><a href="http://www.payscale.com/mypayscale.aspx">INDIVIDUALS</a></li><li class="active"><a href="http://www.payscale.com/pro/">EMPLOYERS</a></li></ul></div><div class="span4 Payscale_HeaderTopRight"><ul><li class="notLast"><a href="http://www.payscale.com/pro/login.aspx">Create an account</a></li><li><a href="http://www.payscale.com/pro/login.aspx">Log in</a></li></ul></div></div><div class="row-fluid second-row"><div class="second-row-div"><ul class="nav-tabs second-level-nav"><li class=""><a class="dropdown-toggle" href="http://www.payscale.com/hr/default">Home</a></li><li class=""><a class="dropdown-toggle" href="http://www.payscale.com/hr/startwizard">Start A Search</a></li><li class="dropdown"><a class="dropdown-toggle" href="#">Why Payscale?<span class="second-level-nav-arrow"></span></a><ul class="dropdown-menu"><li><a href="http://www.payscale.com/hr/innovations/payscale-compensation-solutions">Payscale Solutions</a></li><li><a href="http://www.payscale.com/hr/whypayscale/support">Support and Service</a></li><li><a href="http://www.payscale.com/hr/customers">Customers</a></li><li class="lastItem"><a href="http://www.payscale.com/hr/innovations/methodology">Methodology</a></li></ul></li><li class="dropdown"><a class="dropdown-toggle" href="#">Products<span class="second-level-nav-arrow"></span></a><ul class="dropdown-menu"><li><a href="http://www.payscale.com/hr/product-insight-expert">Insight Expert</a></li><li><a href="http://www.payscale.com/hr/product-insight">Insight</a></li><li><a href="http://www.payscale.com/hr/product-marketrate">MarketRate</a></li><li><a href="http://www.payscale.com/hr/product-pricing">Pricing</a></li><li class="lastItem"><a href="http://www.payscale.com/hr/product-how-it-works">How It Works</a></li></ul></li><li class="dropdown"><a class="dropdown-toggle" href="#">Resources<span class="second-level-nav-arrow"></span></a><ul class="dropdown-menu"><li><a href="http://www.payscale.com/hr/resources">Compensation Resources</a></li><li><a href="http://resources.payscale.com/free-compensation-report">Free Report</a></li><li><a href="http://www.payscale.com/hr/webinars">Webinars</a></li><li><a href="http://resources.payscale.com/us-compensation-trends">Compensation Trends</a></li><li class="lastItem"><a href="http://www.payscale.com/hr/whitepapers">Whitepapers</a></li></ul></li><li class=""><a class="dropdown-toggle" href="http://www.payscale.com/hr/resources/partners">Partners</a></li><li class=""><a class="dropdown-toggle" href="http://www.payscale.com/hr/resources/contact">Contact Us</a></li><li class=""><a class="dropdown-toggle" href="http://www.payscale.com/compensation-today">Blog</a></li></ul></div></div></div><!-- END STANDARD HEADER --></div> </div>
+
+<div id="outerWrapDiv" class="mktEditable">
+<div id="innerWrapDiv">
+<div id="lpeCDiv_15953" class="lpeCElement Rich_Text_1"><span class="lpContentsItem richTextSpan"><p><span style="font-size: 22px; font-family: arial,helvetica,sans-serif;" _mce_style="font-size: 22px; font-family: arial,helvetica,sans-serif;"><strong>Are your competitors growing and giving raises in 2013?</strong></span></p><p><span style="font-size: 14px; line-height: 22px; font-family: arial,helvetica,sans-serif;" _mce_style="font-size: 14px; line-height: 22px; font-family: arial,helvetica,sans-serif;">
+</span></p>
+<p style="line-height:22px;" _mce_style="line-height: 22px;"><span style="font-size: 14px; font-family: arial,helvetica,sans-serif;" _mce_style="font-size: 14px; font-family: arial,helvetica,sans-serif;">Find out. PayScale questioned over 4,000 executives and HR professionals about what happened in 2012 and their top concerns and plans for 2013.</span></p>
+
+<p><span style="font-family: arial,helvetica,sans-serif; font-size: 18px;" _mce_style="font-family: arial,helvetica,sans-serif; font-size: 18px;"><strong>Want to know what they said?</strong></span></p>
+
+<p style="line-height:22px;" _mce_style="line-height: 22px;"><span style="font-size: 14px; font-family: arial,helvetica,sans-serif;" _mce_style="font-size: 14px; font-family: arial,helvetica,sans-serif;">Download PayScale's 2013 Compensation Best Practices Report to learn what companies like yours have to say.</span></p><p><span style="font-family: arial,helvetica,sans-serif;" _mce_style="font-family: arial,helvetica,sans-serif;"><strong><span _mce_style="font-size: 14px;" style="font-size: 14px;">The full report includes detailed insights from 2012 and projections for 2013, by company size and industry about:</span></strong></span></p>
+<ul style="line-height:22px; padding-left:26px;" _mce_style="line-height: 20px;">
+<li><span style="font-size: 14px; font-family: arial,helvetica,sans-serif;" _mce_style="font-size: 14px; font-family: arial,helvetica,sans-serif;">Workforce growth.</span></li>
+<li><span style="font-size: 14px; font-family: arial,helvetica,sans-serif;" _mce_style="font-size: 14px; font-family: arial,helvetica,sans-serif;">Compensation practice trends.</span></li>
+<li><span style="font-size: 14px; font-family: arial,helvetica,sans-serif;" _mce_style="font-size: 14px; font-family: arial,helvetica,sans-serif;">Pay raises and bonuses.</span></li>
+<li><span style="font-size: 14px; font-family: arial,helvetica,sans-serif;" _mce_style="font-size: 14px; font-family: arial,helvetica,sans-serif;">Recruiting and talent retention strategies.</span></li>
+<li><span style="font-size: 14px; font-family: arial,helvetica,sans-serif;" _mce_style="font-size: 14px; font-family: arial,helvetica,sans-serif;">Navigating the growing skills gap.</span></li>
+<li><span style="font-size: 14px; font-family: arial,helvetica,sans-serif;" _mce_style="font-size: 14px; font-family: arial,helvetica,sans-serif;">The effects of healthcare on business.</span></li></ul><p><br></p></span></div>
+<div id="lpeCDiv_15954" class="lpeCElement Form_1"><span class="lpContentsItem formSpan">
+<style type="text/css">form.lpeRegForm ul {font-size: 12px; color: black; font-family: Arial, Helvetica, sans-serif; } form.lpeRegForm ul input {font-size: 12px; color: black; font-family: Arial, Helvetica, sans-serif; } form.lpeRegForm ul input[type='text'] {font-size: 12px; color: black; font-family: Arial, Helvetica, sans-serif; } form.lpeRegForm ul textarea {font-size: 12px; color: black; font-family: Arial, Helvetica, sans-serif; } form.lpeRegForm ul select {font-size: 12px; color: black; font-family: Arial, Helvetica, sans-serif; } form.lpeRegForm li {margin-bottom: 10px; } form.lpeRegForm .mktInput {padding-left: 0px; } form.lpeRegForm label {width: 90px; } form.lpeRegForm input.mktFormText {width: 150px; } form.lpeRegForm textarea {width: 150px; } form.lpeRegForm select {width: 154px; } </style><!--[if IE]><style type='text/css'>form.lpeRegForm li {margin-bottom: 8px; } form.lpeRegForm select {width: 156px; } </style><![endif]-->
+<script type="text/javascript">
+var profiling = {
+  isEnabled: false,
+  numberOfProfilingFields: 3,
+  alwaysShowFields: [ 'mktDummyEntry']
+};
+var mktFormLanguage = 'English'
+</script>
+<script type="text/javascript"> function mktoGetForm() {return document.getElementById('mktForm_1089'); }</script>
+<form class="lpeRegForm formNotEmpty" method="post" enctype="application/x-www-form-urlencoded" action="http://resources.payscale.com/index.php/leadCapture/save" id="mktForm_1089" name="mktForm_1089"><ul class="mktLblLeft"><li class="mktFormReq mktField"><label>First Name:</label><span class="mktInput"><input class="mktFormText mktFormString mktFReq" name="FirstName" id="FirstName" value="" maxlength="255" tabindex="1" type="text"><span class="mktFormMsg"></span></span></li>
+<li class="mktFormReq mktField"><label>Last Name:</label><span class="mktInput"><input class="mktFormText mktFormString mktFReq" name="LastName" id="LastName" value="" maxlength="255" tabindex="2" type="text"><span class="mktFormMsg"></span></span></li>
+<li class="mktFormReq mktField"><label>Company Name:</label><span class="mktInput"><input class="mktFormText mktFormString mktFReq" name="Company" id="Company" value="" maxlength="255" tabindex="3" type="text"><span class="mktFormMsg"></span></span></li>
+<li class="mktFormReq mktField"><label>Job Title:</label><span class="mktInput"><input class="mktFormText mktFormString mktFReq" name="Title" id="Title" value="" maxlength="255" tabindex="4" type="text"><span class="mktFormMsg"></span></span></li>
+<li class="mktFormReq mktField"><label>Phone Number:</label><span class="mktInput"><input class="mktFormText mktFormPhone mktFReq" name="Phone" id="Phone" value="" maxlength="255" tabindex="5" type="text"><span class="mktFormMsg"></span></span></li>
+<li class="mktFormReq mktField"><label>Email Address:</label><span class="mktInput"><input class="mktFormText mktFormEmail mktFReq" name="Email" id="Email" value="" maxlength="255" tabindex="6" type="text"><span class="mktFormMsg"></span></span></li>
+<li class="mktFormReq mktField"><label>Country:</label><span class="mktInput"><select class="mktFormSelect mktFReq" name="Country" id="Country" size="1" tabindex="7"><option value="Select Country..." selected="selected">Select Country...</option><option value="United States">United States</option><option value="Canada">Canada</option><option value="Afghanistan">Afghanistan</option><option value="Albania">Albania</option><option value="Algeria">Algeria</option><option value="American Samoa">American Samoa</option><option value="Andorra">Andorra</option><option value="Angola">Angola</option><option value="Anguilla">Anguilla</option><option value="Antarctica">Antarctica</option><option value="Argentina">Argentina</option><option value="Armenia">Armenia</option><option value="Aruba">Aruba</option><option value="Australia">Australia</option><option value="Austria">Austria</option><option value="Azerbaijan">Azerbaijan</option><option value="Bahamas">Bahamas</option><option value="Bahrain">Bahrain</option><option value="Bangladesh">Bangladesh</option><option value="Barbados">Barbados</option><option value="Belarus">Belarus</option><option value="Belgium">Belgium</option><option value="Belize">Belize</option><option value="Bermuda">Bermuda</option><option value="Bolivia">Bolivia</option><option value="Botswana">Botswana</option><option value="Brazil">Brazil</option><option value="Brunei">Brunei</option><option value="Bulgaria">Bulgaria</option><option value="Burundi">Burundi</option><option value="Cambodia">Cambodia</option><option value="Cameroon">Cameroon</option><option value="Cape Verde">Cape Verde</option><option value="Cayman Islands">Cayman Islands</option><option value="Chad">Chad</option><option value="Chile">Chile</option><option value="China">China</option><option value="Christmas Island">Christmas Island</option><option value="Colombia">Colombia</option><option value="Comoros">Comoros</option><option value="Congo">Congo</option><option value="Cook Islands">Cook Islands</option><option value="Costa Rica">Costa Rica</option><option value="Croatia">Croatia</option><option value="Cuba">Cuba</option><option value="Cyprus">Cyprus</option><option value="Czech Republic">Czech Republic</option><option value="Denmark">Denmark</option><option value="Djibouti">Djibouti</option><option value="Dominica">Dominica</option><option value="Dominican Republic">Dominican Republic</option><option value="Ecuador">Ecuador</option><option value="Egypt">Egypt</option><option value="El Salvador">El Salvador</option><option value="Eritrea">Eritrea</option><option value="Estonia">Estonia</option><option value="Ethiopia">Ethiopia</option><option value="Falkland Islands">Falkland Islands</option><option value="Faroe Islands">Faroe Islands</option><option value="Fiji Islands">Fiji Islands</option><option value="Finland">Finland</option><option value="France">France</option><option value="French Guiana">French Guiana</option><option value="French Polynesia">French Polynesia</option><option value="Gabon">Gabon</option><option value="Gambia">Gambia</option><option value="Georgia">Georgia</option><option value="Germany">Germany</option><option value="Ghana">Ghana</option><option value="Gibraltar">Gibraltar</option><option value="Greece">Greece</option><option value="Greenland">Greenland</option><option value="Grenada">Grenada</option><option value="Guadeloupe">Guadeloupe</option><option value="Guam">Guam</option><option value="Guatemala">Guatemala</option><option value="Guinea">Guinea</option><option value="Guinea-Bissau">Guinea-Bissau</option><option value="Guyana">Guyana</option><option value="Haiti">Haiti</option><option value="Honduras">Honduras</option><option value="Hong Kong">Hong Kong</option><option value="Hungary">Hungary</option><option value="Iceland">Iceland</option><option value="India">India</option><option value="Indonesia">Indonesia</option><option value="Iran">Iran</option><option value="Iraq">Iraq</option><option value="Ireland">Ireland</option><option value="Israel">Israel</option><option value="Italy">Italy</option><option value="Jamaica">Jamaica</option><option value="Japan">Japan</option><option value="Jordan">Jordan</option><option value="Kazakhstan">Kazakhstan</option><option value="Kenya">Kenya</option><option value="Kiribati">Kiribati</option><option value="Korea">Korea</option><option value="Kuwait">Kuwait</option><option value="Kyrgyzstan">Kyrgyzstan</option><option value="Laos">Laos</option><option value="Latvia">Latvia</option><option value="Lebanon">Lebanon</option><option value="Lesotho">Lesotho</option><option value="Liberia">Liberia</option><option value="Libya">Libya</option><option value="Liechtenstein">Liechtenstein</option><option value="Lithuania">Lithuania</option><option value="Luxembourg">Luxembourg</option><option value="Madagascar">Madagascar</option><option value="Malawi">Malawi</option><option value="Malaysia">Malaysia</option><option value="Maldives">Maldives</option><option value="Mali">Mali</option><option value="Malta">Malta</option><option value="Martinique">Martinique</option><option value="Mauritania">Mauritania</option><option value="Mauritius">Mauritius</option><option value="Mayotte">Mayotte</option><option value="Mexico">Mexico</option><option value="Micronesia">Micronesia</option><option value="Moldova">Moldova</option><option value="Monaco">Monaco</option><option value="Mongolia">Mongolia</option><option value="Montserrat">Montserrat</option><option value="Morocco">Morocco</option><option value="Mozambique">Mozambique</option><option value="Myanmar">Myanmar</option><option value="Namibia">Namibia</option><option value="Nauru">Nauru</option><option value="Nepal">Nepal</option><option value="Netherlands">Netherlands</option><option value="New Caledonia">New Caledonia</option><option value="New Zealand">New Zealand</option><option value="Nicaragua">Nicaragua</option><option value="Niger">Niger</option><option value="Nigeria">Nigeria</option><option value="Niue">Niue</option><option value="Norfolk Island">Norfolk Island</option><option value="Norway">Norway</option><option value="Oman">Oman</option><option value="Pakistan">Pakistan</option><option value="Palau">Palau</option><option value="Panama">Panama</option><option value="Papua New Guinea">Papua New Guinea</option><option value="Paraguay">Paraguay</option><option value="Peru">Peru</option><option value="Philippines">Philippines</option><option value="Pitcairn Island">Pitcairn Island</option><option value="Poland">Poland</option><option value="Portugal">Portugal</option><option value="Puerto Rico">Puerto Rico</option><option value="Qatar">Qatar</option><option value="Reunion">Reunion</option><option value="Romania">Romania</option><option value="Russia">Russia</option><option value="Rwanda">Rwanda</option><option value="Saint Helena">Saint Helena</option><option value="Saint Kitts">Saint Kitts</option><option value="Saint Lucia">Saint Lucia</option><option value="Samoa">Samoa</option><option value="San Marino">San Marino</option><option value="Saudi Arabi">Saudi Arabi</option><option value="Senegal">Senegal</option><option value="Seychelles">Seychelles</option><option value="Sierra Leone">Sierra Leone</option><option value="Singapore">Singapore</option><option value="Slovakia">Slovakia</option><option value="Slovenia">Slovenia</option><option value="Solomon Islands">Solomon Islands</option><option value="Somalia">Somalia</option><option value="South Africa">South Africa</option><option value="Spain">Spain</option><option value="Sri Lanka">Sri Lanka</option><option value="Sudan">Sudan</option><option value="Suriname">Suriname</option><option value="Swaziland">Swaziland</option><option value="Sweden">Sweden</option><option value="Switzerland">Switzerland</option><option value="Syria">Syria</option><option value="Taiwan">Taiwan</option><option value="Tajikistan">Tajikistan</option><option value="Tanzania">Tanzania</option><option value="Thailand">Thailand</option><option value="Togo">Togo</option><option value="Tokelau">Tokelau</option><option value="Tonga">Tonga</option><option value="Trinidad and Tobago">Trinidad and Tobago</option><option value="Tunisia">Tunisia</option><option value="Turkey">Turkey</option><option value="Turkmenistan">Turkmenistan</option><option value="Tuvalu">Tuvalu</option><option value="Uganda">Uganda</option><option value="Ukraine">Ukraine</option><option value="United Arab Emirates">United Arab Emirates</option><option value="United Kingdom">United Kingdom</option><option value="Uruguay">Uruguay</option><option value="Uzbekistan">Uzbekistan</option><option value="Vanuatu">Vanuatu</option><option value="Venezuela">Venezuela</option><option value="Vietnam">Vietnam</option><option value="Virgin Islands">Virgin Islands</option><option value="Virgin Islands">Virgin Islands</option><option value="Western Sahara">Western Sahara</option><option value="Yemen">Yemen</option><option value="Yugoslavia">Yugoslavia</option><option value="Zambia">Zambia</option><option value="Zimbabwe">Zimbabwe</option></select><span class="mktFormMsg"></span></span></li>
+<li style="display: none;" class="mktField"><label>State:</label><span class="mktInput"><select style="width: 150px;" class="mktFormSelect" name="State" id="State" size="1" tabindex="8"></select><span class="mktFormMsg"></span></span></li>
+<li class="mktFormReq mktField"><label>City:</label><span class="mktInput"><input class="mktFormText mktFormString mktFReq" name="City" id="City" value="" maxlength="255" tabindex="9" type="text"><span class="mktFormMsg"></span></span></li>
+<li class="mktFormReq mktField"><label>Postal Code:</label><span class="mktInput"><input class="mktFormText mktFormString mktFReq" name="Postal Code" id="Postal Code" value="" maxlength="255" tabindex="10" type="text"><span class="mktFormMsg"></span></span></li>
+<li class="mktFormReq mktField"><label>Num Employees:</label><span class="mktInput"><input class="mktFormText mktFormInt mktFReq" name="NumberOfEmployees" id="NumberOfEmployees" value="" tabindex="11" type="text"><span class="mktFormMsg"></span></span></li>
+<li class="mktField"><label>Industry:</label><span class="mktInput"><select class="mktFormSelect" name="Industry" id="Industry" size="1" tabindex="12"><option value="Select Industry..." selected="selected">Select Industry...</option><option value="Accounting/Auditing Firm">Accounting/Auditing Firm</option><option value="Advertising">Advertising</option><option value="Aerospace and Defense">Aerospace and Defense</option><option value="Agriculture">Agriculture</option><option value="Apparel">Apparel</option><option value="Architecture">Architecture</option><option value="Automobile">Automobile</option><option value="Aviation">Aviation</option><option value="Banking">Banking</option><option value="Biotechnology">Biotechnology</option><option value="Chemicals">Chemicals</option><option value="Childcare/Daycare">Childcare/Daycare</option><option value="Churches &amp; Religious Groups">Churches &amp; Religious Groups</option><option value="Colleges and Universities">Colleges and Universities</option><option value="Commercial Aviation/Airline">Commercial Aviation/Airline</option><option value="Commercial Printing">Commercial Printing</option><option value="Communications">Communications</option><option value="Construction">Construction</option><option value="Consulting">Consulting</option><option value="Education">Education</option><option value="Electronics">Electronics</option><option value="Energy">Energy</option><option value="Engineering">Engineering</option><option value="Engineering Consulting">Engineering Consulting</option><option value="Entertainment">Entertainment</option><option value="Environmental">Environmental</option><option value="Finance">Finance</option><option value="Food &amp; Beverage">Food &amp; Beverage</option><option value="Food Manufacturing">Food Manufacturing</option><option value="Government">Government</option><option value="Government Contractor">Government Contractor</option><option value="Hair and Beauty Salons">Hair and Beauty Salons</option><option value="Healthcare">Healthcare</option><option value="Hospital">Hospital</option><option value="Hospitality">Hospitality</option><option value="Human Resources Consulting">Human Resources Consulting</option><option value="Insurance">Insurance</option><option value="Internet/New Media">Internet/New Media</option><option value="IT Services">IT Services</option><option value="Law Enforcement">Law Enforcement</option><option value="Law Firm">Law Firm</option><option value="Legal">Legal</option><option value="Logistics">Logistics</option><option value="Machinery">Machinery</option><option value="Managment">Managment</option><option value="Manufacturing">Manufacturing</option><option value="Marketing, Advertising &amp; Media">Marketing, Advertising &amp; Media</option><option value="Media">Media</option><option value="Medical Office">Medical Office</option><option value="Mining">Mining</option><option value="Museums, Zoos, and Parks">Museums, Zoos, and Parks</option><option value="Not For Profit">Not For Profit</option><option value="Nursing Home">Nursing Home</option><option value="Other">Other</option><option value="Pharmaceuticals">Pharmaceuticals</option><option value="Pharmacy">Pharmacy</option><option value="Professional Employment Organization">Professional Employment Organization</option><option value="Property Management">Property Management</option><option value="Public Safety">Public Safety</option><option value="Publishing">Publishing</option><option value="Real Estate">Real Estate</option><option value="Recreation">Recreation</option><option value="Retail">Retail</option><option value="Semiconductors">Semiconductors</option><option value="Shipping">Shipping</option><option value="Social Services">Social Services</option><option value="Software Development">Software Development</option><option value="Staffing/Recruiting">Staffing/Recruiting</option><option value="Technology">Technology</option><option value="Telecommunications">Telecommunications</option><option value="Television">Television</option><option value="Transportation, Energy, and Storage">Transportation, Energy, and Storage</option><option value="Travel">Travel</option><option value="Utilities">Utilities</option><option value="Veterinary Care">Veterinary Care</option><option value="Wholesale">Wholesale</option></select><span class="mktFormMsg"></span></span></li>
+<li class="mktField"><label>Years in Job:</label><span class="mktInput"><select class="mktFormSelect" name="YearsinJob" id="YearsinJob" size="1" tabindex="13"><option value="Select a Range..." selected="selected">Select a Range...</option><option value="0 - 4 years">0 - 4 years</option><option value="5 - 10 years">5 - 10 years</option><option value="11 - 20 years">11 - 20 years</option><option value="20+ years">20+ years</option></select><span class="mktFormMsg"></span></span></li>
+<li class="mktField" style="display: none;"><label>AF Code:</label><span class="mktInput"><input class="mktFormHidden" name="AF_Code__c" id="AF_Code__c" value="" type="hidden"><span class="mktFormMsg"></span></span></li>
+<li class="mktField" style="display: none;"><label>SRC Code:</label><span class="mktInput"><input class="mktFormHidden" name="SRC_Code__c" id="SRC_Code__c" value="" type="hidden"><span class="mktFormMsg"></span></span></li>
+<li id="mktFrmButtons"><label>&nbsp;</label><div class="buttonSubmit"><span></span><span></span><div class="buttonSubmit"><span></span><input id="mktFrmSubmit" style="width: auto; overflow: visible; padding-left: .25em; padding-right: .25em;" value="Go!" name="submitButton" onclick="formSubmit(document.getElementById(&quot;mktForm_1089&quot;)); return false;" type="submit"></div></div>&nbsp;<input style="width: auto; overflow: visible; padding-left: .25em; padding-right: .25em;" id="mktFrmReset" value="Clear" name="resetButton" onclick="formReset(document.getElementById(&quot;mktForm_1089&quot;)); return false;" type="reset"></li>  </ul>
+  <span style="display:none;"><input name="_marketo_comments" value="" type="text"></span>
+  <input name="lpId" value="2902" type="hidden">
+  <input name="subId" value="173" type="hidden">
+  <input name="munchkinId" value="417-NLK-080" type="hidden">
+  <input name="kw" value="" type="hidden">
+  <input name="cr" value="" type="hidden">
+  <input name="searchstr" value="" type="hidden">
+  <input name="lpurl" value="http://resources.payscale.com/2013-Compensation-Practices-Report.html?cr={creative}&amp;kw={keyword}" type="hidden">
+  <input name="formid" value="1089" type="hidden">
+  <input name="returnURL" value="http://resources.payscale.com/2013-Compensation-Practices-Report-thank-you.html" type="hidden">
+  <input name="retURL" value="http://resources.payscale.com/2013-Compensation-Practices-Report-thank-you.html" type="hidden">
+  <input name="returnLPId" value="2750" type="hidden">
+  <input name="_mkt_disp" value="return" type="hidden">
+      <input name="_mkt_trk" value="id:417-NLK-080&amp;token:_mch-payscale.com-1367730525000-16910" type="hidden">
+  </form>
+<script type="text/javascript" src="/js/mktFormSupport.js"></script>
+<script type="text/javascript">
+function formSubmit(elt) {
+  return Mkto.formSubmit(elt);
+}
+function formReset(elt) {
+  return Mkto.formReset(elt);
+}
+</script>
+</span></div>
+<div id="lpeCDiv_15955" class="lpeCElement Rectangle_1"><div class="lpContentsItem boxSpan"></div></div>
+<div id="lpeCDiv_15956" class="lpeCElement Rich_Text_2"><span class="lpContentsItem richTextSpan"><p><span style="font-size: 22px; font-family: arial, helvetica, sans-serif;"><strong>DOWNLOAD THE REPORT!</strong></span><br _mce_bogus="1"></p></span></div>
+<div id="lpeCDiv_15957" class="lpeCElement HTML_1"><div class="lpContentsItem rawHtmlSpan"><script language="Javascript" src="/js/public/jquery-latest.min.js" type="text/javascript"></script>
+   <script>
+     var $jQ = jQuery.noConflict();
+     // Use jQuery via $jQ(...)
+     $jQ(document).ready(function(){
+       $jQ("#mktFrmSubmit").wrap("<div class='buttonSubmit'></div>");
+       $jQ(".buttonSubmit").prepend("<span></span>");
+     });
+   </script>
+
+
+
+
+
+<!-- Arquivos utilizados pelo jQuery lightBox plugin -->
+    <script type="text/javascript" src="http://www.payscale.com/content/js/jquery.js"></script>
+    <script type="text/javascript" src="http://www.payscale.com/content/js/jquery.lightbox-0.5.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://www.payscale.com/content/css/jquery.lightbox-0.5.css" media="screen">
+    <!-- / fim dos arquivos utilizados pelo jQuery lightBox plugin -->
+
+<script type="text/javascript">
+    $(function() {
+        $('#gallery a').lightBox();
+    });
+    </script>
+
+
+
+
+<style>
+
+/* Start fancy button */
+
+div.buttonSubmit {
+  position:relative;
+  float:left;
+}
+
+div.buttonSubmit input, div.buttonSubmit span {
+  background-image:url(http://resources.payscale.com/rs/payscale/images/but_green_300x144.gif);
+  background-position:right 0px;
+  background-repeat:no-repeat;
+  border:0px none;
+  color:#FFFFFF;
+  cursor:pointer;
+  float:left;
+  font-weight:bold;
+  height:36px;
+  margin:0px;
+  padding:0px 15px 0px;
+  position:relative;
+  z-index:5;
+}
+div.buttonSubmit span {
+  background-position:left -36px;
+  left:-4px;
+  padding:0px;
+  position:absolute;
+  top:0px;
+  width:4px;
+  z-index:10;
+}
+div.buttonSubmit input {
+  width:auto;
+  padding-left: 6px !important;
+  padding-right: 10px !important;
+
+}
+
+#mktFrmSubmit{
+    color: #FFFFFF !important;
+    font-size: 16px;
+
+
+}
+
+
+div.buttonSubmit:hover input {  background-position: right -72px;}
+div.buttonSubmit:hover span {  background-position: left -108px;}
+
+/* end fancy button */
+
+
+/* jQuery lightBox plugin - Gallery style */
+	#gallery {
+	
+	}
+	#gallery ul { list-style: none; }
+	#gallery ul li { display: inline; }
+	#gallery ul img {
+	
+	}
+	#gallery ul a:hover img {
+	
+	}
+	#gallery ul a:hover {  }
+</style></div></div>
+<div id="lpeCDiv_15958" class="lpeCElement controllerLandingPage.Image_1"><span class="lpContentsItem imageSpan"><img class="lpimg" src="/rs/payscale/images/img_title_2013CBPR.png"></span></div>
+<div id="lpeCDiv_15959" class="lpeCElement controllerLandingPage.Image_2"><span class="lpContentsItem imageSpan"><img class="lpimg" src="/rs/payscale/images/img_2013CBPR_cover.jpg"></span></div>
+<div id="lpeCDiv_15960" class="lpeCElement HTML_2"><div class="lpContentsItem rawHtmlSpan"><script type="text/javascript">
+// Popup window code
+function newPopup(url) {
+	popupWindow = window.open(
+		url,'popUpWindow','height=400,width=800,left=10,top=10,resizable=yes,scrollbars=yes,toolbar=no,menubar=no,location=no,directories=no,status=yes')
+}
+</script></div></div>
+<div id="lpeCDiv_15961" class="lpeCElement Rich_Text_3"><span class="lpContentsItem richTextSpan"><div id="gallery">
+    <ul style="padding:0; margin:0;" _mce_style="padding: 0; margin: 0;">
+        <li>
+            <a href="http://www.payscale.com/cms-images/default-source/b2b/img_2013cbpr_infographic.jpg?sfvrsn=6" _mce_href="http://www.payscale.com/cms-images/default-source/b2b/img_2013cbpr_infographic.jpg?sfvrsn=6" title="PayScale 2013 Compensation Best Practices Report Infographic">
+                <img src="http://resources.payscale.com/rs/payscale/images/but_QuickLook_infographic.jpg" _mce_src="http://resources.payscale.com/rs/payscale/images/but_QuickLook_infographic.jpg" alt="PayScale 2013 Compensation Best Practices Report Infographic" border="none">
+            </a>
+        </li></ul>
+</div></span></div>
+
+
+
+
+<!-- START TEMPLATE HTML - EDIT THIS SECTION -->
+
+
+
+
+
+<div id="mktContent" class="mktEditable">
+<!-- Base of Landing Page Content -->
+</div>
+
+
+
+
+
+<!-- END TEMPLATE HTML -->
+
+
+
+
+<!-- SYSTEM FOOTER - DO NOT EDIT -->
+
+</div>
+</div>
+
+
+<script type="text/javascript" src="https://ssl-munchkin.marketo.net/js/munchkin.js"></script><script>mktoMunchkin('417-NLK-080', {customName: '2013-Compensation-Practices-Report', wsInfo: 'j1RR'});</script>
+
+
+
+
+<!-- Google Analytics PSP Site -->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-860310-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+  
+ 
+<!-- Code for Action: Payscale - Employers -->
+<!-- Begin Rocket Fuel Conversion Action Tracking Code Version 7 --> <img src="http://20503401p.rfihub.com/ca.gif?rb=3377&amp;ca=20503401&amp;ra=REPLACE_ME_WITH_YOUR_CACHE_BUSTING" style="display:none" alt="Rocket Fuel" height="0" width="0">
+<!-- End Rocket Fuel Conversion Action Tracking Code Version7 -->
+
+
+
+<!-- Retargeter Tracking Code -->
+
+<img src="http://ad.retargeter.com/seg?add=317462&amp;t=2" height="1" width="1">
+
+
+
+<!-- PSP Footer -->
+
+<script type="text/javascript" src="http://www.payscale.com/Footer.aspx?js=1"></script><style type="text/css">.Payscale_Footer {padding-bottom: 0;}.row-fluid:after {clear: both;}.row-fluid:before, .row-fluid:after {content: "";display: table;}.row-fluid {width: 100%;}.row-fluid > .span3 {width: 23.0769%;}.row-fluid > .span2 {width: 14.5299%;}.row-fluid > .span1 {width: 7.382978723%;}.row-fluid > [class*="span"] {float: left;margin-left: 2.5641%;}.row-fluid > [class*="span"]:first-child {margin-left: 0;}.universal_footer{margin-left: auto;margin-right: auto;max-width: 940px;}.universal_footer div{font-family: Verdana,Arial,Tahoma,Helvetica,sans-serif;font-size: 11px;text-align:left;line-height: 18px;}.footer_heading{font-weight: bold;margin-top: 10px;}.universal_footer a{display:block;padding-top: 2px;}.footer_social a{display:inline;}.footer_social a img{padding-right: 2px;border: 0px;}.footer_social a:hover{text-decoration:none;}</style><div class="container-fluid" style="padding: 0; padding-bottom: 10px; background-color: #ECF5FA; margin-top: 40px;"><div class="row-fluid" style="border-bottom: 5px solid #336699; margin-bottom: 20px;"></div><div class="row-fluid universal_footer"><div class="span3"><div class="footer_heading">Employers</div><a href="//www.payscale.com/hr/product-insight-expert">Compensation Software</a><a href="//resources.payscale.com/Request-a-Demo.html">Request a Demo</a><a href="//resources.payscale.com/free-compensation-report.html">Get a Free Report</a><a href="//www.payscale.com/hr/webinars">Webinars</a><a href="//www.payscale.com/hr/customers">Customer Success</a><a href="//www.payscale.com/hr/whitepapers">Whitepapers</a></div><div class="span3"><div class="footer_heading">Employees &amp; Job Seekers</div><a href="//www.payscale.com/wizards/choose.asp">Personal Salary Report</a><a href="http://www.payscale.com/career-news">Blogs</a><a href="//www.payscale.com/research/">Career Research</a><a href="//www.payscale.com/Job-Search-Engine">Job Listings</a><a href="//www.payscale.com/resources.aspx">Special Features</a></div><div class="span3"><div class="footer_heading">Our Company</div><a href="//www.payscale.com/about">About PayScale</a><a href="//www.payscale.com/about/advertise">Advertise With Us</a><a href="//www.payscale.com/about/jobs">Jobs at PayScale</a><a href="//www.payscale.com/about/management-team">Management Team</a><a href="//www.payscale.com/about/latest-news">PayScale In the News</a></div><div class="span3"><div class="footer_social" style="margin-top:10px;"><a href="http://www.facebook.com/#!/PayScale"><img src="http://p1.pscdn.me/images/footer/facebook_26x26.png" alt="Facebook" height="26" width="26"></a><a href="http://twitter.com/#!/payscale"><img src="http://p2.pscdn.me/images/footer/twitter_26x26.png" alt="Twitter" height="26" width="26"></a><a href="http://www.linkedin.com/company/47199"><img src="http://p3.pscdn.me/images/footer/linkedin_26x26.png" alt="LinkedIn" height="26" width="26"></a><a href="https://plus.google.com/102959132145794260848" rel="publisher"><img src="http://p2.pscdn.me/images/footer/gplus_26x26.png" alt="Google Plus" height="26" width="26"></a><a href="http://pinterest.com/payscale/"><img src="http://p3.pscdn.me/images/footer/pinterest_26x26.png" alt="Pinterest" height="26" width="26"></a></div><img src="http://p1.pscdn.me/images/ps_logo_tag_150.png" alt="Payscale Logo" style="margin-top: 20px;" height="50" width="150"></div></div><div class="row-fluid universal_footer" style="border-top:1px solid #C1C1C1; margin-top: 30px; padding-top: 5px;"><div class="span2"><a href="//www.payscale.com/license.asp">Terms of Use</a></div><div class="span2"><a href="//www.payscale.com/privacy.asp">Privacy Policy</a></div><div class="span2"><a href="//www.payscale.com/resources_methodology">Methodology</a></div><div class="span2"><a href="//www.payscale.com/syndication/">Publisher Tools</a></div><div class="span1"><a href="//www.payscale.com/about/contact">Contact Us</a></div><div class="span3" style="color:#C1C1C1; padding-top: 2px; text-align:right; width: 21%;">©2000-<script type="text/javascript">d=new Date();y=d.getFullYear();document.write(y);</script>2013&nbsp;PayScale,&nbsp;Inc.<br>All rights reserved.</div></div><div class="row-fluid"><div class="span12"><!-- B2B_House_Footer_728x90 --><div id="div-gpt-ad-1334953178539-0" style="width:728px; height:90px;"><script type="text/javascript">var googletag = googletag || {};googletag.cmd = googletag.cmd || [];(function () {var gads = document.createElement('script');gads.async = true;gads.type = 'text/javascript';var useSSL = 'https:' == document.location.protocol;gads.src = (useSSL ? 'https:' : 'http:') +'//www.googletagservices.com/tag/js/gpt.js';var node = document.getElementsByTagName('script')[0];node.parentNode.insertBefore(gads, node);})();</script><script type="text/javascript">googletag.cmd.push(function() { googletag.display('div-gpt-ad-1334953178539-0'); });</script></div></div></div></div>
+
+<!-- Chat Script -->
+<!-- begin olark code --><script data-cfasync="false" type="text/javascript">/*{literal}<![CDATA[*/
+window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){f[z]=function(){(a.s=a.s||[]).push(arguments)};var a=f[z]._={},q=c.methods.length;while(q--){(function(n){f[z][n]=function(){f[z]("call",n,arguments)}})(c.methods[q])}a.l=c.loader;a.i=nt;a.p={0:+new Date};a.P=function(u){a.p[u]=new Date-a.p[0]};function s(){a.P(r);f[z](r)}f.addEventListener?f.addEventListener(r,s,false):f.attachEvent("on"+r,s);var ld=function(){function p(hd){hd="head";return["<",hd,"></",hd,"><",i,' onl' + 'oad="var d=',g,";d.getElementsByTagName('head')[0].",j,"(d.",h,"('script')).",k,"='",l,"//",a.l,"'",'"',"></",i,">"].join("")}var i="body",m=d[i];if(!m){return setTimeout(ld,100)}a.P(1);var j="appendChild",h="createElement",k="src",n=d[h]("div"),v=n[j](d[h](z)),b=d[h]("iframe"),g="document",e="domain",o;n.style.display="none";m.insertBefore(n,m.firstChild).id=z;b.frameBorder="0";b.id=z+"-loader";if(/MSIE[ ]+6/.test(navigator.userAgent)){b.src="javascript:false"}b.allowTransparency="true";v[j](b);try{b.contentWindow[g].open()}catch(w){c[e]=d[e];o="javascript:var d="+g+".open();d.domain='"+d.domain+"';";b[k]=o+"void(0);"}try{var t=b.contentWindow[g];t.write(p());t.close()}catch(x){b[k]=o+'d.write("'+p().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'}a.P(2)};ld()};nt()})({loader: "static.olark.com/jsclient/loader0.js",name:"olark",methods:["configure","extend","declare","identify"]});
+/* custom configuration goes here (www.olark.com/documentation) */
+olark.identify('5446-668-10-2213');/*]]>{/literal}*/</script><noscript><a href="https://www.olark.com/site/5446-668-10-2213/contact" title="Contact us" target="_blank">Questions? Feedback?</a> powered by <a href="http://www.olark.com?welcome" title="Olark live chat software">Olark live chat software</a></noscript>
+<!-- end olark code -->
+
+
+</body>

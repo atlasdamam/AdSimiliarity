@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html xml:lang="en">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+  <meta http-equiv="Pragma" content="no-cache" /> 
+  <meta http-equiv="Cache-Control" content="no-cache" /> 
+  <meta name="viewport" content=" initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" /> 
+  <link type="text/css" rel="stylesheet" href="https://preview.digby.com/ui/svn/hp4.0/css/small.css" /> 
+  <link type="text/css" rel="stylesheet" media="all and (orientation:portrait)" href="https://preview.digby.com/ui/svn/hp4.0/css/portrait.css" /> 
+  <link type="text/css" rel="stylesheet" media="all and (orientation:landscape)" href="https://preview.digby.com/ui/svn/hp4.0/css/landscape.css" /> 
+  <script type="text/javascript">
+			if (top.frames.length!=0)
+  			top.location=self.document.location;
+	    </script> 
+  <script type="text/javascript">
+	// JavaScript Document
+var a1 = navigator.userAgent;
+var a2 = a1.substring(0,10);
+/*for all BB*/
+if(navigator.userAgent.indexOf("BlackBerry") >= 0 ){
+	document.write("<link href='<link href='https://preview.digby.com/ui/svn/hp4.0/css/forbb.css' rel='stylesheet' type='text/css' />")
+}
+/*for all BB set*/
+if((navigator.platform.indexOf("BlackBerry") >= 0)){
+	if((navigator.userAgent.indexOf("VendorID/378") > 0)){
+		document.write("<link href='https://preview.digby.com/ui/svn/hp4.0/css/forbb5.0.css' rel='stylesheet' type='text/css' />")
+	}
+	if((navigator.userAgent.indexOf("VendorID/120") > 0)){
+		document.write("<link href='https://preview.digby.com/ui/svn/hp4.0/css/forbb4.0.css' rel='stylesheet' type='text/css' />")
+	}
+	if((navigator.userAgent.indexOf("VendorID/100") > 0)){
+		document.write("<link href='https://preview.digby.com/ui/svn/hp4.0/css/forbb4.0Min.css' rel='stylesheet' type='text/css' />")
+	}
+	if((navigator.userAgent.indexOf("BlackBerry") >= 0)){
+		if((navigator.userAgent.indexOf("VendorID/124") > 0)){
+			document.write("<link href='https://preview.digby.com/ui/svn/hp4.0/css/forbb4.6.css' rel='stylesheet' type='text/css' />")
+		}
+	}
+}
+if(navigator.userAgent.indexOf("BlackBerry 9780") >= 0 ){
+	document.write("<link href='https://preview.digby.com/ui/svn/hp4.0/css/forbb9780.css' rel='stylesheet' type='text/css' />")
+}
+if(navigator.userAgent.indexOf("BlackBerry 9900") >= 0 ){
+	document.write("<link href='https://preview.digby.com/ui/svn/hp4.0/css/forbb9900.css' rel='stylesheet' type='text/css' />")
+}
+if(navigator.userAgent.indexOf("BlackBerry9700/5.0") >= 0 ){
+	document.write("<link href='https://preview.digby.com/ui/svn/hp4.0/css/forbb9700_5.0.css' rel='stylesheet' type='text/css' />")
+}
+
+/*for Android*/
+if(navigator.userAgent.indexOf("Android") >= 0  || navigator.platform.indexOf("Android") >= 0){
+	document.write("<link href='https://preview.digby.com/ui/svn/hp4.0/css/android.css' rel='stylesheet' type='text/css' />")
+}
+/*for all Windows Phone*/
+if(navigator.userAgent.indexOf("Windows Phone") >= 0  || navigator.platform.indexOf("Windows Phone") >= 0){
+	//alert("true");
+	document.write("<link href='https://preview.digby.com/ui/svn/hp4.0/css/winphone.css' rel='stylesheet' type='text/css' />")
+}	
+
+
+		</script> 
+  <title>hp Mobile Store</title> 
+ </head> 
+ <body> 
+  <div class="container"> 
+   <div id="header"> 
+    <div class="cartbar">
+     <a href="/hp/accountlogin.do">Sign in</a> 
+     <a href="/hp/cart/list.do" class="cartbar_home">items in cart</a>(0)
+    </div>
+    <div class="logoarea">
+     <div class="logo">
+      <a href="/hp"></a>
+     </div>
+    </div> 
+   </div> 
+   <div id="search"> 
+    <script type="text/javascript">
+<!--
+function searchs()
+{
+
+ if(document.search.keyword1.value=='Enter keyword or item #'|| document.search.keyword1.value==null)
+ {
+
+  document.search.keyword.value="";
+
+
+ }
+ else
+ {
+    document.search.keyword.value=document.search.keyword1.value.replace(/[ ]/g,"%20");
+ }
+ return true;
+}
+//-->
+</script> 
+    <div class="search"> 
+     <form action="/hp/catalog/searchList.do" name="search" id="search" method="post" onsubmit="return searchs();"> 
+      <fieldset> 
+       <input type="hidden" name="keyword" /> 
+       <dl> 
+        <dt> 
+         <input type="text" name="keyword1" class="search_text" maxlength="100" value="Enter keyword or item #" onblur="if (this.value == '') {this.value = 'Enter keyword or item #';}" onfocus="if (this.value == 'Enter keyword or item #') { this.value = ''; }" /> 
+        </dt> 
+        <dd>
+         <input type="submit" class="search_btn_go" name="Submit" value="search" />
+        </dd> 
+       </dl> 
+      </fieldset> 
+     </form> 
+    </div> 
+   </div> 
+   <div id="nav"> 
+    <ul class="nav_title"> 
+     <li> <a href="/hp/catalog.do;jsessionid=2D3B79F1CE79333A45A7CA5E88A31014?cid=0&amp;p=0&amp;pno=12">Home</a></li> 
+     <li class="nav_arrow">|</li> 
+     <li> <a href="/hp/catalog.do;jsessionid=2D3B79F1CE79333A45A7CA5E88A31014?advertiseImgURL=null&amp;cid=1676848&amp;p=0&amp;pno=12">Laptops</a></li> 
+     <li class="nav_arrow">|</li> 
+     <li>All AMD laptops</li> 
+    </ul> 
+   </div> 
+   <div id="main"> 
+    <script language="JavaScript">
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+window.hpmmd=window.hpmmd|| {
+page:{
+  name:		"ec:hhos:us:en-us:Laptops:landing:All AMD laptops",
+  sectiontaxonomy:"hhos:Laptops",
+  
+  store: 	  	"[gen]",
+  
+  
+  login:		"[n]",
+  
+hierarchy:      ["hhos","Laptops" ,"All AMD laptops"],
+platform:	"mobile",
+events: 	["pageview"]
+},
+
+product: {
+  list: [ 
+
+{id: "C2X98AV", quantity: 1, total_price: 349.99}
+	,
+
+{id: "B6E68AV", quantity: 1, total_price: 399.99}
+	,
+
+{id: "C2K41UA", quantity: 1, total_price: 399.99}
+	,
+
+{id: "C2T27AV", quantity: 1, total_price: 399.99}
+	,
+
+{id: "D1C58UA", quantity: 1, total_price: 399.99}
+	,
+
+{id: "B6C46AV", quantity: 1, total_price: 429.99}
+	,
+
+{id: "B5Y91AV", quantity: 1, total_price: 449.99}
+	,
+
+{id: "B5Z51UA", quantity: 1, total_price: 449.99}
+	,
+
+{id: "B8B23AV", quantity: 1, total_price: 479.99}
+	,
+
+{id: "C5F13AV", quantity: 1, total_price: 479.99}
+	
+
+   ]
+ }
+}
+</script> 
+    <script language="JavaScript" type="text/javascript" src="//www.hp.com/cma/ng/lib/bootstrap/metrics.js">
+</script> 
+    <script type="text/javascript">
+
+    var ci_category = '';
+
+</script> 
+    <script language="JavaScript" src="https://cts-secure.channelintelligence.com/9919466_landing.js"></script> 
+    <!-- hero image --> 
+    <div id="banner"> 
+     <img class="banner_img" src="//d2ghmmjkyfysio.cloudfront.net/images/hp/images/mws_banner_amd_660x420.jpg" /> 
+    </div> 
+    <div class="pagearea"> 
+     <span class="page_showing"> Showing 1&nbsp;-&nbsp;10 of 16 </span> 
+     <div>
+       PREV Page 1 of 2 
+      <a href="/hp/catalog.do;jsessionid=2D3B79F1CE79333A45A7CA5E88A31014?cid=2539065&amp;p=2&amp;o=Product+Price%3A%3Aasc">NEXT</a> 
+     </div> 
+    </div> 
+    <div class="sortby"> 
+     <form id="orderForm" name="orderForm" action="/hp/catalog.do;jsessionid=2D3B79F1CE79333A45A7CA5E88A31014?cid=2539065" method="post"> 
+      <input type="hidden" name="searchSwitch" value="" /> 
+      <fieldset> 
+       <dl> 
+        <dt>
+         Sort: 
+         <select name="order" class="sortby_select"> <option selected="selected" value="Product Price::asc">Price : Low - High</option> <option value="Product Price::desc">Price : High - Low</option> <option value="Product Title::asc">Name : A - Z</option> <option value="Product Title::desc">Name : Z - A</option> <option value="Average Rating::desc">Top - Rated</option> <option value="cto::desc">Customizable</option> <option value="cto::asc">Ready-To-Ship</option> </select> 
+        </dt> 
+        <dd>
+         <input name="Submit" type="submit" value="GO" class="sortby_btn_go" />
+        </dd> 
+       </dl> 
+      </fieldset> 
+     </form> 
+    </div> 
+    <ul class="product"> 
+     <li class="product_link" onclick="javascript:window.location='/hp/product/detail.do;jsessionid=2D3B79F1CE79333A45A7CA5E88A31014?itemId=C2X98AV&amp;categoryId=2539065&amp;path=Home%257CLaptops%257CAll%2BAMD%2Blaptops%257CHP%2B2000z-2c00%2B%2BNotebook%2BPC'"> 
+      <dl> 
+       <dd class="product_area1"> 
+        <img src="https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c03312912.png" alt="HP 2000z-2c00  Notebook PC" class="product_img" />
+       </dd> 
+       <dt class="product_area2"> 
+        <span class="product_area4"> <span class="product_title"> &raquo; HP 2000z-2c00 Notebook PC </span> <span class="name_bg">customizable</span> <br /> <span class="processor">AMD Dual-Core Processor E1-1200 + AMD Radeon(TM) HD 7300 Series Discrete-Class Graphics</span><br /> 
+         <!-- review display --> <span class="product_review"><span class="product_star8"></span>3.9 out of 5.0&nbsp;</span> </span> 
+        <span class="product_area3"> <span class="product_pricetitle"> Starting at price: : </span> <span class="product_price"> $ 349.99 <span class="clear"></span> </span> </span> 
+        <!-- gift info below --> 
+        <span class="clear"></span> 
+        <div class="gwp_bg icon_gift icon_car">
+         Eligible for free standard shipping
+        </div>
+        <br /> 
+       </dt> 
+      </dl> </li> 
+     <li class="product_link" onclick="javascript:window.location='/hp/product/detail.do;jsessionid=2D3B79F1CE79333A45A7CA5E88A31014?itemId=B6E68AV&amp;categoryId=2539065&amp;path=Home%257CLaptops%257CAll%2BAMD%2Blaptops%257CHP%2BPavilion%2Bdm1z-4300%2B%2BNotebook%2BPC'"> 
+      <dl> 
+       <dd class="product_area1"> 
+        <img src="https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c02923106.png" alt="HP Pavilion dm1z-4300  Notebook PC" class="product_img" />
+       </dd> 
+       <dt class="product_area2"> 
+        <span class="product_area4"> <span class="product_title"> &raquo; HP Pavilion dm1z-4300 Notebook PC </span> <span class="name_bg">customizable</span> <br /> <span class="processor">AMD Dual-Core Processor E1-1200 + AMD Radeon(TM) HD 7300 Series Discrete-Class Graphics</span><br /> 
+         <!-- review display --> <span class="product_review"><span class="product_star8"></span>4.2 out of 5.0&nbsp;</span> </span> 
+        <span class="product_area3"> <span class="product_pricetitle"> Starting at price: : </span> <span class="product_price"> $ 399.99 <span class="clear"></span> </span> </span> 
+        <!-- gift info below --> 
+        <span class="clear"></span> 
+        <div class="gwp_bg icon_gift icon_car">
+         Eligible for free standard shipping
+        </div>
+        <br /> 
+       </dt> 
+      </dl> </li> 
+     <li class="product_link" onclick="javascript:window.location='/hp/product/detail.do;jsessionid=2D3B79F1CE79333A45A7CA5E88A31014?itemId=C2K41UA&amp;categoryId=2539065&amp;path=Home%257CLaptops%257CAll%2BAMD%2Blaptops%257CHP%2BPavilion%2Bdm1-4310nr%2BNotebook%2BPC'"> 
+      <dl> 
+       <dd class="product_area1"> 
+        <img src="https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c02923106.png" alt="HP Pavilion dm1-4310nr Notebook PC" class="product_img" />
+       </dd> 
+       <dt class="product_area2"> 
+        <span class="product_area4"> <span class="product_title"> &raquo; HP Pavilion dm1-4310nr Notebook PC </span> <br /> <span class="processor">AMD E2-1800 APU (1.7 GHz )</span><br /> 
+         <!-- review display --> </span> 
+        <span class="product_area3"> <span class="product_pricetitle"> Price after savings: </span> <span class="product_price">$399.99 <span class="clear"></span> </span> </span> 
+        <!-- gift info below --> 
+        <span class="clear"></span> 
+        <div class="gwp_bg icon_gift icon_car">
+         Free two business days shipping
+        </div>
+        <br />
+        <div class="gwp_bg icon_gift icon_car">
+         Eligible for free standard shipping
+        </div>
+        <br /> 
+       </dt> 
+      </dl> </li> 
+     <li class="product_link" onclick="javascript:window.location='/hp/product/detail.do;jsessionid=2D3B79F1CE79333A45A7CA5E88A31014?itemId=C2T27AV&amp;categoryId=2539065&amp;path=Home%257CLaptops%257CAll%2BAMD%2Blaptops%257CHP%2BPavilion%2B14z-b100%2B%2BSleekbook'"> 
+      <dl> 
+       <dd class="product_area1"> 
+        <img src="https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c03435378.png" alt="HP Pavilion 14z-b100  Sleekbook" class="product_img" />
+       </dd> 
+       <dt class="product_area2"> 
+        <span class="product_area4"> <span class="product_title"> &raquo; HP Pavilion 14z-b100 Sleekbook </span> <span class="name_bg">customizable</span> <br /> <span class="processor">AMD Dual-Core Processor E1-1200 + AMD Radeon(TM) HD 7300 Series Discrete-Class Graphics</span><br /> 
+         <!-- review display --> <span class="product_review"><span class="product_star7"></span>3.7 out of 5.0&nbsp;</span> </span> 
+        <span class="product_area3"> <span class="product_pricetitle"> Starting at price: : </span> <span class="product_price"> $ 399.99 <span class="clear"></span> </span> </span> 
+        <!-- gift info below --> 
+        <span class="clear"></span> 
+        <div class="gwp_bg icon_gift icon_car">
+         Eligible for free standard shipping
+        </div>
+        <br /> 
+       </dt> 
+      </dl> </li> 
+     <li class="product_link" onclick="javascript:window.location='/hp/product/detail.do;jsessionid=2D3B79F1CE79333A45A7CA5E88A31014?itemId=D1C58UA&amp;categoryId=2539065&amp;path=Home%257CLaptops%257CAll%2BAMD%2Blaptops%257CHP%2BPavilion%2B14-b110us%2BSleekbook'"> 
+      <dl> 
+       <dd class="product_area1"> 
+        <img src="https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c03577651.png" alt="HP Pavilion 14-b110us Sleekbook" class="product_img" />
+       </dd> 
+       <dt class="product_area2"> 
+        <span class="product_area4"> <span class="product_title"> &raquo; HP Pavilion 14-b110us Sleekbook </span> <br /> <span class="processor">AMD Dual-Core A4-4355M APU (1.9 GHz )</span><br /> 
+         <!-- review display --> </span> 
+        <span class="product_area3"> <span class="product_pricetitle"> Price after savings: </span> <span class="product_price">$399.99 <span class="clear"></span> </span> </span> 
+        <!-- gift info below --> 
+        <span class="clear"></span> 
+        <div class="gwp_bg icon_gift icon_car">
+         Free two business days shipping
+        </div>
+        <br />
+        <div class="gwp_bg icon_gift icon_car">
+         Eligible for free standard shipping
+        </div>
+        <br /> 
+       </dt> 
+      </dl> </li> 
+     <li class="product_link" onclick="javascript:window.location='/hp/product/detail.do;jsessionid=2D3B79F1CE79333A45A7CA5E88A31014?itemId=B6C46AV&amp;categoryId=2539065&amp;path=Home%257CLaptops%257CAll%2BAMD%2Blaptops%257CHP%2BPavilion%2Bg6z-2200%2B%2BNotebook%2BPC'"> 
+      <dl> 
+       <dd class="product_area1"> 
+        <img src="https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c03179278.png" alt="HP Pavilion g6z-2200  Notebook PC" class="product_img" />
+       </dd> 
+       <dt class="product_area2"> 
+        <span class="product_area4"> <span class="product_title"> &raquo; HP Pavilion g6z-2200 Notebook PC </span> <span class="name_bg">customizable</span> <br /> <span class="processor">AMD Dual-Core A4-4300M Accelerated Processor (2.5GHz up to 3.0GHze)</span><br /> 
+         <!-- review display --> <span class="product_review"><span class="product_star8"></span>4.2 out of 5.0&nbsp;</span> </span> 
+        <span class="product_area3"> <span class="product_pricetitle"> Starting at price: : </span> <span class="product_price"> $ 429.99 <span class="clear"></span> </span> </span> 
+        <!-- gift info below --> 
+        <span class="clear"></span> 
+        <div class="gwp_bg icon_gift icon_car">
+         Eligible for free standard shipping
+        </div>
+        <br /> 
+       </dt> 
+      </dl> </li> 
+     <li class="product_link" onclick="javascript:window.location='/hp/product/detail.do;jsessionid=2D3B79F1CE79333A45A7CA5E88A31014?itemId=B5Y91AV&amp;categoryId=2539065&amp;path=Home%257CLaptops%257CAll%2BAMD%2Blaptops%257CHP%2BENVY%2B6z-1100%2B%2BSleekbook'"> 
+      <dl> 
+       <dd class="product_area1"> 
+        <img src="https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c03279309.png" alt="HP ENVY 6z-1100  Sleekbook" class="product_img" />
+       </dd> 
+       <dt class="product_area2"> 
+        <span class="product_area4"> <span class="product_title"> &raquo; HP ENVY 6z-1100 Sleekbook </span> <span class="name_bg">customizable</span> <br /> <span class="processor">AMD Dual-Core A6-4455M Processor (2.6GHz/2.1GHz, 1MB L2 Cache) + HD 7500G Discrete-Class Graphics</span><br /> 
+         <!-- review display --> <span class="product_review"><span class="product_star8"></span>4.0 out of 5.0&nbsp;</span> </span> 
+        <span class="product_area3"> <span class="product_pricetitle"> Starting at price: </span> <span class="product_price">$449.99 <span class="clear"></span> </span> </span> 
+        <!-- gift info below --> 
+        <span class="clear"></span> 
+        <div class="gwp_bg icon_gift icon_car">
+         Eligible for free standard shipping
+        </div>
+        <br /> 
+       </dt> 
+      </dl> </li> 
+     <li class="product_link" onclick="javascript:window.location='/hp/product/detail.do;jsessionid=2D3B79F1CE79333A45A7CA5E88A31014?itemId=B5Z51UA&amp;categoryId=2539065&amp;path=Home%257CLaptops%257CAll%2BAMD%2Blaptops%257CHP%2BPavilion%2Bg7-2220us%2BNotebook%2BPC'"> 
+      <dl> 
+       <dd class="product_area1"> 
+        <img src="https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c03209266.png" alt="HP Pavilion g7-2220us Notebook PC" class="product_img" />
+       </dd> 
+       <dt class="product_area2"> 
+        <span class="product_area4"> <span class="product_title"> &raquo; HP Pavilion g7-2220us Notebook PC </span> <br /> <span class="processor">AMD A6-4400M APU (3.2 GHz/2.7 GHz )</span><br /> 
+         <!-- review display --> </span> 
+        <span class="product_area3"> <span class="product_pricetitle"> Price after savings: </span> <span class="product_price">$449.99 <span class="clear"></span> </span> </span> 
+        <!-- gift info below --> 
+        <span class="clear"></span> 
+        <div class="gwp_bg icon_gift icon_car">
+         Free two business days shipping
+        </div>
+        <br />
+        <div class="gwp_bg icon_gift icon_car">
+         Eligible for free standard shipping
+        </div>
+        <br /> 
+       </dt> 
+      </dl> </li> 
+     <li class="product_link" onclick="javascript:window.location='/hp/product/detail.do;jsessionid=2D3B79F1CE79333A45A7CA5E88A31014?itemId=B8B23AV&amp;categoryId=2539065&amp;path=Home%257CLaptops%257CAll%2BAMD%2Blaptops%257CHP%2BPavilion%2Bg7z-2200%2B%2BNotebook%2BPC'"> 
+      <dl> 
+       <dd class="product_area1"> 
+        <img src="https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c03209266.png" alt="HP Pavilion g7z-2200  Notebook PC" class="product_img" />
+       </dd> 
+       <dt class="product_area2"> 
+        <span class="product_area4"> <span class="product_title"> &raquo; HP Pavilion g7z-2200 Notebook PC </span> <span class="name_bg">customizable</span> <br /> <span class="processor">AMD Dual-Core A6-4400M Accelerated Processor (3.0GHz/2.6GHz, 1MB L2 Cache)</span><br /> 
+         <!-- review display --> <span class="product_review"><span class="product_star8"></span>4.1 out of 5.0&nbsp;</span> </span> 
+        <span class="product_area3"> <span class="product_pricetitle"> Starting at price: : </span> <span class="product_price"> $ 479.99 <span class="clear"></span> </span> </span> 
+        <!-- gift info below --> 
+        <span class="clear"></span> 
+        <div class="gwp_bg icon_gift icon_car">
+         Eligible for free standard shipping
+        </div>
+        <br /> 
+       </dt> 
+      </dl> </li> 
+     <li class="product_link" onclick="javascript:window.location='/hp/product/detail.do;jsessionid=2D3B79F1CE79333A45A7CA5E88A31014?itemId=C5F13AV&amp;categoryId=2539065&amp;path=Home%257CLaptops%257CAll%2BAMD%2Blaptops%257CHP%2BPavilion%2B15z-b000%2B%2BSleekbook'"> 
+      <dl> 
+       <dd class="product_area1"> 
+        <img src="https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c03449568.png" alt="HP Pavilion 15z-b000  Sleekbook" class="product_img" />
+       </dd> 
+       <dt class="product_area2"> 
+        <span class="product_area4"> <span class="product_title"> &raquo; HP Pavilion 15z-b000 Sleekbook </span> <span class="name_bg">customizable</span> <br /> <span class="processor">AMD Dual-Core A4-4355M Processor (2.5GHz/2.0GHz, 1MB L2 Cache) + HD 7400G Discrete-Class Graphics</span><br /> 
+         <!-- review display --> <span class="product_review"><span class="product_star9"></span>4.3 out of 5.0&nbsp;</span> </span> 
+        <span class="product_area3"> <span class="product_pricetitle"> Starting at price: : </span> <span class="product_price"> $ 479.99 <span class="clear"></span> </span> </span> 
+        <!-- gift info below --> 
+        <span class="clear"></span> 
+        <div class="gwp_bg icon_gift icon_car">
+         Eligible for free standard shipping
+        </div>
+        <br /> 
+       </dt> 
+      </dl> </li> 
+    </ul> 
+   </div> 
+   <div id="footer">
+    <div class="footer_menu">
+     <a href="tel:8009206947">Call 1 (800) 920-6947</a>|
+     <a href="http://www.shopping.hp.com/?stop_mobi=yes" target="_blank">View HP Direct full Web site</a>|
+     <a href="/hp/privacyPolicy.do">Privacy Policy</a>|
+     <a href="/hp/faq.do">Frequently Asked Questions</a>|
+     <a href="/hp/term.do">Terms Of Use</a>|
+     <a href="/hp/orderTrack.do">Order Status</a>|
+     <a href="https://shopping.hp.com/webapp/shopping/newsletter.do?destPage=news_sub&amp;%3bs=3&amp;%3bl=null" target="_blank">Subscribe to our newsletter</a>
+    </div>
+    <div class="copyright">
+     &copy; 2013 Hewlett-Packard Development Co., L.P.
+    </div>
+   </div> 
+  </div> 
+  <br />  
+ </body>
+</html>

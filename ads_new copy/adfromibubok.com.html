@@ -1,0 +1,1493 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+<meta name="viewport" content="width=1024, maximum-scale=1.0">
+<meta name="verify-v1" content="WHG9AfOToXl/nbuvDMeepmDD45GMqEslSGkwPtAVL3k=">
+
+
+
+<title>Publicar un libro - Publicar libros gratis con Bubok </title>
+<!-- sVyQ-_UaoYJntN83TTIhmkLk5o4 -->
+<!--[if lt IE 9]>
+<script type="text/javascript" >
+document.createElement("nav" ) ;
+document.createElement("header" ) ;
+document.createElement("footer" ) ;
+document.createElement("section" ) ;
+document.createElement("article" ) ;
+document.createElement("aside" ) ;
+document.createElement("hgroup" ) ;
+</script>
+<![endif]--> 
+
+
+
+<script type="text/javascript" src="//cdn.zopim.com/?198vMpt3dK5BlX3BZqyQxTEA6gajI1Hw" charset="utf-8" async=""></script><script src="http://www.google-analytics.com/ga.js" async="" type="text/javascript"></script><script type="text/javascript" language="javascript">
+var current_host = "www.bubok.es";
+</script>
+ 
+<base href="http://www.bubok.es/">
+<link rel="shortcut icon" href="http://www.bubok.es/img/favicon.ico">
+
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery.ui.all.css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+ 
+ 
+
+
+<script type="text/javascript" language="javascript">
+	var site_url = "http://www.bubok.es/";
+	var l_textos_lang_2735="ACEPTAR";
+	var l_cancelar="Cancelar";
+	var l_no = "No";
+	var l_si = "Si";
+	var l_aceptar = "ACEPTAR"; 
+	var l_contactenos = "Contáctanos";
+	var l_subiendo = "subiendo";
+	var l_error_medidas = "Error en medidas del archivo";  
+</script>
+
+<script type="text/javascript" src="/js/imgprev.js"></script>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+/*$.ui.autocomplete.prototype._renderItem = function( ul, item){
+  var term = this.term.split(' ').join('|');
+  var re = new RegExp("(" + term + ")", "gi") ;
+  var t = item.label.replace(re,"$1");
+  return jq( "<li></li>")
+     .data( "item.autocomplete", item )
+     .append( "<a>" + t + "</a>" )
+     .appendTo( ul );
+};
+
+$.widget( "custom.catcomplete", $.ui.autocomplete, {
+_renderMenu: function( ul, items ) {
+  var that = this,
+	currentCategory = "";
+  jq.each( items, function( index, item ) {
+	if ( item.category != currentCategory ) {
+	  ul.append( "<li class='ui-autocomplete-category'>" + item.category + "</li>" );
+	  currentCategory = item.category;
+	}
+	that._renderItemData( ul, item );
+  });
+}
+});
+*/
+
+var jq = jQuery.noConflict();
+
+</script>
+
+
+<script type="text/javascript" language="javascript">
+jq(document).ready(function() { 
+	jq('a').each(function(){
+		if (jq(this).attr("id")!="externo"){
+			var url = this.href;
+			if (url!=""){
+				if((url.indexOf("bubok.es/")==-1) && (url.indexOf("javascript")==-1) && (url.indexOf("mailto")==-1)  && (url.indexOf("sharer.php")==-1)) {
+					url = url.replace("#!/","");
+					jq(this).attr("href","http://www.bubok.es/externo?next="+url);
+					if (this.target!="_blank"){
+						jq(this).attr("target","_blank");
+					}
+				}
+			}
+		}
+	});
+
+	if (typeof jq('.imgp').imgPreview == 'function') {
+		jq('.imgp').imgPreview({
+			containerID: 'imgPrev',
+			srcAttr: 'rel',
+	
+			onShow: function(link){ 
+				if (!jq.browser.msie){
+					jq(link).stop().animate({opacity:0.4});
+					jq('img', this).stop().css({opacity:0});
+				}
+			},
+			onLoad: function(){
+				if (!jq.browser.msie){
+					jq(this).animate({opacity:1}, 300);
+				}
+			},
+			onHide: function(link){
+				if (!jq.browser.msie){
+					jq(link).stop().animate({opacity:1});
+				}
+			}
+		});
+	}
+});
+var auto = null;
+jq(function() {
+/*	jq( "#texto_buscar" ).catcomplete({
+	   source: bsHost + window.location.hostname + "/libro/autocomplete",
+	   minLength: 2,
+	  select: function( event, ui ) {
+		   if (ui.item) {
+				if (ui.item.value.substr(0, 4) == 'http') {
+					window.location = ui.item.value;
+					return false;
+				} else {
+					jq("#texto_buscar").val(ui.item.value);
+					if (ui.item.category == 'Foros') {
+						window.location =  "http://www.bubok.es/" + ui.item.value;
+					} else {
+						window.location = "http://www.bubok.es/tienda/buscar/" + ui.item.value;
+					}
+				}
+		   }
+		  // return false;
+		}
+	});*/
+	auto = new Autocomplete($('texto_buscar'), {'header': true, 'action': bsHost + window.location.hostname + "/libro/autocomplete"});
+});
+
+
+
+/* ]]> */
+</script>
+<meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+<link rel="search" type="application/opensearchdescription+xml" title="Bubok Publishing S.L." href="http://www.bubok.es/files/search.xml">
+
+<meta name="title" content="Publicar un libro - Publicar libros gratis con Bubok">
+<meta name="keywords" content="publicar un libro - como publicar un libro - como publicar un libro - publicar libro - publicar libros gratis - publicar libro editorial - libros - ebook - libros gratis - descargar libros gratis - libros pdf - kindle - descargar libros - ebooks - papyre - ebooks gratis - electronica - poner anuncios gratis - libros online - libros recomendados - nyt - leer libros online - libro - anuncios gratuitos - descargar libros pdf - pdf reader - libros gratis pdf - libros digitales - ebook gratis - libreria - componentes electronicos - librerias - comprar libros - novedades libros - libros pdf gratis - ebooks gratis en español - ebook reader - ereader - calibre ebook -hosting gratis - editoriales - anuncios gratis en internet - bajar libros gratis - libros online gratis - comprar libros online - libros digitales gratis - libro digital - e books - comprar ebook - poner anuncios gratis en internet - anuncio gratis - e reader - ebook precio - ebooks español - poner anuncio gratis - editoriales españolas - anunciar gratis - escribir un libro - clasificados gratis - poner anuncios - google ebooks - publicidad gratis - lector ebook - publicar anuncios - poner anuncio - anunciarse gratis - libro electrónico - ereaders - comparativa ebooks - publicar anuncios gratis en internet - avisos gratis - publicar anuncio gratis - publicar anuncio - buscar libros - libros más vendidos - mejor ebook - libros para ebook - ebook color - ebook barato - diseño editorial - lector dnie - libros electrónicos - ebook precios - anunciosgratis - novedades editoriales - libros electronicos comparativa - ebooks en español - editoriales infantiles - libros ebook - ebooks free - ebook oferta - el mejor ebook - fundas ebook - editar un libro - ebook modelos - ebooks baratos - libros ebook gratis - ediciones - precios ebook - publica tu libro - editorial online - como publicar una novela - como publicar un libro gratis - publicar libros en internet - publicar novela - como publicar - publicar libros online - publicar libro isbn - publicar un ebook - publicar libro digital - publicar libro infantil - publicar libros gratis en internet - publicar libro precio - publicar libros online gratis - publicar libros internet - publicar novela en internet - publicar novela online - como publicar un ebook - publicar un relato">
+<meta name="description" content="Publicar libros gratis en internet es posible con Bubok. Plataforma editorial online lider de autopublicación para tus libros en español.">
+
+
+
+<link rel="stylesheet" href="/css/style_home2010.css?v=42" type="text/css" media="screen">
+<link rel="stylesheet" href="/css/style_general2010.css?v=1" type="text/css" media="screen">
+
+
+<link rel="stylesheet" href="/css/modules/main/style.css?v=1" type="text/css" media="screen"> 
+
+
+
+<!--[if IE]>
+	<link rel="stylesheet" href="/css/modules/mapas/ie_fix.css" type="text/css" media="screen" />
+<![endif]-->
+
+
+<!--[if IE]>
+<link rel="stylesheet" type="text/css" href="css/style_ie.css" />
+<![endif]-->
+
+
+ <link rel="stylesheet" href="/css/style_header_abreo.css?=42" type="text/css" media="screen">
+
+
+
+<link rel="stylesheet" href="/js/css/main.css?v=43" type="text/css" media="screen">
+<link rel="stylesheet" type="text/css" href="/js/wysiwyg/wysiwyg.css?v=42">
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-39772099-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<script type="text/javascript" src="/js/meteora.js"></script><script type="text/javascript" src="http://www.bubok.es/js//lib/Core/Core.js?v=2"></script><script type="text/javascript" src="http://www.bubok.es/js//lib/Native/Array.js?v=2"></script><script type="text/javascript" src="http://www.bubok.es/js//lib/Native/String.js?v=2"></script><script type="text/javascript" src="http://www.bubok.es/js//lib/Native/Function.js?v=2"></script><script type="text/javascript" src="http://www.bubok.es/js//lib/Native/Number.js?v=2"></script><script type="text/javascript" src="http://www.bubok.es/js//lib/Class/Class.js?v=2"></script><script type="text/javascript" src="http://www.bubok.es/js//lib/Native/Element.js?v=2"></script><script type="text/javascript" src="http://www.bubok.es/js//lib/Element/Event.js?v=2"></script><script type="text/javascript" src="http://www.bubok.es/js//lib/Class/Extras.js?v=2"></script><script type="text/javascript" src="http://www.bubok.es/js//lib/Remote/XHR.js?v=2"></script><script type="text/javascript" src="http://www.bubok.es/js//lib/Element/Form.js?v=2"></script><script type="text/javascript" src="http://www.bubok.es/js//lib/Remote/Ajax.js?v=2"></script><script type="text/javascript" src="http://www.bubok.es/js//lib/Core/Meteora.js?v=2"></script>
+
+<script type="text/javascript" src="/js/main.js?v=42"></script>
+<script type="text/javascript" src="/js/ayudaonline.js"></script>
+<script type="text/javascript" src="/js/swfobject2.js"></script> 
+<script type="text/javascript" src="/js/tooltipsy.js"></script> 
+
+<script type="text/javascript" language="javascript">
+
+
+Meteora.uses('Fx.Visual');
+Meteora.uses('Control.Autocomplete');
+
+</script><script type="text/javascript" src="http://www.bubok.es/js//lib/Fx/Base.js?v=2"></script><script type="text/javascript" src="http://www.bubok.es/js//lib/Fx/CSS.js?v=2"></script><script type="text/javascript" src="http://www.bubok.es/js//lib/Fx/Style.js?v=2"></script><script type="text/javascript" src="http://www.bubok.es/js//lib/Element/Dimensions.js?v=2"></script><script type="text/javascript" src="http://www.bubok.es/js//lib/Window/Size.js?v=2"></script><script type="text/javascript" src="http://www.bubok.es/js//lib/Fx/Transitions.js?v=2"></script><script type="text/javascript" src="http://www.bubok.es/js//lib/Fx/Styles.js?v=2"></script><script type="text/javascript" src="http://www.bubok.es/js//lib/Fx/Visual.js?v=2"></script><script type="text/javascript" src="http://www.bubok.es/js//lib/Drag/Base.js?v=2"></script><script type="text/javascript" src="http://www.bubok.es/js//lib/Drag/Move.js?v=2"></script><script type="text/javascript" src="http://www.bubok.es/js//lib/Control/Toolbox.js?v=2"></script><script type="text/javascript" src="http://www.bubok.es/js//lib/Control/Autocomplete.js?v=2"></script>
+
+
+<script type="text/javascript" src="/js/lightbox.js"></script>
+
+
+
+<script language="javascript" type="text/javascript">
+function cambio(){
+var a=$('idiomas');
+if (a.value=="Portugal"){
+   window.location = "http://www.bubok.pt";
+ }
+ 
+}
+
+function cambioIdioma(valor){
+setLang(valor);
+location.reload();
+
+}
+</script>
+  
+
+
+
+            <script language="javascript" type="text/javascript">
+		
+		
+			
+			function setLang(lang)
+			{
+				document.cookie = "lg=" + escape(lang) + "; expires=" + caduca(356) + "; path=/ ;";
+				document.cookie = "lg2=" + escape(lang) + "; expires=" + caduca(356) + "; path=/ ;domain =.bubok.com";
+				 
+			}
+			
+			function caduca(dias) {  
+				var hoy = new Date();
+				var msEnXDias = eval(dias) * 24 * 60 * 60 * 1000;
+				
+				hoy.setTime(hoy.getTime() + msEnXDias);
+				return (hoy.toGMTString());
+			}
+			
+			function buscarTexto(campo){
+				var cosito = document.getElementById(campo).value;
+			   if(cosito!=''){
+				  if(cosito=='Realiza tu búsqueda'){
+				  	document.location.href ="http://www.bubok.es/tienda";
+				  }
+			   	  else{
+					   if(jq('#opt_main_buscador').val()==1){
+						   var string='http://www.bubok.es/buscar/'+cosito.replace(/ /g,'-');
+					   }else if(jq('#opt_main_buscador').val()==2){
+						   var string='https://www.bubok.es/tienda/buscar/'+cosito.replace(/ /g,'-');
+					   }else if(jq('#opt_main_buscador').val()==3){
+						   var string='http://www.bubok.es/ayuda/buscar/'+cosito.replace(/ /g,'-');
+					   }else if(jq('#opt_main_buscador').val()==4 || jq('#opt_main_buscador').val()==5){
+						   var string='http://www.bubok.es/buscar/'+cosito.replace(/ /g,'-');
+					   }
+					   
+						$('form1').action=string;
+						$('form1').submit();
+				  }
+			   }
+			   return false;
+			}
+            </script>
+
+<!-- codigo para tracking de BRAINSISNS-->
+<script type="text/javascript">
+    var bsHost = (("https:" == document.location.protocol) ? "https://" : "http://");
+	document.write(unescape("%3Cscript src='" + bsHost + "tracker.brainsins.com/bstracker.js' type='text/javascript'%3E%3C/script%3E"));
+    document.write(unescape("%3Cscript src='" + bsHost + "d2xkqxdy6ewr93.cloudfront.net/bsbubok.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="http://tracker.brainsins.com/bstracker.js" type="text/javascript"></script><script src="http://d2xkqxdy6ewr93.cloudfront.net/bsbubok.js" type="text/javascript"></script>
+<!-- FIN para tracking de BRAINSISNS-->
+ 
+<style type="text/css">
+.header .btn_mini_nuevo_bubok {
+	margin-left:10px; 
+	margin-top:10px;
+	padding-top: 1px;
+	}
+</style>
+<script type="text/javascript" src="/js/jquery.hint.js"></script>
+
+<script type="text/javascript" charset="utf-8">
+			$(function(){ 
+			    // find all the input elements with title attributes
+				$('input[title!=""]').hint();
+			});
+		</script>
+        
+<style type="text/css">
+.header .buscar span.msgtel {
+	 background: url("/img/home2010/tel.png") no-repeat scroll 2px 4px transparent;
+}
+</style>
+
+ 
+<!--Start of Zopim Live Chat Script-->
+<script type="text/javascript">
+window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
+$.src='//cdn.zopim.com/?198vMpt3dK5BlX3BZqyQxTEA6gajI1Hw';z.t=+new Date;$.
+type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
+</script>
+<!--End of Zopim Live Chat Script-->
+	<script>
+	hayAgentesZopimConectados = true;
+	function mostrarZopim(){
+		if(hayAgentesZopimConectados){
+			$zopim.livechat.button.show();
+			$zopim.livechat.bubble.show();
+		}else esconderZopim();
+    }
+	
+	function esconderZopim(){
+		$zopim.livechat.button.hide();
+		$zopim.livechat.bubble.hide();
+		$zopim.livechat.window.hide();
+	}
+	
+	$zopim(function() {
+    	$zopim.livechat.setOnStatus(updateStatusZopim);
+    });
+	
+	function updateStatusZopim(s){
+		if(s=='offline'){
+			esconderZopim();
+		}
+		
+		if(s=='online') hayAgentesZopimConectados = true;
+		else hayAgentesZopimConectados = false;
+	}
+	
+	</script>
+	 
+	<script>
+		$zopim(function() {
+			esconderZopim();
+		});
+    </script>
+     
+    
+    
+
+ 
+
+<style media="print" type="text/css" __jx__id="___$_3"> .zopim { display: none !important } </style></head>
+<body class="home-di  footnew"><div class="zopim meshim_components_CookieNotification" style="margin: 0px; padding: 0px; border: 0px none; background: none repeat scroll 0% 0% transparent; overflow: visible; position: fixed; z-index: 1000; height: 27px; width: 27px; right: 0px; bottom: 0px; visibility: hidden;" __jx__id="___$_111 ___$_110 ___$_109 ___$_108 ___$_1__cookie_notification"><iframe style="background-color: transparent; vertical-align: text-bottom; overflow: hidden; position: relative; width: 100%; height: 100%; margin: 0px; z-index: 999999;" src="javascript:false" __jx__id="___$_110__iframe" frameborder="0"></iframe></div><div class="zopim meshim_components_Notification" style="margin: 0px; padding: 0px; border: 0px none; background: none repeat scroll 0% 0% transparent; overflow: visible; position: fixed; z-index: 2147483647; height: 41px; width: 37px; right: 202px; bottom: 12px; visibility: hidden;" __jx__id="___$_104 ___$_103 ___$_102 ___$_101 ___$_1__notification"><iframe style="background-color: transparent; vertical-align: text-bottom; overflow: hidden; position: relative; width: 100%; height: 100%; margin: 0px; z-index: 999999;" src="javascript:false" __jx__id="___$_103__iframe" frameborder="0"></iframe></div><div id="__cwindow__" class="zopim meshim_components_LiveHelpWindow" style="margin: 0px; padding: 0px; border: 0px none; background: none repeat scroll 0% 0% transparent; overflow: visible; position: fixed; z-index: 10000002; height: 340px; width: 240px; visibility: hidden; right: 1px; bottom: 0px;" __jx__id="___$_22 ___$_21 ___$_20 ___$_19 ___$_18 ___$_1__liveHelpWindow"><iframe style="background-color: transparent; vertical-align: text-bottom; overflow: hidden; position: relative; width: 100%; height: 100%; margin: 0px; z-index: 999999;" src="javascript:false" __jx__id="___$_21__iframe" frameborder="0"></iframe></div><div class="zopim meshim_components_FloatingButton" style="margin: 0px; padding: 0px; border: 0px none; background: none repeat scroll 0% 0% transparent; overflow: visible; position: fixed; z-index: 10000001; visibility: hidden; right: 1px; bottom: 0px; height: 28px; width: 240px;" __jx__id="___$_14 ___$_13 ___$_12 ___$_1__liveHelpButton"><iframe style="background-color: transparent; vertical-align: text-bottom; overflow: hidden; position: relative; width: 100%; height: 100%; margin: 0px; z-index: 999999;" src="javascript:false" __jx__id="___$_13__iframe" frameborder="0"></iframe></div><div class="zopim meshim_components_FirstUse" style="margin: 0px; padding: 0px; border: 0px none; background: none repeat scroll 0% 0% transparent; overflow: visible; position: fixed; height: 103px; width: 230px; z-index: 10000000; visibility: hidden; right: 1px; bottom: 20px;" __jx__id="___$_6 ___$_5 ___$_4 ___$_1__firstUse"><iframe style="background-color: transparent; vertical-align: text-bottom; overflow: hidden; position: relative; width: 100%; height: 100%; margin: 0px; z-index: 999999;" src="javascript:false" __jx__id="___$_5__iframe" frameborder="0"></iframe></div>
+<div id="hvideo" style="display:none"></div>
+<a href="" name="atop"></a>
+
+
+  
+ <div class="pagina">
+ <!--navidad--><span class="papanoel"></span><!--navidad-->
+            <div class="header">
+            	<div class="usuarios nounder">
+                	
+                       
+                     
+                     
+                     <a title="Identificación de usuario Bubok" rev="autores/form_login" href="identificarme.html" id="alog" rel="vidbox 544 285"><!--<img src="/img/home2010/icon_entra.png" border="0" alt="Identifícate" />--> Identifícate</a> 
+                     
+                      | <a title="Registro de usuario en Bubok" rev="autores/form_register" href="registrarme.html" id="areg" rel="vidbox 579 400">Regístrate</a>
+                      
+                   
+                     
+                     
+                    
+                    	
+                </div>
+                <div class="clear"></div>
+                <div class="buscar conmen">
+                	
+                    
+                	<!--navidad--><span class="deco2"></span><!--navidad-->
+                    <span class="msgtel" style="display:inline">
+                    Si tienes cualquier duda, estaremos encantados de ayudarte <strong>902052573</strong>
+                    </span>
+                	<form action="buscar" onsubmit="buscarTexto('texto_buscar')" method="post" id="form1" name="form1">
+                	<!--<img src="img/home2010/lupabuscar.png" alt="Ej: bubok..." /> -->
+                    
+<script type="text/javascript">
+//<![CDATA[
+function borrar_buscar(){
+							if($('texto_buscar').value=="Ej: bubok...") $('texto_buscar').value="";
+						}
+function on_change_searchtype() {
+	if(auto && jq('#texto_buscar').val() != '' && jq('#text_buscar').val() != 'Realiza tu búsqueda'){auto.search();}
+}
+//]]>
+					</script>
+                    <input autocomplete="off" class="txt" id="texto_buscar" name="buscar" value="Realiza tu búsqueda" onfocus="javascript:if(this.value=='Realiza tu búsqueda')this.value='';" onblur="javascript:if(this.value=='')this.value='Realiza tu búsqueda';" type="text">
+                    
+                    
+                    
+                    <!--onclick="javascript:borrar_buscar();" value="Realiza tu búsqueda"-->
+                    <span>en</span>
+                    <span class="elselect">
+                    <select class="select" onchange="javascript:on_change_searchtype()" name="buscaren" id="opt_main_buscador">
+                              <option value="1" selected="selected">Todo Bubok</option>
+
+                    	 
+                        <option value="2">La tienda</option>
+                         
+                        <option value="3">Ayuda</option>
+                        <option value="4">Autores / Colaboradores</option>
+                        <option value="5">Foros</option>
+                        
+                    </select>
+                    </span>
+                    <input class="btn_mini_nuevo_bubok txtmenu" name="enviar" onclick="buscarTexto('texto_buscar')" value="BUSCAR" type="button">
+                    </form>
+                </div>
+                <div class="clear"></div>
+                <div class="menu">
+                	<!--navidad-->
+	                    <span class="lanieve"></span>
+	                    <span class="lacasita"></span>
+                    <!--navidad-->
+                	<!--<div class="derecho nounder">
+                    	
+                    </div>-->
+                	<div class="izquierdo txtmenu nounder">						
+                        
+                        <a href="https://www.bubok.es/tienda" title="Librería" class="icolib">Librería</a>
+                        
+                          
+                        <span class="separadorm"></span>
+                        <a href="http://www.bubok.es/ayuda" title="Ayuda">Ayuda</a>
+                         
+                        
+                        <span style="display:inline" class="separadorm"></span>
+                        <span style="display:inline"><a href="http://www.bubok.es/foros" title="Foros">Foros</a> </span>
+                        
+                        <span class="separadorm"></span>
+                        <a href="http://www.bubok.es/blog/" title="Blog">Blog</a> 
+                        
+                        <span class="separadorm"></span>
+                        <a href="http://www.bubok.es/servicios360" title="Servicios editoriales">Servicios editoriales</a>
+                        
+                        <span style="display:inline;" class="separadorm"></span>
+                      <span style="display:inline;">  <a href="http://www.bubok.es/packs360" title="Packs editoriales">Packs editoriales</a>  </span>
+                      
+                      <span class="separadorm"></span>
+                    	<a href="http://www.bubok.es/publicar" title="Publica tu libro">Publica tu libro</a> 
+                        
+                        
+                    </div>
+                </div>
+                <a title="Publicar un libro - Publicar libros gratis con Bubok" class="logoweb" href="http://www.bubok.es/">
+                	<span class="logo">
+	                	<!--navidad-->
+	                    <span class="lazologo"></span>
+	                    <span class="nievelogo"></span>
+                        <span class="deco1"></span>
+	                    <!--navidad-->
+	                </span>
+                </a>
+            </div>
+            <!-- EMPIEZA EL CONTENIDO -->
+            <div class="contenido">?<div class="elpadde">
+    <div class="division_superior">
+        <div class="izquierda">
+        	<div class="bannerynotihome">
+            <div class="banner">
+                <span class="title">Haz realidad tu sueño de publicar</span>
+                <ul>
+                    <li>Sin costes ni tiradas mínimas</li>
+                    <li>Los derechos de la obra son tuyos</li>
+                    <li>Fácil y rápido</li>
+                </ul>
+                 
+                <div class="botones_registro_publicar"> 
+                                	¿No te has registrado?
+                    <a class="btn_registra" href="javascript:launchAreg();">Regístrate</a>
+                </div>
+                <div class="botones_registro_publicar2">
+                                	¿Empezamos?
+                    <a class="btn_publica" href="http://www.bubok.es/publicar">Publica</a>
+                </div>
+                <div class="clear"></div>
+                 
+                
+                 
+                <a class="iconos nounder verde" title="¿Qué es bubok?" href="que-es-bubok"><img src="http://www.bubok.es/img/home2010/icon1banner.png" alt="¿Qué es bubok?">¿Qué es bubok?</a>
+                 
+                <a class="iconos nounder verde elmanual" title="Ver el manual" href="http://www.bubok.es/libros/17194/Como-publicar-en-Bubok"><img src="http://www.bubok.es/img/home2010/icon2banner.png" alt="Ver el manual">Ver el manual</a>
+            </div>
+            
+            <div class="derecha noticiasdehome">
+            	             
+            <div class="noticia">
+                <a href="http://www.bubok.es/blog/2012/07/24/nuevo-servicio-book-trailer/" title="Consigue tu Book Trailer"><img alt="Consigue tu Book Trailer" src="http://www.bubok.es/blog/wp-content/uploads/trailer11.jpg"></a>
+                <a class="nounder verde" href="http://www.bubok.es/blog/2012/07/24/nuevo-servicio-book-trailer/" title="Consigue tu Book Trailer"><span class="title">Consigue tu Book Trailer</span></a><br>
+                <div class="justificado_noticia"><a style="text-decoration:none;" href="http://www.bubok.es/blog/2012/07/24/nuevo-servicio-book-trailer/" title="¿Quieres un vídeo promocional único de tu libro? Consigue la mejor publicidad para tu obra."><span class="cont">¿Quieres un vídeo promocional único de tu libro? Consigue la mejor publicidad para tu obra.</span></a></div>
+            </div>
+            <div class="clear"></div>
+             
+
+            
+
+             
+            <div class="noticia">
+                <a href="http://www.bubok.es/blog/2013/03/14/financia-tus-packs-editoriales-de-una-forma-facil-y-sencilla/"><img src="http://www.bubok.es/blog/wp-content/uploads/monedas-plantapastilla.bmp" alt="¿Necesitas financiación?"></a>
+                <a class="nounder verde" href="http://www.bubok.es/blog/2013/03/14/financia-tus-packs-editoriales-de-una-forma-facil-y-sencilla/"><span class="title">¿Necesitas financiación?</span></a><br>
+                <div class="justificado_noticia"><a style="text-decoration:none;" href="http://www.bubok.es/blog/2013/03/14/financia-tus-packs-editoriales-de-una-forma-facil-y-sencilla/" title="Ahora puedes pagar tu pack editorial en cómodos plazos. Consigue más información aquí."><span class="cont">Ahora puedes pagar tu pack editorial en cómodos plazos. Consigue más información aquí.</span></a></div>
+            </div>
+            <div class="clear"></div>
+             
+
+            
+
+             
+            <div class="noticia">
+                <a href="http://www.bubok.es/blog/2012/05/30/nuevo-sistema-de-stock-virtual/"><img src="http://www.bubok.es/blog/wp-content/uploads/stockpastilla.jpeg" alt="Nuevo servicio de Stock Virtual"></a>
+                <a class="nounder verde" href="http://www.bubok.es/blog/2012/05/30/nuevo-sistema-de-stock-virtual/"><span class="title">Nuevo servicio de Stock Virtual</span></a><br>
+                <div class="justificado_noticia"><a style="text-decoration:none;" href="http://www.bubok.es/blog/2012/05/30/nuevo-sistema-de-stock-virtual/" title="Abarata costes y optimiza la impresión con nuestro nuevo sistema. ¡Contáctanos y consíguelo ya!"><span class="cont">Abarata costes y optimiza la impresión con nuestro nuevo sistema. ¡Contáctanos y consíguelo ya!</span></a></div>
+            </div>
+            <div class="clear"></div>
+             
+            </div>
+            </div><!--fin bannerynotihome-->
+                
+ 			<div class="barlogs">
+            	<h6>Publica en Bubok y vende en...</h6>
+                <ul>
+                	<li><img src="/img/thumbslogos/amazon.jpg" alt="Amazon" title="Amazon"></li>
+                    <li><img src="/img/thumbslogos/agapea.jpg" alt="agapea" title="Agapea"></li>
+                    <li><img src="/img/thumbslogos/casadellibro.jpg" alt="casadellibro" title="Casa del libro"></li>
+                    <li><img src="/img/thumbslogos/google.jpg" alt="Google" title="Próximamente en Google eBooks "></li>
+                    <li><img src="/img/thumbslogos/libranda.jpg" alt="Libranda" title="Libranda"></li>
+                    <li><img src="/img/thumbslogos/todoebook.jpg" alt="Todoebook" title="Todoebook"></li>
+                    <li><img src="/img/thumbslogos/exp.jpg" alt="Expansión" title="Expansión"></li>
+                </ul>
+            </div>
+    
+            
+            
+            <div class="derecha cienporcient">
+
+
+
+			<div class="pasos nounder">
+            	 
+                <a href="http://www.bubok.es/packs360" title="Descubre los packs editoriales: ISBN, depósito legal, maquetación..."><span class="paso paso1">
+                       <span class="cont">Descubre los packs editoriales: ISBN, depósito legal, maquetación...</span>
+                        </span></a>
+                 
+                
+                <a href="http://www.bubok.es/asi-son-nuestros-libros" title="¿Cómo son los libros de Bubok? Impresión 100% profesional"><span class="paso paso2">
+                        <span class="cont asisonn">¿Cómo son los libros de Bubok? Impresión 100% profesional</span>
+                    </span></a>
+                <a href="http://www.bubok.es/servicios360" title="Conoce los servicios editoriales que Bubok ofrece para tu libro"><span class="paso paso3">
+                        <span class="cont">Conoce los servicios editoriales que Bubok ofrece para tu libro</span>
+                    </span></a>
+            </div>
+            <div class="comunidad">
+                <span class="title">Comunidad de autores bubok</span>
+                <ul>
+                    <li><a class="blanco nounder" href="casos-de-exito" title="Inspírate en sus historias de éxito">Inspírate en sus historias de éxito</a></li>
+                    <li><a class="blanco nounder" href="http://www.bubok.es/autores/listado" title="Conecta con otros autores">Conecta con otros autores</a></li>
+                    <li><a class="blanco nounder" title="Registro de usuario en Bubok" href="javascript:launchAreg();">Únete a nosotros</a></li>
+                </ul>
+            </div>
+        </div><!--fin derecha-->
+        </div> <!--fin izquierda-->
+        
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+
+    <div class="panel">
+        <div class="div_title">
+            <div class="title"><a class="nounder" href="https://www.bubok.es/tienda">Librería Bubok</a></div>
+            <div class="links">
+                <a class="nounder verde" href="https://www.bubok.es/tienda" title="70.979 Libros publicados">70.979 Libros publicados</a> | 
+                <a class="nounder verde" href="https://www.bubok.es/tienda" title="todos los libros">todos los libros</a>
+            </div>
+        </div>
+        <div class="div_libros">
+              
+             <div class="libro">
+                <a class="title nounder" href="http://www.bubok.es/libros/221642/YO-NO-HUYO-CUANDO-CORRO"><img src="http://www.bubok.es/archivo/portadas/usuario/9d7b7fd6b8f7c2d2756d8d9e55d5ebfd_portada_thumb.jpg" alt="YO NO HUYO CUANDO CORRO" height="151" width="100"></a><br>
+                <a class="title nounder" href="http://www.bubok.es/libros/221642/YO-NO-HUYO-CUANDO-CORRO">YO NO HUYO CUANDO CORRO</a><br>
+                <a class="autor nounder" href="http://JMMillariega.bubok.es" title="Jose Manuel Garcia Fernandez">Jose Manuel Garcia Fernandez</a>
+            </div>
+              
+             <div class="libro">
+                <a class="title nounder" href="http://www.bubok.es/libros/220141/Cintas-de-cassette-La-cara-B-de-la-musica"><img src="http://www.bubok.es/archivo/portadas/usuario/d149d163ae59085a6b2aff602ef73fd4_portada_thumb.jpg" alt="Cintas de cassette. La cara B de [...]" height="151" width="100"></a><br>
+                <a class="title nounder" href="http://www.bubok.es/libros/220141/Cintas-de-cassette-La-cara-B-de-la-musica">Cintas de cassette. La cara B de [...]</a><br>
+                <a class="autor nounder" href="http://oscargarciablesa.bubok.es" title="Oscar Garcia Blesa">Oscar Garcia Blesa</a>
+            </div>
+              
+             <div class="libro">
+                <a class="title nounder" href="http://www.bubok.es/libros/223590/Recetas-en-10-o-20-minutos-con-tu-olla-superrapida-pero-sin-presion-tapada-con-su-tapa-de-cristal"><img src="http://www.bubok.es/archivo/portadas/usuario/ec84e0e2b436166d94ca6b0588f4a389_portada_thumb.jpg" alt="Recetas en 10 o 20 minutos con tu [...]" height="151" width="100"></a><br>
+                <a class="title nounder" href="http://www.bubok.es/libros/223590/Recetas-en-10-o-20-minutos-con-tu-olla-superrapida-pero-sin-presion-tapada-con-su-tapa-de-cristal">Recetas en 10 o 20 minutos con tu [...]</a><br>
+                <a class="autor nounder" href="http://cristinagaliano.bubok.es" title="Cristina Galiano">Cristina Galiano</a>
+            </div>
+             
+        </div>
+         
+        <div class="div_info">
+            <div class="title_it">Manuales de ayuda al escritor</div>
+             
+            <div class="item_ahora">
+                <div class="portada">
+                    <a href="http://www.bubok.es/libros/17196/Tutorial-de-word-para-maquetar-tu-libro" title="Tutorial de word para maquetar tu libro"><img alt="Tutorial de word para maquetar tu libro" src="http://www.bubok.es/archivo/portadas/usuario/b40a13d4ebea2ec3499f265928cac1d8_portada_thumb.jpg" height="69" width="51"></a>
+                </div>
+                <a href="http://www.bubok.es/libros/17196/Tutorial-de-word-para-maquetar-tu-libro" title="Tutorial de word para maquetar tu libro">Tutorial de word para maquetar tu libro</a><br>
+                <a class="autor" href="http://ayuda.bubok.es" title="Ayuda de Bubok">Ayuda de Bubok</a>
+            </div>
+            <div class="clear"></div>
+              
+            <div class="item_ahora">
+                <div class="portada">
+                    <a href="http://www.bubok.es/libros/17262/Guia-Practica-para-vender-tu-libro-version-actualizada" title="Guía Práctica para vender tu libro (versión actualizada)"><img alt="Guía Práctica para vender tu libro (versión actualizada)" src="http://www.bubok.es/archivo/portadas/usuario/0b823d8b45ee3eaf26e538b6cff6f451_portada_thumb.jpg" height="69" width="51"></a>
+                </div>
+                <a href="http://www.bubok.es/libros/17262/Guia-Practica-para-vender-tu-libro-version-actualizada" title="Guía Práctica para vender tu libro (versión actualizada)">Guía Práctica para vender tu libro (versión actualizada)</a><br>
+                <a class="autor" href="http://ayuda.bubok.es" title="Ayuda de Bubok">Ayuda de Bubok</a>
+            </div>
+            <div class="clear"></div>
+             
+
+
+        </div>
+         
+         
+        <div class="videohomebu">
+          <span class="videosid">
+          		<!--<object width="184" height="160"><param name="movie" value="http://www.youtube.com/v/dfutk82ccHc"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/dfutk82ccHc"></embed></object>	 -->
+         		<object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" height="160" width="184">
+         		 <param name="movie" value="http://www.youtube.com/v/dfutk82ccHc">
+          		 <param name="quality" value="high">
+          		 <param name="wmode" value="opaque">
+          		 <param name="swfversion" value="6.0.65.0">
+          		 <param name="expressinstall" value="Scripts/expressInstall.swf">
+          		 <!--[if !IE]>-->
+          		 <object type="application/x-shockwave-flash" data="http://www.youtube.com/v/dfutk82ccHc" height="160" width="184">
+           		 <!--<![endif]-->
+             	 <param name="quality" value="high">
+            	 <param name="wmode" value="opaque">
+            	 <param name="swfversion" value="6.0.65.0">
+            	 <param name="expressinstall" value="Scripts/expressInstall.swf">
+            	 <!--[if !IE]>-->
+          		 </object>
+          		 <!--<![endif]-->
+        		</object>
+				<script type="text/javascript">
+                swfobject.registerObject("FlashID");
+                </script>
+          </span>
+          <p>Libros recomendados de Junio 2012</p>
+        </div>
+         
+        <div class="clear"></div>
+    </div>
+
+
+    <div class="panel">
+        <div class="div_title">
+            <div class="title"><a class="nounder" href="">Comunidad Bubok</a></div>
+            <div class="links">
+                <a class="nounder" href="http://www.bubok.es/autores/listado" title="75.822 usuarios">75.822 Usuarios</a> | 
+                <a class="nounder" title="Registro de usuario en Bubok" rev="autores/form_register" href="registrarme.html" id="areg2" rel="vidbox 579 400">Registro de usuario en Bubok</a>
+            </div>
+        </div>
+
+        <div class="paneldiv3 ahoraenmov">
+            <div class="title_it">Ahora en Bubok</div>
+             
+            <div class="item_ahora">
+                <img alt="Ahora en Bubok" src="http://www.bubok.es/img/home2010/icon1ahora.png">
+                <a title="Bess91" href="http://Bess91.bubok.es">Bess91</a> ha publicado el libro  <a title="Esbozos de un alma" href="http://www.bubok.es/libros/224904/Esbozos-de-un-alma">Esbozos de un alma</a>
+            </div>
+              
+            <div class="item_ahora">
+                <img alt="Ahora en Bubok" src="http://www.bubok.es/img/home2010/icon1ahora.png">
+                <a title="Scire777" href="http://Scire777.bubok.es">Scire777</a> ha votado por el libro <a title="Marcha por la extinción del ser humano." href="http://www.bubok.es/libros/224894/Marcha-por-la-extincion-del-ser-humano">Marcha por la extinción del ser humano.</a>
+            </div>
+              
+            <div class="item_ahora">
+                <img alt="Ahora en Bubok" src="http://www.bubok.es/img/home2010/icon1ahora.png">
+                <a title="Gbbmoran" href="http://Gbbmoran.bubok.es">Gbbmoran</a> ha votado por el libro <a title="El Lienzo" href="http://www.bubok.es/libros/224895/El-Lienzo">El Lienzo</a>
+            </div>
+              
+            <div class="item_ahora">
+                <img alt="Ahora en Bubok" src="http://www.bubok.es/img/home2010/icon1ahora.png">
+                <a title="MichiiVargas" href="http://MichiiVargas.bubok.es">MichiiVargas</a> ha votado por el libro <a title="El Lienzo" href="http://www.bubok.es/libros/224895/El-Lienzo">El Lienzo</a>
+            </div>
+              
+            <div class="item_ahora">
+                <img alt="Ahora en Bubok" src="http://www.bubok.es/img/home2010/icon1ahora.png">
+                <a title="Becka" href="http://Becka.bubok.es">Becka</a> se ha unido a Bubok
+            </div>
+             
+        </div>
+        <div class="paneldiv3 beish forobumov">
+            <div class="title_it">Foros Bubok</div>
+             
+            <div class="item_ahora">
+                 <a href="http://www.bubok.es/foros/tema/9589/63-CONCURSO-DE-MICRO-RELATOS-SUS-ENORMES-RUEDAS" title="63 CONCURSO DE MICRO RELATOS: SUS ENORMES RUEDAS.">63 CONCURSO DE MICRO RELATOS: SUS ENORMES RUEDAS.</a><br>
+                22 de Mayo de 2013 a las 0:49<br>
+                <a href="http://raitann.bubok.es" title="raitann">raitann</a>
+            </div>
+              
+            <div class="item_ahora">
+                 <a href="http://www.bubok.es/foros/tema/9589/63-CONCURSO-DE-MICRO-RELATOS-SUS-ENORMES-RUEDAS" title="63 CONCURSO DE MICRO RELATOS: SUS ENORMES RUEDAS.">63 CONCURSO DE MICRO RELATOS: SUS ENORMES RUEDAS.</a><br>
+                22 de Mayo de 2013 a las 0:27<br>
+                <a href="http://raitann.bubok.es" title="raitann">raitann</a>
+            </div>
+              
+            <div class="item_ahora">
+                 <a href="http://www.bubok.es/foros/tema/9605/Donde-se-distribuyen-los-libros" title="¿Dónde se distribuyen los libros?">¿Dónde se distribuyen los libros?</a><br>
+                21 de Mayo de 2013 a las 23:33<br>
+                <a href="http://rafalvar.bubok.es" title="rafalvar">rafalvar</a>
+            </div>
+              
+            <div class="item_ahora">
+                 <a href="http://www.bubok.es/foros/tema/9571/CII-edicion-del-concurso-de-relatos-mensual-Solo-PRECOMENTARIOS" title="CII edición del concurso de relatos mensual Solo PRECOMENTARIOS">CII edición del concurso de relatos mensual Solo PRECOMENTARIOS</a><br>
+                21 de Mayo de 2013 a las 23:02<br>
+                <a href="http://Zara_x.bubok.es" title="Zara_x">Zara_x</a>
+            </div>
+             
+            <div class="item_ahora sinmargmov">
+                 <br><a href="http://www.bubok.es/foros" title="Los foros de Bubok" class="btnmovil">Los foros de Bubok</a>
+            </div>
+
+              
+        </div>
+        <div class="paneldiv3 ultilibmov">
+            <div class="title_it">Últimos libros publicados</div>
+             
+            <div class="item_ahora">
+                <div class="portada">
+                    <a href="http://www.bubok.es/libros/224905/Fenomenos-Fenomenales" title="Fenómenos Fenomenales"><img alt="Fenómenos Fenomenales" src="http://www.bubok.es/archivo/portadas/usuario/4e340ba4eaeb70c87b9205d08b51a2e3_portada_thumb.jpg" height="69" width="51"></a>
+                </div>
+                <a href="http://www.bubok.es/libros/224905/Fenomenos-Fenomenales" title="Fenómenos Fenomenales">Fenómenos Fenomenales</a><br>
+                <a class="autor" href="http://KateeM.bubok.es" title="Kat Mejía">Kat Mejía</a>
+            </div>
+            <div class="clear"></div>
+              
+            <div class="item_ahora">
+                <div class="portada">
+                    <a href="http://www.bubok.es/libros/224904/Esbozos-de-un-alma" title="Esbozos de un alma"><img alt="Esbozos de un alma" src="http://www.bubok.es/archivo/portadas/usuario/995b3aeae7a6a50cc17c23659c80c3fa_portada_thumb.jpg" height="69" width="51"></a>
+                </div>
+                <a href="http://www.bubok.es/libros/224904/Esbozos-de-un-alma" title="Esbozos de un alma">Esbozos de un alma</a><br>
+                <a class="autor" href="http://Bess91.bubok.es" title="Bessy González Guerrero">Bessy González Guerrero</a>
+            </div>
+            <div class="clear"></div>
+              
+            <div class="item_ahora">
+                <div class="portada">
+                    <a href="http://www.bubok.es/libros/224903/BLUST" title="BLUST"><img alt="BLUST" src="http://www.bubok.es/archivo/portadas/usuario/acd1874cbc6b9b2bfb7dd797d0533d7f_portada_thumb.jpg" height="69" width="51"></a>
+                </div>
+                <a href="http://www.bubok.es/libros/224903/BLUST" title="BLUST">BLUST</a><br>
+                <a class="autor" href="http://MichiiVargas.bubok.es" title="Michelle Vargas">Michelle Vargas</a>
+            </div>
+            <div class="clear"></div>
+             
+
+            <div class="item_ahora sinmargmov">
+                <br><a href="https://www.bubok.es/tienda" class="btnmovil">Todos los libros Bubok</a>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+
+
+     
+    <div class="panel_boletin">
+        <script type="text/javascript">
+            function listar_subcategoria()
+            { 
+                new Ajax('autores/subcategoria2010/'+$('categoria').value, {
+                    update: $("subcategorias")
+                }).request();
+							 
+            }
+            function valida_emailsemanal()
+            {
+                if($('emailboletinsemana').value=="Escríbenos tu email"){
+                    Dialog("Escribe tu correo");
+                    return false;
+                }else{
+                    if($('categoria').value==0){ 
+						Dialog("Elige la categoría");
+                        return false;
+                    }
+					else{
+						if(!$('acepto_cond_uso').checked ){
+							Dialog("Debes aceptar las condiciones de uso");
+							return false;
+						}
+						else{
+							return true; 	
+						}
+					}
+                }
+            }
+        </script>
+        <div class="title">Si quieres recibir semanalmente novedades de libros Bubok</div>
+        <form method="post" action="autores/guardar_datos_boletin" name="boletin" class="boletin" onsubmit="javascript:return valida_emailsemanal();">
+            <input class="input2" value="Escríbenos tu email" id="emailboletinsemana" name="email" type="text">
+            <select id="categoria" class="input" size="1" name="categoria" onchange="javascript:listar_subcategoria();">
+                <option value="0">Selecciona el tema que te interesa</option>
+                 
+                <option value="1">Cómic</option>
+                  
+                <option value="2">Infantil, Juvenil</option>
+                  
+                <option value="3">Narrativa</option>
+                  
+                <option value="4">Poesía</option>
+                  
+                <option value="5">Humanidades e Historia</option>
+                  
+                <option value="6">Artes</option>
+                  
+                <option value="7">Cuidado personal y autoayuda</option>
+                  
+                <option value="8">Ciencias sociales y empresa</option>
+                  
+                <option value="9">Religión y filosofía</option>
+                  
+                <option value="10">Ciencias naturales</option>
+                  
+                <option value="11">Ciencias aplicadas e informática</option>
+                  
+                <option value="12">Ciencias ocultas</option>
+                  
+                <option value="13">Manuales, enciclopedias, diccionarios e idiomas</option>
+                  
+                <option value="14">Viajes, tiempo libre y ocio</option>
+                  
+                <option value="15">Ensayo</option>
+                  
+                <option value="16">Teatro y Guiones</option>
+                  
+                <option value="17">Varios</option>
+                  
+                <option value="18">Ciencias de la salud</option>
+                  
+                <option value="19">Revistas</option>
+                  
+                <option value="20">No categorizado</option>
+                  
+                <option value="21">Audio libros</option>
+                  
+                <option value="22">Relaciones humanas y vida</option>
+                  
+                <option value="23">Economia General</option>
+                  
+                <option value="24">Biografía</option>
+                 
+            </select>
+            <span id="subcategorias"> </span>
+            <!--<input class="btn txtmenu" type="button" value="Enviar" />-->
+        </form>
+    </div>
+     
+
+    <div class="panel sinelpad">
+        <div class="div_noticias" style="padding-right: 15px; width: 421px;"><!--style="padding-right: 15px; width: 421px;"-->
+             <div class="title_it">Últimas noticias en Bubok</div>
+            <div class="principal">
+                 
+                <!--<a class="nounder" href=""><img width="85" src="img/home2010/img_concurso_microrelatos.png" /></a>-->
+                <a class="nounder" href="http://www.bubok.es/blog/2013/05/13/estrenamos-acabado-para-la-portada-de-tu-libro-escoge-entre-mate-o-barniz-brillo/" title="Estrenamos acabado para la portada de tu libro: escoge entre mate o barniz brillo">Estrenamos acabado para la portada de tu libro: escoge entre mate o barniz brillo</a><br>
+                Desde Bubok, seguimos trabajando cada día para ofrecerte más posibilidades a la hora de publicar tu obra. En esta ocasión, queremos informarte de que ya puedes escoger el tipo de acabado que quieres para la portada de tu libro. Ahora, tienes la opción de elegir si quieres que esta sea en mate o en barniz brillo.
+Cuando subas tu libro a la [...]
+                 
+            </div>
+            <div class="clear"></div>
+             
+            <ul>
+                 
+                <li><a class="nounder" href="http://www.bubok.es/blog/2013/04/29/convierte-tus-posts-de-wordpress-en-un-libro/" title="Convierte tus posts de WordPress en un libro">Convierte tus posts de WordPress en un libro</a></li>
+                  
+                <li><a class="nounder" href="http://www.bubok.es/blog/2013/04/26/cual-es-la-estructura-correcta-de-un-libro/" title="¿Cuál es la estructura correcta de un libro?">¿Cuál es la estructura correcta de un libro?</a></li>
+                  
+                <li><a class="nounder" href="http://www.bubok.es/blog/2013/04/22/vive-la-noche-de-los-haikus-con-bubok/" title="Vive la noche de los Haikus con Bubok">Vive la noche de los Haikus con Bubok</a></li>
+                 
+            </ul>
+             
+            <div class="item_ahora">
+                <a title="Todas las noticias" href="http://www.bubok.es/blog" class="btnmovil">Todas las noticias</a>
+            </div>
+        </div>
+
+        <div class="div_info2 libremov"> <!---->
+             <div class="title_it1">Librerías Especializadas</div>
+             
+            <div class="item_acuerdo">
+                <a class="nounder link" title="Librería Academiatv" href="http://academiatv.bubok.es">Librería Academiatv</a><span><a class="nounder link2" title="Librería Academiatv" href="http://academiatv.bubok.es">[+]</a></span>
+            </div>
+              
+            <div class="item_acuerdo">
+                <a class="nounder link" title="Librería Arcoiris" href="http://libreriaarcoiris.bubok.es">Librería Arcoiris</a><span><a class="nounder link2" title="Librería Arcoiris" href="http://libreriaarcoiris.bubok.es">[+]</a></span>
+            </div>
+              
+            <div class="item_acuerdo">
+                <a class="nounder link" title="Librería Autoayuda" href="http://librosautoayuda.bubok.es">Librería Autoayuda</a><span><a class="nounder link2" title="Librería Autoayuda" href="http://librosautoayuda.bubok.es">[+]</a></span>
+            </div>
+              
+            <div class="item_acuerdo">
+                <a class="nounder link" title="Librería Ciencia Ficción" href="http://libroscienciaficcion.bubok.es">Librería Ciencia Ficción</a><span><a class="nounder link2" title="Librería Ciencia Ficción" href="http://libroscienciaficcion.bubok.es">[+]</a></span>
+            </div>
+              
+            <div class="item_acuerdo">
+                <a class="nounder link" title="Librería Concurso" href="http://concurso.bubok.es">Librería Concurso</a><span><a class="nounder link2" title="Librería Concurso" href="http://concurso.bubok.es">[+]</a></span>
+            </div>
+              
+            <div class="item_acuerdo">
+                <a class="nounder link" title="Librería de Economía y Empresa" href="http://expansion.bubok.es">Librería de Economía y Empresa</a><span><a class="nounder link2" title="Librería de Economía y Empresa" href="http://expansion.bubok.es">[+]</a></span>
+            </div>
+              
+            <div class="item_acuerdo">
+                <a class="nounder link" title="Librería Espublico" href="http://espublico.bubok.es">Librería Espublico</a><span><a class="nounder link2" title="Librería Espublico" href="http://espublico.bubok.es">[+]</a></span>
+            </div>
+              
+            <div class="item_acuerdo">
+                <a class="nounder link" title="Librería Novela Romantica" href="http://novela_romantica.bubok.es">Librería Novela Romantica</a><span><a class="nounder link2" title="Librería Novela Romantica" href="http://novela_romantica.bubok.es">[+]</a></span>
+            </div>
+              
+            <div class="clear"></div>
+        </div>
+
+        <div class="div_info acuerdosmov"><!---->
+            <div class="title_it">Acuerdos institucionales</div>
+             
+            <div class="item_acuerdo">
+                <a href="http://expansion.bubok.es/"> 
+                    <img src="http://bubok.es/img/home2010/logoexpansion.jpg" alt="Expansion.com"></a>
+                <a class="nounder link" href="http://expansion.bubok.es/">Expansion.com</a>
+            </div>
+            <div class="clear"></div>
+              
+            <div class="item_acuerdo">
+                <a href="http://cervantesvirtual.bubok.es"> 
+                    <img src="http://bubok.es/img/home2010/logocervantes.jpg" alt="Biblioteca Virtual Miguel de Cervantes"></a>
+                <a class="nounder link" href="http://cervantesvirtual.bubok.es">Biblioteca Virtual Miguel de Cervantes</a>
+            </div>
+            <div class="clear"></div>
+              
+            <div class="item_acuerdo">
+                <a href="http://mjusticia.bubok.es/"> 
+                    <img src="http://bubok.es/img/home2010/logomjusticia.jpg" alt="Ministerio de Justicia"></a>
+                <a class="nounder link" href="http://mjusticia.bubok.es/">Ministerio de Justicia</a>
+            </div>
+            <div class="clear"></div>
+              
+            <div class="item_acuerdo">
+                <a href="http://bne.bubok.es/"> 
+                    <img src="http://bubok.es/img/home2010/logobne.png" alt="Biblioteca Nacional"></a>
+                <a class="nounder link" href="http://bne.bubok.es/">Biblioteca Nacional</a>
+            </div>
+            <div class="clear"></div>
+             
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+<div class="clear"></div>
+
+              		</div>
+            <!-- TERMINA EL CONTENIDO -->
+            
+            <!-- COMIENZA FOOTER -->
+            <div class="footer">
+            	<br>
+            	<div class="compatir">
+                	<a target="_blank" title="Descubre nuestro canal en Facebook" href="http://www.bubok.es/externo?next=http://www.facebook.com/bubok">
+                        <span class="item">
+                            <span class="logo"><img alt="Descubre nuestro canal en Facebook" src="/img/home2010/compatir_facebook.png?v=3"></span>
+                            <span class="texto">Descubre nuestro canal en Facebook</span>
+                        </span>	
+                    </a>
+                    <a target="_blank" title="Síguenos y entérate de las novedades" href="http://www.bubok.es/externo?next=http://twitter.com/bubok">
+                        <span class="item">
+                            <span class="logo"><img alt="Síguenos y entérate de las novedades" src="/img/home2010/compatir_twitter.png?v=3" style="margin-left: 2px;
+    margin-top: 0;"></span>
+                            <span class="texto">Síguenos y entérate de las novedades</span>
+                        </span>
+                    </a>
+                    <a target="_blank" title="Encuentra todas nuestras fotos" href="http://www.bubok.es/externo?next=http://www.flickr.com/photos/bubok/">
+                        <span class="item">
+                            <span class="logo"><img alt="Encuentra todas nuestras fotos" src="/img/home2010/compatir_flickr.png?v=3"></span>
+                            <span class="texto">Encuentra todas nuestras fotos</span>
+                        </span>
+                    </a>
+                    <a target="_blank" title="Mira todos nuestros vídeos" href="http://www.bubok.es/externo?next=http://www.youtube.com/user/BubokSpain">
+                        <span class="item">
+                            <span class="logo"><img alt="Mira todos nuestros vídeos" src="/img/home2010/compatir_youtube.png?v=3"></span>
+                            <span class="texto">Mira todos nuestros vídeos</span>
+                        </span>
+                    </a>
+                    <a target="_blank" title="Encuentra todas nuestras portadas" href="http://www.bubok.es/externo?next=http://pinterest.com/bubok/">
+                        <span class="item">
+                            <span class="logo"><img alt="Encuentra todas nuestras portadas" src="/img/home2010/compartir_pinterest.png?v=3"></span>
+                            <span class="texto">Encuentra todas nuestras portadas</span>
+                        </span>
+                    </a>
+                    
+                    <a target="_blank" title="Previsualiza nuestros libros" href="http://www.bubok.es/externo?next=http://es.scribd.com/BubokSpain">
+                        <span class="item">
+                            <span class="logo"><img alt="Previsualiza nuestros libros" src="/img/home2010/compartir_scribd.png?v=3"></span>
+                            <span class="texto">Previsualiza nuestros libros</span>
+                        </span>
+                    </a>
+                    
+                     
+                </div>
+           <div class="idioma">
+                 
+                  
+                 <a class="txt nounder seleccionado" title=" España" href="http://www.bubok.es" style="margin-right: 0px;"> <img src="/img/espana.png" alt=" España"> <span class="nombre_pais" style="margin-right: 28px;"> España</span></a>
+                    
+                 <a target="_blank" class="txt nounder " title=" Portugal" href="http://www.bubok.es/externo?next=http://www.bubok.pt/" style="margin-right: 0px;"> <img src="/img/portugal.png" alt=" Portugal"> <span class="nombre_pais" style="margin-right: 28px;"> Portugal</span></a>
+                    
+                 <a target="_blank" class="txt nounder " title=" Argentina" href="http://www.bubok.es/externo?next=http://www.bubok.com.ar/" style="margin-right: 0px;"> <img src="/img/argentina.png" alt=" Argentina"> <span class="nombre_pais" style="margin-right: 28px;"> Argentina</span></a>
+                    
+                 <a target="_blank" class="txt nounder " title=" México" href="http://www.bubok.es/externo?next=http://www.bubok.com.mx/" style="margin-right: 0px;"> <img src="/img/mexico.png" alt=" México"> <span class="nombre_pais" style="margin-right: 28px;"> México</span></a>
+                    
+                 <a target="_blank" class="txt nounder " title=" Suecia" href="http://www.bubok.es/externo?next=http://www.bubok.se/" style="margin-right: 0px;"> <img src="/img/sweden.png" alt=" Suecia"> <span class="nombre_pais" style="margin-right: 28px;"> Suecia</span></a>
+                    
+                 <a target="_blank" class="txt nounder " title=" Reino Unido" href="http://www.bubok.es/externo?next=http://www.bubok.co.uk/" style="margin-right: 0px;"> <img src="/img/united_kingdom.png" alt=" Reino Unido"> <span class="nombre_pais" style="margin-right: 28px;"> Reino Unido</span></a>
+                    
+                 <a target="_blank" class="txt nounder " title=" Colombia" href="http://www.bubok.es/externo?next=http://www.bubok.co/" style="margin-right: 0px;"> <img src="/img/colombia.png" alt=" Colombia"> <span class="nombre_pais" style="margin-right: 28px;"> Colombia</span></a>
+                    
+                 <a target="_blank" class="txt nounder " title="Francia" href="http://www.bubok.es/externo?next=http://www.bubok.fr/" style="margin-right: 0px;"> <img src="/img/francia.png" alt="Francia"> <span class="nombre_pais" style="margin-right: 28px;">Francia</span></a>
+                   
+                  
+			    
+                 
+                 
+		        </div>
+                
+                <div class="lospremios">
+                 
+                
+                 
+                <h4 class="titlefoot">Premios y reconocimientos</h4>
+                <ul class="thumbprem" id="thumbprem">
+                <li><a target="_blank" rel="/img/thumbsprem/ficod-big.jpg" href="http://www.bubok.es/blog/2008/11/26/bubok-recibe-el-premio-ficod´08/" title="Recibe el premio Ficod 2008" class="imgp"><img src="/img/thumbsprem/ficod.jpg" alt="ficod"></a></li>
+                
+                <li><a href="#" rel="/img/thumbsprem/startup-big.jpg" title="Finalista del premio StartUp 2008" class="imgp"><img src="/img/thumbsprem/startup.jpg" alt="StartUp"></a></li>
+                
+                <li><a href="#" rel="/img/thumbsprem/revelacion-big.jpg" title="Recibe el premio Empresa Revelacion 2009" class="imgp"><img src="/img/thumbsprem/revelacion.jpg" alt="empresarevelacion"></a></li>
+                
+                <li><a target="_blank" rel="/img/thumbsprem/premiosinternet-big.jpg" href="http://www.bubok.es/externo?next=http://www.premiosdeinternet.org/" title="Recibe premio al mejor sitio web en 2009" class="imgp"><img src="/img/thumbsprem/premiosinternet.jpg" alt="inter09"></a></li>
+                
+                <li><a target="_blank" rel="/img/thumbsprem/emprendedorxxi-big.jpg" href="http://www.bubok.es/blog/2010/04/28/bubok-gana-el-premio-emprendedorxxi-en-madrid/" title="Emprendedor XXI en Madrid" class="imgp"><img src="/img/thumbsprem/emprendedorxxi.jpg" alt="emprendedorxxi"></a></li>
+                
+                <li><a rel="/img/thumbsprem/bancaja-big.jpg" title="Premio Jóvenes Emprendedores" href="http://www.bubok.es/externo?next=http://www.jovenesemprendedoresbancaja.com/premio-bancaja/premio-bancaja.aspx?ANNO=2010" target="_blank" class="imgp"><img src="/img/thumbsprem/bancaja.jpg" alt="premio_bancaja"></a></li>
+                
+                <li><a rel="/img/thumbsprem/plugg-big.jpg" target="_blank" href="http://www.bubok.es/externo?next=http://plugg.eu/program/start-ups-rally/introduction" title="Finalista del premio Plugg 2008" class="imgp"><img src="/img/thumbsprem/plugg.jpg" alt="plugg"></a></li>
+                
+                <li><a rel="/img/thumbsprem/red-big.jpg" title="Premio Red Herring" href="http://www.bubok.es/externo?next=http://www.herring100.com/RHE2010/rhe2010finalists/rhe2010finalists.html" target="_blank" class="imgp"><img src="/img/thumbsprem/red.jpg" alt="premio_red-herring"></a></li>
+                
+                <li>
+                <a style="display:inline" target="_blank" title="Actividad subvencionada por 
+el Ministerio de Cultura" href="http://www.bubok.es/externo?next=http://www.mcu.es/industrias/"><h5>Actividad subvencionada por 
+el Ministerio de Cultura</h5>
+                    <img src="/img/img_MinisterioCultura.gif" alt="img_MinisterioCultura" border="0">
+                    </a>
+                </li>
+                
+                </ul>
+                
+                <!--<div class="premios">
+                	<a target="_blank" href="http://www.bubok.es/blog/2008/11/26/bubok-recibe-el-premio-ficod´08/" title="Recibe el premio Ficod 2008"><img src="/img/home2010/ficod.png" alt="ficod" /></a>
+                    <a target="_blank" href="http://plugg.eu/program/start-ups-rally/introduction" title="Finalista del premio Plugg 2008"><img src="/img/home2010/plugg.png" alt="plugg" /></a>
+                    <img title="Finalista del premio StartUp 2008" src="/img/home2010/startup.png" alt="startup"  />
+                    <img title="Recibe el premio Empresa Revelacion 2009" src="/img/home2010/empresarevelacion.png" alt="empresarevelacion"  />
+                    <a target="_blank" href="http://www.premiosdeinternet.org/" title="Recibe premio al mejor sitio web en 2009"><img src="/img/home2010/inter09.png" alt="inter09" /></a>
+                </div>
+                <div class="premios1">
+                <a target="_blank" href="http://www.bubok.es/blog/2010/04/28/bubok-gana-el-premio-emprendedorxxi-en-madrid/" title="Emprendedor XXI en Madrid"><img src="/img/home2010/emprendedorxxi.png" alt="emprendedorxxi" /></a>
+                    <a title="Premio Jóvenes Emprendedores" href="http://www.jovenesemprendedoresbancaja.com/premio-bancaja/premio-bancaja.aspx?ANNO=2010" target="_blank"><img src="/img/home2010/premio_bancaja.png" alt="premio_bancaja"/></a>
+                    <a title="Premio Red Herring" href="http://www.herring100.com/RHE2010/rhe2010finalists/rhe2010finalists.html" target="_blank"><img src="/img/home2010/premio_red-herring.png" alt="premio_red-herring" /></a>
+                 </div>-->
+                  
+                </div> <!--fin lospremios-->
+                
+                
+                <div class="losenlacs">
+                	<div class="enlacss">
+            	<span class="blanco txt">Mi Bubok: </span> 
+                <a class="txt nounder" href="http://www.bubok.es/autores" title="Mi cuenta">Mi cuenta</a>  <span class="separador">|</span>  
+                <a class="txt nounder" href="http://www.bubok.es/tienda" title="Librería Bubok">Librería Bubok</a>  <span class="separador">|</span>  
+                <a class="txt nounder" href="http://www.bubok.es/autores/listado" title="Autores Bubok">Autores Bubok</a>  <span class="separador">|</span>  
+                  
+             <span style="display:inline">   <a class="txt nounder" href="http://www.bubok.es/foros" title="Foros Bubok">Foros Bubok</a>  <span class="separador">|</span>  </span>
+                <a class="txt nounder" href="http://www.bubok.es/autores/descargas" title="Descargas">Descargas</a>  <span class="separador">|</span>  
+               <span style="display:inline;"> <a class="txt nounder" href="http://www.bubok.es/packs360" title="Packs">Packs</a>  <span class="separador">|</span> </span> 
+                <a class="txt nounder" href="http://www.bubok.es/librerias" title="Acceso librerías" style="display:inline">Acceso librerías</a>  <span class="separador" style="display:inline">|</span>  
+                <a class="txt nounder" href="http://www.bubok.es/casos-de-exito" title="Casos de éxito">Casos de éxito</a>  <span class="separador">|</span>  
+                <a class="txt nounder" href="http://www.bubok.es/asi-son-nuestros-libros" title="Así son nuestros libros">Así son nuestros libros</a>  <span class="separador" style="display:inline">|</span>  
+                 
+               <!-- <a class="txt nounder"  href="http://www.bubok.es/ereaders" title="eReaders (libros electrónicos)" style="display:inline">eReaders (libros electrónicos)</a>  <span class="separador" style="display:inline">|</span>  -->
+                 
+              <!--  <a class="txt nounder"  href="http://www.bubok.es/bubok_creativo" title="Álbumes digitales" style="display:inline">Álbumes digitales</a> <span class="separador" style="display:inline">|</span>  -->
+                <a class="txt nounder" href="http://www.bubok.es/afiliados" title="Programa de afiliados (beta)" style="display:inline">Programa de afiliados (beta)</a> <span class="separador" style="display:inline">|</span> 
+                <a class="txt nounder" href="http://www.bubok.es/mapas" title="Mapas Bubok" style="display:inline">Mapas Bubok</a><br>
+                
+                <span class="blanco txt">Términos legales: </span>
+                <a class="txt nounder" href="http://www.bubok.es/terminos/uso" title="Términos de uso">Términos de uso</a>  <span class="separador">|</span>  
+                <a class="txt nounder" href="http://www.bubok.es/terminos/envio_contenidos" title="Envío de Libros">Envío de Libros</a>  <span class="separador">|</span>  
+                <a class="txt nounder" href="http://www.bubok.es/terminos/tiendaonline" title="Condiciones comerciales">Condiciones comerciales</a>  <span class="separador">|</span>  
+                <a class="txt nounder" href="http://www.bubok.es/terminos/politicadeprivacidad" title="Políticas de privacidad">Políticas de privacidad</a><br>
+                
+                
+                <span class="blanco txt">Ayuda rápida: </span>
+                <a class="txt nounder" href="http://www.bubok.es/ayuda" title="Ayuda">Ayuda</a> <span class="separador">|</span>
+                
+                <a class="txt nounder" href="http://www.bubok.es/main/informacion_bubok" title="¿Cómo publicar en Bubok?">¿Cómo publicar en Bubok?</a> <span class="separador">|</span>
+                <a class="txt nounder" href="http://www.bubok.es/ayuda/rapida" title="Publicar es fácil">Publicar es fácil</a> <span class="separador">|</span>
+                
+                <a class="txt nounder" href="http://www.bubok.es/contacto" title="Contacta">Contacta</a> <span class="separador">|</span> 
+                       	    <a class="txt nounder" href="javascript:void(0);" rev="main/calculadora" title="Calculadora" id="rev_calculadora2" rel="vidbox 600 350">Calculadora</a> <span class="separador">|</span> 
+                            <a class="txt nounder" href="http://www.bubok.es/buscar" title="Buscar">Buscar</a> <br>
+                                
+                <span class="blanco txt">Información corporativa: </span>
+                <a class="txt nounder" title="Quiénes somos" href="http://www.bubok.es/nosotros">Quiénes somos</a>  <span class="separador">|</span> 
+                <a class="txt nounder" title="Prensa" href="http://www.bubok.es/nosotros/cprensa">Prensa</a>  <span class="separador">|</span> 
+                <a class="txt nounder" title="Mapa Web" href="http://www.bubok.es/ayuda/mapa/web">Mapa Web</a>  <span class="separador">|</span> 
+                <a class="txt nounder" title="Conócenos" href="/que-es-bubok">Conócenos</a>  <span class="separador" style="display:inline">|</span> 
+                <a class="txt nounder" title="Páginas amigas" href="http://www.bubok.es/paginas-amigas.html" style="display:inline">Páginas amigas</a>
+                </div>
+                
+                <div class="copyrights"> 
+                	<span class="txtamarillo">Bubok es un servicio para publicar libros de manera gratuita que cuenta con una comunidad activa de autores.</span>
+                	<span class="txtblanco">© 2008-2013 Bubok Publishing S.L.</span>
+                </div>
+                
+                 
+                <div class="logos_footer">
+                	<!--
+                	<ul>
+                		<li><a class="logo_evoluziona" href="http://www.evoluziona.com/" target="_blank" title="Evoluziona Soluciones Integrales"><span>Evoluziona</span></a></li>
+                        
+                        <li><a class="logo_secuoyas" href="http://www.secuoyas.com/" target="_blank" title="Secuoyas"><span>Secuoyas</span></a></li>
+                        
+                        <li><a class="logo_paypal" href="http://www.paypal.es/" target="_blank" title="Paypal"><span>Paypal</span></a>
+                        </li>
+                        
+                        <li><a class="logo_ip" href="http://www.ipsca.com/" target="_blank" title="Servicios de firma electrónica y certificación digital"><span>IPSCA</span></a></li>
+                	</ul>
+                    -->
+                    <ul>
+                        <li><a href="http://www.bubok.es/externo?next=http://www.mastercard.com/" title="MasterCard" target="_blank" class="mastercard"><span>MasterCard</span></a></li>
+                        <li><a href="http://www.bubok.es/externo?next=http://www.visa.com/" title="Visa" target="_blank" class="visa"><span>Visa</span></a></li>
+                        <li><a href="http://www.bubok.es/externo?next=http://www.paypal.com/" title="Paypal" class="paypal2" target="_blank"><span>Paypal</span></a></li>
+                        <li><a href="http://www.bubok.es/externo?next=https://www.confianzaonline.es/empresas/bubok.htm" title="Entidad adherida a Confianza Online" target="_blank" class="confianzaonline"><span>Confianza Online</span></a></li>
+                    </ul>
+                    
+                   
+                	<!--<center>
+                        <a class="logo_evoluziona" href="http://www.evoluziona.com/" target="_blank" title="Evoluziona Soluciones Integrales"><span>Evoluziona</span></a>
+                        <a class="logo_secuoyas" href="http://www.secuoyas.com/" target="_blank" title="Secuoyas"><span>Secuoyas</span></a>
+                        <a class="logo_paypal" href="http://www.paypal.es/" target="_blank" title="Paypal"><span>Paypal</span></a>
+                        <a class="logo_ip" href="http://www.ipsca.com/" target="_blank" title="Servicios de firma electrónica y certificación digital"><span>IPSCA</span></a>
+                        </center>-->
+                        
+                        
+                </div>
+               
+                 
+                 
+                 <div class="confilogo" style="display:none;">
+                    <a title="Entidad adherida a Confianza Online" href="http://www.bubok.es/externo?next=https://www.confianzaonline.es/empresas/bubok.htm" target="_blank" class="sello"></a>
+                 </div>
+                  
+                </div>
+                
+				<!--	
+			<span class="blanco txt">Bubok en España </span>
+			<a class="txt nounder" href="javascript:cambioIdioma('spanish');">en español</a>
+            <a class="txt nounder" href="javascript:cambioIdioma('catalan');">en catalán</a>  <span class="separador">|</span>
+            <a class="txt nounder" href="javascript:cambioIdioma('english');">en inglés</a>  <span class="separador">|</span>
+            <a class="txt nounder blanco" href="javascript:cambioIdioma('english');">en inglés</a>  <span class="separador">|</span> 
+            <a class="txt nounder" href="javascript:cambioIdioma('portugues');">en portugués</a>  <span class="separador">|</span>
+	        -->
+				
+                
+                
+                
+                
+                
+                
+                
+            </div> 
+            <div class="after_footer">
+            	<img src="/img/home2010/borde_inf_footer.png" alt="footer">
+            </div>
+        </div>
+        <div class="sombrafoot">
+        </div>
+     <!-- TERMINA FOOTER -->
+
+<script type="text/javascript" language="javascript">
+function showReg()
+{
+		setTimeout("launchAreg()", 1000);
+}
+
+function showLog()
+{
+	closeBox();
+	setTimeout("launchAlog()", 1000);
+}
+
+function showSen()
+{
+	closeBox();
+	setTimeout("launchAsen()", 1000);
+}
+
+function launchAreg()
+{
+	launchLightBox('areg');
+}
+
+function launchAlog()
+{
+	launchLightBox('alog');
+}
+
+function launchAsen()
+{
+	launchLightBox('asen');
+}
+
+
+
+
+
+
+
+
+</script>
+<a title="ayuda/bases_concurso" href="#" id="idconcurso_31" rel="vidbox 850 750"></a>
+
+<a title="autores/form_sendpass" href="#" id="asen" rel="vidbox 580 250"></a>
+
+<a title="main/visita" href="#" id="avis" rel="vidbox 850 750"></a>
+
+
+
+
+
+
+<div style="display:none" id="dvframe"></div>
+
+
+
+ 
+
+<div id="ayudaonline" class="min">
+  <div class="in">
+      <a href="javascript:mostrarayuda('contacto');">Ayuda online</a> 
+  </div>
+</div>  
+
+ 
+
+
+
+ 
+<div class="mostrar" id="avisocarrito" onmouseout="desplazarizqAvisoCarritoOut();" style="visibility: hidden; left: 0px;" onmouseover="desplazardrchAvisoCarritoOut();">
+	<div class="avisocarrito_content" onclick="iralCarrito();" onmouseover="desplazardrchAvisoCarritoOut();">
+    	<p onmouseover="desplazardrchAvisoCarritoOut();">Tiene <b><span id="cantidadcarrito">0</span></b> producto<span id="pluralcarrito"></span> en el <a href="http://www.bubok.es/tienda/index/desplegar">Carrito de la compra</a></p>
+    </div>
+    <div class="avisocarrito_btn_content" onmouseover="desplazardrchAvisoCarritoOut();">
+    	<a href="javascript:void(0);" onclick="desplazardrchAvisoCarritoOut();" class="avisocarrito_btn">Mostrar</a>
+    </div>
+    <div class="clear"></div>
+</div>
+
+<script type="text/javascript" language="javascript">
+	var idInterval;
+	var idSetTimeOut;
+	var idIntervalOut;
+		
+		function desplazardrchAvisoCarritoOut(){
+			if (typeof idIntervalOut !== "undefined") clearInterval(idIntervalOut);
+			desplazardrchAvisoCarrito(false);
+		}
+		function desplazarizqAvisoCarritoOut(){
+			if (typeof idIntervalOut !== "undefined") clearInterval(idIntervalOut);
+			idIntervalOut = setTimeout("desplazarizqAvisoCarrito()", 1000);
+		}
+	
+		function mostrarocultarAvisoCarrito() {
+			if ($('avisocarrito').hasClass('mostrar')) {
+				desplazarizqAvisoCarrito();
+			} else {
+				desplazardrchAvisoCarrito(true);
+			}
+		}
+		function desplazarizqAvisoCarrito() {
+			$('avisocarrito').setStyle('left', '-202px');
+			$('avisocarrito').removeClass('mostrar');
+			clearInterval(idInterval);
+		}
+		function desplazardrchAvisoCarrito(tiempo) {
+			$('avisocarrito').setStyle('left', '0px');
+			$('avisocarrito').addClass('mostrar');
+			if(tiempo==true) idInterval = setTimeout("desplazarizqAvisoCarrito()", 2000);
+		}
+		function iralCarrito() {
+			location.href = "tienda/index/desplegar";
+		}
+			
+		function comienzoAvisoCarrito() {
+			desplazardrchAvisoCarrito(true);
+		}
+		
+		comienzoAvisoCarrito();
+</script>
+ 
+
+
+
+<div id="btncoenctadoono" style="display:none;">
+ 
+    <!--<script type="text/javascript" language="javascript" src="http://eu.ntrsupport.com/inquiero/web/an/ann4.asp?login=I23EAF508C6BF1A9B700D43&amp;button=on&amp;lang=es&amp;ref=NO REGISTRADO&amp;ref2=98.220.233.171"></script>
+    <a href="http://eu.ntrsupport.com"><img alt="monitor" src="http://eu.ntrsupport.com/inquiero/images/monitor.gif" border="0" /></a>-->
+ 
+
+</div>
+
+
+
+
+<script type="text/javascript">
+		var mostrarVideo = function()
+		{
+			var reproductor = new SWFObject("usr/webroot/files/BUBOK_video_ayuda_streaming.swf","player","900","550","5");
+		
+			reproductor.addParam("allowfullscreen","true");
+			
+			reproductor.addParam("allowscriptaccess","always");
+			
+			reproductor.addVariable("autostart", "true");
+			
+			reproductor.addParam("wmode","transparent");
+			
+			reproductor.addParam("bgcolor","#ffffff");
+		
+			reproductor.write('hvideo');
+			$("hvideo").style.display = "";
+			var wait_bubok = $("espera_bubok");
+			//wait_bubok.setStyles({'top': '200px', 'left': '40%', display: '', 'z-index': 9999});
+			//setTimeout("$('espera_bubok').style.display='none'", 9000);
+			wait_bubok.setStyles({'top': '200px', 'left': '40%', display: '', 'z-index': 800});
+			setTimeout("$('espera_bubok').style.display='none'", 800);
+			setTimeout("$('hvideo').style.display='none'", 81000);
+			
+		}
+</script>
+<script type="text/javascript" src="/usr/webroot/js/bubokVIDEO/swfobject.js"></script>
+
+<!-- ventana alert -->
+<div id="ventanaalert" style="position:absolute; display:none; left:502px; top:1112px; width:345px; height:400px; z-index:999999;">
+
+                <div class="title">
+				<a class="btn_windows_close2" id="ventanaalert_close" onclick="javascript:Effect.fade('ventanaalert');" href="javascript:void(0)" title="Cerrar ventana">Cerrar ventana</a>
+                bubok.es </div>
+
+    <div class="ventanaalert_content">
+                <p id="ventanaalert_txt"></p>
+				<p id="p_ventanaalert_btn2" style="float:left; display:none"><input id="ventanaalert_btn2" onclick="javascript:Effect.fade('ventanaalert');" class="btn_small_small" value="No" type="button"></p>
+                <p align="right"><input id="ventanaalert_btn" class="btn_small_small" value="Si" type="button"></p>
+
+    </div>
+
+    <div class="ventanaalert_bottom"></div>
+
+
+</div>
+
+
+<!--  ventanaalertbig -->
+<div id="ventanaalertbig" class="ventanaalertbig" style="position:absolute; display:none; left:502px; top:1112px; width:487px; height:400px; z-index:999999;">
+	<div class="headmodal">
+    	<h2 id="ventanaalertbig_title">Completado:</h2>
+        <a href="javascript:Effect.fade('ventanaalertbig');" class="cerrar">Cerrar</a>
+    </div>
+    
+    <div class="contenidomodal">
+        <div class="contenidoder">
+        	<p id="ventanaalertbig_txt"></p>
+            
+            <ul class="botonespieventanaalet">
+            	
+            	<li><a id="ventanaalertbig_btn" onclick="javascript:Effect.fade('ventanaalertbig');" href="javascript:void(0);" title="Aceptar"><span>ACEPTAR</span></a></li>
+            </ul>
+            
+        </div>
+    </div>
+    
+    <div class="modalpie"></div>
+</div>
+<!--  ventanaalertbig -->
+
+
+
+<div id="wait_bubok" style="position:absolute; padding:0px; margin:0px; display:none; left:0; top:0; width:210px; height:180px; z-index:100">
+
+
+</div>
+
+<div id="espera_bubok" style="position:absolute; padding:0px; margin:0px; display:none; left:0; top:0; width:210px; height:180px; z-index:100">
+<!-- <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="https://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" width="212" height="200">
+<param name="movie" value="/js/fla/loaderbubok.swf" />
+<param name="quality" value="high" />
+<param name="wmode" value="transparent"  />
+<embed src="/js/fla/loaderbubok.swf" quality="high" pluginspage="https://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" wmode="transparent" width="212" height="200"></embed>
+</object> -->
+</div>
+<!-- GOOGLE  ANALITY -->
+
+
+
+<!-- codigo para tracking de BRAINSISNS-->
+<script type="text/javascript">
+try{
+var BrainSINSTracker = BrainSINS.getTracker( "BS-3105551078-1" );
+BSProcess( BrainSINSTracker );
+}catch( err ) {}
+</script><script type="text/javascript" src="http://tracker.brainsins.com/tracker.php?am=page%2FnextCookieId&amp;t=BS-3105551078-1&amp;callback=BrainSINSTracker.getNextCookieID" id="BrainSINS_jsonpRequest_getcookieid"></script>
+<!-- FIN para tracking de BRAINSISNS-->
+
+<script type="text/javascript" src="http://dnn506yrbagrg.cloudfront.net/pages/scripts/0011/2758.js"></script>
+
+<!--Codigo Analitic -->
+<!-- Google Code for Venta Conversion Page -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1067974490;
+var google_conversion_language = "es";
+var google_conversion_format = "2";
+var google_conversion_color = "ffffff";
+var google_conversion_label = "I593CMq6_QEQ2v6f_QM";
+var google_conversion_value = 0;
+if (1) {
+  google_conversion_value = 1;
+}
+/* ]]]]> */
+</script>
+<div class=" livechat" style="position: absolute; visibility: hidden; border: 0px none; padding: 0px; margin: 0px; width: 0px; height: 0px;" __jx__id="___$_2 ___$_1"></div><script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script><iframe name="google_conversion_frame" src="http://www.googleadservices.com/pagead/conversion/1067974490/?random=1369207440215&amp;cv=7&amp;fst=1369207440215&amp;num=1&amp;fmt=2&amp;value=1&amp;label=I593CMq6_QEQ2v6f_QM&amp;bg=ffffff&amp;hl=es&amp;guid=ON&amp;u_h=1024&amp;u_w=1280&amp;u_ah=984&amp;u_aw=1280&amp;u_cd=24&amp;u_his=50&amp;u_tz=-300&amp;u_java=false&amp;u_nplug=0&amp;u_nmime=0&amp;url=http%3A//www.bubok.es/%3Futm_medium%3Ddisplay%26utm_source%3Dibubok%26utm_campaign%3Dcorp%26utm_term%3D468x60&amp;frm=0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" frameborder="0" height="26" scrolling="no" width="200"><img height="1" width="1" border="0" src="http://www.googleadservices.com/pagead/conversion/1067974490/?frame=0&random=1369207440215&cv=7&fst=1369207440215&num=1&fmt=2&value=1&label=I593CMq6_QEQ2v6f_QM&bg=ffffff&hl=es&guid=ON&u_h=1024&u_w=1280&u_ah=984&u_aw=1280&u_cd=24&u_his=50&u_tz=-300&u_java=false&u_nplug=0&u_nmime=0&url=http%3A//www.bubok.es/%3Futm_medium%3Ddisplay%26utm_source%3Dibubok%26utm_campaign%3Dcorp%26utm_term%3D468x60&frm=0" /></iframe>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://www.googleadservices.com/pagead/conversion/1067974490/?value=1&amp;label=I593CMq6_QEQ2v6f_QM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<!-- Fin Codigo Analitic  -->
+<!-- analytics personalizado -->
+
+<!-- finaliza analytics personalizado -->
+ 
+ 
+ 
+
+ 
+
+
+<div style="display: none; position: absolute;" id="imgPrev"><img></div><div style="visibility: hidden; opacity: 0;" id="lbOverlay"></div><div style="width: 250px; height: 250px; display: none;" id="lbCenter"></div><div style="display: none;" id="lbBottomContainer"><div id="lbBottom"><a href="#" id="lbCloseLink"></a><div id="lbCaption"></div><div id="lbNumber"></div><div style="clear: both;"></div></div></div></body>
