@@ -44,7 +44,11 @@ def getHeadText(soup, file_path):
             headText += unicodedata.normalize('NFKD',k['content']).encode('ascii','strict')
             #count_keywords = count_keywords + 1
         except: 
-            print "Error in keywords' unicode.normalize."
+            print "Error in conversion to ascii. Deleting file."
+            try:
+                os.remove(file_path)
+            except: 
+                print "Error in removing file?"
 
     #Get description from meta tag with name=description. Likewise, the actual description text lies in the content field.
     description = soup.findAll("meta", attrs ={'name' : 'description'})
@@ -61,7 +65,11 @@ def getHeadText(soup, file_path):
             headText += unicodedata.normalize('NFKD',d['content']).encode('ascii','strict')
             #count_description = count_description + 1
         except: 
-            print "Error in description's unicode.normalize."
+            print "Error in conversion to ascii. Deleting file."
+            try:
+                os.remove(file_path)
+            except: 
+                print "Error in removing file?"
         
     if keywords!=[] and description!=[]:
         count_key_desc_and += 1
