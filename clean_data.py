@@ -60,7 +60,7 @@ def cleanFiles(soup, file_path):
             os.remove(file_path)
             return
         #try: 
-        headText += unicodedata.normalize('NFKD',k['content'])
+        headText += unicodedata.normalize('NFKD',k['content']).encode('ascii', 'ignore')
         #except: 
         #    print "Conversion to unicode failed."
 
@@ -76,7 +76,7 @@ def cleanFiles(soup, file_path):
             os.remove(file_path)
             return
         #try: 
-        headText += unicodedata.normalize('NFKD',d['content'])
+        headText += unicodedata.normalize('NFKD',d['content']).encode('ascii', 'ignore')
         #except: 
         #    print "Conversion to unicode failed."
 
@@ -84,11 +84,13 @@ def cleanFiles(soup, file_path):
     if not(keywords!=[] and description!=[] and title!=""):
         print "File does not have all of the following: keywords, description, and title. Deleting " + file_path
         os.remove(file_path)
+        return
 
     print "language: " + get_language(headText)
     if not(get_language(headText)=='english'):
         print "File not in english. Deleting " + file_path
         os.remove(file_path)
+        return
 
     return 
 
@@ -96,7 +98,7 @@ def cleanFiles(soup, file_path):
 
 
 #listofAds = ["adfromhtml.it.html", "adfromnews247.gr.html", "adfromradio.de.html", "adfrom9minecraft.net.html", "adfromaddictinggames.com.html", "adfromallmusic.com.html", "adfromamctheatres.com.html", "adfromandroidcommunity.com.html", "adfromlos40.com.html", "adfromsearch.ch.html", "adfromzalando.pl.html"]
-path = "/Users/scottneaves/Desktop/Online Advertising/AdSimiliarity/mixed_lang"
+path = "/Users/scottneaves/Desktop/Online Advertising/AdSimiliarity/ads_new"
 listing = os.listdir(path)
 for infile in listing:
     print infile
