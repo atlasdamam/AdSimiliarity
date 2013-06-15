@@ -60,7 +60,12 @@ def slamAd(filepath):
         if abs(pair[1]) > max:
             max = abs(pair[1])
             maxTopic = pair[0]
-    print lsi.print_topics(50)[maxTopic]
+
+    print "\nMax: " + str(max)
+    if (max < 1.0):
+        print "Can't assign topic"
+    else:
+        print lsi.print_topics(25)[maxTopic]
 
 
 #fp = raw_input("Enter path to slam ad: ")

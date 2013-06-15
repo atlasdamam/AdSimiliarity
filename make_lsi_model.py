@@ -66,7 +66,8 @@ def getHeadText(soup, file_path):
 
 
 listofAds = []
-path = "/Users/scottneaves/Desktop/Online Advertising/AdSimiliarity/ads1_and_2"
+path = str(os.getcwd()) + "/ads1_and_2"
+#path = "/Users/Sam_Toizer/Documents/School/15th grade/Q3/Online Advertising/AdSimiliarity/ads1_and_2"
 listing = os.listdir(path)
 for infile in listing:
     #print "html filename is: " + infile
@@ -107,17 +108,17 @@ tfidf = models.TfidfModel(corpus) # step 1 -- initialize a model
 
 corpus_tfidf = tfidf[corpus]
 
-lsi = models.LsiModel(corpus_tfidf, id2word=dictionary, num_topics=50) # initialize an LSI transformation
+lsi = models.LsiModel(corpus_tfidf, id2word=dictionary, num_topics=25) # initialize an LSI transformation
 lsi.save("adsLsi.lsi")
 corpus_lsi = lsi[corpus_tfidf] # create a double wrapper over the original corpus: bow->tfidf->fold-in-lsi
 for doc in corpus_lsi:
     print doc
 
 print "LSI topics:"
-for i in range(50):
+for i in range(25):
     print "\n"
     print str(i+1) + ":"
-    print lsi.print_topics(50)[i]
+    print lsi.print_topics(25)[i]
 
 '''
 lsi.save('model.lsi') # same for tfidf, lda, ...

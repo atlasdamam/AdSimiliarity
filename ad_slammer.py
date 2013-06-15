@@ -1,7 +1,7 @@
 import os
 import slam_ad
 
-path = "/Users/scottneaves/Desktop/Online Advertising/AdSimiliarity/ads1_and_2_vset"
+path = str(os.getcwd()) + "/ads1_and_2_vset"
 local_path = "ads1_and_2_vset"
 listing = os.listdir(path)
 for infile in listing:
