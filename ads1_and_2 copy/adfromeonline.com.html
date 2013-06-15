@@ -1,0 +1,3278 @@
+<head><div class="kxhead" data-id="Hhr_tSwi" style="display:none;"><span class="kxtag kxinvisible" data-id="10855" data-alias="Krux loadSegments"><script src="http://apiservices.krxd.net/user_data/segments/3?pubid=54983c83-8810-4a6b-9ff1-81f7349ce967&amp;callback=Krux.ns._default.kxjsonp_userData" type="text/javascript"></script><script src="//platform.twitter.com/widgets.js" id="twitter-wjs"></script><script src="//platform.twitter.com/widgets.js" id="twitter-wjs"></script><script type="text/javascript">Krux('require:segments')</script></span><span class="kxtag kxinvisible" data-id="13132" data-alias="Krux Scraper - sym and xa"><script type="text/javascript">
+  // Scrape dart
+  Krux('scrape.dart', {
+    page_attr_dart: "sym,xa".split(",")
+  });
+
+</script></span><span class="kxtag kxinvisible" data-id="10688" data-alias="Krux Scraper - Hierarchy and Attributes"><script type="text/javascript">
+  // Scrape dart
+  Krux('scrape.dart', {
+    page_attr_dart: "aff,area,b,chan,daypart,genre,f,package,pkid,ref,season,sect,show,site,sport,sub,sub2,t,tag,type,pageid".split(",")
+  });
+  // Set section/subsection
+  Krux('set', {
+    section: Krux('get', 'domain'),
+    subsection: Krux('get', 'page_attr_dart_sect')
+  });
+</script></span><span class="kxtag kxinvisible" data-id="11327" data-alias="Technographic Data provider tag"><script>
+// this tag is intentionally blank
+</script></span><span class="kxtag kxinvisible" data-id="11108" data-alias="Acxiom provider tag"><script>
+// This tag intentionally empty
+</script></span><span class="kxtag kxinvisible" data-id="11109" data-alias="eXelate Media provider tag"><script type="text/javascript">
+  Krux('dataprovider.exelate');
+</script></span><span class="kxtag kxinvisible" data-id="19045" data-alias="AdAdvisor S2S provider tag"><script>
+(function() {
+  // adadvisor redirects to http://logger... so it's not https safe
+  if (location.protocol == "http:") {
+     var u = "http://adadvisor.net/adscores/g.js?sid=9212244187&_kdpid=2111c0af-fc3a-446f-ab07-63aa74fbde8e";
+     (new Image()).src = u;
+   }
+})();
+</script></span><span class="kxtag kxinvisible" data-id="18290" data-alias="Acxiom S2S provider tag"><script>
+(function(){
+  var prefix = location.protocol == 'https:' ? "https:" : "http:";
+  var r_url = prefix + '//p.acxiom-online.com/pixel/sci'
+  var kurl = prefix + '//apiservices.krxd.net/um?partner=acxiom&r=' + r_url;
+  var i = new Image();
+  i.src = kurl;
+})();
+</script></span><span class="kxtag kxinvisible" data-id="16002" data-alias="Quantcast provider tag"></span><span class="kxtag kxinvisible" data-id="14019" data-alias="Bizo provider tag"><script>
+(function(){
+  if (window.KRUX) {
+    var pubid = KRUXSetup.pubid;
+  } else if (window.Krux) {
+    var pubid = Krux('get', 'pubid');
+  } else { 
+    return;
+  }
+  var prefix = location.protocol == 'https:' ? "https:" : "http:";
+  var kurl = prefix + '//beacon.krxd.net/data.gif?_kdpid=890a6228-04af-4630-85b6-0b49dee6157f&pid=' + pubid;
+  var u = prefix + '//api.bizographics.com/v1/profile.redirect?api_key=595bae8dbc0c4c42b4544e688b10c002' + 
+        '&callback_url=' + escape(kurl);
+  var i = new Image();
+  i.src = u;
+})();
+</script></span><span class="kxtag kxinvisible" data-id="15821" data-alias="Targus/AdAdvisor provider tag"><script>
+(function() {
+  // adadvisor redirects to http://logger... so it's not https safe
+  if (location.protocol == "http:") {
+     var u = "http://adadvisor.net/adscores/g.js?sid=9212244187&_kdpid=911765d2-536f-4475-8fd5-92b73478fb8f";
+     (new Image()).src = u;
+   }
+})();
+</script>
+</span><span class="kxtag kxinvisible" data-id="14072" data-alias="Nielsen (via Exelate) provider tag"><script>
+// Blank
+</script></span><span class="kxtag kxinvisible" data-id="11476" data-alias="krux-dfp-site-zone"><script type="text/javascript"> 
+(function() { 
+  function findEl(els) {
+    for(var i = 0; i < els.length; ++i) {
+      try {
+        var pathname = (m = els[i].src.match(/\.doubleclick\.net(\/[^;]*)/)) ? 
+          m[1] : '';
+        
+        if(pathname) {
+          var parts = pathname.split('/');
+          Krux.require('util').set({
+            page_attr_dfpsite: parts[2],
+            page_attr_dfpzone: parts[3]
+          });
+          return true;   
+        }
+      } catch (e) {}
+    }
+  }
+  
+  findEl(document.getElementsByTagName('SCRIPT')) ||
+  findEl(document.getElementsByTagName('IFRAME'));
+  
+})();
+</script></span><span class="kxtag kxinvisible" data-id="15596" data-alias="Quantcast / Krux"><script>
+(function () {
+    if (location.protocol.indexOf('s') > -1) {
+       return;
+    }
+    var u = "http://pixel.quantserve.com/seg/r;a=p-9eJ8k4iSzux46;rand=" +
+        Math.round(Math.random() * 999999942) + ";redirect=" +
+        "http://beacon.krxd.net/data.gif?_kdpid=c28722fa-1ec3-4a33-838f-d360c76c0aca&segs=!qcsegs";
+
+    (new Image()).src = u;
+})();
+</script></span></div><script src="//platform.twitter.com/widgets.js" id="twitter-wjs"></script><script src="http://cdn.krxd.net/controltag?confid=Hhr_tSwi" async="" type="text/javascript"></script><script src="http://b.scorecardresearch.com/beacon.js" async=""></script>
+        
+        <meta charset="utf-8">
+        
+            <title>Married to Jonas | E! Online</title>
+			
+			
+            <meta name="description" content="Your official source for the latest Married to Jonas stories, show clips, photos, videos, and fashion from E! Online.">
+            <meta name="google-site-verification" content="PrhEi7w612RQMIMh7TQkkEOxkApb2TCbAZBdqITWU3U"> 
+            <meta name="y_key" content="5007567999b91359"> 
+            <meta name="msvalidate.01" content="564B986CE3CECCAE84779191BEC6B755"> 
+			
+            <meta property="og:title" content="Married to Jonas">
+            <meta property="og:type" content="website">
+			
+			
+            <meta property="og:url" content="http://www.eonline.com/shows/jonas">
+            <meta property="og:image" content="">
+            <meta property="og:site_name" content="E! Online">
+            <meta property="fb:app_id" content="195662528604">
+            <meta property="og:description" content="Your official source for the latest Married to Jonas stories, show clips, photos, videos, and fashion from E! Online.">
+        	<meta property="og:locale" content="en_US">
+        	
+        	
+ 		      
+ 		
+ 		
+		
+ 		<link rel="icon" href="/resources/images/misc/eonline_favicon_trans.png">
+        <link type="text/css" href="/resources/css/min.css.jsp" rel="stylesheet">
+        <script id="thyme_script_block" src="http://thyme.comcastnets.net/thyme/js/thyme.js" async="" type="text/javascript"></script><script async="" src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en_US.ZyBXoE5PIYQ.O/m=plusone/rt=j/sv=1/d=1/ed=1/am=UQ/rs=AItRSTOrmkfgKlD6C8yyo1rfmt6R8vHs5Q/cb=gapi.loaded_0"></script><script type="text/javascript" src="/resources/js/libs/jquery/1.8.3/jquery-1.8.3.min.js"></script>
+
+		
+		
+		<script type="text/javascript" id="jsEolLibRoot" src="/uberblog/includes/js/eol-lib/eol.js"></script>
+		<script type="text/javascript" id="jsDartAdCode" src="/uberblog/includes/js/eol-lib/eol.page.js"></script>
+		<script type="text/javascript" id="jsMinifier" src="/resources/js/min.js.jsp"></script>
+
+        <script type="text/javascript" src="/resources/js/libs/quirksmode.cookies/quirksmode.cookies.js"></script> 
+		<script type="text/javascript" src="/resources/js/libs/eol/socialMediaIcons.js"></script>
+		<script type="text/javascript" src="/resources/js/libs/eol/eol.lazyLoad.js"></script>
+        
+		
+        <link rel="stylesheet" type="text/css" href="/resources/css/blog.css">
+<link rel="stylesheet" type="text/css" href="/resources/css/eol.twitter.chat.css">
+<link rel="stylesheet" type="text/css" href="/resources/shows/css/shows.css">
+<link rel="stylesheet" type="text/css" href="/resources/shows/css/jonas/jonas.css">
+
+<script type="text/javascript" src="/resources/sites/redcarpet/js/jquery.carouFredSel-5.3.0-packed.js"></script>
+<script type="text/javascript" src="/resources/js/libs/iscroll4/4.1.9/iscroll.js"></script>
+<script type="text/javascript" src="/resources/js/libs/underscore/1.2.2/underscore.js"></script>
+<script type="text/javascript">
+	/* NEED FOR TEMPLATE.JS */
+	if ( window._ ) { _.templateSettings = { interpolate: /\<\@\=(.+?)\@\>/gim, evaluate: /\<\@(.+?)\@\>/gim}; }
+    eol.page.legacyContext(true); //deprecated - use fixedLayoutContext instead
+    eol.page.fixedLayoutContext(true);
+</script>
+<script gapi_processed="true" type="text/javascript" src="https://apis.google.com/js/plusone.js" defer="defer"></script>
+<script src="//platform.twitter.com/widgets.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="http://adunit.cdn.auditude.com/player/js/lib/aud.html5player.js"></script>	
+<script type="text/javascript">window.aud || document.write('<script src="/resources/sites/thesoup/js/auditude.js"><\/script>')</script>
+
+<script type="text/javascript" src="/resources/shows/js/video.js"></script>
+
+
+<script type="text/javascript" src="/resources/widgets/js/polls.js"></script>
+
+
+<script type="text/javascript" src="/resources/js/libs/eol/eol.lazyLoad.js"></script>
+
+
+<script type="text/javascript" id="jsRegEx" src="/resources/js/libs/eol/eol.regEx.js"></script>
+
+        
+            <script type="text/javascript">
+                (function($){
+					(function delayedLoader() {
+						if ((typeof(eol) !== 'undefined') && (typeof(eol.page) !== 'undefined')) {
+							eol.page.dartInit({ "domain" : "eonline", "keywords" : "", "site" : 'shows', "zone" : 'jonas' });
+							eol.page.time( new Date( 1367619786095 ) );
+						} else {
+							eol.lazyLoad.js('eolLibRoot');
+							setTimeout(function() { // Reloads this function, after a 50ms delay.
+								delayedLoader();
+							},50);
+						}
+					})(); // Self-loading function.
+                })(jQuery);
+            </script>
+        	
+	
+    <script src="//connect.facebook.net/en_US/all.js#xfbml=1&amp;appId=195662528604" id="facebook-jssdk" async=""></script><script id="jsSocialMediaIcons" src="/resources/js/libs/eol/socialMediaIcons.js" type="text/javascript"></script><script id="jsUserAgent" src="/resources/js/libs/eol/eol.userAgent.js" type="text/javascript"></script><link id="cssVideoPlayerEngine" href="/resources/engines/video_player_engine/css/eonline.videoPlayerEngine.css" rel="stylesheet" type="text/css"><script id="jsonLibrary" src="/resources/js/libs/jsonparser/2.0/json.min.js" type="text/javascript"></script><script id="jsVideoPlayerEngine" src="/resources/engines/video_player_engine/js/eonline.videoPlayerEngine.js" type="text/javascript"></script><link id="cssEmail" href="/resources/css/email.css" rel="stylesheet" type="text/css"><link id="cssOldModal" href="/includes/css/modal.css" rel="stylesheet" type="text/css"><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}
+.fb_invisible{display:none}
+.fb_reset{background:none;border-spacing:0;border:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}
+.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}
+.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}
+.fb_dialog_content{background:#fff;color:#333}
+.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px;top:8px\9;right:7px\9}
+.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}
+.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}
+.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}
+.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}
+.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}
+.fb_dialog_top_left,
+.fb_dialog_top_right,
+.fb_dialog_bottom_left,
+.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}
+/* @noflip */
+.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}
+/* @noflip */
+.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}
+/* @noflip */
+.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}
+/* @noflip */
+.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right,
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right{width:10px;height:100%}
+.fb_dialog_vert_left{margin-left:-10px}
+.fb_dialog_vert_right{right:0;margin-right:-10px}
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{width:100%;height:10px}
+.fb_dialog_horiz_top{margin-top:-10px}
+.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}
+.fb_dialog_iframe{line-height:0}
+.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}
+.fb_dialog_content .dialog_title > span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif)
+no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}
+body.fb_hidden{-webkit-transform:none;height:100%;margin:0;left:-10000px;overflow:visible;position:absolute;top:-10000px;width:100%
+}
+.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif)
+white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}
+.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}
+#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}
+#fb-root #fb_dialog_ipad_overlay.hidden{display:none}
+.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}
+.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0 0, 0 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}
+.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%
+}
+.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0 0, 0 100%, from(#4966A6),
+color-stop(0.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset,
+rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}
+.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}
+.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}
+.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}
+#fb_dialog_loader_close{float:left}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}
+.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}
+.fb_iframe_widget iframe{position:absolute}
+.fb_iframe_widget_lift{z-index:1}
+.fb_hide_iframes iframe{position:relative;left:-10000px}
+.fb_iframe_widget_loader{position:relative;display:inline-block}
+.fb_iframe_widget_fluid{display:inline}
+.fb_iframe_widget_fluid span{width:100%}
+.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}
+.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_connect_bar_container div,
+.fb_connect_bar_container span,
+.fb_connect_bar_container a,
+.fb_connect_bar_container img,
+.fb_connect_bar_container strong{background:none;border-spacing:0;border:0;direction:ltr;font-style:normal;font-variant:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal;vertical-align:baseline}
+.fb_connect_bar_container{position:fixed;left:0 !important;right:0 !important;height:42px !important;padding:0 25px !important;margin:0 !important;vertical-align:middle !important;border-bottom:1px solid #333 !important;background:#3b5998 !important;z-index:99999999 !important;overflow:hidden !important}
+.fb_connect_bar_container_ie6{position:absolute;top:expression(document.compatMode=="CSS1Compat"? document.documentElement.scrollTop+"px":body.scrollTop+"px")}
+.fb_connect_bar{position:relative;margin:auto;height:100%;width:100%;padding:6px 0 0 0 !important;background:none;color:#fff !important;font-family:"lucida grande", tahoma, verdana, arial, sans-serif !important;font-size:13px !important;font-style:normal !important;font-variant:normal !important;font-weight:normal !important;letter-spacing:normal !important;line-height:1 !important;text-decoration:none !important;text-indent:0 !important;text-shadow:none !important;text-transform:none !important;white-space:normal !important;word-spacing:normal !important}
+.fb_connect_bar a:hover{color:#fff}
+.fb_connect_bar .fb_profile img{height:30px;width:30px;vertical-align:middle;margin:0 6px 5px 0}
+.fb_connect_bar div a,
+.fb_connect_bar span,
+.fb_connect_bar span a{color:#bac6da;font-size:11px;text-decoration:none}
+.fb_connect_bar .fb_buttons{float:right;margin-top:7px}
+.fb_edge_widget_with_comment{position:relative;*z-index:1000}
+.fb_edge_widget_with_comment span.fb_edge_comment_widget{position:absolute}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget{z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget .FB_Loader{left:0;top:1px;margin-top:6px;margin-left:0;background-position:50% 50%;background-color:#fff;height:150px;width:394px;border:1px #666 solid;border-bottom:2px solid #283e6c;z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.dark .FB_Loader{background-color:#000;border-bottom:2px solid #ccc}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.siderender
+.FB_Loader{margin-top:0}
+.fbpluginrecommendationsbarleft,
+.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}
+/* @noflip */
+.fbpluginrecommendationsbarleft{left:10px}
+/* @noflip */
+.fbpluginrecommendationsbarright{right:10px}</style><link href="http://thyme.comcastnets.net/thyme/css/thyme-block.css" rel="stylesheet" type="text/css"></head>
+     
+    
+
+
+	<body data-twttr-rendered="true" id="homepage" class="eol shows shows c-jonas edition_us">
+
+		 
+		
+
+		
+<!-- Default header -->
+        
+		
+        <div id="page" class="lp_wrap">
+            
+
+
+
+
+
+
+
+<script type="text/javascript">
+(function($){
+	(function(a){jQuery.browser.mobile=/android|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(ad|hone|od)|iris|kindle|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|symbian|tablet|treo|up\.(browser|link)|vodafone|wap|webos|windows (ce|phone)|xda|xiino/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|e\-|e\/|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(di|rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|xda(\-|2|g)|yas\-|your|zeto|zte\-/i.test(a.substr(0,4))})(navigator.userAgent||navigator.vendor||window.opera);
+	
+	function browserCheck(){
+	   var userAgent = navigator.userAgent.toLowerCase();
+	   $.browser.chrome = /chrome/.test(navigator.userAgent.toLowerCase());
+	   
+	   if($.browser.msie){
+	      userAgent = $.browser.version;
+	      version = userAgent.substring(0,userAgent.indexOf('.'));
+	      if (version < 8) return false;
+	   } else if($.browser.chrome){
+	      userAgent = userAgent.substring(userAgent.indexOf('chrome/') +7);
+	      version = userAgent.substring(0,userAgent.indexOf('.'));
+	      if (version < 23) return false;
+	   } else if($.browser.safari){
+	      userAgent = userAgent.substring(userAgent.indexOf('version/') +8);
+	      version = userAgent.substring(0,3);
+	      if (version < 5.1) return false;
+	   } else if($.browser.mozilla && navigator.userAgent.toLowerCase().indexOf('firefox') != -1){
+	      userAgent = userAgent.substring(userAgent.indexOf('firefox/') +8);
+	      version = userAgent.substring(0,userAgent.indexOf('.'));
+	      if (version < 16) return false;
+	   }
+	   return true;
+	}
+	
+	if((readCookie('browser_check') === null) && (! jQuery.browser.mobile)) {
+		if(!browserCheck()) {
+			alert("To better enjoy E! Online, please consider updating your browser. We like IE 8.0, Safari 5.1, Chrome 23.0, Firefox 16.0 (or greater). Thank you!\n\nFor more info\nhttp://www.eonline.com/news/333611/faq-mdash-using-the-new-e-online");
+		}
+		createCookie('browser_check','1',0);
+	}
+})(jQuery.noConflict());
+</script>
+
+<script type="text/javascript">
+/* Searchbox Autocomplete -- [This is RAMP's code unless noted by comment] */
+
+//var ezAutocompleteServiceUrl = "http://://[base_ramp_url]/autocomplete/[sitetoken]?callbackName=queryExpansion_callback&q=";
+//var ezAutocompleteSearchUrl = "http://[base_ramp_url]/search?";
+
+queryExpansion_init = function(searchBox, listBox, serviceUrl, searchUrl){
+    
+    searchBox = jQuery(searchBox);
+    listBox = jQuery(listBox);
+    
+    if (searchUrl == null || searchUrl.length == 0){
+        searchUrl = ezAutocompleteSearchUrl;
+    }
+    
+    var searchTimer = null;
+    
+    var getData = function(){
+		var searchQ = jQuery(searchBox)[0].value.replace(/[<>;()]/g,'');
+		var url = serviceUrl + encodeURIComponent(searchQ);
+        var head = document.getElementsByTagName("head")[0];
+        var newScript = document.createElement("script");
+        newScript.type = "text/javascript";
+        newScript.src = url;
+        head.appendChild(newScript);
+    };
+    
+    var init = function(){
+        searchBox.attr("autocomplete", "off");
+        
+        searchBox.bind("blur", function(event){
+            listBox.css("display", "none");
+        });
+        
+        listBox.bind("blur", function(){
+            listBox.css("display", "none");
+        });
+        
+        searchBox.bind("keydown", function(event){
+            var selected = jQuery("a.selected", listBox);
+            
+            // The up/down key events
+            if (event.keyCode == 38 || event.keyCode == 40) {
+                if (selected.length > 0) {
+                    if (event.keyCode == 38) {
+                        selected = selected.prev();//up
+                    }
+                    else {
+                        selected = selected.next();//down
+                    }
+                }
+                
+                if (selected.length == 0) {
+                    if (event.keyCode == 38) {
+                        selected = jQuery("a:last-child", listBox);
+                    }
+                    else {
+                        selected = jQuery("a:first-child", listBox);
+                    }
+                }
+                
+                if (selected.length == 0) {
+                    return;
+                }
+                
+                listBox.css("display", "block");
+                selected.addClass("selected").siblings().removeClass("selected");
+                jQuery(searchBox)[0].value = jQuery(selected[0]).text();
+                
+            // Any other keys pressed
+            }
+            else {
+                if (searchTimer != null) {
+                    clearTimeout(searchTimer);
+                }
+                searchTimer = setTimeout(getData, 300);
+            }
+        });
+    };
+    
+    var callback = function(data){
+        var list = data.ac.q;
+        var content = "";
+        
+        if (list.length > 0){
+            listBox.css("display", "block");
+        }else{
+            listBox.css("display", "none");
+        }
+        
+        for (var i = 0; i < list.length; i+=1){
+			var encodedQ = encodeURIComponent(list[i]);
+        	var url = searchUrl + "query=" + encodedQ.replace(/'/g, "%27");  // E! changed q= to query= 
+        	content += "<a href='' onmousedown='window.location=\""+ url + "\"'>" + list[i] + "</a>";
+        }
+        
+        listBox.each(function(){
+            this.innerHTML = content;
+        });
+    };
+    
+    init();
+    
+    return callback;
+};
+if( navigator.userAgent.match(/iPhone/i) || 
+    navigator.userAgent.match(/iPod/i) || 
+    navigator.userAgent.match(/iPad/i) 
+  ) { 
+       document.title = "E! Online"; 
+    } 
+
+</script>
+
+	
+
+
+
+
+
+
+
+
+
+	
+	    
+	    
+	    
+	    
+	    	
+	    
+	    
+	    
+	    
+	
+
+
+
+    <!--NBC U -->
+    <script src="//www.nbcudigitaladops.com/hosted/global_header.js"></script><script src="//www.nbcudigitaladops.com/hosted/jscript/eonline_com_header.js"></script><script>window.Krux||((Krux=function(){Krux.q.push(arguments);}).q=[]);(function(){function retrieve(n){var m, k='kx'+n;if (window.localStorage) {return window.localStorage[k] || "";} else if (navigator.cookieEnabled) {m = document.cookie.match(k+'=([^;]*)');return (m && unescape(m[1])) || "";} else {return '';}}var kvs = [];Krux.user = retrieve('user');Krux.segments = retrieve('segs') && retrieve('segs').split(',') ||[];for (var i = 0; i < Krux.segments.length; i++ ) {kvs.push('ksg=' + Krux.segments[i]);}Krux.dartKeyValues = kvs.length ? kvs.join(';') + ';': '';})();</script><script>(function(){var kvs = window.Krux ? window.Krux.dartKeyValues : '';if(top.__nbcudigitaladops_inject && top.__nbcudigitaladops_inject.dtprm){top.__nbcudigitaladops_inject.dtprm(kvs);}})();</script><script></script>
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+		
+	
+
+
+<!-- google analytics (us) -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="http://www.google-analytics.com/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-852400-1");
+pageTracker._initData();
+
+pageTracker._trackPageview();
+
+</script>
+
+<div id="HHeader" class="us">
+	<table id="Header_BannerBlock" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td width="100%" align="center">
+				
+					
+					<!-- adKeywords are added only for sweepstakes -->
+						
+
+
+
+
+
+
+
+
+	
+	
+	
+
+	<script type="text/javascript">
+		(function($){
+			window.adBuffer = eol.page.dartRender( {"site" : "shows", "zone" : "jonas", "dimensions" : "728x90,960x150,970x50,970x66,970x90,970x150,970x250,970x415,980x250", "tile" : "1", "wid" : "", "notCategory" : "default"  }) || [];
+			document.write(adBuffer.pop()); 
+		})(jQuery);
+	</script><div style="" class="advertisement ad-ignore ad-728x90-960x150-970x50-970x66-970x90-970x150-970x250-970x415-980x250 reset" rel="1"><!-- -->
+	<script type="text/javascript">
+		(function($){
+			if ( $.isArray(adBuffer) && adBuffer.length === 2 ) {
+				document.write(adBuffer.pop());
+			}
+		})(jQuery);
+	</script><script src="http://ad.doubleclick.net/N2620/adj/shows.us.eonline/jonas;dcopt=ist;tile=1;pos=1_728x90;sz=728x90,960x150,970x50,970x66,970x90,970x150,970x250,970x415,980x250;akw=;wid=;!category=default;pm=1;ord=5672221730649672?" type="text/javascript"></script><script></script>
+<!-- Copyright DoubleClick Inc., All rights reserved. -->
+<!-- This code was autogenerated @ Sat Aug 25 11:03:45 EDT 2012 -->
+<script src="http://pagead2.googlesyndication.com/pagead/imgad/879366/flashwrite_1_2.js"></script>
+  
+<script language="JavaScript">
+ 
+<!--
+var clickThroughOverlayApplied = 'false';
+var dcallowscriptaccess = 'never';
+var plugin = false;
+var advurl = 'http://www.wgntv.com/news/livestreaming/';
+var alttext = '';
+var dcgif = 'http://pagead2.googlesyndication.com/pagead/imgad/3461307/728x90_Nine.jpg';
+var dccreativewidth = '728';
+var dcwmode = 'opaque';
+var imgurl = 'http://www.wgntv.com/news/livestreaming/';
+var target = '_blank';
+var dcbgcolor = '';
+var dcswf = 'http://pagead2.googlesyndication.com/pagead/imgad/3461307/728x90_Nine.swf';
+var dcminversion = '8';
+var dccreativeheight = '90';
+
+var clickTag = encodeURIComponent('http://adclick.g.doubleclick.net/aclk%253Fsa%253DL%2526ai%253DBHv6lWjmEUfuBELPgwQHqk4G4Cqqw2f8CAAAAEAEgADgAWJqo-7FIYMm2hIjwo-wSggEXY2EtcHViLTM3MTE0MTIyMDA5NzU4NjCyAQ93d3cuZW9ubGluZS5jb226AQlnZnBfaW1hZ2XIAQnaASJodHRwOi8vd3d3LmVvbmxpbmUuY29tL3Nob3dzL2pvbmFzmALwLsACAuACAOoCGzI2MjAvc2hvd3MudXMuZW9ubGluZS9qb25hc_gCgdIekAOkA5gD4AOoAwHgBAGgBiA%2526num%253D0%2526sig%253DAOD64_2pd-TbC7X4eoFtoF2ih9om6WdSTg%2526client%253Dca-pub-3711412200975860%2526adurl%253Dhttp://www.wgntv.com/news/livestreaming/');
+function checkFlash(v){ 
+var y, x, s="Shockwave", f="Flash", o="object", u="undefined", np=navigator.plugins, nm=navigator.mimeTypes, nmd="application/x-shockwave-flash"; 
+v = Math.max(Math.floor(v) || 0, 6); // check if v is a number and use Flash Player 6 as the minimum player version 
+if(typeof np!=u&&typeof np[s+" "+f]==o&&(x=np[s+" "+f].description)&&!(typeof nm!=u&&nm[nmd]&&!nm[nmd].enabledPlugin)){ 
+if(v<=x.match(/Shockwave Flash (\d+)/)[1])return true;} 
+else if(typeof window.ActiveXObject!=u){ 
+for(y=16;y>=v;y--){ 
+try{x=new ActiveXObject(s+f+"."+s+f+"."+y);if((x!=null)&&(typeof x==o))return true;}catch(e){}} 
+} 
+return false;}
+
+if ( checkFlash(dcminversion) )  {  
+adcode = '<OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"'+
+' ID=FLASH_AD WIDTH="'+ dccreativewidth +'" HEIGHT="'+ dccreativeheight +'">'+
+'<PARAM NAME=movie VALUE="' + dcswf  +'"><PARAM NAME="FlashVars" VALUE="' +
+'clickTag='+clickTag+'"><PARAM NAME=quality VALUE=high><PARAM NAME=bgcolor VALUE=#'+ dcbgcolor +'><PARAM NAME=wmode VALUE='+ dcwmode +'><PARAM NAME="AllowScriptAccess" VALUE="'+dcallowscriptaccess+'">'+
+ '<EMBED src="' + dcswf  +'" flashvars="' +
+'clickTag='+clickTag+'" quality=high wmode='+dcwmode+
+' swLiveConnect=TRUE WIDTH="'+ dccreativewidth +'" HEIGHT="'+ dccreativeheight +'" bgcolor=#'+ dcbgcolor+
+' TYPE="application/x-shockwave-flash" AllowScriptAccess="'+dcallowscriptaccess+'"></EMBED></OBJECT>';
+if(('j'!="j")&&(typeof dclkFlashWrite!="undefined")){dclkFlashWrite(adcode);}else{document.write(adcode);} 
+} else { 
+document.write('<A TARGET="_blank" HREF="http://adclick.g.doubleclick.net/aclk%253Fsa%253DL%2526ai%253DBHv6lWjmEUfuBELPgwQHqk4G4Cqqw2f8CAAAAEAEgADgAWJqo-7FIYMm2hIjwo-wSggEXY2EtcHViLTM3MTE0MTIyMDA5NzU4NjCyAQ93d3cuZW9ubGluZS5jb226AQlnZnBfaW1hZ2XIAQnaASJodHRwOi8vd3d3LmVvbmxpbmUuY29tL3Nob3dzL2pvbmFzmALwLsACAuACAOoCGzI2MjAvc2hvd3MudXMuZW9ubGluZS9qb25hc_gCgdIekAOkA5gD4AOoAwHgBAGgBiA%2526num%253D0%2526sig%253DAOD64_2pd-TbC7X4eoFtoF2ih9om6WdSTg%2526client%253Dca-pub-3711412200975860%2526adurl%253Dhttp://www.wgntv.com/news/livestreaming/"><IMG SRC="' + dcgif + '" alt="" BORDER=0></A>');
+}
+//-->  
+</script><a target="_blank" href="http://adclick.g.doubleclick.net/aclk%253Fsa%253DL%2526ai%253DBHv6lWjmEUfuBELPgwQHqk4G4Cqqw2f8CAAAAEAEgADgAWJqo-7FIYMm2hIjwo-wSggEXY2EtcHViLTM3MTE0MTIyMDA5NzU4NjCyAQ93d3cuZW9ubGluZS5jb226AQlnZnBfaW1hZ2XIAQnaASJodHRwOi8vd3d3LmVvbmxpbmUuY29tL3Nob3dzL2pvbmFzmALwLsACAuACAOoCGzI2MjAvc2hvd3MudXMuZW9ubGluZS9qb25hc_gCgdIekAOkA5gD4AOoAwHgBAGgBiA%2526num%253D0%2526sig%253DAOD64_2pd-TbC7X4eoFtoF2ih9om6WdSTg%2526client%253Dca-pub-3711412200975860%2526adurl%253Dhttp://www.wgntv.com/news/livestreaming/"><img src="http://pagead2.googlesyndication.com/pagead/imgad/3461307/728x90_Nine.jpg" alt="" border="0"></a>
+<noscript><a target="_blank" href="http://adclick.g.doubleclick.net/aclk%253Fsa%253DL%2526ai%253DBHv6lWjmEUfuBELPgwQHqk4G4Cqqw2f8CAAAAEAEgADgAWJqo-7FIYMm2hIjwo-wSggEXY2EtcHViLTM3MTE0MTIyMDA5NzU4NjCyAQ93d3cuZW9ubGluZS5jb226AQlnZnBfaW1hZ2XIAQnaASJodHRwOi8vd3d3LmVvbmxpbmUuY29tL3Nob3dzL2pvbmFzmALwLsACAuACAOoCGzI2MjAvc2hvd3MudXMuZW9ubGluZS9qb25hc_gCgdIekAOkA5gD4AOoAwHgBAGgBiA%2526num%253D0%2526sig%253DAOD64_2pd-TbC7X4eoFtoF2ih9om6WdSTg%2526client%253Dca-pub-3711412200975860%2526adurl%253Dhttp://www.wgntv.com/news/livestreaming/"><img src="http://pagead2.googlesyndication.com/pagead/imgad/3461307/728x90_Nine.jpg"  border="0" alt="" ></a></noscript>
+	<script type="text/javascript">
+		(function($){
+			if ( $.isArray(adBuffer) && adBuffer.length === 1 ) {
+				document.write(adBuffer.pop());
+			}
+		})(jQuery);
+	</script></div>
+
+					
+					
+				
+			</td>
+		</tr>
+	</tbody></table>
+    
+	<div id="Header_Layout">
+	
+		
+	
+	    <a href="/" data-omniture="trackWidgetClick|{&quot;linkName&quot;:&quot;nav:header:logo&quot;,&quot;products&quot;:&quot;eVar16=\&quot;nav\&quot;&quot;}"><div id="Header_LogoBlock">
+	    	E! Online
+		</div></a>
+	    <div id="Header_NavBlock">
+	    	<ul id="Header_NavBlock_List" class="">
+	    		<li id="Header_NavItem_All" class="Header_NavItem ">
+	    			<a href="/" data-omniture="trackWidgetClick|{&quot;linkName&quot;:&quot;nav:header:all&quot;,&quot;products&quot;:&quot;eVar16=\&quot;nav\&quot;&quot;}">All</a>
+	    			
+
+
+
+
+
+
+
+
+
+	
+
+	    		</li>
+	    		<li id="Header_NavItem_News" class="Header_NavItem ">
+	    			<a href="/news" data-omniture="trackWidgetClick|{&quot;linkName&quot;:&quot;nav:header:news&quot;,&quot;products&quot;:&quot;eVar16=\&quot;nav\&quot;&quot;}">News</a> 
+	    			
+
+
+
+
+
+
+
+
+
+	
+
+	    		</li>
+	    		<li id="Header_NavItem_Photos" class="Header_NavItem ">
+	    			<a href="/photos" data-omniture="trackWidgetClick|{&quot;linkName&quot;:&quot;nav:header:photos&quot;,&quot;products&quot;:&quot;eVar16=\&quot;nav\&quot;&quot;}">Photos</a>
+	    			
+
+
+
+
+
+
+
+
+
+	
+
+	    		</li>
+	    		<li id="Header_NavItem_Videos" class="Header_NavItem ">
+	    			<a href="/videos" data-omniture="trackWidgetClick|{&quot;linkName&quot;:&quot;nav:header:videos&quot;,&quot;products&quot;:&quot;eVar16=\&quot;nav\&quot;&quot;}">Videos</a>
+	    			
+
+
+
+
+
+
+
+
+
+	
+
+	    		</li>
+	    		<li id="Header_NavItem_TVScoop" class="Header_NavItem ">
+	    			<a href="/news/tv" data-omniture="trackWidgetClick|{&quot;linkName&quot;:&quot;nav:header:tvscoop&quot;,&quot;products&quot;:&quot;eVar16=\&quot;nav\&quot;&quot;}">TV Scoop</a>
+	    			
+
+
+
+
+
+
+
+
+
+	
+
+	    		</li>
+	    		<li id="Header_NavItem_Trends" class="Header_NavItem ">
+	    			<a href="/trends" data-omniture="trackWidgetClick|{&quot;linkName&quot;:&quot;nav:header:trends&quot;,&quot;products&quot;:&quot;eVar16=\&quot;nav\&quot;&quot;}">Trends</a>
+	    			
+
+
+
+
+
+
+
+
+
+	
+
+	    		</li>
+
+	    		<li id="Header_NavItem_EShows" class="Header_NavItem Header_NavItem_EShows_Selected">
+	    			<a href="/shows" data-omniture="trackWidgetClick|{&quot;linkName&quot;:&quot;nav:header:shows&quot;,&quot;products&quot;:&quot;eVar16=\&quot;nav\&quot;&quot;}">E! Shows</a>
+					
+
+
+
+
+
+
+
+
+
+	
+		<div id="headerSpot_eshows" class="Header_Callout">
+			<div id="Header_CalloutAligner">
+				<div id="Header_Callout_Caret">
+					<img src="/resources/images/header_footer/caret_up.png" alt="">
+				</div>
+				<br>
+				<div id="Header_CalloutLine">
+					<a href="http://www.eonline.com/shows/fashion_police" onclick="trackWidgetClick(this,'nav:header:')">
+						<span id="Header_Callout_Time"></span>
+						<span id="Header_Callout_Blurb">Fashion Police: Brand New Tonight 10|9c</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	
+
+	    		</li>
+
+	    		<li id="Header_NavItem_RedCarpet" class="Header_NavItem ">
+	    			<a href="/redcarpet" data-omniture="trackWidgetClick|{&quot;linkName&quot;:&quot;nav:header:redcarpet&quot;,&quot;products&quot;:&quot;eVar16=\&quot;nav\&quot;&quot;}">Red Carpet</a>
+	    			
+
+
+
+
+
+
+
+
+
+	
+
+	    		</li>
+	    	</ul>
+	    </div>
+	    <div id="Header_SecondaryNav">
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		
+		
+	
+
+
+
+
+
+
+
+
+
+	
+	
+		
+		
+			
+			
+				
+				
+			
+		
+	
+
+
+
+
+
+
+
+
+
+	
+		
+	
+	
+
+
+
+
+	
+	
+		
+			
+				 
+			
+			
+		
+	
+	
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+	
+	
+		
+			
+				 
+			
+			
+		
+	
+	
+	
+
+
+
+
+
+
+	
+	
+		
+	
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		
+	
+
+
+
+
+	
+	
+		
+	
+
+
+
+
+	
+		 
+	
+	
+
+
+
+
+
+
+
+
+	
+
+
+	
+
+
+	
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+	
+
+
+	
+
+
+	
+
+
+
+
+
+
+	
+
+
+
+	
+	
+		
+		
+	
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		
+	
+
+
+
+
+
+
+	
+	
+	
+		
+	
+
+
+
+
+	
+	
+	
+		
+	
+
+
+
+
+	
+	
+	
+		
+	
+
+
+
+
+	
+	
+	
+		
+	
+
+
+
+
+	
+	
+	
+		
+	
+
+
+
+
+	
+	
+	
+		
+	
+
+
+
+
+	
+	
+	
+	
+		
+	
+
+
+
+
+	
+	
+	
+		
+	
+
+
+
+
+	
+	
+	
+		
+	
+
+
+
+
+
+
+
+	
+		<ul class="social-links horizontal">
+			
+				
+				<li id="rss-icon-0" class="rss">
+					<a id="" href="/everywhere/rss/index.jsp" class="" title="RSS Feeds"><img src="/resources/images/header_footer/black-rss.png" alt="Mobile"></a>
+				</li>
+			
+			
+				
+				<li id="fb-like-0" class="facebook-like ">
+					<div class=" fb_reset" id="fb-root"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe src="http://static.ak.facebook.com/connect/xd_arbiter.php?version=24#channel=f2a46cb0bfde9d8&amp;origin=http%3A%2F%2Fwww.eonline.com&amp;channel_path=%2Fshows%2Fjonas%3Ffb_xd_fragment%23xd_sig%3Df1071cc89c9dcfc%26" style="border: medium none;" tab-index="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_http" allowtransparency="true" name="fb_xdm_frame_http" frameborder="0" scrolling="no"></iframe><iframe src="https://s-static.ak.facebook.com/connect/xd_arbiter.php?version=24#channel=f2a46cb0bfde9d8&amp;origin=http%3A%2F%2Fwww.eonline.com&amp;channel_path=%2Fshows%2Fjonas%3Ffb_xd_fragment%23xd_sig%3Df1071cc89c9dcfc%26" style="border: medium none;" tab-index="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_https" allowtransparency="true" name="fb_xdm_frame_https" frameborder="0" scrolling="no"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
+					<div fb-xfbml-state="rendered" class="fb-like fb_edge_widget_with_comment fb_iframe_widget" data-href="http://www.facebook.com/eonline" data-send="false" data-layout="button_count" data-width="90" data-show-faces="false" data-font="arial" data-omniture="trackShares|{'linkName':'nav:header:facebook_like_button'}"><span style="height: 20px; width: 80px;"><iframe src="http://www.facebook.com/plugins/like.php?api_key=195662528604&amp;locale=en_US&amp;sdk=joey&amp;channel_url=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D24%23cb%3Df14dc29e9cceaaa%26origin%3Dhttp%253A%252F%252Fwww.eonline.com%252Ff2a46cb0bfde9d8%26domain%3Dwww.eonline.com%26relation%3Dparent.parent&amp;href=http%3A%2F%2Fwww.facebook.com%2Feonline&amp;node_type=link&amp;width=90&amp;font=arial&amp;layout=button_count&amp;colorscheme=light&amp;show_faces=false&amp;send=false&amp;extended_social_context=false" class="fb_ltr" title="Like this content on Facebook." style="border: medium none; overflow: hidden; height: 20px; width: 80px;" name="fa6673bfe7e6ee" id="fad48bef8e8a4c" scrolling="no"></iframe></span></div>
+				</li>
+			
+			
+				
+				<li id="follow-button-0" class="twitter">
+					
+					<iframe data-twttr-rendered="true" title="Twitter Follow Button" style="width: 60px; height: 20px;" class="twitter-follow-button twitter-follow-button" src="http://platform.twitter.com/widgets/follow_button.1367516458.html#_=1367619941644&amp;id=twitter-widget-1&amp;lang=en&amp;screen_name=eonline&amp;show_count=false&amp;show_screen_name=false&amp;size=m" allowtransparency="true" frameborder="0" scrolling="no"></iframe>
+				</li>
+			
+			
+			
+			
+			
+			
+				
+				<li id="google-badge-0" class="google-badge">
+					<a href="https://plus.google.com/116527518118173945712?prsrc=3" rel="publisher" style="text-decoration:none;" target="_blank">
+						<img src="/resources/images/header_footer/google-plus-badge.png" alt="Google+" height="20" width="20" border="0">
+					</a>
+				</li>
+			
+		</ul>
+
+		
+		
+
+		
+
+		
+		
+			<script type="text/javascript">
+				// Custom eonline.com implementation of the FB Like DOM insertion code, since Facebook keeps breaking their like buttons.
+				window.fbAsyncInit = function() {
+					FB.init({
+						"appId": "195662528604", // App ID
+						"status": "true", // check login status
+						"cookie": "true", // enable cookies to allow the server to access the session
+						"xfbml": "true" // parse XFBML
+					});
+				};
+
+				var js = document.createElement('script');
+					js.async = true;
+					js.id = 'facebook-jssdk';
+					js.src = '//connect.facebook.net/en_US/all.js#xfbml=1&appId=195662528604';
+				var obj = document.getElementById('facebook-jssdk');
+				if (!obj) {
+					if (document.head) {
+						document.head.appendChild(js);
+					} else if (document.getElementsByTagName('head')) { // IE 7
+						document.getElementsByTagName('head')[0].appendChild(js);
+					}
+				}
+			</script>
+		
+
+		
+		
+			
+			
+			<script type="text/javascript">
+				(function($){
+					$(document).ready(function() {
+						// Auto-Initialize
+						setTimeout(function() {
+							eonline.socialMediaIcons.initTwitterBttns();
+						}, 2000);
+					});
+				})(jQuery.noConflict());
+			</script>
+		
+
+		
+		
+
+		
+		
+
+		
+		
+	
+
+	
+	
+
+		</div>
+		
+		<div id="Header_SearchBlock">
+			<div id="Header_SearchBox">
+		        <form id="Header_Search_Form" action="/search" method="get" onsubmit="return IsSearchValid();">
+		            <input id="Header_Search_Submit" tabindex="2" value="" onclick="" type="submit">
+		            <input id="Header_Search_Input" name="query" tabindex="1" autocomplete="off" type="text">
+		        </form>
+	    	</div>
+	    	<div id="Header_Search_List"></div>
+	    	<script type="text/javascript">
+	    		if (!window.location.origin) window.location.origin = window.location.protocol+"//"+window.location.host;
+				headerAC = queryExpansion_init(jQuery("#Header_Search_Input"), jQuery("#Header_Search_List"),
+						"http://eonlineus.ramp.com/autocomplete?callbackName=headerAC&q=",
+						window.location.origin + "/search/?");
+			</script>
+    	</div>
+	</div>
+</div>
+<script type="text/javascript">
+	function IsSearchValid() {
+		if (jQuery('#Header_Search_Input').val() == '') {
+			jQuery('#Header_Search_Input').focus();
+			return false;
+		}else{
+			return true;
+		}
+	};
+</script>
+            
+
+
+
+
+
+
+	
+
+
+<div id="show-info" class="clear">
+	<div class="logo"></div>
+	<div class="text">
+		<div class="title-desp"></div>
+		<div class="show-time"></div>
+	</div>
+	<div id="social-media-icon-wrap">
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		
+		
+	
+
+
+
+
+
+
+
+
+
+	
+		
+		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+				
+				
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+	
+	
+
+
+
+
+
+
+
+
+
+	
+		
+	
+	
+
+
+
+
+	
+		
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+	
+	
+	
+	
+
+
+
+
+
+
+	
+	
+		
+	
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		
+	
+
+
+
+
+	
+	
+		
+	
+
+
+
+
+	
+	
+		
+	
+
+
+
+
+
+
+	
+
+
+	
+
+
+	
+
+
+	
+
+
+	
+
+
+	
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+	
+
+
+	
+
+
+	
+
+
+
+
+
+
+	
+
+
+
+	
+	
+		
+		
+	
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		
+	
+
+
+
+
+
+
+	
+	
+	
+		
+	
+
+
+
+
+	
+	
+	
+		
+	
+
+
+
+
+	
+	
+	
+		
+	
+
+
+
+
+	
+	
+	
+		
+	
+
+
+
+
+	
+	
+	
+		
+	
+
+
+
+
+	
+	
+	
+		
+	
+
+
+
+
+	
+	
+	
+	
+		
+	
+
+
+
+
+	
+	
+	
+		
+	
+
+
+
+
+	
+	
+	
+		
+	
+
+
+
+
+
+
+
+	
+		<ul class="social-links horizontal">
+			
+			
+				
+				<li id="fb-like-0" class="facebook-like ">
+					<div id="fb-root"></div>
+					<div fb-xfbml-state="rendered" class="fb-like fb_edge_widget_with_comment fb_iframe_widget" data-href="https://www.facebook.com/MarriedToJonasOnE" data-send="false" data-layout="button_count" data-width="90" data-show-faces="false" data-font="arial" data-omniture="trackShares|{'linkName::facebook_like_button'}"><span style="height: 20px; width: 79px;"><iframe src="http://www.facebook.com/plugins/like.php?api_key=195662528604&amp;locale=en_US&amp;sdk=joey&amp;channel_url=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D24%23cb%3Df17741feefa65b4%26origin%3Dhttp%253A%252F%252Fwww.eonline.com%252Ff2a46cb0bfde9d8%26domain%3Dwww.eonline.com%26relation%3Dparent.parent&amp;href=https%3A%2F%2Fwww.facebook.com%2FMarriedToJonasOnE&amp;node_type=link&amp;width=90&amp;font=arial&amp;layout=button_count&amp;colorscheme=light&amp;show_faces=false&amp;send=false&amp;extended_social_context=false" class="fb_ltr" title="Like this content on Facebook." style="border: medium none; overflow: hidden; height: 20px; width: 79px;" name="f2e532a98b86d9a" id="f1280ad359228a8" scrolling="no"></iframe></span></div>
+				</li>
+			
+			
+				
+				<li id="follow-button-0" class="twitter">
+					
+					<iframe data-twttr-rendered="true" title="Twitter Follow Button" style="width: 60px; height: 20px;" class="twitter-follow-button twitter-follow-button" src="http://platform.twitter.com/widgets/follow_button.1367516458.html#_=1367619941647&amp;id=twitter-widget-2&amp;lang=en&amp;screen_name=marriedtojonas&amp;show_count=false&amp;show_screen_name=false&amp;size=m" allowtransparency="true" frameborder="0" scrolling="no"></iframe>
+				</li>
+			
+			
+			
+				
+				<li id="googlePlus-0" class="google-plus" style="float:left;">
+					<div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 90px; height: 20px;"><iframe title="+1" data-gapiattached="true" allowtransparency="true" src="https://plusone.google.com/_/+1/fastbutton?bsv&amp;omniture=trackShares%7C%7B%27linkName%3A%3Agoogle_plus_one_button%27%7D&amp;size=medium&amp;hl=en-US&amp;origin=http%3A%2F%2Fwww.eonline.com&amp;url=http%3A%2F%2Fwww.eonline.com%2Fshows%2Fjonas&amp;ic=1&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en_US.ZyBXoE5PIYQ.O%2Fm%3D__features__%2Fam%3DUQ%2Frt%3Dj%2Fd%3D1%2Frs%3DAItRSTOrmkfgKlD6C8yyo1rfmt6R8vHs5Q#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled&amp;id=I0_1367619939575&amp;parent=http%3A%2F%2Fwww.eonline.com&amp;rpctoken=74291778" name="I0_1367619939575" id="I0_1367619939575" vspace="0" tabindex="0" style="position: static; top: 0px; width: 90px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" marginwidth="0" marginheight="0" hspace="0" frameborder="0" scrolling="no" width="100%"></iframe></div>
+				</li>
+			
+			
+			
+			
+		</ul>
+
+		
+		
+
+		
+
+		
+		
+			<script type="text/javascript">
+				// Custom eonline.com implementation of the FB Like DOM insertion code, since Facebook keeps breaking their like buttons.
+				window.fbAsyncInit = function() {
+					FB.init({
+						"appId": "195662528604", // App ID
+						"status": "true", // check login status
+						"cookie": "true", // enable cookies to allow the server to access the session
+						"xfbml": "true" // parse XFBML
+					});
+				};
+
+				var js = document.createElement('script');
+					js.async = true;
+					js.id = 'facebook-jssdk';
+					js.src = '//connect.facebook.net/en_US/all.js#xfbml=1&appId=195662528604';
+				var obj = document.getElementById('facebook-jssdk');
+				if (!obj) {
+					if (document.head) {
+						document.head.appendChild(js);
+					} else if (document.getElementsByTagName('head')) { // IE 7
+						document.getElementsByTagName('head')[0].appendChild(js);
+					}
+				}
+			</script>
+		
+
+		
+		
+			
+			
+			<script type="text/javascript">
+				(function($){
+					$(document).ready(function() {
+						// Auto-Initialize
+						setTimeout(function() {
+							eonline.socialMediaIcons.initTwitterBttns();
+						}, 2000);
+					});
+				})(jQuery.noConflict());
+			</script>
+		
+
+		
+		
+			
+			
+			<script gapi_processed="true" type="text/javascript" src="https://apis.google.com/js/plusone.js">
+				{parsetags: 'explicit'}
+			</script>
+			<script type="text/javascript">gapi.plusone.go();</script>
+		
+
+		
+		
+
+		
+		
+	
+
+	
+	
+
+	</div>
+
+	
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+(function($){
+    window.adBuffer = eol.page.dartRender( {"dimensions" : "120x60", "tile" : "6", "notCategory" : "default"  }) || [];
+    
+    document.write(adBuffer.pop()); 
+})(jQuery);
+</script><div class="advertisement ad-ignore ad-120x60 reset" rel="6"><!-- -->
+<script type="text/javascript">
+(function($){
+    if ( $.isArray(adBuffer) && adBuffer.length === 2 ) {
+        document.write(adBuffer.pop());
+    }
+})(jQuery);
+</script><script src="http://ad.doubleclick.net/N2620/adj/shows.us.eonline/jonas;tile=6;pos=6_120x60;sz=120x60;akw=;wid=;!category=default;pm=1;ord=5672221730649672?" type="text/javascript"></script>
+<script type="text/javascript">
+(function($){
+    if ( $.isArray(adBuffer) && adBuffer.length === 1 ) {
+        document.write(adBuffer.pop());
+    }
+})(jQuery);
+</script></div>
+
+</div>
+
+<div id="show-tune-in">Brand New Sundays 10|9c </div>
+
+<div id="show-header" class="clear">
+	<div class="keyart"></div>
+	 
+	
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+	// Lazy Loads in the required files, if they weren't added to the resources file.
+	eonline.lazyLoad.init('socialMediaIcons,userAgent,videoPlayerEngine');
+
+	/* Initializes the JSON Config Object, which will be used to bind both the 1st social.media.icon to the DOM & 
+	 * loads all Ajax rendered social.media.icons into the DOM, after the template has been copied, processed & pasted into the DOM.
+	 * Note these items will be dynamically set below, but not in this JSON initialization block: bigThumb, shareUrl, videoId & title.
+	 * The omnitureKey is some unique identifier for Omniture, like jonas or 
+	 */
+	var jsonShowPkgVideos = {
+		"domAttachId": "#social-media-icons",
+		"omnitureKey": "jonas",
+		"showFacebookLike": true,
+		"showTwitterTweet": true,
+		"showEmail": true,
+		"twitterTweetAccountName": "eonline"
+	};
+</script>
+
+
+	<div id="videos">
+		
+			<div class="featured-video">
+				<div id="video-playing-title" class="video-playing-title">Mike Is a Skinny Jean-ius</div>
+				<div id="video-207022" class="video-preview swf-wrap" data-bigthumb="http://thumbnails.eonline.com/p/jonas_203_highlight_a_207022.jpg" data-videosrc="http://link.theplatform.com/s/CAY1CB/783od57Xls_OtjcJZkEBr9O2rbdncCtK?feed=All%20Videos" data-videoid="207022" style="background-image: url(http://thumbnails.eonline.com/p/jonas_203_highlight_a_207022.jpg);"><video src="http://link.theplatform.com/s/CAY1CB/783od57Xls_OtjcJZkEBr9O2rbdncCtK?feed=All%20Videos" tabindex="0" preload="none" autoplay="true" poster="http://thumbnails.eonline.com/p/jonas_203_highlight_a_207022.jpg" id="vid" controls="" height="298" width="536"></video><div id="plugins"></div></div>
+				<div id="video-meta">
+		<div class="video-details">
+			<div class="clear">
+				<div class="video-playing-title" style="display:none">Mike Is a Skinny Jean-ius</div>
+				<div id="social-media-icons"><ul id="social-media-links" class="social-links social-buttons "><li class="facebook-like"><div id="fb-root"></div><div fb-xfbml-state="rendered" class="fb-like fb_edge_widget_with_comment fb_iframe_widget" data-href="http://www.eonline.com/shows/jonas/video/mike-is-a-skinny-jean-ius/207022" data-send="false" data-layout="button_count" data-width="90" data-show-faces="false" data-font="arial" data-omniture="trackShares|{'linkName:jonas:facebook_like_button'}"><span style="height: 20px; width: 74px;"><iframe src="http://www.facebook.com/plugins/like.php?api_key=195662528604&amp;locale=en_US&amp;sdk=joey&amp;channel_url=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D24%23cb%3Df19379f1aee30b2%26origin%3Dhttp%253A%252F%252Fwww.eonline.com%252Ff2a46cb0bfde9d8%26domain%3Dwww.eonline.com%26relation%3Dparent.parent&amp;href=http%3A%2F%2Fwww.eonline.com%2Fshows%2Fjonas%2Fvideo%2Fmike-is-a-skinny-jean-ius%2F207022&amp;node_type=link&amp;width=90&amp;font=arial&amp;layout=button_count&amp;colorscheme=light&amp;show_faces=false&amp;send=false&amp;extended_social_context=false" class="fb_ltr" title="Like this content on Facebook." style="border: medium none; overflow: hidden; height: 20px; width: 74px;" name="f3d38c7a816ddb" id="fb39a37aa0a18" scrolling="no"></iframe></span></div></li><li id="tweet-button" class="twitter"><iframe data-twttr-rendered="true" title="Twitter Tweet Button" style="width: 109px; height: 20px;" class="twitter-share-button twitter-count-horizontal" src="http://platform.twitter.com/widgets/tweet_button.1367516458.html#_=1367619941622&amp;count=horizontal&amp;counturl=http%3A%2F%2Fwww.eonline.com%2Fshows%2Fjonas%2Fvideo%2Fmike-is-a-skinny-jean-ius%2F207022&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=http%3A%2F%2Fwww.eonline.com%2Fshows%2Fjonas&amp;related=undefined&amp;size=m&amp;text=Mike%20Is%20a%20Skinny%20Jean-ius&amp;url=http%3A%2F%2Fwww.eonline.com%2Fshows%2Fjonas%2Fvideo%2Fmike-is-a-skinny-jean-ius%2F207022&amp;via=eonline" allowtransparency="true" frameborder="0" scrolling="no"></iframe></li><li id="email-207022" class="email-bttn"><div class="lWOn email" data-omniture="trackShares|{'linkName:jonas:email_link'}"></div></li></ul><div id="socialSendEmail-207022" class="social-Send-Email">Loading...</div><div id="emailOverlay-207022" class="emailOverlay" style="background-color: rgb(0, 0, 0); opacity: 0.7; display: none;z-index:20;filter:alpha(opacity=70);"></div></div>
+				<div class="description">Joe Jonas takes Dani's brother to one of his favorite New York shops to sample some form-fitting fashions. Can he handle the pasted-on look?</div>
+			</div>
+		</div>
+	</div>
+			</div>
+		
+
+		<div id="video-stream" class="clear">
+			<div style="display: block;" class="video-prev btn disabled">Previous</div>
+			<div id="video-wrap">
+				<div style="text-align: start; float: none; position: relative; top: auto; right: auto; bottom: auto; left: auto; width: 459px; height: 77px; margin: 0px; overflow: hidden;" class="caroufredsel_wrapper"><ul style="text-align: left; float: none; position: absolute; top: 0px; left: 2px; margin: 0px; width: 14139px; height: 77px;" class="videos scrollable horizontal clear">
+					
+						<li class="active">
+							<a href="http://www.eonline.com/shows/jonas/video/mike-is-a-skinny-jean-ius/207022" data-bigthumb="http://thumbnails.eonline.com/p/jonas_203_highlight_a_207022.jpg" data-videosrc="http://link.theplatform.com/s/CAY1CB/783od57Xls_OtjcJZkEBr9O2rbdncCtK?feed=All%20Videos" data-videoid="207022" style=" background-image: url(http://thumbnails.eonline.com/p/jonas_203_highlight_a_207022_thumb.jpg);" class="omniture" rel=":video:mike-is-a-skinny-jean-ius">
+								<span class="title">Mike Is a Skinny Jean-ius</span>
+								<span class="description">Joe Jonas takes Dani's brother to one of his favorite New York shops to sample some form-fitting fashions. Can he handle the pasted-on look?</span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="http://www.eonline.com/shows/jonas/video/dani-wants-a-career/207026" data-bigthumb="http://thumbnails.eonline.com/p/jonas_203_highlight_b_v2_207026.jpg" data-videosrc="http://link.theplatform.com/s/CAY1CB/ZpcKIez8MH2oWzUQfJe_aMO191GAXYUM?feed=All%20Videos" data-videoid="207026" style=" background-image: url(http://thumbnails.eonline.com/p/jonas_203_highlight_b_v2_207026_thumb.jpg);" class="omniture" rel=":video:dani-wants-a-career">
+								<span class="title">Dani Wants a Career</span>
+								<span class="description">A magazine job opportunity has Dani super jazzed, but it directly conflicts with Kevin's touring schedule. Will career win out over their traveling plans?</span>
+							</a>
+						</li>
+					
+						<li style="margin-right: 4px;">
+							<a href="http://www.eonline.com/shows/jonas/video/dani-enters-the-working-world/206985" data-bigthumb="http://thumbnails.eonline.com/p/jonas_203_promo97_v2_206985_thumb_196x110_2382738421.jpg" data-videosrc="http://link.theplatform.com/s/CAY1CB/ExKPPzf6s97u1Nc6VlqEC0_OApQ4QyfJ?feed=All%20Videos" data-videoid="206985" style=" background-image: url(http://thumbnails.eonline.com/p/jonas_203_promo97_v2_206985_thumb_145x82_2382738420.jpg);" class="omniture" rel=":video:dani-enters-the-working-world">
+								<span class="title">Dani Enters the Working World</span>
+								<span class="description">Dani lands every girls dream job--but will Kevin put the brakes on her becoming a career woman? See the drama unfold Sunday 10|9c.</span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="http://www.eonline.com/shows/jonas/video/kevin-and-danielle-jonas-shopping-spree/206743" data-bigthumb="http://thumbnails.eonline.com/p/jonas_202_bonus_crf_206743.jpg" data-videosrc="http://link.theplatform.com/s/CAY1CB/PaU6Ah4D9tmqTRiKQ65fmJ_JjjJvmZ4U?feed=All%20Videos" data-videoid="206743" style=" background-image: url(http://thumbnails.eonline.com/p/jonas_202_bonus_crf_206743_thumb.jpg);" class="omniture" rel=":video:kevin-and-danielle-jonas-shopping-spree">
+								<span class="title">Kevin and Danielle Jonas Shopping Spree!</span>
+								<span class="description">The couple shops for bling together in New York City in this bonus scene from "Married to Jonas." See how long it takes for Kevin to get enough!</span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="http://www.eonline.com/shows/jonas/video/kevin-jonas-goes-awol-on-pom-poms-shoot/206386" data-bigthumb="http://thumbnails.eonline.com/p/jonas_202_highlight_b_206386.jpg" data-videosrc="http://link.theplatform.com/s/CAY1CB/t1V3a9oHiCH__M_2LJL1zlDXGSYjOlVn?feed=All%20Videos" data-videoid="206386" style=" background-image: url(http://thumbnails.eonline.com/p/jonas_202_highlight_b_206386_thumb.jpg);" class="omniture" rel=":video:kevin-jonas-goes-awol-on-“pom-poms”-shoot">
+								<span class="title">Kevin Jonas Goes AWOL on “Pom Poms” Shoot</span>
+								<span class="description">While the Jonas Brothers pal around with some crazy wildlife on the set of their music video, Kevin hides out in his trailer. See why!</span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="http://www.eonline.com/shows/jonas/video/kevin-jonas-is-a-party-pooper/206385" data-bigthumb="http://thumbnails.eonline.com/p/jonas_202_highlight_a_206385.jpg" data-videosrc="http://link.theplatform.com/s/CAY1CB/u0r1m5yW9KRrKVI1xuEc3_nCRIAqJUJZ?feed=All%20Videos" data-videoid="206385" style=" background-image: url(http://thumbnails.eonline.com/p/jonas_202_highlight_a_206385_thumb.jpg);" class="omniture" rel=":video:kevin-jonas-is-a-party-pooper">
+								<span class="title">Kevin Jonas Is a Party Pooper</span>
+								<span class="description">Nick and Joe Jonas are ready for a little on-tour fiesta! But can they convince Kevin to drop the ol' ball and chain?</span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="http://www.eonline.com/shows/jonas/video/jonas-in-laws-move-into-basement/206578" data-bigthumb="http://thumbnails.eonline.com/p/jonas_201_crf_206578.jpg" data-videosrc="http://link.theplatform.com/s/CAY1CB/9p03D0l0l26SRi2enOTaPYWTtGt1N4JL?feed=All%20Videos" data-videoid="206578" style=" background-image: url(http://thumbnails.eonline.com/p/jonas_201_crf_206578_thumb.jpg);" class="omniture" rel=":video:jonas-in-laws-move-into-basement">
+								<span class="title">Jonas In-Laws Move Into Basement</span>
+								<span class="description">Dani Jonas loves her big Italian family - but when the Deleasa clan temporarily move in with her and Kevin, will she be able to keep her cool?</span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="http://www.eonline.com/shows/jonas/video/kevin-jonas-in-laws-move-in/206390" data-bigthumb="http://thumbnails.eonline.com/p/jonas_201_highlight_b_206390.jpg" data-videosrc="http://link.theplatform.com/s/CAY1CB/Ik9kkPtFLgHKxNMECHfmyFVK4woc9PU9?feed=All%20Videos" data-videoid="206390" style=" background-image: url(http://thumbnails.eonline.com/p/jonas_201_highlight_b_206390_thumb.jpg);" class="omniture" rel=":video:kevin-jonas-in-laws-move-in">
+								<span class="title">Kevin Jonas' In-Laws Move In</span>
+								<span class="description">Dani's parents need a place to stay while their new home is under construction. See what catches Mrs. Jonas off-guard when her folks arrive.</span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="http://www.eonline.com/shows/jonas/video/kevin-plays-pom-poms-for-dani/206389" data-bigthumb="http://thumbnails.eonline.com/p/jonas_201_highlight_a_206389.jpg" data-videosrc="http://link.theplatform.com/s/CAY1CB/eG_zCSwp1Xvv4LwOpZ0mPfhw6dMLjUvD?feed=All%20Videos" data-videoid="206389" style=" background-image: url(http://thumbnails.eonline.com/p/jonas_201_highlight_a_206389_thumb.jpg);" class="omniture" rel=":video:kevin-plays-pom-poms-for-dani">
+								<span class="title">Kevin Plays "Pom Poms" for Dani</span>
+								<span class="description">Dani gets a first listen of the Jonas Brothers' new song--but she isn't too crazy about her hubby's ideas for the music video! Hear why.</span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="http://www.eonline.com/shows/jonas/video/married-to-jonas-pre-dinner-jitters/197331" data-bigthumb="http://thumbnails.eonline.com/p/jonas_110_highlight_a_197331.jpg" data-videosrc="http://link.theplatform.com/s/CAY1CB/en82rTbkdlyJ5GaT_6XzSbf5joUJzODY?feed=All%20Videos" data-videoid="197331" style=" background-image: url(http://thumbnails.eonline.com/p/jonas_110_highlight_a_197331_145x82_2296677757.jpg);" class="omniture" rel=":video:married-to-jonas-pre-dinner-jitters">
+								<span class="title">Married to Jonas: Pre-Dinner Jitters</span>
+								<span class="description">The in-laws are coming over for a big family dinner, and Dani wants to make sure everything's perfect. Hear Kevin's advice.</span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="http://www.eonline.com/shows/jonas/video/married-to-jonas-backstage-fun/197332" data-bigthumb="http://thumbnails.eonline.com/p/jonas_110_highlight_b_197332.jpg" data-videosrc="http://link.theplatform.com/s/CAY1CB/DqCZOX_EwaFgPkote6P1FwFtIoVLX5s9?feed=All%20Videos" data-videoid="197332" style=" background-image: url(http://thumbnails.eonline.com/p/jonas_110_highlight_b_197332_145x82_2296678835.jpg);" class="omniture" rel=":video:married-to-jonas-backstage-fun">
+								<span class="title">Married to Jonas: Backstage Fun</span>
+								<span class="description">Go behind the scenes with the Jonas Brothers as they get ready for their big concert at Radio City Music Hall.</span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="http://www.eonline.com/shows/jonas/video/married-to-jonas-international-fandom/196970" data-bigthumb="http://thumbnails.eonline.com/p/jonas_109_highlight_a_196970.jpg" data-videosrc="http://link.theplatform.com/s/CAY1CB/mhoKzyMgdr2YOnbamkkk5QzGPMsJQRDf?feed=All%20Videos" data-videoid="196970" style=" background-image: url(http://thumbnails.eonline.com/p/jonas_109_highlight_a_196970_145x82_2293918003.jpg);" class="omniture" rel=":video:married-to-jonas-international-fandom">
+								<span class="title">Married to Jonas: International Fandom</span>
+								<span class="description">Even half way across the world Kevin gets bombarded by crazed fans! See how his Italian groupies behave when he exits his hotel.</span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="http://www.eonline.com/shows/jonas/video/married-to-jonas-bonus-special-gifts/196972" data-bigthumb="http://thumbnails.eonline.com/p/jonas_109_crf_196972.jpg" data-videosrc="http://link.theplatform.com/s/CAY1CB/scdVCLHVA_d4zD8xOaZuo6eXFbZfOACP?feed=All%20Videos" data-videoid="196972" style=" background-image: url(http://thumbnails.eonline.com/p/jonas_109_crf_196972_145x82_2294218570.jpg);" class="omniture" rel=":video:married-to-jonas-bonus-special-gifts">
+								<span class="title">Married to Jonas Bonus: Special Gifts</span>
+								<span class="description">While in Italy, Kevin buys Dani a gift to show his appreciation for her, but will Dani appreciate his interesting present?</span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="http://www.eonline.com/shows/jonas/video/married-to-jonas-cheers-to-family/196971" data-bigthumb="http://thumbnails.eonline.com/p/jonas_109_highlight_b_196971.jpg" data-videosrc="http://link.theplatform.com/s/CAY1CB/iwYXqtBzj3k9O1XVM3c7_WpHdcWM2jeD?feed=All%20Videos" data-videoid="196971" style=" background-image: url(http://thumbnails.eonline.com/p/jonas_109_highlight_b_196971_145x82_2293904868.jpg);" class="omniture" rel=":video:married-to-jonas-cheers-to-family">
+								<span class="title">Married to Jonas: Cheers to Family</span>
+								<span class="description">Kevin, Dani and her family say a final farewell to Italy by tossing their very own pizza pies! See their toast to the beautiful country.</span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="http://www.eonline.com/shows/jonas/video/bonus-jonas-pop-the-question-part-3/196510" data-bigthumb="http://thumbnails.eonline.com/p/jonas_108_bonus_game_196510.jpg" data-videosrc="http://link.theplatform.com/s/CAY1CB/TmggOSyqZScIMeOU8pRaPgvgIfVN1Es2?feed=All%20Videos" data-videoid="196510" style=" background-image: url(http://thumbnails.eonline.com/p/jonas_108_bonus_game_196510_145x82_2285035843.jpg);" class="omniture" rel=":video:bonus-jonas-pop-the-question-part-3">
+								<span class="title">Bonus Jonas: Pop the Question, Part 3</span>
+								<span class="description">Kevin and Danielle quiz each other on their childhood pasts. See if Dani will win in the memory department with help from her sister Dina.</span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="http://www.eonline.com/shows/jonas/video/married-to-jonas-bonus-shop-til-you-drop/196519" data-bigthumb="http://thumbnails.eonline.com/p/jonas_108_crf_196519.jpg" data-videosrc="http://link.theplatform.com/s/CAY1CB/RyV_5_0EWZDWC_oLZD40cy6hMHRZvK0q?feed=All%20Videos" data-videoid="196519" style=" background-image: url(http://thumbnails.eonline.com/p/jonas_108_crf_196519_145x82_2285922794.jpg);" class="omniture" rel=":video:married-to-jonas-bonus-shop-til-you-drop">
+								<span class="title">Married to Jonas Bonus: Shop 'Til You Drop</span>
+								<span class="description">Dani and her family get ready for their trip to Italy by doing a little retail therapy. See Dani's generous gift to them.</span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="http://www.eonline.com/shows/jonas/video/married-to-jonas-vacationing-in-italy/196520" data-bigthumb="http://thumbnails.eonline.com/p/jonas_108_highlight_a_196520.jpg" data-videosrc="http://link.theplatform.com/s/CAY1CB/qlfDCpZjmO8Vs1yYjzzhdJIJnLmKAA_8?feed=All%20Videos" data-videoid="196520" style=" background-image: url(http://thumbnails.eonline.com/p/jonas_108_highlight_a_196520_145x82_2289018204.jpg);" class="omniture" rel=":video:married-to-jonas-vacationing-in-italy">
+								<span class="title">Married to Jonas: Vacationing in Italy</span>
+								<span class="description">Kevin gets Dani and her entire family to jump on a plane to Florence, Italy! Check out their lavish accommodations.</span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="http://www.eonline.com/shows/jonas/video/married-to-jonas-traveling-abroad/196521" data-bigthumb="http://thumbnails.eonline.com/p/jonas_108_highlight_b_v2_196521.jpg" data-videosrc="http://link.theplatform.com/s/CAY1CB/qwCtcZ1BjqQLLS6qqVzegFV3UkcP2SYz?feed=All%20Videos" data-videoid="196521" style=" background-image: url(http://thumbnails.eonline.com/p/jonas_108_highlight_b_v2_196521_145x82_2289507344.jpg);" class="omniture" rel=":video:married-to-jonas-traveling-abroad">
+								<span class="title">Married to Jonas: Traveling Abroad</span>
+								<span class="description">Dani's family soaks in the romantic ambience of Italy--not to mention the delicious tastes! Check it out.</span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="http://www.eonline.com/shows/jonas/video/married-to-jonas-bonus-family-camping/196518" data-bigthumb="http://thumbnails.eonline.com/p/jonas_107_crf_196518.jpg" data-videosrc="http://link.theplatform.com/s/CAY1CB/AIBOqrrP0mEDJJYtDpiH0QA7BQNjw7_a?feed=All%20Videos" data-videoid="196518" style=" background-image: url(http://thumbnails.eonline.com/p/jonas_107_crf_196518_145x82_2285064559.jpg);" class="omniture" rel=":video:married-to-jonas-bonus-family-camping">
+								<span class="title">Married to Jonas Bonus: Family Camping</span>
+								<span class="description">Kevin takes Dani and her entire Deleasa family into the wilderness for a camping adventure! Will they survive without modern technology?</span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="http://www.eonline.com/shows/jonas/video/married-to-jonas-kevin-s-surprise/196369" data-bigthumb="http://thumbnails.eonline.com/p/jonas_107_highlight_a_v2_196369.jpg" data-videosrc="http://link.theplatform.com/s/CAY1CB/z7cp3vE57_ru_gXftacNrdnMrJ1nXiZo?feed=All%20Videos" data-videoid="196369" style=" background-image: url(http://thumbnails.eonline.com/p/jonas_107_highlight_a_v2_196369_145x82_2287786632.jpg);" class="omniture" rel=":video:married-to-jonas-kevins-surprise">
+								<span class="title">Married to Jonas: Kevin's Surprise</span>
+								<span class="description">Kevin's idea of fun might not be the same as his in-laws! See if they'll go along with his crazy idea.</span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="http://www.eonline.com/shows/jonas/video/married-to-jonas-camping-with-the-deleasas/196370" data-bigthumb="http://thumbnails.eonline.com/p/jonas_107_highlight_b_v2_196370.jpg" data-videosrc="http://link.theplatform.com/s/CAY1CB/6A5RnXJcVKxPcHtdl_Ew8EcI_mev4uBP?feed=All%20Videos" data-videoid="196370" style=" background-image: url(http://thumbnails.eonline.com/p/jonas_107_highlight_b_v2_196370_145x82_2287786588.jpg);" class="omniture" rel=":video:married-to-jonas-camping-with-the-deleasas">
+								<span class="title">Married to Jonas: Camping With the Deleasas</span>
+								<span class="description">Will everything go smoothly on Kevin's camping trip with his city-loving in-laws? See if he can get them to enjoy the great outdoors.</span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="http://www.eonline.com/shows/jonas/video/married-to-jonas-bonus-man-of-the-house/196211" data-bigthumb="http://thumbnails.eonline.com/p/jonas_106_bonus_196211.jpg" data-videosrc="http://link.theplatform.com/s/CAY1CB/uwfL8nJcRCQtuIkpIJbpzarCk8jLmt48?feed=All%20Videos" data-videoid="196211" style=" background-image: url(http://thumbnails.eonline.com/p/jonas_106_bonus_196211_145x82_2282477201.jpg);" class="omniture" rel=":video:married-to-jonas-bonus-man-of-the-house">
+								<span class="title">Married to Jonas Bonus: Man of the House</span>
+								<span class="description">From doggy walking to a good deep carpet cleaning, sometimes it takes a global pop superstar to get the job done. See Kevin go to work!</span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="http://www.eonline.com/shows/jonas/video/bonus-jonas-pop-the-question-part-2/194426" data-bigthumb="http://thumbnails.eonline.com/p/jonas_106_bonus_game_194426.jpg" data-videosrc="http://link.theplatform.com/s/CAY1CB/nIX9L4SV_eQoDIkROf9AEZr_88f34MM_?feed=All%20Videos" data-videoid="194426" style=" background-image: url(http://thumbnails.eonline.com/p/jonas_106_bonus_game_194426_145x82_2283399376.jpg);" class="omniture" rel=":video:bonus-jonas-pop-the-question-part-2">
+								<span class="title">Bonus Jonas: Pop the Question, Part 2</span>
+								<span class="description">Kevin and Dani try to see who knows the most about each other. Find out who knows their partner's quirks better!</span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="http://www.eonline.com/shows/jonas/video/married-to-jonas-planning-katie-s-party/196110" data-bigthumb="http://thumbnails.eonline.com/p/jonas_106_highlight_a_196110.jpg" data-videosrc="http://link.theplatform.com/s/CAY1CB/hkjxiOlHSUqlaIQ74ljl4K_AOpE3gTeD?feed=All%20Videos" data-videoid="196110" style=" background-image: url(http://thumbnails.eonline.com/p/jonas_106_highlight_a_196110_145x82_2281407191.jpg);" class="omniture" rel=":video:married-to-jonas-planning-katies-party">
+								<span class="title">Married to Jonas: Planning Katie's Party</span>
+								<span class="description">Danielle wants to throw Katie the perfect graduation party, but things don’t go as planned. Watch what happens.</span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="http://www.eonline.com/shows/jonas/video/married-to-jonas-kevin-feels-the-pressure/196111" data-bigthumb="http://thumbnails.eonline.com/p/jonas_106_highlight_b_196111.jpg" data-videosrc="http://link.theplatform.com/s/CAY1CB/_2f0QcKI9BPnYgTU9qBvu_lpZicB3BZt?feed=All%20Videos" data-videoid="196111" style=" background-image: url(http://thumbnails.eonline.com/p/jonas_106_highlight_b_196111_145x82_2281410420.jpg);" class="omniture" rel=":video:married-to-jonas-kevin-feels-the-pressure">
+								<span class="title">Married to Jonas: Kevin Feels the Pressure</span>
+								<span class="description">After a long day of recording, Kevin wants to vent--but Dani prefers some quiet time. See how they work out their differences.</span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="http://www.eonline.com/shows/jonas/video/married-to-jonas-bonus-vehicular-damage/195573" data-bigthumb="http://thumbnails.eonline.com/p/jonas_105_bonus_crf_195573.jpg" data-videosrc="http://link.theplatform.com/s/CAY1CB/0e61xlxETuq1ItLEkZwN43Nnr71WiZHR?feed=All%20Videos" data-videoid="195573" style=" background-image: url(http://thumbnails.eonline.com/p/jonas_105_bonus_crf_195573_145x82_2279573492.jpg);" class="omniture" rel=":video:married-to-jonas-bonus-vehicular-damage">
+								<span class="title">Married to Jonas Bonus: Vehicular Damage</span>
+								<span class="description">Kevin drives to the mechanic's to see what Dani's car looks like after her accident. See the damage from her wreck!</span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="http://www.eonline.com/shows/jonas/video/married-to-jonas-dani-learns-to-let-go/195568" data-bigthumb="http://thumbnails.eonline.com/p/jonas_105_highlight_a_195568.jpg" data-videosrc="http://link.theplatform.com/s/CAY1CB/uXwYMjjwbzQ3d6FYBtVWrOJ5GPVOzTzP?feed=All%20Videos" data-videoid="195568" style=" background-image: url(http://thumbnails.eonline.com/p/jonas_105_highlight_a_195568_145x82_2277620796.jpg);" class="omniture" rel=":video:married-to-jonas-dani-learns-to-let-go">
+								<span class="title">Married to Jonas: Dani Learns to Let Go</span>
+								<span class="description">Dani attends a movement class in order to strike the right pose for an upcoming photo shoot. Will she be able to loosen up in front of the camera?</span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="http://www.eonline.com/shows/jonas/video/married-to-jonas-magazine-cover-shoot/195569" data-bigthumb="http://thumbnails.eonline.com/p/jonas_105_highlight_b_195569.jpg" data-videosrc="http://link.theplatform.com/s/CAY1CB/vCe060snknUGH6wTStj1gztflLz6ih9r?feed=All%20Videos" data-videoid="195569" style=" background-image: url(http://thumbnails.eonline.com/p/jonas_105_highlight_b_195569_145x82_2277624419.jpg);" class="omniture" rel=":video:married-to-jonas-magazine-cover-shoot">
+								<span class="title">Married to Jonas: Magazine Cover Shoot</span>
+								<span class="description">Kevin and Dani take cuteness to another level during their cover shoot for "Social Life Magazine." See this photogenic couple in action!</span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="http://www.eonline.com/shows/jonas/video/bonus-jonas-pop-the-question-part-1/194424" data-bigthumb="http://thumbnails.eonline.com/p/jonas_104_bonus_game_194424.jpg" data-videosrc="http://link.theplatform.com/s/CAY1CB/KL14QNqYH0Jt4Q5KEIYunwDfjazQK4St?feed=All%20Videos" data-videoid="194424" style=" background-image: url(http://thumbnails.eonline.com/p/jonas_104_bonus_game_194424_145x82_2277009083.jpg);" class="omniture" rel=":video:bonus-jonas-pop-the-question-part-1">
+								<span class="title">Bonus Jonas: Pop the Question, Part 1</span>
+								<span class="description">Kevin and Dani take a stab at answering questions about each other's families. Find out who knows more about the other's relatives.</span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="http://www.eonline.com/shows/jonas/video/married-to-jonas-bonus-wingin-it/195265" data-bigthumb="http://thumbnails.eonline.com/p/jonas_104_bonus_crf_195265.jpg" data-videosrc="http://link.theplatform.com/s/CAY1CB/2rxSOmkvfO0yi63wKeHM26dfuF_3SoTO?feed=All%20Videos" data-videoid="195265" style=" background-image: url(http://thumbnails.eonline.com/p/jonas_104_bonus_crf_195265_145x82_2276961740.jpg);" class="omniture" rel=":video:married-to-jonas-bonus-wingin-it">
+								<span class="title">Married to Jonas Bonus: Wingin' It</span>
+								<span class="description">Kevin teams up with Dani's brother to build an outdoor firepit--without any instructions! See them get to work.</span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="http://www.eonline.com/shows/jonas/video/married-to-jonas-bucky-gets-winded/195263" data-bigthumb="http://thumbnails.eonline.com/p/jonas_104_highlight_a_195263.jpg" data-videosrc="http://link.theplatform.com/s/CAY1CB/i4_4qujA0QUYc8krB5CfEW1hjRiT_zH_?feed=All%20Videos" data-videoid="195263" style=" background-image: url(http://thumbnails.eonline.com/p/jonas_104_highlight_a_195263_145x82_2276191807.jpg);" class="omniture" rel=":video:married-to-jonas-bucky-gets-winded">
+								<span class="title">Married to Jonas: Bucky Gets Winded</span>
+								<span class="description">Kevin points out that Dani's dad Bucky is having a hard time breathing even during a laid back game of Bocce. Hear his words of advice.</span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="http://www.eonline.com/shows/jonas/video/married-to-jonas-kevin-the-contractor/195264" data-bigthumb="http://thumbnails.eonline.com/p/jonas_104_highlight_b_195264.jpg" data-videosrc="http://link.theplatform.com/s/CAY1CB/CDN_x5KsMfVcQ1PeGt_WrYnBisvzeo4l?feed=All%20Videos" data-videoid="195264" style=" background-image: url(http://thumbnails.eonline.com/p/jonas_104_highlight_b_195264_145x82_2276188734.jpg);" class="omniture" rel=":video:married-to-jonas-kevin-the-contractor">
+								<span class="title">Married to Jonas: Kevin the Contractor</span>
+								<span class="description">Kevin takes it upon himself to dig a huge hole in his backyard for a giant tree while Dani takes it easy at the spa. See who fares better!</span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="http://www.eonline.com/shows/jonas/video/married-to-jonas-bonus-hidden-talent/194884" data-bigthumb="http://thumbnails.eonline.com/p/jonas_103_bonus_194884.jpg" data-videosrc="http://link.theplatform.com/s/CAY1CB/3kTV6rcNNhtXxlWgVSVxHzgPS5OBXOY2?feed=All%20Videos" data-videoid="194884" style=" background-image: url(http://thumbnails.eonline.com/p/jonas_103_bonus_194884_145x82_2274965082.jpg);" class="omniture" rel=":video:married-to-jonas-bonus-hidden-talent">
+								<span class="title">Married to Jonas Bonus: Hidden Talent</span>
+								<span class="description">Kevin surprises his friend with a secret he's covered up for years! See what he's got hidden up his sleeve.</span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="http://www.eonline.com/shows/jonas/video/married-to-jonas-message-from-above/194875" data-bigthumb="http://thumbnails.eonline.com/p/jonas_103_highlight_a_194875.jpg" data-videosrc="http://link.theplatform.com/s/CAY1CB/_tCTRBYoNauGkLC2PeBjV2GI9gX5kvrK?feed=All%20Videos" data-videoid="194875" style=" background-image: url(http://thumbnails.eonline.com/p/jonas_103_highlight_a_194875_145x82_2274175702.jpg);" class="omniture" rel=":video:married-to-jonas-message-from-above">
+								<span class="title">Married to Jonas: Message From Above</span>
+								<span class="description">The Jonas family's spiritual advisor stops by and has a special message to pass on to Kevin and Dani. Hear what it is!</span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="http://www.eonline.com/shows/jonas/video/married-to-jonas-on-the-road/194876" data-bigthumb="http://thumbnails.eonline.com/p/jonas_103_highlight_b_194876.jpg" data-videosrc="http://link.theplatform.com/s/CAY1CB/o5An0DYhlVDNfJ8JjSuQ_uHFNdPKo_3W?feed=All%20Videos" data-videoid="194876" style=" background-image: url(http://thumbnails.eonline.com/p/jonas_103_highlight_b_194876_145x82_2274178027.jpg);" class="omniture" rel=":video:married-to-jonas-on-the-road">
+								<span class="title">Married to Jonas: On the Road</span>
+								<span class="description">Kevin and his brother Nick get some good news about the Jonas Brothers going on tour. How will this affect Dani?</span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="http://www.eonline.com/shows/jonas/video/married-to-jonas-bonus-need-for-speed/194493" data-bigthumb="http://thumbnails.eonline.com/p/jonas_102_bonus_crf_a_194493.jpg" data-videosrc="http://link.theplatform.com/s/CAY1CB/KD89paq_YBrN5Rd804M_tqsRf1FUpZg0?feed=All%20Videos" data-videoid="194493" style=" background-image: url(http://thumbnails.eonline.com/p/jonas_102_bonus_crf_a_194493_145x82_2271522350.jpg);" class="omniture" rel=":video:married-to-jonas-bonus-need-for-speed">
+								<span class="title">Married to Jonas Bonus: Need for Speed</span>
+								<span class="description">Kevin goes to a race track to test-drive a Cadillac CTS-V coupe. See him push the pedal to the medal!</span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="http://www.eonline.com/shows/jonas/video/married-to-jonas-bucky-s-food-feast/194491" data-bigthumb="http://thumbnails.eonline.com/p/jonas_102_highlight_a_194491.jpg" data-videosrc="http://link.theplatform.com/s/CAY1CB/p47vw5Cyg0KgV4u3KQu1h_dIUp2qIRw5?feed=All%20Videos" data-videoid="194491" style=" background-image: url(http://thumbnails.eonline.com/p/jonas_102_highlight_a_194491_145x82_2271949525.jpg);" class="omniture" rel=":video:married-to-jonas-buckys-food-feast">
+								<span class="title">Married to Jonas: Bucky's Food Feast</span>
+								<span class="description">Kevin's trip to a bakery with his father-in-law turns into them buying the whole store! See how much food Bucky buys for eight people.</span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="http://www.eonline.com/shows/jonas/video/married-to-jonas-the-marriage-question/194492" data-bigthumb="http://thumbnails.eonline.com/p/jonas_102_highlight_b_194492.jpg" data-videosrc="http://link.theplatform.com/s/CAY1CB/2tcFMzFpzLomG0NSyIOvhtJ1P2_aYYvc?feed=All%20Videos" data-videoid="194492" style=" background-image: url(http://thumbnails.eonline.com/p/jonas_102_highlight_b_194492_145x82_2271952605.jpg);" class="omniture" rel=":video:married-to-jonas-the-marriage-question">
+								<span class="title">Married to Jonas: The Marriage Question</span>
+								<span class="description">Dani chats with her younger sister about the pressure of high school relationships.</span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="http://www.eonline.com/shows/jonas/video/married-to-jonas/194596" data-bigthumb="http://thumbnails.eonline.com/p/jonas_102_promo77_194596.jpg" data-videosrc="http://link.theplatform.com/s/CAY1CB/uVbzN6a_HjcFMUUutXuXAmaMIH849DB1?feed=All%20Videos" data-videoid="194596" style=" background-image: url(http://thumbnails.eonline.com/p/jonas_102_promo77_194596_145x82_2271218717.jpg);" class="omniture" rel=":video:married-to-jonas">
+								<span class="title">Married to Jonas</span>
+								<span class="description">The honeymoon is never over for these two lovebirds! Catch Kevin and Danielle in brand new episodes of "Married to Jonas," Sundays at 10|9c.</span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="http://www.eonline.com/shows/jonas/video/married-to-jonas-kevin-and-dani-s-live-chat/194177" data-bigthumb="http://thumbnails.eonline.com/p/jonas_101_postshow_194177.jpg" data-videosrc="http://link.theplatform.com/s/CAY1CB/LBmBzBDvMtwWUkQPDgijsdiZga7kZQ7M?feed=All%20Videos" data-videoid="194177" style=" background-image: url(http://thumbnails.eonline.com/p/jonas_101_postshow_194177_145x82_2270271664.jpg);" class="omniture" rel=":video:married-to-jonas-kevin-and-danis-live-chat">
+								<span class="title">Married to Jonas: Kevin and Dani's Live Chat</span>
+								<span class="description">Kevin and Dani answer viewers' questions in a live chat after the series premiere of "Married to Jonas." Find out what life is like for the young couple!</span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="http://www.eonline.com/shows/jonas/video/married-to-jonas-bonus-in-the-limelight/194176" data-bigthumb="http://thumbnails.eonline.com/p/jonas_101_bonus_crf_a_194176.jpg" data-videosrc="http://link.theplatform.com/s/CAY1CB/dSlVnSgX_At_GMRcpAfYf7LI9T8nVjmn?feed=All%20Videos" data-videoid="194176" style=" background-image: url(http://thumbnails.eonline.com/p/jonas_101_bonus_crf_a_194176_145x82_2269595053.jpg);" class="omniture" rel=":video:married-to-jonas-bonus-in-the-limelight">
+								<span class="title">Married to Jonas Bonus: In the Limelight</span>
+								<span class="description">Danielle explains why she gets nervous doing public appearances. Plus, Kevin rattles off a list of his pricey designer shoes.</span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="http://www.eonline.com/shows/jonas/video/married-to-jonas-privacy-please/194139" data-bigthumb="http://thumbnails.eonline.com/p/jonas_101_highlight_a_194139.jpg" data-videosrc="http://link.theplatform.com/s/CAY1CB/AcegCVEKfUGRhbAdi_KaKJLGr4uYH3Z3?feed=All%20Videos" data-videoid="194139" style=" background-image: url(http://thumbnails.eonline.com/p/jonas_101_highlight_a_194139_145x82_2266190661.jpg);" class="omniture" rel=":video:married-to-jonas-privacy-please">
+								<span class="title">Married to Jonas: Privacy Please</span>
+								<span class="description">If only Kevin and Dani could get some alone time when they're tucked away in their own house--but no! See who keeps barging in on them.</span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="http://www.eonline.com/shows/jonas/video/married-to-jonas-dani-tries-to-impress/194140" data-bigthumb="http://thumbnails.eonline.com/p/jonas_101_highlight_b_194140.jpg" data-videosrc="http://link.theplatform.com/s/CAY1CB/0xSFW1UqEc05koIRc9R2rYU7kXZs5hjt?feed=All%20Videos" data-videoid="194140" style=" background-image: url(http://thumbnails.eonline.com/p/jonas_101_highlight_b_194140_145x82_2266191081.jpg);" class="omniture" rel=":video:married-to-jonas-dani-tries-to-impress">
+								<span class="title">Married to Jonas: Dani Tries to Impress</span>
+								<span class="description">Dealing with in-laws is rough on any newlywed, but marrying into a famous family only makes matters worse. Can Dani handle the pressure?</span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="http://www.eonline.com/shows/jonas/video/jonas-couple-dish-on-reality-show/182983" data-bigthumb="http://thumbnails.eonline.com/p/raw_20120501_eupfront_kevindanijonas_182983.jpg" data-videosrc="http://link.theplatform.com/s/CAY1CB/w1rJP6wtEsc73WmvcSis5Ohy21WspQNf?feed=All%20Videos" data-videoid="182983" style=" background-image: url(http://thumbnails.eonline.com/p/raw_20120501_eupfront_kevindanijonas_182983_145x82_2229430890.jpg);" class="omniture" rel=":video:jonas-couple-dish-on-reality-show">
+								<span class="title">Jonas Couple Dish on Reality Show</span>
+								<span class="description">Hear what challenges Kevin Jonas and wife Danielle think they will face on the new E! show, "Married To Jonas."</span>
+							</a>
+						</li>
+					
+						<li>
+							<a href="http://www.eonline.com/shows/jonas/video/jonas-brothers-talk-new-e-reality-show/182981" data-bigthumb="http://thumbnails.eonline.com/p/raw_20120501_eupfront_jonas_182981.jpg" data-videosrc="" data-videoid="182981" style=" background-image: url(http://thumbnails.eonline.com/p/raw_20120501_eupfront_jonas_182981_145x82_2229445857.jpg);" class="omniture" rel=":video:jonas-brothers-talk-new-e-reality-show">
+								<span class="title">Jonas Brothers Talk New E! Reality Show</span>
+								<span class="description">Are Joe and Nick getting any screen time on Kevin's new reality show "Married to Jonas"? Get the lowdown! Plus, Nick dishes on the "Smash" finale.</span>
+							</a>
+						</li>
+					
+				</ul></div>
+			</div>
+			<div style="display: block;" class="video-next btn">Next</div>
+		</div>
+	</div>
+
+	<script type="text/html" id="video-meta-template">
+		<div class="video-details">
+			<div class="clear">
+				<div class="video-playing-title" style="display:none"><@= v.title @></div>
+				<div id="social-media-icons"></div>
+				<div class="description"><@= v.description @></div>
+			</div>
+		</div>
+	</script>
+
+	<script type="text/javascript">
+		(function($){
+			jsonShowPkgVideos.videos = {
+				thumbHeight : 77,
+				thumbWidth : 460,
+				templates : {details : _.template($("#video-meta-template").html())}
+			};
+
+			// Video's Play Button is Clicked
+			$("div.video-preview a").bind("click", function(e, extra){
+				e.preventDefault();
+				var aLink = $(this);
+				var vidId = aLink.parent().attr("data-videoid");
+				var html5src = aLink.parent().attr("data-videosrc");
+				var backImg = aLink.parent().attr("data-bigthumb");
+				video.playVideo({ video:vidId, src:html5src, backImg:backImg }, "jonas", "");
+			});
+
+			// Video Thumbnail was Clicked On
+			$("#video-wrap li a").bind("click", function(e, extra){
+				e.preventDefault();
+				var aLink = $(this);
+				video.changeVideo(aLink, videoId, 'jonas', null, false, jsonShowPkgVideos);
+			});
+
+			$("div.video-preview").first().parents(".featured").addClass("swf");
+			$("div.video-preview").find("#featured-embed").hide();
+			$("ul.videos").carouFredSel({ padding: [0,0] , width: 459, circular:false, infinite:false, auto:false, items : { width: 152, visible: 3 }, scroll:{items:"page"}, prev:{button:"div.video-prev",key:"left"}, next:{button:"div.video-next",key:"right"}, pagination:"" });
+			if ( window.carousel && window.carousel.init ) {carousel.init();}
+
+			$(document).ready(function(){
+				var videoId = '';
+				var aLink = (videoId !== null && videoId !== "") ? $('div a[data-videoid="' + videoId + '"]') : $("ul.videos li a").first();
+				var canAutoScroll = (location.href.indexOf('/video/') > -1) ? true : false; // True for inbound FB Links, false for EOL -> Shows -> Show Landing Page click trails.
+				video.changeVideo(aLink, videoId, 'jonas', '', canAutoScroll, jsonShowPkgVideos);
+			});
+		})(jQuery);
+   </script>
+
+</div>
+
+<a name="main"></a>
+<div class="main_content clear">
+	<div class="left-container">
+		<ul id="show-nav" class="clear">
+			
+				<li class="home"><a href="/shows/jonas/" data-omniture="trackLink|{&quot;linkName&quot;:&quot;shows:jonas:nav-home&quot;,&quot;linkTrackVars&quot;:&quot;eVar17&quot;,&quot;linkTrackEvents&quot;:&quot;event21&quot;}">HOME</a></li>
+			
+				<li class="news"><a href="/shows/jonas/news#main" data-omniture="trackLink|{&quot;linkName&quot;:&quot;shows:jonas:nav-news&quot;,&quot;linkTrackVars&quot;:&quot;eVar17&quot;,&quot;linkTrackEvents&quot;:&quot;event21&quot;}">NEWS</a></li>
+			
+				<li class="photos"><a href="/shows/jonas/photos/6553/jonas-brothers-on-the-road-again#main" data-omniture="trackLink|{&quot;linkName&quot;:&quot;shows:jonas:nav-photos&quot;,&quot;linkTrackVars&quot;:&quot;eVar17&quot;,&quot;linkTrackEvents&quot;:&quot;event21&quot;}">PHOTOS</a></li>
+			
+				<li class="schedule"><a href="/shows/jonas/schedule#main" data-omniture="trackLink|{&quot;linkName&quot;:&quot;shows:jonas:nav-schedule&quot;,&quot;linkTrackVars&quot;:&quot;eVar17&quot;,&quot;linkTrackEvents&quot;:&quot;event21&quot;}">SCHEDULE</a></li>
+			
+				<li class="bio"><a href="/shows/jonas/bio#main" data-omniture="trackLink|{&quot;linkName&quot;:&quot;shows:jonas:nav-jonas.bio&quot;,&quot;linkTrackVars&quot;:&quot;eVar17&quot;,&quot;linkTrackEvents&quot;:&quot;event21&quot;}">MEET THE FAMILY</a></li>
+			
+		</ul>
+		
+
+
+
+
+
+
+
+
+	<ul id="featured-items" class="clear">
+		
+			<li class="featured-item-1">
+				<a class="img-link omniture" rel="jonas-featured:get-the-e-latino-app" href="http://www.eonline.com/news/370917/e-lanza-el-app-e-latino--lo-mejor-de-eonline-ahora-en-espaol-">
+						<img title="E! App Brick" alt="E! App Brick" src="http://www.eonline.com/eol_images/Entire_Site/2013023/E_App_215.jpg" height="215" width="215" border="0">
+						<span class="title">Get the E! Latino App!</span>
+				</a>
+			</li>
+		
+			<li class="featured-item-2">
+				<a class="img-link omniture" rel="jonas-featured:like-us-on-facebook" href="http://www.facebook.com/MarriedToJonasOnE">
+						<img title="Facebook, Opening Act, Social Pages" alt="Facebook, Opening Act, Social Pages" src="http://www.eonline.com/eol_images/Entire_Site/2012414/social_212_FB.jpg" height="215" width="215" border="0">
+						<span class="title">Like Us On Facebook!</span>
+				</a>
+			</li>
+		
+			<li class="featured-item-3">
+				<a class="img-link omniture" rel="jonas-featured:second-season-confirmed" href="http://www.eonline.com/shows/jonas/news/362376/married-to-jonas-renewed-for-second-season-set-to-follow-jonas-brothers-on-tour">
+						<img title="Kevin Jonas, Danielle Jonas" alt="Kevin Jonas, Danielle Jonas" src="http://www.eonline.com/eol_images/Entire_Site/2012828/reg_300.KevinJonas.DanielleJonas.jc.092712.jpeg" height="215" width="215" border="0">
+						<span class="title">Second Season Confirmed!</span>
+				</a>
+			</li>
+		
+	</ul>
+
+	
+		<script src="/resources/js/eol.twitter.chat.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			var objShowPublicKeys = { // These are the same in both Dev & Prod, except where noted.
+				"what_would_ryan_lochte_do": "qcdHGA9bKwpD1qPNeBk2zQ",
+				"kourtney_and_kim_kardashian": "MBBmh6KpPCmZcvBO6cCNYg",
+				"kardashians": "V0BG9lMKQpUz2RQ1EMNQ",
+				"khloe_and_lamar": "M6eHiM3Os4OwoP739oLlg",
+				"ice_loves_coco": "8ULj5W4nxMi5PiEVv2yc0A",
+				"eastwood": "TQWAbRVIVYZ7CjUIdfjQQ",
+				"opening_act": "9odNLeB5PAAwpTJVw0OUEw",
+				"chelsea": "nQOgmSDk7pnvcXpmfSsozA",
+				"jonas": "p3sZtSQQQiLlIm2WinEVQ",
+				"love_you_mean_it": "sDSQMVqt2B0rA5qHRl3QrA",
+				"ths": "n2d1FYqc8xCbeSfPkuhXLw",
+				"chasing_the_saturdays": "cVOLnph6AO5C29p8Y23KAA",
+				"kourtney_and_kim_take_miami": "komcdd11ALQ9SjKs1vHbyQ",
+				"after_lately": "U3H8dMkTappSxOeAaaAGg",
+				"playing_with_fire": "39mL6DLRThgPwtjlHC5ACA"
+			};
+			for (var strKey in objShowPublicKeys) {
+				if (location.href.indexOf(strKey) > -1) {
+					var strShowKey = objShowPublicKeys[strKey];
+				}
+			}
+			if (strShowKey) {
+				document.write('<scr' + 'ipt type="text/javascript" src="http://platform.twitter.com/anywhere.js?id=' + strShowKey + '&v=1"></scr' + 'ipt>');
+			}
+		</script><script type="text/javascript" src="http://platform.twitter.com/anywhere.js?id=p3sZtSQQQiLlIm2WinEVQ&amp;v=1"></script>
+		<div class="twrap clear">
+			<div id="tweet"></div> 
+			<div class="twitter-talent twitter" data-url="['http://api.twitter.com/1/marriedtojonas/lists/cast/statuses.json?per_page=100', 'http://search.twitter.com/search.json?q=%23marriedtojonas+OR+%23kevinjonas+OR+%23daniellejonas+OR+%23bucky+OR+%23danijonas&amp;rpp=100&amp;result_type=recent&amp;lang=en']">
+				<div class="tweet-wrap">
+					<ol class="tweets"></ol>
+					<div id="moreTweets"> MORE TWEETS</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="/resources/js/eol.twitter.chat.initiator.js"></script>
+		<script type="text/javascript" language="javascript"> 
+			var tChatArgs = {
+				"intTweetsDisplayed": 5,
+				"intIncrementCount": 5,
+				"intTweetHeight": 75,
+				"intMsPollRate": 10000,
+				"strTweetHash": "#marriedtojonas"
+			};
+			window.page = new tChat(tChatArgs);
+		</script>
+	
+
+	<div class="interactive-poll">
+		<div class="poll-header">Watch and Weigh In!</div>
+		
+
+
+
+
+
+
+
+
+	
+
+
+	
+
+
+	
+
+<div class="thyme-comments thyme-guest-mode" id="thyme_comment"><div class="thyme-title-control"><pre class="thyme-title">Is Dina being selfish by telling Dani she doesn't want her to move to the city?</pre><span class="thyme-button"><a class="thyme-submitTitle">Save Title</a></span><div class="thyme-clear"></div></div><div class="thyme-head"><div class="thyme-add-comment-bubble"><span class="thyme-comments-stats"><span class="thyme-comments-count">1919</span><span> comments</span></span><span class="thyme-separator">·</span><a style="visibility: visible;" class="thyme-add-comment" title="Add Comment" href="#">								<span class="thyme-text">Add Comment</span>								<span class="thyme-bgImg"></span>							</a></div><div style="visibility: visible;" class="thyme-login-partners"><label>Login:</label><a class="thyme-login-partner thyme-facebook-login" href="#" title="Login with Facebook">							<span class="thyme-text">Facebook</span>							<span class="thyme-bgImg"></span>						</a><a class="thyme-login-partner thyme-twitter-login" href="#" title="Login with Twitter">								<span class="thyme-text">Twitter</span>								<span class="thyme-bgImg"></span>							</a></div><div style="visibility: visible;" class="thyme-logout-block"><span class="thyme-withCredentials"><label>Logged in as</label><span class="thyme-partner-username"></span><span class="thyme-separator">·</span><a class="thyme-logout" title="Logout" href="#">																			<span class="thyme-text">Logout</span>																			<span class="thyme-bgImg"></span>																		</a></span><span class="thyme-withoutCredentials"><a class="thyme-logout thyme-logoutAlt" title="Logout" href="#"><span class="thyme-normal">Logged in via</span><span class="thyme-hover">Logout of</span><span></span></a></span></div></div><div class="thyme-sortLiveUpdateWrapper"><div class="thyme-sort"><label>Sort by:</label><a class="thyme-current">Newest</a><span class="thyme-separator">·</span><a>Oldest</a><span class="thyme-separator">·</span><a>Rating</a></div><div class="thyme-clear"></div></div><ol class="thyme-comment-list"><li class=""><div class="thyme-comment-container"><div class="thyme-comment-body"><a title="Go to Kendra Bethune's profile" class="thyme-avatar thyme-sprite" href="http://www.facebook.com/kendra.bethune.1" target="_blank"><img src="http://graph.facebook.com/100000084801529/picture"></a><span class="thyme-profile-data"><a title="Go to Kendra Bethune's profile" class="thyme-username" href="http://www.facebook.com/kendra.bethune.1" target="_blank">Kendra Bethune</a><a class="thyme-profile-fb-like" title="Like" href="http://www.facebook.com/kendra.bethune.1" rel="nofollow" target="_blank"></a><span class="thyme-simpleCreateDate">2 hours ago</span></span><span class="thyme-comment-actions"><span class="thyme-rating "></span><a class="thyme-like thyme-control" href="#" title="like">								<span class="thyme-text">like</span>								<span class="thyme-bgImg thyme-sprite"></span>							</a><a class="thyme-dislike thyme-control" href="#" title="dislike">									<span class="thyme-text">dislike</span>									<span class="thyme-bgImg thyme-sprite"></span>								</a><a class="thyme-reply thyme-control" href="#" title="reply">			<span class="thyme-text">reply</span>			<span class="thyme-bgImg thyme-sprite"></span>		</a><a class="thyme-report thyme-control" href="#" title="report">			<span class="thyme-text">report</span>			<span class="thyme-bgImg thyme-sprite"></span>		</a></span><span class="thyme-commentValue">no that's not what i said wat i said a paparrzzi was by my house and my neghibor  lee caught him he had no business in the oakland hills  trying to snap snap take pictures</span><span class="thyme-comment-actionsBottom"><a class="thyme-reply thyme-control" href="#" title="reply">			<span class="thyme-text">reply</span>			<span class="thyme-bgImg thyme-sprite"></span>		</a><span class="thyme-separator">·</span><a class="thyme-report thyme-control" href="#" title="report">			<span class="thyme-text">report</span>			<span class="thyme-bgImg thyme-sprite"></span>		</a></span></div></div></li><li class=""><div class="thyme-comment-container"><div class="thyme-comment-body"><a title="Go to Kendra Bethune's profile" class="thyme-avatar thyme-sprite" href="http://www.facebook.com/kendra.bethune.1" target="_blank"><img src="http://graph.facebook.com/100000084801529/picture"></a><span class="thyme-profile-data"><a title="Go to Kendra Bethune's profile" class="thyme-username" href="http://www.facebook.com/kendra.bethune.1" target="_blank">Kendra Bethune</a><a class="thyme-profile-fb-like" title="Like" href="http://www.facebook.com/kendra.bethune.1" rel="nofollow" target="_blank"></a><span class="thyme-simpleCreateDate">2 hours ago</span></span><span class="thyme-comment-actions"><span class="thyme-rating "></span><a class="thyme-like thyme-control" href="#" title="like">								<span class="thyme-text">like</span>								<span class="thyme-bgImg thyme-sprite"></span>							</a><a class="thyme-dislike thyme-control" href="#" title="dislike">									<span class="thyme-text">dislike</span>									<span class="thyme-bgImg thyme-sprite"></span>								</a><a class="thyme-reply thyme-control" href="#" title="reply">			<span class="thyme-text">reply</span>			<span class="thyme-bgImg thyme-sprite"></span>		</a><a class="thyme-report thyme-control" href="#" title="report">			<span class="thyme-text">report</span>			<span class="thyme-bgImg thyme-sprite"></span>		</a></span><span class="thyme-commentValue">that's all i need to know right there kevin is gone to make a music video the jonas brothers wanted to do in the married to jonas show while joe and nick were playing video games</span><span class="thyme-comment-actionsBottom"><a class="thyme-reply thyme-control" href="#" title="reply">			<span class="thyme-text">reply</span>			<span class="thyme-bgImg thyme-sprite"></span>		</a><span class="thyme-separator">·</span><a class="thyme-report thyme-control" href="#" title="report">			<span class="thyme-text">report</span>			<span class="thyme-bgImg thyme-sprite"></span>		</a></span></div></div></li><li class=""><div class="thyme-comment-container"><div class="thyme-comment-body"><span title="I love kim K" class="thyme-avatar thyme-sprite"></span><span class="thyme-profile-data"><span class="thyme-username">I love kim K</span><span class="thyme-simpleCreateDate">4 hours ago</span></span><span class="thyme-comment-actions"><span class="thyme-rating thyme-positive">+1</span><a class="thyme-like thyme-control" href="#" title="like">								<span class="thyme-text">like</span>								<span class="thyme-bgImg thyme-sprite"></span>							</a><a class="thyme-dislike thyme-control" href="#" title="dislike">									<span class="thyme-text">dislike</span>									<span class="thyme-bgImg thyme-sprite"></span>								</a><a class="thyme-reply thyme-control" href="#" title="reply">			<span class="thyme-text">reply</span>			<span class="thyme-bgImg thyme-sprite"></span>		</a><a class="thyme-report thyme-control" href="#" title="report">			<span class="thyme-text">report</span>			<span class="thyme-bgImg thyme-sprite"></span>		</a></span><span class="thyme-commentValue">I just got implants like her! My *** is fat</span><span class="thyme-comment-actionsBottom"><a class="thyme-reply thyme-control" href="#" title="reply">			<span class="thyme-text">reply</span>			<span class="thyme-bgImg thyme-sprite"></span>		</a><span class="thyme-separator">·</span><a class="thyme-report thyme-control" href="#" title="report">			<span class="thyme-text">report</span>			<span class="thyme-bgImg thyme-sprite"></span>		</a></span></div></div></li><li class=""><div class="thyme-comment-container"><div class="thyme-comment-body"><span title="WTF Kendra Joy Bethune" class="thyme-avatar thyme-sprite"></span><span class="thyme-profile-data"><span class="thyme-username">WTF Kendra Joy Bethune</span><span class="thyme-simpleCreateDate">4 hours ago</span></span><span class="thyme-comment-actions"><span class="thyme-rating "></span><a class="thyme-like thyme-control" href="#" title="like">								<span class="thyme-text">like</span>								<span class="thyme-bgImg thyme-sprite"></span>							</a><a class="thyme-dislike thyme-control" href="#" title="dislike">									<span class="thyme-text">dislike</span>									<span class="thyme-bgImg thyme-sprite"></span>								</a><a class="thyme-reply thyme-control" href="#" title="reply">			<span class="thyme-text">reply</span>			<span class="thyme-bgImg thyme-sprite"></span>		</a><a class="thyme-report thyme-control" href="#" title="report">			<span class="thyme-text">report</span>			<span class="thyme-bgImg thyme-sprite"></span>		</a></span><span class="thyme-commentValue">What are you talking about? You make no sense, stop commenting on this page</span><span class="thyme-comment-actionsBottom"><a class="thyme-reply thyme-control" href="#" title="reply">			<span class="thyme-text">reply</span>			<span class="thyme-bgImg thyme-sprite"></span>		</a><span class="thyme-separator">·</span><a class="thyme-report thyme-control" href="#" title="report">			<span class="thyme-text">report</span>			<span class="thyme-bgImg thyme-sprite"></span>		</a></span></div></div></li><li class="thyme-last-child"><div class="thyme-comment-container"><div class="thyme-comment-body"><span title="rob richins" class="thyme-avatar thyme-sprite"></span><span class="thyme-profile-data"><span class="thyme-username">rob richins</span><span class="thyme-simpleCreateDate">Yesterday 11:37 pm</span></span><span class="thyme-comment-actions"><span class="thyme-rating thyme-positive">+1</span><a class="thyme-like thyme-control" href="#" title="like">								<span class="thyme-text">like</span>								<span class="thyme-bgImg thyme-sprite"></span>							</a><a class="thyme-dislike thyme-control" href="#" title="dislike">									<span class="thyme-text">dislike</span>									<span class="thyme-bgImg thyme-sprite"></span>								</a><a class="thyme-reply thyme-control" href="#" title="reply">			<span class="thyme-text">reply</span>			<span class="thyme-bgImg thyme-sprite"></span>		</a><a class="thyme-report thyme-control" href="#" title="report">			<span class="thyme-text">report</span>			<span class="thyme-bgImg thyme-sprite"></span>		</a></span><span class="thyme-commentValue">I can't believe how selfish and dramatic Danielle's family is being about them moving to New York and the son moving to Los Angeles. Parents and siblings are SUPPOSED to want what is best for their loved ones and what will make them happy. I mean get a grip Jersey and New York City are not exactly thousands of miles apart. Can someone say dysfunctional.</span><span class="thyme-comment-actionsBottom"><a class="thyme-reply thyme-control" href="#" title="reply">			<span class="thyme-text">reply</span>			<span class="thyme-bgImg thyme-sprite"></span>		</a><span class="thyme-separator">·</span><a class="thyme-report thyme-control" href="#" title="report">			<span class="thyme-text">report</span>			<span class="thyme-bgImg thyme-sprite"></span>		</a></span></div></div></li></ol><a class="thyme-load-more thyme-control" title="Load more comments ...">						<span class="thyme-text">Load more comments ...</span>						<span class="thyme-bgImg"></span>					</a><div style="visibility: visible;" class="thyme-add-comment-form-block"><div class="thyme-padding"><div class="thyme-wrapper"><div class="thyme-add-comment-form-head"><span class="thyme-heading">Add Comment</span><div class="thyme-login-partners"><label>Login:</label><a class="thyme-login-partner thyme-facebook-login" href="#" title="Login with Facebook">							<span class="thyme-text">Facebook</span>							<span class="thyme-bgImg"></span>						</a><a class="thyme-login-partner thyme-twitter-login" href="#" title="Login with Twitter">								<span class="thyme-text">Twitter</span>								<span class="thyme-bgImg"></span>							</a></div><div class="thyme-clear"></div></div><div class="thyme-add-comment-form"><form><div class="thyme-name-input"><label for="thyme-add-comment-name">Name:</label><div class="thyme-field thyme-field-text thyme-field-long"><div class="thyme-wrapper"><input name="thyme-add-comment-name" type="text"></div></div></div><div class="thyme-name-display"><span class="thyme-avatar thyme-sprite" title=""><img src=""></span><span class="thyme-name-display-login-info"><span class="thyme-withCredentials"><span>You are logged in as </span><span class="thyme-username"></span></span><span class="thyme-withoutCredentials">Logged in</span><span> via </span><span></span></span><a class="thyme-logout" title="Logout" href="#">								<span class="thyme-text">Logout</span>								<span class="thyme-bgImg"></span>							</a><div class="thyme-clear"></div></div><div class="thyme-field thyme-field-textarea"><div class="thyme-wrapper"></div><textarea name="thyme-add-comment-comment"></textarea></div><div class="thyme-captcha"><label for="thyme-word-verification">Word Verification:</label><span class="thyme-instruction">Enter the word displayed to the right.</span><div class="thyme-field thyme-field-text"><div class="thyme-wrapper"></div><input name="thyme-word-verification" type="text"></div><img class="thyme-captcha-challenge" src="http://images.eonline.com/static/redcarpet/globes2007/everywhere/shoutouts/images/107.jpg"></div><div class="thyme-add-comment-form-buttons"><div class="thyme-add-comment-checkbox"><input checked="checked" id="thyme-add-comment-checkbox-input-1367619942189" name="thyme-add-comment-checkbox-input" type="checkbox"><label for="thyme-add-comment-checkbox-input-1367619942189">Post on </label></div><span class="thyme-button"><input value="Post Comment" type="submit"></span><div class="thyme-clear"></div></div></form></div></div></div></div><div class="thyme-pptou"><p>Use of comments signifies your acceptance of the <a target="_blank" href="http://thyme.comcastnets.net/thyme/privacy.jsp">Privacy Policy</a> and <a target="_blank" href="http://thyme.comcastnets.net/thyme/terms.jsp">Terms of Use</a>.</p></div></div><script src="http://thyme.comcastnets.net/thyme/cookiecheck/?callback=THYME.thirdPartyCookieTestStep2&amp;timestamp=1367619942300" async="" type="text/javascript"></script><script src="http://thyme.comcastnets.net/thyme/cookieset/?callback=THYME.thirdPartyCookieTestStep1&amp;timestamp=1367619942146" async="" type="text/javascript"></script>
+<script type="text/javascript">
+
+    function getThyme( host ) {
+        host = (host || "").replace(/:.*?$/,"");
+            
+        if ( /(au|www|ca|uk|comcast)\.eonline\.com/.test( host ) ) {
+            return { host : "www.eonline.com", key : "66aceeda8383f6d1900a593207e02a43"};
+        } else if ( /de\.eonline\.com/.test( host ) ) {
+            return { host : "de.eonline.com", key : "b7fa646c0857f0189adb27e3eb68caa6"};                
+        } else if ( /it\.eonline\.com/.test( host ) ) {
+            return { host : "it.eonline.com", key : "2447cb625efd382499a645ba1087de6b"};                
+        } else if ( /fr\.eonline\.com/.test( host ) ) {
+            return { host : "fr.eonline.com", key : "23427b05a25dc9431f9f30d65cd44172"};                
+        } else if ( /staging\.eonline\.com/.test( host ) ) {
+            return { host : "staging.eonline.com", key : "e70e59d1233fcda0a26e18c352beef13"};                
+        } else if ( /www\.test\.eonline\.com/.test( host ) ) {
+            return { host : "www.test.eonline.com", key : "fb2a896e8488f7b2edf3f4433aa75edd"};                
+        } else if ( /www\d+\.test\.eonline\.com/.test( host ) ) {
+            return { host : "www2.test.eonline.com", key : "9ee9e1ca5ddbf8e8f66daf13070b7f42"};                
+        } else if ( /external\.dev\.eonline\.com/.test( host )) {
+        	return { host : "external.dev.eonline.com", key : "13f32e4dff3594c4e0eda136e24d9f41"};
+        } else if ( /external\d+\.dev\.eonline\.com/.test( host )) {
+        	return { host : "external2.dev.eonline.com", key : "86d2120529efb8c6ac1585b1d732f4fa"};
+        } else if ( /www\.dev\.eonline\.com/.test( host )) {
+        	return { host : "www.dev.eonline.com", key : "053eadfa0fa581fcf4d28ef7301c5a6d"};
+        } else if ( /www\d+\.dev\.eonline\.com/.test( host )) {
+        	return { host : "www2.dev.eonline.com", key : "e04179f4a4051d3b55eb9b92f0b13035"};
+        } else if ( /www\.enjoytheshow\.us/.test( host ) ) {
+        	return { host : "www.enjoytheshow.us", key : "86ed72e36f816610482c1ffcd9d019fc"}; 
+        } else if ( /fr-test\.eonline\.com/.test( host ) ) {
+            return { host : "fr-test.eonline.com", key : "2a6e8c6fcacc194307623c45b5093947"};                
+        } else if ( /it-test\.eonline\.com/.test( host ) ) {
+            return { host : "it-test.eonline.com", key : "1aafa70f1a68fe56654fb55c006fc04e"};                
+        } else if ( /de-test\.eonline\.com/.test( host ) ) {
+            return { host : "de-test.eonline.com", key : "8c9ceb00e0923b2d5ca1cde0596d3e29"};                
+        } else if ( /au-test\.eonline\.com/.test( host ) ) {
+            return { host : "au-test.eonline.com", key : "b6b3eb41abed3153c88eb7a4f8d4dbd7"};                
+        } else if ( /uk-test\.eonline\.com/.test( host ) ) {
+            return { host : "uk-test.eonline.com", key : "5b4e7e0548f40a845c6a71fc5363ebe5"};                
+        } else if ( /ca-test\.eonline\.com/.test( host ) ) {
+            return { host : "ca-test.eonline.com", key : "20f1770b13887c62440ae4cc7229bc12"};                
+        } else if ( /www-origin-east\.eonline\.com/.test( host ) ) {
+            return { host : "www-origin-east.eonline.com", key : "66aceeda8383f6d1900a593207e02a43"};                
+        } else if ( /www-origin-west\.eonline\.com/.test( host ) ) {
+            return { host : "www-origin-west.eonline.com", key : "66aceeda8383f6d1900a593207e02a43"};                
+        } else if ( /preview2\.eonline\.com/.test( host ) ) {
+            return { host : "preview2.eonline.com", key : "66aceeda8383f6d1900a593207e02a43"};                
+        }else if ( /(au|uk|ca)-preview2\.eonline\.com/.test( host ) ) {
+            return { host : "preview2.eonline.com", key : "66aceeda8383f6d1900a593207e02a43"};                
+        }else if ( /preview\.eonline\.com/.test( host ) ) {
+            return { host : "preview.eonline.com", key : "66aceeda8383f6d1900a593207e02a43"};                
+        }else if ( /(au|uk|ca)\.preview\.eonline\.com/.test( host ) ) {
+            return { host : "preview.eonline.com", key : "66aceeda8383f6d1900a593207e02a43"};
+        }else {
+            return { host : "www2.test.eonline.com", key : "9ee9e1ca5ddbf8e8f66daf13070b7f42"};                
+        }
+    }
+
+    var thymeConfig = { 
+    		clientSite: getThyme( window.location.host ).host,
+    		contentID: '71',
+    		contentTypeID: 2,
+    		id:"thyme_comment",
+    		enableTheme:true,
+    		theme:"block",
+    		order:-1,
+    		apiKey: getThyme( window.location.host ).key, sizeOfList: 5, enableEMember: false,
+    		onCommentsChange: function(element){
+    		    	if (typeof lp_global !== 'undefined'){
+    		    		lp_global.AdjustLayout(true, false)   		    		
+    		    	}   
+    			}
+    	}; 
+    
+    
+    function refreshThyme() {
+    	tc = document.getElementById("thyme_comment");
+    	if (tc != null) {
+    		tc.innerHTML = '';
+    	}
+    	te = document.getElementById("thyme_script_block");
+    	if (te != null) {
+    		te.parentNode.removeChild(te);
+    	}
+    	initThyme();
+    };
+    
+    function initThyme() {
+        var e = document.createElement('script'); 
+        e.type = 'text/javascript'; 
+        e.async = true;
+        e.src = 'http://thyme.comcastnets.net/thyme/js/thyme.js';
+        e.id='thyme_script_block'
+        if (document.getElementsByTagName('script')[0]){
+            var s0 = document.getElementsByTagName('script')[0];
+            s0.parentNode.insertBefore(e,s0);
+        } else if (document.getElementsByTagName('head')[0]){
+            document.getElementsByTagName('head')[0].appendChild(e);
+        } else {
+            document.getElementsByTagName('body')[0].appendChild(e);
+        }   	
+    };
+        
+    (function() {
+    	initThyme()
+    })();
+</script>
+
+ 
+	</div>
+</div>
+
+<div class="rail">
+	
+
+
+
+
+
+
+
+
+	
+	
+	
+
+	<script type="text/javascript">
+		(function($){
+			window.adBuffer = eol.page.dartRender( {"site" : "shows", "zone" : "jonas", "dimensions" : "300x250,300x600", "tile" : "2", "wid" : "", "notCategory" : "default"  }) || [];
+			document.write(adBuffer.pop()); 
+		})(jQuery);
+	</script><div class="advertisement ad-ignore ad-300x250-300x600 reset" rel="2"><!-- -->
+	<script type="text/javascript">
+		(function($){
+			if ( $.isArray(adBuffer) && adBuffer.length === 2 ) {
+				document.write(adBuffer.pop());
+			}
+		})(jQuery);
+	</script><script src="http://ad.doubleclick.net/N2620/adj/shows.us.eonline/jonas;tile=2;pos=2_300x250;sz=300x250,300x600;akw=;wid=;!category=default;pm=1;ord=5672221730649672?" type="text/javascript"></script><script></script><!--  Rubicon Project tag -->
+<!--  Site: E! Online    Zone: EOnline   Size: Medium Rectangle  -->
+<script language="JavaScript" type="text/javascript">
+var cb = Math.random();
+var d = document;
+d.write('<script language="JavaScript" type="text/javascript"');
+d.write('src="http://optimized-by.rubiconproject.com/a/6921/12531/22466-15.js?cb='+cb+'">');
+d.write('<\/scr'+'ipt>');
+</script><script language="JavaScript" type="text/javascript" src="http://optimized-by.rubiconproject.com/a/6921/12531/22466-15.js?cb=0.589115141633774"></script><iframe id="01559f1a" name="01559f1a" src="http://cas.ny.us.criteo.com/delivery/afr.php?did=fbb2c8529e&amp;z=58DAB226F89C574E&amp;u=|sIvutnuTgraWGFLTYcUhi/VPSH4q7dWE0352WMwNaqA=|&amp;c1=gGrBDVuhVGLd5DZOdilJ2UE2rUd7G_AXCJUbZW0-vL4WdipxHRfUAqplpvZ6FnowPE4JAhCmdDlthMxW1FHVSkBixy_4Ve1UZXr_-87pLVn4_FM7X7so3So0FnPic1YTlrbC-H1eteuhc30rk1sqS2vQEUf-UWSB3I3vH5UrFtSm23wqxHC8tW7uvnSo-rDiQmJ0G-LnwCIV4DyfY5amtm1uNJphMOTuTOui-No4LY06OAGpJ0MyNBU6_FhSfrnkgTN06XZ5zaPrmK8nNaO_XcQO7eB2huZXrhUwhIToKUbS2C37ptUTU5bHyeq65eolk05CxPMJagJfcIsM42F_BWV4be-_HwC3CIxj7QjqVlPia3R9-F_SM3Tl_S1kip01x3q1EtnxKXA9lzzvbpgWOWfLUrP0osywk4rXk8HTP9g0g6jcbLpSVa5Q9WpGwLcphA9NkhQJgGigNKWHRydMAU7xU93mApty&amp;c2=wc_AVRbX9qULlAd_PWSNGTVCT6AIrl8Q1P0kdimJdbhPczlVIjLkgKjmWTx8Yxr4Ri4Lh4PYxtnv19wlYGYAWg" framespacing="0" frameborder="no" height="250" scrolling="no" width="300"></iframe><script>var _comscore_switch = "na"; var _comscore = _comscore || []; _comscore.push({ c1: "8", c2: "6135404", c3: "29", c4: "12531", c10: "3186205" }); if ( _comscore_switch == 'na' )  {  (function() { var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true; s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js"; el.parentNode.insertBefore(s, el); })(); } </script><script type="text/javascript" src="http://tap-cdn.rubiconproject.com/partner/scripts/rubicon/alice.js?pc=6921/12531&amp;ptc=22466"></script><div style="height:0px; width:0px; overflow:hidden"><iframe src="http://tap2-cdn.rubiconproject.com/partner/scripts/rubicon/emily.html?rtb_ext=1&amp;pc=6921/12531&amp;geo=na&amp;co=us" marginwidth="0" marginheight="0" style="height:0px; width:0px" frameborder="0" height="0" scrolling="NO" width="0"></iframe></div>
+<noscript>
+<a href="http://optimized-by.rubiconproject.com/t/6921/12531/22466-15.1"><img src="http://optimized-by.rubiconproject.com/a/6921/12531/22466-15.img" width="300" height="250" border="0"></a>
+</noscript>
+	<script type="text/javascript">
+		(function($){
+			if ( $.isArray(adBuffer) && adBuffer.length === 1 ) {
+				document.write(adBuffer.pop());
+			}
+		})(jQuery);
+	</script></div>
+
+	
+
+
+
+
+
+
+
+	<div class="big-picture">
+		<a class="image omniture" rel="jonas-featured-large:gallery:jonas-brothers-on-tour" href="/shows/jonas/photos/jonas-brothers-on-the-road-again/6553" title="See how these brothers have been living it up on the road!">
+				<img src="http://www.eonline.com/resize/300/300/0-0-300-300/eol_images/Entire_Site/20121012/reg_600.jonas.mh.111212.jpg" alt="The Jonas Brothers, EMA" height="300" width="300">
+		</a>
+		<div class="caption">
+			<h4>Jonas Brothers On Tour</h4>
+			<p><a href="/photos/6553/jonas-brothers-on-the-road-again">See how these brothers have been living it up on the road!</a></p>
+		</div>
+	</div>
+
+	
+
+
+
+
+
+
+
+<div class="related-galleries">
+	<div class="rg-title">More Photos</div>
+	<ul class="rg-body clear">
+		
+			<li>	
+				<a class="omniture" rel="jonas-galleries:pos-1:jonas-brothers-through-the-years" href="/shows/jonas/photos/jonas-brothers-through-the-years/8562">
+					<img src="http://www.eonline.com/resize/135/135/0-0-300-300/eol_images/Entire_Site/2012916/reg_600.jonas.mh.101612.jpg" alt="Jonas Brothers Through the Years" height="135" width="135">
+					<p>Jonas Brothers Through the Years</p>
+				</a>
+			</li>
+		
+			<li>	
+				<a class="omniture" rel="jonas-galleries:pos-2:kevin-and-danis-instagrams" href="/shows/jonas/photos/kevin-and-dani-s-instagrams/8457">
+					<img src="http://www.eonline.com/resize/135/135/0-0-300-300/eol_images/Entire_Site/2012713/reg_600.jonas.cm.81312.jpg" alt="Kevin and Dani’s Instagrams" height="135" width="135">
+					<p>Kevin and Dani’s Instagrams</p>
+				</a>
+			</li>
+		
+			<li>	
+				<a class="omniture" rel="jonas-galleries:pos-3:the-deleasas-family-album" href="/shows/jonas/photos/the-deleasas-family-album/6476">
+					<img src="http://www.eonline.com/resize/135/135/0-0-300-300/eol_images/Entire_Site/2012917/reg_600.MTJ1.mh.101712.jpg" alt="The Deleasas Family Album" height="135" width="135">
+					<p>The Deleasas Family Album</p>
+				</a>
+			</li>
+		
+			<li>	
+				<a class="omniture" rel="jonas-galleries:pos-4:mikey-deleasas-performance-face" href="/shows/jonas/photos/mikey-deleasa-s-performance-face/6399">
+					<img src="http://www.eonline.com/resize/135/135/0-0-300-300/eol_images/Entire_Site/201299/reg_600.mtj9.mh.100912.jpg" alt="Mikey Deleasa's Performance Face" height="135" width="135">
+					<p>Mikey Deleasa's Performance Face</p>
+				</a>
+			</li>
+		
+			<li>	
+				<a class="omniture" rel="jonas-galleries:pos-5:cooking-with-the-jonas" href="/shows/jonas/photos/cooking-with-the-jonas/6404">
+					<img src="http://www.eonline.com/resize/135/135/0-0-300-300/eol_images/Entire_Site/2012910/reg_600.mtj5.mh.101012.jpg" alt="Cooking With the Jonas'" height="135" width="135">
+					<p>Cooking With the Jonas'</p>
+				</a>
+			</li>
+		
+			<li>	
+				<a class="omniture" rel="jonas-galleries:pos-6:jonas-brothers-radio-city-music-hall-concert" href="/shows/jonas/photos/jonas-brothers-radio-city-music-hall-concert/6390">
+					<img src="http://www.eonline.com/resize/135/135/0-0-300-300/eol_images/Entire_Site/201298/reg_600.JoeJonas.mh.100812.jpg" alt="Jonas Brothers' Radio City Music Hall Concert" height="135" width="135">
+					<p>Jonas Brothers' Radio City Music Hall Concert</p>
+				</a>
+			</li>
+		
+			<li>	
+				<a class="omniture" rel="jonas-galleries:pos-7:kevin-and-danis-airport-style" href="/shows/jonas/photos/kevin-and-dani-s-airport-style/6366">
+					<img src="http://www.eonline.com/resize/135/135/0-0-300-300/eol_images/Entire_Site/201295/reg_600.ab.jonas.jpg" alt="Kevin and Dani's Airport Style" height="135" width="135">
+					<p>Kevin and Dani's Airport Style</p>
+				</a>
+			</li>
+		
+			<li>	
+				<a class="omniture" rel="jonas-galleries:pos-8:halloween-with-the-jonas" href="/shows/jonas/photos/halloween-with-the-jonas/6332">
+					<img src="http://www.eonline.com/resize/135/135/0-0-300-300/eol_images/Entire_Site/2012915/reg_600.mtj1.mh.101512.jpg" alt="Halloween with the Jonas'" height="135" width="135">
+					<p>Halloween with the Jonas'</p>
+				</a>
+			</li>
+		
+			<li>	
+				<a class="omniture" rel="jonas-galleries:pos-9:frankie-jonas-top-twitpics" href="/shows/jonas/photos/frankie-jonas-top-twitpics/6300">
+					<img src="http://www.eonline.com/resize/135/135/0-0-300-300/eol_images/Entire_Site/2012827/reg_600.frankie9.mh.092712.jpg" alt="Frankie Jonas' Top Twitpics" height="135" width="135">
+					<p>Frankie Jonas' Top Twitpics</p>
+				</a>
+			</li>
+		
+			<li>	
+				<a class="omniture" rel="jonas-galleries:pos-10:danielle-jonas-top-hairstyles" href="/shows/jonas/photos/danielle-jonas-top-hairstyles/6260">
+					<img src="http://www.eonline.com/resize/135/135/0-0-300-300/eol_images/Entire_Site/2012824/reg_600.mtj1.mh.092412.jpg" alt="Danielle Jonas' Top Hairstyles" height="135" width="135">
+					<p>Danielle Jonas' Top Hairstyles</p>
+				</a>
+			</li>
+		
+			<li>	
+				<a class="omniture" rel="jonas-galleries:pos-11:dani-and-kevin-jonas-rock-plaid" href="/shows/jonas/photos/dani-and-kevin-jonas-rock-plaid/6201">
+					<img src="http://www.eonline.com/resize/135/135/0-0-300-300/eol_images/Entire_Site/2012821/reg_600.mtj3.mh.092112.jpg" alt="Dani and Kevin Jonas Rock Plaid" height="135" width="135">
+					<p>Dani and Kevin Jonas Rock Plaid</p>
+				</a>
+			</li>
+		
+	</ul>
+</div>
+</div>
+
+</div>
+
+<script type="text/javascript">
+	(function($){
+	    if ( window.parent !== window ) {
+	        $("a").bind("click", function(e){
+	            if(parseInt($(this).attr("data-videoid") || 0,10) <= 0){	
+		            e.preventDefault();
+		            e.stopPropagation();
+		            window.parent.location = $(this).attr("href");
+	            }
+	        });
+	    }        
+	})(jQuery);
+</script>
+            <script type="text/javascript">
+                (function($){
+                    $(document).trigger("cready");
+                })(jQuery);
+            </script>
+            
+
+
+
+
+
+
+	
+
+
+
+    
+    
+    
+    
+    
+    
+    
+        
+        
+        
+    
+
+
+<div id="HFooter">
+	<div id="Footer_Layout">
+		<div id="Footer_SpotSection">
+			
+			<div class="footerSpot">
+				<a href="http://www.eonline.com/shows/what_would_ryan_lochte_do" data-omniture="trackWidgetClick|{&quot;linkName&quot;:&quot;nav:footer:spot_1&quot;,&quot;products&quot;:&quot;eVar16=\&quot;nav\&quot;&quot;}"><img src="http://www.eonline.com/eol_images/Entire_Site/201341/rs_300x150-130501095447-WWRLD_brick_300x150_rev1.jpg"></a>
+			</div>
+			
+			<div class="footerSpot">
+				<a href=" http://www.eonline.com/news/shop_red_carpet" data-omniture="trackWidgetClick|{&quot;linkName&quot;:&quot;nav:footer:spot_2&quot;,&quot;products&quot;:&quot;eVar16=\&quot;nav\&quot;&quot;}"><img src="http://www.eonline.com/eol_images/Entire_Site/201298/Shop_LFRC_2012_FD_brick.gif"></a>
+			</div>
+			
+			<div class="footerSpot">
+				<a href="http://www.eonline.com/shows/jonas" data-omniture="trackWidgetClick|{&quot;linkName&quot;:&quot;nav:footer:spot_3&quot;,&quot;products&quot;:&quot;eVar16=\&quot;nav\&quot;&quot;}"><img src="http://www.eonline.com/eol_images/Entire_Site/201341/rs_300x150-130501095445-MTJ_S2_FooterBrick_300x50_Sun_rev1.jpg"></a>
+			</div>
+			
+		</div>
+		<div id="Footer_Main">
+			<a href="/" data-omniture="trackWidgetClick|{&quot;linkName&quot;:&quot;nav:footer:main&quot;,&quot;products&quot;:&quot;eVar16=\&quot;nav\&quot;&quot;}"><div id="Footer_LogoBlock">
+			</div></a>
+			<div id="Footer_Stripes"></div>
+<!-- c:if test="true" -->
+			<div id="Footer_LogoRight"></div>
+<!-- /c:if -->
+
+
+	
+ 
+
+	<script>
+				(function($){	
+					$(".Footer_LimitedEdNote").bind("click", function(e, extra){
+						$(".Footer_LimitedEdNoteOverlay").css("display","block");
+						$(".Footer_CloseLimitedEdNote").css("display","block");
+					});
+					$(".Footer_CloseLimitedEdNote").bind("click", function(e, extra){
+						$(".Footer_LimitedEdNoteOverlay").css("display","none");
+						$(".Footer_CloseLimitedEdNote").css("display","none");
+					});
+				})(jQuery.noConflict());
+			</script>
+
+			<div id="Footer_NavBlock">
+				
+						
+						
+					
+						
+						
+					
+					
+						<ul>
+							<li>
+								<a href="/shows/schedule" data-omniture="trackWidgetClick|{&quot;linkName&quot;:&quot;nav:footer:shows_schedule&quot;,&quot;products&quot;:&quot;eVar16=\&quot;nav\&quot;&quot;}">Show Schedule</a>
+							</li>
+							<li>
+								<a href="http://www.cafepress.com/shopE" data-omniture="trackWidgetClick|{&quot;linkName&quot;:&quot;nav:footer:shop&quot;,&quot;products&quot;:&quot;eVar16=\&quot;nav\&quot;&quot;}" target="_blank">Shop</a>
+							</li>
+							<li>
+								<a href="/news/mobile" data-omniture="trackWidgetClick|{&quot;linkName&quot;:&quot;nav:footer:everywhere_mobile&quot;,&quot;products&quot;:&quot;eVar16=\&quot;nav\&quot;&quot;}">Mobile</a>
+							</li>
+							<li>
+								<a href="/now" target="_blank">E! Now</a>
+							</li>
+							<li>
+								<a href="/sweepstakes" data-omniture="trackWidgetClick|{&quot;linkName&quot;:&quot;nav:footer:sweepstakes&quot;,&quot;products&quot;:&quot;eVar16=\&quot;nav\&quot;&quot;}">Sweepstakes</a>
+							</li>
+							<li>
+								<a href="http://www.comcastdigital.com/index.php" data-omniture="trackWidgetClick|{&quot;linkName&quot;:&quot;nav:footer:Advertise&quot;,&quot;products&quot;:&quot;eVar16=\&quot;nav\&quot;&quot;}" target="_blank">Advertise</a>
+							</li>
+							<li class="last">
+								<a id="_bapw-link" style="color:white!important;cursor:pointer !important;font:9pt Arial !important;text-decoration:none !important"><img src="http://cdn.betrad.com/pub/icon1.png" id="_bapw-icon" style="display:inline !important;vertical-align:middle !important">
+									<span style="vertical-align:middle !important">AdChoices</span>
+								</a>
+								<script>(function(){var e=document,b,a=(e.location.protocol=="https:"?"https":"http"),c=(a=="https"?"https://info.evidon.com/c/betrad/pub/":"http://cdn.betrad.com/pub/");e.getElementById("_bapw-icon").src=c+"icon1.png";e.getElementById("_bapw-link").onclick=function(){var f=this;function d(i,l){var j=e.getElementsByTagName("head")[0]||e.documentElement,h=false,g=e.createElement("script");function k(){g.onload=g.onreadystatechange=null;j.removeChild(g);l()}g.src=i;g.onreadystatechange=function(){if(!h&&(this.readyState=="loaded"||this.readyState=="complete")){h=true;k()}};g.onload=k;j.insertBefore(g,j.firstChild)}this.onclick="return false";d(a+"://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js",function(){d(c+"pub1.js",function(){BAPW.i(f,{pid:208,ocid:908},false)})});return false};b=new Image();b.src=a+"://l.betrad.com/pub/p.gif?pid=208&ocid=908&ii=1&r="+Math.random()}());</script>
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<a href="/about" data-omniture="trackWidgetClick|{&quot;linkName&quot;:&quot;nav:footer:about&quot;,&quot;products&quot;:&quot;eVar16=\&quot;nav\&quot;&quot;}">About Us</a>
+							</li>
+							<li>
+								<a href="http://www.cegjobs.com" data-omniture="trackWidgetClick|{&quot;linkName&quot;:&quot;nav:footer:careers&quot;,&quot;products&quot;:&quot;eVar16=\&quot;nav\&quot;&quot;}" target="_blank">Careers</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" onclick="window.open('https://www.hostedsupport.com/Support/Interface.cfm?C=1087','ProCSI','status=1,scrollbars=1,resizable=1');">Contact Us</a>
+							</li>
+			    			<li class="last">
+		    					<a href="/sitemap" data-omniture="trackWidgetClick|{&quot;linkName&quot;:&quot;nav:footer:sitemap&quot;,&quot;products&quot;:&quot;eVar16=\&quot;nav\&quot;&quot;}">Site Map</a>
+		    				</li>
+		    			</ul>
+					
+				
+		    	
+			</div>
+
+			<div id="Footer_Tipline">
+				<div class="clear">
+					<div class="TipLineCallout"><b>Got a news tip?</b></div>
+					<div class="TipLineInfo">
+						<a href="/static/uberblog/overlays/tipline/tipline.html" data-omniture="trackWidgetClick|{&quot;linkName&quot;:&quot;nav:footer:tip-line&quot;,&quot;products&quot;:&quot;eVar16=\&quot;nav\&quot;&quot;}" target="_blank" class="eol-tipline override">
+							Call <strong>1-888-E-Online</strong> | Text "<strong>tip</strong>" + your tip to <strong>44264</strong> or <strong>Click Here</strong>
+						</a>
+					</div>
+				</div>
+				<div class="disclaimer">*Message &amp; Data rates may apply. Reply <strong>HELP</strong> for help, <strong>STOP</strong> to cancel.</div>
+			</div>
+
+	
+	
+		<div id="Footer_TabBlock" style="">
+				<div id="Footer_TabBlock_TabBacking"></div>
+				<div id="Newsletters" class="Footer_TabBlock_Tab" style="">
+					<div class="Footer_TabBlock_Title Tab_Unselected" onclick="javascript:ShowTab('Newsletters')" style="width: 320px; left: 5px;">
+						Newsletters<div class="Tab_Arrow"></div>
+					</div>
+					<div id="Newsletter_Block" class="Footer_TabBlock_Body">
+				       <form name="Newsletter_Form" method="post" action="/mvc/hudson/newsletter/submit">
+				           <input name="name" value="Name (optional)" id="Newsletter_Name" class="Newsletter_Input" autocomplete="off" onblur="if (this.value == '') {this.value = 'Name (optional)';jQuery(this).css('color','gray')}" onfocus="if (this.value == 'Name (optional)') {this.value = '';jQuery(this).css('color','black')}" type="text">
+				           <input name="email" value="Email address" id="Newsletter_Email" class="Newsletter_Input" autocomplete="off" onblur="if (this.value == '') {this.value = 'Email address';jQuery(this).css('color','gray')}" onfocus="if (this.value == 'Email address') {this.value = '';jQuery(this).css('color','black')}" type="text">
+				           <input value="Subscribe" id="Newsletter_Button" onclick="javascript: HandleNewsletterSubscribe(); return false;" type="submit">
+				           <ul id="Newsletter_List" class="clear-left">
+				           
+					           <li><input class="Newsletter_Check" name="nids" id="chkNewsletter_1" value="42" type="checkbox"><label>E! News Now</label></li>
+					           <li><input class="Newsletter_Check" name="nids" id="chkNewsletter_2" value="131" type="checkbox"><label>E! Online Breaking News Alerts</label></li>
+				           </ul>
+				       </form>
+					</div>
+				</div>
+				<div id="RSS-Feeds" class="Footer_TabBlock_Tab">
+					<div class="Footer_TabBlock_Title Tab_Unselected" onclick="javascript:ShowTab('RSS-Feeds')" style="width: 315px; left: 330px;">
+						RSS Feeds<div class="Tab_Arrow"></div>
+					</div>
+					<div class="Footer_TabBlock_Body">
+						<span>Click an RSS Feed to Subscribe</span>
+						<section id="rssHolder">
+							<div class="rssLink"><a href="/syndication/feeds/rssfeeds/topstories.xml" data-omniture="trackWidgetClick|{&quot;linkName&quot;:&quot;nav:footer:headlines&quot;,&quot;products&quot;:&quot;eVar16=\&quot;nav\&quot;&quot;}">E! News</a></div>
+							<div class="rssLink"><a href="/syndication/feeds/rssfeeds/tvnews.xml" data-omniture="trackWidgetClick|{&quot;linkName&quot;:&quot;nav:footer:tv_headlines&quot;,&quot;products&quot;:&quot;eVar16=\&quot;nav\&quot;&quot;}">TV Scoop</a></div>
+							<div class="rssLink"><a href="/syndication/feeds/rssfeeds/celebrityphotos.xml" data-omniture="trackWidgetClick|{&quot;linkName&quot;:&quot;nav:footer:celebrity_headlines&quot;,&quot;products&quot;:&quot;eVar16=\&quot;nav\&quot;&quot;}">Celebrity Photos</a></div>
+							<div class="rssLink"><a href="/syndication/feeds/rssfeeds/redcarpet.xml" data-omniture="trackWidgetClick|{&quot;linkName&quot;:&quot;nav:footer:red_carpet_blog&quot;,&quot;products&quot;:&quot;eVar16=\&quot;nav\&quot;&quot;}">Red Carpet</a></div>
+							<div class="rssLink"><a href="/syndication/feeds/rssfeeds/video/index.xml" data-omniture="trackWidgetClick|{&quot;linkName&quot;:&quot;nav:footer:cebrity_videos&quot;,&quot;products&quot;:&quot;eVar16=\&quot;nav\&quot;&quot;}">Videos</a></div>
+							<div class="rssLink"><a href="/syndication/feeds/rssfeeds/fashion.xml" data-omniture="trackWidgetClick|{&quot;linkName&quot;:&quot;nav:footer:fashion&quot;,&quot;products&quot;:&quot;eVar16=\&quot;nav\&quot;&quot;}">Fashion Police</a></div>
+							<div class="rssLink"><a href="/syndication/feeds/rssfeeds/answer.xml" data-omniture="trackWidgetClick|{&quot;linkName&quot;:&quot;nav:footer:ask&quot;,&quot;products&quot;:&quot;eVar16=\&quot;nav\&quot;&quot;}">Ask E!</a></div>
+							<div class="rssLink"><a href="/syndication/feeds/rssfeeds/thesoup.xml" data-omniture="trackWidgetClick|{&quot;linkName&quot;:&quot;nav:footer:the_soup_blog&quot;,&quot;products&quot;:&quot;eVar16=\&quot;nav\&quot;&quot;}">The Soup</a></div>
+							<div class="rssLink"><a href="/syndication/feeds/rssfeeds/trends.xml" data-omniture="trackWidgetClick|{&quot;linkName&quot;:&quot;nav:footer:trends&quot;,&quot;products&quot;:&quot;eVar16=\&quot;nav\&quot;&quot;}">The Trend</a></div>
+							<div class="rssLink"><a href="/everywhere/rss/index.jsp" data-omniture="trackWidgetClick|{&quot;linkName&quot;:&quot;nav:footer:read_more&quot;,&quot;products&quot;:&quot;eVar16=\&quot;nav\&quot;&quot;}">Read More...</a></div>
+						</section>
+					</div>
+				</div>			
+			</div>
+		
+		
+		
+	</div>
+	<div id="Footer_LastBar">
+		<a href="/about/privacy/index.jsp" data-omniture="trackWidgetClick|{&quot;linkName&quot;:&quot;nav:footer:privacy-policy&quot;,&quot;products&quot;:&quot;eVar16=\&quot;nav\&quot;&quot;}" rel="nofollow">Privacy Policy</a>&nbsp;|&nbsp;
+		<a href="/about/terms/index.jsp" data-omniture="trackWidgetClick|{&quot;linkName&quot;:&quot;nav:footer:terms-of-use&quot;,&quot;products&quot;:&quot;eVar16=\&quot;nav\&quot;&quot;}" rel="nofollow">Terms of Use</a>&nbsp;|&nbsp;
+		
+		<a href="http://corporate.comcast.com/news-information/nbcuniversal-transaction/independent-programming" data-omniture="trackWidgetClick|{&quot;linkName&quot;:&quot;nav:footer:independent-programming-report&quot;,&quot;products&quot;:&quot;eVar16=\&quot;nav\&quot;&quot;}" rel="nofollow" target="_blank">Independent Programming Report</a>&nbsp;|&nbsp;
+
+		<a href="/about/copyright/index.jsp" data-omniture="trackWidgetClick|{&quot;linkName&quot;:&quot;nav:footer:copyright&quot;,&quot;products&quot;:&quot;eVar16=\&quot;nav\&quot;&quot;}" rel="nofollow">©</a>2013&nbsp;E! Entertainment Television, LLC. A Division of NBCUniversal.&nbsp;
+		All rights reserved.		
+				
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	function ShowTab(TabID) {
+		jQuery('.Footer_TabBlock_Tab').each(function (index) {
+			if (jQuery(this).prop('id') == TabID) {
+				jQuery(this).css('height', "115");
+				jQuery(this).children('.Footer_TabBlock_Title').removeClass('Tab_Unselected');
+				jQuery(this).children('.Footer_TabBlock_Title').addClass('Tab_Selected');
+			} else {
+				jQuery(this).css('height', "0");
+				jQuery(this).children('.Footer_TabBlock_Title').removeClass('Tab_Selected');
+				jQuery(this).children('.Footer_TabBlock_Title').addClass('Tab_Unselected');
+			}
+		})
+	};
+</script>
+
+<script type="text/javascript">
+	function HandleNewsletterSubscribe() {
+		jQuery('#Newsletter_Button').attr('disabled', true);
+		/* gather/validate */
+		var email_val = jQuery("#Newsletter_Email").val();
+		if (email_val == "" || email_val == "Email address") {
+			jQuery("#Newsletter_Email").focus();
+			return;
+			}
+		else {
+			/*
+			var email_regex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,6}$/i; 
+			if (!email_regex.test(email_val)){
+				jQuery("#Newsletter_Email").focus(function(){this.select();});
+				alert('NO REGEXT');
+				return;
+			}
+			*/
+		}
+		var newsletter_ids = "";
+		jQuery(".Newsletter_Check:checked").each(function(index){
+			if (newsletter_ids.length > 0) {
+				newsletter_ids += ',';
+			}
+			newsletter_ids += jQuery(this).val();
+		});
+		if (newsletter_ids == "") {
+			jQuery("#chkNewsletter_1").focus();
+			return;
+		}
+		/* post */
+		var name_val = jQuery("#Newsletter_Name").val();
+		if (name_val == "Name (optional)") {name_val = ""};
+		var theData = {
+			name : name_val,
+			email : email_val,
+			nids : newsletter_ids
+		};
+		jQuery('#Newsletter_Button').attr('disabled', false);
+		jQuery.post('/mvc/hudson/newsletter/submit' , theData, function(returnData) { 
+			jQuery("#Newsletter_Block").html("<p style='font-size: large; padding-top: 30px; text-align: center;'>Thank you for subscribing!</p>");
+		})
+	};
+</script> 
+
+<script type="text/javascript">
+    (function($){
+        $(".new-edition_selector li a").bind("click", function(e){
+            e.preventDefault();
+            var edition = $(this).attr("class").replace(/^.*?edition_/, "");
+            var subdomain = "";
+            if(edition == "us") {
+            	subdomain = "www";
+            } else {
+            	subdomain = edition + "";
+            }
+            eol.cookie("edition", edition, -1);  
+            SetSessionCookie('override-geo', '-1', '/', '.eonline.com'); 
+            window.location = "http://"+subdomain+".eonline.com";
+        });                      
+    })(jQuery);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+	<!-- START Nielsen Online SiteCensus V6.0 -->
+	<!-- EOL: Loads the Standard Event (SE) function, which will only be used below when (isNielsenFound === false). -->
+	<script type="text/javascript" src="/resources/js/libs/nielsen/adTracking.siteCensus.js"></script>
+
+	<script id="no-search-block" type="text/javascript"></script>
+	<noscript>
+		<!-- EOL: This will be single tracked, as the NBCUDigitalAdOps.com's <script> code won't be triggered, when JS is disabled. -->
+		<div>
+			
+				
+				
+					
+					
+				
+			
+			
+			<img src="//secure-us.imrworldwide.com/cgi-bin/m?ci=us-505504h&amp;cg=0&amp;cc=1&amp;ts=noscript" width="1" height="1" alt="" />
+		</div>
+	</noscript>
+	<!-- END Nielsen Online SiteCensus V6.0 -->
+
+
+
+
+
+
+
+
+<style type="text/css">@import url('http://s3.amazonaws.com/getsatisfaction.com/feedback/feedback.css');</style>
+<script src="http://s3.amazonaws.com/getsatisfaction.com/feedback/feedback.js" type="text/javascript"></script>
+<script type="text/javascript" charset="utf-8">
+    var tab_options = {}
+    tab_options.placement = "hidden";  // left, right, bottom, hidden
+    tab_options.color = "red"; // hex (#FF0000) or color (red)
+
+    GSFN.feedback('http://getsatisfaction.com/eonline/feedback/topics/new?display=overlay&amp;style=question', tab_options);
+</script><a href="#" id="fdbk_tab" class="fdbk_tab_hidden" style="background-color:red">FEEDBACK</a><div id="fdbk_overlay" style="display:none"><div id="fdbk_container"><a href="#" onclick="GSFN.hide();return false" id="fdbk_close"></a><iframe src="https://s3.amazonaws.com/getsatisfaction.com/feedback/transparent.gif" id="fdbk_iframe" allowtransparency="true" class="loading" frameborder="0" scrolling="no"></iframe></div><div id="fdbk_screen"></div></div>
+
+    <!--NBC U -->
+    <script src="//www.nbcudigitaladops.com/hosted/global.js"></script><script src="//www.nbcudigitaladops.com/hosted/jscript/eonline_com.js"></script><script>_qoptions = {    qacct:"p-9eJ8k4iSzux46"};_qfilter = ['9218','316','317','318','319','320','322','325','326','330','331','332','333','334','335','336','337','376','377','378','381','383','384','1914','1915','1953','1956','1957','1960','1964','1997','2005','2006','13267','13268','13269','14057','14058','14059','14060','15755','Q_15755','q_15755','q_325','q_377','q_383','q_378'];document.write('<scr'+'ipt type="text/javascript" src="//pixel.quantserve.com/seg/'+_qoptions.qacct+'.js"></scr'+'ipt>');function _quantgc(n) {        var c=document.cookie;if(!c)return '';        var i=c.indexOf(n+"=");if(-1==i)return '';        var len=i+n.length+1;        var end=c.indexOf(";", len);        return c.substring(len,end<0?c.length:end);};var quantSegs = "";var _qsegs = _quantgc('__qseg').split('|');for(var i=0;i<_qsegs.length;i++){  var qArr=_qsegs[i].split("_");  if (qArr.length>1) {     for(var j=0;j<_qfilter.length;j++){      if (qArr[1]==_qfilter[j]){        quantSegs += ("qsg=" + qArr[1] + ";");        break;      }    }  }}if(top.__nbcudigitaladops_header){  top.__nbcudigitaladops_header.dtprm(quantSegs);}</script><script type="text/javascript" src="//pixel.quantserve.com/seg/p-9eJ8k4iSzux46.js"></script><!-- BEGIN Krux Controltag for E! --><script class="kxct" data-id="Hhr_tSwi" data-version="async:1.6" type="text/javascript">  window.Krux||((Krux=function(){Krux.q.push(arguments)}).q=[]);  (function(){    var k=document.createElement('script');k.type='text/javascript';k.async=true;var m,src=(m=location.href.match(/\bkxsrc=([^&]+)\b/))&&decodeURIComponent(m[1]);    k.src=src||(location.protocol==='https:'?'https:':'http:')+'//cdn.krxd.net/controltag?confid=Hhr_tSwi';    var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(k,s);  })();</script><!-- END Krux Controltag --><script>_qacct="p-9eJ8k4iSzux46";document.write('<' + 'script language="javascript" type="text/javascript" src="//secure.quantserve.com/quant.js"' + '>' +'</' + 'script'+ '>');</script><script language="javascript" type="text/javascript" src="//secure.quantserve.com/quant.js"></script><img src="//www.nbcudigitaladops.com/hosted/housepix.gif" style="display:none" height="0" width="0"><!-- START Nielsen Online SiteCensus V6.0 --><!-- COPYRIGHT 2010 Nielsen Online --><script type="text/javascript">  (function () {    var d = new Image(1, 1);    d.onerror = d.onload = function () {      d.onerror = d.onload = null;    };    d.src = ["//secure-us.imrworldwide.com/cgi-bin/m?ci=us-505504h&cg=0&cc=1&si=", escape(window.location.href), "&rp=", escape(document.referrer), "&ts=compact&rnd=", (new Date()).getTime()].join('');  })();</script><noscript>  <div>    <img src="//secure-us.imrworldwide.com/cgi-bin/m?ci=us-505504h&amp;cg=0&amp;cc=1&amp;ts=noscript"    width="1" height="1" alt="" />  </div></noscript><!-- END Nielsen Online SiteCensus V6.0 --> 
+
+        </div>
+        
+<div id="stat_tracking_area" style="display: none;">
+	<!-- BEGIN: HUDSON common SiteCatalyst Code -->
+	<!-- SiteCatalyst code version: H.24.3.
+			Copyright 1996-2012 Adobe, Inc. All Rights Reserved
+			More info available at http://www.omniture.com -->
+	<script type="text/javascript" src="/uberblog/includes/js/aculo/lib/prototype.js"></script>
+	<script type="text/javascript" id="jsSiteCatCodeHelper" src="/includes/js/sitecatalyst/s_code_helper.js"></script>
+	<script type="text/javascript" id="jsSiteCatCode" src="/includes/js/sitecatalyst/s_code.js"></script>
+	<script type="text/javascript" id="jsSiteCatCodePageMappings" src="/includes/js/sitecatalyst/s_code_pageMappings.js"></script>
+	<script type="text/javascript">
+	
+	
+	
+	
+			
+			
+				
+					s.prop1="e-shows";
+				
+					s.prop2="e-shows:e-shows";
+				
+					s.prop3="e-shows:e-shows:jonas";
+				
+					s.pageName="e-shows:e-shows:jonas:landing";
+				
+					s.prop48="e-shows:e-shows:jonas:landing";
+				
+					s.prop15="shows";
+				
+					s.prop62="index";
+				
+					s.prop56="jonas";
+				
+				
+			
+	
+
+	/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+	var s_code=s.t();if(s_code)document.write(s_code)//--></script>
+	<script language="JavaScript" type="text/javascript"><!--
+	if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+	//--></script><noscript><img src="http://comcastentertainmentgroup.112.2o7.net/b/ss/comcastegegeonlinecom/1/H.24.3--NS/0"
+	height="1" width="1" border="0" alt="" /></noscript><!--/DO NOT REMOVE/-->
+	<!-- End SiteCatalyst code version: H.24.3. -->
+	<!-- END: SiteCatalyst Code -->
+	
+	
+	<script type="text/javascript">
+		function trackLink(lnk, linkName, json) {
+			s.linkTrackVars = json.linkTrackVars || 'NONE';
+			s.linkTrackEvents = json.linkTrackEvents || 'NONE';
+			s.eVar17=linkName;
+			s.tl(lnk, 'o', linkName);
+		}
+
+		function trackLink2(lnk, linkName, json) {
+			s.linkTrackVars = json.linkTrackVars || 'prop1,events';
+			s.linkTrackEvents = json.linkTrackEvents || 'event1';
+			s.prop1 = json.prop1 || 'Prop 1 Value';
+			s.events = json.events || 'event1';
+			s.tl(lnk, 'o', linkName);
+		}
+
+		function trackShares(lnk, linkName, json) { // This is the same code as trackLink above.
+			trackLink(lnk, linkName, json);
+		}
+
+		function trackColumnLayout(json) {
+			s.linkTrackVars = json.linkTrackVars || 'prop57,eVar57';
+			s.linkTrackEvents = json.linkTrackEvents || 'NONE';
+			s.prop57 = json.prop57 || '5';
+			s.eVar57 = json.eVar57 || '5';
+			s.tl(' ','o','column resize');
+		}
+
+		/* This is an onPageLoad tracking function, not a link click tracking function.
+		 * Usage: trackVideoPlayer('frontdoor_live', 'att', 'live:lrc-2013-oscars'); 
+		 *    Or: trackVideoPlayer({"playerName":"frontdoor_live_embed","sponsorName":"att","videoName":"live:lrc-2013-oscars"});
+		 */
+			function trackVideoPlayer(jsonDataOrPlayerName, sponsorName, videoName) {
+			// playerName is overloaded as a json object. It can also be a string.
+			// Get values from json or from strings.
+			if (typeof(jsonDataOrPlayerName) === 'object') {
+				var playerName = jsonDataOrPlayerName.playerName;
+				sponsorName = jsonDataOrPlayerName.sponsorName;
+				videoName = jsonDataOrPlayerName.videoName;
+			} else if (typeof(jsonDataOrPlayerName) === 'string') {
+				var playerName = jsonDataOrPlayerName; // The sponsorName & videoName are already setup above.
+			}
+
+			(function siteCatDelayedLoader(playerName, sponsorName, videoName) { // Self-Loading Function.
+				if (typeof(s) !== 'undefined') {
+					// Map them to the Omniture Objects, as needed:
+					if (typeof(s.Media) === 'undefined') {
+						s.Media = {};
+					}
+					s.Media.playerName = s.eVar18 = s.prop19 = playerName;
+					s.prop20 = s.eVar20 = sponsorName;
+					s.prop39 = s.eVar39 = videoName;
+
+					// Call Omniture:
+					s.t();
+				} else {
+					setTimeout(function() {
+						siteCatDelayedLoader(playerName, sponsorName, videoName); // Loops back into this function.
+					}, 50);
+				}
+			})(playerName, sponsorName, videoName); // Self-Loading Function.
+		}
+
+		// Usage: data-omniture='{"linkName":"[Widget Name]:[Link text]","products":";photos:A1:1-1:the-big-picture;;;eVar16= photos:1-1:the-big-picture:A1"}'>
+		function trackWidgetClick(lnk, linkName, json) {
+			s.linkTrackVars = json.linkTrackVars || 'products,events,eVar17,prop17,eVar16';
+			s.linkTrackEvents = json.linkTrackEvents || 'event21';
+			s.events = json.events || 'event21';
+			s.products = json.products; //';photos:A1:1-1:the-big-picture;;;;
+			s.eVar16= "frontdoor-modules";	//photos:1-1:the-big-picture:A1
+			s.prop17 = json.products; // '[Widget Name]:[Link text]';
+			s.eVar17 = json.products; // '[Widget Name]:[Link text]';
+			s.tl(lnk, 'o', linkName); // '[Widget Name]:[Link text]');
+		}
+
+		function trackWidgetClick2(lnk, linkName, json) {
+			s.linkTrackVars = json.linkTrackVars || 'products,events,eVar17,prop17';
+			s.linkTrackEvents = json.linkTrackEvents || 'event29';
+			s.events = json.events || 'event29';
+			s.products = json.products; // ';ad-widget:A1:1-1:ad-text;;;;eVar16=ad:1-1:ad-text:A1';
+			s.prop17 = json.products; // '[Ad Widget Name]:[Link text]';
+			s.eVar17 = json.products; // '[Ad Widget Name]:[Link text]';
+			s.tl(lnk, 'o', linkName); // '[Ad Widget Name]:[Link text]');
+		}
+
+		function trackWidgetLink(lnk, linkName, json) {
+			s.linkTrackVars = json.linkTrackVars || 'eVar17';
+			s.linkTrackEvents = json.linkTrackEvents || 'NONE';
+			s.eVar17 = linkName;
+			s.tl(lnk, 'o', linkName);
+		}
+
+		// Global Click Handler Event + Function Mapping
+
+		jQuery(document).ready(function($) {
+			/* This is a catch all for any links, which DO NOT have customized Omniture implementations applied to them. If Omniture has already 
+			   been applied to a specific link, then this function is intentionally designed to avoid double counting the user's click action. */
+
+			if (typeof(eol) === 'undefined') {
+				window.eol = {};
+			}
+
+			eol.bindOmnitureListeners = function(strKey) {
+				// Prevents multiple clicks from being added, every time the "More Tweets from ..." link is clicked.
+				$(strKey).unbind('click', eol.globalClickHandler);
+				$(strKey).bind('click', eol.globalClickHandler);
+			}
+
+			eol.globalClickHandler = function(e){
+				var objLink = arguments[0].target;
+				//fb('click');
+				var rand = Math.floor((Math.random()*10)+1);
+				//fb(rand);
+				if (rand == 1) {
+					// Get Attributes from the <a href="..."> tag.
+					//fb(objLink);
+					var onClick = (objLink) ? objLink.getAttribute("onClick") : null;
+
+					// HTML 5 data-* attributes.
+					var omniture = (objLink) ? objLink.getAttribute("data-omniture") : null;
+					//var products = (objLink) ? objLink.getAttribute("data-omniture-products") : null;
+
+					// Find values.
+					var lnk = this; // URL
+					var linkName = (omniture) ? omniture : (this.innerText) ? this.innerText : this.textContent; // Link Text
+
+					/* Skips this function if someone is already using a pre-existing Omniture onClick attribute. This avoids double counting the URL clicks.
+					 * Also skips this function whenever HTML 5 URLs (which use data-* attributes) are detected.
+					 * Old URLs look like this: <a href="..." onclick="s_objectID="http://www.eonline.com/#_1";return this.s_oc?this.s_oc(e):true">...</a>
+					 * New URLs look like this: <a href="..." data-omniture="some string">...</a>
+					 * Ex: <a href="..." onclick="trackLink(this,'$ {sage:omnitureCleanSubSections(article.title)}_top_story_thumbnail')">...</a>
+					 *     <a href="..." data-omniture="$\{sage:omnitureCleanSubSections(article.title)}_top_story_thumbnail">...</a>
+					 *     <a href="..." data-omniture="trackLink2|$\{sage:omnitureCleanSubSections(article.title)}_top_story_thumbnail">...</a>
+					 */
+					if (onClick && (typeof(onClick) === 'string') && (onClick.indexOf) && ((onClick.indexOf('s_objectID') > -1) || (onClick.indexOf('s_oc') > -1) || (onClick.indexOf('track') > -1))) {
+						//fb('onClick detected. Bypassing 2nd click action.');
+						return;
+					} else {
+						//fb('onClick not found. Using Global Omniture Tracking Code.');
+						// Strip any Function Names as Needed
+						var fnName = 'trackLink';
+						if (linkName.indexOf('|') > -1) {
+							var fnName = linkName.substr(0,linkName.indexOf('|'));
+							var linkName = linkName.substr(fnName.length + 1);
+						}
+
+						// Parse Any Remaining JSON
+						var json = {};
+						if (linkName.indexOf('{') > -1) {
+							//fb('linkName: ' + linkName);
+							json = $.parseJSON(linkName);
+							if ((typeof(json) === 'object') && json) {
+								linkName = json.linkName || json.linkname || '';
+							}
+						}
+
+						// Switch Functions as Needed
+						//fb(fnName);
+						switch (fnName) {
+							case 'trackLink2': 
+								trackLink2(lnk, linkName, json);
+								break;
+							case 'trackShares':
+								trackShares(lnk, linkName, json);
+								break;
+							case 'trackColumnLayout':
+								trackColumnLayout(json);
+								break;
+							case 'trackWidgetClick':
+								trackWidgetClick(lnk, linkName, json);
+								break;
+							case 'trackWidgetClick2':
+								trackWidgetClick2(lnk, linkName, json);
+								break;
+							case 'trackWidgetLink':
+								trackWidgetLink(lnk, linkName, json);
+								break;
+							case 'trackLink':
+								trackLink(lnk, linkName, json);
+							default:
+								break;
+						}
+					}
+				}
+			}
+
+			// Binds on all Static Links ONLY, when the page loads. Does not bind on AJAX links.
+			eol.bindOmnitureListeners('a');
+
+			// For AJAX links, add the following code into your JavaScript file's callback function. Make sure that it is after the .appendHTML() code: 
+			// eol.bindOmnitureListeners('#some-AjaxDiv-id a');
+
+		});
+	</script>
+	
+</div>
+		
+<!-- Default footer -->
+
+		
+	
+
+
+</body>

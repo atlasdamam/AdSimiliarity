@@ -1,0 +1,1296 @@
+<head>
+
+<!-- support/ads/gpt_init.ett :start -->
+<!-- support/ads/dart_init.ett :start -->
+<script async="" src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en_US.d8yU-wcNYlQ.O/m=iframes_styles_bubble/exm=identity,notifications,plus,plusone/rt=j/sv=1/d=1/ed=1/am=UQ/rs=AItRSTNFCVmDFU3r-qDb4qDOc5bk3EYiag/cb=gapi.loaded_4"></script><script async="" src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en_US.d8yU-wcNYlQ.O/m=notifications/exm=identity,plus,plusone/rt=j/sv=1/d=1/ed=1/am=UQ/rs=AItRSTNFCVmDFU3r-qDb4qDOc5bk3EYiag/cb=gapi.loaded_3"></script><script async="" src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en_US.d8yU-wcNYlQ.O/m=plus/exm=identity,plusone/rt=j/sv=1/d=1/ed=1/am=UQ/rs=AItRSTNFCVmDFU3r-qDb4qDOc5bk3EYiag/cb=gapi.loaded_2"></script><script async="" src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en_US.d8yU-wcNYlQ.O/m=identity/exm=plusone/rt=j/sv=1/d=1/ed=1/am=UQ/rs=AItRSTNFCVmDFU3r-qDb4qDOc5bk3EYiag/cb=gapi.loaded_1"></script><script async="" src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en_US.d8yU-wcNYlQ.O/m=plusone/rt=j/sv=1/d=1/ed=1/am=UQ/rs=AItRSTNFCVmDFU3r-qDb4qDOc5bk3EYiag/cb=gapi.loaded_0"></script><script src="http://www.google-analytics.com/ga.js" async="" type="text/javascript"></script><script src="http://www.googletagservices.com/tag/js/gpt.js" type="text/javascript" async=""></script><script>
+    if(typeof mi == 'undefined') {
+	document.write('<scr'+'ipt type="text/javascript" src="http://media.sacbee.com/mistatic/javascripts/MI.js"></scr'+'ipt><scr'+'ipt type="text/javascript" src="http://media.sacbee.com/mistatic/javascripts/MI_Cookie.js"></scr'+'ipt>');
+    }else if(typeof mi.Cookie == 'undefined'){
+	document.write('<scr'+'ipt type="text/javascript" src="http://media.sacbee.com/mistatic/javascripts/MI_Cookie.js"></scr'+'ipt>');
+    } 
+</script><script type="text/javascript" src="http://media.sacbee.com/mistatic/javascripts/MI.js"></script><script type="text/javascript" src="http://media.sacbee.com/mistatic/javascripts/MI_Cookie.js"></script>
+<script>
+  var mi__dart_ord = Math.floor(Math.random()*1000000000000000);
+
+  var dart_ad_cookie = new mi.Cookie(document, 'adinfo');
+  dart_ad_cookie.load();
+
+  if('undefined' !== typeof(dart_ad_cookie['adinfo'])){
+    var dart_ad_cookie_parts = dart_ad_cookie['adinfo'].split('|');
+    var dart_ad_cookie_gender = dart_ad_cookie_parts[0];
+    var dart_ad_cookie_birth_year = dart_ad_cookie_parts[1];
+    var dart_ad_cookie_income = dart_ad_cookie_parts[2];
+  }
+</script>
+<!-- support/ads/dart_init.ett :end -->
+
+
+
+<script type="text/javascript">
+mi__dart_demo_gender = dart_ad_cookie_gender;
+mi__dart_demo_birth_year = dart_ad_cookie_birth_year;
+mi__dart_demo_income = dart_ad_cookie_income;
+
+if (mi__dart_demo_gender || mi__dart_demo_birth_year || mi__dart_demo_income) {
+  mi__ad_cookie = 1;
+}
+
+if (mi__dart_demo_birth_year) {
+  today_year = new Date().getFullYear();
+  age = today_year - mi__dart_demo_birth_year;
+  if (age < 13) {}
+  else if (age >= 13 && age <=17) {
+    mi__dart_demo_age = '13-17';
+  }
+  else if (age <= 20) {
+    mi__dart_demo_age = '18-20';
+  }
+  else if (age >= 76) {
+    mi__dart_demo_age = '76-200';
+  }
+  else {
+    if (age % 5 == 0) {
+      min_age = age - 4;
+      max_age = age;
+    }
+    else {
+      min_age = age - (age % 5) + 1;
+      max_age = age + (5 - (age % 5));
+    }
+    mi__dart_demo_age = min_age + "-" + max_age;
+  }
+}
+
+// Since this is first pass TT only, ord must be done outside of TT, sooo...js.
+  var mi__gpt_ord = Math.floor(Math.random()*1000000000000000);
+
+// Standard Google Tag init stuff
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+
+  (function() {
+    var gads = document.createElement("script");
+    gads.async = true;
+    gads.type = "text/javascript";
+    var useSSL = "https:" == document.location.protocol;
+    gads.src = (useSSL ? "https:" : "http:") + "//www.googletagservices.com/tag/js/gpt.js";
+    var node =document.getElementsByTagName("script")[0];
+    node.parentNode.insertBefore(gads, node);
+  })();
+
+// End Standard Google Tag init stuff
+
+// make this safer for sending
+  var gpt_ref = document.referrer;
+  gpt_ref = gpt_ref.replace("http://","");
+  gpt_ref = gpt_ref.split("/")[0];
+  gpt_ref = gpt_ref.split("#")[0];
+  gpt_ref = gpt_ref.split("?")[0];
+
+// Start defining the ads
+  googletag.cmd.push(function() {
+    googletag.pubads().setTargeting("pl", "sectfront");
+    googletag.pubads().setTargeting("sect", "Plus");
+
+    googletag.pubads().setTargeting("ref", gpt_ref);
+    if (mi__ad_cookie) {
+      googletag.pubads().setTargeting("gender", mi__dart_demo_gender);
+      googletag.pubads().setTargeting("age", mi__dart_demo_age);
+      googletag.pubads().setTargeting("income", mi__dart_demo_income);
+    }
+  });
+</script>
+
+<script>
+
+  googletag.cmd.push(function() {
+
+
+    googletag.pubads().enableSingleRequest();
+    googletag.pubads().collapseEmptyDivs();
+
+    googletag.pubads().enableAsyncRendering();
+    googletag.enableServices();
+
+  });
+
+</script>
+
+
+<!-- support/ads/gpt_init.ett :end -->
+
+ 
+
+
+
+
+
+
+
+<script language="JavaScript">
+<!-- 
+var gomez={ 
+	gs: new Date().getTime(), 
+	acctId:'D3FD89', 
+	pgId:'section-front', 
+	grpId:'Sacbee' 
+};
+
+
+/*Gomez tag version: 7.0*/var gomez=gomez?gomez:{};gomez.h3=function(d, s){for(var p in s){d[p]=s[p];}return d;};gomez.h3(gomez,{b3:function(r){if(r<=0)return false;return Math.random()<=r&&r;},b0:function(n){var c=document.cookie;var v=c.match(new RegExp(';[ ]*'+n+'=([^;]*)'));if(!v)v=c.match(new RegExp('^'+n+'=([^;]*)'));if(v)return unescape(v[1]);return '';},c2:function(n,v,e,p,d,s){try{var t=this,a=t.domain?t.domain:location.hostname;var c=n+'='+escape(v)+(e?';expires='+e.toGMTString():'')+(p?';path='+p:';path=/')+(d?';domain='+d:';domain='+a)+(s?';secure':'');document.cookie=c;}catch(e){}},z0:function(n){var t=this;if(n){var s =t.b0("__g_c");if(!s)return '';var v=s.match(new RegExp(n+':([^\|]*)'));if(v)return unescape(v[1]);return '';}else return '';},z1:function(n,m){var t=this;if(n){var s=t.b0("__g_c");if(s){if(s.indexOf(n+':')!=-1)s=s.replace(new RegExp('('+n+':[^\|]*)'),n+':'+m);else s=s==' '?n+':'+m:s+'|'+n+':'+m;t.c2("__g_c",s);}else t.c2("__g_c",n+':'+m);};},b2:function(v,s){var t=this,f=new Date(t.gt()+946080000000),g=''+v+'_'+s;t.c2('__g_u',g,f);t.gc.c=v;t.gc.d=s;t.z1('c',v);t.z1('d',s);},gt:function(){return new Date().getTime()},b5:function(){return new Date().getTime()-gomez.gs},j1:function(h){if(h){if(h.indexOf('<')!=-1||h.indexOf('%3C')!=-1||h.indexOf('%3c')!=-1)return null;if(window.decodeURIComponent)return decodeURIComponent(h);else return unescape(h);}return null;},f1:function(u,t){try{if(u){if(!/(^http|^https)/.test(u)){if(t==1)return gomez.j1(location.hostname);else return u;}var p=new RegExp('(^http|^https|):\/{2}([^\?#;]*)');if(t==1)p=new RegExp('(^http|^https|):\/{2}([^\/\?]*)');var r=u.match(p);if(r&&t==1)return gomez.j1(r[2]);else if(r)return r[0];}return null;}catch(e){return null;}},j3:function(n){try{var t =this,key=escape((window.location+n).replace(new RegExp("([:\/\.])","gm"),""));if(key&&key.length>100){key=key.substring(0,100);}if(window.localStorage){window.localStorage.setItem(key, t.gt());}else{t.z1('r',key+'___'+t.gt());}}catch(e){return ;}}, j2:function(){try{var m,t =this,key=escape((document.referrer+window.location).replace(new RegExp("([:\/\.])","gm"),""));if(key&&key.length>100){key=key.substring(0,100);}if(window.localStorage){m=window.localStorage.getItem(key);}if(!m){var c=t.z0("r");if(c){var r=c.split('___');if(r &&r[0]==key){m=r[1];}};};t.j4();return m;}catch(e){return ;}}, j4:function(){try{var t =this;if(window.localStorage){var key=escape((document.referrer+window.location).replace(new RegExp("([:\/\.])","gm"),""));if(key&&key.length>100){key=key.substring(0,100);}window.localStorage.removeItem(key);}else{t.z1('r', '');}}catch(e){return ;}}, j5:function(){var ret='';for(var i=0;i<3;i++){ret =ret +(((1+Math.random())*0x10000)|0).toString(16).substring(1);}ret =parseInt(ret, 16);return ret;},j6:function(){var t =this;var g=t.b0("__g_u");if(g&&g!='1'&&g.indexOf('NaN')==-1&&g.indexOf('undefined')==-1){var r =g.split("_");if(r.length>5){if(parseInt(r[5])<new Date().getTime()){return undefined;}else{return parseFloat(r[2]);}}}return undefined;},nameEvent:function(){},startInterval:function(){},endInterval:function(){},customValue:function(){}});gomez.P=function(){};gomez.P.prototype={hash:function(o){if(!o)return '';var t=this,s='{n:'+t.f9(o['n'])+'|';for(var i in o){if(i=='n')continue;if(typeof(o[i])=='string'||typeof(o[i])=='number')s +=i+':'+t.f9(o[i])+'|';};s=s.substring(0,s.length-1);return s+'}';},f9:function(s){s=''+s;s=s.replace('|','#$#').replace(':','$*$').replace('{','@#@').replace('}','*@*').replace('&','!*!');return s;},g0:function(){var t=this,z=gomez;if(z.grpIds)z.h3(z.gc,z.grpIds);if(z.wrate)z.gc.r=z.wrate;z.gc.e=z.grpId;for(var i=1;i<5;i++){if(z["grpId"+i]!=undefined){z.gc["e"+i]=z["grpId"+i];}}z.gc.b=z.pgId;z.gc.l=z.f1(z.m,2);if(self.screen){z.gc.m=screen.width;z.gc.o=screen.height;}else if(self.java){var j=java.awt.Toolkit.getDefaultToolkit();var s=j.getScreenSize();z.gc.m=s.width;z.gc.o=s.height;};z.gc.p=navigator.platform;if(navigator.cpuClass)z.gc.q=navigator.cpuClass;if(!z.gc.f&&!z.gc.g){try{var a=new Array("MSIE","Firefox","Opera","Safari","Chrome"),b=document.createElement('div');if(b.addBehavior&&document.body){b.addBehavior('#default#clientCaps');z.gc.k=b.connectionType;}}catch(e){};for(var i=0;i<a.length;i++){if(navigator.userAgent.indexOf(a[i])!=-1){z.gc.g=a[i];z.gc.f=(new String(navigator.userAgent.substring(navigator.userAgent.indexOf(a[i])).match(/[\d.]+/))).substring(0);}}if(!z.gc.f&&!z.gc.g){z.gc.g=navigator.vendor||navigator.appName;z.gc.f=(new String(navigator.appVersion.match(/[\d.]+/))).substring(0);}}return t.hash(z.gc);}};try{gomez.gc={'n':'c'};var iU=gomez.b0('__g_u');if(iU==undefined||iU==''){gomez.b2(gomez.j5(), 0);}var sR=gomez.j6();if(sR==undefined){sR=1;gomez.isFirstVi=true;}else{gomez.isFirstVi=false;}var wR=gomez.wrate?parseFloat(gomez.wrate):(gomez.wrate==0?0:1);wR=wR<0?0:(wR>1?1:wR);gomez.inSample=gomez.z0('a');if(!gomez.inSample||gomez.inSample==''){if(gomez.b3(wR*sR)){gomez.inSample=1;}else{gomez.inSample=0;}gomez.z1('a', gomez.inSample);}else{gomez.inSample=parseInt(gomez.inSample);}gomez.runFlg=gomez.inSample>0;if(gomez.runFlg){gomez.clickT=gomez.j2();gomez.h1=function(v,d){return v?v:d};gomez.gs=gomez.h1(gomez.gs,new Date().getTime());gomez.acctId=gomez.h1(gomez.acctId,'');gomez.pgId=gomez.h1(gomez.pgId,'');gomez.grpId=gomez.h1(gomez.grpId, '');gomez.E=function(c){this.s=c;};gomez.E.prototype={g1:function(e){var t=gomez,i=t.g6(e);if(i)i.e=t.b5();}};gomez.L=function(m){this.a=m;};gomez.L.prototype={g2:function(m){var t=gomez,n=t.b5();var s=document.getElementsByTagName(m);var e=t.k;if(m=='script')e=t.j;if(m=='iframe')e=t.l;if(s){var l=s.length;for(var i=0;i<l;i++){var u=s[i].src||s[i].href;if(u &&!e[u]){var r =new gomez.E(e);t.grm[u]=r;e[u]=new t.c7(u, n);if(t.gIE&&m=='script')t.e2(s[i],'readystatechange',t.d2,false);else t.e2(s[i],'load',r.g1,false);}}}}};gomez.L.m=new Object;gomez.S=function(){var t=this,h=gomez.acctId+".r.axf8.net";t.x=('https:'==location.protocol?'https:':'http:')+'//'+h+'/mr/b.gif?';t.pvHttpUrl=('https:'==location.protocol?'https:':'http:')+'//'+h+'/mr/e.gif?';t.abHttpUrl=('https:'==location.protocol?'https:':'http:')+'//'+h+'/mr/f.gif?';};gomez.h2=function(){var t=this;t.gIE=false;t.f=new Object;t._h=0;t.j=new Object;t.k=new Object;t.l=new Object;t.m=location.href;t.p=-1;t.q=-1;t.u=new Array;t._w=false;t.gSfr=/KHTML|WebKit/i.test(navigator.userAgent);t.grm=new Object;t.b;t.d=false;t.x=false;t.s=new gomez.S;t._a=false;t.h6=false;t.n1=0;t.c=false;};gomez.h3(gomez,{h5:function(u){try{var s=document.createElement('script');s.async=true;if(navigator.userAgent.indexOf('Firefox/3.5')!=-1){s.defer=true;}s.src=u;s.type='text/javascript';if(document.body)document.body.appendChild(s);else if(document.documentElement.getElementsByTagName('head')[0])document.documentElement.getElementsByTagName('head')[0].appendChild(s);}catch(e){var t=gomez;if(t.gSfr)document.write("<scr"+"ipt src='"+u+"'"+"><\/scr"+"ipt>");}},a9:function(){var t=gomez,i=t.z0('a'),g=t.b0('__g_u'),h=t.z0('h'), b=t.z0('b');t.gc.h=b;if(h)t.n1=parseInt(h);if(!t.gc.h)t.gc.h=1;t.z1('b',parseInt(t.gc.h)+1);if(i){t.a=parseInt(i);if(t.a==1){t._w=true;}else if(t.a==3){t.x=true;t._w=true;};t.d=true;}if(!t.gc.a)return;if(b){t.gc.c=t.z0('c');t.gc.i=t.z0('e');t.gc.j=t.z0('f');t.iFS=false;}else {var s='v=1';t.c2('__g_u','1',new Date(t.gt()+1000));t.iFS=true;if(t.b0('__g_u')&&g&&g!='1'&&g.indexOf('NaN')==-1&&g.indexOf('undefined')==-1){s='v=0';var r=g.split('_');t.b2(parseInt(r[0]),parseInt(r[1])+1);if(r[4]&&r[4]!='0'&&t.gt()<parseInt(r[5])&&r[2]&&r[2]!='0'){t.b1(parseFloat(r[2]),parseFloat(r[3]),parseFloat(r[4]),parseInt(r[5]));if(r[6])t.n0(parseInt(r[6]));};};t.h6=true;};t.gc.d=t.z0('d');if(!t.gc.d||(t.gc.d&&t.gc.d==0)){t.z1('d',1);t.gc.d=1;}t.b=t.z0('g');t.j8();if(i &&!t.isFirstVi&&t._w&&!t._a){t.h7();t._a=true;};},h7:function(){var t=gomez,u=t.tloc?t.tloc:('https:'==location.protocol?'https:':'http:')+'//'+t.acctId+'.t.axf8.net/js/gtag7.0.js';t.h5(u);},n0:function(h){var t=gomez,f=new Date(t.gt()+946080000000),g=t.b0('__g_u');t.n1=h;t.z1('h',h);if(g&&g!='1'&&g.indexOf('NaN')==-1&&g.indexOf('undefined')==-1){var r=g.split('_');g=''+r[0]+'_'+r[1]+'_'+r[2]+'_'+r[3]+'_'+r[4]+'_'+r[5]+'_'+h;t.c2('__g_u',g,f);};},b1:function(v,s,q,f){var t=this;if(s ==undefined)s =1;t.d=true;t.z1('e',v);t.z1('f',s);t.gc.i=v;t.gc.j=s;t.h4(v,s,q,f);},b3:function(i, v, s){var t =this;t.d=true;if(s ==undefined)s =1;if(i==0||i==1){t.a=i;if(i==1){t._w=true;if(!t._a){t.h7();t._a=true;};}else{t.d=false;}t.z1('a',t.a);if(v !=undefined){t.b1(v, s);}}else if(i==2){t.h4(v, s);}},h4:function(o,p,q,d){var t=this,f=new Date(t.gt()+946080000000),g=t.b0('__g_u');if(g&&g!='1'&&g.indexOf('NaN')==-1&&g.indexOf('undefined')==-1){var r=g.split('_'),s;if(d)s=d;else if(q&&q>=0)s=new Date(t.gt()+parseInt(q*86400000)).getTime();else{q=5;s=new Date(t.gt()+432000000).getTime();};g=''+r[0]+'_'+r[1]+'_'+o+'_'+p+'_'+q+'_'+s;t.c2('__g_u',g,f);};},b6:function(){var t=gomez;t.p=t.b5();},f8:function(){var t=this;if(t.pollId1)clearInterval(t.pollId1);},b7:function(){var t =gomez;t.f8();t.q=t.b5();},c7:function(u, s){var t=this;t.m=u;t.s=s;},c8:function(){var t=gomez,n=t.b5(),l=document.images.length;if(l>t._h){for(var i=t._h;i<l;++i){var u=document.images[i].src;if(u){var r =new gomez.E(t.f);t.grm[u]=r;t.f[u]=new t.c7(u, n);t.e2(document.images[i],'load',t.c4,false);t.e2(document.images[i],'error',t.c5,false);t.e2(document.images[i],'abort',t.c6,false);}}}t._h=l;},c4:function(e){var t=gomez,i=t.g6(e);if(i)i.e=t.b5();},c5:function(e){var t=gomez,i=t.g6(e);if(i){i.e=t.b5();i.b=1;}},c6:function(e){var t=gomez,i=t.g6(e);if(i)i.a=t.b5();},g6:function(e){var t=gomez,e=window.event?window.event:e,a=t.d8(e),i;if(t.grm[a.src||a.href]&&t.grm[a.src||a.href].s)i=t.grm[a.src||a.href].s[a.src||a.href];return i;},d2:function(){var t=gomez;var e=window.event?window.event:e,s=t.d8(e);if(s.readyState=='loaded'||s.readyState=='complete'){var o=t.j[s.src];if(o)o.e=t.b5();}},nameEvent:function(n){var t=this;t.f6(n,1);},startInterval:function(n){var t=this;t.f6(n,2,1);},endInterval:function(n){var t=this;t.f6(n,2,2);},f6:function(n,p,b){if(n&&n.length>20)n=n.substring(0,20);var t=this,f=t.u;if(p==3){f[f.length]={'n':'a','a':n,'b':b,'e':p,'f':undefined};}else{f[f.length]={'n':'a','a':n,'b':t.b5(),'e':p,'f':b};}},customValue:function(n,v){var t=this;if(typeof(v)!='number'){return;}t.f6(n,3,v);},d8:function(e){if(gomez.gIE)return e.srcElement||{};else return e.currentTarget||e.target||{};},e2:function(e,p,f,c){var n='on'+p;if(e.addEventListener)e.addEventListener(p,f,c);else if(e.attachEvent)e.attachEvent(n, f);else{var x=e[n];if(typeof e[n]!='function')e[n]=f;else e[n]=function(a){x(a);f(a);};}},i1:function(){var d =window.document, done=false,i2=function (){if(!done){done=true;gomez.b6();gomez.a9();}};(function (){try{d.documentElement.doScroll('left');}catch(e){setTimeout(arguments.callee, 50);return;}i2();})();d.onreadystatechange=function(){if(d.readyState=='complete'){d.onreadystatechange=null;i2();}};},j7:function(s, toUrl){try{var t=this,z=gomez;if(!s)return;s+="{n:u|e:1}";var p ='';if(t.isFirstVi){p='&a='+z.acctId+'&r=1&s=1';}else if(t.iFS){p='&a='+z.acctId+'&r='+t.j6();}if(window.encodeURIComponent)s=encodeURIComponent(s);else s=escape(s);z.h5(z.e(toUrl)+'info='+s+p);}catch(err){}return;},e:function(u){if(!/\?|&/.test(u))if(!/\?/.test(u))u +='?';else u +='&';return u;},j8:function(){var t=gomez, p=new gomez.P();var s=p.g0();t.j7(s, t.s.pvHttpUrl);},g7:function(){try{var t=gomez;t.gc.a=t.acctId;t.gIE=!-[1,];if(t.gIE){t.i1();window.attachEvent('onload', t.b7);}else if(window.addEventListener){window.addEventListener('DOMContentLoaded', t.b6, false);window.addEventListener('load', t.b7, false);}else if(t.gSfr){var m=setInterval(function(){if(/loaded|complete/.test(document.readyState)){clearInterval(m);delete m;t.b6();t.b7();}}, 10);}else return;if(!t.jbo){t.c8();t.pollId1=setInterval(t.c8, 10);}if(!t.gIE)t.a9();}catch(e){return;}}});gomez.h2();gomez.g7();}}catch(e){};
+//--> 
+</script>
+ 
+ 
+ <!-- start: support/hnews/apregistry_init.ett  -->
+
+
+
+<!-- end: support/hnews/apregistry_init.ett  -->
+ 
+
+
+
+
+ 
+
+ 
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+<title>Plus - The Sacramento Bee, Sacramento, California</title>
+
+
+
+
+
+<meta name="description" content="Plus - Stories from The Sacramento Bee, a newspaper and Web site covering Northern California">
+
+
+
+<meta name="keywords" content="Plus, Stories, The Sacramento Bee, Sacramento, California, News, newspaper">
+<meta name="publication_date" content="05/01/13">
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Language" content="EN-US">
+<meta http-equiv="ImageResize" content="no">
+<meta http-equiv="ImageToolbar" content="no">
+<meta name="copyright" content="Copyright (c) 2013 The Sacramento Bee.  All Rights Reserved.">
+<meta name="mssmarttagspreventparsing" content="true">
+<meta name="revisit-after" content="1 days">
+
+<link rel="image_src" href="http://www.sacbee.com/static/img/scoopy_like_tn.png">
+
+
+ 
+
+<link rel="icon" href="http://media.sacbee.com/static/img/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="http://media.sacbee.com/static/img/favicon.ico" type="image/x-icon">
+
+
+
+
+<link rel="alternate" type="application/rss+xml" title="Plus - RSS" href="/1539/index.rss?mi_rss=Plus">
+
+
+<link rel="alternate" type="application/rss+xml" title="Plus - Images" href="/1539/v-images/index.rss?mi_rss=Plus">
+
+<!-- CSS files -->
+<link rel="stylesheet" type="text/css" href="http://media.sacbee.com/static/styles/main.css" media="all">
+
+<!--[if IE 6]>
+<link rel="stylesheet" type="text/css" href="http://media.sacbee.com/static/styles/ie6.css" media="all">
+<script type="text/javascript">
+// Fix *ridiculous* IE6 background image re-request "feature" i.e. flicker
+try {
+	  document.execCommand("BackgroundImageCache", false, true);
+	} catch(err) {}
+</script>
+<![endif]-->
+
+<!-- no css specified for this template -->
+<link href="http://media.sacbee.com/static/styles/sitestyles-min.css" rel="stylesheet" type="text/css">
+
+<!-- JavaScript files -->
+ 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+	 
+ 
+<script type="text/javascript" src="http://media.sacbee.com/static/scripts/sacbee-rollup.min.js"></script>
+<script type="text/javascript" src="http://static.sacbeelabs.com/api/js/sbjs.js?_"></script><script type="text/javascript" src="http://static.sacbeelabs.com/api/js/lib/core.js?20130206.5"></script><script src="http://partner.googleadservices.com/gampad/google_ads_gpt.js" type="text/javascript" async=""></script>
+	<script type="text/javascript">
+Sacbee.section_name = "Plus";
+</script>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(["_setAccount", "UA-2767905-6"]);
+  _gaq.push(["_setDomainName", "sacbee.com"]);
+  _gaq.push(["_trackPageview"]);
+
+  (function() {
+    var ga = document.createElement("script"); ga.type = "text/javascript"; ga.async = true;
+    ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+    var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+ 
+
+
+
+	
+<script type="text/javascript">var insitecookie = 'sacbee_user_auth'</script>
+<script type="text/javascript" src="http://media.sacbee.com/static/scripts/mi/insite/insite_cookie_manager.js"></script>
+<script type="text/javascript" src="http://media.sacbee.com/static/scripts/mi/insite/insite.js"></script><style>#member{display:none;}</style>
+
+	
+	
+<!--
+<script src="http://www.sacbee.com/static/insite/js/insite_conf.js" type="text/javascript"></script>
+<script src="http://www.sacbee.com/reg_js/verify_access.js" type="text/javascript"></script>
+-->	
+
+
+
+
+<script type="text/javascript">
+<!--
+    mi_is_live = 1;
+
+    miyahoo = {};
+    miyahoo.tax = "Online|Newspaper_Services|";
+    miyahoo.tax_id = 20397001;
+    miyahoo.content_type = "fn_news";
+    miyahoo.cstm_sctn_list = "section front";
+    miyahoo.cstm_content_cat = "Plus";
+
+    miyahoo.slots = {};
+
+
+
+-->
+</script>
+<script type="text/javascript" src="http://media.sacbee.com/misites/defaults.js"></script>
+<script type="text/javascript" src="http://media.sacbee.com/misites/sac/sacbee.js"></script>
+<script type="text/javascript" src="http://www.sacbee.com/static/includes/omniture_custom/custom.js"></script>
+<script type="text/javascript" src="http://media.sacbee.com/miads/yahoo.js"></script>
+<script type="text/javascript">
+<!--
+ if(miyahoo.ads[mi_live_or_preview].yahoo.enabled){ // 'live' or 'preview' is set during page build
+        document.write('<'+'script type="text/javascript" src="http://e.yieldmanager.net/script.js"></script'+'>');
+    }
+-->
+</script>
+
+
+<script type="text/javascript">
+	var mi = {
+		"media_domain" : "http://media.sacbee.com"
+	}
+</script>
+
+<script type="text/javascript">
+	/**
+	 * miAppControler contains master settings that can be used to quickly disable
+	 * javascript applications. For each supported app there is an attribute containing
+	 * an integer value. The meaning of the value is application specific, except 
+	 * for 0 and 1.
+	 * 0 = disable the entire app
+	 * 1 = enable the entire app
+	 * Any additional values should be noted in this file.
+	 *
+	 * The controller is instantiated in the MI object and should be interfaced with
+	 * there. 
+	 */
+
+	var miAppControler = function() {};
+
+	/* Commenting
+	 2 = disable comment submission & display
+	 3 = enable comment submission & display only
+	 4 = disable popular threads widget
+	*/
+	miAppControler.prototype.commenting = 1;
+
+	/*
+	 2 = display static coupon ad
+	*/
+	miAppControler.prototype.findnsave = 0;
+  miAppControler.prototype.dealsaver = 1;
+
+    /* Surveywall
+	 0 = disable pass widget  
+     1 = enable pass widget
+	*/  
+    miAppControler.prototype.surveywall = 1;
+
+	/* Paywall
+	 0 = disable paywall
+	 1 = enable paywall for preview & live
+	 2 = enable paywall for preview only
+	*/
+	miAppControler.prototype.paywall = 1;
+
+var pageInfo = {'version':1.0};
+pageInfo.section = {};
+pageInfo.section.id = 1539;
+
+<!-- assignment_type: section-front -->
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="http://media.sacbee.com/static/scripts/sectionfront-min.js"></script>
+
+
+
+ 
+<script type="text/javascript">
+// set a javascript variable to be used in an external script for overrides
+var miCommentingEnabled = 1;
+</script>
+ 
+
+<script type="text/javascript">
+	mi.search = new mi.Search();
+</script>
+<script src="http://yui.yahooapis.com/combo?3.3.0/build/oop/oop-min.js&amp;3.3.0/build/event-custom/event-custom-min.js&amp;3.3.0/build/event/event-base-min.js&amp;3.3.0/build/pluginhost/pluginhost-min.js&amp;3.3.0/build/dom/dom-min.js&amp;3.3.0/build/node/node-min.js&amp;3.3.0/build/jsonp/jsonp-min.js&amp;3.3.0/build/jsonp/jsonp-url-min.js&amp;3.3.0/build/yql/yql-min.js&amp;3.3.0/build/attribute/attribute-base-min.js&amp;3.3.0/build/base/base-min.js&amp;3.3.0/build/json/json-min.js&amp;3.3.0/build/plugin/plugin-min.js&amp;3.3.0/build/cache/cache-min.js&amp;3.3.0/build/intl/intl-min.js&amp;3.3.0/build/datatype/lang/datatype-date.js&amp;3.3.0/build/datatype/datatype-date-min.js&amp;gallery-2011.01.03-18-30/build/gallery-torelativetime/gallery-torelativetime-min.js&amp;3.3.0/build/event/event-delegate-min.js" charset="utf-8" type="text/javascript" id="yui_3_3_0_1_13677278809112"></script><script src="http://media.mcclatchyinteractive.com/mistats/mi_content_tracker.js" type="text/javascript"></script><script src="http://media.sacbee.com/static/sacconnect/site_categories.js" charset="utf-8" type="text/javascript" id="yui_3_3_0_1_136772788091111"></script><script src="http://a.lingospot.com/pv/?b_b=Firefox&amp;b_ck=1&amp;b_lm=1367727880000&amp;b_now=1367727881117&amp;b_os=Windows&amp;b_ref=-&amp;b_tz=300&amp;b_url=http%3A%2F%2Fwww.sacbee.com%2Fplus%2F&amp;b_v=20&amp;m_date=-&amp;m_k=3_Sacbee&amp;m_now=-&amp;m_url=-&amp;u_h=19153395&amp;u_i=521172785197119&amp;u_t=0&amp;u_t0_now=1367727881117&amp;v=3&amp;b_t=" language="javascript" type="text/javascript"></script><script src="http://static.lingospot.com/js/all.js?811" language="javascript" type="text/javascript"></script><script src="http://lingows.appspot.com/bubble/?request_id=3_Sacbee&amp;respond_path=LINGO.connect&amp;try=1&amp;key=3_Sacbee&amp;lm=1367727880000&amp;url=http%3A//www.sacbee.com/plus/&amp;title=Plus%20-%20The%20Sacramento%20Bee%2C%20Sacramento%2C%20California" language="javascript" type="text/javascript"></script><link charset="utf-8" href="http://media.sacbee.com/static/sacconnect/toolbar-min.css" rel="stylesheet" type="text/css" id="yui_3_3_0_1_136772788091112"><script src="http://ad.doubleclick.net/pfadx/mi.sac00/Online/NewspaperServices;dcove=d;sect=Plus;lvl6=Plus;pl=sectfront;!c=meebo;atf=n;pos=1;sz=100x60;tile=1;dcmt=text%2Fjavascript;ord=0123456789?" charset="utf-8" type="text/javascript" id="yui_3_3_0_1_136772788091113"></script><script gapi_processed="true" src="https://apis.google.com/js/plusone.js" async="" type="text/javascript"></script><link href="http://s.meebocdn.net/cim/skin_v108_cim_11_34_19/world.w3c.css" media="screen" type="text/css" rel="stylesheet"><style type="text/css">.lingo_spot div div a.lingo_bfn_link,.lingo_spot div div a.lingo_bfn_link:visited{color:black;font-weight:bold;text-decoration:underline;}.lingo_spot div div a.lingo_bfn_link:hover{color:#039;}.lingo_button{cursor:pointer;}.lingo_textfield_20,.lingo_textfield_25{}.lingo_textfield_middle{vertical-align:middle;}.lingo_textfield_ok .lingo_textfield_middle input{background:transparent;border:0;}.lingo_textfield_20 td{height:20px;}.lingo_textfield_ok .lingo_textfield_20 .lingo_textfield_left,.lingo_textfield_ok .lingo_textfield_20 .lingo_textfield_right{width:9px;}.lingo_textfield_25 td{height:25px;}.lingo_textfield_ok .lingo_textfield_25 .lingo_textfield_left,.lingo_textfield_ok .lingo_textfield_25 .lingo_textfield_right{width:10px;}.lingo_clear{clear:both;font-size:0;width:0;height:0;line-height:0;}.lingo_reset .search2_c{}.lingo_reset .title{font-size:12px;font-weight:bold;color:#039;}.lingo_reset .sub{font-size:10px;}.lingo_reset .sub_left{color:red;}.lingo_reset .sub_right{color:red;}.lingo_icon{background-image:url(http://static.lingospot.com/spot/image/icon.gif);}.lingo_icon:hover{background-position:left bottom;}.lingo_icon_red{background-position:left bottom;}.lingo_icon_gray{background-position:-11px bottom;}.lingo_icon_black{background-position:-22px bottom;}.lingo_icon_white{background-position:-33px bottom;}.lingo_reset div .lingo_amazon .lingo_t_title{color:#039;}.lingo_reset div .lingo_amazon .lingo_t_sub_left{color:black;}.lingo_reset div .lingo_amazon .lingo_t_sub_right{color:#900;}.lingo_reset div,.lingo_reset dl,.lingo_reset dt,.lingo_reset dd,.lingo_reset ul,.lingo_reset ol,.lingo_reset li,.lingo_reset h1,.lingo_reset h2,.lingo_reset h3,.lingo_reset h4,.lingo_reset h5,.lingo_reset h6,.lingo_reset pre,.lingo_reset form,.lingo_reset fieldset,.lingo_reset textarea,.lingo_reset p,.lingo_reset blockquote{left:0;top:0;}.lingo_reset,.lingo_reset *{margin:0;padding:0;border:0;border-top:0;border-bottom:0;border-left:0;border-right:0;list-style:none;list-style-type:none;list-style-image:none;background:none;background:none;}body .lingo_reset textarea,body .lingo_reset select,body .lingo_reset input{color:black;background-color:white;border:1px solid black;}.lingo_reset table{border-collapse:collapse;border-spacing:0;display:table;text-indent:0;-moz-box-sizing:border-box;}.lingo_reset address,.lingo_reset caption,.lingo_reset cite,.lingo_reset code,.lingo_reset dfn,.lingo_reset em,.lingo_reset strong,.lingo_reset th,.lingo_reset var{font-style:normal;font-weight:normal;}.lingo_reset caption,.lingo_reset th{text-align:left;}.lingo_reset h1,.lingo_reset h2,.lingo_reset h3,.lingo_reset h4,.lingo_reset h5,.lingo_reset h6,.lingo_reset pre,.lingo_reset code{font-size:100%;font-weight:normal;}.lingo_reset q:before,.lingo_reset q:after{content:'';}.lingo_reset table{font-size:inherit;font:100%;}.lingo_reset select,.lingo_reset input,.lingo_reset textarea{font:99% arial,helvetica,clean,sans-serif;}.lingo_reset pre,.lingo_reset code{font:115% monospace;*font-size:100%;}.lingo_reset{font:13px arial,helvetica,clean,sans-serif;*font-size:small;*font:x-small;}.lingo_reset a:link,.lingo_reset a:visited,.lingo_reset a:hover,.lingo_reset a:active,.lingo_reset *,.lingo_reset{line-height:1.22em;font-family:arial,helvetica,clean,sans-serif;font-size:13px;font-size-adjust:none;font-stretch:normal;font-style:normal;font-variant:normal;font-weight:normal;color:black;outline:none;direction:ltr;letter-spacing:normal;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;unicode-bidi:normal;word-spacing:normal;border-bottom:0;}.lingo_reset a{background:none;}.lingo_reset a{color:blue;text-decoration:none;}.lingo_reset a:visited{color:blue;}.lingo_reset a:hover{color:blue;}.lingo_reset a:active{color:blue;}.lingo_reset,.lingo_reset div,.lingo_reset map,.lingo_reset dt,.lingo_reset isindex,.lingo_reset p,.lingo_reset multicol,.lingo_reset dl,.lingo_reset dd,.lingo_reset ul,.lingo_reset menu,.lingo_reset dir,.lingo_reset ol,.lingo_reset blockquote,.lingo_reset address,.lingo_reset center,.lingo_reset listing,.lingo_reset plaintext,.lingo_reset xmp,.lingo_reset pre,.lingo_reset hr,.lingo_reset marquee,.lingo_reset h1,.lingo_reset h2,.lingo_reset h3,.lingo_reset h4,.lingo_reset h5,.lingo_reset form{display:block;}.lingo_reset table[align="left"]{float:left;}.lingo_reset table[align="right"]{float:right;text-align:start;}.lingo_reset table[rules]:not([rules="none"]){border-collapse:collapse;}.lingo_reset caption{display:table-caption;text-align:center;-moz-box-sizing:border-box;}.lingo_reset tr{display:table-row;vertical-align:inherit;}.lingo_reset col{display:table-column;}.lingo_reset colgroup{display:table-column-group;}.lingo_reset tbody{display:table-row-group;vertical-align:middle;}.lingo_reset thead{display:table-header-group;vertical-align:middle;}.lingo_reset tfoot{display:table-footer-group;vertical-align:middle;}.lingo_reset td{display:table-cell;vertical-align:inherit;text-align:inherit;}.lingo_reset th{display:table-cell;vertical-align:inherit;font-weight:bold;}.lingo_reset ul{list-style:none;list-style-type:none;list-style-image:none;background:none;}.lingo_reset ol{list-style:none;list-style-type:none;list-style-image:none;background:none;}.lingo_reset li{display:list-item;list-style:none;list-style-type:none;list-style-image:none;background:none;}.lingo_reset area,.lingo_reset base,.lingo_reset basefont,.lingo_reset meta,.lingo_reset script,.lingo_reset style,.lingo_reset noembed,.lingo_reset noscript,.lingo_reset param{display:none;}.lingo_spot div div .lingo_t_yedda_title{font-weight:bold;}.lingo_spot div div .lingo_t_yedda_title:hover{font-weight:bold;}.lingo_spot div div .lingo_t_yedda_link{color:#1B4AFF;text-decoration:none;}.lingo_spot div div .lingo_t_yedda_orange_link{color:#FF510A;text-decoration:none;}.lingo_spot div div .lingo_t_yedda_orange_link:hover,.lingo_spot div div .lingo_t_yedda_link:hover{text-decoration:underline;}.lingo_spot div div .lingo_t_yedda_ask{color:white;background-color:#1B4AFE;padding:0px;font-size:11px;border:1px solid #1B4AFE;}.lingo_spot div div div .lingo_t_yedda_ask:hover{color:white;font-size:11px;text-decoration:underline;}.lingo_spot div div .lingo_t_yedda_ask2:hover{text-decoration:underline;}.lingo_spot div div .lingo_t_clipmarks_title{color:#0060C6;font-weight:bold;}.lingo_spot div div .lingo_t_clipmarks_title:hover{color:#0060C6;font-weight:bold;}.lingo_spot div div .lingo_t_clipmarks_pops{color:#FF8C00;text-decoration:none;}.lingo_spot div div .lingo_t_clipmarks_pops:hover{color:#FF8C00;text-decoration:underline;}.lingo_spot div div .lingo_t_clipmarks_link{color:#0864C7;text-decoration:none;}.lingo_spot div div .lingo_t_clipmarks_link:hover{color:#0864C7;text-decoration:underline;}.lingo_spot div div .lingo_t_clipmarks_ft{color:#157EBA;font-size:11px;text-decoration:none;}.lingo_spot div div div .lingo_t_clipmarks_ft:hover{color:#157EBA;font-size:11px;text-decoration:underline;}.lingo_spot .lingo_t_cells{width:100%;}.lingo_spot .lingo_hoverline{text-decoration:none;}.lingo_spot .lingo_hoverline:hover{text-decoration:underline;}body .lingo_spot .lingo_t_heading,body .lingo_spot .lingo_t_heading:hover,body .lingo_spot .lingo_t_heading:visited{font-weight:bold;}body .lingo_spot .lingo_t_title,body .lingo_spot a.lingo_t_title,body .lingo_spot a.lingo_t_title:hover,body .lingo_spot a.lingo_t_title:visited{font-weight:bold;}.lingo_spot a.lingo_t_title:hover{text-decoration:underline;}.lingo_spot div div .lingo_t_subtitle{font-size:11px;}.lingo_spot div div a.lingo_t_subtitle:hover{text-decoration:underline;}.lingo_spot div div .lingo_t_source{font-style:italic;color:#900;}.lingo_spot div div a.lingo_t_source:hover{text-decoration:underline;}.lingo_spot .lingo_t_text_image{float:left;}.lingo_spot .lingo_t_text_image img{margin-right:2px;margin-bottom:2px;}.lingo_spot div div a.lingo_t_text_link,.lingo_spot div div a.lingo_t_text_link:hover{color:black;text-decoration:none;}.lingo_spot div div .lingo_t_preview{text-align:center;margin-left:auto;margin-right:auto;display:block;}.lingo_spot div div .lingo_t_preview_parent{vertical-align:middle;text-align:center;}.lingo_spot .lingo_t_item_unselected{border:1px solid white;}.lingo_spot .lingo_t_item_selected{border:1px dotted gray;background-color:#F0F0F0;}.lingo_spot .lingo_t_image_r0 div{margin-bottom:3px;}.lingo_spot .lingo_t_image_r1 div{margin-bottom:2px;}.lingo_spot .lingo_t_image_r1{clear:both;}.lingo_spot .lingo_t_image_parent div div{margin-right:3px;float:left;}.lingo_spot .lingo_t_image .lingo_t_item_selected{border:1px solid black;}#lingo_hoverline:hover{text-decoration:underline;}a.lingo_link_hidden:link{text-decoration:none;color:black;}a.lingo_link_hidden:visited{color:black;}a.lingo_link_hidden:hover{text-decoration:underline;}</style><style type="text/css">.lingo_clear{clear:both;font-size:0;width:0;height:0;line-height:0;}.lingo_button{cursor:pointer;}.lingo_textfield_20,.lingo_textfield_25{}.lingo_textfield_middle{vertical-align:middle;}.lingo_textfield_ok .lingo_textfield_middle input{background:transparent;border:0;}.lingo_textfield_20 td{height:20px;}.lingo_textfield_ok .lingo_textfield_20 .lingo_textfield_left,.lingo_textfield_ok .lingo_textfield_20 .lingo_textfield_right{width:9px;}.lingo_textfield_25 td{height:25px;}.lingo_textfield_ok .lingo_textfield_25 .lingo_textfield_left,.lingo_textfield_ok .lingo_textfield_25 .lingo_textfield_right{width:10px;}.lingo_reset div,.lingo_reset dl,.lingo_reset dt,.lingo_reset dd,.lingo_reset ul,.lingo_reset ol,.lingo_reset li,.lingo_reset h1,.lingo_reset h2,.lingo_reset h3,.lingo_reset h4,.lingo_reset h5,.lingo_reset h6,.lingo_reset pre,.lingo_reset form,.lingo_reset fieldset,.lingo_reset textarea,.lingo_reset p,.lingo_reset blockquote{left:0;top:0;}.lingo_reset,.lingo_reset *{margin:0;padding:0;border:0;border-top:0;border-bottom:0;border-left:0;border-right:0;list-style:none;list-style-type:none;list-style-image:none;background:none;background:none;}body .lingo_reset textarea,body .lingo_reset select,body .lingo_reset input{color:black;background-color:white;border:1px solid black;}.lingo_reset table{border-collapse:collapse;border-spacing:0;display:table;text-indent:0;-moz-box-sizing:border-box;}.lingo_reset address,.lingo_reset caption,.lingo_reset cite,.lingo_reset code,.lingo_reset dfn,.lingo_reset em,.lingo_reset strong,.lingo_reset th,.lingo_reset var{font-style:normal;font-weight:normal;}.lingo_reset caption,.lingo_reset th{text-align:left;}.lingo_reset h1,.lingo_reset h2,.lingo_reset h3,.lingo_reset h4,.lingo_reset h5,.lingo_reset h6,.lingo_reset pre,.lingo_reset code{font-size:100%;font-weight:normal;}.lingo_reset q:before,.lingo_reset q:after{content:'';}.lingo_reset table{font-size:inherit;font:100%;}.lingo_reset select,.lingo_reset input,.lingo_reset textarea{font:99% arial,helvetica,clean,sans-serif;}.lingo_reset pre,.lingo_reset code{font:115% monospace;*font-size:100%;}.lingo_reset{font:13px arial,helvetica,clean,sans-serif;*font-size:small;*font:x-small;}.lingo_reset a:link,.lingo_reset a:visited,.lingo_reset a:hover,.lingo_reset a:active,.lingo_reset *,.lingo_reset{line-height:1.22em;font-family:arial,helvetica,clean,sans-serif;font-size:13px;font-size-adjust:none;font-stretch:normal;font-style:normal;font-variant:normal;font-weight:normal;color:black;outline:none;direction:ltr;letter-spacing:normal;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;unicode-bidi:normal;word-spacing:normal;border-bottom:0;}.lingo_reset a{background:none;}.lingo_reset a{color:blue;text-decoration:none;}.lingo_reset a:visited{color:blue;}.lingo_reset a:hover{color:blue;}.lingo_reset a:active{color:blue;}.lingo_reset,.lingo_reset div,.lingo_reset map,.lingo_reset dt,.lingo_reset isindex,.lingo_reset p,.lingo_reset multicol,.lingo_reset dl,.lingo_reset dd,.lingo_reset ul,.lingo_reset menu,.lingo_reset dir,.lingo_reset ol,.lingo_reset blockquote,.lingo_reset address,.lingo_reset center,.lingo_reset listing,.lingo_reset plaintext,.lingo_reset xmp,.lingo_reset pre,.lingo_reset hr,.lingo_reset marquee,.lingo_reset h1,.lingo_reset h2,.lingo_reset h3,.lingo_reset h4,.lingo_reset h5,.lingo_reset form{display:block;}.lingo_reset table[align="left"]{float:left;}.lingo_reset table[align="right"]{float:right;text-align:start;}.lingo_reset table[rules]:not([rules="none"]){border-collapse:collapse;}.lingo_reset caption{display:table-caption;text-align:center;-moz-box-sizing:border-box;}.lingo_reset tr{display:table-row;vertical-align:inherit;}.lingo_reset col{display:table-column;}.lingo_reset colgroup{display:table-column-group;}.lingo_reset tbody{display:table-row-group;vertical-align:middle;}.lingo_reset thead{display:table-header-group;vertical-align:middle;}.lingo_reset tfoot{display:table-footer-group;vertical-align:middle;}.lingo_reset td{display:table-cell;vertical-align:inherit;text-align:inherit;}.lingo_reset th{display:table-cell;vertical-align:inherit;font-weight:bold;}.lingo_reset ul{list-style:none;list-style-type:none;list-style-image:none;background:none;}.lingo_reset ol{list-style:none;list-style-type:none;list-style-image:none;background:none;}.lingo_reset li{display:list-item;list-style:none;list-style-type:none;list-style-image:none;background:none;}.lingo_reset area,.lingo_reset base,.lingo_reset basefont,.lingo_reset meta,.lingo_reset script,.lingo_reset style,.lingo_reset noembed,.lingo_reset noscript,.lingo_reset param{display:none;}#lingo_spot #lingo_content_info p{margin-bottom:5px;text-indent:10px;}#lingo_spot .lingo_config_submit{text-align:right;}#lingo_spot #lingo_config .lingo_config_option{text-align:right;padding-right:5px;}#lingo_spot #lingo_content_info select,#lingo_spot #lingo_config select{width:250px;padding-bottom:2px;}#lingo_spot #lingo_config td{padding-right:5px;padding-bottom:5px;}#lingo_spot #lingo_config .lingo_config_submit input{text-align:center;}#lingo_spot #lingo_content_info h1{font-weight:bold;}.lingo_spot .lingo_header{padding-left:10px;padding-right:5px;padding-bottom:7px;}.lingo_spot .lingo_header .lingo_header_left{float:left;}.lingo_spot .lingo_header_left div{float:left;}.lingo_spot .lingo_header_right{float:right;width:200px;cursor:pointer;}.lingo_spot .lingo_header_right div{float:right;}.lingo_spot .lingo_header div,.lingo_spot .lingo_header a{height:20px;}div.lingo_spot .lingo_logo{background-image:url(http://static.lingospot.com/spot/image/skin/lingo/lingospot.gif);background-repeat:no-repeat;width:66px;background-position:0 0;margin-right:10px;}div.lingo_spot .lingo_logo a{width:66px;display:block;}div.lingo_spot .lingo_publisher_logo{background-image:url(http://static.lingospot.com/spot/image/skin/lingo/lingospot.gif);background-repeat:no-repeat;background-position:-80px -40px;margin-right:10px;}div.lingo_spot .lingo_publisher_logo a{display:block;}div.lingo_spot .lingo_forbes_logo{width:64px;background-position:-80px -40px;}div.lingo_spot .lingo_investopedia_logo{background-position:-80px -60px;}div.lingo_spot .lingo_investopedia_logo,div.lingo_spot .lingo_investopedia_logo a{width:122px;}div.lingo_spot .lingo_clipmarks_logo{background-position:-80px -336px;}div.lingo_spot .lingo_clipmarks_logo,div.lingo_spot .lingo_clipmarks_logo a{width:100px;}div.lingo_spot .lingo_forbesautos_logo{background-position:-80px -80px;}div.lingo_spot .lingo_forbesautos_logo,div.lingo_spot .lingo_forbesautos_logo a{width:41px;}div.lingo_spot .lingo_forbesvideos_logo{background-position:-80px -100px;}div.lingo_spot .lingo_forbesvideos_logo,div.lingo_spot .lingo_forbesvideos_logo a{width:47px;}div.lingo_spot .lingo_powered_logo{background-image:url(http://static.lingospot.com/spot/image/skin/lingo/lingospot.gif);background-repeat:no-repeat;width:105px;background-position:-80px -20px;margin-right:3px;}div.lingo_spot .lingo_powered_logo a{width:105px;display:block;}div.lingo_spot .lingo_sponsored_dunkin{width:125px;margin-right:5px;background-image:url(http://static.lingospot.com/spot/image/logo/time_dunkin.gif);background-repeat:no-repeat;}div.lingo_spot .lingo_sponsored_dunkin a{width:125px;display:block;}.lingo_button_search{background-image:url(http://static.lingospot.com/spot/image/skin/lingo/lingospot.gif);background-repeat:no-repeat;background-position:0 -60px;margin-left:3px;}.lingo_button_search a:hover{background-image:url(http://static.lingospot.com/spot/image/skin/lingo/lingospot.gif);background-repeat:no-repeat;background-position:-20px -60px;}.lingo_button_info{background-image:url(http://static.lingospot.com/spot/image/skin/lingo/lingospot.gif);background-repeat:no-repeat;background-position:0 -40px;}.lingo_button_info a:hover{background-image:url(http://static.lingospot.com/spot/image/skin/lingo/lingospot.gif);background-repeat:no-repeat;background-position:-20px -40px;}#lingo_button_expand{background-image:url(http://static.lingospot.com/spot/image/skin/lingo/lingospot.gif);background-repeat:no-repeat;background-position:-40px -20px;}#lingo_button_expand a:hover{background-image:url(http://static.lingospot.com/spot/image/skin/lingo/lingospot.gif);background-repeat:no-repeat;background-position:-60px -20px;}.lingo_button_close{background-image:url(http://static.lingospot.com/spot/image/skin/lingo/lingospot.gif);background-repeat:no-repeat;background-position:0 -20px;}.lingo_button_close a:hover{background-image:url(http://static.lingospot.com/spot/image/skin/lingo/lingospot.gif);background-repeat:no-repeat;background-position:-20px -20px;}.lingo_textfield_ok div.lingo_search .lingo_textfield_right,.lingo_textfield_ok div.lingo_search .lingo_textfield_right a,.lingo_button_search a,.lingo_spot .lingo_header_right a{width:20px;display:block;}.lingo_textfield_ok div.lingo_search .lingo_textfield_left{background-image:url(http://static.lingospot.com/spot/image/skin/lingo/lingospot.gif);background-repeat:no-repeat;background-position:0 -100px;}.lingo_textfield_ok div.lingo_search .lingo_textfield_middle{background:url(http://static.lingospot.com/spot/image/skin/lingo/lingospot.gif) 0 -120px repeat-x;}.lingo_textfield_ok div.lingo_search .lingo_textfield_right{background-image:url(http://static.lingospot.com/spot/image/skin/lingo/lingospot.gif);background-repeat:no-repeat;background-position:0 -80px;}.lingo_textfield_ok div.lingo_search .lingo_textfield_right a:hover{background-image:url(http://static.lingospot.com/spot/image/skin/lingo/lingospot.gif);background-repeat:no-repeat;background-position:-20px -80px;}.lingo_textfield_ok .lingo_button_search{display:none;}.lingo_spot div.lingo_search input{width:140px;color:#54544C;;padding-bottom:0px;}body .lingo_spot .lingo_search_box_blink{text-decoration:underline;color:#D0511D;;}.lingo_spot .lingo_hr{border-top:1px solid #C5C5C5;}.lingo_spot .lingo_content_class{margin-top:0px;margin-bottom:0px;overflow:hidden;text-align:left;}.lingo_spot .lingo_content{width:100%;height:100%;background-color:white;display:none;}.lingo_spot .lingo_content_class .lingo_content_tab{width:100%;height:100%;overflow: auto;text-align:left;}.lingo_spot .lingo_loading{width:100%;height:100%;background:url(http://static.lingospot.com/spot/image/skin/lingo/loading.gif) center center no-repeat;}.lingo_spot .lingo_content_div{width:100%;height:100%;}.lingo_spot .lingo_content_div a{color:black;}.lingo_spot .lingo_content_selected{display:block;}.lingo_spot .lingo_tabs{width:100%;height:100%;}.lingo_spot .lingo_wiki{background-image:url(http://static.lingospot.com/spot/image/skin/lingo/lingospot.gif);background-repeat:no-repeat;display:block;margin-left:auto;margin-right:auto;width:17px;height:16px;background-position:-40px -40px;}.lingo_spot .lingo_tab_selected .lingo_wiki{background-image:url(http://static.lingospot.com/spot/image/skin/lingo/lingospot.gif);background-repeat:no-repeat;background-position:-57px -40px;}.lingo_spot .lingo_tabs td{height:28px;text-align:center;vertical-align:middle;font-size:20px;cursor:pointer;width:20%;}.lingo_spot .lingo_tabs td div{font:12px Arial,Helvetica,sans-serif;line-height:28px;height:26px;text-align:center;}.lingo_spot .lingo_tab_normal{width:20%;}.lingo_spot .lingo_tab_selected{}.lingo_spot .lingo_tab_normal div{color:#54544C;}.lingo_spot .lingo_tab_selected div{color:white;}.lingo_spot tr>.lingo_tabs_class table{border-collapse:separate;}.lingo_spot .lingo_tab_left{background-image:url(http://static.lingospot.com/spot/image/skin/lingo/lingospot.gif);background-repeat:no-repeat;background-position:left -140px;border-right: 1px solid #c5c5c5;}.lingo_spot .lingo_tab_left div{}.lingo_spot .lingo_tab_middle{background-image:url(http://static.lingospot.com/spot/image/skin/lingo/lingospot.gif);background-repeat:no-repeat;background-position:right -168px;}.lingo_spot .lingo_tab_middle div{}.lingo_spot .lingo_tab_right{background-image:url(http://static.lingospot.com/spot/image/skin/lingo/lingospot.gif);background-repeat:no-repeat;background-position:right -196px;}.lingo_spot .lingo_tab_right div{}.lingo_spot .lingo_tabs .lingo_tab_left_selected{background-image:url(http://static.lingospot.com/spot/image/skin/lingo/lingospot.gif);background-repeat:no-repeat;background-position:left -224px;}.lingo_spot .lingo_tabs .lingo_tab_odd_selected{background-image:url(http://static.lingospot.com/spot/image/skin/lingo/lingospot.gif);background-repeat:no-repeat;background-position:right -252px;}.lingo_spot .lingo_tabs .lingo_tab_even_selected{background-image:url(http://static.lingospot.com/spot/image/skin/lingo/lingospot.gif);background-repeat:no-repeat;background-position:left -280px;}.lingo_spot .lingo_tabs .lingo_tab_right_selected{background-image:url(http://static.lingospot.com/spot/image/skin/lingo/lingospot.gif);background-repeat:no-repeat;background-position:right -308px;}.lingo_spot .lingo_tabs .lingo_tab_odd_selected div,.lingo_spot .lingo_tabs .lingo_tab_even_selected div{}.lingo_spot .lingo_tabs .lingo_tab_left_selected div{}.lingo_spot{z-index:10000;position:absolute;top:0px;left:0px;}.lingo_spot .lingo_bubble{z-index:10001;position:absolute;left:0px;top:0px;width:100%;height:100%;}.lingo_spot .lingo_mousebox{z-index:10006;position:absolute;top:18px;left:16px;}.lingo_spot .lingo_foreground{z-index:10007;position:absolute;top:8px;left:8px;}.lingo_spot .lingo_bubble iframe,.lingo_spot .lingo_bubble div{position:absolute;}.lingo_bubble .corner{z-index:10002;}.lingo_bubble .horizontal{z-index:10003;}.lingo_bubble .vertical{z-index:10003;}.lingo_bubble_c{z-index:10004;background-color:white;}.lingo_bubble_nw{background:url(http://static.lingospot.com/spot/image/nw_se.png) no-repeat;}.lingo_bubble_sw{background:url(http://static.lingospot.com/spot/image/sw_ne.png) no-repeat;}.lingo_bubble_ne{background:url(http://static.lingospot.com/spot/image/sw_ne.png) no-repeat;}.lingo_bubble_se{background:url(http://static.lingospot.com/spot/image/nw_se.png) no-repeat;}.lingo_bubble_n{background:url(http://static.lingospot.com/spot/image/n_s.png) repeat-x;}.lingo_bubble_s{background:url(http://static.lingospot.com/spot/image/n_s.png) repeat-x;}.lingo_bubble_w{background:url(http://static.lingospot.com/spot/image/w_e.png) repeat-y;}.lingo_bubble_e{background:url(http://static.lingospot.com/spot/image/w_e.png) repeat-y;}.lingo_triangle div{position:absolute;z-index:10005;width:60px;height:33px;display:none;}.lingo_triangle_sw{background:url(http://static.lingospot.com/spot/image/triangle_sw.png) no-repeat;}.lingo_triangle_nw{background:url(http://static.lingospot.com/spot/image/triangle_nw.png) no-repeat;}
+div#pagebody a.lingo_link_hidden { text-decoration: none; color: black; border: none; }
+div#pagebody a.lingo_link_hidden:hover { text-decoration: none; border-bottom: 1px dotted; color: #024A82; }
+</style></head>
+
+ 
+
+
+ 
+
+
+
+
+<body class="section-front" id="section_1539"><div class="meebo-17-dark meebo-00" id="meebo" style="display: block; bottom: 0px; font: 11px Arial,sans-serif; height: 0px; left: 0px; overflow: hidden; position: fixed; visibility: hidden; width: 100%;"><m mi_ads="" ev_id="3" style="overflow: visible ! important; left: 0px ! important; height: 47px ! important; width: 1167px ! important;" id="meebo-canvas-3" class="meebo-0 meebo-1"><iframe style="left: 0px ! important; width: 1167px ! important;" class="meebo-0" id="meebo-iframe" frameborder="0"></iframe><svg style="position: absolute ! important; height: 47px ! important; width: 1167px ! important;" class="meebo-0" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="meebo-canvas-3-gradient-9" opacity="0.95"><stop stop-opacity="0.95" stop-color="#333" offset="0"></stop></linearGradient><linearGradient id="meebo-canvas-3-gradient-10" y2="1" x1="0" x2="0" y1="0" opacity="1"><stop stop-opacity="1" stop-color="#555" offset="0"></stop><stop stop-opacity="1" stop-color="#444" offset="1"></stop></linearGradient><linearGradient id="meebo-canvas-3-gradient-11" opacity="0.95"><stop stop-opacity="0.95" stop-color="#333" offset="0"></stop><stop stop-opacity="0.95" stop-color="#222" offset="1"></stop></linearGradient><linearGradient id="meebo-canvas-3-gradient-12" opacity="0.95"><stop stop-opacity="0.95" stop-color="#333" offset="0"></stop></linearGradient><linearGradient id="meebo-canvas-3-gradient-13" y2="1" x1="0" x2="0" y1="0" opacity="1"><stop stop-opacity="1" stop-color="#555" offset="0"></stop><stop stop-opacity="1" stop-color="#444" offset="1"></stop></linearGradient><linearGradient id="meebo-canvas-3-gradient-14" opacity="0.95"><stop stop-opacity="0.95" stop-color="#333" offset="0"></stop><stop stop-opacity="0.95" stop-color="#222" offset="1"></stop></linearGradient><linearGradient id="meebo-canvas-3-gradient-45" opacity="0.95"><stop stop-opacity="0.95" stop-color="#333" offset="0"></stop></linearGradient><linearGradient id="meebo-canvas-3-gradient-46" y2="1" x1="0" x2="0" y1="0" opacity="1"><stop stop-opacity="1" stop-color="#555" offset="0"></stop><stop stop-opacity="1" stop-color="#444" offset="1"></stop></linearGradient><linearGradient id="meebo-canvas-3-gradient-47" opacity="0.95"><stop stop-opacity="0.95" stop-color="#333" offset="0"></stop><stop stop-opacity="0.95" stop-color="#222" offset="1"></stop></linearGradient><linearGradient id="meebo-canvas-3-gradient-48" opacity="0.95"><stop stop-opacity="0.95" stop-color="#333" offset="0"></stop></linearGradient><linearGradient id="meebo-canvas-3-gradient-49" y2="1" x1="0" x2="0" y1="0" opacity="1"><stop stop-opacity="1" stop-color="#555" offset="0"></stop><stop stop-opacity="1" stop-color="#444" offset="1"></stop></linearGradient><linearGradient id="meebo-canvas-3-gradient-50" opacity="0.95"><stop stop-opacity="0.95" stop-color="#333" offset="0"></stop><stop stop-opacity="0.95" stop-color="#222" offset="1"></stop></linearGradient></defs><path stroke-opacity="0.005" fill-opacity="0.005" d="M -10 57 L -10 10 A 10 10 0 0 1 6.123233995736766e-16 1.7763568394002505e-15 L 1167 0 A 10 10 0 0 1 1177 10 L 1177 57 L 1167 57 L 1167 10 L 0 10 L 0 57 L -10 57" fill="#000"></path><path stroke-opacity="0.007" fill-opacity="0.007" d="M -9 57 L -9 10 A 9 9 0 0 1 5.51091059616309e-16 1.0000000000000018 L 1167 1 A 9 9 0 0 1 1176 10 L 1176 57 L 1167 57 L 1167 10 L 0 10 L 0 57 L -9 57" fill="#000"></path><path stroke-opacity="0.01" fill-opacity="0.01" d="M -8 57 L -8 10 A 8 8 0 0 1 4.898587196589413e-16 2.0000000000000018 L 1167 2 A 8 8 0 0 1 1175 10 L 1175 57 L 1167 57 L 1167 10 L 0 10 L 0 57 L -8 57" fill="#000"></path><path stroke-opacity="0.013" fill-opacity="0.013" d="M -7 57 L -7 10 A 7 7 0 0 1 4.286263797015736e-16 3 L 1167 3 A 7 7 0 0 1 1174 10 L 1174 57 L 1167 57 L 1167 10 L 0 10 L 0 57 L -7 57" fill="#000"></path><path stroke-opacity="0.015" fill-opacity="0.015" d="M -6 57 L -6 10 A 6 6 0 0 1 3.6739403974420594e-16 4 L 1167 4 A 6 6 0 0 1 1173 10 L 1173 57 L 1167 57 L 1167 10 L 0 10 L 0 57 L -6 57" fill="#000"></path><path stroke-opacity="0.017" fill-opacity="0.017" d="M -5 57 L -5 10 A 5 5 0 0 1 3.061616997868383e-16 5 L 1167 5 A 5 5 0 0 1 1172 10 L 1172 57 L 1167 57 L 1167 10 L 0 10 L 0 57 L -5 57" fill="#000"></path><path stroke-opacity="0.02" fill-opacity="0.02" d="M -4 57 L -4 10 A 4 4 0 0 1 2.4492935982947064e-16 6 L 1167 6 A 4 4 0 0 1 1171 10 L 1171 57 L 1167 57 L 1167 10 L 0 10 L 0 57 L -4 57" fill="#000"></path><path stroke-opacity="0.023" fill-opacity="0.023" d="M -3 57 L -3 10 A 3 3 0 0 1 1.8369701987210297e-16 7 L 1167 7 A 3 3 0 0 1 1170 10 L 1170 57 L 1167 57 L 1167 10 L 0 10 L 0 57 L -3 57" fill="#000"></path><path stroke-opacity="0.025" fill-opacity="0.025" d="M -2 57 L -2 10 A 2 2 0 0 1 1.2246467991473532e-16 8 L 1167 8 A 2 2 0 0 1 1169 10 L 1169 57 L 1167 57 L 1167 10 L 0 10 L 0 57 L -2 57" fill="#000"></path><path stroke-opacity="0.027" fill-opacity="0.027" d="M -1 57 L -1 10 A 1 1 0 0 1 6.123233995736766e-17 9 L 1167 9 A 1 1 0 0 1 1168 10 L 1168 57 L 1167 57 L 1167 10 L 0 10 L 0 57 L -1 57" fill="#000"></path><path d="M 0 11 L 1167 11 L 1167 47 L 0 47 L 0 11" fill="url('http://www.sacbee.com/plus/#meebo-canvas-3-gradient-48')"></path><path d="M 0 10 L 1167 10 L 1167 11 L 0 11 L 0 10" fill="#6a6a6a"></path><path d="M 890 11 L 1167 11 L 1167 47 L 890 47 L 890 11" fill="url('http://www.sacbee.com/plus/#meebo-canvas-3-gradient-49')"></path><path d="M 890 11 L 891 11 L 891 47 L 890 47 L 890 11" fill="#6a6a6a"></path><path d="M 882 11 L 890 11 L 890 47 L 882 47 L 882 11" fill="url('http://www.sacbee.com/plus/#meebo-canvas-3-gradient-50')"></path></svg><m class="meebo-0 meebo-20"><a title="" target="_blank" href="http://www.meebo.com/support/article/174/" ev_id="8" style="white-space: nowrap ! important; -moz-user-select: -moz-none ! important; height: 36px ! important; width: 17px ! important; color: rgb(204, 204, 204) ! important; left: 0px ! important;" class="meebo-0 meebo-34 meebo-23 meebo-29"><m style="overflow: hidden ! important; width: 17px ! important; height: 36px ! important; left: 0px ! important; top: 0px ! important; opacity: 1 ! important;" id="meebo-canvas-8" class="meebo-0 meebo-27"><svg style="position: absolute ! important; width: 17px ! important; height: 36px ! important;" class="meebo-0" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="meebo-canvas-8-gradient-34" opacity="1"></linearGradient></defs><path d="M 0 0 L 17 0 L 17 36 L 0 36 L 0 0" fill="#6a6a6a"></path><path d="M 0 0 L 16 0 L 16 36 L 0 36 L 0 0" fill="#333"></path></svg></m><m style="font-size: 12px ! important; font-weight: bold ! important; font-family: Arial,Helvetica,sans-serif ! important; -moz-user-select: -moz-none ! important; left: 6px ! important; width: 4px ! important; color: rgb(204, 204, 204) ! important;" class="meebo-0 meebo-26">i</m></a><m style="left: 23px ! important;" class="meebo-0 meebo-28 meebo-70 meebo-70-plusone"><div mi_ads="" style="text-indent: 0px; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 106px; height: 24px;" id="meebo-googlePlus-plusone-0" class=""><iframe title="+1" data-gapiattached="true" allowtransparency="true" src="https://plusone.google.com/_/+1/fastbutton?bsv&amp;annotation=bubble&amp;align=right&amp;expandto=top&amp;source=meebo-bar%3Asacbee%253Asacbee&amp;hl=en-US&amp;origin=http%3A%2F%2Fwww.sacbee.com&amp;url=http%3A%2F%2Fwww.sacbee.com%2Fplus%2F&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en_US.d8yU-wcNYlQ.O%2Fm%3D__features__%2Fam%3DUQ%2Frt%3Dj%2Fd%3D1%2Frs%3DAItRSTNFCVmDFU3r-qDb4qDOc5bk3EYiag#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled&amp;id=I0_1367727881428&amp;parent=http%3A%2F%2Fwww.sacbee.com&amp;rpctoken=80746082" name="I0_1367727881428" id="I0_1367727881428" vspace="0" tabindex="0" style="position: static; top: 0px; width: 106px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 24px;" marginwidth="0" marginheight="0" hspace="0" frameborder="0" scrolling="no" width="100%"></iframe></div></m><m title="" ev_id="9" style="white-space: nowrap ! important; -moz-user-select: -moz-none ! important; height: 28px ! important; width: 65px ! important; color: rgb(187, 187, 187) ! important; left: 119px ! important;" id="SharePage" class="meebo-0 meebo-23 meebo-29"><m style="overflow: hidden ! important; opacity: 0 ! important; width: 65px ! important; height: 28px ! important; left: 0px ! important; top: 0px ! important;" id="meebo-canvas-15" class="meebo-0 meebo-27"><svg style="position: absolute ! important; width: 65px ! important; height: 28px ! important;" class="meebo-0" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient y2="1" x1="0" x2="0" y1="0" id="meebo-canvas-15-gradient-35" opacity="1"><stop stop-opacity="1" stop-color="#333" offset="0"></stop><stop stop-opacity="1" stop-color="#222" offset="0.6"></stop></linearGradient><linearGradient y2="1" x1="0" x2="0" y1="0" id="meebo-canvas-15-gradient-36" opacity="1"><stop stop-opacity="1" stop-color="#777" offset="0"></stop><stop stop-opacity="1" stop-color="#555" offset="0.6"></stop></linearGradient></defs><path d="M 0 3 A 3 3 0 0 1 3 4.440892098500626e-16 L 62 0 A 3 3 0 0 1 65 3 L 65 25 A 3 3 0 0 1 62 28 L 3 28 A 3 3 0 0 1 0 25 L 0 3" fill="#222"></path><path d="M 1 3 A 2 2 0 0 1 3 1.0000000000000004 L 62 1 A 2 2 0 0 1 64 3 L 64 25 A 2 2 0 0 1 62 27 L 3 27 A 2 2 0 0 1 1 25 L 1 3" fill="url('http://www.sacbee.com/plus/#meebo-canvas-15-gradient-35')"></path></svg></m><m style="font-size: 12px ! important; font-weight: normal ! important; font-family: Arial,Helvetica,sans-serif ! important; -moz-user-select: -moz-none ! important; left: 25px ! important; width: 34px ! important; color: rgb(187, 187, 187) ! important;" class="meebo-0 meebo-26">Share</m><m style="-moz-user-select: -moz-none ! important; bottom: 6px ! important;" class="meebo-0 meebo-24"><img src="https://cdns.gigya.com/gs/i/sharebar/icons/share.png" class="meebo-0 meebo-25" style="visibility: inherit ! important; -moz-user-select: -moz-none ! important; width: 16px ! important; height: 16px ! important;"></m></m><m title="" ev_id="10" style="white-space: nowrap ! important; -moz-user-select: -moz-none ! important; height: 28px ! important; width: 99px ! important; color: rgb(187, 187, 187) ! important; left: 190px ! important;" id="scmenu" class="meebo-0 meebo-23 meebo-29"><m style="overflow: hidden ! important; opacity: 0 ! important; width: 99px ! important; height: 28px ! important; left: 0px ! important; top: 0px ! important;" id="meebo-canvas-16" class="meebo-0 meebo-27"><svg style="position: absolute ! important; width: 99px ! important; height: 28px ! important;" class="meebo-0" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient y2="1" x1="0" x2="0" y1="0" id="meebo-canvas-16-gradient-37" opacity="1"><stop stop-opacity="1" stop-color="#333" offset="0"></stop><stop stop-opacity="1" stop-color="#222" offset="0.6"></stop></linearGradient><linearGradient y2="1" x1="0" x2="0" y1="0" id="meebo-canvas-16-gradient-38" opacity="1"><stop stop-opacity="1" stop-color="#777" offset="0"></stop><stop stop-opacity="1" stop-color="#555" offset="0.6"></stop></linearGradient></defs><path d="M 0 3 A 3 3 0 0 1 3 4.440892098500626e-16 L 96 0 A 3 3 0 0 1 99 3 L 99 25 A 3 3 0 0 1 96 28 L 3 28 A 3 3 0 0 1 0 25 L 0 3" fill="#222"></path><path d="M 1 3 A 2 2 0 0 1 3 1.0000000000000004 L 96 1 A 2 2 0 0 1 98 3 L 98 25 A 2 2 0 0 1 96 27 L 3 27 A 2 2 0 0 1 1 25 L 1 3" fill="url('http://www.sacbee.com/plus/#meebo-canvas-16-gradient-37')"></path></svg></m><m style="font-size: 12px ! important; font-weight: normal ! important; font-family: Arial,Helvetica,sans-serif ! important; -moz-user-select: -moz-none ! important; left: 25px ! important; width: 68px ! important; color: rgb(187, 187, 187) ! important;" class="meebo-0 meebo-26">SacConnect</m><m style="-moz-user-select: -moz-none ! important; bottom: 6px ! important;" class="meebo-0 meebo-24"><img src="http://media.sacbee.com/static/sacconnect/images/sclogo_23.png" class="meebo-0 meebo-25" style="visibility: inherit ! important; -moz-user-select: -moz-none ! important; width: 16px ! important; height: 16px ! important;"></m></m><m title="" ev_id="19" style="white-space: nowrap ! important; -moz-user-select: -moz-none ! important; height: 28px ! important; width: 101px ! important; color: rgb(187, 187, 187) ! important; left: 295px ! important;" id="sclatestpostsbutton" class="meebo-0 meebo-23 meebo-29"><m style="overflow: hidden ! important; opacity: 0 ! important; width: 101px ! important; height: 28px ! important; left: 0px ! important; top: 0px ! important;" id="meebo-canvas-28" class="meebo-0 meebo-27"><svg style="position: absolute ! important; width: 101px ! important; height: 28px ! important;" class="meebo-0" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient y2="1" x1="0" x2="0" y1="0" id="meebo-canvas-28-gradient-39" opacity="1"><stop stop-opacity="1" stop-color="#333" offset="0"></stop><stop stop-opacity="1" stop-color="#222" offset="0.6"></stop></linearGradient><linearGradient y2="1" x1="0" x2="0" y1="0" id="meebo-canvas-28-gradient-40" opacity="1"><stop stop-opacity="1" stop-color="#777" offset="0"></stop><stop stop-opacity="1" stop-color="#555" offset="0.6"></stop></linearGradient></defs><path d="M 0 3 A 3 3 0 0 1 3 4.440892098500626e-16 L 98 0 A 3 3 0 0 1 101 3 L 101 25 A 3 3 0 0 1 98 28 L 3 28 A 3 3 0 0 1 0 25 L 0 3" fill="#222"></path><path d="M 1 3 A 2 2 0 0 1 3 1.0000000000000004 L 98 1 A 2 2 0 0 1 100 3 L 100 25 A 2 2 0 0 1 98 27 L 3 27 A 2 2 0 0 1 1 25 L 1 3" fill="url('http://www.sacbee.com/plus/#meebo-canvas-28-gradient-39')"></path></svg></m><m style="font-size: 12px ! important; font-weight: normal ! important; font-family: Arial,Helvetica,sans-serif ! important; -moz-user-select: -moz-none ! important; left: 25px ! important; width: 70px ! important; color: rgb(187, 187, 187) ! important;" class="meebo-0 meebo-26">Latest Posts</m><m style="-moz-user-select: -moz-none ! important; bottom: 6px ! important;" class="meebo-0 meebo-24"><img src="http://media.sacbee.com/static/sacconnect/images/latestposts_23.png" class="meebo-0 meebo-25" style="visibility: inherit ! important; -moz-user-select: -moz-none ! important; width: 16px ! important; height: 16px ! important;"></m></m><m title="" ev_id="20" style="white-space: nowrap ! important; -moz-user-select: -moz-none ! important; height: 28px ! important; width: 105px ! important; color: rgb(187, 187, 187) ! important; left: 402px ! important;" id="scweatherbutton" class="meebo-0 meebo-23 meebo-29"><m style="overflow: hidden ! important; opacity: 0 ! important; width: 105px ! important; height: 28px ! important; left: 0px ! important; top: 0px ! important;" id="meebo-canvas-29" class="meebo-0 meebo-27"><svg style="position: absolute ! important; width: 105px ! important; height: 28px ! important;" class="meebo-0" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient y2="1" x1="0" x2="0" y1="0" id="meebo-canvas-29-gradient-41" opacity="1"><stop stop-opacity="1" stop-color="#333" offset="0"></stop><stop stop-opacity="1" stop-color="#222" offset="0.6"></stop></linearGradient><linearGradient y2="1" x1="0" x2="0" y1="0" id="meebo-canvas-29-gradient-42" opacity="1"><stop stop-opacity="1" stop-color="#777" offset="0"></stop><stop stop-opacity="1" stop-color="#555" offset="0.6"></stop></linearGradient></defs><path d="M 0 3 A 3 3 0 0 1 3 4.440892098500626e-16 L 102 0 A 3 3 0 0 1 105 3 L 105 25 A 3 3 0 0 1 102 28 L 3 28 A 3 3 0 0 1 0 25 L 0 3" fill="#222"></path><path d="M 1 3 A 2 2 0 0 1 3 1.0000000000000004 L 102 1 A 2 2 0 0 1 104 3 L 104 25 A 2 2 0 0 1 102 27 L 3 27 A 2 2 0 0 1 1 25 L 1 3" fill="url('http://www.sacbee.com/plus/#meebo-canvas-29-gradient-41')"></path></svg></m><m style="font-size: 12px ! important; font-weight: normal ! important; font-family: Arial,Helvetica,sans-serif ! important; -moz-user-select: -moz-none ! important; left: 25px ! important; width: 74px ! important; color: rgb(187, 187, 187) ! important;" class="meebo-0 meebo-26">66 F Weather</m><m style="-moz-user-select: -moz-none ! important; bottom: 6px ! important;" class="meebo-0 meebo-24"><img src="http://icons-ak.wxug.com/i/c/k/clear.gif" class="meebo-0 meebo-25" style="visibility: inherit ! important; -moz-user-select: -moz-none ! important; width: 16px ! important; height: 16px ! important;"></m></m><m title="" ev_id="21" style="white-space: nowrap ! important; -moz-user-select: -moz-none ! important; height: 28px ! important; width: 102px ! important; color: rgb(187, 187, 187) ! important; left: 513px ! important;" id="custom_1" class="meebo-0 meebo-23 meebo-29"><m style="overflow: hidden ! important; opacity: 0 ! important; width: 102px ! important; height: 28px ! important; left: 0px ! important; top: 0px ! important;" id="meebo-canvas-30" class="meebo-0 meebo-27"><svg style="position: absolute ! important; width: 102px ! important; height: 28px ! important;" class="meebo-0" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient y2="1" x1="0" x2="0" y1="0" id="meebo-canvas-30-gradient-43" opacity="1"><stop stop-opacity="1" stop-color="#333" offset="0"></stop><stop stop-opacity="1" stop-color="#222" offset="0.6"></stop></linearGradient><linearGradient y2="1" x1="0" x2="0" y1="0" id="meebo-canvas-30-gradient-44" opacity="1"><stop stop-opacity="1" stop-color="#777" offset="0"></stop><stop stop-opacity="1" stop-color="#555" offset="0.6"></stop></linearGradient></defs><path d="M 0 3 A 3 3 0 0 1 3 4.440892098500626e-16 L 99 0 A 3 3 0 0 1 102 3 L 102 25 A 3 3 0 0 1 99 28 L 3 28 A 3 3 0 0 1 0 25 L 0 3" fill="#222"></path><path d="M 1 3 A 2 2 0 0 1 3 1.0000000000000004 L 99 1 A 2 2 0 0 1 101 3 L 101 25 A 2 2 0 0 1 99 27 L 3 27 A 2 2 0 0 1 1 25 L 1 3" fill="url('http://www.sacbee.com/plus/#meebo-canvas-30-gradient-43')"></path></svg></m><m style="font-size: 12px ! important; font-weight: normal ! important; font-family: Arial,Helvetica,sans-serif ! important; -moz-user-select: -moz-none ! important; left: 25px ! important; width: 71px ! important; color: rgb(187, 187, 187) ! important;" class="meebo-0 meebo-26">Today's Deal</m><m style="-moz-user-select: -moz-none ! important; bottom: 6px ! important;" class="meebo-0 meebo-24"><img src="http://media.sacbee.com/sacconnect/images/thedealsaver21.png" class="meebo-0 meebo-25" style="visibility: inherit ! important; -moz-user-select: -moz-none ! important; width: 16px ! important; height: 16px ! important;"></m></m></m><m class="meebo-0 meebo-21"><m style="right: 0px ! important;" class="meebo-0 meebo-22"><m title="" ev_id="5" style="white-space: nowrap ! important; -moz-user-select: -moz-none ! important; height: 36px ! important; width: 21px ! important; color: rgb(0, 0, 0) ! important; right: 0px ! important;" class="meebo-0 meebo-36 meebo-23 meebo-29"><m style="overflow: hidden ! important; width: 21px ! important; height: 36px ! important; left: 0px ! important; top: 0px ! important; opacity: 1 ! important;" id="meebo-canvas-5" class="meebo-0 meebo-27"><svg style="position: absolute ! important; width: 21px ! important; height: 36px ! important;" class="meebo-0" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="meebo-canvas-5-gradient-32" opacity="1"></linearGradient></defs><path d="M 0 0 L 21 0 L 21 36 L 0 36 L 0 0" fill="#6a6a6a"></path><path d="M 1 0 L 21 0 L 21 36 L 1 36 L 1 0" fill="#2b2b2b"></path></svg></m><m style="font-size: 12px ! important; font-weight: normal ! important; font-family: Arial,Helvetica,sans-serif ! important; -moz-user-select: -moz-none ! important; left: 14px ! important; width: 1px ! important; color: rgb(0, 0, 0) ! important;" class="meebo-0 meebo-26"></m><m style="-moz-user-select: -moz-none ! important;" class="meebo-0 meebo-24"></m></m><m title="" ev_id="6" style="white-space: nowrap ! important; -moz-user-select: -moz-none ! important; right: 27px ! important; height: 28px ! important; width: 74px ! important; color: rgb(0, 0, 0) ! important;" class="meebo-0 meebo-35 meebo-23 meebo-29"><m style="overflow: hidden ! important; width: 74px ! important; height: 28px ! important; left: 0px ! important; top: 0px ! important; opacity: 1 ! important;" id="meebo-canvas-6" class="meebo-0 meebo-27"><svg style="position: absolute ! important; width: 74px ! important; height: 28px ! important;" class="meebo-0" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="meebo-canvas-6-gradient-33" opacity="1"></linearGradient></defs></svg></m><m style="font-size: 12px ! important; font-weight: normal ! important; font-family: Arial,Helvetica,sans-serif ! important; -moz-user-select: -moz-none ! important; left: 61px ! important; width: 1px ! important; color: rgb(0, 0, 0) ! important;" class="meebo-0 meebo-26"></m><m style="-moz-user-select: -moz-none ! important;" class="meebo-0 meebo-24"></m></m><m style="right: 107px ! important;" class="meebo-0 meebo-28 meebo-70 meebo-70-identity"><div mi_ads="" style="text-indent: 0px; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 44px; height: 28px;" id="meebo-googlePlus-identity-0" class=""><iframe title="+You" data-gapiattached="true" allowtransparency="true" src="https://plusone.google.com/_/widget/render/identity?theme=dark&amp;arrow=up&amp;source=meebo-bar%3Asacbee%253Asacbee&amp;hl=en-US&amp;origin=http%3A%2F%2Fwww.sacbee.com&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en_US.d8yU-wcNYlQ.O%2Fm%3D__features__%2Fam%3DUQ%2Frt%3Dj%2Fd%3D1%2Frs%3DAItRSTNFCVmDFU3r-qDb4qDOc5bk3EYiag#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled&amp;id=I1_1367727881430&amp;parent=http%3A%2F%2Fwww.sacbee.com&amp;rpctoken=36254609" name="I1_1367727881430" id="I1_1367727881430" vspace="0" tabindex="0" style="position: static; top: 0px; width: 44px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 28px;" marginwidth="0" marginheight="0" hspace="0" frameborder="0" scrolling="no" width="100%"></iframe></div></m><m style="right: 151px ! important;" class="meebo-0 meebo-28 meebo-70 meebo-70-plus"><div mi_ads="" style="text-indent: 0px; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 79px; height: 28px;" id="meebo-googlePlus-plus-0" class=""><iframe title="+Share" data-gapiattached="true" allowtransparency="true" src="https://plusone.google.com/_/+1/sharebutton?plusShare=true&amp;bsv&amp;theme=darkspeechbubble&amp;annotation=none&amp;action=share&amp;height=28&amp;align=right&amp;expandto=top&amp;source=meebo-bar%3Asacbee%253Asacbee&amp;hl=en-US&amp;origin=http%3A%2F%2Fwww.sacbee.com&amp;url=http%3A%2F%2Fwww.sacbee.com%2Fplus%2F&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en_US.d8yU-wcNYlQ.O%2Fm%3D__features__%2Fam%3DUQ%2Frt%3Dj%2Fd%3D1%2Frs%3DAItRSTNFCVmDFU3r-qDb4qDOc5bk3EYiag#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Conauth&amp;id=I2_1367727881434&amp;parent=http%3A%2F%2Fwww.sacbee.com&amp;rpctoken=9103064" name="I2_1367727881434" id="I2_1367727881434" vspace="0" tabindex="0" style="position: static; top: 0px; width: 79px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 28px;" marginwidth="0" marginheight="0" hspace="0" frameborder="0" scrolling="no" width="100%"></iframe></div></m><m style="right: 235px ! important;" class="meebo-0 meebo-28 meebo-70 meebo-70-notifications"><div style="text-indent: 0px; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 28px; height: 28px;" mi_ads="" id="meebo-googlePlus-notifications-0" class=""><iframe title="Notifications" data-gapiattached="true" allowtransparency="true" src="https://plusone.google.com/_/widget/render/notifications?theme=dark&amp;source=meebo-bar%3Asacbee%253Asacbee&amp;hl=en-US&amp;origin=http%3A%2F%2Fwww.sacbee.com&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en_US.d8yU-wcNYlQ.O%2Fm%3D__features__%2Fam%3DUQ%2Frt%3Dj%2Fd%3D1%2Frs%3DAItRSTNFCVmDFU3r-qDb4qDOc5bk3EYiag#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled&amp;id=I3_1367727881437&amp;parent=http%3A%2F%2Fwww.sacbee.com&amp;rpctoken=91765224" name="I3_1367727881437" id="I3_1367727881437" vspace="0" tabindex="0" style="position: static; top: 0px; width: 28px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 28px;" marginwidth="0" marginheight="0" hspace="0" frameborder="0" scrolling="no" width="100%"></iframe></div></m></m></m><m ev_id="4" style="opacity: 0 ! important; display: none ! important; padding: 6px 6px 7px ! important;" class="meebo-0 meebo-42 meebo-48"><m style="-moz-user-select: -moz-none ! important;" class="meebo-0 meebo-44"><m style="color: rgb(238, 238, 238) ! important;" class="meebo-0 meebo-43">Hide</m></m><m style="overflow: hidden ! important; height: 20px ! important; width: 13px ! important;" id="meebo-canvas-4" class="meebo-0 meebo-45"><svg style="position: absolute ! important; height: 20px ! important; width: 13px ! important;" class="meebo-0" version="1.1" xmlns="http://www.w3.org/2000/svg"><path transform="translate(0 2)" stroke-opacity="0.025" fill-opacity="0.025" d="M 6 10 A 4 4 0 0 1 10 6 L 2 6 A 4 4 0 0 1 6 10 L 6 2 A 4 4 0 0 1 2.0000000000000004 6 L 13 6 L 6.894427190999916 12.105572809000083 A 2 2 0 0 1 5.105572809000084 12.105572809000083 L -1 6 L 10 6 A 4 4 0 0 1 6 2.0000000000000004 L 6 10" before="true" stroke-width="12" stroke="#000" fill="#000"></path><path transform="translate(0 2)" stroke-opacity="0.025" fill-opacity="0.025" d="M 6 10 A 4 4 0 0 1 10 6 L 2 6 A 4 4 0 0 1 6 10 L 6 2 A 4 4 0 0 1 2.0000000000000004 6 L 13 6 L 6.894427190999916 12.105572809000083 A 2 2 0 0 1 5.105572809000084 12.105572809000083 L -1 6 L 10 6 A 4 4 0 0 1 6 2.0000000000000004 L 6 10" before="true" stroke-width="10" stroke="#000" fill="#000"></path><path transform="translate(0 2)" stroke-opacity="0.025" fill-opacity="0.025" d="M 6 10 A 4 4 0 0 1 10 6 L 2 6 A 4 4 0 0 1 6 10 L 6 2 A 4 4 0 0 1 2.0000000000000004 6 L 13 6 L 6.894427190999916 12.105572809000083 A 2 2 0 0 1 5.105572809000084 12.105572809000083 L -1 6 L 10 6 A 4 4 0 0 1 6 2.0000000000000004 L 6 10" before="true" stroke-width="8" stroke="#000" fill="#000"></path><path transform="translate(0 2)" stroke-opacity="0.025" fill-opacity="0.025" d="M 6 10 A 4 4 0 0 1 10 6 L 2 6 A 4 4 0 0 1 6 10 L 6 2 A 4 4 0 0 1 2.0000000000000004 6 L 13 6 L 6.894427190999916 12.105572809000083 A 2 2 0 0 1 5.105572809000084 12.105572809000083 L -1 6 L 10 6 A 4 4 0 0 1 6 2.0000000000000004 L 6 10" before="true" stroke-width="6" stroke="#000" fill="#000"></path><path transform="translate(0 2)" stroke-opacity="0.025" fill-opacity="0.025" d="M 6 10 A 4 4 0 0 1 10 6 L 2 6 A 4 4 0 0 1 6 10 L 6 2 A 4 4 0 0 1 2.0000000000000004 6 L 13 6 L 6.894427190999916 12.105572809000083 A 2 2 0 0 1 5.105572809000084 12.105572809000083 L -1 6 L 10 6 A 4 4 0 0 1 6 2.0000000000000004 L 6 10" before="true" stroke-width="4" stroke="#000" fill="#000"></path><path transform="translate(0 2)" stroke-opacity="0.025" fill-opacity="0.025" d="M 6 10 A 4 4 0 0 1 10 6 L 2 6 A 4 4 0 0 1 6 10 L 6 2 A 4 4 0 0 1 2.0000000000000004 6 L 13 6 L 6.894427190999916 12.105572809000083 A 2 2 0 0 1 5.105572809000084 12.105572809000083 L -1 6 L 10 6 A 4 4 0 0 1 6 2.0000000000000004 L 6 10" before="true" stroke-width="2" stroke="#000" fill="#000"></path><defs></defs><path d="M 6 10 A 4 4 0 0 1 10 6 L 2 6 A 4 4 0 0 1 6 10 L 6 2 A 4 4 0 0 1 2.0000000000000004 6 L 13 6 L 6.894427190999916 12.105572809000083 A 2 2 0 0 1 5.105572809000084 12.105572809000083 L -1 6 L 10 6 A 4 4 0 0 1 6 2.0000000000000004 L 6 10" stroke-width="0" fill="#222" stroke="#fff"></path></svg></m></m><m ev_id="7" style="opacity: 0 ! important; display: none ! important; padding: 6px 6px 7px ! important;" class="meebo-0 meebo-42 meebo-48"><m style="-moz-user-select: -moz-none ! important;" class="meebo-0 meebo-44"><m style="color: rgb(238, 238, 238) ! important;" class="meebo-0 meebo-43">What's this?</m></m><m style="overflow: hidden ! important; height: 20px ! important; width: 13px ! important;" id="meebo-canvas-7" class="meebo-0 meebo-45"><svg style="position: absolute ! important; height: 20px ! important; width: 13px ! important;" class="meebo-0" version="1.1" xmlns="http://www.w3.org/2000/svg"><path transform="translate(0 2)" stroke-opacity="0.025" fill-opacity="0.025" d="M 6 10 A 4 4 0 0 1 10 6 L 2 6 A 4 4 0 0 1 6 10 L 6 2 A 4 4 0 0 1 2.0000000000000004 6 L 13 6 L 6.894427190999916 12.105572809000083 A 2 2 0 0 1 5.105572809000084 12.105572809000083 L -1 6 L 10 6 A 4 4 0 0 1 6 2.0000000000000004 L 6 10" before="true" stroke-width="12" stroke="#000" fill="#000"></path><path transform="translate(0 2)" stroke-opacity="0.025" fill-opacity="0.025" d="M 6 10 A 4 4 0 0 1 10 6 L 2 6 A 4 4 0 0 1 6 10 L 6 2 A 4 4 0 0 1 2.0000000000000004 6 L 13 6 L 6.894427190999916 12.105572809000083 A 2 2 0 0 1 5.105572809000084 12.105572809000083 L -1 6 L 10 6 A 4 4 0 0 1 6 2.0000000000000004 L 6 10" before="true" stroke-width="10" stroke="#000" fill="#000"></path><path transform="translate(0 2)" stroke-opacity="0.025" fill-opacity="0.025" d="M 6 10 A 4 4 0 0 1 10 6 L 2 6 A 4 4 0 0 1 6 10 L 6 2 A 4 4 0 0 1 2.0000000000000004 6 L 13 6 L 6.894427190999916 12.105572809000083 A 2 2 0 0 1 5.105572809000084 12.105572809000083 L -1 6 L 10 6 A 4 4 0 0 1 6 2.0000000000000004 L 6 10" before="true" stroke-width="8" stroke="#000" fill="#000"></path><path transform="translate(0 2)" stroke-opacity="0.025" fill-opacity="0.025" d="M 6 10 A 4 4 0 0 1 10 6 L 2 6 A 4 4 0 0 1 6 10 L 6 2 A 4 4 0 0 1 2.0000000000000004 6 L 13 6 L 6.894427190999916 12.105572809000083 A 2 2 0 0 1 5.105572809000084 12.105572809000083 L -1 6 L 10 6 A 4 4 0 0 1 6 2.0000000000000004 L 6 10" before="true" stroke-width="6" stroke="#000" fill="#000"></path><path transform="translate(0 2)" stroke-opacity="0.025" fill-opacity="0.025" d="M 6 10 A 4 4 0 0 1 10 6 L 2 6 A 4 4 0 0 1 6 10 L 6 2 A 4 4 0 0 1 2.0000000000000004 6 L 13 6 L 6.894427190999916 12.105572809000083 A 2 2 0 0 1 5.105572809000084 12.105572809000083 L -1 6 L 10 6 A 4 4 0 0 1 6 2.0000000000000004 L 6 10" before="true" stroke-width="4" stroke="#000" fill="#000"></path><path transform="translate(0 2)" stroke-opacity="0.025" fill-opacity="0.025" d="M 6 10 A 4 4 0 0 1 10 6 L 2 6 A 4 4 0 0 1 6 10 L 6 2 A 4 4 0 0 1 2.0000000000000004 6 L 13 6 L 6.894427190999916 12.105572809000083 A 2 2 0 0 1 5.105572809000084 12.105572809000083 L -1 6 L 10 6 A 4 4 0 0 1 6 2.0000000000000004 L 6 10" before="true" stroke-width="2" stroke="#000" fill="#000"></path><defs></defs><path d="M 6 10 A 4 4 0 0 1 10 6 L 2 6 A 4 4 0 0 1 6 10 L 6 2 A 4 4 0 0 1 2.0000000000000004 6 L 13 6 L 6.894427190999916 12.105572809000083 A 2 2 0 0 1 5.105572809000084 12.105572809000083 L -1 6 L 10 6 A 4 4 0 0 1 6 2.0000000000000004 L 6 10" stroke-width="0" fill="#222" stroke="#fff"></path></svg></m></m><m mi_ads="" style="overflow: visible ! important; bottom: 1322px ! important; height: 192px ! important; width: 133px ! important;" id="meebo-canvas-17" class="meebo-0 meebo-10"><svg style="position: absolute ! important; left: -10px ! important; top: -10px ! important; height: 212px ! important; width: 153px ! important;" class="meebo-0" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="meebo-canvas-17-gradient-18" opacity="1"><stop stop-opacity="1" stop-color="#333" offset="0"></stop></linearGradient><linearGradient id="meebo-canvas-17-gradient-19" opacity="1"><stop stop-opacity="1" stop-color="#333" offset="0"></stop></linearGradient></defs><path stroke-opacity="0.005" fill-opacity="0.005" d="M 0 202 L 0 202 L 0 10 A 10 10 0 0 1 10 1.7763568394002505e-15 L 143 0 A 10 10 0 0 1 153 10 L 153 202 L 0 202" fill="#000"></path><path stroke-opacity="0.007" fill-opacity="0.007" d="M 1 202 L 1 202 L 1 10 A 9 9 0 0 1 10 1.0000000000000018 L 143 1 A 9 9 0 0 1 152 10 L 152 202 L 1 202" fill="#000"></path><path stroke-opacity="0.01" fill-opacity="0.01" d="M 2 202 L 2 202 L 2 10 A 8 8 0 0 1 10 2.0000000000000018 L 143 2 A 8 8 0 0 1 151 10 L 151 202 L 2 202" fill="#000"></path><path stroke-opacity="0.013" fill-opacity="0.013" d="M 3 202 L 3 202 L 3 10 A 7 7 0 0 1 10 3 L 143 3 A 7 7 0 0 1 150 10 L 150 202 L 3 202" fill="#000"></path><path stroke-opacity="0.015" fill-opacity="0.015" d="M 4 202 L 4 202 L 4 10 A 6 6 0 0 1 10 4 L 143 4 A 6 6 0 0 1 149 10 L 149 202 L 4 202" fill="#000"></path><path stroke-opacity="0.017" fill-opacity="0.017" d="M 5 202 L 5 202 L 5 10 A 5 5 0 0 1 10 5 L 143 5 A 5 5 0 0 1 148 10 L 148 202 L 5 202" fill="#000"></path><path stroke-opacity="0.02" fill-opacity="0.02" d="M -14 206 L -14 206 A 4 4 0 0 1 -21.846095790563293 204.90111548841048 L 6 202 L 6 10 A 4 4 0 0 1 10 6 L 143 6 A 4 4 0 0 1 147 10 L 147 202 A 4 4 0 0 1 143 206 L 93 206 L 93 206" fill="#000"></path><path stroke-opacity="0.023" fill-opacity="0.023" d="M -13 206 L -13 205 A 3 3 0 0 1 -18.86733702616585 204.11774245348744 L 7 202 L 7 10 A 3 3 0 0 1 10 7 L 143 7 A 3 3 0 0 1 146 10 L 146 202 A 3 3 0 0 1 143 205 L 92 205 L 92 206" fill="#000"></path><path stroke-opacity="0.025" fill-opacity="0.025" d="M -12 206 L -12 204 A 2 2 0 0 1 -15.897366596101028 203.36754446796633 L 8 202 L 8 10 A 2 2 0 0 1 10 8 L 143 8 A 2 2 0 0 1 145 10 L 145 202 A 2 2 0 0 1 143 204 L 91 204 L 91 206" fill="#000"></path><path stroke-opacity="0.027" fill-opacity="0.027" d="M -11 206 L -11 203 A 1 1 0 0 1 -12.939793423488437 202.6582569369133 L 9 202 L 9 10 A 1 1 0 0 1 10 9 L 143 9 A 1 1 0 0 1 144 10 L 144 202 A 1 1 0 0 1 143 203 L 90 203 L 90 206" fill="#000"></path><path d="M -10 202 L 89 202 L 89 206 L -10 206 L -10 202" fill="url('http://www.sacbee.com/plus/#meebo-canvas-17-gradient-19')"></path><path d="M 10 42 L 143 42 L 143 202 L 10 202 L 10 42" fill="url('http://www.sacbee.com/plus/#meebo-canvas-17-gradient-19')"></path><path d="M 10 11 L 143 11 L 143 42 L 10 42 L 10 11" fill="url('http://www.sacbee.com/plus/#meebo-canvas-17-gradient-18')"></path><path fill="none" d="M -9.5 206.5 L -9.5 201.5 A -0.5 -0.5 0 0 1 -8.539182312430967 201.69402850002908 L 10.5 202 L 10.5 10 A -0.5 -0.5 0 0 1 10 10.5 L 143 10.5 A -0.5 -0.5 0 0 1 142.5 10 L 142.5 202 A -0.5 -0.5 0 0 1 143 201.5 L 88.5 201.5 L 88.5 206.5" stroke="#6a6a6a"></path></svg><m style="width: 133px ! important; height: 160px ! important; top: 0px ! important;" class="meebo-0 meebo-12"><m title="sacramento connect" ev_id="11" style="white-space: nowrap ! important; -moz-user-select: -moz-none ! important; height: 24px ! important; width: 131px ! important; color: rgb(187, 187, 187) ! important; top: 1px ! important; left: 1px ! important;" class="meebo-0 meebo-23 meebo-32"><m style="overflow: hidden ! important; width: 131px ! important; height: 24px ! important; left: 0px ! important; top: 0px ! important;" id="meebo-canvas-20" class="meebo-0 meebo-27"><svg style="position: absolute ! important; width: 131px ! important; height: 24px ! important;" class="meebo-0" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs></defs><path d="M 0 0 L 131 0 L 131 24 L 0 24 L 0 0" fill="#333"></path></svg></m><m style="font-size: 12px ! important; font-weight: normal ! important; font-family: &quot;Helvetica Neue&quot;,Arial,Helvetica,sans-serif ! important; -moz-user-select: -moz-none ! important; left: 31px ! important; line-height: 23.5px ! important; width: 90px ! important; color: rgb(187, 187, 187) ! important;" class="meebo-0 meebo-26">sacramento c…</m><m style="-moz-user-select: -moz-none ! important;" class="meebo-0 meebo-24"><img src="http://media.sacbee.com/static/sacconnect/images/sclogo_23.png" class="meebo-0 meebo-25" style="visibility: inherit ! important; -moz-user-select: -moz-none ! important; width: 16px ! important; height: 16px ! important;"></m></m><m title="" ev_id="12" style="white-space: nowrap ! important; -moz-user-select: -moz-none ! important; height: 24px ! important; width: 131px ! important; color: rgb(187, 187, 187) ! important; top: 1px ! important; left: 1px ! important;" class="meebo-0 meebo-23 meebo-32"><m style="overflow: hidden ! important; width: 131px ! important; height: 24px ! important; left: 0px ! important; top: 0px ! important;" id="meebo-canvas-21" class="meebo-0 meebo-27"><svg style="position: absolute ! important; width: 131px ! important; height: 24px ! important;" class="meebo-0" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs></defs><path d="M 0 0 L 131 0 L 131 24 L 0 24 L 0 0" fill="#333"></path></svg></m><m style="font-size: 12px ! important; font-weight: normal ! important; font-family: &quot;Helvetica Neue&quot;,Arial,Helvetica,sans-serif ! important; -moz-user-select: -moz-none ! important; left: 10px ! important; line-height: 23.5px ! important; width: 111px ! important; color: rgb(187, 187, 187) ! important;" class="meebo-0 meebo-26">local california</m><m class="meebo-0 meebo-24"></m></m><m title="" ev_id="13" style="white-space: nowrap ! important; -moz-user-select: -moz-none ! important; height: 24px ! important; width: 131px ! important; color: rgb(187, 187, 187) ! important; top: 1px ! important; left: 1px ! important;" class="meebo-0 meebo-23 meebo-32"><m style="overflow: hidden ! important; width: 131px ! important; height: 24px ! important; left: 0px ! important; top: 0px ! important;" id="meebo-canvas-22" class="meebo-0 meebo-27"><svg style="position: absolute ! important; width: 131px ! important; height: 24px ! important;" class="meebo-0" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs></defs><path d="M 0 0 L 131 0 L 131 24 L 0 24 L 0 0" fill="#333"></path></svg></m><m style="font-size: 12px ! important; font-weight: normal ! important; font-family: &quot;Helvetica Neue&quot;,Arial,Helvetica,sans-serif ! important; -moz-user-select: -moz-none ! important; left: 10px ! important; line-height: 23.5px ! important; width: 111px ! important; color: rgb(187, 187, 187) ! important;" class="meebo-0 meebo-26">interests</m><m class="meebo-0 meebo-24"></m></m><m title="" ev_id="14" style="white-space: nowrap ! important; -moz-user-select: -moz-none ! important; height: 24px ! important; width: 131px ! important; color: rgb(187, 187, 187) ! important; top: 1px ! important; left: 1px ! important;" class="meebo-0 meebo-23 meebo-32"><m style="overflow: hidden ! important; width: 131px ! important; height: 24px ! important; left: 0px ! important; top: 0px ! important;" id="meebo-canvas-23" class="meebo-0 meebo-27"><svg style="position: absolute ! important; width: 131px ! important; height: 24px ! important;" class="meebo-0" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs></defs><path d="M 0 0 L 131 0 L 131 24 L 0 24 L 0 0" fill="#333"></path></svg></m><m style="font-size: 12px ! important; font-weight: normal ! important; font-family: &quot;Helvetica Neue&quot;,Arial,Helvetica,sans-serif ! important; -moz-user-select: -moz-none ! important; left: 10px ! important; line-height: 23.5px ! important; width: 111px ! important; color: rgb(187, 187, 187) ! important;" class="meebo-0 meebo-26">community news</m><m class="meebo-0 meebo-24"></m></m><m title="" ev_id="15" style="white-space: nowrap ! important; -moz-user-select: -moz-none ! important; height: 24px ! important; width: 131px ! important; color: rgb(187, 187, 187) ! important; top: 1px ! important; left: 1px ! important;" class="meebo-0 meebo-23 meebo-32"><m style="overflow: hidden ! important; width: 131px ! important; height: 24px ! important; left: 0px ! important; top: 0px ! important;" id="meebo-canvas-24" class="meebo-0 meebo-27"><svg style="position: absolute ! important; width: 131px ! important; height: 24px ! important;" class="meebo-0" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs></defs><path d="M 0 0 L 131 0 L 131 24 L 0 24 L 0 0" fill="#333"></path></svg></m><m style="font-size: 12px ! important; font-weight: normal ! important; font-family: &quot;Helvetica Neue&quot;,Arial,Helvetica,sans-serif ! important; -moz-user-select: -moz-none ! important; left: 10px ! important; line-height: 23.5px ! important; width: 111px ! important; color: rgb(187, 187, 187) ! important;" class="meebo-0 meebo-26">opinion</m><m class="meebo-0 meebo-24"></m></m><m title="" ev_id="16" style="white-space: nowrap ! important; -moz-user-select: -moz-none ! important; height: 24px ! important; width: 131px ! important; color: rgb(187, 187, 187) ! important; top: 1px ! important; left: 1px ! important;" class="meebo-0 meebo-23 meebo-32"><m style="overflow: hidden ! important; width: 131px ! important; height: 24px ! important; left: 0px ! important; top: 0px ! important;" id="meebo-canvas-25" class="meebo-0 meebo-27"><svg style="position: absolute ! important; width: 131px ! important; height: 24px ! important;" class="meebo-0" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs></defs><path d="M 0 0 L 131 0 L 131 24 L 0 24 L 0 0" fill="#333"></path></svg></m><m style="font-size: 12px ! important; font-weight: normal ! important; font-family: &quot;Helvetica Neue&quot;,Arial,Helvetica,sans-serif ! important; -moz-user-select: -moz-none ! important; left: 10px ! important; line-height: 23.5px ! important; width: 111px ! important; color: rgb(187, 187, 187) ! important;" class="meebo-0 meebo-26">partners</m><m class="meebo-0 meebo-24"></m></m><m title="" ev_id="17" style="white-space: nowrap ! important; -moz-user-select: -moz-none ! important; height: 24px ! important; width: 131px ! important; color: rgb(187, 187, 187) ! important; top: 1px ! important; left: 1px ! important;" class="meebo-0 meebo-23 meebo-32"><m style="overflow: hidden ! important; width: 131px ! important; height: 24px ! important; left: 0px ! important; top: 0px ! important;" id="meebo-canvas-26" class="meebo-0 meebo-27"><svg style="position: absolute ! important; width: 131px ! important; height: 24px ! important;" class="meebo-0" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs></defs><path d="M 0 0 L 131 0 L 131 24 L 0 24 L 0 0" fill="#333"></path></svg></m><m style="font-size: 12px ! important; font-weight: normal ! important; font-family: &quot;Helvetica Neue&quot;,Arial,Helvetica,sans-serif ! important; -moz-user-select: -moz-none ! important; left: 10px ! important; line-height: 23.5px ! important; width: 111px ! important; color: rgb(187, 187, 187) ! important;" class="meebo-0 meebo-26">about</m><m class="meebo-0 meebo-24"></m></m><m title="The Sacramento Bee" ev_id="18" style="white-space: nowrap ! important; -moz-user-select: -moz-none ! important; height: 24px ! important; width: 131px ! important; color: rgb(187, 187, 187) ! important; top: 1px ! important; left: 1px ! important;" class="meebo-0 meebo-23 meebo-32"><m style="overflow: hidden ! important; width: 131px ! important; height: 24px ! important; left: 0px ! important; top: 0px ! important;" id="meebo-canvas-27" class="meebo-0 meebo-27"><svg style="position: absolute ! important; width: 131px ! important; height: 24px ! important;" class="meebo-0" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs></defs><path d="M 0 0 L 131 0 L 131 24 L 0 24 L 0 0" fill="#333"></path></svg></m><m style="font-size: 12px ! important; font-weight: normal ! important; font-family: &quot;Helvetica Neue&quot;,Arial,Helvetica,sans-serif ! important; -moz-user-select: -moz-none ! important; left: 31px ! important; line-height: 23.5px ! important; width: 90px ! important; color: rgb(187, 187, 187) ! important;" class="meebo-0 meebo-26">The Sacrame…</m><m style="-moz-user-select: -moz-none ! important;" class="meebo-0 meebo-24"><img src="http://media.sacbee.com/static/images/scoopy23trans.png" class="meebo-0 meebo-25" style="visibility: inherit ! important; -moz-user-select: -moz-none ! important; width: 16px ! important; height: 16px ! important;"></m></m></m><m class="meebo-0 meebo-15"></m><m style="z-index: 991250 ! important; overflow: hidden ! important; left: 1px ! important; height: 0px ! important; position: absolute ! important; top: 33px ! important; width: 133px ! important;" class="meebo-0"></m><iframe src="about:blank" class="meebo-0 meebo-6" frameborder="0" scrolling="no"></iframe></m></m><m style="opacity: 0.8 ! important; height: 323px ! important;" class="meebo-0 meebo-5"></m><m style="height: 323px ! important;" class="meebo-0 meebo-4"></m><m ev_id="1" style="opacity: 0 ! important; display: none ! important;" class="meebo-0 meebo-42 meebo-48"><m style="-moz-user-select: -moz-none ! important;" class="meebo-0 meebo-44"><m class="meebo-0 meebo-43"></m></m><m style="overflow: hidden ! important;" id="meebo-canvas-1" class="meebo-0 meebo-45"><svg style="position: absolute ! important;" class="meebo-0" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs></defs></svg></m></m><m style="overflow: visible ! important; width: 47px ! important; height: 47px ! important;" id="meebo-canvas-0" class="meebo-0 meebo-37"><svg style="position: absolute ! important; width: 47px ! important; height: 47px ! important;" class="meebo-0" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs></defs><path d="M 10 10 L 47 10 L 47 47 L 10 47 L 10 10" fill="#6a6a6a"></path><path stroke-opacity="0.005" fill-opacity="0.005" d="M 0 57 L 0 10 A 10 10 0 0 1 10 1.7763568394002505e-15 L 47 0 A 10 10 0 0 1 57 10 L 57 57 L 47 57 L 47 10 L 10 10 L 10 57 L 0 57" fill="#000"></path><path stroke-opacity="0.007" fill-opacity="0.007" d="M 1 57 L 1 10 A 9 9 0 0 1 10 1.0000000000000018 L 47 1 A 9 9 0 0 1 56 10 L 56 57 L 47 57 L 47 10 L 10 10 L 10 57 L 1 57" fill="#000"></path><path stroke-opacity="0.01" fill-opacity="0.01" d="M 2 57 L 2 10 A 8 8 0 0 1 10 2.0000000000000018 L 47 2 A 8 8 0 0 1 55 10 L 55 57 L 47 57 L 47 10 L 10 10 L 10 57 L 2 57" fill="#000"></path><path stroke-opacity="0.013" fill-opacity="0.013" d="M 3 57 L 3 10 A 7 7 0 0 1 10 3 L 47 3 A 7 7 0 0 1 54 10 L 54 57 L 47 57 L 47 10 L 10 10 L 10 57 L 3 57" fill="#000"></path><path stroke-opacity="0.015" fill-opacity="0.015" d="M 4 57 L 4 10 A 6 6 0 0 1 10 4 L 47 4 A 6 6 0 0 1 53 10 L 53 57 L 47 57 L 47 10 L 10 10 L 10 57 L 4 57" fill="#000"></path><path stroke-opacity="0.017" fill-opacity="0.017" d="M 5 57 L 5 10 A 5 5 0 0 1 10 5 L 47 5 A 5 5 0 0 1 52 10 L 52 57 L 47 57 L 47 10 L 10 10 L 10 57 L 5 57" fill="#000"></path><path stroke-opacity="0.02" fill-opacity="0.02" d="M 6 57 L 6 10 A 4 4 0 0 1 10 6 L 47 6 A 4 4 0 0 1 51 10 L 51 57 L 47 57 L 47 10 L 10 10 L 10 57 L 6 57" fill="#000"></path><path stroke-opacity="0.023" fill-opacity="0.023" d="M 7 57 L 7 10 A 3 3 0 0 1 10 7 L 47 7 A 3 3 0 0 1 50 10 L 50 57 L 47 57 L 47 10 L 10 10 L 10 57 L 7 57" fill="#000"></path><path stroke-opacity="0.025" fill-opacity="0.025" d="M 8 57 L 8 10 A 2 2 0 0 1 10 8 L 47 8 A 2 2 0 0 1 49 10 L 49 57 L 47 57 L 47 10 L 10 10 L 10 57 L 8 57" fill="#000"></path><path stroke-opacity="0.027" fill-opacity="0.027" d="M 9 57 L 9 10 A 1 1 0 0 1 10 9 L 47 9 A 1 1 0 0 1 48 10 L 48 57 L 47 57 L 47 10 L 10 10 L 10 57 L 9 57" fill="#000"></path></svg><m title="" ev_id="2" style="white-space: nowrap ! important; -moz-user-select: -moz-none ! important; height: 36px ! important; width: 36px ! important; color: rgb(0, 0, 0) ! important;" class="meebo-0 meebo-38 meebo-23 meebo-29"><m style="overflow: hidden ! important; width: 36px ! important; height: 36px ! important; left: 0px ! important; top: 0px ! important; opacity: 1 ! important;" id="meebo-canvas-2" class="meebo-0 meebo-27"><svg style="position: absolute ! important; width: 36px ! important; height: 36px ! important;" class="meebo-0" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="meebo-canvas-2-gradient-31" opacity="1"></linearGradient></defs><path d="M 0 0 L 36 0 L 36 36 L 0 36 L 0 0" fill="#0e0e0e"></path></svg></m><m style="font-size: 12px ! important; font-weight: normal ! important; font-family: Arial,Helvetica,sans-serif ! important; -moz-user-select: -moz-none ! important; left: 14px ! important; width: 16px ! important; color: rgb(0, 0, 0) ! important;" class="meebo-0 meebo-26"></m><m style="-moz-user-select: -moz-none ! important;" class="meebo-0 meebo-24"></m></m></m></div>
+ 
+
+
+
+       	 
+<div id="leaderboard">
+    <div class="ads">
+
+ 
+ 
+ <!-- section ads not active --> _ 
+
+ 
+
+
+     </div>
+</div>
+ 
+
+<div id="pagebody">
+  <div class="wrapper">
+    
+
+
+
+       		<div id="usertools">
+	<div id="insite">
+ 
+		<div id="avatarImage">
+			<img src="http://media.sacbee.com/static/plus/images/plus_mini.png" height="21" width="21" border="0">
+		</div>		  
+
+		<div id="insite_links">
+			<div id="nonmember" class="insite_login">
+				<ul>
+					<li><a href="/plus">Plus digital subscription sign in</a></li>
+				</ul>
+			</div>
+			<div id="member" class="insite_logged_in">
+				<ul>
+					<li><a href="/plus">Plus digital subscription sign in</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>	  
+	<ul>
+		<li><div id="readerservices-menu" class="readerservices-menu"><a href="#">Reader Services</a></div>
+		<div class="readerservices-dropdown">
+			<ul>
+      	<li><a href="http://www.sacbee.com/reg-bin/int.cgi">Access your sacbee.com account</a></li>
+				<li><a href="http://www.sacbee.com/placead/">Place a classified ad</a></li>
+				<li><a href="http://www.sacbee.com/obituaries">Place an obituary</a></li>
+				<li><a href="http://www.sacbee.com/reg-bin/tint.cgi?mode=edit">Manage your sacbee.com account</a></li>
+				<li><a href="https://subscriberservices.mcclatchy.com/sacb/TransactionType.asp">Manage your subscription</a></li>
+        <li><a href="http://www.sacbee.com/account/">Make a payment</a></li>
+				<li><a href="http://www.sacbee.com/beebuzzpoints/">BeeBuzzPoints Loyalty Club</a></li>
+				<li><a href="http://guide.sacbee.com/105/story/21.html">Order reprints</a></li>
+				<li><a href="http://www.sacbee.com/contact/">Contact us</a></li>
+			</ul>
+		</div></li>
+
+		<li><div id="stayconnected-menu" class="readerservices-menu"><a href="#">Stay Connected</a></div>
+		<div class="readerservices-dropdown">
+			<ul>
+      	<li><a href="http://www.sacbee.com/plus/">Subscribe to The Bee</a></li>
+				<li><a href="http://www.sacbee.com/email/">Newsletters &amp; Alerts</a></li>
+        <li><a href="https://itunes.apple.com/us/app/the-sacramento-bee-for-ipad/id594854504?mt=8">iPad App</a></li>
+				<li><a href="http://www.sacbee.com/sbmobile/">Mobile</a></li>
+				<li><a href="http://www.sacbee.com/e-edition/">e-Edition</a></li>
+				<li><a href="http://itunes.apple.com/us/app/the-sacramento-bee-for-ipad/id446757012?ls=1&amp;mt=8">e-Edition on iPad</a></li>
+				<li><a href="http://www.sacbee.com/kindle/">Kindle</a></li>
+        <li><a href="http://search.barnesandnoble.com/The-Sacramento-Bee/The-McClatchy-Company/e/2940000984826?itm=5&amp;USRI=the%2Bmcclatchy%2Bcompany">NOOK Version</a></li>
+        <li><a href="http://www.kobobooks.com/subscriptions/The-Sacramento-Bee/soixbaizo0-zw1Pqqa3EUw.html">Kobo</a></li>
+        <li><a href="http://www.sacbee.com/help">Help</a></li>
+				<li><a href="http://www.sacbee.com/archives/">Archives</a></li>
+				<li><a href="http://www.sacbee.com/contact/">Contact us</a></li>
+			</ul>
+		</div></li>
+
+		<li><a href="http://www.sacbee.com/contact/">Site Feedback</a></li>
+    <li class="last"><a href="http://www.sacbee.com/in-print/">In Today's Paper</a></li>
+
+		<li class="last right">
+			<a href="http://www.sacbee.com/plus#navlink=toppromo">
+				<img style="text-decoration: none;" src="http://www.sacbee.com/static/live/ads/circ/weekendplus/papericon.png" height="15" width="31">
+			</a>
+			<a href="http://www.sacbee.com/plus#navlink=toppromo">
+				Subscribe to The Bee TODAY
+			</a>
+		</li>
+	</ul>
+
+	<script type="text/javascript">
+		Sacbee.enable_readerservices_menus();
+	</script>
+</div><!-- /#usertools -->
+
+    <div id="header">
+        
+
+
+
+       	
+
+
+<div id="branding"><h1><a href="http://www.sacbee.com/"><img src="http://media.sacbee.com/static/img/sacramento-bee-sm.png" alt="sacbee.com"></a>
+<span id="pagename">Plus</span>
+</h1></div>
+<!--& /shared/ads/national/ntl1.comp &-->
+
+        
+
+
+
+       	  
+<div id="main-navbar">
+	<ul>
+		<li id="nav-news" class="topnav default_active active"><a href="http://www.sacbee.com/#navlink=navbar">News</a>
+			<ul class="subnav active">
+				<li class="first"><a href="http://www.sacbee.com/business/#navlink=navdrop">Business</a></li>
+				<li><a href="http://www.sacbee.com/local/#navlink=navdrop">Local</a></li>
+				<li><a href="http://www.sacbee.com/crime/#navlink=navdrop">Crime</a></li>
+				<li><a href="http://www.sacbee.com/obituaries/#navlink=navdrop">Obituaries</a></li>
+				<li><a href="http://www.sacbee.com/weather/#navlink=navdrop">Weather</a></li>
+				<li><a href="http://www.sacbee.com/datacenter/#navlink=navdrop">Data&nbsp;Center</a></li>
+				<li><a href="http://www.sacbee.com/investigations/#navlink=navdrop">Investigations</a></li>
+				<li><a href="http://www.sacbee.com/nationworld/#navlink=navdrop">Nation/World</a></li>
+				<li><a href="http://www.sacbee.com/multimedia/#navlink=navdrop">Photos</a></li>
+				<li class="last"><a href="http://www.sacbee.com/blogs/#navlink=navdrop">Blogs/Columnists</a></li>
+			</ul>
+			<ul class="subnav sponsor active">
+				<li>
+					<div class="rsponsorcontainer sponsortoyota" onclick="window.open('http://www.rosevilletoyota.com')">
+						<div class="rsponsorleft"></div>
+						<div class="rsponsorcenter">
+							<div class="rsponsorby">Sponsored By</div>
+							<div class="rsponsortext">ROSEVILLE&nbsp;TOYOTA</div>
+						</div>
+						<div class="rsponsorright"></div>
+					</div>
+				</li>
+			</ul>
+		</li>
+		<li id="nav-capital" class="topnav"><a href="http://www.sacbee.com/capitolandcalifornia/#navlink=navbar">Capitol&nbsp;&amp;&nbsp;California</a>
+			<ul class="subnav">
+				<li class="first"><a href="http://blogs.sacbee.com/capitolalertlatest/#navlink=navdrop">Capitol&nbsp;Alert</a></li>
+				<li><a href="http://blogs.sacbee.com/the_state_worker/#navlink=navdrop">State&nbsp;Workers</a></li>
+				<li><a href="http://www.sacbee.com/elections/#navlink=navdrop">Election 2012</a></li>
+				<li><a href="http://www.sacbee.com/politics/#navlink=navdrop">Politics</a></li>
+				<li><a href="http://www.sacbee.com/state/#navlink=navdrop">State&nbsp;News</a></li>
+				<li><a href="http://www.sacbee.com/jerrybrown/#navlink=navdrop">Jerry Brown</a></li>
+				<li><a href="http://www.sacbee.com/marijuana/#navlink=navdrop">Marijuana</a></li>
+				<li><a href="http://www.sacbee.com/budget/#navlink=navdrop">Budget</a></li>
+				<li><a href="http://www.sacbee.com/prop8/#navlink=navdrop">Prop&nbsp;8</a></li>
+				<li class="last"><a href="http://www.sacbee.com/blogs/#navlink=navdrop">Blogs/Columnists</a></li>
+			</ul>
+			<ul class="subnav sponsor">
+				<li>
+					<div class="rsponsorcontainer sponsorCCUL" onclick="window.open('http://advocacy.ccul.org/')">
+						<div class="rsponsorleft"></div>
+						<div class="rsponsorcenter">
+							<div class="rsponsorby">Sponsored By</div>
+							<div class="rsponsortext">California&nbsp;Credit&nbsp;Union&nbsp;League</div>
+						</div>
+						<div class="rsponsorright"></div>
+					</div>
+				</li>
+			</ul>
+		</li>
+		<li id="nav-region" class="topnav"><a href="http://www.sacbee.com/ourregion/#navlink=navbar">Our&nbsp;Region</a>
+			<ul class="subnav">
+				<li class="first"><a href="http://www.sacbee.com/business/#navlink=navdrop">Business</a></li>
+				<li><a href="http://blogs.sacbee.com/crime/#navlink=navdrop">Sacto 911</a></li>
+				<li><a href="http://www.sacbee.com/arrestlogs/#navlink=navdrop">Arrest&nbsp;Logs</a></li>
+				<li><a href="http://blogs.sacbee.com/city-beat/#navlink=navdrop">City Beat</a></li>
+				<li><a href="http://www.sacbee.com/trafficnews/#navlink=navdrop">Transportation</a></li>
+				<li><a href="http://www.sacbee.com/medical/#navlink=navdrop">Medical</a></li>
+				<li><a href="http://www.sacbee.com/realestatenews/#navlink=navdrop">Real&nbsp;Estate</a></li>
+				<li><a href="http://www.sacbee.com/community/#navlink=navdrop">Our&nbsp;Towns</a></li>
+				<li><a href="http://www.sacbee.com/education/#navlink=navdrop">Education</a></li>
+				<li><a href="http://www.sacbee.com/environment/#navlink=navdrop">Environment</a></li>
+				<li class="last"><a href="http://www.sacbee.com/religion/#navlink=navdrop">Religion</a></li>
+			</ul>
+			<ul class="subnav sponsor">
+				<li>
+					<div class="rsponsorcontainer sponsortoyota" onclick="window.open('http://www.folsomlaketoyota.com')">
+						<div class="rsponsorleft"></div>
+						<div class="rsponsorcenter">
+							<div class="rsponsorby">Sponsored By</div>
+							<div class="rsponsortext">Roseville Toyota</div>
+						</div>
+						<div class="rsponsorright"></div>
+					</div>
+				</li>
+			</ul>
+		</li>
+		<li id="nav-sports" class="topnav"><a href="http://www.sacbee.com/sports/#navlink=navbar">Sports</a>
+			<ul class="subnav">
+				<li class="first"><a href="http://www.sacbee.com/kings/#navlink=navdrop">Kings/NBA</a></li>
+				<li><a href="http://www.sacbee.com/sf49ers/#navlink=navdrop">49ers</a></li>
+				<li><a href="http://www.sacbee.com/raiders/#navlink=navdrop">Raiders</a></li>
+				<li><a href="http://www.sacbee.com/preps/#navlink=navdrop">High&nbsp;Schools</a></li>
+				<li><a href="http://www.sacbee.com/collegesports/#navlink=navdrop">Colleges</a></li>
+				<li><a href="http://www.sacbee.com/mlb/#navlink=navdrop">A's/Giants</a></li>
+				<li><a href="http://www.sacbee.com/rivercats/#navlink=navdrop">River&nbsp;Cats</a></li>
+				<li><a href="http://www.sacbee.com/ufl/#navlink=navdrop">UFL</a></li>
+				<li><a href="http://www.sacbee.com/golf/#navlink=navdrop">Golf</a></li>
+				<li><a href="http://www.sacbee.com/fishingline/#navlink=navdrop">Fishing&nbsp;Line</a></li>
+				<li class="last"><a href="http://www.sacbee.com/blogs/#navlink=navdrop">Blogs/Columnists</a></li>
+			</ul>
+			<ul class="subnav sponsor">
+				<li>
+					<div class="rsponsorcontainer sponsorsullivan" onclick="window.open('http://www.johnlsullivanchevrolet.com/')">
+						<div class="rsponsorleft"></div>
+						<div class="rsponsorcenter">
+							<div class="rsponsorby">Sponsored By</div>
+							<div class="rsponsortext">JOHN&nbsp;L.&nbsp;SULLIVAN&nbsp;CHEVROLET</div>
+						</div>
+						<div class="rsponsorright"></div>
+					</div>
+				</li>
+			</ul>
+		</li>
+		<li id="nav-livinghere" class="topnav"><a href="http://www.sacbee.com/livinghere/#navlink=navbar">Living&nbsp;Here</a>
+			<ul class="subnav">
+				<li class="first"><a href="http://www.sacbee.com/sacmomsclub/#navlink=navdrop">Moms&nbsp;&amp;&nbsp;Family</a></li>
+				<li><a href="http://www.sacbee.com/sacpaws/#navlink=navdrop">Pets</a></li>
+				<li><a href="http://blogs.sacbee.com/dining/#navlink=navdrop">Appetizers</a></li>
+				<li><a href="http://www.sacbee.com/foodwine/#navlink=navdrop">Food&nbsp;&amp;&nbsp;Wine</a></li>
+				<li><a href="http://www.sacbee.com/home_garden/#navlink=navdrop">Home&nbsp;&amp;&nbsp;Garden</a></li>
+				<li><a href="http://www.sacbee.com/outbound/#navlink=navdrop">Outdoors</a></li>
+				<li><a href="http://www.sacbee.com/healthfitness/#navlink=navdrop">Health&nbsp;&amp;&nbsp;Fitness</a></li>
+				<li><a href="http://www.sacbee.com/books/#navlink=navdrop">Books&nbsp;&amp;&nbsp;Media</a></li>
+				<li><a href="http://www.sacbee.com/travel/#navlink=navdrop">Travel</a></li>
+				<li class="last"><a href="http://www.sacbee.com/fun/#navlink=navdrop">Comics&nbsp;&amp;&nbsp;Games</a></li>
+			</ul>
+			<ul class="subnav sponsor">
+				<li>
+					<div class="rsponsorcontainer sponsorsutter" onclick="window.open('http://www.checksutterfirst.org/')">
+						<div class="rsponsorleft"></div>
+						<div class="rsponsorcenter">
+							<div class="rsponsorby">Sponsored By</div>
+							<div class="rsponsortext">Sutter&nbsp;Health</div>
+						</div>
+						<div class="rsponsorright"></div>
+					</div>
+				</li>
+			</ul>
+		</li>
+		<li id="nav-entertainment" class="topnav"><a href="http://www.sacbee.com/entertainment/#navlink=navbar">Entertainment</a>
+			<ul class="subnav">
+				<li class="first"><a href="http://events.sacbee.com/#navlink=navdrop">Events</a></li>
+				<li><a href="http://www.sacbee.com/movienews/#navlink=navdrop">Movies</a></li>
+				<li><a href="http://events.sacbee.com/restaurants#navlink=navdrop">Dining</a></li>
+				<li><a href="http://blogs.sacbee.com/ticket/#navlink=navdrop">Things to Do</a></li>
+				<li><a href="http://www.sacbee.com/fun/#navlink=navdrop">Comics&nbsp;&amp;&nbsp;Games</a></li>
+				<li><a href="http://www.sacbee.com/tvlistings/story/938402.html#navlink=navdrop">TV&nbsp;Listings</a></li>
+				<li><a href="http://www.sacbee.com/travel/#navlink=navdrop">Travel</a></li>
+				<li><a href="http://www.sacbee.com/books/#navlink=navdrop">Books&nbsp;&amp;&nbsp;Media</a></li>
+				<li><a href="http://www.sacbee.com/music/#navlink=navdrop">Music</a></li>
+				<li><a href="http://www.sacbee.com/onstage/#navlink=navdrop">Theater&nbsp;&amp;&nbsp;Art</a></li>
+                <li><a href="http://www.sacbee.com/beebuzzpoints/#navlink=navdrop">Bee&nbsp;Buzz&nbsp;Points</a></li>
+				<li class="last"><a href="http://www.sacbee.com/1446/#navlink=navdrop">Horoscopes</a></li>
+			</ul>
+			<ul class="subnav sponsor">
+				<li>
+					<!--
+					<div class="rsponsorcontainer sponsorsullivan" onclick="window.open('http://www.johnlsullivanchevrolet.com/')">
+						<div class="rsponsorleft"></div>
+						<div class="rsponsorcenter">
+							<div class="rsponsorby">Sponsored By</div>
+							<div class="rsponsortext">JOHN&nbsp;L.&nbsp;SULLIVAN&nbsp;CHEVROLET</div>
+						</div>
+						<div class="rsponsorright"></div>
+					</div>
+					-->
+				</li>
+			</ul>
+		</li>
+		<li id="nav-opinion" class="topnav"><a href="http://www.sacbee.com/opinion/#navlink=navbar">Opinion</a>
+			<ul class="subnav">
+				<li class="first"><a href="http://www.sacbee.com/editorials/#navlink=navdrop">Editorials</a></li>
+				<li><a href="http://www.sacbee.com/ohman/#navlink=navdrop">Ohman Cartoons</a></li>
+				<li><a href="http://www.sacbee.com/letterstoeditor/#navlink=navdrop">Letters&nbsp;to&nbsp;the&nbsp;Editor</a></li>
+				<li><a href="http://www.sacbee.com/morain/#navlink=navdrop">Dan Morain</a></li>
+				<li><a href="http://www.sacbee.com/viewpoints/#navlink=navdrop">Viewpoints</a></li>
+				<li><a href="http://www.sacbee.com/swarm/#navlink=navdrop">The&nbsp;Swarm</a></li>
+				<li><a href="http://www.sacbee.com/californiaforum/#navlink=navdrop">California&nbsp;Forum</a></li>
+				<li class="last"><a href="http://www.sacbee.com/2010/07/28/2921849/meet-the-bees-editorial-board.html#navlink=navdrop">Editorial&nbsp;Board</a></li>
+			</ul>
+			<ul class="subnav sponsor">
+				<li></li>
+			</ul>
+		</li>
+		<li id="nav-cars" class="topnav right"><a href="http://www.sacbee.com/cars/#navlink=navbar">Cars</a>
+			<ul class="subnav">
+				<li class="first"><a href="http://shopping.sacbee.com/ROP/Subcat.aspx?cat=3330&amp;subcat=3379#navlink=navdrop">Bee&nbsp;Auto&nbsp;Ads</a></li>
+				<li><a href="http://www.sacbee.com/sacautoshow/#navlink=navdrop">Auto Show</a></li>
+				<li><a href="http://www.sacbee.com/cars/#navlink=navdrop">Buy/Sell</a></li>
+				<li><a href="http://www.cars.com/go/crp/index.jsp;?aff=sacbee#navlink=navdrop">Research</a></li>
+				<li><a href="http://www.cars.com/go/advice/index.jsp;?aff=sacbee#navlink=navdrop">Shopping&nbsp;Advice</a></li>
+				<li><a href="http://www.sacbee.com/trafficnews/#navlink=navdrop">Transportation&nbsp;News</a></li>
+				<li class="last"><a href="http://www.cars.com/go/photogalleries/index.jsp;?aff=sacbee#navlink=navdrop">Car&nbsp;Photos/Videos</a></li>
+			</ul>
+			<ul class="subnav sponsor">
+				<li></li>
+			</ul>
+		</li>
+		<li id="nav-jobs" class="topnav right"><a href="http://www.sacbee.com/jobs/#navlink=navbar">Jobs</a>
+			<ul class="subnav">
+				<li class="first"><a href="http://www.sacbee.com/1078/#navlink=navdrop">Healthcare/Social&nbsp;Service&nbsp;Careers</a></li>
+				<li><a href="http://www.virtualcareerevent.com/sacbee">Career&nbsp;Fairs&nbsp;and&nbsp;Events</a></li>
+				<li><a href="http://www.careerbuilder.com/share/login.aspx?lr=cbmc_sb&amp;siteid=mc_sbmyc_1#navlink=navdrop">Post&nbsp;a&nbsp;Resume</a></li>
+				<li><a href="http://www.careerbuilder.com/jobseeker/companies/companysearch.aspx?lr=cbmc_sb&amp;siteid=mc_sbcatg_1#navlink=navdrop">Who's&nbsp;Hiring</a></li>
+				<li><a href="http://www.careerbuilder.com/JobPoster/Products/PostJobsInfo.aspx?lr=cbmc_sb#navlink=navdrop">Employer&nbsp;Resources</a></li>
+				<li class="last"><a href="http://www.sacbee.com/classified-ads/#navlink=navdrop">Search&nbsp;Classifieds</a></li>
+			</ul>
+			<ul class="subnav sponsor">
+				<li></li>
+			</ul>
+		</li>
+		<li id="nav-homes" class="topnav right"><a href="http://www.sacbee.com/homes/#navlink=navbar">Homes</a>
+			<ul class="subnav">
+				<li class="first"><a href="http://www.sacbee.com/classified-ads/category/Rentals/#navlink=navdrop">Classified&nbsp;Rentals</a></li>
+        <li><a href="http://www.sacbee.com/classified-ads/category/Real+Estate/#navlink=navdrop">Classified&nbsp;Home&nbsp;Sales</a></li>
+				<li><a href="http://www.homefinder.com/CA/Sacramento/#navlink=navdrop">Homefinder.com</a></li>
+				<li><a href="http://www.sacbee.com/rentals/#navlink=navdrop">Apartments.com</a></li>
+				<li><a href="http://www.cityfeet.com/sacramento/#navlink=navdrop">Commercial&nbsp;Real&nbsp;Estate</a></li>
+				<li class="last"><a href="http://www.sacbee.com/community/#navlink=navdrop">Community&nbsp;News</a></li>
+			</ul>
+			<ul class="subnav sponsor">
+				<li></li>
+			</ul>
+		</li>
+		<li id="nav-classifieds" class="topnav right"><a href="http://www.sacbee.com/adperfect/#navlink=navbar">Classifieds</a>
+			<ul class="subnav">
+				<li class="first"><a href="http://www.sacbee.com/classified-ads/Obituaries+%26+In+Memoriams/classification/In+Memoriams?&amp;sort=is_featured_b%20desc%2Cpublish_date_l%20desc#navlink=navdrop">In&nbsp;Memoriams</a></li>
+				<li><a href="http://www.sacbee.com/garage-sales-kit/#navlink=navdrop">Garage&nbsp;Sale&nbsp;Kit</a></li>
+				<li><a href="http://www.legalnotice.org/pl/sacbee/landing1.aspx#navlink=navdrop">Legal&nbsp;Notices</a></li>
+				<li class="last"><a href="http://www.sacbee.com/placead/#navlink=navdrop">Place&nbsp;a&nbsp;classified&nbsp;ad</a></li>
+			</ul>
+			<ul class="subnav sponsor">
+				<li></li>
+			</ul>
+		</li>
+		<li id="nav-shopping" class="topnav right last"><a href="http://findnsave.sacbee.com/#navlink=navbar"><img src="http://media.sacbee.com/static/images/ads/find_n_save_80x26_nav_ad.gif" height="26" width="80" border="0"></a>
+			<ul class="subnav">
+      <li class="first"><a href="http://findnsave.sacbee.com/#navlink=navdrop">Find&nbsp;n&nbsp;Save</a></li>
+      	<li><a href="http://sacramento.dealsaver.com/#navlink=navdrop">Dealsaver</a></li>
+				<li><a href="http://findnsave.sacbee.com/Daily-Deal/#navlink=navdrop">Daily&nbsp;Deal</a></li>
+				<li><a href="http://findnsave.sacbee.com/Coupons/#navlink=navdrop">Local&nbsp;Coupons</a></li>
+				<li><a href="http://findnsave.sacbee.com/Local-Ads/#navlink=navdrop">Local&nbsp;Ads</a></li>
+				<li class="last"><a href="http://www.sacbee.com/golfcard/#navlink=navdrop">Golf&nbsp;Card</a></li>
+			</ul>
+			<ul class="subnav sponsor">
+				<li></li>
+			</ul>
+		</li>
+		<li id="nav-ad" class="topnav right last">
+          <!-- start: nav ad -->
+ 
+ 
+ <!-- section ads not active --> _ 
+
+ 
+
+          <!-- end: nav ad -->
+
+			<ul class="subnav">
+			</ul>
+			<ul class="subnav sponsor">
+				<li></li>
+			</ul>
+		</li>
+	</ul>
+</div>
+
+<script type="text/javascript">
+	Sacbee.enable_navbar('main-navbar', 'nav-news', '');
+</script>
+
+
+ 
+
+        <div id="headerdate">Saturday, May 4, 2013</div><!-- #headerdate -->
+        <script type="text/javascript">
+  $(document).ready(function() {
+     var sbMiNow = new Date();
+     var sbMiDayOfWeek = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday")
+     var sbMiMonth = new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+     var sbMiDateString = sbMiDayOfWeek[sbMiNow.getDay()] +", " + sbMiMonth[sbMiNow.getMonth()] + " " + sbMiNow.getDate() + ", " + sbMiNow.getFullYear();
+        $("#headerdate").html(sbMiDateString);
+  });
+
+</script>
+        
+
+
+
+       	 <div id="headersearch">
+	<form method="get" action="/search_results" name="miSearchForm">
+		<div class="searchmain">
+			<input value="" name="q" id="q" type="text">
+			<div class="button button-search"><button type="submit"><img src="http://media.sacbee.com/static/img/searchbutton.png" alt="SEARCH"></button></div>
+			<div class="controller"><span><img src="http://media.sacbee.com/static/img/button-search-close.gif" alt="close"></span></div>
+			<span id="mi_yahoo_preamble">Web Search powered by </span><span class="yahoo">YAHOO!</span> <span id="mi_yahoo_post">SEARCH</span>
+		</div>
+		<div class="searchdropdown">
+			<input name="aff" value="1100" checked="checked" id="uber1" type="radio"> <label for="uber1">sacbee.com</label>
+			<input name="aff" value="web_search" id="search_web" type="radio"> <label for="uber2">Web</label>
+		</div>
+               <span id="searchInputContainer"></span>
+	</form>
+	<script type="text/javascript">
+                 mi.search.searchParamConfig();
+                 mi.search.checkOption();
+ 	         document.miSearchForm.onsubmit = function () {
+ 	                 return mi.search.submitForm();
+  		 }
+  		 Sacbee.enable_searchbox();
+	</script>
+
+
+</div><!-- /#headersearch -->
+ 
+        
+
+
+       	<div id="weathertraffic">
+	<a href="http://www.sacbee.com/weather/" class="weather">Weather</a> | <a href="http://www.sacbee.com/traffic/" class="traffic">Traffic</a>
+	<img src="http://media.sacbee.com/static/img/weather-sunny.gif" alt="Clear">
+	<div class="temperature">68° F</div>
+</div><!-- /#weathertraffic -->
+
+
+    </div><!-- #header -->
+    <div class="tier">
+        <div class="content">
+            
+ 
+
+<script src="http://s.ppjol.net/pp.js" type="text/javascript" id="paywallCodeA">{'zone':'IZneHzVPoZBDo0VWJVsJST','mode':'universal','debug':0}</script><script type="text/javascript" src="/static/scripts/paywall_always_on.js" id="scriptPaywallActive"></script>
+<!--<link href="http://www.sacbee.com/static/plus/subscription.css" rel="stylesheet" type="text/css"> -->
+<style type="text/css">
+.subscription {
+	padding:0 0 10px 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	margin-left:50px;
+	margin-right:50px;
+}
+.content-left {
+	width:890px;
+	float:left;
+	margin:0 20px 10px 0;
+}
+.subscription p {
+	font-size:14px;
+}
+.subscription p.fine-print {
+	font-size:12px;
+	padding-bottom:15px;
+	margin-bottom:15px;
+}
+.sub-header h1.header {
+	margin-bottom:20px;
+}
+.sub-header h2.kicker {
+	color:#022e75;
+	font-size:18px;
+	font-weight:normal;
+	line-height:24px;
+}
+#subscribe {
+	width:880px;
+	height:80px;
+}
+#offer1 {
+	float:left;
+	margin-left:50px;
+	padding-top:10px;
+	height:100px;
+}
+#offer2 {
+	float:right;
+	margin-right:40px;
+	padding-top:10px;
+}
+#packages {
+	width:900px;
+	margin-top:-10px;
+}
+.left {
+	display: block;
+	float:left;
+	width:160px;
+	height:175px;
+	margin:10px 50px 10px 60px;
+	padding:10px;
+	font-size:14px;
+}
+.left a {
+	color:#000;
+	text-decoration:underline;
+}
+.myButton {
+	-moz-box-shadow: 0px 1px 0px 0px #f0f7fa;
+	-webkit-box-shadow: 0px 1px 0px 0px #f0f7fa;
+	box-shadow: 0px 1px 0px 0px #f0f7fa;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #5ea3d1), color-stop(1, #019ad2));
+	background:-moz-linear-gradient(top, #5ea3d1 5%, #019ad2 100%);
+	background:-webkit-linear-gradient(top, #5ea3d1 5%, #019ad2 100%);
+	background:-o-linear-gradient(top, #5ea3d1 5%, #019ad2 100%);
+	background:-ms-linear-gradient(top, #5ea3d1 5%, #019ad2 100%);
+	background:linear-gradient(to bottom, #5ea3d1 5%, #019ad2 100%);
+ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5ea3d1', endColorstr='#019ad2', GradientType=0);
+	background-color:#5ea3d1;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #057fd0;
+	display:inline-block;
+	color:#ffffff !important;
+	font-family:arial;
+	font-size:16px;
+	font-weight:bold;
+	padding:20px 40px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #5b6178;
+}
+.myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #019ad2), color-stop(1, #5ea3d1));
+	background:-moz-linear-gradient(top, #019ad2 5%, #5ea3d1 100%);
+	background:-webkit-linear-gradient(top, #019ad2 5%, #5ea3d1 100%);
+	background:-o-linear-gradient(top, #019ad2 5%, #5ea3d1 100%);
+	background:-ms-linear-gradient(top, #019ad2 5%, #5ea3d1 100%);
+	background:linear-gradient(to bottom, #019ad2 5%, #5ea3d1 100%);
+ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#019ad2', endColorstr='#5ea3d1', GradientType=0);
+	background-color:#019ad2;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+.help {
+	color: #5EA3D1;
+}
+</style>
+<div class="subscription">
+  <div class="content-left">
+    <div class="sub-header">
+      <h1 class="header"><img src="http://www.sacbee.com/static/plus/images/sub-logo.jpg" alt="The Sacramento Bee"></h1>
+      <h2 class="kicker">All the local news and information you want.<br>
+        All the ways you want it.</h2>
+    </div>
+    <p>Now  you can read The Sacramento Bee just the way you like; in print, mobile and  online every day! The Sacramento Bee  +PLUS includes both print and digital subscriptions to keep you connected with  the best local news and information wherever you are!</p>
+    <p>It's easy. Just follow the link below to  activate, sign in, or sign-up for a new +PLUS package that's just right for you.</p>
+    <p>&nbsp;</p>
+    <p style="font-weight:bold; color:#039; font-size:16px">Current Subscribers</p>
+    <div id="subscribe" align="center">
+      <div id="offer1"><a href="#" onclick="$.pressplus.f.pop('plans');" class="myButton">First time +PLUS account activation</a><br>
+        <br>
+        <a href="http://www.sacbee.com/plushelp/"><span class="help">Just follow these easy step by step instructions.</span></a></div>
+      <div id="offer2"><a href="#" onclick="$.pressplus.f.pop('login');" class="myButton"> Sign into your +PLUS account.</a></div>
+    </div>
+    <div style="clear:both; margin-top:40px;"></div>
+    <p style="font-weight:bold; color:#039; font-size:16px">New Subcribers - Available Packages</p>
+    <div id="packages">
+      <div class="left" align="center"> <br>
+        <a href="https://circulationportal.sacbee.com/sbeedition/subscribe/subscribe.cgi?promocode=SACBEE2&amp;ordertype=HYBPRINT"><img src="http://www.sacbee.com/static/plus/images/print_dig_tn.png" height="104" width="137" border="0"><br>
+        <br>
+        Print &amp; Digital<br>
+        from $3.38/week</a></div>
+      <div class="left" align="center"> <br>
+        <a href="#" onclick="$.pressplus.f.pop('plans');"><img src="http://www.sacbee.com/static/plus/images/dig_tn.png" height="104" width="137" border="0"><br>
+        <br>
+        Digital Only<br>
+        from 99¢/month</a></div>
+      <div class="left" align="center"> <br>
+        <a href="https://circulationportal.sacbee.com/sbeedition/subscribe/subscribe.cgi?promocode=SACBHOME&amp;ordertype=PRINT"><img src="http://www.sacbee.com/static/plus/images/print_tn.png" height="104" width="137" border="0"><br>
+        <br>
+        Print Only<br>
+        from $3.00/week</a></div>
+      <div style="clear:both"></div>
+    </div>
+    <div style="clear:both"></div>
+    <div style="margin-top:10px;"></div>
+    <p class="fine-print">The digital subscription includes unlimited access to sacbee.com, mobile website, our
+      smartphone apps, iPad app, and The Bee's e-Edition (the exact replica of the daily paper available on PC,
+      MAC, iPad, iPhone, Android, Blackberry and most tablets). Smartphone apps are not supported
+      on all devices. Does not include Kindle, Kobo, Nook or iTunes e-reader editions. Prices shown are
+      in U.S. dollars. Other restrictions apply.</p>
+  </div>
+  <div>
+    <div style="clear:both"></div>
+    <h3>More Information</h3>
+    <a href="http://www.sacbee.com/2012/08/24/4755180/the-sacramento-bee-plus-faq.html" style="font-size:14px; color:#039; font-weight:bold">FAQ</a> | <a href="http://www.sacbee.com/2012/09/05/4787809/to-our-readers.html" style="font-size:14px; color:#039; font-weight:bold">EDITOR'S NOTE</a> </div>
+  <div style="clear:both"></div>
+</div> 
+            
+            
+    <div id="left_column" class="full_column grid-ab">
+                
+
+        <div class="full_column">
+                    
+                    
+        <!--/div>
+        <div class="grid-ab" -->
+            
+
+
+
+	 <!-- remove ad --> 
+
+        </div>
+    </div><!-- left_column -->
+    <div id="center_column" class="full_columnx">
+                
+        <div class="full-columnx">
+                    
+                    
+        </div><!-- grid-cd -->
+    </div><!-- center_column -->
+
+ 
+	 
+
+
+
+ 
+ 
+
+        </div><!-- .content -->
+
+    </div><!-- .tier -->
+    <div class="tier">
+        
+
+
+
+       	
+
+    </div><!-- .full .tier -->
+    <div class="lower tier"> 
+        <div class="fulltier clearfix">
+            
+
+
+
+       	
+
+            
+
+
+
+       	<!-- -->
+
+        </div><!-- fulltier clearfix -->
+    </div><!-- .lower .tier -->
+    
+    <div class="lower tier">
+        <div class="center">
+              <script type="text/javascript">
+<!--
+//Required Parameters
+    ctxt_ad_config = '1001507650';     //unique numeric partner id
+    ctxt_ad_source = 'npc_mcclatchy_sacramentobee_t2_ctxt';     //provided by Account Manager
+    ctxt_ad_interface = 'http://cm.npc-mcclatchy.overture.com/js_1_0/';     
+    ctxt_ad_width = 728;     //width of the displayed ad block
+    ctxt_ad_height = 90;     //height of the displayed ad block
+
+    
+//Context Parameters
+    ctxt_ad_url = window.location.href.split('?')[0].split('#')[0];     //context URL
+    ctxt_ad_url_cat = 'news';     //fallback category name
+    ctxt_ad_id = 'news';     //context ID name
+    ctxt_ad_keywords = '';     //keywords (URL safe values only)
+    ctxt_ad_oe = 'latin1';     //output character encoding
+                  
+//Type Tag
+    ctxt_ad_type = 'news';     //tag for reports--can be ctxt_ad_section
+//Click Wrapper
+    ctxt_ad_cw = '';     //click wrapper URL
+//Display Parameters
+    //ctxt_ad_bc = '000000';     //cell border color
+    //ctxt_ad_cc = 'ffffff';     //cell background color
+    //ctxt_ad_lc = '000000';     //ad text-title color
+    //ctxt_ad_tc = 'a3a3a3';     //ad text-description color
+    //ctxt_ad_uc = 'a3a3a3';    //ad text-sitehost color
+    ctxt_ad_css = 'http://static.mcclatchyinteractive.com/static/styles/mi/third_party/yahoo/yahoo.css';     //stylesheet URL--can be ctxt_url_css
+    ctxt_ad_newwin = '1';     //new window for results
+-->
+</script>
+
+ <script type="text/javascript">
+<!--
+//Required Parameters
+    ctxt_ad_config = '1001507650';     //unique numeric partner id
+    ctxt_ad_source = 'npc_mcclatchy_sacramentobee_t2_ctxt';     //provided by Account Manager
+
+//Context Parameters
+    ctxt_ad_url_cat = 'misc';     //fallback chategory name
+    ctxt_ad_id = 'misc';     //contect ID name
+                  
+//Type Tag
+    ctxt_ad_type = 'misc';     //tag for reports--can be ctxt_ad_section
+-->
+</script>
+<!-- script -->
+         </div>
+    </div><!-- .lower .tier -->
+
+    <div class="lower partner tier">
+        
+
+
+
+       	<div class="ads">
+<a href="http://www.sacramentoconnect.com/"><img src="http://media.sacbee.com/static/img/partner_tiles/sacconnectbeta_150x50.png" alt="Sacramentoconnect.com" style="margin:2px 2px 2px 2px" border="0"></a>
+<a href="http://www.sacwineregion.com"><img src="http://media.sacbee.com/static/img/partner_tiles/sacwineregion_150x50.png" alt="SacWineRegion.com" style="margin:2px 2px 2px 2px" border="0"></a>
+<a href="http://www.sacmomsclub.com"><img src="http://media.sacbee.com/static/img/partner_tiles/newsacmomsclub_150x50.png" alt="SacMomsclub.com" style="margin:2px 2px 2px 2px" border="0"></a>
+<a href="http://www.sacpaws.com"><img src="http://media.sacbee.com/static/img/partner_tiles/sacpaws2_150x50.png" alt="SacPaws.com" style="margin:2px 2px 2px 2px" border="0"></a>
+<a href="http://www.sacbee.com/beebuzzpoints"><img src="http://media.sacbee.com/static/img/partner_tiles/beebuzzpoints_60x50.png" alt="BeeBuzz Points" style="margin:2px 2px 2px 2px" border="0"></a>
+<a href="http://findnsave.sacbee.com"><img src="http://media.sacbee.com/static/img/partner_tiles/findnsave_150x50.png" alt="Find n Save" style="margin:2px 2px 2px 2px" border="0"></a></div>
+
+
+    </div><!-- .lower .partner .tier -->
+        
+    <!-- .lower .tier -->
+    <div id="footer" class="tier">
+         
+
+
+
+	 
+	<div class="cols clearfix">
+	<div class="col1">
+		<h6><a href="http://www.sacbee.com/contact/">Contact Us</a></h6>
+		<ul class="links">
+			<li><a href="http://www.sacbee.com/contact/">Site Feedback</a></li>
+			<li><a href="http://guide.sacbee.com/105/story/20.html">Corrections</a></li>
+			<li><a href="http://www.sacbee.com/326/story/19629.html">Letters to the Editor</a></li>
+			<li><a href="http://guide.sacbee.com/106/index.html">Bee Jobs</a></li>
+      <li class="last"><a href="http://www.sacbee.com/plus#navlink=footerpromo">Subscribe to The Bee</a></li>
+		</ul>
+	</div><!-- /.col1 -->
+	<div class="col2">
+		<h6>Share Content</h6>
+		<ul class="links">
+			<li><a href="http://videos.sacbee.com/">Share your pictures</a></li>
+			<li><a href="http://videos.sacbee.com/">Share your videos</a></li>
+			<li class="last"><a href="http://guide.sacbee.com/105/story/177.html">News tips</a></li>
+		</ul>
+	</div><!-- /.col2 --> 
+	<div class="col3">
+		<h6><a href="http://www.sacbee.com/advertise/">Advertise With Us</a></h6>
+		<ul class="links">
+			<li><a href="http://www.sacbee.com/placead/">Place a real estate or rental ad</a></li>
+			<li><a href="http://sacramentobee.adperfect.com/">Place a Legal Notice ad</a></li>
+			<li><a href="http://www.sacbee.com/static/live/ads/mediakit/">Place an online ad</a></li>
+			<li class="last"><a href="http://www.sacbee.com/static/live/marketing/images/Ad_site/site/g.htm">Place a newspaper ad</a></li>
+		</ul>
+	</div><!-- /.col3 -->
+	<div class="col4">
+		<h6>Online Extras</h6>
+		<ul class="links">
+			<li><a href="http://www.sacbee.com/email/">Newsletters &amp; Alerts</a></li>
+			<li><a href="http://www.sacbee.com/sbmobile/">Mobile</a></li>
+			<li><a href="http://www.sacbee.com/rss/">RSS Feeds</a></li>
+			<li class="last"><a href="http://guide.sacbee.com/118/story/16.html">Maps &amp; Directions</a></li>
+		</ul>
+	</div><!-- /.col4 -->
+</div><!-- /.cols -->
+<div id="mcclatchy">
+	<div class="links">
+		<ul>
+			<li>Copyright © The Sacramento Bee</li>
+			<li><a href="http://www.sacbee.com/terms-of-service/">Terms of Service</a></li>
+			<li><a href="http://www.sacbee.com/privacy-policy/">Privacy Policy</a></li>
+			<li><a href="http://www.sacbee.com/privacy-policy/#behavioral_targeting">About our ads</a></li>
+			<li><a href="http://www.sacbee.com/copyright/">Copyright</a></li>
+			<li><a href="http://guide.sacbee.com/">About The Sacramento Bee</a></li>
+			<li class="last"><a href="http://www.mcclatchy.com/100/story/179.html">About the McClatchy Company</a></li>
+		</ul>
+	</div>
+
+
+</div><!-- /#mcclatchy -->
+
+ 
+
+<a name="footanchor"></a><!-- /shared/footer.comp -->
+
+
+    </div><!-- #footer .tier -->
+  </div><!-- /.wrapper -->
+</div><!-- /#pagebody -->
+ 
+<!--
+<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src=\'" + gaJsHost + "google-analytics.com/ga.js\' type=\'text/javascript\'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+	try {
+		var pageTracker = _gat._getTracker("UA-2767905-6");
+		pageTracker._setDomainName(".sacbee.com");
+		pageTracker._trackPageview();
+	} catch(err) {}
+</script>
+-->
+ 
+
+
+
+       	<script type="text/javascript" src="http://media.sacbee.com/static/sacconnect/sacconnect-min.js"></script><script type="text/javascript" src="http://yui.yahooapis.com/combo?3.3.0/build/yui/yui-min.js&amp;3.3.0/build/loader/loader-min.js"></script>
+ 
+<div id="mistatstag" style="display:none;">        
+<!-- SiteCatalyst: McClatchy WorkBench Stats Tag v.1.0 -->
+
+<!-- site specific file already loaded -->
+<script language="JavaScript" type="text/javascript" src="http://media.sacbee.com/mistats/products/pubsys_s_code.js"></script><script type="text/javascript" src="http://media.sacbee.com/mistats/products/pubsys_s_code_20.3.js"></script>
+<script language="JavaScript" type="text/javascript">
+<!--
+measure_popularity=false;
+mistats.msr = 'sac|sacbee';
+mistats.cmsid='GUID: | Section: 1539';
+mistats.pagelevel='Section';
+mistats.pagename='Section: Plus';
+mistats.version='1.0|';
+mistats.taxonomy='Online|NewspaperServices|||';
+mistats.channel='Plus';
+
+
+
+
+
+
+
+
+
+
+
+
+
+-->
+</script>
+<script language="JavaScript" type="text/javascript" src="http://media.sacbee.com/mistats/products/pubsys.js"></script>
+<script language="JavaScript" type="text/javascript" src="http://media.sacbee.com/mistats/finalizestats.js"></script>
+<script type="text/javascript" src="http://edge.quantserve.com/quant.js"></script>
+
+<noscript><img src="http://mcclatchy.112.2O7.net/b/ss/nmsacramento%2F1%2FH.10--NS%2F0%3FpageName%3DSection%3A%20Plus&server%3Dwww.sacbee.com&channel%3DPlus&c1%3Dhttp%26%2358%3B%26%2347%3B%26%2347%3Bwww.sacbee.com%26%2347%3B1539%26%2347%3Bindex.html&c3%3DSection&c4%3D&c6%3Dsac%7Csacbee&c28%3D&h1%3DSAC%7CSACBEE%7COnline%7CNewspaperServices%7C%7C%7C%7CPlus" height="1" width="1" border="0" alt="" /></noscript>
+<!-- End SiteCatalyst: McClatchy WorkBench Stats Tag v.1.0 -->
+</div>
+ 
+<div id="MI_post_load" style="display:none;">
+
+
+
+<script type="text/javascript" src="http://init.lingospot.com/ls.js?key=3_Sacbee"></script><!--MI::Jumuishi::App::Aurora::PostProcessor::GPT#Source
+<script>
+
+  googletag.cmd.push(function() {
+
+
+    googletag.pubads().enableSingleRequest();
+    googletag.pubads().collapseEmptyDivs();
+
+    googletag.pubads().enableAsyncRendering();
+    googletag.enableServices();
+
+  });
+
+</script>
+-->
+
+</div>
+ 
+ 
+ 
+
+<script type="text/javascript">
+	myGadgetCom.template = document.getElementById("ComDiscTemplate").innerHTML;
+	myGadgetRec.template = document.getElementById("RecDiscTemplate").innerHTML;
+	myGadgetAva.userTemplate  = document.getElementById("userTemplate").innerHTML;
+	myGadgetAva.guestTemplate = document.getElementById("anonTemplate").innerHTML;
+
+	function pluckCallToAction() {requestBatch.BeginRequest(serverUrl, daapiCallback);};
+	new NYX.ieSafeExecution(pluckCallToAction).execute();
+</script>
+
+ 
+ 
+
+ 
+
+
+<iframe mi_ads="" style="width: 0px; height: 0px; position: absolute; left: -999em;" name="sciframe-sctoolbar" id="sciframe-sctoolbar"></iframe><div style="position: absolute ! important; top: -999px ! important; left: -999px ! important; border-width: 0px ! important; display: block ! important; height: auto ! important; margin: 0px ! important; max-height: none ! important; max-width: none ! important; min-height: 0px ! important; min-width: 0px ! important; padding: 0px ! important; text-indent: 0px ! important; width: auto ! important; word-spacing: normal ! important; font-size: 12px ! important; font-weight: normal ! important; font-family: Arial,Helvetica,sans-serif ! important; white-space: nowrap ! important;">Today's Deal</div><div style="display: none;"><div></div><div></div></div><div class="lingo_spot lingo_reset" style="display: none; width: 460px; height: 260px;" id="lingo_AEgY_15"><div class="lingo_triangle" id="lingo_AEgY_12"><div class="lingo_triangle_sw" id="lingo_AEgY_10">&nbsp;</div><div class="lingo_triangle_nw" id="lingo_AEgY_11">&nbsp;</div></div><div style="width: 426px; height: 220px;" class="lingo_mousebox" id="lingo_AEgY_14"><div style="width: 412px;" class="lingo_foreground" id="lingo_AEgY_13"><table class="lingo_textfield_ok" id="lingo_AEgY_9" width="100%" cellpadding="0" cellspacing="0"><tbody><tr><td class="lingo_header"><div style="width: 100%;height: 100%;"><div class="lingo_header_left"><div id="lingo_AEgY_2"><div class="lingo_logo" id="lingo_AEgY_1"><a title="Add Lingospot to your site or blog." href="http://www.lingospot.com/"></a></div></div><div class="lingo_search" style="display: none;" id="lingo_search"><form style="display: none;" id="lingo_AEgY_5" method="post" action="."><table class="lingo_textfield_20" cellpadding="0" cellspacing="0"><tbody><tr><td class="lingo_textfield_left"></td><td class="lingo_textfield_middle"><input id="lingo_AEgY_3" type="text"></td><td class="lingo_textfield_right" id="lingo_AEgY_4"><a title="Search" href="#"></a></td></tr></tbody></table></form></div><div class="lingo_button_search" style="display: none;" id="lingo_AEgY_6"><a title="Search" href="#"></a></div></div><div class="lingo_header_right"><div class="lingo_button_close" id="lingo_AEgY_7"><a title="Close Bubble" href="#"></a></div><div class="lingo_button_info" id="lingo_AEgY_8"><a title="About Lingospot &amp; Preferences" href="#"></a></div></div></div></td></tr><tr><td class="lingo_hr"></td></tr><tr><td><div id="lingo_AEgY_0"></div></td></tr></tbody></table></div></div><div class=" lingo_bubble"><div style="left: 0px; width: 90px; top: 0px; height: 61px;" class=" lingo_bubble_nw corner">&nbsp;</div><div style="left: 0px; width: 90px; top: 199px; height: 61px;" class=" lingo_bubble_sw corner">&nbsp;</div><div style="left: 370px; width: 90px; top: 0px; height: 61px;" class=" lingo_bubble_ne corner">&nbsp;</div><div style="left: 370px; width: 90px; top: 199px; height: 61px;" class=" lingo_bubble_se corner">&nbsp;</div><div style="left: 45px; width: 370px; top: 0px; height: 44px;" class=" lingo_bubble_n horizontal">&nbsp;</div><div style="left: 45px; width: 370px; top: 216px; height: 44px;" class=" lingo_bubble_s horizontal">&nbsp;</div><div style="left: 0px; width: 44px; top: 45px; height: 170px;" class=" lingo_bubble_w vertical">&nbsp;</div><div style="left: 416px; width: 44px; top: 45px; height: 170px;" class=" lingo_bubble_e vertical">&nbsp;</div><div style="left: 21px; width: 415px; top: 45px; height: 170px;" class=" lingo_bubble_c">&nbsp;</div><div style="left: 45px; width: 370px; top: 21px; height: 215px;" class=" lingo_bubble_c">&nbsp;</div></div></div><div class="lingo_info_box" style="display: none;" id="lingo_content_info">Lingospot searches the Web and brings you links and information related to a keyword, without leaving your current page. To perform your own searches, hold the ALT key and select the text.<b style="text-decoration: underline;">Preferences</b><form method="post" id="lingo_config_form" action="#"><table cellpadding="0" cellspacing="0"><tbody><tr><td class="lingo_config_option">Enable/Disable:</td><td><select id="lingo_config_lo"><option value="on">Enable Lingospot Links</option><option value="off_local">Disable Linogspot Links</option></select></td></tr><tr><td colspan="2" class="lingo_config_submit" style="text-align: right;"><input id="lingo_config_save" value="Save Preferences" type="submit"></td></tr></tbody></table></form></div><link href="//s.ppjol.net/css/pp.css" type="text/css" rel="stylesheet" media="screen"><script async="" type="text/javascript" src="//h.ppjol.com/hecate/hecate/nometer.json?z=IZneHzVPoZBDo0VWJVsJST&amp;cb=_cb_5AC85DC8B6403D46140A532EA7C96075CCAD"></script><script async="" type="text/javascript" src="//h.ppjol.com/hecate/cookie/write.json?cb=_cb_5B3C071089C6BB4D298ACE2FB7A2810BE6A1"></script></body>

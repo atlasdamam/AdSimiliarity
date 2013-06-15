@@ -1,0 +1,944 @@
+<!--SC-RGVW320--><head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<link rel="SHORTCUT ICON" href="//media.sc.easyjet.com/favicon.ico">
+    <title>Réservez des vols pas chers et trouvez des offres de dernière minute - easyJet.com </title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<link type="text/css" rel="Stylesheet" href="//media.sc.easyjet.com/ejcms/cache/Styles/main.min.20130412.css">
+	<!--[if IE 6]>
+		<link href="//media.sc.easyjet.com/ejcms/cache/styles/ie6.min.20130412.css" rel="stylesheet" />
+		<script defer type="text/javascript" src="//js.sc.easyjet.com/ejcms/cache/Scripts/pngFix.js"></script>
+	<![endif]-->
+	<!--[if IE 7]>
+		<link href="//media.sc.easyjet.com/ejcms/cache/styles/ie7.min.20130412.css" rel="stylesheet" />
+	<![endif]-->
+
+	<script async="" src="//res.levexis.com/clientfiles/v3/easyjet.js"></script><script src="http://www.google-analytics.com/ga.js" async="" type="text/javascript"></script><script type="text/javascript">
+var origin = 'CDG';var siteLang = 'fr-fr';var isHomePage = true;var cmsLang = 'fr-FR';var lsDateFormat = 'yy-mm-ddT00:00:00';var lsUrlDateFormat = 'yy-mm-dd';var fcDateFormat = 'yy-mm-ddT00:00:00';var cookies = {"origin":"odb*","search":"ej20SearchCookie","search_dom":".easyjet.com","flightConf":"FlightConfirmation","pers":"pdb*","inspire":"idb*","persDest":"dest","persSeg":"seg","persSegName":"name","persSegValue":"value","flightConfOrig":"OriginAirportCode","flightConfDest":"DestinationAirportCode","flightConfDate":"OutboundDate","flightConfRef":"BookingReference","flightConfAdults":"NumberOfAdults","flightConfChildren":"NumberOfChildren","flightConfInfants":"NumberOfInfants","langCookieName":"lang2012","campaign":"mdb*","campCodeProp":"c","campDateProp":"d","campDateFormat":"yy-mm-dd","ancil":[{"name":"TravelInsuranceConfirmation","ref":"BookingReference"},{"name":"CarHireConfirmation","ref":"BookingReference"},{"name":"HotelConfirmation","ref":"BookingReference"}]};var qss = {"PQs":"pdb*","dest":"d","flags":"f","IMQs":"im","CQs":"mdb*","campDateFormat":"yy-mm-dd","ppcQs":"ppc"};var gaAccount = 'UA-20704438-1';var getNearestAirport = true;var dateFormatSettings = {"dayNames":["dimanche","lundi","mardi","mercredi","jeudi","vendredi","samedi"],"dayNamesShort":["dim.","lun.","mar.","mer.","jeu.","ven.","sam."],"monthNames":["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre",""],"monthNamesShort":["janv.","févr.","mars","avr.","mai","juin","juil.","août","sept.","oct.","nov.","déc.",""]};var gaDomain = 'easyjet.com';var resourceUrlSettings = {"version":20130412,"useSharding":true,"mediaDomain":"media.sc.easyjet.com","mediaExts":[".css",".png",".gif",".jpg",".jpeg",".ico"],"scriptDomain":"js.sc.easyjet.com","scriptExts":[".js"]};var internalLinksRegex = new RegExp('((^http(s?)://www.easyjet.com)|(^http(s?)://easyjet.com)|(^/))', 'i');var persData = '';
+Number.prototype.formatMoney = function (decimalPlaces)
+{
+    var n = this;
+    var c = (decimalPlaces == undefined) ? (n < 1000 ? 2 : 0) : decimalPlaces;
+    var d = ',';
+    var t = ' ';
+
+    var i = parseInt(n.toFixed(c)) + '';
+    var j = (j = i.length) > 3 ? j % 3 : 0;
+
+    var num = (j ? i.substr(0, j) + t : '') +
+        i.substr(j).replace(/(\d{3})(?=\d)/g, '$1' + t) +
+        (c ? d + Math.abs(n - i).toFixed(c).slice(2) : '');
+
+	return '' + num + ' €';
+};
+</script>
+    
+    <script type="text/javascript" src="//js.sc.easyjet.com/ejcms/cache/Scripts/EJ.20130412.js"></script>
+
+    <script type="text/javascript">
+        Accessibility.AddConditionalCss(Accessibility.IsTouchDevice, "//media.sc.easyjet.com/ejcms/cache/Styles/touch.20130412.css");
+    </script>
+	
+    <script type="text/javascript">
+        Accessibility.AddConditionalCss(Accessibility.IsInspireMeApp, "//media.sc.easyjet.com/ejcms/cache/Styles/inspire-app.20130412.css");
+    </script>
+	<style type="text/css">
+	            html {
+                        
+                        
+	                }
+            </style>
+	<script type="text/javascript" id="googleanalytics">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-20704438-1']);
+    _gaq.push(['_setDomainName', 'easyjet.com']);
+    _gaq.push(['_trackPageview', window.location.pathname + '-ej_CMS']);
+</script><script>
+(function (w) {
+	w.tm2BootPosition = 0;
+	w.tm2BootAsync = true;
+	w.tmPageId = 13;
+	w.tmParam = { country_code: "FR" };
+	var conf = { host: 'pfa.levexis.com',
+		account: 'easyjet',
+		version: '3',
+		async: true,
+		cdn: (location.protocol === 'https:') ? 'sec.levexis.com' : 'res.levexis.com',
+		waitService: 'wt.tagman.com',
+		waitTest: false,
+		bootstrap: true,
+		param: w.tmParam || {} };
+	// do not change values below this line
+	function ap(sr , ol) {
+	     var e = document.createElement('script'); 
+	     e.src = sr;
+	     e.async = true;
+	     if (ol) {
+	    	e.onload = e.onerror = function() { if (!this.loaded) { ol(); this.loaded = true; } };
+		e.onreadystatechange = function() { if (this.readyState === 'complete' || this.readyState === 'loaded') { this.onload(); } };
+	     }
+	     var s = document.getElementsByTagName('script')[0];
+	     s.parentNode.insertBefore( e , s);
+	}	
+	w.TMAN = w.TMAN || {};	
+     	w.TMAN.startTime = +new Date();
+	w.TMAN.asyncLoader = function() {
+	      TMAN.addContainer( new TMAN.Container(conf.account, w.tmPageId, conf) );
+	};
+	var tm = '//' + conf.cdn + '/clientfiles/v' + conf.version + '/' + conf.account + '.js'; 
+	if (conf.waitService && conf.waitTest) ap ( '//' + conf.waitService + '/wait/0/' + Math.random() , function() { TMAN.waitLatency=new Date() - TMAN.startTime; } );
+	if (conf.async) {
+	     w.TMAN.position = {};
+	     w.TMAN.doTags = function(p) { TMAN.currentPosition = p; };
+	     w.TMAN.addParam = function(n,v) {
+		w.tmParam[n]=v;
+	     };
+             w.TMAN.addParams = function(c,p) {
+               for (var n in p) {
+                 w.tmParam[n] = p[n];
+               }
+             };
+	     ap(tm);	
+	} else {
+	     document.write('<script src="' + tm + '"><\/script>');
+	}
+})(window);</script>
+
+<script> 
+TMAN.doTags(TMAN.position.TOP_HEAD); 
+</script>
+
+<script type="text/javascript" src="//service.maxymiser.net/cdn/easyjet/js/mmcore.js"></script><script id="mmcore.1" type="text/javascript" charset="utf-8" src="http://service.maxymiser.net/cg/v5/?fv=dmn%3Deasyjet.com%3Bref%3D%3Burl%3Dhttp%253A//www.easyjet.com/fr/%253Futm_source%253DFOX%252520TRAVEL%252520AND%252520ADVENTURE_20130503%2526utm_medium%253Ddisplay%2526utm_content%253D728x90_ROS%2526utm_campaign%253Ddigitalconversionapril%3Bscrw%3D1280%3Bscrh%3D1024%3Bclrd%3D24%3Bcok%3D1%3B&amp;tst=0.016&amp;jsver=5.0&amp;ri=1"></script>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="Content-Script-Type" content="text/javascript"><meta name="description" content="Réservez des vols pas chers sur le site officiel easyJet.com avec les prix les moins chers garantis vers plus de 130 destinations. L'attribution des sièges est disponible sur tous les vols"><meta name="keywords" content="vols pas chers, billets d'avion pas chers, vols dernière minute, offre dernière minute vols, vols secs, vols les moins chers, international, vol France, vol Suisse, vol Belgique, pas cher, compagnie aérienne, billets, vols, offre spéciale, dernière minute, le moins cher, discount, low cost, air, offres spéciales, europe, réserver, réservation, chercher, trouver, européen"><meta name="robots" content="ALL">
+
+<link rel="canonical" href="http://www.easyjet.com/fr">
+
+<script> 
+TMAN.doTags(TMAN.position.BOTTOM_HEAD); 
+</script> 
+
+<script id="tmap_0" async="">TMAN.conf.account=TMAN._containers[0].account;TMAN.conf.id=TMAN._containers[0].id;TMAN.conf.param=TMAN._containers[0].param;window.TMAN.conf.TM2initialised=true; LEV.bootStrap();</script><script id="tmap_2" async="">TMAN.util.appendScript('//nxtck.com/act.php?tag=37489');</script></head>
+<body>
+	<form method="post" action="/fr/?utm_source=FOX%20TRAVEL%20AND%20ADVENTURE_20130503&amp;utm_medium=display&amp;utm_content=728x90_ROS&amp;utm_campaign=digitalconversionapril" id="ctl04">
+<div class="aspNetHidden">
+<input name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNjE2NjMxMTI3ZGSqs62BmDLIkg1/akAmIVDFQMkUow==" type="hidden">
+</div>
+
+		<div id="TMAN_TOP_BODY"></div>
+<script> 
+TMAN.doTags(TMAN.position.TOP_BODY); 
+</script>
+		<div id="pageWrapper" class="siteWrapper">
+			
+			<script type="text/javascript">
+VisitorRecognitionPod.Create('FR', 'VisitorRecognitionContainer', true, 'www.easyjet.com');
+</script>
+<div class="topBar">
+	<div style="display: none;" class="languageSelectContainer" id="nonJslanguageSelectContainer">
+					<select name="nonJsLangSelect" id="nonJsLangSelect">
+						<option value="http://www.easyjet.com/be-nl">België</option><option value="http://www.easyjet.com/be-fr">Belgique</option><option value="http://www.easyjet.com/es">Castellano</option><option value="http://www.easyjet.com/ca">Català</option><option value="http://www.easyjet.com/cs">?esky</option><option value="http://www.easyjet.com/da">Dansk</option><option value="http://www.easyjet.com/de">Deutsch</option><option value="http://www.easyjet.com/el">E???????</option><option value="http://www.easyjet.com/en">English</option><option value="http://www.easyjet.com/fr" selected="selected">Français</option><option value="http://www.easyjet.com/it">Italiano</option><option value="http://www.easyjet.com/hu">Magyarul</option><option value="http://www.easyjet.com/nl">Nederlands</option><option value="http://www.easyjet.com/pl">Polski</option><option value="http://www.easyjet.com/pt">Portugues</option><option value="http://www.easyjet.com/ru">???????</option><option value="http://www.easyjet.com/ch-de">Schweiz</option><option value="http://www.easyjet.com/ch-fr">Suisse</option><option value="http://www.easyjet.com/tr">Türkçe</option><option value="http://www.easyjet.com/us">English (US)</option>
+					</select>
+					<input class="noJsSubmitButton" name="nonJsButton" id="nonJsButton" value="changer" type="submit">
+			</div>
+			<script type="text/javascript">
+				document.getElementById('nonJslanguageSelectContainer').style.display = 'none';
+			</script>
+	<div class="languageSelectContainer" id="langaugeSelectContainer" style="">
+		
+		<div class="languageOption languageOptionHeader" id="langaugeSelected" onclick="toggleDropdown();">
+			<img class="flagImage" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Global/Flags/Flag_of_France_W22H13px.ashx" alt="Flag of France">
+			<span class="languageText selected">Français&nbsp;<a href="#" class="blueText noTrack">[changer]</a></span>
+		</div>
+		<div class="languageSelectDropdown" id="languageSelectDropdown" style="display: none;">
+			<div class="countriesContainer">
+				<ul class="languageListCol">
+				<li class="languageOption">
+				<a href="http://www.easyjet.com/be-nl" class="languageSelectLink">
+					<img class="flagImage" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Global/Flags/Flag_of_Belgium_W22H13px.ashx" alt="Flag of Belgium">
+					<span class="languageText">België</span>
+				</a>
+			</li><li class="languageOption">
+				<a href="http://www.easyjet.com/be-fr" class="languageSelectLink">
+					<img class="flagImage" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Global/Flags/Flag_of_Belgium_W22H13px.ashx" alt="Flag of Belgium">
+					<span class="languageText">Belgique</span>
+				</a>
+			</li><li class="languageOption">
+				<a href="http://www.easyjet.com/es" class="languageSelectLink">
+					<img class="flagImage" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Global/Flags/Flag_of_Spain_W22H13px.ashx" alt="Flag of Spain">
+					<span class="languageText">Castellano</span>
+				</a>
+			</li><li class="languageOption">
+				<a href="http://www.easyjet.com/ca" class="languageSelectLink">
+					<img class="flagImage" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Global/Flags/Flag_of_Catalonia_W22H13px.ashx" alt="Flag of Catalonia">
+					<span class="languageText">Català</span>
+				</a>
+			</li><li class="languageOption">
+				<a href="http://www.easyjet.com/cs" class="languageSelectLink">
+					<img class="flagImage" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Global/Flags/Flag_of_the_Czech_Republic_W22H13px.ashx" alt="Flag of Czech Republic">
+					<span class="languageText">?esky</span>
+				</a>
+			</li><li class="languageOption">
+				<a href="http://www.easyjet.com/da" class="languageSelectLink">
+					<img class="flagImage" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Global/Flags/Flag_of_Denmark_W22H13px.ashx" alt="Flag of Denmark">
+					<span class="languageText">Dansk</span>
+				</a>
+			</li><li class="languageOption">
+				<a href="http://www.easyjet.com/de" class="languageSelectLink">
+					<img class="flagImage" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Global/Flags/Flag_of_Germany_W22H13px.ashx" alt="Flag of Germany">
+					<span class="languageText">Deutsch</span>
+				</a>
+			</li></ul><ul class="languageListCol"><li class="languageOption">
+				<a href="http://www.easyjet.com/el" class="languageSelectLink">
+					<img class="flagImage" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Global/Flags/Flag_of_Greece_W22H13px.ashx" alt="Flag of Greece">
+					<span class="languageText">E???????</span>
+				</a>
+			</li><li class="languageOption">
+				<a href="http://www.easyjet.com/en" class="languageSelectLink">
+					<img class="flagImage" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Global/Flags/Flag_of_the_United_Kingdom_W22H13px.ashx" alt="Flag of the United Kingdom">
+					<span class="languageText">English</span>
+				</a>
+			</li><li class="languageOption">
+				<a href="http://www.easyjet.com/it" class="languageSelectLink">
+					<img class="flagImage" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Global/Flags/Flag_of_Italy_W22H13px.ashx" alt="Flag of Italy">
+					<span class="languageText">Italiano</span>
+				</a>
+			</li><li class="languageOption">
+				<a href="http://www.easyjet.com/hu" class="languageSelectLink">
+					<img class="flagImage" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Global/Flags/Flag_of_Hungary_W22H13px.ashx" alt="Flag of Hungary">
+					<span class="languageText">Magyarul</span>
+				</a>
+			</li><li class="languageOption">
+				<a href="http://www.easyjet.com/nl" class="languageSelectLink">
+					<img class="flagImage" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Global/Flags/Flag_of_the_Netherlands_W22H13px.ashx" alt="Flag of the Netherlands">
+					<span class="languageText">Nederlands</span>
+				</a>
+			</li><li class="languageOption">
+				<a href="http://www.easyjet.com/pl" class="languageSelectLink">
+					<img class="flagImage" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Global/Flags/Flag_of_Poland_W22H13px.ashx" alt="Flag of Poland">
+					<span class="languageText">Polski</span>
+				</a>
+			</li><li class="languageOption">
+				<a href="http://www.easyjet.com/pt" class="languageSelectLink">
+					<img class="flagImage" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Global/Flags/Flag_of_Portugal_W22H13px.ashx" alt="Flag of Portugal">
+					<span class="languageText">Portugues</span>
+				</a>
+			</li></ul><ul class="languageListCol"><li class="languageOption">
+				<a href="http://www.easyjet.com/ru" class="languageSelectLink">
+					<img class="flagImage" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Global/Flags/Russian_flag_22x13.ashx" alt="Flag of Russia">
+					<span class="languageText">???????</span>
+				</a>
+			</li><li class="languageOption">
+				<a href="http://www.easyjet.com/ch-de" class="languageSelectLink">
+					<img class="flagImage" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Global/Flags/Flag_of_Switzerland_Pantone_W22H13px.ashx" alt="Flag of Switzerland">
+					<span class="languageText">Schweiz</span>
+				</a>
+			</li><li class="languageOption">
+				<a href="http://www.easyjet.com/ch-fr" class="languageSelectLink">
+					<img class="flagImage" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Global/Flags/Flag_of_Switzerland_Pantone_W22H13px.ashx" alt="Flag of Switzerland">
+					<span class="languageText">Suisse</span>
+				</a>
+			</li><li class="languageOption">
+				<a href="http://www.easyjet.com/tr" class="languageSelectLink">
+					<img class="flagImage" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Global/Flags/Flag_of_Turkey_W22H13px.ashx" alt="Flag of Turkey">
+					<span class="languageText">Türkçe</span>
+				</a>
+			</li><li class="languageOption">
+				<a href="http://www.easyjet.com/us" class="languageSelectLink">
+					<img class="flagImage" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Global/Flags/Flag_of_the_United_States_W22H13px.ashx" alt="Flag of the United States">
+					<span class="languageText">English (US)</span>
+				</a>
+			</li>
+<script type="text/javascript">
+var toggleDropdownTimer = null;
+
+var toggleDropdown = function()
+{
+	if (toggleDropdownTimer !== null) {
+		clearTimeout(toggleDropdownTimer);
+	}
+
+	$jq("#languageSelectDropdown").toggle();
+	$jq("#langaugeSelected").toggleClass("dropdownVisible");
+	
+	$jq("#langaugeSelectContainer").toggleClass("dropdownHidden");
+	$jq("#VisitorRecognitionContainer").toggle();
+	
+	$jq(".blueText").toggleClass("dropdownVisible");
+
+}
+
+$jq(document).ready(function(){
+if($jq.browser.msie && $jq.browser.version=="6.0")
+{
+	document.getElementById('nonJslanguageSelectContainer').style.display = 'block';
+}
+else
+{
+	$jq("#langaugeSelectContainer").show();
+	
+	// if the path is length 1 or 0 then there's no language, show dropdown
+	var path = window.location.pathname.toString();
+
+	if (path.length <= 1)
+	{
+		toggleDropdown();
+
+		toggleDropdownTimer = setTimeout(function() {
+			toggleDropdownTimer = null;
+			
+			if ($jq("#langaugeSelected").hasClass("dropdownVisible")) {
+				toggleDropdown();
+			}
+		}, 10000);
+	}
+}
+});
+</script>
+				</ul>
+			</div>
+			<div class="closeButtonContainer">
+				<div class="closeButton"><a href="javascript:toggleDropdown();" class="noTrack">Close</a></div>
+			</div>
+		</div>
+	</div>
+	<div id="VisitorRecognitionContainer" class="visitorRecognition">
+
+
+
+<div id="VisitorRecognitionBarPanel" class="HeaderVisitorRecognitionPanel" style="">
+    <div id="WelcomeBackMessage" class="HeaderVisitorRecognitionMessage">
+    
+        Bienvenue
+        
+                <a class="HeaderVisitorRecognitionLinks" id="vrSignIn" href="#">
+                    S'identifier
+                </a>
+                &nbsp;ou&nbsp;
+                <a class="HeaderVisitorRecognitionLinks" id="vrRegister" href="#">
+                    S'enregistrer
+                </a>
+        
+   
+    </div>
+</div>
+
+<div style="clear:both; height:0; font-size:0; overflow:hidden"></div>
+
+</div>
+        
+    <div class="faqSearchBox">
+		<div id="faqSearchWrapper" style="display: block;">
+			<div class="searchButton contain">
+				<a class="on-white noTrack" name="search" id="faqSearchButton" href="#">
+					<span class="searchButtonLeft"></span>
+					<span class="searchButtonRight">FAQs</span>
+				</a>
+			</div>
+			<input class="searchBox" id="searchFaqText" type="text">
+		</div>
+		<noscript>
+			<a class="faqLink" href="http://easyjet-fr.custhelp.com/app/home/">Aide</a>
+		</noscript>
+	</div>
+    <script type="text/javascript">
+        new FaqSearch("faqSearchWrapper", "searchFaqText", "faqSearchButton", "http://easyjet-fr.custhelp.com/app/home/");
+    </script>
+	<div class="clear"></div>
+
+</div>
+<div class="clear"></div>
+			<div class="logoWrapper" style="">
+	<a class="siteLogo" href="http://www.easyjet.com/fr" tabindex="1"><img alt="easyJet" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Global/A Header Graphics/Logo_v9_FullFat.ashx" height="55" width="156"></a>
+    <h1 class="hiddenHeader">  </h1>
+	<div class="headerIconWrapper">
+    <ul><li><a href="http://www.easyjet.com/managebookings/fr" class="noTrack" onclick="displayPopup('/ejcms/nocache/jsCallbacks/CheckInCallback.aspx', 'http://www.easyjet.com/managebookings/fr', 'Header');return false;">
+	<img alt="S’enregistrer en ligne" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Global/A Header Graphics/Check in online.ashx" height="42" width="42"><br>
+	<span>S’enregistrer en ligne</span>
+</a></li><li><a href="https://www.easyjet.com/FR/secure/MyEasyJet.mvc/SignIn">
+	<img alt="Vos réservations " src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Global/A Header Graphics/icon_myEJ.ashx" height="42" width="42"><br>
+	<span>Vos réservations</span>
+</a></li><li><a href="http://www.easyjet.com/fr/inscrire">
+	<img alt=" eOffres" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Global/A Header Graphics/icon_email.ashx" height="42" width="42"><br>
+	<span>eOffres</span>
+</a></li><li><a href="http://easyjet.custhelp.com/app/answers/detail/a_id/3925">
+	<img alt=" Etat du trafic" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Global/A Header Graphics/icon_latest_travel_info_blue.ashx" height="42" width="62"><br>
+	<span>Etat du trafic</span>
+</a></li><li><a href="http://easyjet-fr.custhelp.com/">
+	<img alt=" Aide" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Global/A Header Graphics/icon_help.ashx" height="42" width="42"><br>
+	<span>Aide</span>
+</a></li></ul>
+</div>
+    <div>
+	    <ul class="landmarkLinksList"><li><a href="#mainContent" class="landmarkLink" tabindex="2">Accéder au Sommaire</a></li></ul>
+    </div>
+	<div class="clear"></div>
+</div>
+<div class="clear"></div>
+			<div class="mainNavigation "><div class="headerRibbonCol" style="width: 188px">
+	<div class="headerRibbonColInner">
+		<div class="headerRibbonColImages">
+			<div class="headerRibbonColIcon">
+				<img tabindex="0" alt="" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Global/B Main Navigation/FF_HeaderRibbonFlightGrey.ashx" height="32" width="32">
+			</div>    
+			<br>
+<div class="headerRibbonCol-expand">
+	<img alt="+" src="//media.sc.easyjet.com/ejcms/cache/images/backgrounds/HeaderRibbonDownGrey.gif">
+</div>
+		</div>
+		<div class="headerRibbonColLinks">
+			<div tabindex="0" class="headerRibbonColHeader">
+				Vols
+			</div>
+			<div class="headerRibbonColItems"><a tabindex="0" class="headerRibbonColLink noTrack" href="http://www.easyjet.com/managebookings/fr" onclick="displayPopup('/ejcms/nocache/jsCallbacks/CheckInCallback.aspx', 'http://www.easyjet.com/managebookings/fr', 'MainNav');return false;">Enregistrement</a></div><div class="headerRibbonColItems"><a tabindex="0" class="headerRibbonColLink" href="http://www.easyjet.com/fr/suivi-de-vol-en-direct">Arrivées et départs</a></div><div class="headerRibbonColItems"><a tabindex="0" class="headerRibbonColLink" href="http://www.easyjet.com/fr/membres/">Vos réservations </a></div>
+		</div>
+		<div class="headerRibbonColSeparator"></div>
+		<div class="clear"></div>
+	</div>
+	<div class="headerRibbonColHover extended">
+		<div class="headerRibbonColHoverInner">
+			<div class="headerRibbonColImages">
+				<div class="headerRibbonColIcon">
+					<img alt="" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Global/B Main Navigation/FF_HeaderRibbonFlightWhite.ashx" height="34" width="50" border="0">
+				</div>
+			</div> 
+			<div class="headerRibbonColLinks">
+				<div class="headerRibbonColHeader">
+					Vols
+				</div>
+				<div class="headerRibbonColItems"><a class="headerRibbonColLink noTrack" href="http://www.easyjet.com/managebookings/fr" onclick="displayPopup('/ejcms/nocache/jsCallbacks/CheckInCallback.aspx', 'http://www.easyjet.com/managebookings/fr', 'MainNav');return false;">Enregistrement</a></div><div class="headerRibbonColItems"><a class="headerRibbonColLink" href="http://www.easyjet.com/fr/suivi-de-vol-en-direct">Arrivées et départs</a></div><div class="headerRibbonColItems"><a class="headerRibbonColLink" href="http://www.easyjet.com/fr/membres/">Vos réservations </a></div><div class="headerRibbonColItems"><a class="headerRibbonColLink" href="/fr/Inspirez-moi">Inspirez moi</a></div><div class="headerRibbonColItems"><a class="headerRibbonColLink" href="/fr/carte-des-destinations">Où volons-nous ?</a></div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="headerRibbonColBottom">
+			<span class="bottomRight">
+				<span class="bottomLeft"></span>
+			</span>
+		</div>
+	</div>
+</div><div class="headerRibbonCol" style="width: 188px">
+	<div class="headerRibbonColInner">
+		<div class="headerRibbonColImages">
+			<div class="headerRibbonColIcon">
+				<img tabindex="0" alt="" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Global/B Main Navigation/FF_HeaderRibbonAccomodationGrey.ashx" height="32" width="47">
+			</div>    
+			
+		</div>
+		<div class="headerRibbonColLinks">
+			<div class="headerRibbonColHeader">
+				<a tabindex="0" class="headerRibbonColLink" href="http://hotels.easyjet.com/index.html?aid=347807&amp;lang=fr&amp;label=easy-homepage-navtab-hotels;selected_currency=EUR&amp;utm_source=ej_cms&amp;utm_medium=fr_homepage&amp;utm_term=Hotels&amp;utm_content=Icon&amp;utm_campaign=MainNav">Où séjourner ?</a>
+			</div>
+			<div class="headerRibbonColItems"><a tabindex="0" class="headerRibbonColLink" href="http://hotels.easyjet.com/index.html?aid=347807&amp;lang=fr&amp;label=easy-homepage-navtab-hotels;selected_currency=EUR&amp;utm_source=ej_cms&amp;utm_medium=fr_homepage&amp;utm_term=Hotels&amp;utm_content=StaticLink&amp;utm_campaign=MainNav">Hôtels</a></div>
+		</div>
+		<div class="headerRibbonColSeparator"></div>
+		<div class="clear"></div>
+	</div>
+	<div class="headerRibbonColHover">
+		<div class="headerRibbonColHoverInner">
+			<div class="headerRibbonColImages">
+				<div class="headerRibbonColIcon">
+					<a href="http://hotels.easyjet.com/index.html?aid=347807&amp;lang=fr&amp;label=easy-homepage-navtab-hotels;selected_currency=EUR&amp;utm_source=ej_cms&amp;utm_medium=fr_homepage&amp;utm_term=Hotels&amp;utm_content=Icon&amp;utm_campaign=MainNav"><img alt="" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Global/B Main Navigation/FF_HeaderRibbonAccomodationWhite.ashx" height="34" width="50" border="0"></a>
+				</div>
+			</div> 
+			<div class="headerRibbonColLinks">
+				<div class="headerRibbonColHeader">
+					<a class="headerRibbonColLink" href="http://hotels.easyjet.com/index.html?aid=347807&amp;lang=fr&amp;label=easy-homepage-navtab-hotels;selected_currency=EUR&amp;utm_source=ej_cms&amp;utm_medium=fr_homepage&amp;utm_term=Hotels&amp;utm_content=Icon&amp;utm_campaign=MainNav">Où séjourner ?</a>
+				</div>
+				<div class="headerRibbonColItems"><a class="headerRibbonColLink" href="http://hotels.easyjet.com/index.html?aid=347807&amp;lang=fr&amp;label=easy-homepage-navtab-hotels;selected_currency=EUR&amp;utm_source=ej_cms&amp;utm_medium=fr_homepage&amp;utm_term=Hotels&amp;utm_content=StaticLink&amp;utm_campaign=MainNav">Hôtels</a></div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="headerRibbonColBottom">
+			<span class="bottomRight">
+				<span class="bottomLeft"></span>
+			</span>
+		</div>
+	</div>
+</div><div class="headerRibbonCol" style="width: 188px">
+	<div class="headerRibbonColInner">
+		<div class="headerRibbonColImages">
+			<div class="headerRibbonColIcon">
+				<img tabindex="0" alt="" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Global/B Main Navigation/FF_HeaderRibbonCarGrey.ashx" height="32" width="50">
+			</div>    
+			<br>
+<div class="headerRibbonCol-expand">
+	<img alt="+" src="//media.sc.easyjet.com/ejcms/cache/images/backgrounds/HeaderRibbonDownGrey.gif">
+</div>
+		</div>
+		<div class="headerRibbonColLinks">
+			<div class="headerRibbonColHeader">
+				<a tabindex="0" class="headerRibbonColLink" href="http://cars.easyjet.com/r/?c=car-rental-tab_fr">Se déplacer</a>
+			</div>
+			<div class="headerRibbonColItems"><a tabindex="0" class="headerRibbonColLink" href="http://cars.easyjet.com/r/?c=car-rental-tab_fr">Location de voiture</a></div><div class="headerRibbonColItems"><a tabindex="0" class="headerRibbonColLink" href="http://leparking.easyjet.com/?agent=FR001">Parking</a></div><div class="headerRibbonColItems"><a tabindex="0" class="headerRibbonColLink" href="http://fr.sitestat.com/europcar/easyjet/s?link.car_rental_tab_airportconnect.easyjet.fr&amp;ns_campaign=link.car_rental_tab_airportconnect.easyjet.fr&amp;ns_mchannel=link&amp;ns_source=easyjet.fr&amp;ns_linkname=-&amp;ns_fee=-&amp;ns_type=clickin&amp;ns_url=https://cars.easyjet.com/rentalpackages/airportconnect/?lang=FR&amp;PROMO=47873771">Connexion aéroport</a></div>
+		</div>
+		<div class="headerRibbonColSeparator"></div>
+		<div class="clear"></div>
+	</div>
+	<div class="headerRibbonColHover extended">
+		<div class="headerRibbonColHoverInner">
+			<div class="headerRibbonColImages">
+				<div class="headerRibbonColIcon">
+					<a href="http://cars.easyjet.com/r/?c=car-rental-tab_fr"><img alt="" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Global/B Main Navigation/FF_HeaderRibbonCarWhite.ashx" height="34" width="50" border="0"></a>
+				</div>
+			</div> 
+			<div class="headerRibbonColLinks">
+				<div class="headerRibbonColHeader">
+					<a class="headerRibbonColLink" href="http://cars.easyjet.com/r/?c=car-rental-tab_fr">Se déplacer</a>
+				</div>
+				<div class="headerRibbonColItems"><a class="headerRibbonColLink" href="http://cars.easyjet.com/r/?c=car-rental-tab_fr">Location de voiture</a></div><div class="headerRibbonColItems"><a class="headerRibbonColLink" href="http://leparking.easyjet.com/?agent=FR001">Parking</a></div><div class="headerRibbonColItems"><a class="headerRibbonColLink" href="http://fr.sitestat.com/europcar/easyjet/s?link.car_rental_tab_airportconnect.easyjet.fr&amp;ns_campaign=link.car_rental_tab_airportconnect.easyjet.fr&amp;ns_mchannel=link&amp;ns_source=easyjet.fr&amp;ns_linkname=-&amp;ns_fee=-&amp;ns_type=clickin&amp;ns_url=https://cars.easyjet.com/rentalpackages/airportconnect/?lang=FR&amp;PROMO=47873771">Connexion aéroport</a></div><div class="headerRibbonColItems"><a class="headerRibbonColLink" href="https://airporttransfers.easyjet.com/FR/transfers?utm_source=ej_CMS&amp;utm_medium=FR_Homepage&amp;utm_term=Transfer&amp;utm_content=StaticLink&amp;utm_campaign=MainNav">Navettes aéroport</a></div><div class="headerRibbonColItems"><a class="headerRibbonColLink" href="http://referral.gatwickexpress.com/fr/?utm_source=ej_CMS&amp;utm_medium=FR_Homepage&amp;utm_term=GatwickExpress&amp;utm_content=StaticLink&amp;utm_campaign=MainNav">Gatwick Express</a></div><div class="headerRibbonColItems"><a class="headerRibbonColLink" href="http://www.parishuttle.com/easyjet_referral/index.php?lg=fr&amp;utm_source=ej_cms&amp;utm_medium=fr_homepage&amp;utm_term=ParisShuttle&amp;utm_content=StaticLink6&amp;utm_campaign=MainNav">Paris Shuttle</a></div><div class="headerRibbonColItems"><a class="headerRibbonColLink" href="http://fr.holidaytaxis.com/?ref=ezyfr&amp;utm_source=ej_cms&amp;utm_medium=fr_homepage&amp;utm_term=HolidayTaxis&amp;utm_content=StaticLink7&amp;utm_campaign=MainNav">Transferts</a></div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="headerRibbonColBottom">
+			<span class="bottomRight">
+				<span class="bottomLeft"></span>
+			</span>
+		</div>
+	</div>
+</div><div class="headerRibbonCol" style="width: 188px">
+	<div class="headerRibbonColInner">
+		<div class="headerRibbonColImages">
+			<div class="headerRibbonColIcon">
+				<img tabindex="0" alt="" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Global/B Main Navigation/FF_HeaderRibbonPalmtree_Grey.ashx" height="34" width="29">
+			</div>    
+			
+		</div>
+		<div class="headerRibbonColLinks">
+			<div class="headerRibbonColHeader">
+				<a tabindex="0" class="headerRibbonColLink" href="http://vacances.easyjet.com/?utm_source=ej_CMS&amp;utm_medium=FR_Homepage&amp;utm_term=EJ_Hols2&amp;utm_content=Icon&amp;utm_campaign=MainNav">Vacances</a>
+			</div>
+			<div class="headerRibbonColItems"><a tabindex="0" class="headerRibbonColLink" href="http://vacances.easyjet.com/?utm_source=ej_CMS&amp;utm_medium=FR_Homepage&amp;utm_term=EJ_Hols2&amp;utm_content=StaticLink&amp;utm_campaign=MainNav">Séjours</a></div>
+		</div>
+		<div class="headerRibbonColSeparator"></div>
+		<div class="clear"></div>
+	</div>
+	<div class="headerRibbonColHover">
+		<div class="headerRibbonColHoverInner">
+			<div class="headerRibbonColImages">
+				<div class="headerRibbonColIcon">
+					<a href="http://vacances.easyjet.com/?utm_source=ej_CMS&amp;utm_medium=FR_Homepage&amp;utm_term=EJ_Hols2&amp;utm_content=Icon&amp;utm_campaign=MainNav"><img alt="" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Global/B Main Navigation/FF_HeaderRibbonPalmtree_White.ashx" height="34" width="29" border="0"></a>
+				</div>
+			</div> 
+			<div class="headerRibbonColLinks">
+				<div class="headerRibbonColHeader">
+					<a class="headerRibbonColLink" href="http://vacances.easyjet.com/?utm_source=ej_CMS&amp;utm_medium=FR_Homepage&amp;utm_term=EJ_Hols2&amp;utm_content=Icon&amp;utm_campaign=MainNav">Vacances</a>
+				</div>
+				<div class="headerRibbonColItems"><a class="headerRibbonColLink" href="http://vacances.easyjet.com/?utm_source=ej_CMS&amp;utm_medium=FR_Homepage&amp;utm_term=EJ_Hols2&amp;utm_content=StaticLink&amp;utm_campaign=MainNav">Séjours</a></div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="headerRibbonColBottom">
+			<span class="bottomRight">
+				<span class="bottomLeft"></span>
+			</span>
+		</div>
+	</div>
+</div><div class="headerRibbonCol" style="width: 188px">
+	<div class="headerRibbonColInner">
+		<div class="headerRibbonColImages">
+			<div class="headerRibbonColIcon">
+				<img tabindex="0" alt="" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Global/B Main Navigation/FF_HeaderRibbonWhatToDoGrey.ashx" height="34" width="45">
+			</div>    
+			<br>
+<div class="headerRibbonCol-expand">
+	<img alt="+" src="//media.sc.easyjet.com/ejcms/cache/images/backgrounds/HeaderRibbonDownGrey.gif">
+</div>
+		</div>
+		<div class="headerRibbonColLinks">
+			<div tabindex="0" class="headerRibbonColHeader">
+				Essentiels
+			</div>
+			<div class="headerRibbonColItems"><a tabindex="0" class="headerRibbonColLink" href="http://easyjet-fr.custhelp.com/app/answers/detail/a_id/5587">Attribution des places</a></div><div class="headerRibbonColItems"><a tabindex="0" class="headerRibbonColLink" href="https://insurance.easyjet.com/mawl/inside/ezy/fr?restart=/&amp;utm_source=ej_CMS&amp;utm_medium=FR_Homepage&amp;utm_term=Mondial&amp;utm_content=StaticLinkE1&amp;utm_campaign=MainNav">Assurance voyage</a></div><div class="headerRibbonColItems"><a tabindex="0" class="headerRibbonColLink" href="http://plus.easyjet.com/?language=fr">easyJet <i>Plus!</i></a></div>
+		</div>
+		
+		<div class="clear"></div>
+	</div>
+	<div class="headerRibbonColHover extended">
+		<div class="headerRibbonColHoverInner">
+			<div class="headerRibbonColImages">
+				<div class="headerRibbonColIcon">
+					<img alt="" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Global/B Main Navigation/FF_HeaderRibbonWhatToDoWhite.ashx" height="34" width="50" border="0">
+				</div>
+			</div> 
+			<div class="headerRibbonColLinks">
+				<div class="headerRibbonColHeader">
+					Essentiels
+				</div>
+				<div class="headerRibbonColItems"><a class="headerRibbonColLink" href="http://easyjet-fr.custhelp.com/app/answers/detail/a_id/5587">Attribution des places</a></div><div class="headerRibbonColItems"><a class="headerRibbonColLink" href="https://insurance.easyjet.com/mawl/inside/ezy/fr?restart=/&amp;utm_source=ej_CMS&amp;utm_medium=FR_Homepage&amp;utm_term=Mondial&amp;utm_content=StaticLinkE1&amp;utm_campaign=MainNav">Assurance voyage</a></div><div class="headerRibbonColItems"><a class="headerRibbonColLink" href="http://plus.easyjet.com/?language=fr">easyJet <i>Plus!</i></a></div><div class="headerRibbonColItems"><a class="headerRibbonColLink" href="http://www.easyjet.com/fr/mobile.html">Mobile</a></div><div class="headerRibbonColItems"><a class="headerRibbonColLink" href="http://fr.business.easyjet.com/"><i>FLEXI</i> tarifs</a></div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="headerRibbonColBottom">
+			<span class="bottomRight">
+				<span class="bottomLeft"></span>
+			</span>
+		</div>
+	</div>
+</div></div>
+<script type="text/javascript">
+    var mainNavigation = new Navigation.MainNavigation();
+</script>
+            <a id="mainContent" name="mainContent" tabindex="-1"></a>
+			
+<div class="largeCol">
+	<div tabindex="0"></div><ul style="display: none;" id="crsl_02e5f07c5b914b92960f4723aae70d7a" class="jcarousel-skin-ie7 staticCarouselAds"><li class="pager" style="width: 620px; float: left; list-style: none outside none; display: block;"><a href="http://www.easyjet.com/fr/reserver/hiver-2013-2014"><img alt="Hiver 2013/14 En Vente" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Regional/FR/Carousel/FR-1782-WINTER-620x164-PHASE-2-WEBQ55-v2.ashx"></a></li><li class="pager" style="display: block; width: 620px; float: left; list-style: none outside none;"><a href="http://www.easyjet.com/fr/reserver/ete2013"><img alt="Vacances d'été" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Regional/FR/Carousel/Vacances banner.ashx"><span class="carouselInfoBar overlay">Vacances<span>Planifiez vos vacances d'été 2013</span></span></a></li><li class="pager" style="display: block; width: 620px; float: left; list-style: none outside none;"><a href="http://www.easyjet.com/fr/reserver/pontsdemai2013"><img alt="Ponts de mai" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Regional/FR/Carousel/Bicyle Quality 64.ashx"><span class="carouselInfoBar overlay">Ponts de Mai<span>Quelle escapade choisir en mai?</span></span></a></li><li class="pager lastStaticAd" style="display: block; width: 620px; float: left; list-style: none outside none;"><a href="http://www.easyjet.com/fr/vols-pas-chers/france/nice"><img alt="Nantes Nice" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Regional/FR/Carousel/French Banner Nice.ashx"><span class="carouselInfoBar overlay">Cap au sud<span>Nice au départ de Nantes</span></span></a></li></ul><div class="carousel-wrapper"><div class="carousel-bx-wrapper" style="width:620px; position:relative;"><div class="bx-window" style="position:relative; overflow:hidden; width:620px;"><ul style="width: 999999px; position: relative; left: -1240px;" id="crsl_02e5f07c5b914b92960f4723aae70d7a" class="jcarousel-skin-ie7"><li style="display: block; width: 620px; float: left; list-style: none outside none;"><a tabindex="-1" href="http://www.easyjet.com/fr/vols-pas-chers/france/nice"><img alt="Nantes Nice" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Regional/FR/Carousel/French Banner Nice.ashx"><span class="carouselInfoBar overlay">Cap au sud<span>Nice au départ de Nantes</span></span></a></li><li class="pager" style="width: 620px; float: left; list-style: none outside none; display: block;"><a tabindex="-1" href="http://www.easyjet.com/fr/reserver/hiver-2013-2014"><img alt="Hiver 2013/14 En Vente" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Regional/FR/Carousel/FR-1782-WINTER-620x164-PHASE-2-WEBQ55-v2.ashx"></a></li><li class="pager" style="display: block; width: 620px; float: left; list-style: none outside none;"><a tabindex="-1" href="http://www.easyjet.com/fr/reserver/ete2013"><img alt="Vacances d'été" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Regional/FR/Carousel/Vacances banner.ashx"><span class="carouselInfoBar overlay">Vacances<span>Planifiez vos vacances d'été 2013</span></span></a></li><li class="pager" style="display: block; width: 620px; float: left; list-style: none outside none;"><a tabindex="-1" href="http://www.easyjet.com/fr/reserver/pontsdemai2013"><img alt="Ponts de mai" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Regional/FR/Carousel/Bicyle Quality 64.ashx"><span class="carouselInfoBar overlay">Ponts de Mai<span>Quelle escapade choisir en mai?</span></span></a></li><li class="pager" style="display: block; width: 620px; float: left; list-style: none outside none;"><a tabindex="-1" href="http://www.easyjet.com/fr/vols-pas-chers/france/nice"><img alt="Nantes Nice" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Regional/FR/Carousel/French Banner Nice.ashx"><span class="carouselInfoBar overlay">Cap au sud<span>Nice au départ de Nantes</span></span></a></li><li style="width: 620px; float: left; list-style: none outside none; display: block;"><a tabindex="-1" href="http://www.easyjet.com/fr/reserver/hiver-2013-2014"><img alt="Hiver 2013/14 En Vente" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Regional/FR/Carousel/FR-1782-WINTER-620x164-PHASE-2-WEBQ55-v2.ashx"></a></li></ul></div></div>
+<div id="crsl_02e5f07c5b914b92960f4723aae70d7a_controlPanel" class="controlPanel" style="display: block;">
+	<div class="jcarousel-control">
+		<a tabindex="-1" href="#" title="1" style="display:inline;" class="noTrack"><img src="//media.sc.easyjet.com/ejcms/cache/images/carousel/1off.png" class="noPngFix"></a> <a tabindex="-1" href="#" title="2" style="display:inline;" class="noTrack"><img src="//media.sc.easyjet.com/ejcms/cache/images/carousel/2on.png" class="noPngFix controlPanelOn"></a> <a tabindex="-1" href="#" title="3" style="display:inline;" class="noTrack"><img src="//media.sc.easyjet.com/ejcms/cache/images/carousel/3off.png" class="noPngFix"></a> <a tabindex="-1" href="#" title="4" style="display:inline;" class="noTrack"><img src="//media.sc.easyjet.com/ejcms/cache/images/carousel/4off.png" class="noPngFix"></a> <a tabindex="-1" href="#" title="5" style="display:none;" class="noTrack"><img src="//media.sc.easyjet.com/ejcms/cache/images/carousel/5off.png" class="noPngFix"></a> <a tabindex="-1" href="#" title="6" style="display:none;" class="noTrack"><img src="//media.sc.easyjet.com/ejcms/cache/images/carousel/6off.png" class="noPngFix"></a> 
+	</div>
+	<a tabindex="-1" href="#" class="jcarousel-pauseButton noTrack" id="crsl_02e5f07c5b914b92960f4723aae70d7a_pauseButton"><img class="noPngFix" src="//media.sc.easyjet.com/ejcms/cache/images/carousel/pause.png" title="pause"></a>
+<a tabindex="-1" href="#" class="jcarousel-playButton noTrack" id="crsl_02e5f07c5b914b92960f4723aae70d7a_playButton" style="display: none;"><img class="noPngFix" src="//media.sc.easyjet.com/ejcms/cache/images/carousel/play.png" title="voir" height="19" width="19"></a>
+	<div class="clear"></div>
+</div></div><div tabindex="0"></div>
+<div class="clear"></div><script type="text/javascript">new CarouselComponent('crsl_02e5f07c5b914b92960f4723aae70d7a', 3000, 800, '02e5f07c-5b91-4b92-960f-4723aae70d7a', '/ejcms/nocache/jsCallbacks/CarouselCallback.aspx', true, {"ads":[{"id":"sitecore/content/Global Sites/France/Regional Settings/Carousels/Homepage Carousel/04 By flag/Winter Schedule 2013 2014","img":"//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Regional/FR/Carousel/FR-1782-WINTER-620x164-PHASE-2-WEBQ55-v2.ashx","imgAlt":"Hiver 2013/14 En Vente","link":"http://www.easyjet.com/fr/reserver/hiver-2013-2014","popUrl":"","text":"","sub":"","sp":"","spLink":"http://www.easyjet.com/EN/Book/conditions.html","spLinkAlt":"","overlay":false},{"id":"sitecore/content/Global Sites/France/Regional Settings/Carousels/Homepage Carousel/04 By flag/Italy","img":"//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Standard Carousel Banners/A Leisure/City/PANINI_CAROUSEL.ashx","imgAlt":"l’Italie","link":"http://www.easyjet.com/links.mvc?lang=fr&curr=EUR&dep=IBZ&dest=MXP&dd=2013-05-21&apax=1&view=W","popUrl":"/ejcms/nocache/jsCallbacks/PassengersCallback.aspx","text":"Ibiza - Milan (MXP) à partir de 12,55 €*","sub":"Aller simple - vol en mai","sp":"","spLink":"http://www.easyjet.com/EN/Book/conditions.html","spLinkAlt":"","overlay":true},{"id":"sitecore/content/Global Sites/France/Regional Settings/Carousels/Homepage Carousel/04 By flag/Winter Dynamic 13 14","img":"//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Regional/FR/Carousel/2013/APRIL/FR Winter image 1504.ashx","imgAlt":"Vive L'Hiver","link":"http://www.easyjet.com/links.mvc?lang=fr&curr=EUR&dep=MXP&dest=RAK&dd=2014-01-20&apax=1&view=W","popUrl":"/ejcms/nocache/jsCallbacks/PassengersCallback.aspx","text":"Milan (MXP) - Marrakech à partir de 30,48 €*","sub":"Aller simple - vol en janvier","sp":"","spLink":"/fr/sitecore/content","spLinkAlt":"content","overlay":true},{"id":"sitecore/content/Global Sites/France/Regional Settings/Carousels/Homepage Carousel/04 By flag/South France","img":"//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Standard Carousel Banners/A Leisure/Family/French Homepage Slot 2.ashx","imgAlt":"France","link":"http://www.easyjet.com/links.mvc?lang=fr&curr=EUR&dep=MXP&dest=BOD&dd=2013-05-27&apax=1&view=W","popUrl":"/ejcms/nocache/jsCallbacks/PassengersCallback.aspx","text":"Milan (MXP) - Bordeaux à partir de 25,36 €*","sub":"Aller simple - vol en mai","sp":"","spLink":"/fr/sitecore/content","spLinkAlt":"content","overlay":true}]});</script><div class="flightOfferComponent">
+	<div class="flightOfferList" id="fltOff_6a9b260bb86a403cbcc610a27bcf7609"><div class="flightOfferItem">
+	<div class="focFrom">Reykjavik </div>
+	<div class="focTo">Edimbourg</div>
+	<div class="focMonth">novembre</div>
+	<div class="focPrice">
+		<span class="p1"></span><span class="p2">44</span><span class="p3">,32 €</span>
+	</div>
+	<div class="SmallBrightOrangeBtn contain">
+		<a title="Reykjavik  - Edimbourg, novembre, 44,32 €" class="on-white noTrack" href="http://www.easyjet.com/links.mvc?lang=fr&amp;curr=EUR&amp;dep=KEF&amp;dest=EDI&amp;dd=2013-11-25&amp;apax=1&amp;view=D" name="order">
+			<span class="btnLeft"></span><span class="btnRight">Afficher les vols»</span>
+		</a>
+	</div>
+</div><div class="seperatorDiv"><span class="seperator"></span></div><div class="flightOfferItem">
+	<div class="focFrom">Reykjavik </div>
+	<div class="focTo">Manchester</div>
+	<div class="focMonth">janvier</div>
+	<div class="focPrice">
+		<span class="p1"></span><span class="p2">44</span><span class="p3">,32 €</span>
+	</div>
+	<div class="SmallBrightOrangeBtn contain">
+		<a title="Reykjavik  - Manchester, janvier, 44,32 €" class="on-white noTrack" href="http://www.easyjet.com/links.mvc?lang=fr&amp;curr=EUR&amp;dep=KEF&amp;dest=MAN&amp;dd=2014-01-16&amp;apax=1&amp;view=D" name="order">
+			<span class="btnLeft"></span><span class="btnRight">Afficher les vols»</span>
+		</a>
+	</div>
+</div><div class="seperatorDiv"><span class="seperator"></span></div><div class="flightOfferItem">
+	<div class="focFrom">Reykjavik </div>
+	<div class="focTo">London Luton</div>
+	<div class="focMonth">février</div>
+	<div class="focPrice">
+		<span class="p1"></span><span class="p2">53</span><span class="p3">,55 €</span>
+	</div>
+	<div class="SmallBrightOrangeBtn contain">
+		<a title="Reykjavik  - London Luton, février, 53,55 €" class="on-white noTrack" href="http://www.easyjet.com/links.mvc?lang=fr&amp;curr=EUR&amp;dep=KEF&amp;dest=LTN&amp;dd=2014-02-04&amp;apax=1&amp;view=D" name="order">
+			<span class="btnLeft"></span><span class="btnRight">Afficher les vols»</span>
+		</a>
+	</div>
+</div><div class="seperatorDiv"><span class="seperator"></span></div><div class="flightOfferItem">
+	<div class="focFrom">Reykjavik </div>
+	<div class="focTo">Edimbourg</div>
+	<div class="focMonth">décembre</div>
+	<div class="focPrice">
+		<span class="p1"></span><span class="p2">44</span><span class="p3">,32 €</span>
+	</div>
+	<div class="SmallBrightOrangeBtn contain">
+		<a title="Reykjavik  - Edimbourg, décembre, 44,32 €" class="on-white noTrack" href="http://www.easyjet.com/links.mvc?lang=fr&amp;curr=EUR&amp;dep=KEF&amp;dest=EDI&amp;dd=2013-12-02&amp;apax=1&amp;view=D" name="order">
+			<span class="btnLeft"></span><span class="btnRight">Afficher les vols»</span>
+		</a>
+	</div>
+</div></div>
+	<div class="clear"></div>
+	<div class="flightOfferFooter"><a href="http://www.easyjet.com/FR/Reserver/conditions.html">Prix par personne, aller simple, taxes incluses, avec deux personnes voyageant sur la même réservation (paiement par carte de crédit). Des frais variables s’appliquent pour les bagages en soute. Au moins 4 places à ce prix par vol. </a></div>
+</div><script type="text/javascript">new FlightOffersComponent('fltOff_6a9b260bb86a403cbcc610a27bcf7609', '6a9b260b-b86a-403c-bcc6-10a27bcf7609', '/ejcms/nocache/jsCallbacks/FlightOffersCallback.aspx');</script><div class="multiFeatureContainer narrow">
+	<div tabindex="0"></div><ul style="display: none;" id="scrlMult_57355dda144c473585efebb893e9195b" class="jcarousel-skin-images staticFeatureBlocks">
+		<li class="pager" style="width: 620px; float: left; list-style: none outside none;"><div class="featureBlock"><a href="http://vacances.easyjet.com/?utm_source=ej_CMS&amp;utm_medium=FR_Homepage&amp;utm_term=Holidays&amp;utm_content=Frame1&amp;utm_campaign=ScollingMulti">
+	<span class="feature">
+		<img alt="Toulouse €166/CHF 202pp 4 nuits en juillet" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Regional/FR/ScrollingMultiFeature/HOLIDAYS/FR-SEJOURS-FAMILY-BIKE-SMF.ashx" height="194" width="150">
+		<span class="carouselContentBar bottom">
+			<span class="carouselTitle">Vacances</span>
+			<span class="carouselText">Toulouse</span>
+			<span class="carouselPrice">€166/CHF202pp <br>4 nuits en juillet</span>
+		</span>
+	</span>
+</a><a href="http://cars.easyjet.com/r/?c=homepage-banner_fr">
+	<span class="feature">
+		<img alt="Soyez surclassé au Royaume-Uni" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Standard Scrolling MultiFeature Banners/D Europcar/EUROPCAR_2DAYSFREE_SMF.ashx" height="194" width="150">
+		<span class="carouselContentBar bottom">
+			<span class="carouselTitle">2 jours de location</span>
+			<span class="carouselText">OFFERTS</span>
+			<span class="carouselPrice">Réservez vite !</span>
+		</span>
+	</span>
+</a><a href="http://hotels.easyjet.com/index.html?aid=347807&amp;lang=fr&amp;label=easy-homepage-banner1;selected_currency=EUR&amp;utm_source=ej_CMS&amp;utm_medium=FR_Homepage&amp;utm_term=LateRoom&amp;utm_content=Frame3&amp;utm_campaign=ScollingMulti">
+	<span class="feature">
+		<img alt="Offres d'hôtels incroyables" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Standard Scrolling MultiFeature Banners/E Hotels/BOOKING-BALCONY-SUN-SET-SMF.ashx" height="194" width="150">
+		<span class="carouselContentBar bottom">
+			<span class="carouselTitle">Offres d'hôtels incroyables</span>
+			<span class="carouselText">Aucun frais en plus</span>
+			<span class="carouselPrice">Réservez maintenant</span>
+		</span>
+	</span>
+</a><a href="/fr/reserver/ete2013">
+	<span class="feature">
+		<img alt="Disponible sur l’ensemble des vols d’ici la fin du mois de novembre" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Regional/FR/ScrollingMultiFeature/Vacances SMF.ashx" height="194" width="150">
+		<span class="carouselContentBar bottom">
+			<span class="carouselTitle">VACANCES D’ÉTÉ</span>
+			<span class="carouselText">À planifier d’urgence! </span>
+			<span class="carouselPrice"></span>
+		</span>
+	</span>
+</a></div></li>
+	<li class="pager lastStaticBlock" style="width: 620px; float: left; list-style: none outside none;"><div class="featureBlock"><a href="/fr/vols-pas-chers/italie/olbia-sardaigne"><span class="feature"><img alt="Nouveau Paris CDG - Bari" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Regional/FR/ScrollingMultiFeature/SMF Olbia.ashx" height="194" width="150"><span class="carouselContentBar bottom"><span class="carouselTitle">Nouveau</span><span class="carouselText">Nice - Olbia</span><span class="carouselPrice"> </span></span></span></a><a href="http://www.easyjet.com/fr/mobile"><span class="feature"><img alt="Notre application sur iPhone®  et Android" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Standard Scrolling MultiFeature Banners/F easyJet/Mobile/FAMILY_AND_PHONE_SMF.ashx" height="194" width="150"><span class="carouselContentBar bottom"><span class="carouselTitle">Notre application sur iPhone®  et Android</span><span class="carouselPrice"> </span></span></span></a><a href="http://www.facebook.com/easyJetFrance"><span class="feature"><img alt="Rejoignez-nous sur Facebook" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Standard Scrolling MultiFeature Banners/F easyJet/Social/COUPLE-ON-CLIFF-FACEBOOK.ashx" height="194" width="150"><span class="carouselContentBar bottom"><span class="carouselTitle">Rejoignez-nous sur Facebook</span><span class="carouselText"> </span><span class="carouselPrice"> </span></span></span></a><a href="http://modedemploi.easyjet.com/"><span class="feature"><img alt="Notre mode d'emploi" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Standard Scrolling MultiFeature Banners/B Business/EJ_BUSINESSMAN_SMF.ashx" height="194" width="150"><span class="carouselContentBar bottom"><span class="carouselTitle">Notre mode d'emploi</span><span class="carouselPrice"> </span></span></span></a></div></li></ul><div class="multifeature-bx-wrapper" style="width:620px; position:relative;"><div class="bx-window" style="position:relative; overflow:hidden; width:620px;"><ul style="width: 999999px; position: relative; left: -620px;" id="scrlMult_57355dda144c473585efebb893e9195b" class="jcarousel-skin-images"><li style="width: 620px; float: left; list-style: none outside none;"><div class="featureBlock"><a tabindex="-1" href="/fr/vols-pas-chers/italie/olbia-sardaigne"><span class="feature"><img alt="Nouveau Paris CDG - Bari" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Regional/FR/ScrollingMultiFeature/SMF Olbia.ashx" height="194" width="150"><span class="carouselContentBar bottom"><span class="carouselTitle">Nouveau</span><span class="carouselText">Nice - Olbia</span><span class="carouselPrice"> </span></span></span></a><a tabindex="-1" href="http://www.easyjet.com/fr/mobile"><span class="feature"><img alt="Notre application sur iPhone®  et Android" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Standard Scrolling MultiFeature Banners/F easyJet/Mobile/FAMILY_AND_PHONE_SMF.ashx" height="194" width="150"><span class="carouselContentBar bottom"><span class="carouselTitle">Notre application sur iPhone®  et Android</span><span class="carouselPrice"> </span></span></span></a><a tabindex="-1" href="http://www.facebook.com/easyJetFrance"><span class="feature"><img alt="Rejoignez-nous sur Facebook" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Standard Scrolling MultiFeature Banners/F easyJet/Social/COUPLE-ON-CLIFF-FACEBOOK.ashx" height="194" width="150"><span class="carouselContentBar bottom"><span class="carouselTitle">Rejoignez-nous sur Facebook</span><span class="carouselText"> </span><span class="carouselPrice"> </span></span></span></a><a tabindex="-1" href="http://modedemploi.easyjet.com/"><span class="feature"><img alt="Notre mode d'emploi" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Standard Scrolling MultiFeature Banners/B Business/EJ_BUSINESSMAN_SMF.ashx" height="194" width="150"><span class="carouselContentBar bottom"><span class="carouselTitle">Notre mode d'emploi</span><span class="carouselPrice"> </span></span></span></a></div></li>
+		<li class="pager" style="width: 620px; float: left; list-style: none outside none;"><div class="featureBlock"><a tabindex="-1" href="http://vacances.easyjet.com/?utm_source=ej_CMS&amp;utm_medium=FR_Homepage&amp;utm_term=Holidays&amp;utm_content=Frame1&amp;utm_campaign=ScollingMulti">
+	<span class="feature">
+		<img alt="Toulouse €166/CHF 202pp 4 nuits en juillet" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Regional/FR/ScrollingMultiFeature/HOLIDAYS/FR-SEJOURS-FAMILY-BIKE-SMF.ashx" height="194" width="150">
+		<span class="carouselContentBar bottom">
+			<span class="carouselTitle">Vacances</span>
+			<span class="carouselText">Toulouse</span>
+			<span class="carouselPrice">€166/CHF202pp <br>4 nuits en juillet</span>
+		</span>
+	</span>
+</a><a tabindex="-1" href="http://cars.easyjet.com/r/?c=homepage-banner_fr">
+	<span class="feature">
+		<img alt="Soyez surclassé au Royaume-Uni" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Standard Scrolling MultiFeature Banners/D Europcar/EUROPCAR_2DAYSFREE_SMF.ashx" height="194" width="150">
+		<span class="carouselContentBar bottom">
+			<span class="carouselTitle">2 jours de location</span>
+			<span class="carouselText">OFFERTS</span>
+			<span class="carouselPrice">Réservez vite !</span>
+		</span>
+	</span>
+</a><a tabindex="-1" href="http://hotels.easyjet.com/index.html?aid=347807&amp;lang=fr&amp;label=easy-homepage-banner1;selected_currency=EUR&amp;utm_source=ej_CMS&amp;utm_medium=FR_Homepage&amp;utm_term=LateRoom&amp;utm_content=Frame3&amp;utm_campaign=ScollingMulti">
+	<span class="feature">
+		<img alt="Offres d'hôtels incroyables" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Standard Scrolling MultiFeature Banners/E Hotels/BOOKING-BALCONY-SUN-SET-SMF.ashx" height="194" width="150">
+		<span class="carouselContentBar bottom">
+			<span class="carouselTitle">Offres d'hôtels incroyables</span>
+			<span class="carouselText">Aucun frais en plus</span>
+			<span class="carouselPrice">Réservez maintenant</span>
+		</span>
+	</span>
+</a><a tabindex="-1" href="/fr/reserver/ete2013">
+	<span class="feature">
+		<img alt="Disponible sur l’ensemble des vols d’ici la fin du mois de novembre" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Regional/FR/ScrollingMultiFeature/Vacances SMF.ashx" height="194" width="150">
+		<span class="carouselContentBar bottom">
+			<span class="carouselTitle">VACANCES D’ÉTÉ</span>
+			<span class="carouselText">À planifier d’urgence! </span>
+			<span class="carouselPrice"></span>
+		</span>
+	</span>
+</a></div></li>
+	<li class="pager" style="width: 620px; float: left; list-style: none outside none;"><div class="featureBlock"><a tabindex="-1" href="/fr/vols-pas-chers/italie/olbia-sardaigne"><span class="feature"><img alt="Nouveau Paris CDG - Bari" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Regional/FR/ScrollingMultiFeature/SMF Olbia.ashx" height="194" width="150"><span class="carouselContentBar bottom"><span class="carouselTitle">Nouveau</span><span class="carouselText">Nice - Olbia</span><span class="carouselPrice"> </span></span></span></a><a tabindex="-1" href="http://www.easyjet.com/fr/mobile"><span class="feature"><img alt="Notre application sur iPhone®  et Android" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Standard Scrolling MultiFeature Banners/F easyJet/Mobile/FAMILY_AND_PHONE_SMF.ashx" height="194" width="150"><span class="carouselContentBar bottom"><span class="carouselTitle">Notre application sur iPhone®  et Android</span><span class="carouselPrice"> </span></span></span></a><a tabindex="-1" href="http://www.facebook.com/easyJetFrance"><span class="feature"><img alt="Rejoignez-nous sur Facebook" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Standard Scrolling MultiFeature Banners/F easyJet/Social/COUPLE-ON-CLIFF-FACEBOOK.ashx" height="194" width="150"><span class="carouselContentBar bottom"><span class="carouselTitle">Rejoignez-nous sur Facebook</span><span class="carouselText"> </span><span class="carouselPrice"> </span></span></span></a><a tabindex="-1" href="http://modedemploi.easyjet.com/"><span class="feature"><img alt="Notre mode d'emploi" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Standard Scrolling MultiFeature Banners/B Business/EJ_BUSINESSMAN_SMF.ashx" height="194" width="150"><span class="carouselContentBar bottom"><span class="carouselTitle">Notre mode d'emploi</span><span class="carouselPrice"> </span></span></span></a></div></li><li style="width: 620px; float: left; list-style: none outside none;"><div class="featureBlock"><a tabindex="-1" href="http://vacances.easyjet.com/?utm_source=ej_CMS&amp;utm_medium=FR_Homepage&amp;utm_term=Holidays&amp;utm_content=Frame1&amp;utm_campaign=ScollingMulti">
+	<span class="feature">
+		<img alt="Toulouse €166/CHF 202pp 4 nuits en juillet" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Regional/FR/ScrollingMultiFeature/HOLIDAYS/FR-SEJOURS-FAMILY-BIKE-SMF.ashx" height="194" width="150">
+		<span class="carouselContentBar bottom">
+			<span class="carouselTitle">Vacances</span>
+			<span class="carouselText">Toulouse</span>
+			<span class="carouselPrice">€166/CHF202pp <br>4 nuits en juillet</span>
+		</span>
+	</span>
+</a><a tabindex="-1" href="http://cars.easyjet.com/r/?c=homepage-banner_fr">
+	<span class="feature">
+		<img alt="Soyez surclassé au Royaume-Uni" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Standard Scrolling MultiFeature Banners/D Europcar/EUROPCAR_2DAYSFREE_SMF.ashx" height="194" width="150">
+		<span class="carouselContentBar bottom">
+			<span class="carouselTitle">2 jours de location</span>
+			<span class="carouselText">OFFERTS</span>
+			<span class="carouselPrice">Réservez vite !</span>
+		</span>
+	</span>
+</a><a tabindex="-1" href="http://hotels.easyjet.com/index.html?aid=347807&amp;lang=fr&amp;label=easy-homepage-banner1;selected_currency=EUR&amp;utm_source=ej_CMS&amp;utm_medium=FR_Homepage&amp;utm_term=LateRoom&amp;utm_content=Frame3&amp;utm_campaign=ScollingMulti">
+	<span class="feature">
+		<img alt="Offres d'hôtels incroyables" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Standard Scrolling MultiFeature Banners/E Hotels/BOOKING-BALCONY-SUN-SET-SMF.ashx" height="194" width="150">
+		<span class="carouselContentBar bottom">
+			<span class="carouselTitle">Offres d'hôtels incroyables</span>
+			<span class="carouselText">Aucun frais en plus</span>
+			<span class="carouselPrice">Réservez maintenant</span>
+		</span>
+	</span>
+</a><a tabindex="-1" href="/fr/reserver/ete2013">
+	<span class="feature">
+		<img alt="Disponible sur l’ensemble des vols d’ici la fin du mois de novembre" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Regional/FR/ScrollingMultiFeature/Vacances SMF.ashx" height="194" width="150">
+		<span class="carouselContentBar bottom">
+			<span class="carouselTitle">VACANCES D’ÉTÉ</span>
+			<span class="carouselText">À planifier d’urgence! </span>
+			<span class="carouselPrice"></span>
+		</span>
+	</span>
+</a></div></li></ul></div><a tabindex="-1" href="" class="bx-prev noTrack"></a><a tabindex="-1" href="" class="bx-next noTrack"></a></div><div tabindex="0"></div>
+</div><script type="text/javascript">     
+	new ScrollingMultiFeature('scrlMult_57355dda144c473585efebb893e9195b', {"blocks":[{"features":[{"img":"//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Regional/FR/ScrollingMultiFeature/HOLIDAYS/FR-SEJOURS-FAMILY-BIKE-SMF.ashx","imgAlt":"Toulouse €166/CHF 202pp 4 nuits en juillet","link":"http://vacances.easyjet.com/?utm_source=ej_CMS&utm_medium=FR_Homepage&utm_term=Holidays&utm_content=Frame1&utm_campaign=ScollingMulti","head":"Vacances","body":"Toulouse","price":"€166/CHF202pp </br>4 nuits en juillet"},{"img":"//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Standard Scrolling MultiFeature Banners/D Europcar/EUROPCAR_2DAYSFREE_SMF.ashx","imgAlt":"Soyez surclassé au Royaume-Uni","link":"http://cars.easyjet.com/r/?c=homepage-banner_fr","head":"2 jours de location","body":"OFFERTS","price":"Réservez vite !"},{"img":"//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Standard Scrolling MultiFeature Banners/E Hotels/BOOKING-BALCONY-SUN-SET-SMF.ashx","imgAlt":"Offres d'hôtels incroyables","link":"http://hotels.easyjet.com/index.html?aid=347807&lang=fr&label=easy-homepage-banner1;selected_currency=EUR&utm_source=ej_CMS&utm_medium=FR_Homepage&utm_term=LateRoom&utm_content=Frame3&utm_campaign=ScollingMulti","head":"Offres d'hôtels incroyables","body":"Aucun frais en plus","price":"Réservez maintenant"},{"img":"//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Regional/FR/ScrollingMultiFeature/Vacances SMF.ashx","imgAlt":"Disponible sur l’ensemble des vols d’ici la fin du mois de novembre","link":"/fr/reserver/ete2013","head":"VACANCES D’ÉTÉ","body":"À planifier d’urgence! ","price":""}],"overlayPos":1},{"features":[{"img":"//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Regional/FR/ScrollingMultiFeature/SMF Olbia.ashx","imgAlt":"Nouveau Paris CDG - Bari","link":"/fr/vols-pas-chers/italie/olbia-sardaigne","head":"Nouveau","body":"Nice - Olbia","price":" "},{"img":"//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Standard Scrolling MultiFeature Banners/F easyJet/Mobile/FAMILY_AND_PHONE_SMF.ashx","imgAlt":"Notre application sur iPhone®  et Android","link":"http://www.easyjet.com/fr/mobile","head":"Notre application sur iPhone®  et Android","body":"","price":" "},{"img":"//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Standard Scrolling MultiFeature Banners/F easyJet/Social/COUPLE-ON-CLIFF-FACEBOOK.ashx","imgAlt":"Rejoignez-nous sur Facebook","link":"http://www.facebook.com/easyJetFrance","head":"Rejoignez-nous sur Facebook","body":" ","price":" "},{"img":"//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Standard Scrolling MultiFeature Banners/B Business/EJ_BUSINESSMAN_SMF.ashx","imgAlt":"Notre mode d'emploi","link":"http://modedemploi.easyjet.com/","head":"Notre mode d'emploi","body":"","price":" "}],"overlayPos":1}]});
+</script>
+<div class="thirdLeftCol">
+	<div class="imageFeature">
+	<a class="imageLink" href="http://www.easyjet.com/fr/inspirez-moi">
+		<img class="backgroundImage" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Regional/FR/Image Features/Inspire Me_FR.ashx" alt="Inspirez-moi" height="298" width="298">
+		<span class="richTextArea" style="top:10px; width: 258px"></span>
+	</a>
+</div>
+</div>
+<div class="thirdRightCol">
+	<div class="imageFeature">
+	<a class="imageLink" href="http://www.easyjet.com/fr/business">
+		<img class="backgroundImage" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Regional/FR/Image Features/1552-FR-BUSINESS-298x298-V1-Q55-FINAL.ashx" alt="Business" height="298" width="298">
+		<span class="richTextArea" style="top:10px; width: 258px"></span>
+	</a>
+</div>
+</div>
+<div class="clear"></div>
+
+</div>
+<div class="smallRightCol">
+	<div role="tablist" id="accordionContainer" class="accordionContainer ui-accordion ui-widget ui-helper-reset ui-accordion-icons">
+	<div class="accordionTab top">
+	<div tabindex="0" aria-selected="true" aria-expanded="true" role="tab" class="accordionHeader ui-accordion-header ui-helper-reset ui-state-default ui-state-active ui-corner-top"><span class="ui-icon ui-icon-triangle-1-s"></span>
+		<div>
+			<h3>Et vous, vos envies?</h3>
+		</div>
+	</div>
+	<div role="tabpanel" style="height: 328px;" class="accordionSection ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active">
+		<div class="tabBody"><div class="iframeContainer">
+	<iframe id="accordion_search_1" src="http://www.easyjet.com/fr/searchpod.mvc/showborderless?aclwidth=279&amp;flightsearch=KEF||08-05-2013|11-05-2013|1|0|0|false||" title="Et vous, vos envies?" frameborder="0" height="328" scrolling="no" width="298">
+		<p>Your browser does not support iframes.</p>
+	</iframe>
+</div></div>
+	</div>
+</div><script language="javascript" type="text/javascript">
+	 createiFrameURL("accordion_search_1");
+</script><div class="accordionTab middle">
+	<div tabindex="0" aria-selected="false" aria-expanded="false" role="tab" class="accordionHeader ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"><span class="ui-icon ui-icon-triangle-1-e"></span>
+		<div>
+			<h3>Hôtels</h3>
+		</div>
+	</div>
+	<div role="tabpanel" style="height: 328px; display: none;" class="accordionSection ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+		<div class="tabBody"><div class="iframeContainer">
+	<iframe src="http://hotels.easyjet.com/general.html?aid=347848&amp;lang=fr&amp;tmpl=searchbox-home-final&amp;label=easy-homepage-searchbox-view;selected_currency=EUR" title="Hôtels" frameborder="0" height="328" scrolling="no" width="298">
+		<p>Your browser does not support iframes.</p>
+	</iframe>
+</div></div>
+	</div>
+</div><div class="accordionTab bottom">
+	<div tabindex="0" aria-selected="false" aria-expanded="false" role="tab" class="accordionHeader ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"><span class="ui-icon ui-icon-triangle-1-e"></span>
+		<div>
+			<h3>Besoin de louer une voiture ?</h3>
+		</div>
+	</div>
+	<div role="tabpanel" style="height: 328px; display: none;" class="accordionSection ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+		<div class="tabBody"><div class="iframeContainer">
+	<iframe src="https://cars.easyjet.com/resaweb/trb/bookingPod?partnerkey=easyjet&amp;PROMO=51495483&amp;SKIN=11010&amp;IATA=00650181&amp;PERD=Y&amp;CNTRY=FR&amp;locale=fr " title="Besoin de louer une voiture ?" frameborder="0" height="328" scrolling="no" width="298">
+		<p>Your browser does not support iframes.</p>
+	</iframe>
+</div></div>
+	</div>
+</div><script language="javascript" type="text/javascript">
+	$jq('#accordionContainer').accordion({ 
+        change: function(event, ui) 
+        {
+            $jq('.ui-accordion-header').attr('tabindex','0');
+        },
+        animated: 'easeOutQuad', 
+        header: 'div.accordionHeader'
+        });
+    $jq(".ui-accordion-header").attr("tabindex",'0');
+</script>
+	<div class="clear"></div>
+</div>
+<div class="clear"></div><div class="imageFeature">
+	<a class="imageLink" href="http://www.easyjet.com/managebookings/fr">
+		<img class="backgroundImage" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Regional/FR/Image Features/CUSTOMER NOTICES AND BUTTONS/FR-CHECK-IN-ONLINE-BUTTON-HP-v3.ashx" alt="Enregistrement en ligne" height="55" width="300">
+		<span class="richTextArea" style="top:10px; width: 260px"></span>
+	</a>
+</div><div class="imageFeature">
+	<a class="imageLink" href="http://www.easyjet.com/fr/suivi-de-vol-en-direct">
+		<img class="backgroundImage" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Regional/FR/Image Features/CUSTOMER NOTICES AND BUTTONS/FR-TODAYS-FLIGHTS.ashx" alt="Les Vols du Jour" height="55" width="300">
+		<span class="richTextArea" style="top:10px; width: 260px"></span>
+	</a>
+</div><div class="stackedTextBoxes">
+	<div class="stackedTextBoxesHeader">
+		<h3>Nos meilleures offres partenaires :</h3>
+	</div>
+	<div class="stackedTextBoxesContent"><div class="stackedBox light ">
+	<h4><p><strong>Hôtels</strong></p></h4>
+	<span class="orangeDealText"><a href="http://hotels.easyjet.com/city/es/barcelona.html?aid=347807&amp;lang=fr&amp;label=easy-homepage-toppartnerofferstext;selected_currency=eur&amp;utm_source=ej_CMS&amp;utm_medium=FR_Homepage&amp;utm_term=Hotels&amp;utm_content=Link_1&amp;utm_campaign=StackedTextBox" style="float: none; color: #ff6200; font-size: 1em;">Hôtels 3 étoiles à Barcelone, dès 70 €</a></span>
+	<div class="linkContainer"><a href=""></a></div>
+	<div class="clear"></div>
+</div><div class="stackedBox dark ">
+	<h4><strong>Europcar</strong></h4>
+	<span class="orangeDealText"><a style="float: none; color: #ff6200; font-size: 1em;" href="http://cars.easyjet.com/r/?c=partner-panel_fr">2 jours de location offerts</a></span>
+	<div class="linkContainer"><a href=""></a></div>
+	<div class="clear"></div>
+</div><div class="stackedBox light bottom">
+	<h4><p><strong>Vacances</strong></p></h4>
+	<span class="orangeDealText"><a href="http://vacances.easyjet.com" style="float: none; color: #ff6200; font-size: 1em;">Toulouse<br>
+166 € / 202 CHF pp.&nbsp;<br>
+4 nuits en juillet<br>
+</a></span>
+	<div class="linkContainer"><a href=""></a></div>
+	<div class="clear"></div>
+</div></div>
+</div>
+</div>
+<div class="clear"></div>
+<div class="imageFeature">
+	<a class="imageLink" href="http://www.easyjet.com/fr/inspirez-moi">
+		<img class="backgroundImage" src="//media.sc.easyjet.com/ejcms/cache/medialibrary/Images/Regional/FR/Image Features/1396-Footer-940x120-FR.ashx" alt="Et vous, vos envies?" height="120" width="940">
+		<span class="richTextArea" style="top:10px; width: 900px"><p><br>
+</p>
+<div style="text-align: right;"></div></span>
+	</a>
+</div>
+			<div class="footerWrapper">
+	<div class="footerNavWrapper">
+		<div class="footerCol" style="width:auto">
+	<h2>Vols</h2>
+	<ul><li><a href="http://www.easyjet.com/fr/suivi-de-vol-en-direct">Départs et arrivées</a></li><li><a href="https://www.easyjet.com/FR/secure/MyEasyJet.mvc/SignIn">Vos réservations</a></li><li><a href="/fr/carte-des-destinations">Où volons-nous ?</a></li></ul>
+</div><div class="footerCol" style="width:auto">
+	<h2>Voler avec easyJet</h2>
+	<ul><li><a href="http://www.easyjet.com/FR/Organiser/baggage.html">Franchises de bagages</a></li><li><a href="http://easyjet-fr.custhelp.com/app/answers/list/c/1663">Aide spéciale</a></li></ul>
+</div><div class="footerCol" style="width:auto">
+	<h2>Service clientèle</h2>
+	<ul><li><a href="http://easyjet-fr.custhelp.com/">Aide</a></li><li><a href="http://easyjet.custhelp.com/app/answers/detail/a_id/3925">Etat du trafic</a></li><li><a href="/fr/sitemap">Plan du site</a></li></ul>
+</div><div class="footerCol" style="width:auto">
+	<h2>À propos d'easyJet</h2>
+	<ul><li><a href="http://corporate.easyjet.com/default.aspx">Informations sur la compagnie (GB)</a></li><li><a href="http://corporate.easyjet.com/investors.aspx">Investisseurs (GB)</a></li><li><a href="http://corporate.easyjet.com/media.aspx">Médias (GB)</a></li><li><a href="http://corporate.easyjet.com/sustainability.aspx">Durabilité (GB)</a></li><li><a href="http://careers.easyjet.com/">Carrières (GB)</a></li><li><a href="/fr/unicef">UNICEF</a></li></ul>
+</div><div class="footerCol" style="width:auto">
+	<h2>Termes et conditions</h2>
+	<ul><li><a href="http://www.easyjet.com/fr/Reserver/privacypolicy.html">Politique de confidentialité</a></li><li><a href="http://www.easyjet.com/fr/Reserver/acceptableuse.html">Politique d'utilisation acceptable</a></li><li><a href="/fr/conditions-generales">Conditions Générales</a></li><li><a href="/fr/supplements-et-charges">Suppléments et charges</a></li></ul>
+</div><div class="footerIcon" style="width:auto"><p><a href="http://www.easyjet.com/en/members/newMember.asp"><img alt="Footer Icon" src="/ejcms/cache/medialibrary/Images/Global/C Footer Items/footerIcon.ashx" height="36" width="40"></a> <br>
+<a href="http://www.easyjet.com/fr/membres/newMember.asp">S’inscrire à l’enewsletter!</a></p></div>
+		<div class="clear"></div>
+	</div>
+	<div class="clear"></div>
+</div>
+			<div class="belowFooter">
+				<div class="genericHtmlBlock" style="background: url('')  no-repeat bottom left;">
+	<div style="padding-bottom: 10px; padding-left: 15px; padding-right: 15px; font-size: 90%; padding-top: 10px;">|&nbsp;<a href="/fr/vols-pas-chers/france/paris">vol Paris</a> | <a href="http://www.easyjet.com/fr/vols-pas-cher/Lyon">vol Lyon </a>| <a href="http://www.easyjet.com/fr/vols-pas-cher/nice">vol Nice</a> | <a href="http://www.easyjet.com/fr/vols-pas-cher/Toulouse">vol Toulouse</a> | <a href="http://www.easyjet.com/fr/vols-pas-cher/nantes">vol Nantes</a> | <a href="http://www.easyjet.com/fr/vols-pas-cher/Londres">Londres pas cher</a> | <a href="http://www.easyjet.com/fr/vols-pas-cher/Bordeaux">vol Bordeaux</a> | <a href="http://www.easyjet.com/fr/vols-pas-cher/Marrakech">vol Marrakech</a> | <a href="http://www.easyjet.com/fr/vols-pas-cher/Geneve">vol Genève</a> | <a href="http://www.easyjet.com/fr/vols-pas-cher/Barcelone">vol Barcelone</a> | <a href="http://www.easyjet.com/fr/vols-pas-cher/nice">Vol Genève Nice</a> | <a href="http://www.easyjet.com/fr/vols-pas-cher/Londres">Vol Londres</a> | <a href="http://www.easyjet.com/fr/vols-pas-cher/Paris">Vol Genève Paris</a> | <a href="http://www.easyjet.com/fr/vols-pas-cher/Barcelone">Vol pas cher Barcelone</a> | <a href="http://www.easyjet.com/fr/vols-pas-cher/Porto">Vol Porto</a> | <a href="http://www.easyjet.com/fr/vols-pas-cher/Bruxelles">Vols Bruxelles</a> | <a href="http://www.easyjet.com/fr/vols-pas-cher/amsterdam">Vols pas cher Amsterdam</a> | <a href="http://www.easyjet.com/fr/vols-pas-cher/Berlin">Vol Genève Berlin</a> | <a href="http://www.easyjet.com/fr/vols-pas-cher/Bordeaux">Vol Genève Bordeaux</a> | <a href="http://www.easyjet.com/fr/vols-pas-cher/Lisbonne">Vols Lisbonne</a> |
+<p>*Tarif aller simple. Frais de gestion inclus. Des frais variables s’appliquent pour les bagages en soute. Certains moyens de paiement occasionnent des frais fixes supplémentaires.&nbsp;Prix indiqué pour un paiement par carte de débit</p>
+</div>
+</div>
+			</div>
+		</div>
+		<iframe id="dcFrame" src="http://fls.doubleclick.net/activityi;src=883205;type=french;cat=step1fr;ord=1;num=966967422555078500?" class="Doubleclick" style="display:none;" frameborder="0"></iframe>
+<script type="text/javascript">
+  (function($) {
+    var id = Math.random() * 1000000000000000000;
+    $('#dcFrame').attr('src', 'http://fls.doubleclick.net/activityi;src=883205;type=french;cat=step1fr;ord=1;num=' + id + '?');
+  })($jq);
+</script>
+
+
+
+<div id="TMAN_BOTTOM_BODY"></div>
+<script>
+TMAN.doTags(TMAN.position.BOTTOM_BODY); 
+</script>
+
+<script>
+<!-- This code enables the online checkin popup to be invoked via an anchor tag – requested for by Dan Young.  Once ManageBookings goes live this code and the associated temporary redirect need to be removed -->
+
+$jq(document).ready( function(){
+    if (window.location.hash === '#Checkin-Online' && typeof (displayPopup) === 'function') {
+        displayPopup('/ejcms/nocache/jsCallbacks/CheckInCallback.aspx', '', 'hash');
+        window.location.hash = "";
+    }
+});
+</script>
+
+	</form>
+
+
+
+<script id="tmap_1" src="http://pfa.levexis.com/easyjet/tman.cgi/tmpageid=34&amp;levyouruid=0.15274112463788647&amp;tmsecmode=N&amp;country_code=FR&amp;tmtag=js" async=""></script><script id="tmap_3" src="//nxtck.com/act.php?tag=37489" async=""></script></body>

@@ -1,0 +1,318 @@
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>BetLive</title>
+	<link rel="stylesheet" type="text/css" href="css/Styles.css,CLabWebCore.css">
+	<link rel="stylesheet" type="text/css" href="css/CLabWebCorePrint.css" media="print">
+	<!--[if IE]>   
+	<link rel="stylesheet" type="text/css" href="css/CLabWebCorePrint.IE.css" media="print" />
+	<![endif]-->
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+	<div id="header1Wrap">
+	<div class="headerInnerWrap">
+		<div id="header1">
+			<div id="mainLinkContainer"><a href="sportBets">Ponuda i rezultati</a><a href="stats/?stat_id=1_26" target="_blank">Statistike</a><a href="#" id="hlTeletext">Teletekst</a><a href="poslovnice">Poslovnice</a><a href="pravila">Pravila igre</a><a href="pravilars">Pravila igre RS</a></div>
+			<div id="loginBox">
+			
+				<form name="frmLogin" id="frmLogin" method="post" action="loginUser">
+					<fieldset>
+						<div class="errorMessage" style="visibility: hidden" id="loginErrorMessageContainer"><span class="floatLeft"></span><span class="floatRight closeButton"><a href="#" id="hlCloseLoginErrorMessage"><img src="HtmlIncludes/Images/loginerror_close.gif" alt="" border="0"></a></span></div><label for="userName" id="userNameLabel" class="passwordForgot">Korisnik</label><input name="userName" id="userName" type="text"><label for="userPassword" id="userPasswordLabel" class="passwordForgot">Lozinka</label><input name="userPassword" id="userPassword" type="password">
+					</fieldset>
+				</form>
+				<a href="#" id="hlLogin" name="hlLogin" class="round"><span>Prijava</span></a>
+				<a href="#" id="hlPassForgotten" class="passwordForgot">Izgubljena lozinka?</a><span id="registerContainer" style="display: none;"><a href="#" id="hlRegister">Registriraj se!</a></span>
+			
+			</div>
+		</div>
+	</div>
+</div>
+<div id="header2Wrap">
+	<div class="header2InnerWrap">
+		<div id="header2Logo">
+			<div id="header2LogoUpper">
+				<div id="facebook"></div><div class="day">27</div><div class="month">May</div><div id="currentTime" class="time">21:39</div>
+			</div>
+			<div id="header2LogoLower" onclick="window.location='sportBets';"></div>			
+		</div>
+		<div id="header2FlashNews">
+		<div id="header2FlashNewsDate">25.05.2013</div>
+<div id="header2FlashNewsPicture_721"><img src="newsPicture/721" alt="" title="" border="0"></div>
+<div id="header2FlashNewsText"><span id="span_721"><strong>Finale Lige Prvaka Borussia Dortmund - Bayern Munchen, 25.05.2013, 20:45</strong></span></div>
+<div id="header2FlashNewsNavigator"><span>1</span></div>
+		</div>
+		<div id="header2LinkContainer">			
+			<ul id="menuList">
+				<li id="liSportBetsOn" onclick="window.location='sportBets';">&nbsp;</li>
+					   
+				
+				<li id="liLiveBetsOff" onclick="window.location='liveBets';">&nbsp;</li>
+				
+				<li id="liDogRacesOff" onclick="window.location='dogRaces';">&nbsp;</li>
+				
+				<li id="liBingoOff" onclick="window.location='besix';">&nbsp;</li>
+				
+				<li id="liLotoOff" onclick="window.location='loto';">&nbsp;</li>
+			</ul>	
+		</div>			
+		<div id="weeklyMagazineContainer">
+			<div id="weeklyMagazinePicture"><img src="getWeeklyMagazinePicture" alt="" title=""></div>
+			<div id="weeklyMagazineIntro">Novi tjednik u prodaji</div>
+			<div id="weeklyMagazineDate">od ponedjeljka, 27. svibnja 2013.</div>
+			<div id="weeklyMagazineFooter">u poslovnicama <br>BetLive-a diljem BiH.</div>
+		</div>			
+	</div>
+</div>
+<script src="http://www.google-analytics.com/ga.js" async="" type="text/javascript"></script><script type="text/javascript">
+	weeklyMagazineUrl = '';
+</script>
+	<div id="wrap"><div id="inner-wrap">
+	<div id="content">
+		<div id="leftColumn">
+				<div id="menu_main">	
+	<div class="menu_main_header">PONUDA</div><div class="menu_main_headerRight"><a href="#" id="btnResetOffer"></a></div>
+	<div id="menu_main_items">										
+		<ul class="treeview" id="menuOffer" style="border-top:none !important;"><li class="second last" id="bySportDelimiter"><a class="btnMenuItem" alt="" title="" id="m-bySportDelimiter">&nbsp;</a></li></ul>
+	</div>
+	<div id="offerNextHour">
+		<div id="offerNextHourEmptyRow">&nbsp;</div>
+		<div class="offerNextHourTitleRow"><a href="#" id="btnOfferNextHour" class="">Za 1h</a></div>
+		<div class="offerNextHourTitleRow offerNext4HourTitleRow"><a href="#" id="btnOfferNext4Hour" class="">Za 4h</a></div>
+	</div>
+	<div id="offerSearch">
+		<div id="offerSearchEmptyRow">&nbsp;</div>
+		<div class="offerSearchTitleRow">Pretraga</div>
+		<form id="frmOfferSearch" name="frmOfferSearch" method="post" action="">
+			<fieldset>
+				<input name="searchOffer" id="searchOffer" type="text">
+				<a href="#" id="btnSearchOffer" name="btnSearchOffer" class="round"><span>Pretraga</span></a>
+			</fieldset>
+		</form>
+	</div>
+</div>
+
+
+
+<div id="pdf">DOWNLOAD</div>
+<div class="downloadLine"><a href="Assets/Offer.pdf" target="_blank">Dnevna ponuda</a></div>
+<div class="downloadLine"><a href="Assets/WeekOffer.pdf" target="_blank">Tjedna ponuda</a></div>
+
+<div class="downloadLine"><a href="Assets/BET-Live SMS Kladjenje.pdf" target="_blank">SMS kla?enje</a></div>
+<div class="downloadLine"><a href="Assets/PravilaRS.pdf" target="_blank">Pravila igre RS</a></div>
+<div id="menu_results">
+	<div class="menu_main_header">REZULTATI</div><div class="menu_main_headerRight"><a href="#" id="btnResetResult"></a></div>
+	<div id="menu_results_items">										
+		<ul class="treeview" id="menuResult" style="border-top:none !important;"><li class="first hasChildren expandable" id="resultByDay_2013-05-26_0_0_0"><div class="hitarea first-hitarea hasChildren-hitarea expandable-hitarea"></div><a class="btnMenuItem" alt="" title="" id="m-resultByDay_2013-05-26_0_0_0">Nedjelja 26.05.2013</a><ul style="display: none;"><li class="last" id=""><a class="btnMenuItem" alt="" title="" id="m-undefined"></a></li></ul></li><li class="first hasChildren expandable" id="resultByDay_2013-05-25_0_0_0"><div class="hitarea first-hitarea hasChildren-hitarea expandable-hitarea"></div><a class="btnMenuItem" alt="" title="" id="m-resultByDay_2013-05-25_0_0_0">Subota 25.05.2013</a><ul style="display: none;"><li class="last" id=""><a class="btnMenuItem" alt="" title="" id="m-undefined"></a></li></ul></li><li class="first hasChildren expandable" id="resultByDay_2013-05-24_0_0_0"><div class="hitarea first-hitarea hasChildren-hitarea expandable-hitarea"></div><a class="btnMenuItem" alt="" title="" id="m-resultByDay_2013-05-24_0_0_0">Petak 24.05.2013</a><ul style="display: none;"><li class="last" id=""><a class="btnMenuItem" alt="" title="" id="m-undefined"></a></li></ul></li><li class="first hasChildren expandable" id="resultByDay_2013-05-23_0_0_0"><div class="hitarea first-hitarea hasChildren-hitarea expandable-hitarea"></div><a class="btnMenuItem" alt="" title="" id="m-resultByDay_2013-05-23_0_0_0">?etvrtak 23.05.2013</a><ul style="display: none;"><li class="last" id=""><a class="btnMenuItem" alt="" title="" id="m-undefined"></a></li></ul></li><li class="first hasChildren expandable" id="resultByDay_2013-05-22_0_0_0"><div class="hitarea first-hitarea hasChildren-hitarea expandable-hitarea"></div><a class="btnMenuItem" alt="" title="" id="m-resultByDay_2013-05-22_0_0_0">Srijeda 22.05.2013</a><ul style="display: none;"><li class="last" id=""><a class="btnMenuItem" alt="" title="" id="m-undefined"></a></li></ul></li><li class="first hasChildren expandable" id="resultByDay_2013-05-21_0_0_0"><div class="hitarea first-hitarea hasChildren-hitarea expandable-hitarea"></div><a class="btnMenuItem" alt="" title="" id="m-resultByDay_2013-05-21_0_0_0">Utorak 21.05.2013</a><ul style="display: none;"><li class="last" id=""><a class="btnMenuItem" alt="" title="" id="m-undefined"></a></li></ul></li><li class="first hasChildren expandable" id="resultByDay_2013-05-20_0_0_0"><div class="hitarea first-hitarea hasChildren-hitarea expandable-hitarea"></div><a class="btnMenuItem" alt="" title="" id="m-resultByDay_2013-05-20_0_0_0">Ponedjeljak 20.05.2013</a><ul style="display: none;"><li class="last" id=""><a class="btnMenuItem" alt="" title="" id="m-undefined"></a></li></ul></li><li class="first hasChildren expandable lastExpandable" id="resultMore_2013-05-20"><div class="hitarea first-hitarea hasChildren-hitarea expandable-hitarea lastExpandable-hitarea"></div><a class="btnMenuItem" alt="" title="" id="m-resultMore_2013-05-20">Više...</a><ul style="display: none;"><li class="last" id=""><a class="btnMenuItem" alt="" title="" id="m-undefined"></a></li></ul></li></ul>
+	</div>
+	<div id="resultSearch">
+		<div id="resultSearchEmptyRow">&nbsp;</div>
+		<div class="resultSearchTitleRow">Pretraga</div>
+		<form id="frmResultSearch" name="frmResultSearch" method="post" action="result/search">
+			<fieldset>
+				<input name="searchResult" id="searchResult" value="" type="text">
+				<a href="#" id="btnSearchResult" name="btnSearchResult" class="round"><span>Pretraga</span></a>
+			</fieldset>
+		</form>
+	</div>
+</div>
+		</div>	
+		<div style="height: 56px;" id="middleColumn">
+			<div id="headerContent">
+	<span class="headerContentLeft"><p class="title">LISTA PONUDA</p></span>
+</div> 
+<div id="offerList">
+	<table class="offerListTable" width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td class="betPairs">Ne postoje odgovaraju?e ponude!</td>
+		</tr>
+	</tbody></table>
+</div>
+
+
+<script type="text/JavaScript">
+	chunkNumber = '0';
+	if (chunkNumber) 
+	{
+		chunkNumber = parseInt(chunkNumber, 10);
+		chunkNumber = isNaN(chunkNumber) ? 0 : chunkNumber;		
+	}
+
+	var currentChunk = "";
+	var selectedOffer = "";
+</script>
+		</div>
+		<div id="rightColumn">
+			<div id="ticket"><p class="header">LISTI?</p>
+<div class="tabs regular_on" id="ticketSwitchRegularContainer"><a href="#" class="link_on" id="ticketSwitchRegular">Obi?ni</a></div>
+<div class="tabs system_off" id="ticketSwitchSystemContainer"><a href="#" class="link_off" id="ticketSwitchSystem">Sistemski</a></div>
+
+<div style="float: right;" class="help" id="ticketDisclaimer"><div class="ticketDisclaimerDetails">Ponuda koja se nalazi na ovim stranicama se može promjeniti. <br><br>Prije kona?ne potvrde Vašeg listi?a ponude ?e biti provjerene i odgovaraju?e izmjenjene.</div></div>
+<br style="clear: both">
+<div class="ticket_content">
+	<div class="ticket_item ticket_message" id="ticketMessageContainer" name="ticketMessageContainer" style="display:none !important"></div>
+	<div class="ticket_quickAdd">
+		<div class="item_col1" style="padding-top: 2px;"><label for="txtTicketQuickAdd">Brzi unos</label></div>
+		<div class="item_col2" style="padding-top: 2px;"><input id="txtTicketQuickAdd" name="txtTicketQuickAdd" maxlength="5" type="text"><select id="ddTicketQuickAdd"><option> - </option></select></div>
+		<div class="item_col3" style="padding-right: 10px;"><a href="#" id="btnTicketQuickAdd" name="btnTicketQuickAdd" class="round"><span>Dodaj!</span></a></div>
+		<div style="clear:both;"></div>
+	</div>
+
+</div>
+<div class="ticket_content" id="ticketTabRegular">	
+	
+	<div class="bottomItem">
+	Vaš listi? ne sadržava nikakve ponude!	
+	</div>
+
+</div> 
+<div class="ticket_content" id="ticketTabSystem" style="display:none;">
+	
+	<div class="bottomItem">
+	Vaš listi? ne sadržava nikakve ponude!	
+	</div>
+
+</div>
+
+
+<script type="text/JavaScript">
+var ticketErrorFlag = '0';
+refreshOfferList = '0';
+var confirmDialogOK = 'Da';
+var confirmDialogCancel = 'Ne';
+var confirmDialogTitle = '';
+var ticketDeleteItemQuestion = 'Želite li doista obrisati ponudu sa listi?a?';
+var ticketClearQuestion = 'Želite li doista obrisati kompletni listi??';
+var ticketCosts = 0
+var ticketItemsCount = 0;
+var ticketSystemAddMoreSystemMessage = 'Kako bi igrali sistemski listi? morate dodati još ponuda!';
+var ticketSystemToManyFixesMessage = 'Odabrali ste previše fixeva.';
+var ticketSystemToLittleFixesMessage = 'Odabran je max. broj kombinacija (20). Odaberite dodatne fixeve.';
+var ticketErrorNoStake = '';
+var ticketErrorNoPin = '';
+</script>
+</div>
+			
+			<div id="checkTicket">
+	<p class="header">PROVJERA LISTI?A</p>
+	<div class="messageContainer">
+		<div class="ticket_item ticket_message" id="checkTicketMessageContainer" name="checkTicketMessageContainer" style="display:none !important"></div>
+	</div>
+	<table border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td style="padding-left:12px;">Broj listi?a:</td>
+			<td colspan="2" style="padding-right:5px;"><input id="checkTicketNumber" name="checkTicketNumber" value="" style="width:120px;" type="text"><div id="checkTicketRefreshCaptcha" name="checkTicketRefreshCaptcha" class="refreshCaptcha"></div></td>
+		
+		</tr>
+		<tr>
+			<td style="padding-left:12px; vertical-align: top;">Kod:</td>
+			<td colspan="2"><img src="Library/CLabWebCore/HtmlIncludes/Images/Tmp/31d4f219b5c78581eb0b8a64f6c3b5da.png" id="captchaImage" style="width:150px;vertical-align:middle;" title="Captcha" alt="Captcha"></td>
+		</tr>
+		<tr>
+			<td style="padding-left:12px">&nbsp;</td>
+			<td><input id="checkTicketCaptcha" name="checkTicketCaptcha" type="text"></td>
+			<td style="text-align:right; padding-right:5px;"><a href="#" id="btnCheckTicketSubmit" name="btnCheckTicketSubmit" class="round"><span>Provjeri!</span></a></td>
+		</tr>
+	</tbody></table>
+	<div style="clear:both"><br></div>
+</div>
+			<div id="smsCheckTicket"><div id="smsCheckTicketDialog">&nbsp;</div></div>
+			<div id="eighteenPlus">&nbsp;</div>
+		</div>
+	</div>
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+<script src="javascript/CLabWebCore.js" type="text/javascript"></script>
+
+<script type="text/JavaScript">
+	setTimezoneOffsetCookie();
+
+	$(document).ready(function(){	
+		initializeGlobal(true);
+		setMiddleColumnHeight();
+		initializeShared();
+		initializeOffer();initializeSportTicket();
+
+		
+		
+		initializeMiddleColumnRefreshTimer();
+
+		var stake = $("#txtTicketStake");
+		if (stake) {
+			var inputStake = getInputedAsNumber('#txtTicketStake');
+			if (inputStake == 0) {
+				$('#txtTicketStake').val(1.00);
+				calculatePossibleWinning(2);
+			}
+		}
+
+	});
+
+	backText = 'Natrag';
+	betButtonText = 'Okladi se!';
+	betOnlineButtonText = 'Uplati listi? putem web ra?una!';
+	cancelButtonText = 'Odustani';
+	closeButtonText = 'Zatvori';
+	confirmDeleteAction = '0';
+	continueButtonText = 'Nastavi';
+	createWebTicketButtonText = '';
+	formSubmitErrorMessage = 'Došlo je do pogreške. Molimo Vas da pokušate ponovno.';
+	menuFilterExclusive = '1';
+	passwordForgottenTitle = 'Izgubljena lozinka?';
+	registerButtonText = 'Registracija';
+	printButtonText = 'Ispis!';
+	registrationTitle = 'Registracija';
+	saveButtonText = 'Spremi';
+	sendButtonText = 'Pošalji';
+	roundingValue = '0';
+
+	if (roundingValue.indexOf(',') != -1) {
+		roundingValue = roundingValue.replace('.', '').replace(',', '.');
+	}
+	roundingValue = parseFloat(roundingValue);
+	roundingValue = isNaN(roundingValue) ? 0 : roundingValue;
+
+	document.onclick = jsddm_close;
+</script></div>
+	<div id="footerWrap">?<div class="headerInnerWrap">
+	<div class="footer">
+		<div><a href="onama">O nama</a></div>
+		<div><a href="kontakt">Kontakt</a></div>
+		<div><a href="pravila">Pravila igre</a></div>
+		<div><a href="pravilars">Pravila igre RS</a></div>
+	</div>
+	<div class="footerNext">
+		<div><a href="sportBets">Ponuda / Rezultati</a></div>
+		<div><a href="stats/?stat_id=1_26" target="_blank">Statistike</a></div>
+		<div>Kla?enje uživo</div>
+		<div><a href="#" id="weeklyMagazineFooterLink">Tjednik</a></div>
+	</div>
+	<div class="footerNext">
+		<div><a href="poslovnice">Poslovnice</a></div>
+		<div><a href="#" id="hlOnlineHelp">Online pomo?</a></div>		
+	</div>
+	<div class="footerNext">
+		<div><a href="loto">Loto</a></div>
+	</div>
+	<div class="footerLogo">&nbsp;</div>
+<div></div>
+
+
+<script src="javascript/clab.core.js" type="text/javascript"></script>
+<script type="text/javascript">
+	initializeStaticPart();
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-38772560-1']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+	  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	  var s = document.getElementsByTagName('script')[0];
+	  s.parentNode.insertBefore(ga, s);
+	})();
+
+</script>
+
+</div></div><div style="position: absolute; left: 12px; top: 243px; width: 200px; height: 159px; display: none;" class="jquery-ajax-loader"></div><div style="position: absolute; left: 12px; top: 518px; width: 200px; height: 96px; display: none;" class="jquery-ajax-loader"></div></body>

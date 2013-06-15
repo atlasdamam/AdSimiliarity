@@ -1,0 +1,301 @@
+<head>
+    <meta http-equiv="Content-Type" content="text/HTML; charset=iso-8859-15">
+<meta http-equiv="Content-script-type" content="text/javascript">
+<meta http-equiv="Content-style-type" content="text/css">
+<meta http-equiv="Content-language" content="fr">
+<meta http-equiv="expires" content="0">
+<title>L'Entrepôt du Bricolage - le Bricolage à prix entrepôt ! Des prix bas toute l'année!!</title>
+<meta name="robots" content="index, follow">
+<meta name="Author" content="">
+<meta name="Keywords" content="Bricolage, Grenoble, Bricolage Grenoble, Prix bas, bricolage prix, Pontarlier, Le Creusot, Montceau-les-Mines les Mines, Annecy, Annemasse, Chambéry, Albertville, L'Isle d'Abeau, Saint Jean de Moirans, Echirolles, Saint Martin d'Hères, Romans, Valence, Montélimar, Alès, outillage, Drive, brico drive">
+<meta name="Description" content="Le Bricolage à  prix entrepot! Des prix bas toute l'annee, conseil, service et proximite. Expedition sur toute la France, transport en Isere, avec le premier drive dedie au bricolage en France.">
+<meta name="revisit-after" content="">
+<link rel="shortcut icon" href="http://e-brico.fr/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="http://e-brico.fr/css_5/styles-h.css" type="text/css">
+    <script src="http://www.google-analytics.com/ga.js" async="" type="text/javascript"></script><script type="text/javascript">var SERVER_ROOT = '/';</script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-33840805-1']);
+        _gaq.push(['_setDomainName', 'none']);
+        _gaq.push(['_setAllowLinker', true]);
+        _gaq.push(['_trackPageview']);
+        _gaq.push(['_trackPageLoadTime']);
+        
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+        
+    </script>
+
+<script type="text/javascript">
+    /* effet de page */
+    $(function(){
+        $('div.animation_recrutement').hover(function(){
+            $(this).html('<' + 'a href="http://www.groupesamserecrute.fr/fr/" onclick="window.open(this.href);return false"><' + 'img src="http://e-brico.fr/images/CURL2.jpg" alt=""><' + '/a>');
+        },function(){
+            $(this).html('');
+        })
+        $('#campagne_flash').load('http://e-brico.fr/pages/calendrier-campagne-flash.php');
+    })
+</script>
+
+<script type="text/javascript">
+  /*  commentaires sur liste magasins */
+$(function(){
+    var listItem = $('.jquery-selectbox-list > span');
+    listItem.each(function(e){
+        if( $(this).hasClass('#pro#') ) {
+           $(this).html(function() {
+               return $(this).html().replace( new RegExp('#pro#'),' <' + 'em style="color:green;font-size">Prochainement<' + '/em>');
+            });
+            $(this).removeClass('#pro#');
+        } else if($(this).hasClass('#new#')) {
+           $(this).html( function(){
+               return $(this).html().replace( new RegExp('#new#'),' <' + 'em style="color:red">Nouveau !<' + '/em>');
+            });
+            $(this).removeClass('#new#');
+        } else if($(this).hasClass('#exp#')) {
+           $(this).html( function(){
+               return $(this).html().replace( new RegExp('#exp#'),' <' + 'em style="color:blue">Expédition internationale<' + '/em>');
+            });
+            $(this).removeClass('#exp#');
+        }
+    })
+
+    listItem.filter(function (){
+        $(this).bind('mouseover' , function(){
+            if ($(this).text().length > 43 && $('marquee').size() == 0) {
+                $(this).find('font').wrapInner('<' + 'marquee direction="right" width="104"><' + 'span><' + '/span><' + '/marquee>');
+            }}).bind('mouseout', function(){$('marquee > span').unwrap();})
+        });
+ })
+</script>
+
+
+
+
+
+    <link rel="stylesheet" type="text/css" href="jqmap/style/style.css" media="all">
+    
+    <link rel="stylesheet" type="text/css" media="all" href="http://e-brico.fr/jqmap/js_4/customselectbox/css/jquery.selectbox.css">
+    <link rel="stylesheet" href="jqmap/style/refonte.css.css" type="text/css" media="screen" charset="utf-8">
+<!--[if lt IE 7]><link rel="stylesheet" type="text/css" href="/jqmap/style/ie.css" media="all"><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" type="text/css" href="/jqmap/style/ie7.css" media="all"><![endif]-->
+    <script type="text/javascript" src="http://e-brico.fr/jqmap/js_4/map.js"></script>
+    <script type="text/javascript" src="http://e-brico.fr/jqmap/js_4/customselectbox/js/jquery.selectbox-0.6.1.js"></script>
+</head>
+    <body>
+        <div id="deco">
+            <div id="over-deco" style="
+                                                                                background-repeat: inherit;
+                                                    background-position: center top;
+                                                    background-attachment: inherit;
+                                        ">
+                <div id="document">
+                    <div id="bandeauHaut">
+                        <div class="logo">
+                            <p>
+	<a href="/index.php" title="Accueil"><img alt="" src="http://e-brico.fr/bo/uploads/BAO_PREHOME/CMSimages/ENTREPOT_Small.jpg" style="width: 284px; height: 111px;"></a></p>
+
+                        </div>
+                        <div class="animation_top"><p>
+	<img alt="" src="http://e-brico.fr/bo/uploads/BAO_PREHOME/CMSimages/Banniere-pre-home.gif" style="width: 480px; height: 140px;"></p>
+</div>
+                        <div class="animation_recrutement">&nbsp;</div>
+                    </div>
+                    <div class="clr"></div><div id="corps">
+    <!-- //////////////////////// Contenu //////////////////////// -->
+    <div id="Home">
+        <div id="innercorps">
+            <div id="homeTitle"><h1>
+	<span style="font-size:26px;"><span style="font-family: verdana,geneva,sans-serif;"><strong>Commandez vos produits de bricolage dans notre catalogue en ligne !</strong></span></span></h1>
+</div>
+            <div id="customselect" style="float:left">
+	<div style="width: 196px;" class="jquery-selectbox jquery-custom-selectboxes-replaced"><div style="width: 191px; height: 10em; display: block;" class="jquery-selectbox-list jquery-custom-selectboxes-replaced-list"><span class="Grenoble-Echirolles jquery-selectbox-item value-http://echirolles.e-bricodrive.fr item-0">38 - Grenoble-Echirolles</span><span class="Isle d-Abeau jquery-selectbox-item value-http://isledabeau.e-bricodrive.fr item-1">38 - Isle d'Abeau</span><span class="Moirans jquery-selectbox-item value-http://moirans.e-bricodrive.fr/ item-2">38 - Moirans</span><span class="Saint-Martin-d-Heres jquery-selectbox-item value-http://stmartindheres.e-bricodrive.fr/ item-3">38 - Saint-Martin-d'Hères</span><span class="Ales jquery-selectbox-item value-http://ales.e-bricodrive.fr item-4">30 - Alès</span><span class="Montelimar jquery-selectbox-item value-http://montelimar.e-bricodrive.fr/ item-5">26 - Montélimar</span><span class="Romans-sur-Isere jquery-selectbox-item value-http://romans.e-bricodrive.fr/ item-6">26 - Romans-sur-Isère</span><span class="Valence jquery-selectbox-item value-http://valence.e-bricodrive.fr/ item-7">26 - Valence</span><span class="Albertville jquery-selectbox-item value-http://albertville.e-bricodrive.fr/ item-8">73 - Albertville</span><span class="Chambery jquery-selectbox-item value-http://chambery.e-bricodrive.fr/ item-9">73 - Chambéry</span><span class="Annecy jquery-selectbox-item value-http://annecy.e-bricodrive.fr/ item-10">74 - Annecy</span><span class="Annemasse jquery-selectbox-item value-http://annemasse.e-bricodrive.fr/ item-11">74 - Annemasse  <em style="color:blue">Expédition internationale</em></span><span class="Thyez-Cluses jquery-selectbox-item value-http://thyez.e-bricodrive.fr/ item-12">74 - Thyez-Cluses</span><span class="Montceau-les-Mines jquery-selectbox-item value-http://montceau.e-bricodrive.fr/ item-13">71 - Montceau-les-Mines</span><span class="Pontarlier jquery-selectbox-item value-http://pontarlier.e-bricodrive.fr/ item-14">25 - Pontarlier</span><span class="Remiremont jquery-selectbox-item value-http://remiremont.e-bricodrive.fr/ item-15">88 - Remiremont</span><span class="Fontaine-les-Dijon jquery-selectbox-item value-http://dijon.e-bricodrive.fr/ item-16">21 - Fontaine-lès-Dijon  <em style="color:red">Nouveau !</em></span></div><select class="mag" id="cm" style="padding: 10px 0px; display: none;">
+																																			 <option label="Grenoble-Echirolles" value="http://echirolles.e-bricodrive.fr">38 - Grenoble-Echirolles</option>
+									 <option label="Isle d-Abeau" value="http://isledabeau.e-bricodrive.fr">38 - Isle d'Abeau</option>
+									 <option label="Moirans" value="http://moirans.e-bricodrive.fr/">38 - Moirans</option>
+									 <option label="Saint-Martin-d-Heres" value="http://stmartindheres.e-bricodrive.fr/">38 - Saint-Martin-d'Hères</option>
+									 <option label="Ales" value="http://ales.e-bricodrive.fr">30 - Alès</option>
+									 <option label="Montelimar" value="http://montelimar.e-bricodrive.fr/">26 - Montélimar</option>
+									 <option label="Romans-sur-Isere" value="http://romans.e-bricodrive.fr/">26 - Romans-sur-Isère</option>
+									 <option label="Valence" value="http://valence.e-bricodrive.fr/">26 - Valence</option>
+									 <option label="Albertville" value="http://albertville.e-bricodrive.fr/">73 - Albertville</option>
+									 <option label="Chambery" value="http://chambery.e-bricodrive.fr/">73 - Chambéry</option>
+									 <option label="Annecy" value="http://annecy.e-bricodrive.fr/">74 - Annecy</option>
+									 <option label="Annemasse #exp#" value="http://annemasse.e-bricodrive.fr/">74 - Annemasse #exp#</option>
+									 <option label="Thyez-Cluses" value="http://thyez.e-bricodrive.fr/">74 - Thyez-Cluses</option>
+									 <option label="Montceau-les-Mines" value="http://montceau.e-bricodrive.fr/">71 - Montceau-les-Mines</option>
+									 <option label="Pontarlier" value="http://pontarlier.e-bricodrive.fr/">25 - Pontarlier</option>
+									 <option label="Remiremont" value="http://remiremont.e-bricodrive.fr/">88 - Remiremont</option>
+									 <option label="Fontaine-les-Dijon #new#" value="http://dijon.e-bricodrive.fr/">21 - Fontaine-lès-Dijon #new#</option>
+																</select></div>
+</div>
+<div id="wrapper" style="float:left;margin-top:28px;">
+	<div id="containercontent">
+		<div>
+			<div id="map" style="width: 230px; height: 506px; opacity: 0.792479;"><img class="loader" src="/jqmap/images/map/loading.gif" alt=""></div>
+		</div>
+	</div>
+	</div>
+
+
+<script type="text/javascript">
+	$('#cm').selectbox().bind('change', function(){
+		if($(this).val() != 'false') {
+			try {
+				_gaq.push(['_link', $(this).val()]);
+			} catch(ex) {
+				window.location = $(this).val();
+			}
+		}
+	});
+	$(document).ready(function() {$('.jquery-selectbox-list').css('display','block');});
+</script>
+        </div>
+    </div>
+    <!-- //////////////////////// CONTENU FIN //////////////////////// -->
+</div>
+<div class="clr"></div>
+<!-- //////////////////////// CORPS FIN //////////////////////// -->
+<div id="footer_acc">
+    <div class="bloc">
+        <div class="barre_titres">
+            <p>
+	<img alt="" src="http://e-brico.fr/bo/uploads/BAO_PREHOME/CMSimages/corps-bottom_01.png" style="width: 986px; height: 83px; border-width: 0px; border-style: solid;"></p>
+
+            <div class="clr"></div>
+        </div>
+        <div class="txt" style="margin-left:110px;">
+            <h3>le Drive</h3>
+            <table style="width: 250px;" border="0" cellpadding="1" cellspacing="1">
+	<tbody>
+		<tr>
+			<td>
+				<p>
+					<span style="font-family: arial,helvetica,sans-serif;"><strong>1<sup>er</sup> Drive du Bricolage en France !</strong></span></p>
+				<p>
+					<span style="font-family: arial,helvetica,sans-serif;">Retirez votre commande au jour et à l'heure souhaités en choisissant le magasin le plus proche de chez vous !</span></p>
+			</td>
+			<td>
+				<span style="font-size:12px;">&nbsp;&nbsp;&nbsp;</span></td>
+			<td>
+				<p>
+					<span style="font-size:12px;"><img alt="" src="http://e-brico.fr/bo/uploads/BAO_PREHOME/CMSimages/corps-bottom_04.jpg" height="113" width="132"></span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	&nbsp;</p>
+
+        </div>
+        <div class="txt" style="margin-left:20px; width:235px;">
+            <h3>l'Expédition </h3>
+            <table style="width: 235px;" border="0" cellpadding="1" cellspacing="1">
+	<tbody>
+		<tr>
+			<td>
+				<p>
+					<strong>Grâce à l'envoi postal </strong>sur une sélection de produits partout en France métropolitaine, vous êtes livrés chez vous en 72 heures !</p>
+			</td>
+			<td>
+				&nbsp;</td>
+			<td>
+				<img alt="L'expidition" src="http://e-brico.fr/bo/uploads/BAO_PREHOME/CMSimages/corps-bottom_03.jpg" style="float: right;" height="110" width="83"></td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	&nbsp;</p>
+
+        </div>
+        <div class="txt" style="margin-left:20px;">
+            <h3>le Transport </h3>
+            <table style="width: 300px;" border="0" cellpadding="1" cellspacing="1">
+	<tbody>
+		<tr>
+			<td>
+				<p>
+					<strong>Besoin de préparer un chantier !</strong><br>
+					Nous vous livrons chez vous ou sur votre chantier, aux alentours de votre magasin, à l'horaire souhaité.</p>
+			</td>
+			<td>
+				&nbsp;&nbsp;</td>
+			<td>
+				<p>
+					<img alt="" src="http://e-brico.fr/bo/uploads/BAO_PREHOME/CMSimages/corps-bottom_08.jpg" style="float: right;" height="110" width="119"></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	&nbsp;</p>
+
+        </div>
+        <div class="clr"></div>
+    </div>
+</div>
+<div class="clr"></div>
+                    <div id="bandeauBas">
+                        <div class="LiensFooter">
+                            <p>
+                                                                    <a href="/nos-services.php" title="Nos Services">Nos Services</a>
+                                    <img src="http://e-brico.fr/css_5/images/separateur.jpg" alt="separateur">
+                                                                                                    <a href="/article-nos_engagements-11.htm" title="Nos engagements">Nos engagements</a>
+                                                                            <img src="http://e-brico.fr/css_5/images/separateur.jpg" alt="separateur">
+                                                                                                        <a href="/article-programme_fidelite-13.htm" title="Programme fidélité">Programme fidélité</a>
+                                                                            <img src="http://e-brico.fr/css_5/images/separateur.jpg" alt="separateur">
+                                                                                                        <a href="http://www.groupesamserecrute.fr/fr/" title="Rejoignez-nous !" target="_blank">Rejoignez-nous !</a>
+                                                                            <img src="http://e-brico.fr/css_5/images/separateur.jpg" alt="separateur">
+                                                                                                        <a href="/article-qui_sommes_nous-30.htm" title="Qui sommes-nous?">Qui sommes-nous?</a>
+                                                                                                </p>
+                            <div class="clr"></div>
+                        </div>
+                        <div class="clr"></div>
+                            <div id="txtsFooter" style="color:#FFF;">
+                                <div class="blocM">
+                                    <h3>Magasins de bricolage à prix bas !</h3>
+                                    <p>
+	L'Entrepôt du Bricolage est une enseigne de magasins de bricolage qui propose des prix bas toute l'année pour les particuliers et les professionnels. Les magasins de bricolage L'Entrepôt du Bricolage distribuent des matériaux de construction et de bricolage. Pour tous vos chantiers, L'Entrepôt du Bricolage propose à la vente du matériel à prix bas en provenance des plus grandes marques du bricolage.</p>
+
+                                </div>
+
+                                <div class="blocM">
+                                    <h3>Des magasins de bricolage en régions Rhône-Alpes, Bourgogne, Lorraine, Languedoc-Roussillon et Franche-Comté.</h3>
+                                    <p>
+	Les magasins de bricolage L'Entrepôt du Bricolage sont notamment implantés en Isère à proximité de Grenoble : <a href="http://echirolles.e-bricodrive.fr">Echirolles</a>, <a href="http://stmartindheres.e-bricodrive.fr">Saint-Martin-d'Hères </a>, <a href="http://moirans.e-bricodrive.fr">Moirans</a>, <a href="http://isledabeau.e-bricodrive.fr">L'Isle d'Abeau </a>;&nbsp; en Savoie: <a href="http://chambery.e-bricodrive.fr">Chambéry</a>, <a href="http://albertville.e-bricodrive.fr">Albertville</a>, en Haute-Savoie : <a href="http://annecy.e-bricodrive.fr">Annecy</a>,&nbsp; <a href="http://annemasse.e-bricodrive.fr">Annemasse</a>, <a href="http://thyez.e-bricodrive.fr/">Thyez-Cluses </a>. Vous trouverez aussi des magasins de bricolage L'Entrepôt du Bricolage dans la Drôme : <a href="http://romans.e-bricodrive.fr/">Romans </a>, <a href="http://montelimar.e-bricodrive.fr">Montélimar</a>, <a href="http://valence.e-bricodrive.fr/">Valence</a>, dans le Gard : <a href="http://ales.e-bricodrive.fr/">Alès</a>. Des magasins de bricolage sont ouverts également dans le Doubs: <a href="http://pontarlier.e-bricodrive.fr/">Pontarlier</a>, dans les Vosges :<a href="http://remiremont.e-bricodrive.fr/"> Remiremont&nbsp;</a> et en Saône-et-Loire : <a href="http://montceau.e-bricodrive.fr">Montceau-Les-Mines</a> et <a href="/article-lentrepot_du_bricolage_le_creusot-37.htm">Le Creusot</a>. Vous pouvez consulter la carte des magasins sur la page d'accueil <a href="http://www.e-brico.fr">www.e-brico.fr</a> pour trouver le magasin de bricolage L'Entrepôt du Bricolage le plus proche de chez vous.</p>
+
+                                </div>
+
+                                <div class="blocM">
+                                    <h3>Que trouverez-vous dans un magasin de bricolage L'Entrepôt du Bricolage ?</h3>
+                                    <p>
+	Chacun des magasins de bricolage propose une gamme complète de produits afin de répondre à tous les besoins que vous pourrez rencontrer sur votre chantier. L'Entrepôt du Bricolage propose à la vente un large choix de matériaux de construction et de rénovation ainsi que des produits pour l'aménagement de votre maison et le bricolage : Matériaux, Menuiserie et Plomberie mais aussi Sanitaire et Salle de bains, Carrelage, Parquets, Eclairage et Electricité, Jardin, Chauffage et Isolation. Nos magasins de bricolage possèdent également des rayons Peinture, Outillage, Rangement, Droguerie, Quincaillerie et Bois ou encore Aménagement de placard.</p>
+
+                                </div>
+                                <div class="clr"></div>
+                            </div>
+
+                        <div id="PieddePage">
+                            <p>
+                                                    <a href="/article-mentions_legales-10.htm" title="Mentions légales">Mentions légales </a>
+                            <img src="http://e-brico.fr/css_5/images/separateur_bottom.jpg" alt="separateur">                                                    <a href="/article-qui_sommes_nous-30.htm" title="© L'Entrepôt Du Bricolage 2012">© L'Entrepôt Du Bricolage 2012 </a>
+                            <img src="http://e-brico.fr/css_5/images/separateur_bottom.jpg" alt="separateur">                                                    <a href="http://www.groupe-samse.fr/accueil/nos-metiers/magasin-de-bricolage-et-de-decoration/l-entrepot-du-bricolage.htm" title="Une enseigne du Groupe Samse" target="_blank">Une enseigne du Groupe Samse </a>
+                                                                                </p>
+                            <div class="clr"></div>
+                        </div>
+
+                    </div>
+                    <div class="clr"></div>
+
+                <!-- //////////////////////// DOCUMENT FIN //////////////////////// -->
+                </div>
+            <!-- //////////////////////// DECO FIN //////////////////////// -->
+            </div>
+        </div>
+    
+</body>

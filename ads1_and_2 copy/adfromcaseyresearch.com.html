@@ -1,0 +1,867 @@
+<head>
+		<meta charset="utf-8">
+		<title>Casey Summit 2013</title>
+		<meta name="description" content="">
+<!--[if IE]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="//d15s74raupkmp7.cloudfront.net/css/columnal/columnal_85.css">
+<link rel="stylesheet" type="text/css" href="http://casey-stable.s3.amazonaws.com/sites/2013-fall-summit/css/summit-2013.2.3.css">
+
+<meta property="og:title" content="Casey Research Summit 2013">
+<meta property="og:image" content="http://d1w116sruyx1mf.cloudfront.net/images/landing/summit-2013/">
+<meta property="og:site_name" content="http://caseyresearch.com/ee/summit3/">
+<meta property="og:type" content="article">
+<meta property="og:description" content="">
+
+
+<script src="http://www.google-analytics.com/ga.js" async="" type="text/javascript"></script><script src="http://d1w116sruyx1mf.cloudfront.net/js/jquery-1.8.1.min.js"></script>
+<link href="//fonts.googleapis.com/css?family=Open+Sans:800,600,400" rel="stylesheet" type="text/css">
+<script src="http://d1w116sruyx1mf.cloudfront.net/js/jquery.cycle.min.js"></script>
+<script src="http://d1w116sruyx1mf.cloudfront.net/sites/2013-fall-summit/js/modernizr.custom.64855.js"></script>
+<script src="http://d1w116sruyx1mf.cloudfront.net/sites/2013-fall-summit/js/jquery.placehold.js"></script>
+<meta name="viewport" content="width=device-width; initial-scale=1">
+<link rel="shortcut icon" href="http://www.caseyresearch.com/sites/all/themes/casey/favicon.ico" type="image/x-icon">
+<script>
+$(document).ready(function() {
+	function fix_registerx() {
+		var window_top = $(window).scrollTop();
+		var div_top = $('#register-anchor').offset().top;
+		if (window_top > 39) {$('#register').addClass('fix-posx').removeClass('abs-pos');} else {$('#register').removeClass('fix-posx').addClass('abs-pos');}
+	}
+
+	$(function() {
+		$(window).scroll(fix_registerx);
+		fix_registerx();
+	});
+
+	var $root = $('html, body');
+	$(".scrollto").click(function() {
+		$root.animate({
+			scrollTop: $( $.attr(this, 'href') ).offset().top -39
+		}, 500);
+		return false;
+	});
+
+	$("#sign-the-petition-link").click(function() {
+		$("#petition").addClass("focusform");
+		return false;
+	});
+
+	$(window).scroll(function() {
+
+		if ($(this).scrollTop() < $('section[data-anchor="faculty"]').offset().top -60) {
+			$('nav a').removeClass('active');
+			$('nav a.about-btn').addClass('active');
+			$('a.faculty-btn').removeClass('active');
+		}
+
+   		 if ($(this).scrollTop() >= $('section[data-anchor="faculty"]').offset().top -180) {
+			$('nav a').removeClass('active');
+			$('nav a.faculty-btn').addClass('active');
+		}
+		if ($(this).scrollTop() >= $('section[data-anchor="panels"]').offset().top -100) {
+			$('nav a').removeClass('active');
+			$('nav a.panels-btn').addClass('active');
+		}
+		if ($(this).scrollTop() >= $('section[data-anchor="network"]').offset().top -105) {
+			$('nav a').removeClass('active');
+			$('nav a.network-btn').addClass('active');
+		}
+		if ($(this).scrollTop() >= $('section[data-anchor="agenda"]').offset().top -180) {
+			$('nav a').removeClass('active');
+			$('nav a.agenda-btn').addClass('active');
+		}
+		if ($(this).scrollTop() >= $('section[data-anchor="venue"]').offset().top -180) {
+			$('nav a').removeClass('active');
+			$('nav a.venue-btn').addClass('active');
+		}
+		if ($(this).scrollTop() >= $('aside[data-anchor="register"]').offset().top -50) {
+			$('nav a').removeClass('active');
+			$('nav a.register-btn').addClass('active');
+		}
+		/*if ($(this).scrollTop() >= $('section[data-anchor="sponsors"]').offset().top-280) {
+			$('nav a').removeClass('active');
+			$('nav a.sponsors-btn').addClass('active');
+		}*/
+	});
+
+	$("#slideshow").css("overflow", "hidden");
+	$("ul#slides").cycle({
+		fx: 'fade',
+		pause: 1,
+		prev: '#prev',
+		next: '#next'
+	});
+	$("#slideshow").hover(function() {$("ul#nav").fadeIn();},
+		function() {$("ul#nav").fadeOut();});
+
+	var todayDate = new Date();
+	var month = todayDate.getMonth()+1;
+	var day = todayDate.getDate();
+	var todayFormatted = todayDate.getFullYear() + ((''+month).length<2 ? '0' : '') + month + ((''+day).length<2 ? '0' : '') + day;
+	var earlybird = 20130706;
+	var regular = 20133108;
+	var late = 20131001;
+	if (todayFormatted < earlybird) {$(".early-bird").addClass("current-price");};
+	if (todayFormatted > earlybird && todayFormatted < regular) {$(".regular-price").addClass("current-price");};
+	if (todayFormatted > regular && todayFormatted < late) {$(".late-price").addClass("current-price");};
+	
+	$('.readMore').after('<div class="readMoreBTN">[+] Read More</div>');
+	$('.readMore').toggleClass('collapsed');
+	$('.readMoreBTN').click(function(){
+		$(this).parent().find('.readMore').toggleClass('collapsed');
+		$(this).text($(this).text() == '[+] Read More' ? '[-] Collapse' : '[+] Read More');
+		//$(this).toggleClass('importantDisplay', addOrRemove);
+		return false;
+    	});
+
+	$('.description').hide();
+	$('.toggler').click(function(e){
+		var id=$(this).attr('id');
+		var widgetId=id.substring(id.indexOf('-')+1,id.length);
+		$('#'+widgetId).slideToggle();
+		$('.closeSlider').click(function(){$(this).parent().hide('slow');});
+		return false;
+	});
+
+	//if(!Modernizr.input.placeholder){  
+		$( 'input, textarea' ).placehold( 'placeholderClassName' );
+	//};
+});
+</script>
+	</head>
+
+	<body>
+
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2811832-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+//--><!]]>
+</script>        
+
+
+<div class="container" id="content" data-role="page">
+<header class="introduction-gradient">
+	<div class="row">
+<nav>
+		<div id="left-nav" class="col_2">
+			<ul id="follow-navigation-mobile" class="mobile-only" data-role="listview" data-inset="true">
+		<li><ul id="mobile-nav">
+			<li class="nav-about mobile-nav-about"><a href="#about" class="scrollto about-btn active">Top</a></li>
+			<li class="nav-faculty"><a href="#faculty" class="scrollto faculty-btn">Faculty</a></li>
+			<li class="nav-panels"><a href="#panels" class="scrollto panels-btn">Panels</a></li>
+			<li class="nav-venue"><a href="#venue" class="scrollto venue-btn">Venue</a></li>
+			<!--<li class="nav-sponsors mobile-nav-sponsor"><a href="#sponsors" class="scrollto sponsors-btn">Sponsors</a></li>-->
+			<li class="nav-register"><a href="#reg-anchor" class="scrollto register-btn">Register</a></li>
+		</ul></li>
+	</ul>
+			<h1 id="logo" data-role="header"><a href="http://www.caseyresearch.com/">Casey Research</a></h1>
+				<ul id="follow-navigation" class="mobile-hide">
+					<li class="nav-about"><a href="#about" class="scrollto about-btn active">About</a></li>
+					<li class="nav-faculty"><a href="#faculty" class="scrollto faculty-btn">Faculty</a></li>
+					<li class="nav-panels"><a href="#panels" class="scrollto panels-btn">Panels</a></li>
+					<li class="nav-network"><a href="#network" class="scrollto network-btn">Network</a></li>
+					<li class="nav-agenda"><a href="#agenda" class="scrollto agenda-btn">Agenda</a></li>
+					<li class="nav-venue"><a href="#venue" class="scrollto venue-btn">Venue</a></li>
+					<!--<li class="nav-sponsors"><a href="#sponsors" class="scrollto sponsors-btn">Sponsors</a></li>-->
+				</ul>
+			<div style="height:1px; overflow:hidden;">&nbsp;</div>
+		</div><!-- eo left-nav -->
+</nav>
+		<div class="col_6">
+<section data-anchor="about" data-role="page" id="about">
+			<div data-role="header">
+<p class="opening" style="margin-top:10px;margin-bottom:10px;">Join other independent thinkers for three days in October at the…</p>
+			<img src="http://d1w116sruyx1mf.cloudfront.net/sites/2013-fall-summit/images/FPO_summit_2013_header_v3.png" alt="Casey Research 2013 Summit" style="margin: 0 auto; width: 80%; margin:18px 0 18px 10%;">
+			</div>
+			<div data-role="content">
+<p class="opening">…attend side by side with Dr. Ron Paul, Doug Casey, Donald Coxe, Dr. Lacy Hunt, James Rickards, Chris Martenson, John Hathaway, Paul Brodsky, Van Simmons, Marc J. Victor, Dr.&nbsp;Elizabeth Lee Vliet…
+<a class="scrollto" style="color: #222; border-bottom: 1px dotted #222; text-decoration: none; text-transform:uppercase; float:right; text-align: right; font-size: .85em;" href="#faculty">full&nbsp;list&nbsp;below</a></p><p class="opening" style="font-weight: 600;font-style:italic; clear:both;" align="center"><br>
+October 4, 5 &amp; 6 Tucson, Arizona</p>
+<p>Dear Reader,</p>
+<p>Very possibly the most important <em>Casey Research Summit</em> ever has been scheduled at the stunning <em>Loews Ventana Canyon Resort</em> in Tucson, Arizona, this October 4, 5 and 6.</p>
+
+			<div class="shadow-peel  print-float-right">
+			<img src="http://d1w116sruyx1mf.cloudfront.net/sites/2013-fall-summit/images/Loews.jpg" alt="Loews Ventana Canyon, Tucson">
+			</div>
+            
+			<p class="clearblock" style="margin:10px; height:12px;">&nbsp;</p>
+<p>Over three information-packed days, a limited number of Casey Research readers and guests will participate side by side with a blue-ribbon faculty led by <strong>Dr. Ron Paul</strong> as they explore the <em>seismic</em> shifts ahead for the large Western economies and investment markets.</p>
+<p>The world we now live in is manipulated, managed, and controlled… by the very same people who have manipulated, managed, and controlled the global economy to the precipice.</p>
+<p>Separating fact from fiction is <em>essential</em> to surviving what's coming with your assets intact.</p>
+<ul class="bullet">
+<li>Will Obamacare destroy the US health care system and cripple the economy?</li>
+<li>Can the world's central banks really print their economies back to prosperity?</li>
+<li>What's driving the US stock market? How big is the risk as it reaches new highs?</li>
+<li>Is the bond bubble approaching a pin, wiping out bond investors while simultaneously opening a decades-long profit opportunity for early movers?</li>
+<li>Is the bull market in hard assets over or just getting started? What's holding gold and silver stocks back?</li>
+<li>Has the US now crossed the line in becoming a police state?</li>
+<li>After decades of false promises, is America finally on the path to energy independence? Or is it a myth opening the door for clear-eyed energy investors to profit?</li>
+<li>Just how far is your government willing to go to defend the status quo of deficit spending and to keep the social fabric from tearing?</li>
+<li>Is a currency war now both inevitable and imminent… what are the consequences for investors?</li>
+<li>Is the Eurozone doomed?</li>
+<li>And that's just for starters…</li>
+</ul>
+<p>As you don't need us to tell you, the world has left the proverbial tracks, with overreaching governments now pursuing "whatever it takes" policies in the attempt to force fundamentally damaged economies into recovery, thereby creating massive misallocations of capital and investment pitfalls around every corner.</p>
+<p>The government-led bank heist in Cyprus was just part of a continuum that, as it unfolds, will increasingly penalize the successful, destroy the middle class with inflation, and trap your wealth inside national borders in order to tax it at higher and higher levels.</p>
+<p>To help you fully understand the perilous new world we live in and how to prepare for what’s next, Casey Research has pulled out all the stops for its only Summit to be held in 2013. Starting with an exceptional faculty, most of whom will not only present their latest research and answer your questions but participate as audience members throughout the entire three-day event.</p>
+</div>
+</section>
+<section data-anchor="faculty" data-role="page" id="faculty">
+			<div data-role="header">
+			<h2 class="section-title dark">Faculty</h2>
+			</div>
+			<div data-role="content">
+			<h3>Announcing the 2013 Casey Research Summit Faculty</h3>
+<p>This critical investor's briefing will feature the world's top finance and geopolitical experts, who will show you how to legally protect your assets abroad:</p>
+			<div class="faculty">
+				<div class="readMore collapsed">
+				<div class="img-align-left shadow-peel">
+				<img src="http://d1w116sruyx1mf.cloudfront.net/sites/2013-fall-summit/images/Faculty_Paul_r1.jpg" class="image-border">
+				</div>
+				<h4 class="spkname highlight">Dr. Ron Paul</h4>
+				<p class="job-title">Former Congressman and US Presidential Candidate</p>
+<p>Former Congressman Ron Paul of Texas is the leading spokesman for limited constitutional government, low taxes, free markets, and a return to sound monetary policies based on commodity-backed currency.</p>
+<p>Dr. Paul was known for his consistent voting record in the House of Representatives, never voting for legislation unless the proposed measure was expressly authorized by the Constitution. In the words of former Treasury Secretary William Simon, Dr. Paul is the "one exception to the Gang of 535" on Capitol Hill.</p>
+<p>He has served on the House Banking Committee, where he was a strong advocate for sound monetary policy and an outspoken critic of the Federal Reserve's inflationary measures. He also was a key member of the Gold Commission, advocating a return to a gold standard.</p>
+<p>Dr. Paul will present the keynote address at the Casey Research Summit and attend the entire event as an audience member.</p>
+</div><div class="readMoreBTN">[+] Read More</div><!--eo readMore -->
+			</div>
+			<div class="faculty">
+				<div class="readMore collapsed">
+				<div class="img-align-left shadow-peel">
+				<img src="http://d1w116sruyx1mf.cloudfront.net/sites/2013-fall-summit/images/Faculty_Coxe.jpg" class="image-border">
+				</div>
+				<h4 class="spkname highlight">Donald G. M. Coxe</h4>
+				<p class="job-title">Chairman, Coxe Advisors LLP</p>
+<p>Strategy Advisor to BMO Financial Group and the author of the <strong><em>Basic Points</em></strong> investment journal, Don Coxe has more than 39 years of institutional investment experience in Canada and the US.<br>
+</p>
+<p>From his office in Chicago, Don heads up the Global Commodity Strategy investment management team – a collaboration of Coxe Advisors and Harris Investments – to create and market commodity-oriented solutions for investors. He is advisor to the Coxe Commodity Strategy Fund and the Coxe Global Agribusiness Income Fund in Canada, and the Virtus Global Commodities Stock Fund in the US.</p>
+<p>Don Coxe has consistently been named as a top portfolio strategist by Brendan Wood International; in 2011, he was awarded a lifetime achievement award, and he was ranked number one in the 2007, 2008, and 2009 surveys.</p>
+<p>For commodity investors, Don's presentation at the Tucson Summit alone will be worth the price of admission.</p>
+</div><div class="readMoreBTN">[+] Read More</div><!--eo readMore -->
+			</div>
+			
+			<div class="faculty">
+				<div class="readMore collapsed">
+				<div class="img-align-left shadow-peel">
+				<img src="http://d1w116sruyx1mf.cloudfront.net/sites/2013-fall-summit/images/Faculty_Hunt.jpg" class="image-border">
+				</div>
+				<h4 class="spkname highlight">Dr. Lacy Hunt</h4>
+				<p class="job-title">Executive Vice President, Hoisington Investment Management Company</p>
+<p>An internationally known economist, Dr. Hunt is executive vice president of Hoisington Investment Management Company (HIMCO), a firm that manages $5.8 billion for pension funds, endowments, insurance companies and others. He is vice-chairman of HIMCO's strategic investment policy committee and also chief economist for the Wasatch-Hoisington US Treasury Fund.</p>
+<p>Lacy Hunt is the author of two books and numerous articles in leading magazines, periodicals, and scholarly journals. Among the publishers of his articles are <em>Barron's</em>, <em>The Wall Street Journal</em>, <em>The New York Times</em>, <em>Journal of Finance</em>, <em>Financial Analysts Journal</em>, and <em>The Journal of Portfolio Management</em>.&nbsp; Previously, he was chief US economist for the HSBC Group, one of the world’s largest banks. A native Texan, Dr. Hunt also served as senior economist for the Federal Reserve Bank of Dallas.</p>
+<p>Twice rated by participants at past Casey Research Summits as the best presenter (which is saying something), in Arizona Dr. Hunt will update his views on the bond bubble and the indicators you'll want to watch to know when it is coming to an end. He will then be available throughout the Summit to personally answer your questions.</p>
+</div><div class="readMoreBTN">[+] Read More</div><!--eo readMore -->
+			</div>
+			
+			<div class="faculty">
+				<div class="readMore collapsed">
+				<div class="img-align-left shadow-peel">
+				<img src="http://d1w116sruyx1mf.cloudfront.net/sites/2013-fall-summit/images/Faculty_Rickards.jpg" class="image-border">
+				</div>
+				<h4 class="spkname highlight">James Rickards</h4>
+				<p class="job-title">Senior Managing Director, Tangent Capital Partners</p>
+<p>James Rickards, senior managing director in Tangent Capital Partners, an investment bank based in New York, recently made headlines with his national bestseller, <strong><em>Currency Wars: The Making of the Next Global Crisis</em></strong>.</p>
+<p>He has been interviewed in <em>The Wall Street Journal </em>and has appeared on CNBC, Bloomberg, Fox, CNN, BBC, and NPR, and is an Op-Ed contributor to <em>Financial Times</em>, <em>The New York Times</em>, and <em>Washington Post</em>. He is a visiting lecturer at Northwestern and the School of Advanced International Studies, has delivered papers on risk at Singularity University, the Applied Physics Laboratory, and the Los Alamos National Laboratory and has written numerous articles on risk management.</p>
+<p>As a presenter and three-day participant at the Casey Research Summit, James will provide deeply researched insights into the evolving currency wars, how to reduce the risk to your assets, and the steps he is advising his clients to take in order to profit.</p>
+</div><div class="readMoreBTN">[+] Read More</div><!--eo readMore -->
+			</div>
+			
+			<div class="faculty">
+			<div class="readMore collapsed">
+				<div class="img-align-left shadow-peel">
+				<img src="http://d1w116sruyx1mf.cloudfront.net/sites/2013-fall-summit/images/Faculty_Casey_r1.jpg" class="image-border">
+				</div>
+				<h4 class="spkname highlight">Doug Casey</h4>
+			<p class="job-title">Chairman, Casey Research</p>
+<p>Best-selling author, world-renowned speculator, and Casey Research Chairman Doug Casey has garnered a well-earned reputation for his erudite (and often controversial) insights into politics, economics, and investment markets.</p>
+<p>In Tucson, Doug will expand on some of the themes discussed in his recent book, <em><strong>Totally Incorrect</strong></em>, and provide hard data supporting his contention that the Greater Depression is now not only inevitable but imminent.</p>
+<p>As a participant on a special panel on <em>Internationalizing Your Assets</em>, he'll discuss his latest world tour and his best picks for global diversification today.</p>
+</div><div class="readMoreBTN">[+] Read More</div><!--eo readMore -->
+			</div>
+			
+			<div class="faculty">
+				<div class="readMore collapsed">
+				<div class="img-align-left shadow-peel">
+				<img src="http://d1w116sruyx1mf.cloudfront.net/sites/2013-fall-summit/images/Faculty_Brodsky.jpg" class="image-border">
+				</div>
+				<h4 class="spkname highlight">Paul Brodsky</h4>
+				<p class="job-title">Co-Founder, QB Asset Management</p>
+				<p>A professional investment fund manager since 1996, Paul Brodsky has a deep background in bond trading and running corporate and government-bond trading desks institutionally. Paul, an ardent student of monetary and fiscal policies, and his partner Lee Quaintance are convinced that the trillions of dollars in US government obligations are not sustainable and that, as a consequence, the underlying currency is certain to be devalued with a re-monetization of gold at prices exceeding $10,000 an ounce.</p>
+<p>In Tucson, Paul will share his latest research and answer your questions from the stage, and in person as a Summit participant. </p>
+</div><div class="readMoreBTN">[+] Read More</div><!--eo readMore -->
+			</div>
+			
+			<div class="faculty">
+				<div class="readMore collapsed">
+				<div class="img-align-left shadow-peel">
+				<img src="http://d1w116sruyx1mf.cloudfront.net/sites/2013-fall-summit/images/Faculty_Martenson.jpg" class="image-border">
+				</div>
+				<h4 class="spkname highlight">Chris Martenson</h4>
+				<p class="job-title">Author of <em>The Crash Course</em></p>
+<p>Dr. Chris Martenson is an economic researcher and futurist specializing in energy and resource depletion. He is the founder and editor of the website ChrisMartenson.com, as well as its popular video seminar, <em>The Crash Course</em>.</p>
+<p>Chris is in the dot-connecting business. A former scientist and Fortune 300 executive, he studies macro-trends through his proprietary analytical framework based on the interdependence of the "Three Es" –&nbsp; Economy, Energy, Environment – and uses this lens to assess the probable impact of current developments in the marketplace. All in order to help his readers and clients mitigate and control risk.</p>
+<p>Another top-rated faculty member from a past Casey Summit, Chris returns to update his views on "Peak Prosperity" and how to mitigate personal and investment risk in a world on the downslope of prosperity.</p>
+</div><div class="readMoreBTN">[+] Read More</div><!--eo readMore -->
+			</div>
+            
+			<div class="faculty">
+			<div class="readMore collapsed">
+				<div class="img-align-left shadow-peel">
+				<img src="http://d1w116sruyx1mf.cloudfront.net/sites/2013-fall-summit/images/Faculty_Graziano.jpg" class="image-border">
+				</div>
+				<h4 class="spkname highlight">Dominick Graziano</h4>
+			<p class="job-title">Technical Analyst</p>
+<p>Dominick Graziano has degrees in biology, philosophy, and law. He has been a student of technical analysis for over 20 years. Dominick analyzes the inter-relationship among currencies, commodities, stocks, and bonds to identify risks and opportunities in the global marketplace. His approach to trading and investing allows investors to stay on the right side of market trends, thereby surviving and prospering in any market environment. Over the last several years, he has written a weekly review of global markets highlighting specific investment opportunities in stocks, options, and commodities.</p>
+<p>A technical research consultant to Casey Research, Dominick's warnings on a coming breakdown in gold and gold stocks have been nothing less than prescient, contributing to our unprecedented February 28, 2013 alert to paid subscribers to protect their metals positions with "gold insurance" in the form of a simple options strategy. Subscribers closed out their positions with a minimum gain of 430%.</p>
+<p>In his presentation in Tucson, Dominick will share his latest research on markets you want to invest in, and those you want to avoid.</p>
+</div><div class="readMoreBTN">[+] Read More</div><!--eo readMore -->
+			</div>
+			
+			<div class="faculty">
+				<div class="readMore collapsed">
+				<div class="img-align-left shadow-peel">
+				<img src="http://d1w116sruyx1mf.cloudfront.net/sites/2013-fall-summit/images/Faculty_Rick.jpg" class="image-border">
+				</div>
+				<h4 class="spkname highlight">Rick Rule</h4>
+				<p class="job-title">Chairman, Sprott US Holdings</p>
+<p>Rick began his career in the securities business in 1974, and has been principally involved in natural resource security investments ever since. He is a leading American retail broker specializing in mining, energy, water utilities, forest products, and agriculture.</p>
+<p>Rick has dedicated his entire life to all aspects of the natural resource industry. His contacts and knowledge of this market are unmatched. At Sprott US Holdings, he leads a team that features professionals trained in resource-related disciplines, such as geology and engineering, who work together to evaluate investment opportunities.</p>
+<p>A perennial favorite at the Casey Research Summits, in Arizona Rick will update his views on natural resource markets, participate in panels addressing the capitulation in gold markets and the state of American energy independence, and be available throughout the event to answer your questions on portfolio holdings.</p>
+</div><div class="readMoreBTN">[+] Read More</div><!--eo readMore -->
+			</div>
+			
+			<div class="faculty">
+				<div class="readMore collapsed">
+				<div class="img-align-left shadow-peel">
+				<img src="http://d1w116sruyx1mf.cloudfront.net/sites/2013-fall-summit/images/Faculty_Mauldin.jpg" class="image-border">
+				</div>
+				<h4 class="spkname highlight">John Mauldin</h4>
+				<p class="job-title">Chairman, Mauldin Economics</p>
+<p>Ever since his breakthrough book, <em><strong>Just One Thing: Twelve of the World's Best Investors Reveal the One Strategy You Can't Overlook</strong></em> (Wiley, 2006), best-selling author, economist, and financial writer John Mauldin has been helping individual investors and institutions develop a clearer understanding of the forces driving the global economy and investment markets. Today his publications reach close to 1,000,000 readers weekly.</p>
+<p>In addition to his public writings, John is a sought-after advisor to large hedge funds and to leading money managers.</p>
+<p>John is also the co-sponsor of an annual conference in California featuring a literal <em>Who's Who</em> in the world of economics and investments, with past faculty members including <strong>Mohamed El-Erian</strong><strong> </strong>of PIMCO,<strong> </strong>Harvard-based economist<strong> <strong>Niall Ferguson</strong>, <strong>Dr. Marc Faber</strong>, <strong>Kyle Bass</strong>, <strong>Neil Howe</strong>, <strong>Dr. A. Gary Shilling</strong></strong>, and many more.</p>
+<p>In Arizona, John will update the research presented in his best-selling book, <em><strong>Endgame: The End of the Debt Supercycle and How It Changes Everything</strong></em>.</p>
+</div><div class="readMoreBTN">[+] Read More</div><!--eo readMore -->
+			</div>
+			
+			<div class="faculty">
+				<div class="readMore collapsed">
+				<div class="img-align-left shadow-peel">
+				<img src="http://d1w116sruyx1mf.cloudfront.net/sites/2013-fall-summit/images/Faculty_Victor.jpg" class="image-border">
+				</div>
+				<h4 class="spkname highlight">Marc J. Victor</h4>
+				<p class="job-title">Arizona State Bar-Certified Specialist in Criminal Law</p>
+<p>Marc J. Victor is a highly respected attorney and advocate for personal freedom. He has represented clients in more than a thousand major felony cases including first- and second-degree murder, sex cases, gun cases, major drug cases, complex white-collar cases, federal appeals, and other complex state and federal matters. In a recent high-profile case, he successfully represented Elizabeth Johnson in the "Baby Gabriel" case.</p>
+<p>A Libertarian candidate for the US Senate, Marc received widespread media coverage after being fired as a judge on his first day on the job for refusing on principle to accept cases dealing with matters related to recreational drug use.</p>
+<p>In Arizona, Marc will share his first-hand observations from the front line of the judicial system on the government's steady encroachments into personal rights.</p>
+</div><div class="readMoreBTN">[+] Read More</div><!--eo readMore -->
+			</div>
+			
+			<div class="faculty">
+				<div class="readMore collapsed">
+				<div class="img-align-left shadow-peel">
+				<img src="http://d1w116sruyx1mf.cloudfront.net/sites/2013-fall-summit/images/Faculty_Vanpic.jpg" class="image-border">
+				</div>
+				<h4 class="spkname highlight">Van Simmons</h4>
+				<p class="job-title">Collectibles Expert</p>
+<p>A partner and president of David Hall Rare Coins, Van Simmons has been a rare-coin collector since age 12 and a rare-coin dealer since 1979. As a founder of Professional Coin Grading Service (PCGS), the largest rare-coin grading service in the world, Van helped to revolutionize the rare-coin market. PCGS has graded and certified over 25 million coins over the last 27 years. PCGS has over 1,200 authorized dealers worldwide who sell their product. </p>
+<p>Van has also won acclaim as a collectibles dealer in sports cards and memorabilia, rare firearms, Western memorabilia, and collectible knives. His personal collections run the gamut from antique golf clubs to firearms, from English pottery to Bowie knives, from American and French art glass, California Art, to Western Americana. Even with this wide range of interests, Van's number one collecting passion remains rare coins. His fascination with the beauty, rarity, and historical significance of coins has been a lifelong pursuit. Van was a co-founder and is a board member of Collectors Universe (CLCT), a publically traded company trading on the Nasdaq Exchange.</p>
+<p>In a world where investors are increasingly looking for tangible assets for their portfolio, Van's presentation on the most prospective collectible markets today will be invaluable. As with most speakers, he will also be available throughout the Summit to personally answer your questions on coins and collectibles.</p>
+</div><div class="readMoreBTN">[+] Read More</div><!--eo readMore -->
+			</div>
+			
+			<div class="faculty">
+				<div class="readMore collapsed">
+				<div class="img-align-left shadow-peel">
+				<img src="http://d1w116sruyx1mf.cloudfront.net/sites/2013-fall-summit/images/Faculty_Vliet.jpg" class="image-border">
+				</div>
+				<h4 class="spkname highlight">Dr. Elizabeth Lee Vliet M.D.</h4>
+				<p class="job-title" style="font-style:italic;">Obamacare: The Coming Shock to Your Health and Finances</p>
+<p>Elizabeth Lee Vliet, M.D. is a preventive and climacteric medicine specialist with medical practices in Arizona, Texas, and Virginia that take an integrated approach to evaluation and treatment of patients with complex medical and hormonal problems.</p>
+<p>Dr. Vliet is also founder and CEO of International Health Strategies, Ltd., a medical consulting company for patients seeking worldwide medical freedom and privacy, and host of the "Preserve Health and Wealth" conference to be held in Santiago, Chile, in November 2013.</p>
+<p>The author of <em><strong>It's My Ovaries, Stupid</strong></em>; <em><strong>Screaming to Be Heard</strong></em>; <em><strong>Women, Weight and Hormones</strong></em>; <em><strong>The Savvy Woman's Guide to PCOS</strong></em>; <em><strong>The Savvy Woman's Guide to Great Sex, Strength, and Stamina</strong></em>, Dr. Vliet has appeared on FOX News, Cavuto, Stuart Varney Show, Fox and Friends, Sean Hannity, and nationally syndicated radio shows and numerous Healthcare Town Halls nationally to address the economic and medical impact of Obamacare.</p>
+<p>In Arizona, Dr. Vliet will explain why she believes Obamacare will have a catastrophic impact on the US health system and on the economy. Among those consequences are massive new regulations, over 21 new taxes, and over $700 billion in Medicare cuts resulting in government restrictions on treatments you will be allowed to have.</p>
+<p>In addition, she'll explain the coming changes in medical privacy with federal control of everyone's medical records. Obamacare goes into effect in full force in 2014 – in Tucson, Dr. Vliet will tell you the steps you need to take today to preserve your medical freedom and privacy.</p>
+</div><div class="readMoreBTN">[+] Read More</div><!--eo readMore -->
+			</div>
+			
+			<div class="faculty">
+				<div class="readMore collapsed">
+				<div class="img-align-left shadow-peel">
+				<img src="http://d1w116sruyx1mf.cloudfront.net/sites/2013-fall-summit/images/Faculty_Hathaway.jpg" class="image-border">
+				</div>
+				<h4 class="spkname highlight">John Hathaway</h4>
+				<p class="job-title">Senior Managing Director, Tocqueville Asset Management</p>
+<p><em>"The derivative books of the seven or eight largest US banks are completely opaque and incomprehensible. They are going to be big trouble in the future</em>. <em>The world is falling apart..."</em></p>
+<p>Those are the words of John Hathaway, a member of the Invest­ment Committee and a limited partner of Toc­queville Asset Management where he manages all gold equity products and strate­gies.</p>
+<p>A seasoned money manager and analyst, John began his career in 1970 as an equity analyst with Spencer Trask &amp; Co. before joining the investment advisory firm of David J. Greene &amp; Co. in 1976, where he was made a partner. In 1986, he founded Hudson Capital Advisors and in 1988 became chief investment officer of Oak Hall Advisors. John, who holds a BA from Harvard and an MBA from the University of Virginia, joined Tocqueville as a senior partner in 1997.</p>
+<p>In Arizona, John will discuss the overarching challenges facing the global financial network and provide support for remaining an unrepentant believer that the "hard money" of gold will prevail over fiat currencies over time.</p>
+</div><div class="readMoreBTN">[+] Read More</div><!--eo readMore -->
+			</div>
+			<h2>Plus the Senior Staff of Casey Research…</h2>
+In attendance throughout the event, bringing you their latest research, top investments, and answering your questions…<p></p>
+			
+			<div class="faculty">
+			<div class="readMore collapsed">
+				<div class="img-align-left shadow-peel">
+				<img src="http://d1w116sruyx1mf.cloudfront.net/sites/2013-fall-summit/images/Faculty_Conrad.jpg" class="image-border">
+				</div>
+				<h4 class="spkname highlight">Bud Conrad</h4>
+			<p class="job-title">Chief Economist, Senior Editor, <em>The Casey Report</em></p>
+			<p>Author of the new book <strong><em>Profiting from the World’s Economic Crisis</em></strong>, Bud Conrad holds a B.E. from Yale and an M.B.A. from Harvard. He has held positions with IBM, CDC, Amdahl, and Tandem. Currently he serves as a local board member of the National Association of Business Economics and teaches graduate courses in investing at Golden Gate University. Bud, a futures investor for 25 years and a full-time investor for a decade, is also a regular lecturer for the American Association of Individual Investors and a frequent contributor on Fox Business News. In addition, he produces original analysis for Casey Research, including unique charts and research on the economy and investment markets.			</p>
+</div><div class="readMoreBTN">[+] Read More</div><!--eo readMore -->
+			</div>
+			
+			<div class="faculty">
+			<div class="readMore collapsed">
+				<div class="img-align-left shadow-peel">
+				<img src="http://d1w116sruyx1mf.cloudfront.net/sites/2013-fall-summit/images/Faculty_James.jpg" class="image-border">
+				</div>
+				<h4 class="spkname highlight">Louis James</h4>
+			<p class="job-title">Chief Metals &amp; Mining Investment Strategist</p>
+<p>Louis James’ background in physics, economics, and technical writing prepared him well for his role as senior editor of the <em>International Speculator</em> and <em>Casey Investment Alert</em>. Like Doug Casey, Louis constantly travels the world, visiting highly prospective geological targets, grilling management and company geologists and interviewing natives in a variety of languages to find out what they really think (he’s fluent in French and Spanish, and speaks a little German and Russian). Whether it’s days of back-to-back meetings with mining company executives in Vancouver, pounding on rocks in the Democratic Republic of the Congo, examining drill cores in Argentina, or eating food with names he can’t pronounce with local miners in China, Louis is constantly looking for the next double-your-money winner. He evaluates dozens of companies every month, conducts due diligence on the best, and then compares notes with Doug in order to bring only those most likely to provide rapid high returns to his subscribers’ attention. Louis also reads all the press releases, financial statements, and an enormous quantity of related information to keep track of all of our mineral companies, and has become something of a walking database on the same.
+			</p>
+</div><div class="readMoreBTN">[+] Read More</div><!--eo readMore -->
+			</div>
+			
+			<div class="faculty">
+				<div class="readMore collapsed">
+				<div class="img-align-left shadow-peel">
+				<img src="http://d1w116sruyx1mf.cloudfront.net/sites/2013-fall-summit/images/Faculty_Daley.jpg" class="image-border">
+				</div>
+				<h4 class="spkname highlight">Alex Daley</h4>
+				<p class="job-title">Chief Technology Investment Strategist</p>
+				<p>Alex Daley is the managing editor of <em>Casey Extraordinary Technology</em> and <em>BIG TECH</em>. In his varied career, he’s worked as a senior research executive, a software developer, project manager, senior IT executive, and technology marketer. He’s an industry insider of the highest order, having been involved in numerous startups as an advisor to venture capital companies. He’s been a trusted advisor to the CEOs and strategic planners of some of the world’s largest tech companies. Alex is a successful angel investor in his own right, with a long history of spectacular investment successes.				</p>
+</div><div class="readMoreBTN">[+] Read More</div><!--eo readMore -->
+			</div>
+			
+			<div class="faculty">
+				<div class="readMore collapsed">
+				<div class="img-align-left shadow-peel">
+				<img src="http://d1w116sruyx1mf.cloudfront.net/sites/2013-fall-summit/images/Faculty_Katusa.jpg" class="image-border">
+				</div>
+				<h4 class="spkname highlight">Marin Katusa</h4>
+				<p class="job-title">Chief Energy Investment Strategist</p>
+				<p>Marin Katusa, an accomplished investment analyst, is the senior editor of <em>Casey Energy Dividends</em>, <em>Casey Energy Confidential</em>, and <em>Casey Energy Report</em>. He left a successful teaching career to pursue analyzing and investing in junior resource companies. In addition, he is a regular commentator on BNN and a member of the Vancouver Angel Forum, where he and his colleagues evaluate early seed investment opportunities. Marin also manages a portfolio of international real estate projects. Using advanced mathematical skills, he has created a diagnostic resource market tool that analyzes and compares hundreds of investment variables. Through his own investments, Marin has established a network of relationships with many of the key players in the junior resource sector in Vancouver. Marin has the connections and the mathematical and analytical acumen to bring the best investment ideas and most promising private placement offerings to Casey Research subscribers. </p>
+</div><div class="readMoreBTN">[+] Read More</div><!--eo readMore -->
+			</div>
+			
+			<div class="faculty">
+				<div class="readMore collapsed">
+				<div class="img-align-left shadow-peel">
+				<img src="http://d1w116sruyx1mf.cloudfront.net/sites/2013-fall-summit/images/Faculty_Coxon.jpg" class="image-border">
+				</div>
+				<h4 class="spkname highlight">Terry Coxon</h4>
+				<p class="job-title">Senior Editor, <em>The Casey Report</em></p>
+<p>Terry Coxon is the author of <strong><em>Keep What You Earn</em></strong> and <strong><em>Using Warrants</em></strong>, and co-author (with Harry Browne) of <strong><em>Inflation-Proofing Your Investments</em></strong>. He edited Harry Browne’s Special Reports for its 23 years of publication, and all of Harry Browne’s investment books since 1974. Terry was the founder and for 22 years president of the Permanent Portfolio Fund, a mutual fund that invests in precious metals as well as stocks and bonds. He is currently the president of Passport Financial, Inc., a specialty financial publishing company. Terry Coxon is the man with the big-picture plan. Well versed in the ins and outs of economic theory, he knows that Situation A combined with Catalyst B will inevitably result in Consequence C. As such, he is a respected economist and senior editor for The Casey Report.
+				</p>
+</div><div class="readMoreBTN">[+] Read More</div><!--eo readMore -->
+			</div>
+			
+			<div class="faculty">
+				<div class="readMore collapsed">
+				<div class="img-align-left shadow-peel">
+				<img src="http://d1w116sruyx1mf.cloudfront.net/sites/2013-fall-summit/images/Faculty_Galland.jpg" class="image-border">
+				</div>
+				<h4 class="spkname highlight">David Galland</h4>
+				<p class="job-title">Partner, Casey Research, Editor of <em>The Room</em></p>
+				<p>Over the course of his varied career, which includes a stint at the fabled Climax mine following college, David Galland has worked as a conference director for the world’s largest investment conference (National Committee for Monetary Reform, 1979 to 1987), as a financial newsletter publisher or editor (Gold Newsletter , Aden Analysis , Wealth Magazine , Outstanding Investments , among others), as a founding partner and director of a successful mutual fund group (Blanchard Group of Mutual Funds), and as a founding partner and executive vice president for EverBank, one of the biggest recent successes in online financial services. David is currently a partner with Doug Casey and Olivier Garret in Casey Research, LLC, an international firm providing research and investment recommendations to individuals in over 150 countries. Casey Research publishes several publications covering a variety of investment sectors, including metals and mining, energy, technology, and commodities. In addition to his management responsibilities, David serves as the managing editor for <em>The Casey Report</em> , a monthly publication dedicated to identifying big trend moves and how to profit from them, and contributes to a daily communiqué, <em>Casey Daily Dispatch</em>. </p>
+</div><div class="readMoreBTN">[+] Read More</div><!--eo readMore -->
+			</div>
+			
+			<div class="faculty">
+				<div class="readMore collapsed">
+				<div class="img-align-left shadow-peel">
+				<img src="http://d1w116sruyx1mf.cloudfront.net/sites/2013-fall-summit/images/Faculty_Garret.jpg" class="image-border">
+				</div>
+				<h4 class="spkname highlight">Olivier Garret</h4>
+				<p class="job-title">Partner, CEO, Casey Research</p>
+				<p>Olivier Garret earned an M.B.A. from the Amos Tuck School of Business Administration at Dartmouth College and a D.E.S. in business from the Université de Paris IX-Dauphine. He was a principal in Kemp Management, a management consulting firm focused on merger and acquisition due diligence, restructuring, and turnaround activities for a variety of private equity firms and financial institutions. In this capacity, he led and participated in dozens of merger and acquisition and restructuring deals in a variety of industries. In the 1990s, Olivier was CEO and general manager of a number of industrial businesses ranging from entrepreneurial start-ups to divisions of a Fortune 500 company. In January 2007, he joined Casey Research as CEO and is now a partner with Doug Casey and David Galland. </p>
+</div><div class="readMoreBTN">[+] Read More</div><!--eo readMore -->
+			</div>
+			
+			<div class="faculty">
+				<div class="readMore collapsed">
+				<div class="img-align-left shadow-peel">
+				<img src="http://d1w116sruyx1mf.cloudfront.net/sites/2013-fall-summit/images/Faculty_Brekke.jpg" class="image-border">
+				</div>
+				<h4 class="spkname highlight">Kevin Brekke</h4>
+				<p class="job-title">Managing Editor of <em>World Money Analyst</em></p>
+				<p>Kevin is the Managing Editor of <em>World Money Analyst</em>, the global investment letter from Mauldin Economics. He also serves as an editor for the Metals &amp; Mining Division at Casey Research. Since joining Casey Research in 2007, he has assisted the senior editorial and research staff on several Casey publications.</p>
+<p>His former life in commercial aviation transported him across cultures and ideologies, shaping a worldview free of political boundaries and unencumbered by patriotism. Curiosity trumps routine in his world, forging a residence resume that boasts U.S. cities from coast to coast, Germany's Baden-Baden region, and his latest adventure at a lakeside resort village in Switzerland, where his free time is spent renovating an old chalet.</p>
+<p>Kevin graduated from Chicago's Design Academy in 1983; and earned his BS Political Science/Philosophy, from Portland State University, in 2001.</p>
+</div><div class="readMoreBTN">[+] Read More</div><!--eo readMore -->
+			</div>
+            
+			</div><!--eo data-role content -->
+</section><!-- eo faulty -->
+
+<section data-anchor="panels" data-role="page" id="panels">
+			<div data-role="header">
+			<h2 class="section-title dark">Panels</h2>
+			</div>
+			<div data-role="content">
+<p>We’re also including follow-up panels to answer your questions from recent Casey Research Webinars:</p>
+<p>
+<strong><em>Downturn Millionaires</em></strong>… a panel of experts led by Louis James discussing the outlook for precious metals and precious metals stocks, and naming names of their favorite, deeply undervalued companies today.</p>
+<p>
+<strong><em>Internationalizing Your Assets</em></strong>… Kevin Brekke and a panel share specific actions you can take right away to diversify your assets, and your life, internationally. All attendees will receive a special package containing details on solid overseas institutions willing to open accounts for foreign investors, including Americans.</p>
+<p style="margin-bottom:.65em;">
+<strong><em>The Myth of American Energy Independence</em></strong>… Marin Katusa and special guests reveal the facts about the myth of US energy independence and recommend the best investments for you to profit as the reality of the situation becomes clear.</p>
+<h3 style="margin-top:0;">Plus…</h3>
+<p>
+<em><strong>Politicians Gone Wild</strong></em>… David Galland and a panel discuss the increasing dangers to the global economy and individual liberty from the stunning rise in government power and encroachments into every corner of society.</p>
+
+			</div><!--eo data-role content -->
+</section><!-- eo faulty -->
+
+<section data-anchor="network" data-role="page" id="network">
+			<div data-role="header">
+			<h2 class="section-title dark">Network</h2>
+			</div>
+			<div data-role="content">
+<p>
+<strong>Welcome Reception followed by Dine-Around… </strong>with faculty and fellow participants.</p>
+<p>
+<strong>Breakfast, refreshment breaks, and lunches… </strong>included Friday, Saturday and Sunday.</p>
+<p>
+<strong>The Map Room</strong>… offering a unique opportunity to meet one on one with top executives of some of Casey Research's favorite resource companies.</p>
+<h3>Saturday night Gala Dinner, featuring keynote address by Dr. Ron Paul</h3>
+<p>
+<strong>And We're Not Done Yet!</strong>… Additional faculty members are in the process of being confirmed and will be announced soon.</p>
+<p>
+Add it up, and there is no better way to prepare yourself and your family for the future than by spending three days this October at the beautiful Loews Ventana Canyon Resort in Tucson, Arizona… an unforgettable experience participating side by side with some of the brightest thinkers in economics, investments, and politics today.</p>
+<p>
+As with all Casey Research Summits, attendance is strictly limited and early-bird discounts are available.</p>
+<h4 class="mobile-hide">Don't put it off… Register Today and Save!</h4>
+<a class="mobile-only scrollto" href="#reg-anchor" style="font-size: 1.25em; font-weight: bold;">Don't put it off… Register Today and Save!</a>
+
+			</div><!-- eo agenda content -->
+			</section><!-- eo agenda page -->
+
+<section data-anchor="agenda" data-role="page" id="agenda">
+			<div data-role="header">
+			<h2 class="section-title dark">Agenda</h2>
+			</div>
+			<div data-role="content">
+
+<p><strong>Subject to change</strong><br>
+<table class="agenda" border="0" cellpadding="10" cellspacing="10">
+<tbody>
+<tr><th class="dkgraybg" colspan="2"> Friday, October 4, 2013</th>
+</tr><tr>
+<td>8:00  am</td>
+<td><strong>Registration / Breakfast</strong></td>
+</tr>
+<tr>
+<td>9:00 am</td>
+<td><strong>General Sessions Begin</strong>
+</td>
+</tr>
+<tr>
+<td>12:00 pm</td>
+<td><strong>Lunch</strong></td>
+</tr>
+<tr>
+<td>1:00  pm</td>
+<td><strong>General Sessions Resume</strong></td>
+</tr>
+<tr>
+<td>2:00 pm</td>
+<td><strong>Breakout Sessions</strong></td>
+</tr>
+<tr>
+<td>3:00 pm</td>
+<td><strong>Afternoon Break</strong></td>
+</tr>
+<tr>
+<td>3:15 pm</td>
+<td><strong>General Sessions Resume</strong></td>
+</tr>
+<tr>
+<td>4:15 pm</td>
+<td><strong>General Sessions Conclude</strong></td>
+</tr>
+<tr>
+<td>6:00 pm</td>
+<td><strong>Opening Reception</strong></td>
+</tr>
+<tr>
+<td>7:00 pm</td>
+<td><strong>Faculty and Attendee Dine-Around</strong></td>
+</tr>
+</tbody>
+</table>
+<!-- ***********************
+		day 2 
+****************************-->
+<table class="agenda" border="0" cellpadding="10" cellspacing="10">
+<tbody>
+<tr><th class="dkgraybg" colspan="2">Saturday, October 5, 2013</th>
+</tr><tr>
+<td>7:00 am</td>
+<td><strong>Breakfast</strong></td>
+</tr>
+<tr>
+<td>8:00 am</td>
+<td><strong>General Sessions Begin</strong></td>
+</tr>
+<tr>
+<td>10:00 am</td>
+<td><strong>Morning Break</strong></td>
+</tr>
+<tr>
+<td>10:30 am</td>
+<td><strong>Morning Sessions Resume</strong>
+</td>
+</tr>
+<tr>
+<td>12:00 pm</td>
+<td><strong>Lunch</strong></td>
+</tr>
+<tr>
+<td>1:00 pm</td>
+<td><strong>General Sessions Resume</strong></td>
+</tr>
+<tr>
+<td>2:00 pm</td>
+<td><strong>Breakout Sessions</strong></td>
+</tr>
+<tr>
+<td>3:15 pm</td>
+<td><strong>General Sessions Resume</strong></td>
+</tr>
+<tr>
+<td>4:30 pm</td>
+<td><strong>General Sessions Conclude</strong></td>
+</tr>
+<tr>
+<td>6:00 pm</td>
+<td><strong>Cocktail Reception</strong></td>
+</tr>
+<tr>
+<td>7:00 pm</td>
+<td><strong>Gala Dinner &amp; Keynote Presentation<br>featuring Dr. Ron Paul</strong></td>
+</tr>
+</tbody>
+</table>
+<!-- ***********************
+		day 3
+****************************-->
+<table class="agenda" border="0" cellpadding="10" cellspacing="10">
+<tbody>
+<tr><th class="dkgraybg" colspan="2">Sunday, October 6, 2013</th>
+</tr><tr>
+<td>7:00 am</td>
+<td><strong>Breakfast</strong></td>
+</tr>
+<tr>
+<td>8:00 am</td>
+<td><strong>General Sessions Begin</strong></td>
+</tr>
+<tr>
+<td>10:00 am</td>
+<td><strong>Morning Break</strong></td>
+</tr>
+<tr>
+<td>10:30 am</td>
+<td><strong>Morning Sessions Resume</strong>
+</td>
+</tr>
+<tr>
+<td>11:30 am</td>
+<td><strong>Breakout Sessions</strong></td>
+</tr>
+<tr>
+<td>12:30 pm</td>
+<td><strong>Lunch</strong></td>
+</tr>
+<tr>
+<td>1:30 pm</td>
+<td><strong>General Sessions Resume</strong></td>
+</tr>
+<tr>
+<td>3:00 pm</td>
+<td><strong>General Sessions Conclude</strong></td>
+</tr>
+</tbody>
+</table>
+			
+</p><p style="margin-bottom:0;" class="hideme print-show"><strong>http://caseyresearch.com/summit/2013-fall-summit</strong></p>
+<h5 style="margin-bottom:0;" class="print-hide">Images from previous summits</h5>
+			<div style="overflow: hidden;" id="slideshow" class="slideshow print-hide">
+				<ul style="position: relative;" id="slides">
+					<li style="position: absolute; top: 0px; left: 0px; display: list-item; z-index: 13; opacity: 1;"><img src="http://d1w116sruyx1mf.cloudfront.net/sites/2013-fall-summit/images/slideshow/IMG_9269.jpg" style="height: 300px" width="550"></li>
+					<li style="position: absolute; top: 0px; left: 0px; display: none; z-index: 11; opacity: 0;"><img src="http://d1w116sruyx1mf.cloudfront.net/sites/2013-fall-summit/images/slideshow/IMG_9285.jpg" style="height: 300px" width="550"></li>
+					<li style="position: absolute; top: 0px; left: 0px; display: none; z-index: 10; opacity: 0;"><img src="http://d1w116sruyx1mf.cloudfront.net/sites/2013-fall-summit/images/slideshow/IMG_9286.jpg" style="height: 300px" width="550"></li>
+					<li style="position: absolute; top: 0px; left: 0px; display: none; z-index: 9; opacity: 0;"><img src="http://d1w116sruyx1mf.cloudfront.net/sites/2013-fall-summit/images/slideshow/IMG_9320.jpg" style="height: 300px" width="550"></li>
+					<li style="position: absolute; top: 0px; left: 0px; display: none; z-index: 8; opacity: 0;"><img src="http://d1w116sruyx1mf.cloudfront.net/sites/2013-fall-summit/images/slideshow/IMG_9329.jpg" style="height: 300px" width="550"></li>
+					<li style="position: absolute; top: 0px; left: 0px; display: none; z-index: 7; opacity: 0;"><img src="http://d1w116sruyx1mf.cloudfront.net/sites/2013-fall-summit/images/slideshow/IMG_9378.jpg" style="height: 300px" width="550"></li>
+					<li style="position: absolute; top: 0px; left: 0px; display: none; z-index: 6; opacity: 0;"><img src="http://d1w116sruyx1mf.cloudfront.net/sites/2013-fall-summit/images/slideshow/IMG_9381.jpg" style="height: 300px" width="550"></li>
+					<li style="position: absolute; top: 0px; left: 0px; display: none; z-index: 5; opacity: 0;"><img src="http://d1w116sruyx1mf.cloudfront.net/sites/2013-fall-summit/images/slideshow/IMG_9440.jpg" style="height: 300px" width="550"></li>
+					<li style="position: absolute; top: 0px; left: 0px; display: none; z-index: 4; opacity: 0;"><img src="http://d1w116sruyx1mf.cloudfront.net/sites/2013-fall-summit/images/slideshow/LOB_3418.jpg" style="height: 300px" width="550"></li>
+					<li style="position: absolute; top: 0px; left: 0px; display: none; z-index: 3; opacity: 0;"><img src="http://d1w116sruyx1mf.cloudfront.net/sites/2013-fall-summit/images/slideshow/LOB_3419.jpg" style="height: 300px" width="550"></li>
+					<li style="position: absolute; top: 0px; left: 0px; display: none; z-index: 2; opacity: 0;"><img src="http://d1w116sruyx1mf.cloudfront.net/sites/2013-fall-summit/images/slideshow/LOB_3465.jpg" style="height: 300px" width="550"></li>
+					<li style="position: absolute; top: 0px; left: 0px; display: none; z-index: 1; opacity: 0;"><img src="http://d1w116sruyx1mf.cloudfront.net/sites/2013-fall-summit/images/slideshow/LOB_3476.jpg" style="height: 300px" width="550"></li>
+				</ul>
+			</div><!-- eo Slideshow -->
+		</div><!-- eo schedule content -->
+		</section><!-- eo shedule page -->
+
+<section data-anchor="venue" data-role="page" id="venue">
+			<div data-role="header">
+			<h2 class="section-title dark">Venue</h2>
+			</div>
+			<div data-role="content">
+			<p><strong class="highlight">Loews Ventana Canyon, Tucson</strong></p>
+			<div class="shadow-peel">
+			<img src="http://d1w116sruyx1mf.cloudfront.net/sites/2013-fall-summit/images/scenic-loews.jpg" alt="Loews Ventana Canyon, Tucson">
+			</div>
+			<p class="clearblock" style="margin:5px; height:12px;">&nbsp;</p>
+			<p style="width:46%; margin-left:4%; display:block; float:left; line-height: 1.25em;">7000 North Resort Drive<br>
+				Tucson, Arizona&nbsp;85750</p>
+			<p style="width:46%; margin-right:4%; display:block; float:right; text-align:right; line-height: 1.25em;"><a href="http://www.loewshotels.com/en/Ventana-Canyon-Resort" target="_blank">Venue Website</a><br>
+				(800) 234-5117</p>
+
+			<p class="clearblock" style="height:12px;">&nbsp;</p>
+<p>To reserve:<br><br>
+	<a href="http://www.loewshotels.com/en/Ventana-Canyon-Resort/GroupPages/CaseyResearchFall2013" title="Reserve Online" target="_blank" class="button-link">Reserve Your Room Online</a><br><br>
+</p>
+<p> </p>
+<h3>Directions:</h3>
+<a href="#intAirport" class="toggler" id="toggler-intAirport" style="cursor:pointer; text-decoration: underline; color: #000; font-weight:bold;">From Tucson International Airport to Loews Ventana Canyon:</a>
+<div style="display: none;" class="description" id="intAirport">
+<span class="closeSlider" style="text-size: .75em; display:block; text-align: right;">close<img src="http://d1w116sruyx1mf.cloudfront.net/media/fancybox/fancy_close.png" valign="middle" style="margin:0"></span>
+<ul>
+<li>Depart Airport heading North on Tucson Boulevard</li>
+<li>Turn Right on Valencia Road and travel 2 miles</li>
+<li>Turn Left on Alvernon Way heading North</li>
+<li>Alvernon will feed into Golf Links Road East</li>
+<li>Follow Golf Links to Swan Road and turn Left</li>
+<li>Travel North about 8 miles to Sunrise Drive</li>
+<li>Turn Right on Sunrise to Kolb Road</li>
+<li>Turn Left on Kolb Road and travel 1.5 miles</li>
+<li>Loews Ventana Canyon is on the Right</li>
+<li>Turn Right on Estes Way</li>
+<li>Driving time is approximately 35 minutes</li>
+</ul>
+</div>
+<br>
+<a href="#pheAirport" class="toggler" id="toggler-pheAirport" style="cursor:pointer; text-decoration: underline; color: #000; font-weight:bold;">From Phoenix International Airport:</a>
+<div style="display: none;" class="description" id="pheAirport">
+<span class="closeSlider" style="text-size: .75em; display:block; text-align: right;">close<img src="http://d1w116sruyx1mf.cloudfront.net/media/fancybox/fancy_close.png" valign="middle" style="margin:0"></span>
+<ul>
+<li>Follow signs to Interstate 10 going East</li>
+<li>Exit I-10 on Ina Road, turn left and head East</li>
+<li>After several miles the road changes into Skyline Drive and then to Sunrise Drive</li>
+<li>Continue past Swan and Craycroft Roads</li>
+<li>Turn left at Kolb Road and continue 1.5 miles</li>
+<li>Loews Ventana Canyon is on the right</li>
+<li>Turn Right on Estes Way</li>
+<li>Distance between Phoenix and Tucson is approximately 95 miles or 2 hours</li>
+</ul>
+</div>
+<br>
+<a href="#metroAirport" class="toggler" id="toggler-metroAirport" style="cursor:pointer; text-decoration: underline; color: #000; font-weight:bold;">From Phoenix Metro Area to Loews Ventana Canyon:</a>
+<div style="display: none;" class="description" id="metroAirport">
+<span class="closeSlider" style="text-size: .75em; display:block; text-align: right;">close<img src="http://d1w116sruyx1mf.cloudfront.net/media/fancybox/fancy_close.png" valign="middle" style="margin:0"></span>
+<ul>
+<li>Take I-10 East towards Tucson</li>
+<li>Take Ina Road Exit (Exit 248)</li>
+<li>Turn left on West Ina Road (Eastbound)</li>
+<li>Proceed along Ina Road</li>
+<li>After approximately 7 miles, Ina becomes Skyline Road</li>
+<li>Stay on the main road which becomes Sunrise Road after approximately 2 miles</li>
+<li>Continue approximately 4 miles to Kolb Road</li>
+<li>Turn left on Kolb Road</li>
+<li>Turn right on Resort Drive, marked by a large boulder on the right</li>
+<li>Distance between Phoenix and Tucson is approximately 95 miles or 2 hours</li>
+</ul>
+</div>
+			</div><!-- eo venue content -->
+</section><!-- eo venue page -->
+
+<!--
+<section data-anchor="sponsors" data-role="page" id="sponsors">
+			<div data-role="header">
+			<h2 class="section-title dark">Sponsors</h2>
+			</div>
+			<div data-role="content">
+				<img src="http://d1w116sruyx1mf.cloudfront.net/sites/2013-fall-summit/images/sponsors.jpg" class="" />
+			</div>
+			</div>--><!-- eo sponsors content -->
+<!--</section>--><!-- eo sponsors page -->
+<aside data-anchor="register">
+</aside>
+		</div><!-- eo col_6 -->
+
+<aside>
+		<div class="col_4 last">
+		<div id="register-anchor"></div>
+		<div id="register" class="abs-pos">
+			<div class="registerform">
+  <h3 class="highlight">Register Today</h3>
+  <hr id="reg-anchor">
+  <p class="clearblock job-title" style="padding:0; margin: 2px 0 0 0;">Event Dates</p>
+  <p class="time highlight" style="padding:0;">October 4 - October 6, 2013</p>
+
+	<p class="clearblock job-title" style="padding:0; margin: 0;">Summit Rates</p>
+<div class="vertical-price-chart">
+	<p class="early-bird current-price" style="padding:0; margin: 2px 0 12px 0;"><span>Until June 7 <br> $1295 </span></p>
+	<p class="regular-pricing" style="padding:0; margin: 2px 0 12px 0;"><span>June 8 – August 31 <br> $1495 </span></p>
+	<p class="late-pricing" style="padding:0; margin: 2px 0 12px 0;"><span>Sept 1 – October 1 <br> $1595 </span></p>
+</div>
+
+ <form action="/2013-fall-summit/regonline.php" method="POST" id="reg-form">
+				<fieldset>
+					<label>e-Mail:</label> 
+					<input name="email" class="required" id="email_addr" onfocus="if(this.value == 'Enter your email to register') { this.value = ''; } removeClass(this.id);" value="Enter your email to register" type="email">
+					<br>
+					<input name="button" class="signupbtn" value="Register Now" type="submit">
+
+				</fieldset>
+</form>
+
+			</div><!-- eo registerform -->
+		</div><!-- eo register -->
+		</div><!-- eo col_4 -->
+</aside>
+
+	</div><!-- eo row -->
+
+	<div class="row">
+<footer>
+		<div id="footer" class="col_12 last">
+<div class="col_12 last">
+<div id="footerPromo">
+<p><a title="Home" href="http://www.caseyresearch.com" target="_blank">Home</a>&nbsp;&nbsp;<span>|</span>&nbsp;&nbsp;
+<a title="Special Reports" href="http://www.caseyresearch.com/special-report" target="_blank">Special Reports</a>&nbsp;&nbsp;<span>|</span>&nbsp;&nbsp;
+<a title="Articles" href="http://www.caseyresearch.com/articles" target="_blank">Articles</a> &nbsp;&nbsp;<span>|</span>&nbsp;&nbsp;
+<a title="Casey Services" href="http://www.caseyresearch.com/premium-publications" target="_blank">Products &amp; Services</a>&nbsp;&nbsp;<span>|</span>&nbsp;&nbsp;
+<a title="About Us" href="http://www.caseyresearch.com/philosopy" target="_blank">About Us</a></p>
+
+<p><a title="Terms of Use" href="http://www.caseyresearch.com/terms" target="_blank">Terms of Use</a>&nbsp;&nbsp;<span>|</span>&nbsp;&nbsp;
+<a title="Privacy Policy" href="http://www.caseyresearch.com/privacy-policy" target="_blank">Privacy Policy</a>&nbsp;&nbsp;<span>|</span>&nbsp;&nbsp;
+<a title="Sitemap" href="http://www.caseyresearch.com/sitemap" target="_blank">Sitemap</a></p>
+<p class="copy"><img src="http://www.caseyresearch.com/live-assets/images/misc/cr-logo-footer.png"><br>
+© 2013 Casey Research, LLC<br>All rights reserved<br>&nbsp;</p>
+</div>
+</div>
+
+		</div><!-- eo col_8 -->
+</footer>
+	</div><!-- eo row -->
+</header></div><!-- eo content -->
+	
+</body>

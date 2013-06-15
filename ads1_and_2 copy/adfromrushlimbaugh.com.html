@@ -1,0 +1,287 @@
+<head>
+      <meta charset="UTF-8">
+      <title>IDrive - Universal online backup</title>
+      <link href="/include/css/structure.css" type="text/css" rel="stylesheet">
+ <!-- <link href="/include/css/styles.css" type="text/css" rel="stylesheet" />-->
+      <link href="/include/css/styles_rush_new.css" type="text/css" rel="stylesheet">
+      <link rel="icon" href="/include/images/favicon.ico" sizes="16x16">
+      <link rel="shortcut icon" href="/include/images/favicon.ico" type="image/x-icon">
+      <!--[if IE]> 
+      <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <![endif]-->
+      
+<!--  <link href="/include/css/ie.css" type="text/css" rel="stylesheet" /> -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+    <script language="javascript">
+function confirmFreeProSubmit()
+  {		   
+			var signupType = $('.plan_type input:checked').val();
+			//alert("signup->"+signupType);
+			var thisForm = document.form1;
+			if(signupType=="idrive_pro") //paid accnt CC validations
+			{
+				thisForm.action= "https://www.idrive.com/idrive/servlet/IDRushProRegServlet";
+				thisForm.method="POST";
+				//thisForm.signupSubmit.disabled = true;
+				return true;			
+			}else{
+				thisForm.action= "https://www.idrive.com/idrive/servlet/IDRushFreeRegServlet";
+				thisForm.method="POST";
+				//thisForm.signupSubmit.disabled = true;
+				return true;			
+			}
+	}
+ </script>
+<script type="text/javascript" language="JavaScript">function setfieldfocus() 	{document.form1.promocode.focus();} </script>
+
+     
+   </head>
+   <body class="inner rush rush_plan" onload="setfieldfocus();">
+      <div class="static">
+         <div class="wrapper signup_wrapper promotion_offer">
+            <header>
+               <div class="topheader">
+                  <ul>
+                     <li><a class="login" href="/idrive/login/loginForm">Login</a> </li>
+                  </ul>
+               </div>
+            </header>
+            <nav>
+               <ul>
+                  <li class="inner_logo">
+                     <h1 class="logo"><a href="/index.html"> Online Backup for PC, Mac and iPhone | IDrive</a> </h1>
+                  </li>
+                  <li><a href="/online-backup-features.htm">Features<br>
+                     <span>Learn more about IDrive</span></a>
+                  </li>
+                  <li><a href="/online-backup-download.htm">Download<br>
+                     <span>Get apps for PC, Mac, Linux and Mobiles</span></a>
+                  </li>
+                  <li><a href="/pricing.htm">Pricing<br>
+                     <span>Storage options made for all</span></a>
+                  </li>
+               </ul>
+            </nav>
+            <!-- signup: -->
+            <section class="container promocode_container">
+               <div class="promocode_left">
+					<div class="promo_offer_bg">
+						<div class="promo_txt">
+							* IDrive gives you 20% discount on any paid plan for the first year.
+							Just enter the promo code you heard on Rush's Radio Show. 
+						</div>
+					</div>
+			   </div><!-- promocode_left End -->
+               <div class="promocode_right">
+		  <form action="https://www.idrive.com/idrive/servlet/IDRushFreeRegServlet" method="post" name="form1" id="form1">
+              	<input name="adv_refer" value="" type="hidden">
+					 
+                     <div class="main_head"> <span> Join IDrive today! </span>
+					   
+
+                     
+                          <span class="plan_type">
+						 <input name="signuptype" checked="" id="basic" value="basic" type="radio">
+                        <label for="basic"> Free 5 GB</label>
+                         <input name="signuptype" id="idrive_pro" value="idrive_pro" type="radio">
+                        <label for="idrive_pro"> Pro - Personal / Business </label>
+                        </span> 
+	             
+                     </div>
+                     <div class="content">
+					 <!-- <div class="promocode_join">Enter Your Promo code</div> -->
+                        <ul class="basic_details">
+						 <li>
+                              <label class="green_promo">Promo Code</label>							  
+                              <input name="promocode" id="promocode" size="25" maxlength="50" value="" class="input" type="text">
+							  <span class="promocode_span"></span> 
+                              
+                           </li>
+                           <li>
+                              <label>First Name</label>							  
+                              <input name="first_name" id="first_name" size="25" maxlength="50" value="" class="input" type="text">
+							  <span class="FirstName_span"></span> 
+                              
+                           </li>
+                           <li>
+                              <label>Last Name</label>
+                              <input name="last_name" id="last_name" size="25" maxlength="50" value="" class="input" type="text">
+							  <span class="LastName_span"></span> 
+                            <input name="check1" value="" type="hidden">
+                           </li>
+                          
+                           <li>
+                              <label>Email address</label>
+							  <input name="email" id="email" size="25" maxlength="50" value="" class="input" type="text">      
+                             <span class="email_span"></span> 
+                           </li>
+<!--                            <li> -->
+<!--                               <label>Username</label> -->
+
+
+<!-- // 							err_username = ""; -->
+<!-- // 							if(!err_username.equals("")) -->
+
+
+<!-- 							</li> -->
+                           <li>
+                              <label>Create a Password</label>
+							  <input class="input" name="user_passwd" type="password">
+                              <span class="pw_span"></span> 
+                              
+                           </li>
+                           <!-- <li class="username_suggesion"><b></b></li> -->
+                        </ul>
+						<div class="clear_left"></div>
+						  
+	
+	
+						<div class="rush_plan_option">
+							<div class="plan_table_pro">
+							   <div class="red" id="planSelectErr"></div>
+							   <ul class="rush_plan_main">
+								 	 <!-- ----start personal plan ------- -->
+								   <li class="personal_cont_pro">
+									 <ul>
+										<li class="plan_row_head_pro">IDrive Pro<span>Personal</span></li>
+										<li class="plan_Personal_ul">
+										   <ul class="plan_row_cont_pro ">
+											   <li><div><input class="rush_personal_plan" value="Y1000" name="plan_type" type="radio"></div><div class="pro_use"><span>150 GB</span></div><div class="plan_strike">$49.50 Yearly</div><div class="rush_newplan">$39.60 Yearly</div></li><li><div><input class="rush_personal_plan" value="Y1050" name="plan_type" type="radio"></div><div class="pro_use"><span>500 GB</span></div><div class="plan_strike">$149.50 Yearly</div><div class="rush_newplan">$119.60 Yearly</div></li><li><div><input class="rush_personal_plan" value="Y1200" name="plan_type" type="radio"></div><div class="pro_use"><span>1000 GB</span></div><div class="plan_strike">$299.50 Yearly</div><div class="rush_newplan">$239.60 Yearly</div></li>
+										   </ul>
+										</li>
+									 </ul>
+								  </li>
+								 	<!-- --end personal plan--------- --> 
+								 	
+								 	<!-- ----start business plan------- -->
+							 	 <li class="business_cont_pro">
+									 <ul>
+										<li class="plan_row_head_pro">IDrive Pro<span>Business</span></li>
+										<li class="plan_Business_ul">
+										   <ul class="plan_row_cont_pro">
+											  <li><div><input class="rush_business_plan" value="Y100" name="plan_type" type="radio"></div><div class="pro_use"><span>100 GB</span></div><div class="plan_strike">$99.50 Yearly</div><div class="rush_newplan">$79.60 Yearly</div></li><li><div><input class="rush_business_plan" value="Y200" name="plan_type" type="radio"></div><div class="pro_use"><span>200 GB</span></div><div class="plan_strike">$199.50 Yearly</div><div class="rush_newplan">$159.60 Yearly</div></li><li><div><input class="rush_business_plan" value="Y300" name="plan_type" type="radio"></div><div class="pro_use"><span>500 GB</span></div><div class="plan_strike">$499.50 Yearly</div><div class="rush_newplan">$399.60 Yearly</div></li><li><div><input class="rush_business_plan" value="Y400" name="plan_type" type="radio"></div><div class="pro_use"><span>1000 GB</span></div><div class="plan_strike">$799.50 Yearly</div><div class="rush_newplan">$639.60 Yearly</div></li><li><div><input class="rush_business_plan" value="Y500" name="plan_type" type="radio"></div><div class="pro_use"><span>2000 GB</span></div><div class="plan_strike">$1499.50 Yearly</div><div class="rush_newplan">$1199.60 Yearly</div></li>
+										   </ul>
+										</li>
+									 </ul>
+								  </li>
+								 	 
+		                             <!-- ---end busines plans-------- -->
+								  
+							   </ul>
+							</div>
+							<div id="planSelectErr" class="red"></div>
+						</div>
+						
+                        <div class="card_info">
+                           <div class="subhead">Billing information</div>
+						   <div id="billingError" class="red"></div>
+                        <ul>
+						    
+                              <li class="card_type">
+                                 <label>Card Type </label>
+                                 <span class="visa">
+                                 <input name="cardtype" value="visa" visa="" type="radio">
+                                 </span> <span class="master">
+                                 <input name="cardtype" value="Master Card" master="" card="" type="radio">
+                                 </span> <span class="american_express">
+                                 <input name="cardtype" value="American Express" american="" express="" type="radio">
+                                 </span> <span class="discover">
+                                 <input name="cardtype" value="Discover" discover="" type="radio">
+                                 </span> 
+                              </li>
+                              <li>
+                                 <div class="card_number">
+                                    <label>Card Number</label>
+                                    <input class="input" name="cardnumber" id="cardnumber" size="25" value="" maxlength="25" type="text">
+                                 </div>
+                                 <div class="card_cw"> 
+                                    <span class="cvv_container">
+                                    <label>CVV <font class="cvv tooltip" text="For Visa, MasterCard, and Discover cards, the CVV is the last 3 digit number located on the back of your card on or above your signature line. For an American Express card, it is the 4 digits on the FRONT above the end of your card number.">?</font> </label>
+                                    <input class="input" name="cvv" id="cvv" size="25" maxlength="4" value="" type="text">
+                                    </span> 
+								</div>
+								<div class="card_exp_date">
+                                    <span class="exp_date">
+                                    <label>Expiry Date (mm/yy)</label>
+									 <input name="month" id="month" value="" maxlength="2" class="input" placeholder="mm" type="text">
+					                 <input name="year" id="year" value="" maxlength="2" class="input" placeholder="yy" type="text">
+                                    </span> 
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="card_bill">
+                                    <label>Billing Address </label>
+					           <input class="input" name="address" id="address" maxlength="100" value="" type="text">
+                                 </div>
+                                 <div class="card_bill">
+                                    <label>Zip Code </label>
+					             <input class="input" name="zip" id="zip" maxlength="20" value="" type="text">
+                                 </div>
+                              </li>
+                           </ul>
+                        </div>
+                        <div class="verification">
+                           <div class="subhead">Verification</div>
+                         <div id="textverifyErr" class="red"></div>
+           			   <p>
+						  
+					 <span class="captcha" id="imagetd">
+					
+						  <img src="/include/images/7.png" alt="">
+						  
+						  <img src="/include/images/2.png" alt="">
+						  
+						  <img src="/include/images/8.png" alt="">
+						  
+						  </span>
+						  <input name="textverify" id="textverify" class="input" onchange="validateTextVerifyAjax()" type="text">
+						</p>
+                        </div>
+                     </div>
+                     <div class="signup_footer">
+                        <p>
+                           <input value="Create My Account" class="submit_btn" name="signup_submit" type="submit">
+                        </p>
+                        <p class="terms">By clicking on ‘<span>Create My Account</span>’, you agree to <a href="/terms-and-conditions.htm" class="slink">IDrive Terms</a> and you may receive emails on product updates. </p>
+                     </div>
+                  </form>
+                 
+               </div> <!-- End promocode_right -->
+            </section>
+            <!-- /signup -->
+         </div>
+      </div>
+      <!--adding newe footer--->
+      <footer>
+         <div class="wrapper">
+            <div class="products">
+               <div class="store"><span>Products </span></div>
+               <div class="prod_logo">
+                  <!--<a href="/idrive-lite/" class="idr_contacts">IDrive contacts</a> --><a class="idrivesync" href="http://www.idrivesync.com/">IDriveSync</a> <a class="idr_portable" href="/portable/">IDrive Portable</a> <a class="idr_apps" href="/apps/">Apps</a> 
+               </div>
+            </div>
+            <div class="links">
+               <ul>
+                  <li><a href="/partner/index.html">Partner</a></li>
+                  <li><a href="http://evs.idrive.com/">Developer</a></li>
+                  <li><a href="/rapidserve.htm">Faster Cloud Backup</a></li>
+                  <li><a href="/online-backup-compliance.htm">Compliance</a></li>
+                  <li><a href="/terms-and-conditions.htm">Legal</a></li>
+                  <li><a href="/online-backup-classic-faq.htm">FAQ</a></li>
+                  <li><a href="/online-backup-company.htm">Corporate</a></li>
+                  <li><a href="/support.htm">Support</a></li>
+               </ul>
+            </div>
+            <div class="media">
+               <div> <a title="Facebook" class="facebook" href="http://www.facebook.com/pages/IDrive-Online-Backup/179224278770517"> <img alt="Facebook" src="/include/images/spacer.gif"></a> <a title="Twitter" class="twitter" href="http://twitter.com/idrive_online"> <img alt="Twitter" src="/include/images/spacer.gif"> </a> <a class="linkedin" title="LinkedIn" href="http://www.linkedin.com/company/1498880"> <img alt="LinkedIn" src="/include/images/spacer.gif"> </a> <a title="Google+" class="googleplus" href="https://plus.google.com/115391841761348201842/?prsrc=3"> <img alt="Google+" src="/include/images/spacer.gif"></a> <a title="IDrive Blog" class="blog" href="http://blog.idrive.com/"> <img alt="IDrive Blog" src="/include/images/spacer.gif"></a> <a title="IDrive Forum" class="forum" href="http://forum.idrive.com/"> <img alt="IDrive Forum" src="/include/images/spacer.gif"></a> </div>
+            </div>
+            <p>©  Pro Softnet Corporation</p>
+         </div>
+      </footer>
+   
+   <script src="/idrive/include/scripts/scripts.signup_freepro_rush.js" type="text/javascript"></script>
+<script src="/idrive/include/js/idNameVerifyEmail.js" type="text/javascript"></script>
+
+
+
+</body>

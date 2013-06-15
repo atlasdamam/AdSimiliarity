@@ -1,0 +1,635 @@
+<head><meta name="fragment" content="!"><script src="http://www.google-analytics.com/ga.js" async="" type="text/javascript"></script><script src="//www.googletagmanager.com/gtm.js?id=GTM-99SQ" async=""></script><script async="" src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en_US.4aMTkuJAuyY.O/m=plusone/rt=j/sv=1/d=1/ed=1/am=IQ/rs=AItRSTM1cVosmJiJ_5COJ99XeoI2rODH6w/cb=gapi.loaded_0"></script><script gapi_processed="true" src="https://apis.google.com/js/plusone.js" async="" type="text/javascript"></script><script src="//platform.twitter.com/widgets.js" id="twitter-wjs"></script><script type="text/javascript" src="http://www.submarinoviagens.com.br/Scripts/jquery-1.7.1.min.js"></script><script type="text/javascript"> $MTO = $.noConflict(true); </script><script type="text/javascript" src="http://www.submarinoviagens.com.br/Scripts/loadAsync.js?fh=5bfb7d62-ac4c-e7ce-53b1-2404ab310735"></script><link rel="stylesheet" type="text/css" href="http://www.submarinoviagens.com.br/arquivo/3b18a8f4-0551-4e6f-8cdf-79625161b80b.css">
+<title>Viaje no Feriado - Submarino Viagens</title>
+<meta name="description" content="Viaje no Feriado comprando no Submarino Viagens. Promoções de Passagens Aéreas, Hotéis e Pacotes para feriados com preços imperdíveis. Acesse agora!">
+<meta name="keywords" content="feriado,feriados, viagem feriado, viagens no feriado, passagens no feriado, pacote feriado, pacotes feriados, viajar no feriado, viajar nos feriados, promocoes feriado,promoções para feriado, promoções para feriados, promoções feriados">
+<meta name="language" content="pt-br">
+<meta name="robots" content="index, follow">
+<meta name="Author" content="Submarino Viagens">
+<meta name="rating" content="general">
+<meta name="revisit-after" content="1 days">
+
+<link rel="stylesheet" type="text/css" href="http://www.submarinoviagens.com.br/Styles/SubmarinoJqueryUI.css">
+<!-- teste -->
+<!--script type="text/javascript" src="http://www.submarinoviagens.com.br/scripts/dev/ServiceCaller.js"></script-->
+<script type="text/javascript">
+	var CurrentPointOfSale = "SUBMARINO";
+	var MinDaysToSearch = 2;
+	var PathWebService = "http://www.submarinoviagens.com.br/Passagens/UIService/Service.svc/";
+	var ServerHost = "10.230.16.10";
+	var rootPath = "http://www.submarinoviagens.com.br/";
+	var PescIncB2WGenerico = false;
+	var PesqIncHome = 'B2W';
+	var PesqIncHotel = 'B2W';
+	var PesqIncAereo = 'B2W';
+</script>
+<!--script type="text/javascript" src="http://www.submarinoviagens.com.br/scripts/dev/ServiceCaller.js" onload="if (typeof logLibrary != 'undefined') logLibrary.LogLoad(this);"></script>
+<script type="text/javascript" src="http://www.submarinoviagens.com.br/javascript/jquery-1.7.2.min.js" onload="if (typeof logLibrary != 'undefined') logLibrary.LogLoad(this);"></script>
+<script type="text/javascript" src="http://www.submarinoviagens.com.br/javascript/jquery.carousel.min.js" onload="if (typeof logLibrary != 'undefined') logLibrary.LogLoad(this);"></script>
+<script type="text/javascript" src="http://www.submarinoviagens.com.br/javascript/slideshow.js?ver=19-10-2012" onload="if (typeof logLibrary != 'undefined') logLibrary.LogLoad(this);"></script>
+<script type="text/javascript" src="http://www.submarinoviagens.com.br/javascript/utils.js?fh=3a05628c-2799-9bb7-e5c0-96552f3bddd9" onload="if (typeof logLibrary != 'undefined') logLibrary.LogLoad(this);"></script>
+
+
+
+<script type="text/javascript" src="http://www.submarinoviagens.com.br/Scripts/jquery-ui-1.8.5.custom.min.js" onload="if (typeof logLibrary != 'undefined') logLibrary.LogLoad(this);"></script>
+<script type="text/javascript" src="http://www.submarinoviagens.com.br/Scripts/Dev/Json2.min.js" onload="if (typeof logLibrary != 'undefined') logLibrary.LogLoad(this);"></script>
+<script type="text/javascript" src="http://www.submarinoviagens.com.br/Scripts/dev/Util.js?fh=b20206e8-d8e7-2632-2fbb-11ad9eb8d94d" onload="if (typeof logLibrary != 'undefined') logLibrary.LogLoad(this);"></script>
+<script type="text/javascript" src="http://www.submarinoviagens.com.br/Scripts/Dev/sp.js" onload="if (typeof logLibrary != 'undefined') logLibrary.LogLoad(this);"></script>
+ 
+  
+<script type="text/javascript" src="http://www.submarinoviagens.com.br/Scripts/dev/Omniture/viagens_aunica_s_code.js?fh=bbffc36b-017e-a919-a155-b9ec15e93b4a" onload="if (typeof logLibrary != 'undefined') logLibrary.LogLoad(this);"></script>
+<script type="text/javascript" src="http://www.submarinoviagens.com.br/Scripts/dev/Omniture/variados.js?v=16-11-12&fh=a6a2bbb2-f8c4-462e-19d1-ce05167e4015" onload="if (typeof logLibrary != 'undefined') logLibrary.LogLoad(this);"></script-->
+<script type="text/javascript" src="http://www.submarinoviagens.com.br/bundle/7afa987b-0a98-407b-9f42-41e0c8b47760/0e3577d7-1d72-86a4-9576-33435bd20a17.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        //Cria cookie afiliado
+       var v_AffiliatedID = getParameterByName('AffiliatedID');
+
+       if ( v_AffiliatedID != '') {
+
+            //limpando o cookie cazo tenha algo na URL
+            SetCookie('Utm_Source_B2WViagens', v_AffiliatedID, 30);
+
+       }
+
+    });
+
+
+
+    (function () {
+        var useSSL = 'https:' == document.location.protocol;
+        var src = (useSSL ? 'https:' : 'http:') +
+     '//www.googletagservices.com/tag/js/gpt.js';
+        document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+    })();
+
+            dataLayer = [];
+            dataLayer.push({
+                'colorDepth': screen.colorDepth,
+                'screenResolution': screen.width + "x" + screen.height
+            }); 
+</script><script src="http://www.googletagservices.com/tag/js/gpt.js"></script>
+<!--OMNITURE-->
+<script type="text/javascript">
+	$(document).ready(function () {
+
+		var area = window.location.pathname.split('.aspx')[0].replace('/', '');
+		TrackOmni_Institucional(area );
+		
+
+        //facebook
+        $("li.red_fac a").click(function () {
+            TrackOmni_social(':institucional:'+ area +':facebook' , 'institucional' , '', '', 'facebook');
+        });
+
+        //twitter
+        $("li.red_twi a").click(function () {
+           TrackOmni_social(':institucional:'+ area +':twitter' ,  'institucional' , '', '', 'twitter'); 
+        });
+
+        //google+1
+        $("li.red_goo a").click(function () {
+           TrackOmni_social(':institucional:'+ area +':google' ,  'institucional' , '', '', 'google');
+        });
+	})	
+</script>
+<!--OMNITURE-->
+<script type="text/javascript">
+            dataLayer.push({
+                'pageType': 'institucional'
+            }); 
+</script>
+<style>
+.destaque_feriados {
+	width:990px; 
+}
+.texto_feriado {
+	width:990px;
+	font-family:Arial, Helvetica, sans-serif; 
+	font-size:11px;
+	float:left;
+	margin-left:17px;
+	margin-top:-25px;
+}
+</style>
+
+<!--TAG PREDICTA-->
+<script type="text/javascript">
+(function() {
+var useSSL = 'https:' == document.location.protocol;
+var src = (useSSL ? 'https:' : 'http:') +
+'//www.googletagservices.com/tag/js/gpt.js';
+document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+})();
+</script><script src="http://www.googletagservices.com/tag/js/gpt.js"></script>
+
+<script type="text/javascript">
+googletag.defineSlot('/20143362/landingpage_homepage_home_970x90_faixainferior', [970, 90], 'div-gpt-ad-1363962247120-0').addService(googletag.pubads());
+googletag.pubads().enableSyncRendering();
+googletag.pubads().enableSingleRequest();
+googletag.enableServices();
+</script><script type="text/javascript" src="http://partner.googleadservices.com/gampad/google_ads_gpt.js"></script>
+<!--/TAG PREDICTA-->
+
+</head>
+<body data-twttr-rendered="true">
+ <link href="http://www.submarinoviagens.com.br/css/viagens-submarino.css?fh=c003c15c-abf3-5b1f-432a-d4a85597d876" rel="stylesheet" type="text/css">
+<!--[if IE 7]> <link href="http://www.submarinoviagens.com.br/css/viagens-submarino-ie.css" rel="stylesheet" type="text/css"> <![endif]-->
+<div class="header">
+	<div class="container">
+	<div class="topInfoL">
+		<a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/default.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="/default.aspx"><div class="logo">Submarino Viagens</div></a>
+	</div>
+	<div class="topInfoR">
+		<div class="topMenuAtend">
+		<ul>
+<img src="/images/icone-chat-topo.png" style="float:left" border="0"><li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;javascript:var%20w=window.open(http://centralchat.submarinoviagens.com.br//default.aspx?ch_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="javascript:var w=window.open(&quot;http://centralchat.submarinoviagens.com.br//default.aspx?chat=3&amp;group=Atendimento&amp;url=&quot;+window.location,&quot;chat&quot;,&quot;width=400,height=410,resizable=no,toolbar=0,location=0,directories=0,status=no,menubar=0,scrollbars=0&quot;);" title="Ajuda online"><b>Ajuda online</b></a> |</li>
+			<li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/meuspedidos_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="/meuspedidos" title="Meus Pedidos"><b>Meus Pedidos</b></a> |</li>
+			<li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/central-de-atendimento.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="/central-de-atendimento.aspx" title="Atendimento"><b>Atendimento</b></a> |</li>
+			<li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/melhor-preco-garantido.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="/melhor-preco-garantido.aspx" title="Melhor Preço Garantido"><b>Melhor Preço Garantido</b></a> | </li>
+            <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/corporativo.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="/corporativo.aspx" title="Corporativo"><b>Corporativo</b></a></li>
+			
+		</ul>
+		</div>
+		<div class="topTelRed" style="margin-right:111px;">
+<!--        <div style="margin-top:-10px; width:235px;" class="telSub">Telefones temporariamente indisponíveis</div>-->
+		<div class="telSub">Compre pelo Telefone: <strong>4003-9888</strong></div>
+		<div class="redSub">
+			<ul>
+			<li class="faceSub" title="Facebook">
+				<div class="mRede">
+				<div id="fb-root">
+				<iframe style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; WIDTH: 120px; HEIGHT: 21px; OVERFLOW: hidden; BORDER-TOP: medium none; BORDER-RIGHT: medium none" src="http://www.facebook.com/plugins/like.php?href=www.facebook.com%2Fsubmarinoviagensoficial&amp;layout=button_count&amp;show_faces=false&amp;width=120&amp;action=like&amp;colorscheme=light&amp;height=21&amp;ref=header" allowtransparency="" frameborder="0" scrolling="no"></iframe>
+			  </div>
+              </div>
+			  </li>
+								<li class="twiSub" title="Twitter">
+									<div class="mRede"><iframe data-twttr-rendered="true" title="Twitter Follow Button" style="width: 60px; height: 20px;" class="twitter-follow-button twitter-follow-button" src="http://platform.twitter.com/widgets/follow_button.1368146021.html#_=1369100883282&amp;id=twitter-widget-0&amp;lang=pt&amp;screen_name=SubViagens&amp;show_count=false&amp;show_screen_name=false&amp;size=m" allowtransparency="true" frameborder="0" scrolling="no"></iframe> 
+									<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
+								</li>
+								<li class="googSub" title="Google +">
+									<div class="mRede"><!-- Coloque esta tag onde você deseja que o botão +1 seja renderizado -->
+									<div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 90px; height: 20px;"><iframe title="+1" data-gapiattached="true" allowtransparency="true" src="https://plusone.google.com/_/+1/fastbutton?bsv&amp;size=medium&amp;hl=pt-BR&amp;origin=http%3A%2F%2Fwww.submarinoviagens.com.br&amp;url=http%3A%2F%2Fwww.submarinoviagens.com.br%2F&amp;ic=1&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en_US.4aMTkuJAuyY.O%2Fm%3D__features__%2Fam%3DIQ%2Frt%3Dj%2Fd%3D1%2Frs%3DAItRSTM1cVosmJiJ_5COJ99XeoI2rODH6w#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled&amp;id=I0_1369100883072&amp;parent=http%3A%2F%2Fwww.submarinoviagens.com.br&amp;rpctoken=6987873" name="I0_1369100883072" id="I0_1369100883072" vspace="0" tabindex="0" style="position: static; top: 0px; width: 90px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" marginwidth="0" marginheight="0" hspace="0" frameborder="0" scrolling="no" width="100%"></iframe></div>
+									
+									<!-- Coloque esta chamada de renderização conforme necessário --> 
+									<script type="text/javascript">
+						window.___gcfg = {lang: 'pt-BR'};
+
+						(function() {
+						var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+						po.src = 'https://apis.google.com/js/plusone.js';
+						var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+						})();
+			</script></div>
+			</li>
+			</ul>
+		</div>
+		</div>
+	</div>
+	<div class="subMenu">
+		<ul>
+		<li class="btAereas"><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/passagens-aereas.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="/passagens-aereas.aspx" title="Passagens Aéreas"><b>Passagens Aéreas</b></a></li>
+		<li class="btPacotes"><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/pacotes-turisticos.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="/pacotes-turisticos.aspx" title="Pacotes"><b>Pacotes</b></a></li>
+		<li class="btHoteis"><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/hoteis.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="/hoteis.aspx" title="Hotéis"><b>Hotéis</b></a></li>
+		<li class="btAtracoes"><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/atracoes.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="/atracoes.aspx" title="Atrações"><b>Atrações</b></a></li>
+		<li class="btCruzeiros"><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/cruzeiros-maritimos.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="/cruzeiros-maritimos.aspx" title="Cruzeiros"><b>Cruzeiros</b></a></li>
+		<li class="btResorts"><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/resorts.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="/resorts.aspx" title="Resorts"><b>Resorts</b></a></li>
+		<li class="btSeguros"><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/seguro-viagem.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="/seguro-viagem.aspx" title="Seguros"><b>Seguros</b></a></li>
+		<li class="btPromocoes"><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/promocoes.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="/promocoes.aspx" title="Promoções"><b>Promoções</b></a></li>
+
+		</ul>
+	</div>
+	<div class="subMenuTemas">
+		<ul>
+		<li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/feriados.aspx?s_icid=in_homeprincipal_header_170513_280_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="#" title="viaje pelos temas" class="btTemas"><b>viaje pelos temas</b></a>
+			<div class="mTema">
+			<ul>
+                <li class="l2"><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/viagem-dia-dos-namorados.aspx?s_icid=oferta_in_homeprin_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="/viagem-dia-dos-namorados.aspx?s_icid=oferta_in_homeprincipal_menu_temas_14052013_hotsite_dia_dos_namorados">Dia dos Namorados</a></li>
+                <li class="l2"><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/passagens-internacionais.aspx?s_icid=oferta_in_menu_tem_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="/passagens-internacionais.aspx?s_icid=oferta_in_menu_temas_15052013_hotsite_passagens_internacionais">Passagens Internacionais</a></li>
+				<li class="l2"><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/turismo/aventura.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="/turismo/aventura.aspx">Aventura</a></li>
+				<li class="l2"><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/turismo/feriados.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="/turismo/feriados.aspx">Feriados</a></li>
+				<li class="l3"><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/turismo/praia.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="/turismo/praia.aspx">Melhores Praias</a></li>
+				<li class="l4"><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/turismo/neve.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="/turismo/neve.aspx">Destinos de inverno e neve</a></li>
+				<li class="l4"><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/turismo/familia.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="/turismo/familia.aspx">Viaje com a família</a></li>
+				<li class="l5"><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/turismo/romantico.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="/turismo/romantico.aspx">Aquela viagem romântica</a></li>
+			</ul>
+			</div>
+		</li>
+		</ul>
+	</div>
+	</div>
+</div>
+<div class="root">
+ <!-- home -->
+	<div class="home promocao">
+    <h1>Especial Feriados</h1>
+		<div class="container">
+        <!--<div class= destaque_feriados>
+        <img src="/images/temas/feriados/feriados_dia_trabalho.jpg" />
+        </div>-->
+        <div class="topoTemas temaFeriados">
+      <div class="container">
+        <div class="txtTema">
+          <p>Que tal dar uma pausa? É maravilhoso quando em meio à rotina de trabalho, casa e família, podemos dar uma paradinha para viajar e curtir um pouco a vida. Você pode preferir passar o Carnaval com os amigos em Salvador, assistir as escolas de samba no Rio de Janeiro ou quem sabe ainda ir para Cancun curtir uma praia e fugir da bagunça, afinal feriado também serve para descansar. Na Páscoa você pode além de comer deliciosos chocolates embarcar em outras atividades em Gramado, ir para Nova Jerusalém, em Pernambuco para ver os eventos de Páscoa que mobiliza toda cidade, talvez andar sobre os tapetes coloridos na procissão de Páscoa em Ouro Preto ou na tradicional Sevilha, na Espanha. No Natal e Ano Novo, que são datas mágicas e de pura celebração, tudo é válido, principalmente os pedidos e as promessas de prosperidade para tudo começar com o pé direito. Portanto não importe qual seja o feriado, o importante é você aproveitar.</p>
+          <p>O Submarino Viagens tem o destino certo para seu feriado!</p>
+        </div>
+</div>
+						
+			
+	  </div>
+            <div class="ofertasEspeciais">
+            <div class="container">
+				<h2 class="feriados">Confira as ofertas que preparamos para você viajar no feriado!</h2>
+                <div class="texto_feriado"> 
+                <!--<p>Você que esta procurando ideias viajar no feriado? O Submarino Viagens separou diversas promoções para você. Aproveite o Feriado para descansar e conhecer lugares novos sem deixar de aproveitar os melhores preços disponíveis. Compre agora um dos nossos Pacotes para viajar no feriado! <br /><br />
+                Escolha entre as nossas ofertas o melhor lugar para ir nesse feriado e utilize o cartão do Submarino Viagens para pagar seu pacote em até 10x sem juros.<br /><br />
+</p>-->
+                </div>
+                <div class="boxFeriados">
+<div class="imagem"><img src="/images/temas/feriados/corpus_christi.jpg" alt="Pacotes Corpus Christi" title="Viagem Corpus Christi" height="151" width="392"></div>
+<div class="titulo"><span class="destino">Destino</span><span class="valor">A partir de</span></div>
+<ul>
+ <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/Passagens/selecionarvoo?Origem=SAO&amp;Destino=FLN&amp;Data=30/_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/Passagens/selecionarvoo?Origem=SAO&amp;Destino=FLN&amp;Data=30/05/2013&amp;Hora=&amp;NumADT=1&amp;NumCHD=0&amp;NumINF=0&amp;SomenteDireto=0&amp;Cia=&amp;SelCabin="><span>Florianópolis</span><span class="descricao">Passagem Trecho</span><small>R$</small> <strong>215</strong></a></li>
+ <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/Passagens/selecionarvoo?Origem=SAO&amp;Destino=FRA&amp;Data=28/_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/Passagens/selecionarvoo?Origem=SAO&amp;Destino=FRA&amp;Data=28/05/2013&amp;Hora=&amp;NumADT=1&amp;NumCHD=0&amp;NumINF=0&amp;SomenteDireto=0&amp;Cia=&amp;SelCabin="><span>Frankfurt</span><span class="descricao">Passagem Ida e volta</span><small>10X de R$</small> <strong>251</strong></a></li>
+ <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/hoteis/selecionarhotel?Location=Buzios%20/%20RJ,%20Bras_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/hoteis/selecionarhotel?Location=Buzios / RJ, Brasil&amp;LocationId=-1&amp;CheckIn=30/05/2013&amp;CheckOut=02/06/2013&amp;Rooms=1&amp;Adults=2&amp;Children=0&amp;ChildAges="><span>Búzios</span><span class="descricao">3 Diárias apto duplo</span><small>10X de R$</small> <strong>44</strong></a></li>
+ <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/Pacotes/selecionarpacote?Origem=SAO&amp;OrigemId=0&amp;Destino=_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/Pacotes/selecionarpacote?Origem=SAO&amp;OrigemId=0&amp;Destino=AJU&amp;DestinoId=0&amp;DataIda=30/05/2013&amp;HoraIda=&amp;DataVolta=02/06/2013&amp;HoraVolta=&amp;Location=Aracaju / SE, Brasil&amp;LocationId=0&amp;CheckIn=30/05/2013&amp;CheckOut=02/06/2013&amp;Rooms=1&amp;Adults=2&amp;Children=0&amp;ChildAges=&amp;RoundTrip=1&amp;NonStop=0&amp;AnotherDate=false&amp;Cia=&amp;Cabine="><span>Aracaju</span><span class="descricao">Pacote de 03 dias</span><small>6X de R$</small> <strong>236</strong></a></li>
+ <script type="text/javascript">if (typeof MTOAsyncLoader != 'undefined') MTOAsyncLoader.loadAsync(document.getElementById('slot-dda0dd98-61b7-4e20-b0da-825c7c308ecf'), 'slot');</script>
+</ul>
+</div>
+				
+<div class="boxFeriados">
+<div class="imagem"><img src="/images/temas/feriados/corpus_christi.jpg" alt="Pacotes Corpus Christi" title="Viagem Corpus Christi" height="151" width="392"></div>
+<div class="titulo"><span class="destino">Destino</span><span class="valor">A partir de</span></div>
+<ul>
+ <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/Passagens/selecionarvoo?Origem=SAO&amp;Destino=MCZ&amp;Data=27/_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/Passagens/selecionarvoo?Origem=SAO&amp;Destino=MCZ&amp;Data=27/05/2013&amp;Hora=&amp;NumADT=1&amp;NumCHD=0&amp;NumINF=0&amp;SomenteDireto=0&amp;Cia=&amp;SelCabin="><span>Maceió</span><span class="descricao">Passagem Trecho</span><small>R$</small> <strong>265</strong></a></li>
+ <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/Passagens/selecionarvoo?Origem=SAO&amp;Destino=MIA&amp;Data=28/_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/Passagens/selecionarvoo?Origem=SAO&amp;Destino=MIA&amp;Data=28/05/2013&amp;Origem=MIA&amp;Destino=SAO&amp;Data=04/06/2013&amp;Hora=&amp;NumADT=1&amp;NumCHD=0&amp;NumINF=0&amp;SomenteDireto=0&amp;Cia=&amp;SelCabin="><span>Miami</span><span class="descricao"> Miami</span><small>10X de R$</small> <strong>202</strong></a></li>
+ <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/hoteis/selecionarhotel?Location=Porto%20Seguro%20/%20BA_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/hoteis/selecionarhotel?Location=Porto Seguro / BA, Brasil&amp;LocationId=-1&amp;CheckIn=29/05/2013&amp;CheckOut=02/06/2013&amp;Rooms=1&amp;Adults=2&amp;Children=0&amp;ChildAges="><span>Porto Seguro</span><span class="descricao">4 Diárias apto duplo</span><small>10X de R$</small> <strong>25</strong></a></li>
+ <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/Pacotes/selecionarpacote?Origem=SAO&amp;OrigemId=0&amp;Destino=_20_2&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/Pacotes/selecionarpacote?Origem=SAO&amp;OrigemId=0&amp;Destino=CWB&amp;DestinoId=0&amp;DataIda=29/05/2013&amp;HoraIda=&amp;DataVolta=02/06/2013&amp;HoraVolta=&amp;Location=Curitiba / PR, Brasil&amp;LocationId=0&amp;CheckIn=29/05/2013&amp;CheckOut=02/06/2013&amp;Rooms=1&amp;Adults=2&amp;Children=0&amp;ChildAges=&amp;RoundTrip=1&amp;NonStop=0&amp;AnotherDate=false&amp;Cia=&amp;Cabine="><span>Curitiba</span><span class="descricao">Pacotes de 04 dias</span><small>6X de R$</small> <strong>115</strong></a></li>
+ <script type="text/javascript">if (typeof MTOAsyncLoader != 'undefined') MTOAsyncLoader.loadAsync(document.getElementById('slot-04d90bf0-9e6e-4ea5-8993-f7343d0e6dcc'), 'slot');</script>
+</ul>
+</div>
+
+<div class="boxFeriados">
+<div class="imagem"><img src="/images/temas/feriados/procl_republica.jpg" alt="Pacotes Proclamação da República" title="Viagem Proclamação da República" height="151" width="392"></div>
+<div class="titulo"><span class="destino">Destino</span><span class="valor">A partir de</span></div>
+<ul>
+ <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/Passagens/selecionarvoo?Origem=SAO&amp;Destino=REC&amp;Data=15/_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/Passagens/selecionarvoo?Origem=SAO&amp;Destino=REC&amp;Data=15/11/2013&amp;Hora=&amp;NumADT=1&amp;NumCHD=0&amp;NumINF=0&amp;SomenteDireto=0&amp;Cia=&amp;SelCabin="><span>Recife</span><span class="descricao">Passagem Trecho</span><small>R$</small> <strong>209</strong></a></li>
+ <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/Passagens/selecionarvoo?Origem=SAO&amp;Destino=SCL&amp;Data=13/_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/Passagens/selecionarvoo?Origem=SAO&amp;Destino=SCL&amp;Data=13/11/2013&amp;Origem=SCL&amp;Destino=SAO&amp;Data=20/11/2013&amp;Hora=&amp;NumADT=1&amp;NumCHD=0&amp;NumINF=0&amp;SomenteDireto=0&amp;Cia=&amp;SelCabin="><span>Santiago</span><span class="descricao">Passagem ida e volta</span><small>10X de R$</small> <strong>55</strong></a></li>
+ <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/hoteis/selecionarhotel?Location=Buenos%20Aires%20/%20Bu_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/hoteis/selecionarhotel?Location=Buenos Aires / Buenos Aires, Argentina&amp;LocationId=-1&amp;CheckIn=14/11/2013&amp;CheckOut=17/11/2013&amp;Rooms=1&amp;Adults=2&amp;Children=0&amp;ChildAges="><span>Buenos Aires</span><span class="descricao">3 Diárias apto duplo</span><small>10X de R$</small> <strong>24</strong></a></li>
+ <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/Pacotes/selecionarpacote?Origem=SAO&amp;OrigemId=0&amp;Destino=_20_3&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/Pacotes/selecionarpacote?Origem=SAO&amp;OrigemId=0&amp;Destino=FOR&amp;DestinoId=0&amp;DataIda=15/11/2013&amp;HoraIda=&amp;DataVolta=18/11/2013&amp;HoraVolta=&amp;Location=Fortaleza / CE, Brasil&amp;LocationId=0&amp;CheckIn=15/11/2013&amp;CheckOut=18/11/2013&amp;Rooms=1&amp;Adults=2&amp;Children=0&amp;ChildAges=&amp;RoundTrip=1&amp;NonStop=0&amp;AnotherDate=false&amp;Cia=&amp;Cabine="><span>Fortaleza</span><span class="descricao">Pacote de 03 dias</span><small>6X de R$</small> <strong>94</strong></a></li>
+ <script type="text/javascript">if (typeof MTOAsyncLoader != 'undefined') MTOAsyncLoader.loadAsync(document.getElementById('slot-35e64159-f910-4181-8341-eae209a0ef82'), 'slot');</script>
+</ul>
+</div>
+
+<div class="boxFeriados">
+<div class="imagem"><img src="/images/temas/feriados/natal.jpg" alt="Pacotes Natal" title="Viagem Natal" height="151" width="392"></div>
+<div class="titulo"><span class="destino">Destino</span><span class="valor">A partir de</span></div>
+<ul>
+ <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/Passagens/selecionarvoo?Origem=SAO&amp;Destino=RIO&amp;Data=24/_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/Passagens/selecionarvoo?Origem=SAO&amp;Destino=RIO&amp;Data=24/12/2013&amp;Hora=&amp;NumADT=1&amp;NumCHD=0&amp;NumINF=0&amp;SomenteDireto=0&amp;Cia=&amp;SelCabin="><span>Rio de Janeiro</span><span class="descricao">Passagem Trecho</span><small>R$</small> <strong>85</strong></a></li>
+ <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/Passagens/selecionarvoo?Origem=SAO&amp;Destino=PAR&amp;Data=21/_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/Passagens/selecionarvoo?Origem=SAO&amp;Destino=PAR&amp;Data=21/12/2013&amp;Origem=PAR&amp;Destino=SAO&amp;Data=28/12/2013&amp;Hora=&amp;NumADT=1&amp;NumCHD=0&amp;NumINF=0&amp;SomenteDireto=0&amp;Cia=&amp;SelCabin="><span>Paris</span><span class="descricao">Passagem ida e volta</span><small>10X de R$</small> <strong>264</strong></a></li>
+ <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/hoteis/selecionarhotel?Location=Campos%20do%20Jordao%20_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/hoteis/selecionarhotel?Location=Campos do Jordao / SP, Brasil&amp;LocationId=-1&amp;CheckIn=24/12/2013&amp;CheckOut=25/12/2013&amp;Rooms=1&amp;Adults=2&amp;Children=0&amp;ChildAges="><span>Campos do Jordão</span><span class="descricao">Diária em apto duplo</span><small>10X de R$</small> <strong>16</strong></a></li>
+ <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/Pacotes/selecionarpacote?Origem=SAO&amp;OrigemId=0&amp;Destino=_20_4&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/Pacotes/selecionarpacote?Origem=SAO&amp;OrigemId=0&amp;Destino=NYC&amp;DestinoId=0&amp;DataIda=21/12/2013&amp;HoraIda=&amp;DataVolta=28/12/2013&amp;HoraVolta=&amp;Location=Nova Iorque / NY, Estados Unidos da America&amp;LocationId=0&amp;CheckIn=21/12/2013&amp;CheckOut=28/12/2013&amp;Rooms=1&amp;Adults=2&amp;Children=0&amp;ChildAges=&amp;RoundTrip=1&amp;NonStop=0&amp;AnotherDate=false&amp;Cia=&amp;Cabine="><span>Nova Iorque</span><span class="descricao">Pacote de 07 dias</span><small>10X de R$</small> <strong>297</strong></a></li>
+ <script type="text/javascript">if (typeof MTOAsyncLoader != 'undefined') MTOAsyncLoader.loadAsync(document.getElementById('slot-db5c25ad-ac27-42e6-8fb1-45d249ce5cc6'), 'slot');</script>
+</ul>
+</div>
+
+
+        </div>
+		</div>
+               
+                   <div class="container">
+                    <div class="ofertasEspeciais">
+				<h2>Viaje também para esses destinos  </h2>
+				<div class="carro">
+ <ul> 
+<li style="height:15px;"> <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/hoteis-rio-de-janeiro.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/hoteis-rio-de-janeiro.aspx"> Rio de Janeiro </a> </li> 
+<li style="height:15px;"> <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/hoteis-sao-paulo.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/hoteis-sao-paulo.aspx"> São Paulo </a> </li> 
+<li style="height:15px;"> <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/hoteis-brasilia.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/hoteis-brasilia.aspx"> Brasilia </a> </li> 
+<li style="height:15px;"> <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/hoteis-las-vegas.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/hoteis-las-vegas.aspx"> Las Vegas </a> </li>
+<li style="height:15px;"> <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/hoteis-porto-alegre.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/hoteis-porto-alegre.aspx"> Porto Alegre </a> </li>
+
+<li style="height:15px;"> <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/hoteis-manaus.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/hoteis-manaus.aspx"> Manaus </a> </li> 
+<li style="height:15px;"> <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/hoteis-santiago-do-chile.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/hoteis-santiago-do-chile.aspx"> Santiago do Chile </a> </li> 
+<li style="height:15px;"> <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/hoteis-buenos-aires.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/hoteis-buenos-aires.aspx"> Buenos Aires </a> </li> 
+<li style="height:15px;"> <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/hoteis-ouro-preto.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/hoteis-ouro-preto.aspx"> Ouro Preto </a> </li> 
+<li style="height:15px;"> <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/hoteis-buzios.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/hoteis-buzios.aspx"> Búzios </a> </li> 
+
+<li style="height:15px;"> <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/hoteis-chapada-diamantina.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/hoteis-chapada-diamantina.aspx"> Chapada Diamantina </a> </li> 
+<li style="height:15px;"> <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/passagens-aereas-gramado.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/passagens-aereas-gramado.aspx"> Gramados </a> </li> 
+<li style="height:15px;"> <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/hoteis-angra-dos-reis.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/hoteis-angra-dos-reis.aspx"> Angra dos Reis </a> </li> 
+<li style="height:15px;"> <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/hoteis-balneario-camboriu.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/hoteis-balneario-camboriu.aspx"> Balneário Camboriú </a> </li> 
+<li style="height:15px;"> <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/hoteis-vitoria.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/hoteis-vitoria.aspx"> Vitória </a> </li> 
+
+</ul>
+				</div>
+
+        </div>
+        </div>
+<div class="separador-bco"></div>
+<div class="bnrFooter">
+
+<!-- landingpage_homepage_home_970x90_faixainferior -->
+<div id="div-gpt-ad-1363962247120-0" style="width:970px; height:90px;">
+<script type="text/javascript">
+googletag.display('div-gpt-ad-1363962247120-0');
+</script><div id="google_temp_div_/20143362/landingpage_homepage_home_970x90_faixainferior_0"></div><script type="text/javascript" src="http://pubads.g.doubleclick.net/gampad/ads?gdfp_req=1&amp;correlator=2337977881337753&amp;output=json_html&amp;callback=googletag.impl.pubads.setAdContentsBySlotForSync&amp;impl=ss&amp;json_a=1&amp;eid=108809001&amp;iu_parts=20143362%2Clandingpage_homepage_home_970x90_faixainferior&amp;enc_prev_ius=%2F0%2F1&amp;prev_iu_szs=970x90&amp;cookie=ID%3D1a9c50e4713b48b1%3AT%3D1369100876%3AS%3DALNI_MbJozxIBHxW_TjEw9o8bMWtLt8RWQ&amp;lmt=1369100881&amp;dt=1369100882971&amp;cc=100&amp;biw=1167&amp;bih=323&amp;oid=3&amp;gut=v2&amp;ifi=1&amp;u_tz=-300&amp;u_his=24&amp;u_h=1024&amp;u_w=1280&amp;u_ah=984&amp;u_aw=1280&amp;u_cd=24&amp;u_sd=1&amp;flash=0&amp;url=http%3A%2F%2Fwww.submarinoviagens.com.br%2Fferiados.aspx%3Fs_icid%3Din_homeprincipal_header_170513_280513_corpus-christi_prmc-b2wc-&amp;adks=1852142362&amp;vrg=21&amp;vrp=21&amp;ga_vid=1112575980.1369100878&amp;ga_sid=1369100878&amp;ga_hid=773698912&amp;ga_fc=true"></script>
+</div>
+
+</div>
+<div class="separador-bco"></div>
+
+	</div>
+</div>
+</div>
+
+
+<div class="footer">
+  <div class="footer-header">
+    <div class="payment-ways"> <strong class="strong">Formas de Pagamento</strong>
+      <ul>
+        <li class="payment-ways-list"> <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/formas-de-pagamento.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="/formas-de-pagamento.aspx"><img src="http://www.submarinoviagens.com.br/images/forma_pagamento.jpg" alt="Formas de Pagamento" border="0"></a> </li>
+      </ul>
+    </div>
+    <div style="margin-left:0px;" class="footer-awards"> <strong class="strong">Certificados</strong>
+      <ul>
+        <li><img src="http://www.submarinoviagens.com.br/images/int-segura.jpg" alt=""></li>
+		<li>
+			<div id="sslblindado" style="position: absolute; width: 122px; height: 81px;"><a rel="canonical" href="https://selo.siteblindado.com.br/verificar-ssl?version=0.0.1&amp;token=WA0B32&amp;hostname=www.submarinoviagens.com.br&amp;is_cdn=false&amp;lang=pt-br&amp;color=b&amp;is_https=0" onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;https://selo.siteblindado.com.br/verificar-ssl?version=0.0.1&amp;token=WA0B32&amp;hostname=www.sub_20_1&quot;;return this.s_oc?this.s_oc(e):true" title=""><img src="http://selo.siteblindado.com.br/selos-ssl?version=0.0.1&amp;token=WA0B32&amp;hostname=www.submarinoviagens.com.br&amp;is_cdn=false&amp;lang=pt-br&amp;color=b&amp;is_https=0" oncontextmenu="alert(&quot;Cópia&nbsp;Proibida&nbsp;por&nbsp;Lei&nbsp;-&nbsp;Site&nbsp;Blindado®&nbsp;é&nbsp;marca&nbsp;registrada&nbsp;de&nbsp;Site&nbsp;Blindado&nbsp;S.A.&quot;);return" false;"="" style="border-style: none"></a><param id="aw_nav_post" value="1"></div><script type="text/javascript" src="//selo.siteblindado.com/sslblindado.js"></script>		
+		</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-content">
+    <div class="col-left">
+      <div class="footer-telefones"> <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/central-de-atendimento.aspx_20_2&quot;;return this.s_oc?this.s_oc(e):true" class="atendimento" href="/central-de-atendimento.aspx">Atendimento 4003-9888</a> <span class="compre-pelo-telefone">Compre pelo telefone 4003-2000</span> </div>
+      <div class="footer-questions"> <span class="strong">Dúvidas:</span>
+        <ul>
+          <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/central-de-atendimento.aspx_20_3&quot;;return this.s_oc?this.s_oc(e):true" target="_parent" href="/central-de-atendimento.aspx">Central de Atendimento</a></li>
+          <li class="separador">//</li>
+          <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/mapa-do-site.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" target="_parent" href="/mapa-do-site.aspx">Mapa do site</a></li>
+        </ul>
+      </div>
+      <div class="footer-institucional"> <strong class="strong">Institucional:</strong>
+        <ul>
+          <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/empresa.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="/empresa.aspx">Submarino Viagens</a></li>
+          <li class="separador">//</li>
+          <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/vantagens.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="/vantagens.aspx">Vantagens</a></li>
+          <li class="separador">//</li>
+          <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarino.com.br/_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarino.com.br" target="_blank">Compre no Submarino.com</a></li>
+          <li class="separador">//</li>
+          <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/privacidade.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="/privacidade.aspx">Política de Privacidade</a></li>
+          <li class="separador">//</li>
+          <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/melhor-preco-garantido.aspx_20_2&quot;;return this.s_oc?this.s_oc(e):true" href="/melhor-preco-garantido.aspx">Melhor Preço Garantido</a></li>
+          <li class="separador">//</li>
+          <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/midiakit/midiakit.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="/midiakit/midiakit.aspx">Anuncie</a></li>
+          <li class="separador">//</li>
+          <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.vagas.com.br/b2w_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.vagas.com.br/b2w" target="_blank">Trabalhe conosco</a></li>
+          
+        </ul>
+      </div>
+      <div class="footer-compre-viagens"> <strong class="strong">Compre sua viagem:</strong>
+        <ul>
+          <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/passagens-aereas.aspx_20_2&quot;;return this.s_oc?this.s_oc(e):true" href="/passagens-aereas.aspx">Passagens Aéreas</a></li>
+          <li class="separador">//</li>
+          <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/passagens-internacionais.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="/passagens-internacionais.aspx">Passagens Internacionais</a></li>
+          <li class="separador">//</li>
+          <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/hoteis.aspx_20_2&quot;;return this.s_oc?this.s_oc(e):true" href="/hoteis.aspx">Hotéis</a></li>
+          <li class="separador">//</li>
+          <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/pacotes-turisticos.aspx_20_2&quot;;return this.s_oc?this.s_oc(e):true" href="/pacotes-turisticos.aspx">Pacotes Turísticos</a></li>
+          <li class="separador">//</li>
+          <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/cruzeiros-maritimos.aspx_20_2&quot;;return this.s_oc?this.s_oc(e):true" href="/cruzeiros-maritimos.aspx">Cruzeiros</a></li>
+          <li class="separador">//</li>
+          <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/resorts.aspx_20_2&quot;;return this.s_oc?this.s_oc(e):true" href="/resorts.aspx">Resorts</a></li>
+          <li class="separador">//</li>
+          <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/atracoes.aspx_20_2&quot;;return this.s_oc?this.s_oc(e):true" href="/atracoes.aspx">Atrações</a></li>
+          <li class="separador">//</li>
+          <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/seguro-viagem.aspx_20_2&quot;;return this.s_oc?this.s_oc(e):true" href="/seguro-viagem.aspx">Seguro-Viagem</a></li>
+        </ul>
+      </div>
+      <div class="footer-submarino-combr"> <strong class="strong">Submarino.com.br</strong>
+        <ul>
+          <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarino.com.br/menu/202926/gps?WT.mc_id=viagens_gps&amp;WT.mc_ev=click_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarino.com.br/menu/202926/gps?WT.mc_id=viagens_gps&amp;WT.mc_ev=click">GPS &amp; Navegadores </a></li>
+          <li class="separador">//</li>
+          <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarino.com.br/menu/968/Cameras+Digitais+Filmadoras?WT.mc_id=viagens_cameras&amp;_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarino.com.br/menu/968/Cameras+Digitais+Filmadoras?WT.mc_id=viagens_cameras&amp;WT.mc_ev=click">Câmeras Digitais &amp; Filmadoras</a></li>
+          <li class="separador">//</li>
+          <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarino.com.br/menu/885/mp3+/+mp4?WT.mc_id=viagens_mp3&amp;WT.mc_ev=click_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarino.com.br/menu/885/mp3+/+mp4?WT.mc_id=viagens_mp3&amp;WT.mc_ev=click">MP3 players</a></li>
+          <li class="separador">//</li>
+          <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarino.com.br/loja/258463/tv-e-home-theater?WT.mc_id=viagens_eletro&amp;WT.mc_ev_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarino.com.br/loja/258463/tv-e-home-theater?WT.mc_id=viagens_eletro&amp;WT.mc_ev=click">Eletrônicos Áudio &amp; Vídeo</a></li>
+        </ul>
+      </div>
+      <div class="footer-servicos"> <strong class="strong">Serviços:</strong>
+        <ul>
+         <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/formas-de-pagamento.aspx_20_2&quot;;return this.s_oc?this.s_oc(e):true" href="/formas-de-pagamento.aspx">Formas de pagamento</a></li>
+          <li class="separador">//</li>
+          <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/seguranca.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="/seguranca.aspx">Compra segura</a></li>
+          <li class="separador">//</li>
+          <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/melhor-preco-garantido.aspx_20_3&quot;;return this.s_oc?this.s_oc(e):true" href="/melhor-preco-garantido.aspx">Melhor preço garantido</a></li>
+          <li class="separador">//</li>
+          <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/imprensa.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="/imprensa.aspx">Imprensa</a></li>
+          <li class="separador">//</li>
+          <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.milevo.com.br/_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.milevo.com.br/">Guia de Viagens</a></li>
+          <li class="separador">//</li>
+          <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/revista/revista.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="/revista/revista.aspx">Revista Submarino Viagens</a></li>
+          <li class="separador">//</li>
+          <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/h2w/h2w.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="/h2w/h2w.aspx">Cadastre seu hotel</a></li>
+        </ul>
+      </div>
+      <div class="footer-corporativo"> <strong class="strong">Corporativo:</strong>
+        <ul>
+          <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/corporativo.aspx#viagens-corporativas_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="/corporativo.aspx#viagens-corporativas">Viagens à Negócios</a></li>
+          <li class="separador">//</li>
+          <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/corporativo.aspx#vale-viagem_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="/corporativo.aspx#vale-viagem">Vale-Viagem</a></li>
+          <li class="separador">//</li>
+          <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/corporativo.aspx#incentivo-e-beneficios_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="/corporativo.aspx#incentivo-e-beneficios">Fidelidade e Incentivo</a></li>
+        </ul>
+      </div>
+      <div class="footer-internacional"> <strong class="strong">Internacional:</strong>
+        <ul>
+          <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviajes.com.ar/_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviajes.com.ar" target="_blank">Argentina</a></li>
+        </ul>
+      </div>
+      <div class="footer-afiliados"> <strong class="strong">Afiliados:</strong>
+        <ul>
+          <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.afilio.com.br/_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.afilio.com.br/">Seja um de nossos afiliados</a></li>
+        </ul>
+      </div>
+      <div class="footer-cartao-submarino"> <strong class="strong">Cartão Submarino:</strong>
+        <ul>
+          <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarino.com.br/hotsite/Home-Cartao-Submarino_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarino.com.br/hotsite/Home-Cartao-Submarino" target="_blank">Peça aqui o seu</a></li>
+          <li class="cartao-img"></li>
+        </ul>
+      </div>
+      <div class="footer-parceiros"> <strong class="strong">Afiliados:</strong>
+        <ul>
+          <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://viagens.shoptime.com.br/default.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://viagens.shoptime.com.br/default.aspx" target="_blank">Shoptime Viagens</a></li>
+          <li class="separador">//</li>
+          <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://viagens.americanas.com.br/default.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://viagens.americanas.com.br/default.aspx" target="_blank">Americanas Viagens</a></li>
+          <li class="separador">//</li>
+          <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.blockbusteronline.com.br/home/begin.do?home=BlocHome_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.blockbusteronline.com.br/home/begin.do?home=BlocHome" target="_blank">BlockBuster</a></li>
+          <li class="separador">//</li>
+          <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.ingresso.com.br/br/home/default.asp_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.ingresso.com.br/br/home/default.asp" target="_blank">Ingresso.com</a></li>
+          <li class="separador">//</li>
+          <li><a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.milevo.com.br/_20_2&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.milevo.com.br" target="_blank">Milevo</a></li>
+        </ul>
+      </div>
+    </div>
+    <span class="clear"></span> </div>
+
+  <div class="footer-footer">
+    <div class="content">
+      <div class="footer-top-aereas">
+      <strong>Top passagens aéreas:</strong> 
+     <!-- <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vulputate.</span>-->
+      
+        <ul>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/gol-linhas-aereas.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/gol-linhas-aereas.aspx">Voe Gol</a></li>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/tam-linhas-aereas.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/tam-linhas-aereas.aspx">Tam</a></li>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/azul.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/azul.aspx">Azul</a></li>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/american-airlines.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/american-airlines.aspx">American Airlines</a></li>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/tap.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/tap.aspx">TAP</a></li>
+        </ul>
+        <ul>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/avianca.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/avianca.aspx">Avianca</a></li>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/passaredo.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/passaredo.aspx">Passaredo</a></li>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/lan.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/lan.aspx">Lan</a></li>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/aerolineas-argentinas.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/aerolineas-argentinas.aspx">Aerolineas Argentinas</a></li>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/air-canada.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/air-canada.aspx">Air Canada</a></li>
+        </ul>
+        <ul>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/delta.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/delta.aspx">Delta</a></li>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/lufthansa.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/lufthansa.aspx">Lufthansa</a></li>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/iberia.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/iberia.aspx">Iberia</a></li>
+
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/copa.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/copa.aspx">Copa Airlines</a></li>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/united-airlines.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/united-airlines.aspx">United Airlines</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-top-hoteis"> 
+      <strong>Top hotéis:</strong> 
+      <!--<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vulputate.</span>-->
+        <ul>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/hoteis-sao-paulo.aspx_20_2&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/hoteis-sao-paulo.aspx">São Paulo</a></li>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/hoteis-rio-de-janeiro.aspx_20_2&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/hoteis-rio-de-janeiro.aspx">Rio de Janeiro</a></li>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/hoteis-buenos-aires.aspx_20_2&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/hoteis-buenos-aires.aspx">Buenos Aires</a></li>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/hoteis-fortaleza.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/hoteis-fortaleza.aspx">Fortaleza</a></li>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/hoteis-recife.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/hoteis-recife.aspx">Recife</a></li>
+        </ul>
+        
+        <ul>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/hoteis-salvador.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/hoteis-salvador.aspx">Salvador</a></li>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/hoteis-foz-do-iguacu.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/hoteis-foz-do-iguacu.aspx">Foz do Iguaçu</a></li>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/hoteis-miami.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/hoteis-miami.aspx">Miami</a></li>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/hoteis-orlando.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/hoteis-orlando.aspx">Orlando</a></li>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/hoteis-curitiba.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/hoteis-curitiba.aspx">Curitiba</a></li>
+        </ul>
+        
+        <ul>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/hoteis-natal.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/hoteis-natal.aspx">Natal</a></li>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/hoteis-brasilia.aspx_20_2&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/hoteis-brasilia.aspx">Brasilia</a></li>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/hoteis-joao-pessoa.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/hoteis-joao-pessoa.aspx">João Pessoa</a></li>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/hoteis-maceio.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/hoteis-maceio.aspx">Maceió</a></li>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/hoteis-florianopolis.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/hoteis-florianopolis.aspx">Florianópolis</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-top-destinos-pacotes"> 
+      <strong>Top destinos de pacotes:</strong>
+      <!--<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vulputate.</span>-->
+        <ul>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/destinos/buenos-aires.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/destinos/buenos-aires.aspx">Buenos Aires</a></li>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/destinos/orlando.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/destinos/orlando.aspx">Orlando</a></li>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/destinos/rio-de-janeiro.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/destinos/rio-de-janeiro.aspx">Rio de Janeiro</a></li>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/destinos/fortaleza.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/destinos/fortaleza.aspx">Fortaleza</a></li>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/destinos/foz-do-iguacu.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/destinos/foz-do-iguacu.aspx">Foz do Iguaçu</a></li>
+        </ul>
+        
+        <ul>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/destinos/santiago.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/destinos/santiago.aspx">Santiago</a></li>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/destinos/salvador.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/destinos/salvador.aspx">Salvador</a></li>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/destinos/miami.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/destinos/miami.aspx">Miami</a></li>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/destinos/nova-york.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/destinos/nova-york.aspx">Nova York</a></li>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/destinos/natal.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/destinos/natal.aspx">Natal</a></li>
+        </ul>
+        
+        <ul>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/destinos/sao-paulo.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/destinos/sao-paulo.aspx">São Paulo</a></li>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/destinos/cancun.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/destinos/cancun.aspx">Cancun</a></li>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/destinos/florianopolis.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/destinos/florianopolis.aspx">Florianópolis</a></li>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/destinos/curitiba.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/destinos/curitiba.aspx">Curitiba</a></li>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/destinos/paris.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/destinos/paris.aspx">Paris</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-top-destinos-cruzeiros"> 
+      <strong>Top Cruzeiros:</strong> 
+      <!--<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vulputate.</span>-->
+        <ul>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/cruzeiros/royal-vision-of-the-seas.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/cruzeiros/royal-vision-of-the-seas.aspx">Vision of the Seas</a></li>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/cruzeiros/ibero-grand-mistral.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/cruzeiros/ibero-grand-mistral.aspx">Grand Mistral</a></li>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/cruzeiros/royal-splendour-of-the-seas.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/cruzeiros/royal-splendour-of-the-seas.aspx">Splendour of the Seas</a></li>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/cruzeiros/msc-armonia.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/cruzeiros/msc-armonia.aspx">MSC Armonia</a></li>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/cruzeiros/msc-orchestra.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/cruzeiros/msc-orchestra.aspx">MSC Orchestra</a></li>
+        </ul>
+        
+        <ul>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/cruzeiros/costa-fortuna.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/cruzeiros/costa-fortuna.aspx">Costa Fortuna</a></li>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/cruzeiros/ibero-grand-holiday.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/cruzeiros/ibero-grand-holiday.aspx">Grand Holiday</a></li>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/cruzeiros/costa-victoria.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/cruzeiros/costa-victoria.aspx">Costa Victoria</a></li>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/cruzeiros/msc-musica.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/cruzeiros/msc-musica.aspx">MSC Musica</a></li>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/cruzeiros/costa-pacifica.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/cruzeiros/costa-pacifica.aspx">Costa Pacifica</a></li>
+        </ul>
+
+        <ul>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/cruzeiros/costa-serena.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/cruzeiros/costa-serena.aspx">Costa Serena</a></li>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/cruzeiros/msc-opera.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/cruzeiros/msc-opera.aspx">MSC Opera</a></li>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/cruzeiros/ibero-grand-celebration.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/cruzeiros/ibero-grand-celebration.aspx">Grand Celebration</a></li>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/cruzeiros/royal-mariner-of-the-seas.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/cruzeiros/royal-mariner-of-the-seas.aspx">Mariner Of The Seas</a></li>
+          <li>// <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;http://www.submarinoviagens.com.br/cruzeiros/norwegian-sky.aspx_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.submarinoviagens.com.br/cruzeiros/norwegian-sky.aspx">Norwegian Sky</a></li>
+        </ul>
+        
+      </div>
+      <div class="separador-azul"></div>
+      <div class="anuncios-google"> </div>
+    </div>
+  </div>
+ <div class="footer-content"> B2W VIAGENS E TURISMO LTDA / CNPJ: 06.179.342/0001-05 / Endereço: R: HENRY FORD, 643 - Osasco, SP - 06210-108/ Atendimento ao cliente: <a onclick="var x=&quot;.tl(&quot;;s_objectID=&quot;mailto:faleconosco@submarinoviagens.com.br_20_1&quot;;return this.s_oc?this.s_oc(e):true" href="mailto:faleconosco@submarinoviagens.com.br" style="color:#868585">faleconosco@submarinoviagens.com.br</a></div> 
+</div>
+
+<!--GOOGLE ANALYTICS-->
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-99SQ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-99SQ');</script>
+<!-- End Google Tag Manager -->
+
+<!--GOOGLE ANALYTICS-->
+
+<!--SMART PIXEL-->
+<!-- Google Code for Smart Pixel Remarketing List -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1032927345;
+var google_conversion_language = "en";
+var google_conversion_format = "3";
+var google_conversion_color = "666666";
+var google_conversion_label = "3Lh5CI2RqwIQ8fDE7AM";
+var google_conversion_value = 0;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script><img src="http://googleads.g.doubleclick.net/pagead/viewthroughconversion/1032927345/?random=1369100883206&amp;cv=7&amp;fst=1369100883206&amp;num=1&amp;fmt=3&amp;value=0&amp;label=3Lh5CI2RqwIQ8fDE7AM&amp;bg=666666&amp;hl=en&amp;guid=ON&amp;u_h=1024&amp;u_w=1280&amp;u_ah=984&amp;u_aw=1280&amp;u_cd=24&amp;u_his=24&amp;u_tz=-300&amp;u_java=false&amp;u_nplug=0&amp;u_nmime=0&amp;url=http%3A//www.submarinoviagens.com.br/feriados.aspx%3Fs_icid%3Din_homeprincipal_header_170513_280513_corpus-christi_prmc-b2wc-&amp;frm=0" height="1" width="1" border="0">
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://www.googleadservices.com/pagead/conversion/1032927345/?label=3Lh5CI2RqwIQ8fDE7AM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<!--SMART PIXEL-->
+
+</body>

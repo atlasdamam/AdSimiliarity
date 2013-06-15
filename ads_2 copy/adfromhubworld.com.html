@@ -1,0 +1,179 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Hubworld</title>
+
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=yes">
+
+
+
+    <style type="text/css">
+
+
+    @media only screen and (min-width : 751px) {
+        .bumper-exit .banner { width: 1020px; margin: 0px auto; height: 308px; background: transparent url("/images/common/bumper-bg.png") no-repeat; }
+        .bumper-exit .banner div { position: relative; }
+        .bumper-exit .banner .center { position: relative; margin: 0px auto; width: 960px; height: 291px; }
+        .bumper-exit .banner .close-button { background: none; cursor: pointer; display: block; height: 32px; position: absolute; right: 10px; top: 15px; width: 34px; z-index: 101; }
+        .bumper-exit .banner .big-text { font-family: 'HublishRegular', Arial, san-serif; color: #f3ea00; font-size: 48px; width: 388px; top: 55px; left: 40px; width: 740px; }
+        .bumper-exit .banner .copy { left: 40px; top: 60px; width: 425px; font-size: 21px; }
+        .bumper-exit .continue, .bumper-exit .closead { position: absolute; text-indent: -10000px; overflow: hidden; display: block; }
+        .bumper-exit .continue { left: 253px; bottom: 22px; width: 219px; height: 57px; }
+        .bumper-exit .closead { left: 38px; bottom: 22px; width: 179px; height: 57px; }
+    }
+
+
+    @media only screen and (max-width : 750px) {
+
+        .bumper-exit { background: url('/images/common/bumper-bg-mobile.png') no-repeat right top; overflow: hidden; margin: 0 auto; width: 604px; height: 184px }
+        .center { margin: 10px; position: relative; }
+        .banner { margin: 5px; }
+        .bumper-exit .banner .big-text { font-family: 'HublishRegular', Arial, san-serif; color: #dff10a; font-size: 24px;  }
+        .copy { font-family: Arial, san-serif; color: #FFF; font-size: 14px; line-height: 18px; font-weight: normal; margin-bottom: 10px;  width: 280px; }
+
+        .close-button { background: url("/images/common/bumper-close.png") no-repeat left top; width: 40px; height: 40px; position: absolute; top: -6px; right: -15px; }
+    a.closead, a.closead:hover { display: block; float: left; background: url("/images/common/bumper-cta-back.png") no-repeat left top; width: 128px; height: 50px; text-indent: -9999px; line-height: 50px; }
+        a.continue, a.continue:hover { display: block; float: left;  background: url("/images/common/bumper-cta-go.png") no-repeat left top; width: 142px; height: 50px; text-indent: -9999px; line-height: 50px; }
+
+        .character { background: url("/images/common/bumper-rainbow.png") no-repeat center top; position: absolute; right: 40px; top: 10px; width: 169px; height: 144px; }
+
+    }
+
+
+
+    @media only screen and (max-width: 320px) {
+
+    }
+
+    @media only screen and (max-width: 510px) {
+        .character { display: none; }
+    }
+    @media only screen and (max-width: 600px) {
+        .bumper-exit { width: 100%; min-width: 320px; }
+    }
+
+    html { background: url("/hubworld/img/backgrounds/non-branded/hubworld-default-bkg.jpg") center top repeat-y #521a56; }
+
+
+    </style>
+    
+    <link rel="stylesheet" type="text/css" href="/css/default.css">
+    <!--[if (lt IE 9)&(!IEMobile)]>
+    <link rel='stylesheet' type='text/css' href='/css/common.css' />
+    <style type="text/css">
+        .bumper-exit .banner { width: 1020px; margin: 0px auto; height: 308px; background: transparent url("/images/common/bumper-bg.png") no-repeat; }
+        .bumper-exit .banner div { position: relative; }
+        .bumper-exit .banner .center { position: relative; margin: 0px auto; width: 960px; height: 291px; }
+        .bumper-exit .banner .close-button { background: none; cursor: pointer; display: block; height: 32px; position: absolute; right: 10px; top: 15px; width: 34px; z-index: 101; }
+        .bumper-exit .banner .big-text { font-family: 'HublishRegular', Arial, san-serif; color: #f3ea00; font-size: 48px; width: 388px; top: 55px; left: 40px; width: 740px; }
+        .bumper-exit .banner .copy { left: 40px; top: 60px; width: 425px; font-size: 21px; }
+        .bumper-exit .continue, .bumper-exit .closead { position: absolute; text-indent: -10000px; overflow: hidden; display: block; }
+        .bumper-exit .continue { left: 253px; bottom: 22px; width: 219px; height: 57px; }
+        .bumper-exit .closead { left: 38px; bottom: 22px; width: 179px; height: 57px; }
+    </style>
+    <![endif]-->
+    <link rel="stylesheet" href="/css/common.css" media="screen and (min-width: 750px)">
+
+    <link rel="stylesheet" type="text/css" href="/css/queries.css">
+
+    <script type="text/javascript" src="/js/libs/modernizr.custom.19238.js"></script>
+
+</head>
+
+<body>
+    <div class="bumper-exit">
+        <div class="banner">
+            <div class="center">
+                <div class="close-button go-to-ad"></div>
+                <div class="character"></div>
+
+                <div class="big-text color-purple">Sure you want to go?</div>
+
+                <div class="copy">You're about to go to a page that may contain advertising and may not be covered by our privacy policy.</div>
+                <a href="#" class="go-to-ad closead">Take me back</a>
+                <a href="#" class="go-to-ad continue">That's OK. Let's go!</a>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="/js/libs/jquery-1.6.min.js"></script>
+    <script type="text/javascript" src="/js/libs/jscrollpane-2.0.0.min.js"></script>
+    <script type="text/javascript" src="/js/libs/jquery.mousewheel-3.0.4.js"></script>
+
+    
+    <script></script>
+
+    
+    
+        <script>
+            var site_account = window.location.hostname == "www.hubworld.com" ? "hasbrohubworld-us" : "hasbrohubdev";
+        </script>
+    
+
+    <script type="text/javascript" src="/js/libs/detectmobilebrowser.js"></script>
+    <script type="text/javascript" src="/js/common.js"></script>
+
+    <script type="text/javascript">
+        (function() {
+            var params = window.location.search.substr(1).split("&");
+            var paramSplit = null;
+            var destination = null;
+            var nid = null;
+            var i = 0;
+            for (i = 0; i < params.length; ++i) {
+                paramSplit = params[i].split("=");
+                if (paramSplit && paramSplit.length == 2 && paramSplit[0] == "dest") {
+                    destination = decodeURIComponent(paramSplit[1]);
+                }
+            }
+            for (i = 0; i < params.length; ++i) {
+                paramSplit = params[i].split("=");
+                if (paramSplit && paramSplit.length == 2 && paramSplit[0] == "nid") {
+                    nid = decodeURIComponent(paramSplit[1]);
+                }
+            }
+
+            var delayTimeout = null;
+            var pollTimeout = null;
+            var delay = false;
+
+
+            var goToDestination = function() {
+                if (!delay) {
+                    window.location = destination;
+                } else {
+                    if (!delayTimeout) {
+                        delayTimeout = setTimeout(function() { delay = false; }, 3000);
+                    }
+                    pollTimeout = setTimeout(function() { goToDestination(); }, 250);
+                }
+            };
+
+            $(".close-button, .closead").live("click", function() {
+                window.history.back();
+                return false;
+            });
+
+            $(".continue").click(function() {
+                goToDestination();
+               // $(this).css({ background: "#ffffff url('/ui/img/ajax-loader.gif') no-repeat 50% 50%" });
+                $(this).unbind("click");
+                return false;
+            });
+        }());
+    </script>
+
+	<script src="http://b.scorecardresearch.com/beacon.js"></script>
+	<script>
+	(function() {
+	if (typeof(COMSCORE) != "undefined") {
+	COMSCORE.beacon({c1:2,c2:"6034642",c3:"",c4:"",c5:"",c6:"",c15:""});
+	}
+	}());
+	</script>
+	<script src="http://www.hasbro.com/includes/js/metrics/2011/s_code.js"></script>
+	<script type="text/javascript" src="/js/omniture.js"></script>
+
+
+</body>

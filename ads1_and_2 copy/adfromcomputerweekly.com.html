@@ -1,0 +1,267 @@
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="-1"> 
+  <meta name="Description" content="">  <meta name="Keywords" content="">
+<link rel="shortcut icon" href="http://www.vmware.com/files/templates/images/favicon.ico">
+  <title>VMware</title>
+  <link rel="shortcut icon" href="http://www.vmware.com/files/templates/images/favicon.ico">
+<meta property="og:title" content="VMware">
+<meta property="og:url" content="http://info.vmware.com/content/EMEA_22150_PLY_CIAL_Media_5?/1234">
+<!--[if !IE]>
+<meta property="og:image" content="http://images.connect.vmware.com/eloquaimages/clients/VMWare/%7B537d8b07-c3b1-4628-9513-6723c8b6c400%7D_share1.PNG">
+<![endif]-->
+<meta property="og:site_name" content="VMware">
+<link rel="image_src" href="http://images.connect.vmware.com/eloquaimages/clients/VMWare/%7B537d8b07-c3b1-4628-9513-6723c8b6c400%7D_share1.PNG">
+<meta property="og:description" content="Learn more with our infographic '4 compelling reasons to start your virtualization journey'.">
+  <link href="http://img.en25.com/Web/VMWare/Styles 5.css" media="all" rel="stylesheet"> <style type="text/css" media="screen">
+h3 {
+font-size:14px !important;    
+}
+
+#footer #social {
+    margin-top:0px !important;
+}
+#logo {
+    z-index:1;
+}
+ #step1 .box .lead { 
+position: absolute;
+right: 100px;
+bottom: 0;
+background: url(http://images.connect.vmware.com/eloquaimages/clients/VMWare/{3c2b400f-442d-45c4-9bda-0f18aeca301e}_084899_en_lp5_man.png) no-repeat bottom;
+width: 200px;
+height: 190px;
+}
+/*<![CDATA[*/
+ .LV_validation_message{ font-weight:bold; margin: 0 0 0 5px; }
+ .LV_valid{ color:#00CC00; font-size: 0px; display:none;  }
+ .LV_invalid{ color:#CC0000; font-size:0px; display:none; line-height:0px;}
+ .LV_valid_field, input.LV_valid_field:hover, input.LV_valid_field:active, textarea.LV_valid_field:hover, textarea.LV_valid_field:active { border: 1px solid #00CC00; background-color: #FFF; }
+ .LV_invalid_field, input.LV_invalid_field:hover, input.LV_invalid_field:active, textarea.LV_invalid_field:hover, textarea.LV_invalid_field:active { border: 1px solid #C1272D; background-color:#F4D7DA;}
+ </style>
+ <script language="JavaScript" type="text/javascript" src="http://img.en25.com/Web/VMWare/17437-jquery-1.6.2.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+<script src="https://img.en25.com/i/livevalidation_standalone.compressed.js" type="text/javascript"></script>
+<link href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css">
+<script>
+function checkFields(){
+    var FirstName = "";
+    var LastName = "";
+    var email = "";
+    var numberOfEmployees = "";
+    $("#src").val(getParameter('src'));
+if(FirstName == ''){
+        var field1 = new LiveValidation("FirstName", {validMessage: "", onlyOnBlur: true});field1.add(Validate.Presence, {failureMessage:""});field1.add( Validate.Exclusion, { within: [ 'First Name' ] } );
+    } else {
+        document.getElementById('FirstName').value = firstName;
+        var field1 = new LiveValidation("FirstName", {validMessage: "", onlyOnBlur: true});field1.add(Validate.Presence, {failureMessage:"This field is required"});field1.add( Validate.Exclusion, { within: [ 'First Name' ] } ); }
+        
+if(LastName == ''){
+        var field2 = new LiveValidation("LastName", {validMessage: "", onlyOnBlur: true});field2.add(Validate.Presence, {failureMessage:"This field is required"});field2.add( Validate.Exclusion, { within: [ 'Last Name' ] } ); 
+    } else {
+        document.getElementById('LastName').value = lastName;
+        var field2 = new LiveValidation("LastName", {validMessage: "", onlyOnBlur: true});field2.add(Validate.Presence, {failureMessage:"This field is required"});field2.add( Validate.Exclusion, { within: [ 'Last Name' ] } ); 
+        
+            }
+    if(email == ''){
+        var field0 = new LiveValidation("EmailAddress", {validMessage: "", onlyOnBlur: true});field0.add(Validate.Presence, {failureMessage:"This field is required"});field0.add(Validate.Email, {failureMessage:"A valid email address is required"});
+    } else {
+        document.getElementById('EmailAddress').value = email;
+        var field0 = new LiveValidation("EmailAddress", {validMessage: "", onlyOnBlur: true});field0.add(Validate.Presence, {failureMessage:"This field is required"});field0.add(Validate.Email, {failureMessage:"A valid email address is required"});
+    }
+    
+     if(numberOfEmployees == ''){
+
+            var field13 = new LiveValidation("NumberOfEmployees", {validMessage: "", onlyOnBlur: true});field13.add(Validate.Presence, {failureMessage:"This field is required"});
+        }
+        
+
+
+    
+    }
+    
+    
+        function submitForm(){
+        $('#13Q1_EMEA_22150_PLY_CIAL_Media_EN').submit();
+    }
+    
+     //function to update prepop fields if not populated//////////////////////////////TIM
+    function setPlaceHolders(){
+        //array for all fields that have placeholders
+        var fields =new Array('#FirstName','#LastName','#EmailAddress');
+        //run through each field in array
+        for (var i=0; i < fields.length; i++) {
+            //set up variable to hold current field value
+
+            var f_val = $(fields[i]).val();
+            //if value is blank, it means niether prepop or lookup has returned anything, therefore placeholder is needed (varies according to current position in array)
+            if (f_val==''){
+                if (i==0){
+                    var placeHolder = 'First Name';
+                }else if (i==1){
+                    var placeHolder = 'Last Name';
+                }else if (i==2){
+                    var placeHolder = 'Email Address';
+                }
+                $(fields[i]).val(placeHolder);
+            }//end if
+        }//end for
+    }//end function
+    
+    
+        function getParameter(name) 
+{
+    var url = window.location.href;
+    var tempUrl = window.location.href.toLowerCase();
+    var paramsStart = url.indexOf("?");
+    name = name.toLowerCase();    
+    
+    if(paramsStart != -1)
+    {
+       var tempParamString = tempUrl.substr(paramsStart + 1);       
+       var paramString = url.substr(paramsStart + 1);       
+       var tokenStart = tempParamString.indexOf(name);       
+       if(tokenStart != -1)
+       {          
+          paramToEnd = paramString.substr(tokenStart + name.length + 1);
+          var delimiterPos = paramToEnd.indexOf("&");          
+          if(delimiterPos == -1)
+          {
+             return paramToEnd;             
+          }
+          else 
+          {             
+             return paramToEnd.substr(0, delimiterPos);
+          }
+       }
+       else
+       {
+            return "";
+       }
+    }
+    else
+    {
+        return "";
+    }
+    
+}
+
+
+
+</script>
+</head>
+<body id="step1" onload="checkFields(); setPlaceHolders();">
+  <div id="holder">      <div id="content" style="position:static;">
+        <div id="header" style="position:static;">
+            <div id="logo"><a href="http://www.vmware.com" target="_blank"><img src="http://images.connect.vmware.com/eloquaimages/clients/VMWare/{ce7035b5-8880-4944-9505-7ba0bbb0ee48}_084899_en_lp1_vmware_logo.png" alt="" height="24" width="99" border="0"></a></div><div class="clear"></div>
+            <div class="box">
+                <div class="padd20">
+                    <img src="http://images.connect.vmware.com/eloquaimages/clients/VMWare/{c6fbd481-8ae9-449f-92ff-c292c8b5d84c}_084899_en_lp5_text.png" alt="" height="120" width="600" border="0">
+                    <div class="text">
+                        <!-- some text? -->
+                    </div>
+                </div>
+                <div class="lead"></div>
+            </div>
+            <div class="box">
+                <div>
+                    <div class="padd20">
+                        <h3>Please complete and submit this short form before <br>
+                           <strong>downloading our new infographic</strong>.</h3>
+                        <div class="left">
+                          <div class="input">
+                          <form name="13Q1_EMEA_22150_PLY_CIAL_Media_EN" action="http://s524.t.eloqua.com/e/f2" method="post" id="13Q1_EMEA_22150_PLY_CIAL_Media_EN">
+  <input name="elqFormName" value="13Q1_EMEA_22150_PLY_CIAL_Media_EN" type="hidden">
+  <input name="elqSiteID" value="524" type="hidden">
+  <input name="elqCustomerGUID" value="" type="hidden">
+  <input id="src" name="src" value="Online_13Q2_EMEA_GB_UK_PLY_TechTarget_4ReasonsInfographic" type="hidden">
+  <input name="returnurl" value="http://info.vmware.com/content/EMEA_22150_PLY_CIAL_Media_5_TY" type="hidden">
+  <input name="cid" value="" type="hidden">
+
+        <input class="elqFormField" name="FirstName" id="FirstName" value="" type="text"><br>
+    
+        <input class="elqFormField" name="LastName" id="LastName" value="" type="text"><br>
+    
+        <input class="elqFormField" name="EmailAddress" id="EmailAddress" value="" type="text"><br>
+   
+       <select class="elqFormField" name="NumberOfEmployees" id="NumberOfEmployees" style="width:360px; margin-bottom:10px;">
+<option value="">--Please select number of employees globally--</option>
+<option value="Less Than 100"> Less Than 100</option>
+<option value="100-499"> 100-499</option>
+<option value="500-999"> 500-999</option>
+<option value="1000-4999"> 1000-4999</option>
+<option value="5000-24999"> 5000-24999</option>
+<option value="25000+"> 25000+</option>
+<option value="Unknown"> Unknown</option>
+        </select>
+
+
+
+                            <br>    
+                                
+                                
+                                
+                              <span class="smallprint">From time-to-time VMware will use your contact details, including your email address, to provide information that we believe will be of interest to you. 
+                                <br>
+                            <label for="optout">Tick here to opt out.</label>  <input id="optout" value="optout" type="checkbox"></span>
+                            
+</form>
+                
+                          </div>                            
+                            <div class="clear"></div>                            
+                        </div>
+                        <div class="right">
+                             <div class="text">Learn more with our infographic 
+"<strong>4 compelling reasons to start your virtualization journey</strong>".</div>
+                            <img src="http://images.connect.vmware.com/eloquaimages/clients/VMWare/{11ef0ab0-c179-448d-a81a-0720fb43e03a}_084899_en_lp5_4reasons_bw.png" height="110" width="110" border="0">
+                          <div class="clear"></div>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="submitbut" onclick="submitForm();" style="display: block;">
+         <a href="#"><div class="lt pointer"></div>
+        <div class="mid pointer">SUBMIT</div>
+        <div class="rt pointer"></div></a>
+       </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <img src="http://images.connect.vmware.com/eloquaimages/clients/VMWare/{a777754e-85d2-42ea-88e1-88d4dfd5f16d}_084899_en_lp1_ply.png" alt="PEOPLE LIKE YOU - ARE ON A JOURNEY WITH VMWARE" height="33" width="220" border="0">
+        <div id="social">
+        <span>Share this</span>
+         <a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://info.vmware.com/content/EMEA_22150_PLY_CIAL_Media_5?src=linkedin5&amp;title=VMware&amp;summary=Learn more with our infographic %274 compelling reasons to start your virtualization journey%27.&amp;source=LinkedIn"><img src="http://images.connect.vmware.com/eloquaimages/clients/VMWare/{591551a8-27bd-4ec2-9e98-eaecd09e4f8c}_social_linkedin.png" alt="" height="24" width="24" border="0"></a>
+         
+        <a href="https://plus.google.com/share?url=http://info.vmware.com/content/EMEA_22150_PLY_CIAL_Media_5?/1234?src=googleplus5" onclick="javascript:window.open(this.href,
+  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" target="_blank"><img src="http://images.connect.vmware.com/eloquaimages/clients/VMWare/{dd8b3b28-967f-4538-940a-139e759c6ed7}_google_plus.png" alt="" height="24" width="24" border="0"></a>
+  
+               
+        <a target="_blank" href="http://www.facebook.com/share.php?u=http://info.vmware.com/content/EMEA_22150_PLY_CIAL_Media_5?/1234"><img src="http://images.connect.vmware.com/eloquaimages/clients/VMWare/{206d4931-5b28-44db-a0f2-50e9f850a872}_social_facebook.png" alt="" height="24" width="24" border="0"></a> 
+        
+        
+        
+        <a target="_blank" href="https://twitter.com/share?text=Learn more with our infographic %274 compelling reasons to start your virtualization journey%27.&amp;share?original_referer=http://info.vmware.com/content/EMEA_22150_PLY_CIAL_Media_5?/1234?src=Twitter5&amp;source=tweetbutton&amp;url=http://info.vmware.com/content/EMEA_22150_PLY_CIAL_Media_5?/1234?src=Twitter5"><img src="http://images.connect.vmware.com/eloquaimages/clients/VMWare/{d7ee779a-4dc7-40c3-84a0-3586d82724a2}_twitter.png" alt="" height="24" width="24" border="0"></a>
+    </div>
+        <div class="clear"></div>
+    </div>
+    <div id="copy">Copyright © 2013 VMware, Inc. All rights reserved.</div>
+  </div>
+
+
+
+
+<script type="text/javascript">
+<!--
+if (navigator.appName == 'Netscape' || navigator.appName == 'Opera'){
+     document.write('<layer hidden=true><img src="http://s524.t.eloqua.com/visitor/v200/svrGP?pps=60&siteid=524&PURLSiteID=2&optin=disabled&PURLSiteAlternateDNSID=0&PURLContentWebPublishID=14804&PURLRecordID=0&PURLGUID=82874D0E1627486E97B2B0999BD3974F&UseRelativePath=False&elq={00000000-0000-0000-0000-000000000000}&elq_ck=0&src=Online_13Q2_EMEA_GB_UK_PLY_TechTarget_4ReasonsInfographic" border=0 width=1 height=1 ><\/layer>');
+}else{
+     document.write('<img style="display:none" src="http://s524.t.eloqua.com/visitor/v200/svrGP?pps=60&siteid=524&PURLSiteID=2&optin=disabled&PURLSiteAlternateDNSID=0&PURLContentWebPublishID=14804&PURLRecordID=0&PURLGUID=82874D0E1627486E97B2B0999BD3974F&UseRelativePath=False&elq={00000000-0000-0000-0000-000000000000}&elq_ck=0&src=Online_13Q2_EMEA_GB_UK_PLY_TechTarget_4ReasonsInfographic" border=0 width=1 height=1 >');
+}
+-->
+</script><layer hidden="true"><img src="http://s524.t.eloqua.com/visitor/v200/svrGP?pps=60&amp;siteid=524&amp;PURLSiteID=2&amp;optin=disabled&amp;PURLSiteAlternateDNSID=0&amp;PURLContentWebPublishID=14804&amp;PURLRecordID=0&amp;PURLGUID=82874D0E1627486E97B2B0999BD3974F&amp;UseRelativePath=False&amp;elq={00000000-0000-0000-0000-000000000000}&amp;elq_ck=0&amp;src=Online_13Q2_EMEA_GB_UK_PLY_TechTarget_4ReasonsInfographic" height="1" width="1" border="0"></layer>
+</body>

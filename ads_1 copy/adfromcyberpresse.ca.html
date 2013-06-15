@@ -1,0 +1,871 @@
+<head>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="description" content="EspaceAuto.com, le site automobile qui vous permet de trouver, financer et assurer votre véhicule neuf ou d’occasion de façon simple et rapide.">
+		<title>Bienvenue sur EspaceAuto.com</title>
+		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+		<link href="/Content/jquery-ui-1.10.0.css" rel="stylesheet" type="text/css">
+		<link href="/Content/reset.css?24799" rel="stylesheet" type="text/css">
+<link href="/Content/960_24_col.css?24799" rel="stylesheet" type="text/css">
+<link href="/Content/Site.css?24799" rel="stylesheet" type="text/css">
+<link href="/Content/MenuStyles.css?24799" rel="stylesheet" type="text/css">
+<link href="/Content/Footer.css?24799" rel="stylesheet" type="text/css">
+<link href="/Content/Inline.css?24799" rel="stylesheet" type="text/css">
+<link href="/Content/Widgets.css?24799" rel="stylesheet" type="text/css">
+<link href="/Content/content-pages.css?24799" rel="stylesheet" type="text/css">
+<link href="/Content/jquery-ui-override.css?24799" rel="stylesheet" type="text/css">
+<link href="/Content/Buttons.css?24799" rel="stylesheet" type="text/css">
+
+		<script src="http://www.google-analytics.com/ga.js" async="" type="text/javascript"></script><script src="/Scripts/Libraries/modernizr-2.6.2.min.js" type="text/javascript"></script>
+		<script type="text/javascript">
+
+			if (document.URL.indexOf("fr-CA") >= 0) {
+				document.write('<link href="/Content/overrides-ca-fr.css?24799" rel="stylesheet" type="text/css" />');
+			}
+		
+		</script><link href="/Content/overrides-ca-fr.css?24799" rel="stylesheet" type="text/css">
+		
+		
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+		<script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery.migrate/jquery-migrate-1.1.0.min.js"></script>
+		<script type="text/javascript" src="/Scripts/Libraries/jquery-ui-1.10.0.custom.min.js"></script>
+		<script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.10.0/jquery.validate.min.js"></script>
+
+
+		<script type="text/javascript">
+			if (typeof jQuery === 'undefined') {
+				document.write('<script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.0.min.js"><\/script>');
+			}
+			if (typeof jQuery === 'undefined') {
+				document.write('<script type="text/javascript" src="/Scripts/Libraries/jquery-1.9.0.min.js"><\/script>');
+			}
+			if (!jQuery().validate) {
+				document.write('<script type="text/javascript" src="/Scripts/Libraries/jquery.validate.min.js"><\/script>');
+			}
+		</script>
+		<script src="/Scripts/Libraries/jquery-migrate-1.1.0.js" type="text/javascript"></script>
+		<script src="/Scripts/Libraries/jquery.validate.unobtrusive.min.js" type="text/javascript"></script>
+		<script src="/Scripts/Libraries/jquery.unobtrusive-ajax.js" type="text/javascript"></script>
+		<script src="/Scripts/Libraries/jquery.hoverIntent.minified.js" type="text/javascript"></script>
+		<script src="/Scripts/Libraries/jquery.watermark.min.js" type="text/javascript"></script>
+		<script src="/Scripts/Libraries/Cors/cors.js" type="text/javascript"></script>
+		<script src="/Scripts/Libraries/Handlebars/handlebars.min.js" type="text/javascript"></script>
+		<script src="/Scripts/Libraries/FormatCurrency/jquery.formatCurrency-1.4.0.pack.js" type="text/javascript"></script>
+		<script src="/Scripts/Libraries/FormatCurrency/jquery.formatCurrency.fr-CA.js" type="text/javascript"></script>
+		<script src="/Scripts/Libraries/FormatCurrency/jquery.formatCurrency.en-CA.js" type="text/javascript"></script>
+		<script src="/Scripts/Libraries/Cookie/jquery.cookie.js" type="text/javascript"></script>
+	
+		<script src="/Localization/Shared.js?24799" language="javascript" type="text/javascript"></script>
+<script src="/Localization/Search.js?24799" language="javascript" type="text/javascript"></script>
+<script src="/Localization/Widgets.js?24799" language="javascript" type="text/javascript"></script>
+<script src="/Scripts/Utils.js?24799" language="javascript" type="text/javascript"></script>
+<script src="/Scripts/common.js?24799" language="javascript" type="text/javascript"></script>
+<script src="/Scripts/Layout.js?24799" language="javascript" type="text/javascript"></script>
+<script src="/Scripts/globalize.js?24799" language="javascript" type="text/javascript"></script>
+<script src="/Scripts/globalize.culture.fr-CA.js?24799" language="javascript" type="text/javascript"></script>
+<script src="/Scripts/LinkManager.js?24799" language="javascript" type="text/javascript"></script>
+<script src="/Scripts/AccountActions.js?24799" language="javascript" type="text/javascript"></script>
+<script src="/Scripts/geolocation.js?24799" language="javascript" type="text/javascript"></script>
+
+	    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoHi9NulCXkGFZ26lSQxUSHcbJE2u0h0o&amp;sensor=false"></script><script src="https://maps.gstatic.com/intl/en_us/mapfiles/api-3/12/10/main.js" type="text/javascript"></script>
+	    
+		<script type="text/javascript">
+		    GetGeoLocation(false);
+			if ($.browser.msie) {
+				document.write('<link href="/Content/overrides-ie.css?24799" rel="stylesheet" type="text/css" />');
+			}
+
+			var search_controls_expanded = true;
+		
+			$(document).ready(function () {
+				$("ul#main-menu .mega-menu").hoverIntent({
+					interval: 100,
+					over: drops_show,
+					timeout: 350,
+					out: drops_hide
+				});
+				$("ul#main-menu .mega-menu").addClass('with-js');
+				$("#RyanTechLogo").hide();
+			});
+		
+			function drops_show() {
+				$(this).addClass('show');
+				$(this).removeClass('with-js');
+			}
+
+			function drops_hide() {
+				$(this).removeClass('show');
+				$(this).addClass('with-js');
+			}
+
+		</script>
+	
+		
+		
+		<script type="text/javascript">
+
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-39015336-1']);
+			_gaq.push(['_setDomainName', 'autopremier.com']);
+			_gaq.push(['_setAllowLinker', true]);
+			_gaq.push(['_trackPageview']);
+
+			(function () {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+
+		</script>
+
+	</head>
+
+	<body class="not-logged-in section-home page-home">
+		<div id="back-to-top-div" style="position: fixed; right: 40px; top: 40px; display: none;
+			cursor: pointer;" onclick="ScrollToTop()">
+			<img src="/Content/Images/back-to-top.png" alt="retour en haut">
+		</div>
+		<div class="container_24">
+			<header id="header">
+				<div class="grid_8">
+					<a href="/">
+						<img id="header_logo" src="http://images.autopremier.com/website/fr-CA/Clients/3/Logo/DesjardinsLogo.png" alt="logo">
+					</a>
+				</div>
+				<div class="grid_16">
+					<div class="lang-wrapper">
+						<div class="initiative-wrapper">Une initiative de <a href="http://www.desjardins.com/" target="_blank"><img src="/Content/Images/header-desjardins-logo.gif" alt="Desjardins" height="30" width="144" align="absmiddle" border="0"></a></div>
+						<div id="lang">
+							<span onclick="ChangeLanguageTo('fr-CA')">Français</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span onclick="ChangeLanguageTo('en-CA')">English</span>
+						</div>
+					</div>
+				</div>
+				<div class="grid_24">        
+					<div id="top-nav-bar">
+						<div id="banner">
+							<ul id="main-menu">
+								<li class="mega-menu with-js">
+<h2>
+<a featureid="2" href="/buy" class="_menu">RECHERCHER UN VÉHICULE</a>
+</h2>
+<div class="mega-drop-down">
+<div class="mega-secondary-nav">
+<ul>
+<li>
+<a featureid="3" href="/buy/cars" class="_submenu">Auto, camion et VUS</a>
+</li>
+<li>
+<a featureid="4" href="/buy/motorcycles" class="_submenu">Moto</a>
+</li>
+<li>
+<a featureid="5" href="/buy/powersports" class="_submenu">Véhicule sport motorisé</a>
+</li>
+<li>
+<a featureid="6" href="/buy/rvs" class="_submenu">Véhicule récréatif</a>
+</li>
+<li>
+<a featureid="7" href="/buy/boats" class="_submenu">Bateaux</a>
+</li>
+<li>
+<a featureid="8" href="/buy/personalwatercraft" class="_submenu">Motomarine</a>
+</li>
+<li>
+<a featureid="575" href="/buy/merchants" class="_submenu">Localiser un marchand</a>
+</li>
+</ul>
+</div>
+<div class="mega-promo">
+<img src="http://images.autopremier.com/website/fr-CA/Buy_SearchNewUsedVehicles.jpg" onclick="Redirect('/Buy')" title="Rechercher un véhicule" alt="Rechercher un véhicule">
+</div>
+<div class="mega-helpful-tip">
+<span><img src="http://images.autopremier.com/website/fr-CA/TipOfTheDay.PNG" title="Conseil du jour" alt="Conseil du jour"><br>Beaucoup de personnes aiment partager des idées avec les autres automobilistes, ces dernières comprennent des messages politiques ou des annonces insistant sur la fierté que suscite la réussite...<a href="/Research/Articles/Details/How-to-Remove-Bumper-Stickers">plus ›</a></span>
+</div>
+</div>
+</li>
+<li class="mega-menu with-js">
+<h2>
+<a featureid="23" href="/build" class="_menu">CONFIGURER UN VÉHICULE</a>
+</h2>
+<div class="mega-drop-down">
+<div class="mega-secondary-nav">
+<ul>
+<li>
+<a featureid="24" href="/build" class="_submenu">Construire votre nouveau véhicule</a>
+</li>
+<li>
+<a featureid="25" href="/build/compare" class="_submenu">Comparer</a>
+</li>
+</ul>
+</div>
+<div class="mega-promo">
+<img src="http://images.autopremier.com/website/fr-CA/Build_CarOfYourDreams.jpg" onclick="Redirect('/Build')" title="Configurer un véhicule" alt="Configurer un véhicule">
+</div>
+<div class="mega-helpful-tip">
+<span><img src="http://images.autopremier.com/website/fr-CA/TipOfTheDay.PNG" title="Conseil du jour" alt="Conseil du jour"><br>Trouver la voiture idéale n'est pas aussi facile que ce que les gens pensent. Avec la multitude de marques, de modèles, de niveaux de garniture et de types de caisse disponibles, le choix peut...<a href="/Research/Articles/Details/4-Tips-to-Finding-the-Perfect-Car">plus ›</a></span>
+</div>
+</div>
+</li>
+<li class="mega-menu with-js">
+<h2>
+<a featureid="26" href="/research" class="_menu">ÉVALUER ET S'INFORMER</a>
+</h2>
+<div class="mega-drop-down">
+<div class="mega-secondary-nav">
+<ul>
+<li>
+<a featureid="27" href="/research/articles" class="_submenu">Articles</a>
+</li>
+<li>
+<a featureid="120" href="/research/financialcalculators" class="_submenu">Calculateurs</a>
+</li>
+<li>
+<a featureid="128" href="http://tradein.canadianblackbook.com/tradein/java/entry_token_f08e971a1d7d55a8fa9d494c3c220b82" target="_blank" class="_submenu">Calculateur de valeur d'échange</a>
+</li>
+<li>
+<a featureid="138" href="/research/vehiclehistory" class="_submenu">Historique des véhicules</a>
+</li>
+<li>
+<a featureid="141" href="http://www.tkqlhce.com/click-7118950-10993327" target="_blank" class="_submenu">Agence de crédit Equifax</a>
+</li>
+<li>
+<a featureid="203" href="http://oee.rncan.gc.ca/publications/transports/guide-consommation-carburant/2251" target="_blank" class="_submenu">Consommation de carburant</a>
+</li>
+<li>
+<a featureid="204" href="http://wwwapps.tc.gc.ca/saf-sec-sur/7/vrdb-bdrv/search/search.aspx?lang=fra" target="_blank" class="_submenu">Rappels</a>
+</li>
+<li>
+<a featureid="205" href="/research/cpoinformation" class="_submenu">Programme de véhicules d'occasion certifiés</a>
+</li>
+</ul>
+</div>
+<div class="mega-promo">
+<img src="http://images.autopremier.com/website/fr-CA/Research_ValuableResearchTools.jpg" onclick="Redirect('/Research')" title="Évaluer et s'informer" alt="Évaluer et s'informer">
+</div>
+<div class="mega-helpful-tip">
+<span><img src="http://images.autopremier.com/website/fr-CA/TipOfTheDay.PNG" title="Conseil du jour" alt="Conseil du jour"><br>Chacun des modèles suivants (classés par ordre alphabétique) répondent à l'ensemble des trois critères suivants : modèle 2012, désigné « Meilleur choix en termes de sécurité » par...<a href="/Research/Articles/Details/Safest-Cars-Over-$25,000">plus ›</a></span>
+</div>
+</div>
+</li>
+<li class="mega-menu with-js">
+<h2>
+<a featureid="189" href="/financing" class="_menu">FINANCER</a>
+</h2>
+<div class="mega-drop-down">
+<div class="mega-secondary-nav">
+<ul>
+<li>
+<a featureid="190" href="/financing" class="_submenu">Financer votre achat</a>
+</li>
+<li>
+<a featureid="2285" href="financing/#ready-to-drive" class="_submenu">Prêt-à-conduire Desjardins</a>
+</li>
+<li>
+<a featureid="2286" href="financing/#pre-approved" class="_submenu">Préautorisation Prêt-à-conduire Desjardins</a>
+</li>
+<li>
+<a featureid="2287" href="financing/#other-financing" class="_submenu">Autres produits de financement Desjardins</a>
+</li>
+<li>
+<a featureid="2288" href="financing/#follow-our-advice" class="_submenu">Suivez nos conseils et prenez de bonnes décisions</a>
+</li>
+</ul>
+</div>
+<div class="mega-promo">
+<img src="http://images.autopremier.com/website/fr-CA/mega_menu_finance.jpg" onclick="Redirect('/Financing')" title="Financer" alt="Financer">
+</div>
+<div class="mega-helpful-tip">
+<span><img src="http://images.autopremier.com/website/fr-CA/TipOfTheDay.PNG" title="Conseil du jour" alt="Conseil du jour"><br>Les véhicules multisegments et les véhicules utilitaires sport (VUS) suivants des années modèles 2012 et 2013, classés dans l'ordre alphabétique, ont obtenu une cote de sécurité globale de 5 étoiles à l'évaluation de l'essai de collision de...<a href="/Research/Articles/Details/Safest-SUVs-for-2012-and-2013">plus ›</a></span>
+</div>
+</div>
+</li>
+<li class="mega-menu with-js">
+<h2>
+<a featureid="191" href="/insurance" class="_menu">ASSURER</a>
+</h2>
+<div class="mega-drop-down">
+<div class="mega-secondary-nav">
+<ul>
+<li>
+<a featureid="208" href="/insurance" class="_submenu">Renseignements sur l'assurance</a>
+</li>
+<li>
+<a featureid="2289" href="insurance/#insure-your-car" class="_submenu">Assurer votre auto</a>
+</li>
+<li>
+<a featureid="2290" href="insurance/#insure-your-motorcycle" class="_submenu">Assurer votre moto</a>
+</li>
+<li>
+<a featureid="2291" href="insurance/#insure-your-rv" class="_submenu">Assurer votre véhicule récréatif</a>
+</li>
+</ul>
+</div>
+<div class="mega-promo">
+<img src="http://images.autopremier.com/website/fr-CA/mega_menu_insure.jpg" onclick="Redirect('/Insurance')" title="Assurer" alt="Assurer">
+</div>
+<div class="mega-helpful-tip">
+<span><img src="http://images.autopremier.com/website/fr-CA/TipOfTheDay.PNG" title="Conseil du jour" alt="Conseil du jour"><br>Régulièrement, vous devez vérifier le niveau d'huile de votre voiture, en particulier si vous conduisez un vieux véhicule qui fuit ou brûle un peu d'huile. L'huile est un élément vital...<a href="/Research/Articles/Details/How-to-Check-Your-Cars-Oil-Level">plus ›</a></span>
+</div>
+</div>
+</li>
+
+							</ul>			
+							<div id="logindisplay">
+								<span>
+									Mon compte
+								</span>
+								<div id="dropDownLogin_div_wrapper">
+									<div id="dropDownLogin_div">
+											<iframe id="logOnIframe" src="/fr-CA/Content/LogOnDropDown" isloggedin="0" onload="LogOnIframeLoaded()" frameborder="0" scrolling="no"></iframe>
+								
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>	
+				<div class="clear"></div>
+				<div class="grid_24">
+
+
+<link href="/Content/type-ahead.css?24799" rel="stylesheet" type="text/css">
+
+<script src="/Scripts/Search.js?24799" language="javascript" type="text/javascript"></script>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        var placeHolder = 'Ex. : Camry Blanche Certifiée';
+        var $searchData = $("#searchData");
+        $searchData.watermark(placeHolder).focus();
+        $("#search_location").watermark(local.SearchLocationWaterMark, { useNative: false });
+
+        $("div#search_collapse_div").click(function () {
+            if (search_controls_expanded)
+                CollapseSearchBox();
+            else
+                ExpandSearchBox();
+        });
+
+        $("select#Categories").change(function () {
+            Categories_DropDownList_Changed($("select#Categories").val());
+        });
+
+        InitializeSearchAutocomplete($("#searchData"), $("#autoComplete_Div"));
+
+        InitializeCityStateAutocomplete($("#search_location"), $("#cityState_autoComplete_Div"));
+
+        $('#findIt').tooltip({
+            content: function () {
+                return $('<div>' + local.PleaseEnterSearchTerm + '</div>');
+            }
+        });
+
+        if ($searchData.val().length === 0) {
+            $('#findIt').tooltip("enable");
+        }
+        else {
+            $('#findIt').tooltip("disable");
+        }
+
+        FormatSearchBarFlyOut();
+    });
+     
+</script>
+
+<div id="search_div">
+    
+    <div style="padding-bottom: 48px;" class="searchBox">
+<form novalidate="novalidate" action="/fr-CA/Search/" id="search_form" method="post" onsubmit="return ResetSearchPage();">        <div class="left">
+            <div id="search_textbox_div">
+                <div class="styled-select">
+                <select id="Categories" name="Categories">
+                            <option value="1" selected="selected">Tous les véhicules</option>
+                            <option value="5">Auto, camion et Vus</option>
+                            <option value="6">Moto</option>
+                            <option value="7">Véhicule sport motorisé</option>
+                            <option value="8">Véhicule récréatif</option>
+                            <option value="9">Bateaux</option>
+                            <option value="10">Motomarine</option>
+                            <option value="4">Localiser un Marchand</option>
+                </select>
+                </div>
+                <input placeholder="Ex.&nbsp;: Camry Blanche Certifiée" id="searchData" name="searchData" autocomplete="off" value="" type="text">
+            </div>
+
+            <div id="autoComplete_Div" class="autoComplete" onclick="SearchButtonClicked();"></div>
+            <input id="distance" name="distance" value="0" type="hidden">
+            <input id="sortById" name="sortById" value="1" type="hidden">
+            <input id="pageNumber" name="pageNumber" value="0" type="hidden">
+            <input id="refineSearchTerm" name="refineSearchTerm" value="" type="hidden">
+            <input id="pageCount" name="pageCount" value="50" type="hidden">
+            <input id="pageView" name="pageView" value="listView" type="hidden">
+            <input id="isNewSearch" name="isNewSearch" value="True" type="hidden">
+
+            <div style="display: block;" id="searchCondition_Checkboxes_div">
+                <input name="searchNewCondition" id="searchNewCondition" value="New" checked="" type="checkbox"><label for="searchNewCondition">Neuf</label>
+                <input name="searchUsedCondition" id="searchUsedCondition" value="Used" checked="" type="checkbox"><label for="searchUsedCondition">D'occasion</label>
+            </div>
+            
+        </div>
+        <div id="search-near-label" class="left">Près de</div>
+        <div id="search-near" class="left">
+            <input id="search_location" name="search_location" autocomplete="off" value="," onfocus="$(this).select()" type="text">
+            <div id="cityState_autoComplete_Div" class="autoComplete"></div>
+        </div>
+        <div class="search-bar-search-button">
+        <input id="findIt" class="green-button" title="" value="Recherche" type="submit">
+        </div> 
+</form>
+    </div>
+    
+    <div style="display: block;" id="search_bottom">
+
+
+		<div class="search-by-h2-bg"><h2>Rechercher par</h2></div>
+        <div id="search_menu_container_div">
+            <ul class="menu">
+                <li id="search_menuitem_make" onclick="ShowTab('make_tab_panel', 'search_menuitem_make')">MARQUE<img src="/Content/Images/search-bar-arrow-down.png" alt="" id="search_menuitem_make_arrow" border="0"></li>
+                <li id="search_menuitem_price" onclick="ShowTab('price_tab_panel', 'search_menuitem_price')">PRIX<img src="/Content/Images/search-bar-arrow-down.png" alt="" id="search_menuitem_price_arrow" border="0"></li>
+                <li id="search_menuitem_payment" onclick="ShowTab('payment_tab_panel', 'search_menuitem_payment')">PAIEMENT<img src="/Content/Images/search-bar-arrow-down.png" alt="" id="search_menuitem_payment_arrow" border="0"></li>
+                <li id="search_menuitem_body" onclick="ShowTab('bodytype_tab_panel', 'search_menuitem_body')">TYPE DE VÉHICULE<img src="/Content/Images/search-bar-arrow-down.png" alt="" id="search_menuitem_body_arrow" border="0"></li>
+                <li id="search_menuitem_usage" onclick="ShowTab('usage_tab_panel', 'search_menuitem_usage')">KILOMÉTRAGE<img src="/Content/Images/search-bar-arrow-down.png" alt="" id="search_menuitem_usage_arrow" border="0"></li>
+                <li id="search_menuitem_recently_viewed" onclick="ShowTab('recently_viewed_tab_panel', 'search_menuitem_recently_viewed')"><span class="left">CONSULTÉS RÉCEMMENT</span><div class="recently-viewed-counter">0</div><img src="/Content/Images/search-bar-arrow-light-down.png" alt="" class="left" id="search_menuitem_recently_viewed_arrow" border="0"></li>
+            </ul>
+        </div>
+
+        <div id="make_tab_panel" class="tab_panel _tab_panel_vertical"><div><ul><li><a href="/Search/SearchByCategory/1/Acura" title="Acura">Acura</a></li><li><a href="/Search/SearchByCategory/1/Audi" title="Audi">Audi</a></li><li><a href="/Search/SearchByCategory/1/Bentley" title="Bentley">Bentley</a></li><li><a href="/Search/SearchByCategory/1/BMW" title="BMW">BMW</a></li><li><a href="/Search/SearchByCategory/1/Buick" title="Buick">Buick</a></li><li><a href="/Search/SearchByCategory/1/Cadillac" title="Cadillac">Cadillac</a></li><li><a href="/Search/SearchByCategory/1/Chevrolet" title="Chevrolet">Chevrolet</a></li><li><a href="/Search/SearchByCategory/1/Chrysler" title="Chrysler">Chrysler</a></li><li><a href="/Search/SearchByCategory/1/Dodge" title="Dodge">Dodge</a></li><li><a href="/Search/SearchByCategory/1/Ferrari" title="Ferrari">Ferrari</a></li></ul></div><div><ul><li><a href="/Search/SearchByCategory/1/FIAT" title="FIAT">FIAT</a></li><li><span>Fisker</span></li><li><a href="/Search/SearchByCategory/1/Ford" title="Ford">Ford</a></li><li><a href="/Search/SearchByCategory/1/Geo" title="Geo">Geo</a></li><li><a href="/Search/SearchByCategory/1/Gmc" title="Gmc">Gmc</a></li><li><a href="/Search/SearchByCategory/1/Honda" title="Honda">Honda</a></li><li><a href="/Search/SearchByCategory/1/HUMMER" title="HUMMER">HUMMER</a></li><li><a href="/Search/SearchByCategory/1/Hyundai" title="Hyundai">Hyundai</a></li><li><a href="/Search/SearchByCategory/1/Infiniti" title="Infiniti">Infiniti</a></li><li><a href="/Search/SearchByCategory/1/Isuzu" title="Isuzu">Isuzu</a></li></ul></div><div><ul><li><a href="/Search/SearchByCategory/1/Jaguar" title="Jaguar">Jaguar</a></li><li><a href="/Search/SearchByCategory/1/Jeep" title="Jeep">Jeep</a></li><li><a href="/Search/SearchByCategory/1/Kia" title="Kia">Kia</a></li><li><a href="/Search/SearchByCategory/1/&quot;Land Rover&quot;" title="Land Rover">Land Rover</a></li><li><a href="/Search/SearchByCategory/1/Lexus" title="Lexus">Lexus</a></li><li><a href="/Search/SearchByCategory/1/Lincoln" title="Lincoln">Lincoln</a></li><li><a href="/Search/SearchByCategory/1/Maserati" title="Maserati">Maserati</a></li><li><a href="/Search/SearchByCategory/1/Mazda" title="Mazda">Mazda</a></li><li><a href="/Search/SearchByCategory/1/Mercedes-Benz" title="Mercedes-Benz">Mercedes-Benz</a></li><li><a href="/Search/SearchByCategory/1/Mercury" title="Mercury">Mercury</a></li></ul></div><div><ul><li><a href="/Search/SearchByCategory/1/Mini" title="Mini">Mini</a></li><li><a href="/Search/SearchByCategory/1/Mitsubishi" title="Mitsubishi">Mitsubishi</a></li><li><a href="/Search/SearchByCategory/1/Nissan" title="Nissan">Nissan</a></li><li><a href="/Search/SearchByCategory/1/Oldsmobile" title="Oldsmobile">Oldsmobile</a></li><li><a href="/Search/SearchByCategory/1/Plymouth" title="Plymouth">Plymouth</a></li><li><a href="/Search/SearchByCategory/1/Pontiac" title="Pontiac">Pontiac</a></li><li><a href="/Search/SearchByCategory/1/Porsche" title="Porsche">Porsche</a></li><li><a href="/Search/SearchByCategory/1/Ram" title="Ram">Ram</a></li><li><a href="/Search/SearchByCategory/1/Rolls-Royce" title="Rolls-Royce">Rolls-Royce</a></li><li><a href="/Search/SearchByCategory/1/Saab" title="Saab">Saab</a></li></ul></div><div><ul><li><a href="/Search/SearchByCategory/1/Saturn" title="Saturn">Saturn</a></li><li><a href="/Search/SearchByCategory/1/Scion" title="Scion">Scion</a></li><li><a href="/Search/SearchByCategory/1/Smart" title="Smart">Smart</a></li><li><span>Spyker</span></li><li><a href="/Search/SearchByCategory/1/Subaru" title="Subaru">Subaru</a></li><li><a href="/Search/SearchByCategory/1/Suzuki" title="Suzuki">Suzuki</a></li><li><a href="/Search/SearchByCategory/1/Toyota" title="Toyota">Toyota</a></li><li><a href="/Search/SearchByCategory/1/Volkswagen" title="Volkswagen">Volkswagen</a></li><li><a href="/Search/SearchByCategory/1/Volvo" title="Volvo">Volvo</a></li></ul></div><div class="clear-special"></div></div>
+        <div id="price_tab_panel" class="tab_panel _tab_panel_vertical"><div><ul><li><a href="/Search/SearchByCategory/1/Moins-de-10000-Prix" title="0 $ - 10 000 $">0 $ - 10 000 $</a></li><li><a href="/Search/SearchByCategory/1/Moins-de-20000-Prix" title="10 000 $ - 20 000 $">10 000 $ - 20 000 $</a></li><li><a href="/Search/SearchByCategory/1/Moins-de-30000-Prix" title="20 000 $ - 30 000 $">20 000 $ - 30 000 $</a></li></ul></div><div><ul><li><a href="/Search/SearchByCategory/1/Moins-de-40000-Prix" title="30 000 $ - 40 000 $">30 000 $ - 40 000 $</a></li><li><a href="/Search/SearchByCategory/1/Moins-de-50000-Prix" title="40 000 $ - 50 000 $">40 000 $ - 50 000 $</a></li></ul></div><div><ul><li><a href="/Search/SearchByCategory/1/Moins-de-60000-Prix" title="50 000 $ - 60 000 $">50 000 $ - 60 000 $</a></li><li><a href="/Search/SearchByCategory/1/Moins-de-70000-Prix" title="60 000 $ - 70 000 $">60 000 $ - 70 000 $</a></li></ul></div><div><ul><li><a href="/Search/SearchByCategory/1/Moins-de-80000-Prix" title="70 000 $ - 80 000 $">70 000 $ - 80 000 $</a></li><li><a href="/Search/SearchByCategory/1/Moins-de-90000-Prix" title="80 000 $ - 90 000 $">80 000 $ - 90 000 $</a></li></ul></div><div><ul><li><a href="/Search/SearchByCategory/1/Moins-de-100000-Prix" title="90 000 $ - 100 000 $">90 000 $ - 100 000 $</a></li><li><a href="/Search/SearchByCategory/1/Plus-de-100000-Prix" title="100 000 $ +">100 000 $ +</a></li></ul></div><div class="clear-special"></div></div>
+        <div id="payment_tab_panel" class="tab_panel _tab_panel_vertical"><div><ul><li><a href="/Search/SearchByCategory/1/Moins-de-100-payment" title="0 $ - 100 $">0 $ - 100 $</a></li><li><a href="/Search/SearchByCategory/1/Moins-de-200-payment" title="100 $ - 200 $">100 $ - 200 $</a></li><li><a href="/Search/SearchByCategory/1/Moins-de-300-payment" title="200 $ - 300 $">200 $ - 300 $</a></li></ul></div><div><ul><li><a href="/Search/SearchByCategory/1/Moins-de-400-payment" title="300 $ - 400 $">300 $ - 400 $</a></li><li><a href="/Search/SearchByCategory/1/Moins-de-500-payment" title="400 $ - 500 $">400 $ - 500 $</a></li></ul></div><div><ul><li><a href="/Search/SearchByCategory/1/Moins-de-600-payment" title="500 $ - 600 $">500 $ - 600 $</a></li><li><a href="/Search/SearchByCategory/1/Moins-de-700-payment" title="600 $ - 700 $">600 $ - 700 $</a></li></ul></div><div><ul><li><a href="/Search/SearchByCategory/1/Moins-de-800-payment" title="700 $ - 800 $">700 $ - 800 $</a></li><li><a href="/Search/SearchByCategory/1/Moins-de-900-payment" title="800 $ - 900 $">800 $ - 900 $</a></li></ul></div><div><ul><li><a href="/Search/SearchByCategory/1/Moins-de-1000-payment" title="900 $ - 1 000 $">900 $ - 1 000 $</a></li><li><a href="/Search/SearchByCategory/1/Plus-de-1000-payment" title="1 000 $ +">1 000 $ +</a></li></ul></div><div class="clear-special"></div><span style="padding-left:35px; color:#8a8a8a" ;="">*Terme de 60 mois, taux d'intérêt de 7,89&nbsp; %</span></div>
+        <div id="bodytype_tab_panel" class="tab_panel _tab_panel_vertical"><div><ul><li><a href="/Search/SearchByCategory/1/Berline" title="Berline">Berline</a></li><li><a href="/Search/SearchByCategory/1/Cabriolet" title="Cabriolet">Cabriolet</a></li></ul></div><div><ul><li><a href="/Search/SearchByCategory/1/Camion" title="Camion">Camion</a></li><li><a href="/Search/SearchByCategory/1/Coupé" title="Coupé">Coupé</a></li></ul></div><div><ul><li><a href="/Search/SearchByCategory/1/Familiale" title="Familiale">Familiale</a></li><li><a href="/Search/SearchByCategory/1/Fourgonnette" title="Fourgonnette">Fourgonnette</a></li></ul></div><div><ul><li><a href="/Search/SearchByCategory/1/&quot;Voiture à hayon&quot;" title="Voiture à hayon">Voiture à hayon</a></li></ul></div><div><ul><li><a href="/Search/SearchByCategory/1/VUS" title="VUS">VUS</a></li></ul></div><div class="clear-special"></div></div>
+        <div id="usage_tab_panel" class="tab_panel _tab_panel_vertical"><div><ul><li><a href="/Search/SearchByCategory/1/Moins-de-25000-km" title="0 - 25 000">0 - 25 000</a></li><li><a href="/Search/SearchByCategory/1/Moins-de-50000-km" title="25 000 - 50 000">25 000 - 50 000</a></li><li><a href="/Search/SearchByCategory/1/Moins-de-75000-km" title="50 000 - 75 000">50 000 - 75 000</a></li></ul></div><div><ul><li><a href="/Search/SearchByCategory/1/Moins-de-100000-km" title="75 000 - 100 000">75 000 - 100 000</a></li><li><a href="/Search/SearchByCategory/1/Moins-de-125000-km" title="100 000 - 125 000">100 000 - 125 000</a></li></ul></div><div><ul><li><a href="/Search/SearchByCategory/1/Moins-de-150000-km" title="125 000 - 150 000">125 000 - 150 000</a></li><li><a href="/Search/SearchByCategory/1/Moins-de-175000-km" title="150 000 - 175 000">150 000 - 175 000</a></li></ul></div><div><ul><li><a href="/Search/SearchByCategory/1/Moins-de-200000-km" title="175 000 - 200 000">175 000 - 200 000</a></li><li><a href="/Search/SearchByCategory/1/Moins-de-225000-km" title="200 000 - 225 000">200 000 - 225 000</a></li></ul></div><div><ul><li><a href="/Search/SearchByCategory/1/Moins-de-250000-km" title="225 000 - 250 000">225 000 - 250 000</a></li><li><a href="/Search/SearchByCategory/1/Plus-de-250000-km" title="250 000 +">250 000 +</a></li></ul></div><div class="clear-special"></div></div>
+        <div id="recently_viewed_tab_panel" class="tab_panel">
+        	<div id="recently_viewed_tab_panel_inner">
+                (aucun article n'a récemment été consulté)
+            <br>
+        	</div>
+        </div>
+        <div id="RateAndTermText" style="display:none;">Terme de 60 mois, taux d'intérêt de 7,89&nbsp; %</div>
+		<div class="clear"></div>
+    </div>
+</div>
+<div id="search_collapse_div">
+    <div class="more-search-links-l"></div>
+    <div class="more-search-links"><span id="more-search-links-text">MOINS DE LIENS DE RECHERCHE</span><img id="search_collapse_arrow_img" src="/Content/Images/SearchCollapse_toggle_uparrow.png" alt="masquer"></div>
+    <div class="more-search-links-r"></div>
+</div>
+					
+				</div>	
+				<div class="clear"></div>
+			</header>
+			<section id="main">
+				
+
+<div class="home-container-background">
+
+    <div class="home-container-content">
+        
+
+<div style="display: inline-block;" class="_itemPositionStyle">
+
+<style class="first-item" type="text/css">
+
+
+</style>
+
+<div class="grid_9">
+<section id="ImagePlate-14" class="widget">
+    <fieldset class="image-plate-widget">
+        <img src="http://images.autopremier.com/website/fr-CA/value_proposition.gif" alt="proposition de valeur" title="Préautorisation financement auto." onclick="window.location='http://www.desjardins.com/fr/particuliers/produits_services/comptes-services-relies/modes-acces/accesd-internet/fonctions/preautorisation-pret-conduire.jsp?utm_campaign=20130415-particuliers-espaceauto&amp;utm_medium=banner&amp;utm_source=espaceauto%2ecom&amp;utm_content=FR_348x225_valuepropositionpreaut__';">
+    </fieldset>
+</section>
+</div>
+
+<style type="text/css">
+
+        div.body_type_item_div img
+        {
+            background-image: url('/Content/Images/search_by_bodytype.png');
+        }
+
+        div.body_type_item_div_disabled img
+        {
+            background-image: url('/Content/Images/search_by_bodytype_disabled.png');
+        }
+		
+        div.body_type_item_div:hover img
+        {
+            background-image: url('/Content/Images/search_by_bodytype_hover.png');
+        }
+
+
+</style>
+
+<div class="search-item-by-body last-item">
+<div class="widget-border-style">
+<section id="SearchItemByBody-7" class="widget">
+
+    <fieldset>
+
+
+            <h2>Recherche par type de véhicule</h2>
+            <div class="body_type_item_div" onclick="BodyTypeClicked('Diesel', 'buy')">
+                <img src="/Content/Images/transparent.png" alt="Diesel" class="diesel" title="Diesel">
+                <span>Diesel</span>
+            </div>
+            <div class="body_type_item_div" onclick="BodyTypeClicked('Électrique', 'buy')">
+                <img src="/Content/Images/transparent.png" alt="Électrique" class="electric" title="Électrique">
+                <span>Électrique</span>
+            </div>
+            <div class="body_type_item_div" onclick="BodyTypeClicked('Hybride', 'buy')">
+                <img src="/Content/Images/transparent.png" alt="Hybride" class="hybrid" title="Hybride">
+                <span>Hybride</span>
+            </div>
+            <div class="body_type_item_div" onclick="BodyTypeClicked('Cabriolet', 'buy')">
+                <img src="/Content/Images/transparent.png" alt="Cabriolet" class="convertible" title="Cabriolet">
+                <span>Cabriolet</span>
+            </div>
+            <div class="body_type_item_div" onclick="BodyTypeClicked('Coupé', 'buy')">
+                <img src="/Content/Images/transparent.png" alt="Coupé" class="coupe" title="Coupé">
+                <span>Coupé</span>
+            </div>
+            <div class="body_type_item_div" onclick="BodyTypeClicked('Voiture à hayon', 'buy')">
+                <img src="/Content/Images/transparent.png" alt="Voiture à hayon" class="hatchback" title="Voiture à hayon">
+                <span>Voiture à hayon</span>
+            </div>
+            <div class="body_type_item_div_disabled">
+                <img src="/Content/Images/transparent.png" alt="De luxe" class="luxury" title="De luxe">
+                <span>De luxe</span>
+            </div>
+            <div class="body_type_item_div" onclick="BodyTypeClicked('Berline', 'buy')">
+                <img src="/Content/Images/transparent.png" alt="Berline" class="sedan" title="Berline">
+                <span>Berline</span>
+            </div>
+            <div class="body_type_item_div" onclick="BodyTypeClicked('VUS', 'buy')">
+                <img src="/Content/Images/transparent.png" alt="VUS" class="suv" title="VUS">
+                <span>VUS</span>
+            </div>
+            <div class="body_type_item_div" onclick="BodyTypeClicked('Camion', 'buy')">
+                <img src="/Content/Images/transparent.png" alt="Camion" class="truck" title="Camion">
+                <span>Camion</span>
+            </div>
+            <div class="body_type_item_div" onclick="BodyTypeClicked('Fourgonnette', 'buy')">
+                <img src="/Content/Images/transparent.png" alt="Fourgonnette" class="minivan" title="Fourgonnette">
+                <span>Fourgonnette</span>
+            </div>
+            <div class="body_type_item_div" onclick="BodyTypeClicked('Familiale', 'buy')">
+                <img src="/Content/Images/transparent.png" alt="Familiale" class="wagon" title="Familiale">
+                <span>Familiale</span>
+            </div>
+                <div class="body_type_item_div_disabled">
+                    <img src="/Content/Images/transparent.png" alt="Bateaux" class="boat" title="Bateaux">
+                    <span>Bateaux</span>
+                </div>
+                <div class="body_type_item_div" onclick="BodyTypeClicked('Moto', 'buy')">
+                    <img src="/Content/Images/transparent.png" alt="Moto" class="motorcycle" title="Moto">
+                    <span>Moto</span>
+                </div>
+                <div class="body_type_item_div_disabled">
+                    <img src="/Content/Images/transparent.png" alt="Motomarine" class="personal-watercraft" title="Motomarine">
+                    <span>Motomarine</span>
+                </div>
+                <div class="body_type_item_div" onclick="BodyTypeClicked('Véhicule sport motorisé', 'buy')">
+                    <img src="/Content/Images/transparent.png" alt="Véhicule sport motorisé" class="powersport" title="Véhicule sport motorisé">
+                    <span>Véhicule sport motorisé</span>
+                </div>
+                <div class="body_type_item_div_disabled">
+                    <img src="/Content/Images/transparent.png" alt="Véhicule récréatif" class="rv-trailer" title="Véhicule récréatif">
+                    <span>Véhicule récréatif</span>
+                </div>
+
+	</fieldset>
+</section>
+</div>
+</div></div>        
+
+
+    <link rel="stylesheet" href="/Content/NivoSlider/themes/default/default.css" type="text/css">
+    <link rel="stylesheet" href="/Content/NivoSlider/nivo-slider.css" type="text/css">
+    <script src="/Scripts/Libraries/NivoSlider/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#slider').nivoSlider({ pauseTime: 5000 });
+        
+            $('.nivo-control').live('mouseover', function() {
+              //var index = $(".nivo-controlNav .active").attr('rel'); //get current slide image index
+              //alert(index);
+
+              var nivoText = $('.nivoSlider img').map(function() { return $(this).attr('title'); });
+              var tooltipText = nivoText[$(this).index()];
+              if (tooltipText == '') return;
+              var xTooltip = $(this).position().left;
+              var nivoCtrlHeight = $(this).height();
+              var yTooltip = $(this).offset().top + nivoCtrlHeight;
+              $('#nivoTooltip').css('left',xTooltip).css('top',yTooltip).stop(true,true).fadeIn(200).text(tooltipText);
+            });
+
+            $('.nivo-control').live('mouseout', function() {
+                $('#nivoTooltip').stop(true,true).fadeOut(1000);
+            });
+
+//            $('[id^="nivo_sort_"]').live('mouseover', function(){
+//                alert("Test");
+//            });
+
+            $('#compare-').tooltip({
+                content: function () {
+                    return $('<div>' + local.PleaseSelect2Vehicles + '</div>');
+                }
+            });
+        });
+    </script>
+
+<style type="text/css">
+
+        
+            #Ads-28 
+            {
+                height: 328px;
+                width: 946px;
+            }
+            
+            .nivo-caption
+            {
+                display:none !important;
+            }
+            
+            #nivoTooltip 
+            {
+	            display:none;
+	            position:absolute;
+	            margin-top:8px; /* Tweak the vert offset HERE */ 
+	            margin-left:0px; /* Tweak the horiz offset HERE */ 
+	            max-width:auto;
+	            font-family:arial;
+	            font-size: 11px;
+	            color: #FFF;
+	            border: 1px solid #444;
+	            text-shadow: 0 0 2px #162434;
+	            padding: 4px 8px;
+	            background: #162434;
+	            opacity:0.88;
+	            filter: alpha(opacity=88);
+	            box-shadow: 0 0 4px #444; 
+	            border-radius: 3px;
+	            z-index:9999;
+            }
+        
+
+</style>
+<div id="shared-client-ads">
+<div id="Ads-28" class="horizontal-ads-section">
+
+        <div class="ads-slider">
+            <div class="slider-wrapper theme-default">
+                <div id="slider" class="nivoSlider">
+                        <img src="http://images.autopremier.com/website/fr-CA/Clients/3/ads/Desjardins_Finan_948x298.png" alt="" id="nivo_sort_1" title="Prêt auto Desjardins." style="height: 298px; width: 948px; display: none;" onclick="$.post( window.location.protocol + '//' + window.location.host + '/Content/ClickedAd', { adId: '42' } );Redirect('http://www.desjardins.com/fr/particuliers/produits_services/financement/automobile/pret-conduire-desjardins.jsp?utm_campaign=20130415-particuliers-espaceauto&amp;utm_medium=banner&amp;utm_source=espaceauto%2ecom&amp;utm_content=FR_948x298_pac1__', true)" data-transition="fade">
+                        <img src="http://images.autopremier.com/website/fr-CA/Clients/3/ads/dag-banniere-generique-948x298.gif" alt="" id="nivo_sort_2" title="Assurance Auto" style="height: 298px; width: 948px; display: none;" onclick="$.post( window.location.protocol + '//' + window.location.host + '/Content/ClickedAd', { adId: '43' } );Redirect('http://assurance-auto.desjardinsassurancesgenerales.com/sur-mesure?campagne=BP500233', true)" data-transition="fade">
+                        <img src="http://images.autopremier.com/website/fr-CA/Clients/3/ads/Desjardins_Concours_948x298.png" alt="" id="nivo_sort_3" title="Préautorisation financement auto." style="height: 298px; width: 948px; display: none;" onclick="$.post( window.location.protocol + '//' + window.location.host + '/Content/ClickedAd', { adId: '44' } );Redirect('http://www.desjardins.com/fr/particuliers/concours/preautorisation.jsp?utm_campaign=20130415-particuliers-espaceauto&amp;utm_medium=banner&amp;utm_source=espaceauto%2ecom&amp;utm_content=FR_948x298_contestpreaut1__', true)" data-transition="fade">
+                        <img src="http://images.autopremier.com/website/fr-CA/Clients/3/ads/dag-banniere-zero-infrac-948x298.gif" alt="" id="nivo_sort_4" title="Assurance Auto" style="height: 298px; width: 948px; display: none;" onclick="$.post( window.location.protocol + '//' + window.location.host + '/Content/ClickedAd', { adId: '45' } );Redirect('http://assurance-auto.desjardinsassurancesgenerales.com/sur-mesure?campagne=BP500235', true)" data-transition="fade">
+                        <img src="http://images.autopremier.com/website/fr-CA/Clients/3/ads/dag-banniere-jeunes-948x298.gif" alt="" id="nivo_sort_5" title="Assurance auto Jeune" style="height: 298px; width: 948px; display: none;" onclick="$.post( window.location.protocol + '//' + window.location.host + '/Content/ClickedAd', { adId: '46' } );Redirect('http://assurance-auto.desjardinsassurancesgenerales.com/sur-mesure?campagne=BP500234', true)" data-transition="fade">
+                <img style="display: inline;" src="http://images.autopremier.com/website/fr-CA/Clients/3/ads/Desjardins_Finan_948x298.png" onclick="$.post( window.location.protocol + '//' + window.location.host + '/Content/ClickedAd', { adId: '42' } );Redirect('http://www.desjardins.com/fr/particuliers/produits_services/financement/automobile/pret-conduire-desjardins.jsp?utm_campaign=20130415-particuliers-espaceauto&amp;utm_medium=banner&amp;utm_source=espaceauto%2ecom&amp;utm_content=FR_948x298_pac1__', true)" class="nivo-main-image"><div style="display: block; opacity: 0.561163;" class="nivo-caption">Prêt auto Desjardins.</div><div class="nivo-directionNav"><a class="nivo-prevNav">Prev</a><a class="nivo-nextNav">Next</a></div></div><div class="nivo-controlNav"><a class="nivo-control active" rel="0">1</a><a class="nivo-control" rel="1">2</a><a class="nivo-control" rel="2">3</a><a class="nivo-control" rel="3">4</a><a class="nivo-control" rel="4">5</a></div>
+            </div>
+        </div>
+        <div id="nivoTooltip"></div>
+
+</div></div>
+    </div>
+
+</div>
+
+
+			</section>
+			<footer id="footer">
+				<div class="grid_24">
+					<div class="footer-container-content">
+
+<div style="display: inline-block;" class="_itemPositionStyle">
+
+<fieldset class="footerWidget first-item" itemscope="" itemtype="http://schema.org/SearchResultsPage">
+	<div class="top-vehicle-searches-widget">
+    <legend>Véhicules les plus recherchés</legend>
+    <ul>
+            <li><a itemprop="url" href="/Search/SearchByCategory/1/VUS"><span itemprop="name">VUS</span></a></li>
+            <li><a itemprop="url" href="/Search/SearchByCategory/1/Berline"><span itemprop="name">Berline</span></a></li>
+            <li><a itemprop="url" href="/Search/SearchByCategory/1/Cabriolet"><span itemprop="name">Cabriolet</span></a></li>
+            <li><a itemprop="url" href="/Search/SearchByCategory/1/%22Voiture+%c3%a0+hayon%22"><span itemprop="name">"Voiture à hayon"</span></a></li>
+            <li><a itemprop="url" href="/Search/SearchByCategory/1/Camion"><span itemprop="name">Camion</span></a></li>
+            <li><a itemprop="url" href="/Search/SearchByCategory/1/Fourgonnette"><span itemprop="name">Fourgonnette</span></a></li>
+            <li><a itemprop="url" href="/Search/SearchByCategory/1/Moins-de-10000-Prix"><span itemprop="name">Moins-de-10000-Prix</span></a></li>
+            <li><a itemprop="url" href="/Search/SearchByCategory/1/Coup%c3%a9"><span itemprop="name">Coupé</span></a></li>
+            <li><a itemprop="url" href="/Search/SearchByCategory/1/Diesel"><span itemprop="name">Diesel</span></a></li>
+            <li><a itemprop="url" href="/Search/SearchByCategory/1/Familiale"><span itemprop="name">Familiale</span></a></li>
+    </ul>
+	</div>
+</fieldset>
+<fieldset class="footerWidget" itemscope="" itemtype="http://schema.org/Offer">
+	<div class="just-arrived-widget">
+    <legend>Derniers arrivages</legend>
+    <ul>
+            <li><a itemprop="url" href="/Item/Details/2007-honda-odyssey/170494"><span itemprop="name">2007 Honda Odyssey</span></a></li>
+            <li><a itemprop="url" href="/Item/Details/2008-honda-civic/170492"><span itemprop="name">2008 Honda Civic</span></a></li>
+            <li><a itemprop="url" href="/Item/Details/2010-honda-civic/170490"><span itemprop="name">2010 Honda Civic</span></a></li>
+            <li><a itemprop="url" href="/Item/Details/2007-honda-civic/170488"><span itemprop="name">2007 Honda Civic</span></a></li>
+            <li><a itemprop="url" href="/Item/Details/2009-honda-civic/170487"><span itemprop="name">2009 Honda Civic</span></a></li>
+            <li><a itemprop="url" href="/Item/Details/2010-honda-accord/170486"><span itemprop="name">2010 Honda Accord</span></a></li>
+            <li><a itemprop="url" href="/Item/Details/2008-suzuki-sx4/170485"><span itemprop="name">2008 Suzuki SX4</span></a></li>
+            <li><a itemprop="url" href="/Item/Details/2005-hyundai-tucson/170484"><span itemprop="name">2005 Hyundai Tucson</span></a></li>
+            <li><a itemprop="url" href="/Item/Details/2007-nissan-murano/170483"><span itemprop="name">2007 Nissan Murano</span></a></li>
+            <li><a itemprop="url" href="/Item/Details/1993-mazda-mx-5/170482"><span itemprop="name">1993 Mazda MX-5</span></a></li>
+    </ul>
+	</div>
+</fieldset>
+<fieldset class="footerWidget last-item" itemscope="" itemtype="http://schema.org/Article">
+	<div class="top-resources-widget">
+    <legend>Ressources les plus demandées</legend>
+    <ul>
+            <li><a itemprop="url" href="/Research/Articles/Details/The-9-Most-Dangerous-Distracted-Driver-Habits"><span itemprop="name">Les 9 distractions au volant les plus dangereuses</span></a></li>
+            <li><a itemprop="url" href="/Research"><span itemprop="name">Rechercher</span></a></li>
+            <li><a itemprop="url" href="/Research/Articles"><span itemprop="name">Articles</span></a></li>
+            <li><a itemprop="url" href="/Research/FinancialCalculators"><span itemprop="name">Calculateurs</span></a></li>
+            <li><a itemprop="url" href="/Research/FinancialCalculators/What-vehicle-can-I-afford"><span itemprop="name">Quelle voiture puis-je m'offrir?</span></a></li>
+            <li><a itemprop="url" href="/Research/CPOInformation"><span itemprop="name">Programme de véhicules d'occasion certifiés</span></a></li>
+            <li><a itemprop="url" href="/Research/Articles/Details/Safest-SUVs-for-2012-and-2013"><span itemprop="name">Les VUS les plus sécuritaires de 2012 et 2013</span></a></li>
+            <li><a itemprop="url" href="/Research/VehicleHistory"><span itemprop="name">Historique des véhicules</span></a></li>
+            <li><a itemprop="url" href="/Research/FinancialCalculators/Monthly-payment-calculator"><span itemprop="name">Calculateur de mensualités</span></a></li>
+            <li><a itemprop="url" href="/Research/Articles/Details/5-Tips-for-Driving-in-the-Fog"><span itemprop="name">5 conseils pour conduire dans le brouillard</span></a></li>
+    </ul>
+	</div>
+</fieldset></div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div id="disclaimers" class="grid_24">
+					<div class="jen-remove">
+						<div class="footermenu-wrap">
+							<div class="footermenu">
+								<ul>
+									<li><a href="/">Accueil</a></li>
+								</ul>
+								<ul><li>
+<a featureid="2" href="/Buy">Rechercher un véhicule</a>
+</li>
+<li>
+<a featureid="23" href="/Build">Configurer un véhicule</a>
+</li>
+<li>
+<a featureid="26" href="/Research">Évaluer et s'informer</a>
+</li>
+<li>
+<a featureid="189" href="/Financing">Financer</a>
+</li>
+<li>
+<a featureid="191" href="/Insurance">Assurer</a>
+</li>
+</ul> 
+								<ul>
+									<li><a href="/Content/About">À propos de nous</a></li>
+									<li><a href="/Content/PrivacyPolicy">Politique de confidentialité</a></li>
+									<li><a onclick="ShowContactUs();" style="cursor: pointer;">Contactez-nous</a></li>
+									<li><a href="http://www.desjardins.com" target="_blank">Desjardins.com</a></li>
+									<li><a href="/Content/TermsOfUse">Termes d'utilisation</a></li>
+									<li><a href="/Content/FAQs" class="last-link">FAQ</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+			<div class="clear">
+			</div>
+			<div class="footer-branding">
+				<div class="grid_8">
+					<div class="footer-brand1">
+						<div class="left">Développé par</div>
+						<a href="http://www.autopremier.com/fr-CA/" target="_blank">
+							<div class="footer-logo1">
+								<img src="/Content/Images/footer-auto-premier-logo.gif" alt="Auto Premier Logo"></div>
+						</a>
+					</div>
+				</div>
+				<div class="grid_8">
+					<div class="footer-brand2">
+						<a href="http://www.partenaires-desjardins.com/espaceauto/" target="_blank">
+							<img src="http://images.autopremier.com/website/fr-CA/footer-dealer-services-logo.jpg" alt="Dealer Services Logo">
+						</a>
+					</div>
+				</div>
+				<div class="grid_8">
+					<div class="footer-brand3">
+						<div class="footer-logo3">
+							<img src="/Content/Images/footer-chrome-data-logo.gif" alt="Chrome Data Logo">
+						</div>
+						<div class="right">Contenu fourni par</div>
+					</div>
+				</div>
+				<div style="display: none;" class="grid_8" id="RyanTechLogo">
+					<div class="footer-brand3">
+						<div class="footer-logo3">
+							<img src="/Content/Images/ryantech_logo.png" alt="Ryan Tech Logo">
+						</div>
+						<div class="right">Données d'inventaire fournies par</div>
+					</div>
+				</div>
+				<div class="clear">
+				</div>
+			</div>
+			<div class="clear">
+			</div>
+			<div class="grid_24">
+				<div class="copyright">
+					<div class="copyright-content">
+						© 2013 Mouvement des caisses Desjardins et CU Direct Corporation. Tous droits réservés.</div>
+				</div>
+				<div class="clear">
+				</div>
+			</div>
+		</div>
+<script type="text/javascript">
+
+    $(function () {
+        $("#contactUsDialog").dialog({ autoOpen: false, height: 'auto', width: 'auto', resizable: false, zIndex: 10000 });
+    });
+
+    function ShowContactUs() {
+        $("#contactUsDialog").removeClass("hidden");
+        $("#contactUsDialog").dialog("open");
+    }
+
+</script>
+	
+<div aria-labelledby="ui-id-1" aria-describedby="contactUsDialog" role="dialog" tabindex="-1" style="display: none;" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-draggable"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span class="ui-dialog-title" id="ui-id-1">Contactez-nous</span><button title="close" aria-disabled="false" role="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-dialog-titlebar-close"><span class="ui-button-icon-primary ui-icon ui-icon-closethick"></span><span class="ui-button-text">close</span></button></div><div id="contactUsDialog" class="hidden ui-dialog-content ui-widget-content">
+    <div id="contactUsDialogInside">
+        <strong>Utilisateur d'EspaceAuto.com </strong><br>
+        
+
+Si vous avez besoin d'assistance pour le site Web, composez le  (855) 568-2835.     
+
+<br><br>
+   
+
+Pour de plus amples renseignements sur les produits et services de financement Desjardins, visitez <a href="http://www.desjardins.com/fr/bienvenue.jsp" target="_blank">Desjardins.com</a>.    
+
+<br><br>
+
+Pour de plus amples renseignements sur les produits d’assurances Desjardins, visitez <a href="http://www.desjardinsassurancesgenerales.com/d-qc/FR/Pages/accueil.aspx" target="_blank">desjardinsassurancesgenerales.com</a>.  
+
+<br><br>
+
+<strong>Marchand</strong><br>
+        
+
+Si vous désirez afficher votre inventaire sur EspaceAuto.com, visitez <a href="http://www.partenaires-desjardins.com/espaceauto/" target="_blank">Services aux marchands</a> pour obtenir plus d'informations.  
+
+<br><br>
+
+Si vous avez besoin d’assistance concernant le site EspaceAuto.com, veuillez contacter notre service à la clientèle au (855) 568-2835
+    </div>
+    <div>
+        <input class="green-button" value="Fermer" onclick="$('#contactUsDialog').dialog('close');" style="float:right;" type="button">
+    </div>
+</div></div></body>

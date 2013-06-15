@@ -1,0 +1,904 @@
+<head runat="server">
+    <title>Sam’s Club® Recipes for Simply Delicious Meals :  Corn Cakes with Shrimp &amp; Guacamole</title>
+
+	<link href="//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/simply-delicious-meals/web/favicon.ico" rel="Shortcut Icon">
+		<link href="/meals/content/site.css" rel="stylesheet" type="text/css">    
+    <script src="http://platform.twitter.com/js/tfw/hub/client.js" async="" type="text/javascript" id="LR1"></script><script src="//platform.twitter.com/widgets.js" id="twitter-wjs"></script><script src="http://www.google-analytics.com/ga.js" async="" type="text/javascript"></script><script type="text/javascript">
+        var vir_dir = "meals/";
+    </script>
+    <script src="//ajax.aspnetcdn.com/ajax/jquery/jquery-1.7.min.js" type="text/javascript"></script>
+
+	<script src="//connect.facebook.net/en_US/all.js#xfbml=1" type="text/javascript"></script>
+
+
+	<script src="//samsglobalmedia.cotssl.net/globalmedia/shared/scripts/jquery.simplemodal.1.4.1.min.js" type="text/javascript"></script>
+   
+		<script type="text/javascript" src="//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/simply-delicious-meals/web/scripts/site.min.js?v=7"></script>  
+    
+    
+    <link rel="canonical" href="http://www3.samsclub.com/meals/recipes/corn-cakes-with-shrimp-and-guacamole-recipe">
+    <link href="//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/simply-delicious-meals/web/styles/recipe-print.css" media="print" rel="Stylesheet">
+
+        <meta name="description" content="Try this recipe for Corn Cakes with Shrimp &amp; Guacamole from Sam’s Club® Simply Delicious Meals.">    
+        <meta name="keywords" content="Corn Cakes with Shrimp and Guacamole, Seafood Recipes, Dinner Recipes, Sam’s Club Recipes.">
+        <meta property="og:title" content="Sam’s Club® Recipes for Simply Delicious Meals :  Corn Cakes with Shrimp &amp; Guacamole">    
+    <meta property="og:url" content="http://www3.samsclub.com/meals/recipes/corn-cakes-with-shrimp-and-guacamole-recipe">
+        <meta property="og:image" content="http://samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/meals/chorus/images/original/130101679916604257.jpg">
+    <meta property="og:description" content="Try this recipe for Corn Cakes with Shrimp &amp; Guacamole from Sam’s Club® Simply Delicious Meals.">
+    <meta property="og:site_name" content="Simply Delicious Meals">
+
+    <script type="text/javascript">
+		var _thisRecipeTitle = 'Corn Cakes with Shrimp &amp; Guacamole';
+
+        function rate(r) {
+            $('#ratings_container').append('<p class="red">Submitting rating...</p>');
+            setTimeout(function() {
+                $('#ratings_container').load('/meals/recipes/rate', { 'recipeid': '70890', 'rating': r });
+            }, 500);
+        }
+
+
+		function LoadRecipeRating() {
+		    $('#ratings_container img').each(function(index) {
+                $(this).unbind('click');
+            });
+			$('#ratings_container').load('/meals/recipes/rate', { 'recipeid' : '70890', 'rating' : 0, 'title' : 'Corn Cakes with Shrimp &amp;amp; Guacamole'}, BindRatingButtons );
+		}
+
+		function BindRatingButtons() {
+			$('#ratings_container img').each(function(index) {
+                $(this).bind('click', function() {
+                    rate(parseInt(index + 1));
+                });
+            });
+		}
+
+		function LoadProductPopUpInfo(key, value) {
+			var targetLI = $(value);
+			var prodid= targetLI.attr("prodid");
+			var url ='/meals/recipes/productpopup/' + prodid;
+			$.get(url, function(data) {
+				var popupdata = data.replace("##recipetitle##",_thisRecipeTitle);
+				targetLI.find("strong").attr("title",popupdata).tooltip({ position: "center right"});
+			});
+		}
+
+        $(document).ready(function () {
+            $('#nav li').eq(1).addClass("active");
+
+			LoadRecipeRating();
+
+            
+            $('.shopclublink').each(function() {
+                $(this).live('click', function() {
+                    _gaq.push(['_trackEvent', 'Shop Online', 'Click', $(this).attr('title')]);
+                });
+            });
+            
+            $('.varlink').each(function() {
+                $(this).live('click', function() {
+                    _gaq.push(['_trackEvent', 'View All Recipes with this Ingredient', 'Click', $(this).attr('title')]);
+                });
+            });
+
+			$("li.hasLink").each(LoadProductPopUpInfo);
+            
+            $('#mainIng').click(function () {
+                    $('#mainIngUl').toggle();
+                    var miSrc = $('#mainIngImg').attr('src');
+                    if (miSrc === '//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/simply-delicious-meals/web/images/page/easyrecipe/filter-green-arrow-up.png') {
+                        $('#mainIngImg').attr('src', '//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/simply-delicious-meals/web/images/page/easyrecipe/filter-green-arrow-down.png');
+                    } else {
+                        $('#mainIngImg').attr('src', '//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/simply-delicious-meals/web/images/page/easyrecipe/filter-green-arrow-up.png');
+                    }
+                });
+
+                $('#mealTp').click(function () {
+                    $('#mealTypeUl').toggle();
+                    var miSrc = $('#mealTypeImg').attr('src');
+                    if (miSrc === '//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/simply-delicious-meals/web/images/page/easyrecipe/filter-green-arrow-up.png') {
+                        $('#mealTypeImg').attr('src', '//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/simply-delicious-meals/web/images/page/easyrecipe/filter-green-arrow-down.png');
+                    } else {
+                        $('#mealTypeImg').attr('src', '//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/simply-delicious-meals/web/images/page/easyrecipe/filter-green-arrow-up.png');
+                    }
+                });
+
+                $('#cookTime').click(function () {
+                    $('#cookTimeUl').toggle();
+                    var miSrc = $('#cookTimeImg').attr('src');
+                    if (miSrc === '//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/simply-delicious-meals/web/images/page/easyrecipe/filter-green-arrow-up.png') {
+                        $('#cookTimeImg').attr('src', '//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/simply-delicious-meals/web/images/page/easyrecipe/filter-green-arrow-down.png');
+                    } else {
+                        $('#cookTimeImg').attr('src', '//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/simply-delicious-meals/web/images/page/easyrecipe/filter-green-arrow-up.png');
+                    }
+                });
+
+                $('#seasonal').click(function () {
+                    $('#seasonalUl').toggle();
+                    var miSrc = $('#seasonalImg').attr('src');
+                    if (miSrc === '//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/simply-delicious-meals/web/images/page/easyrecipe/filter-green-arrow-up.png') {
+                        $('#seasonalImg').attr('src', '//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/simply-delicious-meals/web/images/page/easyrecipe/filter-green-arrow-down.png');
+                    } else {
+                        $('#seasonalImg').attr('src', '//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/simply-delicious-meals/web/images/page/easyrecipe/filter-green-arrow-up.png');
+                    }
+                });
+
+                $('#mainIngUl').hide();
+                $('#mealTypeUl').hide();
+                $('#cookTimeUl').hide();
+                $('#seasonalUl').hide();
+            
+                if ('all' != 'all') {
+                    var mixSrc = $('#mainIngImg').attr('src');
+                    if (mixSrc === '//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/simply-delicious-meals/web/images/page/easyrecipe/filter-green-arrow-up.png') {
+                        $('#mainIngImg').attr('src', '//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/simply-delicious-meals/web/images/page/easyrecipe/filter-green-arrow-down.png');
+                    } else {
+                        $('#mainIngImg').attr('src', '//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/simply-delicious-meals/web/images/page/easyrecipe/filter-green-arrow-up.png');
+                    }
+                    $('#mainIngUl').show();
+                }
+                if ('all' != 'all') {
+                    var mtxSrc = $('#mealTypeImg').attr('src');
+                    if (mtxSrc === '//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/simply-delicious-meals/web/images/page/easyrecipe/filter-green-arrow-up.png') {
+                        $('#mealTypeImg').attr('src', '//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/simply-delicious-meals/web/images/page/easyrecipe/filter-green-arrow-down.png');
+                    } else {
+                        $('#mealTypeImg').attr('src', '//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/simply-delicious-meals/web/images/page/easyrecipe/filter-green-arrow-up.png');
+                    }
+                    $('#mealTypeUl').show();
+                }
+                if ('all' != 'all') {
+                    var ctxSrc = $('#cookTimeImg').attr('src');
+                    if (ctxSrc === '//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/simply-delicious-meals/web/images/page/easyrecipe/filter-green-arrow-up.png') {
+                        $('#cookTimeImg').attr('src', '//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/simply-delicious-meals/web/images/page/easyrecipe/filter-green-arrow-down.png');
+                    } else {
+                        $('#cookTimeImg').attr('src', '//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/simply-delicious-meals/web/images/page/easyrecipe/filter-green-arrow-up.png');
+                    }
+                    $('#cookTimeUl').show();
+                }
+                if ('all' != 'all') {
+                    var shxSrc = $('#seasonalImg').attr('src');
+                    if (shxSrc === '//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/simply-delicious-meals/web/images/page/easyrecipe/filter-green-arrow-up.png') {
+                        $('#seasonalImg').attr('src', '//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/simply-delicious-meals/web/images/page/easyrecipe/filter-green-arrow-down.png');
+                    } else {
+                        $('#seasonalImg').attr('src', '//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/simply-delicious-meals/web/images/page/easyrecipe/filter-green-arrow-up.png');
+                    }
+                    $('#seasonalUl').show();
+                }
+            var animationSpeed = 1000;
+            var position = 0;
+            if (position == 0) {
+                $('#miLeft').attr('src', '//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/simply-delicious-meals/web/images/page/easyrecipe/leftarrow-gray.jpg');
+            }
+            
+            $('.browsemainingredients .forward').click(function () {
+                $('.mainIngredientSlider').animate({
+                    left: "0"
+                }, animationSpeed);
+                $('#miRotator').html('3');
+                $('#miLeft').attr('src', '//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/simply-delicious-meals/web/images/page/easyrecipe/leftarrow-gray.jpg');
+                $('#miRight').attr('src', '//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/simply-delicious-meals/web/images/page/easyrecipe/rightarrow.jpg');
+            });
+
+            $('.browsemainingredients .backward').click(function () {
+                $('.mainIngredientSlider').animate({
+                    left: "-668"
+                }, animationSpeed);
+                $('#miRotator').html('6');
+                $('#miRight').attr('src', '//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/simply-delicious-meals/web/images/page/easyrecipe/rightarrow-gray.jpg');
+                $('#miLeft').attr('src', '//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/simply-delicious-meals/web/images/page/easyrecipe/leftarrow.jpg');
+            });
+            
+            $('#miRotator').html('3');
+        });
+	</script>
+
+
+    <script type="text/javascript">
+        $(function () {
+            $('#largebannercontainer').RFI_TabSystem({ tabContent: ".largebanner", tabs: ".dots", autoGenIndexes: true, timeInterval: 4000 });
+        });
+    </script>
+
+<style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}
+.fb_invisible{display:none}
+.fb_reset{background:none;border-spacing:0;border:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}
+.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}
+.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}
+.fb_dialog_content{background:#fff;color:#333}
+.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px;top:8px\9;right:7px\9}
+.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}
+.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}
+.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}
+.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}
+.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}
+.fb_dialog_top_left,
+.fb_dialog_top_right,
+.fb_dialog_bottom_left,
+.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}
+/* @noflip */
+.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}
+/* @noflip */
+.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}
+/* @noflip */
+.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}
+/* @noflip */
+.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right,
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right{width:10px;height:100%}
+.fb_dialog_vert_left{margin-left:-10px}
+.fb_dialog_vert_right{right:0;margin-right:-10px}
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{width:100%;height:10px}
+.fb_dialog_horiz_top{margin-top:-10px}
+.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}
+.fb_dialog_iframe{line-height:0}
+.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}
+.fb_dialog_content .dialog_title > span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif)
+no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}
+body.fb_hidden{-webkit-transform:none;height:100%;margin:0;left:-10000px;overflow:visible;position:absolute;top:-10000px;width:100%
+}
+.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif)
+white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}
+.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}
+#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}
+#fb-root #fb_dialog_ipad_overlay.hidden{display:none}
+.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}
+.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0 0, 0 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}
+.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%
+}
+.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0 0, 0 100%, from(#4966A6),
+color-stop(0.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset,
+rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}
+.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}
+.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}
+.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}
+#fb_dialog_loader_close{float:left}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}
+.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}
+.fb_iframe_widget iframe{position:absolute}
+.fb_iframe_widget_lift{z-index:1}
+.fb_hide_iframes iframe{position:relative;left:-10000px}
+.fb_iframe_widget_loader{position:relative;display:inline-block}
+.fb_iframe_widget_fluid{display:inline}
+.fb_iframe_widget_fluid span{width:100%}
+.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}
+.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_connect_bar_container div,
+.fb_connect_bar_container span,
+.fb_connect_bar_container a,
+.fb_connect_bar_container img,
+.fb_connect_bar_container strong{background:none;border-spacing:0;border:0;direction:ltr;font-style:normal;font-variant:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal;vertical-align:baseline}
+.fb_connect_bar_container{position:fixed;left:0 !important;right:0 !important;height:42px !important;padding:0 25px !important;margin:0 !important;vertical-align:middle !important;border-bottom:1px solid #333 !important;background:#3b5998 !important;z-index:99999999 !important;overflow:hidden !important}
+.fb_connect_bar_container_ie6{position:absolute;top:expression(document.compatMode=="CSS1Compat"? document.documentElement.scrollTop+"px":body.scrollTop+"px")}
+.fb_connect_bar{position:relative;margin:auto;height:100%;width:100%;padding:6px 0 0 0 !important;background:none;color:#fff !important;font-family:"lucida grande", tahoma, verdana, arial, sans-serif !important;font-size:13px !important;font-style:normal !important;font-variant:normal !important;font-weight:normal !important;letter-spacing:normal !important;line-height:1 !important;text-decoration:none !important;text-indent:0 !important;text-shadow:none !important;text-transform:none !important;white-space:normal !important;word-spacing:normal !important}
+.fb_connect_bar a:hover{color:#fff}
+.fb_connect_bar .fb_profile img{height:30px;width:30px;vertical-align:middle;margin:0 6px 5px 0}
+.fb_connect_bar div a,
+.fb_connect_bar span,
+.fb_connect_bar span a{color:#bac6da;font-size:11px;text-decoration:none}
+.fb_connect_bar .fb_buttons{float:right;margin-top:7px}
+.fb_edge_widget_with_comment{position:relative;*z-index:1000}
+.fb_edge_widget_with_comment span.fb_edge_comment_widget{position:absolute}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget{z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget .FB_Loader{left:0;top:1px;margin-top:6px;margin-left:0;background-position:50% 50%;background-color:#fff;height:150px;width:394px;border:1px #666 solid;border-bottom:2px solid #283e6c;z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.dark .FB_Loader{background-color:#000;border-bottom:2px solid #ccc}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.siderender
+.FB_Loader{margin-top:0}
+.fbpluginrecommendationsbarleft,
+.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}
+/* @noflip */
+.fbpluginrecommendationsbarleft{left:10px}
+/* @noflip */
+.fbpluginrecommendationsbarright{right:10px}</style></head>
+ 
+<body data-twttr-rendered="true"><iframe src="https://platform.twitter.com/widgets/hub.html" style="position: absolute; top: -9999em; width: 10px; height: 10px;" name="twttrHubFrameSecure" tabindex="0" allowtransparency="true" id="twttrHubFrameSecure" frameborder="0" scrolling="no"></iframe><iframe src="http://platform.twitter.com/widgets/hub.html" style="position: absolute; top: -9999em; width: 10px; height: 10px;" name="twttrHubFrame" tabindex="0" allowtransparency="true" id="twttrHubFrame" frameborder="0" scrolling="no"></iframe>
+    <div class="wrapper">
+<div class="header">
+    <div class="fr smalltext">
+        <a onclick="s_objectID=&quot;http://samsclub.p.delivery.net/m/p/sam/pref/sign-up.asp?iid=032811_RFI|NP|EmailInsider_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://samsclub.p.delivery.net/m/p/sam/pref/sign-up.asp?iid=032811_RFI|NP|EmailInsider" target="_blank" class="fr">E-Mail Sign Up</a>
+        <a onclick="s_objectID=&quot;http://www.samsclub.com/sams/checkout/membership/purchaseMembership.jsp?iid=032811_RFI|NP|JoinSC_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.samsclub.com:80/sams/checkout/membership/purchaseMembership.jsp?iid=032811_RFI|NP|JoinSC" target="_blank" class="fr">Membership Info</a>
+        <a onclick="s_objectID=&quot;http://www3.samsclub.com/clublocator_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www3.samsclub.com/clublocator" target="_blank" class="fr">Club Locator</a>
+        <a onclick="s_objectID=&quot;http://www.samsclub.com/sams/homepage.jsp?iid=032811_RFI|NP|ShopSamsClub_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.samsclub.com/sams/homepage.jsp?iid=032811_RFI|NP|ShopSamsClub" class="fr">Shop SamsClub.com</a>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+    <div class="social fr">
+		<div class="headerroptions">
+			<a href="javascript:void(0);" onclick="s_objectID=&quot;javascript:void(0);_1&quot;;return this.s_oc?this.s_oc(e):true" class="st_email_custom" st_url="http://www3.samsclub.com/meals/recipes/corn-cakes-with-shrimp-and-guacamole-recipe?pid=DS_TOH_MAY13" st_title="http://www3.samsclub.com/meals/recipes/corn-cakes-with-shrimp-and-guacamole-recipe?pid=DS_TOH_MAY13" gatitle="Header Email Share"><img alt="Email" title="Email" st_url="http://www3.samsclub.com/meals/recipes/corn-cakes-with-shrimp-and-guacamole-recipe?pid=DS_TOH_MAY13" st_title="http://www3.samsclub.com/meals/recipes/corn-cakes-with-shrimp-and-guacamole-recipe?pid=DS_TOH_MAY13" displaytext="" src="//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/simply-delicious-meals/web/images/layout/btn-email.jpg" gatitle="Header Email Share"></a>
+			<iframe data-twttr-rendered="true" title="Twitter Tweet Button" style="width: 109px; height: 20px;" class="twitter-share-button twitter-count-horizontal" src="http://platform.twitter.com/widgets/tweet_button.1367516458.html#_=1367702588645&amp;count=horizontal&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=http%3A%2F%2Fwww3.samsclub.com%2Fmeals%2Frecipes%2Fcorn-cakes-with-shrimp-and-guacamole-recipe%3Fpid%3DDS_TOH_MAY13&amp;size=m&amp;text=Need%20inspiration%20for%20meal%20time%3F%20Our%20simple%20%26%20delicious%20recipes%20can%20help%20put%20food%20on%20the%20table%20during%20any%20occasion&amp;url=http%3A%2F%2Fwww3.samsclub.com%2Fmeals%2F" allowtransparency="true" frameborder="0" scrolling="no"></iframe>
+			<fb:like class="fb_edge_widget_with_comment fb_iframe_widget" fb-xfbml-state="rendered" width="91" height="21" layout="button_count" show_faces="false" colorscheme="light" scrolling="no" frameborder="0" allowtransparency="true" href="http://www3.samsclub.com/meals/"><span style="height: 20px; width: 77px;"><iframe src="http://www.facebook.com/plugins/like.php?api_key=&amp;locale=en_US&amp;sdk=joey&amp;channel_url=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D24%23cb%3Df39764314818db8%26origin%3Dhttp%253A%252F%252Fwww3.samsclub.com%252Ffb945f11fa79%26domain%3Dwww3.samsclub.com%26relation%3Dparent.parent&amp;href=http%3A%2F%2Fwww3.samsclub.com%2Fmeals%2F&amp;node_type=link&amp;width=91&amp;layout=button_count&amp;colorscheme=light&amp;show_faces=false&amp;extended_social_context=false" class="fb_ltr" title="Like this content on Facebook." style="border: medium none; overflow: hidden; height: 20px; width: 77px;" name="fb6806a465ea5e" id="f24128ee041b64a" scrolling="no"></iframe></span></fb:like>
+		</div>
+    </div>
+    <div class="clear"></div>
+<form action="/meals/search" class="fr" id="searchsdm" method="post">		<input value="http://www.samsclub.com/sams/search/searchResults.jsp?iid=032811_RFI|NP|Search_Box&amp;searchTerm=" id="hdnSamsSearchURL" type="hidden">
+<input class="smalltext" id="txtSamsSearch" name="searchterm" title="Keyword, Item Number or Page" value="Keyword, Item Number or Page" type="text">        <img src="//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/simply-delicious-meals/web/images/icon/search.jpg" alt="Simply Delicious Meals - Search Keyword, Item Number or Page" title="Simply Delicious Meals - Search Keyword, Item Number or Page" height="15" width="15">
+        <select class="smalltext" id="searchselect">
+            <option value="sdm">Simply Delicious Meals</option>
+            <option value="sc">SamsClub.com</option>
+        </select>
+        <input class="search" value="" type="submit">
+</form>    <div class="clear"></div>
+    <a href="http://www3.samsclub.com/meals/" onclick="s_objectID=&quot;http://www3.samsclub.com/meals/_1&quot;;return this.s_oc?this.s_oc(e):true"><img class="himg" src="//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/simply-delicious-meals/web/images/header/simply-delicious-meals.png" alt="Simply Delicious Meals" title="Simply Delicious Meals" height="35" width="348"></a>
+</div>
+<div class="nav">
+    <a onclick="s_objectID=&quot;http://www.samsclub.com/sams/homepage.jsp?iid=032811_RFI|NP|Home_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.samsclub.com/sams/homepage.jsp?iid=032811_RFI|NP|Home" class="samslogo"></a>
+    <ul id="nav">
+        <li><a href="http://www3.samsclub.com/meals/" onclick="s_objectID=&quot;http://www3.samsclub.com/meals/_2&quot;;return this.s_oc?this.s_oc(e):true" style="height:41px;"><img src="//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/simply-delicious-meals/web/images/icon/home.png" alt="Simply Delicious Meals Home" title="Simply Delicious Meals Home" height="32" width="20"></a>
+            <div class="dropdown"><div class="category bnone"><a onclick="s_objectID=&quot;http://www5.samsclub.com/InClubsNow.aspx_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www5.samsclub.com/InClubsNow.aspx"><strong class="blue">« In Clubs Now</strong></a></div><div class="category"><strong class="blue">Family &amp; Health</strong><a onclick="s_objectID=&quot;http://www5.samsclub.com/PetCenter.aspx_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www5.samsclub.com/PetCenter.aspx">Pet Center</a><a onclick="s_objectID=&quot;http://www5.samsclub.com/BabyCenter.aspx_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www5.samsclub.com/BabyCenter.aspx">Baby Center</a><a onclick="s_objectID=&quot;http://www5.samsclub.com/ManZone.aspx_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www5.samsclub.com/ManZone.aspx">Man Zone</a><a onclick="s_objectID=&quot;http://www5.samsclub.com/Moms-Corner.aspx_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www5.samsclub.com/Moms-Corner.aspx">Mom’s Corner</a><a onclick="s_objectID=&quot;http://www5.samsclub.com/healthwellness.aspx_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www5.samsclub.com/healthwellness.aspx">Health &amp; Wellness</a></div><div class="category"><strong class="blue">Food &amp; Home</strong><a onclick="s_objectID=&quot;http://www5.samsclub.com/Electronics.aspx_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www5.samsclub.com/Electronics.aspx">Electronics</a><a onclick="s_objectID=&quot;http://www5.samsclub.com/HomeCenter.aspx_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www5.samsclub.com/HomeCenter.aspx">Home Center</a><a onclick="s_objectID=&quot;http://www5.samsclub.com/WeatherWatch.aspx_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www5.samsclub.com/WeatherWatch.aspx">Weather Watch</a></div><div class="category"><strong class="blue">Business</strong><a onclick="s_objectID=&quot;http://www5.samsclub.com/Foodservice.aspx_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www5.samsclub.com/Foodservice.aspx">Foodservice</a><a onclick="s_objectID=&quot;http://www5.samsclub.com/C-Store.aspx_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www5.samsclub.com/C-Store.aspx">Convenience Store</a><a onclick="s_objectID=&quot;http://www5.samsclub.com/ConcessionAndVending.aspx_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www5.samsclub.com/ConcessionAndVending.aspx">Concessions &amp; Vending</a></div><div class="category"><strong class="blue">Samples</strong><a onclick="s_objectID=&quot;http://www5.samsclub.com/InHomeSampling.aspx_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www5.samsclub.com/InHomeSampling.aspx">In-Home Sampling</a></div><div class="category"><strong class="blue">Seasonal Features</strong><a onclick="s_objectID=&quot;http://www5.samsclub.com/SummerFun.aspx_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www5.samsclub.com/SummerFun.aspx">Summer Fun &amp; Travel</a><a onclick="s_objectID=&quot;http://www5.samsclub.com/backToSchool.aspx_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www5.samsclub.com/backToSchool.aspx">Back-to-School</a></div></div>
+        </li>
+        <li class="active"><a href="http://www3.samsclub.com/meals/recipes" onclick="s_objectID=&quot;http://www3.samsclub.com/meals/recipes_1&quot;;return this.s_oc?this.s_oc(e):true">Simple Recipes</a></li>
+        <li><a href="http://www3.samsclub.com/meals/fresh" onclick="s_objectID=&quot;http://www3.samsclub.com/meals/fresh_1&quot;;return this.s_oc?this.s_oc(e):true">Fresh Foods</a></li>
+        <li><a href="http://www3.samsclub.com/meals/see-whats-cooking" onclick="s_objectID=&quot;http://www3.samsclub.com/meals/see-whats-cooking_1&quot;;return this.s_oc?this.s_oc(e):true">Tips and Videos</a></li>
+        <li><a href="http://www3.samsclub.com/meals/events" onclick="s_objectID=&quot;http://www3.samsclub.com/meals/events_1&quot;;return this.s_oc?this.s_oc(e):true">Monthly Spotlight</a></li>
+        <li><a href="http://www3.samsclub.com/meals/wines" onclick="s_objectID=&quot;http://www3.samsclub.com/meals/wines_1&quot;;return this.s_oc?this.s_oc(e):true">Wine Pairing</a></li>
+    </ul>
+</div>        
+
+
+
+<div class="maincontent">
+    <div class="nocontent fl leftglobalcallouts">
+        
+        
+    <div class="recipeFilters">
+        <h3>Filters</h3>
+        
+        <span class="blue bold"><img src="//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/simply-delicious-meals/web/images/page/easyrecipe/filter-green-arrow-up.png" alt="" id="mainIngImg" width="7"> <a onclick="s_objectID=&quot;javascript:void(0);_2&quot;;return this.s_oc?this.s_oc(e):true" href="javascript:void(0);" id="mainIng">Main Ingredient</a></span>
+        <ul style="display: none;" id="mainIngUl">
+                      <li><a onclick="s_objectID=&quot;http://www3.samsclub.com/meals/recipes/all/Pasta/all/all/all/all_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www3.samsclub.com/meals/recipes/all/Pasta/all/all/all/all">Pasta</a></li>
+                      <li><a onclick="s_objectID=&quot;http://www3.samsclub.com/meals/recipes/all/Chicken/all/all/all/all_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www3.samsclub.com/meals/recipes/all/Chicken/all/all/all/all">Chicken</a></li>
+                      <li><a onclick="s_objectID=&quot;http://www3.samsclub.com/meals/recipes/all/Beef/all/all/all/all_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www3.samsclub.com/meals/recipes/all/Beef/all/all/all/all">Beef</a></li>
+                      <li><a onclick="s_objectID=&quot;http://www3.samsclub.com/meals/recipes/all/Pork/all/all/all/all_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www3.samsclub.com/meals/recipes/all/Pork/all/all/all/all">Pork</a></li>
+                      <li><a onclick="s_objectID=&quot;http://www3.samsclub.com/meals/recipes/all/Seafood/all/all/all/all_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www3.samsclub.com/meals/recipes/all/Seafood/all/all/all/all">Seafood</a></li>
+                      <li><a onclick="s_objectID=&quot;http://www3.samsclub.com/meals/recipes/all/Fruit/all/all/all/all_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www3.samsclub.com/meals/recipes/all/Fruit/all/all/all/all">Fruit</a></li>
+        </ul>
+        <div class="clear"></div>
+        <span class="blue bold"><img src="//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/simply-delicious-meals/web/images/page/easyrecipe/filter-green-arrow-up.png" alt="" id="mealTypeImg" width="7"> <a onclick="s_objectID=&quot;javascript:void(0);_3&quot;;return this.s_oc?this.s_oc(e):true" href="javascript:void(0);" id="mealTp">Meal Type</a></span>
+        <ul style="display: none;" id="mealTypeUl">
+                      <li><a onclick="s_objectID=&quot;http://www3.samsclub.com/meals/recipes/Dinner/all/all/all/all/all_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www3.samsclub.com/meals/recipes/Dinner/all/all/all/all/all">Dinner</a></li>
+                      <li><a onclick="s_objectID=&quot;http://www3.samsclub.com/meals/recipes/Sides/all/all/all/all/all_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www3.samsclub.com/meals/recipes/Sides/all/all/all/all/all">Sides</a></li>
+                      <li><a onclick="s_objectID=&quot;http://www3.samsclub.com/meals/recipes/Snacks/all/all/all/all/all_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www3.samsclub.com/meals/recipes/Snacks/all/all/all/all/all">Snacks</a></li>
+                      <li><a onclick="s_objectID=&quot;http://www3.samsclub.com/meals/recipes/Lunch/all/all/all/all/all_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www3.samsclub.com/meals/recipes/Lunch/all/all/all/all/all">Lunch</a></li>
+                      <li><a onclick="s_objectID=&quot;http://www3.samsclub.com/meals/recipes/Breakfast/all/all/all/all/all_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www3.samsclub.com/meals/recipes/Breakfast/all/all/all/all/all">Breakfast</a></li>
+                      <li><a onclick="s_objectID=&quot;http://www3.samsclub.com/meals/recipes/Dessert/all/all/all/all/all_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www3.samsclub.com/meals/recipes/Dessert/all/all/all/all/all">Dessert</a></li>
+                      <li><a onclick="s_objectID=&quot;http://www3.samsclub.com/meals/recipes/Beverages/all/all/all/all/all_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www3.samsclub.com/meals/recipes/Beverages/all/all/all/all/all">Beverages</a></li>
+        </ul>
+        <div class="clear"></div>
+        <span class="blue bold"><img src="//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/simply-delicious-meals/web/images/page/easyrecipe/filter-green-arrow-up.png" alt="" id="cookTimeImg" width="7"> <a onclick="s_objectID=&quot;javascript:void(0);_4&quot;;return this.s_oc?this.s_oc(e):true" href="javascript:void(0);" id="cookTime">Prep Time</a></span>
+<ul style="display: none;" id="cookTimeUl">
+          <li><a onclick="s_objectID=&quot;http://www3.samsclub.com/meals/recipes/all/all/15/all/all/all_1&quot;;return this.s_oc?this.s_oc(e):true" href="/meals/recipes/all/all/15/all/all/all">Less than 15 minutes</a></li>
+          <li><a onclick="s_objectID=&quot;http://www3.samsclub.com/meals/recipes/all/all/30/all/all/all_1&quot;;return this.s_oc?this.s_oc(e):true" href="/meals/recipes/all/all/30/all/all/all">Less than 30 minutes</a></li>
+          <li><a onclick="s_objectID=&quot;http://www3.samsclub.com/meals/recipes/all/all/45/all/all/all_1&quot;;return this.s_oc?this.s_oc(e):true" href="/meals/recipes/all/all/45/all/all/all">Less than 45 minutes</a></li>
+          <li><a onclick="s_objectID=&quot;http://www3.samsclub.com/meals/recipes/all/all/60/all/all/all_1&quot;;return this.s_oc?this.s_oc(e):true" href="/meals/recipes/all/all/60/all/all/all">Less than 60 minutes</a></li>
+          <li><a onclick="s_objectID=&quot;http://www3.samsclub.com/meals/recipes/all/all/65/all/all/all_1&quot;;return this.s_oc?this.s_oc(e):true" href="/meals/recipes/all/all/65/all/all/all">Above 60 minutes</a></li>
+   
+</ul>
+
+        
+        <div class="clear"></div>
+                <span class="blue bold" style="margin-left: 10px;"><a onclick="s_objectID=&quot;http://www3.samsclub.com/meals/recipes/all/all/all/top-rated/all/all_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www3.samsclub.com/meals/recipes/all/all/all/top-rated/all/all">Top-Rated</a></span>
+
+        <br>
+                <span class="blue bold" style="margin-left: 10px;"><a onclick="s_objectID=&quot;http://www3.samsclub.com/meals/recipes/all/all/all/all/new/all_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www3.samsclub.com/meals/recipes/all/all/all/all/new/all">New</a></span>
+        <br>
+        <span class="blue bold"><img src="//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/simply-delicious-meals/web/images/page/easyrecipe/filter-green-arrow-up.png" alt="" id="seasonalImg" width="7"> <a onclick="s_objectID=&quot;javascript:void(0);_5&quot;;return this.s_oc?this.s_oc(e):true" href="javascript:void(0);" id="seasonal">Seasonal/Holiday</a></span>
+        <div class="clear"></div>
+        <ul style="display: none;" id="seasonalUl">
+                    <li><a onclick="s_objectID=&quot;http://www3.samsclub.com/meals/recipes/all/all/all/all/all/Easter_Recipes_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www3.samsclub.com/meals/recipes/all/all/all/all/all/Easter_Recipes">Easter Recipes</a></li>
+                    <li><a onclick="s_objectID=&quot;http://www3.samsclub.com/meals/recipes/all/all/all/all/all/Grilling_and_Summer_Entertaining_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www3.samsclub.com/meals/recipes/all/all/all/all/all/Grilling_and_Summer_Entertaining">Grilling and Summer Entertaining</a></li>
+        </ul>
+        <br>
+        <a class="reset" href="/meals/recipes" onclick="s_objectID=&quot;http://www3.samsclub.com/meals/recipes_2&quot;;return this.s_oc?this.s_oc(e):true">RESET FILTER</a>
+        <br>
+        <br>
+    </div>
+
+
+        <a href="/meals/bbq" onclick="s_objectID=&quot;http://www3.samsclub.com/meals/bbq_1&quot;;return this.s_oc?this.s_oc(e):true" style="display:block; margin:0; padding:0; height: 190px;">
+            <img src="//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/simply-delicious-meals/web/images/page/banner/side-callout-2.jpg" alt="BBQ National Tour" width="220">
+        </a>
+
+        
+        <div id="largebannercontainer" class="none">
+            
+            
+        </div>
+  
+<div class="globalcallout">
+        <div class="gc">
+            <a href="http://www3.samsclub.com/meals/daily-chef" title="Daily Chef™" onclick="s_objectID=&quot;http://www3.samsclub.com/meals/daily-chef_1&quot;;return this.s_oc?this.s_oc(e):true" style="display:block;">
+                <img src="//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/meals/chorus/images/original/130075791601876998.jpg" alt="Daily Chef™" title="Daily Chef™" style="border: 2px solid #5f9534; margin: 3px;" height="100" width="197">
+            </a>
+            <span style="padding-left: 12px; padding-right: 10px; padding-bottom: 10px; display: block;">
+                <h4 class="m4">Daily Chef™</h4>
+                <p class="m8" style="line-height: normal;">Now quality and value have a new name - Daily Chef™ exclusively at Sam’s Club.</p>
+                <a href="http://www3.samsclub.com/meals/daily-chef" onclick="s_objectID=&quot;http://www3.samsclub.com/meals/daily-chef_2&quot;;return this.s_oc?this.s_oc(e):true" class="green" style="text-decoration: underline;">View Daily Chef™ Products»</a>
+            </span>
+
+        </div>
+        <div class="gc">
+            <a href="http://www3.samsclub.com/meals/artisan-fresh" title="Artisan Fresh™" onclick="s_objectID=&quot;http://www3.samsclub.com/meals/artisan-fresh_1&quot;;return this.s_oc?this.s_oc(e):true" style="display:block;">
+                <img src="//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/meals/chorus/images/original/130075791759755070.jpg" alt="Artisan Fresh™" title="Artisan Fresh™" style="border: 2px solid #5f9534; margin: 3px;" height="100" width="197">
+            </a>
+            <span style="padding-left: 12px; padding-right: 10px; padding-bottom: 10px; display: block;">
+                <h4 class="m4">Artisan Fresh™</h4>
+                <p class="m8" style="line-height: normal;">The delicious taste you’ve come to expect from our Member’s Mark Deli and Bakery items under a new name.</p>
+                <a href="http://www3.samsclub.com/meals/artisan-fresh" onclick="s_objectID=&quot;http://www3.samsclub.com/meals/artisan-fresh_2&quot;;return this.s_oc?this.s_oc(e):true" class="green" style="text-decoration: underline;">View Artisan Fresh™ Products»</a>
+            </span>
+
+        </div>
+</div>    </div>
+    <div class="fl mainpage">
+        
+    
+    <div id="recipesubnav" class="subnav">
+        <a href="/meals/recipes" onclick="s_objectID=&quot;http://www3.samsclub.com/meals/recipes_3&quot;;return this.s_oc?this.s_oc(e):true">Simple Recipes</a> <span>&gt;</span> 
+        Corn Cakes with Shrimp &amp; Guacamole
+    </div>
+    <div itemscope="" itemtype="http://data-vocabulary.org/Recipe" class="recipedetail">
+        <h1 class="blue m14" itemprop="name">Corn Cakes with Shrimp &amp; Guacamole</h1>
+        <div class="fl interiorpov">
+                <img src="//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/meals/chorus/images/original/130101679916604257.jpg" alt="Corn Cakes with Shrimp &amp; Guacamole" title="Corn Cakes with Shrimp &amp; Guacamole" itemprop="photo" height="240" width="420">
+                <img src="//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/meals/chorus/images/original/129630076417854789.png" alt="Dinner" title="Dinner" class="icon" height="32" width="32">
+        </div>
+        <div class="fr interiorpov">
+            <div class="roptions">
+                <a href="javascript:void(0);" onclick="s_objectID=&quot;javascript:void(0);_6&quot;;return this.s_oc?this.s_oc(e):true" id="btnPrintRecipe">
+                    <img src="//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/simply-delicious-meals/web/images/layout/btn-print.png" alt="Print this recipe" title="Print this recipe"></a>
+                <a href="javascript:void(0);" onclick="s_objectID=&quot;javascript:void(0);_7&quot;;return this.s_oc?this.s_oc(e):true" title="Email" class="st_email_custom" st_url="http://www3.samsclub.com/meals/recipes/corn-cakes-with-shrimp-and-guacamole-recipe" st_title="Corn Cakes with Shrimp &amp; Guacamole" displaytext="" gatitle="Recipe Share"></a>
+<a onclick="s_objectID=&quot;http://pinterest.com/pin/create/button/?url=http%3a%2f%2fwww3.samsclub.com%2fmeals%2frecipes%2fco_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://pinterest.com/pin/create/button/?url=http%3a%2f%2fwww3.samsclub.com%2fmeals%2frecipes%2fcorn-cakes-with-shrimp-and-guacamole-recipe&amp;media=http://samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/meals/chorus/images/original/130101679916604257.jpg&amp;description=Corn Cakes with Shrimp &amp; Guacamole" class="pin-it-button" count-layout="horizontal" style="background: url('http://assets.pinterest.com/images/pinit6.png'); font: 11px Arial, sans-serif; text-indent: -9999em; font-size: .01em; color: #CD1F1F; height: 20px; width: 43px; background-position: 0 -7px;">Pin It</a>                <div class="clear">
+                </div>
+                <iframe data-twttr-rendered="true" title="Twitter Tweet Button" style="width: 58px; height: 20px;" class="twitter-share-button twitter-count-none" src="http://platform.twitter.com/widgets/tweet_button.1367516458.html#_=1367702588647&amp;count=none&amp;id=twitter-widget-1&amp;lang=en&amp;original_referer=http%3A%2F%2Fwww3.samsclub.com%2Fmeals%2Frecipes%2Fcorn-cakes-with-shrimp-and-guacamole-recipe%3Fpid%3DDS_TOH_MAY13&amp;size=m&amp;text=Corn%20Cakes%20with%20Shrimp%20%26%20Guacamole&amp;url=http%3A%2F%2Fwww3.samsclub.com%2Fmeals%2Frecipes%2Fcorn-cakes-with-shrimp-and-guacamole-recipe" allowtransparency="true" frameborder="0" scrolling="no"></iframe>
+                <fb:like class="fb_edge_widget_with_comment fb_iframe_widget" fb-xfbml-state="rendered" width="80" height="21" layout="button_count" show_faces="false" colorscheme="light" scrolling="no" frameborder="0" allowtransparency="true" href="http://www3.samsclub.com/meals/recipes/corn-cakes-with-shrimp-and-guacamole-recipe"><span style="height: 20px; width: 71px;"><iframe src="http://www.facebook.com/plugins/like.php?api_key=&amp;locale=en_US&amp;sdk=joey&amp;channel_url=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D24%23cb%3Df3eeb823293b694%26origin%3Dhttp%253A%252F%252Fwww3.samsclub.com%252Ffb945f11fa79%26domain%3Dwww3.samsclub.com%26relation%3Dparent.parent&amp;href=http%3A%2F%2Fwww3.samsclub.com%2Fmeals%2Frecipes%2Fcorn-cakes-with-shrimp-and-guacamole-recipe&amp;node_type=link&amp;width=90&amp;layout=button_count&amp;colorscheme=light&amp;show_faces=false&amp;extended_social_context=false" class="fb_ltr" title="Like this content on Facebook." style="border: medium none; overflow: hidden; height: 20px; width: 71px;" name="fd1b3c70170d64" id="f1d99bf1f59c3ca" scrolling="no"></iframe></span></fb:like>
+                <div class="clear">
+                </div>
+            </div>
+                <p class="green">
+                    <strong>Preparation time</strong>:
+                    <time itemprop="totalTime" datetime="PT35M">35 minutes</time>
+                </p>
+                <p class="green">
+                    <strong>Servings</strong>: <span itemprop="yield">24</span></p>
+            <p itemprop="review" itemscope="" itemtype="http://data-vocabulary.org/Review-aggregate" class="ratings" id="ratings_container">           
+
+<span itemprop="rating" style="display:none;">0</span>
+<span itemprop="count" style="display:none;">0</span>
+
+<strong class="green">Rating:</strong>&nbsp;
+    <img src="//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/simply-delicious-meals/web/images/icon/rating_off.png" alt="Corn Cakes with Shrimp &amp;amp; Guacamole : 1 rating" title="Corn Cakes with Shrimp &amp;amp; Guacamole : 1 rating" height="16" width="16">
+    <img src="//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/simply-delicious-meals/web/images/icon/rating_off.png" alt="Corn Cakes with Shrimp &amp;amp; Guacamole : 2 rating" title="Corn Cakes with Shrimp &amp;amp; Guacamole : 2 rating" height="16" width="16">
+    <img src="//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/simply-delicious-meals/web/images/icon/rating_off.png" alt="Corn Cakes with Shrimp &amp;amp; Guacamole : 3 rating" title="Corn Cakes with Shrimp &amp;amp; Guacamole : 3 rating" height="16" width="16">
+    <img src="//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/simply-delicious-meals/web/images/icon/rating_off.png" alt="Corn Cakes with Shrimp &amp;amp; Guacamole : 4 rating" title="Corn Cakes with Shrimp &amp;amp; Guacamole : 4 rating" height="16" width="16">
+    <img src="//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/simply-delicious-meals/web/images/icon/rating_off.png" alt="Corn Cakes with Shrimp &amp;amp; Guacamole : 5 rating" title="Corn Cakes with Shrimp &amp;amp; Guacamole : 5 rating" height="16" width="16">
+</p>
+            <p>The stunning presentation is deceiving for just how easy these exciting appetizers are to make. A hint of sweetness in the pancake mix serves as a delicious contrast to the smooth, savory flavors of guacamole and the tender texture of shrimp.&nbsp;</p>
+        </div>
+        <div class="clear">
+        </div>
+            <div class="fl ingredients">
+                <p><strong class="green">Ingredients</strong></p>
+                <ul class="disc">
+                            <li itemprop="ingredient" itemscope="" itemtype="http://data-vocabulary.org/RecipeIngredient" prodid="159910" class="hasLink">
+                                <strong itemprop="name" class="green">1/2 cup(s)     fresh or frozen corn</strong>
+                            </li>
+                            <li itemprop="ingredient" itemscope="" itemtype="http://data-vocabulary.org/RecipeIngredient">
+                                <span itemprop="name">1 1/4 cup(s)     water, divided</span></li>                
+                            <li itemprop="ingredient" itemscope="" itemtype="http://data-vocabulary.org/RecipeIngredient" prodid="prod5850214" class="hasLink">
+                                <strong itemprop="name" class="green">1  cup(s)     complete buttermilk pancake mix</strong>
+                            </li>
+                            <li itemprop="ingredient" itemscope="" itemtype="http://data-vocabulary.org/RecipeIngredient" prodid="prod5100024" class="hasLink">
+                                <strong itemprop="name" class="green">2  Tbsp. grated Parmesan cheese</strong>
+                            </li>
+                            <li itemprop="ingredient" itemscope="" itemtype="http://data-vocabulary.org/RecipeIngredient" prodid="161463" class="hasLink">
+                                <strong itemprop="name" class="green">1/8 tsp. hot pepper sauce</strong>
+                            </li>
+                            <li itemprop="ingredient" itemscope="" itemtype="http://data-vocabulary.org/RecipeIngredient" prodid="161769" class="hasLink">
+                                <strong itemprop="name" class="green">2  Tbsp. finely chopped sweet red pepper</strong>
+                            </li>
+                            <li itemprop="ingredient" itemscope="" itemtype="http://data-vocabulary.org/RecipeIngredient" prodid="159198" class="hasLink">
+                                <strong itemprop="name" class="green">1  tsp. dried cilantro</strong>
+                            </li>
+                            <li itemprop="ingredient" itemscope="" itemtype="http://data-vocabulary.org/RecipeIngredient" prodid="prod4850333" class="hasLink">
+                                <strong itemprop="name" class="green">1   medium ripe avocado, peeled and pitted</strong>
+                            </li>
+                            <li itemprop="ingredient" itemscope="" itemtype="http://data-vocabulary.org/RecipeIngredient" prodid="151775" class="hasLink">
+                                <strong itemprop="name" class="green">4  Tbsp. finely chopped onion, divided</strong>
+                            </li>
+                            <li itemprop="ingredient" itemscope="" itemtype="http://data-vocabulary.org/RecipeIngredient" prodid="prod6610195" class="hasLink">
+                                <strong itemprop="name" class="green">1  Tbsp. chopped seeded jalapeño pepper</strong>
+                            </li>
+                            <li itemprop="ingredient" itemscope="" itemtype="http://data-vocabulary.org/RecipeIngredient" prodid="prod6300034" class="hasLink">
+                                <strong itemprop="name" class="green">1  Tbsp. lime juice</strong>
+                            </li>
+                            <li itemprop="ingredient" itemscope="" itemtype="http://data-vocabulary.org/RecipeIngredient" prodid="156330" class="hasLink">
+                                <strong itemprop="name" class="green">1/8 tsp. salt</strong>
+                            </li>
+                            <li itemprop="ingredient" itemscope="" itemtype="http://data-vocabulary.org/RecipeIngredient" prodid="prod4840507" class="hasLink">
+                                <strong itemprop="name" class="green">24   cooked small shrimp, peeled and deveined</strong>
+                            </li>
+                </ul>
+                <p></p>
+            </div>
+            <div class="fl instructions">
+                <p>
+                    <strong class="green">Cooking Directions</strong></p>
+                <div itemprop="instructions">
+                    <ol>
+                            <li>In a small saucepan, bring the corn and 1/2 cup water to a boil. Reduce heat; cover and simmer for 4 to 6 minutes or until tender. Drain.</li>
+                            <li>In a large bowl, combine pancake mix and cheese. Add pepper sauce and remaining water; stir just until moistened. Fold in the corn, red pepper, 2 tablespoons onion and minced cilantro.</li>
+                            <li>Pour batter by tablespoonfuls onto a greased hot griddle; turn when bubbles form on top. Cook until the second side is golden brown. Set aside.</li>
+                            <li>In a small bowl, mash avocado with remaining onion, jalapeño, lime juice and salt. Top each pancake with a teaspoonful of guacamole and a shrimp. Serve immediately.</li>
+                    </ol>
+                </div>
+            </div>
+        <div class="clear"></div>
+        
+        <br>
+                <h3 class="green">Top Rated Seafood</h3>
+                <div class="browsemainingredients">
+                    <div style="width: 660px; overflow: hidden; height: 230px; position: absolute; top: 0; left: 20px;">
+                        <ul class="mainIngredientSlider">
+                                    <li class="item" style="margin-bottom:0! important;">
+                                        <div class="listbox fl">
+                                            <div class="header">
+                                                Seafood
+                                            </div>
+                                            <div class="body3">
+                                                    <img src="//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/meals/chorus/images/original/130080959728305692.jpg" alt="Smoked Chicken Tacos" title="Smoked Chicken Tacos" class="thumbnail" height="115" width="197">
+                                                <h3 class="blue bold">Smoked Chicken Tacos</h3>
+                                                <p class="fl"><a class="recipe" href="/meals/recipes/smoked-chicken-tacos-recipe" onclick="s_objectID=&quot;http://www3.samsclub.com/meals/recipes/smoked-chicken-tacos-recipe_1&quot;;return this.s_oc?this.s_oc(e):true">View This Recipe »</a></p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="item" style="margin-bottom:0! important;">
+                                        <div class="listbox fl">
+                                            <div class="header">
+                                                Seafood
+                                            </div>
+                                            <div class="body3">
+                                                    <img src="//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/meals/chorus/images/original/130082640304238622.jpg" alt="Grilled Jumbo Shrimp with Tomatoes" title="Grilled Jumbo Shrimp with Tomatoes" class="thumbnail" height="115" width="197">
+                                                <h3 class="blue bold">Grilled Jumbo Shrimp with Tomatoes</h3>
+                                                <p class="fl"><a class="recipe" href="/meals/recipes/grilled-jumbo-shrimp-w-tomatoes-recipe" onclick="s_objectID=&quot;http://www3.samsclub.com/meals/recipes/grilled-jumbo-shrimp-w-tomatoes-recipe_1&quot;;return this.s_oc?this.s_oc(e):true">View This Recipe »</a></p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="item" style="margin-bottom:0! important;">
+                                        <div class="listbox fl">
+                                            <div class="header">
+                                                Seafood
+                                            </div>
+                                            <div class="body3">
+                                                    <img src="//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/meals/chorus/images/original/129968079672339119.jpg" alt="Creamy Shrimp Pasta" title="Creamy Shrimp Pasta" class="thumbnail" height="115" width="197">
+                                                <h3 class="blue bold">Creamy Shrimp Pasta</h3>
+                                                <p class="fl"><a class="recipe" href="/meals/recipes/creamy-shrimp-pasta-recipe-recipe" onclick="s_objectID=&quot;http://www3.samsclub.com/meals/recipes/creamy-shrimp-pasta-recipe-recipe_1&quot;;return this.s_oc?this.s_oc(e):true">View This Recipe »</a></p>
+                                            </div>
+                                        </div>
+                                    </li>
+                        
+                        </ul>
+                    </div>
+                            <div class="clear"></div>
+                    
+                </div>
+    </div>
+    <style type="text/css">
+        .browsemainingredients { position: relative; height: 250px; width: 730px; z-index: 2; overflow: hidden; left: -20px;}
+        .browsemainingredients .forward { position: relative; top: 95px;}
+        .browsemainingredients .backward { position: relative; top: 95px; left: 662px;}
+        .browsemainingredients .mainIngredientSlider {display: block; width: 2500px; position: absolute; top: 5px; margin: 0; padding: 0; list-style: none! important;}
+        .browsemainingredients .label { position: absolute; top: 230px; left: 642px; color: #5f9534;}
+    </style>
+
+    </div>
+    <div class="clear"></div>
+</div>        
+    <div id="supplierlist" class="nocontent">
+        <h2 class="green m14">Check out our picks of the week:</h2>
+        <div>
+            <div class="items">
+                            <div class="fl item">
+                        <div class="fl supplier smalltext" onclick="_gaq.push(['_trackEvent', 'Supplier Products', 'Click', 'KC Masterpiece&amp;#174; Original Barbecue Sauce - Original Barbecue Sauce.']);; window.location.href='/meals/recipes/product/prod8510342'">
+                                <img src="//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/meals/chorus/images/original/129695564538873754.jpg" alt="KC Masterpiece® Original Barbecue Sauce" title="KC Masterpiece® Original Barbecue Sauce"><br>
+                            <h4 class="smalltext"><strong>Original Barbecue Sauce.</strong></h4>
+                            <p class="p1">Thick, rich and bold. Loaded with garlic, molasses, onions and spices. It's great with all types of meat or poultry.</p>
+                        </div>
+                        <div class="fl supplier smalltext" onclick="_gaq.push(['_trackEvent', 'Supplier Products', 'Click', 'Crystal Light&amp;#174; - Reinvent water.']);; window.location.href='/meals/recipes/product/prod3780030'">
+                                <img src="//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/meals/chorus/images/original/129766483746233821.jpg" alt="Crystal Light®" title="Crystal Light®"><br>
+                            <h4 class="smalltext"><strong>Reinvent water.</strong></h4>
+                            <p>If you are on the go, these practical one-bottle drink mixes will give you the best refreshing option.</p>
+                        </div>
+                        <div class="fl supplier smalltext" onclick="_gaq.push(['_trackEvent', 'Supplier Products', 'Click', 'Hidden Valley Ranch - Betcha can&amp;#39;t tell it&amp;#39;s light!']);; window.location.href='/meals/recipes/product/163545'">
+                                <img src="//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/meals/chorus/images/original/129870183772757019.png" alt="Hidden Valley Ranch" title="Hidden Valley Ranch"><br>
+                            <h4 class="smalltext"><strong>Betcha can't tell it's light!</strong></h4>
+                            <p>Get that great Hidden Valley® taste with only 7 grams of fat per serving.</p>
+                        </div>
+                        <div class="fl supplier smalltext" onclick="_gaq.push(['_trackEvent', 'Supplier Products', 'Click', 'Olive Garden&amp;#174; Signature Italian Dressing - Turn any meal into a restaurant experience.']);; window.location.href='/meals/recipes/product/prod6300088'">
+                                <img src="//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/meals/chorus/images/original/129923673515863728.jpg" alt="Olive Garden® Signature Italian Dressing" title="Olive Garden® Signature Italian Dressing"><br>
+                            <h4 class="smalltext"><strong>Turn any meal into a restaurant experience.</strong></h4>
+                            <p>Olive Garden's famous&nbsp;Italian flavor to your own salad.&nbsp;</p>
+                        </div>
+                            </div>
+            </div>
+        </div>
+    </div>
+
+<div class="sitemaplinks smalltext">
+	<div class="fl mnone">
+		<span>About Sam's Club</span>
+        <a onclick="s_objectID=&quot;http://pressroom.samsclub.com/content/?id=3&amp;atg=524&amp;iid=032811_RFI|NP|About_Sams_Club_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://pressroom.samsclub.com/content/?id=3&amp;atg=524&amp;iid=032811_RFI|NP|About_Sams_Club" title="About Sam's Club">About Sam's Club</a>
+        <a onclick="s_objectID=&quot;http://samsclub.p.delivery.net/m/p/sam/pref/sign-up.asp?iid=032811_RFI|NP|E-mail_Newsletter_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://samsclub.p.delivery.net/m/p/sam/pref/sign-up.asp?iid=032811_RFI|NP|E-mail_Newsletter" title="E-mail Newsletter">E-mail Newsletter</a>
+        <a onclick="s_objectID=&quot;http://pressroom.samsclub.com/PressReleases/?atg=9623&amp;iid=032811_RFI|NP|News_and_Press_Releases_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://pressroom.samsclub.com/PressReleases/?atg=9623&amp;iid=032811_RFI|NP|News_and_Press_Releases" title="News&amp;PressReleases">News and Press Releases</a>
+        <a onclick="s_objectID=&quot;http://walmartstores.com/Suppliers/?atg=9626&amp;iid=032811_RFI|NP|For_Supplier_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://walmartstores.com/Suppliers/?atg=9626&amp;iid=032811_RFI|NP|For_Supplier" title="For Suppliers ">For Suppliers</a>
+        <a onclick="s_objectID=&quot;http://walmartstores.com/Careers/7746.aspx?atg-9624&amp;iid=032811_RFI|NP|Careers_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://walmartstores.com/Careers/7746.aspx?atg-9624&amp;iid=032811_RFI|NP|Careers" title="Careers">Careers</a>
+	</div>
+	<div class="fl">
+		<span>Our Clubs</span>
+        <a onclick="s_objectID=&quot;http://www3.samsclub.com/clublocator/?iid=032811_RFI|NP|Club_Locator_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www3.samsclub.com/clublocator/?iid=032811_RFI|NP|Club_Locator" title="Find a club">Find a Club</a>
+        <a onclick="s_objectID=&quot;http://www.samsclub.com/sams/pagedetails/content.jsp?pageName=roadShow&amp;iid=032811_RFI|NP|Roadshow_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.samsclub.com:80/sams/pagedetails/content.jsp?pageName=roadShow&amp;iid=032811_RFI|NP|Roadshow_Events" title="Roadshow Events">Roadshow Events</a>
+        <a onclick="s_objectID=&quot;http://www.samsclub.com/sams/pagedetails/content.jsp?pageName=authorSigning&amp;iid=032811_RFI|NP|Aut_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.samsclub.com:80/sams/pagedetails/content.jsp?pageName=authorSigning&amp;iid=032811_RFI|NP|Author_Signing_Events" title="Author Signing Events">Author Signing Events</a>
+	</div>
+	<div class="fl">
+		<span>Shipping and Delivery</span>
+        <a onclick="s_objectID=&quot;http://www.samsclub.com/sams/pagedetails/content.jsp?pageName=howToBuy&amp;iid=032811_RFI|NP|How_To_B_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.samsclub.com:80/sams/pagedetails/content.jsp?pageName=howToBuy&amp;iid=032811_RFI|NP|How_To_Buy" title="How To Buy">How To Buy</a>
+        <a onclick="s_objectID=&quot;http://samsclubanswercenter.custhelp.com/app/answers/detail/a_id/354_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://samsclubanswercenter.custhelp.com/app/answers/detail/a_id/354" title="Shipping">Shipping</a>
+        <a onclick="s_objectID=&quot;http://samsclubanswercenter.custhelp.com/app/answers/detail/a_id/251_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://samsclubanswercenter.custhelp.com/app/answers/detail/a_id/251" title="Returns and Refunds">Returns and Refunds</a>
+	</div>
+	<div class="fl">
+		<span>Help</span>
+		<a onclick="s_objectID=&quot;http://samsclubanswercenter.custhelp.com/app/_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://samsclubanswercenter.custhelp.com/app/" title="Contact Us">Contact Us</a>
+        <a onclick="s_objectID=&quot;http://www.samsclub.com/sams/account/signin/login.jsp?iid=032811_RFI|NP|Track_Orders_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.samsclub.com:80/sams/account/signin/login.jsp?iid=032811_RFI|NP|Track_Orders" title="Track Orders">Track Orders</a>
+        <a onclick="s_objectID=&quot;http://www.samsclub.com/sams/account/signin/forgotPassword.jsp?iid=032811_RFI|NP|Forgot_Sign_In-P_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.samsclub.com:80/sams/account/signin/forgotPassword.jsp?iid=032811_RFI|NP|Forgot_Sign_In-Password" title="Forgot Sign In/Password">Forgot Sign In/Password</a>
+        <a onclick="s_objectID=&quot;http://walmartstores.com/Recalls/?iid=032811_RFI|NP|Product_Recalls_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://walmartstores.com/Recalls/?iid=032811_RFI|NP|Product_Recalls" title="Product Recalls">Product Recalls</a>
+        <a onclick="s_objectID=&quot;http://samsclubanswercenter.custhelp.com/app/answers/list_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://samsclubanswercenter.custhelp.com/app/answers/list" title="View All Help">View All Help</a>
+	</div>
+	<div class="clear"></div>
+</div>
+<div style="color: #fff; background: #7FAA61; padding: 0 15px 5px 15px;">
+        <p>*Sam’s Club offers members a 200% guarantee for fresh products (i.e., meat, bakery and produce). We will refund double the member’s purchase price or refund the purchase price and replace the product. A 100% guarantee will be offered to all other customers.</p>
+    
+</div>
+<div class="footer smalltext">
+	<div class="fl">
+        <a onclick="s_objectID=&quot;http://www.samsclub.com/sams/pagedetails/samsFooter_seeAll.jsp?iid=032811_RFI|NP|Site_Directory_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.samsclub.com:80/sams/pagedetails/samsFooter_seeAll.jsp?iid=032811_RFI|NP|Site_Directory" title="Site Directory">Site Directory</a> | <a onclick="s_objectID=&quot;http://www.samsclub.com/sams/pagedetails/content.jsp?pageName=privacyPolicy&amp;iid=032811_RFI|NP|Pri_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.samsclub.com:80/sams/pagedetails/content.jsp?pageName=privacyPolicy&amp;iid=032811_RFI|NP|Privacy_Policy" title="Privacy Policy">Privacy Policy</a> | <a onclick="s_objectID=&quot;http://www.samsclub.com/sams/pagedetails/content.jsp?pageName=termsandconditions&amp;iid=032811_RFI|N_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.samsclub.com:80/sams/pagedetails/content.jsp?pageName=termsandconditions&amp;iid=032811_RFI|NP|Terms_and_Conditions" title="Terms and Conditions">Terms and Conditions</a>
+	</div>
+	<span class="fr">
+
+<value>
+    <value class="Text">© 2000-2012, Sam's West, Inc. All rights reserved.</value>
+</value>        </span>
+</div>
+<!-- Sam's Simply Delicious Pixel pixel. Do not remove --> <img src="http://h.nexac.com/e/a-975/s-1743/c-158/g-542.xgi?pkey=ak930d7lx38dp&amp;chpcm=&amp;chpsg=&amp;chpcr=&amp;chpck=&amp;rand=%n&amp;chpth=" height="1" width="1" border="0">
+<script src="//www.samsclub.com/sams/scripts/omniture/s_code.js" type="text/javascript"></script>
+
+
+<script language="JavaScript" type="text/javascript"><!--
+    var site = "Everyday Meals Solution";
+    s.pageName = "Rockfish:" + site + ':' + document.title; ;
+    s.server = 'Rockfish:' + site;
+    s.channel = "Partner:Rockfish";
+    var s_code = s.t(); if (s_code) document.write(s_code)//-->
+</script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-22295193-1']);
+	_gaq.push(['_setCampNameKey', 'pid']);
+	  _gaq.push(['_setCampSourceKey', 'rid']);
+  _gaq.push(['_setCampMediumKey', 'cid']);
+
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        if ('https:' == document.location.protocol) {
+            ga.src = 'https://ssl.google-analytics.com/ga.js';
+        } else {
+           	ga.src = 'http://www.google-analytics.com/ga.js';
+        }
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script><script language="javascript" type="text/javascript">
+	function AddWaterMark(textboxid, texttodisplay) {
+		$(textboxid).blur(function () {
+			if ($(this).val().length == 0) {
+				$(this).val(texttodisplay).addClass('watermark');
+			}
+		}).focus(function () {
+			if ($(this).val() == texttodisplay) {
+				$(this).val('').removeClass('watermark');
+			}
+		}).val(texttodisplay).addClass('watermark');
+	}
+
+	function registerEmailButtons() {
+		$(".st_email_custom").unbind('click').bind('click', shareThisButtonClickHandler);
+	}
+
+	function shareThisButtonClickHandler() {
+		var targetUrl = $(this).attr('st_url');
+		sharingSource = $(this).attr('gaTitle');
+		sharingInfo = $(this).attr('st_title');
+		if (!sharingSource) {
+			sharingSource = "";
+		}
+		if (!sharingInfo) {
+			sharingInfo = "";
+		}
+		if (targetUrl && targetUrl != "") {
+			$("textarea#sharethisemailmessage").val("Check out this cooking idea from Sam's Club Simply Delicious Meals: " + targetUrl)
+		}
+		$('#sharethismodal').modal({
+			minHeight: 540,
+			minwidth: 610,
+			close: false,
+			onShow: function () {
+			}
+		});
+		$('#sharethismodal').show();
+	}
+
+	var submitting = false;
+	var sharingSource = "";
+	var sharingInfo = "";
+	$(document).ready(function () {
+		AddWaterMark('#sharethisemailto', 'example@friendemail.com');
+		AddWaterMark('#sharethisemailfrom', 'example@youremail.com');
+
+		$(".st_email_custom").bind('click', shareThisButtonClickHandler);
+
+		$("#sharethismodal .cancel").bind('click', function () {
+			$.modal.close();
+		});
+		$("#sharethisagain").bind('click', function () {
+			
+			$('#sharethiserrormessage').addClass("none");
+			$('#sharethissubmitmessage').addClass("none");
+			$('#sharethisbuttons').show();
+			$('#sharethisemailto').val('');
+			$('#sharethisemailto').focus();
+		});
+
+		$("#sharethismodal .submit").bind('click', function () {
+			$('#sharethiserrormessage').html("Sending Email").removeClass('red').removeClass('none').addClass('sharethismessage');
+			if (!submitting) {
+				submitting = true;
+				$('#sharethisbuttons').hide();
+
+				var thisChallenge = $("input#recaptcha_challenge_field").val(); // Recaptcha.get_challenge();
+				var thisResponse = $("input#recaptcha_response_field").val(); // Recaptcha.get_response();
+				var emailTo = $('#sharethisemailto').val();
+				var emailFrom = $('#sharethisemailfrom').val();
+				var emailMessage = $('textarea#sharethisemailmessage').val();
+				if (emailTo == "" || emailTo == "example@friendemail.com") {
+					$('#sharethiserrormessage').html('Please enter a valid email address.').addClass('red').removeClass("none").removeClass('sharethismessage');
+					$('#sharethisbuttons').show();
+					$('#sharethisemailto').focus();
+				} else if (emailFrom == "" || emailFrom == "example@youremail.com") {
+					$('#sharethiserrormessage').html('Please enter a valid email address.').addClass('red').removeClass("none").removeClass('sharethismessage');
+					$('#sharethisbuttons').show();
+					$('#sharethisemailfrom').focus();
+				} else if (thisResponse == "") {
+					$('#sharethiserrormessage').html('Please enter the reCAPTCHA words to submit.').addClass('red').removeClass("none").removeClass('sharethismessage');
+					$('#sharethisbuttons').show();
+					Recaptcha.focus_response_field;
+				} else {
+					$.ajax({
+						type: 'POST',
+						url: '/meals/Home/ShareThis',
+						data: {
+							emailfrom: emailFrom
+								, emailto: emailTo
+								, recaptcha_challenge_field: thisChallenge
+								, recaptcha_response_field: thisResponse
+								, emailmessage: emailMessage
+						},
+						dataType: 'json',
+						success: function (response) {
+							if (response && response.success) {
+								$('#sharethiserrormessage').addClass("none");
+								$('#sharethissubmitmessage').removeClass("none");
+								_gaq.push(['_trackEvent', sharingSource, 'Email Sucess', sharingInfo]);
+							} else {
+								
+								_gaq.push(['_trackEvent', sharingSource, 'Email Failure', sharingInfo]);
+								if (response && response.message) {
+									_gaq.push(['_trackEvent', sharingSource, 'Email Error', response.message]);
+									$('#sharethiserrormessage').html(response.message).addClass('red').removeClass('sharethismessage');
+								} else {
+									_gaq.push(['_trackEvent', sharingSource, 'Email Error', 'General Error']);
+									$('#sharethiserrormessage').html('Bad Data, try again!').addClass('red').removeClass('sharethismessage');
+								}
+								$('#sharethiserrormessage').removeClass("none");
+								$('#sharethisbuttons').show();
+								
+							}
+						},
+						error: function () {
+							$('#sharethiserrormessage').html('Unable to contact server please try again later.').addClass('red').removeClass("none").removeClass('sharethismessage');
+						}
+
+					});
+				}
+				submitting = false;
+			}
+		});
+
+
+	});
+</script>
+<style>
+	#sharethismodal { height:320px; width: 580px; padding: 2px!important; overflow: hidden;}
+	#sharethismodal .simplemodal-data { background-color:transparent; -moz-border-radius:10px; -webkit-border-radius:10px; border-radius:10px; padding:2px; -moz-box-shadow:0px 0px 20px #000; -webkit-box-shadow:0px 0px 20px #000; box-shadow:0px 0px 20px #000; z-index:1600; }
+	#sharethismodal .modalCloseImg { display:block; background:url(//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/simply-delicious-meals/web/images/layout/btn-sharethis-x.jpg) no-repeat 0 0; width:15px; height:15px; z-index:3200; cursor:pointer; }
+
+	#sharethismodal .sharethismodalheader { position:relative; background: #6da635; height:44px; font-size:32px; font-weight: 500; color: #FFF; padding: 5px;}
+	#sharethismodal .data-label { width:100px; text-align: right; float: left; font-size: 13pt; font-weight: 600;}
+	#sharethismodal .data-field { width:440px; text-align: left; float: left; padding:4px 10px 4px 10px}
+	#sharethismodal textarea { width: 440px; height:100px; background-color: #f1f1f1;}
+	#sharethismodal .data-field input { width: 440px; background-color: #F1F1F1}
+	#sharethismodal .recaptchadiv { margin-left: 110px; width: 470px; height: 137px;}
+	#sharethismodal .spacer { height: 10px;}
+	#sharethismodal .buttons { float: right; padding-right:20px; padding-top:10px; margin-right: 10px; margin-left: 10px;}
+	#sharethiserrormessage { padding-bottom:5px; padding-right: 30px; }
+	#sharethissubmitmessage { padding-bottom:5px; padding-right: 30px; padding-top: 15px; font-size: 13pt;}
+	.sharethismessage { padding-bottom:5px; padding-right: 30px; padding-top: 15px; font-size: 13pt;}
+	#sharethismodal .watermark { color:rgb(137, 137, 137); }
+	#sharethismodal .sharethiscloseimage { top:17px; right:15px; position:absolute; }
+</style>
+<div class="none">
+	<div id="sharethismodal">
+		<div class="sharethismodalheader">
+			Email this to a friend. <a onclick="s_objectID=&quot;javascript:void(0)_1&quot;;return this.s_oc?this.s_oc(e):true" href="javascript:void(0)" class="cancel">
+				<img src="//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/simply-delicious-meals/web/images/layout/btn-sharethis-x.jpg" alt="Close" title="close" class="sharethiscloseimage" height="15" width="15">
+			</a>
+		</div>
+		<div class="spacer m14">
+		</div>
+		<div class="data-label">
+			To:</div>
+		<div class="data-field"><input class="watermark" id="sharethisemailto" maxlength="100" name="EmailTo" value="" type="text"></div>
+		<div class="clear">
+		</div>
+		<div class="data-label">
+			From:</div>
+		<div class="data-field"><input class="watermark" id="sharethisemailfrom" maxlength="100" name="EmailFrom" value="" type="text"></div>
+		<div class="clear">
+		</div>
+		<div class="data-label">
+			Message:</div>
+		<div class="data-field"><textarea cols="20" id="sharethisemailmessage" maxlength="1000" name="EmailMessage" rows="2">Check out this cooking idea from Sam's Club Simply Delicious Meals: http://www3.samsclub.com/meals/recipes/corn-cakes-with-shrimp-and-guacamole-recipe?pid=DS_TOH_MAY13</textarea></div>
+		<div class="clear">
+		</div>
+		<div id="sharethissubmitmessage" class="none fr">
+			Email sent. <a onclick="s_objectID=&quot;javascript:void(0)_2&quot;;return this.s_oc?this.s_oc(e):true" href="javascript:void(0)" id="sharethisagain">Click here</a> to send
+			to another friend.</div>
+		<div class="buttons" id="sharethisbuttons">
+			<a class="cancel">
+				<img src="//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/simply-delicious-meals/web/images/layout/btn-sharethis-cancel.png" alt="cancel" title="cancel">
+			</a><a class="submit">
+				<img src="//samsglobalmedia.akcdn.rockfishhosting.com/globalmedia/simply-delicious-meals/web/images/layout/btn-sharethis-send.jpg" alt="send" title="send">
+			</a>
+		</div>
+		<div class="clear"></div>
+		<div id="sharethiserrormessage" class="none fr sharethismessage"></div>
+	</div>
+</div>
+    </div>
+
+    <div id="modal"></div>
+    
+
+
+<div class=" fb_reset" id="fb-root"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe src="http://static.ak.facebook.com/connect/xd_arbiter.php?version=24#channel=fb945f11fa79&amp;origin=http%3A%2F%2Fwww3.samsclub.com&amp;channel_path=%2Fmeals%2Frecipes%2Fcorn-cakes-with-shrimp-and-guacamole-recipe%3Fpid%3DDS_TOH_MAY13%26fb_xd_fragment%23xd_sig%3Df54514cd4555fc%26" style="border: medium none;" tab-index="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_http" allowtransparency="true" name="fb_xdm_frame_http" frameborder="0" scrolling="no"></iframe><iframe src="https://s-static.ak.facebook.com/connect/xd_arbiter.php?version=24#channel=fb945f11fa79&amp;origin=http%3A%2F%2Fwww3.samsclub.com&amp;channel_path=%2Fmeals%2Frecipes%2Fcorn-cakes-with-shrimp-and-guacamole-recipe%3Fpid%3DDS_TOH_MAY13%26fb_xd_fragment%23xd_sig%3Df54514cd4555fc%26" style="border: medium none;" tab-index="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_https" allowtransparency="true" name="fb_xdm_frame_https" frameborder="0" scrolling="no"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div></body>

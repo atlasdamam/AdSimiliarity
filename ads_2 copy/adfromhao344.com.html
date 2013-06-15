@@ -1,0 +1,560 @@
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Module for ControlLogix PAC Chassis - Online Development Inc</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+    
+    
+	<meta http-equiv="Page-Enter" content="revealtrans(duration=0.0)">
+<meta http-equiv="Page-Exit" content="revealtrans(duration=0.0)">
+
+<link rel="stylesheet" type="text/css" href="http://www.oldi.com/css/all.css">
+	<script type="text/javascript" async="" src="http://dnn506yrbagrg.cloudfront.net/pages/scripts/0009/9184.js"></script><script src="http://www.google-analytics.com/ga.js" async="" type="text/javascript"></script><script type="text/javascript" src="http://www.oldi.com/javascript/jquery-1.4.4.min.js"></script><!--https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js-->
+	<script type="text/javascript" src="http://www.oldi.com/javascript/jquery-ui-1.8.8.custom.min.js"></script><!--https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.8/jquery-ui.min.js-->
+	<script type="text/javascript" src="http://www.oldi.com/javascript/ddaccordion.js"></script>
+	<!-- ROTATOR -->
+	<script type="text/javascript">
+    	$(document).ready(function() {
+			
+			//Set Default State of each portfolio piece
+				$(".ui-tabs-nav").show();
+				$(".ui-tabs-nav a:first").addClass("active");
+					
+				//Get size of images, how many there are, then determin the size of the image reel.
+				var imageWidth = $(".rotate_window").width();
+				var imageSum = $(".image_reel img").size();
+				var imageReelWidth = imageWidth * imageSum;
+				
+				//Adjust the image reel to its new size
+				$(".image_reel").css({'width' : imageReelWidth});
+				
+				//ui-tabs-nav + Slider Function
+				rotate = function(){	
+					var triggerID = $active.attr("rel") - 1; //Get number of times to slide
+					var image_reelPosition = triggerID * imageWidth; //Determines the distance the image reel needs to slide
+			
+					$(".ui-tabs-nav a").removeClass('active'); //Remove all active class
+					$active.addClass('active'); //Add active class (the $active is declared in the rotateSwitch function)
+					
+					//Slider Animation
+					$(".image_reel").fadeOut(600);
+					$(".image_reel").animate({ left: -image_reelPosition }, 0 );
+					$(".image_reel").fadeIn(600);
+				}; 
+				
+				//Rotation + Timing Event
+				rotateSwitch = function(){		
+					play = setInterval(function(){ //Set timer - this will repeat itself every 3 seconds
+						$active = $('.ui-tabs-nav a.active').next();
+						if ( $active.length === 0) { //If ui-tabs-nav reaches the end...
+							$active = $('.ui-tabs-nav a:first'); //go back to first
+						}
+						rotate(); //Trigger the ui-tabs-nav and slider function
+					}, 7000); //Timer speed in milliseconds (3 seconds)
+				};
+				
+				rotateSwitch(); //Run function on launch
+				
+				//On Hover
+				$(".image_reel a").hover(function() {
+					clearInterval(play); //Stop the rotation
+				}, function() {
+					rotateSwitch(); //Resume rotation
+				});	
+				
+				//On Click
+				$(".ui-tabs-nav a").click(function() {	
+					$active = $(this); //Activate the clicked paging
+					//Reset Timer
+					clearInterval(play); //Stop the rotation
+					rotate(); //Trigger rotation immediately
+					rotateSwitch(); // Resume rotation
+					return false; //Prevent browser jump to link anchor
+				});
+
+});
+
+
+
+
+var url = window.location;
+var theState = false;
+var expandMenuIndex=-1;
+if (url.toString().indexOf("controllogix") > -1) {
+
+    expandMenuIndex = 0;
+
+
+}
+
+else if (url.toString().indexOf("standalone") > -1) {
+
+    expandMenuIndex = 1;
+
+
+}
+
+//else if (url.toString().indexOf("gateway") > -1) {
+
+   // expandMenuIndex = 2;
+
+
+//}
+
+
+else if (url.toString().indexOf("performance") > -1) {
+
+    expandMenuIndex = 2;
+
+
+}
+
+
+else if (url.toString().indexOf("dcs") > -1) {
+
+    expandMenuIndex = 3;
+
+
+}
+
+
+
+else if (url.toString().indexOf("module") > -1) {
+
+    expandMenuIndex = 4;
+
+
+}
+
+
+
+else if (url.toString().indexOf("processor") > -1) {
+
+    expandMenuIndex = 5;
+
+
+}
+else {
+
+    theState = true;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+//Initialize 2nd demo:
+ddaccordion.init({
+    headerclass: "technology", //Shared CSS class name of headers group
+    contentclass: "thelanguage", //Shared CSS class name of contents group
+    revealtype: "click", //Reveal content when user clicks or onmouseover the header? Valid value: "click", "clickgo", or "mouseover"
+    mouseoverdelay: 200, //if revealtype="mouseover", set delay in milliseconds before header expands onMouseover
+    collapseprev: false, //Collapse previous content (so only one open at any time)? true/false 
+    defaultexpanded: [expandMenuIndex], //index of content(s) open by default [index1, index2, etc]. [] denotes no content.
+    onemustopen: false, //Specify whether at least one header should be open always (so never all headers closed)
+    animatedefault: false, //Should contents open by default be animated into view?
+    persiststate: theState, //persist state of opened contents within browser session?
+    toggleclass: ["closedlanguage", "openlanguage"], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+    togglehtml: ["prefix", "<img src='http://www.oldi.com/images/arrow.gif' class='imghover'  onmouseover='this.src=\"http://www.oldi.com/images/arrow-hover.gif\";' onmouseout='this.src=\"http://www.oldi.com/images/arrow.gif\";'    />", "<img src='http://www.oldi.com/images/arrow-open.gif'   onmouseover='this.src=\"http://www.oldi.com/images/arrow-open-hover.gif\";' onmouseout='this.src=\"http://www.oldi.com/images/arrow-open.gif\";'    class='imghover2' /> "], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+    animatespeed: "fast", //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
+    oninit: function (expandedindices) { //custom code to run when headers have initalized
+        //do nothing
+    },
+    onopenclose: function (header, index, state, isuseractivated) { //custom code to run whenever a header is opened or closed
+        //do nothing
+    }
+})
+
+
+
+
+
+    </script><style type="text/css">
+.thelanguage{display: none}
+a.hiddenajaxlink{display: none}
+</style>
+    <link rel="stylesheet" type="text/css" href="http://www.oldi.com/css/rotator.css">
+    
+    
+    
+	<!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="http://www.oldi.com/css/ie.css" media="screen"/><![endif]-->
+    <!--[if IE 6]><link rel="stylesheet" type="text/css" href="http://www.oldi.com/css/ie6.css" media="screen"/><![endif]-->
+    <!--[if IE 5]><link rel="stylesheet" type="text/css" href="http://www.oldi.com/css/ie5.css" media="screen"/><![endif]-->
+    
+    <!-- DROPDOWN NAVIGATION -->
+
+    
+
+
+
+ 
+    
+
+
+    
+    
+    <script type="text/javascript" src="http://www.oldi.com/javascript/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.oldi.com/javascript/fancybox/jquery.fancybox-1.3.4.css" media="screen">
+    <script type="text/javascript">
+		$(document).ready(function() {
+			
+			$("a.lightwindow").fancybox();
+
+			$("a.lightwindow-iframe").fancybox({
+				'width'				: '75%',
+				'height'			: '95%',
+				'autoScale'			: false,
+				'transitionIn'		: 'none',
+				'transitionOut'		: 'none',
+				'type'				: 'iframe'
+			});
+			
+			$("a.lightwindow-inline").fancybox({
+				'height'			: '95%',
+				'autoScale'			: false,
+				'transitionIn'		: 'none',
+				'transitionOut'		: 'none',
+				'type'				: 'iframe'
+			});
+			
+			$("a.lightwindow-vid").fancybox({
+				'height'			: 505,
+				'width'				: 808,
+				'autoScale'			: true,
+				'transitionIn'		: 'none',
+				'transitionOut'		: 'none',
+				'type'				: 'iframe'
+			});
+		});
+	</script>
+	
+    <link rel="stylesheet" type="text/css" href="http://www.oldi.com/css/print.css" media="print">
+
+
+<style type="text/css">
+     
+
+     .openpet{ /*class added to contents of 1st demo when they are open*/
+background: yellow;
+}
+
+.technology{ 
+cursor: hand;
+cursor: pointer;
+ float:left;
+ height:35px;
+
+ 
+}
+.imghover
+{
+width:10px; height:10px;
+
+
+}
+.imghover:hover
+{
+width:10px; height:10px;
+
+
+}
+.openlanguage{  color: green;
+}
+
+.closedlanguage{  
+color: red;
+}
+
+ a.linkhdr:link,a.linkhdr:active,a.linkhdr:visited{font-weight:normal;color:#000; text-decoration:none;}
+ a.linkhdr:hover{font-weight:normal;color:#0079c2; text-decoration:none; }
+ 
+
+.openpet{ /*class added to contents of 1st demo when they are open*/
+background: yellow;
+}
+
+.technology{ /*header of 2nd demo*/
+cursor: hand;
+cursor: pointer;
+height:20px;
+  
+}
+.spacing{padding:4px 0;}
+.technology li{ /*header of 2nd demo*/
+padding-bottom:5px;
+  
+}
+ 
+
+</style>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-529064-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>	
+</head>
+<body id="controlLogix">
+	<div id="wrapper">
+		<div id="content">
+			
+            
+<div class="panel">
+        <form method="get" action="http://www.oldi.com/search/search.aspx" class="search">
+					<fieldset>
+						
+
+						<span class="text"><input id="lb01" name="zoom_query" type="text"></span>
+						<input class="submit" value="Search" title="Search" type="submit">
+					</fieldset>
+				</form>
+				<ul id="nav">
+					<li><a href="http://www.oldi.com/products.aspx">Products</a></li>
+                    <li><a href="http://www.oldi.com/news.aspx">News &amp; Events</a></li>
+					<li><a href="http://www.oldi.com/support.aspx">Support</a></li>
+					<li><a href="http://www.oldi.com/about.aspx">About</a></li>
+					<li><a href="http://www.oldi.com/contact.aspx">Contact</a></li>
+					<li class="last"><a href="http://www.oldi.com/ecustomer_enu/start.swe?SWECmd=Start&amp;SWEHo=www.oldi.com" target="_blank">Customer Login</a></li>
+				</ul>
+			</div>
+			<h1 class="data-exchange">&nbsp;</h1>
+            
+			<div class="png-holder">
+				<div class="png-box">
+					<div class="holder">
+						<div class="lt"></div>
+						<div class="t"></div>
+						<div class="rt"></div>
+						<div class="c">
+							<div class="l"></div>
+							<div class="content">
+							  <h2 class="main-image logix"><span>eATM tManager<br>
+for ControlLogix</span>
+                              
+                              <span class="subheading">Simplify Bidirectional Data Transfer Between Enterprise Systems and Any Mix of Allen-Bradley, Siemens and Modicon PLCs/PACs</span>
+                              <a class="sysin portal" href="http://www.oldi.com/tmanager-solutions/" target="_blank"></a>
+                              </h2>
+
+                          </div>
+						  <div class="r"></div>
+						</div>
+						<div class="lb"></div>
+						<div class="b"></div>
+						<div class="rb"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="data3">
+				<div class="image">
+					<a href="../images/tMangager_ControlLogix_Module.png" class="lightwindow"><img src="../images/img07.jpg" alt="image description" height="327" width="308">
+					Click to Enlarge</a>
+                	
+				</div>
+                <div class="only">
+                    <p><strong class="firstbold">eATM tManager Enterprise Appliance Transaction Modules for ControlLogix</strong></p>
+    
+                    <p>eATM tManager Enterprise Appliance Transaction Modules enable the connection of enterprise, business and plant computer systems with popular Allen-Bradley, Siemens and Modicon PLCs/PACs. They enable the exchange of plant floor data via JMS-based messaging services and databases.</p>
+                    <p>The in-chassis modules install in an Allen-Bradley ControlLogix PAC and communicate to other Allen-Bradley 
+                    controllers via the backplane, bridge modules or EtherNet/IP. They connect to Siemens controllers by Industrial Ethernet® and to Modicon controllers by Modbus® TCP.  Any combination of these controllers can be connected to the enterprise via a single eATM module.</p>
+    
+                    <h2>Fast and Easy</h2>
+                    <p>First, choose the computer adapter (e.g. Microsoft SQL) and drivers for the automation adapter (e.g. Allen-Bradley). Next, install the eATM appliance in a ControlLogix chassis. 
+                    Then, use the eATM software to configure data exchanges via drag and drop - that's all there is to it. No special languages to know, no special training required, and no additional software packages are required.</p>
+                    <h2>Secure</h2>
+                    <p>The functionality of eATM modules can be totally independent from existing PAC/PLC programs. In addition, operation can only be changed by authorized personnel using 
+                    the eATM configuration software. As an industrial product, eATM modules have better security and reduced vulnerability to attack than computer-based options.</p>
+                
+                </div>
+				
+		  </div>
+
+		</div>
+		
+
+
+
+
+
+<div id="sidebar">
+			<strong class="logo"><a href="http://www.oldi.com/index.aspx"><img src="http://www.oldi.com/images/logo.gif" alt="Online Development Inc"></a></strong>
+	  		<ul class="sidenav"> 
+				
+                <!-- eATM -->
+              <li>  <a href="http://www.oldi.com/eatm.aspx">Enterprise-to-Controller Data Exchange Appliances</a>
+	                
+                    <!-- CONTROLLOGIX -->
+                    	<div class="spacing">
+                          <span headerindex="0h" class="technology openlanguage"><span class="accordprefix"><img src="http://www.oldi.com/images/arrow-open.gif" onmouseover="this.src=&quot;http://www.oldi.com/images/arrow-open-hover.gif&quot;;" onmouseout="this.src=&quot;http://www.oldi.com/images/arrow-open.gif&quot;;" class="imghover2"> </span><span style="width:1px"></span><span class="accordsuffix"></span></span><a href="http://www.oldi.com/controllogix" class="linkhdr tman-logix">Module for ControlLogix PAC Chassis</a> 
+                           <div style="display: block;" contentindex="0c" class="thelanguage toggle_container"> <!-- Drop down -->
+                                <ul class="subnav tman-logix"> 
+                                    <li class="demo-link"><a href="http://www.oldi.com/controllogix/demo.aspx">Videos</a></li>
+                                    <li class="success-link"><a href="http://www.oldi.com/controllogix/success.aspx">Success Stories</a></li>
+                                    <li class="lit-link"><a href="http://www.oldi.com/controllogix/literature.aspx">Literature</a></li>
+                                    <li class="knowbase-link"><a href="http://kb.oldi.com" target="_blank">Knowledgebase</a></li>
+                                    <li class="Latest Information-link"><a href="http://www.oldi.com/tmanager-solutions/" target="_blank">tManager Solutions</a></li>
+                                </ul>
+                            </div>
+                         </div>
+              </li>
+                
+                <!-- cATM -->
+		  	<li>	 <a href="http://www.oldi.com/catm.aspx">Controller-to-Controller Data Exchange Appliances</a>
+					 
+ 
+                        <!-- HIGH PERFORMANCE -->
+					<div class="spacing">
+                        <span headerindex="1h" class="technology closedlanguage"><span class="accordprefix"><img src="http://www.oldi.com/images/arrow.gif" class="imghover" onmouseover="this.src=&quot;http://www.oldi.com/images/arrow-hover.gif&quot;;" onmouseout="this.src=&quot;http://www.oldi.com/images/arrow.gif&quot;;"></span><span style="width:1px"></span><span class="accordsuffix"></span></span><a href="http://www.oldi.com/performance" class="linkhdr hiperform">High Performance Module for Allen-Bradley, Siemens and Modicon</a> 
+                            <div style="display: none;" contentindex="1c" class="thelanguage toggle_container"> <!-- Drop down -->
+                                <ul class="subnav hiperform">
+                                   <li class="lit-link"><a href="http://www.oldi.com/performance/literature.aspx">Literature</a></li>
+                                   <li class="knowbase-link"><a href="http://kb.oldi.com" target="_blank">Knowledgebase</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!--- --->
+                        
+                        <!-- BAILEY DCS -->
+						<div class="spacing">
+                            <span headerindex="2h" class="technology closedlanguage"><span class="accordprefix"><img src="http://www.oldi.com/images/arrow.gif" class="imghover" onmouseover="this.src=&quot;http://www.oldi.com/images/arrow-hover.gif&quot;;" onmouseout="this.src=&quot;http://www.oldi.com/images/arrow.gif&quot;;"></span><span style="width:1px"></span><span class="accordsuffix"></span></span><a href="http://www.oldi.com/dcs" class="linkhdr bailey">Bailey DCS to ControlLogix<br>PAC Module</a> 
+                            <div style="display: none;" contentindex="2c" class="thelanguage toggle_container"> <!-- Drop down -->
+                                <ul class="subnav bailey">
+                                    <li class="lit-link"><a href="http://www.oldi.com/dcs/literature.aspx">Literature</a></li>
+                                    <li class="knowbase-link"><a href="http://kb.oldi.com" target="_blank">Knowledgebase</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                </li>
+                
+                <!-- SPECIAL APPLICATION PRODUCTS -->
+			<li>	 <a href="http://www.oldi.com/computing.aspx">Special Application Products</a>
+				 
+                    
+                    	<!-- COMPUTING MODULE -->
+						<div class="spacing">
+                            <span headerindex="3h" class="technology closedlanguage"><span class="accordprefix"><img src="http://www.oldi.com/images/arrow.gif" class="imghover" onmouseover="this.src=&quot;http://www.oldi.com/images/arrow-hover.gif&quot;;" onmouseout="this.src=&quot;http://www.oldi.com/images/arrow.gif&quot;;"></span><span style="width:1px"></span><span class="accordsuffix"></span></span><a href="http://www.oldi.com/module" class="linkhdr module">Module for ControlLogix PAC Chassis</a> 
+                            <div style="display: none;" contentindex="3c" class="thelanguage toggle_container"> <!-- Drop down -->
+                                <ul class="subnav module">
+                                    <li class="lit-link"><a href="http://www.oldi.com/module/literature.aspx">Literature</a></li>
+                                    <li class="knowbase-link"><a href="http://kb.oldi.com" target="_blank">Knowledgebase</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!--- --->
+                        
+                        <!-- TECLA -->
+					<div class="spacing">
+                            <span headerindex="4h" class="technology closedlanguage"><span class="accordprefix"><img src="http://www.oldi.com/images/arrow.gif" class="imghover" onmouseover="this.src=&quot;http://www.oldi.com/images/arrow-hover.gif&quot;;" onmouseout="this.src=&quot;http://www.oldi.com/images/arrow.gif&quot;;"></span><span style="width:1px"></span><span class="accordsuffix"></span></span><a href="http://www.oldi.com/processor" class="linkhdr processor">Panel Mounted Unit</a> 
+                            <div style="display: none;" contentindex="4c" class="thelanguage toggle_container"> <!-- Drop down -->
+                                <ul class="subnav processor">
+                                    <li class="lit-link"><a href="http://www.oldi.com/processor/literature.aspx">Literature</a></li>
+                                    <li class="knowbase-link"><a href="http://kb.oldi.com" target="_blank">Knowledgebase</a></li>
+                                </ul>
+                            </div>
+                        </div>
+        </li>           
+                        
+   </ul>
+          
+<a class="questions" href="http://www.oldi.com/contact.aspx"><strong>Have Questions?</strong> Click or Call<br>800-625-8678</a>
+<div id="footer">
+	© Copyright 2013, Online Development Inc., All rights reserved. All trademarks are the property of their respective owners. <a href="http://www.oldi.com/privacy.aspx">Privacy</a>
+</div>
+
+
+<!--ONESTAT SCRIPTCODE START-->
+<script type="text/javascript">
+<!--
+// Account ID : 238886
+// Website URL: http://www.oldi.com
+// Copyright (C) 2002-2007 OneStat.com All Rights Reserved
+function OneStat_Pageview()
+{
+    var d=document;
+    var sid="238886";
+    var CONTENTSECTION="";
+    var osp_ACTION="";
+    var osp_TRANSACTION="";
+    var osp_AMOUNT="";
+    var osp_PRODUCTCODE="";
+    var osp_PRODUCTGROUP="";
+    var osp_ADCAMPAIGN="";
+    var osp_CUSTOMER="";
+    var osp_CUST0 = "";
+    var osp_CUST1 = "";
+    var osp_CUST2 = "";
+    var osp_CUST3 = "";
+    var osp_CUST10 = "";
+    var osp_CUST11 = "";
+    var osp_URL=d.URL;
+    var osp_Title=d.title;
+    var t=new Date();
+    var p="http"+(d.URL.indexOf('https:')==0?'s':'')+"://stat.onestat.com/stat.aspx?tagver=2&sid="+sid;
+    p+="&url="+escape(osp_URL);
+    p+="&ti="+escape(osp_Title);
+    p+="&section="+escape(CONTENTSECTION);
+    p+="&cma="+escape(osp_ACTION);
+    p+="&cmt="+escape(osp_TRANSACTION);
+    p+="&cmm="+escape(osp_AMOUNT);
+    p+="&cmp="+escape(osp_PRODUCTCODE);
+    p+="&cmg="+escape(osp_PRODUCTGROUP);
+    p+="&cmad="+escape(osp_ADCAMPAIGN);
+    p+="&cmc="+escape(osp_CUSTOMER);
+    p+="&cu0="+escape(osp_CUST0);
+    p+="&cu1="+escape(osp_CUST1);
+    p+="&cu2="+escape(osp_CUST2);
+    p+="&cu3="+escape(osp_CUST3);
+    p+="&cu10="+escape(osp_CUST10);
+    p+="&cu11="+escape(osp_CUST11);
+    p+="&rf="+escape(parent==self?document.referrer:top.document.referrer);
+    p+="&tz="+escape(t.getTimezoneOffset());
+    p+="&ch="+escape(t.getHours());
+    p+="&js=1";
+    p+="&ul="+escape(navigator.appName=="Netscape"?navigator.language:navigator.userLanguage);
+    if(osp_URL!=d.URL) p+="&ol="+escape(d.URL);
+    if(typeof(screen)=="object"){
+       p+="&sr="+screen.width+"x"+screen.height;p+="&cd="+screen.colorDepth;
+       p+="&jo="+(navigator.javaEnabled()?"Yes":"No");
+    }
+    d.write('<img id="ONESTAT_TAG" border="0" width="1" height="1" src="'+p+'" >');
+}
+
+OneStat_Pageview();
+//-->
+
+</script><img id="ONESTAT_TAG" src="http://stat.onestat.com/stat.aspx?tagver=2&amp;sid=238886&amp;url=http%3A//www.oldi.com/controllogix/%3Fgclid%3DCL7Q6ty2sLcCFcU7MgodXTcAfQ&amp;ti=Module%20for%20ControlLogix%20PAC%20Chassis%20-%20Online%20Development%20Inc&amp;section=&amp;cma=&amp;cmt=&amp;cmm=&amp;cmp=&amp;cmg=&amp;cmad=&amp;cmc=&amp;cu0=&amp;cu1=&amp;cu2=&amp;cu3=&amp;cu10=&amp;cu11=&amp;rf=&amp;tz=300&amp;ch=23&amp;js=1&amp;ul=en-US&amp;sr=1280x1024&amp;cd=24&amp;jo=No" height="1" width="1" border="0">
+<noscript>
+<a href="http://www.onestat.com"><img border="0" width="1" height="1" src="http://stat.onestat.com/stat.aspx?tagver=2&amp;sid=238886&amp;js=No&amp;" ALT="OneStat.com Web Analytics" /></a>
+</noscript>
+
+<!--ONESTAT SCRIPTCODE END-->
+
+<script type="text/javascript" src="http://dnn506yrbagrg.cloudfront.net/pages/scripts/0009/9184.js"> </script>
+
+</div>
+<script type="text/javascript">
+setTimeout(function(){var a=document.createElement("script");
+var b=document.getElementsByTagName('script')[0];
+a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0009/9184.js";
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script>
+
+
+</div><div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close">Click Here or press ‘Esc’ to Close  X</a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div><script type="text/javascript" src="http://trk.cetrk.com/t.js?s=342670&amp;t=1369456437226"></script><script type="text/javascript" src="http://trk.cetrk.com/t.js?s=342670&amp;t=1369456437658"></script></body>

@@ -1,0 +1,739 @@
+<head>
+<meta charset="UTF-8">
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="http://cdn.clickatell.com/wp-content/themes/clickatell-child/style.css" media="all">
+<link rel="pingback" href="http://www.clickatell.com/xmlrpc.php">
+
+<!-- This site is optimized with the Yoast WordPress SEO plugin v1.2.8.7 - http://yoast.com/wordpress/seo/ -->
+<title>Bulk SMS gateway for developers | APIs &amp; Scripts | Clickatell</title>
+<meta name="description" content="Our APIs are fast, simple and reliable. Our ready-made scripts help you to connect to our gateway.">
+<link rel="canonical" href="http://www.clickatell.com/apis-scripts/">
+<link rel="author" href="https://plus.google.com/117203299889430268409/posts">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@@Clickatell">
+<meta name="twitter:image" content="http://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash3/s160x160/555452_10150692541918960_1329944550_a.jpg">
+<meta name="twitter:description" content="Our APIs are fast, simple and reliable. Our ready-made scripts help you to connect to our gateway.">
+<meta property="og:locale" content="en_US">
+<meta property="fb:admins" content="740705629">
+<meta property="og:title" content="Bulk SMS gateway for developers | APIs &amp; Scripts | Clickatell">
+<meta property="og:description" content="Our APIs are fast, simple and reliable. Our ready-made scripts help you to connect to our gateway.">
+<meta property="og:url" content="http://www.clickatell.com/apis-scripts/">
+<meta property="og:site_name" content="Clickatell">
+<meta property="og:type" content="article">
+<meta property="og:image" content="http://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash3/s160x160/555452_10150692541918960_1329944550_a.jpg">
+<!-- / Yoast WordPress SEO plugin. -->
+
+<link rel="alternate" type="application/rss+xml" title="Clickatell » Feed" href="http://www.clickatell.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Clickatell » Comments Feed" href="http://www.clickatell.com/comments/feed/">
+
+			<div class="fit-vids-style">­<style>               .fluid-width-video-wrapper {                 width: 100%;                              position: relative;                       padding: 0;                            }                                                                                   .fluid-width-video-wrapper iframe,        .fluid-width-video-wrapper object,        .fluid-width-video-wrapper embed {           position: absolute;                       top: 0;                                   left: 0;                                  width: 100%;                              height: 100%;                          }                                       </style></div><script src="http://www.google-analytics.com/ga.js" async="" type="text/javascript"></script><script type="text/javascript">//<![CDATA[
+			// Google Analytics for WordPress by Yoast v4.2.8 | http://yoast.com/wordpress/google-analytics/
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-402181-1']);
+							_gaq.push(['_trackPageview']);
+			(function () {
+				var ga = document.createElement('script');
+				ga.type = 'text/javascript';
+				ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(ga, s);
+			})();
+			//]]></script>
+			<link rel="stylesheet" id="jwt-control-css" href="http://www.clickatell.com/wp-content/plugins/jquery-website-tour/WebsiteTour/css/control.css" type="text/css" media="all">
+<link rel="stylesheet" id="jwt-css" href="http://www.clickatell.com/wp-content/plugins/jquery-website-tour/WebsiteTour/css/jquerytour.css" type="text/css" media="all">
+<link rel="stylesheet" id="woo-responsive-layout-css" href="http://www.clickatell.com/wp-content/themes/canvas/css/generator.php" type="text/css" media="screen">
+<script type="text/javascript" src="http://cdn.clickatell.com/wp-includes/js/jquery/jquery.js"></script>
+<script type="text/javascript" src="http://www.clickatell.com/wp-content/plugins/jquery-website-tour/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="http://www.clickatell.com/wp-content/plugins/jquery-website-tour/js/cookie.js"></script>
+<script type="text/javascript" src="http://www.clickatell.com/wp-content/plugins/jquery-website-tour/js/jquery_website_tour.js"></script>
+<script type="text/javascript" src="http://www.clickatell.com/wp-content/plugins/wp-video-lightbox/js/jquery.prettyPhoto.js"></script>
+<script type="text/javascript" src="http://cdn.clickatell.com/wp-includes/js/comment-reply.js"></script>
+<script type="text/javascript" src="http://cdn.clickatell.com/wp-content/themes/clickatell-child/js/tabber-minimized.js"></script>
+<script type="text/javascript" src="http://cdn.clickatell.com/wp-content/themes/canvas/includes/js/third-party.js"></script>
+<script type="text/javascript" src="http://cdn.clickatell.com/wp-content/themes/canvas/includes/js/jquery.flexslider.min.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var woo_localized_data = {"select_a_page":"Select a page:"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="http://cdn.clickatell.com/wp-content/themes/canvas/includes/js/general.js"></script>
+
+	<script type="text/javascript">
+	if(ajaxurl == ''){
+		var ajaxurl = "http://www.clickatell.com/wp-admin/admin-ajax.php"; 
+		var loader_url = "http://www.clickatell.com/wp-content/plugins/clickatell-apis/images/loading.gif"; 
+    }
+	</script>
+<!-- Framebreaker by H.-Peter Pfeufer -->
+<script type="text/javascript">
+if (self != top) {
+	top.location.replace(self.location.href);
+}
+</script>
+<!-- /Framebreaker by H.-Peter Pfeufer -->
+<link rel="stylesheet" type="text/css" href="http://www.clickatell.com/wp-content/plugins/wp-recaptcha/recaptcha.css"><link type="text/css" rel="stylesheet" href="http://www.clickatell.com/wp-content/plugins/wp-video-lightbox/css/prettyPhoto.css">
+<!-- Google Webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:r,b,i,bi" rel="stylesheet" type="text/css">
+
+<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<!--  Mobile viewport scale -->
+<meta content="initial-scale=1.0; maximum-scale=1.0; user-scalable=yes" name="viewport">
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<!-- Options Panel Custom CSS -->
+<style type="text/css">
+#footer-widgets .footer-col-3 {
+    padding-right: 28px;
+    width: 128px !important;
+}
+#footer-widgets .footer-col-2 {
+    width: 120px !important;
+}
+
+#header .talk a:hover {
+    background: url("http://cdn.clickatell.com/wp-content/uploads/2012/04/header-button-hover.png") no-repeat scroll 0 2px transparent;
+}
+
+body #header .talk a {
+    background: url("http://cdn.clickatell.com/wp-content/uploads/2012/04/header-button.png") no-repeat scroll 0 2px transparent;
+margin-left: 30px !important;
+}
+
+#header .talk a span {
+    color: #D5C8B9 !important;
+font-weight: bold;
+}
+body.page-template-template-login-php .button span {
+    line-height: 19px !important;
+	font-size: 11px !important;
+}
+
+body.page-template-template-login-php #wrapper #content .button.grey,
+body.page-template-template-login-php #wrapper #content .button.grey:visited
+ {
+	background: #FFF;
+	background: -moz-linear-gradient(top, #FFF 0%, #E9E9E9 100%) !important;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FFF), color-stop(100%,#E9E9E9)) !important;
+	background: -webkit-linear-gradient(top, #FFF 0%,#E9E9E9 100%) !important;
+	background: -o-linear-gradient(top, #FFF 0%,#E9E9E9 100%) !important;
+	background: -ms-linear-gradient(top, #FFF 0%,#E9E9E9 100%) !important;
+	background: linear-gradient(top, #FFF 0%,#E9E9E9 100%) !important;	
+	border: 3px solid #FFF !important;
+	border-radius: 4px;		
+	color: #0075AA !important;
+	display: block;
+	font: 12px/16px Arial,Helvetica,sans-serif;
+	padding: 2px 10px 16px;
+	text-align: center;
+	vertical-align: middle;
+}
+#header .talk a:hover span {
+    color: #D5C8B9 !important;
+    font-weight: bold;
+}
+</style>
+
+
+<!-- Woo Shortcodes CSS -->
+<link href="http://cdn.clickatell.com/wp-content/themes/canvas/functions/css/shortcodes.css" rel="stylesheet" type="text/css">
+
+<!-- Custom Stylesheet -->
+<link href="http://cdn.clickatell.com/wp-content/themes/canvas/custom.css" rel="stylesheet" type="text/css">
+</head>
+
+
+<body class="page page-id-57 page-parent page-template page-template-template-developers-php gecko two-col-left width-960 two-col-left-960">
+<div id="slider-bg"></div>
+<div id="header-bg"></div>
+<div id="breadcrumb-bg"></div>
+<div id="wrapper">
+
+		      
+	    
+    <a class="signup" href="/register/"><strong class="today">Sign up today</strong> and get <strong>10 FREE</strong> messages</a>
+    
+	<div id="header" class="col-full">
+ 		
+				
+		<div id="logo">
+		<a href="http://www.clickatell.com/" title=""><img src="http://cdn.clickatell.com/wp-content/uploads/2011/12/clickatell-logo-line.png" alt="Clickatell" title="Go to the Clickatell Home Page"></a>
+<span class="site-title"><a href="http://www.clickatell.com/">Clickatell</a></span>
+		</div><!-- /#logo -->
+		
+		<div id="head-right">			
+		    		    <form method="get" id="searchform" action="http://www.clickatell.com/search-results/"> 
+		    		<input value="Search" name="q" id="s" onblur="if (this.value == '')  
+		    		{this.value = 'Search';}" onfocus="if (this.value == 'Search')  
+		    		{this.value = '';}" type="text"> 
+		    		<input id="searchsubmit" value="" type="submit"> 
+		    </form>
+		    		    
+		    <script type="text/javascript">
+		    var __ALC_BADGE_SUFFIX = (Math.round(Math.random()*10000000000));
+		    document.write('<div id="__ALC_BADGE_ONLINE'+__ALC_BADGE_SUFFIX+'" class="talk" style="display: none;"><a href="javascript://chat" onclick="_alc.startChat(15276); return false;">Speak to a <span>real person</span> online</a></div><div id="__ALC_BADGE_OFFLINE'+__ALC_BADGE_SUFFIX+'" class="talk-offline" style="display: none;"><a href="javascript://chat" onclick="_alc.startChat(15276); return false;"><img id="__ALC_BADGE_OFFLINE_IMAGE" style="border: 0px none" src="http://cdn.clickatell.com/wp-content/themes/clickatell-child/images/support-chat-offline.png" /></a></div>');
+		    if ( typeof(__ALC_Badges) == 'undefined' ) __ALC_Badges = new Array();
+		    var __ALC_BUTTON = new Object(); __ALC_BUTTON.id = '15276'; __ALC_BUTTON.available = '__ALC_BADGE_ONLINE'+__ALC_BADGE_SUFFIX; __ALC_BUTTON.unavailable = '__ALC_BADGE_OFFLINE'+__ALC_BADGE_SUFFIX; __ALC_BUTTON.department = 11514; __ALC_Badges.push(__ALC_BUTTON);
+		    </script><div id="__ALC_BADGE_ONLINE6563543939" class="talk" style=""><a href="javascript://chat" onclick="_alc.startChat(15276); return false;">Speak to a <span>real person</span> online</a></div><div id="__ALC_BADGE_OFFLINE6563543939" class="talk-offline" style="display: none;"><a href="javascript://chat" onclick="_alc.startChat(15276); return false;"><img id="__ALC_BADGE_OFFLINE_IMAGE" style="border: 0px none" src="http://cdn.clickatell.com/wp-content/themes/clickatell-child/images/support-chat-offline.png"></a></div>
+		    
+		    <div class="menu-header-links-container"><ul id="menu-header-links" class="headerlinks"><li id="menu-item-509" class="login menu-item menu-item-type-custom menu-item-object-custom menu-item-509"><a title="Login to your account now | Clickatell" href="/login/">LOGIN</a></li>
+<li id="menu-item-508" class="contact menu-item menu-item-type-custom menu-item-object-custom menu-item-508"><a title="Contact Us | Clickatell" href="/about-us/contact-us/">Contact</a></li>
+</ul></div>		    
+	      		<div id="navigation" class="col-full">
+					<ul class="nav fl sf-js-enabled" id="main-nav">
+				<!-- Get Creative with SMS --> 
+				<li class="main-nav-menu menu-item menu-item-type-post_type menu-item-object-page parent" id="menu-item-get-creative">
+					<a href="/get-creative-with-sms/">Get creative with SMS<span class="description">Dozens of ways to use bulk sms, industries and success stories</span></a>
+													<ul class="sub-menu">
+							 
+								<div class="singlecol sc1 fl"><li id="menu-item-2348" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/get-creative-with-sms/alerts/">SMS Alerts</a></li>
+<li id="menu-item-2349" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/get-creative-with-sms/sms-reminders/">SMS Reminders</a></li>
+<li id="menu-item-2350" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/get-creative-with-sms/sms-competitions/">SMS Competitions</a></li>
+<li id="menu-item-2351" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/get-creative-with-sms/personalized-priority-messaging/">Personalized Priority Messaging (PPM)</a></li>
+<li id="menu-item-2352" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/get-creative-with-sms/email-to-sms/">Email to SMS</a></li>
+<li id="menu-item-2353" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/get-creative-with-sms/two-way-messaging-shortcodes/">Two-Way Messaging and Short Codes</a></li>
+<li id="menu-item-2354" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/get-creative-with-sms/reservations-bookings/">Reservations and Bookings</a></li>
+<li id="menu-item-2355" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/get-creative-with-sms/notifications/">Notifications</a></li>
+<li id="menu-item-2356" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/get-creative-with-sms/international-sms/">International SMS</a></li>
+<li id="menu-item-5900" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/get-creative-with-sms/bulk-sms/">Bulk SMS</a></li>
+</div><div class="singlecol sc2 fl"><li id="menu-item-2357" class="dd-header menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/get-creative-with-sms/sms-in-your-industry/">SMS in your industry</a></li>
+<li id="menu-item-2358" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/get-creative-with-sms/sms-in-your-industry/healthcare-industry/">Healthcare Industry</a></li>
+<li id="menu-item-2366" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/get-creative-with-sms/sms-in-your-industry/call-centers/">Call Centers</a></li>
+<li id="menu-item-2359" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/get-creative-with-sms/sms-in-your-industry/marketing/">Marketing</a></li>
+<li id="menu-item-2367" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/get-creative-with-sms/sms-in-your-industry/manufacturing/">Manufacturing</a></li>
+<li id="menu-item-2360" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/get-creative-with-sms/sms-in-your-industry/government/">Government</a></li>
+<li id="menu-item-2368" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/get-creative-with-sms/sms-in-your-industry/it-software/">IT / Software</a></li>
+<li id="menu-item-2361" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/get-creative-with-sms/sms-in-your-industry/banking-finance/">Banking and Finance</a></li>
+<li id="menu-item-2369" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/get-creative-with-sms/sms-in-your-industry/ngo-aid/">NGO / Aid</a></li>
+<li id="menu-item-2362" class="dd-extended menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/get-creative-with-sms/sms-in-your-industry/travel-and-hospitality/">Travel and Hospitality</a></li>
+<li id="menu-item-2370" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/get-creative-with-sms/sms-in-your-industry/retail-consumer/">Retail / Consumer</a></li>
+<li id="menu-item-2363" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/get-creative-with-sms/sms-in-your-industry/insurance/">Insurance</a></li>
+<li id="menu-item-2371" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/get-creative-with-sms/sms-in-your-industry/ecommerce/">eCommerce</a></li>
+<li id="menu-item-2364" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/get-creative-with-sms/sms-in-your-industry/social-networking/">Social Networking</a></li>
+<li id="menu-item-2372" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/get-creative-with-sms/sms-in-your-industry/enterprise-solutions/">Enterprise Solutions</a></li>
+<li id="menu-item-2365" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/get-creative-with-sms/sms-in-your-industry/education/">Education</a></li>
+</div>							</ul>
+										</li>
+
+				<!-- Our Products --> 
+				<li class="main-nav-menu menu-item menu-item-type-post_type menu-item-object-page parent" id="menu-item-our-products">
+					<a class="sf-with-ul">Our Products<span class="description">Variety of online &amp; enterprise services</span></a>
+													<ul class="sub-menu">
+							
+								<div class="singlecol sc1 fl"><li id="menu-item-2373" class="dd-header menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/clickatell-products/online-products/">Online Products</a></li>
+<li id="menu-item-2374" class="dd-desc dd-icon-mobile menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/clickatell-products/online-products/easy-sms-communicator-2/">EASY SMS<span class="dd-description">Communicator2</span></a></li>
+<li id="menu-item-2375" class="dd-desc dd-icon-spanner menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/clickatell-products/online-products/sms-gateway-developers-central/">SMS GATEWAY<span class="dd-description">Developers’ Central</span></a></li>
+<li id="menu-item-7764" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/clickatell-products/online-products/short-codes/">Short Codes</a></li>
+<li id="menu-item-2377" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/clickatell-products/online-products/product-feature-comparison/">Product Feature Comparison</a></li>
+<li id="menu-item-2378" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/clickatell-products/online-products/how-our-online-products-work/">How Our Online Products Work</a></li>
+</div><div class="singlecol sc2 fl"><li id="menu-item-2379" class="dd-header menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/clickatell-products/enterprise-products/">Enterprise Products</a></li>
+<li id="menu-item-2380" class="dd-icon-plus menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/clickatell-products/enterprise-products/enterprise-sms/">Connect with Enterprise SMS</a></li>
+<li id="menu-item-2381" class="dd-icon-chip menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/clickatell-products/enterprise-products/ussd/">USSD</a></li>
+<li id="menu-item-2382" class="dd-icon-smartphone menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/clickatell-products/enterprise-products/mobile-transaction-services/">Transact with Mobile Transaction Services</a></li>
+</div>							</ul>
+										</li>	
+				
+				<!-- Pricing & Coverage --> 
+				<li class="main-nav-menu menu-item menu-item-type-post_type menu-item-object-page parent" id="menu-item-pricing-coverage">
+					<a href="/pricing-and-coverage/" class="sf-with-ul">Pricing &amp; Coverage<span class="description">Advanced pricing, specials &amp; areas of coverage</span></a>
+					
+						                            <ul class="sub-menu">
+							
+								<div class="singlecol sc1 fl"><li id="menu-item-5977" class="dd-header dd-nolink menu-item menu-item-type-custom menu-item-object-custom"><a>Pricing</a></li>
+<li id="menu-item-27883" class="menu-item menu-item-type-custom menu-item-object-custom"><a title="Message Pricing | Clickatell" href="http://www.clickatell.com/pricing-and-coverage/message-pricing/">Message Pricing</a></li>
+<li id="menu-item-23140" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/pricing-and-coverage/short-code-costs/">Short Code Costs</a></li>
+<li id="menu-item-23259" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/pricing-and-coverage/two-way-costs/">Two-Way Costs</a></li>
+</div><div class="singlecol sc2 fl"><li id="menu-item-5986" class="dd-header dd-nolink menu-item menu-item-type-custom menu-item-object-custom"><a>Coverage</a></li>
+<li id="menu-item-12026" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/pricing-and-coverage/standard-coverage/">All Countries &amp; Networks We Cover</a></li>
+<li id="menu-item-12028" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/pricing-and-coverage/advanced-pricing-standard-coverage/">Advanced Pricing: Standard Coverage (MT)</a></li>
+<li id="menu-item-12019" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/pricing-and-coverage/advanced-pricing-advanced-coverage/">Advanced Pricing: Advanced Coverage (MO)</a></li>
+<li id="menu-item-5984" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/pricing-and-coverage/short-code-coverage/">Short Code Coverage</a></li>
+</div><span class="singlecol sc3 fl"><li id="menu-item-5988" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/test-sms-gateway/">Test Gateway</a></li>
+<li id="menu-item-5989" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/pricing-and-coverage/how-do-i-pay/">How do I pay?</a></li>
+</span>	
+							</ul>
+										</li>
+				
+			<!-- APIs & Scripts --> 
+			<li class="main-nav-menu menu-item menu-item-type-post_type menu-item-object-page parent" id="menu-item-apis-scripts">
+				<a href="/apis-scripts/" class="sf-with-ul">APIs &amp; Scripts<span class="description dd-nolink">Developers' Central, plus informative forums</span></a>
+											<ul class="sub-menu">
+						
+							<div class="singlecol sc1 fl"><li id="menu-item-2383" class="dd-header menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/apis-scripts/apis/">APIs</a></li>
+<li id="menu-item-2431" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/apis-scripts/apis/http-s/">HTTP/S</a></li>
+<li id="menu-item-2509" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/apis-scripts/apis/xml/">XML</a></li>
+<li id="menu-item-2511" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/apis-scripts/apis/ftp/">FTP</a></li>
+<li id="menu-item-2513" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/apis-scripts/apis/smtp/">SMTP</a></li>
+<li id="menu-item-2515" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/apis-scripts/apis/soap/">SOAP</a></li>
+<li id="menu-item-2388" class="dd-extended menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/apis-scripts/apis/com-object/">COM Object</a></li>
+<li id="menu-item-2517" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/apis-scripts/apis/smpp/">SMPP</a></li>
+</div><div class="singlecol sc2 fl"><li id="menu-item-2391" class="dd-header menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/apis-scripts/scripts/">Scripts</a></li>
+<li id="menu-item-2774" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/apis-scripts/scripts/php/">PHP</a></li>
+<li id="menu-item-2392" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/apis-scripts/scripts/vb-net/">VB.Net</a></li>
+<li id="menu-item-2393" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/apis-scripts/scripts/vbscript/">VBScript</a></li>
+<li id="menu-item-2394" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/apis-scripts/scripts/cold-fusion/">Cold Fusion</a></li>
+<li id="menu-item-2395" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/apis-scripts/scripts/c-scripts/">C# Scripts</a></li>
+<li id="menu-item-2396" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/apis-scripts/scripts/oracle/">Send SMS with Oracle</a></li>
+<li id="menu-item-2397" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/apis-scripts/scripts/java/">Java</a></li>
+<li id="menu-item-2398" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/apis-scripts/scripts/perl/">Perl</a></li>
+<li id="menu-item-2399" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/apis-scripts/scripts/ruby/">Ruby</a></li>
+<li id="menu-item-2400" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/apis-scripts/scripts/applescript/">Applescript</a></li>
+</div><span class="singlecol sc3 fl"><li id="menu-item-23351" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="https://getsatisfaction.com/clickatell" onclick="javascript:_gaq.push(['_trackEvent','outbound-menu','http://getsatisfaction.com']);">Forum</a></li>
+</span>						</ul>
+								</li>		
+									
+			<!-- Support --> 
+			<li class="main-nav-menu menu-item menu-item-type-post_type menu-item-object-page parent" id="menu-item-support">
+				<a href="/help-support/" class="sf-with-ul">Support<span class="description">24/7 online assistance</span></a>
+											<ul class="sub-menu">
+						
+							<div class="singlecol sc1 fl"><li id="menu-item-2404" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/help-support/communicator-2/">Communicator 2</a></li>
+<li id="menu-item-3043" class="dd-extended menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/help-support/developers-central/">Developers’ Central</a></li>
+<li id="menu-item-2407" class="menu-item menu-item-type-post_type menu-item-object-page"><a title="Clickatell Messenger-PRO" href="http://www.clickatell.com/help-support/messenger-pro/">M-PRO</a></li>
+<li id="menu-item-594" class="dd-extended menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/help-support/white-papers-guides/">White Papers &amp; Guides</a></li>
+<li id="menu-item-2406" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/help-support/frequently-asked-questions/">FAQ</a></li>
+<li id="menu-item-2998" class="dd-extended menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/forgot-your-password/">Forgot your password</a></li>
+<li id="menu-item-8593" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="https://getsatisfaction.com/clickatell" onclick="javascript:_gaq.push(['_trackEvent','outbound-menu','http://getsatisfaction.com']);">Forum</a></li>
+</div>						</ul>
+								</li>	
+			
+			<!-- About --> 
+			<li class="main-nav-menu menu-item menu-item-type-post_type menu-item-object-page parent" id="menu-item-about">
+				<a href="/about-us/" class="sf-with-ul">About<span class="description">Contacts &amp; info</span></a>
+									<ul class="sub-menu">
+					
+						<div class="singlecol sc1 fl"><li id="menu-item-2412" class="dd-header menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/about-us/contact-us/">Contact Us</a></li>
+<li id="menu-item-23504" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/about-us/contact-us/contact-support/">Tech Support</a></li>
+<li id="menu-item-2411" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/about-us/contact-us/contact-sales/">Pre-sales</a></li>
+<li id="menu-item-23429" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/about-us/contact-us/enterprise-products-enquiry/">Enterprise</a></li>
+</div><div class="singlecol sc2 fl"><li id="menu-item-2420" class="dd-header menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/about-us/partners-affiliations/">Partners &amp; Affiliates</a></li>
+<li id="menu-item-2419" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/about-us/partners-affiliations/strategic-partners/">Strategic Partners</a></li>
+<li id="menu-item-2421" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/about-us/partners-affiliations/systems-integrators/">Systems Integrators</a></li>
+<li id="menu-item-11229" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/about-us/partners-affiliations/affiliate-program/">Affiliate Program</a></li>
+</div><span class="singlecol sc3 fl"><li id="menu-item-2423" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/about-us/our-people/">Our People</a></li>
+<li id="menu-item-2429" class="menu-item menu-item-type-custom menu-item-object-custom"><a title="Jobs at Clickatell" href="/about-us/jobs-at-clickatell/">Jobs at Clickatell</a></li>
+<li id="menu-item-23921" class="menu-item menu-item-type-custom menu-item-object-custom"><a target="_blank" href="http://americas.clickatell.com/">Americas</a></li>
+<li id="menu-item-2424" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/about-us/press-centre/">Press Centre</a></li>
+<li id="menu-item-29062" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/about-us/clickatell-at-events/">Clickatell at Events</a></li>
+<li id="menu-item-2425" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/about-us/clickatell-values/">Clickatell Values</a></li>
+<li id="menu-item-2426" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/about-us/why-choose-clickatell/">Why Choose Clickatell</a></li>
+<li id="menu-item-2427" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.clickatell.com/about-us/investors/">Investors</a></li>
+</span>					</ul>
+							</li>	
+
+		</ul><!-- /#main-nav -->
+	</div><!-- /#navigation -->
+         </div>
+         
+         <div class="fix"></div>
+	</div><!-- /#header -->
+				
+	       
+    <!-- #content Starts -->
+		 
+	<div class="breadcrumb breadcrumbs woo-breadcrumbs"><div class="breadcrumb-trail"><span class="trail-before"><span class="breadcrumb-title">You are here:</span></span> <a href="http://www.clickatell.com" title="Clickatell" rel="home" class="trail-begin">Home</a> <span class="sep">&gt;</span> <span class="trail-end">APIs &amp; Scripts</span></div></div>	
+		
+	<h1 class="title">APIs &amp; Scripts</h1>	
+    <div id="content" class="col-full">
+    
+    <div class="scroller">
+    
+    	<div id="main-sidebar-container">    
+
+            <!-- #main Starts -->
+                                 
+            <div id="main">
+                               
+<div class="post-57 page type-page status-publish hentry">
+
+		
+	<div class="api-block">
+				<h2>APIs </h2>
+			
+		<p class="dblurb"></p><p>Our APIs are fast, simple and reliable and built in such a way that they integrate with any system or application.</p><p>&nbsp;</p><p></p><div class="api-holder">							<div class="api  first">
+					<a href="http://www.clickatell.com/apis-scripts/apis/http-s/"><img src="http://cdn.clickatell.com/wp-content/uploads/2012/03/https.png" alt="API image">
+					
+										
+					</a>
+					
+					<p>Simple, used as an HTTP/Internet Post.</p>
+				</div>
+																<div class="api ">
+					<a href="http://www.clickatell.com/apis-scripts/apis/ftp/"><img src="http://cdn.clickatell.com/wp-content/uploads/2012/03/ftp.png" alt="API image">
+					
+										
+					</a>
+					
+					<p>Once off, high volume messaging.</p>
+				</div>
+																<div class="api ">
+					<a href="http://www.clickatell.com/apis-scripts/apis/smpp/"><img src="http://cdn.clickatell.com/wp-content/uploads/2012/03/smpp.png" alt="API image">
+					
+										
+					</a>
+					
+					<p>Robust connection, suitable for large volumes of traffic.</p>
+				</div>
+																<div class="api ">
+					<a href="http://www.clickatell.com/apis-scripts/apis/xml/"><img src="http://cdn.clickatell.com/wp-content/uploads/2012/03/xml.png" alt="API image">
+					
+										
+					</a>
+					
+					<p>XML interface with its own set of DTDs.</p>
+				</div>
+																<div class="api  last">
+					<a href="http://www.clickatell.com/apis-scripts/apis/soap/"><img src="http://cdn.clickatell.com/wp-content/uploads/2012/03/soap.png" alt="API image">
+					
+										
+					</a>
+					
+					<p>A protocol for exchanging XML-based messages using HTTP/HTTPS.</p>
+				</div>
+				<div class="fix"></div>												<div class="api  first">
+					<a href="http://www.clickatell.com/apis-scripts/apis/smtp/"><img src="http://cdn.clickatell.com/wp-content/uploads/2012/03/smtp.png" alt="API image">
+					
+										
+					</a>
+					
+					<p>Email to SMS.</p>
+				</div>
+																<div class="api ">
+					<a href="http://www.clickatell.com/apis-scripts/apis/com-object/"><img src="http://cdn.clickatell.com/wp-content/uploads/2012/03/comobj.png" alt="API image">
+					
+										
+					</a>
+					
+					<p>Popular with windows-based developers.</p>
+				</div>
+																															<div class="fix"></div>
+		</div>
+	</div>
+	
+	<div class="lists">
+		<h2>Scripts</h2>
+		
+		<p class="dblurb"></p>		
+		<div class="left">
+											<p class="blurb">Our ready-made scripts help you to connect to our gateway through your chosen programming language. These scripts all work with the HTTP API. </p>
+						<ul>
+												<li><a href="http://www.clickatell.com/apis-scripts/scripts/php/">PhP</a></li>
+													<li><a href="http://www.clickatell.com/apis-scripts/scripts/vb-net/">VB.Net</a></li>
+													<li><a href="http://www.clickatell.com/apis-scripts/scripts/vbscript/">VBScript</a></li>
+													<li><a href="http://www.clickatell.com/apis-scripts/scripts/cold-fusion/">Cold Fusion</a></li>
+													<li><a href="http://www.clickatell.com/apis-scripts/scripts/c-scripts/">C#</a></li>
+													<li><a href="http://www.clickatell.com/apis-scripts/scripts/oracle/">Oracle</a></li>
+																											</ul>
+					
+		</div>
+		
+		<div class="right">
+											<p class="blurb">Listed below are a number of third party libraries, classes and scripts for other languages.</p>
+						<ul>
+																<li><a href="http://www.clickatell.com/apis-scripts/scripts/java/">Java</a></li>
+													<li><a href="http://www.clickatell.com/apis-scripts/scripts/perl/">Perl</a></li>
+													<li><a href="http://www.clickatell.com/apis-scripts/scripts/ruby/">Ruby</a></li>
+													<li><a href="http://www.clickatell.com/apis-scripts/scripts/applescript/">Applescript</a></li>
+																															</ul>
+					</div>
+		<div class="fix"></div>
+	</div>
+	
+	
+	
+
+
+	<div class="fix"></div>
+
+</div><!-- /.post -->
+     
+            </div><!-- /#main -->
+                
+            <div id="sidebar">
+            	<div class="static">
+            
+            	            		<div class="widget">
+            		<p><a href="http://youtu.be/UtA3mJIvdcs" rel="wp-video-lightbox" title=""><img src="http://cdn.clickatell.com/wp-content/uploads/2013/02/video-messaging-api.jpg" alt="Which API is best for your messaging needs?"></a></p>
+<p>&nbsp;</p>
+<div class="widget" id="gsfn_list_widget">
+  <h3 class="widget-title"><a href="https://getsatisfaction.com/clickatell" class="widget_title">Clickatell Connect API Forum Latest Posts</a></h3>
+  <div class="widget-holder">
+    <div id="gsfn_content"><ul class="gsfn_topic_list">
+<li class="gsfn_question"><a href="http://getsatisfaction.com/clickatell/topics/smtp_api_security?utm_medium=widget&amp;utm_source=widget_clickatell" class="gsfn_link" target="_top">SMTP API security</a><span class="time">about 1 hour ago</span><div class="gsfn_summary"></div></li>
+<li class="gsfn_problem"><a href="http://getsatisfaction.com/clickatell/topics/sending_sms_message_from_rsa_securid_server?utm_medium=widget&amp;utm_source=widget_clickatell" class="gsfn_link" target="_top">Sending SMS Message from RSA SecurID Server</a><span class="time">2 days ago</span><div class="gsfn_summary"></div></li>
+<li class="gsfn_question"><a href="http://getsatisfaction.com/clickatell/topics/a_unicode_convertor_in_my_communicator2_clickatell_account?utm_medium=widget&amp;utm_source=widget_clickatell" class="gsfn_link" target="_top">A Unicode convertor in my Communicator2 Clickatell account</a><span class="time">3 days ago</span><div class="gsfn_summary"></div></li>
+</ul></div>
+    <div class="powered_by"> <a href="https://getsatisfaction.com/"><img alt="Burst16" src="http://getsatisfaction.com/images/burst16.png" style="vertical-align: middle;"></a> <a href="https://getsatisfaction.com/">Get Satisfaction support network</a> </div>
+  </div>
+  <script src="http://getsatisfaction.com/clickatell/widgets/javascripts/0c9c33b9db/widgets.js" type="text/javascript"></script> 
+  <script src="http://getsatisfaction.com/clickatell/topics.widget?callback=gsfnTopicsCallback&amp;length=0&amp;limit=3&amp;sort=recently_active" type="text/javascript"></script> 
+</div>
+<div class="widget" id="gsfn_list_widget">
+	<h3>Start sending SMS now</h3>
+	<div style="padding: 20px;">
+		<img src="http://cdn.clickatell.com/wp-content/uploads/2012/04/dev-cen.jpg" style="float:right;">
+	  <span style="color: #5B6770; font: 11px/16px Arial,Helvetica,sans-serif; text-transform: uppercase;">SMS Gateway</span>
+		<h2 style="color: #0075AA; font: bold 15px/16px Arial,Helvetica,sans-serif;">Developers' Central</h2>
+		<p>Reliable, scalable and customizable, Developers’ Central integrates with your systems and applications via our wide variety of <a href="http://www.clickatell.com/apis-scripts/">APIs.</a></p>
+		<a href="https://www.clickatell.com/register/?product=1" class="button" style="font: bold 14px/12px Arial,Helvetica,sans-serif;">Try Developers' Central now<br><span style="font: normal 10px/12px Arial,Helvetica,sans-serif;">&amp; get 10 free test messages</span></a>
+	</div>
+</div>                	</div>	
+            	            
+           		            	
+            	           		</div>
+           		
+           	</div>
+           	<div class="fix"></div>
+           	<div class="stopper"></div>
+           	
+           	</div>
+           	
+           	
+		</div><!-- /#main-sidebar-container -->         
+		
+    </div><!-- /#content -->
+	
+
+	<div id="footer-widgets" class="col-full col-5">
+			 	<div class="block footer-col-1">
+	 		<div id="nav_menu-3" class="widget widget_nav_menu"><h3>Products</h3><div class="menu-products-container"><ul id="menu-products" class="menu"><li id="menu-item-570" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-570"><a href="http://www.clickatell.com/clickatell-products/online-products/easy-sms-communicator-2/">Easy SMS: Communicator 2</a></li>
+<li id="menu-item-571" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-571"><a href="http://www.clickatell.com/clickatell-products/online-products/sms-gateway-developers-central/">SMS Gateway Developers’ Central</a></li>
+</ul></div></div><div id="nav_menu-4" class="widget widget_nav_menu"><h3>Pricing &amp; Coverage</h3><div class="menu-pricing-coverage-container"><ul id="menu-pricing-coverage" class="menu"><li id="menu-item-27882" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27882"><a title="Message Pricing | Clickatell" href="http://www.clickatell.com/pricing-and-coverage/message-pricing/">Message Pricing</a></li>
+<li id="menu-item-3526" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3526"><a href="http://www.clickatell.com/test-sms-gateway/">Test the Gateway</a></li>
+<li id="menu-item-23397" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23397"><a href="http://www.clickatell.com/pricing-and-coverage/standard-coverage/">All Countries &amp; Networks We Cover</a></li>
+<li id="menu-item-5835" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5835"><a href="http://www.clickatell.com/pricing-and-coverage/advanced-pricing-standard-coverage/">Advanced Pricing: Standard Coverage</a></li>
+<li id="menu-item-5795" class="Advanced Coverage menu-item menu-item-type-post_type menu-item-object-page menu-item-5795"><a href="http://www.clickatell.com/pricing-and-coverage/advanced-pricing-advanced-coverage/">Advanced Pricing: Advanced Coverage</a></li>
+<li id="menu-item-5799" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5799"><a href="http://www.clickatell.com/pricing-and-coverage/short-code-costs/">Short Code Costs</a></li>
+<li id="menu-item-5763" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5763"><a href="http://www.clickatell.com/pricing-and-coverage/short-code-coverage/">Short Code Coverage</a></li>
+<li id="menu-item-3740" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3740"><a href="http://www.clickatell.com/pricing-and-coverage/how-do-i-pay/">How do I pay?</a></li>
+</ul></div></div>    
+	 	</div>
+	 		 	<div class="block footer-col-2">
+	 		<div id="nav_menu-5" class="widget widget_nav_menu"><h3>Customers</h3><div class="menu-get-creative-with-sms-container"><ul id="menu-get-creative-with-sms" class="menu"><li id="menu-item-22847" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22847"><a href="http://www.clickatell.com/get-creative-with-sms/">Get Creative</a></li>
+<li id="menu-item-578" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-578"><a href="http://www.clickatell.com/get-creative-with-sms/sms-in-your-industry/it-software/">IT / Software</a></li>
+<li id="menu-item-579" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-579"><a href="http://www.clickatell.com/get-creative-with-sms/sms-in-your-industry/healthcare-industry/">Healthcare Industry</a></li>
+<li id="menu-item-580" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-580"><a href="http://www.clickatell.com/get-creative-with-sms/sms-in-your-industry/manufacturing/">Manufacturing</a></li>
+<li id="menu-item-581" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-581"><a href="http://www.clickatell.com/get-creative-with-sms/sms-in-your-industry/marketing/">Marketing</a></li>
+<li id="menu-item-583" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-583"><a href="http://www.clickatell.com/get-creative-with-sms/sms-in-your-industry/government/">Government</a></li>
+<li id="menu-item-4240" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4240"><a href="http://www.clickatell.com/get-creative-with-sms/sms-in-your-industry/banking-finance/">Banking and Finance</a></li>
+<li id="menu-item-585" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-585"><a href="http://www.clickatell.com/get-creative-with-sms/sms-in-your-industry/travel-and-hospitality/">Travel and Hospitality</a></li>
+<li id="menu-item-586" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-586"><a href="http://www.clickatell.com/get-creative-with-sms/sms-in-your-industry/insurance/">Insurance</a></li>
+<li id="menu-item-587" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-587"><a href="http://www.clickatell.com/get-creative-with-sms/sms-in-your-industry/ecommerce/">eCommerce</a></li>
+<li id="menu-item-588" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-588"><a href="http://www.clickatell.com/get-creative-with-sms/sms-in-your-industry/social-networking/">Social Networking</a></li>
+<li id="menu-item-589" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-589"><a href="http://www.clickatell.com/get-creative-with-sms/sms-in-your-industry/education/">Education</a></li>
+</ul></div></div>    
+	 	</div>
+	 		 	<div class="block footer-col-3">
+	 		<div id="nav_menu-6" class="widget widget_nav_menu"><h3>Developers’ Centre</h3><div class="menu-developers-centre-container"><ul id="menu-developers-centre" class="menu"><li id="menu-item-590" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-57 current_page_item menu-item-590"><a href="http://www.clickatell.com/apis-scripts/">APIs &amp; Scripts</a></li>
+<li id="menu-item-23474" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-23474"><a href="https://getsatisfaction.com/clickatell" onclick="javascript:_gaq.push(['_trackEvent','outbound-menu','http://getsatisfaction.com']);">Forum</a></li>
+</ul></div></div><div id="nav_menu-7" class="widget widget_nav_menu"><h3>Support</h3><div class="menu-support-container"><ul id="menu-support-1" class="menu"><li id="menu-item-2404" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2404"><a href="http://www.clickatell.com/help-support/communicator-2/">Communicator 2</a></li>
+<li id="menu-item-3043" class="dd-extended menu-item menu-item-type-post_type menu-item-object-page menu-item-3043"><a href="http://www.clickatell.com/help-support/developers-central/">Developers’ Central</a></li>
+<li id="menu-item-2407" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2407"><a title="Clickatell Messenger-PRO" href="http://www.clickatell.com/help-support/messenger-pro/">M-PRO</a></li>
+<li id="menu-item-594" class="dd-extended menu-item menu-item-type-post_type menu-item-object-page menu-item-594"><a href="http://www.clickatell.com/help-support/white-papers-guides/">White Papers &amp; Guides</a></li>
+<li id="menu-item-2406" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2406"><a href="http://www.clickatell.com/help-support/frequently-asked-questions/">FAQ</a></li>
+<li id="menu-item-2998" class="dd-extended menu-item menu-item-type-post_type menu-item-object-page menu-item-2998"><a href="http://www.clickatell.com/forgot-your-password/">Forgot your password</a></li>
+<li id="menu-item-8593" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8593"><a href="https://getsatisfaction.com/clickatell" onclick="javascript:_gaq.push(['_trackEvent','outbound-menu','http://getsatisfaction.com']);">Forum</a></li>
+</ul></div></div>    
+	 	</div>
+	 		 	<div class="block footer-col-4">
+	 		<div id="nav_menu-8" class="widget widget_nav_menu"><h3>About Us</h3><div class="menu-about-us-container"><ul id="menu-about-us" class="menu"><li id="menu-item-599" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-599"><a href="http://www.clickatell.com/about-us/contact-us/">Contact Us</a></li>
+<li id="menu-item-596" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-596"><a href="http://www.clickatell.com/about-us/partners-affiliations/">Partners</a></li>
+<li id="menu-item-598" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-598"><a href="http://www.clickatell.com/about-us/our-people/">Our People</a></li>
+<li id="menu-item-4288" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4288"><a href="http://www.clickatell.com/about-us/jobs-at-clickatell/">Jobs at Clickatell</a></li>
+<li id="menu-item-23920" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-23920"><a target="_blank" href="http://americas.clickatell.com">Americas</a></li>
+<li id="menu-item-601" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-601"><a href="http://www.clickatell.com/about-us/press-centre/">Press Centre</a></li>
+<li id="menu-item-23674" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23674"><a href="http://www.clickatell.com/about-us/press-centre/press-archive/">Press Releases</a></li>
+<li id="menu-item-22834" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22834"><a href="http://www.clickatell.com/about-us/clickatell-values/">Clickatell Values</a></li>
+<li id="menu-item-22815" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22815"><a href="http://www.clickatell.com/about-us/investors/">Investors</a></li>
+<li id="menu-item-22836" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22836"><a href="http://www.clickatell.com/about-us/why-choose-clickatell/">Why Clickatell</a></li>
+<li id="menu-item-4477" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4477"><a href="http://www.clickatell.com/sitemap/">Sitemap</a></li>
+</ul></div></div>    
+	 	</div>
+	 		 	<div class="block footer-col-5">
+		 	<div id="footer">
+		 	
+		 				 		
+			 		<a class="foot-signup" href="/register/">Sign up now</a>
+			 		<a class="contact" href="/about-us/contact-us/">Contact Us</a>
+			 	
+		 		<div class="fr">
+		 			<a href="http://pinterest.com/clickatell/" target="_blank"><img src="http://cdn.clickatell.com/wp-content/themes/clickatell-child/images/pinterest.png" alt="pinterest"></a>
+		 			<a href="http://www.linkedin.com/groups?gid=2850770" target="_blank"><img src="http://cdn.clickatell.com/wp-content/themes/clickatell-child/images/linkedin.png" alt="linkedin"></a>
+			 		<a href="http://www.facebook.com/pages/Clickatell/187073743959?cid=185276" target="_blank"><img src="http://cdn.clickatell.com/wp-content/themes/clickatell-child/images/fb.png" alt="facebook"></a>
+			 		<a href="http://twitter.com/#!/clickatell?cid=185277" target="_blank"><img src="http://cdn.clickatell.com/wp-content/themes/clickatell-child/images/twitter.png" alt="twitter"></a>
+			 		<a href="https://plus.google.com/117203299889430268409/" target="_blank"><img src="http://cdn.clickatell.com/wp-content/themes/clickatell-child/images/gplus.png" alt="google plus"></a>
+		 		</div> 
+		 		 
+		 		<form method="get" id="searchform" action="http://www.clickatell.com/"> 
+		 				<input value="Search" name="s" id="s" onblur="if (this.value == '')  
+		 				{this.value = 'Search';}" onfocus="if (this.value == 'Search')  
+		 				{this.value = '';}" type="text"> 
+		 				<input id="searchsubmit" value="" type="submit"> 
+		 		</form>
+		 		<img class="fr" src="http://cdn.clickatell.com/wp-content/themes/clickatell-child/images/footer-logo.png" alt="logo">   
+		 		<br style="clear:right;">
+		 	    <p>© Copyright 2013 Clickatell</p>
+		 	    <div class="menu-footer-links-container"><ul id="menu-footer-links" class="menu"><li id="menu-item-3946" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3946"><a href="http://www.clickatell.com/about-us/privacy-policy/">Privacy Policy</a></li>
+<li id="menu-item-3947" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3947"><a href="http://www.clickatell.com/about-us/terms-and-conditions/">Terms &amp; Conditions</a></li>
+</ul></div>		 		
+		 	</div><!-- /#footer  -->
+	 	</div>
+	 	
+	</div>
+	
+	
+	    
+	
+		
+	</div><!-- /#wrapper -->
+
+	<div id="footer-bg"></div>
+	
+	<div class="fix"></div><!--/.fix-->
+	
+	<form style="display:none;">
+<input id="admin_jwt_request_uri" name="admin_jwt_request_uri" value="/apis-scripts/?cid=206647" type="text">
+</form>
+      <script type="text/javascript" charset="utf-8">
+        /* <![CDATA[ */
+        jQuery(document).ready(function($) {
+          $("a[rel^='wp-video-lightbox']").prettyPhoto({
+            animation_speed: 'fast',
+            slideshow: 5000,
+            autoplay_slideshow: false,
+            opacity: 0.80,
+            show_title: true,
+            allow_resize: true,
+            default_width: 640,
+			default_height: 480,
+			counter_separator_label: '/',
+			theme: 'pp_default', 
+            horizontal_padding: 20,
+            hideflash: false,
+            wmode: 'opaque',
+            autoplay: false,
+            modal: false,
+            deeplinking: false,
+            overlay_gallery: true,
+            keyboard_shortcuts: true,
+            changepicturecallback: function(){},
+            callback: function(){},
+            ie6_fallback: true,
+            markup: '<div class="pp_pic_holder"> \
+						<div class="ppt">&nbsp;</div> \
+						<div class="pp_top"> \
+							<div class="pp_left"></div> \
+							<div class="pp_middle"></div> \
+							<div class="pp_right"></div> \
+						</div> \
+						<div class="pp_content_container"> \
+							<div class="pp_left"> \
+							<div class="pp_right"> \
+								<div class="pp_content"> \
+									<div class="pp_loaderIcon"></div> \
+									<div class="pp_fade"> \
+										<a href="#" class="pp_expand" title="Expand the image">Expand</a> \
+										<div class="pp_hoverContainer"> \
+											<a class="pp_next" href="#">next</a> \
+											<a class="pp_previous" href="#">previous</a> \
+										</div> \
+										<div id="pp_full_res"></div> \
+										<div class="pp_details"> \
+											<div class="pp_nav"> \
+												<a href="#" class="pp_arrow_previous">Previous</a> \
+												<p class="currentTextHolder">0/0</p> \
+												<a href="#" class="pp_arrow_next">Next</a> \
+											</div> \
+											<p class="pp_description"></p> \
+											{pp_social} \
+											<a class="pp_close" href="#">Close</a> \
+										</div> \
+									</div> \
+								</div> \
+							</div> \
+							</div> \
+						</div> \
+						<div class="pp_bottom"> \
+							<div class="pp_left"></div> \
+							<div class="pp_middle"></div> \
+							<div class="pp_right"></div> \
+						</div> \
+					</div> \
+					<div class="pp_overlay"></div>',
+            gallery_markup: '<div class="pp_gallery"> \
+								<a href="#" class="pp_arrow_previous">Previous</a> \
+								<div> \
+									<ul> \
+										{gallery} \
+									</ul> \
+								</div> \
+								<a href="#" class="pp_arrow_next">Next</a> \
+							</div>',
+            image_markup: '<img id="fullResImage" src="{path}" />',
+            flash_markup: '<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="{width}" height="{height}"><param name="wmode" value="{wmode}" /><param name="allowfullscreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="movie" value="{path}" /><embed src="{path}" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" width="{width}" height="{height}" wmode="{wmode}"></embed></object>',
+            quicktime_markup: '<object classid="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B" codebase="http://www.apple.com/qtactivex/qtplugin.cab" height="{height}" width="{width}"><param name="src" value="{path}"><param name="autoplay" value="{autoplay}"><param name="type" value="video/quicktime"><embed src="{path}" height="{height}" width="{width}" autoplay="{autoplay}" type="video/quicktime" pluginspage="http://www.apple.com/quicktime/download/"></embed></object>',
+            iframe_markup: '<iframe src ="{path}" width="{width}" height="{height}" frameborder="no"></iframe>',
+            inline_markup: '<div class="pp_inline">{content}</div>',
+            custom_markup: '',
+            social_tools: false
+          });
+        });
+				/* ]]> */
+      </script><script type="text/javascript">
+/* <![CDATA[ */
+var wooFeedbackL10n = {"nextButton":"Next \u2192","prevButton":"\u2190 Previous"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="http://cdn.clickatell.com/wp-content/themes/canvas/includes/js/feedback.js"></script>
+	    
+    
+<script type="text/javascript">
+var __ALC_Deployment = 9877;
+document.write(unescape("%3Cscript src='"+document.location.protocol+"//depot.liveagentforsalesforce.com/app/js/lt.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="http://depot.liveagentforsalesforce.com/app/js/lt.js" type="text/javascript"></script><script type="text/javascript" src="http://depot.liveagentforsalesforce.com/app/genid.php?id=9877&amp;r=0.6743279522046269"></script><script type="text/javascript" src="http://depot.liveagentforsalesforce.com/app/deployment.php?id=9877&amp;ptid=9877-1b3718e68-402e-40af-a9b5-a753d9b35496&amp;stid=1b3718e68-402e-40af-a9b5-a753d9b35496&amp;oref=Direct&amp;chat=null&amp;r=0.5696828799869037&amp;d[]=11514&amp;b[]=15276"></script>
+
+<script>// Function to start and stop sliding fixed content
+		jQuery(document).ready(function($) {
+		$(window).bind("load", function() {
+		var scrollingDiv = $(".static"),
+			top = $('.static').offset().top - 20,
+			height = $('.static').outerHeight(true),
+			scroller = $('.scroller').outerHeight(true),
+			bottom = $('.stopper').offset().top - height;
+		  
+				$(document).scroll(function(){	
+				// what the y position of the scroll is
+				var y = $(this).scrollTop();
+				//	z = $(this).scrollTop() + $(window).height();
+				// above the start point
+				if (y <= top ) {
+//						scrollingDiv.removeClass('fixed');
+//						scrollingDiv.removeClass('fixed-bottom');
+						
+						scrollingDiv
+						.stop()
+						.animate({"marginTop": "0px"}, 'slow', 'swing' );
+					}
+				// below the start point and above the end point
+				else if (y >= top & y < bottom ) { 
+//						scrollingDiv.addClass('fixed');
+						
+						scrollingDiv
+						.stop()
+						.animate({"marginTop": ($(window).scrollTop()) - top + 10 + "px"}, 'slow', 'swing' );
+					}
+				
+				// below the end point
+				else if (y >= bottom) {
+//						scrollingDiv.removeClass('fixed');
+//						scrollingDiv.addClass('fixed-bottom');
+						scrollingDiv
+						.stop()
+						.animate({"marginTop": scroller - height + "px"}, 'slow', 'swing' );
+					}
+				});
+			});			
+		});
+</script><div style="top: -1000px; position: absolute; z-index: 1000;" id="__ALC_INVITE_DIV_15277"><div style=" width:292px; height:159px;"><img id="alc_invite_image_15277" name="alc_invite_image_15277" src="http://depot.liveagentforsalesforce.com/app/chat/invites/1/invite_blue.png" alt="" usemap="#alc_invite_map_15277" height="159" width="292" border="0"><map id="alc_invite_map_15277" name="alc_invite_map_15277"><area shape="circle" coords="230, 8, 9" href="" onclick="_alc.rejectInvite(); return false;"><area shape="rect" coords="230, 0, 272, 17" href="" onclick="_alc.rejectInvite(); return false;"><area shape="circle" coords="270, 8, 9" href="" onclick="_alc.rejectInvite(); return false;"><area shape="circle" coords="79, 116, 13" href="" onclick="_alc.startChat(15277); return false;"><area shape="rect" coords="80, 103, 210, 129" href="" onclick="_alc.startChat(15277); return false;"><area shape="circle" coords="211, 117, 13" href="" onclick="_alc.startChat(15277); return false;"></map></div></div><img src="http://livet112.liveagentforsalesforce.com/firstping?userAgent=Mozilla%2F5.0%20(Windows%20NT%206.1%3B%20WOW64%3B%20rv%3A20.0)%20Gecko%2F20100101%20Firefox%2F20.0&amp;oref=Direct&amp;loc=http%3A%2F%2Fwww.clickatell.com%2Fapis-scripts%2F%3Fcid%3D206647&amp;ptid=9877-1b3718e68-402e-40af-a9b5-a753d9b35496&amp;stid=1b3718e68-402e-40af-a9b5-a753d9b35496&amp;deployment=9877&amp;details=%7B%22language%22%3A%22en-US%22%2C%22custom%22%3A%5B%5D%2C%22Flash%20Version%22%3A-1%2C%22Screen%22%3A%221152x864%22%2C%22time_offset%22%3A-300%7D&amp;r=0.8156832121337997" id="activa_live_chat_tp" style="position: absolute; top: -1000px;"></body>

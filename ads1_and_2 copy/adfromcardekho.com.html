@@ -1,0 +1,697 @@
+<head>
+                <title>Nissan Sunny</title>
+                <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=8">
+                <!-- <meta name="viewport" content="width=device-width"> -->
+                <link rel="stylesheet" href="css/sunny.css" type="text/css" media="screen">
+<link href="img/favicon-icon.ico" rel="shortcut icon" type="image/x-icon">
+                <!-- Tablet -->
+                <link href="css/tablet.css" rel="stylesheet" type="text/css" media="only screen and (min-width:321px) and (max-width:768px)">
+
+                <!-- IE6 "fix" for the close png image -->
+                <!--[if lt IE 7]>
+                <link type='text/css' href='css/basic_ie.css' rel='stylesheet' media='screen' />
+                <![endif]-->
+                <script src="//connect.facebook.net/en_US/all.js#appId=126246904142469&amp;xfbml=1" id="facebook-jssdk"></script><script src="http://www.google-analytics.com/ga.js" async="" type="text/javascript"></script><script type="text/javascript" src="js/jquery-1.4.2.min"></script>
+                <script type="text/javascript" src="js/s3Slider.js"></script>
+                <script type="text/javascript" src="js/jquery.simplemodal.js"></script>
+                <script type="text/javascript" src="js/basic.js"></script>
+                <script type="text/javascript" src="js/dropdowntabs.js"></script>
+                
+                	
+                
+                
+                <style type="text/css">
+/*Demo Styles*/
+                    p {
+	padding:0 30px 30px 30px;
+	color:#fff;
+	font:11pt "Helvetica Neue", "Helvetica", Arial, sans-serif;
+	text-shadow: #000 0px 1px 0px;
+	line-height:200%;
+}
+p a {
+	font-size:10pt;
+	text-decoration:none;
+	outline: none;
+	color:#ddd;
+	background:#222;
+	border-top:1px solid #333;
+	padding:5px 8px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	-moz-box-shadow: 0px 1px 1px #000;
+	-webkit-box-shadow: 0px 1px 1px #000;
+	box-shadow: 0px 1px 1px #000;
+}
+p a:hover {
+	background-color:#427cb4;
+	border-color:#5c94cb;
+	color:#fff;
+}
+.nissan_logo {
+	padding:0px 0px 0px 0px;
+	margin-bottom:0px;
+	float:left;
+	margin-top:0px;
+}
+#content {
+	margin-top:15px;
+	background:#111;
+	background:rgba(0, 0, 0, 0.65);
+	width:266px;
+	height:84px;
+	float:left;
+	text-align:left;
+}
+.stamp {
+	float: right;
+	margin: 15px 30px 0 0;
+}
+</style>
+<script type="text/javascript">
+function showUser(str)
+{
+if (str=="")
+  {
+  document.getElementById("txtHint").innerHTML="";
+  return;
+  }
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open("GET","getuser.php?q="+str,true);
+xmlhttp.send();
+}
+</script>
+                <script type="text/javascript">
+                    $(document).ready(function() {
+                        $('#slider1').s3Slider({
+                            // timeOut: 9000
+                            timeOut: 3000
+                        });
+                    });
+                </script>
+                <script type="text/javascript">
+                    function clearText(thefield){
+                        if (thefield.defaultValue==thefield.value)
+                            thefield.value = ""
+                    }
+                </script>
+                <script type="text/javascript">
+
+                    function validateform(frmObj)
+                    {
+                        if(frmObj.name.value=='')
+                        {
+                            alert("Please enter your name.");
+                            frmObj.name.focus();
+                            return false;
+                        }
+                        
+                        if(frmObj.email.value=='')
+                        {
+                            alert("Please enter your email.");
+                            frmObj.email.focus();
+                            return false;
+                        }
+
+                        if(frmObj.email.value!='')
+                        {
+                            var reg           = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+                            var address       = frmObj.email.value;
+
+                            if(reg.test(address) == false)
+                            {
+
+                                alert("Please enter valid from email addresss.");
+                                frmObj.email.focus();
+                                return false;
+                            }
+                        }
+                        //mibile
+                        if(frmObj.mobile.value=='')
+                        {
+                            alert("Please enter your mobile number.");
+                            frmObj.mobile.focus();
+                            return false;
+                        }
+
+                        var y = frmObj.mobile.value;
+
+                        if(isNaN(y)||y.indexOf(" ")!=-1)
+                        {
+                            alert("The Mobile number you Entered is not a Numeric value. Please check and try again");
+                            frmObj.mobile.focus();
+                            return false;
+                        }
+                        //landline
+//                        if(frmObj.landline.value=='')
+//                        {
+//                            alert("Please enter your landline number.");
+//                            frmObj.landline.focus();
+//                            return false;
+//                        }
+//                        var y = frmObj.landline.value;
+//
+//                        if(isNaN(y)||y.indexOf(" ")!=-1)
+//                        {
+//                            alert("The landline number you Entered is not a Numeric value. Please check and try again");
+//                            frmObj.landline.focus();
+//                            return false;
+//                        }
+                        //Preferd Contact
+                        if(frmObj.Preferred_Contact.value=='select-one')
+                        {
+                            alert("Please Select Preferred Contact.");
+                            frmObj.Preferred_Contact.focus();
+                            return false;
+                        }
+
+//                        if(frmObj.address.value=='')
+//                        {
+//                            alert("Please Enter Address.");
+//                            frmObj.address.focus();
+//                            return false;
+//                        }
+                    }
+                    
+                    function changescity(value)
+                    {
+                        if(value=='Other')
+                        {
+                            document.getElementById('span_city').style.display ="inline";
+                        }
+                        else
+                        {
+                            document.getElementById('span_city').style.display ="none";
+                        }
+                    }
+
+                    function changesdealer(value)
+                    {
+                        if(value=='Dealer_Other')
+                        {
+                            document.getElementById('span_dealer').style.display ="inline";
+
+                        }
+                        else
+                        {
+                            document.getElementById('span_dealer').style.display ="none";
+                        }
+                    }
+
+                    function getXMLHTTP() { //fuction to return the xml http object
+                        var xmlhttp=false;
+                        try{
+                            xmlhttp=new XMLHttpRequest();
+                        }
+                        catch(e)	{
+                            try{
+                                xmlhttp= new ActiveXObject("Microsoft.XMLHTTP");
+                            }
+                            catch(e){
+                                try{
+                                    xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+                                }
+                                catch(e1){
+                                    xmlhttp=false;
+                                }
+                            }
+                        }
+
+                        return xmlhttp;
+                    }
+
+                    function getCenter(cityId) {
+
+                        var strURL="findcenter.php?center="+cityId;
+                        var req = getXMLHTTP();
+
+                        if (req) 
+                        {
+                            req.onreadystatechange = function() {
+                                if (req.readyState == 4) {
+                                    // only if "OK"
+                                    if (req.status == 200) {
+                                        document.getElementById('centerdiv').innerHTML=req.responseText;
+                                        //$('#centerdiv').html(req.responseText);
+                                    } else {
+                                        alert("There was a problem while using XMLHTTP:\n" + req.statusText);
+                                    }
+                                }
+                            }
+                            req.open("GET", strURL, true);
+                            req.send(null);
+                        }
+                        //$('#centerdiv').append('<select><option>1</option><option>2</option></select>');
+                        ab();
+                    }
+
+                </script>
+                <script type="text/javascript">
+	
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-15726015-24']);
+	_gaq.push(['_trackPageview']);
+	
+	(function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+	
+	</script>
+<style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}
+.fb_invisible{display:none}
+.fb_reset{background:none;border-spacing:0;border:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}
+.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}
+.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}
+.fb_dialog_content{background:#fff;color:#333}
+.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px;top:8px\9;right:7px\9}
+.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}
+.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}
+.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}
+.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}
+.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}
+.fb_dialog_top_left,
+.fb_dialog_top_right,
+.fb_dialog_bottom_left,
+.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}
+/* @noflip */
+.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}
+/* @noflip */
+.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}
+/* @noflip */
+.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}
+/* @noflip */
+.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right,
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right{width:10px;height:100%}
+.fb_dialog_vert_left{margin-left:-10px}
+.fb_dialog_vert_right{right:0;margin-right:-10px}
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{width:100%;height:10px}
+.fb_dialog_horiz_top{margin-top:-10px}
+.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}
+.fb_dialog_iframe{line-height:0}
+.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}
+.fb_dialog_content .dialog_title > span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif)
+no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}
+body.fb_hidden{-webkit-transform:none;height:100%;margin:0;left:-10000px;overflow:visible;position:absolute;top:-10000px;width:100%
+}
+.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif)
+white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}
+.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}
+#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}
+#fb-root #fb_dialog_ipad_overlay.hidden{display:none}
+.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}
+.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0 0, 0 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}
+.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%
+}
+.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0 0, 0 100%, from(#4966A6),
+color-stop(0.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset,
+rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}
+.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}
+.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}
+.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}
+#fb_dialog_loader_close{float:left}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}
+.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}
+.fb_iframe_widget iframe{position:absolute}
+.fb_iframe_widget_lift{z-index:1}
+.fb_hide_iframes iframe{position:relative;left:-10000px}
+.fb_iframe_widget_loader{position:relative;display:inline-block}
+.fb_iframe_widget_fluid{display:inline}
+.fb_iframe_widget_fluid span{width:100%}
+.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}
+.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_connect_bar_container div,
+.fb_connect_bar_container span,
+.fb_connect_bar_container a,
+.fb_connect_bar_container img,
+.fb_connect_bar_container strong{background:none;border-spacing:0;border:0;direction:ltr;font-style:normal;font-variant:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal;vertical-align:baseline}
+.fb_connect_bar_container{position:fixed;left:0 !important;right:0 !important;height:42px !important;padding:0 25px !important;margin:0 !important;vertical-align:middle !important;border-bottom:1px solid #333 !important;background:#3b5998 !important;z-index:99999999 !important;overflow:hidden !important}
+.fb_connect_bar_container_ie6{position:absolute;top:expression(document.compatMode=="CSS1Compat"? document.documentElement.scrollTop+"px":body.scrollTop+"px")}
+.fb_connect_bar{position:relative;margin:auto;height:100%;width:100%;padding:6px 0 0 0 !important;background:none;color:#fff !important;font-family:"lucida grande", tahoma, verdana, arial, sans-serif !important;font-size:13px !important;font-style:normal !important;font-variant:normal !important;font-weight:normal !important;letter-spacing:normal !important;line-height:1 !important;text-decoration:none !important;text-indent:0 !important;text-shadow:none !important;text-transform:none !important;white-space:normal !important;word-spacing:normal !important}
+.fb_connect_bar a:hover{color:#fff}
+.fb_connect_bar .fb_profile img{height:30px;width:30px;vertical-align:middle;margin:0 6px 5px 0}
+.fb_connect_bar div a,
+.fb_connect_bar span,
+.fb_connect_bar span a{color:#bac6da;font-size:11px;text-decoration:none}
+.fb_connect_bar .fb_buttons{float:right;margin-top:7px}
+.fb_edge_widget_with_comment{position:relative;*z-index:1000}
+.fb_edge_widget_with_comment span.fb_edge_comment_widget{position:absolute}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget{z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget .FB_Loader{left:0;top:1px;margin-top:6px;margin-left:0;background-position:50% 50%;background-color:#fff;height:150px;width:394px;border:1px #666 solid;border-bottom:2px solid #283e6c;z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.dark .FB_Loader{background-color:#000;border-bottom:2px solid #ccc}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.siderender
+.FB_Loader{margin-top:0}
+.fbpluginrecommendationsbarleft,
+.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}
+/* @noflip */
+.fbpluginrecommendationsbarleft{left:10px}
+/* @noflip */
+.fbpluginrecommendationsbarright{right:10px}</style></head>
+
+                <body class="body">
+<!--top black pach start-->
+<div class="pach"></div>
+<!--top black pach start-->
+<div class="mian_div">
+                  <div class="internal_main_div_Panel01"> 
+    
+    <!--Main div start-->
+    <div class="nissan_logo"><a href="http://www.nissan.in"><img src="img/nissan_logo.jpg" height="103" width="82"></a></div>
+    <div class="internal_nissan_sunny_logo"><img src="img/sunny_logo.png" height="78" width="182"> 
+                      <!--<div class="test_drive_link"><a href="test-drive.html">Test Drive</a></div>--> 
+                    </div>
+    
+    <!--Menu start-->
+    <div class="internal_menu_main_div">
+                      <div id="bluemenu" class="bluetabs">
+        <ul>
+                          <li><a href="home.html">Home</a></li>
+                          <li><a href="specification.html">Specification</a></li>
+                          <li><a href="gallery.html">Gallery</a></li>
+                          <li class="selected"><a href="test-drive.html">Test Drive</a></li>
+                          <!-- <li><a href="price.html">Price</a></li> -->
+                          <li><a href="price.php">Price</a></li>
+                          <li><a href="news.html">News</a></li>
+                          <li><a href="reviews.html">Reviews</a></li>
+                          <li><a href="locate-us.php">Dealer Locator</a></li>
+                        </ul>
+      </div>
+                      
+                      <!--1st drop down menu (rel="dropmenu1_b")-->
+                      <div id="dropmenu1_b" class="dropmenudiv_b"> <a href="http://www.dynamicdrive.com/style/csslibrary/category/C1/">Horizontal CSS Menus</a> <a href="http://www.dynamicdrive.com/style/csslibrary/category/C2/">Vertical CSS Menus</a> <a href="http://www.dynamicdrive.com/style/csslibrary/category/C4/">Image CSS</a> <a href="http://www.dynamicdrive.com/style/csslibrary/category/C6/">Form CSS</a> <a href="http://www.dynamicdrive.com/style/csslibrary/category/C5/">DIVs and containers</a> <a href="http://www.dynamicdrive.com/style/csslibrary/category/C7/">Links and Buttons</a> <a href="http://www.dynamicdrive.com/style/csslibrary/category/C8/">Other</a> </div>
+                      <script type="text/javascript">
+                                    //SYNTAX: tabdropdown.init("menu_id", [integer OR "auto"])
+                                    tabdropdown.init("bluemenu")
+                                </script> 
+                    </div>
+    <!--Menu end--> 
+    
+    <!--Main div end--> 
+    
+  </div>
+                  
+                  <!--Slide panel start-->
+<div class="slide_panel">
+    <div id="slider1">
+<!--        <img src="img/slider/sunny-offer_christmas.jpg" alt="1" /> -->
+ <!--           <img src="img/slider/sunny-offer_jan.jpg" alt="1" />	-->
+
+		<ul id="slider1Content">
+            <!-- <li class="slider1Image"> <img src="img/slider/slide16.jpg" alt="Sunny Special Edition Leather"/> <span style="height:0px;padding:0;"></span></li> -->
+            <li style="display: list-item;" class="slider1Image"> <img src="img/slider/slide_nsfl.jpg" alt="Nissan Super Fans League"> <span style="height: 0px; padding: 0px; display: inline;"></span></li>
+            <li class="slider1Image"> <img src="img/slider/slide18.jpg" alt="Sunny Xtronic Technology"> <span style="height:0px;padding:0;"></span></li>
+            <li class="slider1Image"> <img src="img/slider/slide19.jpg" alt="Sunny CVT Automatic/> <span style=" height:0px;padding:0;"=""></li>
+            <li class="slider1Image"> <img src="img/slider/slide20.jpg" alt="Sunny CVT Automatic"> <span style="height:0px;padding:0;"></span></li> 
+         
+<!--		<li class="slider1Image"><img src="img/slider/slide13.jpg" alt="1"> </li>
+
+
+		<li class="slider1Image"><img src="img/slider/slide12.jpg" alt="1">
+        <span class="right"><strong>Terms and Conditions</strong><br>
+          <br>
+          Insurance at Re 1 is applicable on Sunny Petrol Only<br><br>
+          ## Finance up to 100% of ex-showroom price. Credit at the sole discretion of financers<br><br>
+          # EMI is calculated for Sunny on loan of Rs. 4 Lacs for 5 years tenure<br><br>
+          Low EMI & free insurance is not applicable for Sunny Diesel<br>
+		</span>
+		</li>
+-->        
+        <!-- <li class="slider1Image"><img src="img/slider/slide01.jpg" alt="2" />
+        <span class="right"><strong>Terms and Conditions</strong><br>
+          <br>
+          Insurance at Re 1 is applicable on Sunny Petrol Only<br><br>
+          ## Finance up to 100% of ex-showroom price. Credit at the sole discretion of financers<br><br>
+          # EMI is calculated for Sunny on loan of Rs. 4 Lacs for 5 years tenure<br><br>
+          Low EMI & free insurance is not applicable for Sunny Diesel<br>
+		</span> 
+
+		</li>
+-->
+<!--
+        <li class="slider1Image"> <img src="img/slider/slide14.jpg" alt="Nissan Safety Driving Forum" /> </li>
+-->
+         
+
+<!--
+        <li class="slider1Image"> <img src="img/slider/slide02.jpg" alt="Nissan Sunny is Big in Size" /> <span class="right"><strong>Stretched in size</strong><br>
+          <br>
+          When admiring the Nissan Sunny, make sure you stand a few feet away to take in its entire length and size. From the dynamically sculpted front to the crispy sporty rear, the Sunny is sophisticated yet sporty, and visibly bigger, promising a level of refinement far beyond other compact sedans </span></li>
+        <li class="slider1Image"> <img src="img/slider/slide10.jpg" alt="Nissan Sunny is Stuffed with features" /><span class="right"><strong>Stuffed with features</strong><br />
+          <br>
+          <strong> Fine vision meters</strong> - The large, bright lettering of these meters provides clear, at-a-glance readability.<br>
+          <br>
+          <strong>Auto A/C</strong> – Keep interior at desired temperature<br>
+          <br>
+          <strong>Steering wheel controls</strong> – Allows easy control of the audio system </span></li>
+        <li class="slider1Image"><img src="img/slider/slide07.jpg" alt="Nissan Sunny has Premium Design" />  <span class="right"><strong>Its not just Design, but Premium Styling</strong><br>
+          <br>
+          Innovation meets simplicity and luxury meets the practicality inside the Nissan Sunny. It's heightened sense of style blends flawlessly with a wealth of features</span></li>
+        <li class="slider1Image"> <img src="img/slider/slide01.jpg" alt="Nissan Sunny has Advance Technology" /> <span class="right"><strong>Its not just power But advanced Technology</strong><br>
+          <br>
+          What you are Looking at is not just a car. This is the new Nissan Sunny. Stretched in Size, Stuffed with features, it's going to dare you to open your mind and re-examine your expectations from a car. </span></li>
+        <li class="slider1Image">  <img src="img/slider/slide03.jpg" alt="Nissan Sunny has a lot more" />  <span class="right"><strong>Expect More from the Nissan Sunny</strong><br>
+          <br>
+          Across 9 previous generations and 16 million units, customers have come to Expect More... </span></li>
+        <li class="slider1Image">  <img src="img/slider/slide04.jpg" alt="Nissan Sunny has excellent cabin space" />  <span class="right"><strong>Best in class cabin space</strong><br>
+          <br>
+          with legroom that is extraordinarily spacious, and seating that's just the right blend of luxurious texture and firm support. The Sunny is designed to take the ordinary out of everyday driving. </span></li>
+        <li class="slider1Image">  <img src="img/slider/slide05.jpg" alt="Nissan Sunny has Keyless Entry" />  <span class="right"><strong>iKey - Keyless Entry </strong><br>
+          <br>
+          Smart keyless entry with trunk release function that saves time and provides reassuring security. </span></li>
+        <li class="slider1Image">  <img src="img/slider/slide08.jpg" alt="Nissan Sunny has Push Button Start" /> <span class="right"><strong>Push button start</strong><br>
+          <br>
+          start the engine with the push of a button and lock or unlock the doors by touching the request switch on the door handle </span></li>
+        <li class="slider1Image">  <img src="img/slider/slide09.jpg" alt="Nissan Sunny has huge boot space" />  <span class="right"><strong>490L of boot space</strong><br>
+          <br>
+          The Nissan Sunny features a wide open, surprisingly roomy trunk with a generous storage space of 490 litres for those extra shopping and travel bags </span></li>
+-->
+        <div class="clear slider1Image"></div>
+
+      </ul> 
+
+	</div>
+  </div>
+                  
+                  <!--Slide panel end--> 
+                  
+                </div>
+<div class="content_area">
+                  <hr style="margin-top:10px; margin-left:auto; margin-right:auto; margin-bottom:10px;" size="1" align="center" color="#abaaaa">
+                  
+                  <!--News title Div start-->
+                  <div class="title_bg">
+	                  <div class="title">Test Drive</div>
+<!--	                  
+    	              <div class="title_offer">
+    	              	Exchange Bonus of upto Rs. 15,000/-
+    	              	<p>* Limited Period Offer</p>
+    	              </div>
+-->
+                  </div>
+                  <!--News title Div end-->
+                                    <!--Content Div start-->
+                  <div class="test-drive-content">
+    <div class="testdrive_panel_01">
+    <h3>Contact Details</h3>
+    <form id="frm-contact" action="/test-drive.php" method="post" onsubmit="Javascript:return validateform(this);">
+                      <div class="field">
+        <label class="field-name field-135">Name <span style="color:red">*</span></label>
+        <span class="field-value">
+                        <input value="" class="text-input textfield field-100" name="name" id="name" type="text">
+                        </span> </div>
+                      <div class="field">
+        <label class="field-name field-135">Email <span style="color:red">*</span></label>
+        <span class="field-value">
+                        <input value="" class="text-input textfield field-165" name="email" id="email" type="text">
+                        </span> </div>
+                      <div class="field">
+        <label class="field-name field-135">Mobile <span style="color:red">*</span></label>
+        <span class="field-value">
+                        <input value="" maxlength="10" class="text-input textfield field-100" name="mobile" id="mobile" type="text">
+                        </span> </div>
+                      <div class="field">
+        <label class="field-name field-135">Land line</label>
+        <span class="field-value">
+                        <input value="" class="text-input textfield field-100" name="landline" id="landline" type="text">
+                        </span> </div>
+                      <div class="field">
+        <label class="field-name field-135">Preferred Contact <span style="color:red">*</span></label>
+        <span class="field-value">
+                        <select class="field-100" name="Preferred_Contact" id="Preferred_Contact">
+          <option value="select-one">-Select One-</option>
+          <option value="Mobile"> Mobile</option>
+          <option value="Email"> Email</option>
+          <option value="Land line"> Land line</option>
+        </select>
+                        </span> </div>
+<!--                      <div class="field">
+        <label class="field-name field-135" style="vertical-align:top;">Address <span style="color:red">*</span></label>
+        <span class="field-value">
+                        <textarea name="address" id="address"> 
+                        </span> </div>-->
+                      <!-- 
+                      <div class="field">
+							<label class="field-name field-230">Yes, I would like a free car loan quotation</label>
+							<span class="field-value">
+								<input type="checkbox" name="quotaion" id="quotaion" style="vertical-align:middle;">
+							</span>
+						</div>-->
+                      </form></div>
+                      <div class="vehicle">
+                      <h3>Select Vehicle</h3>
+					  <div class="field">
+        <label class="field-name"> Fuel </label>
+        <span class="field-value">
+                        <select name="Fuel" id="Fuel" onchange="showUser(this.value)">
+          <option value="Petrol">Petrol</option>
+          <option value="Diesel">Diesel</option>
+          
+        </select>
+                        </span> </div>
+                      <div id="txtHint"><div class="field">
+        <label class="field-name"> Grade </label>
+        <span class="field-value">
+                        <select id="Model" name="Model">
+          <option value="Sunny XE">Sunny XE</option>
+          <option value="Sunny XL">Sunny XL</option>
+          <option value="Sunny XL CVT">Sunny XL CVT</option>
+          <option value="Sunny XV">Sunny XV</option>
+          <option value="Sunny XV Sp Edition">Sunny XV Special Edition</option>
+        </select>
+                        </span> </div></div>
+                        
+                      <div class="field">
+        <label class="field-name"> City </label>
+        <span class="field-value">
+                        <input name="city" value="" class="frmfield" id="city" type="text">
+                        </span> </div>
+                      <div class="field">
+        <label class="field-name"> I would like to hear <br>
+                          from you with in. </label>
+        <span class="field-value">
+                        <select name="hear" id="hear">
+          <option value="1 Week">1 Week</option>
+          <option value="2 Weeks">2 Weeks</option>
+          <option value="1 Month">1 Month</option>
+        </select>
+
+                        </span> </div>
+						
+                      <div class="clear"></div>
+                      <div class="button">
+        <input name="data_from" value="sunny-website" id="data_from" type="hidden">
+        <input id="submit" class="submit" name="submit" value="" type="submit">
+      </div>
+                    
+  </div>
+                 <div class="clear"></div>
+<!--                   <div id="sunny_terms">
+                      
+					<label>*Price for Sunny XE Petrol ex-showroom Delhi. Other variants please confirm with your local Dealer. Accessories shown are not part of standard fitment and subject to availability. Please consult your local dealer for details. Terms & Conditions apply.</label>
+                  </div>
+              -->
+
+<!--
+    	<br>
+    	    <hr>
+	<h3 style="color: #000000; font-family: 'NissanAGLightSC','Lucida Grande',Tahoma,Verdana,Arial,Helvetica,sans-serif; font-size: 18px; margin-top: 20px; margin-left: 30px; margin-bottom: 0px">Terms and Conditions</h3><br>
+          <p style="font-size: 10px; padding-bottom: 0px; padding-top: 0px">
+* Terms & conditions Apply:
+*100% OFF: 1 winner every week on Sunny cars purchased and delivered during scheme period (1st October 2012 to 20th November 2012) | For ½ kg Gold: 1 winner to be selected after scheme period. All Sunny cars purchased and delivered during scheme period are eligible for the contest | **Exchange Bonus: Exchange bonus of upto Rs 50,000 – as applicable on different models. Kindly contact dealer for further details | ##Free Insurance: Free insurance scheme is available through Nissan Tied up Insurance Co. only, generated at Nissan dealerships. | #Various flexible low EMI options available | ~~Total Benefits: As applicable on different models. Terms and conditions apply. Contact nearest Nissan dealer for more details | Finance given on sole discretion of financier | Accessories shown are not part of standard fitments and subject to availability. Please consult your local dealer for details.
+          </p>
+-->
+<!--                  
+    	<br>
+    	    <hr>
+	<h3 style="color: #000000; font-family: 'NissanAGLightSC','Lucida Grande',Tahoma,Verdana,Arial,Helvetica,sans-serif; font-size: 18px; margin-top: 20px; margin-left: 30px; margin-bottom: 0px">Terms and Conditions</h3><br>
+          <p style="font-size: 10px; padding-bottom: 0px; padding-top: 0px">
+          Insurance at Re 1 is applicable on Sunny Petrol Only. 
+          ## Finance up to 100% of ex-showroom price. Credit at the sole discretion of financers. <br>
+          # EMI is calculated for Sunny on loan of Rs. 4 Lacs for 5 years tenure. 
+          Low EMI & free insurance is not applicable for Sunny Diesel.
+          </p>
+-->
+                </div>
+<!--Content Div end-->
+</div>
+
+<!--Footer start-->
+<div class="footer">
+	<span class="toll-num"><a href="test-drive.php">Book a Test Drive</a> | Toll Free Number : 1800-209-4080</span>
+	<span style="float:right;">
+	<a href="http://nissanmicra.co.in" target="_blank">Nissan Micra India</a> | 
+	<a href="privacy-policy.html">Privacy Policy</a> | 
+	<a href="customer_care.html">Customer Care</a> | 
+	<a href="copyright-disclaimer.html">Copyright and Disclaimer</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	</span>
+	<a href="http://www.facebook.com/NissanSunnyIndia" target="_blank" style="margin-right:10px; vertical-align:middle; float:right;"><img src="img/facebook-footer-icon.png" alt="" height="16" width="16"></a>
+
+	<div class=" fb_reset" id="fb-root"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe src="http://static.ak.facebook.com/connect/xd_arbiter.php?version=24#channel=f16c712002bf04c&amp;origin=http%3A%2F%2Fnissansunnyindia.com&amp;channel_path=%2Ftest-drive.php%3Ffb_xd_fragment%23xd_sig%3Df3acd102e150e66%26" style="border: medium none;" tab-index="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_http" allowtransparency="true" name="fb_xdm_frame_http" frameborder="0" scrolling="no"></iframe><iframe src="https://s-static.ak.facebook.com/connect/xd_arbiter.php?version=24#channel=f16c712002bf04c&amp;origin=http%3A%2F%2Fnissansunnyindia.com&amp;channel_path=%2Ftest-drive.php%3Ffb_xd_fragment%23xd_sig%3Df3acd102e150e66%26" style="border: medium none;" tab-index="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_https" allowtransparency="true" name="fb_xdm_frame_https" frameborder="0" scrolling="no"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe src="https://www.facebook.com/dialog/oauth?client_id=126246904142469&amp;response_type=token%2Csigned_request%2Ccode&amp;display=none&amp;domain=nissansunnyindia.com&amp;origin=1&amp;redirect_uri=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D24%23cb%3Df31a063a7dd26a8%26origin%3Dhttp%253A%252F%252Fnissansunnyindia.com%252Ff16c712002bf04c%26domain%3Dnissansunnyindia.com%26relation%3Dparent&amp;sdk=joey" style="display: none;" allowtransparency="true" name="f8cb3c7d37b26e" frameborder="0" scrolling="no"></iframe></div></div></div>
+	<script>(function(d, s, id) 
+	{
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=126246904142469&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+	<div fb-xfbml-state="parsed" class="fb-like fb_edge_widget_with_comment fb_iframe_widget" data-href="http://www.facebook.com/NissanSunnyIndia" data-send="false" data-layout="button_count" data-width="80" data-show-faces="false" data-font="lucida grande"><span style="height: 21px; width: 90px;"><iframe src="http://www.facebook.com/plugins/like.php?api_key=126246904142469&amp;locale=en_US&amp;sdk=joey&amp;channel_url=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D24%23cb%3Df28bb4538cb6994%26origin%3Dhttp%253A%252F%252Fnissansunnyindia.com%252Ff16c712002bf04c%26domain%3Dnissansunnyindia.com%26relation%3Dparent.parent&amp;href=http%3A%2F%2Fwww.facebook.com%2FNissanSunnyIndia&amp;node_type=link&amp;width=90&amp;font=lucida%20grande&amp;layout=button_count&amp;colorscheme=light&amp;show_faces=false&amp;send=false&amp;extended_social_context=false" class="fb_ltr" title="Like this content on Facebook." style="border: medium none; overflow: hidden; height: 21px; width: 90px;" name="fcfaa7c5f0f168" id="f5f1e16fdde762" scrolling="no"></iframe></span></div>
+</div>
+<!--Footer end-->
+<div class="footer-manage-link">
+  <div class="wrapper">
+    <span><a href="http://phonethics.in" target="_blank">Website managed by <em>Phonethics.in</em></a></span>
+  </div>
+</div>
+<!-- Google Code for Remarketing tag -->
+<!-- Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. For instructions on adding this tag and more information on the above requirements, read the setup guide: google.com/ads/remarketingsetup -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 995441721;
+var google_conversion_label = "mHj4CJ_lvwQQufjU2gM";
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script><iframe name="google_conversion_frame" src="http://googleads.g.doubleclick.net/pagead/viewthroughconversion/995441721/?random=1367628521755&amp;cv=7&amp;fst=1367628521755&amp;num=1&amp;fmt=1&amp;label=mHj4CJ_lvwQQufjU2gM&amp;guid=ON&amp;u_h=1024&amp;u_w=1280&amp;u_ah=984&amp;u_aw=1280&amp;u_cd=24&amp;u_his=50&amp;u_tz=-300&amp;u_java=false&amp;u_nplug=0&amp;u_nmime=0&amp;url=http%3A//nissansunnyindia.com/test-drive.php&amp;frm=0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" frameborder="0" height="13" scrolling="no" width="300"><img height="1" width="1" border="0" src="http://googleads.g.doubleclick.net/pagead/viewthroughconversion/995441721/?frame=0&random=1367628521755&cv=7&fst=1367628521755&num=1&fmt=1&label=mHj4CJ_lvwQQufjU2gM&guid=ON&u_h=1024&u_w=1280&u_ah=984&u_aw=1280&u_cd=24&u_his=50&u_tz=-300&u_java=false&u_nplug=0&u_nmime=0&url=http%3A//nissansunnyindia.com/test-drive.php&frm=0" /></iframe>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/995441721/?value=0&amp;label=mHj4CJ_lvwQQufjU2gM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+
+ </body>

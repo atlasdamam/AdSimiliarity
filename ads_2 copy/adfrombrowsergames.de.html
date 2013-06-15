@@ -1,0 +1,723 @@
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+    <meta name="description" content="World of Tanks — Award-winning Tank Action MMO. Choose from over 150 American, Soviet, German and French armored vehicles and join fierce team-based PvP combats right from the start">
+    <title>World of Tanks — Tank Action MMO</title>
+
+    <link rel="stylesheet" type="text/css" href="/static/3.11.0.3/common/css/main-layout.css" media="screen" id="screenview">
+    <!--[if IE]>
+    <link rel="stylesheet" type="text/css" href="/static/3.11.0.3/common/css/ie.css" media="all" />
+<![endif]-->
+
+<link rel="stylesheet" type="text/css" href="/static/3.11.0.3/common/css/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="/static/3.11.0.3/common/css/block/scrollpane/scrollpane.css" media="all">
+<link rel="stylesheet" type="text/css" href="/static/3.11.0.3/common/css/print.css" media="print">
+<link rel="stylesheet" type="text/css" href="/static/3.11.0.3/common/css/javascript.css">
+<link rel="stylesheet" type="text/css" href="/static/3.11.0.3/plugins/fancybox/jquery.fancybox-1.3.4.css">
+
+
+
+
+
+
+    <link rel="stylesheet" type="text/css" href="/dcont/gskins_installed/wot_8_5/skin.css">
+
+
+<script src="https://ssl.google-analytics.com/ga.js" async="" type="text/javascript"></script><script type="text/javascript">
+    GAME = 'wot';
+    MEDIA_URL = "/static/3.11.0.3/";
+    CLANWARS_MEDIA_URL = "";
+    IFRAME_PROXY = "https://worldoftanks.com/utils/ssl_proxy/";
+    
+    ACCOUNT_AJAX_INFO_URL = "/ajax_info/";
+    var WORLD_REDIVISION_PROVINCE_LANDING_COLORING =false;
+
+    WOT_TIME_DELIMITER = ":";
+    WOT_DATE_DELIMITER = ".";
+    WOT_DATE_FORMAT = "dmy";
+
+    PENDING_OPERATION_JAVASCRIPT_TIMEOUT = 15;
+
+    
+
+    
+    var active_menu_id = "index";
+</script>
+<script src="/static/3.11.0.3/i18n/en.js"></script>
+
+
+    <script type="text/javascript" src="/static/3.11.0.3/jquery.js?b551d1d1"></script>
+
+    <script type="text/javascript" src="/static/3.11.0.3/wg_common.js?7a8b983e"></script>
+
+
+    <script type="text/javascript" src="/static/3.11.0.3/underscore.js?6dc59d3a"></script>
+
+
+    <script type="text/javascript" src="/static/3.11.0.3/uri.js?afd74dae"></script>
+
+
+    
+        <script type="text/javascript" src="/static/3.11.0.3/wg_geoip.js?9a973dd3"></script>
+    
+
+<script type="text/javascript" charset="utf-8" src="/static/3.11.0.3/plugins/porthole/porthole.js"></script>
+<script type="text/javascript">
+    //add csrf token for all ajasx requests
+    $.ajaxSetup({
+        beforeSend: function(xhr, settings) {
+            if (!(/^http:.*/.test(settings.url) || /^https:.*/.test(settings.url))) {
+                // Only send the token to relative URLs i.e. locally.
+                // CheckCSRF();
+                xhr.setRequestHeader("X-CSRFToken", "WNznyBGoYijTKfZuC0iyhg5GsCG2qSUs" );
+            }
+        }
+    });
+</script>
+<script type="text/javascript">
+if(!window.console) {
+    window.console = {log: $.noop};
+}
+</script>
+<script type="text/javascript" charset="utf-8" src="/static/3.11.0.3/jsbase/js/scripts.js"></script>
+<script type="text/javascript">
+    window.Settings = window.Settings || {};
+    window.Settings.HOME_URL = "/";
+</script>
+<script type="text/javascript">
+    window.Settings = window.Settings || {};
+    window.Settings.AuthenticationSSO = {"attemptImmediateCookie": {"path": "/", "name": "ptl_auth_sso_attempt_immediate"}};
+</script>
+<script type="text/javascript">
+    window.Settings = window.Settings || {};
+    window.Settings.AUTH_ERROR_CODE_UNAUTHORIZED = 401;
+</script>
+<script type="text/javascript">
+    window.Settings = window.Settings || {};
+    window.Settings.AUTH_IS_AUTHENTICATED = 0;
+    window.Settings.AUTH_LOGOUT_URL = "/auth/notify/signout/";
+
+    window.Settings.AUTH_OPENID_VERIFY_URL = 'https://worldoftanks.com/auth/oid/verify/';
+    window.Settings.AUTH_OPENID_VERIFY_IMMEDIATE_URL = 'https://worldoftanks.com/auth/oid/verify/immediate/';
+    window.Settings.AUTH_OPENID_PROCESS_STATUS_URL_TEMPLATE = '/auth/oid/process/status/<%= token %>/';
+    window.Settings.AUTH_OPENID_PROCESS_TOKEN_QUERY_PARAMETER = 'openid_process_token';
+</script>
+<script type="text/javascript" charset="utf-8" src="/static/3.11.0.3/authenticationoid/js/openid.js"></script>
+
+    
+
+
+
+    <script type="text/javascript" src="/static/3.11.0.3/registration/landing_pages/layouts/standard/layout.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/3.11.0.3/registration/landing_pages/layouts/standard/layout.css">
+        
+    <script type="text/javascript" src="/lstatic/native/ac_runactivecontent.js"></script>
+    <script type="text/javascript" src="/lstatic/native/skin.js"></script>
+    <link rel="stylesheet" type="text/css" href="/lstatic/native/skin.css">
+    
+    <script type="text/javascript" src="/static/3.11.0.3/plugins/flash/jwplayer/jwplayer.js"></script>
+
+<script type="text/javascript" charset="utf-8" src="/static/3.11.0.3/plugins/jquery/jcarousel/jquery.jcarousel.min.js"></script> 
+<link rel="stylesheet" type="text/css" href="/static/3.11.0.3/plugins/jquery/jcarousel/skin.css">
+
+    
+<link rel="stylesheet" type="text/css" href="/static/3.11.0.3/common/css/block/b-tooltip/b-tooltip.css" media="screen" id="screenview">
+<script type="text/javascript">
+    jQuery(document).ready(function(){
+        expandableLang = new wot_hl.MenuWnd('#js-lang-wrapper', {direction: 'down'});
+    });
+</script>
+
+
+<script type="text/javascript">
+    var ACCOUNT_NAME_MIN_LENGTH = 3;
+    var ACCOUNT_NAME_MAX_LENGTH = 24;
+    var ACCOUNT_NAME_REGEX = /^[a-zA-Z0-9_]+$/;
+    var ACCOUNT_LOGIN_MIN_LENGTH = 1;
+    var ACCOUNT_LOGIN_MAX_LENGTH = 50;
+    var ACCOUNT_LOGIN_REGEX = /^[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)*@([a-zA-Z0-9]([a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z]{2,4}$/;
+    var ACCOUNT_PASSWORD_MIN_LENGTH = 6;
+    var ACCOUNT_PASSWORD_MAX_LENGTH = 100;
+    var ACCOUNT_PASSWORD_REGEX = /^[a-zA-Z0-9_]+$/;
+</script>
+
+<script type="text/javascript">
+    var REGISTRATION_CREATE_URL = '/play/en/create/';
+    var REGISTRATION_VALIDATE_URL = '/play/en/validate/';
+    
+        var EMAIL_AUTOCOMPLETE_ENABLED = true;
+    
+</script> 
+
+
+    <script type="text/javascript" src="/static/3.11.0.3/registration/js/verified_domains/cluster_usa.js"></script>
+    <script type="text/javascript" src="/static/3.11.0.3/common/autocomplete.js"></script>
+
+
+<script type="text/javascript" src="/static/3.11.0.3/registration/form_validation.js"></script>
+<script type="text/javascript" src="/static/3.11.0.3/registration/js/basic.js"></script>
+<script type="text/javascript" src="/static/3.11.0.3/personal/js/utils.js"></script>
+
+</head>
+
+<body class="local_en">
+
+    <div class="wrapper">
+        
+            <div class="header">
+    <div class="logo"></div>
+</div>
+        <!--.header-->
+        <div class="content">
+            
+                <div class="right-col">
+                    <h1 class="content_header content_header_en"><span></span></h1><!--.content_header-->
+                    <div class="form">
+                        
+
+    <!--
+    <div id="js-lang-wrapper" class="b-language">
+        <div class="js-visible-wnd b-language_value">
+            <img alt="en" class="b-language_value_img" src="/static/3.11.0.3/common/img/lang/lang-en.jpg"/>
+            <span class="b-language_value_name">English</span> <span class="b-language_value_name_arrow">&nbsp;</span>
+        </div>
+        <div class="js-expand-wnd js-hidden l-language-list">
+            <ul class="b-language-list">
+                
+                
+                
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="registration_services">
+        
+
+<div class="b-registration-service js-registration-external-service" style="display:none">
+    <span class="b-registration-service_ico b-registration-service_ico_None"></span>
+    <p class="b-registration-service_text">You are creating an account using </p>
+    <a class="b-registration-service_linck_cancel" href="/play/en/">Cancel</a>
+</div>
+<div class="js-registration-external-services l-service" style="display:none;">
+    <h4 class="b-login-header">Use your credentials from other services to create account faster</h4>
+    <ul class="b-service">
+        
+            <li><a class="b-service-facebook" href="/play/en/?external=facebook"><span>Facebook</span></a></li>
+        
+            <li><a class="b-service-google" href="/play/en/?external=google"><span>Google</span></a></li>
+        
+            <li><a class="b-service-yahoo" href="/play/en/?external=yahoo"><span>Yahoo</span></a></li>
+        
+            <li><a class="b-service-twitter" href="/play/en/?external=twitter"><span>Twitter</span></a></li>
+        
+    </ul>
+</div>
+<script type="text/javascript">
+    (function($){
+    $(function(){
+        
+        $('.js-registration-external-services').show();
+        
+    });
+    })(jQuery);
+</script>
+<noscript>
+    <h4 class="b-login-header">Use your credentials from other services <br/> to create account faster</h4>
+    <div class="b-message-warning">
+    Simplified registration through external services disabled. Please enable JavaScript in your browser to use simplified registration.
+    </div>
+</noscript>
+
+
+    </div>-->
+    <div class="registration_form b-content-registration">
+        
+        
+        <form class="b-form registration_form" action="/play/en/" id="registration-form" method="post">
+            <input name="csrfmiddlewaretoken" value="WNznyBGoYijTKfZuC0iyhg5GsCG2qSUs" type="hidden">
+            <input name="form_token" value="adccd05c7d1ea5e5df84e07ba1e7c4cf" id="id_form_token" type="hidden">
+
+            
+
+            <div style="display:none;" id="rules-dialog">
+                <div class="b-message-info b-content"> <p>USER_NEW_TEXT
+</p> </div>
+                <span class="b-button b-button__colored">
+                    <a href="#" class="b-button_right" id="js-close-rules-button">Close</a>
+                </span>
+            </div>
+            
+
+
+<fieldset class="b-login b-login-content b-login__tooltip ">
+    <div class="b-label">
+        <label for="id_reg_login">Email</label>
+    </div>
+    <div class="b-input b-input__tooltip -metrika-nokeys">
+        
+            <div class="b-hint js-hint-email-popup" style="display: none;">
+                <p>Please check the email you entered. Did you mean:</p>
+<div class="container-similar-domains"></div>
+                <span class="b-hint_arrow"></span>
+            </div>
+        
+        <input autocomplete="off" name="reg_login" maxlength="50" id="id_reg_login" tabindex="1" type="text">
+        
+    </div>
+    <div>
+        <div class="descripton">Must be valid. You will be asked for it at login.</div>
+        <div class="b-decline"></div>
+    
+    </div>
+</fieldset>
+
+<fieldset class="b-login b-login-content">
+    <div class="b-label">
+        <label for="id_name">User name</label>
+    </div>
+    <div class="b-input"> <input autocomplete="off" name="name" maxlength="24" id="id_name" tabindex="2" type="text"> </div>
+    
+        <div class="b-decline b-decline__show">
+            
+        </div>
+    
+</fieldset>
+<div class="b-list-name js-reg-name-suggestion-block" style="display:none">
+    <h2 class="b-list-name-question">Possible variants:</h2>
+    <ul id="nicknames_group">
+    </ul>
+</div>
+
+<fieldset class="b-login b-login-content">
+    <div class="b-label"> 
+        
+        <label for="id_reg_password">Password</label>
+    </div>
+    <div class="b-input -metrika-nokeys"> <input autocomplete="off" name="reg_password" maxlength="100" id="id_reg_password" tabindex="4" type="password"> </div>
+    
+        <div class="b-decline b-decline__show">
+            
+        </div>
+    
+</fieldset>
+<fieldset class="b-login b-login-content">
+    <div class="b-label">
+        <label for="id_reg_re_password">Confirm password</label>
+    </div>
+    <div class="b-input -metrika-nokeys"> <input autocomplete="off" name="reg_re_password" maxlength="100" id="id_reg_re_password" tabindex="4" type="password"> </div>
+    <div class="b-decline b-decline__show">
+        
+    </div>
+</fieldset>
+
+<fieldset class="b-login b-captcha ">
+    <div>
+        <label for="id_cap_1">Type the text you see in the picture</label>
+<div id="id_cap" class="layoutfix b-captcha_field">
+    <div class="b-captcha_left_position">
+        <div class="b-captcha_wait">
+            <div style="width:170px;height:60px;" class="b-captcha-img"><img src="/captcha/?session_key=78b3e32eadda438e83d99d9b1f68b61c" alt="captcha" class="js-captcha-image" height="60"><input tabindex="5" name="cap_0" value="78b3e32eadda438e83d99d9b1f68b61c" id="id_cap_0" type="hidden"></div>
+            <div class="b-captcha_wait_blackout js-captcha-wait"></div>
+        </div>
+
+    </div>
+    <div class="b-captca-field">
+        <div><input autocomplete="off" name="cap_1" maxlength="6" tabindex="5" class="js-captcha-input" id="id_cap_1" type="text"></div>
+        <div class="b-captca-errors">
+            <div class="b-error">
+                <div class="b-error-text"></div>
+            </div>
+            <div class="b-decline"></div>
+        </div>
+        <a href="#" class="js-captcha-reload b-captcha-reload" style=""><span>Reload image</span></a>
+    </div>
+
+    <script type="text/javascript">
+    (function($) {
+
+        if (!window.wotCaptcha) {
+            window.wotCaptcha = {};
+            window.wotCaptcha.Reload = function() {
+                var images = $('.js-captcha-image');
+
+                images.each(function(i, v){
+                    var image = $(v);
+                    var src = image.attr('src');
+                    src = src.replace(/&hash=[^&]+/, '');
+                    var date = new Date();
+                    src += '&hash=' + date.getTime();
+                    image.attr('src', src);
+
+                });
+                images.load( function () {
+                        $(".js-captcha-wait").fadeOut("fast");
+                    });
+                jQuery('.js-captcha-input').val('');
+            };
+            window.wotCaptcha.Enable = function() {
+                var images = $('.js-captcha-image');
+                images.replaceWith(function() {
+                    var img = $('<img />');
+                    img.attr('src', $(this).attr('src'));
+                    img.attr('class', $(this).attr('class'));
+                    $(this).parent().find('input').removeAttr('disabled');
+                    return img;
+                });
+                var inputs = $('.js-captcha-input');
+                inputs.each(function(i, v){
+                    $(v).removeAttr('disabled');
+                });
+            };
+            window.wotCaptcha.Disable = function() {
+                var images = $('.js-captcha-image');
+                images.replaceWith(function() {
+                    var div = $('<div />');
+                    div.attr('src', $(this).attr('src'));
+                    div.attr('class', $(this).attr('class'));
+                    div.parent().find('input').attr('disabled', 'disabled');
+                    return div;
+                });
+                var inputs = $('.js-captcha-input');
+                inputs.each(function(i, v){
+                    $(v).attr('disabled', 'disabled');
+                });
+            };
+        }
+
+        // on ready
+        $(function() {
+            $('.js-captcha-reload').show().click(function() {
+                $(".js-captcha-wait").fadeIn("fast", window.wotCaptcha.Reload());
+                return false;
+            });
+        });
+
+    })(jQuery);
+    </script>
+</div>
+    </div>
+</fieldset>
+
+
+
+            
+
+
+            
+            <div class="b-message-warning-lite b-margin-big">
+                
+
+                
+                
+                
+                
+                
+
+                
+                
+                
+
+                
+                By clicking <span class="bold-font">Play for Free</span> you agree with <a href="/en/user_agreement" target="_blank">EULA</a>.
+            </div>
+            
+
+            <fieldset class="b-login b-login_field_indent_top b-login_nohidden">
+                    <div class="b-big-orange-buttonarea b-big-orange-tab">
+                        <span class="b-big-orange-button">
+                            <span class="b-big-orange-button_right b-button-wrap">
+                                <input id="registration-start-button" value="Play for Free" tabindex="7" type="submit">
+                            </span>
+                        </span>
+                    </div>
+                
+            </fieldset>
+
+
+        </form>
+
+    </div>
+
+                    </div><!--.form-->
+                </div>
+                <div class="left-col">
+                    <div class="media_video">
+                        
+                        <div class="promoVideo">
+	<div id="mediaplayer"></div>
+
+    <script language="javascript">
+        if (AC_FL_RunContent == 0) {
+            alert("This page requires AC_RunActiveContent.js.");
+        } else {
+            AC_FL_RunContent(
+                'codebase', 'https://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0',
+                'width', '472px',
+                'height', '298px',
+                'src', '/lstatic/native/wotvideocontainer?videourl=/lstatic/native/WOT.flv&videoscr=/lstatic/native/previewimage.jpg&autoplay=false',
+                'quality', 'high',
+                'pluginspage', 'https://www.macromedia.com/go/getflashplayer',
+                'align', 'middle',
+                'play', 'true',
+                'loop', 'true',
+                'scale', 'showall',
+                'wmode', 'transparent',
+                'devicefont', 'false',
+                'id', 'play_video',
+                'bgcolor', '#000000',
+                'name', 'play_video',
+                'menu', 'true',
+                'allowFullScreen', 'true',
+                'allowScriptAccess','always',
+                'swLiveConnect','true',
+                'movie', '/lstatic/native/wotvideocontainer?videourl=/lstatic/native/WOT.flv&videoscr=/lstatic/native/previewimage.jpg&autoplay=false',
+                'salign', ''
+                ); //end AC code
+        }
+    </script><embed src="/lstatic/native/wotvideocontainer.swf?videourl=/lstatic/native/WOT.flv&amp;videoscr=/lstatic/native/previewimage.jpg&amp;autoplay=false" quality="high" pluginspage="https://www.macromedia.com/go/getflashplayer" play="true" loop="true" scale="showall" wmode="transparent" devicefont="false" bgcolor="#000000" name="play_video" menu="true" allowfullscreen="true" allowscriptaccess="always" swliveconnect="true" salign="" type="application/x-shockwave-flash" height="298px" width="472px" align="middle"> 
+    <noscript>
+                <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" width="472" height="298" id="play_video" align="middle">
+                <param name="allowScriptAccess" value="always" />
+                <param NAME="wmode" VALUE="transparent">
+                <param name="allowFullScreen" value="true" />
+                <param name="movie" value="/lstatic/native/wotvideocontainer.swf?videourl=wowp_video.flv&videoscr=media/previewimage1.jpg&autoplay=false" />
+                <param name="quality" value="high" />
+                <param name="bgcolor" value="#000000" />
+                <embed wmode="transparent" src="/lstatic/native/wotvideocontainer.swf?videourl=/lstatic/native/WOT.flv&videoscr=/lstatic/native/previewimage.jpg&autoplay=false" quality="high" bgcolor="#000000" width="472" height="298" name="play_video" align="middle" allowScriptAccess="sameDomain" allowFullScreen="false" swliveconnect="true" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+                </object>
+    </noscript>
+</div>
+                        
+                    </div><!--.media_video-->
+
+                    <div class="media_screenshots">
+                        
+                        
+<div class="screenshots">
+    <!--<h4>SCREENSHOTS</h4>-->
+    <div class=" jcarousel-skin-screens-wn"><div style="position: relative; display: block;" class="jcarousel-container jcarousel-container-horizontal"><div style="overflow: hidden; position: relative;" class="jcarousel-clip jcarousel-clip-horizontal"><ul style="overflow: hidden; position: relative; top: 0px; left: 0px; margin: 0px; padding: 0px; width: 968px;" id="mycarousel" class="jcarousel-list jcarousel-list-horizontal">
+        <li jcarouselindex="1" style="float: left; list-style: none outside none;" class="jcarousel-item jcarousel-item-horizontal jcarousel-item-1 jcarousel-item-1-horizontal">
+            <img src="/lstatic/native/images/1-r.jpg">
+            <a href="/lstatic/native/images/1.jpg" class="media-screen" rel="group1"></a>
+        </li>
+        <li jcarouselindex="2" style="float: left; list-style: none outside none;" class="jcarousel-item jcarousel-item-horizontal jcarousel-item-2 jcarousel-item-2-horizontal">
+            <img src="/lstatic/native/images/2-r.jpg">
+            <a href="/lstatic/native/images/2.jpg" class="media-screen" rel="group1"></a>
+        </li>
+        <li jcarouselindex="3" style="float: left; list-style: none outside none;" class="jcarousel-item jcarousel-item-horizontal jcarousel-item-3 jcarousel-item-3-horizontal"><img src="/lstatic/native/images/3-r.jpg">
+            <a href="/lstatic/native/images/3.jpg" class="media-screen" rel="group1"></a>
+        </li>
+        <li jcarouselindex="4" style="float: left; list-style: none outside none;" class="jcarousel-item jcarousel-item-horizontal jcarousel-item-4 jcarousel-item-4-horizontal">
+            <img src="/lstatic/native/images/4-r.jpg">
+            <a href="/lstatic/native/images/4.jpg" class="media-screen" rel="group1"></a>
+        </li>
+        <li jcarouselindex="5" style="float: left; list-style: none outside none;" class="jcarousel-item jcarousel-item-horizontal jcarousel-item-5 jcarousel-item-5-horizontal">
+            <img src="/lstatic/native/images/5-r.jpg">
+            <a href="/lstatic/native/images/5.jpg" class="media-screen" rel="group1"></a>
+        </li>
+        <li jcarouselindex="6" style="float: left; list-style: none outside none;" class="jcarousel-item jcarousel-item-horizontal jcarousel-item-6 jcarousel-item-6-horizontal">
+            <img src="/lstatic/native/images/6-r.jpg">
+            <a href="/lstatic/native/images/6.jpg" class="media-screen" rel="group1"></a>
+        </li>
+        <li jcarouselindex="7" style="float: left; list-style: none outside none;" class="jcarousel-item jcarousel-item-horizontal jcarousel-item-7 jcarousel-item-7-horizontal">
+            <img src="/lstatic/native/images/7-r.jpg">
+            <a href="/lstatic/native/images/7.jpg" class="media-screen" rel="group1"></a>
+        </li>
+        <li jcarouselindex="8" style="float: left; list-style: none outside none;" class="jcarousel-item jcarousel-item-horizontal jcarousel-item-8 jcarousel-item-8-horizontal">
+            <img src="/lstatic/native/images/8-r.jpg">
+            <a href="/lstatic/native/images/8.jpg" class="media-screen" rel="group1"></a>
+        </li>
+    </ul></div><div disabled="true" style="display: block;" class="jcarousel-prev jcarousel-prev-horizontal jcarousel-prev-disabled jcarousel-prev-disabled-horizontal"></div><div disabled="false" style="display: block;" class="jcarousel-next jcarousel-next-horizontal"></div></div></div>
+</div>
+                        
+                    </div><!--.media_screenshots-->
+
+                    <div class="info">
+                        
+                        <div class="downloadd_box">
+    
+    <span class="downloadd_box_text">Already registered?</span><br>
+    <a class="downloadd_box_linc" href="http://downloads.worldoftanks.com/links/latest_web_install_us">Download game (4.4 Gb)</a>
+</div>
+                        
+                     </div><!--.info-->
+                </div>
+            
+        </div>
+        
+            <div class="awards">
+                
+                <ul>
+    
+        <li>
+            <img class="awards-nocolor" src="/static/3.11.0.3/registration/img/awards/guinness.png" alt="">
+            <img class="awards-color" src="/static/3.11.0.3/registration/img/awards/guinness-c.png" alt="">
+        </li>
+    
+        <li>
+            <img class="awards-nocolor" src="/static/3.11.0.3/registration/img/awards/gdn.png" alt="">
+            <img class="awards-color" src="/static/3.11.0.3/registration/img/awards/gdn-c.png" alt="">
+        </li>
+    
+        <li>
+            <img class="awards-nocolor" src="/static/3.11.0.3/registration/img/awards/gamepro.png" alt="">
+            <img class="awards-color" src="/static/3.11.0.3/registration/img/awards/gamepro-c.png" alt="">
+        </li>
+    
+        <li>
+            <img class="awards-nocolor" src="/static/3.11.0.3/registration/img/awards/ega_2011.png" alt="">
+            <img class="awards-color" src="/static/3.11.0.3/registration/img/awards/ega_2011-c.png" alt="">
+        </li>
+    
+        <li>
+            <img class="awards-nocolor" src="/static/3.11.0.3/registration/img/awards/e3_2011_rising_star.png" alt="">
+            <img class="awards-color" src="/static/3.11.0.3/registration/img/awards/e3_2011_rising_star-c.png" alt="">
+        </li>
+    
+        <li>
+            <img class="awards-nocolor" src="/static/3.11.0.3/registration/img/awards/e3_2011_hidden_gem.png" alt="">
+            <img class="awards-color" src="/static/3.11.0.3/registration/img/awards/e3_2011_hidden_gem-c.png" alt="">
+        </li>
+    
+        <li>
+            <img class="awards-nocolor" src="/static/3.11.0.3/registration/img/awards/e3_2011_best_of.png" alt="">
+            <img class="awards-color" src="/static/3.11.0.3/registration/img/awards/e3_2011_best_of-c.png" alt="">
+        </li>
+    
+        <li>
+            <img class="awards-nocolor" src="/static/3.11.0.3/registration/img/awards/e3_2011_award_needed.png" alt="">
+            <img class="awards-color" src="/static/3.11.0.3/registration/img/awards/e3_2011_award_needed-c.png" alt="">
+        </li>
+    
+</ul>
+                
+            </div><!--.awards-->
+        
+        <div class="footer">
+            
+            <ul class="copyr">
+    <li class="b-footer-support">
+        <a href="http://support.worldoftanks.com" target="_blank">support</a>
+    </li>
+    <li class="b-footer-copyr_wg">
+        <a href="http://wargaming.net/" target="_blank">© 2010–2013<br>Wargaming.net<br>All rights reserved. </a>
+    </li>
+    <li class="b-footer-copyr_bw">
+        <a href="http://www.bigworldtech.com/" target="_blank">Powered by<br>BigWorld<br>Technology™ ©</a>
+    </li>
+</ul>
+            
+    <div class="b-footer-copyr-item b-footer-copyr_esrb"> <a target="_blank" href="http://www.esrb.org/ratings/ratings_guide.jsp"> </a> </div>
+
+
+
+            
+        </div><!--.footer-->
+    </div><!--.wrapper-->
+
+    
+
+
+
+    
+
+    
+
+
+
+<!-- RadiumOne code begin -->
+
+
+
+
+    <script type="text/javascript">
+        <!--
+        document.write('<iframe src="https://rs.gwallet.com/r1/pixel/x2581r'+Math.round(Math.random()*10000000)+'" width="1" height="0" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>');
+        //-->
+    </script><iframe src="https://rs.gwallet.com/r1/pixel/x2581r1006428" marginwidth="0" marginheight="0" frameborder="0" height="0" scrolling="no" width="1"></iframe>
+    <noscript>
+        <iframe src="https://rs.gwallet.com/r1/pixel/x2581" width="1" height="0" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+    </noscript>
+
+
+
+
+<!-- RadiumOne code end -->
+
+
+
+
+
+
+    
+    
+    
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8323632-2']);
+        _gaq.push(['_setAllowLinker', true]);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+
+<!-- Yandex.Metrika counter -->
+    <div style="display:none;"><script type="text/javascript">
+        (function(w, c) {
+            (w[c] = w[c] || []).push(function() {
+                try {
+                    w.yaCounter7736065 = new Ya.Metrika({id:7736065, enableAll:true});
+                }
+                catch(e) { }
+            });
+        })(window, "yandex_metrika_callbacks");
+    </script></div>
+    <script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+    <noscript><div><img src="//mc.yandex.ru/watch/7736065" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    
+    
+    
+    <!-- Google Code for landing pages -->
+    <!-- Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. For instructions on adding this tag and more information on the above requirements, read the setup guide: google.com/ads/remarketingsetup -->
+    <script type="text/javascript">
+        /* <![CDATA[ */
+        var google_conversion_id = 956025417;
+        var google_conversion_label = "OHSACK_BkQQQyZTvxwM";
+        var google_custom_params = window.google_tag_params;
+        var google_remarketing_only = true;
+        /* ]]> */
+        </script>
+        <div class="google-conversion">
+            <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+            </script><iframe name="google_conversion_frame" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/956025417/?random=1369458155859&amp;cv=7&amp;fst=1369458155859&amp;num=1&amp;fmt=1&amp;label=OHSACK_BkQQQyZTvxwM&amp;guid=ON&amp;u_h=1024&amp;u_w=1280&amp;u_ah=984&amp;u_aw=1280&amp;u_cd=24&amp;u_his=50&amp;u_tz=-300&amp;u_java=false&amp;u_nplug=0&amp;u_nmime=0&amp;url=https%3A//worldoftanks.com/play/en/%3Futm_campaign%3D1000%26utm_medium%3D881%26utm_source%3D375%26sid%3DT%253DAmp-cmXJJkjvr345DyjqUkyNO1yVfc-d%2521P%253D0BZ4JWk4GXLvL05-OBBaxvE--umopx99bx4HZislvwZYASD5usta3xNyvsxb3LnNWW92JKePou3Dy2iZG3xJ423SrwHrN-KpiUE9EFxLFOyPcBqXDscxPv_XjZJsc52&amp;frm=0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" frameborder="0" height="13" scrolling="no" width="300"><img height="1" width="1" border="0" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/956025417/?frame=0&random=1369458155859&cv=7&fst=1369458155859&num=1&fmt=1&label=OHSACK_BkQQQyZTvxwM&guid=ON&u_h=1024&u_w=1280&u_ah=984&u_aw=1280&u_cd=24&u_his=50&u_tz=-300&u_java=false&u_nplug=0&u_nmime=0&url=https%3A//worldoftanks.com/play/en/%3Futm_campaign%3D1000%26utm_medium%3D881%26utm_source%3D375%26sid%3DT%253DAmp-cmXJJkjvr345DyjqUkyNO1yVfc-d%2521P%253D0BZ4JWk4GXLvL05-OBBaxvE--umopx99bx4HZislvwZYASD5usta3xNyvsxb3LnNWW92JKePou3Dy2iZG3xJ423SrwHrN-KpiUE9EFxLFOyPcBqXDscxPv_XjZJsc52&frm=0" /></iframe>
+        </div>
+        <noscript>
+        <div style="display:inline;">
+        <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/956025417/?value=0&amp;label=OHSACK_BkQQQyZTvxwM&amp;guid=ON&amp;script=0"/>
+        </div>
+    </noscript>
+
+
+
+    
+
+     
+
+
+
+
+
+
+     
+    <script type="text/javascript">jQuery(function(){ new regionWidget('challenge', '/geoip/region_widget/', 'top'); })</script> 
+     
+
+
+<div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div><div id="js-tooltip-container"></div><div id="js-autocomplete-container-1" class="b-account-search-div" style="display: none;"></div></body>

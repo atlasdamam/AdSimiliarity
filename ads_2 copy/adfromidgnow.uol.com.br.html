@@ -1,0 +1,496 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Otimizando a performance da rede para melhorar a performance dos seus sistemas</title>
+
+  
+    
+    	<link rel="canonical" href="http://whitepapers.computerworld.com.br/level3_wp_performance_de_rede">
+    
+
+
+  <meta name="description" content="Para enfrentar a latência, ganhando seu controle, você precisa entender as necessidades de seus aplicativos, usando-as para ditar a maneira como você usa os recursos da Wide Area Network (WAN)">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--[if lt IE 9]>
+  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <style rel="stylesheet">
+    * { margin:0; padding:0; outline:none; border:none; }
+    .wrapper { width:900px; margin:0 auto; overflow:hidden; position:relative; }
+    header, footer, nav, section, article, figure { display:block; }
+
+    .clearfix:after {visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;}
+    * html .clearfix { zoom:1; } /* IE6 */
+    *:first-child+html .clearfix { zoom:1; } /* IE7 */
+
+    html, body { height:100%; width:100%; font-family:arial; }
+    #container { position:absolute;left:0;top:0;width:100%;height:100%; }
+    #container > header { padding:12px 0px; background:#ffffff; color:#030303; }
+    #container > header .wrapper { overflow:hidden; }
+    #container > header figure { float:left; width:30%; }
+    #container > header hgroup { float:right; width:70%; }
+    #container > header h1 { margin:4% 0 2% 0; }
+
+    #container > section {  padding:30px 0; background:#d9d9d9; color:#000000; min-height:75%; }
+    #container div.left { float:left; width:45%; margin-left:9%; }
+    #container div.left img { margin:0 0 35px 15px; }
+    #container div.left li { margin-bottom:15px; margin-left:17px; }
+    #container div.left li h3 { font-size:17px; }
+    #container div.left li p { font-size:13px; }
+    #container div.right { float:right; width:40%; }
+    #container div.socialfloating { position:absolute; top:0; left:0; width:10%; }
+    #container div.socialfloating iframe { margin:10px 0 0 0; }
+
+    #content figure { text-align:center; }
+
+    #conversion header { background:#d02023; padding:16px 0px; }
+    #conversion header h2 { font-weight:bold; margin:4px 30px; padding:0; font-size:18px; text-align:left; color:#FFFFFF; }
+    #conversion header p { font-size:14px; line-height:18px; margin:4px 30px; font-size:14px; color:#FFFFFF; }
+    #conversion section { background:#ffffff; padding:20px 50px; }
+    #conversion section p { font-size:14px; line-height:16px; }
+
+    
+
+    #conversion .actions { text-align:center; }
+    #conversion .call_button { text-align:center; text-decoration:none; display:block; width:210px; height:45px; line-height:45px; border:0; font-weight:bold; font-size:20px; cursor:pointer; -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; margin:16px auto 25px; }
+    #conversion .call_button { color:#FFFFFF; background:#ff5353; background:-moz-linear-gradient(top, #ff5353 0%, #c40000 100%); background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff5353), color-stop(100%,#c40000)); background:-webkit-linear-gradient(top, #ff5353 0%,#c40000 100%); background:-o-linear-gradient(top, #ff5353 0%,#c40000 100%); background:-ms-linear-gradient(top, #ff5353 0%,#c40000 100%); filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5353', endColorstr='#c40000',GradientType=0 ); background:linear-gradient(top, #ff5353 0%,#c40000 100%); }
+    #conversion .call_button:hover { background:#ff5b5b; background:-moz-linear-gradient(top, #ff5b5b 0%, #d60e0e 100%); background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff5b5b), color-stop(100%,#d60e0e)); background:-webkit-linear-gradient(top, #ff5b5b 0%,#d60e0e 100%); background:-o-linear-gradient(top, #ff5b5b 0%,#d60e0e 100%); background:-ms-linear-gradient(top, #ff5b5b 0%,#d60e0e 100%); filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5b5b', endColorstr='#d60e0e',GradientType=0 ); background:linear-gradient(top, #ff5b5b 0%,#d60e0e 100%); }
+
+    #conversion form .field { margin-bottom: 10px; }
+    #conversion form .field div { margin-bottom: 5px; }
+    #conversion form select{ width: 100%;}
+    #conversion form label { display:position:relative; block; margin-bottom:10px; font-size:12px; color:; }
+    #conversion form input { width:100%; height:20px; line-height:20px; padding:0 0 0 3px; margin:3px 0 5px 0; display:block; border:1px solid #DDD; }
+    #conversion form input[type=radio] + label, #conversion form input[type=radio] + label + label { display: inline; }
+    #conversion form input[type=radio] { width: auto; display: inline; vertical-align: middle; margin: -5px 5px 0 0; }
+	#conversion form input[type=checkbox] { float: left; display: inline-block; width: auto; margin: 1px 6px 0 0; }
+	#conversion form input[type=checkbox] + label {width: 240px;display: inline-block;padding: 5px 0 4px 0;}
+    #conversion form textarea { width:100%; line-height:20px; padding:0 0 0 3px;margin:3px 0 5px 0; display:block; border:1px solid #DDD; }
+    #conversion form .notice { font-size:10px; color:; margin-top:15px; }
+    #conversion form label.error { display:none !important; }
+    #conversion form input.error, #conversion form textarea.error, #conversion form select.error { background:#FFDDDD; border:1px solid #ED7575; }
+    #conversion form #error-container { background:#FFDDDD; display:none; padding:10px; margin:0 -28px 20px -28px; border-radius:3px; -moz-border-radius:3px; -webkit-border-radius:3px; }
+    #conversion form #error-container p { color:#463A33; text-align:center; font-size:12px; margin:0; }
+    
+#container > header h1 {
+letter-spacing: -1px;
+font-size: 32px;
+font-family: arial,helvetica,sans-serif;
+margin: 0 0 17px 0;
+}
+
+#container > header h2 {
+font-size: 22px;
+font-weight: normal;
+letter-spacing: 0;
+}
+
+#container > header .wrapper {
+padding-top: 15px;
+}
+
+#container div.left img {
+border: 3px solid #D9D9D9;
+}
+  </style>
+
+  <meta property="og:title" content="Otimizando a performance da rede para melhorar a performance dos seus sistemas">
+  <meta property="og:image" content="https://rdstation-static.s3.amazonaws.com/images/landing_page/2712/offer-logo.jpg">
+  <meta property="fb:admins" content="159732357452275">
+
+
+  <script async="" src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en_US.pq-TpXiLgaE.O/m=plusone/rt=j/sv=1/d=1/ed=1/am=EQ/rs=AItRSTOY9mIG3t5Os0XGQNrlA_ssOaR9lA/cb=gapi.loaded_0"></script><script gapi_processed="true" src="https://apis.google.com/js/plusone.js" async="" type="text/javascript"></script><script src="//connect.facebook.net/en_US/all.js#xfbml=1&amp;appId=159732357452275" id="facebook-jssdk"></script><script src="https://platform.twitter.com/widgets.js" id="twitter-wjs"></script><script src="http://www.google-analytics.com/ga.js" async="" type="text/javascript"></script><script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-757904-11']);
+    if (document.domain.indexOf("computerworld.com.br") != -1) { _gaq.push(['_setDomainName', 'computerworld.com.br']); }
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_trackPageview']);
+    (function() {
+     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     })();
+   </script>
+
+<style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}
+.fb_invisible{display:none}
+.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}
+.fb_reset > div{overflow:hidden}
+.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}
+.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}
+.fb_dialog_content{background:#fff;color:#333}
+.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px;top:8px\9;right:7px\9}
+.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}
+.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}
+.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}
+.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}
+.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}
+.fb_dialog_top_left,
+.fb_dialog_top_right,
+.fb_dialog_bottom_left,
+.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}
+/* @noflip */
+.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}
+/* @noflip */
+.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}
+/* @noflip */
+.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}
+/* @noflip */
+.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right,
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right{width:10px;height:100%}
+.fb_dialog_vert_left{margin-left:-10px}
+.fb_dialog_vert_right{right:0;margin-right:-10px}
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{width:100%;height:10px}
+.fb_dialog_horiz_top{margin-top:-10px}
+.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}
+.fb_dialog_iframe{line-height:0}
+.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}
+.fb_dialog_content .dialog_title > span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif)
+no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}
+body.fb_hidden{-webkit-transform:none;height:100%;margin:0;left:-10000px;overflow:visible;position:absolute;top:-10000px;width:100%
+}
+.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif)
+white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}
+.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}
+#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}
+#fb-root #fb_dialog_ipad_overlay.hidden{display:none}
+.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}
+.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0 0, 0 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}
+.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%
+}
+.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0 0, 0 100%, from(#4966A6),
+color-stop(0.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset,
+rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}
+.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}
+.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}
+.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}
+#fb_dialog_loader_close{float:left}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}
+.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}
+.fb_iframe_widget iframe{position:absolute}
+.fb_iframe_widget_lift{z-index:1}
+.fb_hide_iframes iframe{position:relative;left:-10000px}
+.fb_iframe_widget_loader{position:relative;display:inline-block}
+.fb_iframe_widget_fluid{display:inline}
+.fb_iframe_widget_fluid span{width:100%}
+.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}
+.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_connect_bar_container div,
+.fb_connect_bar_container span,
+.fb_connect_bar_container a,
+.fb_connect_bar_container img,
+.fb_connect_bar_container strong{background:none;border-spacing:0;border:0;direction:ltr;font-style:normal;font-variant:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal;vertical-align:baseline}
+.fb_connect_bar_container{position:fixed;left:0 !important;right:0 !important;height:42px !important;padding:0 25px !important;margin:0 !important;vertical-align:middle !important;border-bottom:1px solid #333 !important;background:#3b5998 !important;z-index:99999999 !important;overflow:hidden !important}
+.fb_connect_bar_container_ie6{position:absolute;top:expression(document.compatMode=="CSS1Compat"? document.documentElement.scrollTop+"px":body.scrollTop+"px")}
+.fb_connect_bar{position:relative;margin:auto;height:100%;width:100%;padding:6px 0 0 0 !important;background:none;color:#fff !important;font-family:"lucida grande", tahoma, verdana, arial, sans-serif !important;font-size:13px !important;font-style:normal !important;font-variant:normal !important;font-weight:normal !important;letter-spacing:normal !important;line-height:1 !important;text-decoration:none !important;text-indent:0 !important;text-shadow:none !important;text-transform:none !important;white-space:normal !important;word-spacing:normal !important}
+.fb_connect_bar a:hover{color:#fff}
+.fb_connect_bar .fb_profile img{height:30px;width:30px;vertical-align:middle;margin:0 6px 5px 0}
+.fb_connect_bar div a,
+.fb_connect_bar span,
+.fb_connect_bar span a{color:#bac6da;font-size:11px;text-decoration:none}
+.fb_connect_bar .fb_buttons{float:right;margin-top:7px}
+.fb_edge_widget_with_comment{position:relative;*z-index:1000}
+.fb_edge_widget_with_comment span.fb_edge_comment_widget{position:absolute}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget{z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget .FB_Loader{left:0;top:1px;margin-top:6px;margin-left:0;background-position:50% 50%;background-color:#fff;height:150px;width:394px;border:1px #666 solid;border-bottom:2px solid #283e6c;z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.dark .FB_Loader{background-color:#000;border-bottom:2px solid #ccc}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.siderender
+.FB_Loader{margin-top:0}
+.fbpluginrecommendationsbarleft,
+.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}
+/* @noflip */
+.fbpluginrecommendationsbarleft{left:10px}
+/* @noflip */
+.fbpluginrecommendationsbarright{right:10px}</style></head>
+<body data-twttr-rendered="true">
+
+  <div id="container">
+    <header>
+      <div class="wrapper">
+        <figure>
+          <img src="http://static.rdstation.com.br/images/landing_page/424/company-logo.png" alt="Logo">
+        </figure>
+        <hgroup>
+          <h1>Otimizando a performance da rede para melhorar a performance dos seus sistemas</h1>
+          <h2>Para enfrentar a latência, ganhando seu controle, você precisa entender as necessidades de seus aplicativos, usando-as para ditar a maneira como você usa os recursos da Wide Area Network (WAN)</h2>
+        </hgroup>
+      </div>
+    </header>
+    <section class="clearfix">
+      <div class="wrapper">
+        <div id="content" class="left">
+          <figure>
+            <img src="https://rdstation-static.s3.amazonaws.com/images/landing_page/2712/offer-logo.jpg" alt="Imagem">
+          </figure>
+          <ul>
+            
+              <li>
+                <h3>Performance</h3>
+                <p>Descubra como a Wide Area Network (WAN) é a chave para melhorias significativas no desempenho de suas aplicações.</p>
+              </li>
+            
+            
+              <li>
+                <h3>Aplicações de negócios</h3>
+                <p>Agregue maior valor de negócio a partir de poucos recursos.</p>
+              </li>
+            
+            
+              <li>
+                <h3>Requisitos</h3>
+                <p>Veja o que é necessário para selecionar a tecnologia
+de WAN mais adequada ao seu negócio. Saiba mais.</p>
+              </li>
+            
+            
+          </ul>
+        </div>
+        <div id="conversion" class="right">
+          <header>
+            <h2>Faça o download grátis aqui!</h2>
+            <p>Aproveite o nosso whitepaper. É gratuito, basta preencher o formulário.</p>
+          </header>
+          <section>
+            <form id="conversion-form" action="https://www.rdstation.com.br/api/1.2/conversions" method="POST">
+  <input name="token_rdstation" value="4677041899b01d0fac96187b671a31cf" type="hidden">
+  <input name="identificador" value="level3_wp_performance_de_rede" type="hidden">
+  <input name="redirect_to" value="http://lt.idg.com.br/level3/level3_wp_performance_de_rede.pdf" type="hidden">
+  <input name="c_utmz" value="131935901.1369370413.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)" type="hidden">
+
+  <div id="error-container">
+  	<p>Preencha corretamente os campos marcados</p>
+  </div>
+
+
+  <div class="field">
+  	<label for="Nome:_">Nome:*</label><input class="required" id="nome" name="nome" type="text">
+  </div>
+
+  <div class="field">
+  	<label for="Sobrenome:_">Sobrenome:*</label><input class="required" id="sobrenome" name="sobrenome" type="text">
+  </div>
+
+  <div class="field">
+  	<label for="Cargo:_">Cargo:*</label><select class="required" id="cargo_" name="cargo"><option value=""></option>
+<option value="Corporativo: CEO / Presidente / Proprietário / Sócio">Corporativo: CEO / Presidente / Proprietário / Sócio</option>
+<option value="Corporativo: Vice-Presidente">Corporativo: Vice-Presidente</option>
+<option value="Corporativo: CMO / CFO / Controller/ COO">Corporativo: CMO / CFO / Controller/ COO</option>
+<option value="Corporativo: CIO / CTO / CSO">Corporativo: CIO / CTO / CSO</option>
+<option value="Corporativo: Superintendente">Corporativo: Superintendente</option>
+<option value="Corporativo: Diretor (Não Tecnologia)">Corporativo: Diretor (Não Tecnologia)</option>
+<option value="Corporativo: Diretor (Tecnologia)">Corporativo: Diretor (Tecnologia)</option>
+<option value="Tecnologia: Gerente / Chefe">Tecnologia: Gerente / Chefe</option>
+<option value="Tecnologia: Supervisor / Coordenador">Tecnologia: Supervisor / Coordenador</option>
+<option value="Tecnologia: Administrador de Banco de Dados (DBA)">Tecnologia: Administrador de Banco de Dados (DBA)</option>
+<option value="Tecnologia: Administrador de E-Business">Tecnologia: Administrador de E-Business</option>
+<option value="Tecnologia: Administrador de Rede / Networking">Tecnologia: Administrador de Rede / Networking</option>
+<option value="Tecnologia: Administrador de Sistemas de Telecomunicações">Tecnologia: Administrador de Sistemas de Telecomunicações</option>
+<option value="Tecnologia: Analista">Tecnologia: Analista</option>
+<option value="Tecnologia: Assistente">Tecnologia: Assistente</option>
+<option value="Tecnologia: Consultor">Tecnologia: Consultor</option>
+<option value="Tecnologia: Vendedor">Tecnologia: Vendedor</option>
+<option value="Tecnologia: Webmaster">Tecnologia: Webmaster</option>
+<option value="Tecnologia: Desenvolvedor / Programador">Tecnologia: Desenvolvedor / Programador</option>
+<option value="Tecnologia: Designer Gráfico / Web Designer">Tecnologia: Designer Gráfico / Web Designer</option>
+<option value="Tecnologia: Suporte Técnico / Help Desk">Tecnologia: Suporte Técnico / Help Desk</option>
+<option value="Tecnologia: Revendedor de Informática">Tecnologia: Revendedor de Informática</option>
+<option value="Não Tecnologia: Gerente / Chefe">Não Tecnologia: Gerente / Chefe</option>
+<option value="Não Tecnologia: Supervisor / Coordenador">Não Tecnologia: Supervisor / Coordenador</option>
+<option value="Não Tecnologia: Consultor / Assessor">Não Tecnologia: Consultor / Assessor</option>
+<option value="Não Tecnologia: Assistente / Analista">Não Tecnologia: Assistente / Analista</option>
+<option value="Não Tecnologia: Profissional de Administração Pública">Não Tecnologia: Profissional de Administração Pública</option>
+<option value="Não Tecnologia: Professor / Reitor">Não Tecnologia: Professor / Reitor</option>
+<option value="Não Tecnologia: Profissional Liberal">Não Tecnologia: Profissional Liberal</option>
+<option value="Não Tecnologia: Vendedor / Representante">Não Tecnologia: Vendedor / Representante</option>
+<option value="Não Tecnologia: Jornalista">Não Tecnologia: Jornalista</option>
+<option value="Não Tecnologia: Assessor de Imprensa / Relações Públicas">Não Tecnologia: Assessor de Imprensa / Relações Públicas</option>
+<option value="Não Tecnologia: Publicitário / Mídia">Não Tecnologia: Publicitário / Mídia</option>
+<option value="Estudante">Estudante</option>
+<option value="Não Trabalhando no Momento">Não Trabalhando no Momento</option></select>
+  </div>
+
+  <div class="field">
+  	<label for="Empresa:_">Empresa:*</label><input class="required" id="empresa" name="empresa" type="text">
+  </div>
+
+  <div class="field">
+  	<label for="N_mero_de_funcion_rios:_">Número de funcionários:*</label><select class="required" id="numero-de-funcionarios_" name="numero-de-funcionarios"><option value=""></option>
+<option value="Micro: com até 19 empregados">Micro: com até 19 empregados</option>
+<option value="Pequena: de 20 a 99 empregados">Pequena: de 20 a 99 empregados</option>
+<option value="Média: 100 a 499 empregados">Média: 100 a 499 empregados</option>
+<option value="Grande: mais de 500 empregados">Grande: mais de 500 empregados</option></select>
+  </div>
+
+  <div class="field">
+  	<label for="Endere_o:_">Endereço:*</label><input class="required" id="endereco" name="endereco" type="text">
+  </div>
+
+  <div class="field">
+  	<label for="Complemento:">Complemento:</label><input id="complemento" name="complemento" type="text">
+  </div>
+
+  <div class="field">
+  	<label for="Cidade:_">Cidade:*</label><input class="required" id="cidade" name="cidade" type="text">
+  </div>
+
+  <div class="field">
+  	<label for="Estado:_">Estado:*</label><select class="required" id="estado_" name="estado"><option value=""></option>
+<option value="AC">AC</option>
+<option value="AL">AL</option>
+<option value="AM">AM</option>
+<option value="AP">AP</option>
+<option value="BA">BA</option>
+<option value="CE">CE</option>
+<option value="DF">DF</option>
+<option value="ES">ES</option>
+<option value="GO">GO</option>
+<option value="MA">MA</option>
+<option value="MG">MG</option>
+<option value="MS">MS</option>
+<option value="MT">MT</option>
+<option value="PA">PA</option>
+<option value="PB">PB</option>
+<option value="PE">PE</option>
+<option value="PI">PI</option>
+<option value="PR">PR</option>
+<option value="RJ">RJ</option>
+<option value="RN">RN</option>
+<option value="RO">RO</option>
+<option value="RR">RR</option>
+<option value="RS">RS</option>
+<option value="SC">SC</option>
+<option value="SE">SE</option>
+<option value="SP">SP</option>
+<option value="TO">TO</option></select>
+  </div>
+
+  <div class="field">
+  	<label for="Pa_s:_">País:*</label><input class="required" id="pais" name="pais" type="text">
+  </div>
+
+  <div class="field">
+  	<label for="CEP:_">CEP:*</label><input class="required" id="cep" name="cep" type="text">
+  </div>
+
+  <div class="field">
+  	<label for="Telefone_comercial:_">Telefone comercial:*</label><input class="required" id="telefone-comercial" name="telefone-comercial" type="text">
+  </div>
+
+  <div class="field">
+  	<label for="E-mail:_">E-mail:*</label><input class="required email" id="email_lead" name="email_lead" type="text">
+  </div>
+
+  <div class="field">
+  	<label for="Voc__est__ambientado_com_o_termo_Multi-Protocol_Label_Switching__MPLS__:_">Você está ambientado com o termo Multi-Protocol Label Switching (MPLS)?:*</label><select class="required" id="voce-esta-ambientado-com-o-termo-multi-protocol-label-switching-mpls_" name="voce-esta-ambientado-com-o-termo-multi-protocol-label-switching-mpls"><option value=""></option>
+<option value="Sim">Sim</option>
+<option value="Não">Não</option></select>
+  </div>
+
+  <div class="field">
+  	<label for="Voc__est__definindo_poss_veis_parceiros_para_solu__es_de_rede_nos_pr_ximos_meses_:_">Você está definindo possíveis parceiros para soluções de rede nos próximos meses?:*</label><select class="required" id="voce-esta-definindo-possiveis-parceiros-para-solucoes-de-rede-nos-proximos-meses_" name="voce-esta-definindo-possiveis-parceiros-para-solucoes-de-rede-nos-proximos-meses"><option value=""></option>
+<option value="0-3 meses">0-3 meses</option>
+<option value="3-6 meses">3-6 meses</option>
+<option value="6-12 meses">6-12 meses</option>
+<option value="12-24 meses">12-24 meses</option>
+<option value="Não está definindo novos fornecedores">Não está definindo novos fornecedores</option></select>
+  </div>
+
+  <div class="field">
+  	<label for="Se_voc__j__possui_um_fornecedor_de_rede__qual_o_seu_n_vel_de_satisfa__o_:_">Se você já possui um fornecedor de rede, qual o seu nível de satisfação?:*</label><select class="required" id="se-voce-ja-possui-um-fornecedor-de-rede-qual-o-seu-nivel-de-satisfacao_" name="se-voce-ja-possui-um-fornecedor-de-rede-qual-o-seu-nivel-de-satisfacao"><option value=""></option>
+<option value="Não tenho fornecedor">Não tenho fornecedor</option>
+<option value="Extremamente Insatisfeito">Extremamente Insatisfeito</option>
+<option value="Muito insatisfeito">Muito insatisfeito</option>
+<option value="Insatisfeito">Insatisfeito</option>
+<option value="Levemente insatisfeito">Levemente insatisfeito</option>
+<option value="Neutro">Neutro</option>
+<option value="Levemente satisfeito">Levemente satisfeito</option>
+<option value="Satisfeito">Satisfeito</option>
+<option value="Muito satisfeito">Muito satisfeito</option>
+<option value="Extremamente satisfeito">Extremamente satisfeito</option></select>
+  </div>
+
+  <div class="field">
+  	<label for="Autorizo_o_Now_Digital_Business_a_enviar_ofertas_de_produtos_e_servi_os_do_pr_prio_Now_Digital_Business_e_de_seus_parceiros_para_meu_endere_o_e_ou_e-mail:_">Autorizo o Now!Digital Business a enviar ofertas de produtos e serviços do próprio Now!Digital Business e de seus parceiros para meu endereço e/ou e-mail:*</label><div><input class="required" id="autorizo-o-now-digital-business-a-enviar-ofertas-de-produtos-e-servicos-do-proprio-now-digital-business-e-de-seus-parceiros-para-meu-endereco-e-ou-e-mail__sim" name="autorizo-o-now-digital-business-a-enviar-ofertas-de-produtos-e-servicos-do-proprio-now-digital-business-e-de-seus-parceiros-para-meu-endereco-e-ou-e-mail" value="Sim" type="radio"><label>Sim</label></div><div><input class="required" id="autorizo-o-now-digital-business-a-enviar-ofertas-de-produtos-e-servicos-do-proprio-now-digital-business-e-de-seus-parceiros-para-meu-endereco-e-ou-e-mail__no" name="autorizo-o-now-digital-business-a-enviar-ofertas-de-produtos-e-servicos-do-proprio-now-digital-business-e-de-seus-parceiros-para-meu-endereco-e-ou-e-mail" value="Não" type="radio"><label>Não</label></div>
+  </div>
+
+  
+  <div class="field">
+    <label><span id="math_expression">9 + 7 = ?</span></label>
+    <input name="captcha" class="math" type="text">
+  </div>
+
+  <div class="actions">
+    <input class="call_button" id="cf_submit" value="Receber material" type="submit">
+    <img style="display: none;" src="//rdstation-static.s3.amazonaws.com/images/ajax-loader.gif" id="ajax-loader" alt="Enviando...">
+  </div>
+  <p class="notice">Prometemos não utilizar suas informações de contato para enviar qualquer tipo de SPAM.</p>
+</form>
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script type="text/javascript" src="//rdstation-static.s3.amazonaws.com/js/jquery.validate/1.9/jquery.validate.min.js"></script>
+<script type="text/javascript" src="//rdstation-static.s3.amazonaws.com/js/jquery.form/2.02/jquery.form.js"></script>
+<script type="text/javascript" src="//rdstation-static.s3.amazonaws.com/js/rd/1.4/rdlps.min.js"></script>
+<script type="text/javascript">
+var origConversionSuccess = conversionSuccess;
+conversionSuccess = function(resp) {
+  origConversionSuccess(resp);
+
+  try { _gaq.push(['_trackPageview', '/level3_wp_performance_de_rede/conversao']); } catch(err) { }
+
+
+  alert("Obrigado pelo interesse em nosso whitepaper. Você será redirecionado para o download.");
+
+
+  location.href = 'http://lt.idg.com.br/level3/level3_wp_performance_de_rede.pdf';
+
+}
+</script>
+
+<script type="text/javascript" src="//rdstation-static.s3.amazonaws.com/js/rd/1.2/rdlps-autofill.min.js"></script>
+
+
+          </section>
+        </div>
+        <div id="social-share" class="socialfloating">
+  <iframe data-twttr-rendered="true" title="Twitter Tweet Button" style="width: 58px; height: 62px;" class="twitter-share-button twitter-count-vertical" src="http://platform.twitter.com/widgets/tweet_button.1368146021.html#_=1369370415189&amp;count=vertical&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=http%3A%2F%2Fwhitepapers.computerworld.com.br%2Flevel3_wp_performance_de_rede&amp;size=m&amp;text=Otimizando%20a%20performance%20da%20rede%20para%20melhorar%20a%20performance%20dos%20seus%20sistemas&amp;url=http%3A%2F%2Fwhitepapers.computerworld.com.br%2Flevel3_wp_performance_de_rede" allowtransparency="true" frameborder="0" scrolling="no"></iframe><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script><br>
+  <div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 50px; height: 60px;"><iframe title="+1" data-gapiattached="true" allowtransparency="true" src="https://plusone.google.com/_/+1/fastbutton?bsv&amp;size=tall&amp;hl=en-US&amp;origin=http%3A%2F%2Fwhitepapers.computerworld.com.br&amp;url=http%3A%2F%2Fwhitepapers.computerworld.com.br%2Flevel3_wp_performance_de_rede&amp;ic=1&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en_US.pq-TpXiLgaE.O%2Fm%3D__features__%2Fam%3DEQ%2Frt%3Dj%2Fd%3D1%2Frs%3DAItRSTOY9mIG3t5Os0XGQNrlA_ssOaR9lA#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Conload&amp;id=I0_1369370414616&amp;parent=http%3A%2F%2Fwhitepapers.computerworld.com.br&amp;rpctoken=78246175" name="I0_1369370414616" id="I0_1369370414616" vspace="0" tabindex="0" style="position: static; top: 0px; width: 50px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 60px;" marginwidth="0" marginheight="0" hspace="0" frameborder="0" scrolling="no" width="100%"></iframe></div><br>
+  <div fb-xfbml-state="parsed" class="fb-like fb_edge_widget_with_comment fb_iframe_widget" data-send="false" data-href="" data-layout="box_count" data-width="55" data-show-faces="false"><span style="height: 65px; width: 55px;"><iframe src="http://www.facebook.com/plugins/like.php?api_key=159732357452275&amp;locale=en_US&amp;sdk=joey&amp;channel_url=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D24%23cb%3Dfc3e61f2caa368%26origin%3Dhttp%253A%252F%252Fwhitepapers.computerworld.com.br%252Ff26fcd28376e292%26domain%3Dwhitepapers.computerworld.com.br%26relation%3Dparent.parent&amp;href=http%3A%2F%2Fwhitepapers.computerworld.com.br%2Flevel3_wp_performance_de_rede&amp;node_type=link&amp;width=55&amp;layout=box_count&amp;colorscheme=light&amp;show_faces=false&amp;send=false&amp;extended_social_context=false" class="fb_ltr" title="Like this content on Facebook." style="border: medium none; overflow: hidden; height: 65px; width: 55px;" name="f309a4870fd787" id="f3bf08644a3fee" scrolling="no"></iframe></span></div><br>
+</div>
+<div class=" fb_reset" id="fb-root"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe src="http://static.ak.facebook.com/connect/xd_arbiter.php?version=24#channel=f26fcd28376e292&amp;origin=http%3A%2F%2Fwhitepapers.computerworld.com.br&amp;channel_path=%2Flevel3_wp_performance_de_rede%3Ffb_xd_fragment%23xd_sig%3Df2d4bf8ee076ea%26" style="border: medium none;" tab-index="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_http" allowtransparency="true" name="fb_xdm_frame_http" frameborder="0" scrolling="no"></iframe><iframe src="https://s-static.ak.facebook.com/connect/xd_arbiter.php?version=24#channel=f26fcd28376e292&amp;origin=http%3A%2F%2Fwhitepapers.computerworld.com.br&amp;channel_path=%2Flevel3_wp_performance_de_rede%3Ffb_xd_fragment%23xd_sig%3Df2d4bf8ee076ea%26" style="border: medium none;" tab-index="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_https" allowtransparency="true" name="fb_xdm_frame_https" frameborder="0" scrolling="no"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe src="https://www.facebook.com/connect/ping?client_id=159732357452275&amp;response_type=token%2Csigned_request%2Ccode&amp;domain=whitepapers.computerworld.com.br&amp;origin=1&amp;redirect_uri=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D24%23cb%3Df32582429b3d0a6%26origin%3Dhttp%253A%252F%252Fwhitepapers.computerworld.com.br%252Ff26fcd28376e292%26domain%3Dwhitepapers.computerworld.com.br%26relation%3Dparent&amp;sdk=joey" style="display: none;" allowtransparency="true" name="f3a5dccdaef164" frameborder="0" scrolling="no"></iframe></div></div></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=159732357452275";
+  fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+      </div>
+    </section>
+  </div>
+
+
+
+</body>

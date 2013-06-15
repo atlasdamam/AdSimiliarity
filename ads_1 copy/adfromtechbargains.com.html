@@ -1,0 +1,338 @@
+<head>
+	<title>Charter One®</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" type="text/css" href="http://www.charterone.com/promotions/checking-offer/css/main.css">
+
+<!--[if gte IE 8]>
+<style>
+	#mainWrapper {width:803px; text-align:left; position:relative; top: 100px;}
+	#leftPlus {padding-top:57px;}
+	#rightMain {float:right; width:350px; height:353px; padding-top:15px;}
+	#submitButton {position:relative; left:-12px; padding-top:10px;}
+</style>
+<![endif]-->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+	<script type="text/javascript">
+	if (typeof jQuery == 'undefined')
+	{
+	    document.write(unescape("%3Cscript src='http://www.charterone.com/promotions/checking-offer/script/jquery-1.4.3.min.js' type='text/javascript'%3E%3C/script%3E"));
+	}
+	</script>
+   
+   <script type="text/javascript" src="http://www.charterone.com/promotions/checking-offer/script/formValidations.js"></script>
+   <script type="text/javascript" src="http://www.charterone.com/promotions/checking-offer/script/todCommon.js"></script>
+   <script type="text/javascript">
+/* Responsible for submitting form data; obtaining the couponSN; changing display to the thankyou page. */
+   function submitData(){
+       $.ajax({
+               url: 'http://citizensbank.merklehosting.com/tod/rws/processForm',
+               data: $("#cpnForm").serialize() ,
+               type: 'get',
+               dataType: 'jsonp',
+               success: function(respData){  actOnAjaxResponse(respData); },
+               error:   function(xmlHttpR, jqStatus){      displayError();  }
+       });
+   }
+
+   function actOnAjaxResponse(data){
+      if (data.hasOwnProperty('couponSN')) {
+        if(data.couponSN.length == 12){
+         window.location = 'http://www.charterone.com/promotions/checking-offer/cobThankYou.html?csn=' + data.couponSN +'&ema=' + encodeURIComponent(data.email);
+        }else{
+         displayError();
+        }
+      }else{
+        if (data.hasOwnProperty('duplicate')) {
+        getElement('fieldsRequired').innerHTML='';	
+      	 getElement('lpRightError').innerHTML = 'Coupon already issued to this email.<br/>Please check your inbox.';
+      	}
+      	else
+      	
+        	displayError();
+      }
+   }
+
+   function displayError(){
+   getElement('fieldsRequired').innerHTML='';	
+      getElement('lpRightError').innerHTML = 'Sorry a technical error occurred<br/>Please try again later.';
+   }
+
+   </script>
+</head>
+
+<body style="background-color:#e5f1d2; margin:0px;">
+   <div id="topCO">
+		<div align="center">
+			<div id="mainWrapper">
+				<div id="topBullets">
+					<table border="0" cellpadding="0" cellspacing="0">
+						<tbody><tr>
+							<td><img src="images/37269a_bullets_02.png" alt="1,2,3" height="161" width="74"></td>
+							<td valign="top">
+								<div class="citifont1" style="padding-top:28px;">It's Easy! Just complete the form</div>
+								<div class="citifont1" style="padding-top:27px;">Click below to get your coupon</div>
+								<div class="citifont1" style="padding-top:27px;">And apply today!</div>
+							</td>
+						</tr>
+					</tbody></table>
+				</div>
+				<div id="leftMain">
+					<div class="citifont2b">Open your first new Charter One personal<br>checking account by May 31, 2013.<sup style="font-size:11px;">1</sup></div>
+					<div id="leftGet">
+						<table width="100%" border="0" cellpadding="0" cellspacing="0">
+							<tbody><tr>
+							  	<td style="padding-bottom:4px;" height="31" valign="middle" width="19" align="left"><img src="images/59989_lp_arrow.jpg" height="16" width="14"></td>
+								<td class="citifont3b" style="padding-bottom:4px;" valign="middle" width="350" align="left"><span>ENROLL</span> in Online Banking and make 3 online bill payments</td>
+						  	  <td class="citifont3b" style="padding-bottom:4px;" valign="middle" width="91" align="left"><span>GET <sup style="font-size:10px;">$</sup>50</span></td>
+						  </tr>
+							<tr>
+							  <td height="39" valign="middle" width="19" align="left"><img src="images/59989_lp_arrow.jpg" height="16" width="14"></td>
+								<td class="citifont3b" valign="bottom" width="350" align="left"><span>SET UP</span> Direct Deposit and complete a single direct deposit<br>
+							  of $500 or more to your new checking account</td>
+							  	<td class="citifont3b" valign="middle" align="left"><span>GET <sup style="font-size:10px;">$</sup>50</span></td>
+						  </tr>
+							<tr>
+							  <td style="padding-bottom:4px;" height="29" valign="bottom" width="19" align="left"><img src="images/59989_lp_arrow.jpg" height="16" width="14"></td>
+								<td class="citifont3b" style="padding-bottom:4px;" valign="bottom" width="350" align="left"><span>DO BOTH</span> of the above</td>
+							  	<td class="citifont3b" style="padding-bottom:4px;" valign="bottom" align="left"><span>GET <sup style="font-size:10px;">$</sup>50</span></td>
+						  </tr>
+							<tr>
+							  <td height="49" valign="middle" width="19" align="left"><img src="images/59989_lp_arrow.jpg" height="16" width="14"></td>
+								<td class="citifont3b" style="padding-bottom:4px;" valign="bottom" width="350" align="left"><span>QUALIFY</span> for online bill payments or direct deposit bonus open<br>a savings account with Steady Save<sup style="font-size:8px;">®</sup> and transfer at least $25</td>
+							  	<td class="citifont3b" valign="middle" align="left"><span>GET <sup style="font-size:10px;">$</sup>25</span></td>
+						  </tr>
+							<tr>
+							  <td height="53" valign="top" align="left">&nbsp;</td>
+							  <td colspan="2" class="citifont6" valign="middle" align="left">THAT'S A TOTAL OF <sup style="font-size:10px;">$</sup>175</td>
+						  </tr>
+							<tr>
+							  <td valign="top" align="left">&nbsp;</td>
+							  <td class="citifont3b" valign="top" align="left">After you open your checking account, the above activities<br>must post to and clear your new account by July 31, 2013.</td>
+							  <td class="citifont3b" valign="top" align="left">&nbsp;</td>
+						  </tr>
+						</tbody></table>
+        </div>
+				</div>
+				<div id="rightMain">
+					<div id="rightForm"><form id="cpnForm" action="" onsubmit=" validate();return false;">
+						<input name="pc" id="pc" value="c1_dir_p1" type="hidden">
+               	<input name="b" id="b" value="CharterOne" type="hidden">
+               	<input name="iqCode" id="iqCode" value="" type="hidden">
+						<table border="0" cellpadding="0" cellspacing="0">
+							<tbody><tr>
+								<td class="formText" style="padding:24px 40px 12px 0px;"><span id="fieldsRequired">All Fields Required</span> <span id="lpRightError" style="color: #EC2E2E;font: bold;"></span></td>
+							</tr>
+							<tr>
+								<td>
+									<table border="0" cellpadding="0" cellspacing="0">
+										<tbody><tr>
+											<td class="formText">First Name</td>
+											<td class="formText" style="padding-left:10px;">Last Name</td>
+										</tr>
+										<tr>
+											<td><input name="fn" id="fn" style="width:100px;" class="formText" maxlength="25" type="text"></td>
+											<td style="padding-left:10px;"><input name="ln" id="ln" style="width:150px;" class="formText" maxlength="25" type="text"></td>
+										</tr>
+									</tbody></table>
+								</td>
+							</tr>
+							<tr>
+								<td style="padding-top:5px;">
+									<table border="0" cellpadding="0" cellspacing="0">
+										<tbody><tr>
+											<td class="formText">Street Address, Apt. #</td>
+										</tr>
+										<tr>
+											<td><input name="add" id="add" style="width:266px;" class="formText" maxlength="60" type="text"></td>
+										</tr>
+									</tbody></table>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<table border="0" cellpadding="0" cellspacing="0">
+										<tbody><tr>
+											<td class="formText" style="padding-top:5px;">City</td>
+											<td class="formText" style="padding-left:10px; padding-top:5px;">State</td>
+											<td class="formText" style="padding-left:10px; padding-top:5px;">Zip</td>
+										</tr>
+										<tr>
+											<td><input name="city" id="city" style="width:150px;" class="formText" maxlength="25" type="text"></td>
+											<td style="padding-left:10px;"><select name="state" id="state" style="width:47px;" class="formText">
+												<option value="">--</option>
+                                    <option value="AK">AK</option>
+                                    <option value="AL">AL</option>
+                                    <option value="AR">AR</option>
+                                    <option value="AZ">AZ</option>
+                                    <option value="CA">CA</option>
+                                    <option value="CO">CO</option>
+                                    <option value="CT">CT</option>
+                                    <option value="DC">DC</option>
+                                    <option value="DE">DE</option>
+                                    <option value="FL">FL</option>
+                                    <option value="GA">GA</option>
+                                    <option value="HI">HI</option>
+                                    <option value="IA">IA</option>
+                                    <option value="ID">ID</option>
+                                    <option value="IL">IL</option>
+                                    <option value="IN">IN</option>
+                                    <option value="KS">KS</option>
+                                    <option value="KY">KY</option>
+                                    <option value="LA">LA</option>
+                                    <option value="MA">MA</option>
+                                    <option value="MD">MD</option>
+                                    <option value="ME">ME</option>
+                                    <option value="MI">MI</option>
+                                    <option value="MN">MN</option>
+                                    <option value="MO">MO</option>
+                                    <option value="MS">MS</option>
+                                    <option value="MT">MT</option>
+                                    <option value="NC">NC</option>
+                                    <option value="ND">ND</option>
+                                    <option value="NE">NE</option>
+                                    <option value="NH">NH</option>
+                                    <option value="NJ">NJ</option>
+                                    <option value="NM">NM</option>
+                                    <option value="NV">NV</option>
+                                    <option value="NY">NY</option>
+                                    <option value="OH">OH</option>
+                                    <option value="OK">OK</option>
+                                    <option value="OR">OR</option>
+                                    <option value="PA">PA</option>
+                                    <option value="RI">RI</option>
+                                    <option value="SC">SC</option>
+                                    <option value="SD">SD</option>
+                                    <option value="TN">TN</option>
+                                    <option value="TX">TX</option>
+                                    <option value="UT">UT</option>
+                                    <option value="VA">VA</option>
+                                    <option value="VT">VT</option>
+                                    <option value="WA">WA</option>
+                                    <option value="WI">WI</option>
+                                    <option value="WV">WV</option>
+                                    <option value="WY">WY</option>
+											</select></td>
+											<td style="padding-left:10px;"><input name="zip" id="zip" maxlength="10" style="width:42px;" class="formText" type="text"></td>
+										</tr>
+									</tbody></table>
+								</td>
+							</tr>
+							<tr>
+								<td style="padding-top:5px;">
+									<table border="0" cellpadding="0" cellspacing="0">
+										<tbody><tr>
+											<td class="formText">Email</td>
+										</tr>
+										<tr>
+											<td><input name="ema" id="ema" style="width:266px;" class="formText" maxlength="254" type="text"></td>
+										</tr>
+									</tbody></table>
+								</td>
+							</tr>
+							<tr>
+								<td style="padding-top:5px;">
+									<table border="0" cellpadding="0" cellspacing="0">
+										<tbody><tr>
+											<td class="formText">Confirm Email</td>
+										</tr>
+										<tr>
+											<td><input name="verifyEmail" id="verifyEmail" style="width:266px;" class="formText" maxlength="254" type="text"></td>
+										</tr>
+									</tbody></table>
+								</td>
+							</tr>
+						</tbody></table>
+						<div id="submitButton"><input id="subBtn" name="EMAIL MY COUPON" src="images/37269a_CTA.png" alt="EMAIL MY COUPON" height="83" type="image" width="303"></div>
+					</form>
+					</div>
+					
+					
+				</div>
+                <div style="clear:both;"></div>
+				<div id="legal"><br><br>
+					<table width="770" border="0" cellpadding="0" cellspacing="0">
+						<tbody><tr>
+							<td class="font7" style="padding-right:5px;" valign="top" align="left"><span style="font-size:8px; position:relative: bottom:3px;">1</span></td>
+							<td class="font7" valign="top" align="left">
+								<table border="0" cellpadding="0" cellspacing="0">
+									<tbody><tr>
+										<td style="padding-bottom:8px;">You must open your first new personal checking account between 4/22/13 and 5/31/13. Primary account holder may not be or have been a primary or secondary signer on any personal checking account within the previous six months. Offer may be withdrawn without notice and cannot be combined with any other checking offer. Offer only available to the person who completes the required fields on this page, and the new account must be open and in good standing to qualify for this offer.</td>
+									</tr>
+									<tr>
+										<td style="padding-bottom:8px;">To earn the $50 Online Bill Pay Bonus: Enroll in Online Banking; use the Bill Pay service to schedule at least 3 bill payment transactions that post to and clear your checking account by 7/31/13. Bill payments must be initiated through the bank's Online Banking bill payment service and be made to 3 different payees and for recipients other than someone in your household.</td>
+									</tr>
+									<tr>
+										<td style="padding-bottom:8px;">To earn the $50 Direct Deposit Bonus: Have a single direct deposit of at least $500 post to and clear your account by 7/31/13. If you meet both the Online Bill Pay and Direct Deposit requirements you will earn an additional $50 bonus for a total of $150 in bonuses. </td>
+									</tr>
+									<tr>
+										<td style="padding-bottom:8px;">To earn the $25 Savings Bonus: Qualify for either the online bill pay or direct deposit bonus and open a savings account with Steady Save<sup style="font-size:8px;">®</sup> between 4/22/13 and 5/31/13. Enrollment in Steady Save must occur at account opening and a Steady Save transaction of at least $25 that posts and clears by 7/31/13. Primary account holder on the savings or money market account may not be a signer on any other personal savings or money market account. </td>
+									</tr>
+									<tr>
+										<td style="padding-bottom:8px;">Bonus will be deposited into your qualifying checking account by 10/31/13 and will be labeled as "Balance Builder Bonus." One bonus per customer. Bonus will be reported to the IRS.</td>
+									</tr>
+                                    <tr>
+										<td style="padding-bottom:8px;">Variable-rate Annual Percentage Yield (APY) for Checking with Interest varies by account and tier. For example, as of 3/8/13, APY by tier for Personal Checking with Interest is: 0.01% for $25+, $2,500+, $10,000+, $25,000+, $50,000+, $75,000+. Fees may reduce earnings.</td>
+									</tr>
+                                    <tr>
+										<td style="padding-bottom:8px;">Accounts, services subject to approval. Fees, policies and prices subject to change.</td>
+									</tr>
+                                    <tr>
+										<td style="padding-bottom:8px;">The personal information you provide will be used to identify you for this offer and future marketing purposes.</td>
+									</tr>
+									<tr>
+										<td style="padding-bottom:8px;">Charter One | 1215 Superior Avenue | Cleveland, OH | 44114</td>
+									</tr>
+									<tr>
+										<td style="padding-bottom:8px;"><a href="http://www.charterone.com/security/about_ads.aspx" class="legal">About our Ads</a>.</td>
+									</tr>
+									<tr>
+										<td style="padding-bottom:8px;">© 2013 RBS Citizens Financial Group, Inc. All rights reserved. Charter One is a brand name of RBS Citizens, N.A. </td>
+									</tr>
+									<tr>
+										<td style="padding-bottom:20px;"><a href="http://www.charterone.com/tools/leaving.aspx?url=http://www.fdic.gov/deposit/deposits" class="legal">Member FDIC</a>.</td>
+									</tr>
+								</tbody></table>
+							</td>
+						</tr>
+					</tbody></table>
+				</div>
+			</div>
+		</div>
+</div>
+<script language="JavaScript1.1" src="https://pixel.mathtag.com/event/js?mt_id=219444&amp;mt_adid=100688&amp;v1=&amp;v2=&amp;v3=&amp;s1=&amp;s2=&amp;s3="></script>
+
+<script type="text/javascript">
+   $(document).ready(function(){
+
+       var iq_id = getUrlParam(window.location.href,'iq_id');
+       iq_id = trim(iq_id);
+       $('#iqCode').val(iq_id);
+
+       $("#subBtn").mouseover(function(){
+           $("#subBtn").animate({
+            width: 280,
+            height: 77
+           }, 150 );
+      });
+       $("#subBtn").mouseout(function(){
+           $("#subBtn").animate({
+            width: 303,
+            height: 83
+           }, 300 );
+      });
+
+       $("#subBtn").click(function(){
+           $("#subBtn").animate({
+            width: 280,
+            height: 77
+           }, 50 );
+           $("#subBtn").animate({
+            width: 303,
+            height: 83
+           }, 50 );
+      });
+   });
+</script>
+
+
+</body>

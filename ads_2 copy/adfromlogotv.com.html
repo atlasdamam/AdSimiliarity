@@ -1,0 +1,2278 @@
+<!--
+
+--><head><script type="text/javascript" src="http://cus.flux.com/api/widgetsService/widgetList?communityUcid=06F4FFFF009B10200002FFFFF406&amp;callback=FB6EBAEA9"></script><script type="text/javascript" src="http://daapiak.flux.com/2.0/00001/json/06F4FFFF009B10200002FFFFF406/feeds/widgets4Context?callback=FC10F308A"></script><link href="http://s.fluxstatic.com/widgets4/CSS/common.css?v=28" rel="stylesheet" type="text/css"><!--[if IE 9]><link rel='stylesheet' type='text/css' href='http://s.fluxstatic.com/widgets4/CSS/common-ie9.css?v=28'/><![endif]-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<script src="http://www.google-analytics.com/ga.js" async="" type="text/javascript"></script><script>
+//****CONFIGURATION****//
+
+interstitial_on_off = "on"; //on/off switch for interstitial
+
+on_time = new Date("May 10, 2011 00:00:00");	//Turn-on time. Format is: "Month dd, yyyy hh:mm:ss" e.g. January 20, 2004 10:30:00
+off_time = new Date("May 10, 2011 23:59:59");	//Turn-off time. Format is: "Month dd, yyyy hh:mm:ss" e.g January 20, 2004 19:00:00
+cookie_days = 1; //duration of cookie
+
+//**END CONFIGURATION**//
+
+function getCookieVal(offset) {
+
+var endstr = document.cookie.indexOf(";", offset);
+if (endstr == -1) {
+endstr = document.cookie.length;
+}
+
+return unescape(document.cookie.substring(offset, endstr));
+
+}
+
+function FixCookieDate(date) {
+
+var base = new Date(0);
+var skew = base.getTime();
+if (skew > 0) {
+date.setTime(date.getTime() - skew);
+}
+
+}
+
+function readCookie(name) {
+var nameEQ = name + "=";
+var ca = document.cookie.split(';');
+for(var i=0;i < ca.length;i++) {
+var c = ca[i];
+while (c.charAt(0)==' ') c = c.substring(1,c.length);
+if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+}
+return null;
+}
+
+function createCookie(name,value,days) {
+if (days) {
+var date = new Date();
+FixCookieDate(date);
+date.setTime(date.getTime()+(days*24*60*60*1000));
+var expires = "; expires="+date.toGMTString();
+}
+else var expires = "";
+document.cookie = name+"="+value+expires+"; path=/";
+}
+
+function eraseCookie(name) {
+createCookie(name,"",-1);
+}
+
+function getparam( name )
+{
+name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+var regexS = "[\\?&]"+name+"=([^&#]*)";
+var regex = new RegExp( regexS );
+var results = regex.exec( window.location.href );
+if( results == null )
+return "";
+else
+return results[1];
+}
+
+var currentDate = new Date();	
+if (interstitial_on_off=="on" && readCookie("logo_interstitial") != "logotv" && on_time <= currentDate && off_time >= currentDate) {
+createCookie("logo_interstitial", "logotv", cookie_days);
+window.location.href = "/interstitial/splashland.jhtml?loc="+window.location.href;
+
+}
+
+</script>
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:url" content="http://www.logotv.comnull">
+<meta name="twitter:site" content="@logotv">
+<meta name="twitter:image" content="http://www.logotv.com/sitewide/images/LOGO_logo.jpg">
+
+<title>Watch RuPaul's Drag Race, That Sex Show, and 1 Girl 5 Gays Full Episodes | Logo TV</title>
+<meta name="twitter:title" content="Logo TV">
+
+<meta name="description" content="Watch full episodes of RuPaul's Drag Race, That Sex Show, 1 girl 5 gays and more Logo TV shows for free online. Watch Logo reality TV episodes, documentaries, full length films, gay movies, and more.">
+<meta name="twitter:description" content="Watch full episodes of RuPaul's Drag Race, That Sex Show, 1 girl 5 gays and more Logo TV shows for free online. Watch Logo reality TV episodes, documentaries, full length films, gay movies, and more.">
+<meta property="og:description" content="Watch full episodes of RuPaul's Drag Race, That Sex Show, 1 girl 5 gays and more Logo TV shows for free online. Watch Logo reality TV episodes, documentaries, full length films, gay movies, and more.">
+
+<meta name="Publisher" content="LOGO">
+<meta name="Publisher-Email" content="feedback@logo-tv.com">
+<meta name="Identifier-URL" content="http://www.logo-tv.com/">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="copyright" content="(c) 2012 MTV Networks, a division of
+Viacom International Inc. All rights reserved. LOGO, DIFFERENT
+TOGETHER and all related titles and designs are trademarks of MTV
+Networks, a division of Viacom International Inc.">
+
+<meta name="msvalidate.01" content="6F801977F7B0E9DEA96B82F1EEC60757">
+
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<link href="/sitewide/core/style/components/buttons.css" media="all" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" media="screen, print, projection" href="/sitewide/css/charlie/main.css">
+<link rel="stylesheet" type="text/css" media="screen, print, projection" href="/sitewide/css/charlie/footer.css">
+<link rel="stylesheet" type="text/css" media="screen, print, projection" href="/global/music/shows/css/shows.css">
+
+<script>var baseDomain = 'http://www.logotv.com';</script>
+
+<script type="text/JavaScript" src="/sitewide/core/javaScript/search/search.js"></script>
+<script>
+</script>
+<script type="text/JavaScript">
+searchTerm="";
+srchType="";
+searchFail="";
+</script>
+<!-- BEGIN Hi-Media Media Settings - v1.0 -->
+<script type="text/javascript">
+//var adlSite='autres-sites-mtv.com';
+//var adlZone='ros';
+//var adlKv='';
+//var adlHasDcopt = false;
+//var adlPro=window.location.protocal=='https:'?'https:':'http:';
+//document.write('<'+'sc'+'ript type="text/javascript" src="'+adlPro+'//js.himediads.com/js?lang=fr&s='+adlSite+'&z='+adlZone+'&d='+Math.floor(Math.random()*10000000000)+'"><\/'+'sc'+'ript>');</script>
+<!-- END Hi-Media Media Settings - v1.0 -->	
+
+<script type="text/javascript">
+
+var nameShow;
+
+</script>
+
+<script type="text/javascript" src="/sitewide/js/sendToFriend.js" language="javascript"></script>
+<script type="text/javascript" src="/sitewide/core/javaScript/jQuery/jquery-1.5.2.min.js" language="javascript"></script>
+<script type="text/JavaScript" src="/sitewide/scripts/zap2it_lookup.js"></script>
+
+<script type="text/javascript">
+/*
+MTV's jQuery scripts use no conflict mode and use $j.
+Assign jQuery to $j so Logo plays nice with the MTV scripts.
+*/
+var $j = jQuery;
+</script>
+
+<script language="JavaScript" type="text/javascript">var sections="&gateway=home";</script>
+
+<!-- automatic insertion -->
+
+<script language="javascript" src="/sitewide/scripts/personalization.js"></script>
+
+<script language="javascript" src="/shared/scripts/flash_detect.js"></script>	
+<script language="javascript" src="/shared/scripts/Media.js"></script>	
+<script language="javascript" src="/shared/scripts/detect_viewpoint.js"></script>	
+
+<script language="javascript" type="text/javascript"><!--
+var extraVals = '';
+extraVals = extraVals==""?extraVals:"&"+extraVals;
+var if_nt_Screen_Attr = screen.height + "x" + screen.width + "x" + screen.colorDepth;
+var if_nt_Flash = flashVersion;
+
+var docURL = document.location + "";
+
+var partsParts = window.location.pathname;
+
+var if_nt_url= escape(partsParts);
+
+var mep1;
+function setMep1(str){
+mep1 = str;
+}
+setMep1(sections + "&pageName=index.jhtml" + "&if_nt_login=" + if_nt_login + "&if_clientCode=" + if_clientCode + "&if_nt_userName=" + if_nt_userName + "&if_nt_bandwidth=" + if_nt_bandwidth + "&if_nt_Screen_Attr=" + if_nt_Screen_Attr + "&if_nt_zyg=" + if_nt_zyg + "&if_nt_span=" + if_nt_span + "&if_nt_demo=" + if_nt_demo + "&if_nt_era=" + if_nt_era + "&if_nt_Flash=" + if_nt_Flash + extraVals);
+
+var bc="&if_nt_Browser_Combination=" + escape(window.navigator.userAgent);
+var Site='mtv'; var if_SiteID='2';
+
+--></script>
+
+<script language="JavaScript" type="text/javascript" src="/shared/droplets/sectionsetupFiles/special_rep_calls.js"></script>
+
+<script type="text/javascript" src="/sitewide/scripts/rep.js"></script>	
+
+<!--START CODA-->
+
+<script type="text/javascript" language="JavaScript">
+
+var remote_host = '';
+
+</script>
+
+<script type="text/JavaScript" src="/global/reporting/scripts/rep_object.js"></script>
+
+<script type="text/JavaScript" language="JavaScript">
+
+var omniCall = new ReportingCall(defaultCall);
+var mtv_dloc = window.location.toString();
+var mtv_dlocParts = mtv_dloc.split("/");
+var ocp = omniCall.pageName?omniCall.pageName:"";
+if(omniCall.gateway=="asm")omniCall.asm=true;
+
+try{
+//	MTVi.reporting.PartnerSearch.setTerms("");
+//	omniCall.partnerSearch=MTVi.reporting.PartnerSearch.getKeywords();
+omniCall.partnerSearch=MTVi.reporting.PartnerSearch.get("");
+}catch(e){}
+
+</script>
+
+<script language="JavaScript" src="/sitewide/scripts/omni_config.js"></script>
+
+<script type="text/JavaScript" language="JavaScript" src="/global/reporting/scripts/omni_functions.js"></script>
+
+<script type="text/javascript" src="http://www.mtv.com/global/scripts/special/projx.jhtml?channelname=Logo"></script>
+<script type="text/javascript" src="http://btg.mtvnservices.com/aria/coda.html?site=logoonline.com"></script><script src="http://btg.mtvnservices.com/aria/uuid.html" type="text/javascript"></script><script src="//mtvn.demdex.net/event?d_stuff=1&amp;d_dst=1&amp;d_rtbd=json&amp;d_cts=1&amp;d_cb=aam_tnt_cb" type="text/javascript"></script><script src="http://rtax.criteo.com/delivery/rta/rta.js?netId=1513&amp;cookieName=cto_via&amp;rnd=340790769728223500&amp;varName=crtg_content" type="text/javascript"></script><script src="//edge.quantserve.com/quant.js" type="text/javascript"></script><style>.mboxDefault { visibility:hidden; }</style><script src="http://b.scorecardresearch.com/beacon.js?c1=2&amp;c2=6059103&amp;c3=&amp;c4=http%253A%2F%2Fwww.logotv.com%2F&amp;c5=20000&amp;c6=&amp;c15=" type="text/javascript"></script>
+<script type="text/javascript" src="/sitewide/scripts/ad_reporting_logo_extra.js"></script>
+<script type="text/javascript" src="/sitewide/scripts/ad_scheduler_logo.jhtml"></script><script src="/sitewide/scripts/CODA_scheduler.js"></script>
+
+<script type="text/javascript" src="/sitewide/scripts/reporting.js"></script>
+
+<!--END CODA-->
+
+<script type="text/javascript" src="/sitewide/core/javaScript/swfObject/swfobject.js" language="javascript"></script>
+<script type="text/javascript" src="/global/apps/fbml/js/SwfPlayerObject.js" language="javascript"></script>
+<script language="Javascript" src="/sitewide/scripts/sponsored_links_linkspots_conf.js"></script>
+<script language="Javascript" src="/global/scripts/overture/sponsored_links_lib.js"></script>
+
+<script type="text/javascript" src="/sitewide/core/javaScript/jQuery/jquery.delay.js"></script>
+<script type="text/javascript" src="/sitewide/core/javaScript/jQuery/jqueryqtip100rc3min.js"></script>
+<script type="text/javascript" src="/sitewide/core/javaScript/jQuery/jquery.xslt.js"></script>
+<script type="text/javascript" src="/sitewide/scripts/logoLitePlayer.js"></script><script src="http://www.logotv.com/global/flux/js/yepnope/1.0.1/yepnope.min.js" type="text/javascript"></script><script src="http://www.logotv.com/global/music/videos/scripts/jquery-player/0.11/player.js" type="text/javascript"></script>
+<script type="text/javascript" src="/global/music/shows/scripts/shows.js"></script>
+<script type="text/javascript" src="/global/music/scripts/includes/utils.jhtml"></script>
+<script type="text/javascript" src="/sitewide/core/javaScript/fancybox/jquery.fancybox-1.2.6.js"></script>
+<script type="text/javascript" src="/sitewide/scripts/shows.js"></script>
+
+<link href="/global/music/css/marquee.css" media="screen, print, projection" type="text/css" rel="stylesheet"> 
+<link href="/sitewide/css/charlie/marquee.css" media="screen, print, projection" type="text/css" rel="stylesheet">
+<link href="/sitewide/css/charlie/shows.css" media="screen, print, projection" type="text/css" rel="stylesheet">
+<link href="/home/css/screen.css" media="screen, print, projection" type="text/css" rel="stylesheet">
+
+<script type="text/javascript" src="/sitewide/core/javaScript/jQuery/jquery.delay.js"></script>
+
+<script>
+video_keyvals='';
+</script>
+
+<script>
+
+secparams="_hp"; //homepage default
+zone="_hp"; //homepage default
+ex_cats="";	//exception categories
+show_1x2=false; //normally don't generate survey ad
+inc_qs=true;	//switch for including query string in key vals
+var url = window.location.pathname;
+
+//deal with unwanted pagenames and with leading and trailing undesirable chars
+if (url !="" && url !="/") {
+
+var SplitResult = url.split("/");
+lastsec = SplitResult[SplitResult.length-1]
+/*
+if (lastsec == "series.jhtml") { //trim any pagenames we do not want in zone/sec
+url="";
+for (i=0;i<SplitResult.length-1;i++) {
+if (SplitResult[i] == "")
+url=url+SplitResult[i];
+else url=url+"/"+SplitResult[i];
+}
+}
+*/
+var SplitResult2 = url.split(".");
+if (SplitResult2[SplitResult2.length-1] == "jhtml") { //trim .jhtml extension
+url = url.substring(1,url.length-6);
+} else url = url.substring(1); //trim leading slash
+//deal with hub pages and other special cases 
+if (url == "video/showall"){
+url = "video/_mn";
+show_1x2=true; //turn on survey ad	
+surveyparams="video/video";
+} else if (url == 'video/franchise') {
+url=video_keyvals;
+} else if (url.split("/")[0] == 'video') {
+url=video_keyvals;
+inc_qs=false;
+}
+if (url == "travel/main"){
+url = "travel/_mn";
+show_1x2=true; //turn on survey ad	
+surveyparams="travel/travel";
+}
+if (url == "shows/" || url == "schedule/" || url == "about/") {
+url=url+"_mn";
+show_1x2=true; //turn on survey ad
+surveyparams=url+"/"+url;
+}
+//include query string (if any)
+qs=window.location.search.substring(1);
+if (qs != "" && inc_qs) {
+qs=qs.replace("=","");
+url=url+"/"+qs;
+}
+//set secparams and zone
+secparams=url;
+zone=url;
+}
+//remove non-allowable CODA chars
+var not_allowed = new Array("_", ".","\"","\'"," ","&",";","~","-",":","?","@","{","}","^","$","\\","%","|");
+
+for (na_iter=0; na_iter<not_allowed.length; na_iter++) {
+secparams = secparams.replace(not_allowed[na_iter], "_");
+zone = zone.replace(not_allowed[na_iter], "_");
+}
+
+if (secparams.charAt(0) == "0" || secparams.charAt(0) == "1" || secparams.charAt(0) == "2" || secparams.charAt(0) == "3" || secparams.charAt(0) == "4" || secparams.charAt(0) == "5" || secparams.charAt(0) == "6" || secparams.charAt(0) == "7" || secparams.charAt(0) == "8" || secparams.charAt(0) == "9") {
+secparams = "_"+secparams;
+zone = "_"+zone;
+}
+
+for (num_iter=0; num_iter<5; num_iter++) {
+secparams = secparams.replace("/0", "/_0");
+zone = zone.replace("/0", "/_0");
+secparams = secparams.replace("/1", "/_1");
+zone = zone.replace("/1", "/_1");
+secparams = secparams.replace("/2", "/_2");
+zone = zone.replace("/2", "/_2");
+secparams = secparams.replace("/3", "/_3");
+zone = zone.replace("/3", "/_3");
+secparams = secparams.replace("/4", "/_4");
+zone = zone.replace("/4", "/_4");
+secparams = secparams.replace("/5", "/_5");
+zone = zone.replace("/5", "/_5");
+secparams = secparams.replace("/6", "/_6");
+zone = zone.replace("/6", "/_6");
+secparams = secparams.replace("/7", "/_7");
+zone = zone.replace("/7", "/_7");
+secparams = secparams.replace("/8", "/_8");
+zone = zone.replace("/8", "/_8");
+secparams = secparams.replace("/9", "/_9");
+zone = zone.replace("/9", "/_9");
+}
+//section name and exclusion category
+secname=secparams.split("/")[0];
+ex_cats = "!category="+secname+";";
+
+</script>
+
+<script>
+function removeInvalidCharsFrom(myString) {
+var escapedString = myString.replace(/\W/g, "_");
+return escapedString;
+}
+
+</script>
+<script type="text/javascript" src="http://www.mtv.com/sitewide/fbml/scripts/utils.jhtml?flip=true"></script>
+<script type="text/javascript" src="/sitewide/scripts/community2/main.jhtml"></script>
+<script type="text/javascript" src="/sitewide/scripts/gen.js"></script>
+
+<style>
+#opa-header{
+width:976px;
+margin-left:auto;
+margin-right:auto;
+background:url("/sitewide/css/images/opaBackground.png") repeat-x scroll center center transparent;
+padding-top:5px;
+z-index:0;
+}
+
+#opa-header #adContainer{
+list-style:none outside none;
+margin:0;
+padding:0;
+}
+
+#opa-header #adContainer #leftPromo {
+list-style:none outside none;
+margin:0px; padding:0px;
+display:inline-block !important;
+width:238px;
+float:left;
+}
+
+#opa-header #adContainer #leftPromo #leftPromo-content{
+display:none; /*jQuery Will Set To 'block' if 728x90 Ad Loads*/
+width:218px;
+height:70px;
+overflow:hidden;
+border:1px solid #4B4B4B;
+margin-left:10px;
+margin-top:10px;
+position:relative;
+float:left;
+background:url("/sitewide/views/bafaPromoModule/images/BAFA_Promo_BG.png") repeat-y scroll 0 0 transparent;
+}
+
+#opa-header #adContainer #ad-728x90{
+display:inline-block;
+text-align:right;
+margin:0px;
+padding:0px;
+text-align:center;
+}
+
+.bafaLeftContent{
+width:218px;
+height:70px;
+position:relative;
+float:left;
+font-size:11px;
+text-transform:uppercase;
+font-weight:lighter;
+text-align:left;
+font-family:Helvetica, Arial, sans-serif;
+line-height:13px;
+list-style-type:none;
+padding:0px;
+}
+
+.bafaLeftContent a{
+text-decoration:none;
+border:none;
+}
+
+.hasArrow{
+padding-right:10px;
+background: transparent url(/sitewide/views/bafaPromoModule/images/BAFA_Promo_linkBg_off.png) no-repeat scroll center right;
+position:relative;
+*float:left;
+}
+
+.lowerDivider{
+border-bottom:2px solid #B2B6C1;
+}
+
+textarea {
+resize: none;
+}	
+/* HEADER */
+div#search {
+background-image: none;
+}
+/* ADS */
+li#ad-728x90 {
+margin-bottom: 5px;
+}
+div#marquee_container {
+position: relative; 
+z-index: 100; 
+display: block; 
+overflow: hidden; 
+float: left; 
+margin-left: 10px;
+margin-top: 0px; 
+}
+div#ad300x250_homepage_div {
+overflow: hidden; 
+width: 300px; 
+height: 250px; 
+float: right;
+z-index: 80;
+margin-top: 25px; 
+margin-right: 10px; 
+position: relative;
+}
+iframe#ad300x250_homepage_iframe {
+height: 250px;
+width: 300px;
+}	
+/* MAIN CONTAINER */
+div#supercontainer {
+position: relative; 
+float: left; 
+margin: 0px; 
+background-color: #FFF; 
+width: 976px;
+}
+/* GUTTERS */
+div#gutterLeft {
+position: absolute; 
+top: 0pt; 
+left: 0pt; 
+height: 1035px; 
+width: 340.5px;
+}
+div#gutterRight {
+position: absolute; 
+top: 0pt; 
+right: 0pt; 
+height: 1035px; 
+width: 340.5px;
+}
+</style>
+<!--[if IE 8]>
+<style>
+#opa-header #adContainer #ad-728x90{
+display:block;
+}
+</style>
+<![endif]-->
+<style>body {background: url(/sitewide/css/charlie/themes/1/hp-hat-update_01.jpg) top center no-repeat black}</style><script src="//mtvn.demdex.net/event?d_rtbd=json&amp;d_dst=1&amp;d_cts=1&amp;d_cb=btg.Demdex.response&amp;c_pageName=%2FLogo&amp;c_ch=Logo&amp;c_h2=Logo&amp;c_c17=Logo&amp;c_v49=Logo&amp;c_events=event16&amp;c_c34=10%3A00PM&amp;c_v46=10%3A00PM&amp;c_c33=Monday&amp;c_v45=Monday&amp;c_v57=b18de230-6c30-b846-f9e3-fb4d72f017ce&amp;c_v67=b18de230-6c30-b846-f9e3-fb4d72f017ce_1369706954986&amp;c_c41=New&amp;c_host=www.logotv.com" type="text/javascript"></script><link rel="stylesheet" class="dynamic_css" type="text/css" href=""></head>
+<body style="" class="smallSearch"><script src="http://widgets4.flux.com/Core?includeJquery=false" type="text/javascript"></script><div class="mboxDefault"></div>
+
+<div style="height:1px;position:absolute;left:-100px;visibility:hidden;width:1px">
+<script type="text/javascript">	
+var vPair = "";
+
+var ex_cats = '';
+var keyvals="site=logoonline;!category=video;!category=expand;!category=pop;!category=3rdparty;!category=eyeblaster;!category=eyewonder;"+ex_cats+vPair;
+btg.config.DoubleClick["dartSite"] = 'logoonline.mtvi';
+btg.config.DoubleClick["keyValues"] = keyvals;
+btg.config.DoubleClick["defaultContentType"] = 'adj';
+btg.config.DoubleClick["positionThreshold"] = '2';
+btg.config.DoubleClick["zone"] = "atf_j_s/"+zone;	
+btg.Controller.placeAd(
+{
+size:'3x3',
+contentType:'adj',
+sections:secparams,
+keyValues:keyvals
+}
+);
+</script><div style="visibility: visible; display: block;" class="mboxDefault"></div><div id="mboxMarker-default-vialogoonline-0" style="visibility:hidden;display:none">&nbsp;</div><script src="http://mtvnetworks.tt.omtrdc.net/m2/mtvnetworks/mbox/standard?mboxHost=www.logotv.com&amp;mboxSession=1369706940370-472527&amp;mboxPage=1369706953321-560519&amp;screenHeight=1024&amp;screenWidth=1280&amp;browserWidth=1184&amp;browserHeight=323&amp;browserTimeOffset=-300&amp;colorDepth=24&amp;mboxCount=1&amp;channel=undefined&amp;pageType=&amp;loggedIn=No&amp;mbox=vialogoonline&amp;mboxId=0&amp;mboxTime=1369688953511&amp;mboxURL=http%3A%2F%2Fwww.logotv.com%2F&amp;mboxReferrer=&amp;mboxVersion=41" language="JavaScript"></script><script type="text/javascript" id="ad_1" src="http://ad.doubleclick.net/adj/logoonline.mtvi/atf_j_s/_hp;sec0=_hp;pos=atf;tag=adj;mtype=standard;site=logoonline;CRM=MLG;A1=VN900;sz=3x3;tile=1;dcopt=ist;!category=video;!category=expand;!category=pop;!category=3rdparty;!category=eyeblaster;!category=eyewonder;u=b18de230-6c30-b846-f9e3-fb4d72f017ce%7Csec0%3D_hp;ord=302064040398564900?"></script><a target="_new" href="http://ad.doubleclick.net/click;h=v8/3df0/0/0/%2a/z;25172797;0-0;0;31535478;2300-3/3;13990999/14008895/2;u=b18de230-6c30-b846-f9e3-fb4d72f017ce|sec0=_hp;~aopt=2/1/df9f/0;~sscs=%3fhttp://www.logoonline.com"><img src="http://s0.2mdn.net/viewad/1061466/3x3.jpg" alt="Click here to find out more!" border="0"></a>
+</div>
+
+<!-- The styled div prevents the single pixel from messing up the layout -->
+<div style="height:1px;position:absolute;left:-100px;visibility:hidden;width:1px">
+<script type="text/javascript">
+var vPair = "";
+
+btg.config.DoubleClick["dartSite"] = 'logoonline.mtvi';
+
+var keyvals="site=logoonline;!category=video;!category=expand;!category=pop;!category=3rdparty;!category=eyeblaster;!category=eyewonder;"+ex_cats+vPair;
+btg.config.DoubleClick["keyValues"] = keyvals;
+btg.config.DoubleClick["defaultContentType"] = 'adj';
+btg.config.DoubleClick["positionThreshold"] = '2';
+btg.config.DoubleClick["zone"] = "atf_j_s/"+zone;	
+//Place Ad with 2 min refresh
+btg.Controller.placeAd(
+{
+size:'6x6',
+contentType:'adj',
+sections:secparams,
+keyValues:keyvals,
+reloadInterval:120000
+}
+);
+btg.config.DoubleClick["dartSite"] = 'logoonline.mtvi';
+btg.Cookie.set("vmn_poe"); //Once the “vmn_cookie” is set (scoped to the session), Coda will reject all “6x6” calls.
+</script>
+</div>
+<script type="text/javascript">
+// Flux anchor fix
+var timeout = 5;
+function fixFluxLinks() {
+if(timeout > 0) {
+if(jQuery(".fluxWidget .share a").length > 0) {
+jQuery(".fluxWidget .share a").each(function(){
+if(jQuery(this).attr("href") == "")
+jQuery(this).attr("href", "#");
+});
+} else {
+window.setTimeout(fixFluxLinks, 500);	
+}
+timeout = timeout-1;
+}
+}
+jQuery(window).load(function(){
+fixFluxLinks();
+});
+</script>
+
+<!-- logo header feed -->
+
+<!-- header html start -->
+<!-- header head start -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" media="screen, print, projection" href="/sitewide/css/charlie/header.css">
+
+<div class="topMenuBar noindex">
+<div id="topMenuBarContainer">
+<div class="flux4Widget" data-widget="userBar"></div>
+<div class="flux4Widget" data-widget="profile"></div>
+</div>
+</div>
+
+<script src="http://btg.mtvnservices.com/mtvn/jquery-flux4/0.11/flux4.js" type="text/javascript"></script>
+<script type="text/javascript">
+var MTVN = MTVN || {};
+MTVN.conf = MTVN.conf || {};
+MTVN.conf.flux4 = MTVN.conf.flux4 || {};
+
+MTVN.conf.flux4["ucid"] = "06F4FFFF009B10200002FFFFF406";
+MTVN.conf.flux4["widgets"] = {
+"userBar": {
+"name": "UserBar",
+"opts": {
+displayMode: 'EmbeddedTop',
+contentUri: '06F4FFFF009B10200002FFFFF406',
+elements: [
+{
+id: 'MyStuff',
+showThumbnail: true
+/*,fbPublishing: true*/
+},
+/*{
+id: 'ActivityFeed',
+settings:{
+maxResults: 10,
+updateRequestInterval: 30
+}
+},*/
+{
+id: 'CustomLink',
+url: 'javascript:popNewsletter();',
+text: 'Sign up for our XOXOlogo newsletter',
+alt: 'Sign up for our XOXOlogo newsletter'
+},
+{
+id: 'Follow',
+layout: 'horizontal',
+title: '',
+elements: [{ id: 'twitter', showCounter: true, button: 'grey' }, { id: 'facebook', showCounter: true, colorscheme: 'dark' }]
+},
+{
+id: 'FbPublishing'
+}
+]
+}
+},
+"profile": {
+"name":'UserProfile', 
+"opts": {}
+},
+
+"activity": {
+"name": "ActivityFeed",
+"opts": {
+title: "",
+updateRequestInterval: 30,
+injectItems: 2,
+injectSeconds: 10,
+maxResults: 15,
+showPager: true,
+paginationType: 'pages',
+filterVisible: false,
+sortingVisible:false,
+defaultFilter: 'Comments',
+enableComments: true,
+includeGuestActivities: true,
+topOrder: true,
+commentMessage: 'Join the conversation ...'
+}
+},
+
+"videoShare": {
+"name": "Share",
+"opts": {
+title: " ",
+layout: 'horizontal',
+elements: [
+{ id: 'Facebook', type: 'fblike', colorScheme: 'light', send: false },
+{ id: 'Twitter', originalButton: true, urlSettings: { related: "LogoTV", via: "LogoTV" } },
+{ id: 'GooglePlusOne', count:false},	
+{ id: 'Embed' },
+{ id: 'More', title: 'More&raquo;' }
+]
+}
+},
+
+"carouselVideoShare": {
+"name": "Share",
+"opts": {
+title: " ",
+layout: 'horizontal',
+elements: [
+{ id: 'Twitter', originalButton: true, urlSettings: { related: "LogoTV", via: "LogoTV" } },
+{ id: 'GooglePlusOne', count:true},	
+{ id: 'Facebook', type: 'fblike', colorScheme: 'light', send: false }
+]
+}
+},
+
+"vevoVideoShare": {
+"name": "Share",
+"opts": {
+title: " ",
+layout: 'horizontal',
+elements: [
+{ id: 'Facebook', type: 'fblike', colorScheme: 'light', send: false },
+{ id: 'Twitter', originalButton: true, urlSettings: { related: 'mtvnews', via: "LogoTV" } },
+{ id: 'GooglePlusOne', count:false},	
+{ id: 'More', title: 'More&raquo;' }
+],
+overlayElements: {
+copyLinkEnabled: true,
+tabs: [
+{ id: 'SocialTab', visible: true,
+elements: [
+{ id: 'Facebook', type: "fblike", send: true },
+{ id: 'Twitter', originalButton: true },
+{ id: 'GooglePlusOne' },
+{ id: 'StumbleUpon', originalButton: true },
+{ id: 'Digg' },
+{ id: 'Tumblr', originalButton: true },
+{ id: 'Reddit' },
+{ id: 'Blogger' },
+{ id: 'MySpace' },
+{ id: 'StudiVZ' },
+{ id: 'Orkut' },
+{ id: 'Hyves' },
+{ id: 'Tuenti' },
+{ id: 'Windowslive' },
+{ id: 'Pinterest' }
+]
+},
+{ id: 'EmailTab', visible: true },
+{ id: 'EmbedTab', visible: false },
+{ id: 'FollowersTab', visible: true }
+]
+}
+}
+},
+
+"flag": {
+"name": "Flag",
+"onLoad": function(widget) {}
+}
+};
+$j(function(){$j(".flux4Widget").flux4();});	
+</script>
+<script type="text/javascript" src="/sitewide/scripts/random_background.js"></script>
+<script type="text/javascript">
+
+var sponsorshipType = "home";
+var idVideo;
+var idFranchise;
+var idSeries;
+var clickGutter;
+var clickGutterUrl;
+var arrPixelTracker = new Array();
+var skinSource;
+var hideComments;
+var backgroundAttachment;
+
+$j.ajax({
+type: "GET",
+url: "/content/skins/sitewide/xml/sponsorshipPackages.jhtml",
+dataType: "xml",
+contentType: "text/xml",
+error: function(error){
+},
+success: function(xml) {
+
+var strDateToday = "2013-05-27";
+
+$j(xml).find('package').each(function() {
+var doLoop = new Boolean(true);
+var package = $j(this);
+
+var differenceStart = 0;
+var differenceEnd = 0;
+var strDateStart = "" + package.attr('startOn') + "";
+var arrDateStart = strDateStart.split('-'); 
+dateStart = new Date(arrDateStart[0], arrDateStart[1]-1, arrDateStart[2]);
+var arrDateToday = strDateToday.split('-');
+dateToday = new Date(arrDateToday[0], arrDateToday[1]-1, arrDateToday[2]);
+differenceStart = dateStart - dateToday;
+
+if (differenceStart <= 0) {	
+var strDateEnd = "" + package.attr('endOn') + "";
+var arrDateEnd = strDateEnd.split('-'); 
+dateEnd = new Date(arrDateEnd[0], arrDateEnd[1]-1, arrDateEnd[2]);
+differenceEnd = dateEnd - dateToday;
+
+if (differenceEnd >= 0) {
+$j(package).find('flag').each(function() {
+switch(sponsorshipType) {
+case 'home':
+if ($j(this).attr('type') == "homepage") {
+doLoop = applySponsorship(package);
+}
+break;
+case 'showsHub':
+if ($j(this).attr('type') == "showsHub") {
+doLoop = applySponsorship(package);
+}
+break;
+case 'videosShowAll':
+if ($j(this).attr('type') == "videosShowAll") {
+doLoop = applySponsorship(package);
+}
+break;
+case 'series':
+if ((($j(this).attr('type') == "bySeries-0") || ($j(this).attr('type') == "bySeries-2")) && (Number($j(this).attr('matchValue')) == idSeries)) {
+doLoop = applySponsorship(package);
+}
+break;
+case 'franchise':
+if ((($j(this).attr('type') == "byVideoFranchise-0") || ($j(this).attr('type') == "byVideoFranchise-2")) && (Number($j(this).attr('matchValue')) == idFranchise)) {
+doLoop = applySponsorship(package);
+}
+break;
+case 'video':
+if (($j(this).attr('type') == "byVideoContentID") && (Number($j(this).attr('matchValue')) == idVideo)) {
+doLoop = applySponsorship(package);
+} else if ((($j(this).attr('type') == "byVideoFranchise-1") || ($j(this).attr('type') == "byVideoFranchise-2")) && (Number($j(this).attr('matchValue')) == idFranchise)) {
+doLoop = applySponsorship(package);
+} else if ((($j(this).attr('type') == "bySeries-1") || ($j(this).attr('type') == "bySeries-2")) && (Number($j(this).attr('matchValue')) == idSeries)) {
+doLoop = applySponsorship(package);
+}
+break;
+default:
+break;
+}
+return doLoop;
+});	
+}
+}
+return doLoop;
+});	
+}
+});
+$j(document).ready(function() {
+if (skinSource != "") {
+skinSource = $j.trim(skinSource);
+var tSource = '<link rel="stylesheet" class="dynamic_css" type="text/css" href="'+skinSource+'"/>';
+/* IE doesn't always notice the presence of new stylesheets appended via jquery */
+if ($j.browser.msie) {
+(document.createStyleSheet) ? document.createStyleSheet(skinSource) : $j('<link rel="stylesheet" type="text/css" href="/sitewide/core/droplets/sponsorshipPackages/' + skinSource + '" />').appendTo('head');
+} else {
+$j('head').append(tSource);	
+}
+}
+if (hideComments == "true") {
+$j('div.comments-wrapper').remove();
+}
+if(backgroundAttachment) {
+$j('body').css('background-attachment', backgroundAttachment);
+}
+if (clickGutter == "true") {
+if($j('#gutterLeft').length == 0) $j('body').append('<div id="gutterLeft"></div>');
+if($j('#gutterRight').length == 0) $j('body').append('<div id="gutterRight"></div>');
+resizeGutters();
+
+$j('#gutterLeft').click(function() {
+window.open(clickGutterUrl, "Advertisement");
+});
+$j('#gutterRight').click(function() {
+window.open(clickGutterUrl, "Advertisement");
+});
+$j('#gutterLeft').hover(function() {
+$j(this).css("cursor","pointer");
+window.status = clickGutterUrl;
+$j(this).mouseout(function() {
+window.status = "";
+});
+});
+$j('#gutterRight').hover(function() {
+$j(this).css("cursor","pointer");
+window.status = clickGutterUrl;
+$j(this).mouseout(function() {
+window.status = "";
+});
+});
+}
+if (arrPixelTracker.length > 0) {
+var len = arrPixelTracker.length;
+var ord = ord=Math.random()*10000000000000000;
+for ( var i = 0; i < len; ++i ){
+$j('body').append(arrPixelTracker[i]);
+}
+}
+});
+
+function applySponsorship(_package) {
+if (clickGutter != "true") {
+clickGutter = _package.find('clickGutter').attr('enabled');
+clickGutterUrl = jQuery.trim(_package.find('clickGutter').text());
+}
+if (_package.find('pixelTracker').attr('enabled') == "true") {
+var fileref = document.createElement("img");
+var src=_package.find('pixelTracker').text();
+var ord = ord=Math.random()*10000000000000000;
+src=src.replace("[timestamp]", ord);
+fileref.setAttribute("src", src);
+arrPixelTracker.push(fileref);
+}
+skinSource = _package.find('skinSource').text();
+if (_package.attr('backgroundAttachment') == "fixed") {
+backgroundAttachment = "fixed";
+}
+if (_package.attr('hideComments') == "true") {
+hideComments = "true";
+}
+return true;
+}
+
+function isiPad() {
+return navigator.userAgent.indexOf('iPad') != -1;
+}
+
+function resizeGutters(){
+
+if(isiPad()) {
+$j('#gutterLeft').width(0);
+$j('#gutterRight').width(0);
+return;
+}
+var pageWidth = $j("body").width();
+var gutterWidth = (pageWidth-976)/2;
+$j('#gutterLeft').width(gutterWidth-3);
+$j('#gutterRight').width(gutterWidth-3);
+}
+
+$j(function(){resizeGutters();});
+
+$j(window).resize(function() {
+resizeGutters();
+});
+
+</script>
+<script type="text/javascript" src="/sitewide/core/javaScript/jQuery/jquery.shadow.js"></script>
+<link rel="stylesheet" type="text/css" media="screen, print, projection" href="/sitewide/core/javaScript/jQuery/jquery.shadow.css">
+<!-- search box -->
+<script type="text/JavaScript" src="/sitewide/core/javaScript/search/search.js">
+
+<script type="text/JavaScript">
+searchTerm="";
+searchType="";
+searchFail="";
+</script>
+<!-- end search box -->
+
+<!-- autocomplete code for the search box -->
+<script type="text/javascript" src="/sitewide/core/javaScript/dojo/dojo.js">
+
+<script type="text/JavaScript">
+dojo.hostenv.setModulePrefix('utils', 'utils');
+dojo.widget.manager.registerWidgetPackage('utils');
+dojo.require("utils.AutoComplete");
+</script>
+
+<!-- end autocomplete code for the search box -->
+
+<!-- header head end -->
+<!-- header body start -->
+<div class="header noindex">
+
+<a id="logo" href="http://www.logotv.com"></a>
+
+<ul style="" class="dropdown dropdown-horizontal" id="mainMenu">
+<li><a class="dir" href="/video">Watch Video</a><ul>
+<li class=""><a href="/video/showall.jhtml">Full Episodes</a></li>
+<li class=""><a href="/shows/logo_movie_house/series.jhtml">Full Length Movies</a></li>
+<li class="lowerDivider"><a href="/shows/what_logo_documentaries/series.jhtml">Full Length Docs</a></li>
+<li class="play"><a href="/video/1-girl-5-gays-episode-18-season-4/1703497/playlist.jhtml"><img src="/sitewide/css/charlie/themes/1/menu-play.png">1 girl 5 gays Full Episodes</a></li>
+<li class="play"><a href="/video/eastsiders-episode-7-season-1/1707747/playlist.jhtml#vid=910272"><img src="/sitewide/css/charlie/themes/1/menu-play.png">EastSiders Full Episodes</a></li>
+<li class="play"><a href="/video/felt-episode-3-season-1/1707907/playlist.jhtml"><img src="/sitewide/css/charlie/themes/1/menu-play.png">Felt Full Episodes</a></li>
+<li class="play"><a href="/video/webisode-episode-8-season-1-hunting-season/1695734/playlist.jhtml#vid=846330"><img src="/sitewide/css/charlie/themes/1/menu-play.png">Hunting Season Full Episodes</a></li>
+<li class="play"><a href="/video/operation-vacation-julianna-vittorio/1704977/playlist.jhtml"><img src="/sitewide/css/charlie/themes/1/menu-play.png">Operation: Vacation Full Episodes</a></li>
+<li class="play"><a href="/video/?id=1706103"><img src="/sitewide/css/charlie/themes/1/menu-play.png">RuPaul's Drag Race Season 5 Full Episodes</a></li>
+<li class="play"><a href="/video/that-sex-show-episode-30-season-1/1703370/playlist.jhtml"><img src="/sitewide/css/charlie/themes/1/menu-play.png">That Sex Show Full Episodes</a></li>
+<li class="play"><a href="/video/what-im-a-stripper/1705318/playlist.jhtml"><img src="/sitewide/css/charlie/themes/1/menu-play.png">WHAT!? I'm a Stripper</a></li>
+</ul>
+</li>
+<li><a class="dir" href="/shows">Shows</a><ul>
+<li class=""><a href="/schedule/">TV Schedule</a></li>
+<li class="lowerDivider"><a href="http://www.logotv.com/talk/">LogoTalk!</a></li>
+<li class=""><a href="/shows/one_girl_five_gays/series.jhtml">1 girl 5 gays</a></li>
+<li class=""><a href="/shows/absolutely_fabulous/series.jhtml">Absolutely Fabulous</a></li>
+<li class=""><a href="/shows/eastsiders/series.jhtml">EastSiders</a></li>
+<li class=""><a href="/shows/felt/series.jhtml">Felt</a></li>
+<li class=""><a href="/shows/golden_girls/series.jhtml">Golden Girls</a></li>
+<li class=""><a href="/shows/hunting_season/series.jhtml">Hunting Season</a></li>
+<li class=""><a href="/shows/operation_vacation/series.jhtml">Operation: Vacation</a></li>
+<li class=""><a href="/shows/roseanne/series.jhtml">Roseanne</a></li>
+<li class=""><a href="/shows/rupauls_drag_race/season_5/series.jhtml">RuPaul's Drag Race Season 5</a></li>
+<li class=""><a href="/shows/south_of_nowhere/series.jhtml">South of Nowhere</a></li>
+<li class=""><a href="/shows/that_sex_show/series.jhtml">That Sex Show</a></li>
+<li class=""><a href="/shows/what_logo_documentaries/series.jhtml">WHAT!? Logo Documentaries</a></li>
+</ul>
+</li>
+<li><a class="dir" href="http://www.newnownext.com/">News</a><ul>
+<li class=""><a href="http://www.newnownext.com/">NewNowNext: Beyond Trends </a></li>
+<li class=""><a href="http://www.thebacklot.com/">The Backlot: The Corner of Hollywood &amp; Gay</a></li>
+<li class=""><a href="http://www.afterellen.com/">AfterEllen: Pop Culture for Gay &amp; Bi Women</a></li>
+</ul>
+</li>
+<li><a class="dir" href="/about/">About</a><ul>
+<li class=""><a href="/channel/">Get Logo</a></li>
+<li class=""><a href="/about/contact.jhtml">Contact Us</a></li>
+<li class=""><a href="/about/">Follow Us</a></li>
+<li class=""><a href="/sitemap.jhtml">Sitemap</a></li>
+<li class=""><a href="/about/sweepstakes.jhtml">Sweepstakes &amp; Events</a></li>
+<li class=""><a href="http://shop.logoonline.com">Shop</a></li>
+<li class=""><a href="http://www.logopressroom.com">Logo Press</a></li>
+</ul>
+</li>
+</ul>
+<script type="text/javascript">
+$(document).ready(function() {
+$('#mainMenu li.play a').hover(function() {
+var img = $(this).find('img');
+var src = $(img).attr('src');
+$(img).attr('src', src.replace('.png', '-hover.png'));
+},
+function() {
+var img = $(this).find('img');
+var src = $(img).attr('src');
+$(img).attr('src', src.replace('-hover.png', '.png'));
+});
+
+});
+</script>
+<div id="search" style="background-image: none;">
+<div id="tabs">
+<ul id="header-search-tabs" class="header-search-tabs">
+<li onclick="toggle_divs('header-search-logo', 'header-search-web', 'header-search-video', 'searchterm', '0');" id="header-search-logo" class="active">
+<a href="javascript:toggle_divs('header-search-logo', 'header-search-web', 'header-search-video', 'searchterm', '0');" class="active">LogoTV.com</a>
+</li>
+</ul>
+</div>
+<div id="form">
+<form id="searchForm" name="searchForm" autocomplete="off" onsubmit="return true;" action="javascript:runPortableSearch('searchterm', toggleSearchType);">
+<div id="searchField">
+<label>
+<input value="Search LogoTV.com" onclick="javascript:removePortableDefaultSearchText('searchterm', toggleSearchType);" onblur="javascript:resetPortableDefaultSearchText('searchterm', toggleSearchType);" onkeypress="handleKeyPress(event)" id="searchterm" name="searchterm" type="text">
+<input id="searchtype" name="searchtype" value="logoonline" type="hidden">
+<input value="0" name="start" id="start" type="hidden">
+</label>
+</div>
+<div id="searchButton">
+<a title="Search" onclick="this.blur();" href="javascript:runPortableSearch('searchterm', toggleSearchType);">
+<span></span>
+</a>
+</div>
+<dojo:autocomplete formid="searchForm" textboxid="searchterm" debug="true" action="/sitewide/core/search/proxy.jhtml"></dojo:autocomplete>
+</form>
+</div>
+</div>
+</div>
+<!-- header body end -->
+<!-- header html end -->
+
+<!-- hang out festival cross-brand hp takeover -->
+
+<div id="opa-header" class="noindex">
+<ul id="adContainer">
+<li id="leftPromo">
+<div style="display: block;" id="leftPromo-content">
+<ul style="width: 218px; display: block; position: relative; float: left; list-style-type: none; padding: 0px; margin: 0px; top: -210px;">
+<li class="bafaLeftContent" style="background: transparent url(http://www.logotv.com/content/bafaPromos/images/pintrest_23x23.png) no-repeat scroll 15px 50%;"><a href="http://fb56463.offerpop.com/fb/canvas/tab/31772462827/150794994973742/56463%0A" target="_blank" style="margin: 0px; padding: 0px; width: 218px; display: block; position: relative; float: left; height:68px;">
+<table style="float:right; position:relative; margin-right:5px;" height="68" width="164">
+<tbody><tr>
+<td height="68" valign="middle"><span style="color: #FF0000;">Want to get pinned?&nbsp; </span><span class="hasArrow" style="color: #FFF;">Pin us on Pinterest</span></td>
+</tr>
+</tbody></table></a></li>
+<li class="bafaLeftContent" style="background: transparent url(http://www.logotv.com/content/bafaPromos/images/135x74_Ru_02.png) no-repeat scroll 0px 0px;"><a href="http://fb56463.offerpop.com/fb/canvas/tab/31772462827/150794994973742/56463%0A" target="_blank" style="margin: 0px; padding: 0px; width: 218px; display: block; position: relative; float: left; height:68px;">
+<table style="float:right; position:relative; margin-right:5px;" height="68" width="164">
+<tbody><tr>
+<td height="68" valign="middle"><span style="color: #FF0000;">Your Fav Queens Are Back!&nbsp; </span><span class="hasArrow" style="color: #FFF;">RuPaul's All Stars Drag Race</span></td>
+</tr>
+</tbody></table></a></li>
+<li class="bafaLeftContent" style="background: transparent url(http://www.logotv.com/content/bafaPromos/images/pintrest_23x23.png) no-repeat scroll 15px 50%;"><a href="http://fb56463.offerpop.com/fb/canvas/tab/31772462827/150794994973742/56463%0A" target="_blank" style="margin: 0px; padding: 0px; width: 218px; display: block; position: relative; float: left; height:68px;">
+<table style="float:right; position:relative; margin-right:5px;" height="68" width="164">
+<tbody><tr>
+<td height="68" valign="middle"><span style="color: #FF0000;">Want to get pinned?&nbsp; </span><span class="hasArrow" style="color: #FFF;">Pin us on Pinterest</span></td>
+</tr>
+</tbody></table></a></li>
+<li class="bafaLeftContent" style="background: transparent url(http://www.logotv.com/content/bafaPromos/images/pintrest_23x23.png) no-repeat scroll 15px 50%;"><a href="http://fb56463.offerpop.com/fb/canvas/tab/31772462827/150794994973742/56463%0A" target="_blank" style="margin: 0px; padding: 0px; width: 218px; display: block; position: relative; float: left; height:68px;">
+<table style="float:right; position:relative; margin-right:5px;" height="68" width="164">
+<tbody><tr>
+<td height="68" valign="middle"><span style="color: #FF0000;">Want to get pinned?&nbsp; </span><span class="hasArrow" style="color: #FFF;">Pin us on Pinterest</span></td>
+</tr>
+</tbody></table></a></li>
+<li class="bafaLeftContent" style="background: transparent url(http://www.logotv.com/content/bafaPromos/images/OPA-foursquare-23x23.png) no-repeat scroll 15px 50%;"><a href="https://foursquare.com/logotv" target="_blank" style="margin: 0px; padding: 0px; width: 218px; display: block; position: relative; float: left; height:68px;">
+<table style="float:right; position:relative; margin-right:5px;" height="68" width="164">
+<tbody><tr>
+<td height="68" valign="middle"><span style="color: #FFF;">Get tips from our stars when you&nbsp; </span><span class="hasArrow" style="color: #87F717;">check in on Foursquare!</span></td>
+</tr>
+</tbody></table></a></li>
+<li class="bafaLeftContent" style="background: transparent url(http://www.logotv.com/content/bafaPromos/images/23x23_facebook.png) no-repeat scroll 15px 50%;"><a href="http://www.facebook.com/1girl5gays" target="_blank" style="margin: 0px; padding: 0px; width: 218px; display: block; position: relative; float: left; height:68px;">
+<table style="float:right; position:relative; margin-right:5px;" height="68" width="164">
+<tbody><tr>
+<td height="68" valign="middle"><span style="color: #75BBF9;">Meet your new BFFs.&nbsp; </span><span class="hasArrow" style="color: #FFF;">Friend 1 girl 5 gays.</span></td>
+</tr>
+</tbody></table></a></li>
+<li class="bafaLeftContent" style="background: transparent url(http://www.logotv.com/content/bafaPromos/images/OPA-tumblr.png) no-repeat scroll 15px 50%;"><a href="http://logotv.tumblr.com" target="_blank" style="margin: 0px; padding: 0px; width: 218px; display: block; position: relative; float: left; height:68px;">
+<table style="float:right; position:relative; margin-right:5px;" height="68" width="164">
+<tbody><tr>
+<td height="68" valign="middle"><span style="color: #8258FA;">All about images?&nbsp; </span><span class="hasArrow" style="color: #f0f0f0;">Tumble with us on Tumblr.</span></td>
+</tr>
+</tbody></table></a></li>
+<li class="bafaLeftContent" style="background: transparent url(http://www.logotv.com/content/bafaPromos/images/OPA-getglue.png) no-repeat scroll 15px 50%;"><a href="http://www.getglue.com/logotv" target="_blank" style="margin: 0px; padding: 0px; width: 218px; display: block; position: relative; float: left; height:68px;">
+<table style="float:right; position:relative; margin-right:5px;" height="68" width="164">
+<tbody><tr>
+<td height="68" valign="middle"><span style="color: #f0f0f0;">Check in on GetGlue.&nbsp; </span><span class="hasArrow" style="color: #e2bd00;">Unlock exclusive show stickers.</span></td>
+</tr>
+</tbody></table></a></li>
+<li class="bafaLeftContent" style="background: transparent url(http://www.logotv.com/content/bafaPromos/images/23x23_signup.png) no-repeat scroll 15px 50%;"><a onclick="javascript:popNewsletter();" href="#" style="margin: 0px; padding: 0px; width: 218px; display: block; position: relative; float: left; height:68px;">
+<table style="float:right; position:relative; margin-right:5px;" height="68" width="164">
+<tbody><tr>
+<td height="68" valign="middle"><span style="color: #75BBF9;">Get the latest from Logo.&nbsp; </span><span class="hasArrow" style="color: #FFF;">Sign up for our newsletters.</span></td>
+</tr>
+</tbody></table></a></li>
+<li class="bafaLeftContent" style="background: transparent url(http://www.logotv.com/content/bafaPromos/images/23x23_facebook.png) no-repeat scroll 15px 50%;"><a href="http://www.facebook.com/logo" target="_blank" style="margin: 0px; padding: 0px; width: 218px; display: block; position: relative; float: left; height:68px;">
+<table style="float:right; position:relative; margin-right:5px;" height="68" width="164">
+<tbody><tr>
+<td height="68" valign="middle"><span style="color: #75BBF9;">Like Logo?&nbsp; </span><span style="color: #FFF;"> Then Like us on Facebook.</span></td>
+</tr>
+</tbody></table></a></li>
+<li class="bafaLeftContent" style="background: transparent url(http://www.logotv.com/content/bafaPromos/images/OPA-twitter-2012.png) no-repeat scroll 15px 50%;"><a href="http://www.twitter.com/LogoTV" target="_blank" style="margin: 0px; padding: 0px; width: 218px; display: block; position: relative; float: left; height:68px;">
+<table style="float:right; position:relative; margin-right:5px;" height="68" width="164">
+<tbody><tr>
+<td height="68" valign="middle"><span style="color: #FFF;">We tweet, you win.&nbsp; </span><span class="hasArrow" style="color: rgb(75, 200, 254);">Follow LogoTV for exclusive sweepstakes.</span></td>
+</tr>
+</tbody></table></a></li>
+<li class="bafaLeftContent" style="background: transparent url(http://www.logotv.com/content/bafaPromos/images/23x23_downelink.png) no-repeat scroll 15px 50%;"><a href="http://www.downelink.com/" target="_blank" style="margin: 0px; padding: 0px; width: 218px; display: block; position: relative; float: left; height:68px;">
+<table style="float:right; position:relative; margin-right:5px;" height="68" width="164">
+<tbody><tr>
+<td height="68" valign="middle"><span style="color: rgb(0, 148, 254);">Join the largest LGBT social network,&nbsp; </span><span class="hasArrow" style="color: #FFF;">Downelink</span></td>
+</tr>
+</tbody></table></a></li>
+<li class="bafaLeftContent" style="background: transparent url(http://www.logotv.com/content/bafaPromos/images/23x23_facebook.png) no-repeat scroll 15px 50%;"><a href="http://www.facebook.com/NewNowNext" target="_blank" style="margin: 0px; padding: 0px; width: 218px; display: block; position: relative; float: left; height:68px;">
+<table style="float:right; position:relative; margin-right:5px;" height="68" width="164">
+<tbody><tr>
+<td height="68" valign="middle"><span style="color: #75BBF9;">Go beyond style, music, pop culture&nbsp; </span><span class="hasArrow" style="color: #FFF;">with NewNowNext.</span></td>
+</tr>
+</tbody></table></a></li>
+<li class="bafaLeftContent" style="background: transparent url(http://www.logotv.com/content/bafaPromos/images/23x23_facebook.png) no-repeat scroll 15px 50%;"><a href="http://www.facebook.com/RuPaulsDragRace" target="_blank" style="margin: 0px; padding: 0px; width: 218px; display: block; position: relative; float: left; height:68px;">
+<table style="float:right; position:relative; margin-right:5px;" height="68" width="164">
+<tbody><tr>
+<td height="68" valign="middle"><span style="color: #75BBF9;">Love RuPaul's Drag Race?&nbsp; </span><span class="hasArrow" style="color: #FFF;">Connect with fans on Facebook.</span></td>
+</tr>
+</tbody></table></a></li>
+<li class="bafaLeftContent" style="background: transparent url(http://www.logotv.com/content/bafaPromos/images/23x23_sweepstakes.png) no-repeat scroll 15px 50%;"><a href="http://ebm.mail.logoonline.com/r/regf2?a=0&amp;aid=1327847037&amp;n=1" target="_blank" style="margin: 0px; padding: 0px; width: 218px; display: block; position: relative; float: left; height:68px;">
+<table style="float:right; position:relative; margin-right:5px;" height="68" width="164">
+<tbody><tr>
+<td height="68" valign="middle"><span style="color: #FF5B71;">Wanna win?&nbsp; </span><span class="hasArrow" style="color: #F0F0F0;">Get our sweepstakes only newsletter.</span></td>
+</tr>
+</tbody></table></a></li>
+<li class="bafaLeftContent" style="background: transparent url(http://www.logotv.com/content/bafaPromos/images/23x23_facebook.png) no-repeat scroll 15px 50%;"><a href="http://apps.facebook.com/rupaul-drag-name?_fb_fromhash=515670f141b42b5cb97c1774908b9bd0" target="_blank" style="margin: 0px; padding: 0px; width: 218px; display: block; position: relative; float: left; height:68px;">
+<table style="float:right; position:relative; margin-right:5px;" height="68" width="164">
+<tbody><tr>
+<td height="68" valign="middle"><span style="color: #75BBF9;">Hey Miss Thang, what's your drag name?&nbsp; </span><span class="hasArrow" style="color: #FFF;">Try our Facebook app!</span></td>
+</tr>
+</tbody></table></a></li>
+<li class="bafaLeftContent" style="background: transparent url(http://www.logotv.com/content/bafaPromos/images/23x23_facebook.png) no-repeat scroll 15px 50%;"><a href="http://www.facebook.com/RuPaulsDragRace" target="_blank" style="margin: 0px; padding: 0px; width: 218px; display: block; position: relative; float: left; height:68px;">
+<table style="float:right; position:relative; margin-right:5px;" height="68" width="164">
+<tbody><tr>
+<td height="68" valign="middle"><span style="color: #75BBF9;">'Like' Drag Race&nbsp; </span><span class="hasArrow" style="color: #FFF;">on Facebook!</span></td>
+</tr>
+</tbody></table></a></li>
+<li class="bafaLeftContent" style="background: transparent url(http://www.logotv.com/content/bafaPromos/images/OPA-channelfinder-23x23.png) no-repeat scroll 15px 50%;"><a href="http://logotv.com/channel" target="_blank" style="margin: 0px; padding: 0px; width: 218px; display: block; position: relative; float: left; height:68px;">
+<table style="float:right; position:relative; margin-right:5px;" height="68" width="164">
+<tbody><tr>
+<td height="68" valign="middle"><span style="color: #75BBF9;">Get Logo in your living room!&nbsp; </span><span class="hasArrow" style="color: #FFF;">Find the channel number.</span></td>
+</tr>
+</tbody></table></a></li>
+</ul>
+</div>
+</li>
+<li style="margin-bottom: 5px; display: inline-block;" id="ad-728x90">
+<script type="text/javascript">
+var vPair = "";
+
+btg.config.DoubleClick["dartSite"] = 'logoonline.mtvi';
+
+var keyvals="site=logoonline;dcopt=ist;!category=video;!category=expand;!category=pop;!category=3rdparty;!category=eyeblaster;!category=eyewonder;"+ex_cats+vPair;
+btg.config.DoubleClick["keyValues"] = keyvals;
+btg.config.DoubleClick["defaultContentType"] = 'adj';
+btg.config.DoubleClick["positionThreshold"] = '2';
+btg.config.DoubleClick["zone"] = "atf_j_s/"+zone;	
+
+if (zone.substring(0,5)=="video") {
+//Place Reloadable Ad
+btg.Controller.placeAd(
+{
+size:'728x90',
+sections:secparams,
+keyValues:keyvals,
+isReloadable:true,
+reloadInterval:120000
+}
+);
+} else {
+//Place Static Ad
+btg.Controller.placeAd(
+{
+size:'728x90',
+sections:secparams,
+keyValues:keyvals
+}
+);
+}
+btg.config.DoubleClick["dartSite"] = 'logoonline.mtvi';
+</script><script type="text/javascript" id="ad_3" src="http://ad.doubleclick.net/adj/logoonline.mtvi/btf_j_s/_hp;sec0=_hp;pos=btf;tag=adj;mtype=standard;site=logoonline;CRM=MLG;A1=VN900;sz=728x90;tile=3;dcopt=ist;!category=video;!category=expand;!category=pop;!category=3rdparty;!category=eyeblaster;!category=eyewonder;u=b18de230-6c30-b846-f9e3-fb4d72f017ce%7Csec0%3D_hp;ord=302064040398564900?"></script><!-- Copyright 2008 DoubleClick, a division of Google Inc. All rights reserved. -->
+<!-- Code auto-generated on Fri Mar 29 16:31:57 EDT 2013 -->
+<script src="http://s0.2mdn.net/879366/flashwrite_1_2.js"></script>
+<a target="_blank" href="http://ad.doubleclick.net/click%3Bh%3Dv8/3df0/3/0/%2a/r%3B270559711%3B1-0%3B0%3B96603796%3B3454-728/90%3B53645593/53561288/1%3Bu%3Db18de230-6c30-b846-f9e3-fb4d72f017ce%257Csec0%253D_hp%3B%7Eaopt%3D0/ff/df9f/ff%3B%7Efdr%3D270604626%3B0-0%3B10%3B33532036%3B3454-728/90%3B53666754/53582003/1%3Bu%3Db18de230-6c30-b846-f9e3-fb4d72f017ce|sec0%3D_hp%3B%7Eaopt%3D2/1/df9f/0%3B%7Esscs%3D%3fhttps://www.facebook.com/tanqueray"><img src="http://s0.2mdn.net/2993648/1-Tanqueray_728x90_FY13_HIGHBALL-COMPANION.jpg" alt="Advertisement" galleryimg="no" height="90" width="728" border="0"></a>
+<noscript><a target="_blank" href="http://ad.doubleclick.net/click%3Bh%3Dv8/3df0/3/0/%2a/r%3B270559711%3B1-0%3B0%3B96603796%3B3454-728/90%3B53645593/53561288/1%3Bu%3Db18de230-6c30-b846-f9e3-fb4d72f017ce%257Csec0%253D_hp%3B%7Eaopt%3D0/ff/df9f/ff%3B%7Efdr%3D270604626%3B0-0%3B10%3B33532036%3B3454-728/90%3B53666754/53582003/1%3Bu%3Db18de230-6c30-b846-f9e3-fb4d72f017ce|sec0%3D_hp%3B%7Eaopt%3D2/1/df9f/0%3B%7Esscs%3D%3fhttps://www.facebook.com/tanqueray"><img src="http://s0.2mdn.net/2993648/1-Tanqueray_728x90_FY13_HIGHBALL-COMPANION.jpg" width="728" height="90" border="0" alt="Advertisement" galleryimg="no"></a></noscript>
+
+</li>
+</ul>
+</div>
+
+<!-- The following script checks for an 900w ad and removes the opa header if that's the case -->
+<script type="text/javascript" src="/sitewide/scripts/header.js"></script>
+
+<div id="siteContent">
+<div id="supercontainer">
+
+<div class="hp_topStage"><style>
+/* GENERAL */
+div.ajax-loader {
+position:relative; 
+float:left;
+background-repeat:no-repeat; 
+background-position:center;
+background-image:url(/home/images/ajax-loader.gif);
+margin-bottom:10px;	
+}
+/* "Under Video" BAR UNDER MAIN VIDEO */
+div#underVideoBar {
+background: url("/home/images/2008/leftModuleBgs/h1-tile.png") repeat-x scroll 0% 0% transparent;
+width: 705px; 
+float: left; 
+position: relative; 
+padding: 8px 0 12px 0;
+margin-top: 4px;
+overflow: hidden;
+}
+div#hp_left div#underVideoBar h1 {
+font-size: 20px;
+line-height: 21px;
+font-weight: bold; 
+color: rgb(68, 102, 136); 
+position: relative; 
+float: left; 
+margin: 0 0 0 10px; 
+padding: 0;
+letter-spacing: 0.4px;
+}
+div#underVideoBar span#arrow {
+float: right; 
+position: relative; 
+margin: 0 10px 0 0;
+padding: 0;
+}
+div#underVideoBar a.btnArrowPost {
+text-transform: uppercase; 
+letter-spacing: 0.4px; 
+text-decoration: none; 
+font-weight: bold;
+}
+div#underVideoBar a.btnArrowPost span {
+float: right;
+}
+
+/** NOTE: REMOVE ".forcedPadding" DIV **/
+
+/* VIDEO INFORMATION */
+div.module-bottom {
+background: url("/home/images/2008/leftModuleBgs/moduleBorderBottom.png") repeat-x scroll center top transparent; 
+height: 5px; 
+width: 345px; 
+position: relative; 
+float: left; 
+}
+/* COLUMN A */
+div#videoModuleInformationDivider {
+float: left; 
+position: relative; 
+border-left: 1px solid rgb(184, 186, 198); 
+border-top: 1px solid rgb(184, 186, 198);
+}
+div#col-a div.module-bottom {
+-moz-background-inline-policy: continuous;
+}
+/* COLUMN B */
+div.module-container {
+float: left; 
+position: relative; 
+border-left: 1px solid rgb(184, 186, 198); 
+border-top: 1px solid rgb(184, 186, 198);
+}
+div.moduleList {
+border-top: 1px solid rgb(230, 231, 233); 
+margin-left: 10px; 
+position: relative; 
+float: right; 
+width: 325px;
+}
+div.moduleList div.forceRight {
+border-bottom: 1px solid rgb(230, 231, 233); 
+background: url("/home/images/2008/leftModuleBgs/itemSlatBgShaded.png") repeat-x scroll 0% 0% transparent; 
+position: relative; 
+float: right;
+}
+div.moduleList div.read-more {
+height: 25px; 
+width: 325px; 
+position: relative; 
+float: left; 
+margin-top: 10px; 
+margin-bottom: 10px;	
+}
+div.moduleList div.read-more span.read-more-inner {
+margin-top: 5px; 
+margin-bottom: 5px;
+float: right;	
+}
+div.moduleList div.read-more span.read-more-inner span {
+float: right;	
+}
+div.moduleList div.noShade {
+background: none;	
+}
+div#moduleThumbnail a#overlay {
+width: 150px; 
+height: 100px; 
+z-index: 500; 
+overflow: hidden; 
+position: absolute; 
+float: left; 
+margin-top: 0px; 
+margin-left: -150px;
+}
+div#moduleThumbnail div.transparent-overlay {
+float: left; 
+position: absolute; 
+width: 150px; 
+height: 100px; 
+overflow: hidden;
+}
+div#moduleThumbnail div.transparent-overlay a {
+position: absolute; 
+margin-top: -100px;
+}
+div#moduleThumbnail div.transparent-overlay a img {
+width: 150px;
+height: 100px;
+}
+/* COLUMN C */
+div#col-c div.content-block {
+width: 340px; 
+padding-bottom: 10px; 
+float: left; 
+position: relative; 
+background: url("/home/images/2008/rightModuleBgs/bg1.jpg") repeat-x scroll 0% 0% transparent;
+}
+div#col-c div.content-block span.block-title {
+font-family: Helvetica,Arial,sans-serif; 
+margin-top: 10px; 
+font-size: 13px; 
+margin-left: 10px; 
+color: rgb(45, 45, 45); 
+font-weight: bold; 
+position: relative; 
+float: left;
+}
+div#col-c div.container {
+float: left; 
+position: relative; 
+width: 240px; 
+margin-left: 10px; 
+padding-top: 5px;
+}
+div#col-c div.container div.thumbnail-container {
+border: 1px solid rgb(192, 201, 208); 
+padding: 3px; 
+float: left; 
+position: relative; 
+width: 90px; 
+height: 65px; 
+margin-bottom: 10px; 
+margin-top: 5px; 
+margin-left: 5px; 
+background-color: rgb(255, 255, 255);
+}
+div#col-c div.container div.content-container {
+float: right; 
+position: relative; 
+width: 115px; 
+margin-bottom: 10px; 
+margin-top: 5px;
+margin-right: 10px;
+}
+div#col-c div.container div.content-container a span {
+font-weight: bold;	
+}
+div#col-c div.container div.content-container span {
+float: left; 
+position: relative; 
+width: 120px; 
+font-size: 12px;
+}
+div#col-c div.content-block div.content-divider {
+background: url("/home/images/2008/rightModuleBgs/divider2.jpg") repeat-x scroll 0% 0% transparent; 
+height: 2px; 
+width: 240px; 
+float: left; 
+margin-left: 10px; 
+position: relative; 
+margin-top: 5px;
+}
+/* SCHEDULE-SPECIFIC */
+div#col-c div#schedule .time {
+position: relative; 
+float: left; 
+margin-left: 10px; 
+width: 62px; 
+margin-top: 5px;
+}
+div#col-c div#schedule .show {
+position: relative; 
+float: left; 
+width: 140px; 
+margin-top: 3px;
+margin-bottom: 3px; 
+padding-left: 10px; 
+border-left: 1px solid rgb(153, 153, 153); 
+font-size: 12px;
+}
+div#col-c div#schedule div#see-full {
+float: left; 
+position: relative; 
+width: 240px; 
+margin-left: 10px; 
+height: 15px; 
+padding-top: 10px;
+}
+div#col-c div#schedule div#see-full a {
+position:relative; 
+font-weight:bold; 
+font-size:11px;
+margin-right:5px; 
+float:right; 
+text-align:right; 
+background:url(/home/images/2008/rightModuleBgs/linkBg_off.png) right no-repeat;
+}
+div#col-c div#schedule div#see-full a span {
+margin-right:15px;
+text-decoration:underline;
+}
+/* TRAVEL/VACATION SPECIFIC */
+div#col-c div#travel div#plan-vacation {
+float: left; 
+position: relative; 
+width: 240px; 
+margin-left: 5px; 
+height: 15px; 
+padding-top: 10px;
+}
+div#col-c div#travel div#plan-vacation a {
+position:relative; 
+font-weight:bold; 
+font-size:11px;
+margin-right:5px;
+float:right; 
+text-align:right; 
+background:url(/home/images/2008/rightModuleBgs/linkBg_off.png) right no-repeat;	
+}
+div#col-c div#travel div#plan-vacation a span {
+margin-right:15px; 
+text-decoration:underline;	
+}
+div#col-c div.mdl-exploreOtherSites {
+width: 340px; 
+padding-bottom: 10px; 
+float: left; 
+position: relative; 
+background: url("/home/images/2008/rightModuleBgs/bg1.jpg") repeat-x scroll 0% 0% transparent; 
+display: block;
+}
+/* OTHER SITES SPECIFIC */
+div#col-c div.md1-exploreOtherSites div.entry {
+position: relative; 
+float: left; 
+margin-left: 10px; 
+width: 200px; 
+padding-left: 40px; 
+display: block; 
+padding-top: 10px; 
+padding-bottom: 10px; 
+min-height: 28px; 
+}
+div#col-c div.md1-exploreOtherSites div#365gay-site {
+background: url("/home/images/2008/moreLogoSites/365gay.png") no-repeat scroll 0px 50% transparent;
+}
+div#col-c div.md1-exploreOtherSites div#newnownext-site {
+background: url("/home/images/2008/moreLogoSites/newnownext.png") no-repeat scroll 0px 50% transparent;
+}
+div#col-c div.md1-exploreOtherSites div#tripout-site {
+background: url("/home/images/2008/moreLogoSites/togt.png") no-repeat scroll 0px 50% transparent;
+}
+div#col-c div.md1-exploreOtherSites div#downelink-site {
+background: url("/home/images/2008/moreLogoSites/downelink.png") no-repeat scroll 0px 50% transparent;
+}
+div#col-c div.md1-exploreOtherSites div#moreAbout {
+float: left; 
+position: relative; 
+width: 240px; 
+margin-left: 5px; 
+height: 15px; 
+padding-top: 10px;
+}
+div#col-c div.md1-exploreOtherSites div#moreAbout a {
+position: relative; 
+font-weight: bold; 
+font-size: 11px; 
+margin-right: 5px; 
+float: right; 
+text-align: right; 
+background: url("/home/images/2008/rightModuleBgs/linkBg_off.png") no-repeat scroll right center transparent;
+}
+div#col-c div.md1-exploreOtherSites div#moreAbout a span{
+margin-right: 15px; 
+text-decoration: underline;
+}
+/* CONNECT SPECIFIC */
+div#col-c div#connect div.entry {
+position: relative; 
+float: left; 
+margin-left: 10px; 
+width: 240px; 
+padding-top: 10px; 
+padding-bottom: 10px; 
+min-height: 28px;
+}
+div#col-c div#connect div.entry a {
+font-size: 12px; 
+font-weight: bold;
+}
+div#col-c div#connect div.entry a img {
+width: 28px;
+height: 28px;
+margin: 0pt 12px 0pt 0px; 
+vertical-align: middle;
+}
+div#col-c div#connect div#facebook-connect a img {
+background: url("/home/images/icn-facebook.jpg") no-repeat scroll 0pt 0pt transparent;
+}
+div#col-c div#connect div#myspace-connect a img {
+background: url("/home/images/icn-foursquare.jpg") no-repeat scroll 0pt 0pt transparent;
+}
+div#col-c div#connect div#twitter-connect a img {
+background: url("/home/images/icn-twitter.jpg") no-repeat scroll 0pt 0pt transparent;
+}
+div#col-c div#connect div#google-connect a img {
+background: url("/home/images/icn-google.jpg") no-repeat scroll 0pt 0pt transparent;
+}
+div#col-c div#connect div#tumblr-connect a img {
+background: url("/home/images/icn-tumblr.jpg") no-repeat scroll 0pt 0pt transparent;
+}
+div#col-c div#connect div#pinterest-connect a img {
+background: url("/home/images/icn-pinterest.jpg") no-repeat scroll 0pt 0pt transparent;
+}
+div#col-c div#connect div#instagram-connect a img {
+background: url("/home/images/icon-instagram.jpg") no-repeat scroll 0pt 0pt transparent;
+}
+</style><div id="marquee_container" style="height: px; width: px;">
+<div class="marquee">
+<div class="marquee_homepage mdl ">
+<div class="group marquee_">
+<div id="marquee_d3113e9" class="marquee_img_horizontal">
+<ul style="position: relative; overflow: hidden;" id="marquee_imgid_d3113e9" class="marquee_content">
+<li style="position: absolute; top: 0px; left: 0px; width: 646px; height: 404px; display: list-item; opacity: 1;" id="marquee_d3113e9_1" class="marquee_images" size="small">
+<div><a class="marquee_img" onmousedown="dispatcher.sendLinkEvent({linkType:'o',linkName:'HP:P1:01:Get Your Daily Dose of Sexy, Gay Films with Blackmail Boys'});" href="/video/blackmail-boys/1707965/playlist.jhtml">
+<img src="/shows/logo_movie_house/assets/images/tla_movies/blackmail_boys/marquee/2//646x326.jpg" alt="Get Your Daily Dose of Sexy, Gay Films with 'Blackmail Boys'" height="326" width="646"></a></div>
+</li>
+<li style="position: absolute; top: 0px; left: 0px; width: 646px; height: 404px; display: none;" id="marquee_d3113e9_2" class="marquee_images" size="small">
+<div><a class="marquee_img" onmousedown="dispatcher.sendLinkEvent({linkType:'o',linkName:'HP:P1:02:Real Couples Therapy. Real Puppets. Watch a New Felt'});" href="/video/felt-episode-3-season-1/1707907/playlist.jhtml">
+<img src="/shows/felt/assets/images/episodes/103/646x326.jpg" alt="Real Couples Therapy. Real Puppets. Watch a New 'Felt'" height="326" width="646"></a></div>
+</li>
+<li style="position: absolute; top: 0px; left: 0px; width: 646px; height: 404px; display: none;" id="marquee_d3113e9_3" class="marquee_images" size="small">
+<div><a class="marquee_img" onmousedown="dispatcher.sendLinkEvent({linkType:'o',linkName:'HP:P1:03:Watch the Drama Unfold on a New EastSiders'});" href="/video/?id=1707747">
+<img src="/shows/eastsiders/assets/images/episodes/107/alt/646x326.jpg" alt="Watch the Drama Unfold on a New EastSiders" height="326" width="646"></a></div>
+</li>
+<li style="position: absolute; top: 0px; left: 0px; width: 646px; height: 404px; display: none;" id="marquee_d3113e9_4" class="marquee_images" size="small">
+<div><a class="marquee_img" onmousedown="dispatcher.sendLinkEvent({linkType:'o',linkName:'HP:P1:04:Having Drag Race Withdrawal? Rewatch Season 4 Now!'});" href="/video/episode-1-season-4-rupocalypse-now/1677963/playlist.jhtml">
+<img src="/shows/rupauls_drag_race_s4/assets/images/marquee/key_art//646x326.jpg" alt="Having 'Drag Race' Withdrawal? Rewatch Season 4 Now!" height="326" width="646"></a></div>
+</li>
+<li style="position: absolute; top: 0px; left: 0px; width: 646px; height: 404px; display: none;" id="marquee_d3113e9_5" class="marquee_images" size="small">
+<div><a class="marquee_img" onmousedown="dispatcher.sendLinkEvent({linkType:'o',linkName:'HP:P1:05:Joseph, Benedict and Chris... Oh My!'});" href="http://www.thebacklot.com/2013-hot-100-voting/05/2013/">
+<img src="/partners/the_backlot/hot_100/1//646x326.jpg" alt="Joseph, Benedict and Chris... Oh My!" height="326" width="646"></a></div>
+</li>
+<li style="position: absolute; top: 0px; left: 0px; width: 646px; height: 404px; display: none;" id="marquee_d3113e9_6" class="marquee_images" size="small">
+<div><a class="marquee_img" onmousedown="dispatcher.sendLinkEvent({linkType:'o',linkName:'HP:P1:06:Nothing to Wear to That Memorial Day BBQ?'});" href="http://www.newnownext.com/summer-style-guide/2013/">
+<img src="/partners/newnownext/summer_style_guid//646x326.jpg" alt="Nothing to Wear to That Memorial Day BBQ?" height="326" width="646"></a></div>
+</li>
+</ul>
+<div class="marquee_bg">
+<div class="marquee_text" id="marquee_d3113e9_1_div">
+<h2><a href="/video/blackmail-boys/1707965/playlist.jhtml">Get Your Daily Dose of Sexy, Gay Films with 'Blackmail Boys'</a></h2>
+<p>A sweet and sexually explicit love story becomes an exhilarating extortion tale for two boys, Aaron, and Sam, who plot to
+blackmail a prominent religious figure.
+</p>
+<div class="snipe snipe_"><a class="" onmousedown="dispatcher.sendLinkEvent({linkType:'o',linkName:'HP:P1:01:Get Your Daily Dose of Sexy, Gay Films with Blackmail Boys'});" href="/video/blackmail-boys/1707965/playlist.jhtml"><img style="opacity: 0; display: inline;" class="hide" src="/home/images/sashes/full_movie_white.png" border="0"></a></div></div>
+<div class="marquee_text hide" id="marquee_d3113e9_2_div">
+<h2><a href="/video/felt-episode-3-season-1/1707907/playlist.jhtml">Real Couples Therapy. Real Puppets. Watch a New 'Felt'</a></h2>
+<p>A wife gives her husband the birthday party he never had, a man bonds with his boyfriend over a card game and a woman realizes
+she isn't as advanced as she would like to be.
+</p>
+<div class="snipe snipe_"><a class="" onmousedown="dispatcher.sendLinkEvent({linkType:'o',linkName:'HP:P1:02:Real Couples Therapy. Real Puppets. Watch a New Felt'});" href="/video/felt-episode-3-season-1/1707907/playlist.jhtml"><img style="opacity: 0.0000616838; display: inline;" class="hide" src="/home/images/sashes/full_episode_white.png" border="0"></a></div></div>
+<div class="marquee_text hide" id="marquee_d3113e9_3_div">
+<h2><a href="/video/?id=1707747">Watch the Drama Unfold on a New EastSiders</a></h2>
+<p>It's the end of the month and the apartment is in boxes. Cal and Thom are moving out and Thom has begun seeing Jeremy. Jeremy
+asks Thom to move in with him. His answer, though, is a little surprising.
+</p>
+<div class="snipe snipe_"><a class="" onmousedown="dispatcher.sendLinkEvent({linkType:'o',linkName:'HP:P1:03:Watch the Drama Unfold on a New EastSiders'});" href="/video/?id=1707747"><img style="opacity: 0; display: inline;" class="hide" src="/home/images/sashes/full_episode_white.png" border="0"></a></div></div>
+<div class="marquee_text hide" id="marquee_d3113e9_4_div">
+<h2><a href="/video/episode-1-season-4-rupocalypse-now/1677963/playlist.jhtml">Having 'Drag Race' Withdrawal? Rewatch Season 4 Now!</a></h2>
+<p>That's right squirrel friends... we put all of the season 4 'Drag Race' episodes up online so you could spend your Memorial
+Day weekend inside. You're welcome!
+</p>
+<div class="snipe snipe_"><a class="" onmousedown="dispatcher.sendLinkEvent({linkType:'o',linkName:'HP:P1:04:Having Drag Race Withdrawal? Rewatch Season 4 Now!'});" href="/video/episode-1-season-4-rupocalypse-now/1677963/playlist.jhtml"><img style="opacity: 0; display: inline;" class="hide" src="/home/images/sashes/full_episodes_white.png" border="0"></a></div></div>
+<div class="marquee_text hide" id="marquee_d3113e9_5_div">
+<h2><a href="http://www.thebacklot.com/2013-hot-100-voting/05/2013/">Joseph, Benedict and Chris... Oh My!</a></h2>
+<p>Spend your Memorial Day weekend looking at hot men in order to help The Backlot pick the top 100 hottest men of 2013.</p>
+<div class="snipe snipe_"><a class="" onmousedown="dispatcher.sendLinkEvent({linkType:'o',linkName:'HP:P1:05:Joseph, Benedict and Chris... Oh My!'});" href="http://www.thebacklot.com/2013-hot-100-voting/05/2013/"><img style="opacity: 0; display: inline;" class="hide" src="/home/images/sashes/vote_now_white.png" border="0"></a></div></div>
+<div class="marquee_text hide" id="marquee_d3113e9_6_div">
+<h2><a href="http://www.newnownext.com/summer-style-guide/2013/">Nothing to Wear to That Memorial Day BBQ?</a></h2>
+<p>NewNowNext's Summer Style Guide has you covered. Take a peek at what you should be rocking to look cool and keep cool this
+summer.
+</p>
+<div class="snipe snipe_"><a class="" onmousedown="dispatcher.sendLinkEvent({linkType:'o',linkName:'HP:P1:06:Nothing to Wear to That Memorial Day BBQ?'});" href="http://www.newnownext.com/summer-style-guide/2013/"><img style="opacity: 0; display: inline;" class="hide" src="/home/images/sashes/video_photos_more_white.png" border="0"></a></div></div>
+</div>
+</div>
+<div class="marquee_list_horizontal">
+<div id="marquee_navid_d3113e9" class="horizontal"><a class="activeSlide" href="/video/blackmail-boys/1707965/playlist.jhtml" onmousedown="dispatcher.sendLinkEvent({linkType:'o',linkName:'HP:P1:01:Get Your Daily Dose of Sexy, Gay Films with Blackmail Boys'});"><span class="marquee_thumb_horizontal padB_zero marquee-thumb-0"> </span><img src="/shows/logo_movie_house/assets/images/tla_movies/blackmail_boys/marquee/2//107x74.jpg" alt="Get Your Daily Dose of Sexy, Gay Films with 'Blackmail Boys'" height="74" width="107"></a><a href="/video/felt-episode-3-season-1/1707907/playlist.jhtml" onmousedown="dispatcher.sendLinkEvent({linkType:'o',linkName:'HP:P1:02:Real Couples Therapy. Real Puppets. Watch a New Felt'});"><span class="marquee_thumb_horizontal padB_zero marquee-thumb-1"> </span><img src="/shows/felt/assets/images/episodes/103/107x74.jpg" alt="Real Couples Therapy. Real Puppets. Watch a New 'Felt'" height="74" width="107"></a><a href="/video/?id=1707747" onmousedown="dispatcher.sendLinkEvent({linkType:'o',linkName:'HP:P1:03:Watch the Drama Unfold on a New EastSiders'});"><span class="marquee_thumb_horizontal padB_zero marquee-thumb-2"> </span><img src="/shows/eastsiders/assets/images/episodes/107/alt/107x74.jpg" alt="Watch the Drama Unfold on a New EastSiders" height="74" width="107"></a><a href="/video/episode-1-season-4-rupocalypse-now/1677963/playlist.jhtml" onmousedown="dispatcher.sendLinkEvent({linkType:'o',linkName:'HP:P1:04:Having Drag Race Withdrawal? Rewatch Season 4 Now!'});"><span class="marquee_thumb_horizontal padB_zero marquee-thumb-3"> </span><img src="/shows/rupauls_drag_race_s4/assets/images/marquee/key_art//107x74.jpg" alt="Having 'Drag Race' Withdrawal? Rewatch Season 4 Now!" height="74" width="107"></a><a href="http://www.thebacklot.com/2013-hot-100-voting/05/2013/" onmousedown="dispatcher.sendLinkEvent({linkType:'o',linkName:'HP:P1:05:Joseph, Benedict and Chris... Oh My!'});"><span class="marquee_thumb_horizontal padB_zero marquee-thumb-4"> </span><img src="/partners/the_backlot/hot_100/1//107x74.jpg" alt="Joseph, Benedict and Chris... Oh My!" height="74" width="107"></a><a href="http://www.newnownext.com/summer-style-guide/2013/" onmousedown="dispatcher.sendLinkEvent({linkType:'o',linkName:'HP:P1:06:Nothing to Wear to That Memorial Day BBQ?'});" class="last"><span class="marquee_thumb_horizontal marquee-thumb-5"> </span><img src="/partners/newnownext/summer_style_guid//107x74.jpg" alt="Nothing to Wear to That Memorial Day BBQ?" height="74" width="107"></a></div>
+</div>
+</div><script type="text/javascript" src="/global/scripts/jquery/jquery.cycle.js"> </script><script type="text/javascript">
+$j(document).ready(function(){
+
+$j('#marquee_imgid_d3113e9').cycle({timeout:8000,fx:'scrollDown',speed:500,pager:'#marquee_navid_d3113e9',pagerEvent:'click mouseenter mouseleave',pauseOnPagerHover:1,enableCustom:true,imageParentId:'#marquee_d3113e9',imageParentIdHover:true,before:marqueeBeforeShow,prefix:'marquee',delay:0});
+});
+</script></div><script type="text/javascript">
+var wrapper = "";
+$j(".snipe img").each(function() {
+wrapper = $j(this).parent().parent().clone();
+wrapper.html("");
+wrapper.attr("class", "");
+$j(this).wrap(wrapper);
+});
+</script></div><script type="text/javascript">
+jQuery(".marquee_list_horizontal .horizontal a span").each(function(i, value) {
+jQuery(this).addClass("marquee-thumb-"+i);
+});
+
+/* LogoTV snipes adaptation */
+var marqueeImg = jQuery(".marquee_ .marquee_img");
+jQuery(".marquee_ .marquee_bg .marquee_text").each(function(index){
+jQuery(this).append(jQuery(".snipe", marqueeImg[index]));
+})
+</script></div>
+<div id="topstage_small_promo">
+<div id="nopromo-social-300x138"><a href="http://www.facebook.com/logo" class="facebook" target="_blank"><span></span>Facebook</a><a href="http://twitter.com/LogoTV" class="twitter" target="_blank"><span></span>Twitter</a><a href="http://logotv.tumblr.com" class="tumblr" target="_blank"><span></span>Tumblr</a><a href="javascript:popNewsletter();" class="newsletter"><span></span>Newsletter</a></div>
+</div>
+<div id="ad300x250_homepage_div"><script type="text/javascript">
+//Place Ad
+//btg.Controller.placeAd({
+//	size:'300x250',
+//	sections:secparams,
+//	keyValues:vPair,
+//	reloadInterval:60000,
+//	isReloadable: true
+//	});
+btg.Controller.placeAd({
+size:'300x250',
+contentType:'adj',
+sections:secparams,
+keyValues:vPair
+});
+
+var isDebug = location.search.indexOf("debug=true") != -1;
+var flashVersion = "10.0.12.36";
+$('#ad300x250_homepage_div #ad2').attr("id", "ad300x250_homepage_iframe");
+
+var origionalAdCall = String($('#ad300x250_homepage_iframe').attr("src"));
+ordID = origionalAdCall.substring(origionalAdCall.indexOf("ord=")+4,origionalAdCall.indexOf("?"));
+</script><script type="text/javascript" id="ad_4" src="http://ad.doubleclick.net/adj/logoonline.mtvi/btf_j_s/_hp;sec0=_hp;pos=btf;tag=adj;mtype=standard;site=logoonline;CRM=MLG;A1=VN900;sz=300x250;tile=4;dcopt=ist;!category=video;!category=expand;!category=pop;!category=3rdparty;!category=eyeblaster;!category=eyewonder;u=b18de230-6c30-b846-f9e3-fb4d72f017ce%7Csec0%3D_hp;ord=302064040398564900?"></script>
+<!-- Copyright DoubleClick Inc., All rights reserved. -->
+<!-- This code was autogenerated @ Fri May 24 09:42:21 EDT 2013 -->
+<script src="http://s0.2mdn.net/879366/flashwrite_1_2.js"></script>
+  
+<a target="_new" href="http://ad.doubleclick.net/click%3Bh%3Dv8/3df0/3/0/%2a/w%3B272025394%3B0-0%3B1%3B33532036%3B4307-300/250%3B54523235/54408740/1%3Bu%3Db18de230-6c30-b846-f9e3-fb4d72f017ce|sec0%3D_hp%3B%7Eaopt%3D2/1/df9f/0%3B%7Esscs%3D%3fhttp://www.headandshoulders.com/en-US/collection/old-spice.jspx"><img src="http://s0.2mdn.net/823907/HnS_OldSpice_media_300x250.jpg" alt="" border="0"></a>
+<noscript><a target="_new" href="http://ad.doubleclick.net/click%3Bh%3Dv8/3df0/3/0/%2a/w%3B272025394%3B0-0%3B1%3B33532036%3B4307-300/250%3B54523235/54408740/1%3Bu%3Db18de230-6c30-b846-f9e3-fb4d72f017ce|sec0%3D_hp%3B%7Eaopt%3D2/1/df9f/0%3B%7Esscs%3D%3fhttp://www.headandshoulders.com/en-US/collection/old-spice.jspx"><img src="http://s0.2mdn.net/823907/HnS_OldSpice_media_300x250.jpg"  border="0" alt="" ></a></noscript></div>
+</div>
+<div class="hp_wrapper" id="hp_wrapper">
+<div id="hp_left">
+<div id="underVideoBar">
+<h1>Watch thousands of Logo videos, full episodes and movies!</h1><span id="arrow"><a class="buttonPost btnArrowPost" href="/video/showall.jhtml" title="See All Logo Video"><span>See All</span></a></span></div>
+<div id="col-a">
+<div class="hpModule_video" id="logo_hp_module_left1">
+<div id="headingBlock">
+<div class="headingBlockSponsor"><script>
+var promoSetName = removeInvalidCharsFrom("Felt");
+btg.config.DoubleClick["positionThreshold"] = '2';
+btg.config.DoubleClick["zone"] = "btf_j_s/"+zone;
+btg.config.DoubleClick["keyValues"] = "promoSetName="+promoSetName+";site=logoonline;!category=video;!category=expand;!category=pop;!category=3rdparty;!category=eyeblaster;!category=eyewonder;"+ex_cats;
+
+//Place Ad
+btg.Controller.placeAd(
+{
+size:'100x50',
+sections:secparams,
+reloadInterval:30000
+}
+);
+</script></div>
+<h2><a href="" style="color:#333333;">Felt</a></h2>
+</div>
+<div id="videoModuleInformationDivider">
+<div id="moduleInformation">
+<div id="moduleThumbnail"><img alt="Felt" src="/shows/felt/assets/images/preview/1/120x80.jpg" height="100" width="150"><a title="Felt" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:left1:thumb:Felt&quot;});" id="overlay" href="/shows/felt/series.jhtml">
+</a><div class="transparent-overlay"><a title="Felt" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:left1:thumb:Felt&quot;});" id="overlay" href="/shows/felt/series.jhtml"></a><a title="Felt" href="/shows/felt/series.jhtml"><img alt="Felt" src="/home/images/2008/leftModuleBgs/transparent.png" height="100" width="150"></a></div></div>
+<div id="moduleDescription">Identities concealed. When couples therapy clients have their own voices and issues put into the mouths of puppets, the results
+are both hilarious and heartfelt.
+</div>
+</div>
+<div class="moduleList">
+<div class="forceRight"><a href="/video/felt-episode-2-season-1/1707227/playlist.jhtml" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:left1:1:Felt: Episode 2, Season 1-1707227&quot;});" rel="/home/xml/model/playlistInfo.jhtml?id=1707227" class="videoItemWithTooltip " id="videoModuleleft1_1707227" _tooltip="leftMiddle" _target="Right" _promosettitle="Felt: Episode 2, Season 1" _tooltiplocation="Right" _id="1707227">
+<div style="position: relative; float: left; width: 255px; margin-bottom: 3px;"><span id="fullContentFlag">FULL EPISODE</span></div><span id="videoTitle">Felt: Episode 2, Season 1</span></a></div>
+<div class="forceRight noShade"><a href="/video/felt-episode-1-season-1/1706955/playlist.jhtml" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:left1:2:Felt: Episode 1, Season 1-1706955&quot;});" rel="/home/xml/model/playlistInfo.jhtml?id=1706955" class="videoItemWithTooltip " id="videoModuleleft1_1706955" _tooltip="leftMiddle" _target="Right" _promosettitle="Felt: Episode 1, Season 1" _tooltiplocation="Right" _id="1706955">
+<div style="position: relative; float: left; width: 255px; margin-bottom: 3px;"><span id="fullContentFlag">FULL EPISODE</span></div><span id="videoTitle">Felt: Episode 1, Season 1</span></a></div>
+<div class="forceRight"><a href="/video/?id=1705102" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:left1:3:Previews: Felt -1705102&quot;});" rel="/home/xml/model/playlistInfo.jhtml?id=1705102" class="videoItemWithTooltip " id="videoModuleleft1_1705102" _tooltip="leftMiddle" _target="Right" _promosettitle="Previews: Felt " _tooltiplocation="Right" _id="1705102"><span id="videoTitle">Previews: Felt </span></a></div>
+<div class="forceRight noShade"><a href="/video/?id=1705151" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:left1:4:Preview: Felt - Meet Our Therapist, Rachel-1705151&quot;});" rel="/home/xml/model/playlistInfo.jhtml?id=1705151" class="videoItemWithTooltip " id="videoModuleleft1_1705151" _tooltip="leftMiddle" _target="Right" _promosettitle="Preview: Felt - Meet Our Therapist, Rachel" _tooltiplocation="Right" _id="1705151"><span id="videoTitle">Preview: Felt - Meet Our Therapist, Rachel</span></a></div>
+</div>
+</div>
+<div class="module-bottom"></div>
+</div>
+<div class="hpModule_video" id="logo_hp_module_left2">
+<div id="headingBlock">
+<div class="headingBlockSponsor"><script>
+var promoSetName = removeInvalidCharsFrom("Logo Movie House");
+btg.config.DoubleClick["positionThreshold"] = '2';
+btg.config.DoubleClick["zone"] = "btf_j_s/"+zone;
+btg.config.DoubleClick["keyValues"] = "promoSetName="+promoSetName+";site=logoonline;!category=video;!category=expand;!category=pop;!category=3rdparty;!category=eyeblaster;!category=eyewonder;"+ex_cats;
+
+//Place Ad
+btg.Controller.placeAd(
+{
+size:'100x50',
+sections:secparams,
+reloadInterval:30000
+}
+);
+</script></div>
+<h2><a href="http://www.logotv.com/shows/logo_movie_house/series.jhtml" style="color:#333333;">Logo Movie House</a></h2>
+</div>
+<div id="videoModuleInformationDivider">
+<div id="moduleInformation">
+<div id="moduleThumbnail"><img alt="Logo Movie House" src="/shows/logo_movie_house/assets/images/tla_preview/longhorns//120x80.jpg" height="100" width="150"><a title="Logo Movie House" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:left2:thumb:Logo Movie House&quot;});" id="overlay" href="http://www.logotv.com/shows/logo_movie_house/series.jhtml">
+</a><div class="transparent-overlay"><a title="Logo Movie House" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:left2:thumb:Logo Movie House&quot;});" id="overlay" href="http://www.logotv.com/shows/logo_movie_house/series.jhtml"></a><a title="Logo Movie House" href="http://www.logotv.com/shows/logo_movie_house/series.jhtml"><img alt="Logo Movie House" src="/home/images/2008/leftModuleBgs/transparent.png" height="100" width="150"></a></div></div>
+<div id="moduleDescription">This summer LogoTV.com is premiering sexy, independent gay films for your viewing pleasure &amp; for FREE. Get a taste of the
+action with these steamy new trailers.
+</div>
+</div>
+<div class="moduleList">
+<div class="forceRight"><a href="/video/dorian-blues/1706758/playlist.jhtml" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:left2:1:Dorian Blues-1706758&quot;});" rel="/home/xml/model/playlistInfo.jhtml?id=1706758" class="videoItemWithTooltip " id="videoModuleleft1_1706758" _tooltip="leftMiddle" _target="Right" _promosettitle="Dorian Blues" _tooltiplocation="Right" _id="1706758">
+<div style="position: relative; float: left; width: 255px; margin-bottom: 3px;"><span id="fullContentFlag">ENTIRE FILM</span></div><span id="videoTitle">Dorian Blues</span></a></div>
+<div class="forceRight noShade"><a href="/video/longhorns/1706636/playlist.jhtml" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:left2:2:Longhorns-1706636&quot;});" rel="/home/xml/model/playlistInfo.jhtml?id=1706636" class="videoItemWithTooltip " id="videoModuleleft1_1706636" _tooltip="leftMiddle" _target="Right" _promosettitle="Longhorns" _tooltiplocation="Right" _id="1706636">
+<div style="position: relative; float: left; width: 255px; margin-bottom: 3px;"><span id="fullContentFlag">ENTIRE FILM</span></div><span id="videoTitle">Longhorns</span></a></div>
+<div class="forceRight"><a href="/video/the-skinny-uncut/1688925/playlist.jhtml" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:left2:3:The Skinny (Uncut)-1688925&quot;});" rel="/home/xml/model/playlistInfo.jhtml?id=1688925" class="videoItemWithTooltip " id="videoModuleleft1_1688925" _tooltip="leftMiddle" _target="Right" _promosettitle="The Skinny (Uncut)" _tooltiplocation="Right" _id="1688925">
+<div style="position: relative; float: left; width: 255px; margin-bottom: 3px;"><span id="fullContentFlag">ENTIRE FILM</span></div><span id="videoTitle">The Skinny (Uncut)</span></a></div>
+<div class="forceRight noShade"><a href="/video/leave-it-on-the-floor/1688838/playlist.jhtml" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:left2:4:Leave It On The Floor -1688838&quot;});" rel="/home/xml/model/playlistInfo.jhtml?id=1688838" class="videoItemWithTooltip " id="videoModuleleft1_1688838" _tooltip="leftMiddle" _target="Right" _promosettitle="Leave It On The Floor " _tooltiplocation="Right" _id="1688838">
+<div style="position: relative; float: left; width: 255px; margin-bottom: 3px;"><span id="fullContentFlag">ENTIRE FILM</span></div><span id="videoTitle">Leave It On The Floor </span></a></div>
+<div style="clear:both;"></div>
+<div class="read-more"><span class="read-more-inner"><a title="More from Logo Movie House" href="http://www.logotv.com/shows/logo_movie_house/series.jhtml" class="buttonPost btnArrowPost"><span>More from Logo Movie House</span></a></span></div>
+<div style="clear:both;"></div>
+</div>
+</div>
+<div class="module-bottom"></div>
+</div>
+<div class="hpModule_video" id="logo_hp_module_left3">
+<div id="headingBlock">
+<div class="headingBlockSponsor"><script>
+var promoSetName = removeInvalidCharsFrom("RuPaul's Drag Race Season 4");
+btg.config.DoubleClick["positionThreshold"] = '2';
+btg.config.DoubleClick["zone"] = "btf_j_s/"+zone;
+btg.config.DoubleClick["keyValues"] = "promoSetName="+promoSetName+";site=logoonline;!category=video;!category=expand;!category=pop;!category=3rdparty;!category=eyeblaster;!category=eyewonder;"+ex_cats;
+
+//Place Ad
+btg.Controller.placeAd(
+{
+size:'100x50',
+sections:secparams,
+reloadInterval:30000
+}
+);
+</script></div>
+<h2><a href="/shows/rupauls_drag_race/season_4/series.jhtml" style="color:#333333;">RuPaul's Drag Race Season 4</a></h2>
+</div>
+<div id="videoModuleInformationDivider">
+<div id="moduleInformation">
+<div id="moduleThumbnail"><img alt="RuPaul's Drag Race Season 4" src="/shows/rupauls_drag_race_s4/assets/images/marquee/key_art//120x80.jpg" height="100" width="150"><a title="RuPaul's Drag Race Season 4" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:left3:thumb:RuPaul's Drag Race Season 4&quot;});" id="overlay" href="/shows/rupauls_drag_race/season_4/series.jhtml">
+</a><div class="transparent-overlay"><a title="RuPaul's Drag Race Season 4" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:left3:thumb:RuPaul's Drag Race Season 4&quot;});" id="overlay" href="/shows/rupauls_drag_race/season_4/series.jhtml"></a><a title="RuPaul's Drag Race Season 4" href="/shows/rupauls_drag_race/season_4/series.jhtml"><img alt="RuPaul's Drag Race Season 4" src="/home/images/2008/leftModuleBgs/transparent.png" height="100" width="150"></a></div></div>
+<div id="moduleDescription">It's the search for 'America's Next Drag Superstar', hunty.</div>
+</div>
+<div class="moduleList">
+<div class="forceRight"><a href="/video/episode-3-season-4-glamazons-vs-champions/1678960/playlist.jhtml" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:left3:1:Episode 3, Season 4: Glamazons vs. Champions-1678960&quot;});" rel="/home/xml/model/playlistInfo.jhtml?id=1678960" class="videoItemWithTooltip " id="videoModuleleft1_1678960" _tooltip="leftMiddle" _target="Right" _promosettitle="Episode 3, Season 4: Glamazons vs. Champions" _tooltiplocation="Right" _id="1678960">
+<div style="position: relative; float: left; width: 255px; margin-bottom: 3px;"><span id="fullContentFlag">FULL EPISODE</span></div><span id="videoTitle">Episode 3, Season 4: Glamazons vs. Champions</span></a></div>
+<div class="forceRight noShade"><a href="/video/untucked-episode-3-more-from-glamazons-vs-champions/1678961/playlist.jhtml" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:left3:2:Untucked, Episode 3: More from Glamazons vs. Champions-1678961&quot;});" rel="/home/xml/model/playlistInfo.jhtml?id=1678961" class="videoItemWithTooltip " id="videoModuleleft1_1678961" _tooltip="leftMiddle" _target="Right" _promosettitle="Untucked, Episode 3: More from Glamazons vs. Champions" _tooltiplocation="Right" _id="1678961">
+<div style="position: relative; float: left; width: 255px; margin-bottom: 3px;"><span id="fullContentFlag">FULL EPISODE</span></div><span id="videoTitle">Untucked, Episode 3: More from Glamazons vs. Champions</span></a></div>
+<div class="forceRight"><a href="/video/episode-2-season-4-wtf-wrestlings-trashiest-fighters/1678533/playlist.jhtml" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:left3:3:Episode 2, Season 4: WTF!: Wrestling's Trashiest Fighters-1678533&quot;});" rel="/home/xml/model/playlistInfo.jhtml?id=1678533" class="videoItemWithTooltip " id="videoModuleleft1_1678533" _tooltip="leftMiddle" _target="Right" _promosettitle="Episode 2, Season 4: WTF!: Wrestling's Trashiest Fighters" _tooltiplocation="Right" _id="1678533">
+<div style="position: relative; float: left; width: 255px; margin-bottom: 3px;"><span id="fullContentFlag">FULL EPISODE</span></div><span id="videoTitle">Episode 2, Season 4: WTF!: Wrestling's Trashiest Fighters</span></a></div>
+<div class="forceRight noShade"><a href="/video/untucked-episode-2-more-from-wtf-wrestlings-trashiest-fighters/1678535/playlist.jhtml" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:left3:4:Untucked, Episode 2: More from WTF!: Wrestling's Trashiest Fighters-1678535&quot;});" rel="/home/xml/model/playlistInfo.jhtml?id=1678535" class="videoItemWithTooltip " id="videoModuleleft1_1678535" _tooltip="leftMiddle" _target="Right" _promosettitle="Untucked, Episode 2: More from WTF!: Wrestling's Trashiest Fighters" _tooltiplocation="Right" _id="1678535">
+<div style="position: relative; float: left; width: 255px; margin-bottom: 3px;"><span id="fullContentFlag">FULL EPISODE</span></div><span id="videoTitle">Untucked, Episode 2: More from WTF!: Wrestling's Trashiest Fighters</span></a></div>
+<div class="forceRight"><a href="/video/episode-1-season-4-rupocalypse-now/1677963/playlist.jhtml" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:left3:5:Episode 1, Season 4: RuPocalypse Now!-1677963&quot;});" rel="/home/xml/model/playlistInfo.jhtml?id=1677963" class="videoItemWithTooltip " id="videoModuleleft1_1677963" _tooltip="leftMiddle" _target="Right" _promosettitle="Episode 1, Season 4: RuPocalypse Now!" _tooltiplocation="Right" _id="1677963">
+<div style="position: relative; float: left; width: 255px; margin-bottom: 3px;"><span id="fullContentFlag">FULL EPISODE</span></div><span id="videoTitle">Episode 1, Season 4: RuPocalypse Now!</span></a></div>
+<div class="forceRight noShade"><a href="/video/untucked-episode-1-more-from-rupocalypse-now/1677976/playlist.jhtml" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:left3:6:Untucked, Episode 1: More from RuPocalypse Now!-1677976&quot;});" rel="/home/xml/model/playlistInfo.jhtml?id=1677976" class="videoItemWithTooltip " id="videoModuleleft1_1677976" _tooltip="leftMiddle" _target="Right" _promosettitle="Untucked, Episode 1: More from RuPocalypse Now!" _tooltiplocation="Right" _id="1677976">
+<div style="position: relative; float: left; width: 255px; margin-bottom: 3px;"><span id="fullContentFlag">FULL EPISODE</span></div><span id="videoTitle">Untucked, Episode 1: More from RuPocalypse Now!</span></a></div>
+<div style="clear:both;"></div>
+<div class="read-more"><span class="read-more-inner"><a title="More From 'RuPaul's Drag Race' Season 4" href="/shows/rupauls_drag_race/season_4/series.jhtml" class="buttonPost btnArrowPost"><span>More From 'RuPaul's Drag Race' Season 4</span></a></span></div>
+<div style="clear:both;"></div>
+</div>
+</div>
+<div class="module-bottom"></div>
+</div>
+<div class="hpModule_video" id="logo_hp_module_left4">
+<div id="headingBlock">
+<div class="headingBlockSponsor"><script>
+var promoSetName = removeInvalidCharsFrom("Hunting Season");
+btg.config.DoubleClick["positionThreshold"] = '2';
+btg.config.DoubleClick["zone"] = "btf_j_s/"+zone;
+btg.config.DoubleClick["keyValues"] = "promoSetName="+promoSetName+";site=logoonline;!category=video;!category=expand;!category=pop;!category=3rdparty;!category=eyeblaster;!category=eyewonder;"+ex_cats;
+
+//Place Ad
+btg.Controller.placeAd(
+{
+size:'100x50',
+sections:secparams,
+reloadInterval:30000
+}
+);
+</script></div>
+<h2><a href="/shows/hunting_season/series.jhtml" style="color:#333333;">Hunting Season</a></h2>
+</div>
+<div id="videoModuleInformationDivider">
+<div id="moduleInformation">
+<div id="moduleThumbnail"><img alt="Hunting Season" src="/shows/hunting_season/assets/images/key_art/module/alt_2//120x80.jpg" height="100" width="150"><a title="Hunting Season" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:left4:thumb:Hunting Season&quot;});" id="overlay" href="/shows/hunting_season/series.jhtml">
+</a><div class="transparent-overlay"><a title="Hunting Season" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:left4:thumb:Hunting Season&quot;});" id="overlay" href="/shows/hunting_season/series.jhtml"></a><a title="Hunting Season" href="/shows/hunting_season/series.jhtml"><img alt="Hunting Season" src="/home/images/2008/leftModuleBgs/transparent.png" height="100" width="150"></a></div></div>
+<div id="moduleDescription">Hunting Season is a new series based on the funny and painfully truthful blog of Alex, a single gay 20-something in Manhattan.</div>
+</div>
+<div class="moduleList">
+<div class="forceRight"><a href="/video/webisode-episode-8-season-1-hunting-season/1695734/playlist.jhtml" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:left4:1:Webisode - Episode 8, Season 1: Hunting Season-1695734&quot;});" rel="/home/xml/model/playlistInfo.jhtml?id=1695734" class="videoItemWithTooltip " id="videoModuleleft1_1695734" _tooltip="leftMiddle" _target="Right" _promosettitle="Webisode - Episode 8, Season 1: Hunting Season" _tooltiplocation="Right" _id="1695734">
+<div style="position: relative; float: left; width: 255px; margin-bottom: 3px;"><span id="fullContentFlag">FULL EPISODE</span></div><span id="videoTitle">Webisode - Episode 8, Season 1: Hunting Season</span></a></div>
+<div class="forceRight noShade"><a href="/video/webisode-episode-7-season-1-hunting-season/1695275/playlist.jhtml" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:left4:2:Webisode - Episode 7, Season 1: Hunting Season-1695275&quot;});" rel="/home/xml/model/playlistInfo.jhtml?id=1695275" class="videoItemWithTooltip " id="videoModuleleft1_1695275" _tooltip="leftMiddle" _target="Right" _promosettitle="Webisode - Episode 7, Season 1: Hunting Season" _tooltiplocation="Right" _id="1695275">
+<div style="position: relative; float: left; width: 255px; margin-bottom: 3px;"><span id="fullContentFlag">FULL EPISODE</span></div><span id="videoTitle">Webisode - Episode 7, Season 1: Hunting Season</span></a></div>
+<div class="forceRight"><a href="/video/webisode-episode-6-season-1-hunting-season/1694813/playlist.jhtml" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:left4:3:Webisode - Episode 6, Season 1: Hunting Season-1694813&quot;});" rel="/home/xml/model/playlistInfo.jhtml?id=1694813" class="videoItemWithTooltip " id="videoModuleleft1_1694813" _tooltip="leftMiddle" _target="Right" _promosettitle="Webisode - Episode 6, Season 1: Hunting Season" _tooltiplocation="Right" _id="1694813">
+<div style="position: relative; float: left; width: 255px; margin-bottom: 3px;"><span id="fullContentFlag">FULL EPISODE</span></div><span id="videoTitle">Webisode - Episode 6, Season 1: Hunting Season</span></a></div>
+<div class="forceRight noShade"><a href="/video/webisode-episode-5-season-1-hunting-season/1694401/playlist.jhtml" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:left4:4:Webisode - Episode 5, Season 1: Hunting Season-1694401&quot;});" rel="/home/xml/model/playlistInfo.jhtml?id=1694401" class="videoItemWithTooltip " id="videoModuleleft1_1694401" _tooltip="leftMiddle" _target="Right" _promosettitle="Webisode - Episode 5, Season 1: Hunting Season" _tooltiplocation="Right" _id="1694401">
+<div style="position: relative; float: left; width: 255px; margin-bottom: 3px;"><span id="fullContentFlag">FULL EPISODE</span></div><span id="videoTitle">Webisode - Episode 5, Season 1: Hunting Season</span></a></div>
+<div style="clear:both;"></div>
+<div class="read-more"><span class="read-more-inner"><a title="Watch More Hunting Season" href="/shows/hunting_season/series.jhtml" class="buttonPost btnArrowPost"><span>Watch More Hunting Season</span></a></span></div>
+<div style="clear:both;"></div>
+</div>
+</div>
+<div class="module-bottom"></div>
+</div>
+</div>
+<div id="col-b">
+<div class="hpModule_video">
+<div id="headingBlock">
+<div class="headingBlockSponsor"><script>
+var promoSetName = removeInvalidCharsFrom("EastSiders");
+btg.config.DoubleClick["positionThreshold"] = '2';
+btg.config.DoubleClick["zone"] = "btf_j_s/"+zone;
+btg.config.DoubleClick["keyValues"] = "promoSetName="+promoSetName+";site=logoonline;!category=video;!category=expand;!category=pop;!category=3rdparty;!category=eyeblaster;!category=eyewonder;"+ex_cats;
+
+//Place Ad
+btg.Controller.placeAd(
+{
+size:'100x50',
+sections:secparams,
+reloadInterval:30000
+}
+);
+</script></div>
+<h2><a href="/shows/eastsiders/series.jhtml" style="color:#333333;">EastSiders</a></h2>
+</div>
+<div id="videoModuleInformationDivider">
+<div id="moduleInformation">
+<div id="moduleThumbnail"><img alt="EastSiders" src="/shows/eastsiders/assets/images/key_art/temp//120x80.jpg" height="100" width="150"><a title="EastSiders" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:right1:thumb:EastSiders&quot;});" id="overlay" href="/shows/eastsiders/series.jhtml">
+</a><div class="transparent-overlay"><a title="EastSiders" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:right1:thumb:EastSiders&quot;});" id="overlay" href="/shows/eastsiders/series.jhtml"></a><a title="EastSiders" href="/shows/eastsiders/series.jhtml"><img alt="EastSiders" src="/home/images/2008/leftModuleBgs/transparent.png" height="100" width="150"></a></div></div>
+<div id="moduleDescription">"EastSiders" explores the aftermath of infidelity on a gay couple in Silverlake, CA. When Cal finds out Thom has been cheating
+on him with Jeremy, their relationship is turned upside down.
+</div>
+</div>
+<div class="moduleList">
+<div class="forceRight"><a href="/video/eastsiders-episode-1-season-1/1706046/playlist.jhtml" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:right1:1:Eastsiders: Episode 1, Season 1-1706046&quot;});" rel="/home/xml/model/playlistInfo.jhtml?id=1706046" class="videoItemWithTooltip " id="videoModuleleft1_1706046" _tooltip="rightMiddle" _target="Left" _promosettitle="Eastsiders: Episode 1, Season 1" _tooltiplocation="Left" _id="1706046"><span id="videoTitle">Eastsiders: Episode 1, Season 1</span></a></div>
+<div class="forceRight noShade"><a href="/video/eastsiders-episode-2-season-1/1706047/playlist.jhtml" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:right1:2:Eastsiders: Episode 2, Season 1-1706047&quot;});" rel="/home/xml/model/playlistInfo.jhtml?id=1706047" class="videoItemWithTooltip " id="videoModuleleft1_1706047" _tooltip="rightMiddle" _target="Left" _promosettitle="Eastsiders: Episode 2, Season 1" _tooltiplocation="Left" _id="1706047"><span id="videoTitle">Eastsiders: Episode 2, Season 1</span></a></div>
+<div class="forceRight"><a href="/video/eastsiders-episode-3-season-1/1706048/playlist.jhtml" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:right1:3:Eastsiders: Episode 3, Season 1-1706048&quot;});" rel="/home/xml/model/playlistInfo.jhtml?id=1706048" class="videoItemWithTooltip " id="videoModuleleft1_1706048" _tooltip="rightMiddle" _target="Left" _promosettitle="Eastsiders: Episode 3, Season 1" _tooltiplocation="Left" _id="1706048"><span id="videoTitle">Eastsiders: Episode 3, Season 1</span></a></div>
+<div class="forceRight noShade"><a href="/video/eastsiders-episode-4-season-1/1706565/playlist.jhtml" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:right1:4:EastSiders: Episode 4, Season 1-1706565&quot;});" rel="/home/xml/model/playlistInfo.jhtml?id=1706565" class="videoItemWithTooltip " id="videoModuleleft1_1706565" _tooltip="rightMiddle" _target="Left" _promosettitle="EastSiders: Episode 4, Season 1" _tooltiplocation="Left" _id="1706565"><span id="videoTitle">EastSiders: Episode 4, Season 1</span></a></div>
+<div class="forceRight"><a href="/video/eastsiders-episode-5-season-1/1706938/playlist.jhtml" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:right1:5:EastSiders: Episode 5, Season 1-1706938&quot;});" rel="/home/xml/model/playlistInfo.jhtml?id=1706938" class="videoItemWithTooltip " id="videoModuleleft1_1706938" _tooltip="rightMiddle" _target="Left" _promosettitle="EastSiders: Episode 5, Season 1" _tooltiplocation="Left" _id="1706938"><span id="videoTitle">EastSiders: Episode 5, Season 1</span></a></div>
+<div class="forceRight noShade"><a href="/video/eastsiders-episode-6-season-1/1707305/playlist.jhtml" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:right1:6:EastSiders: Episode 6, Season 1-1707305&quot;});" rel="/home/xml/model/playlistInfo.jhtml?id=1707305" class="videoItemWithTooltip " id="videoModuleleft1_1707305" _tooltip="rightMiddle" _target="Left" _promosettitle="EastSiders: Episode 6, Season 1" _tooltiplocation="Left" _id="1707305"><span id="videoTitle">EastSiders: Episode 6, Season 1</span></a></div>
+<div class="forceRight"><a href="/video/eastsiders-episode-7-season-1/1707747/playlist.jhtml" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:right1:7:EastSiders: Episode 7, Season 1-1707747&quot;});" rel="/home/xml/model/playlistInfo.jhtml?id=1707747" class="videoItemWithTooltip " id="videoModuleleft1_1707747" _tooltip="rightMiddle" _target="Left" _promosettitle="EastSiders: Episode 7, Season 1" _tooltiplocation="Left" _id="1707747"><span id="videoTitle">EastSiders: Episode 7, Season 1</span></a></div>
+<div style="clear:both;"></div>
+<div class="read-more"><span class="read-more-inner"><a title="More From EastSiders" href="/shows/eastsiders/series.jhtml" class="buttonPost btnArrowPost"><span>More From EastSiders</span></a></span></div>
+<div style="clear:both;"></div>
+</div>
+</div>
+<div class="module-bottom"></div>
+</div>
+<div class="hpModule_video">
+<div id="headingBlock">
+<div class="headingBlockSponsor"><script>
+var promoSetName = removeInvalidCharsFrom("RuPaul's Drag Race Season 5");
+btg.config.DoubleClick["positionThreshold"] = '2';
+btg.config.DoubleClick["zone"] = "btf_j_s/"+zone;
+btg.config.DoubleClick["keyValues"] = "promoSetName="+promoSetName+";site=logoonline;!category=video;!category=expand;!category=pop;!category=3rdparty;!category=eyeblaster;!category=eyewonder;"+ex_cats;
+
+//Place Ad
+btg.Controller.placeAd(
+{
+size:'100x50',
+sections:secparams,
+reloadInterval:30000
+}
+);
+</script></div>
+<h2><a href="/shows/rupauls_drag_race/season_5/series.jhtml" style="color:#333333;">RuPaul's Drag Race Season 5</a></h2>
+</div>
+<div id="videoModuleInformationDivider">
+<div id="moduleInformation">
+<div id="moduleThumbnail"><img alt="RuPaul's Drag Race Season 5" src="/shows/rupauls_drag_race_s5/assets/images/marquee/key_art//120x80.jpg" height="100" width="150"><a title="RuPaul's Drag Race Season 5" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:right2:thumb:RuPaul's Drag Race Season 5&quot;});" id="overlay" href="/shows/rupauls_drag_race/season_5/series.jhtml">
+</a><div class="transparent-overlay"><a title="RuPaul's Drag Race Season 5" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:right2:thumb:RuPaul's Drag Race Season 5&quot;});" id="overlay" href="/shows/rupauls_drag_race/season_5/series.jhtml"></a><a title="RuPaul's Drag Race Season 5" href="/shows/rupauls_drag_race/season_5/series.jhtml"><img alt="RuPaul's Drag Race Season 5" src="/home/images/2008/leftModuleBgs/transparent.png" height="100" width="150"></a></div></div>
+<div id="moduleDescription">Rev your engines, dolls.</div>
+</div>
+<div class="moduleList">
+<div class="forceRight"><a href="/video/rupauls-drag-race-episode-14-season-5-rupauls-drag-race-reunited/1706878/playlist.jhtml" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:right2:1:RuPaul's Drag Race: Episode 14, Season 5: RuPaul's Drag Race: Reunited-1706878&quot;});" rel="/home/xml/model/playlistInfo.jhtml?id=1706878" class="videoItemWithTooltip " id="videoModuleleft1_1706878" _tooltip="rightMiddle" _target="Left" _promosettitle="RuPaul's Drag Race: Episode 14, Season 5: RuPaul's Drag Race: Reunited" _tooltiplocation="Left" _id="1706878">
+<div style="position: relative; float: left; width: 255px; margin-bottom: 3px;"><span id="fullContentFlag">FULL EPISODE</span></div><span id="videoTitle">RuPaul's Drag Race: Episode 14, Season 5: RuPaul's Drag Race: Reunited</span></a></div>
+<div class="forceRight noShade"><a href="/video/rupauls-drag-race-episode-13-season-5-countdown-to-the-crown/1706469/playlist.jhtml" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:right2:2:RuPaul's Drag Race: Episode 13, Season 5 - Countdown To The Crown-1706469&quot;});" rel="/home/xml/model/playlistInfo.jhtml?id=1706469" class="videoItemWithTooltip " id="videoModuleleft1_1706469" _tooltip="rightMiddle" _target="Left" _promosettitle="RuPaul's Drag Race: Episode 13, Season 5 - Countdown To The Crown" _tooltiplocation="Left" _id="1706469">
+<div style="position: relative; float: left; width: 255px; margin-bottom: 3px;"><span id="fullContentFlag">FULL EPISODE</span></div><span id="videoTitle">RuPaul's Drag Race: Episode 13, Season 5 - Countdown To The Crown</span></a></div>
+<div class="forceRight"><a href="/video/rupauls-drag-race-episode-12-season-5-the-final-three-hunty/1706103/playlist.jhtml" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:right2:3:RuPaul's Drag Race: Episode 12, Season 5: The Final Three, Hunty-1706103&quot;});" rel="/home/xml/model/playlistInfo.jhtml?id=1706103" class="videoItemWithTooltip " id="videoModuleleft1_1706103" _tooltip="rightMiddle" _target="Left" _promosettitle="RuPaul's Drag Race: Episode 12, Season 5: The Final Three, Hunty" _tooltiplocation="Left" _id="1706103">
+<div style="position: relative; float: left; width: 255px; margin-bottom: 3px;"><span id="fullContentFlag">FULL EPISODE</span></div><span id="videoTitle">RuPaul's Drag Race: Episode 12, Season 5: The Final Three, Hunty</span></a></div>
+<div class="forceRight noShade"><a href="/video/rupauls-drag-race-episode-11-season-5-sugar-ball/1705510/playlist.jhtml" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:right2:4:RuPaul's Drag Race: Episode 11, Season 5: Sugar Ball -1705510&quot;});" rel="/home/xml/model/playlistInfo.jhtml?id=1705510" class="videoItemWithTooltip " id="videoModuleleft1_1705510" _tooltip="rightMiddle" _target="Left" _promosettitle="RuPaul's Drag Race: Episode 11, Season 5: Sugar Ball " _tooltiplocation="Left" _id="1705510">
+<div style="position: relative; float: left; width: 255px; margin-bottom: 3px;"><span id="fullContentFlag">FULL EPISODE</span></div><span id="videoTitle">RuPaul's Drag Race: Episode 11, Season 5: Sugar Ball </span></a></div>
+<div class="forceRight"><a href="/video/rupauls-drag-race-untucked-episode-11-sugar-ball/1705511/playlist.jhtml" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:right2:5:RuPaul's Drag Race: Untucked, Episode 11: Sugar Ball-1705511&quot;});" rel="/home/xml/model/playlistInfo.jhtml?id=1705511" class="videoItemWithTooltip " id="videoModuleleft1_1705511" _tooltip="rightMiddle" _target="Left" _promosettitle="RuPaul's Drag Race: Untucked, Episode 11: Sugar Ball" _tooltiplocation="Left" _id="1705511">
+<div style="position: relative; float: left; width: 255px; margin-bottom: 3px;"><span id="fullContentFlag">FULL EPISODE</span></div><span id="videoTitle">RuPaul's Drag Race: Untucked, Episode 11: Sugar Ball</span></a></div>
+<div class="forceRight noShade"><a href="/video/rupauls-drag-race-episode-10-season-5-super-troopers/1705161/playlist.jhtml" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:right2:6:RuPaul's Drag Race: Episode 10, Season 5 - Super Troopers -1705161&quot;});" rel="/home/xml/model/playlistInfo.jhtml?id=1705161" class="videoItemWithTooltip " id="videoModuleleft1_1705161" _tooltip="rightMiddle" _target="Left" _promosettitle="RuPaul's Drag Race: Episode 10, Season 5 - Super Troopers " _tooltiplocation="Left" _id="1705161">
+<div style="position: relative; float: left; width: 255px; margin-bottom: 3px;"><span id="fullContentFlag">FULL EPISODE</span></div><span id="videoTitle">RuPaul's Drag Race: Episode 10, Season 5 - Super Troopers </span></a></div>
+<div class="forceRight"><a href="/video/rupauls-drag-race-untucked-episode-10-super-troopers/1705169/playlist.jhtml" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:right2:7:RuPaul's Drag Race: Untucked, Episode 10: Super Troopers -1705169&quot;});" rel="/home/xml/model/playlistInfo.jhtml?id=1705169" class="videoItemWithTooltip " id="videoModuleleft1_1705169" _tooltip="rightMiddle" _target="Left" _promosettitle="RuPaul's Drag Race: Untucked, Episode 10: Super Troopers " _tooltiplocation="Left" _id="1705169">
+<div style="position: relative; float: left; width: 255px; margin-bottom: 3px;"><span id="fullContentFlag">FULL EPISODE</span></div><span id="videoTitle">RuPaul's Drag Race: Untucked, Episode 10: Super Troopers </span></a></div>
+<div class="forceRight noShade"><a href="/video/rupauls-drag-race-episode-9-season-5-drama-queens/1704733/playlist.jhtml" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:right2:8:RuPaul's Drag Race: Episode 9, Season 5: Drama Queens-1704733&quot;});" rel="/home/xml/model/playlistInfo.jhtml?id=1704733" class="videoItemWithTooltip " id="videoModuleleft1_1704733" _tooltip="rightMiddle" _target="Left" _promosettitle="RuPaul's Drag Race: Episode 9, Season 5: Drama Queens" _tooltiplocation="Left" _id="1704733">
+<div style="position: relative; float: left; width: 255px; margin-bottom: 3px;"><span id="fullContentFlag">FULL EPISODE</span></div><span id="videoTitle">RuPaul's Drag Race: Episode 9, Season 5: Drama Queens</span></a></div>
+<div class="forceRight"><a href="/video/rupauls-drag-race-untucked-episode-9-drama-queens/1704735/playlist.jhtml" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:right2:9:RuPaul's Drag Race: Untucked, Episode 9: Drama Queens-1704735&quot;});" rel="/home/xml/model/playlistInfo.jhtml?id=1704735" class="videoItemWithTooltip " id="videoModuleleft1_1704735" _tooltip="rightMiddle" _target="Left" _promosettitle="RuPaul's Drag Race: Untucked, Episode 9: Drama Queens" _tooltiplocation="Left" _id="1704735">
+<div style="position: relative; float: left; width: 255px; margin-bottom: 3px;"><span id="fullContentFlag">FULL EPISODE</span></div><span id="videoTitle">RuPaul's Drag Race: Untucked, Episode 9: Drama Queens</span></a></div>
+<div style="clear:both;"></div>
+<div class="read-more"><span class="read-more-inner"><a title="Watch More RuPaul's Drag Race Season 5" href="/shows/rupauls_drag_race/season_5/series.jhtml" class="buttonPost btnArrowPost"><span>Watch More RuPaul's Drag Race Season 5</span></a></span></div>
+<div style="clear:both;"></div>
+</div>
+</div>
+<div class="module-bottom"></div>
+</div>
+<div class="hpModule_video">
+<div id="headingBlock">
+<div class="headingBlockSponsor"><script>
+var promoSetName = removeInvalidCharsFrom("Roseanne");
+btg.config.DoubleClick["positionThreshold"] = '2';
+btg.config.DoubleClick["zone"] = "btf_j_s/"+zone;
+btg.config.DoubleClick["keyValues"] = "promoSetName="+promoSetName+";site=logoonline;!category=video;!category=expand;!category=pop;!category=3rdparty;!category=eyeblaster;!category=eyewonder;"+ex_cats;
+
+//Place Ad
+btg.Controller.placeAd(
+{
+size:'100x50',
+sections:secparams,
+reloadInterval:30000
+}
+);
+</script></div>
+<h2><a href="/shows/roseanne/series.jhtml" style="color:#333333;">Roseanne</a></h2>
+</div>
+<div id="videoModuleInformationDivider">
+<div id="moduleInformation">
+<div id="moduleThumbnail"><img alt="Roseanne" src="/shows/roseanne/assets/images/key_art/temp//120x80.jpg" height="100" width="150"><a title="Roseanne" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:right3:thumb:Roseanne&quot;});" id="overlay" href="/shows/roseanne/series.jhtml">
+</a><div class="transparent-overlay"><a title="Roseanne" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:right3:thumb:Roseanne&quot;});" id="overlay" href="/shows/roseanne/series.jhtml"></a><a title="Roseanne" href="/shows/roseanne/series.jhtml"><img alt="Roseanne" src="/home/images/2008/leftModuleBgs/transparent.png" height="100" width="150"></a></div></div>
+<div id="moduleDescription">'Roseanne' is the story of lower class family struggling with life's essential problems: Marriage, Children, Money and Parent's
+in Law.
+</div>
+</div>
+<div class="moduleList">
+<div class="forceRight"><a href="/video/?id=1705853" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:right3:1:Roseanne: Episode 1 , Season 1 - Life And Stuff-1705853&quot;});" rel="/home/xml/model/playlistInfo.jhtml?id=1705853" class="videoItemWithTooltip " id="videoModuleleft1_1705853" _tooltip="rightMiddle" _target="Left" _promosettitle="Roseanne: Episode 1 , Season 1 - Life And Stuff" _tooltiplocation="Left" _id="1705853"><span id="videoTitle">Roseanne: Episode 1 , Season 1 - Life And Stuff</span></a></div>
+<div class="forceRight noShade"><a href="/video/?id=1705854" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:right3:2:Roseanne: Episode 7, Season 3 - Trick Or Treat-1705854&quot;});" rel="/home/xml/model/playlistInfo.jhtml?id=1705854" class="videoItemWithTooltip " id="videoModuleleft1_1705854" _tooltip="rightMiddle" _target="Left" _promosettitle="Roseanne: Episode 7, Season 3 - Trick Or Treat" _tooltiplocation="Left" _id="1705854"><span id="videoTitle">Roseanne: Episode 7, Season 3 - Trick Or Treat</span></a></div>
+<div class="forceRight"><a href="/video/?id=1705855" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:right3:3:Roseanne: Episode 19, Season 5 - &quot;It's A Boy&quot;-1705855&quot;});" rel="/home/xml/model/playlistInfo.jhtml?id=1705855" class="videoItemWithTooltip " id="videoModuleleft1_1705855" _tooltip="rightMiddle" _target="Left" _promosettitle="Roseanne: Episode 19, Season 5 - &quot;It's A Boy&quot;" _tooltiplocation="Left" _id="1705855"><span id="videoTitle">Roseanne: Episode 19, Season 5 - "It's A Boy"</span></a></div>
+<div class="forceRight noShade"><a href="/video/?id=1705856" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:right3:4:Roseanne: Episode 11, Season 6 - Driver's Seat-1705856&quot;});" rel="/home/xml/model/playlistInfo.jhtml?id=1705856" class="videoItemWithTooltip " id="videoModuleleft1_1705856" _tooltip="rightMiddle" _target="Left" _promosettitle="Roseanne: Episode 11, Season 6 - Driver's Seat" _tooltiplocation="Left" _id="1705856"><span id="videoTitle">Roseanne: Episode 11, Season 6 - Driver's Seat</span></a></div>
+<div class="forceRight"><a href="/video/roseanne-episode-18-season-6-dont-ask-dont-tell/1705857/playlist.jhtml" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:right3:5:Roseanne: Episode 18, Season 6 - Don't Ask, Don't Tell-1705857&quot;});" rel="/home/xml/model/playlistInfo.jhtml?id=1705857" class="videoItemWithTooltip " id="videoModuleleft1_1705857" _tooltip="rightMiddle" _target="Left" _promosettitle="Roseanne: Episode 18, Season 6 - Don't Ask, Don't Tell" _tooltiplocation="Left" _id="1705857">
+<div style="position: relative; float: left; width: 255px; margin-bottom: 3px;"><span id="fullContentFlag">FULL EPISODE</span></div><span id="videoTitle">Roseanne: Episode 18, Season 6 - Don't Ask, Don't Tell</span></a></div>
+<div style="clear:both;"></div>
+<div class="read-more"><span class="read-more-inner"><a title="Watch More Roseanne" href="/shows/roseanne/series.jhtml" class="buttonPost btnArrowPost"><span>Watch More Roseanne</span></a></span></div>
+<div style="clear:both;"></div>
+</div>
+</div>
+<div class="module-bottom"></div>
+</div>
+<div class="hpModule_video">
+<div id="headingBlock">
+<div class="headingBlockSponsor"><script>
+var promoSetName = removeInvalidCharsFrom("1 girl 5 gays");
+btg.config.DoubleClick["positionThreshold"] = '2';
+btg.config.DoubleClick["zone"] = "btf_j_s/"+zone;
+btg.config.DoubleClick["keyValues"] = "promoSetName="+promoSetName+";site=logoonline;!category=video;!category=expand;!category=pop;!category=3rdparty;!category=eyeblaster;!category=eyewonder;"+ex_cats;
+
+//Place Ad
+btg.Controller.placeAd(
+{
+size:'100x50',
+sections:secparams,
+reloadInterval:30000
+}
+);
+</script></div>
+<h2><a href="http://www.logotv.com/shows/one_girl_five_gays/series.jhtml" style="color:#333333;">1 girl 5 gays</a></h2>
+</div>
+<div id="videoModuleInformationDivider">
+<div id="moduleInformation">
+<div id="moduleThumbnail"><img alt="1 girl 5 gays" src="/shows/one_girl_five_gays/img/episodes/410/1/120x80.jpg" height="100" width="150"><a title="1 girl 5 gays" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:right4:thumb:1 girl 5 gays&quot;});" id="overlay" href="http://www.logotv.com/shows/one_girl_five_gays/series.jhtml">
+</a><div class="transparent-overlay"><a title="1 girl 5 gays" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:right4:thumb:1 girl 5 gays&quot;});" id="overlay" href="http://www.logotv.com/shows/one_girl_five_gays/series.jhtml"></a><a title="1 girl 5 gays" href="http://www.logotv.com/shows/one_girl_five_gays/series.jhtml"><img alt="1 girl 5 gays" src="/home/images/2008/leftModuleBgs/transparent.png" height="100" width="150"></a></div></div>
+<div id="moduleDescription">What happens when one sassy straight girl gets up close and personal with five fierce gay men? A whole lot of OMFG! Watch
+weeknights @ 11:30/10:30c!
+</div>
+</div>
+<div class="moduleList">
+<div class="forceRight"><a href="/video/1-girl-5-gays-episode-23-season-4/1705861/playlist.jhtml" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:right4:1:1 girl 5 gays: Episode 23, Season 4-1705861&quot;});" rel="/home/xml/model/playlistInfo.jhtml?id=1705861" class="videoItemWithTooltip " id="videoModuleleft1_1705861" _tooltip="rightMiddle" _target="Left" _promosettitle="1 girl 5 gays: Episode 23, Season 4" _tooltiplocation="Left" _id="1705861">
+<div style="position: relative; float: left; width: 255px; margin-bottom: 3px;"><span id="fullContentFlag">FULL EPISODE</span></div><span id="videoTitle">1 girl 5 gays: Episode 23, Season 4</span></a></div>
+<div class="forceRight noShade"><a href="/video/1-girl-5-gays-episode-22-season-4/1705264/playlist.jhtml" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:right4:2:1 girl 5 gays: Episode 22, Season 4 -1705264&quot;});" rel="/home/xml/model/playlistInfo.jhtml?id=1705264" class="videoItemWithTooltip " id="videoModuleleft1_1705264" _tooltip="rightMiddle" _target="Left" _promosettitle="1 girl 5 gays: Episode 22, Season 4 " _tooltiplocation="Left" _id="1705264">
+<div style="position: relative; float: left; width: 255px; margin-bottom: 3px;"><span id="fullContentFlag">FULL EPISODE</span></div><span id="videoTitle">1 girl 5 gays: Episode 22, Season 4 </span></a></div>
+<div class="forceRight"><a href="/video/1-girl-5-gays-episode-21-season-4/1704816/playlist.jhtml" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:right4:3:1 girl 5 gays: Episode 21, Season 4 -1704816&quot;});" rel="/home/xml/model/playlistInfo.jhtml?id=1704816" class="videoItemWithTooltip " id="videoModuleleft1_1704816" _tooltip="rightMiddle" _target="Left" _promosettitle="1 girl 5 gays: Episode 21, Season 4 " _tooltiplocation="Left" _id="1704816">
+<div style="position: relative; float: left; width: 255px; margin-bottom: 3px;"><span id="fullContentFlag">FULL EPISODE</span></div><span id="videoTitle">1 girl 5 gays: Episode 21, Season 4 </span></a></div>
+<div class="forceRight noShade"><a href="/video/1-girl-5-gays-episode-20-season-4/1704290/playlist.jhtml" onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:right4:4:1 girl 5 gays: Episode 20, Season 4-1704290&quot;});" rel="/home/xml/model/playlistInfo.jhtml?id=1704290" class="videoItemWithTooltip " id="videoModuleleft1_1704290" _tooltip="rightMiddle" _target="Left" _promosettitle="1 girl 5 gays: Episode 20, Season 4" _tooltiplocation="Left" _id="1704290">
+<div style="position: relative; float: left; width: 255px; margin-bottom: 3px;"><span id="fullContentFlag">FULL EPISODE</span></div><span id="videoTitle">1 girl 5 gays: Episode 20, Season 4</span></a></div>
+<div style="clear:both;"></div>
+<div class="read-more"><span class="read-more-inner"><a title="More from 1 girl 5 gays" href="http://www.logotv.com/shows/one_girl_five_gays/series.jhtml" class="buttonPost btnArrowPost"><span>More from 1 girl 5 gays</span></a></span></div>
+<div style="clear:both;"></div>
+</div>
+</div>
+<div class="module-bottom"></div>
+</div>
+</div>
+</div>
+<div id="hp_right">
+<div id="col-c">
+<div id="lookup" class="content-block" style="margin:5px;width:250px;"><iframe src="/sitewide/widgets/channel-lookup/channel-lookup-src.html" id="channel_iframe" style="width: 250px; border: 0; overflow: hidden; height: 165px" scrolling="no"></iframe></div>
+<div id="schedule" class="content-block"><span class="block-title">Tonight On Logo - Monday, May 27</span><div class="content-divider"></div>
+<div class="container"><span class="time">9:00 ET</span><a href="/shows/felt/series.jhtml" class="show"><span>Felt</span></a></div>
+<div class="content-divider"></div>
+<div class="container"><span class="time">9:30 ET</span><a href="/shows/felt/series.jhtml" class="show"><span>Felt</span></a></div>
+<div class="content-divider"></div>
+<div class="container"><span class="time">10:00 ET</span><a href="/shows/felt/series.jhtml" class="show"><span>Felt</span></a></div>
+<div class="content-divider"></div>
+<div class="container"><span class="time">10:30 ET</span><a href="/shows/one_girl_five_gays/series.jhtml" class="show"><span>1 girl 5 gays</span></a></div>
+<div class="content-divider"></div>
+<div class="container"><span class="time">11:00 ET</span><a href="/shows/that_sex_show/series.jhtml" class="show"><span>That Sex Show</span></a></div>
+<div class="content-divider"></div>
+<div class="container"><span class="time">12:00 ET</span><a href="/shows/rupauls_drag_race/season_5/series.jhtml" class="show"><span>RuPaul's Drag Race</span></a></div>
+<div class="content-divider"></div>
+<div id="see-full"><a href="/schedule"><span>See Full Schedule</span></a></div>
+</div>
+<div class="newnownext_travel"><div id="travel" class="content-block"><span class="block-title">NewNowNext Travel</span><div class="container"><div class="thumbnail-container"><a onclick="return dispatcher.sendLinkEvent({linkType:'o',linkName:'HP:far_right::Pines Pavilion Just About Ready To Own Summer On Fire Island: WATCH'});" title="Pines Pavilion Just About Ready To Own Summer On Fire Island: WATCH" href="http://www.newnownext.com/pines-pavilion-just-about-ready-to-own-summer-on-fire-island-watch/05/2013/"><img src="http://newnownext.mtvnimages.com/2013/05/Screen-Shot-2013-05-25-at-5.32.54-PM.png?width=120&amp;height=80" height="65" width="90"></a></div><div class="content-container"><a title="Pines Pavilion Just About Ready To Own Summer On Fire Island: WATCH" href="http://www.newnownext.com/pines-pavilion-just-about-ready-to-own-summer-on-fire-island-watch/05/2013/"><span>Pines Pavilion Just About Ready To Own Summer On Fire Island: WATCH</span></a><span></span></div></div><div class="content-divider"></div><div class="container"><div class="thumbnail-container"><a onclick="return dispatcher.sendLinkEvent({linkType:'o',linkName:'HP:far_right::NewNowNext Travel: 2013 Pride Calendar'});" title="NewNowNext Travel: 2013 Pride Calendar" href="http://www.newnownext.com/pride-guide-2013/05/2013/"><img src="http://newnownext.mtvnimages.com/2013/05/PRIDE-PARADE.jpg?width=120&amp;height=80" height="65" width="90"></a></div><div class="content-container"><a title="NewNowNext Travel: 2013 Pride Calendar" href="http://www.newnownext.com/pride-guide-2013/05/2013/"><span>NewNowNext Travel: 2013 Pride Calendar</span></a><span></span></div></div><div class="content-divider"></div><div class="container"><div class="thumbnail-container"><a onclick="return dispatcher.sendLinkEvent({linkType:'o',linkName:'HP:far_right::He’s A Beauty! Winner Of The Broadway Beauty Pageant Crowned: PHOTOS'});" title="He’s A Beauty! Winner Of The Broadway Beauty Pageant Crowned: PHOTOS" href="http://www.newnownext.com/hes-a-beauty-winner-of-the-broadway-beauty-pageant-crowned-photos/05/2013/"><img src="http://newnownext.mtvnimages.com/2013/05/broadway-beauty-pageant.jpg?width=120&amp;height=80" height="65" width="90"></a></div><div class="content-container"><a title="He’s A Beauty! Winner Of The Broadway Beauty Pageant Crowned: PHOTOS" href="http://www.newnownext.com/hes-a-beauty-winner-of-the-broadway-beauty-pageant-crowned-photos/05/2013/"><span>He’s A Beauty! Winner Of The Broadway Beauty Pageant Crowned: PHOTOS</span></a><span></span></div></div><div class="content-divider"></div><div id="plan-vacation"><a onclick="return dispatcher.sendLinkEvent({linkType:&quot;o&quot;,linkName:&quot;HP:far_right::Plan A Vacation&quot;});" href="http://www.newnownext.com/travel/"><span>Plan A Vacation</span></a></div></div></div><script type="text/javascript">
+$( function(){
+$('.newnownext_travel').xslt({
+xmlUrl: '/home/xml/model/NNNTravelFeed.jhtml',
+xslUrl: '/home/xsl/view/railModuleFromNNNFeed.xsl', 
+xslCache: false,
+callback: function(result) {
+if( result != false ) {
+$('.newnownext_travel').slideDown('slow');
+}
+}
+});
+});
+</script><div id="travel" class="content-block"><span class="block-title">More On Logo</span><div class="container">
+<div class="thumbnail-container"><a onclick="return dispatcher.sendLinkEvent({linkType:'o',linkName:'HP:far_right:More On Logo:Escape to Las Vegas Sweepstakes'});" title="Escape to Las Vegas Sweepstakes" href="http://www.newnownext.com/escape-to-las-vegas-sweepstakes/"><img alt="" src="/sweepstakes/lvcva/120x80.jpg" height="65" width="90"></a></div>
+<div class="content-container"><a title="Escape to Las Vegas Sweepstakes" href="http://www.newnownext.com/escape-to-las-vegas-sweepstakes/"><span>Escape to Las Vegas Sweepstakes</span></a><span>Enter now for your chance to win tickets for two to Las Vegas AND tickets to Cirque du Soleil's Zumanity!</span></div>
+</div>
+<div class="content-divider"></div>
+<div class="container">
+<div class="thumbnail-container"><a onclick="return dispatcher.sendLinkEvent({linkType:'o',linkName:'HP:far_right:More On Logo:Puppet Service Announcements'});" title="Puppet Service Announcements" href="http://www.logotv.com/avenueq"><img alt="" src="/shows/avenue_q/assets/images/key_art/150x100.jpg" height="65" width="90"></a></div>
+<div class="content-container"><a title="Puppet Service Announcements" href="http://www.logotv.com/avenueq"><span>Puppet Service Announcements</span></a><span>The Tony Award-winning musical Avenue Q and Logo have joined forces for a national PSA campaign designed to create public
+awareness surrounding HIV. Check it out!</span></div>
+</div>
+</div>
+<div class="mdl-exploreOtherSites"><span style="font-family: Helvetica,Arial,sans-serif; margin-top:10px; font-size: 13px; margin-left: 10px; color: rgb(45, 45, 45); font-weight: bold; position:relative; float:left;">Other Logo Sites</span><div style="background: transparent url(/home/images/2008/rightModuleBgs/divider2.jpg) repeat-x scroll 0% 0%; height: 2px; width: 240px; float: left; margin-left: 10px; position: relative; margin-top:10px;"></div><div style="position:relative; float:left; margin-left:10px; width:200px; padding-left:40px; display:block; padding-top:10px; padding-bottom:10px; min-height:28px; background:url(/home/images/icn-NNN.jpg) no-repeat scroll 0px 50%"><div style="width:198px; position:relative; float:right; display:block; font-size:10px; font-weight:bold; color:#56626C;">NewNowNext.com</div><div style="width:198px; position:relative; float:right; margin-top:3px; display:block;"><a href="http://www.newnownext.com/today-in-gay-adrian-peterson-not-with-gay-marriage-haters-storm-the-bastille-and-more/05/2013/" target="_blank" style="font-size:12px; font-weight:bold;"><span>Today In Gay: Adrian Peterson “Not With” Gay Marriage, Haters Storm The Bastille, And More</span></a></div></div><div style="background: transparent url(/home/images/2008/rightModuleBgs/divider2.jpg) repeat-x scroll 0% 0%; height: 2px; width: 240px; float: left; margin-left: 10px; position: relative;"></div><div style="position:relative; float:left; margin-left:10px; width:200px; padding-left:40px; display:block; padding-top:10px; padding-bottom:10px; min-height:28px; background:url(/home/images/icn-ellen.jpg) no-repeat scroll 0px 50%"><div style="width:198px; position:relative; float:right; display:block; font-size:10px; font-weight:bold; color:#56626C;">AfterEllen.com</div><div style="width:198px; position:relative; float:right; margin-top:3px; display:block;"><a href="http://www.afterellen.com/2013/05/lea-seydoux-playing-man-blue-warmest-color-katee-sackhoff-playing-fake-gay-riddick" target="_blank" style="font-size:12px; font-weight:bold;"><span>Afternoon Delight: Lea Seydoux on "playing the man" in "Blue is the Warmest Color," Katee Sackhoff on playing fake gay in
+"Riddick" 
+</span></a></div></div><div style="background: transparent url(/home/images/2008/rightModuleBgs/divider2.jpg) repeat-x scroll 0% 0%; height: 2px; width: 240px; float: left; margin-left: 10px; position: relative;"></div><div style="float:left; position:relative; width:240px; margin-left:5px; height:15px; padding-top:10px;"><a style="position:relative; font-weight:bold; font-size:11px; margin-right:5px; float:right; text-align:right; background:url(/home/images/2008/rightModuleBgs/linkBg_off.png) right no-repeat;" href="/about"><span style="margin-right:15px; text-decoration:underline;">More About Logo</span></a></div></div><script type="text/javascript">
+$( function(){
+$('.mdl-exploreOtherSites').xslt({
+xmlUrl: '/home/xml/model/moreLogoSites.jhtml',
+xslUrl: '/home/xsl/view/otherLogoSites.xsl', 
+xslCache: false,
+callback: function(result) {
+if( result != false ) {
+$('.mdl-exploreOtherSites').slideDown('slow');
+}
+}
+});
+});
+</script><div id="connect" class="content-block"><span class="block-title">
+Connect With Logo
+</span><div class="content-divider"></div>
+<div class="entry" id="facebook-connect"><a href="http://www.facebook.com/logo" target="_blank"><img src="/home/images/spacer.gif"><span>Like us on Facebook</span></a></div>
+<div class="content-divider"></div>
+<div class="entry" id="myspace-connect"><a href="http://www.foursquare.com/LogoTV" target="_blank"><img src="/home/images/spacer.gif"><span>Find us on Foursquare</span></a></div>
+<div class="content-divider"></div>
+<div class="entry" id="twitter-connect"><a href="http://twitter.com/LogoTV" target="_blank"><img src="/home/images/spacer.gif"><span>Follow us on Twitter</span></a></div>
+<div class="content-divider"></div>
+<div class="entry" id="google-connect"><a href="https://plus.google.com/108850167869273724563" target="_blank"><img src="/home/images/spacer.gif"><span>Find us on Google+</span></a></div>
+<div class="content-divider"></div>
+<div class="entry" id="tumblr-connect"><a href="http://logotv.tumblr.com" target="_blank"><img src="/home/images/spacer.gif"><span>Tumble with us on Tumblr</span></a></div>
+<div class="content-divider"></div>
+<div class="entry" id="pinterest-connect"><a href="http://pinterest.com/logotv/" target="_blank"><img src="/home/images/spacer.gif"><span>Pin us on Pinterest</span></a></div>
+<div class="content-divider"></div>
+<div class="entry" id="instagram-connect"><a href="http://instagram.com/logotv" target="_blank"><img src="/home/images/spacer.gif"><span>Connect with us on Instagram</span></a></div>
+</div><script>
+$('.videoItemWithTooltip').each(function() // Select all elements with the "tooltip" attribute
+{
+$(this).qtip({
+content: {
+url: '/home/videoModuleTooltip.jhtml',
+data: { id: $(this).attr('_id'), tooltipLocation: $(this).attr('_tooltipLocation'), promoSetTitle: $(this).attr('_promoSetTitle') },
+method: 'get'
+},
+position: {
+corner: {
+target:$(this).attr('_target'), tooltip:$(this).attr('_tooltip')
+}
+},
+show: {delay:800, when:{ event: 'mouseover' }, effect: { length: 0 }},
+style: {padding: 0, height:675, width: 365, border: {width: 0, radius: 0}},
+hide: {
+delay: 0,
+when: { event: 'mouseout' },
+effect: { length: 0 }
+}
+});
+});
+</script></div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="footer noindex">
+<div id="footer_content">
+<div id="footer_left">
+<div>
+<img src="http://www.logotv.com/sitewide/images/footer/logo_online.jpg" height="82" width="212">
+</div>
+<div id="footer_legal">
+© 2013 Viacom International Inc.
+<br>
+All rights reserved. Logo and all related marks and designs are trademarks of Viacom Internation Inc.
+<br>
+<br>
+AfterEllen.com is not affiliated with Ellen DeGeneres.
+</div>
+</div>
+<div id="footer_right">
+<div id="footer_navigation">
+<!-- <a style="float: right;" class="fbutton2 sitemapIcon" href="/sitemap.jhtml"><span/></a> -->
+<div id="footer_mainNavigation">
+<a href="http://www.logotv.com/video/">Watch Video</a>
+<a href="http://www.logotv.com/shows/">Shows</a>
+<a href="http://www.logotv.com/schedule/">Schedule</a>
+<a href="http://www.logotv.com/talk/">LogoTALK</a>
+<a href="http://www.newnownext.com/">News</a>
+<a href="http://shop.logoonline.com/?campaign1=Logoonline_Header_Footer">Shop</a>
+<a href="http://www.logotv.com/about/">About</a>
+<a href="http://www.logotv.com/sitemap.jhtml">Sitemap</a>
+</div>
+</div>
+<div id="footer_otherSitesWrapper">
+<div id="footer_otherSitesHeader">
+<span style="color: rgb(126, 126, 126); font-size: 12px;">Visit Our Other Sites:</span>
+</div>
+<div id="footer_otherSitesContent" style="margin-left: 170px;">
+<ul id="footer_otherSitesContentBlocks">
+<li><div class="fbutton3"><a href="http://www.afterellen.com" target="_blank" title="Lesbian Video &amp; Entertainment News"><img class="aellenIcon" src="http://www.logotv.com/sitewide/img/spacer.gif"></a><br><a href="http://www.afterellen.com" target="_blank" title="Lesbian Video &amp; Entertainment News">Lesbian</a> <a href="http://www.afterellen.com/taxonomy/term/2689" target="_blank" title="Lesbian Video &amp; Entertainment News">Video</a> &amp;<br><a href="http://www.afterellen.com" target="_blank" title="Lesbian Video &amp; Entertainment News">Entertainment News</a></div></li>
+<li><div class="fbutton3"><a href="http://www.thebacklot.com" target="_blank" title="Gay Movies &amp; Entertainment News"><img class="thebacklotIcon" src="http://www.logotv.com/sitewide/img/spacer.gif"></a><br><a href="http://www.thebacklot.com" target="_blank" title="Gay Movies">Gay Movies</a> &amp;<br><a href="http://www.thebacklot.com" target="_blank" title="Entertainment News">Entertainment News</a></div></li>
+<li><div class="fbutton3"><a href="http://www.downelink.com" target="_blank" title="Gay &amp; Lesbian Social Network"><img class="downelinkIcon" src="http://www.logotv.com/sitewide/img/spacer.gif"></a><br><a href="http://www.downelink.com" target="_blank" title="Gay &amp; Lesbian Social Network">Gay &amp; Lesbian<br>Social Network</a></div></li>
+<li><div class="fbutton3"><a href="http://www.rupaulsdragrace.com/" target="_blank" title="RuPaul searches for America's Next Drag Queen"><img class="rupaulIcon" src="http://www.logotv.com/sitewide/img/spacer.gif"></a><br><a href="http://www.rupaulsdragrace.com/" target="_blank" title="RuPaul searches for America's Next Drag Queen">RuPaul</a> <a href="http://www.rupaulsdragrace.com/" target="_blank" title="RuPaul searches for America's Next Drag Queen">searches for America's Next Drag Queen</a></div></li>
+<li><div class="fbutton3"><a href="http://www.newnownext.com" target="_blank" title="Gay Pop Culture &amp; Entertainment Blog"><img class="nnnIcon" src="http://www.logotv.com/sitewide/img/spacer.gif"></a><br><a href="http://www.newnownext.com" target="_blank" title="Gay Pop Culture &amp; Entertainment Blog">Gay</a> <a href="http://www.newnownext.com" target="_blank" title="Gay Pop Culture &amp; Entertainment Blog">Pop Culture</a> &amp; <a href="http://www.newnownext.com" target="_blank" title="Gay Pop Culture &amp; Entertainment Blog">Entertainment Blog</a></div></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="footer_subNavigation">
+<a href="http://www.logotv.com/about/asm/adspecs.jhtml">Advertising Info</a> |
+<a href="http://www.logotv.com/about/terms-of-use.jhtml">Terms of Use</a>
+|
+<a href="/about/copyright-compliance-policy.jhtml">Copyright Compliance Property</a> |
+<a href="http://www.logotv.com/about/privacy-policy.jhtml">Privacy Policy/Your CA Privacy Rights</a> |
+<a href="http://media.viacom.com/accessibility/">Closed Captioning Contact</a> |
+<a href="http://srp.mtvn.com/sitefaq.html">Ad Choices<img style="height:11px;position:relative;top:2px;left:2px" src="http://www.logotv.com/sitewide/images/footer/ad-option-logo-12x12.png"></a>
+</div>
+</div>
+</div>
+
+<div style="width: 92.5px;" id="gutterLeft"></div>
+<div style="width: 92.5px;" id="gutterRight"></div>
+
+<script type="text/javascript">
+function isiPad() {
+return navigator.userAgent.indexOf('iPad') != -1;
+}
+
+function isMobile() {
+if( /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+return true;
+}
+return false;
+}
+
+function resizeGutters(){
+
+if(isiPad() || isMobile()) {
+$j('#gutterLeft').width(0);
+$j('#gutterRight').width(0);
+return;
+}
+var pageWidth = $("body").width();
+var gutterWidth = (pageWidth-976)/2;
+$('#gutterLeft').width(gutterWidth-3);
+$('#gutterRight').width(gutterWidth-3);
+}
+
+resizeGutters();
+
+$(window).resize(function() {
+resizeGutters();
+});
+
+</script>
+
+<script type="text/javascript">
+//Place Survey Ad Call
+btg.Controller.placeAd(
+{
+size:'1x2',
+sections:secparams,
+keyValues:keyvals,
+reloadInterval:30000
+} 
+);
+</script><script type="text/javascript" id="ad_5" src="http://ad.doubleclick.net/adj/logoonline.mtvi/btf_j_s/_hp;sec0=_hp;pos=btf;tag=adj;mtype=standard;site=logoonline;promoSetName=1_girl_5_gays;CRM=MLG;A1=VN900;sz=1x2;tile=5;dcopt=ist;!category=video;!category=expand;!category=pop;!category=3rdparty;!category=eyeblaster;!category=eyewonder;u=b18de230-6c30-b846-f9e3-fb4d72f017ce%7Csec0%3D_hp;ord=302064040398564900?"></script><a target="_new" href="http://ad.doubleclick.net/click;h=v8/3df0/0/0/%2a/w;219085008;0-0;0;33532036;152-1/2;33904873/33922751/1;u=b18de230-6c30-b846-f9e3-fb4d72f017ce|sec0=_hp;~aopt=2/1/df9f/0;~sscs=%3fhttp://www.logoonline.com"><img src="http://ad.doubleclick.net/1358506/1x1_transparent.gif" alt="Click here to find out more!" border="0"></a>
+
+<!-- Key Lime Interactive Survey Calls - 3/10 -->
+<script type="text/javascript" charset="utf-8" src="https://server.userzoom.com/trueintent/js/uz_til.js"></script>
+<script type="text/javascript" language="javascript">uz_til.initialize('3787B7A3C12CDF11ADAC0019BBCA1734');</script>
+
+<!-- BEGIN JS TAG - AdExtent Dynamic Retargeting Segment - DO NOT MODIFY -->
+<script>
+if(window.location.pathname=="/shows/vicky_and_lysander/series.jhtml") {
+var sc = document.createElement('script');
+sc.src = 'http://dynads.adextent.com/ansn-creative/dynads/ServeS3.ashx/autotag.js';
+sc.type = 'text/javascript';
+if(typeof sc.async !== 'undefined') {
+sc.async = true;
+} 
+document.getElementsByTagName('head')[0].appendChild(sc);
+}
+</script>
+<!-- END TAG -->
+
+
+
+
+
+<div id="fancy_overlay"></div><div id="fancy_loading"><div></div></div><div id="fancy_outer"><div id="fancy_inner"><div id="fancy_close"></div><div id="fancy_bg"><div class="fancy_bg" id="fancy_bg_n"></div><div class="fancy_bg" id="fancy_bg_ne"></div><div class="fancy_bg" id="fancy_bg_e"></div><div class="fancy_bg" id="fancy_bg_se"></div><div class="fancy_bg" id="fancy_bg_s"></div><div class="fancy_bg" id="fancy_bg_sw"></div><div class="fancy_bg" id="fancy_bg_w"></div><div class="fancy_bg" id="fancy_bg_nw"></div></div><a href="javascript:;" id="fancy_left"><span class="fancy_ico" id="fancy_left_ico"></span></a><a href="javascript:;" id="fancy_right"><span class="fancy_ico" id="fancy_right_ico"></span></a><div id="fancy_content"></div></div></div><div id="fancy_title"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="fancy_title" id="fancy_title_left"></td><td class="fancy_title" id="fancy_title_main"><div></div></td><td class="fancy_title" id="fancy_title_right"></td></tr></tbody></table></div><div id="popupCastDynamic" class="popup_div"><div class="popup_div_body"><div class="body-container"><div class="title1"><a href="#"></a></div><p class="deck"></p></div><div class="clr"><span></span></div></div><div class="popup_div_bottom"></div></div><script widgets4debug="true" id="06F4FFFF009B10200002FFFFF406"></script><iframe style="display: none;"></iframe><iframe src="http://fast.mtvn.demdex.net/DSD-gz/mtvn-dest.html?targus=1&amp;targusvalidttl=14400&amp;bizo=1&amp;bizovalidttl=14400&amp;nexac=1&amp;nexacvalidttl=14400&amp;acx=1&amp;acxvalidttl=14400&amp;addthis=1&amp;addthisvalidttl=14400&amp;is_exelate=1&amp;exvalidttl=302400&amp;is_mediamath=1&amp;mmvalidttl=10080&amp;rubicon=1&amp;rubiconvalidttl=14400" style="height:1px;width:1px;visibility:hidden;position:absolute;bottom:0;left:-1000px"></iframe></body><!-- PAGEOK -->

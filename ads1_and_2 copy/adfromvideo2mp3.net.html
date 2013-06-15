@@ -1,0 +1,183 @@
+<head>
+	<title>Welcome to GEICO!</title>
+	<link href="/landingpage/geico_main.css" type="text/css" rel="stylesheet">
+	<link href="/public/favicon.ico" rel="Shortcut Icon">
+
+	<meta http-equiv="imagetoolbar" content="no">
+	<meta content="Get a new online auto insurance quote, buy car insurance online, recall old quotes, learn how to save money on auto insurance" name="description">
+	<!--[if lt IE 7]>
+        <style type="text/css">
+            #gecko { behavior:url(/landingpage/sitelinks/iepngfix.htc); }
+        </style>
+    <![endif]-->
+	<style type="text/css">
+		#geicologo { float: left; }
+		#container {  width: 740px; margin: 15px auto 5px auto; }
+	 	#footer { margin-top: 5px; margin-left: 0px; }
+		#footer ul {margin: 0 0 0 5px; padding: 0 0 0 0;}
+		#floatinglogo { width: 670px; text-align: right; overflow: hidden; margin-top: 5px;}
+		#footerbottom { margin-left: -125px; width: 70px; color: #666; text-align: left; background-color:#0033CC; }
+		input { border: solid 0px;  font-size: 24px }
+
+	</style>
+
+	<script src="http://stats.g.doubleclick.net/dc.js" async="" type="text/javascript"></script><script language="javascript"></script>
+	<!-- start: includes/scripts/format_landingPage.js -->
+	<script language="javascript">
+
+	var curLogo = "00001";
+	var zip="";
+
+	function getURLParam(){
+		var foundSOA = "";
+		var showWhat = "";
+		var foundLogo = "";
+		var strHref = window.location.href;
+		
+		if ( strHref.indexOf("?") > -1 ){
+			var strParams = strHref.substr(strHref.indexOf("?")).toLowerCase();
+			var paramsArray = strParams.split("&");
+			for (var i = 0; i < paramsArray.length; i++){
+				if ((paramsArray[i].indexOf("soa=") > -1 ) || (paramsArray[i].indexOf("s=") > -1 )){
+					var aParamArray = paramsArray[i].split("=");
+					foundSOA = aParamArray[1];
+				}
+				if (paramsArray[i].indexOf("show=") > -1 ){
+					var aParamArray = paramsArray[i].split("=");
+					showWhat = aParamArray[1];
+				}
+				if (paramsArray[i].indexOf("logo=") > -1 ){
+					var aParamArray = paramsArray[i].split("=");
+					foundLogo = aParamArray[1];
+				}
+				if (paramsArray[i].indexOf("zip=") > -1 ){
+					var aParamArray = paramsArray[i].split("=");
+					zip = aParamArray[1];
+				}
+			}
+		}
+		if (foundSOA == "") {
+			foundSOA = "00001";
+		}
+		if (showWhat == "logo") {
+			curLogo = foundSOA;
+		}
+		if (foundLogo != "") {
+			curLogo = foundLogo;
+		}
+  		return foundSOA;
+	}
+	var curSOA = getURLParam();
+
+	function modifyForm(){
+		for (i=0; i<document.forms[0].length; i++){
+			var item = document.forms[0].elements[i];
+			if (item.name == "POL_soaCode"){
+				item.value = curSOA;
+			}
+		}
+	}
+
+	function addURLparam(){
+		var strHref = window.location.href;
+  		var strParam = "";
+    	if (strHref.indexOf("?") > -1 ){
+  			strParam = strHref.substr(strHref.indexOf("?") + 1);
+		}
+    	document.forms[0].action = document.forms[0].action + strParam;
+	}
+
+	function appendFormValues(){
+		var formvalues="";
+		for (i=0; i<document.forms[0].length; i++){
+			var item = document.forms[0].elements[i];
+			var formitem = item.name;
+			var formvalue = item.value;
+			formvalues += formitem + "=" + formvalue + "&";
+		}
+		document.forms[0].action = document.forms[0].action + "?" + formvalues;
+	}
+
+	function addPageData(){
+		modifyForm();
+		appendFormValues();
+		addURLparam();
+	}
+
+    </script>
+
+<!--$Revision: 1.2 $-->
+<!--$Name:  $-->
+
+	<!-- end: includes/scripts/format_landingPage.js -->
+	<script type="text/javascript" src="/scripts/rtdCookie.js"></script>
+</head>
+
+<body style="background: #fff;">
+	<div id="container"> 
+		<div id="floatinglogo">			
+		</div>
+	    
+		<div id="contentArea">
+			<div id="top">				
+			</div>
+		</div>	
+		
+		<div id="formArea" style="position: relative; background-image: url(/images/landing/go312.jpg); background-repeat: no-repeat; width: 740px; height: 592px; margin-left: auto; margin-right: auto; margin-top: 5px; border: solid 1px #000000;">
+		      <form action="https://sales2.geico.com/internetsales/index.jsp" method="post" onsubmit="addPageData();">
+			    <input name="POL_ratedZip5" maxlength="5" style="float:left; position:relative; top:501px; left:232px; width:150px; line-height:32px; height:32px; font-size:32px; text-align:center; margin-top: 6px;" alt="Enter your ZIP code" type="text" border="1">
+			    <input src="/images/landing/go88_button.gif" alt="" style="float:left; position:relative; top:495px; left:260px; height: 55px; width: 214px; " type="image">
+			    <input value="true" name="GENINFO_referralInd" type="hidden">
+			    <input value="RatedStateLandingGo320" name="GENINFO_currentPageName" type="hidden">
+			    <input value="soa" name="POL_soaCode" type="hidden">
+		      </form>
+		      <script type="text/javascript">
+			document.forms[0].POL_ratedZip5.value=zip;
+		      </script>		     
+		 </div>
+		<div id="footer">
+			<!-- start: includes/footers/no_links_common.htm -->
+				<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-34118221-1']);
+		
+		// enable subdomain tracking functionality
+		_gaq.push(['_setDomainName', '.geico.com']); 
+		
+		// exclude Geico as a referring site.
+		_gaq.push(['_addIgnoredRef', 'geico.com']); 
+		
+		// set lookback to be 3 months 
+		_gaq.push(['_setCampaignCookieTimeout', 7884000000]);
+		_gaq.push(['_trackPageview']);
+		
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		
+			ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+	
+	<div id="footer">
+		<ul>
+			<li>© 1996-<script type="text/ecmascript">
+var year=new Date();
+year=year.getYear();
+if (year<1900) year+=1900;
+document.write(year);
+</script>2013
+             GEICO</li>
+		</ul>
+	</div>
+
+	<!--$Revision: 1.4 $-->
+	<!--$Name:  $-->
+			<!-- end: includes/footers/no_links_common.htm -->
+		</div>
+	</div>
+
+
+
+
+
+</body>

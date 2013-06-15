@@ -1,0 +1,574 @@
+<head id="_htmHead"><script src="/includes/common/scripts/opinionlab/oo_conf_float.js?version=15.00" async="" type="text/javascript"></script><script src="/includes/common/scripts/opinionlab/oo_engine.min.js?version=15.00" async="" type="text/javascript"></script><script src="/Includes/Common/Scripts/Analytics/Criteo.js?version=15.00" async="" type="text/javascript"></script><script src="http://www.googlecommerce.com/trustedstores/gtmp_compiled.js" async="" type="text/javascript"></script><script src="http://www.adobetag.com/d1/guitarcenter/live/JBS.js" async="async" type="text/javascript"></script> <title id="_htmTitle">
+Live Wire Elite at Guitar Center | Search Results
+</title> <meta name="verify-v1" content="xm3ZwFRUWeh1YYkqPGOiWCI8zzpbBloCC+YVitoIe50="> <meta name="y_key" content="f1dda75749288e44"> <meta name="keywords" content=" "> <meta name="description" content=" "> <link rel="canonical" href="/Search/Default.aspx"> <link id="Favicon" rel="SHORTCUT ICON" href="/includes/GuitarCenter/images/favicon.ico"> 
+<!--BEGIN ASSETS RENDERER-->
+<!--BEGIN EXTERNAL ASSETS (TOP)-->
+<!--END EXTERNAL ASSETS (TOP)-->
+<!--BEGIN BUNDLED ASSETS-->
+<link href="/Minified/Views/GuitarCenter/_EmptyLayout.cshtml_Views/GuitarCenter/Listing/Index.cshtml_15.00.css" rel="stylesheet" type="text/css">
+<!--END BUNDLED ASSETS-->
+<!--BEGIN EXTERNAL ASSETS (BOTTOM)-->
+<!--END EXTERNAL ASSETS (BOTTOM)-->
+<!--END ASSETS RENDERER-->
+ 
+<!--BEGIN ASSETS RENDERER-->
+<!--BEGIN EXTERNAL ASSETS (TOP)-->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js" type="text/javascript"></script>
+<!--END EXTERNAL ASSETS (TOP)-->
+<!--BEGIN BUNDLED ASSETS-->
+<script src="/Minified/Views/GuitarCenter/_EmptyLayout.cshtml_Views/GuitarCenter/Listing/Index.cshtml_15.00.js" type="text/javascript"></script><style>.mboxDefault { visibility:hidden; }</style></head><body><img src="//tracking.searchmarketing.com/welcome.asp?SMCID=335&amp;x=" height="1" width="1">
+<!--END BUNDLED ASSETS-->
+<!--BEGIN EXTERNAL ASSETS (BOTTOM)-->
+<!--END EXTERNAL ASSETS (BOTTOM)-->
+<!--END ASSETS RENDERER-->
+ <script language="text/javascript">
+var NTPT_PGEXTRA='source=&PageName=Guitar%20Center%3ASearch%20Results';
+</script> <script type="text/javascript">
+var omnitureStoreFinder_s;
+var omnitureBrandPrefix = 'gc';
+function analyticsUpdateStoreFinder() { 
+omnitureStoreFinder_s = s_gi('guitarcenterprod,gciglobalprod');
+omnitureStoreFinder_s.linkInternalFilters = 'javascript:,guitarcenter.com,www.guitarcenter.com';
+omnitureStoreFinder_s.linkTrackEvents = 'event41';
+omnitureStoreFinder_s.linkTrackVars = 'events,eVar25';
+omnitureStoreFinder_s.events = 'event41';
+omnitureStoreFinder_s.eVar25 = '';
+omnitureStoreFinder_s.server = 'www.guitarcenter.com';
+if(typeof(checkOmnitureClientUpdates) == 'function') checkOmnitureClientUpdates();
+//call this on-demand by client events omnitureStoreFinder_s.tl(this, 'o', 'storeLocator');
+}</script>   <span id="divHeader"> <script type="text/javascript">
+function set_search(e) {
+var userSearch = $.trim($('#header-search-input').val()); 
+var searchFilter = $('#SearchFilter ul li.selected').attr('searchtext');
+var search;
+if ((searchFilter != null && searchFilter != undefined) && (userSearch != null && userSearch != undefined)) {
+search = userSearch;
+$('#header-search-input-hidden').val(search);
+} 
+if (userSearch == 'Keywords' || userSearch == '') { 
+alert('Please enter a keyword to Search');
+if(e.preventDefault) {
+e.preventDefault();
+return false;
+} else{
+e.returnValue = false;
+}
+return false;
+}
+}
+function save_state(id) {
+try {
+if (typeof id != 'undefined') {
+var date = new Date();
+date.setTime(date.getTime() + (30 * 60 * 1000));
+$.cookie('ck_CFID', id, { expires: date });
+}
+} catch (err) {}
+}
+function set_state(opt) { 
+try {
+var id = $.cookie('ck_CFID');
+if (typeof id != 'undefined') {
+id = '#' + id;
+$(id).attr('class', 'selected');
+}
+} catch (err) {} 
+}
+$(document).ready(function () {
+if ($().jquery != '1.7.2')
+{
+var $jQuery = jQuery.noConflict(true); 
+jQuery = $jQuery; 
+}
+if (document.getElementsByName('src') != null) {
+var options = { meth: "POST", url: "/Ajax/Search/AutoComplete.asmx", json: true, maxentries: 5, siteid: "8", timeout: 8000, widthModifier: 80, submitOnClick: "true" };
+var as = new bsn.AutoSuggest(document.getElementsByName('src')[0], options);
+}
+if ($("div[id='cssnav'] ul li a[href='http://gc.guitarcenter.com/locations/']").length > 0) {
+$("div[id='cssnav'] ul li a[href='http://gc.guitarcenter.com/locations/']").bind('click', function () {
+displayStoreLocatorOverlay('http://www.guitarcenter.com/MicrositeStoreSearch.ashx');
+return false;
+});
+}
+try {
+$('.ddlSearchCat').selectbox();
+}
+catch (err) {
+//Handle errors here
+}
+if (!$.support.placeholder) {
+/* Fallback support for the placeholder attrib */
+$("input[placeholder]").each(function () {
+$(this).val($(this).val() == '' ? $(this).css("color", "gray").css("font-style", "italic").attr("placeholder") : $(this).css("color", "black").css("font-style", "normal").val());
+});
+$("body").on("focus", "input[placeholder]", function () {
+$(this).css("color", "black");
+$(this).css("font-style", "normal");
+$(this).val($(this).val() == $(this).attr("placeholder") ? '' : $(this).val());
+});
+$("body").on("blur", "input[placeholder]", function () {
+$(this).val($(this).val() == '' ? $(this).css("color", "gray").css("font-style", "italic").attr("placeholder") : $(this).css("color", "black").css("font-style", "normal").val());
+});
+}
+});
+// begin filteredsearch.js
+/*
+* jQuery selectbox plugin
+*
+* Copyright (c) 2007 Sadri Sahraoui (brainfault.com)
+* Licensed under the GPL license and MIT:
+* http://www.opensource.org/licenses/GPL-license.php
+* http://www.opensource.org/licenses/mit-license.php
+*
+* The code is inspired from Autocomplete plugin (http://www.dyve.net/jquery/?autocomplete)
+*
+* Revision: $Id$
+* Version: 0.5
+* 
+* Changelog :
+* Version 0.5 
+* - separate css style for current selected element and hover element which solve the highlight issue 
+* Version 0.4
+* - Fix width when the select is in a hidden div @Pawel Maziarz
+* - Add a unique id for generated li to avoid conflict with other selects and empty values @Pawel Maziarz
+*/
+jQuery.fn.extend({
+selectbox: function(options) {
+return this.each(function() {
+new jQuery.SelectBox(this, options);
+});
+}
+});
+/* pawel maziarz: work around for ie logging */
+if (!window.console) {
+var console = {
+log: function(msg) {}
+}
+} /* */
+jQuery.SelectBox = function(selectobj, options) {
+var opt = options || {};
+opt.inputClass = opt.inputClass || "selectbox";
+opt.containerClass = opt.containerClass || "selectbox-wrapper";
+opt.hoverClass = opt.hoverClass || "current";
+opt.currentClass = opt.selectedClass || "selected"
+opt.debug = opt.debug || false;
+var elm_id = selectobj.id;
+var active = -1;
+var inFocus = false;
+var hasfocus = 0;
+//jquery object for select element
+var $select = $(selectobj);
+// jquery container object
+var $container = setupContainer(opt);
+//jquery input object 
+var $input = setupInput(opt);
+// hide select and append newly created elements
+$select.hide().before($input).before($container);
+init();
+//set_state(this);
+$input.click(function() {
+if (!inFocus) {
+$container.toggle();
+}
+}).focus(function() {
+if ($container.not(':visible')) {
+inFocus = true;
+$container.show();
+}
+}).keydown(function(event) {
+switch (event.keyCode) {
+case 38:
+// up
+event.preventDefault();
+moveSelect(-1);
+break;
+case 40:
+// down
+event.preventDefault();
+moveSelect(1);
+break;
+//case 9: // tab 
+case 13:
+// return
+event.preventDefault(); // seems not working in mac !
+$('li.' + opt.hoverClass).trigger('click');
+break;
+case 27:
+//escape
+hideMe();
+break;
+}
+}).blur(function() {
+if ($container.is(':visible') && hasfocus > 0) {
+if (opt.debug) console.log('container visible and has focus')
+} else {
+hideMe();
+}
+});
+function hideMe() {
+hasfocus = 0;
+$container.hide();
+}
+function init() {
+$container.append(getSelectOptions($input.attr('id'))).hide();
+var width = $input.css('width');
+$container.width(width);
+///var dropdownWidth = $('div.selectbox-wrapper').width() - 10;
+///$('input.selectbox').width(dropdownWidth);
+///$('.gcHeaderSearchv2 input').width(330 - dropdownWidth);
+}
+function setupContainer(options) {
+var container = document.createElement("div");
+$container = $(container);
+$container.attr('id', elm_id + '_container');
+$container.addClass(options.containerClass);
+return $container;
+}
+function setupInput(options) {
+var $input = $("div#SearchFilter span.selectbox");
+$input.attr("id", elm_id);
+$input.attr("type", "text");
+$input.addClass(options.inputClass);
+$input.attr("autocomplete", "off");
+$input.attr("readonly", "readonly");
+$input.attr("tabIndex", $select.attr("tabindex")); // "I" capital is important for ie
+return $input;
+}
+function moveSelect(step) {
+var lis = $("li", $container);
+if (!lis) return;
+active += step;
+if (active < 0) {
+active = 0;
+} else if (active >= lis.size()) {
+active = lis.size() - 1;
+}
+lis.removeClass(opt.hoverClass);
+$(lis[active]).addClass(opt.hoverClass);
+}
+function setCurrent() {
+var li = $("li." + opt.currentClass, $container).get(0);
+var ar = ('' + li.id).split('_');
+var el = ar[ar.length - 1];
+$select.val(el);
+$("#searchForm").attr("action", "http://www.guitarcenter.com/Search/Default.aspx")
+if ( (el != null && el != undefined) && el== "110" )
+{
+$("#searchForm").attr("action", "http://www.guitarcenter.com/Used-Gear.gc")
+}
+if ( (el != null && el != undefined) && el== "130" )
+{
+$("#searchForm").attr("action", "http://www.guitarcenter.com/Featured-Platinum.gc")
+}
+if ( (el != null && el != undefined) && el== "140" )
+{
+$("#searchForm").attr("action", "http://www.guitarcenter.com/Featured-Clearance.gc")
+}
+if ( (el != null && el != undefined) && el== "120" )
+{
+$("#searchForm").attr("action", "http://www.guitarcenter.com/Condition-Vintage.gc")
+}
+if ( (el != null && el != undefined) && el== "100" )
+{
+$("#searchForm").attr("action", "http://www.guitarcenter.com/New-Gear.gc")
+}
+$input.html($(li).html());
+return true;
+}
+// select value
+function getCurrentSelected() {
+return $select.val();
+}
+// input value
+function getCurrentValue() {
+return $input.val();
+}
+function getSelectOptions(parentid) {
+var select_options = new Array();
+var ul = document.createElement('ul');
+$select.children('option').each(function() {
+var li = document.createElement('li');
+//li.setAttribute('id', parentid + '_' + $(this).val());
+li.setAttribute('id', 'ddlSearchCat_' + $(this).val());
+li.setAttribute('searchtext', $(this).attr('searchtext'));
+li.innerHTML = $(this).html();
+if ($(this).is(':selected')) {
+$input.html($(this).html());
+$(li).addClass(opt.currentClass);
+}
+ul.appendChild(li);
+$(li).mouseover(function(event) {
+hasfocus = 1;
+if (opt.debug) console.log('over on : ' + this.id);
+jQuery(event.target, $container).addClass(opt.hoverClass);
+}).mouseout(function(event) {
+hasfocus = -1;
+if (opt.debug) console.log('out on : ' + this.id);
+jQuery(event.target, $container).removeClass(opt.hoverClass);
+}).click(function(event) {
+var fl = $('li.' + opt.hoverClass, $container).get(0);
+if (opt.debug) console.log('click on :' + this.id);
+save_state(this.id);
+if (this.id == 'ddlSearchCat_0') {
+$('.gcHeaderSearchv2 input').width(295);
+} else if (this.id == 'ddlSearchCat_100') {
+$('.gcHeaderSearchv2 input').width(245);
+} else if (this.id == 'ddlSearchCat_110') {
+$('.gcHeaderSearchv2 input').width(252);
+} else if (this.id == 'ddlSearchCat_120') {
+$('.gcHeaderSearchv2 input').width(262);
+} else if (this.id == 'ddlSearchCat_130') {
+$('.gcHeaderSearchv2 input').width(194);
+} else if (this.id == 'ddlSearchCat_140') {
+$('.gcHeaderSearchv2 input').width(245);
+}
+$('li.' + opt.currentClass).removeClass(opt.currentClass);
+$(this).addClass(opt.currentClass);
+setCurrent();
+hideMe();
+});
+});
+return ul;
+}
+};
+// end filteredsearch.js
+</script> <link href="/includes/guitarcenter/css/microsites/storelocatoroverlay.css" rel="stylesheet" type="text/css"> <script src="/includes/guitarcenter/scripts/microsites/storelocatoroverlay.js" type="text/javascript"></script> <style type="text/css">
+.slider-wrapper
+{
+height: 348px;
+position: relative;
+width: 785px;
+z-index: 1;
+}
+#escape
+{
+height: 44px;
+position: absolute;
+top: -10px;
+left: 0;
+width: 100%;
+}
+</style> <div id="page-header-wrapper"> </div> <div class="header"> <div class="gcLogo"> <a onclick="s_objectID=&quot;http://www.guitarcenter.com/_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.guitarcenter.com"> <img src="/includes/guitarcenter/images/topnav/gc_header_red.png" alt="Guitar Center" height="75" width="132"> </a> </div> <div id="gcHeaderSearch-Container"> <div id="gcHeaderSearch-Border"> <div id="gcHeaderSearch-Border2"> <div id="gcHeaderSearch-Border3"> <div id="SearchFilter"><span tabindex="0" readonly="readonly" autocomplete="off" type="text" id="ctl00_ddlSearchCat" class="selectbox">All</span><div style="display: none; width: 15px;" class="selectbox-wrapper" id="ctl00_ddlSearchCat_container"><ul><li class="selected" searchtext="{0}" id="ddlSearchCat_0">All</li><li searchtext="new {0}" id="ddlSearchCat_100">New Gear</li><li searchtext="used {0}" id="ddlSearchCat_110">Used Gear</li><li searchtext="vintage {0}" id="ddlSearchCat_120">Vintage</li><li searchtext="platinum {0}" id="ddlSearchCat_130">Platinum Boutique</li><li searchtext="clearance {0}" id="ddlSearchCat_140">Clearance</li></ul></div><select name="ctl00$ddlSearchCat" id="ctl00_ddlSearchCat" style="display: none;" class="ddlSearchCat"> <option value="0" searchtext="{0}">All</option> <option value="100" searchtext="new {0}">New Gear</option> <option value="110" searchtext="used {0}">Used Gear</option> <option value="120" searchtext="vintage {0}">Vintage</option> <option value="130" searchtext="platinum {0}">Platinum Boutique</option> <option value="140" searchtext="clearance {0}">Clearance</option> </select></div> <div class="gcHeaderSearch-gutter">&nbsp;</div> <div class="gcHeaderSearchv2"> <form method="get" action="http://www.guitarcenter.com/Search/Default.aspx" id="searchForm" onsubmit="submitform()"> <input name="internal" value="1" type="hidden"> <input id="browser" name="browser" value="" type="hidden"> <input id="header-search-input-hidden" name="fsrc" type="hidden"> <input style="color: gray; font-style: italic;" id="header-search-input" name="src" autocomplete="off" placeholder="Keywords" type="text"> </form></div> <div class="breaker"></div> </div> </div> </div> <div class="gcHeaderSearchv2-submit"> <input id="SearchSubmit" onclick="javascript:set_search(event);" type="submit"> <div class="breaker"></div> </div>  </div> <div style="clear: both;"> </div> <div class="gcHeaderSubmenuCtnr"> <div class="gcHeaderSubmenu"> <ul> <li> <a class="soitem" href="https://www.guitarcenter.com/MyAccount/Login.aspx">Login</a></li> <li> <span> 
+866-498-7882
+</span> </li> <li><a class="soitem" href="http://www.guitarcenter.com/MyAccount/Default.aspx">My Account</a></li> <li><a class="soitem" href="http://www.guitarcenter.com/Wishlist/Default.aspx">Wish List</a></li> <li><a class="soitem" href="http://gc.guitarcenter.com/financing/">Financing</a></li> <li><a class="soitem" href="http://www.guitarcenter.com/GC---Contact-Us-Landing-g10075t0.gc">Help</a></li> <li><a class="soitem" href="http://www.gci-csat.com/html/contactus.html">Feedback</a></li> <li><img src="/includes/common/images/international/flags/US.gif" width="20"><a class="soitem" href="http://www.guitarcenter.com/International/ContextSelector.aspx">Change</a></li> </ul> </div> <div style="clear: both;"> </div> <div class="gcHeaderMarketing"> <a onclick="s_objectID=&quot;http://www.guitarcenter.com/GC-Shipping-Page-g26324t0.gc_1&quot;;return this.s_oc?this.s_oc(e):true" href="/GC-Shipping-Page-g26324t0.gc"> FREE SHIPPING, NO MINIMUM*</a> </div> <div style="clear: both;"> </div> <div class="gcHeaderSubmenuBottom"> <ul> <li><a onclick="analyticsUpdateStoreFinder(); displayStoreLocatorOverlay('http://www.guitarcenter.com/MicrositeStoreSearch.ashx')" style="cursor: pointer">Store Finder</a></li> <li><a onclick="s_objectID=&quot;http://www.guitarcenter.com/MyAccount/Cart.aspx_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.guitarcenter.com/MyAccount/Cart.aspx">Shopping Cart</a></li> </ul> </div> </div> </div> <div style="clear: both;"> </div> <div class=""> <div id="wrapper" class="container_16"> <div id="escape"> </div> <div id="cssnav"> <ul> <li id="products"> <a onclick="s_objectID=&quot;http://www.guitarcenter.com/_2&quot;;return this.s_oc?this.s_oc(e):true" href="/">Products</a> <div> </div> <ul> <li id=""> <a class="soitem" href="/Guitar.gc">Guitars</a> <div class="flyout"> <div class="tabover"> </div> <div class="flycontent"> <div class="top"> <div class="topcon"> <div class="col"> <div class="h3">Top Categories</div> <ol> <li> <a class="soitem" href="/Electric-Guitar-Guitar.gc">Electric Guitars</a> </li> <li> <a class="soitem" href="/Acoustic-Guitar-Guitar.gc">Acoustic Guitars</a> </li> <li> <a class="soitem" href="/Acoustic-Electric-Guitar-Guitar.gc">Acoustic-Electric Guitars</a> </li> <li> <a class="soitem" href="/Classical---Nylon-Guitars-Guitar.gc">Classical Guitars</a> </li> <li> <a class="soitem" href="/Guitar,Orientation-Left-Handed.gc">Left-Handed Guitars</a> </li> <li> <a class="soitem" href="/Guitar-Value-Pack-Guitar.gc">Guitar Value Packs</a> </li> <li> <a class="soitem" href="/Guitar---Bass-Parts---Accessories-Accessories.gc">Guitar Accessories</a> </li> </ol> </div> <div class="col"> <div class="h3">Related Products</div> <ol> <li> <a class="soitem" href="/Guitar-Amplifiers-Amplifiers.gc">Guitar Amps</a> </li> <li> <a class="soitem" href="/Effects-Amplifiers---Effects.gc">Pedals &amp; Effects</a> </li> <li> <a class="soitem" href="/Guitar-Strings-Strings.gc">Strings</a> </li> <li> <a class="soitem" href="/Guitar-Cases-and-Gig-Bags-Stringed-Instrument-Cases---Gig-Bags.gc">Cases &amp; Gig Bags</a> </li> <li> <a class="soitem" href="/Guitar-Stands---Wall-Hangers-Stands---Racks.gc">Stands &amp; Hangers</a> </li> <li> <a class="soitem" href="/Straps---Strap-Locks-Guitar---Bass-Parts---Accessories.gc">Straps</a> </li> <li> <a class="soitem" href="/Picks---Pick-Holders-Guitar---Bass-Parts---Accessories.gc">Picks</a> </li> <li> <a class="soitem" href="/Instrument-Cables-Cables.gc">Cables</a> </li> <li> <a class="soitem" href="/Folk---Traditional-Stringed-Instruments-Folk---Traditional-Instruments.gc">Folk Instruments</a> </li> <li> <a class="soitem" href="/iOS-Devices-Recording-Gear.gc">iOS Devices</a> </li> </ol> </div> <div class="col"> <div class="h3">Top Brands</div> <ol> <li> <a class="soitem" href="/Fender,Guitar.gc">Fender</a> </li> <li> <a class="soitem" href="/Gibson,Guitar.gc">Gibson</a> </li> <li> <a class="soitem" href="/Epiphone,Guitar.gc">Epiphone</a> </li> <li> <a class="soitem" href="/Ibanez,Guitar.gc">Ibanez</a> </li> <li> <a class="soitem" href="/Martin,Guitar.gc">Martin</a> </li> <li> <a class="soitem" href="/Taylor,Guitar.gc">Taylor</a> </li> <li> <a class="soitem" href="/ESP,Guitar.gc">ESP</a> </li> <li> <a class="soitem" href="/Paul-Reed-Smith,Guitar.gc">PRS</a> </li> </ol> </div> <div class="breaker"> </div> </div> </div> </div> </div> </li> <li id=""> <a class="soitem" href="http://platinum.guitarcenter.com/">Platinum Guitars</a> <div class="flyout"> <div class="tabover"> </div> <div class="flycontent"> <div class="top"> <div class="topcon"> <div class="col"> <div class="h3">Buy Platinum Inventory</div> <ol> <li> <a class="soitem" href="/Guitar,Featured-Platinum.gc">Platinum Guitars</a> </li> <li> <a class="soitem" href="/Bass,Featured-Platinum.gc">Platinum Bass</a> </li> <li> <a class="soitem" href="/Amplifiers-Amplifiers---Effects,Featured-Platinum.gc">Platinum Amps</a> </li> <li> <a class="soitem" href="http://gc.guitarcenter.com/BoutiquePedals/">Boutique Pedals</a> </li> </ol> </div> <div class="col"> <div class="h3">Browse Store Inventory</div> <ol> <li> <a class="soitem" href="http://platinum.guitarcenter.com/Guitars/">Platinum Guitars</a> </li> <li> <a class="soitem" href="http://platinum.guitarcenter.com/Guitars/index.cfm?catId=14&amp;subCat=53&amp;ipp=32">Platinum Bass</a> </li> <li> <a class="soitem" href="http://platinum.guitarcenter.com/Amps/">Platinum Amps</a> </li> <li> <a class="soitem" href="http://platinum.guitarcenter.com/EffectsAccessories/">Boutique Pedals</a> </li> </ol> </div> <div class="breaker"> </div> </div> </div> </div> </div> </li> <li id=""> <a class="soitem" href="/Bass.gc">Bass</a> <div class="flyout"> <div class="tabover"> </div> <div class="flycontent"> <div class="top"> <div class="topcon"> <div class="col"> <div class="h3">Top Categories</div> <ol> <li> <a class="soitem" href="/Electric-Bass-Bass.gc">Electric Bass</a> </li> <li> <a class="soitem" href="/Acoustic-Bass-Bass.gc">Acoustic Bass</a> </li> <li> <a class="soitem" href="/Upright-Bass-Bass.gc">Upright Bass</a> </li> <li> <a class="soitem" href="/Bass,Orientation-Left-Handed.gc">Left-Handed Bass</a> </li> <li> <a class="soitem" href="/Value-Packages-Electric-Bass.gc">Electric Bass Value Packs</a> </li> <li> <a class="soitem" href="/Guitar---Bass-Parts---Accessories-Accessories.gc">Bass Accessories</a> </li> </ol> </div> <div class="col"> <div class="h3">Related Products</div> <ol> <li> <a class="soitem" href="/Bass-Amplifiers-Amplifiers.gc">Bass Amps</a> </li> <li> <a class="soitem" href="/Bass-Effects-Pedals-Effects-Pedals.gc">Pedals &amp; Effects</a> </li> <li> <a class="soitem" href="/Bass-Guitar-Strings-Strings.gc">Strings</a> </li> <li> <a class="soitem" href="/Bass-Guitar-Cases---Gig-Bags.gc">Cases &amp; Gig Bags</a> </li> <li> <a class="soitem" href="/Guitar-Stands---Wall-Hangers-Stands---Racks.gc">Stands &amp; Hangers</a> </li> <li> <a class="soitem" href="/Instrument-Cables-Cables.gc">Cables</a> </li> <li> <a class="soitem" href="/iOS-Guitar-Interfaces-iOS-Devices.gc">iOS Guitar Interfaces</a> </li> </ol> </div> <div class="col"> <div class="h3">Top Brands</div> <ol> <li> <a class="soitem" href="/Ibanez,Bass.gc">Ibanez</a> </li> <li> <a class="soitem" href="/Schecter,Bass.gc">Schecter</a> </li> <li> <a class="soitem" href="/Fender,Bass.gc">Fender</a> </li> <li> <a class="soitem" href="/Music-Man,Bass.gc">Music Man</a> </li> <li> <a class="soitem" href="/ESP,Bass.gc">ESP</a> </li> <li> <a class="soitem" href="/Dean,Bass.gc">Dean</a> </li> <li> <a class="soitem" href="/Squier,Bass.gc">Squier</a> </li> </ol> </div> <div class="breaker"> </div> </div> </div> </div> </div> </li> <li id=""> <a class="soitem" href="/Drum---Percussion.gc">Drums &amp; Percussion</a> <div class="flyout"> <div class="tabover"> </div> <div class="flycontent"> <div class="top"> <div class="topcon"> <div class="col"> <div class="h3">Top Categories</div> <ol> <li> <a class="soitem" href="/Acoustic-Drums---Sets-Drum---Percussion.gc">Acoustic Drums &amp; Sets</a> </li> <li> <a class="soitem" href="/Electronic-Drums-Drum---Percussion.gc">Electronic Drums &amp; Sets</a> </li> <li> <a class="soitem" href="/Cymbals---Gongs-Drum---Percussion.gc">Cymbals</a> </li> <li> <a class="soitem" href="/World-Percussion-Drums---Percussion.gc">Hand Drums &amp; World Percussion</a> </li> <li> <a class="soitem" href="/Drum-Hardware-Drum---Percussion.gc">Drum Hardware</a> </li> <li> <a class="soitem" href="/Marching-Percussion-Marching-Band.gc">Marching Percussion</a> </li> <li> <a class="soitem" href="/Concert-Percussion.gc">Concert Percussion</a> </li> <li> <a class="soitem" href="/Classroom-Musical-Instruments-Classroom---Kids.gc">Classroom &amp; Kids</a> </li> <li> <a class="soitem" href="/Drum-Accessories-Drum---Percussion.gc">Accessories &amp; Parts</a> </li> </ol> </div> <div class="col"> <div class="h3">Related Products</div> <ol> <li> <a class="soitem" href="/Drum-Sticks---Mallets-Drum-Accessories.gc">Sticks &amp; Accessories</a> </li> <li> <a class="soitem" href="/Drum-Heads-Drum-Accessories.gc">Heads</a> </li> <li> <a class="soitem" href="/Drum---Percussion-Stands--Racks-Drum-Hardware.gc">Stands &amp; Racks</a> </li> <li> <a class="soitem" href="/Drum---Percussion-Cases--Gig-Bags---Covers-Drum-Accessories.gc">Cases, Bags &amp; Covers</a> </li> <li> <a class="soitem" href="/Percussion-Microphones-Microphones.gc">Drum Mics</a> </li> <li> <a class="soitem" href="/Drum-Thrones-Drum-Hardware.gc">Thrones</a> </li> <li> <a class="soitem" href="/Music-Software-Pro-Audio.gc">Software &amp; Virtual Instruments</a> </li> <li> <a class="soitem" href="/iOS-Devices-Recording-Gear.gc">iOS Devices</a> </li> </ol> </div> <div class="col"> <div class="h3">Top Brands</div> <ol> <li> <a class="soitem" href="/DW,Drum---Percussion.gc">DW</a> </li> <li> <a class="soitem" href="/Pearl,Drum---Percussion.gc">Pearl</a> </li> <li> <a class="soitem" href="/Zildjian,Drum---Percussion.gc">Zildjian</a> </li> <li> <a class="soitem" href="/Sabian,Drum---Percussion.gc">Sabian</a> </li> <li> <a class="soitem" href="/Tama,Drum---Percussion.gc">Tama</a> </li> <li> <a class="soitem" href="/Vic-Firth.gc">Vic Firth</a> </li> <li> <a class="soitem" href="/Remo.gc">Remo</a> </li> <li> <a class="soitem" href="/Pacific-Drums-by-DW.gc">PDP</a> </li> <li> <a class="soitem" href="/Gretsch-Drums.gc">Gretsch</a> </li> </ol> </div> <div class="breaker"> </div> </div> </div> </div> </div> </li> <li id=""> <a class="soitem" href="/Microphones-Pro-Audio.gc">Microphones &amp; Wireless</a> <div class="flyout"> <div class="tabover"> </div> <div class="flycontent"> <div class="top"> <div class="topcon"> <div class="col"> <div class="h3">Top Categories</div> <ol> <li> <a class="soitem" href="/Recording-Microphones-Microphones.gc">Recording Microphones</a> </li> <li> <a class="soitem" href="/Live-Microphones-Microphones.gc">Live Microphones</a> </li> <li> <a class="soitem" href="/USB-Microphones-Microphones.gc">USB Microphones</a> </li> <li> <a class="soitem" href="/Wireless-Systems-Pro-Audio.gc">Wireless Microphone Systems</a> </li> <li> <a class="soitem" href="/iOS-Microphones-iOS-Devices.gc">iOS Microphones</a> </li> <li> <a class="soitem" href="/Percussion-Microphones-Microphones.gc">Drum Microphones</a> </li> <li> <a class="soitem" href="/Microphone-Packages-Microphones.gc">Microphone Packs &amp; Kits</a> </li> <li> <a class="soitem" href="/Microphone-Accessories-Microphones.gc">Microphone Accessories</a> </li> </ol> </div> <div class="col"> <div class="h3">Related Products</div> <ol> <li> <a class="soitem" href="/Microphone-Stands---Booms-Stands---Racks.gc">Stands &amp; Booms</a> </li> <li> <a class="soitem" href="/Microphone-Cases---Gig-Bags-Cases--Gig-bags---Covers.gc">Cases &amp; Gig Bags</a> </li> <li> <a class="soitem" href="/Microphone-Cables-Cables.gc">Cables</a> </li> <li> <a class="soitem" href="/Microphone-Preamps-Signal-Processors.gc">Microphone Preamps</a> </li> <li> <a class="soitem" href="/Vocal-Processors-Signal-Processors.gc">Vocal Processors</a> </li> <li> <a class="soitem" href="/Vocal-Software-Music-Software.gc">Vocal Software</a> </li> </ol> </div> <div class="col"> <div class="h3">Top Brands</div> <ol> <li> <a class="soitem" href="/Shure.gc">Shure</a> </li> <li> <a class="soitem" href="/MXL.gc">MXL</a> </li> <li> <a class="soitem" href="/Audio-Technica.gc">Audio-Technica</a> </li> <li> <a class="soitem" href="/AKG.gc">AKG</a> </li> <li> <a class="soitem" href="/Sennheiser.gc">Sennheiser</a> </li> <li> <a class="soitem" href="/Blue.gc">Blue</a> </li> <li> <a class="soitem" href="/Electro-Voice.gc">Electro-Voice</a> </li> </ol> </div> <div class="breaker"> </div> </div> </div> </div> </div> </li> <li id=""> <a class="soitem" href="/Live-Sound-Pro-Audio.gc">Live Sound Equipment</a> <div class="flyout flymiddle"> <div class="tabover"> </div> <div class="flycontent"> <div class="top"> <div class="topcon"> <div class="col"> <div class="h3">Top categories</div> <ol> <li> <a class="soitem" href="/Live-Sound-Packages-Live-Sound.gc">PA Systems</a> </li> <li> <a class="soitem" href="/PA-Speakers-Live-Sound.gc">PA Speakers</a> </li> <li> <a class="soitem" href="/Live-Power-Amplifiers-Live-Sound.gc">Live Power Amps</a> </li> <li> <a class="soitem" href="/Stage-Monitors-Live-Sound.gc">Stage Monitors</a> </li> <li> <a class="soitem" href="/Stage-Subwoofers-Live-Sound.gc">Stage Subwoofers</a> </li> <li> <a class="soitem" href="/Signal-Processors-Pro-Audio.gc">Signal Processors</a> </li> <li> <a class="soitem" href="/Mixers-Pro-Audio.gc">Mixers</a> </li> <li> <a class="soitem" href="/Live-Microphones-Microphones.gc">Microphones</a> </li> <li> <a class="soitem" href="/Wireless-Systems-Pro-Audio.gc">Wireless Systems</a> </li> <li> <a class="soitem" href="/Headphones-Pro-Audio.gc">Headphones</a> </li> <li> <a class="soitem" href="/Power-Conditioners-Power-Supplies--Conditioners--Cords.gc">Power Conditioners</a> </li> <li> <a class="soitem" href="/DJ-Gear-Pro-Audio.gc">DJ Equipment</a> </li> <li> <a class="soitem" href="/Lighting---Stage-Effects-Pro-Audio.gc">Stage Lighting &amp; Effects</a> </li> </ol> </div> <div class="col"> <div class="h3">Related Products</div> <ol> <li> <a class="soitem" href="/Stands---Racks-Accessories.gc">Stands &amp; Racks</a> </li> <li> <a class="soitem" href="/Cases--Gigbags---Covers-Accessories.gc">Cases &amp; Gig Bags</a> </li> <li> <a class="soitem" href="/Cables---Snakes-Accessories.gc">Cables &amp; Snakes</a> </li> <li> <a class="soitem" href="/PA-Speaker-Parts-Amplifier-Parts.gc">PA Replacement Speakers &amp; Parts</a> </li> <li> <a class="soitem" href="/Stage---Roadie-Supplies-Accessories.gc">Stage Accessories</a> </li> <li> <a class="soitem" href="/Music-Software-Pro-Audio.gc">Software &amp; Virtual Instruments</a> </li> <li> <a class="soitem" href="/iOS-Devices-Recording-Gear.gc">iOS Devices</a> </li> <li> <a class="soitem" href="/Personal---Home-Entertainment-Pro-Audio.gc">Personal &amp; Home Entertainment</a> </li> </ol> </div> <div class="col"> <div class="h3">Top Brands</div> <ol> <li> <a class="soitem" href="/JBL.gc">JBL</a> </li> <li> <a class="soitem" href="/QSC.gc">QSC</a> </li> <li> <a class="soitem" href="/Mackie.gc">Mackie</a> </li> <li> <a class="soitem" href="/Electro-Voice.gc">Electro-Voice</a> </li> <li> <a class="soitem" href="/Bose.gc">Bose</a> </li> <li> <a class="soitem" href="/Behringer,Pro-Audio.gc">Behringer</a> </li> <li> <a class="soitem" href="/Shure.gc">Shure</a> </li> </ol> </div> <div class="breaker"> </div> </div> </div> </div> </div> </li> <li id=""> <a class="soitem" href="/Amplifiers---Effects.gc">Amplifiers &amp; Effects</a> <div class="flyout flymiddle"> <div class="tabover"> </div> <div class="flycontent"> <div class="top"> <div class="topcon"> <div class="col"> <div class="h3">Top Categories</div> <ol> <li> <a class="soitem" href="/Guitar-Amplifiers-Amplifiers.gc">Guitar Amps</a> </li> <li> <a class="soitem" href="/Bass-Amplifiers-Amplifiers.gc">Bass Amps</a> </li> <li> <a class="soitem" href="/Tube-Amplifiers-Amplifiers.gc">Tube Amps</a> </li> <li> <a class="soitem" href="/Mini---Headphone-Amplifiers-Amplifiers.gc">Headphone &amp; Mini Amps</a> </li> <li> <a class="soitem" href="/Amplifiers---Monitors.gc">Keyboard Amps</a> </li> <li> <a class="soitem" href="/Effects-Amplifiers---Effects.gc">Pedals &amp; Effects</a> </li> <li> <a class="soitem" href="/Pedalboards-Effects.gc">Pedalboards</a> </li> </ol> </div> <div class="col"> <div class="h3">Related Products</div> <ol> <li> <a class="soitem" href="/Amplifier-Cases.gc">Covers &amp; Cases</a> </li> <li> <a class="soitem" href="/Amplifier-Stands-Stands---Racks.gc">Stands</a> </li> <li> <a class="soitem" href="/Instrument-Amp-Parts-Amplifier-Parts.gc">Tubes &amp; Parts</a> </li> <li> <a class="soitem" href="/Cables---Snakes-Accessories.gc">Cables &amp; Snakes</a> </li> <li> <a class="soitem" href="/iOS-Devices-Recording-Gear.gc">iOS Devices</a> </li> <li> <a class="soitem" href="/Lighting---Stage-Effects-Pro-Audio.gc">Stage Lighting &amp; Effects</a> </li> </ol> </div> <div class="col"> <div class="h3">Top Brands</div> <ol> <li> <a class="soitem" href="/Fender,Amplifiers---Effects.gc">Fender</a> </li> <li> <a class="soitem" href="/Marshall,Amplifiers---Effects.gc">Marshall</a> </li> <li> <a class="soitem" href="/Line-6,Amplifiers---Effects.gc">Line 6</a> </li> <li> <a class="soitem" href="/Boss,Amplifiers---Effects.gc">Boss</a> </li> <li> <a class="soitem" href="/Dunlop,Amplifiers---Effects.gc">Dunlop</a> </li> <li> <a class="soitem" href="/Vox,Amplifiers---Effects.gc">Vox</a> </li> <li> <a class="soitem" href="/Peavey,Amplifiers---Effects.gc">Peavey</a> </li> </ol> </div> <div class="breaker"> </div> </div> </div> </div> </div> </li> <li id=""> <a class="soitem" href="/Keyboards---MIDI.gc">Keyboards &amp; MIDI</a> <div class="flyout flymiddle"> <div class="tabover"> </div> <div class="flycontent"> <div class="top"> <div class="topcon"> <div class="col"> <div class="h3">Top Categories</div> <ol> <li> <a class="soitem" href="/Digital-Pianos-Keyboards---MIDI.gc">Digital Pianos</a> </li> <li> <a class="soitem" href="/Keyboard-Synthesizers-Keyboards---MIDI.gc">Synthesizers</a> </li> <li> <a class="soitem" href="/Keyboard-Workstations-Keyboards---MIDI.gc">Workstations</a> </li> <li> <a class="soitem" href="/Portable---Arranger-Keyboards-Keyboards---MIDI.gc">Portable &amp; Arranger Keyboards</a> </li> <li> <a class="soitem" href="/Controllers-MIDI.gc">MIDI Controllers</a> </li> <li> <a class="soitem" href="/MIDI-Interfaces-MIDI.gc">MIDI Interfaces</a> </li> <li> <a class="soitem" href="/Keyboard-Accessories---Parts-Accessories.gc">Keyboard Accessories &amp; Parts</a> </li> </ol> </div> <div class="col"> <div class="h3">Related Products</div> <ol> <li> <a class="soitem" href="/Amplifiers---Monitors.gc">Keyboard Amps</a> </li> <li> <a class="soitem" href="/Benches---Stools-Keyboard-Accessories---Parts.gc">Benches &amp; Stools</a> </li> <li> <a class="soitem" href="/Keyboard-Stands---Racks-Stands---Racks.gc">Stands &amp; Racks</a> </li> <li> <a class="soitem" href="/Keyboard-Sustain--Volume--Expression-Pedals-Keyboard-Accessories---Parts.gc">Keyboard Pedals</a> </li> <li> <a class="soitem" href="/Keyboard-Cases---Gig-Bags.gc">Cases &amp; Gig Bags</a> </li> <li> <a class="soitem" href="/Cables-Cables---Snakes.gc">Cables</a> </li> <li> <a class="soitem" href="/Keyboard-Power-Supplies-Power-Supplies.gc">Power Supplies</a> </li> <li> <a class="soitem" href="/Music-Software-Pro-Audio.gc">Software &amp; Virtual Instruments</a> </li> <li> <a class="soitem" href="/iOS-Devices-Recording-Gear.gc">iOS Devices</a> </li> </ol> </div> <div class="col"> <div class="h3">Top Brands</div> <ol> <li> <a class="soitem" href="/Casio,Keyboards---MIDI.gc">Casio</a> </li> <li> <a class="soitem" href="/Yamaha,Keyboards---MIDI.gc">Yamaha</a> </li> <li> <a class="soitem" href="/Roland,Keyboards---MIDI.gc">Roland</a> </li> <li> <a class="soitem" href="/Korg,Keyboards---MIDI.gc">Korg</a> </li> <li> <a class="soitem" href="/Akai,Keyboards---MIDI.gc">Akai</a> </li> <li> <a class="soitem" href="/M-Audio,Keyboards---MIDI.gc">M-Audio</a> </li> <li> <a class="soitem" href="/Moog,Keyboards---MIDI.gc">Moog</a> </li> <li> <a class="soitem" href="/Nord,Keyboards---MIDI.gc">Nord</a> </li> </ol> </div> <div class="breaker"> </div> </div> </div> </div> </div> </li> <li id=""> <a class="soitem" href="/Accessories.gc">Accessories</a> <div class="flyout flymiddle"> <div class="tabover"> </div> <div class="flycontent"> <div class="top"> <div class="topcon"> <div class="col"> <div class="h3">Top Categories</div> <ol> <li> <a class="soitem" href="/Strings-Accessories.gc">Strings</a> </li> <li> <a class="soitem" href="/Cables---Snakes-Accessories.gc">Cables &amp; Snakes</a> </li> <li> <a class="soitem" href="/Cases--Gigbags---Covers-Accessories.gc">Cases &amp; Gig Bags</a> </li> <li> <a class="soitem" href="/Stands---Racks-Accessories.gc">Stands &amp; Racks</a> </li> <li> <a class="soitem" href="/Tuners---Metronomes-Accessories.gc">Tuners &amp; Metronomes</a> </li> <li> <a class="soitem" href="/Guitar---Bass-Parts---Accessories-Accessories.gc">Guitar &amp; Bass Parts</a> </li> <li> <a class="soitem" href="/Power-Supplies--Conditioners--Cords-Accessories.gc">Power &amp; Batteries</a> </li> <li> <a class="soitem" href="/Studio-Furniture-Accessories.gc">Furniture &amp; Studio Foam</a> </li> <li> <a class="soitem" href="/Instrument-Care-Accessories.gc">Care &amp; Cleaning</a> </li> <li> <a class="soitem" href="/Practice-Accessories-Accessories.gc">Practice &amp; Performance Aids</a> </li> <li> <a class="soitem" href="/Tools-Accessories.gc">Tools</a> </li> </ol> </div> <div class="col"> <div class="h3">Related Products</div> <ol> <li> <a class="soitem" href="/Effects-Amplifiers---Effects.gc">Pedals &amp; Effects</a> </li> <li> <a class="soitem" href="/Guitar-Pickups-Guitar-Pickups---Parts.gc">Pickups</a> </li> <li> <a class="soitem" href="/Music-Software-Pro-Audio.gc">Software &amp; Virtual Instruments</a> </li> <li> <a class="soitem" href="/Books--Sheet-Music---Media.gc">Books, Sheet Music &amp; Media</a> </li> <li> <a class="soitem" href="/Clothing---Collectibles.gc">Gifts, Collectibles, &amp; Clothing</a> </li> <li> <a class="soitem" href="/Personal---Home-Entertainment-Pro-Audio.gc">Personal &amp; Home Entertainment</a> </li> <li> <a class="soitem" href="/iOS-Devices-Recording-Gear.gc">iOS Devices</a> </li> <li> <a class="soitem" href="/ipad-g26315t0.gc">iPad</a> </li> <li> <a class="soitem" href="/apps-g26369t0.gc">iPad Apps</a> </li> </ol> </div> <div class="col"> <div class="h3">Top Brands</div> <ol> <li> <a class="soitem" href="/D-Addario.gc">D'Addario</a> </li> <li> <a class="soitem" href="/Ernie-Ball.gc">Ernie Ball</a> </li> <li> <a class="soitem" href="/Dunlop.gc">Dunlop</a> </li> <li> <a class="soitem" href="/ProLine.gc">ProLine</a> </li> <li> <a class="soitem" href="/Live-Wire.gc">Live Wire</a> </li> <li> <a class="soitem" href="/Hercules-Stands.gc">Hercules</a> </li> <li> <a class="soitem" href="/Levy-s.gc">Levy's</a> </li> <li> <a class="soitem" href="/EMG.gc">EMG</a> </li> </ol> </div> <div class="breaker"> </div> </div> </div> </div> </div> </li> <li id=""> <a class="soitem" href="/Recording-Pro-Audio.gc">Recording &amp; Software</a> <div class="flyout flymiddle"> <div class="tabover"> </div> <div class="flycontent"> <div class="top"> <div class="topcon"> <div class="col"> <div class="h3">Top Categories</div> <ol> <li> <a class="soitem" href="/Music-Software-Pro-Audio.gc">Software &amp; Virtual Instruments</a> </li> <li> <a class="soitem" href="/Audio-Interfaces-Recording.gc">Audio Interfaces</a> </li> <li> <a class="soitem" href="/Studio-Monitors-Recording.gc">Studio Monitors</a> </li> <li> <a class="soitem" href="/Studio-Subwoofers-Recording.gc">Studio Subwoofers</a> </li> <li> <a class="soitem" href="/Studio---Recording-Packages-Recording.gc">Studio &amp; Recording Packages</a> </li> <li> <a class="soitem" href="/Multitrack-Recorders-Recording.gc">Multitrack Recorders</a> </li> <li> <a class="soitem" href="/Portable---Field-Recorders-Recording.gc">Portable &amp; Field Recorders</a> </li> <li> <a class="soitem" href="/Audio-Playback-for-Studio-Recording.gc">Studio Audio Playback</a> </li> <li> <a class="soitem" href="/Recording-Microphones-Microphones.gc">Microphones</a> </li> <li> <a class="soitem" href="/Headphones-Pro-Audio.gc">Headphones</a> </li> <li> <a class="soitem" href="/Signal-Processors-Pro-Audio.gc">Signal Processors</a> </li> <li> <a class="soitem" href="/Mixers-Pro-Audio.gc">Mixers</a> </li> <li> <a class="soitem" href="/Computers---Peripherals-Pro-Audio.gc">Computers &amp; Peripherals</a> </li> </ol> </div> <div class="col"> <div class="h3">Related Products</div> <ol> <li> <a class="soitem" href="/Studio-Furniture-Accessories.gc">Furniture &amp; Studio Foam</a> </li> <li> <a class="soitem" href="/MIDI-Keyboards---MIDI.gc">MIDI</a> </li> <li> <a class="soitem" href="/Books--Sheet-Music---Media.gc">Books, Sheet Music &amp; Media</a> </li> <li> <a class="soitem" href="/Benches---Stools-Keyboard-Accessories---Parts.gc">Benches &amp; Stools</a> </li> <li> <a class="soitem" href="/Stands---Racks-Accessories.gc">Stands &amp; Racks</a> </li> <li> <a class="soitem" href="/Cables---Snakes-Accessories.gc">Cables &amp; Snakes</a> </li> <li> <a class="soitem" href="/Power-Supplies--Conditioners--Cords-Accessories.gc">Power &amp; Batteries</a> </li> <li> <a class="soitem" href="/Duplication-Pro-Audio.gc">Disc Duplication</a> </li> <li> <a class="soitem" href="/Media--Storage---Memory-Accessories.gc">Recordable Media &amp; Memory</a> </li> <li> <a class="soitem" href="/Personal---Home-Entertainment-Pro-Audio.gc">Personal &amp; Home Entertainment</a> </li> <li> <a class="soitem" href="/iOS-Devices-Recording-Gear.gc">iOS Devices</a> </li> <li> <a class="soitem" href="/ipad-g26315t0.gc">iPad</a> </li> <li> <a class="soitem" href="/apps-g26369t0.gc">iPad Apps</a> </li> </ol> </div> <div class="col"> <div class="h3">Top Brands</div> <ol> <li> <a class="soitem" href="/TASCAM.gc">TASCAM</a> </li> <li> <a class="soitem" href="/M-Audio.gc">M-Audio</a> </li> <li> <a class="soitem" href="/Apple.gc">Apple</a> </li> <li> <a class="soitem" href="/Avid.gc">Avid</a> </li> <li> <a class="soitem" href="/Ableton.gc">Ableton</a> </li> <li> <a class="soitem" href="/KRK.gc">KRK</a> </li> <li> <a class="soitem" href="/PreSonus.gc">PreSonus</a> </li> <li> <a class="soitem" href="/Focusrite.gc">Focusrite</a> </li> </ol> </div> <div class="breaker"> </div> </div> </div> </div> </div> </li> <li id=""> <a class="soitem" href="/DJ-Gear-Pro-Audio.gc">DJ &amp; Lighting</a> <div class="flyout flybottom"> <div class="tabover"> </div> <div class="flycontent"> <div class="top"> <div class="topcon"> <div class="col"> <div class="h3">Top Categories</div> <ol> <li> <a class="soitem" href="/DJ-Controllers---Interfaces-DJ-Gear.gc">Controllers &amp; Interfaces</a> </li> <li> <a class="soitem" href="/DJ-CD--MP3---Media-Players-DJ-Gear.gc">CD, MP3 &amp; Media Players</a> </li> <li> <a class="soitem" href="/Turntables-DJ-Gear.gc">Turntables</a> </li> <li> <a class="soitem" href="/DJ-MIxers-Mixers.gc">Mixers</a> </li> <li> <a class="soitem" href="/DJ-Packages-DJ-Gear.gc">DJ Packages</a> </li> <li> <a class="soitem" href="/DJ-Headphones-Headphones.gc">Headphones</a> </li> <li> <a class="soitem" href="/iOS-DJ-iOS-Devices.gc">iOS DJ</a> </li> <li> <a class="soitem" href="/DJ---Remix-Software-Music-Software.gc">DJ &amp; Remix Software</a> </li> <li> <a class="soitem" href="/Lighting---Stage-Effects-Pro-Audio.gc">Lighting &amp; Effects</a> </li> <li> <a class="soitem" href="/DJ-Accessories-DJ-Gear.gc">DJ Accessories</a> </li> </ol> </div> <div class="col"> <div class="h3">Related Products</div> <ol> <li> <a class="soitem" href="/Karaoke-Pro-Audio.gc">Karaoke</a> </li> <li> <a class="soitem" href="/Live-Sound-Packages-Live-Sound.gc">PA Systems</a> </li> <li> <a class="soitem" href="/Microphones-Pro-Audio.gc">Microphones</a> </li> <li> <a class="soitem" href="/Production---Groove-Keyboards---MIDI.gc">Production &amp; Groove</a> </li> <li> <a class="soitem" href="/Cables---Snakes-Accessories.gc">Cables &amp; Snakes</a> </li> <li> <a class="soitem" href="/DJ-Stands---Racks-Stands---Racks.gc">Stands &amp; Racks</a> </li> <li> <a class="soitem" href="/DJ-Cases---Gig-Bags.gc">Cases &amp; Bags</a> </li> <li> <a class="soitem" href="/Lighting-Stands--Truss---Hardware-Stands---Racks.gc">Lighting Stands &amp; Truss</a> </li> <li> <a class="soitem" href="/Personal---Home-Entertainment-Pro-Audio.gc">Personal &amp; Home Entertainment</a> </li> </ol> </div> <div class="col"> <div class="h3">Top Brands</div> <ol> <li> <a class="soitem" href="/Chauvet.gc">Chauvet</a> </li> <li> <a class="soitem" href="/American-DJ.gc">American DJ</a> </li> <li> <a class="soitem" href="/Pioneer.gc">Pioneer</a> </li> <li> <a class="soitem" href="/Numark.gc">Numark</a> </li> <li> <a class="soitem" href="/Native-Instruments.gc">Native Instruments</a> </li> <li> <a class="soitem" href="/JBL.gc">JBL</a> </li> </ol> </div> <div class="breaker"> </div> </div> </div> </div> </div> </li> <li id=""> <a class="soitem" href="/Folk---Traditional-Instruments.gc">Folk &amp; Wind Instruments</a> <div class="flyout flybottom"> <div class="tabover"> </div> <div class="flycontent"> <div class="top"> <div class="topcon"> <div class="col"> <div class="h3">Top Categories</div> <ol> <li> <a class="soitem" href="/Ukuleles-Folk---Traditional-Stringed-Instruments.gc">Ukuleles</a> </li> <li> <a class="soitem" href="/Banjos-Folk---Traditional-Stringed-Instruments.gc">Banjos</a> </li> <li> <a class="soitem" href="/Mandolins-Folk---Traditional-Stringed-Instruments.gc">Mandolins</a> </li> <li> <a class="soitem" href="/Resonators-Folk---Traditional-Stringed-Instruments.gc">Resonators</a> </li> <li> <a class="soitem" href="/Pedal---Lap-Steels-Folk---Traditional-Stringed-Instruments.gc">Pedal &amp; Lap Steels</a> </li> <li> <a class="soitem" href="/Latin-Strings-Folk---Traditional-Stringed-Instruments.gc">Latin Guitars</a> </li> <li> <a class="soitem" href="/Harmonicas-Wind---Keyboard-Instruments.gc">Harmonicas</a> </li> <li> <a class="soitem" href="/Accordions-Wind---Keyboard-Instruments.gc">Accordions</a> </li> <li> <a class="soitem" href="/Unusual---Experimental-Instruments-Folk---Traditional-Instruments.gc">Theremins</a> </li> </ol> </div> <div class="col"> <div class="h3">Related Products</div> <ol> <li> <a class="soitem" href="/Strings-Accessories.gc">Strings</a> </li> <li> <a class="soitem" href="/Folk-Stringed-Instrument-Cases---Gigbags-Stringed-Instrument-Cases---Gig-Bags.gc">Cases &amp; Gig Bags</a> </li> <li> <a class="soitem" href="/Instrument-Cables-Cables.gc">Cables</a> </li> <li> <a class="soitem" href="/Guitar-Stands---Wall-Hangers-Stands---Racks.gc">Stands &amp; Hangers</a> </li> <li> <a class="soitem" href="/Guitar---Bass-Parts---Accessories-Accessories.gc">Guitar Accessories</a> </li> <li> <a class="soitem" href="/Books--Sheet-Music---Media.gc">Books, Sheet Music &amp; Media</a> </li> <li> <a class="soitem" href="/Tuners---Metronomes-Accessories.gc">Tuners &amp; Metronomes</a> </li> </ol> </div> <div class="col"> <div class="h3">Top Brands</div> <ol> <li> <a class="soitem" href="/Fender,Folk---Traditional-Instruments.gc">Fender</a> </li> <li> <a class="soitem" href="/Hohner,Folk---Traditional-Instruments.gc">Hohner</a> </li> <li> <a class="soitem" href="/Lanikai,Folk---Traditional-Instruments.gc">Lanikai</a> </li> <li> <a class="soitem" href="/Rogue,Folk---Traditional-Instruments.gc">Rogue</a> </li> <li> <a class="soitem" href="/Suzuki,Folk---Traditional-Instruments.gc">Suzuki</a> </li> <li> <a class="soitem" href="/Gretsch,Folk---Traditional-Instruments.gc">Gretsch</a> </li> <li> <a class="soitem" href="/Deering,Folk---Traditional-Instruments.gc">Deering</a> </li> </ol> </div> <div class="breaker"> </div> </div> </div> </div> </div> </li> <li id=""> <a class="soitem" href="/Band-Orchestra-Instruments-g26767t0.gc">Band &amp; Orchestra</a> <div class="flyout flybottom"> <div class="tabover"> </div> <div class="flycontent"> <div class="top"> <div class="topcon"> <div class="col"> <div class="h3">Top Categories</div> <ol> <li> <a class="soitem" href="/Woodwinds.gc">Woodwind Instruments</a> </li> <li> <a class="soitem" href="/Brass-Instruments.gc">Brass Instruments</a> </li> <li> <a class="soitem" href="/Orchestral-Strings.gc">Orchestral Strings</a> </li> <li> <a class="soitem" href="/Marching-Band.gc">Marching Band</a> </li> <li> <a class="soitem" href="/Concert-Percussion.gc">Concert Percussion</a> </li> <li> <a class="soitem" href="/Classroom---Kids.gc">Classroom &amp; Kids</a> </li> </ol> </div> <div class="col"> <div class="h3">Related Products</div> <ol> <li> <a class="soitem" href="/Woodwind-Accessories-Woodwinds.gc">Woodwind Accessories</a> </li> <li> <a class="soitem" href="/Brass-Accessories-Brass-Instruments.gc">Brass Accessories</a> </li> <li> <a class="soitem" href="/Accessories-for-Orchestral-Strings-Orchestral-Strings.gc">Orchestral Strings Accessories</a> </li> <li> <a class="soitem" href="/Marching-Band-Accessories-Marching-Band.gc">Marching Accessories</a> </li> <li> <a class="soitem" href="/Concert-Percussion-Accessories-Concert-Percussion.gc">Concert Percussion Accessories</a> </li> <li> <a class="soitem" href="/Books--Sheet-Music---Media.gc">Books, Sheet Music &amp; Media</a> </li> <li> <a class="soitem" href="/Tuners---Metronomes-Accessories.gc">Tuners &amp; Metronomes</a> </li> </ol> </div> <div class="col"> <div class="h3">Top Brands</div> <ol> <li> <a class="soitem" href="/Vandoren.gc">Vandoren</a> </li> <li> <a class="soitem" href="/Yamaha.gc">Yamaha</a> </li> <li> <a class="soitem" href="/Rico.gc">Rico Reeds</a> </li> <li> <a class="soitem" href="/Buffet.gc">Buffet Crampon</a> </li> <li> <a class="soitem" href="/Bach.gc">Bach</a> </li> <li> <a class="soitem" href="/Selmer-Paris.gc">Selmer Paris</a> </li> </ol> </div> <div class="breaker"> </div> </div> </div> </div> </div> </li> <li id=""> <a class="soitem" href="/Condition-Vintage.gc">Vintage</a> <div class="flyout flybottom"> <div class="tabover"> </div> <div class="flycontent"> <div class="top"> <div class="topcon"> <div class="col"> <div class="h3">Vintage Gear</div> <ol> <li> <a class="soitem" href="/Guitar,Condition-Vintage.gc">Vintage Guitars</a> </li> <li> <a class="soitem" href="/Bass,Condition-Vintage.gc">Vintage Bass</a> </li> <li> <a class="soitem" href="/Acoustic-Drums---Sets-Drum---Percussion,Condition-Vintage.gc">Vintage Drums</a> </li> <li> <a class="soitem" href="/Amplifiers---Effects,Condition-Vintage.gc">Vintage Amps &amp; Effects</a> </li> <li> <a class="soitem" href="/Keyboards---MIDI,Condition-Vintage.gc">Vintage Keyboards</a> </li> <li> <a class="soitem" href="/Microphones-Pro-Audio,Condition-Vintage.gc">Vintage Microphones</a> </li> </ol> </div> <div class="breaker"> </div> </div> </div> </div> </div> </li> <li id="giftcerts"> <a class="soitem" href="/GC-Gift-Cards-g26464t0.gc">Guitar Center Gift Card</a> </li> </ul> </li> <li> <a onclick="s_objectID=&quot;http://www.guitarcenter.com/Brand/BrandList.aspx_1&quot;;return this.s_oc?this.s_oc(e):true" href="/Brand/BrandList.aspx">Brands</a> <div> </div> <ul> <li id="giftcerts"> <a class="soitem" href="/Fender.gc">Fender</a> </li> <li id="giftcerts"> <a class="soitem" href="/Gibson.gc">Gibson</a> </li> <li id="giftcerts"> <a class="soitem" href="/Epiphone.gc">Epiphone</a> </li> <li id="giftcerts"> <a class="soitem" href="/Martin.gc">Martin</a> </li> <li id="giftcerts"> <a class="soitem" href="/Taylor.gc">Taylor</a> </li> <li id="giftcerts"> <a class="soitem" href="/Yamaha.gc">Yamaha</a> </li> <li id="giftcerts"> <a class="soitem" href="/Ibanez.gc">Ibanez</a> </li> <li id="giftcerts"> <a class="soitem" href="/Roland.gc">Roland</a> </li> <li id="giftcerts"> <a class="soitem" href="/Line-6.gc">Line 6</a> </li> <li id="giftcerts"> <a class="soitem" href="/Shure.gc">Shure</a> </li> <li id="giftcerts"> <a class="soitem" href="/Dunlop.gc">Dunlop</a> </li> <li id="giftcerts"> <a class="soitem" href="/Ernie-Ball.gc">Ernie Ball</a> </li> <li id="giftcerts"> <a class="soitem" href="/D-Addario.gc">D'Addario</a> </li> <li id="giftcerts"> <a class="soitem" href="/Remo.gc">Remo</a> </li> <li id="giftcerts"> <a class="soitem" href="/apple.gc">Apple</a> </li> <li id="giftcerts"> <a class="soitem" href="/Brand/BrandList.aspx">All Brands</a> </li> </ul> </li> <li> <a onclick="s_objectID=&quot;http://used.guitarcenter.com/usedGear/index.cfm_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://used.guitarcenter.com/usedGear/index.cfm">Used Gear</a> <div> </div> <ul> <li id="giftcerts"> <a class="soitem" href="http://used.guitarcenter.com/usedGear/index.cfm">All Used Gear</a> </li> <li id="giftcerts"> <a class="soitem" href="http://www.vintageguitars.net/">Vintage Gear</a> </li> <li id="giftcerts"> <a class="soitem" href="/Guitar,Used-Gear.gc">Used Guitars</a> </li> <li id="giftcerts"> <a class="soitem" href="/Amplifiers-Amplifiers---Effects,Used-Gear.gc">Used Amps</a> </li> <li id="giftcerts"> <a class="soitem" href="/Bass,Used-Gear.gc">Used Bass</a> </li> <li id="giftcerts"> <a class="soitem" href="/Drum---Percussion,Used-Gear.gc">Used Drums</a> </li> <li id="giftcerts"> <a class="soitem" href="/Live-Sound-Pro-Audio,Used-Gear.gc">Used Live Sound</a> </li> <li id="giftcerts"> <a class="soitem" href="/Recording-Pro-Audio,Used-Gear.gc">Used Recording</a> </li> <li id="giftcerts"> <a class="soitem" href="/Accessories,Used-Gear.gc">Used Accessories</a> </li> <li id="giftcerts"> <a class="soitem" href="/Keyboards---MIDI,Used-Gear.gc">Used Keyboards</a> </li> <li id="giftcerts"> <a class="soitem" href="http://used.guitarcenter.com/usedGear/index.cfm?sellGear">Sell Your Gear</a> </li> </ul> </li> <li> <a onclick="s_objectID=&quot;http://clearance.guitarcenter.com/_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://clearance.guitarcenter.com/">Clearance</a> <div> </div> <ul> <li id="giftcerts"> <a class="soitem" href="http://gc.guitarcenter.com/clearance/">Clearance</a> </li> </ul> </li> <li> <a onclick="s_objectID=&quot;http://stores.guitarcenter.com/locations_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://stores.guitarcenter.com/locations">Our Stores</a> <div> </div> <ul> <li id="giftcerts"> <a class="soitem" href="http://stores.guitarcenter.com/locations">Store Locator</a> </li> <li id="giftcerts"> <a class="soitem" href="http://stores.guitarcenter.com/gc-garage">GC Garage</a> </li> <li id="giftcerts"> <a class="soitem" href="/GCStudios-g26427t0.gc">GC Studios</a> </li> <li id="giftcerts"> <a class="soitem" href="http://stores.guitarcenter.com/local/store-experts">Experts</a> </li> <li id="giftcerts"> <a class="soitem" href="http://stores.guitarcenter.com/gcpro">GC Pro</a> </li> </ul> </li> <li id="atGC"> <a onclick="s_objectID=&quot;http://www.guitarcenter.com/Guitar-Center-Events-g26459t0.gc_1&quot;;return this.s_oc?this.s_oc(e):true" href="/Guitar-Center-Events-g26459t0.gc"> <img src="/includes/guitarcenter/images/at-guitar-center-nav.png" style="border:0px;"></a> <div> </div> <ul> <li id="giftcerts"> <a class="soitem" href="/Guitar-Center-Events-g26459t0.gc">Events</a> </li> <li id="giftcerts"> <a class="soitem" href="http://gc.guitarcenter.com/sessions/">Sessions TV</a> </li> <li id="giftcerts"> <a class="soitem" href="http://gc.guitarcenter.com/interview/">Artist Interviews</a> </li> <li id="giftcerts"> <a class="soitem" href="http://gc.guitarcenter.com/podcast/">Podcasts</a> </li> <li id="giftcerts"> <a class="soitem" href="http://gc.guitarcenter.com/connections/">Connections</a> </li> <li id="giftcerts"> <a class="soitem" href="http://www.youtube.com/guitarcenter">YouTube</a> </li> <li id="giftcerts"> <a class="soitem" href="http://www.facebook.com/GuitarCenter">Facebook</a> </li> <li id="giftcerts"> <a class="soitem" href="http://twitter.com/#!/guitarcenter">Twitter</a> </li> </ul> </li> <li> <a onclick="s_objectID=&quot;http://www.guitarcenter.com/#_1&quot;;return this.s_oc?this.s_oc(e):true" href="/#">Learn</a> <div> </div> <ul> <li id="giftcerts"> <a class="soitem" href="/Saturday-Guitar-Class-g26677t0.gc">Free Guitar Lessons</a> </li> <li id="giftcerts"> <a class="soitem" href="http://www.guitarcenter.com/Saturday-Ukulele-Class-g26598t0.gc">Free Ukulele Lessons</a> </li> <li id="giftcerts"> <a class="soitem" href="/Recording-Made-Easy-g26448t0.gc">Recording Made Easy</a> </li> <li id="giftcerts"> <a class="soitem" href="/Music-Mentor-Series-g26699t0.gc">Music Mentor</a> </li> </ul> </li> </ul> </div> <div class="clear"> </div> </div> </div> <div class="clear"> </div> <div id="dialogstorefindercontainer" class="dialog_storefinder_container"> </div> <div class="dialog_storefinder_backgroundPopup" id="dialogstorefinderbackground"> </div> <!-- Microsite Overlay --> <script type="text/javascript">
+var MICROSITE_BASEURL = '//stores.guitarcenter.com/';
+$(window).load(function () {
+if (getCookie("profileId") != null) {
+var pId = getCookie("profileId");
+var wId = getCookie("widgetId");
+var contType = getCookie("profileType");
+$("body").append("<script type='text/javascript' src='" + MICROSITE_BASEURL + "StoresForStores-Widgets-Base-v1-ExpertGearListFollowAlong/FollowAlongIndex?widgetId=" + wId + "&contextType=" + contType + "&contextId=" + pId + "' />");
+}
+});
+</script> </span> <div id="divAdminMessage" style="font-family : Arial, sans-serif, Verdana; font-size : 12px; font-weight : bold; line-height : 18px; color: #FFFFFF" align="center"> </div> <script type="text/javascript">
+var default_value = "Search over 70,000 items...";
+var highlight_color = "#FFFFCC";
+var unhighlight_color = "white";
+</script> <div id="search-results"> <input id="storeNumber" value="" type="hidden"> <script type="text/javascript">
+var url = window.location.href;
+var slashCount = url.split('/').length - 1;
+var gcCount = url.split('.gc').length - 1;
+var promopage = url.indexOf('ClaimDiscountCoupon.aspx');
+if ((promopage == -1) && (slashCount > 3) || (gcCount > 0)) {
+document.write('<div id="divMbox"><div class="mboxDefault"></div><scr' + 'ipt language="JavaScript1.2">mboxCreate(\'GC_sitewides\');</scr' + 'ipt></div>');
+}
+</script><div id="divMbox"><div style="visibility: visible; display: block;" id="mboxImported-default-GC_sitewides-0"><!-- Offer Id: 81091  --><script type="text/javascript" src="//images.guitarcenter.com/Content/GC/rme/2012/source/jquery.fancybox.js?v=2.0.6"></script>
+  <link rel="stylesheet" type="text/css" href="//images.guitarcenter.com/Content/GC/rme/2012/source/jquery.fancybox.css" media="screen">
+  <script type="text/javascript"></script>
+  <link rel="stylesheet" type="text/css" href="//images.guitarcenter.com/Content/GC/rme/2012/source/jquery.fancybox.css" media="screen">
+  <script type="text/javascript">// <![CDATA[
+	$(document).ready(function() {
+	$(".fancybox").fancybox({
+		maxWidth	: 400,
+		maxHeight	: 250,
+		fitToView	: false,
+		width		: '70%',
+		height		: '70%',
+		autoSize	: false,
+		closeClick	: false,
+		openEffect	: 'none',
+		closeEffect	: 'none'
+	});
+});
+// ]]></script>
+<!--CATEGORY SITEWIDE-->
+<div style="width: 190px; padding-left: 3px; float: left; padding-top: 5px;"><form action="https://gc.guitarcenter.com/secure/subscribe/qry_emailSubNew.cfm" name="member" method="post" id="member"> <input value="1" name="join" class="inp_con" type="hidden"> <input name="firstName" class="inp_con" type="hidden"> <input name="lastName" class="inp_con" type="hidden"> <input name="zip" class="inp_con" type="hidden">
+<div style="background: url(//images.guitarcenter.com/content/gc/hp_images/email-coupon-blk-bg-2.gif) no-repeat center 50%; width: 190px; height: 75px; position: relative;"><input autocomplete="OFF" value="enter email" name="email" onclick="this.value=''" style="padding: 0px 8px; border: none; left: 10px; top: 47px; width: 90px; position: absolute;"> <input src="//images.guitarcenter.com/content/gc/hp_images/submit-btn.png" value="Join The List Now" alt="Submit" name="join" onclick="if(typeof ntptEventTag == 'function') {ntptEventTag(' ev=Email%20Signup%20Start&amp;conv=Email%20Signup%20Start&amp;pv=0 ');}" title="Submit" style="left: 120px; top: 46px; position: absolute;" type="image"></div>
+<input value="1" name="optIn" type="hidden"> <input value="homepage" name="keyword" type="hidden"> <input name="confirmed" type="hidden"> </form></div>
+<!--BEGIN EDIT-->
+<div style="margin-left: 188px; margin-bottom: 5px;"><img usemap="#Map" alt="Memorial Day Coupon" src="//images.guitarcenter.com/Content/GC/promo/2013/05-May/memorial/coupon/4103-memorial-day-request-category-sitewide-v1.jpg" border="0"> 
+<map name="Map">
+<area onclick="s_objectID=&quot;http://images.guitarcenter.com/Content/GC/promo/2013/chat/ChatRequestCode.html_1&quot;;return this.s_oc?this.s_oc(e):true" href="//images.guitarcenter.com/Content/GC/promo/2013/chat/ChatRequestCode.html" class="fancybox fancybox.iframe" coords="628,11,763,41" shape="rect">
+<area onclick="s_objectID=&quot;http://www.guitarcenter.com/Promos/ClaimDiscountCoupon.aspx?pid=8060&amp;icid=400246_1&quot;;return this.s_oc?this.s_oc(e):true" href="/Promos/ClaimDiscountCoupon.aspx?pid=8060&amp;icid=400246" coords="627,44,762,74" shape="rect"> 
+</map>
+</div>
+<!--END EDIT--><!-- Offer Id: 79517  --><script type="text/javascript">
+/*mboxHighlight+ (1of2) v1 ==> Response Plugin*/
+window.ttMETA=(typeof(window.ttMETA)!='undefined')?window.ttMETA:[];window.ttMETA.push({'mbox':'GC_sitewides','campaign':'GC Memorial Day 2013','experience':'Exp  A','offer':'Memorial Day 2013 Cat'});window.ttMBX=function(x){var mbxList=[];for(i=0;i<ttMETA.length;i++){if(ttMETA[i].mbox==x.getName()){mbxList.push(ttMETA[i])}}return mbxList[x.getId()]}
+</script><!-- Offer Id: 64863  --><script type="text/javascript">
+/*T&T to SiteCat v4 ==>Response Plugin*/
+window.s_tnt = window.s_tnt || '', tntVal = '43436:0:0,';
+if (window.s_tnt.indexOf(tntVal) == -1) {
+    window.s_tnt += tntVal
+}
+if (mboxCurrent.getFetcher().getType() == 'ajax'  && (window.s && window.s.tl)) {
+    s.tl('TnT', 'o', 'TnT');
+}
+</script></div><script language="JavaScript1.2">mboxCreate('GC_sitewides');</script><div id="mboxMarker-default-GC_sitewides-0" style="visibility:hidden;display:none"></div><script src="http://mbox12.offermatica.com/m2/guitarcenter/mbox/standard?mboxHost=www.guitarcenter.com&amp;mboxSession=1369437199514-864774&amp;mboxPage=1369437199514-864774&amp;mboxCount=1&amp;mbox=GC_sitewides&amp;mboxId=0&amp;mboxURL=http%3A%2F%2Fwww.guitarcenter.com%2FSearch%2FDefault.aspx%3Finternal%3D1%26browser%3D%26fsrc%3DLive%2BWire%2BElite%26src%3DLive%2BWire%2BElite&amp;mboxReferrer=&amp;mboxVersion=34" language="JavaScript"></script></div> <div class="search-results-content"> <div class="breadcrumb"> <span><a onclick="s_objectID=&quot;http://www.guitarcenter.com/_3&quot;;return this.s_oc?this.s_oc(e):true" href="/" qs="">Home</a></span> </div> <div class="breaker"></div> <div class="search-title html-content-isolated"> <h1 style="text-transform: capitalize;">Search results for <span class="red">"Live Wire Elite"</span></h1> </div> <div class="breaker"></div> <div class="h2">Results 1-10 of 10</div> <div class="search-sort-pagetop"> <div class="search-sort-pagination-top"> <div class="left"></div> <div class="right"></div> </div> <div class="search-sort-pagination"> <div class="sort-section"> <label>Sort By:</label> <select class="sortby" qs="o"> <option value="0" selected="selected">Relevance</option> <option value="5">Best Seller</option> <option value="6">Best Rating</option> <option value="2">Price - High To Low</option> <option value="1">Price - Low To High</option> <option value="3">Brand - A-Z</option> <option value="16">Brand - Z-A</option> </select> <label>Display:</label> <select class="display" qs="ipp"> <option value="15">15</option> <option value="25" selected="selected">25</option> <option value="50">50</option> <option value="100">100</option> </select> </div> <div class="pagination-section"> <form class="pageno-form" action=""> <ul> <li><a href="/Page-1.gc?src=Live Wire Elite&amp;internal=1&amp;browser=&amp;fsrc=Live+Wire+Elite" class="soitem active">1</a></li> </ul> <ul> <li> <span class="page-count"> <input value="Page #" class="pageno placeholder" size="5" type="text"> of
+</span> </li> <li> <a class="soitem total-count" href="">1</a> </li> </ul> </form> </div> <div class="breaker"></div> </div> <div class="search-sort-pagination-bottom"> <div class="left"></div> <div class="right"></div> </div> </div> <div class="experts-show"><a onclick="s_objectID=&quot;javascript:void(0)_1&quot;;return this.s_oc?this.s_oc(e):true" id="showExperts" href="javascript:void(0)" style="display:none">Show Experts</a></div> <div id="search-grid-container"> <div id="search-grid"> <input id="storeNumber" value="" type="hidden"> <input id="storeName" value="" type="hidden"> <input id="certificationCategory" value="O" type="hidden"> <input id="loadExperts" value="False" type="hidden"> <input id="loadStoreInfo" value="False" type="hidden"> <input id="isMicrositeSearch" value="JBS.SiteManager.UI.Public.ViewModel.Listing.Content.ProductSectionModel.." type="hidden"> <input id="expertsSectionMsName" value="//stores.guitarcenter.com/" type="hidden"> <input id="expertsSectionEmailPt" value="/Ajax/Microsites/MicrositeEmail.ashx" type="hidden"> <input id="expertsSectionGenPt" value="/Ajax/Microsites/Microsite.ashx" type="hidden"> <input id="expertsSectionLocPt" value="http://www.guitarcenter.com/MicrositeStoreSearch.ashx" type="hidden"> <input id="expertsSectionSearchRoot" value="http://www.guitarcenter.com/" type="hidden"> <div id="experts" style="display: none"> <div class="experts-gutter"></div> <div id="experts-panel"> <h2>NEED ADVICE?<br>
+Talk to Our Experts</h2> <div id="experts-panel-content"> </div> </div> </div> <div class="grid-product top-seller"> <div class="badge"></div> <a onclick="s_objectID=&quot;http://www.guitarcenter.com/Live-Wire-Elite-12-Gauge-Speakon-1-4--Speaker-Cable-100366848-i116553_1&quot;;return this.s_oc?this.s_oc(e):true" href="/Live-Wire-Elite-12-Gauge-Speakon-1-4--Speaker-Cable-100366848-i1165534.gc"> <div class="grid-product-image"> <div> <img class="" src="http://images.guitarcenter.com/products/full/LiveWire/633154394085619457.jpg" alt="Live Wire Elite 12-Gauge Speakon-1/4&amp;quot; Speaker Cable (S12NQ25-LW)"> </div> <span style="display:none;"></span> </div> <span class="grid-product-name">Live Wire Elite 12-Gauge Speakon-1/4" Speaker Cable</span> </a> <div class="grid-product-info"> <ul> <li><span class="price-main"><a class="soitem" href="/Live-Wire-Elite-12-Gauge-Speakon-1-4--Speaker-Cable-100366848-i1165534.gc">$24.99+</a></span></li> <li>
+Rating: 
+<span class="rating"> <img src="/includes/guitarcenter/images/listing/star5-sm.png" alt="Overall User Rating: 5.000000"> </span> </li> </ul> </div> </div> <div class="grid-product top-seller"> <div class="badge"></div> <a onclick="s_objectID=&quot;http://www.guitarcenter.com/Live-Wire-Elite-12-Gauge-Speakon-Speakon-Speaker-Cable-100232426-i116_1&quot;;return this.s_oc?this.s_oc(e):true" href="/Live-Wire-Elite-12-Gauge-Speakon-Speakon-Speaker-Cable-100232426-i1165530.gc"> <div class="grid-product-image"> <div> <img class="" src="http://images.guitarcenter.com/products/full/LiveWire/633154394072796215.jpg" alt="Live Wire Elite 12-Gauge Speakon-Speakon Speaker Cable (S12NN10-LW)"> </div> <span style="display:none;"></span> </div> <span class="grid-product-name">Live Wire Elite 12-Gauge Speakon-Speakon Speaker Cable</span> </a> <div class="grid-product-info"> <ul> <li><span class="price-main"><a class="soitem" href="/Live-Wire-Elite-12-Gauge-Speakon-Speakon-Speaker-Cable-100232426-i1165530.gc">$31.99+</a></span></li> <li>
+Rating: 
+<span class="rating"> <img src="/includes/guitarcenter/images/listing/star5-sm.png" alt="Overall User Rating: 5.000000"> </span> </li> </ul> </div> </div> <div class="grid-product top-rated"> <div class="badge"></div> <a onclick="s_objectID=&quot;http://www.guitarcenter.com/Live-Wire-Elite-QUAD-MICROPHONE-CABLE-104612486-i1382184.gc_1&quot;;return this.s_oc?this.s_oc(e):true" href="/Live-Wire-Elite-QUAD-MICROPHONE-CABLE-104612486-i1382184.gc"> <div class="grid-product-image"> <div> <img class="" src="http://images.guitarcenter.com/products/full/LiveWire/633327373010103040.jpg" alt="Live Wire Elite QUAD MICROPHONE CABLE (EQMC15)"> </div> <span style="display:none;"></span> </div> <span class="grid-product-name">Live Wire Elite QUAD MICROPHONE CABLE</span> </a> <div class="grid-product-info"> <ul> <li><span class="price-main"><a class="soitem" href="/Live-Wire-Elite-QUAD-MICROPHONE-CABLE-104612486-i1382184.gc">$29.99+</a></span></li> <li>
+Rating: 
+<span class="rating"> <img src="/includes/guitarcenter/images/listing/star5-sm.png" alt="Overall User Rating: 5.000000"> </span> </li> </ul> </div> </div> <div class="grid-product top-rated"> <div class="badge"></div> <a onclick="s_objectID=&quot;http://www.guitarcenter.com/Live-Wire-Elite-Instrument-Cable-104612361-i1382179.gc_1&quot;;return this.s_oc?this.s_oc(e):true" href="/Live-Wire-Elite-Instrument-Cable-104612361-i1382179.gc"> <div class="grid-product-image"> <div> <img class="" src="http://images.guitarcenter.com/products/full/LiveWire/633327372375563668.jpg" alt="Live Wire Elite Instrument Cable (EIC3)"> </div> <span style="display:none;"></span> </div> <span class="grid-product-name">Live Wire Elite Instrument Cable</span> </a> <div class="grid-product-info"> <ul> <li><span class="price-main"><a class="soitem" href="/Live-Wire-Elite-Instrument-Cable-104612361-i1382179.gc">$22.99+</a></span></li> <li>
+Rating: 
+<span class="rating"> <img src="/includes/guitarcenter/images/listing/star5-sm.png" alt="Overall User Rating: 5.000000"> </span> </li> </ul> </div> </div> <div class="grid-product top-rated"> <div class="badge"></div> <a onclick="s_objectID=&quot;http://www.guitarcenter.com/Live-Wire-Elite-12-Gauge-Speakon-Banana-Speaker-Cable-101831584-i1165_1&quot;;return this.s_oc?this.s_oc(e):true" href="/Live-Wire-Elite-12-Gauge-Speakon-Banana-Speaker-Cable-101831584-i1165522.gc"> <div class="grid-product-image"> <div> <img class="" src="http://images.guitarcenter.com/products/full/LiveWire/633154394052623066.jpg" alt="Live Wire Elite 12-Gauge Speakon-Banana Speaker Cable (S12BN10-LW)"> </div> <span style="display:none;"></span> </div> <span class="grid-product-name">Live Wire Elite 12-Gauge Speakon-Banana Speaker Cable</span> </a> <div class="grid-product-info"> <ul> <li><span class="price-main"><a class="soitem" href="/Live-Wire-Elite-12-Gauge-Speakon-Banana-Speaker-Cable-101831584-i1165522.gc">$25.99+</a></span></li> <li>
+Rating: 
+<span class="rating"> <img src="/includes/guitarcenter/images/listing/star5-sm.png" alt="Overall User Rating: 5.000000"> </span> </li> </ul> </div> </div> <div class="grid-product top-rated"> <div class="badge"></div> <a onclick="s_objectID=&quot;http://www.guitarcenter.com/Live-Wire-Elite-Angle-Straight-Instrument-Cable-104612437-i2736833.gc_1&quot;;return this.s_oc?this.s_oc(e):true" href="/Live-Wire-Elite-Angle-Straight-Instrument-Cable-104612437-i2736833.gc"> <div class="grid-product-image"> <div> <img class="" src="http://images.guitarcenter.com/products/full/LiveWire/634959243786591729.jpg" alt="Live Wire Elite Angle-Straight Instrument Cable (EIC186L)"> </div> <span style="display:none;"></span> </div> <span class="grid-product-name">Live Wire Elite Angle-Straight Instrument Cable</span> </a> <div class="grid-product-info"> <ul> <li><span class="price-main"><a class="soitem" href="/Live-Wire-Elite-Angle-Straight-Instrument-Cable-104612437-i2736833.gc">$29.99+</a></span></li> <li>
+Rating: 
+<span class="rating"> <img src="/includes/guitarcenter/images/listing/star5-sm.png" alt="Overall User Rating: 5.000000"> </span> </li> </ul> </div> </div> <div class="grid-product top-rated"> <div class="badge"></div> <a onclick="s_objectID=&quot;http://www.guitarcenter.com/Live-Wire-Elite-12-Gauge-1-4--Banana-Speaker-Cable-100097741-i1165526_1&quot;;return this.s_oc?this.s_oc(e):true" href="/Live-Wire-Elite-12-Gauge-1-4--Banana-Speaker-Cable-100097741-i1165526.gc"> <div class="grid-product-image"> <div> <img class="" src="http://images.guitarcenter.com/products/full/LiveWire/633154394059660211.jpg" alt="Live Wire Elite 12-Gauge 1/4&amp;quot; Banana Speaker Cable (S12BQ25-LW)"> </div> <span style="display:none;"></span> </div> <span class="grid-product-name">Live Wire Elite 12-Gauge 1/4" Banana Speaker Cable</span> </a> <div class="grid-product-info"> <ul> <li><span class="price-main"><a class="soitem" href="/Live-Wire-Elite-12-Gauge-1-4--Banana-Speaker-Cable-100097741-i1165526.gc">$28.99+</a></span></li> <li>
+Rating: 
+<span class="rating"> <img src="/includes/guitarcenter/images/listing/star4-sm.png" alt="Overall User Rating: 4.000000"> </span> </li> </ul> </div> </div> <div class="grid-product top-rated"> <div class="badge"></div> <a onclick="s_objectID=&quot;http://www.guitarcenter.com/Live-Wire-Elite-1-4--1-4--Speaker-Cable-100823046-i1168103.gc_1&quot;;return this.s_oc?this.s_oc(e):true" href="/Live-Wire-Elite-1-4--1-4--Speaker-Cable-100823046-i1168103.gc"> <div class="grid-product-image"> <div> <img class="" src="http://images.guitarcenter.com/products/full/LiveWire/633154415962655210.jpg" alt="Live Wire Elite 1/4&amp;quot;-1/4&amp;quot; Speaker Cable (S125-LW)"> </div> <span style="display:none;"></span> </div> <span class="grid-product-name">Live Wire Elite 1/4"-1/4" Speaker Cable</span> </a> <div class="grid-product-info"> <ul> <li><span class="price-main"><a class="soitem" href="/Live-Wire-Elite-1-4--1-4--Speaker-Cable-100823046-i1168103.gc">$22.99</a></span></li> <li>
+Rating: 
+<span class="rating"> <img src="/includes/guitarcenter/images/listing/star4-sm.png" alt="Overall User Rating: 4.000000"> </span> </li> </ul> </div> </div> <div class="grid-product top-rated"> <div class="badge"></div> <a onclick="s_objectID=&quot;http://www.guitarcenter.com/Live-Wire-Elite-EIC06LL-6--Dual-Angle-Patch-Cable-104612338-i1382178._1&quot;;return this.s_oc?this.s_oc(e):true" href="/Live-Wire-Elite-EIC06LL-6--Dual-Angle-Patch-Cable-104612338-i1382178.gc"> <div class="grid-product-image"> <div> <img class="" src="http://images.guitarcenter.com/products/full/LiveWire/633327372271499836.jpg" alt="Live Wire Elite EIC06LL 6&amp;quot; Dual Angle Patch Cable (EIC06LL)"> </div> <span style="display:none;"></span> </div> <span class="grid-product-name">Live Wire Elite EIC06LL 6" Dual Angle Patch Cable</span> </a> <div class="grid-product-info"> <ul> <li><span class="price-main"><a class="soitem" href="/Live-Wire-Elite-EIC06LL-6--Dual-Angle-Patch-Cable-104612338-i1382178.gc">$19.99</a></span></li> <li>
+Rating: 
+<span class="rating"> <img src="/includes/guitarcenter/images/listing/star5-sm.png" alt="Overall User Rating: 5.000000"> </span> </li> </ul> </div> </div> <div class="grid-product top-rated"> <div class="badge"></div> <a onclick="s_objectID=&quot;http://www.guitarcenter.com/Live-Wire-Elite-EICS186-18-6ft-Silent-Instrument-Cable-106555857-i270_1&quot;;return this.s_oc?this.s_oc(e):true" href="/Live-Wire-Elite-EICS186-18-6ft-Silent-Instrument-Cable-106555857-i2709081.gc"> <div class="grid-product-image"> <div> <img class="" src="http://images.guitarcenter.com/products/full/LiveWire/634880040630994256.jpg" alt="Live Wire Elite EICS186 18.6ft Silent Instrument Cable (EICS186)"> </div> <span style="display:none;"></span> </div> <span class="grid-product-name">Live Wire Elite EICS186 18.6ft Silent Instrument Cable</span> </a> <div class="grid-product-info"> <ul> <li><span class="price-main"><a class="soitem" href="/Live-Wire-Elite-EICS186-18-6ft-Silent-Instrument-Cable-106555857-i2709081.gc">$44.99</a></span></li> <li>
+Rating: 
+<span class="rating"> <img src="/includes/guitarcenter/images/listing/star5-sm.png" alt="Overall User Rating: 5.000000"> </span> </li> </ul> </div> </div> <div class="search-grid-hide-border"></div> <div class="breaker"></div> </div> <div class="search-sort-pagebottom"> <div class="search-sort-pagination-top"> <div class="left"></div> <div class="right"></div> </div> <div class="search-sort-pagination"> <div class="sort-section"> <label>Sort By:</label> <select class="sortby" qs="o"> <option value="0" selected="selected">Relevance</option> <option value="5">Best Seller</option> <option value="6">Best Rating</option> <option value="2">Price - High To Low</option> <option value="1">Price - Low To High</option> <option value="3">Brand - A-Z</option> <option value="16">Brand - Z-A</option> </select> <label>Display:</label> <select class="display" qs="ipp"> <option value="15">15</option> <option value="25" selected="selected">25</option> <option value="50">50</option> <option value="100">100</option> </select> </div> <div class="pagination-section"> <form class="pageno-form" action=""> <ul> <li><a onclick="s_objectID=&quot;http://www.guitarcenter.com/Page-1.gc?src=Live%20Wire%20Elite&amp;internal=1&amp;browser=&amp;fsrc=Live%20Wir_1&quot;;return this.s_oc?this.s_oc(e):true" href="/Page-1.gc?src=Live Wire Elite&amp;internal=1&amp;browser=&amp;fsrc=Live Wire Elite" qs="" class="active">1</a></li> </ul> <ul> <li> <span class="page-count"> <input value="Page #" class="pageno placeholder" size="5" type="text"> of
+</span> </li> <li> <a onclick="s_objectID=&quot;http://www.guitarcenter.com/Search/Default.aspx?internal=1&amp;browser=&amp;fsrc=Live+Wire+Elite&amp;src=Live_1&quot;;return this.s_oc?this.s_oc(e):true" class="total-count" href="">1</a> </li> </ul> </form> </div> <div class="breaker"></div> </div> <div class="search-sort-pagination-bottom"> <div class="left"></div> <div class="right"></div> </div> <div class="search-sort-pagination-shadow"> <div> <div></div> </div> </div> </div> </div> <div class="breaker"></div> </div> <div class="search-results-nav"> <div class="search-results-group "> <div class="h2"> <span>Narrow By</span> </div> <div class="nav-block block-open "> <div class="h3"> <a onclick="s_objectID=&quot;javascript:;_1&quot;;return this.s_oc?this.s_oc(e):true" class="minimize-link" href="javascript:;">Featured Products</a> </div> <div class="content "> <ul class=""> <li class="" data-defaultsortorderindex="0"> <a href="/Featured-Top-Seller.gc?src=Live Wire Elite&amp;ipp=25&amp;internal=1&amp;browser=&amp;fsrc=Live+Wire+Elite" class="soitem checkbox">Top Seller</a> <span>(2)</span> </li> <li class="" data-defaultsortorderindex="0"> <a href="/Featured-Top-Rated.gc?src=Live Wire Elite&amp;ipp=25&amp;internal=1&amp;browser=&amp;fsrc=Live+Wire+Elite" class="soitem checkbox">Top Rated</a> <span>(10)</span> </li> </ul> <div class="breaker"></div> </div> </div> 
+    <div class="nav-block   findInStore block-open">
+        <div class="h3">
+                <a onclick="s_objectID=&quot;javascript:;_2&quot;;return this.s_oc?this.s_oc(e):true" class="minimize-link" href="javascript:;">Find In Stores</a>
+            <a onclick="s_objectID=&quot;javascript:;_3&quot;;return this.s_oc?this.s_oc(e):true" class="info" href="javascript:;" tool-tip="#storeInfoToolTip">Info</a>
+        </div>
+        <div id="storeInfoToolTip" class="tool-tip">
+            <div class="tool-tip-top"></div>
+            <div class="tool-tip-content">
+                <h2>Find In Stores</h2>
+                <p>Check product availability in selected store(s).</p>
+                <div class="tool-tip-close"><a onclick="s_objectID=&quot;javascript:;_4&quot;;return this.s_oc?this.s_oc(e):true" href="javascript:;">X</a></div>
+            </div>
+            <div class="tool-tip-bottom"></div>
+            <div class="tool-tip-arrow"></div>
+        </div>
+        <div style="" class="content">
+            <div class="search-results-find-stores">
+                <form class="findInStoresForm" action="/Listing/Search/StoreSection?internal=1&amp;browser=&amp;fsrc=Live+Wire+Elite&amp;src=Live+Wire+Elite" method="post">
+                    <input style="color: gray; font-style: italic;" name="findInStoresQuery" class="placeholder" value="" placeholder="City &amp; State or ZIP Code" autocomplete="off" type="text">
+                    <input class="go" value="Go" type="submit">
+                </form>
+                <div class="breaker"></div>
+            </div>
+            <div class="breaker"></div>
+        </div>
+    </div>
+ <div class="nav-block block-open "> <div class="h3"> <a onclick="s_objectID=&quot;javascript:;_5&quot;;return this.s_oc?this.s_oc(e):true" class="minimize-link" href="javascript:;">Category</a> </div> <div class="content "> <ul class=""> <li class=""> <a onclick="s_objectID=&quot;http://www.guitarcenter.com/Speaker-Cables-Cables.gc?src=Live%20Wire%20Elite&amp;ipp=25&amp;internal=1&amp;br_1&quot;;return this.s_oc?this.s_oc(e):true" href="/Speaker-Cables-Cables.gc?src=Live Wire Elite&amp;ipp=25&amp;internal=1&amp;browser=&amp;fsrc=Live+Wire+Elite" qs="">Speaker Cables</a> <span>(5)</span> </li> <li class=""> <a onclick="s_objectID=&quot;http://www.guitarcenter.com/Instrument-Cables-Cables.gc?src=Live%20Wire%20Elite&amp;ipp=25&amp;internal=1_1&quot;;return this.s_oc?this.s_oc(e):true" href="/Instrument-Cables-Cables.gc?src=Live Wire Elite&amp;ipp=25&amp;internal=1&amp;browser=&amp;fsrc=Live+Wire+Elite" qs="">Instrument Cables</a> <span>(4)</span> </li> <li class=""> <a onclick="s_objectID=&quot;http://www.guitarcenter.com/Microphone-Cables-Cables.gc?src=Live%20Wire%20Elite&amp;ipp=25&amp;internal=1_1&quot;;return this.s_oc?this.s_oc(e):true" href="/Microphone-Cables-Cables.gc?src=Live Wire Elite&amp;ipp=25&amp;internal=1&amp;browser=&amp;fsrc=Live+Wire+Elite" qs="">Microphone Cables</a> <span>(1)</span> </li> </ul> <div class="breaker"></div> </div> </div> <div class="nav-block block-open "> <div class="h3"> <a onclick="s_objectID=&quot;javascript:;_6&quot;;return this.s_oc?this.s_oc(e):true" class="minimize-link" href="javascript:;">Price Range</a> </div> <div class="content "> <ul class=""> <li class="" data-defaultsortorderindex="0"> <a href="/Under-25.gc?src=Live Wire Elite&amp;ipp=25&amp;internal=1&amp;browser=&amp;fsrc=Live+Wire+Elite" class="soitem checkbox">Under $25</a> <span>(4)</span> </li> <li class="" data-defaultsortorderindex="0"> <a href="/25-50.gc?src=Live Wire Elite&amp;ipp=25&amp;internal=1&amp;browser=&amp;fsrc=Live+Wire+Elite" class="soitem checkbox">$25 - $50</a> <span>(8)</span> </li> <li class="" data-defaultsortorderindex="0"> <a href="/50-100.gc?src=Live Wire Elite&amp;ipp=25&amp;internal=1&amp;browser=&amp;fsrc=Live+Wire+Elite" class="soitem checkbox">$50 - $100</a> <span>(5)</span> </li> <li class="" data-defaultsortorderindex="0"> <a href="/100-200.gc?src=Live Wire Elite&amp;ipp=25&amp;internal=1&amp;browser=&amp;fsrc=Live+Wire+Elite" class="soitem checkbox">$100 - $200</a> <span>(1)</span> </li> </ul> <div class="breaker"></div> </div> </div> <div class="nav-block block-open nav-no-link"> <div class="h3">
+Rating </div> <div class="content "> <ul class=""> <li class=""> <a href="/5-Stars.gc?src=Live Wire Elite&amp;ipp=25&amp;internal=1&amp;browser=&amp;fsrc=Live+Wire+Elite" class="soitem checkbox"> <img src="/includes/guitarcenter/images/listing/star5.png" alt="Overall User Rating: 5"> </a> <span>(8)</span> </li> <li class=""> <a href="/4-Stars.gc?src=Live Wire Elite&amp;ipp=25&amp;internal=1&amp;browser=&amp;fsrc=Live+Wire+Elite" class="soitem checkbox"> <img src="/includes/guitarcenter/images/listing/star4.png" alt="Overall User Rating: 4"> </a> <span>(2)</span> </li> </ul> <div class="breaker"></div> </div> </div> <div class="nav-block "> <div class="h3"> <a onclick="s_objectID=&quot;javascript:;_7&quot;;return this.s_oc?this.s_oc(e):true" class="minimize-link" href="javascript:;">Cable Gauge</a> </div> <div class="content minimized"> <ul class=""> <li class="" data-defaultsortorderindex="0"> <a href="/Cable-Gauge-12-Gauge.gc?src=Live Wire Elite&amp;ipp=25&amp;internal=1&amp;browser=&amp;fsrc=Live+Wire+Elite" class="soitem checkbox">12 Gauge</a> <span>(2)</span> </li> </ul> <div class="breaker"></div> </div> </div> <div class="nav-block "> <div class="h3"> <a onclick="s_objectID=&quot;javascript:;_8&quot;;return this.s_oc?this.s_oc(e):true" class="minimize-link" href="javascript:;">Connector Type</a> </div> <div class="content minimized"> <ul class=""> <li class="" data-defaultsortorderindex="0"> <a href="/Connector-Type-Banana-to-Speakon.gc?src=Live Wire Elite&amp;ipp=25&amp;internal=1&amp;browser=&amp;fsrc=Live+Wire+Elite" class="soitem checkbox">Banana to Speakon</a> <span>(1)</span> </li> <li class="" data-defaultsortorderindex="0"> <a href="/Connector-Type-Speakon-to-Other.gc?src=Live Wire Elite&amp;ipp=25&amp;internal=1&amp;browser=&amp;fsrc=Live+Wire+Elite" class="soitem checkbox">Speakon to Other</a> <span>(1)</span> </li> <li class="" data-defaultsortorderindex="0"> <a href="/Connector-Type-Speakon-to-Speakon.gc?src=Live Wire Elite&amp;ipp=25&amp;internal=1&amp;browser=&amp;fsrc=Live+Wire+Elite" class="soitem checkbox">Speakon to Speakon</a> <span>(1)</span> </li> <li class="" data-defaultsortorderindex="0"> <a href="/Connector-Type-XLR-to-XLR.gc?src=Live Wire Elite&amp;ipp=25&amp;internal=1&amp;browser=&amp;fsrc=Live+Wire+Elite" class="soitem checkbox">XLR to XLR</a> <span>(1)</span> </li> </ul> <div class="breaker"></div> </div> </div> <div class="nav-block "> <div class="h3"> <a onclick="s_objectID=&quot;javascript:;_9&quot;;return this.s_oc?this.s_oc(e):true" class="minimize-link" href="javascript:;">Length</a> </div> <div class="content minimized"> <ul class=""> <li class="" data-defaultsortorderindex="0"> <a href="/Length-10-to-12-Foot.gc?src=Live Wire Elite&amp;ipp=25&amp;internal=1&amp;browser=&amp;fsrc=Live+Wire+Elite" class="soitem checkbox">10 to 12 Foot</a> <span>(3)</span> </li> <li class="" data-defaultsortorderindex="0"> <a href="/Length-13-to-19-Foot.gc?src=Live Wire Elite&amp;ipp=25&amp;internal=1&amp;browser=&amp;fsrc=Live+Wire+Elite" class="soitem checkbox">13 to 19 Foot</a> <span>(1)</span> </li> <li class="" data-defaultsortorderindex="0"> <a href="/Length-25-Foot-or-More.gc?src=Live Wire Elite&amp;ipp=25&amp;internal=1&amp;browser=&amp;fsrc=Live+Wire+Elite" class="soitem checkbox">25 Foot or More</a> <span>(4)</span> </li> <li class="" data-defaultsortorderindex="0"> <a href="/Length-4-to-9-Foot.gc?src=Live Wire Elite&amp;ipp=25&amp;internal=1&amp;browser=&amp;fsrc=Live+Wire+Elite" class="soitem checkbox">4 to 9 Foot</a> <span>(1)</span> </li> </ul> <div class="breaker"></div> </div> </div> </div> <div class="breaker"></div> </div> <div class="breaker"></div> </div> <div id="dialogstorefindercontainer" class="dialog_storefinder_container"></div> <div class="dialog_storefinder_backgroundPopup" id="dialogstorefinderbackground"></div> <div class="emailoverlay" id="emailoverlay"> <div id="email-popup-contents"></div> </div> <div id="fileUploadOverlay"> <div id="fileupload-popup-contents"></div> </div> <span id="divFooter"> <div style="clear:both;"></div> <div id="gc-main-footer-container"> <div id="footer-columns"> <ul id="col-1"> <li><div class="h3">Shop By Category</div></li> <li><a onclick="s_objectID=&quot;http://www.guitarcenter.com/Brand/BrandList.aspx_2&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.guitarcenter.com/Brand/BrandList.aspx">Browse by Brand</a></li> <li><a onclick="s_objectID=&quot;http://www.guitarcenter.com/Guitar.gc_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.guitarcenter.com/Guitar.gc">Guitars</a></li> <li><a onclick="s_objectID=&quot;http://www.guitarcenter.com/Bass.gc_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.guitarcenter.com/Bass.gc">Bass</a></li> <li><a onclick="s_objectID=&quot;http://www.guitarcenter.com/Keyboards---MIDI.gc_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.guitarcenter.com/Keyboards---MIDI.gc">Keyboards</a></li> <li><a onclick="s_objectID=&quot;http://www.guitarcenter.com/Drum---Percussion.gc_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.guitarcenter.com/Drum---Percussion.gc">Drums</a></li> <li><a onclick="s_objectID=&quot;http://www.guitarcenter.com/Pro-Audio.gc_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.guitarcenter.com/Pro-Audio.gc">Pro Audio</a></li> <li><a onclick="s_objectID=&quot;http://www.guitarcenter.com/Accessories.gc_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.guitarcenter.com/Accessories.gc">Accessories</a></li> <li><a onclick="s_objectID=&quot;http://platinum.guitarcenter.com/_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://platinum.guitarcenter.com/">Platinum Gear</a></li> <li><a onclick="s_objectID=&quot;http://www.vintageguitars.net/_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.vintageguitars.net/">Vintage Gear</a></li> </ul> <ul id="col-2"> <li><div class="h3">My Guitar Center</div></li> <li><a class="soitem" href="/MyAccount/Default.aspx">Account Info</a></li> <li><a class="soitem" href="/MyAccount/CommunicationPreferences.aspx">Communication Preferences</a></li> <li><a class="soitem" href="/MyAccount/WishList/Default.aspx">Wish List</a></li> <li><a class="soitem" href="/MyAccount/Cart.aspx">Shopping Cart</a></li> <li><a class="soitem" href="/MyAccount/OrderHistory.aspx">Order History</a></li> <li><a onclick="s_objectID=&quot;http://gc.guitarcenter.com/financing/30_30.cfm_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://gc.guitarcenter.com/financing/30_30.cfm">Price Guarantee</a></li> <li><a onclick="s_objectID=&quot;http://gc.guitarcenter.com/financing/guarantee/warranty.cfm_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://gc.guitarcenter.com/financing/guarantee/warranty.cfm">Warranty</a></li> <li><a onclick="s_objectID=&quot;http://gc.guitarcenter.com/rebates/_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://gc.guitarcenter.com/rebates/">Rebates</a></li> <li><a class="soitem" href="http://gc.guitarcenter.com/financing/30_30.cfm">Returns</a></li> <li><a onclick="s_objectID=&quot;http://gc.guitarcenter.com/pro-coverage/_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://gc.guitarcenter.com/pro-coverage/">Pro Coverage</a></li> <li><a onclick="s_objectID=&quot;http://gc.guitarcenter.com/financing/30_30.cfm#layway_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://gc.guitarcenter.com/financing/30_30.cfm#layway">Layaway</a></li> </ul> <ul id="col-3"> <li><div class="h3">Support &amp; Services</div></li> <li><a onclick="s_objectID=&quot;http://stores.guitarcenter.com/stores/locations_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://stores.guitarcenter.com/stores/locations" style="cursor:pointer">Locations</a></li> <li><a onclick="s_objectID=&quot;http://www.guitarcenter.com/GC---Contact-Us-Landing-g10075t0.gc_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.guitarcenter.com/GC---Contact-Us-Landing-g10075t0.gc">Contact Us</a></li> <li><a onclick="s_objectID=&quot;http://gc.guitarcenter.com/careers/_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://gc.guitarcenter.com/careers/">Careers</a></li> <li><a class="soitem" href="http://gc.guitarcenter.com/affiliate/">Affiliate Program</a></li> <li><a onclick="s_objectID=&quot;http://www.gcpro.com/_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.gcpro.com/" target="_blank">GC Pro</a></li> <li><a onclick="s_objectID=&quot;http://gc.guitarcenter.com/gift-guide/_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://gc.guitarcenter.com/gift-guide/">Gift Guide</a></li> <li><a onclick="s_objectID=&quot;http://gc.guitarcenter.com/company/_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://gc.guitarcenter.com/company/">Company Information</a></li> <li><a onclick="s_objectID=&quot;http://gc.guitarcenter.com/events/_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://gc.guitarcenter.com/events/">Events &amp; Promotions</a></li> <li><a onclick="s_objectID=&quot;http://gc.guitarcenter.com/sessions/_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://gc.guitarcenter.com/sessions/">Guitar Center Sessions</a></li> <li><a onclick="s_objectID=&quot;http://gc.guitarcenter.com/interviews_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://gc.guitarcenter.com/interviews">Artist Interviews</a></li> <li><a onclick="s_objectID=&quot;http://gc.guitarcenter.com/shipping/_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://gc.guitarcenter.com/shipping/">Shipping</a></li> <li><a onclick="s_objectID=&quot;http://www.guitarcenter.com/charity/donationrequest.aspx_1&quot;;return this.s_oc?this.s_oc(e):true" href="/charity/donationrequest.aspx">Donations</a></li> <li><a onclick="s_objectID=&quot;http://www.guitarcenter.com/GC-Site-Map-g10001t0.gc_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.guitarcenter.com/GC-Site-Map-g10001t0.gc">Sitemap</a></li> </ul> <div id="footerChangeCountry"> <a onclick="s_objectID=&quot;http://www.guitarcenter.com/International/ContextSelector.aspx_1&quot;;return this.s_oc?this.s_oc(e):true" href="/International/ContextSelector.aspx" id="footerCountryFlag"><img src="/includes/common/images/international/flags/US.gif" style="height:11px; vertical-align:middle; margin-right:6px;">UNITED STATES: <span class="footerUnderline">CHANGE COUNTRY</span></a> </div> <ul id="col-4"> <li><div class="h3" id="footer-features-services">Featured Services</div></li> <div class="clear"></div> <div id="sub-col-a"> <div id="sub-col-1" class="sub-col"> <span class="footer-icon"> <a onclick="s_objectID=&quot;http://gc.guitarcenter.com/financing/gccard.cfm_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://gc.guitarcenter.com/financing/gccard.cfm" id="footer-icon-financing"><div class="h4">Financing</div> <div class="footer-nobold">increase your<br>purchasing power</div> </a> </span> <span class="footer-icon"> <button id="contactusbtn" rel="#contactusmodal" style="display:none"></button> <a class="soitem" id="contactuslink" href="http://www.gci-csat.com/html/contactus.html?iframe=true&amp;width=700&amp;height=720" style="display:none"></a> <a onclick="s_objectID=&quot;javascript:;_10&quot;;return this.s_oc?this.s_oc(e):true" href="javascript:;" id="footer-icon-wlty" rel="#contactusmodal"><div class="h4">Feedback</div> <div class="footer-nobold">our ears are <br>always open</div> </a> <script type="text/javascript">
+function OpenFeedbackOverlayWithPrettyPhoto() {
+//backwards compat.
+$("#contactuslink").click();
+}
+function OpenFeedbackOverlay() {
+$("#contactusbtn").each(function () {
+try {
+$(this).overlay({
+color: '#000',
+mask: {
+color: '#000',
+loadSpeed: 200,
+opacity: .8
+},
+oneInstance: false,
+onClose: function () {
+},
+onBeforeLoad: function () {
+var aurl = "http://www.gci-csat.com/html/contactus.html?iframe=true&width=700&height=720";
+$("#contactiframe").attr('src', aurl);
+$("#contactiframe").attr('height', '720');
+$("#contactiframe").attr('width', '700');
+},
+closeOnClick: true,
+load: true
+}).load();
+}
+catch (err) {
+OpenFeedbackOverlayWithPrettyPhoto();
+}
+});
+}
+jQuery(function () {
+jQuery("#footer-icon-wlty").bind('click', OpenFeedbackOverlay);
+});
+</script> </span> <span class="footer-icon"> <a onclick="s_objectID=&quot;http://gc.guitarcenter.com/gc-garage/_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://gc.guitarcenter.com/gc-garage/" id="footer-icon-gcgarage"><div class="h4">GC Garage</div> <div class="footer-nobold">guitar tune ups<br>and repair</div> </a> </span> </div> </div> <div id="sub-col-b"> <div id="sub-col-2" class="sub-col"> <span class="footer-icon"> <a onclick="s_objectID=&quot;http://gc.guitarcenter.com/view-our-catalog/_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://gc.guitarcenter.com/view-our-catalog/" id="footer-icon-catalog"><div class="h4">View Our Catalog</div> <div class="footer-nobold">view this month's<br>products &amp; services</div> </a> </span> <span class="footer-icon"> <a onclick="s_objectID=&quot;http://gc.guitarcenter.com/financing/giftcard.cfm_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://gc.guitarcenter.com/financing/giftcard.cfm" id="footer-icon-giftcard"><div class="h4">Gift Card</div> <div class="footer-nobold">the perfect gift for<br>every musician</div> </a> </span> <span class="footer-icon"> <a onclick="s_objectID=&quot;http://gc.guitarcenter.com/musician-services/_1&quot;;return this.s_oc?this.s_oc(e):true" href="http://gc.guitarcenter.com/musician-services/" id="footer-icon-mservices"><div class="h4">Musician Services</div> <div class="footer-nobold">mix, master,<br>distribution &amp; more</div> </a> </span> </div> </div> </ul> </div> <div class="clear"></div> <div id="gc-main-footer-bottom"> <div id="footer-gclogo" style="padding-top:15px;"><a onclick="s_objectID=&quot;http://www.guitarcenter.com/_4&quot;;return this.s_oc?this.s_oc(e):true" href="http://www.guitarcenter.com"><img src="/includes/guitarcenter/images/clear.gif" style="" height="60" width="120" border="0"></a></div> <div id="footer-gc-search"> <form method="get" action="http://www.guitarcenter.com/New-Gear.gc"> <input name="internal" value="1" type="hidden"> <input value="KEYWORDS OR ITEM #" autocomplete="off" id="footer-search-input" name="src" onfocus="javascript:set_value(this.id, true)" onblur="javascript:set_value(this.id, false)" type="text"> <input value=" " id="footer-search-button" onclick="var s = $.trim($('#footer-search-input').val()); if (s == 'KEYWORDS OR ITEM #' || s == '') {alert('Please enter a keyword or Item # to Search'); return false;}" type="submit"> </form> </div> <div id="gc-main-footer-copyright">
+Copyright &nbsp;©&nbsp; Guitar Center, Inc. &nbsp;-&nbsp;&nbsp;&nbsp;All Rights Reserved. &nbsp;&nbsp;-&nbsp;&nbsp;
+<a class="soitem" href="http://gc.guitarcenter.com/legal/">Terms of Use</a> &nbsp;|&nbsp; <a class="soitem" href="http://gc.guitarcenter.com/legal/privacy.cfm">Your Privacy Rights</a> &nbsp;|&nbsp; <a class="soitem" href="http://gc.guitarcenter.com/legal/tac.cfm">Purchase Terms &amp; Conditions</a> </div> <div id="gc-main-footer-buttons"> <ul> <li><a class="soitem paypal" href="http://paypal.com/">PayPal</a></li> <li><a class="soitem comodo" href="https://secure.comodo.net/ttb_searcher/trustlogo?v_querytype=W&amp;v_shortname=SC2&amp;v_search=www.guitarcenter.com&amp;x=6&amp;y=5">Comodo: Instant SSL Certificate Secured</a></li> <li><a class="soitem pricegrabber" href="http://www.pricegrabber.com/rating_getreview.php/retid=5866">Price Grabber</a></li> <li> <a class="soitem bizrate" href="http://www.bizrate.com/ratings_guide/cust_reviews__mid--141658.html"> <img src="https://medals.bizrate.com/medals/dynamic/141658_medal.gif" alt="" height="32" width="55"><div id="bizrateImage"></div> <noscript> <img src="https://medals.bizrate.com/medals/dynamic/141658_medal.gif" width="55" height="32" /> </noscript> </a> </li> </ul> </div> <div id="gc-main-footer-social-links"> <span id="footer-social-desc">FOLLOW GUITAR CENTER:</span><br> <ul> <li><a class="soitem facebook" href="http://www.facebook.com/GuitarCenter">Facebook</a></li> <li><a class="soitem twitter" href="http://twitter.com/guitarcenter">Twitter</a></li> <li><a class="soitem youtube" href="http://www.youtube.com/guitarcenter">YouTube</a></li> </ul> </div> </div> </div> <div class="modal" id="contactusmodal"><div class="button-container"><br> <button class="close">Close</button> <div class="breaker"></div> </div> <iframe id="contactiframe" height="0" width="0"></iframe> </div> <script type="text/javascript" defer="defer">
+$(function() {
+if (typeof ResourceBootstrapper != 'undefined') {
+ResourceBootstrapper.Version = "15.00";
+ResourceBootstrapper.add("/Includes/Common/Scripts/Analytics/Criteo.js");
+ResourceBootstrapper.add("/includes/common/scripts/opinionlab/oo_engine.min.js");
+ResourceBootstrapper.add("/includes/common/scripts/opinionlab/oo_conf_float.js");
+ResourceBootstrapper.add("https://medals.bizrate.com/medals/dynamic/141658_medal.gif", "img", {Width: 55, Height: 32, PlaceholderId: "bizrateImage"});
+if (window.attachEvent) {
+window.attachEvent("onload", ResourceBootstrapper.load);
+}
+else {
+window.addEventListener("load", ResourceBootstrapper.load, false);
+}
+}
+else { 
+debugger;
+}
+});
+</script> <!-- BEGIN: OnlineOpinion v5.x.x - Released: xx/xx/xxx - Components: Full - The following code is
+Copyright 1998-2010 OpinionLab, Inc. All rights reserved. Unauthorized use is prohibited. This product
+and other products of OpinionLab, Inc. are protected by U.S. Patent No. 6606581, 6421724, 6785717 B1
+and other patents pending. http://www.opinionlab.com --> <!-- MAIN OL STYLESHEET --> <link rel="stylesheet" type="text/css" href="/includes/common/scripts/opinionlab/oo_style.css"> <!-- END: OnlineOpinion v5.x.x --> <script type="text/javascript">
+function omnitureStripCharacters(input) { var ret = input.replace(/\&\w+;|%\d{2}|[^A-Za-z0-9\s.&]/gi, ''); ret = ret.replace(/&/gi, 'and'); ret = ret.toLowerCase(); return ret; }
+var s_account = 'guitarcenterprod,gciglobalprod';
+var omnitureInternalFilters = 'javascript:,guitarcenter.com,www.guitarcenter.com';
+$.urlParam = function(name){ var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href); if(results != null && results.length > 0) { return results[1]; } else { return ''; } }
+function getOmnitureCookie(name) { var nameEQ = name + '='; var ca = document.cookie.split(';'); for (var i = 0; i < ca.length; i++) { var c = ca[i]; while (c.charAt(0) == ' ') c = c.substring(1, c.length); if (c.indexOf(nameEQ) == 0) { return $.trim(c.substring(nameEQ.length, c.length).toLowerCase()); } } return ''; }
+function setOmnitureCookie(name,value) { document.cookie=name + '=' + escape(value); }
+function getOmnitureSourceCode() { var source = ''; var history = ''; var urlSource = ''; urlSource = $.urlParam('source'); if (urlSource != null && urlSource != '') { source = urlSource; } else if (getOmnitureCookie('source') != '') { source = getOmnitureCookie('source'); } if (getOmnitureCookie('source_history') != '') { history = getOmnitureCookie('source_history'); } if( (!history.length && source.length) || history.indexOf(source) == -1) { setOmnitureCookie('source_history', $.trim(history + ' ' + source)); return source; } else { return ''; } }
+var omnitureCampaign = ''; if(typeof getOmnitureSourceCode != 'undefined') omnitureCampaign = omnitureStripCharacters(getOmnitureSourceCode());
+</script> <script type="text/javascript" src="/Includes/GuitarCenter/scripts/minified/omniture.min.js"></script> <script type="text/javascript">
+var omnitureFormValidationImagePath = '/includes/Common/images/arrowLeft.gif';
+if(typeof(omnitureMapFormErrorValues) == 'function') omnitureMapFormErrorValues();
+</script> <script type="text/javascript">
+s.pageType = '';
+s.pageName = '[gc] search results';
+s.server = 'www.guitarcenter.com';
+s.events = 'event1';
+s.products = '';
+s.channel = '[gc] search results';
+s.campaign = omnitureCampaign;
+s.eVar48 = omnitureCampaign;
+s.eVar49 = omnitureCampaign;
+s.prop1 = '[gc] search results';
+s.prop2 = '[gc] search results';
+s.prop3 = '[gc] search results';
+s.prop4 = '[gc] search results';
+s.prop5 = '[gc] search results';
+s.prop6 = '[gc] search results';
+s.prop7 = '[gc] search';
+s.eVar1 = 'live wire elite';
+s.prop8 = 'live wire elite';
+s.prop9 = '10';
+</script> <script language="JavaScript" type="text/javascript"><!--
+var s_code=s.t();if(s_code)document.write(s_code)//--></script> <script language="JavaScript" type="text/javascript"><!--
+if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+//--></script><noscript><a href="http://www.Adobe.com" title="Web Analytics"> <img src="http://guitarcenterprod.112.2O7.net/b/ss/guitarcenterprod/1/H.20.3--NS/0" height="1" width="1" border="0" alt="" /></a> </noscript><!--/DO NOT REMOVE/--> <!-- End SiteCatalyst code version: H.24. --> <!-- Start Criteo Tag --> <script type="text/javascript">
+//cto listing tag
+var cto_params = [];
+cto_params["kw"] = "Live Wire Elite";
+cto_params["i1"] = "101692127";
+cto_params["i2"] = "100035064";
+cto_params["i3"] = "104612478";
+var cto_conf = 't1=sendEvent&c=2&p=3795';
+var cto_conf_event = 'v=2&wi=7715335&pt1=3';
+</script> <!-- End Criteo Tag --> </span> <div id="spnGoogle" style="margin:0;padding:0;height:0"></div> <input id="GoogleTrustedStoreID" value="1327510" type="hidden"> <input id="GoogleTrustedProductSearchID" value="1327510" type="hidden"> <script type="text/javascript" src="/includes/common/scripts/GoogleTrustedSite.js" defer="defer"></script> <div id="GTS_CONTAINER"></div>  
+</body>

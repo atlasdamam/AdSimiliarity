@@ -1,0 +1,823 @@
+<head>
+        <style type="text/css" media="all">@import "/css/main.css";</style>
+                <title>Gazeta #Sieci – Tygodnik M?odej Polski</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="Content-Language" content="pl">
+        <meta name="robots" content="all">
+        <meta name="description" content="Sieci #Sieci">
+        <meta name="keywords" content="Sieci #Sieci">
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <script src="//connect.facebook.net/pl_PL/all.js#xfbml=1" id="facebook-jssdk"></script><script src="//platform.twitter.com/widgets.js" id="twitter-wjs"></script><script src="http://stats.g.doubleclick.net/dc.js" async="" type="text/javascript"></script><script type="text/javascript" src="/jvs/mootools-core-1.4.5.js"></script>
+        <script type="text/javascript" src="/jvs/mootools-more-1.4.0.1.js"></script>
+        <script type="text/javascript" src="/jvs/cookiepolicy.js"></script>
+                
+        <script type="text/javascript">
+            window.addEvent('domready',function(){
+            Locale.use('pl-PL');
+ 
+ 
+            function checkBoxHeight(el) {
+                var rows = new Array();
+                var rowId = 0;
+                $$(el).each(function(sDesc, i) {
+                sDesc.setStyle('padding-bottom', '0px');
+                    if(isNaN(rows[Math.floor(rowId)])){
+                        rows[Math.floor(rowId)] = 0;
+                    }
+                    rows[Math.floor(rowId)] = Math.max(rows[Math.floor(rowId)], sDesc.getSize().y);
+
+                    if(sDesc.hasClass('last')) {
+                        rowId++;
+                    }
+                });
+
+                var rowId = 0;
+                $$(el).each(function(sDesc, i){
+                    sDesc.setStyle('padding-bottom', ((rows[Math.floor(rowId)]-parseInt(sDesc.getStyle('padding-top'))-parseInt(sDesc.getStyle('padding-bottom'))-parseInt(sDesc.getStyle('height')))+14)+'px');
+                    if(sDesc.hasClass('last')){
+                        rowId++;
+                    }
+                });
+            }
+    
+            function setInvHeight(){
+                $$('.inMask').each(function(el, i) {
+                    el.setStyle('height', 'auto');
+        
+                    if(el.getFirst('.iresult')) 
+                        h2 = el.getFirst('.iresult').getSize().y;
+                    else 
+                        h2 = 0;
+        
+                    h = el.getSize().y-h2;
+                    el.setStyle('height', h);
+                });
+
+            }
+    
+            var exec = function(){
+                setInvHeight()
+                checkBoxHeight('.artBox');   
+            }
+    
+            
+                exec.delay(50);
+                exec.delay(150);
+                exec.delay(300);
+                exec.delay(500);
+                exec.delay(700);
+                exec.delay(900);
+                exec.delay(2000);
+            
+ 
+  
+            $$('.checkAnswers').addEvent('click', function(e){
+    formId=this.get('rel');
+    // zatrzymanie wysy?ania formularza
+    e.stop();
+
+    // okre?lenie, co ma si? sta? po wys?aniu formularza
+    $('inquiryForm'+formId).set('send', 
+        { 
+            onComplete: function(response){
+                resp = response.split(';');
+
+                resp.each(function(row){
+                    rowTab= row.split(':');
+                    $('spanPr'+rowTab[0]).set('html','('+rowTab[1]+'%)');
+                    $('bar'+rowTab[0]).setStyle('width', rowTab[1] + '%');
+                });
+            }
+        }
+    );
+
+    // wys?anie formularza
+    $('inquiryForm'+formId).send();
+
+    $('bfresult'+formId).fade('out');
+    $('bfresult'+formId).slide('out');                              
+    $('result'+formId).fade('in');
+
+
+    return false;
+});
+
+
+     
+            $$('.searchInput').addEvent('focus', function(){   
+                if(this.value=='Szukaj'){ this.value=''; }
+                if(this.value=='adres e-mail'){ this.value=''; }
+                if(this.value=='has?o'){ this.value=''; }
+            });
+
+            $('searchInput').addEvent('blur', function(){
+                if(this.value==''){ this.value='Szukaj'; }
+            });  
+    
+                    
+            $('mail_top').addEvent('blur', function(){
+                if(this.value==''){ this.value='adres e-mail'; }
+            });
+
+            $('pass_top').addEvent('blur', function(){
+                if(this.value==''){ this.value='has?o'; }
+            });
+
+            $('loginTopb').addEvent('click', function(){
+                $('logowanieBox').fade('toggle');
+                return false;
+            })
+        
+                        
+            $('searchForm').addEvent('keydown', function(evt) {
+                if(evt.key=='enter'){
+                    $('searchForm').submit();
+                    return false;
+                }
+            });
+            $$('.searchBtn').addEvent('click', function(evt) {
+                $('searchForm').submit();
+                return false;
+
+            });
+            
+            
+            
+
+                    
+            
+                        var formValidatorLoginTop = new Form.Validator.Inline($('topLoginForm'));
+            function logujTop(){
+                if(formValidatorLoginTop.validate()) {      
+                    var address = new Element('input[type=hidden]');
+                    address.set('name', 'address');
+                    address.set('value', document.URL);
+                    address.inject($('topLoginForm'));
+
+                    $('topLoginForm').submit();
+                }
+            }
+
+            $('loginBtnTop').addEvent('click', function(e) {
+                logujTop();
+                return false;
+            });
+        
+            $('topLoginForm').addEvent('keydown', function(evt) {
+                if(evt.key=='enter'){
+                    logujTop();
+                    return false;
+                }
+            });
+        
+//            var showMoreLoginFormFormValidator = new Form.Validator.Inline($('showMoreLoginForm'));
+//    
+//            function showMoreLoginFormLogin(){
+//                if(showMoreLoginFormFormValidator.validate()){      
+//                    var address = new Element('input[type=hidden]');
+//                    address.set('name', 'address');
+//                    address.set('value', document.URL);
+//                    address.inject($('showMoreLoginForm'));
+//
+//                    $('showMoreLoginForm').submit();
+//                }
+//            }
+
+//            $('showMoreLoginButton').addEvent('click', function(e){
+//                showMoreLoginFormLogin();
+//                return false;
+//            });
+        
+//            $('showMoreLoginForm').addEvent('keydown', function(evt){
+//                if(evt.key=='enter'){
+//                    showMoreLoginFormLogin();
+//                    return false;
+//                }
+//            });
+        
+             
+
+             $('showMoreButton').addEvent('click', function() {
+    
+                var right = '0px';
+    
+                if($('showMoreLoginBox').getStyle('right') == '-344px') {
+                    right = '0px';
+                } else {
+                    right = '-344px';
+                } 
+        
+                $('showMoreLoginBox').morph({
+                'right': right
+                });
+        
+                return false;
+            });
+
+            
+            if($('newszak1')){
+                $('newszak1').addEvent('click', function(){
+                    this.addClass('selected');
+                    $('newszak2').removeClass('selected');
+                    $$('.release_2').hide();
+                    $$('.release_1').show(); 
+                    return false
+                });
+
+                $('newszak2').addEvent('click', function(){
+                    this.addClass('selected');
+                    $('newszak1').removeClass('selected');
+                    $$('.release_1').hide();
+                    $$('.release_2').show(); 
+                    return false
+                }); 
+            }       
+    
+            
+            
+            });
+        </script>
+        
+        <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-21394414-5']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+      </script>
+
+    <link href="/jvs/cookieInfo/cookiepolicy.css" type="text/css" media="screen" rel="stylesheet"><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}
+.fb_invisible{display:none}
+.fb_reset{background:none;border-spacing:0;border:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}
+.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}
+.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}
+.fb_dialog_content{background:#fff;color:#333}
+.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px;top:8px\9;right:7px\9}
+.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}
+.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}
+.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}
+.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}
+.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}
+.fb_dialog_top_left,
+.fb_dialog_top_right,
+.fb_dialog_bottom_left,
+.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}
+/* @noflip */
+.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}
+/* @noflip */
+.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}
+/* @noflip */
+.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}
+/* @noflip */
+.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right,
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right{width:10px;height:100%}
+.fb_dialog_vert_left{margin-left:-10px}
+.fb_dialog_vert_right{right:0;margin-right:-10px}
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{width:100%;height:10px}
+.fb_dialog_horiz_top{margin-top:-10px}
+.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}
+.fb_dialog_iframe{line-height:0}
+.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}
+.fb_dialog_content .dialog_title > span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif)
+no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}
+body.fb_hidden{-webkit-transform:none;height:100%;margin:0;left:-10000px;overflow:visible;position:absolute;top:-10000px;width:100%
+}
+.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif)
+white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}
+.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}
+#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}
+#fb-root #fb_dialog_ipad_overlay.hidden{display:none}
+.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}
+.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0 0, 0 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}
+.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%
+}
+.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0 0, 0 100%, from(#4966A6),
+color-stop(0.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset,
+rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}
+.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}
+.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}
+.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}
+#fb_dialog_loader_close{float:left}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}
+.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}
+.fb_iframe_widget iframe{position:absolute}
+.fb_iframe_widget_lift{z-index:1}
+.fb_hide_iframes iframe{position:relative;left:-10000px}
+.fb_iframe_widget_loader{position:relative;display:inline-block}
+.fb_iframe_widget_fluid{display:inline}
+.fb_iframe_widget_fluid span{width:100%}
+.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}
+.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_connect_bar_container div,
+.fb_connect_bar_container span,
+.fb_connect_bar_container a,
+.fb_connect_bar_container img,
+.fb_connect_bar_container strong{background:none;border-spacing:0;border:0;direction:ltr;font-style:normal;font-variant:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal;vertical-align:baseline}
+.fb_connect_bar_container{position:fixed;left:0 !important;right:0 !important;height:42px !important;padding:0 25px !important;margin:0 !important;vertical-align:middle !important;border-bottom:1px solid #333 !important;background:#3b5998 !important;z-index:99999999 !important;overflow:hidden !important}
+.fb_connect_bar_container_ie6{position:absolute;top:expression(document.compatMode=="CSS1Compat"? document.documentElement.scrollTop+"px":body.scrollTop+"px")}
+.fb_connect_bar{position:relative;margin:auto;height:100%;width:100%;padding:6px 0 0 0 !important;background:none;color:#fff !important;font-family:"lucida grande", tahoma, verdana, arial, sans-serif !important;font-size:13px !important;font-style:normal !important;font-variant:normal !important;font-weight:normal !important;letter-spacing:normal !important;line-height:1 !important;text-decoration:none !important;text-indent:0 !important;text-shadow:none !important;text-transform:none !important;white-space:normal !important;word-spacing:normal !important}
+.fb_connect_bar a:hover{color:#fff}
+.fb_connect_bar .fb_profile img{height:30px;width:30px;vertical-align:middle;margin:0 6px 5px 0}
+.fb_connect_bar div a,
+.fb_connect_bar span,
+.fb_connect_bar span a{color:#bac6da;font-size:11px;text-decoration:none}
+.fb_connect_bar .fb_buttons{float:right;margin-top:7px}
+.fb_edge_widget_with_comment{position:relative;*z-index:1000}
+.fb_edge_widget_with_comment span.fb_edge_comment_widget{position:absolute}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget{z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget .FB_Loader{left:0;top:1px;margin-top:6px;margin-left:0;background-position:50% 50%;background-color:#fff;height:150px;width:394px;border:1px #666 solid;border-bottom:2px solid #283e6c;z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.dark .FB_Loader{background-color:#000;border-bottom:2px solid #ccc}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.siderender
+.FB_Loader{margin-top:0}
+.fbpluginrecommendationsbarleft,
+.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}
+/* @noflip */
+.fbpluginrecommendationsbarleft{left:10px}
+/* @noflip */
+.fbpluginrecommendationsbarright{right:10px}</style></head>
+    <body data-twttr-rendered="true">
+        <div id="headerBg">
+            <div id="header">
+                <div id="hleft">
+                    <div id="socBox">
+                        <a class="socIco fb" target="_blank" title="facebook" href="https://www.facebook.com/gazetawsieci"></a>
+                        <a class="socIco tw" target="_blank" title="twitter" href="https://twitter.com/Tygodnik_Sieci"></a>
+                        <a class="socIco g" target="_blank" title="Google +" href="https://plus.google.com/105518933479270003229"></a>
+                        <a class="socIco yt" target="_blank" title="Youtube" href="https://www.youtube.com/user/tygodnikmlodejpolski?feature=watch"></a>
+                        <a class="socIco xx" target="_blank" title="Pinterest" href="http://pinterest.com/sieci/"></a>
+                        <a class="socIco nk" target="_blank" title="Nasza-Klasa" href="http://nk.pl/tygodniksieci"></a>
+                        <a class="socIco xy" target="_blank" title="RSS" href="/rss"></a>
+                    </div> 
+                    
+                </div>    
+                <a id="logo" href="/" title="#Sieci"><img src="/images/logoNew.jpg" alt="#Sieci"></a>
+                <div id="searchBox">
+                    <form method="get" action="/siecisearch.html" id="searchForm">
+                        <input id="searchInput" class="searchInput" value="Szukaj" name="search" type="text">
+                        <a class="searchBtn" title="szukaj" href="#">&nbsp;</a>
+                    </form> 
+                    <div class="clear"></div>
+                                            <a class="last" title="Rejestracja do serwisu" rel="nofollow" href="/rejestracja-logowanie.html">Rejestracja</a>
+                        <a id="loginTopb" title="Logowanie do serwisu" rel="nofollow" href="#">Zaloguj</a>
+                    
+
+                </div>
+
+                     
+                                    <div id="logowanieBox">
+                        <form id="topLoginForm" action="pClientLogin" method="post">
+                            <input id="mail_top" name="email" value="adres e-mail" class="required validate-email searchInput" type="text">
+                            <input id="pass_top" name="password" value="has?o" class="required searchInput" type="password">
+
+                            <div class="clear loHeight"></div>
+                            <a class="forgotPass" href="/zapomniane-haslo.html" title="nie pami?tam has?a">nie pami?tam has?a</a>
+                            <a title="zaloguj si?" href="#" class="loginBtn right" id="loginBtnTop"></a>
+                        </form>
+                    </div>
+                
+            </div>
+        </div>
+
+        <div id="wrapper">
+
+            
+                            <div id="right">
+                                        <div id="newspaperBox">
+                        <a id="newszak1" class="selected" href="#" title="Sieci">Sieci</a>
+                        <a id="newszak2" href="#" title="Sieci Historii">Sieci Historii</a>
+                        <div id="newspapercontent">
+                            <a href="/aktualne-wydanie-sieci.html" title="Zobacz spis tre?ci"><img class="release_1" src="/pMagazineReleaseGetCover,46?type=medium" alt="Numer 20"></a>
+                            <a href="/aktualne-wydanie-sieci-historii.html" title="Zobacz spis tre?ci"><img class="release_2" src="/pMagazineReleaseGetCover,14?type=medium" alt="Numer 1"></a>
+                        </div>
+                        <a class="newspbtn1 release_1" href="/e-wydanie.html" title="kup e-wydanie"></a>
+                        <a class="newspbtn1 release_2" href="/e-wydanie-sieci-historii.html" title="kup e-wydanie"></a>
+                        <a class="newspbtn2 btnRed h101" href="/prenumerata.html" title="prenumerata">Prenumerata</a>
+                        <div class="clear"></div>
+                    </div>
+
+                    <div class="rigContent">
+                        <div class="box">
+                            <div class="release_1">
+                                <p><span>"...coraz cz??ciej medialny dzie? rozpoczyna si? od doniesie? o&nbsp;kolejnej aferze."</span></p>
+                                <div class="boxlink"><a href="/numer-20-pmagazine-46.html" title="Zobacz spis tre?ci">Zobacz spis tre?ci</a></div>
+                            </div>
+                            <div class="release_2">
+                                
+                                <div class="boxlink"><a href="/numer-1-pmagazine-14.html" title="Zobacz spis tre?ci">Zobacz spis tre?ci</a></div>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <p class="podpat">Pod patronatem</p>
+                            <h2><a href="/maj-na-foksal-pnews-98.html" title="„Maj na Foksal”">„Maj na Foksal”</a></h2>
+                            <p></p><p>To wielki maraton kulturalny organizowany przez&nbsp; Stowarzyszenie Dziennikarzy Polskich. Imprezy otwarte odbywa? si? b?d? w&nbsp;Domu Dziennikarza w&nbsp;Warszawie przy ul. Foksal 3/5 w&nbsp;dniach 6-29 maja.</p><p></p>
+                            <div class="boxlink"><a href="/patronat.html" title="Inne wydarzenia">Inne wydarzenia</a></div>
+                        </div>
+
+
+                        <iframe title="Twitter Timeline Widget" style="border: medium none; max-width: 100%; min-width: 180px;" allowtransparency="true" class="twitter-timeline twitter-timeline-rendered" id="twitter-widget-0" frameborder="0" height="280" scrolling="no" width="220"></iframe>
+                        <script>!function(d,s,id){ var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){ js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                        
+                        
+                        
+                        <div class="box boxFacebook">
+                        <div id="facebook">
+                            <div class=" fb_reset" id="fb-root"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe src="http://static.ak.facebook.com/connect/xd_arbiter.php?version=24#channel=f3555420a6dbf5c&amp;origin=http%3A%2F%2Fwww.tygodnikmlodejpolski.pl&amp;channel_path=%2F%3Ffb_xd_fragment%23xd_sig%3Df143c9819b971fe%26" style="border: medium none;" tab-index="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_http" allowtransparency="true" name="fb_xdm_frame_http" frameborder="0" scrolling="no"></iframe><iframe src="https://s-static.ak.facebook.com/connect/xd_arbiter.php?version=24#channel=f3555420a6dbf5c&amp;origin=http%3A%2F%2Fwww.tygodnikmlodejpolski.pl&amp;channel_path=%2F%3Ffb_xd_fragment%23xd_sig%3Df143c9819b971fe%26" style="border: medium none;" tab-index="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_https" allowtransparency="true" name="fb_xdm_frame_https" frameborder="0" scrolling="no"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
+                            <script>(function(d, s, id) {
+                              var js, fjs = d.getElementsByTagName(s)[0];
+                              if (d.getElementById(id)) return;
+                              js = d.createElement(s); js.id = id;
+                              js.src = "//connect.facebook.net/pl_PL/all.js#xfbml=1";
+                              fjs.parentNode.insertBefore(js, fjs);
+                            }(document, 'script', 'facebook-jssdk'));</script>
+                        
+                            <div fb-xfbml-state="parsed" class="fb-like-box fb_iframe_widget fb_hide_iframes" data-href="http://www.facebook.com/gazetawsieci" data-width="188" data-height="285" data-show-faces="true" data-stream="false" data-show-border="false" data-header="true"><span style="height: 285px; width: 188px;"><iframe src="http://www.facebook.com/plugins/likebox.php?api_key=&amp;locale=pl_PL&amp;sdk=joey&amp;channel=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D24%23cb%3Dfcb3ce5841c0c6%26origin%3Dhttp%253A%252F%252Fwww.tygodnikmlodejpolski.pl%252Ff3555420a6dbf5c%26domain%3Dwww.tygodnikmlodejpolski.pl%26relation%3Dparent.parent&amp;height=285&amp;header=true&amp;show_faces=true&amp;stream=false&amp;width=188&amp;href=http%3A%2F%2Fwww.facebook.com%2Fgazetawsieci&amp;colorscheme=light&amp;show_border=false" class="fb_ltr" title="Facebook Social Plugin" style="border: medium none; overflow: hidden; height: 285px; width: 188px;" name="f139079bd967264" id="f267051185de448" scrolling="no"></iframe></span></div>
+                            
+                        </div>
+                            </div>
+
+                        <div class="box">
+                            <h2>Galeria</h2>
+                            <a class="imglink" href="/galeria-pgalery-1p15.html" title="Galeria"><img src="/prod/galimage/minRight/_39.jpg" alt="Galeria"></a>
+                            <div class="boxlink"><a target="_blank" title="Pinterest galeria Micha?a Korsuna" href="http://pinterest.com/sieci/galeria-micha%C5%82a-korsuna/"><img src="images/grafico.png"></a><a href="/galeria-pgalery-1.html" title="Galeria">Zobacz wi?cej grafik</a></div>
+
+                        </div>
+                        <div class="box">
+                            <h2>Filmy</h2>
+                            <a class="imglink" target="_blank" href="https://www.youtube.com/user/tygodnikmlodejpolski/videos?flow=grid&amp;view=0" title="Filmy"><img src="images/ytimg.jpg" alt="Filmy"></a>
+                            <div class="boxlink"><a href="https://www.youtube.com/user/tygodnikmlodejpolski/videos?flow=grid&amp;view=0" title="Nasze materia?y na Youtube" target="_blank"><img class="ytico" src="images/ytico.png"></a><a href="https://www.youtube.com/user/tygodnikmlodejpolski/videos?flow=grid&amp;view=0" title="Nasze materia?y na Youtube" target="_blank">Nasze materia?y</a></div>
+                        </div>
+                        
+                        <div class="box wspolpr">
+                            <p class="podpat">Wspó?pracujemy z</p>
+                            <ul style="" class="adresy-url">
+                                <li><a class="v4" target="_blank" href="http://www.wpolityce.pl">www.wpolityce.pl</a></li>
+                                <li><a class="v4" target="_blank" href="http://www.wnas.pl">www.wnas.pl</a></li>
+                                <li><a class="v4" target="_blank" href="http://www.wgospodarce.pl">www.wgospodarce.pl</a></li>
+                                <li><a class="v4" target="_blank" href="http://www.stefczyk.info">www.stefczyk.info</a></li>
+                                <li><a class="v4" target="_blank" href="http://www.stefczyk.tv">www.stefczyk.tv</a></li>
+                                <li><a class="v4" target="_blank" href="http://www.gb.pl">www.gb.pl</a></li>
+                                <li><a class="v4" target="_blank" href="http://www.tygodnikpodlaski.pl">www.tygodnikpodlaski.pl</a></li>
+                                <li><a class="v4" target="_blank" href="http://podlasiemabiznes.pl/">www.kochampodlasie.pl</a></li>
+                            </ul>
+                        </div>
+                        <div class="box white">
+                        <a href="/w-jak-wolnosc.html" title="W jak Wolno??" id="wjw">W jak Wolno??</a>
+                        </div> 
+                    </div>
+
+
+                </div>
+            
+            
+            
+
+
+
+            <div id="content">
+                                        
+                                <div class="featured" rel="118">
+
+        
+            <a class="img" title="Bielecki: Ta w?adza nie ma ?adnej wizji" href="/bielecki-ta-wladza-nie-ma-zadnej-wizji-pnews-118.html">
+                <img src="/prod/news/main/bielecki_ta_wladza_nie_ma_zadnej_wizji_118.jpg" alt="Bielecki: Ta w?adza nie ma ?adnej wizji">
+                <span class="ttitle">Gor?cy temat</span>
+            </a>
+                <div class="right">
+            <h1><a title="Bielecki: Ta w?adza nie ma ?adnej wizji" href="/bielecki-ta-wladza-nie-ma-zadnej-wizji-pnews-118.html">
+            Bielecki: Ta w?adza nie ma ?adnej wizji        </a></h1>
+            <div class="short">  &nbsp;- Nie mo?na rz?dzi? krajem, je?li wyje?d?a si? na weekend w&nbsp;czwartek wieczorem lub w&nbsp;pi?tek rano, a&nbsp;wraca w&nbsp;poniedzia?ek po po?udniu. Polska to kraj, którym rz?dzenie wymaga sta?ej...</div>
+</div>
+<div class="clear loHeight">&nbsp;</div>
+
+
+</div>
+<div id="home">
+                        <div style="padding-bottom: 87px;" class="artBox" rel="113">
+
+                                                                    <h2><a title="Teraz id? dalej" href="/teraz-ide-dalej-pnews-113.html">
+                Teraz id? dalej            </a></h2>
+
+                            <div class="short">  W&nbsp;najnowszym wydaniu "Sieci" dost?pnym w&nbsp;kioskach od 20 maja znajd? Pa?stwo rozmow? Kamili ?apickiej z&nbsp;Joann? Moro, filmow? Ann? German.  </div>
+            
+
+</div>
+
+                    <div style="padding-bottom: 15px;" class="artBox type2 last" rel="115">
+
+                                                                                        <a class="img" title="Portale komplementuj? &quot;Sieci Historii&quot;" href="/portale-komplementuja-sieci-historii-pnews-115.html">
+                                <img src="/prod/news/double/portale_komplementuja_sieci_historii_115.jpg" alt="Portale komplementuj? &quot;Sieci Historii&quot;">
+                            </a>
+                                                <h2><a title="Portale komplementuj? &quot;Sieci Historii&quot;" href="/portale-komplementuja-sieci-historii-pnews-115.html">
+                        Portale komplementuj? "Sieci Historii"                    </a></h2>
+
+                                            
+
+</div>
+
+        
+<div class="clear loHeight"></div>                    <div style="padding-bottom: 36px;" class="artBox" rel="120">
+
+                                                                        <a class="img" title="Upadek marsza?ka" href="/upadek-marszalka-pnews-120.html">
+                        <img src="/prod/news/min/upadek_marszalka_120.jpg" alt="Upadek marsza?ka">
+                    </a>
+                                <h2><a title="Upadek marsza?ka" href="/upadek-marszalka-pnews-120.html">
+                Upadek marsza?ka            </a></h2>
+
+                    
+
+</div>
+
+                    <div style="padding-bottom: 15px;" class="artBox" rel="116">
+
+                                                                        <a class="img" title="Zapis czatu z prof. Janem ?arynem!" href="/zapis-czatu-z-prof-janem-zarynem-pnews-116.html">
+                        <img src="/prod/news/min/zapis_czatu_z_prof_janem_zarynem_116.jpg" alt="Zapis czatu z prof. Janem ?arynem!">
+                    </a>
+                                <h2><a title="Zapis czatu z prof. Janem ?arynem!" href="/zapis-czatu-z-prof-janem-zarynem-pnews-116.html">
+                Zapis czatu z&nbsp;prof. Janem ?arynem!            </a></h2>
+
+                    
+
+</div>
+
+                    <div style="padding-bottom: 36px;" class="artBox last" rel="112">
+
+                                                                        <a class="img" title="Niemy krzyk" href="/niemy-krzyk-pnews-112.html">
+                        <img src="/prod/news/min/niemy_krzyk_112.jpg" alt="Niemy krzyk">
+                    </a>
+                                <h2><a title="Niemy krzyk" href="/niemy-krzyk-pnews-112.html">
+                Niemy krzyk            </a></h2>
+
+                    
+
+</div>
+
+<div class="clear loHeight"></div>                    <div style="padding-bottom: 90px;" class="artBox" rel="109">
+
+                                                                    <h2><a title="Wierz? tylko w fakty" href="/wierze-tylko-w-fakty-pnews-109.html">
+                Wierz? tylko w&nbsp;fakty            </a></h2>
+
+                            <div class="short">  W&nbsp;najnowszym wydaniu "Sieci" dost?pnym w&nbsp;kioskach od 13 maja przedstawiamy Pa?stwu rozmow? braci Jacka i&nbsp;Micha?a Karnowskich z&nbsp;Zuzann? Kurtyk?, lekarzem, wdow? po ?p. Januszu Kurtyce, prezesie...</div>
+            
+
+</div>
+
+                    <div style="padding-bottom: 15px;" class="artBox" rel="111">
+
+                                                                        <a class="img" title="Bohater, który czeka na godne miejsce" href="/bohater-ktory-czeka-na-godne-miejsce-pnews-111.html">
+                        <img src="/prod/news/min/bohater_ktory_czeka_na_godne_miejsce_111.jpg" alt="Bohater, który czeka na godne miejsce">
+                    </a>
+                                <h2><a title="Bohater, który czeka na godne miejsce" href="/bohater-ktory-czeka-na-godne-miejsce-pnews-111.html">
+                Bohater, który czeka na godne miejsce            </a></h2>
+
+                    
+
+</div>
+
+                    <div style="padding-bottom: 69px;" class="artBox last" rel="103">
+
+                                                                    <h2><a title="Presja ma sens! Marsz w obronie TV Trwam" href="/presja-ma-sens-marsz-w-obronie-tv-trwam-pnews-103.html">
+                Presja ma sens! Marsz w&nbsp;obronie TV Trwam            </a></h2>
+
+                            <div class="short"> 19 maja w&nbsp;Warszawie odb?dzie si? manifestacja w&nbsp;obronie TV Trwam i&nbsp;wolno?ci s?owa w&nbsp;Polsce. Jej organizatorem jest parlamentarny Zespó? ds. Przeciwdzia?ania Ateizacji Polski. </div>
+            
+
+</div>
+
+<div class="clear loHeight"></div>                    <div style="padding-bottom: 15px;" class="artBox" rel="110">
+
+                                                                        <a class="img" title="Zapis czatu z Dorot? ?osiewicz " href="/zapis-czatu-z-dorota-losiewicz-pnews-110.html">
+                        <img src="/prod/news/min/zapis_czatu_z_dorota_losiewicz_110_2.jpg" alt="Zapis czatu z Dorot? ?osiewicz ">
+                    </a>
+                                <h2><a title="Zapis czatu z Dorot? ?osiewicz " href="/zapis-czatu-z-dorota-losiewicz-pnews-110.html">
+                Zapis czatu z&nbsp;Dorot? ?osiewicz             </a></h2>
+
+                    
+
+</div>
+
+                    <div style="padding-bottom: 108px;" class="artBox" rel="104">
+
+                                                                    <h2><a title="W poszukiwaniu sukcesów" href="/w-poszukiwaniu-sukcesow-pnews-104.html">
+                W poszukiwaniu sukcesów            </a></h2>
+
+                            <div class="short"> &nbsp; "Skoro niemiecki klub w&nbsp;oparciu o&nbsp;trzech Polaków potrafi? stworzy? dru?yn?,&nbsp;  która zagra w&nbsp;finale Ligi Mistrzów, to dlaczego w&nbsp;Polsce nie jeste?my w&nbsp;stanie&nbsp;...</div>
+            
+
+</div>
+
+                    <div style="padding-bottom: 36px;" class="artBox last" rel="105">
+
+                                                                        <a class="img" title="Alfabet Jerzego Jachowicza" href="/alfabet-jerzego-jachowicza-pnews-105.html">
+                        <img src="/prod/news/min/alfabet_jerzego_jachowicza_105.jpg" alt="Alfabet Jerzego Jachowicza">
+                    </a>
+                                <h2><a title="Alfabet Jerzego Jachowicza" href="/alfabet-jerzego-jachowicza-pnews-105.html">
+                Alfabet Jerzego Jachowicza            </a></h2>
+
+                    
+
+</div>
+
+<div class="clear loHeight"></div>                    <div style="padding-bottom: 15px;" class="artBox" rel="106">
+
+                                                                        <a class="img" title="Kabaret Ró?owy Balonik" href="/kabaret-rozowy-balonik-pnews-106.html">
+                        <img src="/prod/news/min/kabaret_rozowy_balonik_106_2.jpg" alt="Kabaret Ró?owy Balonik">
+                    </a>
+                                <h2><a title="Kabaret Ró?owy Balonik" href="/kabaret-rozowy-balonik-pnews-106.html">
+                Kabaret Ró?owy Balonik            </a></h2>
+
+                    
+
+</div>
+
+                    <div style="padding-bottom: 66px;" class="artBox" rel="107">
+
+                                                                    <h2><a title="Pokolenie XL- Wychowani za s?odko" href="/pokolenie-xl-wychowani-za-slodko-pnews-107.html">
+                Pokolenie XL- Wychowani za s?odko            </a></h2>
+
+                            <div class="short">  Dorota ?osiewicz w&nbsp;najnowszym numerze tygodnika „Sieci” pisze o&nbsp;z?ych nawykach ?ywieniowych kszta?towanych ju? u&nbsp;najm?odszych dzieci.  </div>
+            
+
+</div>
+
+                    <div style="padding-bottom: 15px;" class="artBox last" rel="108">
+
+                                                                        <a class="img" title="Tykaj?ca bomba pod Tuskiem" href="/tykajaca-bomba-pod-tuskiem-pnews-108.html">
+                        <img src="/prod/news/min/tykajaca_bomba_pod_tuskiem_108.jpg" alt="Tykaj?ca bomba pod Tuskiem">
+                    </a>
+                                <h2><a title="Tykaj?ca bomba pod Tuskiem" href="/tykajaca-bomba-pod-tuskiem-pnews-108.html">
+                Tykaj?ca bomba pod Tuskiem            </a></h2>
+
+                    
+
+</div>
+
+<div class="clear loHeight"></div>                    <div style="padding-bottom: 48px;" class="artBox" rel="87">
+
+                                                                    <h2><a title="Beata Sawicka oczami Agenta Tomka" href="/beata-sawicka-oczami-agenta-tomka-pnews-87.html">
+                Beata Sawicka oczami Agenta Tomka            </a></h2>
+
+                            <div class="short"> - W&nbsp;Polsce rz?dzonej przez Donalda Tuska s?dzia da? jasny sygna? tym wszystkim, którzy bior? lub daj? ?apówki: jeste?cie bezkarni - w&nbsp;rozmowie z&nbsp;Markiem Pyz? mówi Tomasz...</div>
+            
+
+</div>
+
+                    <div style="padding-bottom: 15px;" class="artBox" rel="88">
+
+                                                                        <a class="img" title="Nasz cz?owiek w Dortmundzie" href="/nasz-czlowiek-w-dortmundzie-pnews-88.html">
+                        <img src="/prod/news/min/nasz_czlowiek_w_dortmundzie_88.jpg" alt="Nasz cz?owiek w Dortmundzie">
+                    </a>
+                                <h2><a title="Nasz cz?owiek w Dortmundzie" href="/nasz-czlowiek-w-dortmundzie-pnews-88.html">
+                Nasz cz?owiek w&nbsp;Dortmundzie            </a></h2>
+
+                    
+
+</div>
+
+                    <div style="padding-bottom: 69px;" class="artBox last" rel="89">
+
+                                                                    <h2><a title="Pochwa?a prostoty" href="/pochwala-prostoty-pnews-89.html">
+                Pochwa?a prostoty            </a></h2>
+
+                            <div class="short"> W&nbsp;najnowszym numerze tygodnika „Sieci” Anna Sarzy?ska opisuje tradycyjny polski ogród. Doradza, jak zagospodarowa? przydomow? przestrze?, by sta?a si? kolorow? wizytówk?...</div>
+            
+
+</div>
+
+<div class="clear loHeight"></div>                    <div style="padding-bottom: 15px;" class="artBox" rel="90">
+
+                                                                        <a class="img" title="Czas na zmiany" href="/czas-na-zmiany-pnews-90.html">
+                        <img src="/prod/news/min/czas_na_zmiany_90.jpg" alt="Czas na zmiany">
+                    </a>
+                                <h2><a title="Czas na zmiany" href="/czas-na-zmiany-pnews-90.html">
+                Czas na zmiany            </a></h2>
+
+                    
+
+</div>
+
+                    <div style="padding-bottom: 69px;" class="artBox" rel="82">
+
+                                                                    <h2><a title="Siewiernyj w Bia?ej Podlaskiej" href="/siewiernyj-w-bialej-podlaskiej-pnews-82.html">
+                Siewiernyj w&nbsp;Bia?ej Podlaskiej            </a></h2>
+
+                            <div class="short"> O&nbsp;powstaj?cym filmie pod (roboczym) tytu?em „Smole?sk” pisze Andrzej Rafa? Potocki na ?amach najnowszego numeru „Sieci”. W&nbsp;artykule du?o miejsca po?wi?ci? ludziom,...</div>
+            
+
+</div>
+
+                    <div style="padding-bottom: 27px;" class="artBox last" rel="83">
+
+                                                                    <h2><a title="Ludzie z wazeliny wed?ug Krzysztofa Feusette – cz??? druga" href="/ludzie-z-wazeliny-wedlug-krzysztofa-feusette-czesc-druga-pnews-83.html">
+                Ludzie z&nbsp;wazeliny wed?ug Krzysztofa Feusette – cz??? druga            </a></h2>
+
+                            <div class="short"> - Przed tygodniem opublikowa?em pierwsz? cz??? swojego – co warto podkre?li?: subiektywnego – rankingu dziennikarzy i&nbsp;telewizyjnych ekspertów najbardziej oddanych w?adzy...</div>
+            
+
+</div>
+
+<div class="clear loHeight"></div>
+
+
+
+    <div id="moreContent"></div>
+</div>
+
+
+
+
+
+
+                
+     <div class="clear">&nbsp;</div>    
+<div class="pageList">
+
+     
+           
+		
+		<a class="pageNumber selected" href="/">1</a> 
+		<a class="pageNumber" href="/sieci-page-1.html">2</a> 
+		<a class="pageNumber" href="/sieci-page-2.html">3</a> 
+		<a class="pageNumber pageLast" href="/sieci-page-3.html">4</a> 
+		
+		<a class="next" href="/sieci-page-1.html">nast?pna</a>
+	 
+	
+	
+	
+    
+
+    <div class="clear loHeight">&nbsp;</div>
+</div>
+    
+    
+
+
+
+
+        </div>
+
+        <div class="clear">&nbsp;</div>
+    </div>  
+
+
+    <div id="footer"> 
+        <div id="bottomMenu">
+            <ul>
+                                    <li><a href="/o-tygodniku.html" title="Tygodnik Sieci">Tygodnik Sieci</a></li>
+                                    <li><a href="/sieci-historii.html" title="Sieci Historii">Sieci Historii</a></li>
+                                    <li><a href="/archiwum.html" title="Archiwum">Archiwum</a></li>
+                                    <li><a href="/prenumerata.html" title="Prenumerata">Prenumerata</a></li>
+                                    <li><a href="/reklama.html" title="Reklama">Reklama</a></li>
+                                    <li><a href="/dla-mediow.html" title="Dla mediów">Dla mediów</a></li>
+                                    <li class="last"><a href="/kontakt.html" title="Kontakt">Kontakt</a></li>
+                            </ul>
+            <a id="logos" href="/" title="#Sieci"><img src="/images/logoS.gif" alt="#Sieci"></a>
+        </div>
+        <div id="bottomLinks">
+            <ul>
+                <li><a title="Regulamin" href="/regulamin.html">Regulamin</a></li> 
+                <li><a title="Polityka prywatno?ci" href="/polityka-prywatnosci.html">Polityka prywatno?ci</a></li>
+                <li><a target="_blank" title="eGazety.pl" href="http://www.egazety.pl/fratria/e-wydanie-w-sieci.html">eGazety.pl</a></li>
+                <li><a target="_blank" title="e-kiosk.pl" href="http://www.e-kiosk.pl/index.php?page=titleissues&amp;id_title=6965">e-kiosk.pl</a></li>
+                <li class="last"><a target="_blank" title="nexto.pl" href="http://www.nexto.pl/e-prasa/sieci_p35638.xml?archival">nexto.pl</a></li>
+            </ul>
+        </div>
+    </div>
+
+        <div id="showMoreLoginBox">
+            <a id="showMoreButton" href="#" title="Dowiedz si? wi?cej"></a>
+            <div>
+                                <h2>Zaloguj si?, by uzyska? dost?p do unikatowych tre?ci oraz cotygodniowego newslettera z informacjami na temat najnowszego wydania</h2>
+                
+                
+                <a class="textLink" href="/rejestracja-logowanie.html" rel="nofollow" title="Zarejestruj si?">Zarejestruj si?</a> | 
+                <a class="textLink" href="/zapomniane-haslo.html" rel="nofollow" title="Zapomnia?em has?a">Zapomnia?em has?a</a>
+                <a id="showMoreLoginButton" title="Zaloguj si?" rel="nofollow" href="/rejestracja-logowanie.html" class="loginBtn right"></a>
+                                <div class="clear"></div>
+            </div>
+        </div>
+                
+
+
+<div style="display: block;" id="cookiePolicyWrapper"><div id="cookiePolicyBody"><div id="cookiePolicyCloseDiv"><a title="zamknij" href="#" id="cookiePolicyCloseButton">x</a></div><p class="cookieAlert">Ta strona u?ywa cookie</p><p class="cookieText"> Zapoznaj si? ze <a href="/polityka-prywatnosci.html">sposobem i celami ich u?ywania</a> oraz mo?liwo?ciami <a href="/polityka-prywatnosci.html#cookieChange">zmiany ustawie?</a> cookie w Twojej przegl?darce.<br>Korzystanie z niniejszej strony oznacza wyra?enie zgody na u?ywanie cookies zgodnie z bie??cymi ustawieniami przegl?darki.</p></div></div><iframe style="display: none;" allowtransparency="true" id="rufous-sandbox" frameborder="0" scrolling="no"></iframe></body>

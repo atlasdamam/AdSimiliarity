@@ -1,0 +1,253 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="shortcut icon" href="/j1001NRIZip/kotaknri/sites/default/files/garland_favicon.ico" type="image/x-icon">
+
+    <title>Kotak Mahindra Bank | Kotak NRI</title>
+            <link type="text/css" rel="stylesheet" media="all" href="/j1001NRIZip/kotaknri/sites/default/modules/nrilead.10.10.2011/css/basic.css?U">
+<link type="text/css" rel="stylesheet" media="all" href="/j1001NRIZip/kotaknri/sites/default/modules/nrilead.10.10.2011/css/basic_ie.css?U">
+<link type="text/css" rel="stylesheet" media="all" href="/j1001NRIZip/kotaknri/sites/default/modules/nrilead.10.10.2011/css/facebox.css?U">
+<link type="text/css" rel="stylesheet" media="all" href="/j1001NRIZip/kotaknri/modules/node/node.css?U">
+<link type="text/css" rel="stylesheet" media="all" href="/j1001NRIZip/kotaknri/modules/system/system.css?U">
+<link type="text/css" rel="stylesheet" media="all" href="/j1001NRIZip/kotaknri/modules/system/system-menus.css?U">
+<link type="text/css" rel="stylesheet" media="all" href="/j1001NRIZip/kotaknri/sites/all/modules/cck/theme/content-module.css?U">
+<link type="text/css" rel="stylesheet" media="all" href="/j1001NRIZip/kotaknri/sites/all/modules/filefield/filefield.css?U">
+<link type="text/css" rel="stylesheet" media="all" href="/j1001NRIZip/kotaknri/sites/all/modules/panels/css/panels.css?U">
+<link type="text/css" rel="stylesheet" media="all" href="/j1001NRIZip/kotaknri/sites/all/modules/cck/modules/fieldgroup/fieldgroup.css?U">
+<link type="text/css" rel="stylesheet" media="all" href="/j1001NRIZip/kotaknri/sites/all/modules/views/css/views.css?U">
+<link type="text/css" rel="stylesheet" media="all" href="/j1001NRIZip/kotaknri/sites/default/modules/nrilead.10.10.2011/css/lead-form2.css?U">    <script src="https://ssl.google-analytics.com/ga.js" async="" type="text/javascript"></script><script type="text/javascript" src="/j1001NRIZip/kotaknri/sites/default/files/js/js_0aa65ab3f50ecef50ea7615e2705d33d.js"></script>
+<script type="text/javascript" src="/j1001NRIZip/kotaknri/sites/default/files/jstimer/timer.js?U"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/kotaknri/", "googleanalytics": { "trackOutgoing": 1, "trackMailto": 1, "trackDownload": 1, "trackDownloadExtensions": "7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip" } });
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+$(document).ready(function() {
+    $("#edit-branch-city").change(function() {
+      if($("#edit-branch-city option:selected").val() != 0) {
+        $.ajax({
+          url: "https://www.kotak.com/kotaknri/?q=nrilead/get_branch",
+          data: {city:$("#edit-branch-city option:selected").text()},
+          success: function(data) {
+            var option = "";
+            if(data.length) {
+              var p = json_parse(data);
+              jQuery.each(p, function(index, text) {
+                option += '<option value="'+index+'">'+text+'</option>';
+              });
+            }
+            $("select#edit-branch-name").html(option);
+          },
+          error: function() {
+            alert("Failed to load branches.");
+          }
+        });
+      }
+    });
+
+    $("#nrilead-form2").submit(function() {
+      /*$.blockUI();*/
+    });
+  });
+//--><!]]>
+</script>
+    <meta name="description" content="Kotak Mahindra NRI Banking offers wide range of NRI Accounts - NRE Rupee Saving, NRO Rupee Saving, you can credit your account from anywhere in the world.">
+    <meta name="keywords" content="NRI Banking, NRI Account, NRE Account, NRO Account, Kotak NRI Account">
+    <!--[if lt IE 7]>
+      <link type="text/css" rel="stylesheet" media="all" href="/kotaknri/themes/garland/fix-ie.css" />    <![endif]-->
+  </head>
+  <body>
+    <form action="/j1001NRIZip/kotaknri/?q=lead-form/2&amp;ptr=OZ875F&amp;pdt=100&amp;Banner=OzoneSavings&amp;Pub=1185000000" accept-charset="UTF-8" method="post" id="nrilead-form2">
+<div><noscript><div id="no_js_box"><p>Javascript is disabled on your browser. Please enable JavaScript on your browser or upgrade to a Javascript-capable browser.</p></div></noscript><div id="wrapper">
+  <div class="logo">
+    <table width="415" align="left" border="0" cellpadding="0" cellspacing="0">
+      <tbody><tr>
+       <td width="309"><img src="https://www.kotak.com/kotaknri/sites/default/modules/nrilead.10.10.2011/images/lead-form2/logo-kotak.jpg" alt="" height="56" width="309"></td>
+       <td width="116"><img src="https://www.kotak.com/kotaknri/sites/default/modules/nrilead.10.10.2011/images/lead-form2/logo.jpg" alt="" height="56" width="99"></td>
+      </tr>
+      <tr>
+       <td><img src="https://www.kotak.com/kotaknri/sites/default/modules/nrilead.10.10.2011/images/lead-form2/logo-txt.gif" alt="Let's make money simple" height="27" width="302"></td>
+       <td>&nbsp;</td>
+      </tr>
+    </tbody></table>
+  </div>
+<table><tbody><tr><td valign="bottom">
+  <div class="contentLeftpanel">
+    <div class="features">
+    <div><img src="https://www.kotak.com/kotaknri/sites/default/modules/nrilead.10.10.2011/images/lead-form2/head-features.gif" alt="Features of Kotak NRI Banking " height="28" width="248"></div>
+    <div>
+      <table width="500" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr>
+          <td width="69" bgcolor="#ededed">
+            <img src="https://www.kotak.com/kotaknri/sites/default/modules/nrilead.10.10.2011/images/lead-form2/featuers-icon1.gif" alt="" height="65" width="69"></td>
+          <td width="177" align="left" bgcolor="#ededed">Online Remittances through Click2Remit</td>
+          <td width="69" bgcolor="#ffffff">
+            <img src="https://www.kotak.com/kotaknri/sites/default/modules/nrilead.10.10.2011/images/lead-form2/featuers-icon2.gif" alt="" height="65" width="69"></td>
+          <td width="185" align="left" bgcolor="#ffffff">Build your dream home in India with our Home Loans</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FEFEFE">
+            <img src="https://www.kotak.com/kotaknri/sites/default/modules/nrilead.10.10.2011/images/lead-form2/featuers-icon4.gif" alt="" height="65" width="69"></td>
+          <td align="left" bgcolor="#FEFEFE">Personal Attention . Dedicated Relationship Manager, Live Chat.</td>
+          <td bgcolor="#ededed">
+            <img src="https://www.kotak.com/kotaknri/sites/default/modules/nrilead.10.10.2011/images/lead-form2/featuers-icon3.gif" alt="" height="65" width="69"></td>
+          <td align="left" bgcolor="#ededed">Opening Bank Account Online by generating Customer Response Number.</td>
+        </tr>
+        <tr>
+          <td bgcolor="#ededed">
+            <img src="https://www.kotak.com/kotaknri/sites/default/modules/nrilead.10.10.2011/images/lead-form2/featuers-icon5.gif" alt="" height="65" width="69"></td>
+          <td align="left" bgcolor="#ededed">Attractive Forex Rates</td>
+          <td bgcolor="#FBFBFB">
+            <img src="https://www.kotak.com/kotaknri/sites/default/modules/nrilead.10.10.2011/images/lead-form2/featuers-icon6.gif" alt="" height="65" width="69"></td>
+          <td align="left" bgcolor="#FBFBFB">Through our Accounts &amp; Deposits make your small savings, big</td>
+        </tr>
+      </tbody></table>
+    </div>
+  </div>
+</div>
+</td><td>
+<div class="contentRightpanel"><div class="offers"><img src="https://www.kotak.com/kotaknri/sites/default/modules/nrilead.10.10.2011/images/lead-form2/top-img.gif" alt="" height="133" width="135"></div><div class="topTextblurb">We bring our privileged NRI customers a host of exclusive services. These have been specially designed keeping in mind convenience with an essence of simplicity.</div>
+<div>
+  <div style="height:75px;"><img src="https://www.kotak.com/kotaknri/sites/default/modules/nrilead.10.10.2011/images/lead-form2/get-connected.gif" alt="Get Connected" height="77" width="439"></div><div class="formPanel">
+    <table class="formTable" width="405" border="0" cellpadding="0" cellspacing="0">
+      <tbody><tr>
+        <td colspan="2"><b>Please fill in your details. We will get in touch with you shortly.</b></td>
+        </tr>
+      <tr>
+        <td width="288">
+ <input placeholder="First Name*" maxlength="64" name="first_name" id="edit-first-name" size="60" value="" title="Please enter your first name." autocomplete="off" class="form-text texBox" type="text">
+
+</td>
+        <td width="117" align="left"><img src="https://www.kotak.com/kotaknri/sites/default/modules/nrilead.10.10.2011/images/lead-form2/icon-firstname.gif" alt="First name" title="First name" height="25" width="27"></td>
+      </tr>
+      <tr>
+        <td>
+ <input placeholder="Last Name*" maxlength="64" name="last_name" id="edit-last-name" size="60" value="" title="Please enter your last name." autocomplete="off" class="form-text texBox" type="text">
+
+</td>
+        <td align="left"><img src="https://www.kotak.com/kotaknri/sites/default/modules/nrilead.10.10.2011/images/lead-form2/icon-lastname.gif" alt="Last name" title="Last name" height="25" width="27"></td>
+      </tr>
+      <tr>
+        <td>
+ <input placeholder="Email*" maxlength="50" name="email" id="edit-email" size="60" value="" title="Please enter your email address." autocomplete="off" class="form-text texBox" type="text">
+
+</td>
+        <td align="left"><img src="https://www.kotak.com/kotaknri/sites/default/modules/nrilead.10.10.2011/images/lead-form2/icon-email.gif" alt="Email" title="Email" height="25" width="27"></td>
+      </tr>
+      <tr>
+        <td>
+ <select name="country_id" title="Please select your country from country list." class="form-select texBox" id="edit-country-id"><option value="0">--Country--</option><option value="289">Alaska</option><option value="290">Albania</option><option value="291">Algeria</option><option value="258">American Samoa</option><option value="292">Andorra</option><option value="293">Angola</option><option value="294">Anguilla</option><option value="295">Antigua and Barbuda</option><option value="296">Argentina</option><option value="297">Armenia</option><option value="298">Aruba</option><option value="299">Ascension</option><option value="300">Australia</option><option value="301">Austria</option><option value="302">Azerbaijan</option><option value="303">Azores</option><option value="304">Bahamas</option><option value="305">Bahrain</option><option value="307">Barbados</option><option value="308">Belarus</option><option value="309">Belgium</option><option value="310">Belize</option><option value="311">Benin</option><option value="312">Bermuda</option><option value="313">Bhutan</option><option value="314">Bolivia</option><option value="315">Bophuthatswana</option><option value="316">Bosnia and Herzegovina</option><option value="317">Botswana</option><option value="318">Brazil</option><option value="319">Brunei Darussalam</option><option value="320">Bulgaria</option><option value="321">Burkina Faso</option><option value="322">Burundi</option><option value="410">Cambodia</option><option value="323">Cameroon</option><option value="324">Canada</option><option value="325">Canary Island</option><option value="326">Cape Verde</option><option value="327">Cayman Islands</option><option value="328">Central African Republic</option><option value="329">Chad</option><option value="330">Chile</option><option value="331">China</option><option value="332">Christmas Island</option><option value="333">Ciskei</option><option value="334">Cocoskeeling Island</option><option value="335">Colombia</option><option value="336">Comoros</option><option value="337">Congo</option><option value="338">Cook Islands</option><option value="339">Costa Rica</option><option value="406">Cote DIvoire</option><option value="340">Croatia</option><option value="341">Cuba</option><option value="342">Cyprus</option><option value="343">Czech Republic</option><option value="344">Denmark</option><option value="345">Diego Garcia</option><option value="346">Djibouti</option><option value="348">Dominica</option><option value="347">Dominican Republic</option><option value="350">Ecuador</option><option value="351">Egypt</option><option value="352">El Salvador</option><option value="353">Equatorial Guinea</option><option value="354">Eritrea</option><option value="355">Estonia</option><option value="356">Ethiopia</option><option value="357">Falkland Islands (Malvinas)</option><option value="358">Faroe Islands</option><option value="359">Fiji</option><option value="360">Finland</option><option value="362">France</option><option value="363">French Guiana</option><option value="361">French Polynesia</option><option value="364">Gabon</option><option value="365">Gambia</option><option value="366">Georgia</option><option value="367">Germany</option><option value="368">Ghana</option><option value="369">Gibraltar</option><option value="370">Greece</option><option value="371">Greenland</option><option value="372">Grenada</option><option value="373">Guadeloupe</option><option value="374">Guam</option><option value="375">Guatemala</option><option value="377">Guinea</option><option value="376">Guinea-Bissau</option><option value="378">Guyana</option><option value="379">Haiti</option><option value="380">Hawaii</option><option value="471">Holy See (Vatican City State)</option><option value="381">Honduras</option><option value="382">Hong Kong</option><option value="383">Hungary</option><option value="384">Iceland</option><option value="485">India</option><option value="385">Indonesia</option><option value="386">Iran, Islamic Republic of</option><option value="387">Iraq</option><option value="388">Ireland</option><option value="389">Israel</option><option value="390">Italy</option><option value="407">Jamaica</option><option value="408">Japan</option><option value="409">Jordan</option><option value="391">Kazakhstan</option><option value="392">Kenya</option><option value="394">Kiribati</option><option value="446">Korea, Democratic Peoples Republic of</option><option value="272">Korea, Republic of</option><option value="395">Kuwait</option><option value="393">Kyrgyzstan</option><option value="396">Lao Peoples Democratic Republic</option><option value="397">Latvia</option><option value="398">Lebanon</option><option value="399">Lesotho</option><option value="400">Liberia</option><option value="401">Libyan Arab Jamahiriya</option><option value="402">Liechtenstein</option><option value="403">Lithuania</option><option value="404">Luxembourg</option><option value="405">Macau</option><option value="411">Macedonia</option><option value="412">Madagascar</option><option value="413">Madeira Island</option><option value="414">Malawi</option><option value="415">Malaysia</option><option value="416">Maldives</option><option value="417">Mali</option><option value="418">Malta</option><option value="421">Marshall Islands</option><option value="422">Martinique</option><option value="423">Mauritania</option><option value="424">Mauritius</option><option value="425">Mayotte</option><option value="426">Mexico</option><option value="427">Micronesia, Federated States of</option><option value="428">Moldova, Republic of</option><option value="429">Monaco</option><option value="419">Mongolia</option><option value="430">Montserrat</option><option value="431">Morocco</option><option value="432">Mozambique</option><option value="433">Myanmar</option><option value="434">Namibia</option><option value="435">Nauru</option><option value="437">Netherlands</option><option value="438">Netherlands Antilles</option><option value="439">New Caledonia</option><option value="440">New Zealand</option><option value="441">Nicaragua</option><option value="442">Niger</option><option value="443">Nigeria</option><option value="444">Niue</option><option value="445">Norfolk Island</option><option value="420">Northern Mariana Islands</option><option value="447">Norway</option><option value="448">Oman</option><option value="242">Palau</option><option value="243">Palestinian Territory, Occupied</option><option value="244">Panama</option><option value="245">Papua New Guinea</option><option value="246">Paraguay</option><option value="247">Peru</option><option value="248">Philippines</option><option value="249">Poland</option><option value="250">Portugal</option><option value="251">Puerto Rico</option><option value="252">Qatar</option><option value="253">Reunion</option><option value="254">Rodrigues Island</option><option value="255">Romania</option><option value="256">Russian Federation</option><option value="257">Rwanda</option><option value="275">Saint Helena</option><option value="276">Saint Kitts and Nevis</option><option value="277">Saint Lucia</option><option value="278">Saint Pierre and Miquelon</option><option value="280">Saint Vincent and the Grenadines</option><option value="259">Samoa</option><option value="260">San Marino</option><option value="279">Sao Tome and Principe</option><option value="261">Saudi Arabia</option><option value="262">Scotland</option><option value="263">Senegal</option><option value="264">Seychelles</option><option value="265">Sierra Leone</option><option value="266">Singapore</option><option value="267">Slovakia</option><option value="268">Slovenia</option><option value="269">Solomon Islands</option><option value="270">Somalia</option><option value="271">South Africa</option><option value="273">Spain</option><option value="274">Sri Lanka</option><option value="281">Sudan</option><option value="282">Suriname</option><option value="283">Swaziland</option><option value="284">Sweden</option><option value="285">Switzerland</option><option value="286">Syrian Arab Republic</option><option value="287">Taiwan</option><option value="451">Tajikistan</option><option value="450">Tanzania, United Republic of</option><option value="452">Thailand</option><option value="349">Timor-Leste</option><option value="453">Togo</option><option value="454">Tokelau</option><option value="455">Tonga</option><option value="456">Transkei</option><option value="457">Trinidad and Tobago</option><option value="458">Tunisia</option><option value="459">Turkey</option><option value="460">Turkmenistan</option><option value="461">Turks and Caicos Islands</option><option value="462">Tuvalu</option><option value="491">UAE - Abhu Dhabi</option><option value="494">UAE - Ajman</option><option value="490">UAE - Dubai</option><option value="495">UAE - Fuhairah</option><option value="492">UAE - Ras Al Khaimah</option><option value="493">UAE - Sharjah</option><option value="496">UAE - Um Al Quwain</option><option value="464">Uganda</option><option value="466">Ukraine</option><option value="463">United Arab Emirates</option><option value="465">United Kingdom</option><option value="468" selected="selected">United States</option><option value="467">Uruguay</option><option value="470">Vanuatu</option><option value="472">Venda</option><option value="473">Venezuela</option><option value="474">Vietnam</option><option value="475">Virgin Islands, British</option><option value="476">Virgin Islands, U.S.</option><option value="477">Wallis and Futuna</option><option value="478">Yemen</option><option value="479">Yugoslavia</option><option value="480">Zaire</option><option value="481">Zambia</option><option value="482">Zimbabwe</option></select>
+
+</td>
+        <td align="left"><img src="https://www.kotak.com/kotaknri/sites/default/modules/nrilead.10.10.2011/images/lead-form2/icon-country.gif" alt="Country" title="Country" height="25" width="27"></td>
+      </tr>
+      <tr>
+        <td>
+ <input placeholder="Area Code*" maxlength="6" name="area_code" id="edit-area-code" size="60" value="" title="Please enter your area code." autocomplete="off" class="form-text texBox" type="text">
+
+</td>
+        <td align="left"><img src="https://www.kotak.com/kotaknri/sites/default/modules/nrilead.10.10.2011/images/lead-form2/icon-areacode.gif" alt="Area Code" title="Area code" height="25" width="27"></td>
+      </tr>
+      <tr>
+        <td>
+ <input placeholder="Mobile Number*" maxlength="12" name="mobile_no" id="edit-mobile-no" size="60" value="" title="Please enter your mobile number." autocomplete="off" class="form-text texBox" type="text">
+
+</td>
+        <td align="left"><img src="https://www.kotak.com/kotaknri/sites/default/modules/nrilead.10.10.2011/images/lead-form2/icon-mobile.gif" alt="Mobile number" title="Mobile number" height="25" width="27"></td>
+      </tr>
+      <tr>
+        <td>
+ <input placeholder="Phone Number*" maxlength="12" name="phone_no" id="edit-phone-no" size="60" value="" title="Please enter your phone number." autocomplete="off" class="form-text texBox" type="text">
+
+</td>
+        <td align="left"><img src="https://www.kotak.com/kotaknri/sites/default/modules/nrilead.10.10.2011/images/lead-form2/icon-phone.gif" alt="Phone number" title="Phone number" height="25" width="27"></td>
+      </tr>
+      <tr class="will-travel">
+        <td colspan="2" align="left">
+ <input name="will_travel" id="edit-will-travel" value="1" class="form-checkbox" type="checkbox"> I am travelling within 15 days to India.
+
+</td>
+      </tr>
+      <tr class="travel-on">
+        <td colspan="2" align="left">
+ <select disabled="" name="travel_start_day" class="form-select select" id="edit-travel-start-day"><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option><option value="01">01</option><option value="02">02</option><option value="03">03</option><option value="04">04</option><option value="05">05</option><option value="06">06</option><option value="07">07</option><option value="08">08</option><option value="09">09</option><option value="10">10</option><option value="11">11</option></select>
+
+&nbsp;
+ <select disabled="" name="travel_start_month" class="form-select select" id="edit-travel-start-month"><option value="05">May</option><option value="06">June</option></select>
+
+&nbsp;
+ <select disabled="" name="travel_start_year" class="form-select select" id="edit-travel-start-year"><option value="2013">2013</option></select>
+
+</td>
+      </tr>
+      <tr>
+        <td colspan="2" align="left">
+ <select disabled="" name="branch_city" title="Please select the city from the city list." class="form-select select" id="edit-branch-city"><option value="0">--City--</option><option value="1">Agra</option><option value="3">Ahmedabad</option><option value="11">Ahmednagar</option><option value="12">Ajmer</option><option value="13">Allahabad</option><option value="14">Ambala</option><option value="15">Amloh</option><option value="16">Amreli</option><option value="17">Amritsar</option><option value="18">Amtala</option><option value="19">Anand</option><option value="20">Ankleshwar</option><option value="21">Apra</option><option value="22">Aurangabad</option><option value="24">Bangalore</option><option value="36">Banswara</option><option value="37">Baranada</option><option value="38">Barbil</option><option value="39">Bardoli</option><option value="40">Bareilly</option><option value="41">Belgaum</option><option value="42">Bhavnagar</option><option value="43">Bhilwara</option><option value="44">Bhiwadi</option><option value="45">Bhopal</option><option value="46">Bhubaneshwar</option><option value="47">Bhuj</option><option value="48">Bidadi</option><option value="49">Bilaspur</option><option value="50">Bodeli</option><option value="51">Buti Bori</option><option value="52">Chaibasa</option><option value="53">Chakan</option><option value="54">Chandigarh</option><option value="56">Changodar</option><option value="57">Cheeka</option><option value="58">Chennai</option><option value="65">Coimbatore</option><option value="67">Dahanu</option><option value="68">Dahod</option><option value="69">Deesa</option><option value="70">Dehradun</option><option value="71">Dhanbad</option><option value="72">Dombivali</option><option value="73">Duliajan</option><option value="74">Faridabad</option><option value="75">Fatehabad</option><option value="76">Gandhi Nagar</option><option value="77">Gandhidham</option><option value="78">Ghaziabad</option><option value="79">Gorakhpur</option><option value="80">Gurdaspur</option><option value="81">Gurgaon</option><option value="87">Guwahati</option><option value="92">HUNSIMARANAHALLI</option><option value="88">Hajira</option><option value="89">Halol</option><option value="90">Himmatnagar</option><option value="91">Hubli</option><option value="93">Hyderabad</option><option value="101">Indore</option><option value="102">Jaipur</option><option value="104">Jalandhar</option><option value="105">Jalgaon</option><option value="106">Jamnagar</option><option value="107">Jamshedpur</option><option value="108">Joda</option><option value="109">Jodhpur</option><option value="110">Jorhat</option><option value="111">Kadi</option><option value="112">Kalyan</option><option value="113">Kanpur</option><option value="115">Kapurthala</option><option value="116">Karnal</option><option value="117">Kelambakkam</option><option value="118">Khadki</option><option value="119">Kochi</option><option value="120">Kolhapur</option><option value="121">Kolkata</option><option value="127">Kondhave Khurd</option><option value="128">Kottayam</option><option value="129">Kozikode</option><option value="130">Lucknow</option><option value="132">Ludhiana</option><option value="133">Madhapur</option><option value="134">Madipakkam</option><option value="135">Madurai</option><option value="136">Mahendra Garh</option><option value="137">Manesar</option><option value="138">Mangalore</option><option value="139">Mani Majra</option><option value="140">Margao</option><option value="141">Mathura</option><option value="142">Meerut</option><option value="143">Mehesana</option><option value="144">Modasa</option><option value="145">Mohali</option><option value="146">Moradabad</option><option value="147">Morbi</option><option value="148">Mullanpur</option><option value="149">Mumbai</option><option value="188">Muthangi</option><option value="189">Mysore</option><option value="190">Nadiad</option><option value="191">Nagpur</option><option value="192">Nakodar</option><option value="193">Nallapadu</option><option value="194">Namakkal</option><option value="195">Nandelav</option><option value="196">Naranpura</option><option value="197">Narendrapur (near Kolkatta)</option><option value="198">Nasik</option><option value="199">Navi Mumbai</option><option value="203">Navsari</option><option value="204">Neemrana</option><option value="205">New Delhi</option><option value="248">Niwai</option><option value="249">Noida</option><option value="252">Orissa</option><option value="253">Palam</option><option value="254">Palanpur</option><option value="255">Palsana</option><option value="256">Panchkula</option><option value="257">Panipat</option><option value="258">Panjim</option><option value="259">Patiala</option><option value="260">Patna</option><option value="261">Phagwara</option><option value="262">Pimpri Chinchwad</option><option value="263">Piplod</option><option value="264">Puducherry</option><option value="265">Pune</option><option value="270">Raipur</option><option value="271">Rajkot</option><option value="272">Rajpura</option><option value="273">Rajsamand</option><option value="274">Ranchi</option><option value="275">Rishabhdeo</option><option value="276">Rohtak</option><option value="277">Rourkela</option><option value="278">Rudrapur</option><option value="279">Sachin</option><option value="280">Salem</option><option value="281">Sangrur</option><option value="282">Sankari</option><option value="283">Sarpavaram</option><option value="284">Shillong</option><option value="285">Sidhpur</option><option value="286">Silvassa</option><option value="287">Soyagaon</option><option value="288">Surat</option><option value="292">Surendranagar</option><option value="293">Tarapur</option><option value="294">Thane</option><option value="301">Thiruvananthapuram</option><option value="302">Tirupur</option><option value="303">Trichy</option><option value="304">Udaipur</option><option value="305">Unjha</option><option value="306">Vadodara</option><option value="308">Vallabh Vidyanagar</option><option value="309">Valsad</option><option value="310">Vapi</option><option value="311">Varanasi</option><option value="312">Vasai</option><option value="313">Vatva</option><option value="314">Vijayawada</option><option value="315">Viramgam</option><option value="316">Virar</option><option value="317">Vishakapatnam&nbsp;</option><option value="318">Visnagar</option><option value="319">Vyara</option><option value="320">Warangal</option><option value="321">Zirakpur</option></select>
+
+<br><br>
+ <select disabled="" name="branch_name" title="Please select the branch from the branch list." class="form-select select" id="edit-branch-name"><option value="0">--Branch--</option><option value="M. G. Road">M. G. Road</option><option value="SDM Road">SDM Road</option><option value="Chandan House">Chandan House</option><option value="Maninagar">Maninagar</option><option value="Satellite">Satellite</option><option value="Bodakdev">Bodakdev</option><option value="Shahibaug">Shahibaug</option><option value="Drive In Road">Drive In Road</option><option value="Chandkheda">Chandkheda</option><option value="Ashram Rd">Ashram Rd</option><option value="Savedi">Savedi</option><option value="Ajmer">Ajmer</option><option value="Allahabad">Allahabad</option><option value="Ambala Cantt - Nicholson Road">Ambala Cantt - Nicholson Road</option><option value="Amloh">Amloh</option><option value="Amreli">Amreli</option><option value="Amritsar">Amritsar</option><option value="Amtala">Amtala</option><option value="Anand">Anand</option><option value="Ankleshwar">Ankleshwar</option><option value="Banga Road">Banga Road</option><option value="Waluj">Waluj</option><option value="Aurangabad">Aurangabad</option><option value="J.P. Nagar">J.P. Nagar</option><option value="Kammanahalli">Kammanahalli</option><option value="Jakkasandra">Jakkasandra</option><option value="Majestic">Majestic</option><option value="Kormangala">Kormangala</option><option value="Lavelle Road">Lavelle Road</option><option value="ITPL">ITPL</option><option value="Indira Nagar">Indira Nagar</option><option value="Thippasandra - Aaradhana Arcade">Thippasandra - Aaradhana Arcade</option><option value="Banasankari">Banasankari</option><option value="EC">EC</option><option value="Jayanagar">Jayanagar</option><option value="Banswara">Banswara</option><option value="Baranada">Baranada</option><option value="Near Kali Mandir">Near Kali Mandir</option><option value="Bardoli">Bardoli</option><option value="Bareilly">Bareilly</option><option value="Belgaum">Belgaum</option><option value="Bhavnagar">Bhavnagar</option><option value="Bhilwara">Bhilwara</option><option value="Neelam Chowk">Neelam Chowk</option><option value="M.P.Nagar">M.P.Nagar</option><option value="Janpath">Janpath</option><option value="Bhuj">Bhuj</option><option value="Kumbaswar Complex">Kumbaswar Complex</option><option value="Bilaspur">Bilaspur</option><option value="Bodeli">Bodeli</option><option value="Buti Bori">Buti Bori</option><option value="Chaibasa">Chaibasa</option><option value="Chakan">Chakan</option><option value="Sec 35">Sec 35</option><option value="Sec9">Sec9</option><option value="Changodar">Changodar</option><option value="Cheeka">Cheeka</option><option value="Porur">Porur</option><option value="Chennai">Chennai</option><option value="Anna Salai">Anna Salai</option><option value="Vellachery">Vellachery</option><option value="Thyagaraya Nagar">Thyagaraya Nagar</option><option value="Kodambakkam">Kodambakkam</option><option value="Adyar">Adyar</option><option value="R S Puram">R S Puram</option><option value="Coimbatore">Coimbatore</option><option value="Dahanu">Dahanu</option><option value="Dahod">Dahod</option><option value="Deesa">Deesa</option><option value="Dehradun">Dehradun</option><option value="Dhanbad">Dhanbad</option><option value="Dombivali">Dombivali</option><option value="Duliajan">Duliajan</option><option value="Faridabad">Faridabad</option><option value="Fatehabad">Fatehabad</option><option value="Gandhinagar">Gandhinagar</option><option value="Sindhu">Sindhu</option><option value="Ghaziabad">Ghaziabad</option><option value="Park Road">Park Road</option><option value="Tibri Road">Tibri Road</option><option value="Gurgaon">Gurgaon</option><option value="Old Judicial Complex">Old Judicial Complex</option><option value="Badshahpur">Badshahpur</option><option value="Gurgaon DLF">Gurgaon DLF</option><option value="Golf Course">Golf Course</option><option value="Sector 14">Sector 14</option><option value="G S Road">G S Road</option><option value="Hajira">Hajira</option><option value="Halol">Halol</option><option value="Himmat Nagar">Himmat Nagar</option><option value="Hubli">Hubli</option><option value="Hunsimaranahalli - North Bangalore">Hunsimaranahalli - North Bangalore</option><option value="Jubilee Hills">Jubilee Hills</option><option value="Kukatpally">Kukatpally</option><option value="Himayat Nagar">Himayat Nagar</option><option value="Nampally">Nampally</option><option value="A S Rao Nagar">A S Rao Nagar</option><option value="Dilsukhnagar">Dilsukhnagar</option><option value="Sarojini Devi Rd">Sarojini Devi Rd</option><option value="Somajiguda">Somajiguda</option><option value="Indore">Indore</option><option value="Jaipur">Jaipur</option><option value="Jalandhar">Jalandhar</option><option value="Jalgaon">Jalgaon</option><option value="Jamnagar">Jamnagar</option><option value="Gayatri Enclave">Gayatri Enclave</option><option value="Joda">Joda</option><option value="Chopasani Road">Chopasani Road</option><option value="Gar Ali Road">Gar Ali Road</option><option value="Kadi">Kadi</option><option value="Santoshi Mata Road">Santoshi Mata Road</option><option value="The Mall">The Mall</option><option value="Govind Nagar">Govind Nagar</option><option value="Kapurthala">Kapurthala</option><option value="Karnal">Karnal</option><option value="Rajiv Gandhi Road">Rajiv Gandhi Road</option><option value="Khadki">Khadki</option><option value="Cochin">Cochin</option><option value="Raja Rampuri Road">Raja Rampuri Road</option><option value="Rash Behari">Rash Behari</option><option value="Ballygunj">Ballygunj</option><option value="Dalhousie">Dalhousie</option><option value="Salt Lake">Salt Lake</option><option value="Kankurgachi">Kankurgachi</option><option value="Park Street">Park Street</option><option value="Kondwa Main Rd- Yash Tower- BR">Kondwa Main Rd- Yash Tower- BR</option><option value="Kottayam">Kottayam</option><option value="Kozhikode">Kozhikode</option><option value="Shahnajaf Road,">Shahnajaf Road,</option><option value="Lucknow -">Lucknow -</option><option value="Ludhiana">Ludhiana</option><option value="Madhapur">Madhapur</option><option value="Madippakkam">Madippakkam</option><option value="Goods Shed Street">Goods Shed Street</option><option value="Manesar">Manesar</option><option value="Mangalore">Mangalore</option><option value="NAC">NAC</option><option value="Margao">Margao</option><option value="Mathura">Mathura</option><option value="Meerut">Meerut</option><option value="Mehsana">Mehsana</option><option value="Modasa">Modasa</option><option value="Mohali">Mohali</option><option value="Civil Lines">Civil Lines</option><option value="Morbi">Morbi</option><option value="Dakha">Dakha</option><option value="Napean Sea Rd">Napean Sea Rd</option><option value="Malad (West)">Malad (West)</option><option value="Worli">Worli</option><option value="Khar (West)">Khar (West)</option><option value="Kalina">Kalina</option><option value="Kandivali">Kandivali</option><option value="Lokhandwala - II">Lokhandwala - II</option><option value="Powai- Citipark- Central Avenue - BR">Powai- Citipark- Central Avenue - BR</option><option value="Andheri (East)">Andheri (East)</option><option value="Juhu - Maitri - BR">Juhu - Maitri - BR</option><option value="Lokhandwala - I">Lokhandwala - I</option><option value="Chembur">Chembur</option><option value="Borivali">Borivali</option><option value="Fort">Fort</option><option value="Andheri - J B Nagar">Andheri - J B Nagar</option><option value="Chruchgate">Chruchgate</option><option value="LBS Marg - Ghatkopar">LBS Marg - Ghatkopar</option><option value="Matunga">Matunga</option><option value="Mulund West">Mulund West</option><option value="Vile Parle (West)">Vile Parle (West)</option><option value="Parel">Parel</option><option value="Penninsula-Lower Parel">Penninsula-Lower Parel</option><option value="Mumbai 26 - Sion">Mumbai 26 - Sion</option><option value="Kandivali (East)">Kandivali (East)</option><option value="Opera House">Opera House</option><option value="Vile Parle (East)">Vile Parle (East)</option><option value="Malad- Palm Court- BR">Malad- Palm Court- BR</option><option value="Ghatkopar">Ghatkopar</option><option value="Prabhadevi">Prabhadevi</option><option value="Kalbadevi">Kalbadevi</option><option value="Bandra">Bandra</option><option value="Mittal Court">Mittal Court</option><option value="Santacruz (West)">Santacruz (West)</option><option value="Colaba">Colaba</option><option value="Goregoan East">Goregoan East</option><option value="Goregaon West">Goregaon West</option><option value="Lower Parel">Lower Parel</option><option value="Crawford Market">Crawford Market</option><option value="Hughes Road">Hughes Road</option><option value="Patencheru">Patencheru</option><option value="Saraswati Puram">Saraswati Puram</option><option value="Nadiad">Nadiad</option><option value="Kingsway">Kingsway</option><option value="Nurmahal Road">Nurmahal Road</option><option value="Nallapadu">Nallapadu</option><option value="Namakkal">Namakkal</option><option value="Nandlev">Nandlev</option><option value="Naranpura">Naranpura</option><option value="Narendrapur">Narendrapur</option><option value="Thatte Nagar Road">Thatte Nagar Road</option><option value="Nerul">Nerul</option><option value="Vashi Sector 17">Vashi Sector 17</option><option value="Koparkhairne">Koparkhairne</option><option value="CBD Belapur">CBD Belapur</option><option value="Navsari">Navsari</option><option value="Neemrana">Neemrana</option><option value="Punjabi Bagh">Punjabi Bagh</option><option value="Rajouri Garden">Rajouri Garden</option><option value="Connaught Place">Connaught Place</option><option value="Sadar Bazar">Sadar Bazar</option><option value="Okhla Phase II">Okhla Phase II</option><option value="Mayur Vihar">Mayur Vihar</option><option value="Nehru Place">Nehru Place</option><option value="Lajpat Nagar">Lajpat Nagar</option><option value="South Extension - BR">South Extension - BR</option><option value="Panchsheel Enclave - BR">Panchsheel Enclave - BR</option><option value="Mansarovar Garden">Mansarovar Garden</option><option value="Kamla Nagar">Kamla Nagar</option><option value="Chandni Chowk">Chandni Chowk</option><option value="Kirti Nagar">Kirti Nagar</option><option value="Gulmohar Park">Gulmohar Park</option><option value="Kalkaji">Kalkaji</option><option value="Vasant Vihar">Vasant Vihar</option><option value="Vasantkunj">Vasantkunj</option><option value="CP Inner Circle">CP Inner Circle</option><option value="Azadpur">Azadpur</option><option value="Safdarjung">Safdarjung</option><option value="Naya Bazar">Naya Bazar</option><option value="GK- II">GK- II</option><option value="Pitampura">Pitampura</option><option value="Vikaspuri">Vikaspuri</option><option value="East Patel Nagar">East Patel Nagar</option><option value="Janakpuri">Janakpuri</option><option value="Paschim Vihar">Paschim Vihar</option><option value="Defence Colony">Defence Colony</option><option value="Rohini">Rohini</option><option value="GK- I">GK- I</option><option value="Dwarka - BR">Dwarka - BR</option><option value="Karol Bagh">Karol Bagh</option><option value="Saket">Saket</option><option value="Model Town">Model Town</option><option value="Daryagunj">Daryagunj</option><option value="Preet Vihar">Preet Vihar</option><option value="Karkardooma">Karkardooma</option><option value="Ashok Vihar">Ashok Vihar</option><option value="Old Rajinder Nagar">Old Rajinder Nagar</option><option value="Chawari Bazar">Chawari Bazar</option><option value="NFC">NFC</option><option value="Yojna Vihar">Yojna Vihar</option><option value="Niwai">Niwai</option><option value="Sector - 51">Sector - 51</option><option value="Sector 63">Sector 63</option><option value="Sec 18">Sec 18</option><option value="Cuttack">Cuttack</option><option value="Palam">Palam</option><option value="Palanpur">Palanpur</option><option value="Palsana">Palsana</option><option value="Panchkula">Panchkula</option><option value="Panipat">Panipat</option><option value="Panjim">Panjim</option><option value="New Leela Bhawan">New Leela Bhawan</option><option value="Patna">Patna</option><option value="Phagwara">Phagwara</option><option value="Pimpri Chinchwad">Pimpri Chinchwad</option><option value="Piplod - BR">Piplod - BR</option><option value="Puducherry">Puducherry</option><option value="Ramwadi (Viman Nagar)">Ramwadi (Viman Nagar)</option><option value="Bhandarkar Road">Bhandarkar Road</option><option value="Kumthekar Road">Kumthekar Road</option><option value="Aundh">Aundh</option><option value="East Street">East Street</option><option value="Chattisgarh">Chattisgarh</option><option value="Rajkot">Rajkot</option><option value="Patiala">Patiala</option><option value="Rajsamand">Rajsamand</option><option value="Narayani Complex">Narayani Complex</option><option value="Rishabhdeo">Rishabhdeo</option><option value="Rohtak">Rohtak</option><option value="Raurkela">Raurkela</option><option value="Rudrapur">Rudrapur</option><option value="Sachin">Sachin</option><option value="Alagapuram">Alagapuram</option><option value="Kaula Park">Kaula Park</option><option value="Sankari">Sankari</option><option value="Sarpavaram">Sarpavaram</option><option value="Shillong">Shillong</option><option value="Sidhpur">Sidhpur</option><option value="D.N.Silvassa">D.N.Silvassa</option><option value="Soyagoan">Soyagoan</option><option value="Kumbharia Road">Kumbharia Road</option><option value="Puna">Puna</option><option value="Cloth Market">Cloth Market</option><option value="Ghod Dod Road">Ghod Dod Road</option><option value="Surender Nagar">Surender Nagar</option><option value="Shiv Kala Arcade">Shiv Kala Arcade</option><option value="Bhiwandi">Bhiwandi</option><option value="Naupada">Naupada</option><option value="Mira Bhayander Road">Mira Bhayander Road</option><option value="Hiranandani Estate - Thane- BR">Hiranandani Estate - Thane- BR</option><option value="Hiranandani">Hiranandani</option><option value="Ulhasnagar">Ulhasnagar</option><option value="Manpada">Manpada</option><option value="Trivandrum">Trivandrum</option><option value="Avinashi Road">Avinashi Road</option><option value="Trichy">Trichy</option><option value="Udaipur">Udaipur</option><option value="Unjha">Unjha</option><option value="Tarsali">Tarsali</option><option value="Alkapuri">Alkapuri</option><option value="Vallabh Vidya Nagar">Vallabh Vidya Nagar</option><option value="Valsad">Valsad</option><option value="Vapi">Vapi</option><option value="Godwlia">Godwlia</option><option value="Manikpur">Manikpur</option><option value="Vatva">Vatva</option><option value="M G Road">M G Road</option><option value="Viramgam">Viramgam</option><option value="Virar (W)">Virar (W)</option><option value="Waltair Uplands">Waltair Uplands</option><option value="Visnagar">Visnagar</option><option value="Vyara">Vyara</option><option value="M G M Road">M G M Road</option><option value="Kalghidhar Enclave">Kalghidhar Enclave</option><option value="Parrys Corner">Parrys Corner</option></select>
+
+</td>
+      </tr>
+      <tr>
+        <td colspan="2" align="left"><table width="350" border="0" cellpadding="0" cellspacing="0">
+          <tbody><tr>
+            <td collspan="3"><div class="container-inline"><img src="https://www.kotak.com/kotaknri/?q=nrilead/captcha"><br><div class="form-item" id="edit-captcha-wrapper">
+ <label for="edit-captcha">What code is in the image?: </label>
+ <input maxlength="5" name="captcha" id="edit-captcha" size="10" value="" title="What code is in the image?" autocomplete="off" class="form-text" type="text">
+</div>
+</div></td>
+          </tr>
+        </tbody></table></td>
+        </tr>
+      <tr>
+        <td colspan="2" style="line-height:21px;" align="left"><p>*All fields are mandatory</p>
+          <p>
+ <input name="termscondition" id="edit-termscondition" value="1" class="form-checkbox" type="checkbox"> I have read and accepted the <a href="http://www.kotak.com/Kotak_BankSite/nri/sites/default/themes/nri/tnc.html" target="_blank">Terms and Conditions</a>.
+
+</p>
+          <p>
+ <input name="cross_sell" id="edit-cross-sell" value="1" class="form-checkbox" type="checkbox"> I am also interested in Click2Remit (Money Transfer)
+
+</p></td>
+        </tr>
+    </tbody></table>
+  </div>
+  <p><img src="https://www.kotak.com/kotaknri/sites/default/modules/nrilead.10.10.2011/images/lead-form2/bg-formbot.gif" alt="" height="19" width="439"></p>
+  </div>
+  <div class="submitPanel"><input name="op" id="edit-submit" value="" class="form-submit" type="submit">
+</div>
+</div>
+</td></tr></tbody></table>
+<div class="clear"></div>
+</div>
+
+<div id="footer_part"><div class="footer_text"><div class="left"><br><br><strong>Copyright Kotak Mahindra Group. All Rights Reserved.</strong><br>Reproduction in whole or in part in any form or medium without the express written consent of Kotak Mahindra Group is prohibited. Your use of this site is subject to and constitutes acknowledgement and acceptance of our Code Of Conduct. Find out about our privacy policy.</div><div class="footer_kotak_logo"><img src="https://www.kotak.com/kotaknri/sites/default/modules/nrilead.10.10.2011/images/lead_form_cc/kotak_logo.jpg" alt="Kotak Mahindra Bank" height="" width=""></div><div class="clr"></div><br><a href="http://www.kotak.com/bank/common/disclaimer.htm" class="h6">Disclaimer </a><span class="line"> |</span> <a href="http://www.kotak.com/bank/common/privacy_policy.htm" class="h6">Private Policy</a> <span class="line"> |</span> <a href="http://www.kotak.com/bank/common/fpc.htm" class="h6">Code Of Conduct</a> <span class="line"> |</span> <a href="http://www.kotak.com/bank/common/security.htm" class="h6">Security</a> <span class="line"> |</span> <a href="http://www.kotak.com/Kotak_BankSite/nri/sites/default/themes/nri/tnc.html" class="h6">*Terms &amp; Conditions </a></div></div><input name="product_code" id="edit-product-code" value="100" type="hidden">
+<input name="partner_code" id="edit-partner-code" value="OZ875F" type="hidden">
+<input name="channel_code" id="edit-channel-code" value="" type="hidden">
+<input name="conversion_code" id="edit-conversion-code" value="" type="hidden">
+<input name="unique_id" id="edit-unique-id" value="51a2ae45eb3d9" type="hidden">
+<input name="form_build_id" id="form-0fc443be6d425de0e9a46c6046b16cc6" value="form-0fc443be6d425de0e9a46c6046b16cc6" type="hidden">
+<input name="form_id" id="edit-nrilead-form2" value="nrilead_form2" type="hidden">
+
+<!-- OPENTRACKER HTML START -->
+<!-- <script src="http://script.opentracker.net/?site=nri.kotak.com"></script> -->
+<noscript>
+<!-- MKP 20130211 Commented as per shrikishna sir's instruction -->
+<!-- <a href="http://www.opentracker.net" target="_blank"> 
+<img src="http://img.opentracker.net/?cmd=nojs&site=nri.kotak.com" alt="web tracking" border="0"></a>
+-->
+</noscript>
+<!-- OPENTRACKER HTML END -->
+</div></form>
+  <script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var _gaq = _gaq || [];_gaq.push(["_setAccount", "UA-4203568-1"]);_gaq.push(["_trackPageview"]);(function() {var ga = document.createElement("script");ga.type = "text/javascript";ga.async = true;ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga, s);})();
+//--><!]]>
+</script>
+  
+
+</body>

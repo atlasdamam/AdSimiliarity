@@ -1,0 +1,456 @@
+<head><style type="text/css" media="screen">.te_overflow{overflow:hidden !important}.te_dragging{cursor:move !important}#tu_overlay,.te_top_up{top:0;left:0}#tu_overlay{width:100%;height:100%;position:fixed;z-index:999}#temp_up{top:-9999px;z-index:-1}.te_transparent{opacity:0}.te_shaded{opacity:.65;background:black}.te_scrollable{overflow:auto}.te_top_up{position:absolute;z-index:1000}.te_top_up a{border:0}.te_top_up a:hover{border:0}.te_top_up .ui-resizable-se{position:absolute !important;background-color:transparent !important;border:0 !important}.te_wrapper{position:relative}.te_title{width:100%;color:white;font-family:"Lucida Grande", "Arial";font-size:11px;position:absolute;text-align:center;z-index:1001}.te_frame,#tu_center_wrapper{border-collapse:collapse}.te_frame tr,.te_frame td{margin:0;padding:0}.te_frame .te_left,.te_frame .te_middle,.te_frame .te_right{padding:0}.te_controls{position:absolute;z-index:1001}.te_close_link,.te_previous_link,.te_next_link{cursor:pointer}.te_close_link{position:absolute;z-index:1002}.te_previous_link,.te_next_link{display:block;float:left}#tu_center_wrapper{position:absolute;z-index:1000}#tu_loader{width:100%;height:100%;position:absolute;background:url(images/top_up/loader.gif) no-repeat 50% 50%;display:block;z-index:1003} #top_up .te_dashboard .ui-resizable-se{width:10px !important;height:10px !important;bottom:12px !important;right:10px !important;background-image:url(images/top_up/dashboard/sprite.png) !important;background-position:0 0 !important}.te_dashboard .te_title{top:-9px;font-weight:bold;text-shadow:1px 1px 1px black}.te_dashboard .te_corner,.te_dashboard .te_rib{background-image:url(images/top_up/dashboard/sprite.png)}.te_dashboard .te_top,.te_dashboard .te_bottom{height:20px}.te_dashboard .te_left_filler{width:20px}.te_dashboard .te_right_filler{width:19px}.te_dashboard .te_middle .te_middle{background:url(images/top_up/dashboard/middle.png)}.te_dashboard .te_top .te_left{background-position:-17px -29px}.te_dashboard .te_top .te_middle{background-position:0 -71px}.te_dashboard .te_top .te_right{background-position:-33px -29px}.te_dashboard .te_middle .te_left{background-position:-17px -232px}.te_dashboard .te_middle .te_right{background-position:-33px -232px}.te_dashboard .te_bottom .te_left{background-position:-17px -47px}.te_dashboard .te_bottom .te_middle{background-position:-17px -89px}.te_dashboard .te_bottom .te_right{background-position:-33px -47px}.te_dashboard .te_content{margin:-11px -12px -11px -13px}.te_dashboard .te_controls{left:50%;width:63px;height:29px;margin-left:-33px;padding-left:5px;bottom:35px;background-image:url(images/top_up/dashboard/sprite.png);background-position:0 -178px}.te_dashboard .te_previous_link,.te_dashboard .te_next_link{width:31px;height:29px;background-image:url(images/top_up/dashboard/sprite.png)}.te_dashboard .te_previous_link{background-position:66px -113px}.te_dashboard .te_next_link{background-position:30px -113px}.te_dashboard .te_previous_link:hover{background-position:66px -142px}.te_dashboard .te_next_link:hover{background-position:30px -142px}.te_dashboard .te_close_link{width:28px;height:26px;top:-15px;right:-6px;background-image:url(images/top_up/dashboard/sprite.png);background-position:-20px 0} #top_up .te_quicklook .ui-resizable-se{width:10px !important;height:10px !important;bottom:12px !important;right:9px !important;background-image:url(images/top_up/quicklook/sprite.png) !important;background-position:-75px -181px !important}.te_quicklook .te_title{top:6px}.te_quicklook .te_corner,.te_quicklook .te_rib{background-image:url(images/top_up/quicklook/sprite.png)}.te_quicklook .te_top{height:24px}.te_quicklook .te_bottom{height:56px}.te_quicklook .te_left_filler,.te_quicklook .te_right_filler{width:12px}.te_quicklook .te_middle .te_middle{background:url(images/top_up/quicklook/middle.png)}.te_quicklook .te_top .te_left{background-position:0 0}.te_quicklook .te_top .te_middle{background-position:0 -30px}.te_quicklook .te_top .te_right{background-position:12px 0}.te_quicklook .te_middle .te_left{background-position:0 -181px}.te_quicklook .te_middle .te_right{background-position:12px -181px}.te_quicklook .te_bottom .te_left{background-position:0 -122px}.te_quicklook .te_bottom .te_middle{background-position:0 -61px}.te_quicklook .te_bottom .te_right{background-position:12px -122px}.te_quicklook .te_content{margin:0 -7px}.te_quicklook .te_controls{left:50%;width:66px;margin-left:-33px;bottom:18px}.te_quicklook .te_previous_link,.te_quicklook .te_next_link{width:31px;height:29px;margin:0 1px;background-image:url(images/top_up/quicklook/sprite.png)}.te_quicklook .te_previous_link{background-position:89px -195px}.te_quicklook .te_next_link{background-position:52px -195px}.te_quicklook .te_previous_link:hover{background-position:89px -226px}.te_quicklook .te_next_link:hover{background-position:52px -226px}.te_quicklook .te_close_link{width:13px;height:13px;top:7px;left:9px;background-image:url(images/top_up/quicklook/sprite.png);background-position:-24px -181px} #top_up .te_flatlook .ui-resizable-se{width:10px !important;height:10px !important;bottom:22px !important;right:14px !important;background-image:url(images/top_up/flatlook/sprite.png) !important;background-position:-75px -181px !important}.te_flatlook .te_title{top:5px;text-shadow:1px 1px 2px #2A2A2A}.te_flatlook .te_corner,.te_flatlook .te_rib{background-image:url(images/top_up/flatlook/sprite.png)}.te_flatlook .te_top{height:26px}.te_flatlook .te_bottom{height:29px}.te_flatlook .te_left_filler,.te_flatlook .te_right_filler{width:21px}.te_flatlook .te_middle .te_middle{background:url(images/top_up/flatlook/middle.png) repeat-x top}.te_flatlook .te_top .te_left{background-position:0 0}.te_flatlook .te_top .te_middle{background-position:0 -29px}.te_flatlook .te_top .te_right{background-position:-89px 0}.te_flatlook .te_middle .te_left{background-position:0 -181px}.te_flatlook .te_middle .te_right{background-position:-89px -181px}.te_flatlook .te_bottom .te_left{background-position:0 -90px}.te_flatlook .te_bottom .te_middle{background-position:0 -58px}.te_flatlook .te_bottom .te_right{background-position:-89px -90px}.te_flatlook .te_content{margin:-2px -11px -3px -11px}.te_flatlook .te_controls{left:50%;width:66px;margin-left:-33px;bottom:18px}.te_flatlook .te_previous_link,.te_flatlook .te_next_link{width:31px;height:29px;margin:0 1px;background-image:url(images/top_up/flatlook/sprite.png)}.te_flatlook .te_previous_link{background-position:89px -195px}.te_flatlook .te_next_link{background-position:52px -195px}.te_flatlook .te_previous_link:hover{background-position:89px -226px}.te_flatlook .te_next_link:hover{background-position:52px -226px}.te_flatlook .te_close_link{width:13px;height:13px;top:6px;left:15px;background-image:url(images/top_up/flatlook/sprite.png);background-position:-24px -181px}</style>
+<meta name="google-site-verification" content="hZ28en8WIKhlaYPvGiU8nwhVPdfmgo5q-ktFk4NVQsI">
+<meta name="msvalidate.01" content="DC36E91CF5C3679EAC8EBACEB304F361">
+<meta name="alexaVerifyID" content="fllMKZPdf4YvMJeCy6LtczIiDAo">
+<title>Silk Sarees,e-shopping for Silk Sarees,Silk Sarees in Chennai, Online Silk Saree Shopping,Silk sarees in Pondicherry,Marriage Silk sarees,Wedding Collections, Textiles in Kerala, Silk Sarees in Trivandrum</title>
+
+<meta name="Subject" content="Silk Sarees">
+
+<meta name="description" content="Pothys is your ultimate destination for silks and silk sarees, perfect silk sarees collection for weddings and other festive occasions. Pothys textiles newly opened in Trivandrum, Kerala for  silk sarees and pure silk sarees in Kerala. Now Silk Sarees in Pondicherry. We give you the assurance of the finest Silk Sarees, authentic designs, genuine customer service and a luxurious shopping experience for sarees and  silk sarees collection..">
+
+<meta name="keywords" content="Silk sarees in Pondicherry, Silk Sarees, Textiles in Kerala, Silk Sarees in Trivandrum,Pothys ,Aalayam of Silks,e-shopping for Silk Sarees,Silk Sarees in Chennai,Online Saree  Shopping,Wedding Silks in Chennai,Marriage Silks,Silk Sarees,festive silks,online shopping for silk sarees,silk sarees,south indian sarees,Wedding Silks,kancheepuram silk sarees,silk cotton sarees,ethnic silks,Indian  Wedding Sarees,pattu sarees">
+
+<meta name="Language" content="English">
+
+<meta name="Distribution" content="Global">
+
+<meta name="Robots" content="All">
+
+<meta name="Revisit-After" content="7 Days">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<!-- Video Popup Script -->
+<script type="text/javascript" src="javascripts/top_up-min.js"></script><script src="javascripts/jquery/all.js" type="text/javascript" onload="TopUp.init()" onreadystatechange="TopUp.init()"></script>
+<script type="text/javascript">
+      TopUp.addPresets({
+        "#examples a": {
+          title: "Gallery {alt} ({current} of {total})",
+          group: "examples",
+          effect: "clip",
+		  readAltText: 1,
+          shaded: 1
+        }
+      });
+    </script>
+<script src="Scripts/swfobject_modified.js" type="text/javascript"></script>
+<!-- Video Popup Script End-->
+<!-- Full Slider -->
+<script src="js/jquery.carouFredSel-6.1.0-packed.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(function() {
+        var _direction = 'left';
+        $('#carousel').carouFredSel({
+            direction: _direction,
+            responsive: true,
+            circular: false,
+            items: {
+                width: 1500,
+                height: 321,
+                visible: {
+                    min: 1,
+                    max: 1
+                }
+            },
+            scroll: {
+                items: 1,
+                duration: 9000,
+                timeoutDuration: 5000,
+                pauseOnHover: 'immediate',
+                onEnd: function(data) {
+                    _direction = (_direction == 'left') ? 'right' : 'left';
+                    $(this).trigger('configuration', ['direction', _direction]);
+                }
+            }
+        });
+    });
+		</script>
+<!-- Full Slider End -->
+<!-- Flex Dropdown Menu -->
+<link rel="stylesheet" type="text/css" href="css/flexmenu.css">
+
+<script type="text/javascript" src="js/flexmenu.js"></script>
+<!-- Flex Dropdown Menu -->
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+<script src="js/sound.js" type="text/javascript"></script>
+<!--Skype Start-->
+<script type="text/javascript" src="http://cdn.dev.skype.com/uri/skype-uri.js"></script><script src="http://cdn.dev.skype.com/uri/skype-analytics.js" type="text/javascript"></script>
+<!--Skype End-->
+<style media="screen" type="text/css">#FlashID {visibility:hidden}</style></head>
+<body style="background-image:url(images/master-bg.jpg); background-repeat:repeat;">
+<form name="form1" method="post" action="index.aspx" id="form1">
+<div>
+<input name="__EVENTTARGET" id="__EVENTTARGET" value="" type="hidden">
+<input name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" type="hidden">
+<input name="__LASTFOCUS" id="__LASTFOCUS" value="" type="hidden">
+<input name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMTc2Njk2NTYyD2QWAgIBD2QWCgIDDw8WAh4EVGV4dAUOV2VsY29tZSBHdWVzdCxkZAIJDxYGHgRocmVmBQpMb2dpbi5hc3B4HgV0aXRsZQUFTG9naW4eCWlubmVyaHRtbAUFTG9naW5kAg0PFgIeC18hSXRlbUNvdW50AikWUmYPZBYEZg8VBAtTaWxrIFNhcmVlcxNXZWRkaW5nIENvbGxlY3Rpb25zE1dlZGRpbmcgQ29sbGVjdGlvbnMTV2VkZGluZyBDb2xsZWN0aW9uc2QCAQ8WAh4HVmlzaWJsZWhkAgEPZBYCZg8VBAtTaWxrIFNhcmVlcxJLYW5jaGVlcHVyYW0gU2lsa3MSS2FuY2hlZXB1cmFtIFNpbGtzEkthbmNoZWVwdXJhbSBTaWxrc2QCAg9kFgJmDxUEC1NpbGsgU2FyZWVzD1NhbXVkcmlrYSBQYXR0dQ9TYW11ZHJpa2EgUGF0dHUPU2FtdWRyaWthIFBhdHR1ZAIDD2QWAmYPFQQLU2lsayBTYXJlZXMPUGFyYW1wYXJhIFBhdHR1D1BhcmFtcGFyYSBQYXR0dQ9QYXJhbXBhcmEgUGF0dHVkAgQPZBYCZg8VBAtTaWxrIFNhcmVlcxBWYXN0cmFrYWxhIFBhdHR1EFZhc3RyYWthbGEgUGF0dHUQVmFzdHJha2FsYSBQYXR0dWQCBQ9kFgRmDxUEC1NpbGsgU2FyZWVzFlZhc3RyYWthbGEgSGFsZiBTYXJlZXMWVmFzdHJha2FsYSBIYWxmIFNhcmVlcxZWYXN0cmFrYWxhIEhhbGYgU2FyZWVzZAIBDxYCHwVoZAIGD2QWBGYPFQQLU2lsayBTYXJlZXMPVmFzdW5kaHJhIFBhdHR1D1Zhc3VuZGhyYSBQYXR0dQ9WYXN1bmRocmEgUGF0dHVkAgEPFgIfBWhkAgcPZBYCZg8VBAtTaWxrIFNhcmVlcwtHaWZ0IFNhcmVlcwtHaWZ0IFNhcmVlcwtHaWZ0IFNhcmVlc2QCCA9kFgRmDxUEC1NpbGsgU2FyZWVzF0thbmNoaXB1cmFtIFRyYWRpdGlvbmFsF0thbmNoaXB1cmFtIFRyYWRpdGlvbmFsF0thbmNoaXB1cmFtIFRyYWRpdGlvbmFsZAIBDxYCHwVoZAIJD2QWAmYPFQQLU2lsayBTYXJlZXMRQXJhbmkgR2lmdCBTYXJlZXMRQXJhbmkgR2lmdCBTYXJlZXMRQXJhbmkgR2lmdCBTYXJlZXNkAgoPZBYCZg8VBAtTaWxrIFNhcmVlcxdLYW5jaGlwdXJhbSBHaWZ0IFNhcmVlcxdLYW5jaGlwdXJhbSBHaWZ0IFNhcmVlcxdLYW5jaGlwdXJhbSBHaWZ0IFNhcmVlc2QCCw9kFgJmDxUEC1NpbGsgU2FyZWVzElN1bW1lciBDb2xsZWN0aW9ucxJTdW1tZXIgQ29sbGVjdGlvbnMSU3VtbWVyIENvbGxlY3Rpb25zZAIMD2QWAmYPFQQLU2lsayBTYXJlZXMSUG9jaGFtcGFsbHkgU2FyZWVzElBvY2hhbXBhbGx5IFNhcmVlcxJQb2NoYW1wYWxseSBTYXJlZXNkAg0PZBYEZg8VBAtTaWxrIFNhcmVlcxVGYW5jeSBDaGFuZGVyaSBTYXJlZXMVRmFuY3kgQ2hhbmRlcmkgU2FyZWVzFUZhbmN5IENoYW5kZXJpIFNhcmVlc2QCAQ8WAh8FaGQCDg9kFgRmDxUEC1NpbGsgU2FyZWVzFEZhbmN5IE9yZ2FuamEgU2FyZWVzFEZhbmN5IE9yZ2FuamEgU2FyZWVzFEZhbmN5IE9yZ2FuamEgU2FyZWVzZAIBDxYCHwVoZAIPD2QWBGYPFQQLU2lsayBTYXJlZXMMVHVzc2FyIFNpbGtzDFR1c3NhciBTaWxrcwxUdXNzYXIgU2lsa3NkAgEPFgIfBWhkAhAPZBYEZg8VBAtTaWxrIFNhcmVlcxZGYW5jeSBDcmVwZSBFbWJyb2lkZXJ5FkZhbmN5IENyZXBlIEVtYnJvaWRlcnkWRmFuY3kgQ3JlcGUgRW1icm9pZGVyeWQCAQ8WAh8FaGQCEQ9kFgJmDxUEC1NpbGsgU2FyZWVzD0Rlc2lnbmVyIEJsb3VzZQ9EZXNpZ25lciBCbG91c2UPRGVzaWduZXIgQmxvdXNlZAISD2QWAmYPFQQLU2lsayBTYXJlZXMVQXJ0IFNpbGsgRmFuY3kgU2FyZWVzFUFydCBTaWxrIEZhbmN5IFNhcmVlcxVBcnQgU2lsayBGYW5jeSBTYXJlZXNkAhMPZBYEZg8VBAtTaWxrIFNhcmVlcxFBcnQgU2lsayBEZXNpZ25lchFBcnQgU2lsayBEZXNpZ25lchFBcnQgU2lsayBEZXNpZ25lcmQCAQ8WAh8FaGQCFA9kFgRmDxUEC1NpbGsgU2FyZWVzF1NvZnQgU2lsayBQcmludGVkIENyZXBlF1NvZnQgU2lsayBQcmludGVkIENyZXBlF1NvZnQgU2lsayBQcmludGVkIENyZXBlZAIBDxYCHwVoZAIVD2QWBGYPFQQLU2lsayBTYXJlZXMWQmFuYXJhcyBFeGNsdXNpdmUgU2lsaxZCYW5hcmFzIEV4Y2x1c2l2ZSBTaWxrFkJhbmFyYXMgRXhjbHVzaXZlIFNpbGtkAgEPFgIfBWhkAhYPZBYEZg8VBAtTaWxrIFNhcmVlcwtVcHBhZGEgU2lsawtVcHBhZGEgU2lsawtVcHBhZGEgU2lsa2QCAQ8WAh8FaGQCFw9kFgJmDxUEC1NpbGsgU2FyZWVzEVBhdHRvbGEgU29mdCBTaWxrEVBhdHRvbGEgU29mdCBTaWxrEVBhdHRvbGEgU29mdCBTaWxrZAIYD2QWBGYPFQQLU2lsayBTYXJlZXMLT3Jpc3NhIFNpbGsLT3Jpc3NhIFNpbGsLT3Jpc3NhIFNpbGtkAgEPFgIfBWhkAhkPZBYEZg8VBAtTaWxrIFNhcmVlcxJLb3JhIGJ5IEtvcmEgU2lsa3MSS29yYSBieSBLb3JhIFNpbGtzEktvcmEgYnkgS29yYSBTaWxrc2QCAQ8WAh8FaGQCGg9kFgRmDxUEC1NpbGsgU2FyZWVzEE5pbmUgWWFyZHMgU2FyZWUQTmluZSBZYXJkcyBTYXJlZRBOaW5lIFlhcmRzIFNhcmVlZAIBDxYCHwVoZAIbD2QWBGYPFQQLU2lsayBTYXJlZXMPTWF5dXJpIE1lbnBhdHR1D01heXVyaSBNZW5wYXR0dQ9NYXl1cmkgTWVucGF0dHVkAgEPFgIfBWhkAhwPZBYEZg8VBAtTaWxrIFNhcmVlcxBQYXJ0eXdlYXIgU2FyZWVzEFBhcnR5d2VhciBTYXJlZXMQUGFydHl3ZWFyIFNhcmVlc2QCAQ8WAh8FaGQCHQ9kFgRmDxUEC1NpbGsgU2FyZWVzFVBhcnR5d2VhciBIYWxmIFNhcmVlcxVQYXJ0eXdlYXIgSGFsZiBTYXJlZXMVUGFydHl3ZWFyIEhhbGYgU2FyZWVzZAIBDxYCHwVoZAIeD2QWBGYPFQQLU2lsayBTYXJlZXMNUHJpbnRlZCBTaWxrcw1QcmludGVkIFNpbGtzDVByaW50ZWQgU2lsa3NkAgEPFgIfBWhkAh8PZBYCZg8VBAtTaWxrIFNhcmVlcwtDYXN1YWwgV2VhcgtDYXN1YWwgV2VhcgtDYXN1YWwgV2VhcmQCIA9kFgRmDxUEC1NpbGsgU2FyZWVzC1NpbGsgQ290dG9uC1NpbGsgQ290dG9uC1NpbGsgQ290dG9uZAIBDxYCHwVoZAIhD2QWAmYPFQQLU2lsayBTYXJlZXMPRGVzaWduZXIgU2FyZWVzD0Rlc2lnbmVyIFNhcmVlcw9EZXNpZ25lciBTYXJlZXNkAiIPZBYCZg8VBAtTaWxrIFNhcmVlcwxOZXcgYXJyaXZhbHMMTmV3IGFycml2YWxzDE5ldyBhcnJpdmFsc2QCIw9kFgJmDxUECUtpZHMgV2VhchtOYXZhcmF0aG5hIFBhdmFkYWkgKFNraXJ0cykbTmF2YXJhdGhuYSBQYXZhZGFpIChTa2lydHMpG05hdmFyYXRobmEgUGF2YWRhaSAoU2tpcnRzKWQCJA9kFgJmDxUECUtpZHMgV2VhchlBcnQgU2lsayBQYXZhZGFpIChTa2lydHMpGUFydCBTaWxrIFBhdmFkYWkgKFNraXJ0cykZQXJ0IFNpbGsgUGF2YWRhaSAoU2tpcnRzKWQCJQ9kFgRmDxUECUtpZHMgV2VhcgxLdXR0eSBTYXJlZXMMS3V0dHkgU2FyZWVzDEt1dHR5IFNhcmVlc2QCAQ8WAh8FaGQCJg9kFgJmDxUECldvbWFuIFdlYXITQ2h1cmlkaGFyIE1hdGVyaWFscxNDaHVyaWRoYXIgTWF0ZXJpYWxzE0NodXJpZGhhciBNYXRlcmlhbHNkAicPZBYCZg8VBAtTaWxrIFNhcmVlcxVFeGNsdXNpdmUgQ29sbGVjdGlvbnMVRXhjbHVzaXZlIENvbGxlY3Rpb25zFUV4Y2x1c2l2ZSBDb2xsZWN0aW9uc2QCKA9kFgRmDxUECE1lbiBXZWFyB0Rob3RpZXMHRGhvdGllcwdEaG90aWVzZAIBDxYCHwVoZAIPDxBkZBYAZAIRDzwrAAkBAA8WBB4IRGF0YUtleXMWAB8EAg9kFh4CAQ9kFgICAQ8PFgIeD0NvbW1hbmRBcmd1bWVudAUBMWQWAmYPFQELYW1hdGh1cy5wbmdkAgIPZBYCAgEPDxYCHwcFATJkFgJmDxUBCWJsYWNrLnBuZ2QCAw9kFgICAQ8PFgIfBwUBM2QWAmYPFQEIYmx1ZS5wbmdkAgQPZBYCAgEPDxYCHwcFATRkFgJmDxUBCWJyb3duLnBuZ2QCBQ9kFgICAQ8PFgIfBwUBNWQWAmYPFQEJZ3JlZW4ucG5nZAIGD2QWAgIBDw8WAh8HBQE2ZBYCZg8VAQhncmV5LnBuZ2QCBw9kFgICAQ8PFgIfBwUBN2QWAmYPFQEJaXZvcnkucG5nZAIID2QWAgIBDw8WAh8HBQIxNWQWAmYPFQEKb3JhbmdlLnBuZ2QCCQ9kFgICAQ8PFgIfBwUBOGQWAmYPFQEIcGFsZS5wbmdkAgoPZBYCAgEPDxYCHwcFAjEzZBYCZg8VAQhwaW5rLnBuZ2QCCw9kFgICAQ8PFgIfBwUBOWQWAmYPFQEHcmVkLnBuZ2QCDA9kFgICAQ8PFgIfBwUCMTBkFgJmDxUBCHJvc2UucG5nZAIND2QWAgIBDw8WAh8HBQIxNGQWAmYPFQEMdmlvbGV0LTEucG5nZAIOD2QWAgIBDw8WAh8HBQIxMWQWAmYPFQEKdmlvbGV0LnBuZ2QCDw9kFgICAQ8PFgIfBwUCMTJkFgJmDxUBCnllbGxvdy5wbmdkZEFs+hxr1deRe/V1vLecckbfXJSZ" type="hidden">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div>
+
+	<input name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWGAKwm7mCDAL0+bPPDwKWrpMHApeukwcClK6TBwKVrpMHApKukwcCmcG56QwCgaXC1gcC5rvC1gcCq5DC1gcC6pne3w0C//Pd3w0CwOrB1gcCrcHC1gcCwtnB1gcCgaXe3w0C5rve3w0C//PB1gcC7IjC1gcCmdvB1gcCwOrd3w0CrcHe3w0C2KywmAZReyG79sYVi/+VMYUIxuDRazdMQg==" type="hidden">
+</div>
+  
+<div id="home-wrapper">
+  <div id="wrapper-head">
+    <div id="header"><img src="images/logo.png" alt="Logo" class="logo" title="Pothys - Aalayam of Textiles" height="127" width="118">
+      <div id="admin-details"> <strong><span id="lblWelcome">Welcome Guest,</span></strong> <a href="OrderStatus.aspx" id="aMyAccount" title="My Account">My Account</a> | <a href="Wishlist.aspx" id="aWishlist" title="Wishlist">Wishlist</a> | <a href="Login.aspx" id="aLogout" title="Login">Login</a> </div>
+      <div id="head-nav">
+      
+        <div id="shipping"><img src="images/shipping-icon.png" alt="Shipping Icon" height="34" width="65">Free Shipping<br>
+          Across India</div>
+        <div id="skype"><a href="skype:PothysSilks?chat"><div class="skype_links"></div></a><br>
+        </div>
+        <div id="gift-voucher"><a href="GiftVoucher.aspx" title="Gift Voucher"><img src="images/gift-voucher.png" alt="Gift Voucher" height="62" width="112"></a></div>
+        <div id="cart"><img src="images/cart-icon.png" alt="Cart" height="33" width="54">Cart <span>(<a id="lnkCartCount" href="javascript:__doPostBack('lnkCartCount','')" style="text-decoration:none;color:#FFFFFF;">Empty</a>)</span></div>
+      </div>
+       <div class="skype-text">Online Chat Available bwtn 9am - 6pm IST</div>
+    </div>
+    <div id="navigation">
+      <ul>
+        <li><a href="index.aspx" title="Home">Home</a></li>
+        <li><a href="profile.aspx" title="Profile">Profile</a></li>
+        <li><a data-flexmenu="flexmenu1" href="products.aspx" title="Collections" id="collections">Collections</a></li>
+        <li><a href="advertisement.aspx" title="Advertisement">Advertisement</a></li>
+        <li><a href="virtualpothys.aspx" title="Virtual Tour">Virtual Tour</a></li>
+        <li><a href="awards.aspx" title="Awards">Awards</a></li>
+        <li><a href="contactus.aspx" class="last" title="Contact Us">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+  </div> 
+    <div id="wrapper-banner">
+      <div style="display: block; text-align: start; float: none; position: relative; top: auto; right: auto; bottom: auto; left: auto; z-index: auto; width: 1167px; height: 321px; margin: 0px; overflow: hidden;" class="caroufredsel_wrapper"><div style="text-align: left; float: none; position: absolute; top: 0px; right: auto; bottom: auto; left: -481.858px; margin: 0px; width: 10503px; height: 321px; z-index: auto;" id="carousel">  <img style="width: 1167px;" src="images/banners/banner02.jpg" alt="Pothys" height="321" width="1500"> <img style="width: 1167px;" src="images/banners/banner03.jpg" alt="Pothys" height="321" width="1500"> <img style="width: 1167px;" src="images/banners/banner04.jpg" alt="Pothys" height="321" width="1500">
+      <img style="width: 1167px;" src="images/banners/banner01.jpg" alt="Pothys" height="321" width="1500"></div></div>
+    </div>
+    <div id="wrapper">    
+    <div id="left-panel">
+      <div id="left-navigation">
+        <ul>
+            
+              <li><a href="products/Silk Sarees/Wedding Collections.html" title="Wedding Collections" class="menutext">Wedding Collections</a><span class="newgif"></span></li>
+            
+              <li><a href="products/Silk Sarees/Kancheepuram Silks.html" title="Kancheepuram Silks" class="menutext">Kancheepuram Silks</a><span class="newgif"><img src="images/new.gif" id="dlmenu_ctl01_newimg" alt="New" height="16" width="33"></span></li>
+            
+              <li><a href="products/Silk Sarees/Samudrika Pattu.html" title="Samudrika Pattu" class="menutext">Samudrika Pattu</a><span class="newgif"><img src="images/new.gif" id="dlmenu_ctl02_newimg" alt="New" height="16" width="33"></span></li>
+            
+              <li><a href="products/Silk Sarees/Parampara Pattu.html" title="Parampara Pattu" class="menutext">Parampara Pattu</a><span class="newgif"><img src="images/new.gif" id="dlmenu_ctl03_newimg" alt="New" height="16" width="33"></span></li>
+            
+              <li><a href="products/Silk Sarees/Vastrakala Pattu.html" title="Vastrakala Pattu" class="menutext">Vastrakala Pattu</a><span class="newgif"><img src="images/new.gif" id="dlmenu_ctl04_newimg" alt="New" height="16" width="33"></span></li>
+            
+              <li><a href="products/Silk Sarees/Vastrakala Half Sarees.html" title="Vastrakala Half Sarees" class="menutext">Vastrakala Half Sarees</a><span class="newgif"></span></li>
+            
+              <li><a href="products/Silk Sarees/Vasundhra Pattu.html" title="Vasundhra Pattu" class="menutext">Vasundhra Pattu</a><span class="newgif"></span></li>
+            
+              <li><a href="products/Silk Sarees/Gift Sarees.html" title="Gift Sarees" class="menutext">Gift Sarees</a><span class="newgif"><img src="images/new.gif" id="dlmenu_ctl07_newimg" alt="New" height="16" width="33"></span></li>
+            
+              <li><a href="products/Silk Sarees/Kanchipuram Traditional.html" title="Kanchipuram Traditional" class="menutext">Kanchipuram Traditional</a><span class="newgif"></span></li>
+            
+              <li><a href="products/Silk Sarees/Arani Gift Sarees.html" title="Arani Gift Sarees" class="menutext">Arani Gift Sarees</a><span class="newgif"><img src="images/new.gif" id="dlmenu_ctl09_newimg" alt="New" height="16" width="33"></span></li>
+            
+              <li><a href="products/Silk Sarees/Kanchipuram Gift Sarees.html" title="Kanchipuram Gift Sarees" class="menutext">Kanchipuram Gift Sarees</a><span class="newgif"><img src="images/new.gif" id="dlmenu_ctl10_newimg" alt="New" height="16" width="33"></span></li>
+            
+              <li><a href="products/Silk Sarees/Summer Collections.html" title="Summer Collections" class="menutext">Summer Collections</a><span class="newgif"><img src="images/new.gif" id="dlmenu_ctl11_newimg" alt="New" height="16" width="33"></span></li>
+            
+              <li><a href="products/Silk Sarees/Pochampally Sarees.html" title="Pochampally Sarees" class="menutext">Pochampally Sarees</a><span class="newgif"><img src="images/new.gif" id="dlmenu_ctl12_newimg" alt="New" height="16" width="33"></span></li>
+            
+              <li><a href="products/Silk Sarees/Fancy Chanderi Sarees.html" title="Fancy Chanderi Sarees" class="menutext">Fancy Chanderi Sarees</a><span class="newgif"></span></li>
+            
+              <li><a href="products/Silk Sarees/Fancy Organja Sarees.html" title="Fancy Organja Sarees" class="menutext">Fancy Organja Sarees</a><span class="newgif"></span></li>
+            
+              <li><a href="products/Silk Sarees/Tussar Silks.html" title="Tussar Silks" class="menutext">Tussar Silks</a><span class="newgif"></span></li>
+            
+              <li><a href="products/Silk Sarees/Fancy Crepe Embroidery.html" title="Fancy Crepe Embroidery" class="menutext">Fancy Crepe Embroidery</a><span class="newgif"></span></li>
+            
+              <li><a href="products/Silk Sarees/Designer Blouse.html" title="Designer Blouse" class="menutext">Designer Blouse</a><span class="newgif"><img src="images/new.gif" id="dlmenu_ctl17_newimg" alt="New" height="16" width="33"></span></li>
+            
+              <li><a href="products/Silk Sarees/Art Silk Fancy Sarees.html" title="Art Silk Fancy Sarees" class="menutext">Art Silk Fancy Sarees</a><span class="newgif"><img src="images/new.gif" id="dlmenu_ctl18_newimg" alt="New" height="16" width="33"></span></li>
+            
+              <li><a href="products/Silk Sarees/Art Silk Designer.html" title="Art Silk Designer" class="menutext">Art Silk Designer</a><span class="newgif"></span></li>
+            
+              <li><a href="products/Silk Sarees/Soft Silk Printed Crepe.html" title="Soft Silk Printed Crepe" class="menutext">Soft Silk Printed Crepe</a><span class="newgif"></span></li>
+            
+              <li><a href="products/Silk Sarees/Banaras Exclusive Silk.html" title="Banaras Exclusive Silk" class="menutext">Banaras Exclusive Silk</a><span class="newgif"></span></li>
+            
+              <li><a href="products/Silk Sarees/Uppada Silk.html" title="Uppada Silk" class="menutext">Uppada Silk</a><span class="newgif"></span></li>
+            
+              <li><a href="products/Silk Sarees/Pattola Soft Silk.html" title="Pattola Soft Silk" class="menutext">Pattola Soft Silk</a><span class="newgif"><img src="images/new.gif" id="dlmenu_ctl23_newimg" alt="New" height="16" width="33"></span></li>
+            
+              <li><a href="products/Silk Sarees/Orissa Silk.html" title="Orissa Silk" class="menutext">Orissa Silk</a><span class="newgif"></span></li>
+            
+              <li><a href="products/Silk Sarees/Kora by Kora Silks.html" title="Kora by Kora Silks" class="menutext">Kora by Kora Silks</a><span class="newgif"></span></li>
+            
+              <li><a href="products/Silk Sarees/Nine Yards Saree.html" title="Nine Yards Saree" class="menutext">Nine Yards Saree</a><span class="newgif"></span></li>
+            
+              <li><a href="products/Silk Sarees/Mayuri Menpattu.html" title="Mayuri Menpattu" class="menutext">Mayuri Menpattu</a><span class="newgif"></span></li>
+            
+              <li><a href="products/Silk Sarees/Partywear Sarees.html" title="Partywear Sarees" class="menutext">Partywear Sarees</a><span class="newgif"></span></li>
+            
+              <li><a href="products/Silk Sarees/Partywear Half Sarees.html" title="Partywear Half Sarees" class="menutext">Partywear Half Sarees</a><span class="newgif"></span></li>
+            
+              <li><a href="products/Silk Sarees/Printed Silks.html" title="Printed Silks" class="menutext">Printed Silks</a><span class="newgif"></span></li>
+            
+              <li><a href="products/Silk Sarees/Casual Wear.html" title="Casual Wear" class="menutext">Casual Wear</a><span class="newgif"><img src="images/new.gif" id="dlmenu_ctl31_newimg" alt="New" height="16" width="33"></span></li>
+            
+              <li><a href="products/Silk Sarees/Silk Cotton.html" title="Silk Cotton" class="menutext">Silk Cotton</a><span class="newgif"></span></li>
+            
+              <li><a href="products/Silk Sarees/Designer Sarees.html" title="Designer Sarees" class="menutext">Designer Sarees</a><span class="newgif"><img src="images/new.gif" id="dlmenu_ctl33_newimg" alt="New" height="16" width="33"></span></li>
+            
+              <li><a href="products/Silk Sarees/New arrivals.html" title="New arrivals" class="menutext">New arrivals</a><span class="newgif"><img src="images/new.gif" id="dlmenu_ctl34_newimg" alt="New" height="16" width="33"></span></li>
+            
+              <li><a href="products/Kids Wear/Navarathna Pavadai (Skirts).html" title="Navarathna Pavadai (Skirts)" class="menutext">Navarathna Pavadai (Skirts)</a><span class="newgif"><img src="images/new.gif" id="dlmenu_ctl35_newimg" alt="New" height="16" width="33"></span></li>
+            
+              <li><a href="products/Kids Wear/Art Silk Pavadai (Skirts).html" title="Art Silk Pavadai (Skirts)" class="menutext">Art Silk Pavadai (Skirts)</a><span class="newgif"><img src="images/new.gif" id="dlmenu_ctl36_newimg" alt="New" height="16" width="33"></span></li>
+            
+              <li><a href="products/Kids Wear/Kutty Sarees.html" title="Kutty Sarees" class="menutext">Kutty Sarees</a><span class="newgif"></span></li>
+            
+              <li><a href="products/Woman Wear/Churidhar Materials.html" title="Churidhar Materials" class="menutext">Churidhar Materials</a><span class="newgif"><img src="images/new.gif" id="dlmenu_ctl38_newimg" alt="New" height="16" width="33"></span></li>
+            
+              <li><a href="products/Silk Sarees/Exclusive Collections.html" title="Exclusive Collections" class="menutext">Exclusive Collections</a><span class="newgif"><img src="images/new.gif" id="dlmenu_ctl39_newimg" alt="New" height="16" width="33"></span></li>
+            
+              <li><a href="products/Men Wear/Dhoties.html" title="Dhoties" class="menutext">Dhoties</a><span class="newgif"></span></li>
+              
+        </ul>
+        <div class="ActlMenus" style="padding:4px; padding-right:17px; font-size:11px;" align="right"><strong></strong></div>
+      </div>
+    </div>
+    <div id="home-container">
+    <div id="seas-advt">   <object style="visibility: visible;" id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" height="408" width="408">
+        <param name="movie" value="flash/pothys-new.swf">
+        <param name="quality" value="high">
+        <param name="wmode" value="opaque">
+        <param name="swfversion" value="6.0.65.0">
+        <!-- This param tag prompts users with Flash Player 6.0 r65 and higher to download the latest version of Flash Player. Delete it if you don’t want users to see the prompt. -->
+        <param name="expressinstall" value="Scripts/expressInstall.swf">
+        <!-- Next object tag is for non-IE browsers. So hide it from IE using IECC. -->
+        <!--[if !IE]>-->
+        <object type="application/x-shockwave-flash" data="flash/pothys-new.swf" height="408" width="408">
+          <!--<![endif]-->
+          <param name="quality" value="high">
+          <param name="wmode" value="opaque">
+          <param name="swfversion" value="6.0.65.0">
+          <param name="expressinstall" value="Scripts/expressInstall.swf">
+          <!-- The browser displays the following alternative content for users with Flash Player 6.0 and older. -->
+          <div>
+            <h4>Content on this page requires a newer version of Adobe Flash Player.</h4>
+            <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" height="33" width="112"></a></p>
+          </div>
+          <!--[if !IE]>-->
+        </object>
+        <!--<![endif]-->
+      </object></div>
+       
+    </div>
+    <div id="right-panel">
+    <div id="price-range-home"> 
+       <span class="pricelist">
+           <table id="rblPriceList" border="0">
+	<tbody><tr>
+		<td><input id="rblPriceList_0" name="rblPriceList" value="1" onclick="javascript:setTimeout('__doPostBack(\'rblPriceList$0\',\'\')', 0)" type="radio"><label for="rblPriceList_0"> Upto Rs.5,000</label></td>
+	</tr><tr>
+		<td><input id="rblPriceList_1" name="rblPriceList" value="2" onclick="javascript:setTimeout('__doPostBack(\'rblPriceList$1\',\'\')', 0)" type="radio"><label for="rblPriceList_1"> Rs.5,000 - Rs.10,000</label></td>
+	</tr><tr>
+		<td><input id="rblPriceList_2" name="rblPriceList" value="3" onclick="javascript:setTimeout('__doPostBack(\'rblPriceList$2\',\'\')', 0)" type="radio"><label for="rblPriceList_2"> Rs.10,000 - Rs.20,000</label></td>
+	</tr><tr>
+		<td><input id="rblPriceList_3" name="rblPriceList" value="4" onclick="javascript:setTimeout('__doPostBack(\'rblPriceList$3\',\'\')', 0)" type="radio"><label for="rblPriceList_3"> Rs.20,000 - Rs.50,000</label></td>
+	</tr><tr>
+		<td><input id="rblPriceList_4" name="rblPriceList" value="5" onclick="javascript:setTimeout('__doPostBack(\'rblPriceList$4\',\'\')', 0)" type="radio"><label for="rblPriceList_4"> Rs.50,000 - Above</label></td>
+	</tr>
+</tbody></table> 
+       </span>   
+    </div>
+    <div id="color-plus-home">
+      <ul>
+          <span id="dlColor"><span>
+            <ul>
+          <br><span>
+                <li><a id="dlColor_ctl01_lnkColor" href="javascript:__doPostBack('dlColor$ctl01$lnkColor','')"><img src="colors/amathus.png" alt="" height="21" width="21"></a></li>
+          </span><span>
+                <li><a id="dlColor_ctl04_lnkColor" href="javascript:__doPostBack('dlColor$ctl04$lnkColor','')"><img src="colors/brown.png" alt="" height="21" width="21"></a></li>
+          </span><span>
+                <li><a id="dlColor_ctl07_lnkColor" href="javascript:__doPostBack('dlColor$ctl07$lnkColor','')"><img src="colors/ivory.png" alt="" height="21" width="21"></a></li>
+          </span><span>
+                <li><a id="dlColor_ctl10_lnkColor" href="javascript:__doPostBack('dlColor$ctl10$lnkColor','')"><img src="colors/pink.png" alt="" height="21" width="21"></a></li>
+          </span><span>
+                <li><a id="dlColor_ctl13_lnkColor" href="javascript:__doPostBack('dlColor$ctl13$lnkColor','')"><img src="colors/violet-1.png" alt="" height="21" width="21"></a></li>
+          </span><br><span>
+                <li><a id="dlColor_ctl02_lnkColor" href="javascript:__doPostBack('dlColor$ctl02$lnkColor','')"><img src="colors/black.png" alt="" height="21" width="21"></a></li>
+          </span><span>
+                <li><a id="dlColor_ctl05_lnkColor" href="javascript:__doPostBack('dlColor$ctl05$lnkColor','')"><img src="colors/green.png" alt="" height="21" width="21"></a></li>
+          </span><span>
+                <li><a id="dlColor_ctl08_lnkColor" href="javascript:__doPostBack('dlColor$ctl08$lnkColor','')"><img src="colors/orange.png" alt="" height="21" width="21"></a></li>
+          </span><span>
+                <li><a id="dlColor_ctl11_lnkColor" href="javascript:__doPostBack('dlColor$ctl11$lnkColor','')"><img src="colors/red.png" alt="" height="21" width="21"></a></li>
+          </span><span>
+                <li><a id="dlColor_ctl14_lnkColor" href="javascript:__doPostBack('dlColor$ctl14$lnkColor','')"><img src="colors/violet.png" alt="" height="21" width="21"></a></li>
+          </span><br><span>
+                <li><a id="dlColor_ctl03_lnkColor" href="javascript:__doPostBack('dlColor$ctl03$lnkColor','')"><img src="colors/blue.png" alt="" height="21" width="21"></a></li>
+          </span><span>
+                <li><a id="dlColor_ctl06_lnkColor" href="javascript:__doPostBack('dlColor$ctl06$lnkColor','')"><img src="colors/grey.png" alt="" height="21" width="21"></a></li>
+          </span><span>
+                <li><a id="dlColor_ctl09_lnkColor" href="javascript:__doPostBack('dlColor$ctl09$lnkColor','')"><img src="colors/pale.png" alt="" height="21" width="21"></a></li>
+          </span><span>
+                <li><a id="dlColor_ctl12_lnkColor" href="javascript:__doPostBack('dlColor$ctl12$lnkColor','')"><img src="colors/rose.png" alt="" height="21" width="21"></a></li>
+          </span><span>
+                <li><a id="dlColor_ctl15_lnkColor" href="javascript:__doPostBack('dlColor$ctl15$lnkColor','')"><img src="colors/yellow.png" alt="" height="21" width="21"></a></li>
+          </span><br><span>
+            </span></ul>
+          </span></span>
+          <input name="hidColor" id="hidColor" type="hidden">
+      </ul>
+    </div></div>
+    <div id="main-con">
+    <div id="location"><a href="branches.aspx#boutique">Chennai</a> | <a href="branches.aspx#boutique">Pothy’s Boutique</a> (G.N.Chetty Road) | <a href="branches.aspx#madurai">Madurai</a> <a href="branches.aspx#srivilliputhur">Srivilliputhur</a> | <a href="branches.aspx#tirunelveli">Tirunelveli</a><br><a href="branches.aspx#thiruvananthapuram">Thiruvananthapuram</a><br>
+        <a href="branches.aspx#coimbatore">Coimbatore</a> | <a href="branches.aspx#pondicherry">Pondicherry</a><br>
+        </div>
+    <div id="video"><a id="element_1" toptions="width = 425, height = 344" href="http://pothys.co.in/media/gogreen_2.flv"> <img src="images/pothys_adver-img.jpg" id="element_0" alt="Advertisement" height="151" width="335" border="0"></a></div>
+    </div>
+    <div id="con-text"><img src="images/records.png" alt="Records" height="111" width="255">
+      <p>Swoon into the magic of the finest silk at Pothys, a top most destination for silk and silk sarees. Procure best quality and high graded fabric and go ahead and drape yourself in some of our timeless silk sarees. We offer a wide range of designer sarees in various styles, designs and vibrant color combinations. Served as a perfect costume for wedding and other festive occasions, our range can surely transform the wearer into a style diva. </p>
+    <p>The smooth edging of sarees blend with authentic designs offer genuine customer service and a luxurious shopping experience. Pothys offers you an exclusive brand of pure silk sarees, artistically designed and handcrafted at our looms  <strong>- Samudrika, Parampara and Vastrakala. </strong></p></div>
+    
+    <div id="top-brands"><img src="images/top-brands.png" alt="Top-Brands" height="90" width="98"><a href="Samudrika_Pattu.aspx"><img src="images/samudrika.png" alt="Samudrika Pattu" title="Samudrika Pattu" height="90" width="160" border="0"></a><a href="Parampara_Pattu.aspx"><img src="images/parampara.png" alt="Parampara Pattu" title="Parampara Pattu" height="90" width="160"></a><a href="Vastrakala_Pattu.aspx"><img src="images/vastrakala.png" alt="Vastrakala Pattu" title="Vastrakala Pattu" height="90" width="120"></a><a href="Vasundhra_Pattu.aspx"><img src="images/vasundra.png" alt="Vasundhra Pattu" title="Vasundhra Pattu" height="90" width="120"></a></div>
+   </div>
+   
+   <div id="showroom"><img src="images/our-showroom.jpg" alt="showroom" height="18" width="127"> </div>
+   
+   <div class="top-brands2">
+     <div id="examples">   
+    <div class="img-gallery2">
+    <a href="images/showroom-b1.jpg" class="top_up" title="GN Chetty Road"><img src="images/showroom-t1.jpg" alt="showroom1" height="97" width="130"></a>
+    <a href="images/showroom_chn/pothys_chn_img1.jpg" class="top_up" title="GN Chetty Road"></a>
+     <a href="images/showroom_chn/pothys_chn_img2.jpg" class="top_up" title="GN Chetty Road"></a>
+      <a href="images/showroom_chn/pothys_chn_img3.jpg" class="top_up" title="GN Chetty Road"></a>
+       <a href="images/showroom_chn/pothys_chn_img4.jpg" class="top_up" title="GN Chetty Road"></a>
+        <a href="images/showroom_chn/pothys_chn_img5.jpg" class="top_up" title="GN Chetty Road"></a>
+         <a href="images/showroom_chn/pothys_chn_img6.jpg" class="top_up" title="GN Chetty Road"></a>
+          <a href="images/showroom_chn/pothys_chn_img7.jpg" class="top_up" title="GN Chetty Road"></a>
+           <a href="images/showroom_chn/pothys_chn_img8.jpg" class="top_up" title="GN Chetty Road"></a>
+            <a href="images/showroom_chn/pothys_chn_img9.jpg" class="top_up" title="GN Chetty Road"></a>
+             <a href="images/showroom_chn/pothys_chn_img10.jpg" class="top_up" title="GN Chetty Road"></a>
+              <a href="images/showroom_chn/pothys_chn_img11.jpg" class="top_up" title="GN Chetty Road"></a>
+               <a href="images/showroom_chn/pothys_chn_img12.jpg" class="top_up" title="GN Chetty Road"></a>
+    </div></div>
+    
+    <div class="img-gallery"><a href="images/showroom-b2.jpg" class="top_up" title="Kovai"><img src="images/showroom-t2.jpg" alt="showroom2" height="97" width="130"></a></div>
+    
+    
+    <div class="img-gallery">
+    <a href="images/showroom-b3.jpg" class="top_up" title="Madurai"><img src="images/showroom-t3.jpg" alt="showroom3" height="97" width="130"></a> 
+    </div>
+    
+    <div class="img-gallery">
+    <a href="images/showroom-b4.jpg" class="top_up" title="Puducherry"><img src="images/showroom-t4.jpg" alt="showroom4" height="97" width="130"></a> 
+    </div>
+
+
+    <div class="img-gallery">
+    <a href="images/showroom-b5.jpg" class="top_up" title="Thiruvananthapuram"><img src="images/showroom-t5.jpg" alt="showroom5" height="97" width="130"></a> 
+    </div>
+
+
+        
+    </div>
+   
+   
+   
+
+<div id="footer">
+  <div id="innerfooter">
+  <div class="foot-link">
+  <h6>The Pothys</h6>
+   <ul>
+    <li><a href="index.aspx" title="Home">Home</a></li>
+    <li><a href="profile.aspx" title="Profile">Profile</a></li>
+    <li><a href="Products.aspx" title="Collections">Collections</a></li>
+    <li><a href="Advertisement.aspx" title="Advertisement">Advertisement</a></li>
+    <li><a href="virtualpothys.aspx" title="Virtual Tour">Virtual Tour</a></li>
+    <li><a href="Awards.aspx" title="Awards">Awards</a></li>
+  </ul>
+  
+  </div>
+  <div class="foot-link">
+  <h6>information</h6>
+  <ul>
+    <li><a href="../../safe-purchase.aspx" title="Safe Purchase">Safe Purchase
+</a></li>
+    <li><a href="../../faq.aspx" title="FAQ">FAQ
+      </a></li>
+    
+    <li><a href="../../shipping-policy.aspx" title="Shipping Policy">Shipping Policy
+      </a></li>
+    <li><a href="../../Wishlist.aspx" title="Know about Wishlist">Know about Wishlist</a></li>
+    
+  </ul>
+  
+  </div>
+  <div class="foot-link">
+  <h6>customer service</h6>
+  <ul>
+    <li><a href="GiftVoucher.aspx" title="Gift Card">Gift Card</a></li>
+    <li><a href="OrderStatus.aspx" title="Order Tracking">Order Tracking</a></li>
+    <li><a href="enquiry.aspx" title="Enquiry"> Enquiry</a></li>
+    <li><a href="Branches.aspx" title="Branches">Branches</a></li>
+    <li><a href="contactus.aspx" title="Contact Us">Contact Us</a></li>
+  </ul>
+  
+  </div>
+  <div class="foot-link">
+  <h6>connect with us</h6>
+  <ul>
+    <li>Follow Us On</li>
+    <li class="sociallist" style="background-image:none; margin:8px 3px 8px 25px; padding:0;"><a href="https://www.facebook.com/Pothyssilks" target="_blank"><img src="images/fb-icon.png" alt="Facebook" title="Facebook" height="35" width="35" border="0"></a></li>
+    <li class="sociallist" style="background-image:none; margin:8px 3px; padding:0;"><a href="http://pinterest.com/pothyssilks/" target="_blank"><img src="images/pintrest-icon.png" alt="Pinterest" title="Pinterest" height="35" width="35" border="0"></a></li>
+    <li class="sociallist" style="background-image:none; margin:8px 3px; padding:0;"><a href="http://www.youtube.com/pothyschennai" target="_blank"><img src="images/youtube-icon.png" alt="You Tube" title="You Tube" height="35" width="35" border="0"></a></li>
+    <li class="sociallist" style="background-image:none; margin:8px 3px; padding:0;"><a href="http://pothystextiles.blogspot.com/" target="_blank"><img src="images/blog-icon.png" alt="Blog" title="Blog" height="35" width="35" border="0"></a></li>
+    
+  </ul>
+  
+  </div>
+  <div style="clear:both;"></div>
+  <div class="copyrights">© Copyright Pothys 2013. All rights reserved</div>
+  <div class="design">Designed by <a href="http://www.webindia.com/" target="_blank">Webindia</a></div>
+  </div>
+</div>
+  
+<script type="text/javascript">
+<!--
+document.getElementById("collections").setAttribute("data-flexmenu","flexmenu1");
+swfobject.registerObject("FlashID");
+//-->
+</script>
+<script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+
+</script><script src="http://www.google-analytics.com/ga.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+    var pageTracker = _gat._getTracker("UA-5116706-1");
+    pageTracker._initData();
+    pageTracker._trackPageview();
+    //soundon();
+</script>
+</form>
+
+<div id="tu_overlay" onclick="TopUp.overlayClose()" style="display: none"></div><div id="top_up" class="te_top_up" style="display: none"><div class="te_wrapper"><div class="te_title"></div><table class="te_frame"><tbody><tr class="te_top"><td class="te_left te_corner"><div class="te_left_filler"></div></td><td class="te_middle te_rib"></td><td class="te_right te_corner"><div class="te_right_filler"></div></td></tr><tr class="te_middle"><td class="te_left te_rib"></td><td class="te_middle"><div class="te_content"><!-- Content --></div></td><td class="te_right te_rib"></td></tr><tr class="te_bottom"><td class="te_left te_corner"></td><td class="te_middle te_rib"></td><td class="te_right te_corner"></td></tr></tbody></table><div class="te_controls" style="display: none"><a class="te_previous_link" onclick="TopUp.previous()"></a><a class="te_next_link" onclick="TopUp.next()"></a></div><a class="te_close_link" onclick="TopUp.close()" style="display: none"></a></div></div><div id="temp_up" class="te_top_up te_transparent"><div class="te_wrapper"><div class="te_title"></div><table class="te_frame"><tbody><tr class="te_top"><td class="te_left te_corner"><div class="te_left_filler"></div></td><td class="te_middle te_rib"></td><td class="te_right te_corner"><div class="te_right_filler"></div></td></tr><tr class="te_middle"><td class="te_left te_rib"></td><td class="te_middle"><div class="te_content"><!-- Content --></div></td><td class="te_right te_rib"></td></tr><tr class="te_bottom"><td class="te_left te_corner"></td><td class="te_middle te_rib"></td><td class="te_right te_corner"></td></tr></tbody></table><div class="te_controls" style="display: none"><a class="te_previous_link" onclick="TopUp.previous()"></a><a class="te_next_link" onclick="TopUp.next()"></a></div><a class="te_close_link" onclick="TopUp.close()" style="display: none"></a></div></div><table id="tu_center_wrapper" style="display: none"><tbody><tr valign="middle"><td id="tu_centered_content" align="center"><!-- Top ups --></td></tr></tbody></table><div id="tu_loader" style="display: none"></div><ul style="display: none; visibility: visible; z-index: 1000;" id="flexmenu1" class="flexdropdownmenu jqflexmenu">
+  <li><a href="Products.aspx" title="Silk Sarees">Silk Sarees</a></li>
+  <li><a href="menswear.aspx" title="Men Wear">Men Wear</a></li>
+  <li><a href="womenswear.aspx" title="Women Wear">Women Wear</a></li>
+  <li><a href="kidswear.aspx" title="Kids Wear">Kids Wear</a></li>
+</ul></body>

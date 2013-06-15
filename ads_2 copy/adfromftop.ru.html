@@ -1,0 +1,331 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>VirtuaGirl</title>
+<link rel="alternate" type="application/rss+xml" title="VirtuaGirl Cards" href="/rss/">
+<link rel="alternate" type="application/rss+xml" title="VirtuaGirl News" href="/rss/news.php">
+
+<link href="css/body.css?20130520" rel="stylesheet" type="text/css">
+<link href="css/home.css?20130520" rel="stylesheet" type="text/css">
+<link href="css/jquery-ui-1.7.2.custom.css" rel="stylesheet" type="text/css">
+<link href="data/26/style.css?20130424" rel="stylesheet" type="text/css">
+
+<script src="http://www.google-analytics.com/ga.js" async="" type="text/javascript"></script><script language="javascript" type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+<script language="javascript" type="text/javascript" src="js/ajaxLoad.js"></script>
+<script language="javascript" type="text/javascript" src="js/swfobject.js"></script>
+<script language="javascript" type="text/javascript" src="js/dl.js"></script>
+<script language="javascript" type="text/javascript" src="js/popUp.js"></script>
+
+<!--FLASH ACCEUIL -->
+<script type="text/javascript">swfobject.embedSWF("data/26/en/flv/fl_home_v3.1.swf", "flashHome3", "739", "370", "9.0.0", false, {loaderColor:"0xFFFFFF"}, {wmode: "transparent"});</script><style media="screen" type="text/css">#flashHome3 {visibility:hidden}</style>	
+
+<script language="javascript" type="text/javascript">
+$(document).ready(function(){
+
+	$("ul[class=tab01] li a").click(function(){
+		$(this).parent("li").parent("ul").children("li").removeClass("selected");
+		$(this).parent("li").addClass("selected");
+		var platformSelected = $(this).attr("name");
+		var platformCurrent = (platformSelected=="win")?"mac":"win";			
+		$("#download_"+platformSelected).show();
+		$("#download_"+platformCurrent).hide();
+		return false;
+	});
+
+
+	
+
+	// J'INITIALISE MES VARIABLES GLOBALES
+	obj_header_username=document.getElementById("login_username");
+	obj_header_password=document.getElementById("login_password");
+	obj_login_error01=document.getElementById("login_error01");
+	
+	// JE DONNE LE FOCUS AU USERNAME
+	$(obj_header_username).focus();
+
+	// JE CACHE MES DIV D'ERREUR
+	$(obj_login_error01).hide();
+
+	///////////
+	// LOGIN //
+	///////////
+	$("input[id=login_submit]").click(
+		function()
+		{
+			$("input[id=login_submit]").attr({ disabled: "disabled" }); // DESACTIVATION DU BOUTON SUBMIT
+
+			$(obj_login_error01).hide();
+
+			// JE VALIDE LES CHAMPS EN AJAX
+			$("div[id=ajaxPop]").hide();
+			var html = $.ajax({url: "php/ajaxProcess_login.php?username="+obj_header_username.value+'&password='+encodeURIComponent(obj_header_password.value),async: false,global: false}).responseText;
+			if(html=="true")
+			{	
+				$("div[id=ajaxPop]").empty();
+				
+				$.ajax({
+					beforeSend: function(){$("#loading").show();},
+					//complete: function(){$("#loading").hide();},	   
+					url: 'php/pop_login.php?setId=992&validAuth=1',
+					global: false,
+					success: function(html){
+						$("div[id=ajaxPop]").append(html);
+						window.location='?setId=992&Auth=true';
+					}
+				});				
+			}
+			else
+			{
+				if(html=="false_login")
+					$(obj_login_error01).show();
+			}
+			$("div[id=ajaxPop]").show();
+		
+			// FOCUS
+			if(obj_header_password.value=='')
+				$(obj_header_password).focus();
+			if(obj_header_username.value=='')
+				$(obj_header_username).focus();
+
+			$("input[id=login_submit]").attr({ disabled: "" }); // JE REACTIVE LE BOUTON SUBMIT
+		}
+	);
+	
+
+	$("a[class=passwordRetrieve]").click(function()
+	{
+		PopUp("php/pop_passwordRetrieve.php?",820,360,0);
+		return false;
+	});
+});
+</script>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-22423573-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+</head>
+
+<body>
+<div id="gbl_26">
+
+
+<script language="javascript" type="text/javascript" src="js/cookie.js"></script>
+<script language="javascript" type="text/javascript">
+$(document).ready(
+	function()
+	{
+		// MODULE CUSTOMER SERVICE
+		$("a[class=customerService]").click(function(){
+			$.ajax({
+				beforeSend: function(){},
+				global: false,
+				url: '/cs/index.php',
+				success: function(html){$("body").append(html);}
+			});
+			return false;
+		});
+	}
+);
+
+
+</script>
+<div id="ajaxPop"></div>
+<div id="loading" style="position:fixed;top:0px;left:0px;width:100%;height:100%;z-index:10000;background-image:url('data/global/ajaxLoad_bg.png');display:none;filter:alpha(opacity=50);-moz-opacity:0.5;opacity:0.5;"></div>
+
+
+
+<div id="topHeader">
+	<div> 
+		<a href="?&amp;setId=992&amp;language=en" target="_parent"><img src="data/global/flag_en.jpg" alt="English" title="English" width="15" border="0"></a> <a href="?&amp;setId=992&amp;language=fr" target="_parent"><img src="data/global/flag_fr.jpg" alt="French" title="French" width="15" border="0"></a> <a href="?&amp;setId=992&amp;language=ru" target="_parent"><img src="data/global/flag_ru.jpg" alt="Russian" title="Russian" width="15" border="0"></a> <a href="?&amp;setId=992&amp;language=de" target="_parent"><img src="data/global/flag_de.jpg" alt="" title="" width="15" border="0"></a> <a href="?&amp;setId=992&amp;language=sp" target="_parent"><img src="data/global/flag_sp.jpg" alt="Spanish" title="Spanish" width="15" border="0"></a> <a href="?&amp;setId=992&amp;language=jp" target="_parent"><img src="data/global/flag_jp.jpg" alt="japanese" title="japanese" width="15" border="0"></a> 		| <a href="javascript:void(0);" onclick="PopUp('termsAndConditions.php','500','500','1')">T.O.S &amp; E.U.L.A</a> | <a href="totemEntertainment.php" target="_blank">contact us</a>
+			</div>
+	<span id="login_error01" style="display:none;"><b>We couldn't find that login/password</b>. Please check your entry to make sure you've spelled correctly.<br></span>
+	</div>
+<div id="head_home">
+	<div id="header">
+		<a href="index.php" target="_self"><img src="data/26/header.png" border="0"></a>
+		<h3 class="en"><span>Sex</span> Free desktop strippers</h3>
+		<div id="form_top">
+						<form onsubmit="return(false);" class="login2">
+				<p>Login</p><input name="username" id="login_username" tabindex="1" style="margin-right:4px;" type="text"><input name="CurrentPage" value="collection" id="login_CurrentPage" type="hidden"><input name="Submit" value="Login" id="login_submit" tabindex="4" type="submit">
+				<br clear="left">
+				<p>Password</p> <input name="password" id="login_password" tabindex="2" style="margin-right:0em;" type="password">
+				
+				<p class="lost_psw"><a href="php/pop_passwordRetrieve.php" class="passwordRetrieve">lost password?</a></p>
+			</form>
+			
+					</div>
+
+		<br clear="all">
+	</div>
+</div>
+<div id="body" style="background-image: none;">
+	<div class="download">
+		<div class="en">
+			<div class="wrapper">
+				<img src="data/global/icon_windows.png">
+				<p>Windows XP, Vista, Seven, 8</p>
+			</div>
+			<div class="wrapper">
+				<img src="data/global/icon_mac.png">
+				<p>Mac OSX 10.6 or higher</p>
+			</div>
+			<div class="wrapper">
+				<img src="data/global/icon_hd.png">
+				<p>Content in HD 1080 and more</p>
+			</div>
+			<div class="wrapper">
+				<img src="data/global/icon_free.png">
+				<p>100% Free unlimited software</p>
+			</div>
+			<div class="wrapper">
+				<img src="data/global/icon_norton.png">
+				<p>No adware<br>No spyware<br>No virus</p>
+			</div>
+			<div class="wrapper">
+				<img src="data/26/icon_1998.png">
+				<p>The hottest girls on your desktop</p>
+			</div>
+		</div>
+		<div>
+			<div id="flashHome3" style="border-bottom: 1px solid rgb(139, 139, 139); text-align: center; font-size: 18px; padding: 10px; background-image: url(&quot;data/26/freeHomeFlash.jpg&quot;); height: 322px; width: 719px; visibility: visible;"></div>
+			<!--
+						<video width="644" height="322" autoplay="true" loop="true">
+				<source src="data/26/en/video/fl_home_v3.1.webmsd.webm" type="video/webm" />
+				<source src="data/26/en/video/fl_home_v3.1.mp4.mp4" type="video/mp4" />			
+				<source src="data/26/en/video/home2.ogv" type="video/ogg" />	
+			</video>
+						-->
+			
+			<div id="bloc1">
+				<div>
+					<h3 class="en">Spice up <span>your desktop !</span></h3>
+					<p>Download your desktop strippers for free</p>
+				</div>
+			</div>
+			<div id="bloc2">
+				
+				<a href="/dl.php?platform=" target="_self"><img src="data/global/en/btDownload.gif" alt="Click here to download now" title="Click here to download now" onmouseover="this.src='data/global/en/btDownloadOn.gif';" onmouseout="this.src='data/global/en/btDownload.gif';" height="60" width="280" border="0"></a>
+			</div>
+		</div>
+		
+			</div>
+
+	
+	
+	<div style="border-bottom: 1px solid #BABABA;padding: 2em 0;width: 940px; margin:0 auto;">
+		<div style="position:relative;float:left;margin-right:15px;"><img src="http://cards.virtuagirl.com/free/sets/a0776/illustrations/card.jpg" alt="Zafira / Dove feather" title="Zafira / Dove feather" class="cardFull" height="242" width="162" border="0"></div>
+		<div class="setCard" style="min-height:250px;">
+			<h1 style="margin-top: 0;">Zafira / <span class="titleMore">Dove feather</span></h1>
+											Origins: Budapest / Hungary - Age: 26<br>
+				Height: 5.6 - Weight: 121 - Vital Statistics: 34/24/34<br><br>
+						Long slender legs and sweet buttery thighs make Zafira a perfect specimen from the waist down. If you look at a lady’s legs first when you first meet her then Zafira is the model who will always keep you satisfied. Legs like long sweet luscious lollipops!<br><br>
+			Categories: Lingerie, Stockings, High Heels, Shaved, Big Boobs, Brunette, European			<br><br>
+			<a onclick="return dlNow('/dl.php','download.php','0')" href="download.php" target="_self"><img src="data/global/en/btDownloadDemo.gif" alt="Click here to download now" title="Click here to download now" onmouseover="this.src='data/global/en/btDownloadDemoOn.gif';" onmouseout="this.src='data/global/en/btDownloadDemo.gif';" height="33" width="172" border="0"></a>
+		</div>
+	</div>
+	
+	
+	
+	<div class="contenu">
+		<div>
+			<div class="wrapper">
+				<div><img src="data/26/img_girls.png"></div>
+				<h3>OVER <span>1000 GIRLS !</span></h3>
+				<p>Discover our amazing collection of 1000+ stripping beauties, including famous Jana Cova, Little Caprice, Stacy Silver, Aria Giovanni, Carla Cox, Carmen Gemini! Blond, brunette, femmes fatales, cute students, duos and even trios, get the women of your dreams on your desktop!</p>
+			</div>
+			<div class="wrapper">
+				<div><img src="data/26/img_hd.png"></div>
+				<h3>HD <span>EXCLUSIVE CONTENT</span></h3>
+				<p>Buy the girls and enjoy their 30 to 45 minutes stripping show on your desktop. Girls strip and get naked on your desktop just like you would see in a live strip bar. Also get bonus photosets, making of and extra videos. All content is 100% exclusive and HD quality.</p>
+			</div>
+ 						<div class="wrapper">
+				<div><img src="data/26/img_community.png"></div>
+				<h3>OVER <span>19 MILLION USERS</span></h3>
+				<p>Become an active member of the VirtuaGirl community.<br>Meet, talk and share about the girls with other VirtuaGirl enthusiasts.<br>Meet the crew and voice your opinion about past and future production.</p>
+			</div>
+		</div>
+		<div>
+			<ul class="tab01">
+				<li class="selected"><a href="download2.php" target="_self" name="win">Windows</a></li>
+				<li style="margin-right: 0;"><a href="download2.php" target="_self" name="mac">Mac</a></li>
+			</ul>
+			
+			<div id="download_mac" style="display:none;clear:both;">
+				<h3 class="en">Software <span>download</span></h3>
+				<a href="http://safeweb.norton.com/report/show?url=virtuagirl.com" target="_blank"><img src="data/26/img_software_mac.png"></a>
+				<ul class="blanc">
+					<li>License: Free Software</li>
+					<li>Version: 1.1.0.59</li>
+					<li>File size: 35.7 MB</li>
+					<li>64 bit color</li>
+					<li>Release date: 2013-04-30</li>
+					<li>Mac OS X 10.6 or higher</li>
+					<li>No adware<br>No spyware<br>No virus</li>
+					<li>Easy to uninstall. Open Applications: drag &amp; drop VirtuaGirl to your bin.</li>
+				</ul>
+				<a onclick="return dlNow('/dl.php?platform=mac','download.php?platform=mac','0')" href="download.php?platform=mac" target="_self" class="download-button en"><img src="data/global/en/btDownload.gif" style="margin-top: 10px;" alt="Click here to download now" title="Click here to download now" onmouseover="this.src='data/global/en/btDownloadOn.gif';" onmouseout="this.src='data/global/en/btDownload.gif';" width="243" border="0"></a>
+			</div>
+			<div id="download_win">
+				<h3 class="en">Software <span>download</span></h3>
+				<a href="http://safeweb.norton.com/report/show?url=virtuagirl.com" target="_blank"><img src="data/26/img_software.png"></a>
+				<ul class="blanc">
+					<li>License: Free Software</li>
+					<li>Version: 1.1.0.58</li>
+					<li>File size: 26.5 MB</li>
+					<li>32 bit color</li>
+					<li>Release date: 2013-04-30</li>
+					<li>Windows XP/Vista/Seven/8</li>
+					<li>No adware<br>No spyware<br>No virus</li>
+					<li>Easy to uninstall: Click on: Start &gt; Programs &gt; VirtuaGirl &gt; Uninstall.</li>
+				</ul>
+				<a onclick="return dlNow('/dl.php?platform=win','download.php?platform=win','0')" href="download.php?platform=win" target="_self" class="download-button en"><img src="data/global/en/btDownload.gif" style="margin-top: 10px;" alt="Click here to download now" title="Click here to download now" onmouseover="this.src='data/global/en/btDownloadOn.gif';" onmouseout="this.src='data/global/en/btDownload.gif';" width="243" border="0"></a>
+			</div>
+		</div>
+	</div>		
+
+<br clear="all">
+</div>
+<div style="margin: 0 auto;width:990px;height:20px;background-color: #FFF;border-left: 1px solid #333;border-right: 1px solid #333;"></div>
+<div id="footer">
+	<div><img src="data/26/logo_footer.png"></div>
+	<div>
+		<ul>
+			<li><a href="javascript:void(0);" onclick="PopUp('privacyPolicy.php','500','500','1')">Privacy Policy</a></li>
+			<li><a href="javascript:void(0);" onclick="PopUp('termsAndConditions.php','500','500','1')">T.O.S &amp; E.U.L.A</a></li>
+			<li><a href="javascript:void(0);" onclick="PopUp('dmca.php','500','500','1')">DMCA</a></li>
+			<li><a href="mailto:support@actiondesk.com?subject=VirtuaGirl support">VirtuaGirl support</a></li>		</ul>
+	</div>
+	<div>
+		<ul>
+			<li><a href="promote.php" target="_blank">Affiliate Program</a></li>
+			<li><a href="javascript:void(0);" onclick="PopUp('billing.php','600','400','1')">Billing</a></li>				
+			<li><a href="totemEntertainment.php" target="_blank">contact us</a></li>
+
+			
+			
+						<li><a href="javascript:void(0);" onclick="PopUp('press.php','750','600','1')">Press</a></li>
+			<li><a href="javascript:void(0);" onclick="PopUp('certificates.php','750','600','1')">Certificates</a></li>
+						
+		</ul>
+	</div>
+	<div>
+		<a href="javascript:void(0);" onclick="PopUp('2257.php','650','260','1')">18 U.S.C. 2257 Record-Keeping Requirements Compliance Statement</a><br>
+		This website is viewable with any browser. The software is designed for Windows (XP/Vista/Seven &amp; 8) on PC and  OSX (10.6 and above) on Mac.<br>
+		All rights reserved - VirtuaGirl is a Registered Trademark of Totem Entertainment		
+		<br><a href="http://www.girlsfullshow.com/" target="_blank">GirlsFullShow</a>					<!--Follow us: -->
+			<a href="/rss/" target="_blank"><img src="data/global/icRss.png" alt="20 Latest Girls" title="20 Latest Girls" height="16" width="16" align="bottom" border="0"></a> 
+			<a href="http://www.facebook.com/pages/VirtuaGirl/172381899456762" rel="nofollow" target="_blank"><img src="data/global/icFacebook.png" alt="Facebook page" title="Facebook page" height="16" width="16" align="bottom" border="0"></a>
+			<a href="http://twitter.com/totement" target="_blank"><img src="data/global/icTwitter.png" alt="Follow us on Twitter" title="Follow us on Twitter" height="16" width="16" align="bottom" border="0"></a>
+			</div>
+</div></div>
+
+</body>

@@ -1,0 +1,1457 @@
+<head><link rel="ICON" href="http://images.htcampus.com/media/images/favicon.ico"><link rel="SHORTCUT ICON" href="http://images.htcampus.com/media/images/favicon.ico"><link rel="canonical" href="http://www.htcampus.com/college/institute-business-management-mangalayatan-university/"><title>Institute of Business Management, Mangalayatan University, Uttar Pradesh - HTCampus</title><meta name="keywords" content="Institute of Business Management, Mangalayatan University, Placement Institute of Business Management, Mangalayatan University, Admission in Institute of Business Management, Mangalayatan University, Courses offered by Institute of Business Management, Mangalayatan University, Faculty details Institute of Business Management, Mangalayatan University"><meta name="description" content="Find information of Institute of Business Management, Mangalayatan University- Admission, fees, faculty, courses offered, HTCampus"><meta property="fb:app_id" content="407744539286557"><link href="http://images.htcampus.com/media/uploads/new_pages_css.css" rel="stylesheet" type="text/css"><script async="" src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en_US.pq-TpXiLgaE.O/m=plusone/rt=j/sv=1/d=1/ed=1/am=EQ/rs=AItRSTOY9mIG3t5Os0XGQNrlA_ssOaR9lA/cb=gapi.loaded_0"></script><script type="text/javascript" async="" src="http://dnn506yrbagrg.cloudfront.net/pages/scripts/0016/9467.js?380393"></script><script src="https://d31qbv1cthcecs.cloudfront.net/atrk.js" async="" type="text/javascript"></script><script src="http://www.google-analytics.com/ga.js" async="" type="text/javascript"></script><script src="https://platform.twitter.com/widgets.js" id="twitter-wjs"></script><script gapi_processed="true" src="https://apis.google.com/js/plusone.js" async="" type="text/javascript"></script><script src="http://b.scorecardresearch.com/beacon.js" async=""></script><script src="http://images.htcampus.com/media/uploads/layout_base_extend.js" type="text/javascript"></script><script src="http://sda.htcampus.com/media/scripts/lead_form.js" type="text/javascript"></script><script src="http://images.htcampus.com/media/scripts/jquery.blockUI.js" type="text/javascript"></script><script src="http://images.htcampus.com/media/scripts/jquery.cookie.js" type="text/javascript"></script><script type="text/javascript">
+        $(document).ready(function(){
+        var token = getCookie('htc_token');
+        if($.browser.msie && window.XDomainRequest)
+        {
+            var url='http://sda.htcampus.com/lms/generate_leadform/';
+            var referer="url_path="+(window.location.href)+'&token='+token;
+            GET_LandingForm(url,referer);
+        }
+        else
+        {
+            $.get('http://sda.htcampus.com/lms/generate_leadform/',{'token':token}, function(data){
+                $('#leadform').html(data);
+                $('#leadformbtn').attr('onclick','');
+                $('#leadformbtn').bind('click',obj);
+            });
+        }
+        });
+
+    obj = function(){
+        if(leadFormValidator('leadformbtn','id_lead_form'))
+            register_lead($('#id_lead_form'));
+        } 
+    function register_lead(form){
+
+        var name = document.lead_form.name.value ;
+        var email = document.lead_form.email.value ;
+        var contact_number = document.lead_form.contact_number.value
+        var course = document.lead_form.course_category ;
+        var subcourse = document.lead_form.course_sub_category ;
+        if (typeof(course)!="undefined"){
+            if (typeof(course.options)!="undefined"){
+                var course_name =  course.options[course.selectedIndex].text ;
+                var subcourse_name = '' ;
+            }
+        }
+        if (typeof(course_name)=="undefined"){
+            var course_name = '' ;
+            var subcourse_name = subcourse.options[subcourse.selectedIndex].text;
+        }
+        var city = document.lead_form.current_city ;
+        var city_name =  city.options[city.selectedIndex].text ;
+        
+        post_dict = { 'fname' : name ,
+                    'email' : email ,
+                    'contact_number' : contact_number ,
+                    'area_of_interest':course_name,
+                    'sub_course_name' : subcourse_name ,
+                    'city' : city_name ,
+                    }
+
+        $.ajax({
+            type: 'POST',
+            url: '/register_lead/',
+            dataType: 'text',
+            data:post_dict,
+
+            success:function(res){
+                if (res == 'True')
+                formValidator('leadformbtn','id_lead_form', 'sda.htcampus.com');
+                else{
+                    alert('This email is already registerd. Please login');
+                    formValidator('leadformbtn','id_lead_form', 'sda.htcampus.com' ,false,false);
+                    }
+                }
+            }); 
+        }
+    function lead_login(){
+            var next_url = '#TBLogin_inline?height=246&amp;width=470&amp;LoginlineId=header-login-box1&amp;next='+window.location.pathname;
+            tb_showlogin('Log In',next_url);
+    }
+    </script><script src="http://images.htcampus.com/media/htc_2011/scripts/thickbox_new.js" type="text/javascript"></script><script type="text/javascript">
+/* <![CDATA[ */
+function timeHere() {
+  _gaq.push(['_trackEvent', 'College Details', 'time spent > 2 min', "Institute of Business Management, Mangalayatan University"]);
+  }
+$(document).ready(function(){
+
+	ajaxcall('/ajax_brochure/','#ajax_brochure',{inst_id:'10165'});
+	$("#ajax_brochure").show()
+    ajaxcall('/college-search/related_college/','#rel_college_div',{inst_id:'10165'});
+	 ajaxcall('/ask/ajax_comments/','#ajax_comments',{id:'10165',app:'core',model_name:'Institute',template:'post_review'});
+	crn_fun(".myCorner");
+	crn_fun(".top1","top");
+	setTimeout('timeHere();', 1000*60*2);
+	});
+function comments_content(thisobj){
+	if (thisobj.comment.value == 'Write your update or comment here' || thisobj.comment.value == ''){
+		$('#id_comment_error').show();
+		return false;
+	}
+  return true;
+}
+function download_ebrochure(a_tag_id){
+	_gaq.push(['_trackEvent', 'College Details', 'eBroucher', 'Institute of Business Management, Mangalayatan University']);
+	var div_str='<div id='+a_tag_id+' class="brochure_cls" style="display:none;"></div>';
+	$('body').append(div_str);
+	tb_showlogin('Log In','#TBLogin_inline?height=246&amp;width=470&amp;LoginlineId=header-login-box1&amp;next=/college/institute-business-management-mangalayatan-university/');
+	return false;
+}
+
+/* ]]> */
+
+</script><script type="text/javascript">
+                    (function() {
+                    var useSSL = 'https:' == document.location.protocol;
+                    var src = (useSSL ? 'https:' : 'http:') +
+                    '//www.googletagservices.com/tag/js/gpt.js';
+                    document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+                    })();
+                    </script><script src="http://www.googletagservices.com/tag/js/gpt.js"></script><script type="text/javascript">
+            googletag.cmd.push(function() {
+            googletag.defineSlot('/2174911/htc_collegedetail_top_728x90', [728, 90], 'div-gpt-ad-1365396833499-17').addService(googletag.pubads());googletag.defineSlot('/2174911/htc_collegedetail_left_160x600', [160, 600], 'div-gpt-ad-1365396833499-16').addService(googletag.pubads());googletag.defineSlot('/2174911/htc_collegedetail_bottom_728x90', [728, 90], 'div-gpt-ad-1365396833499-15').addService(googletag.pubads());googletag.defineUnit('/2174911/ca-pub-4885500807754460/htc_header_logo200x60_1', [200, 60], 'div-gpt-ad-1').addService(googletag.pubads());googletag.defineUnit('/2174911/ca-pub-4885500807754460/htc_header_logo200x60_2', [200, 60], 'div-gpt-ad-2').addService(googletag.pubads());googletag.defineUnit('/2174911/ca-pub-4885500807754460/htc_header_logo200x60_3', [200, 60], 'div-gpt-ad-3').addService(googletag.pubads());    
+                            googletag.pubads().setTargeting("college", "landing");
+                            googletag.pubads().set("page_url", "http://www.htcampus.com/college/institute-business-management-mangalayatan-university/");
+                            
+                 googletag.pubads().enableSyncRendering();
+                 googletag.pubads().enableSingleRequest();
+                
+                googletag.enableServices();
+                });
+                </script><script type="text/javascript" src="http://partner.googleadservices.com/gampad/google_ads_gpt.js"></script><script type="text/javascript">
+        var _comscore = _comscore || [];
+        _comscore.push({ c1: "2", c2: "6035286" });
+        (function() {
+            var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+            s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+            el.parentNode.insertBefore(s, el);
+        })();
+        </script><noscript><img src="http://b.scorecardresearch.com/p?c1=2&c2=6035286&cv=2.0&cj=1" /></noscript><!-- base comscore tag ends --><!-- comscore ajax call tracker starts --><script type="text/javascript">
+            function trackComscore(obj){
+                // declare c1...c16 variable
+                obj = obj || {};
+                var c1 = obj.c1 || "2",
+                    c2 = obj.c2 || "6035286",
+                    c3 = "",
+                    c4 = encodeURIComponent(obj.c4 || window.location.href),
+                    c5 = "",
+                    c6 = "",
+                    c8 = encodeURIComponent(obj.c8 || document.getElementsByTagName("title")[0].innerHTML),
+                    c15 = "",
+                    cv = "2.0",
+                    cj = "1";
+                
+                // create img
+                var img = document.createElement("img");
+                img.src = "http://b.scorecardresearch.com/p?c1=" + c1 + "&c2=" + c2 + "&c3=" + c3 + "&c4=" + c4 + "&c5=" + c5 + "&c6=" + c6 + "&c8=" + c8 +  "&c15=" + c15 + "&cv=" + cv + "&cj=" + cj;
+                //
+                document.body.appendChild(img);
+            }
+        </script><script src="http://pagead2.googlesyndication.com/pagead/osd.js" type="text/javascript"></script></head><body data-twttr-rendered="true"><script type="text/javascript">
+        function fixDiv() {
+            var w = $(window).scrollTop();
+            if ( w > $("#user_status").data("top")) {
+                if($('#user_status').hasClass('user_top')){
+                    $('#user_status').removeClass('user_top')
+                    $('#user_status').addClass('scroll-fix')
+                }
+            }
+            else {
+                if(!$('#user_status').hasClass('user_top')){
+                    if ($('.top_add_wrap').length > 0){
+                        $('#user_status').addClass('user_top')
+                        $('#user_status').removeClass('scroll-fix')
+                    }
+                }
+            }
+        }
+        $(function(){
+            $("#user_status").data("top", $("#user_status").offset().top); // set original position on load
+            $(window).scroll(fixDiv);
+        })
+        function removeHeaderAd()
+        {
+            $('.bannertop2').removeClass('bannertop2');
+            $('.top_add_wrap').remove();
+            $('.user_top').removeClass('user_top');
+            $('.top_add_bottom').removeClass('top_add_bottom');
+        }
+    </script><div class="top_add_wrap"><div class="topAdd"><div class="top_add_wrap"><div class="add_cross"><a onclick="removeHeaderAd()">cross</a></div><div class="add_banner"><div id="div-gpt-ad-1365396833499-17" style="width:728px; height:90px;"><script type="text/javascript">
+
+googletag.display('div-gpt-ad-1365396833499-17');
+
+</script><script type="text/javascript" src="http://pubads.g.doubleclick.net/gampad/ads?gdfp_req=1&amp;correlator=956737037270992&amp;output=json_html&amp;callback=googletag.impl.pubads.setAdContentsBySlotForSync&amp;impl=ss&amp;json_a=1&amp;eid=108809002&amp;iu_parts=2174911%2Chtc_collegedetail_top_728x90%2Chtc_collegedetail_left_160x600%2Chtc_collegedetail_bottom_728x90%2Cca-pub-4885500807754460%2Chtc_header_logo200x60_1%2Chtc_header_logo200x60_2%2Chtc_header_logo200x60_3&amp;enc_prev_ius=%2F0%2F1%2C%2F0%2F2%2C%2F0%2F3%2C%2F0%2F4%2F5%2C%2F0%2F4%2F6%2C%2F0%2F4%2F7&amp;prev_iu_szs=728x90%2C160x600%2C728x90%2C200x60%2C200x60%2C200x60&amp;cust_params=college%3Dlanding&amp;cookie=ID%3Ddc98bb024acb01a5%3AT%3D1369417603%3AS%3DALNI_MYXTzTAXHC9OX0j4tu0cG281NmNyw&amp;lmt=1369417588&amp;dt=1369417588706&amp;biw=1184&amp;bih=323&amp;oid=3&amp;url=http%3A%2F%2Fwww.htcampus.com%2Fcollege%2Finstitute-business-management-mangalayatan-university%2F&amp;gut=v2&amp;ifi=1&amp;u_tz=-300&amp;u_his=50&amp;u_h=1024&amp;u_w=1280&amp;u_ah=984&amp;u_aw=1280&amp;u_cd=24&amp;u_sd=1&amp;flash=0&amp;url=http%3A%2F%2Fwww.htcampus.com%2Fcollege%2Finstitute-business-management-mangalayatan-university%2F&amp;adks=716576124%2C4251485428%2C2771598590%2C1068196269%2C4091387535%2C3220023191&amp;vrg=21&amp;vrp=21&amp;ga_vid=1268621822.1369417589&amp;ga_sid=1369417589&amp;ga_hid=1813456817"></script><div id="div-gpt-ad-1365396833499-17_ad_container">
+<ins style="width: 728px; height: 90px; display: inline-table; position: relative; border: 0px none;"><ins style="width: 728px; height: 90px; display: block; position: relative; border: 0px none;"><iframe style="border: 0px none; position: absolute; top: 0px; left: 0px;" marginheight="0" marginwidth="0" name="google_ads_iframe_/2174911/htc_collegedetail_top_728x90_0" id="google_ads_iframe_/2174911/htc_collegedetail_top_728x90_0" frameborder="0" height="90" scrolling="no" width="728"></iframe></ins></ins></div>
+<script>googletag.impl.pubads.createDomIframe("div-gpt-ad-1365396833499-17_ad_container" ,"/2174911/htc_collegedetail_top_728x90_0",false,undefined);</script></div></div></div><div class="adbdr"></div></div></div><div id="headtop" class="top_add_bottom"><div id="user_status" class="user_top">
+
+
+
+<div class="top">
+	<div class="regtop">
+		<div class="right reg">
+			<form id="id_login_form_nav" name="new_login_form_nav" method="post" onsubmit="return false;" action="#"><div style="display:none"><input name="csrfmiddlewaretoken" value="01c011c036d8678d5dee81255672f67f" type="hidden"></div>
+				<input name="from" id="from" value="ask" type="hidden">
+				<ul>
+					
+					
+						<li><strong>Registered User</strong></li>
+											
+						<li class="error_message_top" id="id_error_msg_login_top" style="display:none;color:red;">Please Enter valid Email and Password</li>
+						<li><input id="id_username" name="username" class="text" value="Enter Username" onfocus="hide_msg('id_username','Enter Username')" onblur="show_msg(this,'Enter Username' )" type="text"></li>
+						<li><input id="id_password" name="password" class="text" value="Enter Password" onfocus="hide_msg('id_password','Enter Password')" onblur="show_msg(this,'Enter Password')" type="password"></li>
+										
+						<li><input id="id_next" name="next" value="/college/institute-business-management-mangalayatan-university/" type="hidden"></li>
+	          			<li><input name="ip_address" value="125.56.222.14" type="hidden"></li>
+						<li>
+							<input id="id_login_button" class="button_new_small cls_register_button" value="Login" type="submit">
+							<div class="button_small_Ending"></div>
+						</li>
+						<li><a href="/user/forgetpassword/">Forgot Password</a></li>
+						<li class="bdrgrey zerofont">&nbsp;</li>
+						<li><strong>New User?</strong></li>
+						<li>
+							<input onclick="LoadCaptcha();tb_showlogin('Register Now','#TBLogin_inline?height=473&amp;width=710&amp;LoginlineId=header-registration-box1');" class="button_new_small " value="Register Now" type="button"><div class="button_small_Ending"></div>						
+						</li>		
+					
+				</ul>
+			</form>
+		</div>
+	</div>
+	<div class="clear zerofont">
+</div>
+
+
+
+</div></div><div class="martop add_top"><div id="logo"><a href="/" title="Colleges in India- HTCampus"></a></div></div></div><div class="header"><!--Header navigation starts--><div id="id_navbar" class="nav1"><div class="left_nav">&nbsp;</div><ul><li onmouseover="show_submenus('id_home_nav','id_home_sub');" onmouseout="hide_submenus('id_home_nav','id_home_sub');"><a href="/" id="id_home_nav" class="home left">&nbsp;&nbsp;</a></li><li onmouseover="show_submenus('id_mba_course','id_mba_course_sub');" onmouseout="hide_submenus('id_mba_course','id_mba_course_sub');"><a href="/category/mba-business-management/" id="id_mba_course" class="mba"><span>&nbsp;</span>MBA Courses </a><div id="id_mba_course_sub" class="insidenav cornerb mba1" style="display: none; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;"><ul><li><strong><b>MBA</b></strong></li><li><a href="/category/mba-business-management/mba/">Full Time MBA</a></li><li><a href="/category/mba-business-management/online-mba/">Online MBA</a></li><li><a href="/category/mba-business-management/executive-mba/">Executive MBA</a></li><li><a href="/category/mba-business-management/financial-management/">Financial Management</a></li><li><a href="/category/mba-business-management/human-resource-management/">Human Resource Management</a></li><li><a href="/category/mba-business-management/sales-marketing-management/">Sales &amp; Marketing</a></li><li><strong><a href="/career/career_listing/mba-business-management/">Management Careers</a></strong></li><li><strong><a href="/article/education/mba-business-management/">Management News &amp; Articles</a></strong></li></ul></div></li><li onmouseover="show_submenus('id_course_12','id_course_12_sub');" onmouseout="hide_submenus('id_course_12','id_course_12_sub');"><a href="#" id="id_course_12" class="course"><span>&nbsp;</span>Courses after 12th  </a><div id="id_course_12_sub" class="insidenav cornerb course1" style="display: none; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;"><ul><li><strong><b>Popular Courses After 12th</b></strong></li><li><a href="/category/mba-business-management/bba/">BBA</a></li><li><a href="/category/aviationtravel-hospitality/hotel-management/">Hotel Management</a></li><li><a href="/category/animation-multimedia/animation-3d-animation/">Animation</a></li><li><a href="/category/media-films-journalism/journalism-mass-comm/">Mass Comm / Journalism</a></li><li><a href="/category/engineering/">B.E / B.Tech</a></li><li><a href="/category/engineering/architecture/">B. Arch / Architecture</a></li></ul></div></li><li><a href="/collegeapplications/" target="_blank" id="id_college_app" class="app">College Application
+			     <div class="studyimage"><img src="http://images.htcampus.com/media/htc_2011/images/new2.gif" align="top" border="0"></div></a></li><li onmouseover="show_submenus('id_sample_test','id_sample_test_sub');" onmouseout="hide_submenus('id_sample_test','id_sample_test_sub');"><a href="/sample-tests/" id="id_sample_test" class="sample"><span>&nbsp;</span> Sample Test </a><div id="id_test">
+
+
+<div id="id_sample_test_sub" class="insidenav cornerb sample1" style="width: 728px; margin-left: -359px; display: none; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
+<ul>	
+					
+<li><strong><a href="/sample-tests/mba-business-management/" title="BBA / MBA / Management">BBA / MBA / Management</a></strong> </li>
+	 
+		<li><a href="/sample-tests/mba-business-management/cat/" title="CAT">CAT</a> </li>
+	 
+		<li><a href="/sample-tests/mba-business-management/jmet/" title="JMET">JMET</a> </li>
+	 
+		<li><a href="/sample-tests/mba-business-management/snap/" title="SNAP">SNAP</a> </li>
+	 
+		<li><a href="/sample-tests/mba-business-management/mat/" title="MAT">MAT</a> </li>
+	 
+		<li><a href="/sample-tests/mba-business-management/ibsat/" title="IBSAT">IBSAT</a> </li>
+	 
+		<li><a href="/sample-tests/mba-business-management/xat/" title="XAT">XAT</a> </li>
+	 
+		<li><a href="/sample-tests/mba-business-management/mah-cet/" title="MAH CET ">MAH CET </a> </li>
+	 
+		<li><a href="/sample-tests/mba-business-management/cet-ggsipu-bba/" title="CET (GGSIPU) BBA">CET (GGSIPU) BBA</a> </li>
+	 
+		<li><a href="/sample-tests/mba-business-management/iift/" title="IIFT">IIFT</a> </li>
+	 
+		<li><a href="/sample-tests/mba-business-management/cmat/" title="CMAT">CMAT</a> </li>
+	
+	<li class="clear">&nbsp;</li>		
+					
+<li><strong><a href="/sample-tests/others/" title="Others">Others</a></strong> </li>
+	 
+		<li><a href="/sample-tests/others/cds-combined-defence-services/" title="CDS (Combined Defence Services)">CDS (Combined Defence...</a> </li>
+	 
+		<li><a href="/sample-tests/others/nda-national-defence-academy/" title="NDA (National Defence Academy)">NDA (National Defence...</a> </li>
+	 
+		<li><a href="/sample-tests/others/ntse-national-talent-search-examination/" title="NTSE (National Talent Search Examination)">NTSE (National Talent...</a> </li>
+	
+	<li class="clear">&nbsp;</li>		
+
+</ul>
+<ul>
+					
+	<li><strong><a href="/sample-tests/engineering/" title="Engineering ">Engineering </a></strong> </li>
+	 
+		<li><a href="/sample-tests/engineering/gate-computer-science/" title="GATE - Computer Science">GATE - Computer Science</a> </li>
+	 
+		<li><a href="/sample-tests/engineering/gate-ece/" title="GATE - E.C.E">GATE - E.C.E</a> </li>
+	 
+		<li><a href="/sample-tests/engineering/gate-mechanical/" title="GATE - Mechanical">GATE - Mechanical</a> </li>
+	 
+		<li><a href="/sample-tests/engineering/gate-civil/" title="Gate - Civil">Gate - Civil</a> </li>
+	 
+		<li><a href="/sample-tests/engineering/kcet/" title="KCET">KCET</a> </li>
+	 
+		<li><a href="/sample-tests/engineering/mht-cet/" title="MHT-CET">MHT-CET</a> </li>
+	 
+		<li><a href="/sample-tests/engineering/gate-chemical/" title="GATE - Chemical">GATE - Chemical</a> </li>
+	 
+		<li><a href="/sample-tests/engineering/gate-instrumentation/" title="GATE - Instrumentation">GATE - Instrumentation</a> </li>
+	 
+		<li><a href="/sample-tests/engineering/gate-life-sciences/" title="GATE - Life Sciences">GATE - Life Sciences</a> </li>
+	 
+		<li><a href="/sample-tests/engineering/gate-biotechnology/" title="GATE - Biotechnology">GATE - Biotechnology</a> </li>
+	 
+		<li><a href="/sample-tests/engineering/bitsat/" title="BITSAT">BITSAT</a> </li>
+	 
+		<li><a href="/sample-tests/engineering/comedk-enggarch/" title="COMEDK ENGG/ARCH">COMEDK ENGG/ARCH</a> </li>
+	 
+		<li><a href="/sample-tests/engineering/jee-main-aieee/" title="JEE (Mains)">JEE (Mains)</a> </li>
+	 
+		<li><a href="/sample-tests/engineering/jee-advance-iit-jee/" title="JEE (Advanced)">JEE (Advanced)</a> </li>
+	 
+		<li><a href="/sample-tests/engineering/jee-mains-advance-test-series/" title="JEE Mains &amp; Advance Test Series">JEE Mains &amp; Advance Test...</a> </li>
+	 
+		<li><a href="/sample-tests/engineering/jecrc-university-btech-entrance/" title="JECRC University B.Tech Entrance">JECRC University B.Tech...</a> </li>
+	
+	<li class="clear">&nbsp;</li>		
+
+</ul>
+<ul>	
+
+	<li><strong><a href="/sample-tests/aviationtravel-hospitality/" title="Aviation / Travel / Hospitality">Aviation / Travel / Hospitality</a></strong> </li>
+	 
+		<li><a href="/sample-tests/aviationtravel-hospitality/nchmct-jee/" title="NCHMCT - JEE">NCHMCT - JEE</a> </li>
+	 
+		<li><a href="/sample-tests/aviationtravel-hospitality/cet-ggsipu-bhmct/" title="CET (GGSIPU) BHMCT">CET (GGSIPU) BHMCT</a> </li>
+	
+	<li class="clear">&nbsp;</li>							
+
+	<li><strong><a href="/sample-tests/banking-finance-accounting/" title="Banking / Finance / Accounts">Banking / Finance / Accounts</a></strong> </li>
+	 
+		<li><a href="/sample-tests/banking-finance-accounting/bank-po-exams/" title="Bank PO Exams">Bank PO Exams</a> </li>
+	 
+		<li><a href="/sample-tests/banking-finance-accounting/ca-cpt/" title="CA CPT">CA CPT</a> </li>
+	
+	<li class="clear">&nbsp;</li>							
+
+	<li><strong><a href="/sample-tests/medicine-health-care/" title="Medicine / Health Care">Medicine / Health Care</a></strong> </li>
+	 
+		<li><a href="/sample-tests/medicine-health-care/aiims/" title="AIIMS">AIIMS</a> </li>
+	 
+		<li><a href="/sample-tests/medicine-health-care/aipmt/" title="AIPMT">AIPMT</a> </li>
+	 
+		<li><a href="/sample-tests/medicine-health-care/niper/" title="NIPER">NIPER</a> </li>
+	 
+		<li><a href="/sample-tests/medicine-health-care/jipmer/" title="JIPMER">JIPMER</a> </li>
+	 
+		<li><a href="/sample-tests/medicine-health-care/comedk-medicine/" title="COMEDK Medicine">COMEDK Medicine</a> </li>
+	 
+		<li><a href="/sample-tests/medicine-health-care/cmc-vellore-cet/" title="CMC Vellore CET">CMC Vellore CET</a> </li>
+	 
+		<li><a href="/sample-tests/medicine-health-care/viteee/" title="VITEEE">VITEEE</a> </li>
+	 
+		<li><a href="/sample-tests/medicine-health-care/neet/" title="NEET (UG)">NEET (UG)</a> </li>
+	
+	<li class="clear">&nbsp;</li>							
+
+</ul>
+<ul>
+					
+	<li><strong><a href="/sample-tests/art-design-fashion/" title="Fashion / Textile Design">Fashion / Textile Design</a></strong> </li>
+	 
+		<li><a href="/sample-tests/art-design-fashion/aieed/" title="AIEED">AIEED</a> </li>
+	
+	<li class="clear">&nbsp;</li>
+					
+	<li><strong><a href="/sample-tests/sciences/" title="Sciences">Sciences</a></strong> </li>
+	 
+		<li><a href="/sample-tests/sciences/maths-olympiad/" title="Maths Olympiad">Maths Olympiad</a> </li>
+	
+	<li class="clear">&nbsp;</li>
+
+</ul>		
+
+</div></div></li><li onmouseover="show_submenus('id_ask_ans','id_ask_ans_sub');" onmouseout="hide_submenus('id_ask_ans','id_ask_ans_sub');"><a href="/ask/" id="id_ask_ans" class="ask"><span>&nbsp;</span>Ask &amp; Answer  </a><div id="id_ask_ans_sub" class="insidenav cornerb ask_head" style="display: none; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;"><ul><li><strong><a href="/ask/">Ask Questions to Experts on</a></strong></li><li><a href="/ask/category/animation-multimedia/" title="Animation / Multimedia">Animation / Multimedia</a></li><li><a href="/ask/category/aviationtravel-hospitality/" title="Aviation / Travel / Hospitality">Aviation / Travel / Hospitality</a></li><li><a href="/ask/category/banking-finance-accounting/" title="Banking / Finance / Accounts">Banking / Finance / Accounts</a></li><li><a href="/ask/category/mba-business-management/" title="BBA / MBA / Management">BBA / MBA / Management</a></li><li><a href="/ask/category/computers-it/" title="BCA / MCA / Computers">BCA / MCA / Computers</a></li><li><a href="/ask/category/engineering/" title="Engineering ">Engineering </a></li><li><a href="/ask/category/art-design-fashion/" title="Fashion / Textile Design">Fashion / Textile Design</a></li><li><a href="/ask/category/languages-literature/" title="Languages / Arts / Literature">Languages / Arts / Literature</a></li><li><a href="/ask/category/media-films-journalism/" title="Media / Films / Journalism">Media / Films / Journalism</a></li><li><a href="/ask/category/medicine-health-care/" title="Medicine / Health Care">Medicine / Health Care</a></li><li><a href="/ask/category/politics-law-humanities/" title="Politics / Law / Humanities">Politics / Law / Humanities</a></li><li><a href="/ask/category/professional-vocational-courses/" title="Professional / Vocational Courses">Professional / Vocational Courses</a></li><li><a href="/ask/category/sciences/" title="Sciences">Sciences</a></li><li><a href="/ask/" title="Other Areas">Other Areas</a></li></ul></div></li><li onmouseover="show_submenus('id_toolkit','id_toolkit_sub');" onmouseout="hide_submenus('id_toolkit','id_toolkit_sub');"><a href="/help-me-decide/" id="id_toolkit" class="tool"><span>&nbsp;</span>ToolKit </a><div id="id_toolkit_sub" class="insidenav cornerb tool1" style="display: none; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;"><ul><li><strong><a href="#TBLogin_inline?height=246&amp;width=470&amp;LoginlineId=header-login-box1&amp;next=/salary_calculator/" class="loginthickbox" title="Log in">Salary Calculator</a></strong><em>Learn, How much can you earn after pursuing a degree</em></li><li><strong><a href="#TBLogin_inline?height=246&amp;width=470&amp;LoginlineId=header-login-box1&amp;next=/match-me/" class="loginthickbox" title="Log in">Match Colleges</a></strong><em>Find Colleges according to your Career interests</em></li><li><strong><a href="/ask/" title="Ask Experts">Ask Experts</a></strong><em>Get your doubts cleared by HTCampus Career Experts </em></li><li><strong><a href="/compare-college/" title="Compare Colleges">Compare Colleges</a></strong><em>Select &amp; Compare Colleges</em></li><li><strong><a href="/article/" title="News &amp; Articles">News &amp; Articles</a></strong><em>Latest Education News &amp; Articles</em></li><li><strong><a href="/discussion-forum/" title="Discussion Forums">Discussion Forums</a></strong><em>Discuss with your peers on various topics</em></li><li><strong><a href="/career/" title="Careers">Careers</a></strong><em>Browse popular Careers across streams</em></li></ul></div></li><li><span>&nbsp;</span><a class="study" title="Study Abroad" href="http://www.mycollegesabroad.com/" target="_blank">Study Abroad
+			</a></li></ul><div class="right_nav">&nbsp;</div></div><!--Header Navigation Ends--></div><!--Header Ends--><div class="clear">&nbsp;</div><div class="new_user2" id="header-registration-box1" style="display:none;"><div id="id_registration_page_div" class="registration_page"><div class="login_link_div">Existing User? <a onclick="CloseRegistrationDivFromLogin();" href="#TBLogin_inline?height=246&amp;width=470&amp;LoginlineId=header-login-box1" class="loginthickbox" title="Log in">Log in</a></div><div class="log_form_holder"><form id="id_registration_form_div" method="post" onsubmit="return false;" action="#" name="login_reg_form"><div style="display:none"><input name="csrfmiddlewaretoken" value="01c011c036d8678d5dee81255672f67f" type="hidden"></div><div class="errormessage_registration" id="error_id" style="display:none;color:red;">This email address is already in use. Please provide a different email address.</div><div class="errormessage_registration" id="error_number_id" style="display:none;color:red;"></div><div class="filedHolder"><div class="reg_name" id="reg_email_id">Email ID:</div><div class="reg_name1"><input id="id_email" maxlength="30" name="email" class="reg_name2" type="text"><div class="small_txt">Email ID will be Username</div></div><b class="errormessage_reg" id="email_error"></b><div class="clear_font"></div></div><div class="filedHolder"><div class="reg_name" id="reg_fname_id">Name:</div><div class="reg_name1"><input id="id_fname" name="fname" class="reg_name2" type="text"></div><b class="errormessage_reg" id="fname_error"></b><div class="clear_font"></div></div><div class="filedHolder"><div class="reg_name" id="reg_pwd_id">Password:</div><div class="reg_name1"><input id="id_password1" name="password1" class="reg_name2" type="password"></div><b class="errormessage_reg" id="password1_error"></b><div class="clear_font"></div></div><div class="filedHolder"><div class="reg_name" id="reg_pwd_id2">Confirm Password:</div><div class="reg_name1"><input id="id_password2" name="password2" class="reg_name2" type="password"></div><b class="errormessage_reg" id="password2_error"></b><div class="clear_font"></div></div><div class="filedHolder"><div class="reg_name" id="reg_aoi_id">Area of Interest:</div><div class="reg_name1"><select id="id_area" name="area_of_interest" class="reg_name3_dark"><option value="-1">Select Category</option><option value="7">Animation / Multimedia</option><option value="13">Aviation / Travel / Hospitality</option><option value="11">Banking / Finance / Accounts</option><option value="14">BBA / MBA / Management</option><option value="15">BCA / MCA / Computers</option><option value="12">Engineering </option><option value="6">Fashion / Textile Design</option><option value="19">Languages / Arts / Literature</option><option value="9">Media / Films / Journalism</option><option value="10">Medicine / Health Care</option><option value="16">Politics / Law / Humanities</option><option value="18">Professional / Vocational Courses</option><option value="17">Others</option><option value="20">Sciences</option></select></div><b class="errormessage_reg" id="interest_error"></b><div class="clear_font"></div></div><div class="filedHolder"><div class="reg_name" id="reg_pl_id">Preferred Location:</div><div class="reg_name1"><select id="id_preffered_location" name="preffered_loc" class="reg_name3_dark"><option value="-1">Select Location</option><option value="1">Andaman &amp; Nicobar Islands</option><option value="2">Andhra Pradesh</option><option value="3">Arunachal Pradesh</option><option value="4">Assam</option><option value="5">Bihar</option><option value="6">Chhattisgarh</option><option value="34">Dadra and Nagar Haveli</option><option value="33">Daman and Diu</option><option value="7">Delhi</option><option value="8">Goa</option><option value="9">Gujarat</option><option value="10">Haryana</option><option value="11">Himachal Pradesh</option><option value="12">Jammu and Kashmir</option><option value="13">Jharkhand</option><option value="14">Karnataka</option><option value="15">Kerala</option><option value="16">Lakshadweep</option><option value="17">Madhya Pradesh</option><option value="18">Maharashtra</option><option value="19">Manipur</option><option value="20">Meghalaya</option><option value="21">Mizoram</option><option value="22">Nagaland</option><option value="23">Orissa (Odisha)</option><option value="24">Puducherry (Pondicherry)</option><option value="25">Punjab</option><option value="26">Rajasthan</option><option value="27">Sikkim</option><option value="28">Tamil Nadu</option><option value="29">Tripura</option><option value="30">Uttar Pradesh</option><option value="31">Uttarakhand (Uttaranchal)</option><option value="32">West Bengal</option></select></div><b class="errormessage_reg" id="location_error"></b><div class="clear_font"></div></div><div class="filedHolder"><div class="reg_name" id="reg_cl_id">Current Location:</div><div class="reg_name1"><select id="id_current_location" name="current_location" class="reg_name3_dark"><optgroup label=""><option value="-1">Select City</option></optgroup><optgroup label="Top Cities"><option value="635">New Delhi</option><option value="532">Bangalore / Bengalooru</option><option value="576">Hyderabad</option><option value="599">Kolkata / Calcutta</option><option value="622">Mumbai</option><option value="646">Pune</option><option value="545">Chennai</option></optgroup><optgroup label="Andaman &amp; Nicobar Islands"><option value="700">Andaman &amp; Nicobar Islands - Other</option><option value="526">Andaman Islands</option><option value="636">Nicobar Islands</option><option value="397">Port Blair</option></optgroup><optgroup label="Andhra Pradesh"><option value="16">Anantapur</option><option value="527">Andhra Pradesh - Other</option><option value="566">Guntur</option><option value="576">Hyderabad</option><option value="702">Karimnagar</option><option value="703">Nalgonda</option><option value="704">Nellore</option><option value="420">Ranga Reddy</option><option value="690">Secunderabad</option><option value="669">Tirupati</option><option value="683">Vijayawada</option><option value="506">Visakhapatnam/Vizag</option><option value="685">Warangal</option></optgroup><optgroup label="Arunachal Pradesh"><option value="528">Arunachal Pradesh - Other</option><option value="579">Itanagar</option></optgroup><optgroup label="Assam"><option value="530">Assam - Other</option><option value="553">Dispur</option><option value="568">Guwahati</option><option value="592">Kaziranga</option><option value="348">Nagaon</option><option value="455">Silchar</option><option value="666">Tezpur</option></optgroup><optgroup label="Bihar"><option value="18">Arrah</option><option value="59">Begusarai</option><option value="535">Bhagalpur</option><option value="539">Bihar - Other</option><option value="85">Biharsharif</option><option value="107">Chapra</option><option value="111">Chenari</option><option value="549">Darbhanga</option><option value="130">Dehri</option><option value="559">Gaya</option><option value="626">Muzaffarpur</option><option value="631">Nalanda</option><option value="644">Patna</option><option value="384">Patnacity</option><option value="435">Samastipur</option><option value="465">Sitamarhi</option></optgroup><optgroup label="Chhattisgarh"><option value="79">Bhilai</option><option value="541">Bilaspur</option><option value="90">Bishrampur</option><option value="546">Chhattisgarh - Other</option><option value="712">Durg</option><option value="602">Korba</option><option value="648">Raipur</option></optgroup><optgroup label="Dadra and Nagar Haveli"><option value="117">Dadra and Nagar Haveli - Other</option><option value="458">Silvassa</option></optgroup><optgroup label="Daman and Diu"><option value="124">Daman</option><option value="125">Daman and Diu - Other</option></optgroup><optgroup label="Delhi"><option value="635">New Delhi</option></optgroup><optgroup label="Goa"><option value="561">Goa - Other</option><option value="616">Mapusa</option><option value="617">Margao</option><option value="640">Panaji</option><option value="681">Vasco Da Gama</option></optgroup><optgroup label="Gujarat"><option value="517">Ahmedabad</option><option value="525">Anand</option><option value="76">Bhavnagar</option><option value="158">Dwarka</option><option value="557">Gandhinagar</option><option value="194">Gujarat - Other</option><option value="206">Himatnagar</option><option value="223">Jamnagar</option><option value="238">Junagadh</option><option value="650">Rajkot</option><option value="664">Surat</option><option value="694">Surendranagar</option><option value="51">Vadodara</option></optgroup><optgroup label="Haryana"><option value="522">Ambala</option><option value="30">Bahadurgarh</option><option value="83">Bhiwani</option><option value="116">Dabwali</option><option value="556">Faridabad</option><option value="567">Gurgaon</option><option value="571">Haryana - Other</option><option value="691">Hisar</option><option value="231">Jhajjar</option><option value="282">Kurukshetra</option><option value="373">Palwal</option><option value="374">Panchkula</option><option value="641">Panipat</option><option value="425">Rewari</option><option value="653">Rohtak</option><option value="464">Sirsa</option><option value="471">Sonepat</option><option value="511">Yamunanagar</option></optgroup><optgroup label="Himachal Pradesh"><option value="142">Dharamsala</option><option value="198">Hamirpur</option><option value="572">Himachal Pradesh - Other</option><option value="613">Manali</option><option value="371">Palampur</option><option value="659">Shimla</option><option value="469">Solan</option></optgroup><optgroup label="Jammu and Kashmir"><option value="707">Anantnag</option><option value="583">Jammu</option><option value="584">Jammu &amp; Kashmir - Other</option><option value="261">Kashmir</option><option value="605">Leh / Ladakh</option><option value="663">Srinagar</option></optgroup><optgroup label="Jharkhand"><option value="542">Bokaro</option><option value="132">Deogarh</option><option value="552">Dhanbad</option><option value="204">Hazaribagh</option><option value="585">Jamshedpur</option><option value="586">Jharkhand - Other</option><option value="416">Ramgarh</option><option value="651">Ranchi</option></optgroup><optgroup label="Karnataka"><option value="532">Bangalore / Bengalooru</option><option value="534">Belgaum</option><option value="86">Bijapur</option><option value="145">Dharwad</option><option value="565">Gulbarga</option><option value="575">Hubli</option><option value="591">Karnataka - Other</option><option value="614">Mangalore</option><option value="307">Manipal</option><option value="627">Mysore</option></optgroup><optgroup label="Kerala"><option value="98">Calicut</option><option value="114">Cochin/Kochi</option><option value="160">Ernakulam</option><option value="588">Kannur</option><option value="593">Kerala - Other</option><option value="600">Kollam</option><option value="279">Kottayam</option><option value="604">Kozhikode</option><option value="623">Munnar</option><option value="639">Palakkad</option><option value="673">Thiruvananthapuram</option><option value="668">Thrissur</option></optgroup><optgroup label="Lakshadweep"><option value="266">Kavaratti</option><option value="607">Lakshadweep - Other</option></optgroup><optgroup label="Madhya Pradesh"><option value="709">Betul</option><option value="537">Bhopal</option><option value="136">Deogarh</option><option value="711">Dewas</option><option value="569">Gwalior</option><option value="578">Indore</option><option value="580">Jabalpur</option><option value="594">Khajuraho</option><option value="610">Madhya Pradesh - Other</option><option value="714">Rewa</option><option value="715">Sagar</option><option value="676">Ujjain</option></optgroup><optgroup label="Maharashtra"><option value="5">Ahmednagar</option><option value="6">Akola</option><option value="689">Amravati</option><option value="531">Aurangabad</option><option value="147">Dhule</option><option value="221">Jalgaon</option><option value="257">Karjat</option><option value="275">Kolhapur</option><option value="291">Latur</option><option value="293">Lonavala</option><option value="612">Maharashtra - Other</option><option value="313">Matunga</option><option value="622">Mumbai</option><option value="629">Nagpur</option><option value="350">Nanded</option><option value="632">Nashik</option><option value="633">Navi Mumbai</option><option value="379">Panvel</option><option value="646">Pune</option><option value="657">Sangli</option><option value="444">Satara</option><option value="662">Solapur</option><option value="667">Thane</option><option value="490">Thane (Urban Areas)</option><option value="512">Yavatmal</option></optgroup><optgroup label="Manipur"><option value="577">Imphal</option><option value="615">Manipur - Other</option></optgroup><optgroup label="Meghalaya"><option value="28">Baghmara</option><option value="619">Meghalaya - Other</option><option value="658">Shillong</option></optgroup><optgroup label="Mizoram"><option value="518">Aizawl</option><option value="620">Mizoram - Other</option></optgroup><optgroup label="Nagaland"><option value="149">Dimapur</option><option value="596">Kohima</option><option value="628">Nagaland - Other</option></optgroup><optgroup label="Orissa (Odisha)"><option value="538">Bhubaneswar</option><option value="710">Brahmapur (Berhampur)</option><option value="548">Cuttack</option><option value="134">Deogarh</option><option value="601">Konark</option><option value="638">Orissa / Odisha - Other</option><option value="647">Puri</option><option value="655">Rourkela</option></optgroup><optgroup label="Puducherry (Pondicherry)"><option value="242">Kalapet</option><option value="645">Puducherry - Other</option></optgroup><optgroup label="Punjab"><option value="1">Abhipur</option><option value="2">Abohar</option><option value="4">Ahmedgarh</option><option value="12">Amloh</option><option value="524">Amritsar</option><option value="15">Anandpur Sahib</option><option value="41">Banur</option><option value="50">Barnala</option><option value="52">Bassi</option><option value="54">Batala</option><option value="55">Bathinda</option><option value="544">Chandigarh</option><option value="208">Hoshiarpur</option><option value="582">Jalandhar</option><option value="609">Ludhiana</option><option value="305">Malerkotla</option><option value="327">Moga</option><option value="328">Mohali</option><option value="383">Pathankot</option><option value="643">Patiala</option><option value="698">Punjab - Other</option></optgroup><optgroup label="Rajasthan"><option value="519">Ajmer</option><option value="705">Alwar</option><option value="536">Bharatpur</option><option value="699">Bhilwara</option><option value="82">Bhiwadi</option><option value="540">Bikaner</option><option value="135">Deogarh</option><option value="581">Jaipur</option><option value="713">Jhunjhunu / Churu</option><option value="587">Jodhpur</option><option value="603">Kota</option><option value="649">Rajasthan - Other</option><option value="716">Sikar</option><option value="718">Tonk</option><option value="675">Udaipur</option></optgroup><optgroup label="Sikkim"><option value="558">Gangtok</option><option value="660">Sikkim - Other</option></optgroup><optgroup label="Tamil Nadu"><option value="545">Chennai</option><option value="547">Coimbatore</option><option value="555">Erode</option><option value="247">Kancheepuram</option><option value="590">Kanyakumari</option><option value="695">Kumbakonam</option><option value="611">Madurai</option><option value="388">Perundurai</option><option value="415">Ramapuram</option><option value="656">Salem</option><option value="665">Tamil Nadu - Other</option><option value="491">Thanjavur</option><option value="492">Thiruvallur</option><option value="696">Tiruchengode</option><option value="717">Tirupur</option><option value="495">Trichy / Tiruchirapalli</option><option value="674">Tuticorin</option><option value="682">Vellore</option></optgroup><optgroup label="Tripura"><option value="515">Agartala</option><option value="672">Tripura - Other</option></optgroup><optgroup label="Uttar Pradesh"><option value="516">Agra</option><option value="520">Aligarh</option><option value="521">Allahabad</option><option value="10">Ambedkar Nagar</option><option value="11">Amethi</option><option value="23">Azamgarh</option><option value="36">Ballia</option><option value="42">Barabanki</option><option value="533">Bareilly</option><option value="53">Basti</option><option value="88">Bijnor</option><option value="95">Bulandshahar</option><option value="118">Dadri</option><option value="133">Deogarh</option><option value="162">Etawah</option><option value="163">Faizabad</option><option value="172">Firozabad</option><option value="178">Gautam Buddh Nagar</option><option value="560">Ghaziabad</option><option value="180">Ghazipur</option><option value="189">Gonda</option><option value="562">Gorakhpur</option><option value="563">Greater Noida</option><option value="228">Jaunpur</option><option value="233">Jhansi</option><option value="589">Kanpur</option><option value="251">Kanpur Dehat</option><option value="608">Lucknow</option><option value="312">Mathura</option><option value="618">Meerut</option><option value="621">Moradabad</option><option value="625">Muzaffarnagar</option><option value="637">Noida</option><option value="403">Raibareilly</option><option value="411">Rajpur</option><option value="417">Rampur</option><option value="432">Saharanpur</option><option value="500">Unnao</option><option value="677">Uttar Pradesh - Other</option><option value="680">Varanasi</option></optgroup><optgroup label="Uttarakhand (Uttaranchal)"><option value="551">Dehradun</option><option value="197">Haldwani</option><option value="570">Haridwar</option><option value="630">Nainital</option><option value="652">Rishikesh</option><option value="654">Roorkee</option><option value="429">Rudrapur</option><option value="678">Uttarakhand - Other</option></optgroup><optgroup label="West Bengal"><option value="529">Asansol</option><option value="708">Barddhaman</option><option value="543">Burdwan</option><option value="550">Darjeeling</option><option value="554">Durgapur</option><option value="574">Howrah</option><option value="209">Hugli</option><option value="269">Kharagpur</option><option value="599">Kolkata / Calcutta</option><option value="624">Murshidabad</option><option value="368">North 24 Parganas(Urban areas)</option><option value="410">Rajpur</option><option value="661">Siliguri</option><option value="472">South 24 Parganas(Urban Areas)</option><option value="686">West Bengal - Other</option></optgroup></select></div><b class="errormessage_reg" id="current_location_error"></b><div class="clear_font"></div></div><div class="filedHolder"><div class="reg_name" id="reg_el_id">Current Educational Level:</div><div class="reg_name1"><select id="id_highest_qa_level" name="highest_qa_level" class="reg_name3_dark"><option value="-1">Select Level</option><option value="Studying 10th">Studying 10th</option><option value="Completed 10th">Completed 10th</option><option value="Studying 12th">Studying 12th</option><option value="Completed 12th">Completed 12th</option><option value="Pursuing Graduation">Pursuing Graduation</option><option value="Completed Graduation">Completed Graduation</option><option value="Pursuing Post Graduation">Pursuing Post Graduation</option><option value="Completed Post Graduation">Completed Post Graduation</option><option value="Pursuing Doctorate/Fellowship">Pursuing Doctorate/Fellowship</option><option value="Other">Other</option></select></div><b class="errormessage_reg" id="level_error"></b><div class="clear_font"></div></div><div class="filedHolder"><div class="reg_name" id="reg_cn_id">Contact Number:</div><div class="reg_name1"><input id="id_contact_number" name="contact_number" class="reg_name2" type="text"></div><b class="errormessage_reg" id="mobile_error"></b><div class="clear_font"></div></div><div class="filedHolder"><div class="reg_name" id="reg_ay_id">Admission Year:</div><div class="reg_name1"><select id="id_year" name="year_of_entrance" class="reg_name3_dark"><option value="-1" selected="selected">Admission Year</option><option value="2013">2013</option><option value="2014">2014</option><option value="2015">2015</option></select></div><b class="errormessage_reg" id="year_error"></b><div class="clear_font"></div></div><div class="filedHolder"><div id="id_captcha_div"></div><a onclick="CloseLoginDiv(this.id);" id="id_reload_image" href="#TBLogin_inline?height=473&amp;width=710&amp;LoginlineId=header-registration-box1" class="loginthickbox refresh" title="Register Now"><img alt="Reload" src="http://images.htcampus.com/media/images/ico_refresh.jpg" title="Reload Captcha Image" border="0"></a><div class="errormessage_reg" style="display:none;" id="id_captcha_error">Enter the correct code.</div></div><div class="clear_font"></div><div class="filedHolder" style="padding:7px 0 0 179px !important;"><input name="id_checkbox" id="id_checkbox" onclick="removeSubmit();" checked="checked" value="" type="checkbox"> I agree to the <a class="alink1" href="/tnc/" target="_blank" title="Terms of Use">Terms of Use</a><br>&amp; authorize HTCampus to contact me<br><b class="errormessage_reg" style="float:none;" id="condition_error"></b></div><div style="padding:7px 0 0 176px !important;"><input name="next" value="" type="hidden"><div><input value="/college/institute-business-management-mangalayatan-university/" name="url_path" id="id_url_path" type="hidden"></div><div><input value="23.63.227.198" name="ip_address" id="id_ip_address" type="hidden"></div><div><input value="0" name="sms_valid" id="id_sms_valid" type="hidden"></div><div><input id="registration_submit" class="register_button cls_register_new_button" onclick="return RegisterUser();_gaq.push(['_trackEvent', 'login', '']);" value="Register Now!" type="submit"></div><div class="clear_font"></div></div></form></div><div class="reg_image"></div><div class="clear_font"></div></div></div><div class="login_main" id="header-login-box1" style="display:none;"><div id="id_login_page_div" class="login_page"><div class="existing_user"><form id="id_login_form" name="new_login_form" method="post" onsubmit="return false;" action="#"><div style="display:none"><input name="csrfmiddlewaretoken" value="01c011c036d8678d5dee81255672f67f" type="hidden"></div><input name="from" id="from" value="ask" type="hidden"><ul><li class="errormessage_reg1" id="id_error_msg_login" style="display:none;color:red;">Please Enter valid Email and Password</li><li class="clear"></li><li class="name">Email</li><li class="re_name"><input id="id_username" name="username" value="Enter Username" class="re_name1" onfocus="thickbox_hide_msg('id_login_form','username','Enter Username')" onblur="thickbox_show_msg('id_login_form','username','Enter Username' )" type="text"></li><li class="name">Password</li><li class="re_name"><input id="id_password" name="password" value="Enter Password" class="re_name1" onfocus="thickbox_hide_msg('id_login_form','password','Enter Password')" onblur="thickbox_show_msg('id_login_form','password','Enter Password')" type="password"></li><li><input name="next" value="" type="hidden"></li><li><input name="ip_address" value="23.63.227.198" type="hidden"></li><li class="name">&nbsp;</li><li class="re_name"><input id="id_input3" name="input3" class="checkbok" value="" type="checkbox"> 
+              Remember me on this Computer
+        </li><li class="name">&nbsp;</li><li class="re_name"><input id="id_login_button" class="register_button cls_register_button" value="Login" onclick="_gaq.push(['_trackEvent', 'login', '']);" type="submit"></li><li class="name2">&nbsp;</li><li class="re_name"><a href="/user/forgetpassword/" title="Forgot Password">Forgot Password</a></li></ul></form><div class="clear_font"></div><div class="signup_link_div">New User? <a onclick="CloseLoginDiv(this.id);" href="#TBLogin_inline?height=473&amp;width=710&amp;LoginlineId=header-registration-box1" class="loginthickbox" title="Sign up">Sign up</a></div></div><div class="clear_font"></div></div></div><script type="text/javascript">
+/* <![CDATA[ */
+    $(function(){
+    crn_fun(".cornerbottom","bottom");
+    crn_fun(".myCorner1");
+    crn_fun(".myCornerleft","left");
+    crn_fun(".myC1");
+    }); 
+/* ]]> */
+function event_tracking(){
+	search_val = $("#id_q").val();
+	loc = document.searchform.location.value;
+	string1 = '';
+	if (search_val != "Enter Institute or Course Name" && search_val != ''){
+		string1 = string1 + search_val;
+	}
+	if (loc != "Enter Location" && loc != ""){
+		string1 = string1 + " " + loc;
+	}
+	_gaq.push(['_trackEvent', 'Generic', 'institute_list',string1]);
+}
+</script><div style="border-radius: 10px 10px 10px 10px;" class="left searchtop myCorner1 searchtopinside"><form method="get" action="/college-search/" name="searchform" onsubmit="return search('searchform',this);"><ul><li><strong>Search</strong></li><li><input class="text1" value="Enter Institute or Course Name" name="q" id="id_q" onfocus="hide_msg('id_q','Enter Institute or Course Name')" onblur="show_msg(this,'Enter Institute or Course Name' )" type="text"></li><li><input class="text2" value="Enter Location" name="location" id="id_location" onfocus="hide_msg('id_location','Enter Location')" onblur="show_msg(this,'Enter Location' )" type="text"></li><li><input class="button_new_big " value="Search" onclick="event_tracking()" type="submit"><div class="button_big_Ending"></div></li></ul></form></div><div class="clear">&nbsp;</div><div id="leftinside"><div style="border-radius: 10px 10px 10px 10px;" class="left myCorner1 blueinside"><div class="blueinside_arrow">&nbsp;</div><ul><li><strong>Institute Details</strong></li><li><span class="about">&nbsp;</span><a href="#about_us" onclick="_gaq.push(['_trackEvent', 'College Details', 'About Us', 'Institute of Business Management, Mangalayatan University']);">About Us</a></li><li class="whitebdr">&nbsp;</li><li><span class="contact">&nbsp;</span><a href="#TB_inline?height=250&amp;width=440&amp;inlineId=contactus" class="thickbox" title="Contact Details" onclick="_gaq.push(['_trackEvent', 'College Details', 'Contact Details', 'Institute of Business Management, Mangalayatan University']);">Contact Details</a></li><li class="whitebdr">&nbsp;</li><li><span class="placement">&nbsp;</span><a href="#placement" onclick="_gaq.push(['_trackEvent', 'College Details', 'Placement', 'Institute of Business Management, Mangalayatan University']);">Placement</a></li><li class="whitebdr">&nbsp;</li><li><span class="facilities">&nbsp;</span><a href="#facility" onclick="_gaq.push(['_trackEvent', 'College Details', 'Facilities', 'Institute of Business Management, Mangalayatan University']);">Facilities</a></li><li class="whitebdr">&nbsp;</li><li><span class="courses">&nbsp;</span><a href="#courses" onclick="_gaq.push(['_trackEvent', 'College Details', 'Courses', 'Institute of Business Management, Mangalayatan University']);">Courses</a></li><li class="whitebdr">&nbsp;</li><li><span class="faculty">&nbsp;</span><a href="#faculty" onclick="_gaq.push(['_trackEvent', 'College Details', 'Faculty', 'Institute of Business Management, Mangalayatan University']);">Faculty</a></li><li class="whitebdr">&nbsp;</li><li><span class="photos">&nbsp;</span><a href="#photo" onclick="_gaq.push(['_trackEvent', 'College Details', 'Photos', 'Institute of Business Management, Mangalayatan University']);">Photos</a></li><li class="whitebdr">&nbsp;</li><!-- 	
+			
+			<li><span class="ask">&nbsp;</span><a href="#ask_ans">Ask n Answer</a></li><li class="whitebdr">&nbsp;</li>
+			 
+			--><li><span class="review">&nbsp;</span><a href="#review" onclick="_gaq.push(['_trackEvent', 'College Details', 'Comments and Updates', 'Institute of Business Management, Mangalayatan University']);">Comments</a></li></ul></div></div><div id="contactus" style="display:none;"><div style="border-radius: 10px 10px 10px 10px;" class="basedivwhite myCornerinside"><ul><li><span>Year of  Establishment </span><em>:</em><u>N.A.</u></li><li><span>Contact No.</span><em>:</em><u>
+						5722 - 272100
+						,
+						9319222222
+					</u></li><li><span>Email</span><em>:</em><u><a href="mailto:info@mangalayatan.in" rel="nofollow">info@mangalayatan.in</a></u></li><li><span>Website </span><em>:</em><u><a href="http://www.mangalayatan.in/institutes/institute-of-business-management.aspx" target="_blank" rel="nofollow">www.mangalayatan.in/institutes/institute-of-business-management.aspx</a></u></li><li><span>Address </span><em>:</em><u><p>Extended NCR, Mathura-Aligarh Highway, 33rd Milestone, PIN - 202145</p></u></li><li><span>Last Update Date </span><em>:</em><u>2013-05-24 23:02:08</u></li></ul><div class="clearboth"></div></div></div><div style="border-radius: 10px 10px 10px 10px;" class="greymid right myCorner1"><img style="border-radius: 10px 10px 10px 10px;" alt="Institute of Business Management, Mangalayatan University logo" title="Institute of Business Management, Mangalayatan University" src="http://images.htcampus.com/media/uploads/images/institute/institute-business-management-mangalayatan-university/Mangalayatan_1.jpg" class="myCorner1" height="80" width="80" align="left" border="0"><div style="border-radius: 10px 10px 10px 10px;" id="college_inside_lead" class="myC1"><strong>Interested in this College?</strong>Fill in the details below
+		<div id="leadform">
+<form method="post" name="lead_form" id="id_lead_form">
+    
+    
+    <ul><li id="id_error_remark" class="error_message" style="display: none;">Please fill the field mark in Red</li></ul>
+    <ul>
+        <li> <input onblur="blur_field_value('name','Student Name', this.value);" valid="not_empty" name="name" maxlength="50" onfocus="focus_field_value('name','Student Name', this.value);" class="drop_box manditory" value="Student Name" id="id_name" type="text"></li>
+<li> <input onblur="blur_field_value('email','Email', this.value);" valid="not_empty|email" name="email" maxlength="100" onfocus="focus_field_value('email','Email', this.value);" class="drop_box manditory" value="Email" id="id_email" type="text"></li>
+<li> <input onblur="blur_field_value('contact_number','Mobile Number', this.value);" valid="not_empty|integer|cellnum|chklen" name="contact_number" maxlength="21" onfocus="focus_field_value('contact_number','Mobile Number', this.value);" class="drop_box manditory" value="Mobile Number" id="id_contact_number" type="text"></li>
+<li> <select id="id_current_city" valid="not_empty" class="drop_box manditory" name="current_city">
+<optgroup label="">
+<option value="" selected="selected">Select Current Location</option>
+</optgroup>
+<optgroup label="Top Cities">
+<option value="3">Bangalore / Bengalooru</option>
+<option value="4">Chennai</option>
+<option value="13">Hyderabad</option>
+<option value="256">Kolkata / Calcutta</option>
+<option value="5">Mumbai</option>
+<option value="330">New Delhi</option>
+<option value="144">Pune</option>
+</optgroup>
+<optgroup label="Punjab">
+<option value="164">Abhipur</option>
+<option value="165">Abohar</option>
+<option value="166">Ahmedgarh</option>
+<option value="337">Amloh</option>
+<option value="171">Amritsar</option>
+<option value="303">Anandpur Sahib</option>
+<option value="439">Banur</option>
+<option value="373">Barnala</option>
+<option value="619">Bassi</option>
+<option value="302">Batala</option>
+<option value="167">Bathinda</option>
+<option value="172">Chandigarh</option>
+<option value="168">Hoshiarpur</option>
+<option value="173">Jalandhar</option>
+<option value="174">Ludhiana</option>
+<option value="654">Malerkotla</option>
+<option value="365">Moga</option>
+<option value="169">Mohali</option>
+<option value="170">Pathankot</option>
+<option value="175">Patiala</option>
+<option value="387">Punjab - Other</option>
+</optgroup>
+<optgroup label="Tripura">
+<option value="201">Agartala</option>
+<option value="202">Tripura - Other</option>
+</optgroup>
+<optgroup label="Uttar Pradesh">
+<option value="225">Agra</option>
+<option value="226">Aligarh</option>
+<option value="227">Allahabad</option>
+<option value="203">Ambedkar Nagar</option>
+<option value="204">Amethi</option>
+<option value="205">Azamgarh</option>
+<option value="206">Ballia</option>
+<option value="207">Barabanki</option>
+<option value="228">Bareilly</option>
+<option value="347">Basti</option>
+<option value="208">Bijnor</option>
+<option value="209">Bulandshahar</option>
+<option value="210">Dadri</option>
+<option value="270">Deogarh (Uttar Pradesh)</option>
+<option value="211">Etawah</option>
+<option value="212">Faizabad</option>
+<option value="213">Firozabad</option>
+<option value="214">Gautam Buddh Nagar</option>
+<option value="229">Ghaziabad</option>
+<option value="215">Ghazipur</option>
+<option value="216">Gonda</option>
+<option value="230">Gorakhpur</option>
+<option value="231">Greater Noida</option>
+<option value="217">Jaunpur</option>
+<option value="218">Jhansi</option>
+<option value="232">Kanpur</option>
+<option value="219">Kanpur Dehat</option>
+<option value="233">Lucknow</option>
+<option value="220">Mathura</option>
+<option value="234">Meerut</option>
+<option value="235">Moradabad</option>
+<option value="236">Muzaffarnagar</option>
+<option value="237">Noida</option>
+<option value="221">Raibareilly</option>
+<option value="671">Rajpur (Uttar Pradesh)</option>
+<option value="223">Rampur</option>
+<option value="224">Saharanpur</option>
+<option value="300">Unnao</option>
+<option value="238">Uttar Pradesh - Other</option>
+<option value="239">Varanasi</option>
+</optgroup>
+<optgroup label="Gujarat">
+<option value="55">Ahmedabad</option>
+<option value="56">Anand</option>
+<option value="50">Bhavnagar</option>
+<option value="51">Dwarka</option>
+<option value="57">Gandhinagar</option>
+<option value="52">Gujarat - Other</option>
+<option value="53">Himatnagar</option>
+<option value="54">Jamnagar</option>
+<option value="320">Junagadh</option>
+<option value="58">Rajkot</option>
+<option value="59">Surat</option>
+<option value="441">Surendranagar</option>
+<option value="60">Vadodara</option>
+</optgroup>
+<optgroup label="Maharashtra">
+<option value="127">Ahmednagar</option>
+<option value="128">Akola</option>
+<option value="148">Amravati</option>
+<option value="139">Aurangabad</option>
+<option value="129">Dhule</option>
+<option value="130">Jalgaon</option>
+<option value="293">Karjat</option>
+<option value="131">Kolhapur</option>
+<option value="132">Latur</option>
+<option value="436">Lonavala</option>
+<option value="140">Maharashtra - Other</option>
+<option value="133">Matunga</option>
+<option value="5">Mumbai</option>
+<option value="141">Nagpur</option>
+<option value="134">Nanded</option>
+<option value="142">Nashik</option>
+<option value="403">Navi Mumbai</option>
+<option value="135">Panvel</option>
+<option value="144">Pune</option>
+<option value="145">Sangli</option>
+<option value="136">Satara</option>
+<option value="146">Solapur</option>
+<option value="147">Thane</option>
+<option value="137">Thane (Urban Areas)</option>
+<option value="138">Yavatmal</option>
+</optgroup>
+<optgroup label="Mizoram">
+<option value="153">Aizawl</option>
+<option value="154">Mizoram - Other</option>
+</optgroup>
+<optgroup label="Rajasthan">
+<option value="177">Ajmer</option>
+<option value="683">Alwar</option>
+<option value="178">Bharatpur</option>
+<option value="514">Bhilwara</option>
+<option value="176">Bhiwadi</option>
+<option value="179">Bikaner</option>
+<option value="269">Deogarh (Rajasthan)</option>
+<option value="180">Jaipur</option>
+<option value="684">Jhunjhunu / Churu</option>
+<option value="181">Jodhpur</option>
+<option value="182">Kota</option>
+<option value="183">Rajasthan - Other</option>
+<option value="685">Sikar</option>
+<option value="686">Tonk</option>
+<option value="184">Udaipur</option>
+</optgroup>
+<optgroup label="Haryana">
+<option value="71">Ambala</option>
+<option value="61">Bahadurgarh</option>
+<option value="62">Bhiwani</option>
+<option value="311">Dabwali</option>
+<option value="72">Faridabad</option>
+<option value="73">Gurgaon</option>
+<option value="74">Haryana - Other</option>
+<option value="69">Hisar</option>
+<option value="344">Jhajjar</option>
+<option value="63">Kurukshetra</option>
+<option value="64">Palwal</option>
+<option value="65">Panchkula</option>
+<option value="75">Panipat</option>
+<option value="66">Rewari</option>
+<option value="76">Rohtak</option>
+<option value="67">Sirsa</option>
+<option value="68">Sonepat</option>
+<option value="70">Yamunanagar</option>
+</optgroup>
+<optgroup label="Andhra Pradesh">
+<option value="8">Anantapur</option>
+<option value="11">Andhra Pradesh - Other</option>
+<option value="12">Guntur</option>
+<option value="13">Hyderabad</option>
+<option value="672">Karimnagar</option>
+<option value="674">Nalgonda</option>
+<option value="673">Nellore</option>
+<option value="374">Ranga Reddy</option>
+<option value="592">Secunderabad</option>
+<option value="14">Tirupati</option>
+<option value="15">Vijayawada</option>
+<option value="10">Visakhapatnam/Vizag</option>
+<option value="16">Warangal</option>
+</optgroup>
+<optgroup label="Jammu and Kashmir">
+<option value="676">Anantnag</option>
+<option value="85">Jammu</option>
+<option value="86">Jammu &amp; Kashmir - Other</option>
+<option value="84">Kashmir</option>
+<option value="87">Leh / Ladakh</option>
+<option value="88">Srinagar</option>
+</optgroup>
+<optgroup label="Andaman &amp; Nicobar Islands">
+<option value="7">Andaman &amp; Nicobar Islands - Other</option>
+<option value="6">Andaman Islands</option>
+<option value="475">Nicobar Islands</option>
+<option value="283">Port Blair</option>
+</optgroup>
+<optgroup label="Bihar">
+<option value="24">Arrah</option>
+<option value="25">Begusarai</option>
+<option value="32">Bhagalpur</option>
+<option value="33">Bihar - Other</option>
+<option value="26">Biharsharif</option>
+<option value="27">Chapra</option>
+<option value="28">Chenari</option>
+<option value="34">Darbhanga</option>
+<option value="29">Dehri</option>
+<option value="35">Gaya</option>
+<option value="36">Muzaffarpur</option>
+<option value="37">Nalanda</option>
+<option value="38">Patna</option>
+<option value="30">Patnacity</option>
+<option value="31">Samastipur</option>
+<option value="621">Sitamarhi</option>
+</optgroup>
+<optgroup label="Arunachal Pradesh">
+<option value="17">Arunachal Pradesh - Other</option>
+<option value="18">Itanagar</option>
+</optgroup>
+<optgroup label="West Bengal">
+<option value="251">Asansol</option>
+<option value="681">Barddhaman</option>
+<option value="252">Burdwan</option>
+<option value="253">Darjeeling</option>
+<option value="254">Durgapur</option>
+<option value="255">Howrah</option>
+<option value="247">Hugli</option>
+<option value="248">Kharagpur</option>
+<option value="256">Kolkata / Calcutta</option>
+<option value="257">Murshidabad</option>
+<option value="249">North 24 Parganas(Urban areas)</option>
+<option value="222">Rajpur (West bengal)</option>
+<option value="258">Siliguri</option>
+<option value="250">South 24 Parganas(Urban Areas)</option>
+<option value="259">West Bengal - Other</option>
+</optgroup>
+<optgroup label="Assam">
+<option value="19">Assam - Other</option>
+<option value="20">Dispur</option>
+<option value="21">Guwahati</option>
+<option value="22">Kaziranga</option>
+<option value="482">Nagaon</option>
+<option value="286">Silchar</option>
+<option value="23">Tezpur</option>
+</optgroup>
+<optgroup label="Meghalaya">
+<option value="319">Baghmara</option>
+<option value="151">Meghalaya - Other</option>
+<option value="152">Shillong</option>
+</optgroup>
+<optgroup label="Karnataka">
+<option value="3">Bangalore / Bengalooru</option>
+<option value="99">Belgaum</option>
+<option value="96">Bijapur</option>
+<option value="97">Dharwad</option>
+<option value="100">Gulbarga</option>
+<option value="101">Hubli</option>
+<option value="102">Karnataka - Other</option>
+<option value="103">Mangalore</option>
+<option value="98">Manipal</option>
+<option value="104">Mysore</option>
+</optgroup>
+<optgroup label="Madhya Pradesh">
+<option value="677">Betul</option>
+<option value="120">Bhopal</option>
+<option value="119">Deogarh (Madhya Pradesh)</option>
+<option value="678">Dewas</option>
+<option value="121">Gwalior</option>
+<option value="122">Indore</option>
+<option value="123">Jabalpur</option>
+<option value="124">Khajuraho</option>
+<option value="125">Madhya Pradesh - Other</option>
+<option value="679">Rewa</option>
+<option value="680">Sagar</option>
+<option value="126">Ujjain</option>
+</optgroup>
+<optgroup label="Chhattisgarh">
+<option value="402">Bhilai</option>
+<option value="39">Bilaspur</option>
+<option value="536">Bishrampur</option>
+<option value="40">Chhattisgarh - Other</option>
+<option value="675">Durg</option>
+<option value="41">Korba</option>
+<option value="42">Raipur</option>
+</optgroup>
+<optgroup label="Orissa / Odisha">
+<option value="157">Bhubaneswar</option>
+<option value="682">Brahmapur (Berhampur)</option>
+<option value="158">Cuttack</option>
+<option value="268">Deogarh (Orissa)</option>
+<option value="159">Konark</option>
+<option value="160">Orissa / Odisha - Other</option>
+<option value="161">Puri</option>
+<option value="162">Rourkela</option>
+</optgroup>
+<optgroup label="Jharkhand">
+<option value="91">Bokaro</option>
+<option value="464">Deogarh (Jharkhand)</option>
+<option value="92">Dhanbad</option>
+<option value="89">Hazaribagh</option>
+<option value="93">Jamshedpur</option>
+<option value="94">Jharkhand - Other</option>
+<option value="90">Ramgarh</option>
+<option value="95">Ranchi</option>
+</optgroup>
+<optgroup label="Kerala">
+<option value="105">Calicut</option>
+<option value="106">Cochin/Kochi</option>
+<option value="107">Ernakulam</option>
+<option value="110">Kannur</option>
+<option value="111">Kerala - Other</option>
+<option value="112">Kollam</option>
+<option value="108">Kottayam</option>
+<option value="113">Kozhikode</option>
+<option value="114">Munnar</option>
+<option value="115">Palakkad</option>
+<option value="625">Ramapuram</option>
+<option value="109">Thiruvananthapuram</option>
+<option value="116">Thrissur</option>
+</optgroup>
+<optgroup label="Tamil Nadu">
+<option value="4">Chennai</option>
+<option value="191">Coimbatore</option>
+<option value="192">Erode</option>
+<option value="187">Kancheepuram</option>
+<option value="193">Kanyakumari</option>
+<option value="558">Kumbakonam</option>
+<option value="194">Madurai</option>
+<option value="369">Perundurai</option>
+<option value="195">Salem</option>
+<option value="196">Tamil Nadu - Other</option>
+<option value="188">Thanjavur</option>
+<option value="189">Thiruvallur</option>
+<option value="285">Tiruchengode</option>
+<option value="198">Tirupur</option>
+<option value="197">Trichy / Tiruchirapalli</option>
+<option value="199">Tuticorin</option>
+<option value="200">Vellore</option>
+</optgroup>
+<optgroup label="Dadra and Nagar Haveli">
+<option value="382">Dadra and Nagar Haveli - Other</option>
+<option value="519">Silvassa</option>
+</optgroup>
+<optgroup label="Daman and Diu">
+<option value="358">Daman</option>
+<option value="426">Daman and Diu - Other</option>
+</optgroup>
+<optgroup label="Uttarakhand / Uttaranchal">
+<option value="241">Dehradun</option>
+<option value="240">Haldwani</option>
+<option value="242">Haridwar</option>
+<option value="243">Nainital</option>
+<option value="244">Rishikesh</option>
+<option value="245">Roorkee</option>
+<option value="658">Rudrapur</option>
+<option value="246">Uttarakhand - Other</option>
+</optgroup>
+<optgroup label="Himachal Pradesh">
+<option value="77">Dharamsala</option>
+<option value="78">Hamirpur</option>
+<option value="81">Himachal Pradesh - Other</option>
+<option value="82">Manali</option>
+<option value="79">Palampur</option>
+<option value="83">Shimla</option>
+<option value="80">Solan</option>
+</optgroup>
+<optgroup label="Nagaland">
+<option value="489">Dimapur</option>
+<option value="155">Kohima</option>
+<option value="156">Nagaland - Other</option>
+</optgroup>
+<optgroup label="Sikkim">
+<option value="185">Gangtok</option>
+<option value="186">Sikkim - Other</option>
+</optgroup>
+<optgroup label="Goa">
+<option value="44">Goa - Other</option>
+<option value="45">Mapusa</option>
+<option value="46">Margao</option>
+<option value="47">Panaji</option>
+<option value="48">Vasco Da Gama</option>
+</optgroup>
+<optgroup label="Manipur">
+<option value="149">Imphal</option>
+<option value="150">Manipur - Other</option>
+</optgroup>
+<optgroup label="Puducherry / Pondicherry">
+<option value="516">Kalapet</option>
+<option value="163">Puducherry - Other</option>
+</optgroup>
+<optgroup label="Lakshadweep">
+<option value="649">Kavaratti</option>
+<option value="118">Lakshadweep - Other</option>
+</optgroup>
+<optgroup label="Delhi">
+<option value="330">New Delhi</option>
+</optgroup>
+<optgroup label="Others">
+<option value="331">Others</option>
+</optgroup>
+</select></li>
+<li> <select id="id_course_category" onchange="set_course_subcategory(this.value);" class="drop_box manditory" name="course_category" valid="not_empty">
+<option value="" selected="selected">Select Course Category</option>
+<option value="2">Engineering </option>
+<option value="3">BBA / MBA / Management</option>
+<option value="4">Medicine / Health Care</option>
+<option value="5">Aviation / Travel / Hospitality</option>
+<option value="6">Computer Science &amp; IT</option>
+<option value="7">Fashion / Textile Design</option>
+<option value="8">Media / Films / Journalism</option>
+<option value="10">Politics / Law / Humanities</option>
+<option value="11">Professional / Vocational Courses</option>
+<option value="12">Others</option>
+<option value="13">Animation / Multimedia</option>
+<option value="14">Banking / Finance / Accounts</option>
+<option value="15">BCA / MCA / Computers</option>
+<option value="16">Languages / Arts / Literature</option>
+<option value="18">Sciences(B.sc/M.sc)</option>
+</select></li>
+<li> <select id="id_course_sub_category" valid="not_empty" class="drop_box manditory" name="course_sub_category">
+<option value="" selected="selected">Select Sub Category</option>
+<option value="1"> Accountancy</option>
+<option value="2">Acting / Modeling</option>
+<option value="3">Advertising</option>
+<option value="4">Aeronautical Engineering</option>
+<option value="5">Agribusiness Management </option>
+<option value="6">Agriculture</option>
+<option value="7">Airport Operations</option>
+<option value="8">Anchoring &amp; Jockeying</option>
+<option value="9">Animation / 3D Animation</option>
+<option value="10">Archaeology</option>
+<option value="11">Architecture</option>
+<option value="12">Armed Forces </option>
+<option value="13">Astrology</option>
+<option value="14">Ayurveda</option>
+<option value="15">Banking </option>
+<option value="16">BBA</option>
+<option value="17">Beauty</option>
+<option value="18">BioTechnology</option>
+<option value="19">Cabin Crew Training</option>
+<option value="20">Chartered Accountancy</option>
+<option value="21">Chemical Engineering </option>
+<option value="22">Civil Engineering </option>
+<option value="23">Civil Services </option>
+<option value="24">Clinical Research</option>
+<option value="25">Commerce</option>
+<option value="26">Company Secretary</option>
+<option value="27">Computer Certificate Course</option>
+<option value="28">Computer Information Systems</option>
+<option value="29">Computer Science Engineering</option>
+<option value="30">Corporate Law</option>
+<option value="31">Creative Arts</option>
+<option value="32">Dental Sciences</option>
+<option value="33">Dietician </option>
+<option value="34">Economics</option>
+<option value="35">Editing &amp; Publishing </option>
+<option value="36">Education &amp; Teaching </option>
+<option value="37">Electrical &amp; Electronics Engineering</option>
+<option value="38">Engineering</option>
+<option value="39">Entrepreneurship</option>
+<option value="40">Environment &amp; Botany</option>
+<option value="41">Event Management</option>
+<option value="42">Executive MBA</option>
+<option value="43">Fashion Design</option>
+<option value="44">Fashion Merchandising</option>
+<option value="45">Film Making &amp; Direction</option>
+<option value="46">Finance</option>
+<option value="47">Financial Analyst</option>
+<option value="48">Financial Management </option>
+<option value="49">Fitness Trainer</option>
+<option value="50">Food Production / Catering</option>
+<option value="51">Food Technology / Processing</option>
+<option value="52">Forensic Science</option>
+<option value="53">Gems &amp; Jewellery Design </option>
+<option value="54">Geology</option>
+<option value="55">Graphic Design</option>
+<option value="56">Hardware / Embedded Systems</option>
+<option value="57">Healthcare Management</option>
+<option value="58">Homoeopathy</option>
+<option value="59">Horticulture</option>
+<option value="60">Hospitality &amp; Tourism Management</option>
+<option value="61">Hotel Management</option>
+<option value="62">Human Resource Management</option>
+<option value="63">ICWA / CFA / CPA</option>
+<option value="64">Industrial Engineering </option>
+<option value="65">Information &amp; Data Management</option>
+<option value="66">Information Technology</option>
+<option value="67">Information Technology Management </option>
+<option value="68">Insurance / Actuary</option>
+<option value="69">Interior Design</option>
+<option value="70">International Business</option>
+<option value="71">International Law</option>
+<option value="72">International Politics</option>
+<option value="73">Journalism &amp; Mass Comm</option>
+<option value="74">Languages &amp; Literature</option>
+<option value="75">Law</option>
+<option value="76">Leather &amp; Footwear </option>
+<option value="77">Logistics &amp; Operations Management</option>
+<option value="78">Marine Engineering </option>
+<option value="79">MBA</option>
+<option value="80">MCA / BCA</option>
+<option value="81">Mechanical Engineering</option>
+<option value="82">Media Management</option>
+<option value="83">Medical Sciences</option>
+<option value="84">Merchant Navy </option>
+<option value="85">Miscellaneous</option>
+<option value="86">Networking</option>
+<option value="87">Nuclear Science</option>
+<option value="88">Office Administration</option>
+<option value="89">Outsourcing</option>
+<option value="90">Paramedical / Nursing Studies</option>
+<option value="91">Performing Arts</option>
+<option value="92">Pharmacy</option>
+<option value="93">Philosophy</option>
+<option value="94">Photography</option>
+<option value="95">Physiotherapy</option>
+<option value="96">Political Science</option>
+<option value="97">Production</option>
+<option value="98">Psychology</option>
+<option value="99">Public Relations</option>
+<option value="100">Retail Management</option>
+<option value="101">Sales &amp; Marketing Management</option>
+<option value="102">Sciences (B.Sc/M.Sc)</option>
+<option value="103">Securities / Trading</option>
+<option value="104">Social Work</option>
+<option value="105">Sound Engineering</option>
+<option value="106">Sports &amp; Athletics </option>
+<option value="107">Taxation</option>
+<option value="108">Technician </option>
+<option value="109">Telecommunication Engineering </option>
+<option value="110">Textile &amp; Apparel Design</option>
+<option value="111">Travel &amp; Ticketing </option>
+<option value="112">Veterinary Science</option>
+<option value="113">Web Design &amp; Development</option>
+<option value="114">Zoologist</option>
+</select></li>
+<li> <select id="id_year_of_entrance" valid="not_empty" class="drop_box manditory" name="year_of_entrance">
+<option value="" selected="selected">Select Year Of Entrance</option>
+<option value="2013">2013</option>
+<option value="2014">2014</option>
+<option value="2015">2015</option>
+<option value="2016">2016</option>
+<option value="2017">2017</option>
+<option value="2018">2018</option>
+</select></li>
+<li> <select id="id_highest_qualification" valid="not_empty" class="drop_box manditory" name="highest_qualification">
+<option value="" selected="selected">Select Highest Qualification</option>
+<option value="Studying 10th">Studying 10th</option>
+<option value="Completed 10th">Completed 10th</option>
+<option value="Studying 12th">Studying 12th</option>
+<option value="Completed 12th">Completed 12th</option>
+<option value="Diploma - Pursuing">Diploma - Pursuing</option>
+<option value="Diploma - Completed">Diploma - Completed</option>
+<option value="Bachelors/UG - Pursuing">Bachelors/UG - Pursuing</option>
+<option value="Bachelors/UG - Completed">Bachelors/UG - Completed</option>
+<option value="Masters/PG - Pursuing">Masters/PG - Pursuing</option>
+<option value="Masters/PG - Completed">Masters/PG - Completed</option>
+<option value="Doctorate/PhD - Pursuing">Doctorate/PhD - Pursuing</option>
+<option value="Others">Others</option>
+</select></li>
+<li> <select id="id_course_type" valid="not_empty" class="drop_box manditory" name="course_type">
+<option value="" selected="selected">Select Course Type</option>
+<option value="Full time">Full time</option>
+<option value="Part time">Part time</option>
+<option value="Online/ distance education">Online/ distance education</option>
+<option value="Executive">Executive</option>
+<option value="Others">Others</option>
+</select></li>
+<li> <select id="id_time_to_call" valid="not_empty" class="drop_box manditory" name="time_to_call">
+<option value="" selected="selected">Select Best Time To Call</option>
+<option value="9 to 12 Am">9 to 12 Am</option>
+<option value="12 Am to 3 pm">12 Am to 3 pm</option>
+<option value="3 pm to 7 pm">3 pm to 7 pm</option>
+<option value="Call me anytime">Call me anytime</option>
+</select></li>
+<li> <input valid="not_empty" checked="checked" name="tnc" class="manditory" id="id_tnc" type="checkbox"> <span class="helptext">I accept <a href="/tnc/" target="_blank">T&amp;C</a> and allow HTCampus to contact me</span></li>
+        <li><input value="http://www.htcampus.com/college/institute-business-management-mangalayatan-university/" name="url_path" id="id_url_path" type="hidden"></li>
+        <li><input value="98.220.233.171" name="ip_address" id="id_ip_address" type="hidden"></li>
+        <li><p>&nbsp;</p>
+            <input id="leadformbtn" onclick="return formValidator('leadformbtn','id_lead_form', 'sda.htcampus.com');" class="leadform_submit" value="Submit" type="button">
+
+        </li>
+        <li>
+        <input name="token" value="&quot;740840793_2013-05-24_23:16:07.503756&quot;" type="hidden"></li>
+    </ul>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div><h1>Institute of Business Management, Mangalayatan University</h1><ul><li><h2>Location</h2><em>Aligarh , Uttar Pradesh</em></li><li><h2>Affiliated To</h2><em>
+            
+			  Mangalayatan University
+            
+			</em></li><li><h2>Establishment On</h2><em>
+			
+				N.A.
+		  	
+		  	</em></li><li><h2>Updated On</h2><em>24 May 2013</em></li><li id="ajax_brochure" class="myC1 blue" style="border-radius: 10px 10px 10px 10px;">
+    		<a rel="nofollow" id="id_ebrochure" href="/ebrochure/institute-business-management-mangalayatan-university/" onclick="return download_ebrochure(this.id)"><b>Download Brochure</b><span>&nbsp;</span></a>
+
+</li></ul><div class="stamp">&nbsp;</div></div><!--right starts--><div id="rightpanel" class="right"><div class="blank_right">&nbsp;</div><div class="clear">&nbsp;</div><div class="ask1 right"><div class="ask_top_left"> &nbsp;</div><div class="ask_top_mid"><h2>Related Articles</h2></div><div class="aboutcollege_right">&nbsp;</div><div class="ask_mid left"><ul><li class="listlink"><span>&nbsp;</span><a href="/article/jkbose-declares-jammu-division-class-10-results-2013-3390/">JKBOSE declares Jammu Division Class 10 Results 2013</a></li><li class="listlink"><span>&nbsp;</span><a href="/article/upsc-announces-geologist-written-exam-2012-results-3389/">UPSC announces Geologist Written Exam 2012 Results</a></li><li class="listlink"><span>&nbsp;</span><a href="/article/upsc-declares-scra-2013-written-exam-result-3388/">UPSC declares SCRA 2013 Written Exam Result</a></li><li class="listlink"><span>&nbsp;</span><a href="/article/common-entrance-test-for-bms-at-du-exam-pattern-3387/">Common Entrance Test for BMS at DU: Exam Pattern</a></li><li class="listlink"><span>&nbsp;</span><a href="/article/bachelor-with-honours-in-management-studies-bms-at-du-how-to-apply-3386/">Bachelor with Honours in Management Studies (BMS) at DU: How to Apply</a></li></ul><div class="view right"><a href="/article/">View more</a></div></div><div class="ask_bottom_left"> &nbsp;</div><div class="ask_bottom_mid">&nbsp;</div><div class="ask_bottom_right"> &nbsp;</div></div><div class="clear">&nbsp;</div><div id="rel_college_div">
+<div class="ask1 right">
+	<div class="ask_top_left"> &nbsp;</div>
+	<div class="ask_top_mid"><h2>Similar Institutes</h2></div>
+	<div class="aboutcollege_right">&nbsp;</div>
+	<div class="ask_mid left">
+	<ul>
+		
+		<li class="listlink">
+			<span>&nbsp;</span>
+			<a href="/institute/mangalayatan-instiute-engineering-and-technology" title="Mangalayatan Institute of Engineering &amp; Technology">Mangalayatan Institute of Engineering &amp; Technology</a>
+		</li>
+		
+		<li class="listlink">
+			<span>&nbsp;</span>
+			<a href="/institute/institute-biomedical-education-research" title="Institute of BioMedical Education &amp; Research, Mangalayatan University">Institute of BioMedical Education &amp; Research, Mangalayatan University</a>
+		</li>
+		
+		<li class="listlink">
+			<span>&nbsp;</span>
+			<a href="/institute/institute-education-research-mangalayatan-university" title="Institute of Education &amp; Research, Mangalayatan University">Institute of Education &amp; Research, Mangalayatan University</a>
+		</li>
+		
+		<li class="listlink">
+			<span>&nbsp;</span>
+			<a href="/institute/institute-business-management-mangalayatan-university" title="Institute of Business Management, Mangalayatan University">Institute of Business Management, Mangalayatan University</a>
+		</li>
+		
+		<li class="listlink">
+			<span>&nbsp;</span>
+			<a href="/institute/institute-computer-applications-mangalayatan-university" title="Institute of Computer Applications, Mangalayatan University">Institute of Computer Applications, Mangalayatan University</a>
+		</li>
+		
+	</ul>
+	</div>
+	<div class="ask_bottom_left"> &nbsp;</div>
+	<div class="ask_bottom_mid">&nbsp;</div>
+	<div class="ask_bottom_right"> &nbsp;</div>
+</div>
+</div></div><!--right ends--><!--mid start--><div class="left"><div><a name="about_us">&nbsp;</a></div><div class="aboutcollege"><div class="clear">&nbsp;</div><div class="ask_top_left"> &nbsp;</div><div class="career_mid_top left"><h2>About Us</h2></div><div class="aboutcollege_right">&nbsp;</div><div class="aboutcollege_mid left"><p>The Institute of Business Management in Mangalayatan University is one of the top MBA colleges in India. It is an institute with excellent infrastructure offering graduate and post graduate courses in management education. It offers MBA and BBA courses. The institute is committed to a role in creating such leaders through its dynamic academic environment, well structured programmes, extensive specialist resources and a strong network of support during the curriculum.</p></div><div class="ask_bottom_left"> &nbsp;</div><div class="about_bottom_mid">&nbsp;</div><div class="ask_bottom_right"> &nbsp;</div></div></div><div id="midarea"><div><a name="placement">&nbsp;</a></div><div class="aboutcollege"><div class="clear">&nbsp;</div><div class="ask_top_left"> &nbsp;</div><div class="career_mid_top left"><h2>Placement Records</h2></div><div class="aboutcollege_right">&nbsp;</div><div class="aboutcollege_mid left">
+			The information will be added soon.
+			
+			
+		</div><div class="ask_bottom_left"> &nbsp;</div><div class="about_bottom_mid">&nbsp;</div><div class="ask_bottom_right"> &nbsp;</div></div><div><a name="courses">&nbsp;</a></div><div class="aboutcollege"><div class="clear">&nbsp;</div><div class="ask_top_left"> &nbsp;</div><div class="career_mid_top left"><h2>Courses and Admission Criteria</h2></div><div class="aboutcollege_right">&nbsp;</div><div class="aboutcollege_mid left">
+			Institute offers Master of Business Administration, Doctor of Philosophy and Master of Family Business Management course.
+			<div><strong class="qbold left">Masters Programs</strong><div style="display: none; border-radius: 10px 10px 10px 10px;" class="myC1 grey left" id="crs_hide_1_1"><h3><a href="javascript:showcrs_div(33248,1,1);">Master of Business Administration</a></h3><span class="plus"><a href="javascript:showcrs_div(33248,1,1);"></a></span></div><div id="crs_show_1_1" style="display: block;"><div class="left openplus"><div style="border-top-left-radius: 10px; border-top-right-radius: 10px;" class="left green1 top1"><h3><a href="javascript:showcrs_div(33248,1,1);">Master of Business Administration</a></h3><span class="minus"><a href="javascript:showcrs_div(33248,1,1);"></a></span></div><div class="green1mid left" id="crs_detail_1_1"><ul>
+	
+	<li><strong>Course Detail:</strong>The institute offers two years full time Master of Business Administration course with specialization in International Business, Retail Management and Supply Chain Management, </li>
+	
+	
+	
+	<li><strong>Course Affiliation: </strong>Mangalayatan University</li>
+	
+	
+	<li><strong>Admission Criteria:</strong>The candidate should have passed graduate with 50% marks from a recognized university. Selection will be based on as per the university norms. </li>
+	
+	
+	
+    
+    
+</ul>
+	
+</div><div class="green1mid_bottomleft">&nbsp;</div><div class="green1mid_bottommid"></div><div class="green1mid_bottomright">&nbsp;</div></div></div><script type="text/javascript">
+				      showcrs_div(33248,1,1);
+				    </script><div style="border-radius: 10px 10px 10px 10px;" class="myC1 grey left" id="crs_hide_1_2"><h3><a href="javascript:showcrs_div(34533,1,2);">Master of Family Business Management</a></h3><span class="plus"><a href="javascript:showcrs_div(34533,1,2);"></a></span></div><div id="crs_show_1_2" style="display:none;"><div class="left openplus"><div style="border-top-left-radius: 10px; border-top-right-radius: 10px;" class="left green1 top1"><h3><a href="javascript:showcrs_div(34533,1,2);">Master of Family Business Management</a></h3><span class="minus"><a href="javascript:showcrs_div(34533,1,2);"></a></span></div><div class="green1mid left" id="crs_detail_1_2"></div><div class="green1mid_bottomleft">&nbsp;</div><div class="green1mid_bottommid"></div><div class="green1mid_bottomright">&nbsp;</div></div></div><div style="border-radius: 10px 10px 10px 10px;" class="myC1 grey left" id="crs_hide_1_3"><h3><a href="javascript:showcrs_div(34536,1,3);">Master of Financial Engineering (MFE)</a></h3><span class="plus"><a href="javascript:showcrs_div(34536,1,3);"></a></span></div><div id="crs_show_1_3" style="display:none;"><div class="left openplus"><div style="border-top-left-radius: 10px; border-top-right-radius: 10px;" class="left green1 top1"><h3><a href="javascript:showcrs_div(34536,1,3);">Master of Financial Engineering (MFE)</a></h3><span class="minus"><a href="javascript:showcrs_div(34536,1,3);"></a></span></div><div class="green1mid left" id="crs_detail_1_3"></div><div class="green1mid_bottomleft">&nbsp;</div><div class="green1mid_bottommid"></div><div class="green1mid_bottomright">&nbsp;</div></div></div><div style="border-radius: 10px 10px 10px 10px;" class="myC1 grey left" id="crs_hide_1_4"><h3><a href="javascript:showcrs_div(124064,1,4);">Master of Arts (Business Economics)</a></h3><span class="plus"><a href="javascript:showcrs_div(124064,1,4);"></a></span></div><div id="crs_show_1_4" style="display:none;"><div class="left openplus"><div style="border-top-left-radius: 10px; border-top-right-radius: 10px;" class="left green1 top1"><h3><a href="javascript:showcrs_div(124064,1,4);">Master of Arts (Business Economics)</a></h3><span class="minus"><a href="javascript:showcrs_div(124064,1,4);"></a></span></div><div class="green1mid left" id="crs_detail_1_4"></div><div class="green1mid_bottomleft">&nbsp;</div><div class="green1mid_bottommid"></div><div class="green1mid_bottomright">&nbsp;</div></div></div><strong class="qbold left">Doctoral Programs</strong><div style="display: none; border-radius: 10px 10px 10px 10px;" class="myC1 grey left" id="crs_hide_2_1"><h3><a href="javascript:showcrs_div(124066,2,1);">Doctor of Philosophy (Ph.D)</a></h3><span class="plus"><a href="javascript:showcrs_div(124066,2,1);"></a></span></div><div id="crs_show_2_1" style="display: block;"><div class="left openplus"><div style="border-top-left-radius: 10px; border-top-right-radius: 10px;" class="left green1 top1"><h3><a href="javascript:showcrs_div(124066,2,1);">Doctor of Philosophy (Ph.D)</a></h3><span class="minus"><a href="javascript:showcrs_div(124066,2,1);"></a></span></div><div class="green1mid left" id="crs_detail_2_1"><ul>
+	
+	<li><strong>Course Detail:</strong>The institute offers two years full time Doctor of Philosophy course.</li>
+	
+	
+	
+	
+	<li><strong>Admission Criteria:</strong>The candidate should have passed a master degree with minimum 55% marks from a recognized university. Selection will be based on as per the university norms.</li>
+	
+	
+	
+    
+    
+</ul>
+	
+</div><div class="green1mid_bottomleft">&nbsp;</div><div class="green1mid_bottommid"></div><div class="green1mid_bottomright">&nbsp;</div></div></div><script type="text/javascript">
+				      showcrs_div(124066,2,1);
+				    </script><strong class="qbold left">Bachelors Programs</strong><div style="display: none; border-radius: 10px 10px 10px 10px;" class="myC1 grey left" id="crs_hide_3_1"><h3><a href="javascript:showcrs_div(33249,3,1);">Bachelor of Business Administration (BBA)</a></h3><span class="plus"><a href="javascript:showcrs_div(33249,3,1);"></a></span></div><div id="crs_show_3_1" style="display: block;"><div class="left openplus"><div style="border-top-left-radius: 10px; border-top-right-radius: 10px;" class="left green1 top1"><h3><a href="javascript:showcrs_div(33249,3,1);">Bachelor of Business Administration (BBA)</a></h3><span class="minus"><a href="javascript:showcrs_div(33249,3,1);"></a></span></div><div class="green1mid left" id="crs_detail_3_1"><ul>
+	
+	<li><strong>Course Detail:</strong>The institute offers three years full time Bachelor of Business Administration course.</li>
+	
+	
+	
+	<li><strong>Course Affiliation: </strong>Mangalayatan University</li>
+	
+	
+	<li><strong>Admission Criteria:</strong>The candidate should have passed 10+2 or equivalent with minimum 50% marks from a recognized board. Selection will be based on as per the university norms.</li>
+	
+	
+	
+    
+    
+</ul>
+	
+</div><div class="green1mid_bottomleft">&nbsp;</div><div class="green1mid_bottommid"></div><div class="green1mid_bottomright">&nbsp;</div></div></div><script type="text/javascript">
+				      showcrs_div(33249,3,1);
+				    </script><strong class="qbold left">PG Diploma / Certifications</strong><div style="display: none; border-radius: 10px 10px 10px 10px;" class="myC1 grey left" id="crs_hide_4_1"><h3><a href="javascript:showcrs_div(124065,4,1);">Post Graduate Diploma in Business Management</a></h3><span class="plus"><a href="javascript:showcrs_div(124065,4,1);"></a></span></div><div id="crs_show_4_1" style="display: block;"><div class="left openplus"><div style="border-top-left-radius: 10px; border-top-right-radius: 10px;" class="left green1 top1"><h3><a href="javascript:showcrs_div(124065,4,1);">Post Graduate Diploma in Business Management</a></h3><span class="minus"><a href="javascript:showcrs_div(124065,4,1);"></a></span></div><div class="green1mid left" id="crs_detail_4_1"><ul>
+	
+	<li><strong>Course Detail:</strong>The institute offers one year full time Postgraduate Diploma course with specialization in Financial Management and Banking &amp; Insurance.</li>
+	
+	
+	
+	
+	<li><strong>Admission Criteria:</strong>The candidate should have passed graduate with minimum 50% marks from a recognized university. Selection will be based on as per the university norms.</li>
+	
+	
+	
+    
+    
+</ul>
+	
+</div><div class="green1mid_bottomleft">&nbsp;</div><div class="green1mid_bottommid"></div><div class="green1mid_bottomright">&nbsp;</div></div></div><script type="text/javascript">
+				      showcrs_div(124065,4,1);
+				    </script></div></div><div class="ask_bottom_left"> &nbsp;</div><div class="about_bottom_mid">&nbsp;</div><div class="ask_bottom_right"> &nbsp;</div></div><div><a name="facility">&nbsp;</a></div><div class="aboutcollege"><div class="clear">&nbsp;</div><div class="ask_top_left"> &nbsp;</div><div class="career_mid_top left"><h2>Facilities</h2></div><div class="aboutcollege_right">&nbsp;</div><div class="aboutcollege_mid left"><p><strong>Infrastructure Overview: </strong>The institute has well equipped with all the modern facilities.</p><p><strong>Hostel Details: </strong>The university has a modern Wi-Fi equipped six-floor hostel that can accommodate 476 students. It is divided into boys and girls sections, each with its own wardens available round-the-clock.</p><p><strong>Laboratory Details:</strong>Computer labs at the institute are well equipped with modern software to keep the students abreast of the fast changing business and management needs of the corporate world</p><p><strong>Classrooms Details: </strong>All the classrooms are well furnished.</p><p><strong>Library Details:</strong>The institute has rich collection of books and journals in library.</p></div><div class="ask_bottom_left"> &nbsp;</div><div class="about_bottom_mid">&nbsp;</div><div class="ask_bottom_right"> &nbsp;</div></div><div><a name="photo">&nbsp;</a></div><div class="aboutcollege"><div class="clear">&nbsp;</div><div class="ask_top_left"> &nbsp;</div><div class="career_mid_top left"><h2>Photos (3)</h2></div><div class="aboutcollege_right">&nbsp;</div><div class="aboutcollege_midphoto left" id="imageset">
+
+
+<div class="aboutcollege_midphotomid1">
+				
+	
+	<img src="http://images.htcampus.com/media/uploads/images/institute/institute-business-management-mangalayatan-university/infrastructure/sports.125x80.jpg" alt="" title="http://images.htcampus.com/media/uploads/images/institute/institute-business-management-mangalayatan-university/infrastructure/sports.125x80.jpg" align="left">			
+	
+				
+</div>
+
+<div class="aboutcollege_midphotomid1">
+				
+	
+	<img src="http://images.htcampus.com/media/uploads/images/institute/institute-business-management-mangalayatan-university/infrastructure/library.125x80.jpg" alt="" title="http://images.htcampus.com/media/uploads/images/institute/institute-business-management-mangalayatan-university/infrastructure/library.125x80.jpg" align="left">			
+	
+				
+</div>
+
+<div class="aboutcollege_midphotomid1">
+				
+	
+	<img src="http://images.htcampus.com/media/uploads/images/institute/institute-business-management-mangalayatan-university/infrastructure/hostel.125x80.jpg" alt="" title="http://images.htcampus.com/media/uploads/images/institute/institute-business-management-mangalayatan-university/infrastructure/hostel.125x80.jpg" align="left">			
+	
+				
+</div>
+
+
+
+</div><script type="text/javascript">
+	      get_imageset('10165','0','right');
+	</script><div class="ask_bottom_left"> &nbsp;</div><div class="about_bottom_mid">&nbsp;</div><div class="ask_bottom_right"> &nbsp;</div></div><div><a name="faculty"></a></div><div class="aboutcollege"><div class="clear">&nbsp;</div><div class="ask_top_left"> &nbsp;</div><div class="career_mid_top left"><h2>Faculty</h2></div><div class="aboutcollege_right">&nbsp;</div><div class="aboutcollege_mid left">
+	Institute has professionally qualified and experienced faculty drawn from various streams of management discipline. A balanced mix of academicians, researchers, and professionals from both public and private sectors and with rich research and managerial experience contributes to the Institute's academic excellence and character in the country.
+	
+	<div style="display: none; border-radius: 10px 10px 10px 10px;" class="myC1 grey left" id="fac_hide_1"><h3><a href="javascript:showfac_div(1,35869)">Ambrish Sharma</a></h3><span class="plus"><a href="javascript:showfac_div(1,35869)"></a></span></div><div class="left openplus" id="fac_show_1" style="display: block;"><div style="border-top-left-radius: 10px; border-top-right-radius: 10px;" class="left green1 top1"><h3><a href="javascript:showfac_div(1,35869)">Ambrish Sharma</a></h3><span class="minus"><a href="javascript:showfac_div(1,35869)"></a></span></div><div class="green1mid left" id="fac_1">
+<ul class="">
+	
+	<li><strong>Faculty Detail:</strong>Lecturer, Department of Marketing.</li>
+	
+	
+	
+	
+	<li><strong>Qualification:</strong>MBA, M.Phil, PGDBM, B.A. </li>
+	
+	
+	<li><strong>Courses Taken:</strong>The Information will be added soon.</li>
+	
+	
+	<li><strong>Subject Expertise:</strong>The Information will be added soon.</li>
+	
+</ul></div><div class="green1mid_bottomleft">&nbsp;</div><div class="green1mid_bottommid"></div><div class="green1mid_bottomright">&nbsp;</div></div><script type="text/javascript">
+	      showfac_div(1,35869);
+	    </script><div style="border-radius: 10px 10px 10px 10px;" class="myC1 grey left" id="fac_hide_2"><h3><a href="javascript:showfac_div(2,35870)">Gaurav Saxena</a></h3><span class="plus"><a href="javascript:showfac_div(2,35870)"></a></span></div><div class="left openplus" id="fac_show_2" style="display:none;"><div style="border-top-left-radius: 10px; border-top-right-radius: 10px;" class="left green1 top1"><h3><a href="javascript:showfac_div(2,35870)">Gaurav Saxena</a></h3><span class="minus"><a href="javascript:showfac_div(2,35870)"></a></span></div><div class="green1mid left" id="fac_2"></div><div class="green1mid_bottomleft">&nbsp;</div><div class="green1mid_bottommid"></div><div class="green1mid_bottomright">&nbsp;</div></div><div style="border-radius: 10px 10px 10px 10px;" class="myC1 grey left" id="fac_hide_3"><h3><a href="javascript:showfac_div(3,35871)">Dr. Shailendra Singh</a></h3><span class="plus"><a href="javascript:showfac_div(3,35871)"></a></span></div><div class="left openplus" id="fac_show_3" style="display:none;"><div style="border-top-left-radius: 10px; border-top-right-radius: 10px;" class="left green1 top1"><h3><a href="javascript:showfac_div(3,35871)">Dr. Shailendra Singh</a></h3><span class="minus"><a href="javascript:showfac_div(3,35871)"></a></span></div><div class="green1mid left" id="fac_3"></div><div class="green1mid_bottomleft">&nbsp;</div><div class="green1mid_bottommid"></div><div class="green1mid_bottomright">&nbsp;</div></div><div style="border-radius: 10px 10px 10px 10px;" class="myC1 grey left" id="fac_hide_4"><h3><a href="javascript:showfac_div(4,35872)">Minal</a></h3><span class="plus"><a href="javascript:showfac_div(4,35872)"></a></span></div><div class="left openplus" id="fac_show_4" style="display:none;"><div style="border-top-left-radius: 10px; border-top-right-radius: 10px;" class="left green1 top1"><h3><a href="javascript:showfac_div(4,35872)">Minal</a></h3><span class="minus"><a href="javascript:showfac_div(4,35872)"></a></span></div><div class="green1mid left" id="fac_4"></div><div class="green1mid_bottomleft">&nbsp;</div><div class="green1mid_bottommid"></div><div class="green1mid_bottomright">&nbsp;</div></div><div style="border-radius: 10px 10px 10px 10px;" class="myC1 grey left" id="fac_hide_5"><h3><a href="javascript:showfac_div(5,35873)">Dr. Sandeep Shandilya</a></h3><span class="plus"><a href="javascript:showfac_div(5,35873)"></a></span></div><div class="left openplus" id="fac_show_5" style="display:none;"><div style="border-top-left-radius: 10px; border-top-right-radius: 10px;" class="left green1 top1"><h3><a href="javascript:showfac_div(5,35873)">Dr. Sandeep Shandilya</a></h3><span class="minus"><a href="javascript:showfac_div(5,35873)"></a></span></div><div class="green1mid left" id="fac_5"></div><div class="green1mid_bottomleft">&nbsp;</div><div class="green1mid_bottommid"></div><div class="green1mid_bottomright">&nbsp;</div></div><div style="border-radius: 10px 10px 10px 10px;" class="myC1 grey left" id="fac_hide_6"><h3><a href="javascript:showfac_div(6,35874)">Dr. Siddharth Jain</a></h3><span class="plus"><a href="javascript:showfac_div(6,35874)"></a></span></div><div class="left openplus" id="fac_show_6" style="display:none;"><div style="border-top-left-radius: 10px; border-top-right-radius: 10px;" class="left green1 top1"><h3><a href="javascript:showfac_div(6,35874)">Dr. Siddharth Jain</a></h3><span class="minus"><a href="javascript:showfac_div(6,35874)"></a></span></div><div class="green1mid left" id="fac_6"></div><div class="green1mid_bottomleft">&nbsp;</div><div class="green1mid_bottommid"></div><div class="green1mid_bottomright">&nbsp;</div></div><div style="border-radius: 10px 10px 10px 10px;" class="myC1 grey left" id="fac_hide_7"><h3><a href="javascript:showfac_div(7,35875)">Masood Hasan</a></h3><span class="plus"><a href="javascript:showfac_div(7,35875)"></a></span></div><div class="left openplus" id="fac_show_7" style="display:none;"><div style="border-top-left-radius: 10px; border-top-right-radius: 10px;" class="left green1 top1"><h3><a href="javascript:showfac_div(7,35875)">Masood Hasan</a></h3><span class="minus"><a href="javascript:showfac_div(7,35875)"></a></span></div><div class="green1mid left" id="fac_7"></div><div class="green1mid_bottomleft">&nbsp;</div><div class="green1mid_bottommid"></div><div class="green1mid_bottomright">&nbsp;</div></div><div style="border-radius: 10px 10px 10px 10px;" class="myC1 grey left" id="fac_hide_8"><h3><a href="javascript:showfac_div(8,35876)">Adesh Bhatela</a></h3><span class="plus"><a href="javascript:showfac_div(8,35876)"></a></span></div><div class="left openplus" id="fac_show_8" style="display:none;"><div style="border-top-left-radius: 10px; border-top-right-radius: 10px;" class="left green1 top1"><h3><a href="javascript:showfac_div(8,35876)">Adesh Bhatela</a></h3><span class="minus"><a href="javascript:showfac_div(8,35876)"></a></span></div><div class="green1mid left" id="fac_8"></div><div class="green1mid_bottomleft">&nbsp;</div><div class="green1mid_bottommid"></div><div class="green1mid_bottomright">&nbsp;</div></div><div style="border-radius: 10px 10px 10px 10px;" class="myC1 grey left" id="fac_hide_9"><h3><a href="javascript:showfac_div(9,35877)">S.S. Mehta</a></h3><span class="plus"><a href="javascript:showfac_div(9,35877)"></a></span></div><div class="left openplus" id="fac_show_9" style="display:none;"><div style="border-top-left-radius: 10px; border-top-right-radius: 10px;" class="left green1 top1"><h3><a href="javascript:showfac_div(9,35877)">S.S. Mehta</a></h3><span class="minus"><a href="javascript:showfac_div(9,35877)"></a></span></div><div class="green1mid left" id="fac_9"></div><div class="green1mid_bottomleft">&nbsp;</div><div class="green1mid_bottommid"></div><div class="green1mid_bottomright">&nbsp;</div></div><div style="border-radius: 10px 10px 10px 10px;" class="myC1 grey left" id="fac_hide_10"><h3><a href="javascript:showfac_div(10,35878)">Amit Verma</a></h3><span class="plus"><a href="javascript:showfac_div(10,35878)"></a></span></div><div class="left openplus" id="fac_show_10" style="display:none;"><div style="border-top-left-radius: 10px; border-top-right-radius: 10px;" class="left green1 top1"><h3><a href="javascript:showfac_div(10,35878)">Amit Verma</a></h3><span class="minus"><a href="javascript:showfac_div(10,35878)"></a></span></div><div class="green1mid left" id="fac_10"></div><div class="green1mid_bottomleft">&nbsp;</div><div class="green1mid_bottommid"></div><div class="green1mid_bottomright">&nbsp;</div></div><div style="border-radius: 10px 10px 10px 10px;" class="myC1 grey left" id="fac_hide_11"><h3><a href="javascript:showfac_div(11,35879)">Dr. Archana Sharma</a></h3><span class="plus"><a href="javascript:showfac_div(11,35879)"></a></span></div><div class="left openplus" id="fac_show_11" style="display:none;"><div style="border-top-left-radius: 10px; border-top-right-radius: 10px;" class="left green1 top1"><h3><a href="javascript:showfac_div(11,35879)">Dr. Archana Sharma</a></h3><span class="minus"><a href="javascript:showfac_div(11,35879)"></a></span></div><div class="green1mid left" id="fac_11"></div><div class="green1mid_bottomleft">&nbsp;</div><div class="green1mid_bottommid"></div><div class="green1mid_bottomright">&nbsp;</div></div><div style="border-radius: 10px 10px 10px 10px;" class="myC1 grey left" id="fac_hide_12"><h3><a href="javascript:showfac_div(12,35880)">Dr. Garima Sharma</a></h3><span class="plus"><a href="javascript:showfac_div(12,35880)"></a></span></div><div class="left openplus" id="fac_show_12" style="display:none;"><div style="border-top-left-radius: 10px; border-top-right-radius: 10px;" class="left green1 top1"><h3><a href="javascript:showfac_div(12,35880)">Dr. Garima Sharma</a></h3><span class="minus"><a href="javascript:showfac_div(12,35880)"></a></span></div><div class="green1mid left" id="fac_12"></div><div class="green1mid_bottomleft">&nbsp;</div><div class="green1mid_bottommid"></div><div class="green1mid_bottomright">&nbsp;</div></div></div><div class="ask_bottom_left"> &nbsp;</div><div class="about_bottom_mid">&nbsp;</div><div class="ask_bottom_right"> &nbsp;</div></div><div id="ajax_qna"></div><div><a name="review">&nbsp;</a></div><div class="aboutcollege"><div class="clear">&nbsp;</div><div class="ask_top_left"> &nbsp;</div><div class="career_mid_top left"><h2>Campus Updates on Institute of Business Management, Mangalayatan University </h2></div><div class="aboutcollege_right">&nbsp;</div><div class="aboutcollege_mid left"></div><div class="ask_bottom_left"> &nbsp;</div><div class="about_bottom_mid">&nbsp;</div><div class="ask_bottom_right"> &nbsp;</div></div></div><div class="aboutcollege"><div class="clear">&nbsp;</div><div class="ask_top_left"> &nbsp;</div><div class="career_mid_top left"><h2>Updates and comments on Institute of Business Management, Mangalayatan University </h2></div><div class="aboutcollege_right">&nbsp;</div><div id="ajax_comments">
+
+
+
+
+
+<div class="aboutcollege_mid left" id="ajax_comments">
+	<div class="left openplus">
+		<div class="left green1 top1">
+				Share an update or comment about this college
+		</div>
+		<div class="green1mid left">
+		  <form id="id_comment_form" action="/check_login/institute-business-management-mangalayatan-university/" method="post" onsubmit="return comments_content(this);">
+				<div style="display:none"><input name="csrfmiddlewaretoken" value="01c011c036d8678d5dee81255672f67f" type="hidden"></div>
+		<input name="content_type" value="core.institute" id="id_content_type" type="hidden">
+                <input name="object_pk" value="10165" id="id_object_pk" type="hidden">
+                <input name="timestamp" value="1369417576" id="id_timestamp" type="hidden">
+                <input name="security_hash" value="84086af871271997b47a5700a73193c24d13abf8" id="id_security_hash" type="hidden">
+                <p style="display:none">
+					<label for="id_honeypot">Leave blank</label>
+	                <input name="honeypot" id="id_honeypot" type="text">
+                </p>
+				<ul>
+				    <li style="color:#FF0000; font:normal 11px Verdana; width:300px;display:none;" id="id_comment_error">Please enter your comment before pressing submit</li>
+					<li>
+						<textarea name="comment" id="id_comment" cols="75" rows="2" class="textinside" onfocus="ChangeClass(this,'textinside','Write your update or comment here');">Write your update or comment here</textarea>
+					</li>
+					
+					<li>
+						
+						<input value="Submit" class="button_new_big " onclick="return check_before_login('id_comment_form');" type="button">
+						
+						<div class="button_big_Ending"></div>
+					</li>
+					
+				</ul>
+		  </form>
+		</div>
+		<div class="green1mid_bottomleft">&nbsp;</div> 
+		<div class="green1mid_bottommid"></div>
+		<div class="green1mid_bottomright">&nbsp;</div> 
+		
+	</div>
+</div></div><div class="ask_bottom_left"> &nbsp;</div><div class="about_bottom_mid">&nbsp;</div><div class="ask_bottom_right"> &nbsp;</div></div><div class="clear">&nbsp;</div><div style="border-top-left-radius: 10px; border-top-right-radius: 10px;" id="footer" class="topfoot"><script type="text/javascript">
+        (function() {
+            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+            po.src = 'https://apis.google.com/js/plusone.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+        })();
+        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+    </script><script type="text/javascript">
+        function fixLHSDiv() {
+            var $div = $("#id_lhs_ad");
+            if ($(window).scrollTop() > $div.data("top")) {
+                $('#id_lhs_ad').addClass('lhs_ad_fixed');
+            }
+            else {
+                $('#id_lhs_ad').removeClass('lhs_ad_fixed');
+            }
+        }
+        $(function(){
+            try{
+                $("#id_lhs_ad").data("top", $("#id_lhs_ad").offset().top); // set original position on load
+                $(window).scroll(fixLHSDiv);
+              }
+              catch(e){}
+        })
+
+    </script><div id="id_lhs_ad" class="lhs_ad"><div id="div-gpt-ad-1365396833499-16" style="width:160px; height:600px;"><script type="text/javascript">
+
+googletag.display('div-gpt-ad-1365396833499-16');
+
+</script><div id="div-gpt-ad-1365396833499-16_ad_container">
+<ins style="width: 160px; height: 600px; display: inline-table; position: relative; border: 0px none;"><ins style="width: 160px; height: 600px; display: block; position: relative; border: 0px none;"><iframe style="border: 0px none; position: absolute; top: 0px; left: 0px;" marginheight="0" marginwidth="0" name="google_ads_iframe_/2174911/htc_collegedetail_left_160x600_0" id="google_ads_iframe_/2174911/htc_collegedetail_left_160x600_0" frameborder="0" height="600" scrolling="no" width="160"></iframe></ins></ins></div>
+<script>googletag.impl.pubads.createDomIframe("div-gpt-ad-1365396833499-16_ad_container" ,"/2174911/htc_collegedetail_left_160x600_0",false,undefined);</script></div></div><div class="htc_share"><em></em><div class="inside zero_bdr"><iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fhtcampus&amp;send=false&amp;layout=box_count&amp;width=450&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=90&amp;appId=407744539286557" style="border:none; overflow:hidden; width:450px; height:65px;" allowtransparency="true" frameborder="0" scrolling="no"></iframe></div><div class="inside zero_bdr"><div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 50px; height: 60px;"><iframe title="+1" data-gapiattached="true" allowtransparency="true" src="https://plusone.google.com/_/+1/fastbutton?bsv&amp;size=tall&amp;hl=en-US&amp;origin=http%3A%2F%2Fwww.htcampus.com&amp;url=http%3A%2F%2Fwww.htcampus.com%2F&amp;ic=1&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en_US.pq-TpXiLgaE.O%2Fm%3D__features__%2Fam%3DEQ%2Frt%3Dj%2Fd%3D1%2Frs%3DAItRSTOY9mIG3t5Os0XGQNrlA_ssOaR9lA#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Conload&amp;id=I0_1369417589897&amp;parent=http%3A%2F%2Fwww.htcampus.com&amp;rpctoken=82698885" name="I0_1369417589897" id="I0_1369417589897" vspace="0" tabindex="0" style="position: static; top: 0px; width: 50px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 60px;" marginwidth="0" marginheight="0" hspace="0" frameborder="0" scrolling="no" width="100%"></iframe></div></div><div class="inside"><iframe data-twttr-rendered="true" title="Twitter Tweet Button" style="width: 58px; height: 62px;" class="twitter-share-button twitter-count-vertical" src="http://platform.twitter.com/widgets/tweet_button.1368146021.html#_=1369417590055&amp;count=vertical&amp;counturl=http%3A%2F%2Fwww.htcampus.com&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=http%3A%2F%2Fwww.htcampus.com%2Fcollege%2Finstitute-business-management-mangalayatan-university%2F&amp;size=m&amp;text=Get%20information%20on%20Colleges%20in%20India%2C%20Education%2C%20Courses%2C%20MBA%20Courses%2C%20Engineering%20Colleges&amp;url=http%3A%2F%2Fgoo.gl%2Fsa0Il&amp;via=htcampus" allowtransparency="true" frameborder="0" scrolling="no"></iframe><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div></div><div style="padding: 0px 0px 0px 105px;"></div><div class="links"><ul><li style="border-radius: 10px 10px 10px 10px;" class="footerbase myCorner"><a href="/" title="Home">Home</a></li><li style="border-radius: 10px 10px 10px 10px;" class="footerbase myCorner"><a href="/explore-college/explore/" title="Explore Colleges">Explore Colleges</a></li><li><a href="/explore-college/category/" title="Browse by Category">Browse by Category</a></li><li class="grydot">&nbsp;</li><li><a href="/browse-colleges-courses/display/" title="Browse Colleges &amp; Courses">Browse Colleges &amp; Courses</a></li><li class="grydot">&nbsp;</li><li style="border-radius: 10px 10px 10px 10px;" class="footerbase myCorner"><a title="Study Abroad" href="http://studyabroad.htcampus.com/" target="_blank">Study Abroad</a></li></ul><ul><li style="border-radius: 10px 10px 10px 10px;" class="footerbase myCorner"><a href="/article/" title="Articles &amp; Resources">Articles &amp; Resources</a></li><li><a href="/article/education/" title="Education Articles">Education Articles</a></li><li class="grydot">&nbsp;</li><li><a href="/article/career/" title="Career Guide">Career Guide</a></li><li class="grydot">&nbsp;</li><li><a href="/ask/" title="Question Bank">Question Bank</a></li><li class="grydot">&nbsp;</li><li><a href="/article/news/" title="News &amp; Updates">News &amp; Updates</a></li><li class="grydot">&nbsp;</li><li><a href="/discussion-forum/" title="Discussion Forums">Discussion Forums</a></li><li class="grydot">&nbsp;</li></ul><ul><li style="border-radius: 10px 10px 10px 10px;" class="footerbase myCorner"><a href="/help-me-decide/" title="ToolKit">ToolKit</a></li><li><a href="#TBLogin_inline?height=246&amp;width=470&amp;LoginlineId=header-login-box1&amp;next=/help-me-decide/" class="loginthickbox" title="Log in">Help me Decide</a></li><li class="grydot">&nbsp;</li><li><a href="#TBLogin_inline?height=246&amp;width=470&amp;LoginlineId=header-login-box1&amp;next=/salary_calculator/" class="loginthickbox" title="Log in">Salary Calculator</a></li><li class="grydot">&nbsp;</li><li><a href="#TBLogin_inline?height=246&amp;width=470&amp;LoginlineId=header-login-box1&amp;next=/match-me/" class="loginthickbox" title="Log in">Match me</a></li><li class="grydot">&nbsp;</li><li><a href="#TBLogin_inline?height=246&amp;width=470&amp;LoginlineId=header-login-box1&amp;next=/compare-college/" class="loginthickbox" title="Log in">Search &amp; Compare</a></li><li class="grydot">&nbsp;</li><li><a href="#TBLogin_inline?height=246&amp;width=470&amp;LoginlineId=header-login-box1&amp;next=/ask/" class="loginthickbox" title="Log in">Ask Experts</a></li><li class="grydot">&nbsp;</li></ul><ul><li style="border-radius: 10px 10px 10px 10px;" class="footerbase myCorner"><a href="/contact-us/" title="Useful Material">Contact HTCampus</a></li><li></li><li><a href="/" title="For Sales &amp; Partnerships"><h4>For Sales &amp; Partnership :</h4></a></li><li><a href="/" title="For Sales &amp; Partnership">htcampus@hindustantimes.com</a></li><li class="grydot">&nbsp;</li><li></li><li><a href="/" title="For Social Media"><h4>For Social Media :</h4></a></li><li><a href="/" title="For Social Media">social@htcampus.com</a></li><li class="grydot">&nbsp;</li></ul><div class="clear zerofont">&nbsp;</div></div><div class="links"><span style="border-radius: 10px 10px 10px 10px;" class="footerdynamic myCorner">Top Trending Articles</span><ul><li class="grydot">&nbsp;</li><li><a href="/article/advantages-disadvantages-distance-learning-612/ " title="Advantages &amp; Disadvantages of Distance Learning">Advantages &amp; Disadvantages of Distance Learning</a></li><li class="grydot">&nbsp;</li><li><a href="/category/engineering/architecture/" title="Architecture Colleges">Architecture Colleges</a></li><li class="grydot">&nbsp;</li><li><a href="/article/b-school-in-himachal-pradesh-that-will-accept-cat-2012-scores-2689/" title="B-School in Himachal Pradesh that will accept CAT 2012 scores">B-School in Himachal Pradesh that will accept CAT 2012 scores</a></li><li class="grydot">&nbsp;</li><li><a href="/category/sciences/biotechnology/" title="Biotechnology Colleges">Biotechnology Colleges</a></li><li class="grydot">&nbsp;</li><li><a href="/collegeapplications/" title="College Admissions">College Admissions</a></li><li class="grydot">&nbsp;</li><li><a href="/category/engineering/" title="Engineering Colleges">Engineering Colleges</a></li><li class="grydot">&nbsp;</li><li><a href="/article/institutes-in-orrisa-that-will-accept-cat-2012-scores-2673/" title="Institutes in Orrisa that will Accept CAT 2012 Scores">Institutes in Orrisa that will Accept CAT 2012 Scores</a></li><li class="grydot">&nbsp;</li><li><a href="/article/jee-main-and-jee-advanced-faqs-3017/" title="JEE (Main) and JEE (Advanced): FAQs">JEE (Main) and JEE (Advanced): FAQs</a></li><li class="grydot">&nbsp;</li><li><a href="/article/list-of-all-india-medical-examinations-to-be-held-in-2013-2774/" title="List of All India Medical Examinations to be held in 2013">List of All India Medical Examinations to be held in 2013</a></li><li class="grydot">&nbsp;</li><li><a href="/category/media-films-journalism/journalism-mass-comm/" title="Mass Communication Colleges">Mass Communication Colleges</a></li><li class="grydot">&nbsp;</li><li><a href="/article/mba-institutes-in-uttarakhand-that-will-accept-cat-2012-score-2682/" title="MBA Institutes in Uttarakhand that will accept CAT 2012 score">MBA Institutes in Uttarakhand that will accept CAT 2012 score</a></li><li class="grydot">&nbsp;</li><li><a href="/article/nata-2013-for-admissions-into-bachelor-of-architecture-2957/" title="NATA 2013">NATA 2013</a></li><li class="grydot">&nbsp;</li><li><a href="/article/preparation-tips-for-jee-mains-advanced-2013-2950/" title="Preparation Tips for JEE Mains &amp; Advanced 2013">Preparation Tips for JEE Mains &amp; Advanced 2013</a></li><li class="grydot">&nbsp;</li></ul><ul><li><a href="/category/engineering/aeronautical-engineering/" title="Aeronautical Engineering Colleges">Aeronautical Engineering Colleges</a></li><li class="grydot">&nbsp;</li><li><a href="/category/languages-literature/performing-arts/" title="Art Colleges">Art Colleges</a></li><li class="grydot">&nbsp;</li><li><a href="/article/b-schools-in-haryana-that-will-accept-cat-2012-score-2678/" title="B-Schools in Haryana that will accept CAT 2012 score">B-Schools in Haryana that will accept CAT 2012 score</a></li><li class="grydot">&nbsp;</li><li><a href="/article/eligibility-and-application-procedure-to-apply-to-bitsat-2013-2824/" title="BITSAT 2013">BITSAT 2013</a></li><li class="grydot">&nbsp;</li><li><a href="/collegeapplications/" title="College Applications">College Applications</a></li><li class="grydot">&nbsp;</li><li><a href="/category/aviationtravel-hospitality/hotel-management/" title="Hotel Management Colleges">Hotel Management Colleges</a></li><li class="grydot">&nbsp;</li><li><a href="/article/institutes-in-punjab-that-will-accept-cat-2012-score-2674/" title="Institutes in Punjab that will accept CAT 2012 score">Institutes in Punjab that will accept CAT 2012 score</a></li><li class="grydot">&nbsp;</li><li><a href="/category/media-films-journalism/journalism-mass-comm/" title="Journalism Colleges">Journalism Colleges</a></li><li class="grydot">&nbsp;</li><li><a href="/article/list-of-medical-colleges-available-for-allotment-under-neet-2013-2784/" title="List of colleges under NEET 2013">List of colleges under NEET 2013</a></li><li class="grydot">&nbsp;</li><li><a href="/category/mba-business-management/mba/" title="MBA Colleges">MBA Colleges</a></li><li class="grydot">&nbsp;</li><li><a href="/article/mba-institutes-in-west-bengal-that-will-accept-cat-2012-score-2683/" title="MBA Institutes in West Bengal that will accept CAT 2012 score">MBA Institutes in West Bengal that will accept CAT 2012 score</a></li><li class="grydot">&nbsp;</li><li><a href="/article/national-institutes-that-will-accept-cat-2012-scores-2671/" title="National Institutes that will accept CAT 2012 scores">National Institutes that will accept CAT 2012 scores</a></li><li class="grydot">&nbsp;</li><li><a href="/article/12-tips-crack-general-studies-section-civil-servic-781/" title="Top 10 Tips to crack the general studies section for Civil Services">Top 10 Tips to crack the general studies section for Civil Services</a></li><li class="grydot">&nbsp;</li></ul><ul><li><a href="/article/aiims-mbbs-medical-entrance-exam-on-1st-june-2013-2942/" title="AIIMS Medical Entrance Exam 2013">AIIMS Medical Entrance Exam 2013</a></li><li class="grydot">&nbsp;</li><li><a href="/category/aviationtravel-hospitality/" title="Aviation Colleges">Aviation Colleges</a></li><li class="grydot">&nbsp;</li><li><a href="/category/mba-business-management/bba/" title="BBA Colleges">BBA Colleges</a></li><li class="grydot">&nbsp;</li><li><a href="/category/mba-business-management/" title="Business Colleges">Business Colleges</a></li><li class="grydot">&nbsp;</li><li><a href="/category/medicine-health-care/dental-sciences/" title="Dental Colleges">Dental Colleges</a></li><li class="grydot">&nbsp;</li><li><a href="/article/how-prepare-essay-questions-civil-services-mains-2-782/" title="How to prepare for essay questions: Civil Services Main">How to prepare for essay questions: Civil Services Main</a></li><li class="grydot">&nbsp;</li><li><a href="/article/institutes-in-rajasthan-that-will-accept-cat-2012-score-2675/" title="Institutes in Rajasthan that will accept CAT 2012 score">Institutes in Rajasthan that will accept CAT 2012 score</a></li><li class="grydot">&nbsp;</li><li><a href="http://resultsout.com/" title="Latest exam results">Latest exam results</a></li><li class="grydot">&nbsp;</li><li><a href="/article/list-of-top-hotel-management-institutes-in-india-2883/" title="List of top Hotel Management Institutes in India">List of top Hotel Management Institutes in India</a></li><li class="grydot">&nbsp;</li><li><a href="/article/mba-colleges-in-madhya-pradesh-that-will-accept-cat-2012-scores-2698/" title="MBA Colleges in Madhya Pradesh that will accept CAT 2012 scores">MBA Colleges in Madhya Pradesh that will accept CAT 2012 scores</a></li><li class="grydot">&nbsp;</li><li><a href="/category/computers-it/mca-bca/" title="MCA Colleges">MCA Colleges</a></li><li class="grydot">&nbsp;</li><li><a href="/category/medicine-health-care/pharmacy/" title="Pharmacy Colleges">Pharmacy Colleges</a></li><li class="grydot">&nbsp;</li><li><a href="/article/12-tips-crack-general-studies-section-civil-servic-781/" title="Top 10 Tips to crack the general studies section for Civil Services">Top 10 Tips to crack the general studies section for Civil Services</a></li><li class="grydot">&nbsp;</li></ul><ul><li><a href="/article/aiims-mbbs-medical-entrance-exam-on-1st-june-2013-2942/" title="AIIMS Medical Entrance Exam 2013">AIIMS Medical Entrance Exam 2013</a></li><li class="grydot">&nbsp;</li><li><a href="/category/aviationtravel-hospitality/" title="Aviation Colleges">Aviation Colleges</a></li><li class="grydot">&nbsp;</li><li><a href="/category/mba-business-management/bba/" title="BBA Colleges">BBA Colleges</a></li><li class="grydot">&nbsp;</li><li><a href="/category/mba-business-management/" title="Business Colleges">Business Colleges</a></li><li class="grydot">&nbsp;</li><li><a href="/category/medicine-health-care/dental-sciences/" title="Dental Colleges">Dental Colleges</a></li><li class="grydot">&nbsp;</li><li><a href="/article/how-prepare-essay-questions-civil-services-mains-2-782/" title="How to prepare for essay questions: Civil Services Main">How to prepare for essay questions: Civil Services Main</a></li><li class="grydot">&nbsp;</li><li><a href="/article/institutes-in-rajasthan-that-will-accept-cat-2012-score-2675/" title="Institutes in Rajasthan that will accept CAT 2012 score">Institutes in Rajasthan that will accept CAT 2012 score</a></li><li class="grydot">&nbsp;</li><li><a href="http://resultsout.com/" title="Latest exam results">Latest exam results</a></li><li class="grydot">&nbsp;</li><li><a href="/article/list-of-top-hotel-management-institutes-in-india-2883/" title="List of top Hotel Management Institutes in India">List of top Hotel Management Institutes in India</a></li><li class="grydot">&nbsp;</li><li><a href="/article/mba-colleges-in-madhya-pradesh-that-will-accept-cat-2012-scores-2698/" title="MBA Colleges in Madhya Pradesh that will accept CAT 2012 scores">MBA Colleges in Madhya Pradesh that will accept CAT 2012 scores</a></li><li class="grydot">&nbsp;</li><li><a href="/category/computers-it/mca-bca/" title="MCA Colleges">MCA Colleges</a></li><li class="grydot">&nbsp;</li><li><a href="/category/medicine-health-care/pharmacy/" title="Pharmacy Colleges">Pharmacy Colleges</a></li><li class="grydot">&nbsp;</li><li><a href="/article/12-tips-crack-general-studies-section-civil-servic-781/" title="Top 10 Tips to crack the general studies section for Civil Services">Top 10 Tips to crack the general studies section for Civil Services</a></li><li class="grydot">&nbsp;</li></ul></div></div><div style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;" class="footerblue left"><span class="left">© 2010 Firefly e-Ventures Ltd.</span><span class="right"><a href="/contact-us/" title="Contact HTCampus">Contact HTCampus</a>&nbsp;|&nbsp;
+		<a href="/sitemap.xml" title="Site Map">Site Map</a>&nbsp;|&nbsp;
+		<a href="/policy/" title="Privacy Policy" target="_blank">Privacy Policy</a>&nbsp;|&nbsp;
+		<a href="/tnc/" title="Terms &amp; Conditions" target="_blank">Terms &amp; Conditions</a></span></div><div class="clear">&nbsp;</div><div class="bannertop bannertop2"><div id="div-gpt-ad-1" style="width: 200px; height: 60px;float:left;margin-right:5px;"><script type="text/javascript">
+googletag.cmd.push(function() {googletag.display('div-gpt-ad-1'); });
+</script><div id="div-gpt-ad-1_ad_container">
+<ins style="width: 200px; height: 60px; display: inline-table; position: relative; border: 0px none;"><ins style="width: 200px; height: 60px; display: block; position: relative; border: 0px none;"><iframe style="border: 0px none; position: absolute; top: 0px; left: 0px;" marginheight="0" marginwidth="0" name="google_ads_iframe_/2174911/ca-pub-4885500807754460/htc_header_logo200x60_1_0" id="google_ads_iframe_/2174911/ca-pub-4885500807754460/htc_header_logo200x60_1_0" frameborder="0" height="60" scrolling="no" width="200"></iframe></ins></ins></div>
+<script>googletag.impl.pubads.createDomIframe("div-gpt-ad-1_ad_container" ,"/2174911/ca-pub-4885500807754460/htc_header_logo200x60_1_0",false,undefined);</script></div><div id="div-gpt-ad-2" style="width: 200px; height: 60px;float:left;margin-right:5px;"><script type="text/javascript">
+googletag.cmd.push(function() {googletag.display('div-gpt-ad-2'); });
+</script></div><div id="div-gpt-ad-3" style="width: 200px; height: 60px;float:left;margin-right:5px;"><script type="text/javascript">
+googletag.cmd.push(function() {googletag.display('div-gpt-ad-3'); });
+</script></div></div><script type="text/javascript">
+//<![CDATA[
+$(document).ready(function(){
+  var ca =document.cookie.split(';');
+  var nameEQ = "next_redirect_url=";
+  var red_url = undefined;
+  for(var i=0;i < ca.length;i++)
+  {
+    var c = ca[i];
+    while (c.charAt(0)==' ') c = c.substring(1,c.length);
+    if (c.indexOf(nameEQ) == 0)  red_url= c.substring(nameEQ.length,c.length);
+
+  }
+  if (red_url){
+    var d = new Date();
+    sep_url = '"';
+    new_url = red_url.slice(red_url.indexOf(sep_url)+1,red_url.lastIndexOf(sep_url));
+    redirect_url = "#TBLogin_inline?height=246&amp;width=470&amp;LoginlineId=header-login-box1&amp;next="+new_url;
+    tb_showlogin("Log In", redirect_url, "");
+    document.cookie = nameEQ+new_url+";expires=" + d.toGMTString() + ";"+ ";";
+  }
+})
+  //]]></script><div id="popuplanding_div"><link href="http://images.htcampus.com/media/css/popuplandingpage.css" rel="stylesheet">
+
+
+ 
+
+
+
+
+<div id="htlandingpage" style="display:none;" class="lfpop_Container">
+<form action="" method="post" id="id_popup_landing_form">
+<div class="lfpop_cross_btn" title="close this window"></div>
+<div class="lfpop_Topheader">
+<div id="id_firsttext" class="lfpop_TopText"></div>
+
+<div id="id_secondtext" class="lfpop_Text"></div>
+	<div class="lfpop_big_box">
+	<div class="lfpop_box">
+	  <h2>Your Preferences</h2>
+          <div class="lfpop_frm_box">
+          		<span id="specialisation_id_err" class="lfpop_fie"></span>
+                <select id="specialisation_id" class="lfpop_select" name="course_category" valid="notempty">
+                </select>
+                <span class="lfpop_star">*</span>
+                <span id="course_type_id_err" class="lfpop_fie"></span>
+                <select id="course_type_id" class="lfpop_select" name="course_type" valid="notempty">
+                </select>
+                <span class="lfpop_star">*</span>	
+                <span id="admission_year_id_err" class="lfpop_fie"></span>
+                <select id="admission_year_id" class="lfpop_select" name="year_of_entrance" valid="notempty">
+                </select>
+                <span class="lfpop_star">*</span>	
+                <span id="preferred_city_list_id_err" class="lfpop_fie"></span>
+                <select id="preferred_city_list_id" class="lfpop_select" name="preferred_city" valid="notempty">
+                </select>
+                <span class="lfpop_star">*</span>	    
+          </div>
+	</div>
+    <div class="lfpop_box">
+	  <h2>Your Career Summary</h2>
+          <div class="lfpop_frm_box">
+          	<span id="qualification_id_err" class="lfpop_fie"></span>
+              <select id="qualification_id" class="lfpop_select" name="highest_qualification" valid="notempty">
+              </select>
+              <span class="lfpop_star">*</span>	
+              <span id="work_exp_id_err" class="lfpop_fie"></span>
+                <select id="work_exp_id" class="lfpop_select" name="work_exp" valid="notempty">
+                </select>
+                <span class="lfpop_star">*</span>	
+                <p class="">&nbsp;</p>
+                
+                                  
+          </div>
+	</div>
+    <div class="lfpop_box lfpop_mar_rgt">
+	  <h2> Your Details</h2>
+          <div class="lfpop_frm_box">
+          <span id="name_id_err" class="lfpop_fie"></span>
+         	
+       		  <input id="name_id" onblur="blur_field('Name',this);" onfocus="focus_field('Name',this);" style="width:195px;" name="name" value="Name" valid="notempty" class="lfpop_txt" type="text"><span class="lfpop_star">*</span>	
+                <span id="email_id_err" class="lfpop_fie"></span>
+                <input id="email_id" onblur="blur_field('E-mail',this);" onfocus="focus_field('E-mail',this);" style="width:195px;" name="email" value="E-mail" valid="notempty|email" class="lfpop_txt" type="text"><span class="lfpop_star">*</span>
+                <span id="contact_number_id_err" class="lfpop_fie"></span>
+                <input id="contact_number_id" onblur="blur_field('Mobile No.',this);" onfocus="focus_field('Mobile No.',this);" style="width:195px;" name="contact_number" value="Mobile No." valid="notempty|integer|cellnum|chklen" class="lfpop_txt" type="text">
+                <span class="lfpop_star">*</span>
+                <span id="current_city_list_id_err" class="lfpop_fie"></span>
+			<select id="current_city_list_id" class="lfpop_select" name="current_city" valid="notempty">
+              </select><span class="lfpop_star">*</span>
+               <input name="domain" id="domain_id" value="1" type="hidden">
+               <input name="url_path" id="url_path_id" value="" type="hidden">
+               <input name="ip_address" id="ip_address_id" value="184.26.162.6" type="hidden">
+              
+				
+          </div>
+	</div>
+	
+	
+	    	
+</div>
+<div class="lfpop_big_box">
+	<table width="100%" cellpadding="0" cellspacing="0">
+	</table>
+</div>
+</div>
+<div class="lfpop_enterline">
+<div class="lfpop_termscondition"><span id="id_tnc_err" class="lfpop_fie_1"></span><input id="id_tnc" value="123" checked="checked" name="tnc" valid="notempty" type="checkbox">I accept <a href="/tnc/" target="_blank">T&amp;C</a> and allow HTCampus to contact me</div>
+<div class="lfpop_termscondition lfpop_pad_top">
+<div class="lfpop_lft_terms"> <img src="http://images.htcampus.com/media/images/popuplandingpage_images/left-one.gif" alt="Submit" height="45" width="250" align="left"></div>
+<div><a id="popupsubmit"><img src="http://images.htcampus.com/media/images/popuplandingpage_images/btn.gif" alt="Submit" height="43" width="187" align="left" border="0"></a></div>
+<div><img src="http://images.htcampus.com/media/images/popuplandingpage_images/right-one.gif" alt="Submit" height="45" width="250" align="left"></div>
+</div>
+</div>
+
+<div class="lfpop_ht__big_box">
+	<div class="lfpop_ht_box">
+<div class="lfpop_footerheading">The HTCampus Advantage</div>
+<div class="lfpop_info_box">Get Updated information on thousands of colleges in India.</div>
+<div class="lfpop_info_box">Updates on placements, courses, faculty and other facilities.</div>
+<div class="lfpop_info_box">Browse expert articles on various aspects of higher studies.</div>
+<div class="lfpop_info_box">Take Free Mock tests once you have registered.</div>
+</div>
+</div>
+</form>
+</div>
+
+
+
+
+
+</div><script type="text/javascript">
+    function removeFooterAd(){
+        $('.bottom_add_banner').remove();
+    }
+</script><script type="text/javascript">
+    function fixFooterDiv() {
+        if ($(window).scrollTop() > $("#id_navbar").data("top")) {
+            $('.bottom_add_banner').show();
+        }
+        else {
+            $('.bottom_add_banner').hide();
+        }
+    }
+    $(function(){
+        $("#id_navbar").data("top", $("#id_navbar").offset().top); // set original position on load
+        $(window).scroll(fixFooterDiv);
+    })
+    </script><div class="bottom_add_banner" style="display: none;"><div class="top_add_wrap_bottom mt16"><div class="add_cross_bottom"><a onclick="removeFooterAd()">cross</a></div><div class="add_banner_bottom"><div id="div-gpt-ad-1365396833499-15" style="width:728px; height:90px;"><script type="text/javascript">
+
+googletag.display('div-gpt-ad-1365396833499-15');
+
+</script><div id="div-gpt-ad-1365396833499-15_ad_container">
+<ins style="width: 728px; height: 90px; display: inline-table; position: relative; border: 0px none;"><ins style="width: 728px; height: 90px; display: block; position: relative; border: 0px none;"><iframe style="border: 0px none; position: absolute; top: 0px; left: 0px;" marginheight="0" marginwidth="0" name="google_ads_iframe_/2174911/htc_collegedetail_bottom_728x90_0" id="google_ads_iframe_/2174911/htc_collegedetail_bottom_728x90_0" frameborder="0" height="90" scrolling="no" width="728"></iframe></ins></ins></div>
+<script>googletag.impl.pubads.createDomIframe("div-gpt-ad-1365396833499-15_ad_container" ,"/2174911/htc_collegedetail_bottom_728x90_0",false,undefined);</script></div></div></div></div><script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-15795682-1']);
+  _gaq.push(['_setDomainName', 'none']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  
+  
+  
+  
+</script><script type="text/javascript">
+/* <![CDATA[ /
+var google_conversion_id = 1007271771;
+var google_conversion_label = "wrfdCJWwhAkQ2_6m4AM";
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/ ]]> */
+</script><script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script><noscript><div style="display:inline;"><img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1007271771/?value=0&label=wrfdCJWwhAkQ2_6m4AM&guid=ON&script=0"/></div></noscript><!-- Start Alexa Certify Javascript --><script type="text/javascript">
+_atrk_opts = { atrk_acct:"3g8yh1acBa0021", domain:"htcampus.com",dynamic: true};
+(function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();
+</script><noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=3g8yh1acBa0021" style="display:none" height="1" width="1" alt="" /></noscript><!-- End Alexa Certify Javascript --><script type="text/javascript">
+setTimeout(function(){var a=document.createElement("script");
+var b=document.getElementsByTagName("script")[0];
+a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0016/9467.js?"+Math.floor(new Date().getTime()/3600000);
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script><!-- Google Code for Smart Pixel For Master Page HTCampus.com --><!-- Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. For instructions on adding this tag and more information on the above requirements, read the setup guide: google.com/ads/remarketingsetup --><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1007271771;
+var google_conversion_label = "UAHACJX_5QkQ2_6m4AM";
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script><script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script><iframe name="google_conversion_frame" src="http://googleads.g.doubleclick.net/pagead/viewthroughconversion/1007271771/?random=1369417589955&amp;cv=7&amp;fst=1369417589955&amp;num=1&amp;fmt=1&amp;label=UAHACJX_5QkQ2_6m4AM&amp;guid=ON&amp;u_h=1024&amp;u_w=1280&amp;u_ah=984&amp;u_aw=1280&amp;u_cd=24&amp;u_his=50&amp;u_tz=-300&amp;u_java=false&amp;u_nplug=0&amp;u_nmime=0&amp;url=http%3A//www.htcampus.com/college/institute-business-management-mangalayatan-university/&amp;frm=0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" frameborder="0" height="13" scrolling="no" width="300"><img height="1" width="1" border="0" src="http://googleads.g.doubleclick.net/pagead/viewthroughconversion/1007271771/?frame=0&random=1369417589955&cv=7&fst=1369417589955&num=1&fmt=1&label=UAHACJX_5QkQ2_6m4AM&guid=ON&u_h=1024&u_w=1280&u_ah=984&u_aw=1280&u_cd=24&u_his=50&u_tz=-300&u_java=false&u_nplug=0&u_nmime=0&url=http%3A//www.htcampus.com/college/institute-business-management-mangalayatan-university/&frm=0" /></iframe><noscript><div style="display:inline;"><img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1007271771/?value=0&amp;label=UAHACJX_5QkQ2_6m4AM&amp;guid=ON&amp;script=0"/></div></noscript>
+</body>

@@ -1,0 +1,921 @@
+<!--<![endif]--><head><script src="//ct1.addthis.com/static/r07/auth013.js" type="text/javascript"></script><link media="all" href="//ct1.addthis.com/static/r07/widget114.css" type="text/css" rel="stylesheet">
+	
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Building Live NASDAQ Bar Graphs without Plug-Ins | the HTML5 Center</title>
+  <meta name="description" content="In this article, we'll get rolling on developing plug-in free by creating bar graphs and similar graphics, using NASDAQ's current web site as an example.">  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="shortcut icon" href="images/favicon.gif">
+
+  <link rel="stylesheet" href="/css/style.css?v=1.1">
+  <link rel="stylesheet" href="/css/lib/lightbox.css?v=1.1">    
+  <!--<link rel="stylesheet" href="/css/ie8.css" />-->
+
+
+  <script src="http://platform.twitter.com/js/tfw/hub/client.js" async="" type="text/javascript" id="LR1"></script><script async="" src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en_US.r3QWApkN4KM.O/m=plusone/rt=j/sv=1/d=1/ed=1/am=EQ/rs=AItRSTMXOSfYHNeCWAliTFzzK4EPtqRvFg/cb=gapi.loaded_0"></script><script src="http://www.google-analytics.com/ga.js" async="" type="text/javascript"></script><script src="//connect.facebook.net/en_US/all.js#xfbml=1" id="facebook-jssdk"></script><script src="/js/libs/modernizr-1.7.min.js"></script>
+  
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+<!-- Google Analytics -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-5239675-15']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<!-- Google Analytics Social Button Tracking -->
+<script type="text/javascript" src="https://s3.amazonaws.com/ha_js/ga_social_tracking.js"></script>
+<script type="text/javascript">_ga.trackFacebook();</script> 
+
+<script src="http://www.livefyre.com/api/v1.1/internal/login_init.js?callback=LF.initCallback&amp;url=http%3A//html5center.sourceforge.net/Building-Live-NASDAQ-Bar-Graphs-without-Plug-Ins&amp;site_id=312741&amp;article_id=http%3A//html5center.sourceforge.net/Building-Live-NASDAQ-Bar-Graphs-without-Plug-Ins" type="text/javascript"></script><div id="_atssh" style="visibility: hidden; height: 1px; width: 1px; position: absolute; z-index: 100000;"><iframe src="//ct1.addthis.com/static/r07/sh116.html#" style="height: 1px; width: 1px; position: absolute; z-index: 100000; border: 0px none; left: 0px; top: 0px;" title="AddThis utility frame" id="_atssh262"></iframe></div><script src="http://ct1.addthis.com/static/r07/core078.js" type="text/javascript"></script><link type="text/css" rel="stylesheet" href="http://widgets.twimg.com/j/2/widget.css"><style type="text/css">#twtr-widget-1 .twtr-avatar { display: block; } #twtr-widget-1 .twtr-user { display: inline; } #twtr-widget-1 .twtr-tweet-text { margin-left: 40px; }</style><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}
+.fb_invisible{display:none}
+.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}
+.fb_reset > div{overflow:hidden}
+.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}
+.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}
+.fb_dialog_content{background:#fff;color:#333}
+.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px;top:8px\9;right:7px\9}
+.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}
+.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}
+.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}
+.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}
+.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}
+.fb_dialog_top_left,
+.fb_dialog_top_right,
+.fb_dialog_bottom_left,
+.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}
+/* @noflip */
+.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}
+/* @noflip */
+.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}
+/* @noflip */
+.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}
+/* @noflip */
+.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right,
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right{width:10px;height:100%}
+.fb_dialog_vert_left{margin-left:-10px}
+.fb_dialog_vert_right{right:0;margin-right:-10px}
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{width:100%;height:10px}
+.fb_dialog_horiz_top{margin-top:-10px}
+.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}
+.fb_dialog_iframe{line-height:0}
+.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}
+.fb_dialog_content .dialog_title > span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif)
+no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}
+body.fb_hidden{-webkit-transform:none;height:100%;margin:0;left:-10000px;overflow:visible;position:absolute;top:-10000px;width:100%
+}
+.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif)
+white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}
+.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}
+#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}
+#fb-root #fb_dialog_ipad_overlay.hidden{display:none}
+.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}
+.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0 0, 0 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}
+.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%
+}
+.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0 0, 0 100%, from(#4966A6),
+color-stop(0.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset,
+rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}
+.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}
+.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}
+.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}
+#fb_dialog_loader_close{float:left}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}
+.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}
+.fb_iframe_widget iframe{position:absolute}
+.fb_iframe_widget_lift{z-index:1}
+.fb_hide_iframes iframe{position:relative;left:-10000px}
+.fb_iframe_widget_loader{position:relative;display:inline-block}
+.fb_iframe_widget_fluid{display:inline}
+.fb_iframe_widget_fluid span{width:100%}
+.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}
+.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_connect_bar_container div,
+.fb_connect_bar_container span,
+.fb_connect_bar_container a,
+.fb_connect_bar_container img,
+.fb_connect_bar_container strong{background:none;border-spacing:0;border:0;direction:ltr;font-style:normal;font-variant:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal;vertical-align:baseline}
+.fb_connect_bar_container{position:fixed;left:0 !important;right:0 !important;height:42px !important;padding:0 25px !important;margin:0 !important;vertical-align:middle !important;border-bottom:1px solid #333 !important;background:#3b5998 !important;z-index:99999999 !important;overflow:hidden !important}
+.fb_connect_bar_container_ie6{position:absolute;top:expression(document.compatMode=="CSS1Compat"? document.documentElement.scrollTop+"px":body.scrollTop+"px")}
+.fb_connect_bar{position:relative;margin:auto;height:100%;width:100%;padding:6px 0 0 0 !important;background:none;color:#fff !important;font-family:"lucida grande", tahoma, verdana, arial, sans-serif !important;font-size:13px !important;font-style:normal !important;font-variant:normal !important;font-weight:normal !important;letter-spacing:normal !important;line-height:1 !important;text-decoration:none !important;text-indent:0 !important;text-shadow:none !important;text-transform:none !important;white-space:normal !important;word-spacing:normal !important}
+.fb_connect_bar a:hover{color:#fff}
+.fb_connect_bar .fb_profile img{height:30px;width:30px;vertical-align:middle;margin:0 6px 5px 0}
+.fb_connect_bar div a,
+.fb_connect_bar span,
+.fb_connect_bar span a{color:#bac6da;font-size:11px;text-decoration:none}
+.fb_connect_bar .fb_buttons{float:right;margin-top:7px}
+.fb_edge_widget_with_comment{position:relative;*z-index:1000}
+.fb_edge_widget_with_comment span.fb_edge_comment_widget{position:absolute}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget{z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget .FB_Loader{left:0;top:1px;margin-top:6px;margin-left:0;background-position:50% 50%;background-color:#fff;height:150px;width:394px;border:1px #666 solid;border-bottom:2px solid #283e6c;z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.dark .FB_Loader{background-color:#000;border-bottom:2px solid #ccc}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.siderender
+.FB_Loader{margin-top:0}
+.fbpluginrecommendationsbarleft,
+.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}
+/* @noflip */
+.fbpluginrecommendationsbarleft{left:10px}
+/* @noflip */
+.fbpluginrecommendationsbarright{right:10px}</style><style type="text/css">#twtr-widget-1 .twtr-doc,                      #twtr-widget-1 .twtr-hd a,                      #twtr-widget-1 h3,                      #twtr-widget-1 h4 {            background-color: #c2d6db !important;            color: #ffffff !important;          }          #twtr-widget-1 .twtr-tweet a {            color: #116789 !important;          }          #twtr-widget-1 .twtr-bd, #twtr-widget-1 .twtr-timeline i a,           #twtr-widget-1 .twtr-bd p {            color: #444444 !important;          }          #twtr-widget-1 .twtr-new-results,           #twtr-widget-1 .twtr-results-inner,           #twtr-widget-1 .twtr-timeline {            background: #ffffff !important;          }</style><script src="http://zor.livefyre.com/wjs/v1.0.1490220/javascripts/livefyre_jquery.js" type="text/javascript"></script><script src="http://zor.livefyre.com/wjs/v1.0.1490220/javascripts/livefyre.js" type="text/javascript"></script><link media="all" href="http://zor.livefyre.com/wjs/v1.0.1490220/css/livefyre_embed.css" type="text/css" rel="stylesheet"></head>
+<body data-twttr-rendered="true"><iframe src="https://platform.twitter.com/widgets/hub.html" style="position: absolute; top: -9999em; width: 10px; height: 10px;" name="twttrHubFrameSecure" tabindex="0" allowtransparency="true" id="twttrHubFrameSecure" frameborder="0" scrolling="no"></iframe><iframe src="http://platform.twitter.com/widgets/hub.html" style="position: absolute; top: -9999em; width: 10px; height: 10px;" name="twttrHubFrame" tabindex="0" allowtransparency="true" id="twttrHubFrame" frameborder="0" scrolling="no"></iframe><div id="lightbox" class="olioboard"><div id="lightbox_container"><a href="#" class="lightbox_close">Close</a><div id="lightbox_content"></div></div></div>
+  <div class="wrapper">
+	  <header>
+  		<div class="inside">
+  		  <h1><a href="/">The HTML5 Center</a></h1>
+  		  <h2>Produce in Partnership: <a href="http://www.beautyoftheweb.com/" target="_blank" class="microsoft">Microsoft</a> - <a href="http://sourceforge.net/" target="_blank" class="sourceforge">SourceForge</a></h2>
+  		  <nav>
+  		    <ul>
+  		      <li><a href="/" class="home" onclick="_gaq.push(['_trackEvent', 'HomePage', 'PageVisit', '']);">Home</a></li>
+  		      <li><a href="/archive-blog/" class="blog" onclick="_gaq.push(['_trackEvent', 'BlogPage', 'PageVisit', '']);">HTML5 Blog</a></li>
+  		      <li><a href="/videos/" class="videos" onclick="_gaq.push(['_trackEvent', 'VideosPage', 'PageVisit', '']);">Videos</a></li>
+  		    </ul>
+  		  </nav>
+  		</div>
+  	</header>
+  	<div id="main" role="main">
+  	  <div class="tupperware">
+  	    <div class="left">
+  	      
+<section>
+  <header>
+    <h1>Building Live NASDAQ Bar Graphs without Plug-</h1>
+    <span class="icon blog"></span>
+  </header>
+  <article>
+    <p class="meta">by Jeff Cogswell</p>
+    <div class="sharing">
+      <!-- AddThis Button BEGIN -->
+      <div class="addthis_toolbox addthis_default_style ">
+      	
+          
+        <span style="margin-left:4px; display:inline-block; width: 75px;"><div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 90px; height: 20px;"><iframe title="+1" data-gapiattached="true" allowtransparency="true" src="https://plusone.google.com/_/+1/fastbutton?bsv&amp;size=medium&amp;hl=en-US&amp;origin=http%3A%2F%2Fhtml5center.sourceforge.net&amp;url=http%3A%2F%2Fhtml5center.sourceforge.net%2FBuilding-Live-NASDAQ-Bar-Graphs-without-Plug-Ins&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en_US.r3QWApkN4KM.O%2Fm%3D__features__%2Fam%3DEQ%2Frt%3Dj%2Fd%3D1%2Frs%3DAItRSTMXOSfYHNeCWAliTFzzK4EPtqRvFg#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Conload&amp;id=I0_1369675566289&amp;parent=http%3A%2F%2Fhtml5center.sourceforge.net&amp;rpctoken=23240894" name="I0_1369675566289" id="I0_1369675566289" vspace="0" tabindex="0" style="position: static; top: 0px; width: 90px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" marginwidth="0" marginheight="0" hspace="0" frameborder="0" scrolling="no" width="100%"></iframe></div></span>
+          
+        <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+        <iframe data-twttr-rendered="true" title="Twitter Tweet Button" style="width: 109px; height: 20px;" class="twitter-share-button twitter-count-horizontal" src="http://platform.twitter.com/widgets/tweet_button.1368146021.html#_=1369675566595&amp;count=horizontal&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=http%3A%2F%2Fhtml5center.sourceforge.net%2FBuilding-Live-NASDAQ-Bar-Graphs-without-Plug-Ins&amp;size=m&amp;text=Building%20Live%20NASDAQ%20Bar%20Graphs%20without%20Plug-Ins%20%7C%20The%20HTML5%20Center&amp;url=http%3A%2F%2Fhtml5center.sourceforge.net%2FBuilding-Live-NASDAQ-Bar-Graphs-without-Plug-Ins" allowtransparency="true" frameborder="0" scrolling="no"></iframe>
+        
+        <fb:like class="fb_edge_widget_with_comment fb_iframe_widget" fb-xfbml-state="rendered" style="display:inline-block; width:130px; vertical-align:top; margin-left:15px;" href="http://html5center.sourceforge.net/Building-Live-NASDAQ-Bar-Graphs-without-Plug-Ins" send="false" width="130" layout="button_count" show_faces="true" action="recommend"><span style="height: 20px; width: 111px;"><iframe src="http://www.facebook.com/plugins/like.php?api_key=112137472229411&amp;locale=en_US&amp;sdk=joey&amp;channel_url=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D24%23cb%3Df36dad9b47f6876%26origin%3Dhttp%253A%252F%252Fhtml5center.sourceforge.net%252Ff3763d0becf8c62%26domain%3Dhtml5center.sourceforge.net%26relation%3Dparent.parent&amp;href=http%3A%2F%2Fhtml5center.sourceforge.net%2FBuilding-Live-NASDAQ-Bar-Graphs-without-Plug-Ins&amp;node_type=link&amp;width=130&amp;layout=button_count&amp;colorscheme=light&amp;action=recommend&amp;show_faces=false&amp;send=false&amp;extended_social_context=false" class="fb_ltr" title="Like this content on Facebook." style="border: medium none; overflow: hidden; height: 20px; width: 111px;" name="f3e5693ecd99c4" id="fb66b6e3bc73f" scrolling="no"></iframe></span></fb:like>
+      <div class="atclear"></div></div>
+
+    </div>
+    <!-- AddThis Button END -->
+	
+
+<h2>Building Live NASDAQ Bar Graphs without Plug-Ins</h2>
+<p>
+	PLUG IN FREE SERIES - TUTORIAL 1
+</p>
+<p>
+In this article, we'll get rolling on developing plug-in free by creating bar graphs and similar graphics, using NASDAQ's current web site	<a target="_blank" href="http://www.nasdaq.com/symbol/msft/interactive-chart">http://www.nasdaq.com/symbol/msft/interactive-chart</a> as an example. But we won't be
+	creating merely a<em> picture</em> of a bar graph, but a <em>real, interactive</em> bar graph. Let's take a look at an existing site that uses Flash, then
+	build one using HTML5.
+</p>
+<p>
+	If you have Flash installed, you'll see a fancy line chart. You can float your mouse over the line and see a small popup showing the stock price at that
+	point, along with the volume of trading, like so:
+</p>
+<p>
+	<img alt="" src="/inc/articles/img/nasdaq/stocks1.png" width="550">
+</p>
+<p>
+	If you don't have Flash installed, then the site just shows you a graphic image. So you're not left out completely without Flash, but with HTML5, we can
+	include everybody.
+</p>
+<p>
+	Now, we'll build something similar. To keep this article from getting too long, let's just show the data in a box below the graph. But as you move the
+	mouse along the graph, or touch it on a tablet, it will highlight the closest point on the graph, and show the information for that point in a box. Here's
+	what the final product will look like:
+</p>
+<p>
+	<img alt="" src="/inc/articles/img/nasdaq/stocks2.png" width="550">
+</p>
+<p>
+	<strong>The General Layout</strong>
+</p>
+<p>
+	In general, when you develop web sites, you often want to break up your code files. For these demonstrations, however, let's not waste time fussing with
+	projects and code files. So I'm going to put it all in a single HTML file. That way, later on you can easily break things into separate JavaScript and CSS
+	files. If you're going to follow along hands-on, then, pick your favorite text editor and create a blank text file. Add the following lines:
+</p>
+<div class="snippet-container" style="undefined;"><div class="sh_emacs snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre><a style="display: none;" class="snippet-copy sh_url" href="#">copy</a><a class="snippet-text sh_url" href="#">text</a><a class="snippet-window sh_url" href="#">pop-up</a></pre></div><pre class="js sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE html<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div>
+<p>
+	The first line is important and <em>required</em>; the doctype tells the browser which version of HTML to use. Starting with HTML5, the doctype is simply
+	html without any other parameters. The remaining lines should be familiar to you and any other web developers. Go ahead and save this file as stocks.html.
+	Because there's no server-side code, you don't have to worry about saving it in a directory that a web server can access. Instead, we'll just load the
+	files directly into the browser.
+</p>
+<h2>Gathering the Data</h2>
+<p>
+	At the heart of any good software program is the data. We want to use stock prices, so let's gather some historical prices on Microsoft (MSFT). We could
+	use an API to gather recent historical prices, but instead I just hand-gathered some stock prices on Microsoft.
+</p>
+<p>
+	Just before the closing &lt;/body&gt; tag, insert an open &lt;script&gt; and closing &lt;/script&gt; tag along with the following code as shown inside the
+	script tags. (Or just copy and paste it from this article.)
+</p>
+<div class="snippet-container" style="undefined;"><div class="sh_emacs snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre><a style="display: none;" class="snippet-copy sh_url" href="#">copy</a><a class="snippet-text sh_url" href="#">text</a><a class="snippet-window sh_url" href="#">pop-up</a></pre></div><pre class="js sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;!</span>DOCTYPE html<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>html<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>head<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>head<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;</span>script<span class="sh_symbol">&gt;</span></li><li><span class="sh_keyword">var</span> prices <span class="sh_symbol">=</span> <span class="sh_symbol">[</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<span class="sh_cbracket">{</span> date<span class="sh_symbol">:</span><span class="sh_string">'1/15/13'</span><span class="sh_symbol">,</span> price<span class="sh_symbol">:</span><span class="sh_string">'27.21'</span><span class="sh_symbol">,</span> volume<span class="sh_symbol">:</span> <span class="sh_string">'48224440'</span> <span class="sh_cbracket">}</span><span class="sh_symbol">,</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<span class="sh_cbracket">{</span> date<span class="sh_symbol">:</span><span class="sh_string">'1/16/13'</span><span class="sh_symbol">,</span> price<span class="sh_symbol">:</span><span class="sh_string">'27.04'</span><span class="sh_symbol">,</span> volume<span class="sh_symbol">:</span> <span class="sh_string">'41062810'</span> <span class="sh_cbracket">}</span><span class="sh_symbol">,</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<span class="sh_cbracket">{</span> date<span class="sh_symbol">:</span><span class="sh_string">'1/17/13'</span><span class="sh_symbol">,</span> price<span class="sh_symbol">:</span><span class="sh_string">'27.25'</span><span class="sh_symbol">,</span> volume<span class="sh_symbol">:</span> <span class="sh_string">'51647220'</span> <span class="sh_cbracket">}</span><span class="sh_symbol">,</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<span class="sh_cbracket">{</span> date<span class="sh_symbol">:</span><span class="sh_string">'1/18/13'</span><span class="sh_symbol">,</span> price<span class="sh_symbol">:</span><span class="sh_string">'27.25'</span><span class="sh_symbol">,</span> volume<span class="sh_symbol">:</span> <span class="sh_string">'52165050'</span> <span class="sh_cbracket">}</span><span class="sh_symbol">,</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<span class="sh_cbracket">{</span> date<span class="sh_symbol">:</span><span class="sh_string">'1/22/13'</span><span class="sh_symbol">,</span> price<span class="sh_symbol">:</span><span class="sh_string">'27.15'</span><span class="sh_symbol">,</span> volume<span class="sh_symbol">:</span> <span class="sh_string">'58642390'</span> <span class="sh_cbracket">}</span><span class="sh_symbol">,</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<span class="sh_cbracket">{</span> date<span class="sh_symbol">:</span><span class="sh_string">'1/23/13'</span><span class="sh_symbol">,</span> price<span class="sh_symbol">:</span><span class="sh_string">'27.61'</span><span class="sh_symbol">,</span> volume<span class="sh_symbol">:</span> <span class="sh_string">'50288930'</span> <span class="sh_cbracket">}</span><span class="sh_symbol">,</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<span class="sh_cbracket">{</span> date<span class="sh_symbol">:</span><span class="sh_string">'1/24/13'</span><span class="sh_symbol">,</span> price<span class="sh_symbol">:</span><span class="sh_string">'27.63'</span><span class="sh_symbol">,</span> volume<span class="sh_symbol">:</span> <span class="sh_string">'101321400'</span> <span class="sh_cbracket">}</span><span class="sh_symbol">,</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<span class="sh_cbracket">{</span> date<span class="sh_symbol">:</span><span class="sh_string">'1/25/13'</span><span class="sh_symbol">,</span> price<span class="sh_symbol">:</span><span class="sh_string">'27.88'</span><span class="sh_symbol">,</span> volume<span class="sh_symbol">:</span> <span class="sh_string">'81814260'</span> <span class="sh_cbracket">}</span><span class="sh_symbol">,</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<span class="sh_cbracket">{</span> date<span class="sh_symbol">:</span><span class="sh_string">'1/28/13'</span><span class="sh_symbol">,</span> price<span class="sh_symbol">:</span><span class="sh_string">'27.91'</span><span class="sh_symbol">,</span> volume<span class="sh_symbol">:</span> <span class="sh_string">'56054570'</span> <span class="sh_cbracket">}</span><span class="sh_symbol">,</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<span class="sh_cbracket">{</span> date<span class="sh_symbol">:</span><span class="sh_string">'1/29/13'</span><span class="sh_symbol">,</span> price<span class="sh_symbol">:</span><span class="sh_string">'28.01'</span><span class="sh_symbol">,</span> volume<span class="sh_symbol">:</span> <span class="sh_string">'49234080'</span> <span class="sh_cbracket">}</span><span class="sh_symbol">,</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<span class="sh_cbracket">{</span> date<span class="sh_symbol">:</span><span class="sh_string">'1/30/13'</span><span class="sh_symbol">,</span> price<span class="sh_symbol">:</span><span class="sh_string">'27.85'</span><span class="sh_symbol">,</span> volume<span class="sh_symbol">:</span> <span class="sh_string">'43571210'</span> <span class="sh_cbracket">}</span><span class="sh_symbol">,</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<span class="sh_cbracket">{</span> date<span class="sh_symbol">:</span><span class="sh_string">'1/31/13'</span><span class="sh_symbol">,</span> price<span class="sh_symbol">:</span><span class="sh_string">'27.45'</span><span class="sh_symbol">,</span> volume<span class="sh_symbol">:</span> <span class="sh_string">'50524770'</span> <span class="sh_cbracket">}</span><span class="sh_symbol">,</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<span class="sh_cbracket">{</span> date<span class="sh_symbol">:</span><span class="sh_string">'2/1/13'</span><span class="sh_symbol">,</span> price<span class="sh_symbol">:</span><span class="sh_string">'27.93'</span><span class="sh_symbol">,</span> volume<span class="sh_symbol">:</span> <span class="sh_string">'55548860'</span> <span class="sh_cbracket">}</span><span class="sh_symbol">,</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<span class="sh_cbracket">{</span> date<span class="sh_symbol">:</span><span class="sh_string">'2/4/13'</span><span class="sh_symbol">,</span> price<span class="sh_symbol">:</span><span class="sh_string">'27.44'</span><span class="sh_symbol">,</span> volume<span class="sh_symbol">:</span> <span class="sh_string">'50508670'</span> <span class="sh_cbracket">}</span><span class="sh_symbol">,</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<span class="sh_cbracket">{</span> date<span class="sh_symbol">:</span><span class="sh_string">'2/5/13'</span><span class="sh_symbol">,</span> price<span class="sh_symbol">:</span><span class="sh_string">'27.495'</span><span class="sh_symbol">,</span> volume<span class="sh_symbol">:</span> <span class="sh_string">'35367310'</span> <span class="sh_cbracket">}</span><span class="sh_symbol">,</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<span class="sh_cbracket">{</span> date<span class="sh_symbol">:</span><span class="sh_string">'2/6/13'</span><span class="sh_symbol">,</span> price<span class="sh_symbol">:</span><span class="sh_string">'27.34'</span><span class="sh_symbol">,</span> volume<span class="sh_symbol">:</span> <span class="sh_string">'41750840'</span> <span class="sh_cbracket">}</span><span class="sh_symbol">,</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<span class="sh_cbracket">{</span> date<span class="sh_symbol">:</span><span class="sh_string">'2/7/13'</span><span class="sh_symbol">,</span> price<span class="sh_symbol">:</span><span class="sh_string">'27.283'</span><span class="sh_symbol">,</span> volume<span class="sh_symbol">:</span> <span class="sh_string">'38007050'</span> <span class="sh_cbracket">}</span><span class="sh_symbol">,</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<span class="sh_cbracket">{</span> date<span class="sh_symbol">:</span><span class="sh_string">'2/8/13'</span><span class="sh_symbol">,</span> price<span class="sh_symbol">:</span><span class="sh_string">'27.55'</span><span class="sh_symbol">,</span> volume<span class="sh_symbol">:</span> <span class="sh_string">'33318310'</span> <span class="sh_cbracket">}</span><span class="sh_symbol">,</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<span class="sh_cbracket">{</span> date<span class="sh_symbol">:</span><span class="sh_string">'2/11/13'</span><span class="sh_symbol">,</span> price<span class="sh_symbol">:</span><span class="sh_string">'27.86'</span><span class="sh_symbol">,</span> volume<span class="sh_symbol">:</span> <span class="sh_string">'32163676'</span> <span class="sh_cbracket">}</span></li><li><span class="sh_symbol">];</span></li><li><span class="sh_symbol">&lt;/</span>script<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>body<span class="sh_symbol">&gt;</span></li><li><span class="sh_symbol">&lt;/</span>html<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;script&gt;
+var prices = [
+	{ date:'1/15/13', price:'27.21', volume: '48224440' },
+	{ date:'1/16/13', price:'27.04', volume: '41062810' },
+	{ date:'1/17/13', price:'27.25', volume: '51647220' },
+	{ date:'1/18/13', price:'27.25', volume: '52165050' },
+	{ date:'1/22/13', price:'27.15', volume: '58642390' },
+	{ date:'1/23/13', price:'27.61', volume: '50288930' },
+	{ date:'1/24/13', price:'27.63', volume: '101321400' },
+	{ date:'1/25/13', price:'27.88', volume: '81814260' },
+	{ date:'1/28/13', price:'27.91', volume: '56054570' },
+	{ date:'1/29/13', price:'28.01', volume: '49234080' },
+	{ date:'1/30/13', price:'27.85', volume: '43571210' },
+	{ date:'1/31/13', price:'27.45', volume: '50524770' },
+	{ date:'2/1/13', price:'27.93', volume: '55548860' },
+	{ date:'2/4/13', price:'27.44', volume: '50508670' },
+	{ date:'2/5/13', price:'27.495', volume: '35367310' },
+	{ date:'2/6/13', price:'27.34', volume: '41750840' },
+	{ date:'2/7/13', price:'27.283', volume: '38007050' },
+	{ date:'2/8/13', price:'27.55', volume: '33318310' },
+	{ date:'2/11/13', price:'27.86', volume: '32163676' }
+];
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div>
+<p>
+	This code is an array of JavaScript objects, where each object holds information about a day's stock price and volume. If you're coming from a Flash world,
+	this code might look a lot like using ActionScript. That's because both JavaScript and ActionScript are based on the same standard, the language known as
+	EcmaScript.
+</p>
+<p>
+	Now let's move onto the user interface.
+</p>
+<h2>Your Canvas </h2>
+<p>
+	If we were using Flash, we would drop an element on the web page that can hold a Flash window. But we're not; instead we'll use the Canvas element that's
+	part of HTML5 and available in all the modern browsers. A canvas is an area of the browser page that we can draw graphics on, and we simply specify a
+	location on the screen and a size. Insert the following code in just after the opening &lt;body&gt; tag, and before the &lt;script&gt; tag you typed
+	earlier; I'm showing the &lt;body&gt; tag so you can see where to put it:
+</p>
+<div class="snippet-container" style="undefined;"><div class="sh_emacs snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre><a style="display: none;" class="snippet-copy sh_url" href="#">copy</a><a class="snippet-text sh_url" href="#">text</a><a class="snippet-window sh_url" href="#">pop-up</a></pre></div><pre class="js sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;</span>body<span class="sh_symbol">&gt;</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<span class="sh_symbol">&lt;</span>div style<span class="sh_symbol">=</span><span class="sh_string">"margin-top:100px; margin-left:100px;"</span><span class="sh_symbol">&gt;</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<span class="sh_symbol">&lt;</span>canvas id<span class="sh_symbol">=</span><span class="sh_string">"canvas1"</span> width<span class="sh_symbol">=</span><span class="sh_string">"1000px"</span> height<span class="sh_symbol">=</span><span class="sh_string">"600px"</span><span class="sh_symbol">&gt;&lt;/</span>canvas<span class="sh_symbol">&gt;</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<span class="sh_symbol">&lt;</span>div id<span class="sh_symbol">=</span><span class="sh_string">"pointer"</span> width<span class="sh_symbol">:</span><span class="sh_string">"10px"</span> height<span class="sh_symbol">:</span><span class="sh_string">"10px"</span><span class="sh_symbol">&gt;&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<span class="sh_symbol">&lt;</span>div id<span class="sh_symbol">=</span><span class="sh_string">"tipbox"</span><span class="sh_symbol">&gt;&lt;</span>div id<span class="sh_symbol">=</span><span class="sh_string">"datediv"</span><span class="sh_symbol">&gt;&lt;</span><span class="sh_regexp">/div&gt;&lt;div id="pricediv"&gt;&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sh_symbol">&lt;</span>div id<span class="sh_symbol">=</span><span class="sh_string">"volumediv"</span><span class="sh_symbol">&gt;&lt;</span><span class="sh_regexp">/div&gt;&lt;/</span>div<span class="sh_symbol">&gt;</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<span class="sh_symbol">&lt;/</span>div<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;body&gt;
+	&lt;div style="margin-top:100px; margin-left:100px;"&gt;
+	&lt;canvas id="canvas1" width="1000px" height="600px"&gt;&lt;/canvas&gt;
+	&lt;div id="pointer" width:"10px" height:"10px"&gt;&lt;/div&gt;
+	&lt;div id="tipbox"&gt;&lt;div id="datediv"&gt;&lt;/div&gt;&lt;div id="pricediv"&gt;&lt;/div&gt;
+		&lt;div id="volumediv"&gt;&lt;/div&gt;&lt;/div&gt;
+	&lt;/div&gt;
+</pre></div></div>
+<p>
+	In order to draw onto the Canvas, we need to ask the browser for the Canvas element itself. We'll use the getElementById function. Then once we have the
+	Canvas in our JavaScript, we have to ask the canvas for something called a context, which is an object we use for drawing onto. Add the following code just
+	before the closing &lt;/script&gt; tag:
+</p>
+<div class="snippet-container" style="undefined;"><div class="sh_emacs snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre><a style="display: none;" class="snippet-copy sh_url" href="#">copy</a><a class="snippet-text sh_url" href="#">text</a><a class="snippet-window sh_url" href="#">pop-up</a></pre></div><pre class="js sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_keyword">var</span> canvas <span class="sh_symbol">=</span> document<span class="sh_symbol">.</span><span class="sh_function">getElementById</span><span class="sh_symbol">(</span><span class="sh_string">'canvas1'</span><span class="sh_symbol">);</span></li><li><span class="sh_keyword">var</span> context <span class="sh_symbol">=</span> canvas<span class="sh_symbol">.</span><span class="sh_function">getContext</span><span class="sh_symbol">(</span><span class="sh_string">'2d'</span><span class="sh_symbol">);</span></li><li><span class="sh_symbol">&lt;/</span>script<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">var canvas = document.getElementById('canvas1');
+var context = canvas.getContext('2d');
+&lt;/script&gt;
+</pre></div></div>
+<p>
+	The first line gets the canvas by asking the document for the element whose ID is canvas1. (Notice the id attribute in the original canvas tag we added.)
+	The second line asks the resulting canvas for the drawing context. The parameter, 2D, means we're doing 2-dimensional drawings.
+</p>
+<p>
+	Using this canvas, we will draw a line from point to point, where each point is an x-y coordinate, with the x being the date and the y being the stock
+	price. Of course, in reality we're dealing with a 600-wide by 400-tall canvas made up of pixels, not dates and stock prices. So we need to figure out how
+	to map the data to actual pixel locations.
+</p>
+<p>
+	What we don't want to do is hardcode actual pixel values, such as each date is ten pixels to the right of the previous date. Instead, we'll divide up that
+	graph portion proportionally. The benefit there is that if we resize the graph, the data will stretch with it!
+</p>
+<p>
+	To do that, let's calculate some values, specifically the size of each horizontal unit; the minimum and maximum price; and using the min and max, the size
+	of each vertical unit. Add this code before the closing script tag:
+</p>
+<div class="snippet-container" style="undefined;"><div class="sh_emacs snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre><a style="display: none;" class="snippet-copy sh_url" href="#">copy</a><a class="snippet-text sh_url" href="#">text</a><a class="snippet-window sh_url" href="#">pop-up</a></pre></div><pre class="js sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_keyword">var</span> xsize <span class="sh_symbol">=</span> canvas<span class="sh_symbol">.</span>clientWidth<span class="sh_symbol">;</span></li><li><span class="sh_keyword">var</span> ysize <span class="sh_symbol">=</span> canvas<span class="sh_symbol">.</span>clientHeight<span class="sh_symbol">;</span></li><li><span class="sh_keyword">var</span> unitwidth <span class="sh_symbol">=</span> <span class="sh_normal">xsize </span><span class="sh_symbol">/</span> <span class="sh_symbol">(</span>prices<span class="sh_symbol">.</span>length <span class="sh_symbol">-</span> <span class="sh_number">1</span><span class="sh_symbol">);</span></li><li><span class="sh_keyword">var</span> minprice <span class="sh_symbol">=</span> <span class="sh_number">99999999</span><span class="sh_symbol">;</span></li><li><span class="sh_keyword">var</span> maxprice <span class="sh_symbol">=</span> <span class="sh_number">0</span><span class="sh_symbol">;</span></li><li><span style="display:none;">&nbsp;</span></li><li><span class="sh_keyword">for</span> <span class="sh_symbol">(</span><span class="sh_keyword">var</span> i<span class="sh_symbol">=</span><span class="sh_number">0</span><span class="sh_symbol">;</span> i<span class="sh_symbol">&lt;</span>prices<span class="sh_symbol">.</span>length<span class="sh_symbol">;</span> i<span class="sh_symbol">++)</span> <span class="sh_cbracket">{</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<span class="sh_keyword">if</span> <span class="sh_symbol">(</span>prices<span class="sh_symbol">[</span>i<span class="sh_symbol">].</span>price <span class="sh_symbol">&lt;</span> minprice<span class="sh_symbol">)</span> <span class="sh_cbracket">{</span> minprice <span class="sh_symbol">=</span> prices<span class="sh_symbol">[</span>i<span class="sh_symbol">].</span>price<span class="sh_symbol">;</span> <span class="sh_cbracket">}</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sh_keyword">if</span> <span class="sh_symbol">(</span>prices<span class="sh_symbol">[</span>i<span class="sh_symbol">].</span>price <span class="sh_symbol">&gt;</span> maxprice<span class="sh_symbol">)</span> <span class="sh_cbracket">{</span> maxprice <span class="sh_symbol">=</span> prices<span class="sh_symbol">[</span>i<span class="sh_symbol">].</span>price<span class="sh_symbol">;</span> <span class="sh_cbracket">}</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<span class="sh_cbracket">}</span></li><li><span class="sh_keyword">var</span> unitheight <span class="sh_symbol">=</span> <span class="sh_normal">ysize </span><span class="sh_symbol">/</span> <span class="sh_symbol">(</span>maxprice <span class="sh_symbol">-</span> minprice<span class="sh_symbol">);</span></li><li><span style="display:none;">&nbsp;</span></li><li><span class="sh_symbol">&lt;/</span>script<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">var xsize = canvas.clientWidth;
+var ysize = canvas.clientHeight;
+var unitwidth = xsize / (prices.length - 1);
+var minprice = 99999999;
+var maxprice = 0;
+
+for (var i=0; i&lt;prices.length; i++) {
+	if (prices[i].price &lt; minprice) { minprice = prices[i].price; }
+		if (prices[i].price &gt; maxprice) { maxprice = prices[i].price; }
+	}
+var unitheight = ysize / (maxprice - minprice);
+
+&lt;/script&gt;
+</pre></div></div>
+<p>
+	The first two lines just grab the dimensions of the canvas. We're doing it this way so that we can change the canvas size later and the whole thing will
+continue to function, stretching the final graph into the new size. The horizontal unit size, unitwidth, is given by the horizontal size divided by	<em>one less than</em> the number of elements. (Think about that one; 19 data points have 18 spaces between them. Thus we subtract one.) Then we do a quick
+	loop to figure out the min and max price, and finally divide the vertical size by the difference between the max and min. (In that case we don't subtract
+	anything from the difference, since difference gives us the same result of the space between.)
+</p>
+<p>
+	Next we're going to use a clever trick to effectively change the coordinates of the canvas. I don't want to have to take the two coordinates of each point
+	and calculate the number of pixels. I just want to use the coordinates' actual values. So to do that I introduce a transformation, whereby I change the
+	coordinate system for the canvas. This uses a trick called a transformation matrix, which comes from the mathematics of linear algebra. If you're unclear
+about it, here's a page I found with a very good explanation. [Link to	<a target="_blank" href="http://falcon80.com/HTMLCanvas/CanvasTransformations/Transform.html">http://falcon80.com/HTMLCanvas/CanvasTransformations/Transform.html</a>]
+</p>
+<p>
+	Add this line before the closing &lt;/script&gt; tag:
+</p>
+<div class="snippet-container" style="undefined;"><div class="sh_emacs snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre><a style="display: none;" class="snippet-copy sh_url" href="#">copy</a><a class="snippet-text sh_url" href="#">text</a><a class="snippet-window sh_url" href="#">pop-up</a></pre></div><pre class="js sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li>context<span class="sh_symbol">.</span><span class="sh_function">transform</span><span class="sh_symbol">(</span>unitwidth<span class="sh_symbol">,</span> <span class="sh_number">0</span><span class="sh_symbol">,</span> <span class="sh_number">0</span><span class="sh_symbol">,</span> <span class="sh_symbol">-</span>unitheight<span class="sh_symbol">,</span> <span class="sh_number">0</span><span class="sh_symbol">,</span> ysize<span class="sh_symbol">);</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;</li><li><span class="sh_symbol">&lt;/</span>script<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">context.transform(unitwidth, 0, 0, -unitheight, 0, ysize);
+	
+&lt;/script&gt;
+</pre></div></div>
+<p>
+	And now we can actually draw the graph. The way this works is the canvas maintains a "current position" where it can draw lines. We move to a starting
+	position, and then draw a line to the next position, and continue to do that. We'll then return to our original position so we have a closed figure we can
+	fill with a color. Here's the code to draw the lines; note that the lines themselves don't have a color, so we won't see anything until we fill the figure:
+</p>
+<div class="snippet-container" style="undefined;"><div class="sh_emacs snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre><a style="display: none;" class="snippet-copy sh_url" href="#">copy</a><a class="snippet-text sh_url" href="#">text</a><a class="snippet-window sh_url" href="#">pop-up</a></pre></div><pre class="js sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li>context<span class="sh_symbol">.</span><span class="sh_function">beginPath</span><span class="sh_symbol">();</span></li><li>context<span class="sh_symbol">.</span><span class="sh_function">moveTo</span><span class="sh_symbol">(</span><span class="sh_number">0</span><span class="sh_symbol">,</span><span class="sh_number">0</span><span class="sh_symbol">);</span></li><li><span class="sh_keyword">for</span> <span class="sh_symbol">(</span><span class="sh_keyword">var</span> i<span class="sh_symbol">=</span><span class="sh_number">0</span><span class="sh_symbol">;</span> i<span class="sh_symbol">&lt;</span>prices<span class="sh_symbol">.</span>length<span class="sh_symbol">;</span> i<span class="sh_symbol">++)</span> <span class="sh_cbracket">{</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;context<span class="sh_symbol">.</span><span class="sh_function">lineTo</span><span class="sh_symbol">(</span>i<span class="sh_symbol">,</span> <span class="sh_symbol">(</span>prices<span class="sh_symbol">[</span>i<span class="sh_symbol">].</span>price <span class="sh_symbol">-</span> minprice<span class="sh_symbol">));</span></li><li><span class="sh_cbracket">}</span></li><li>context<span class="sh_symbol">.</span><span class="sh_function">lineTo</span><span class="sh_symbol">(</span>xsize<span class="sh_symbol">,</span> <span class="sh_number">0</span><span class="sh_symbol">);</span></li><li>context<span class="sh_symbol">.</span><span class="sh_function">closePath</span><span class="sh_symbol">();</span></li><li><span style="display:none;">&nbsp;</span></li><li><span class="sh_symbol">&lt;/</span>script<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">context.beginPath();
+context.moveTo(0,0);
+for (var i=0; i&lt;prices.length; i++) {
+	context.lineTo(i, (prices[i].price - minprice));
+}
+context.lineTo(xsize, 0);
+context.closePath();
+
+&lt;/script&gt;
+</pre></div></div>
+<p>
+	Now let's fill it in so we can see it. To do this we'll create a nice color gradient. Color gradients get a line that denotes what direction the colors
+	should flow, and then we provide the actual colors, and finally fill the figure:
+</p>
+<div class="snippet-container" style="undefined;"><div class="sh_emacs snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre><a style="display: none;" class="snippet-copy sh_url" href="#">copy</a><a class="snippet-text sh_url" href="#">text</a><a class="snippet-window sh_url" href="#">pop-up</a></pre></div><pre class="js sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_keyword">var</span> gradient <span class="sh_symbol">=</span> context<span class="sh_symbol">.</span><span class="sh_function">createLinearGradient</span><span class="sh_symbol">(</span><span class="sh_number">0</span><span class="sh_symbol">,</span><span class="sh_number">0</span><span class="sh_symbol">,</span> <span class="sh_number">0</span><span class="sh_symbol">,</span> maxprice <span class="sh_symbol">-</span> minprice<span class="sh_symbol">);</span></li><li>gradient<span class="sh_symbol">.</span><span class="sh_function">addColorStop</span><span class="sh_symbol">(</span><span class="sh_number">0</span><span class="sh_symbol">,</span> <span class="sh_string">'#8ED6FF'</span><span class="sh_symbol">);</span></li><li>gradient<span class="sh_symbol">.</span><span class="sh_function">addColorStop</span><span class="sh_symbol">(</span><span class="sh_number">1</span><span class="sh_symbol">,</span> <span class="sh_string">'#004CB3'</span><span class="sh_symbol">);</span></li><li>context<span class="sh_symbol">.</span>fillStyle <span class="sh_symbol">=</span> gradient<span class="sh_symbol">;</span></li><li>context<span class="sh_symbol">.</span><span class="sh_function">fill</span><span class="sh_symbol">();</span></li><li><span style="display:none;">&nbsp;</span></li><li><span class="sh_symbol">&lt;/</span>script<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">var gradient = context.createLinearGradient(0,0, 0, maxprice - minprice);
+gradient.addColorStop(0, '#8ED6FF');
+gradient.addColorStop(1, '#004CB3');
+context.fillStyle = gradient;
+context.fill();
+
+&lt;/script&gt;
+</pre></div></div>
+<p>
+	We now have our graph. Try it out. Here's what you'll see:
+</p>
+<p>
+	<img alt="" src="/inc/articles/img/nasdaq/stocks3.png" width="550">
+</p>
+<h2>Making it Interactive</h2>
+<p>
+	To make the graph interactive, we can track mouse positions. We'll grab only the x coordinate, and then find the nearest point on the graph, and position a
+	small black box on that point. And we'll also locate the data point in our original array, and grab that information and push it into an HTML element.
+	Here's the code to do all this:
+</p>
+<div class="snippet-container" style="undefined;"><div class="sh_emacs snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre><a style="display: none;" class="snippet-copy sh_url" href="#">copy</a><a class="snippet-text sh_url" href="#">text</a><a class="snippet-window sh_url" href="#">pop-up</a></pre></div><pre class="js sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_keyword">var</span> tipbox <span class="sh_symbol">=</span> document<span class="sh_symbol">.</span><span class="sh_function">getElementById</span><span class="sh_symbol">(</span><span class="sh_string">'tipbox'</span><span class="sh_symbol">);</span></li><li><span class="sh_keyword">var</span> pointer <span class="sh_symbol">=</span> document<span class="sh_symbol">.</span><span class="sh_function">getElementById</span><span class="sh_symbol">(</span><span class="sh_string">'pointer'</span><span class="sh_symbol">);</span></li><li><span class="sh_keyword">var</span> datediv <span class="sh_symbol">=</span> document<span class="sh_symbol">.</span><span class="sh_function">getElementById</span><span class="sh_symbol">(</span><span class="sh_string">'datediv'</span><span class="sh_symbol">);</span></li><li><span class="sh_keyword">var</span> pricediv <span class="sh_symbol">=</span> document<span class="sh_symbol">.</span><span class="sh_function">getElementById</span><span class="sh_symbol">(</span><span class="sh_string">'pricediv'</span><span class="sh_symbol">);</span></li><li><span class="sh_keyword">var</span> volumediv <span class="sh_symbol">=</span> document<span class="sh_symbol">.</span><span class="sh_function">getElementById</span><span class="sh_symbol">(</span><span class="sh_string">'volumediv'</span><span class="sh_symbol">);</span></li><li><span class="sh_keyword">var</span> canvasx <span class="sh_symbol">=</span> canvas<span class="sh_symbol">.</span>offsetLeft<span class="sh_symbol">;</span></li><li><span class="sh_keyword">var</span> canvasy <span class="sh_symbol">=</span> canvas<span class="sh_symbol">.</span>offsetTop<span class="sh_symbol">;</span></li><li><span style="display:none;">&nbsp;</span></li><li><span class="sh_keyword">function</span> <span class="sh_function">mousemove</span><span class="sh_symbol">(</span>e<span class="sh_symbol">)</span> <span class="sh_cbracket">{</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<span class="sh_keyword">var</span> xpos <span class="sh_symbol">=</span> <span class="sh_predef_var">Math</span><span class="sh_symbol">.</span><span class="sh_function">round</span><span class="sh_symbol">((</span>e<span class="sh_symbol">.</span>clientX <span class="sh_symbol">-</span> canvasx<span class="sh_symbol">)</span><span class="sh_normal"> </span><span class="sh_symbol">/</span> unitwidth<span class="sh_symbol">);</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<span class="sh_keyword">var</span> priceitem <span class="sh_symbol">=</span> prices<span class="sh_symbol">[</span>xpos<span class="sh_symbol">];</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;pointer<span class="sh_symbol">.</span>style<span class="sh_symbol">.</span>left <span class="sh_symbol">=</span> <span class="sh_symbol">(</span>canvasx <span class="sh_symbol">-</span> <span class="sh_number">5</span> <span class="sh_symbol">+</span> xpos <span class="sh_symbol">*</span> unitwidth<span class="sh_symbol">)</span> <span class="sh_symbol">+</span> <span class="sh_string">'px'</span><span class="sh_symbol">;</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;pointer<span class="sh_symbol">.</span>style<span class="sh_symbol">.</span>top <span class="sh_symbol">=</span> <span class="sh_symbol">(</span>canvasy <span class="sh_symbol">-</span> <span class="sh_number">5</span> <span class="sh_symbol">+</span> ysize <span class="sh_symbol">-</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sh_symbol">(</span>priceitem<span class="sh_symbol">.</span>price <span class="sh_symbol">-</span> minprice<span class="sh_symbol">)</span> <span class="sh_symbol">*</span> unitheight<span class="sh_symbol">)</span> <span class="sh_symbol">+</span> <span class="sh_string">'px'</span><span class="sh_symbol">;</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;pointer<span class="sh_symbol">.</span>style<span class="sh_symbol">.</span>display <span class="sh_symbol">=</span> <span class="sh_string">'block'</span><span class="sh_symbol">;</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;tipbox<span class="sh_symbol">.</span>style<span class="sh_symbol">.</span>display <span class="sh_symbol">=</span> <span class="sh_string">'block'</span><span class="sh_symbol">;</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;datediv<span class="sh_symbol">.</span>innerHTML <span class="sh_symbol">=</span> <span class="sh_string">'Date: '</span> <span class="sh_symbol">+</span> priceitem<span class="sh_symbol">.</span>date<span class="sh_symbol">;</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;pricediv<span class="sh_symbol">.</span>innerHTML <span class="sh_symbol">=</span> <span class="sh_string">'Price: '</span> <span class="sh_symbol">+</span> priceitem<span class="sh_symbol">.</span>price<span class="sh_symbol">;</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;volumediv<span class="sh_symbol">.</span>innerHTML <span class="sh_symbol">=</span> <span class="sh_string">'Volume: '</span> <span class="sh_symbol">+</span> priceitem<span class="sh_symbol">.</span>volume<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li><span style="display:none;">&nbsp;</span></li><li>canvas<span class="sh_symbol">.</span><span class="sh_function">addEventListener</span><span class="sh_symbol">(</span><span class="sh_string">"mousemove"</span><span class="sh_symbol">,</span> mousemove<span class="sh_symbol">,</span> <span class="sh_keyword">false</span><span class="sh_symbol">);</span></li><li><span style="display:none;">&nbsp;</span></li><li><span class="sh_symbol">&lt;/</span>script<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">var tipbox = document.getElementById('tipbox');
+var pointer = document.getElementById('pointer');
+var datediv = document.getElementById('datediv');
+var pricediv = document.getElementById('pricediv');
+var volumediv = document.getElementById('volumediv');
+var canvasx = canvas.offsetLeft;
+var canvasy = canvas.offsetTop;
+
+function mousemove(e) {
+	var xpos = Math.round((e.clientX - canvasx) / unitwidth);
+	var priceitem = prices[xpos];
+	pointer.style.left = (canvasx - 5 + xpos * unitwidth) + 'px';
+	pointer.style.top = (canvasy - 5 + ysize -
+		(priceitem.price - minprice) * unitheight) + 'px';
+	pointer.style.display = 'block';
+	tipbox.style.display = 'block';
+	datediv.innerHTML = 'Date: ' + priceitem.date;
+	pricediv.innerHTML = 'Price: ' + priceitem.price;
+	volumediv.innerHTML = 'Volume: ' + priceitem.volume;
+}
+
+canvas.addEventListener("mousemove", mousemove, false);
+
+&lt;/script&gt;
+</pre></div></div>
+<p>
+	The first several lines just grab the different elements, as well as the absolute position of the canvas. Then we have a function that we'll call in
+	response to the mouse moving over the canvas. (It will also respond to touches of the finger on tablet and mobile devices, so we're good there too.) The
+	event handler grabs the horizontal position, and calculates the closest unit. Then we position the pointer block, which is just a small HTML element. And
+	finally we make the block visible in case it wasn't already visible. Then, with the box displaying the information, we simply grab the data out of our
+	array and push it into the various DIV elements inside the tip box, again making the tip box visible as well, in case it wasn't already.
+</p>
+<p>
+	That's it. With a little CSS styling we can make this thing beautiful. In between the &lt;head&gt; and &lt;/head&gt; tags, add the following styling:
+</p>
+<div class="snippet-container" style="undefined;"><div class="sh_emacs snippet-wrap"><div class="snippet-menu sh_sourceCode" style="display:none;"><pre><a style="display: none;" class="snippet-copy sh_url" href="#">copy</a><a class="snippet-text sh_url" href="#">text</a><a class="snippet-window sh_url" href="#">pop-up</a></pre></div><pre class="js sh_javascript snippet-formatted sh_sourceCode"><ol class="snippet-num"><li><span class="sh_symbol">&lt;</span>style<span class="sh_symbol">&gt;</span></li><li>body <span class="sh_cbracket">{</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;padding<span class="sh_symbol">:</span><span class="sh_number">0</span><span class="sh_symbol">;</span> margin<span class="sh_symbol">:</span><span class="sh_number">0</span><span class="sh_symbol">;</span> font<span class="sh_symbol">-</span>family<span class="sh_symbol">:</span> arial<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li><span style="display:none;">&nbsp;</span></li><li>#tipbox <span class="sh_cbracket">{</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;width<span class="sh_symbol">:</span>100px<span class="sh_symbol">;</span> height<span class="sh_symbol">:</span>auto<span class="sh_symbol">;</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;border<span class="sh_symbol">:</span>1px solid black<span class="sh_symbol">;</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;background<span class="sh_symbol">-</span>color<span class="sh_symbol">:</span>#8ED6FF<span class="sh_symbol">;</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;display<span class="sh_symbol">:</span>none<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li><span style="display:none;">&nbsp;</span></li><li>#pointer <span class="sh_cbracket">{</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;position<span class="sh_symbol">:</span> absolute<span class="sh_symbol">;</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;background<span class="sh_symbol">-</span>color<span class="sh_symbol">:</span>black<span class="sh_symbol">;</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;width<span class="sh_symbol">:</span>10px<span class="sh_symbol">;</span> height<span class="sh_symbol">:</span>10px<span class="sh_symbol">;</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;display<span class="sh_symbol">:</span>none<span class="sh_symbol">;</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;border<span class="sh_symbol">:</span>none<span class="sh_symbol">;</span></li><li>&nbsp;&nbsp;&nbsp;&nbsp;box<span class="sh_symbol">-</span>shadow<span class="sh_symbol">:</span> 0px 0px 3px 3px #8ED6FF<span class="sh_symbol">;</span></li><li><span class="sh_cbracket">}</span></li><li><span class="sh_symbol">&lt;/</span>style<span class="sh_symbol">&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display:none;">&lt;style&gt;
+body {
+	padding:0; margin:0; font-family: arial;
+}
+
+#tipbox {
+	width:100px; height:auto;
+	border:1px solid black;
+	background-color:#8ED6FF;
+	display:none;
+}
+
+#pointer {
+	position: absolute;
+	background-color:black;
+	width:10px; height:10px;
+	display:none;
+	border:none;
+	box-shadow: 0px 0px 3px 3px #8ED6FF;
+}
+&lt;/style&gt;
+</pre></div></div>
+<p>
+	This CSS is just run-of-the-mill CSS, except I do include a nice little box shadow under the pointer.
+</p>
+<p>
+	Here's the final thing. If you're reading this page in a modern HTML5-capable browser, you can try it out right here:
+</p>
+<p>
+	<style>
+	#tipbox { width:100px; height:auto; border:1px solid  black; background-color:#8ED6FF; display:none; }
+	#pointer { position: absolute; background-color:black; width:10px; height:10px; display:none; border:none; box-shadow: 0px 0px 3px 3px #8ED6FF; }
+	</style>
+
+	</p><div style="margin-top:0px; margin-left:0px;"><canvas id="canvas1" width="640px" height="480px"></canvas> <div id="pointer" width:"10px"="" height:"10px"=""></div> <div id="tipbox"><div id="datediv"></div><div id="pricediv"></div><div id="volumediv"></div></div> </div>
+	<script>
+	var prices = [
+	    { date:'1/15/13', price:27.21, volume: '48224440' },
+	    { date:'1/16/13', price:27.04, volume: '41062810' },
+	    { date:'1/17/13', price:27.25, volume: '51647220' },
+	    { date:'1/18/13', price:27.25, volume: '52165050' },
+	    { date:'1/22/13', price:27.15, volume: '58642390' },
+	    { date:'1/23/13', price:27.61, volume: '50288930' },
+	    { date:'1/24/13', price:27.63, volume: '101321400' },
+	    { date:'1/25/13', price:27.88, volume: '81814260' },
+	    { date:'1/28/13', price:27.91, volume: '56054570' },
+	    { date:'1/29/13', price:28.01, volume: '49234080' },
+	    { date:'1/30/13', price:27.85, volume: '43571210' },
+	    { date:'1/31/13', price:27.45, volume: '50524770' },
+	    { date:'2/1/13', price:27.93, volume: '55548860' },
+	    { date:'2/4/13', price:27.44, volume: '50508670' },
+	    { date:'2/5/13', price:27.495, volume: '35367310' },
+	    { date:'2/6/13', price:27.34, volume: '41750840' },
+	    { date:'2/7/13', price:27.283, volume: '38007050' },
+	    { date:'2/8/13', price:27.55, volume: '33318310' },
+	    { date:'2/11/13', price:27.86, volume: '32163676' }
+	];
+	var canvas = document.getElementById('canvas1');
+	var context = canvas.getContext('2d');
+	var xsize = canvas.clientWidth;
+	var ysize = canvas.clientHeight;
+	var unitwidth = xsize / (prices.length - 1);
+	var minprice = 99999999;
+	var maxprice = 0;
+	for (var i=0; i<prices.length; i++) {
+	    if (prices[i].price < minprice) { minprice = prices[i].price; }
+		if (prices[i].price > maxprice) { maxprice = prices[i].price; }
+	}
+	var unitheight = ysize / (maxprice - minprice);
+	context.transform(unitwidth, 0, 0, -unitheight, 0, ysize);
+	context.beginPath();
+	context.moveTo(0,0);
+	for (var i=0; i<prices.length; i++) {
+		context.lineTo(i, (prices[i].price - minprice));
+	}
+	context.lineTo(xsize, 0);
+	context.closePath();
+	var gradient = context.createLinearGradient(0,0, 0, maxprice - minprice);
+	gradient.addColorStop(0, '#8ED6FF');
+	gradient.addColorStop(1, '#004CB3');
+	context.fillStyle = gradient;
+	context.fill();
+	var tipbox = document.getElementById('tipbox');
+	var pointer = document.getElementById('pointer');
+	var datediv = document.getElementById('datediv');
+	var pricediv = document.getElementById('pricediv');
+	var volumediv = document.getElementById('volumediv');
+	var canvasx = canvas.offsetLeft;
+	var canvasy = canvas.offsetTop;
+	function mousemove(e) {
+		var xpos = Math.round((e.clientX - canvasx) / unitwidth);
+		var priceitem = prices[xpos];
+		pointer.style.display = 'block';
+		pointer.style.left = (canvasx - 5 + xpos * unitwidth) + 'px';
+		pointer.style.top = (canvasy - 5 + ysize - (priceitem.price - minprice) * unitheight) + 'px';
+		tipbox.style.display = 'block';
+		datediv.innerHTML = 'Date: ' + priceitem.date;
+		pricediv.innerHTML = 'Price: ' + priceitem.price;
+		volumediv.innerHTML = 'Volume: ' + priceitem.volume;
+	}
+	canvas.addEventListener("mousemove", mousemove, false);
+	</script>
+<p></p>
+<h2>Conclusion</h2>
+<p>
+	With only a very small amount of code, and a couple HTML elements and styling, we were able to create an interactive chart without a single plug-in. How
+	about that.
+</p>
+<p>
+	We've just scratched the surface here, but you can see how we could expand on this, adding additional features quite easily. And we made it re-usable, so
+	if you want to change the size of the canvas element with a different height and width, you can do so easily. The whole graph will still plot, stretched
+	out to the new size.
+</p>
+<p>
+	<a href="http://sourceforge.net/p/html5center/code/ci/master/tree/" target="_blank"><img src="/inc/articles/img/nasdaq/browse_code_btn.jpg" alt="Download" border="0"></a></p>
+<p>
+	<strong>About the Author</strong>
+</p>
+<p>
+	<img src="/inc/articles/img/nasdaq/cogswell.png" alt="Author" width="141" border="0">
+</p>
+<p>
+Jeff Cogswell has nearly 25 years of experience as both a software engineer and a professional writer. He has worked on development teams, doing everything from low-level C programming on Unix up to high-level web development. In the past decade he has focused his work primarily on web development, including mastering such technologies as server-side programming with C#, and client-side programming such as HTML, XML, JavaScript, and Adobe tools, and now HTML5. He has authored numerous books, including C++ All-in-One for Dummies. He writes regular columns for SourceForge and SlashDot, including columns on parallel programming and development.
+</p>
+
+  <section>
+<!-- START: Livefyre Embed -->
+<script type="text/javascript" src="http://zor.livefyre.com/wjs/v1.0/javascripts/livefyre_init.js"></script>
+<script type="text/javascript">
+    var fyre = LF({
+        site_id: 312741
+    });
+</script><div id="livefyre"><div class="lf_widget_message lf_loading"></div></div>
+<!-- END: Livefyre Embed -->
+  </section>
+  </article>
+
+</section>  	    </div> <!-- left -->
+  	    <div class="right">
+       
+  	      <div class="sharing">
+  	        <h3>Share this site with your friends</h3>
+
+            <div id="fb-root"></div>
+       
+            <div class="addthis_toolbox addthis_default_style " style="white-space:nowrap">
+                    <fb:like class="fb_edge_widget_with_comment fb_iframe_widget" fb-xfbml-state="rendered" style="display:inline-block; width:120px; vertical-align:top;" href="http://html5center.sourceforge.net/" send="false" width="120" layout="button_count" show_faces="true" action="recommend"><span style="height: 20px; width: 114px;"><iframe src="http://www.facebook.com/plugins/like.php?api_key=112137472229411&amp;locale=en_US&amp;sdk=joey&amp;channel_url=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D24%23cb%3Df18b3f04a4458a%26origin%3Dhttp%253A%252F%252Fhtml5center.sourceforge.net%252Ff3763d0becf8c62%26domain%3Dhtml5center.sourceforge.net%26relation%3Dparent.parent&amp;href=http%3A%2F%2Fhtml5center.sourceforge.net%2F&amp;node_type=link&amp;width=130&amp;layout=button_count&amp;colorscheme=light&amp;action=recommend&amp;show_faces=false&amp;send=false&amp;extended_social_context=false" class="fb_ltr" title="Like this content on Facebook." style="border: medium none; overflow: hidden; height: 20px; width: 114px;" name="f67bf79bf4aece" id="f1686787b3253d6" scrolling="no"></iframe></span></fb:like>
+					
+				    <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+            
+            <iframe data-twttr-rendered="true" title="Twitter Tweet Button" style="width: 109px; height: 20px;" class="twitter-share-button twitter-count-horizontal" src="http://platform.twitter.com/widgets/tweet_button.1368146021.html#_=1369675566599&amp;count=horizontal&amp;id=twitter-widget-1&amp;lang=en&amp;original_referer=http%3A%2F%2Fhtml5center.sourceforge.net%2FBuilding-Live-NASDAQ-Bar-Graphs-without-Plug-Ins&amp;size=m&amp;text=Learn%20more%20about%20%23HTML5%20at%20the%20%23HTML5%20Center%2C%20produced%20in%20partnership%20with%20%40Microsoft%20and%20%40SourceForge%3A&amp;url=http%3A%2F%2Fhtml5center.sourceforge.net%2F" allowtransparency="true" frameborder="0" scrolling="no"></iframe>
+
+				    <span class="gplus" style="margin-left:4px; display:inline-block;">
+                    <div id="___plusone_1" style="text-indent: 0px; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 90px; height: 20px;"><iframe title="+1" data-gapiattached="true" allowtransparency="true" src="https://plusone.google.com/_/+1/fastbutton?bsv&amp;size=medium&amp;hl=en-US&amp;origin=http%3A%2F%2Fhtml5center.sourceforge.net&amp;url=http%3A%2F%2Fhtml5center.sourceforge.net%2F&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en_US.r3QWApkN4KM.O%2Fm%3D__features__%2Fam%3DEQ%2Frt%3Dj%2Fd%3D1%2Frs%3DAItRSTMXOSfYHNeCWAliTFzzK4EPtqRvFg#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled&amp;id=I1_1369675566297&amp;parent=http%3A%2F%2Fhtml5center.sourceforge.net&amp;rpctoken=90095544" name="I1_1369675566297" id="I1_1369675566297" vspace="0" tabindex="0" style="position: static; top: 0px; width: 90px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" marginwidth="0" marginheight="0" hspace="0" frameborder="0" scrolling="no" width="100%"></iframe></div>
+                    </span>
+
+
+
+            <div class="atclear"></div></div>
+
+            <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4e8b7716626d16f5"></script>
+            <!-- AddThis Button END -->
+          </div>
+          <!-- promo units -->
+          <div style="text-align:left;">
+          	<!-- HTML5_Center -->
+			<script type="text/javascript">
+			  var ord = window.ord || Math.floor(Math.random() * 1e16);
+			  document.write('<script type="text/javascript" src="http://ad.doubleclick.net/N4140/adj/HTML5_Center;sz=309x310;ord=' + ord + '?"><\/script>');
+			</script><script type="text/javascript" src="http://ad.doubleclick.net/N4140/adj/HTML5_Center;sz=309x310;ord=6445489260131211?"></script><a target="_top" href="http://googleads.g.doubleclick.net/aclk?sa=L&amp;ai=C9ItdFZejUai_AtC6wQHs-IHgBMeZ9LsDAAAQASAAUMHWx7IGYMm2hIjwo-wSggEXY2EtcHViLTg2ODI4NDg3ODgzNTkyMTjIAQLgAgCoAwGqBLMBT9BoZf2Nx0D5ZMKPpUoA3nfFO-jjpdev5q9x6ZsgBt1YkjI0nXxwnPL4dXNKJhSnbdp0FrkBMITDlEmOOylo_HR5_rVZeyjsk2qAFVQSShCr-0qqgJpqqqL_rRXzXpJhaGB_TzBDz-BFTjs299k-eWKmQ3DXbU8wNKXjc7BRDu_7gEGSNFEYEJhaqGVJ45dexxs82WG4X9_On9PcjRRs8lCIN7tr98HQHI52bagldZn4Q6LgBAGgBhQ&amp;num=0&amp;sig=AOD64_3uJFy_AYBJXTRxRo5ogPJaa8J2YA&amp;client=ca-pub-8682848788359218&amp;adurl=http://www.microsoft.com/click/services/Redirect2.ashx%3FCR_CC%3D200213393"><img src="http://pagead2.googlesyndication.com/simgad/17321857113797796567" alt="" height="310" width="309" border="0"></a>
+			<noscript>
+			<a href="http://ad.doubleclick.net/N4140/jump/HTML5_Center;sz=309x310;ord=[timestamp]?">
+			<img src="http://ad.doubleclick.net/N4140/ad/HTML5_Center;sz=309x310;ord=[timestamp]?" width="309" height="310" />
+			</a>
+			</noscript>
+		  <br>
+          <a onclick="_gaq.push(['_trackEvent', 'PromoUnits', 'Click', 'VS2012Promo']);" href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200145380" target="_blank"><img src="/images/promos/VS_promotion2.png" alt=""></a><br><br>
+          </div>
+		  <section>
+		  			<header>
+		     	         <h1>Sponsored Links</h1>
+		  			</header>
+		     	         <ul style="list-style: none;margin-left: 0;padding-left: 1em;text-indent: -1em;">
+		     	            <li>» <a onclick="_gaq.push(['_trackEvent', 'SponsoredLinks', 'Click', 'KeepTheCash']);" href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200201379" target="_blank">Keep the Cash -Publish an App - Get up to $2000</a></li>
+							<li>» <a onclick="_gaq.push(['_trackEvent', 'SponsoredLinks', 'Click', 'BuildExperience']);" href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200145379" target="_blank">Build an immersive app experience</a></li>
+							<li>» <a onclick="_gaq.push(['_trackEvent', 'SponsoredLinks', 'Click', 'BuildYourApp']);" href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200145379" target="_blank">Build your app. Get free tools and expert guidance</a></li>
+							<li>» <a onclick="_gaq.push(['_trackEvent', 'SponsoredLinks', 'Click', 'CodeItOnce']);" href="http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200145379" target="_blank">Code it once reach more devices</a></li>
+		               </ul>
+		  </section>
+          <!-- end promo units -->
+  	        	                <section>
+            <header>
+              <h1>Other Featured Resources</h1>
+            </header>
+              
+             
+              <ul class="other_resources">
+                                                <li>
+                    
+                    <a href="/Build-a-Plug-In-Free-Interactive-Map" class="img"><img src="/images/resources/60.jpg"></a>
+                    <div class="content">
+                      <h2><a href="/Build-a-Plug-In-Free-Interactive-Map">Build a Plug-In Free Interactive Map</a></h2>
+                    </div>    
+                    
+                    </li>
+                    
+                                                
+                                                              <li>
+                    
+                    <a href="/Toward-a-plug-in-Free-Web" class="img"><img src="/images/resources/58.jpg"></a>
+                    <div class="content">
+                      <h2><a href="/Toward-a-plug-in-Free-Web">Toward a plug-in Free Web</a></h2>
+                    </div>    
+                    
+                    </li>
+                    
+                                                              <li>
+                    
+                    <a href="/Using-Web-Workers-to-improve-performance-of-image-manipulation" class="img"><img src="/images/resources/57.jpg"></a>
+                    <div class="content">
+                      <h2><a href="/Using-Web-Workers-to-improve-performance-of-image-manipulation">Using Web Workers to improve performance of image manipulation</a></h2>
+                    </div>    
+                    
+                    </li>
+                    
+                                                              <li>
+                    
+                    <a href="/How-to-build-an-Instagram-like-photo-sharing-app-with-HTML5" class="img"><img src="/images/resources/56.jpg"></a>
+                    <div class="content">
+                      <h2><a href="/How-to-build-an-Instagram-like-photo-sharing-app-with-HTML5">How to build an Instagram-like photo sharing app with HTML5</a></h2>
+                    </div>    
+                    
+                    </li>
+                    
+                                                              <li>
+                    
+                    <a href="/The-Star-Wars-intro-in-pure-CSS3-thanks-to-3D-transform-&amp;-animations" class="img"><img src="/images/resources/55.jpg"></a>
+                    <div class="content">
+                      <h2><a href="/The-Star-Wars-intro-in-pure-CSS3-thanks-to-3D-transform-&amp;-animations">The Star Wars intro in pure CSS3 thanks to 3D transform &amp; animations</a></h2>
+                    </div>    
+                    
+                    </li>
+                    
+                                                              <li style="display: none;" class="hide-this">
+                    
+                    <a href="/Behind-the-Heist:-How-the-Be-the-Thief-experience-was-created" class="img"><img src="/images/resources/54.jpg"></a>
+                    <div class="content">
+                      <h2><a href="/Behind-the-Heist:-How-the-Be-the-Thief-experience-was-created">Behind the Heist: How the "Be the Thief" experience was created</a></h2>
+                    </div>    
+                    
+                    </li>
+                    
+                                                              <li style="display: none;" class="hide-this">
+                    
+                    <a href="/Surviving-the-Zombie-Apocalypse-with-HTML5-and-SVG:-Text-Paths-and-Basic-Animation" class="img"><img src="/images/resources/53.jpg"></a>
+                    <div class="content">
+                      <h2><a href="/Surviving-the-Zombie-Apocalypse-with-HTML5-and-SVG:-Text-Paths-and-Basic-Animation">Surviving the Zombie Apocalypse with HTML5 and SVG: Text, Paths and Basic Animation</a></h2>
+                    </div>    
+                    
+                    </li>
+                    
+                                                              <li style="display: none;" class="hide-this">
+                    
+                    <a href="/Quickstart-adding-HTML-controls-and-handling-events" class="img"><img src="/images/resources/52.jpg"></a>
+                    <div class="content">
+                      <h2><a href="/Quickstart-adding-HTML-controls-and-handling-events">Adding HTML controls and handling events</a></h2>
+                    </div>    
+                    
+                    </li>
+                    
+                                                              <li style="display: none;" class="hide-this">
+                    
+                    <a href="/Part-1-Create-a-Hello-world-app-Windows-Store-apps-using-JavaScript-and-HTML" class="img"><img src="/images/resources/51.jpg"></a>
+                    <div class="content">
+                      <h2><a href="/Part-1-Create-a-Hello-world-app-Windows-Store-apps-using-JavaScript-and-HTML">Create a Hello, world app</a></h2>
+                    </div>    
+                    
+                    </li>
+                    
+                                                              <li style="display: none;" class="hide-this">
+                    
+                    <a href="/Using-the-Windows-8-Simulator-and-VS-2012-to-debug-the-IE10-touch-events-and-your-responsive-design-on-the-web" class="img"><img src="/images/resources/50.jpg"></a>
+                    <div class="content">
+                      <h2><a href="/Using-the-Windows-8-Simulator-and-VS-2012-to-debug-the-IE10-touch-events-and-your-responsive-design-on-the-web">Using the Windows 8 Simulator and VS 2012 to debug the IE10 touch events and your responsive design on the web</a></h2>
+                    </div>    
+                    
+                    </li>
+                    
+                                                              <li style="display: none;" class="hide-this">
+                    
+                    <a href="/Optical-Zooming-How-to-Correct-Legacy-Document-Modes-Problems-with-Fonts" class="img"><img src="/images/resources/49.jpg"></a>
+                    <div class="content">
+                      <h2><a href="/Optical-Zooming-How-to-Correct-Legacy-Document-Modes-Problems-with-Fonts">Optical Zooming: How to Correct Legacy Document Modes Problems with Fonts</a></h2>
+                    </div>    
+                    
+                    </li>
+                    
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                          </ul>
+              <!--
+              <div class="res-view-more">
+                <a class="button" href="#">Show More Resources&nbsp;</a>
+              </div>
+              -->
+          </section>
+            	      <section>
+  	        <header class="icon">
+  	          <h1>Recent HTML5 Tweets</h1>
+  	          <span class="twitter"></span>
+  	         <!-- <nav>
+  	            <a href="#" class="nav_left" id="twit_prev">Left</a>
+  	            <a href="#" class="nav_right" id="twit_next">Right</a>
+  	          </nav>-->
+  	        </header>
+  	        <div id="twitter" class="trending loading">
+           <!--  <script src="/js/libs/widget.js"></script>-->
+            <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+			<script>
+				new TWTR.Widget({
+				  version: 2,
+				  type: 'search',
+				  search: '#HTML5',
+				  interval: 2000,
+				  title: '',
+				  subject: '',
+				  width: 300,
+				  height: 400,
+				  theme: {
+					shell: {
+					  background: '#c2d6db',
+					  color: '#ffffff'
+					},
+					tweets: {
+					  background: '#ffffff',
+					  color: '#444444',
+					  links: '#116789'
+					}
+				  },
+				  features: {
+					scrollbar: true,
+					loop: true,
+					live: true,
+					hashtags: true,
+					timestamp: true,
+					avatars: true,
+					toptweets: true,
+					behavior: 'all'
+				
+				  }
+				}).render().start();
+            </script><div class="twtr-widget twtr-scroll" id="twtr-widget-1"><div class="twtr-doc" style="width: 300px;">            <div class="twtr-hd"><h3><a target="_blank" style="color:#ffffff" href="https://twitter.com/search/%23HTML5"></a></h3>                      <h4><a target="_blank" style="color:#ffffff" href="https://twitter.com/search/%23HTML5"></a></h4>             </div>            <div class="twtr-bd">              <div class="twtr-timeline" style="height: 400px;">                <div class="twtr-tweets">                  <div class="twtr-reference-tweet"></div><div class="twtr-tweet" id="tweet-id-50"><div class="twtr-tweet-wrap">         <div class="twtr-avatar">           <div class="twtr-img"><a target="_blank" href="https://twitter.com/intent/user?screen_name=gtpintado"><img alt="gtpintado profile" src="http://a0.twimg.com/profile_images/1333346344/gp_normal.jpg"></a></div>         </div>         <div class="twtr-tweet-text">           <p>             <a target="_blank" href="https://twitter.com/intent/user?screen_name=gtpintado" class="twtr-user">gtpintado</a> Using HTML5 audio and video HTML | MDN <a href="http://t.co/n8rNkeVWeQ" target="_blank" urlentities="[object Object]" rel="nofollow">shrd.by/sygMYb</a> <a href="http://twitter.com/search?q=%23html5" title="#html5" class="tweet-url hashtag" target="_blank">#html5</a>             <em>            <a target="_blank" class="twtr-timestamp" time="Mon, 27 May 2013 17:21:19 +0000" href="https://twitter.com/gtpintado/status/339068815738556416">4 minutes ago</a> ·            <a target="_blank" class="twtr-reply" href="https://twitter.com/intent/tweet?in_reply_to=339068815738556416">reply</a> ·             <a target="_blank" class="twtr-rt" href="https://twitter.com/intent/retweet?tweet_id=339068815738556416">retweet</a> ·             <a target="_blank" class="twtr-fav" href="https://twitter.com/intent/favorite?tweet_id=339068815738556416">favorite</a>             </em>           </p>         </div>       </div></div><div class="twtr-tweet" id="tweet-id-49"><div class="twtr-tweet-wrap">         <div class="twtr-avatar">           <div class="twtr-img"><a target="_blank" href="https://twitter.com/intent/user?screen_name=CodemotionRoma"><img alt="CodemotionRoma profile" src="http://a0.twimg.com/profile_images/3180651005/74030fb9f5cde12cf8e26e5d9285877a_normal.jpeg"></a></div>         </div>         <div class="twtr-tweet-text">           <p>             <a target="_blank" href="https://twitter.com/intent/user?screen_name=CodemotionRoma" class="twtr-user">CodemotionRoma</a> <a href="http://twitter.com/search?q=%23HTML5" title="#HTML5" class="tweet-url hashtag" target="_blank">#HTML5</a> Codeshow Roma 30.05 - avvicinati alla famiglia dei linguaggi HTML5 :-) <a href="http://t.co/bBvQYIbuwH" target="_blank" urlentities="[object Object]" rel="nofollow">ow.ly/lr1TB</a> <a href="http://twitter.com/search?q=%23codemotion" title="#codemotion" class="tweet-url hashtag" target="_blank">#codemotion</a>             <em>            <a target="_blank" class="twtr-timestamp" time="Mon, 27 May 2013 17:05:38 +0000" href="https://twitter.com/CodemotionRoma/status/339064866453204993">20 minutes ago</a> ·            <a target="_blank" class="twtr-reply" href="https://twitter.com/intent/tweet?in_reply_to=339064866453204993">reply</a> ·             <a target="_blank" class="twtr-rt" href="https://twitter.com/intent/retweet?tweet_id=339064866453204993">retweet</a> ·             <a target="_blank" class="twtr-fav" href="https://twitter.com/intent/favorite?tweet_id=339064866453204993">favorite</a>             </em>           </p>         </div>       </div></div><div class="twtr-tweet" id="tweet-id-48"><div class="twtr-tweet-wrap">         <div class="twtr-avatar">           <div class="twtr-img"><a target="_blank" href="https://twitter.com/intent/user?screen_name=marianlloret"><img alt="marianlloret profile" src="http://a0.twimg.com/profile_images/2368751494/8mweej4tby7o4fobfes9_normal.jpeg"></a></div>         </div>         <div class="twtr-tweet-text">           <p>             <a target="_blank" href="https://twitter.com/intent/user?screen_name=marianlloret" class="twtr-user">marianlloret</a> HTML5 Up!, plantillas elegantes y editables para sitios web en <a href="http://twitter.com/search?q=%23HTML5" title="#HTML5" class="tweet-url hashtag" target="_blank">#HTML5</a> <a href="http://t.co/LEIcKA10kJ" target="_blank" urlentities="[object Object]" rel="nofollow">wwwhatsnew.com/2013/05/25/htm…</a>             <em>            <a target="_blank" class="twtr-timestamp" time="Mon, 27 May 2013 16:47:42 +0000" href="https://twitter.com/marianlloret/status/339060353302409216">38 minutes ago</a> ·            <a target="_blank" class="twtr-reply" href="https://twitter.com/intent/tweet?in_reply_to=339060353302409216">reply</a> ·             <a target="_blank" class="twtr-rt" href="https://twitter.com/intent/retweet?tweet_id=339060353302409216">retweet</a> ·             <a target="_blank" class="twtr-fav" href="https://twitter.com/intent/favorite?tweet_id=339060353302409216">favorite</a>             </em>           </p>         </div>       </div></div><div class="twtr-tweet" id="tweet-id-47"><div class="twtr-tweet-wrap">         <div class="twtr-avatar">           <div class="twtr-img"><a target="_blank" href="https://twitter.com/intent/user?screen_name=derossi_s"><img alt="derossi_s profile" src="http://a0.twimg.com/profile_images/3235320583/09d0c2535b730b8c1f8ae82e914e5cd5_normal.jpeg"></a></div>         </div>         <div class="twtr-tweet-text">           <p>             <a target="_blank" href="https://twitter.com/intent/user?screen_name=derossi_s" class="twtr-user">derossi_s</a> Slick looking <a href="http://twitter.com/search?q=%23HTML5" title="#HTML5" class="tweet-url hashtag" target="_blank">#HTML5</a> game using <a href="http://twitter.com/search?q=%23CreateJS" title="#CreateJS" class="tweet-url hashtag" target="_blank">#CreateJS</a> <a href="http://t.co/Vdx86vzThB" target="_blank" urlentities="[object Object]" rel="nofollow">pritt2013.eoa.de/Games/PilotSch…</a> Pilot School! would like to know who built it?             <em>            <a target="_blank" class="twtr-timestamp" time="Mon, 27 May 2013 16:44:41 +0000" href="https://twitter.com/derossi_s/status/339059594326310912">41 minutes ago</a> ·            <a target="_blank" class="twtr-reply" href="https://twitter.com/intent/tweet?in_reply_to=339059594326310912">reply</a> ·             <a target="_blank" class="twtr-rt" href="https://twitter.com/intent/retweet?tweet_id=339059594326310912">retweet</a> ·             <a target="_blank" class="twtr-fav" href="https://twitter.com/intent/favorite?tweet_id=339059594326310912">favorite</a>             </em>           </p>         </div>       </div></div><div class="twtr-tweet" id="tweet-id-46"><div class="twtr-tweet-wrap">         <div class="twtr-avatar">           <div class="twtr-img"><a target="_blank" href="https://twitter.com/intent/user?screen_name=InfoQ"><img alt="InfoQ profile" src="http://a0.twimg.com/profile_images/132099256/infoq-square_normal.jpg"></a></div>         </div>         <div class="twtr-tweet-text">           <p>             <a target="_blank" href="https://twitter.com/intent/user?screen_name=InfoQ" class="twtr-user">InfoQ</a> Whitepaper: Extend Your <a href="http://twitter.com/search?q=%23JavaEE" title="#JavaEE" class="tweet-url hashtag" target="_blank">#JavaEE</a> Apps with a <a href="http://twitter.com/search?q=%23Mobile" title="#Mobile" class="tweet-url hashtag" target="_blank">#Mobile</a> Web Interface - Learn more about ICEMobile. <a href="http://twitter.com/search?q=%23HTML5" title="#HTML5" class="tweet-url hashtag" target="_blank">#HTML5</a> <a href="http://t.co/7pK29b9V2K" target="_blank" urlentities="[object Object]" rel="nofollow">bit.ly/13NLRIp</a>             <em>            <a target="_blank" class="twtr-timestamp" time="Mon, 27 May 2013 16:44:01 +0000" href="https://twitter.com/InfoQ/status/339059428089266176">42 minutes ago</a> ·            <a target="_blank" class="twtr-reply" href="https://twitter.com/intent/tweet?in_reply_to=339059428089266176">reply</a> ·             <a target="_blank" class="twtr-rt" href="https://twitter.com/intent/retweet?tweet_id=339059428089266176">retweet</a> ·             <a target="_blank" class="twtr-fav" href="https://twitter.com/intent/favorite?tweet_id=339059428089266176">favorite</a>             </em>           </p>         </div>       </div></div><div class="twtr-tweet" id="tweet-id-45"><div class="twtr-tweet-wrap">         <div class="twtr-avatar">           <div class="twtr-img"><a target="_blank" href="https://twitter.com/intent/user?screen_name=Grsmto"><img alt="Grsmto profile" src="http://a0.twimg.com/profile_images/254205075/l_05732e0232234471a4ddd3370bec10c3_normal.png"></a></div>         </div>         <div class="twtr-tweet-text">           <p>             <a target="_blank" href="https://twitter.com/intent/user?screen_name=Grsmto" class="twtr-user">Grsmto</a> Nouvelle version de Mappy enfin en ligne !!! <a href="http://twitter.com/search?q=%23html5" title="#html5" class="tweet-url hashtag" target="_blank">#html5</a> <a href="http://twitter.com/search?q=%23rwd" title="#rwd" class="tweet-url hashtag" target="_blank">#rwd</a> <a href="http://t.co/BJkjsEhjs2" target="_blank" urlentities="[object Object]" rel="nofollow">pic.twitter.com/BJkjsEhjs2</a>             <em>            <a target="_blank" class="twtr-timestamp" time="Mon, 27 May 2013 16:21:53 +0000" href="https://twitter.com/Grsmto/status/339053857650929664">about 1 hour ago</a> ·            <a target="_blank" class="twtr-reply" href="https://twitter.com/intent/tweet?in_reply_to=339053857650929664">reply</a> ·             <a target="_blank" class="twtr-rt" href="https://twitter.com/intent/retweet?tweet_id=339053857650929664">retweet</a> ·             <a target="_blank" class="twtr-fav" href="https://twitter.com/intent/favorite?tweet_id=339053857650929664">favorite</a>             </em>           </p>         </div>       </div></div><div class="twtr-tweet" id="tweet-id-44"><div class="twtr-tweet-wrap">         <div class="twtr-avatar">           <div class="twtr-img"><a target="_blank" href="https://twitter.com/intent/user?screen_name=PSD2HTML"><img alt="PSD2HTML profile" src="http://a0.twimg.com/profile_images/1961613354/logo_new_normal.jpg"></a></div>         </div>         <div class="twtr-tweet-text">           <p>             <a target="_blank" href="https://twitter.com/intent/user?screen_name=PSD2HTML" class="twtr-user">PSD2HTML</a> Customizing <a href="http://twitter.com/search?q=%23HTML5" title="#HTML5" class="tweet-url hashtag" target="_blank">#HTML5</a> Form Error Messages With JavaScript: <a href="http://t.co/WvmTzzTun8" target="_blank" urlentities="[object Object]" rel="nofollow">goo.gl/bl4Ie</a>             <em>            <a target="_blank" class="twtr-timestamp" time="Mon, 27 May 2013 16:21:49 +0000" href="https://twitter.com/PSD2HTML/status/339053838243872770">about 1 hour ago</a> ·            <a target="_blank" class="twtr-reply" href="https://twitter.com/intent/tweet?in_reply_to=339053838243872770">reply</a> ·             <a target="_blank" class="twtr-rt" href="https://twitter.com/intent/retweet?tweet_id=339053838243872770">retweet</a> ·             <a target="_blank" class="twtr-fav" href="https://twitter.com/intent/favorite?tweet_id=339053838243872770">favorite</a>             </em>           </p>         </div>       </div></div><div class="twtr-tweet" id="tweet-id-43"><div class="twtr-tweet-wrap">         <div class="twtr-avatar">           <div class="twtr-img"><a target="_blank" href="https://twitter.com/intent/user?screen_name=SAPMobile"><img alt="SAPMobile profile" src="http://a0.twimg.com/profile_images/2406481233/ouar9tke4bmulk68wiml_normal.jpeg"></a></div>         </div>         <div class="twtr-tweet-text">           <p>             <a target="_blank" href="https://twitter.com/intent/user?screen_name=SAPMobile" class="twtr-user">SAPMobile</a> SAP <a href="http://twitter.com/search?q=%23Fiori" title="#Fiori" class="tweet-url hashtag" target="_blank">#Fiori</a> is a beautiful <a href="http://twitter.com/search?q=%23HTML5" title="#HTML5" class="tweet-url hashtag" target="_blank">#HTML5</a> platform to use to build apps from the ground up around users <a href="http://t.co/2Kd8TLHgQQ" target="_blank" urlentities="[object Object]" rel="nofollow">spr.ly/6014kupr</a>             <em>            <a target="_blank" class="twtr-timestamp" time="Mon, 27 May 2013 16:00:06 +0000" href="https://twitter.com/SAPMobile/status/339048375544602624">about 1 hour ago</a> ·            <a target="_blank" class="twtr-reply" href="https://twitter.com/intent/tweet?in_reply_to=339048375544602624">reply</a> ·             <a target="_blank" class="twtr-rt" href="https://twitter.com/intent/retweet?tweet_id=339048375544602624">retweet</a> ·             <a target="_blank" class="twtr-fav" href="https://twitter.com/intent/favorite?tweet_id=339048375544602624">favorite</a>             </em>           </p>         </div>       </div></div><div class="twtr-tweet" id="tweet-id-42"><div class="twtr-tweet-wrap">         <div class="twtr-avatar">           <div class="twtr-img"><a target="_blank" href="https://twitter.com/intent/user?screen_name=html5_ninja"><img alt="html5_ninja profile" src="http://a0.twimg.com/profile_images/2293370721/1voyasxtx93emckxzq1e_normal.png"></a></div>         </div>         <div class="twtr-tweet-text">           <p>             <a target="_blank" href="https://twitter.com/intent/user?screen_name=html5_ninja" class="twtr-user">html5_ninja</a> The World Needs More Ninjas - <a href="http://t.co/VnL3igQiP9" target="_blank" urlentities="[object Object]" rel="nofollow">mf.tt/AVc9</a> - <a href="http://twitter.com/search?q=%23html5" title="#html5" class="tweet-url hashtag" target="_blank">#html5</a> <a href="http://twitter.com/search?q=%23css3" title="#css3" class="tweet-url hashtag" target="_blank">#css3</a>             <em>            <a target="_blank" class="twtr-timestamp" time="Mon, 27 May 2013 15:59:52 +0000" href="https://twitter.com/html5_ninja/status/339048315255681025">about 1 hour ago</a> ·            <a target="_blank" class="twtr-reply" href="https://twitter.com/intent/tweet?in_reply_to=339048315255681025">reply</a> ·             <a target="_blank" class="twtr-rt" href="https://twitter.com/intent/retweet?tweet_id=339048315255681025">retweet</a> ·             <a target="_blank" class="twtr-fav" href="https://twitter.com/intent/favorite?tweet_id=339048315255681025">favorite</a>             </em>           </p>         </div>       </div></div><div class="twtr-tweet" id="tweet-id-41"><div class="twtr-tweet-wrap">         <div class="twtr-avatar">           <div class="twtr-img"><a target="_blank" href="https://twitter.com/intent/user?screen_name=Uberflip"><img alt="Uberflip profile" src="http://a0.twimg.com/profile_images/3463766024/25942909ebed7db81d56175834382ab4_normal.jpeg"></a></div>         </div>         <div class="twtr-tweet-text">           <p>             <a target="_blank" href="https://twitter.com/intent/user?screen_name=Uberflip" class="twtr-user">Uberflip</a> <a href="http://twitter.com/search?q=%23HTML5" title="#HTML5" class="tweet-url hashtag" target="_blank">#HTML5</a>: The Ultimate Competitive Edge via <a class="tweet-url username" data-screen-name="InfiniteSass" href="http://twitter.com/InfiniteSass" target="_blank">@InfiniteSass</a> <a href="http://t.co/QslDfCDWy3" target="_blank" urlentities="[object Object]" rel="nofollow">ubrflp.in/1aqxOc3</a>             <em>            <a target="_blank" class="twtr-timestamp" time="Mon, 27 May 2013 15:56:11 +0000" href="https://twitter.com/Uberflip/status/339047388905893888">about 1 hour ago</a> ·            <a target="_blank" class="twtr-reply" href="https://twitter.com/intent/tweet?in_reply_to=339047388905893888">reply</a> ·             <a target="_blank" class="twtr-rt" href="https://twitter.com/intent/retweet?tweet_id=339047388905893888">retweet</a> ·             <a target="_blank" class="twtr-fav" href="https://twitter.com/intent/favorite?tweet_id=339047388905893888">favorite</a>             </em>           </p>         </div>       </div></div><div class="twtr-tweet" id="tweet-id-40"><div class="twtr-tweet-wrap">         <div class="twtr-avatar">           <div class="twtr-img"><a target="_blank" href="https://twitter.com/intent/user?screen_name=KeithTTS"><img alt="KeithTTS profile" src="http://a0.twimg.com/profile_images/2369885312/wtahri7t73au7d9ave5b_normal.jpeg"></a></div>         </div>         <div class="twtr-tweet-text">           <p>             <a target="_blank" href="https://twitter.com/intent/user?screen_name=KeithTTS" class="twtr-user">KeithTTS</a> Now Hiring: Front-End Technical Leader/Architect in New York, NY <a href="http://t.co/IZzOPjWfXL" target="_blank" urlentities="[object Object]" rel="nofollow">bull.hn/l/17OPY/4</a> <a href="http://twitter.com/search?q=%23HTML5" title="#HTML5" class="tweet-url hashtag" target="_blank">#HTML5</a> <a href="http://twitter.com/search?q=%23Impactjs" title="#Impactjs" class="tweet-url hashtag" target="_blank">#Impactjs</a>             <em>            <a target="_blank" class="twtr-timestamp" time="Mon, 27 May 2013 15:50:19 +0000" href="https://twitter.com/KeithTTS/status/339045914347962370">about 1 hour ago</a> ·            <a target="_blank" class="twtr-reply" href="https://twitter.com/intent/tweet?in_reply_to=339045914347962370">reply</a> ·             <a target="_blank" class="twtr-rt" href="https://twitter.com/intent/retweet?tweet_id=339045914347962370">retweet</a> ·             <a target="_blank" class="twtr-fav" href="https://twitter.com/intent/favorite?tweet_id=339045914347962370">favorite</a>             </em>           </p>         </div>       </div></div><div class="twtr-tweet" id="tweet-id-39"><div class="twtr-tweet-wrap">         <div class="twtr-avatar">           <div class="twtr-img"><a target="_blank" href="https://twitter.com/intent/user?screen_name=Ipwian"><img alt="Ipwian profile" src="http://a0.twimg.com/profile_images/2729313127/390b9e3bf7858da72afeae0347367f4e_normal.png"></a></div>         </div>         <div class="twtr-tweet-text">           <p>             <a target="_blank" href="https://twitter.com/intent/user?screen_name=Ipwian" class="twtr-user">Ipwian</a> Snel beschikken over de juiste .NET,  <a href="http://twitter.com/search?q=%23Java" title="#Java" class="tweet-url hashtag" target="_blank">#Java</a> of <a href="http://twitter.com/search?q=%23HTML5" title="#HTML5" class="tweet-url hashtag" target="_blank">#HTML5</a> developer? <a href="http://t.co/e75IVzR1MN" target="_blank" urlentities="[object Object]" rel="nofollow">bit.ly/ipwian</a>             <em>            <a target="_blank" class="twtr-timestamp" time="Mon, 27 May 2013 15:36:01 +0000" href="https://twitter.com/Ipwian/status/339042313508626432">about 1 hour ago</a> ·            <a target="_blank" class="twtr-reply" href="https://twitter.com/intent/tweet?in_reply_to=339042313508626432">reply</a> ·             <a target="_blank" class="twtr-rt" href="https://twitter.com/intent/retweet?tweet_id=339042313508626432">retweet</a> ·             <a target="_blank" class="twtr-fav" href="https://twitter.com/intent/favorite?tweet_id=339042313508626432">favorite</a>             </em>           </p>         </div>       </div></div><div class="twtr-tweet" id="tweet-id-38"><div class="twtr-tweet-wrap">         <div class="twtr-avatar">           <div class="twtr-img"><a target="_blank" href="https://twitter.com/intent/user?screen_name=data_becker"><img alt="data_becker profile" src="http://a0.twimg.com/profile_images/3223780161/ea6fa0a6daecb81790b2d2b134e653f3_normal.png"></a></div>         </div>         <div class="twtr-tweet-text">           <p>             <a target="_blank" href="https://twitter.com/intent/user?screen_name=data_becker" class="twtr-user">data_becker</a> Kompakter Artikel über unseren gratis A5 <a href="http://twitter.com/search?q=%23HTML5" title="#HTML5" class="tweet-url hashtag" target="_blank">#HTML5</a> Animator Free bei onlinepc.ch: <a href="http://t.co/HjXOpo8ofb" target="_blank" urlentities="[object Object]" rel="nofollow">ow.ly/lq3me</a> =&gt; danke! <a href="http://twitter.com/search?q=%23webdesign" title="#webdesign" class="tweet-url hashtag" target="_blank">#webdesign</a> ^CS             <em>            <a target="_blank" class="twtr-timestamp" time="Mon, 27 May 2013 15:32:29 +0000" href="https://twitter.com/data_becker/status/339041425893228544">about 1 hour ago</a> ·            <a target="_blank" class="twtr-reply" href="https://twitter.com/intent/tweet?in_reply_to=339041425893228544">reply</a> ·             <a target="_blank" class="twtr-rt" href="https://twitter.com/intent/retweet?tweet_id=339041425893228544">retweet</a> ·             <a target="_blank" class="twtr-fav" href="https://twitter.com/intent/favorite?tweet_id=339041425893228544">favorite</a>             </em>           </p>         </div>       </div></div><div class="twtr-tweet" id="tweet-id-37"><div class="twtr-tweet-wrap">         <div class="twtr-avatar">           <div class="twtr-img"><a target="_blank" href="https://twitter.com/intent/user?screen_name=josem2112"><img alt="josem2112 profile" src="http://a0.twimg.com/profile_images/2550279089/2718236sqw6jz8kzw9h0_normal.jpeg"></a></div>         </div>         <div class="twtr-tweet-text">           <p>             <a target="_blank" href="https://twitter.com/intent/user?screen_name=josem2112" class="twtr-user">josem2112</a> HTML5 Up!, plantillas elegantes y editables para sitios web en HTML5 <a href="http://t.co/ZmLLGyOsh9" target="_blank" urlentities="[object Object]" rel="nofollow">buff.ly/13UHefH</a> <a href="http://twitter.com/search?q=%23HTML5" title="#HTML5" class="tweet-url hashtag" target="_blank">#HTML5</a> <a href="http://twitter.com/search?q=%23DiseñoWeb" title="#DiseñoWeb" class="tweet-url hashtag" target="_blank">#DiseñoWeb</a>             <em>            <a target="_blank" class="twtr-timestamp" time="Mon, 27 May 2013 15:30:20 +0000" href="https://twitter.com/josem2112/status/339040884324712452">about 1 hour ago</a> ·            <a target="_blank" class="twtr-reply" href="https://twitter.com/intent/tweet?in_reply_to=339040884324712452">reply</a> ·             <a target="_blank" class="twtr-rt" href="https://twitter.com/intent/retweet?tweet_id=339040884324712452">retweet</a> ·             <a target="_blank" class="twtr-fav" href="https://twitter.com/intent/favorite?tweet_id=339040884324712452">favorite</a>             </em>           </p>         </div>       </div></div><div class="twtr-tweet" id="tweet-id-36"><div class="twtr-tweet-wrap">         <div class="twtr-avatar">           <div class="twtr-img"><a target="_blank" href="https://twitter.com/intent/user?screen_name=OpenWebDevice"><img alt="OpenWebDevice profile" src="http://a0.twimg.com/profile_images/3365889073/4f8a2bbc958aaeadb2ad998aa6101f60_normal.png"></a></div>         </div>         <div class="twtr-tweet-text">           <p>             <a target="_blank" href="https://twitter.com/intent/user?screen_name=OpenWebDevice" class="twtr-user">OpenWebDevice</a> 6 <a href="http://twitter.com/search?q=%23apps" title="#apps" class="tweet-url hashtag" target="_blank">#apps</a> to help you learn <a href="http://twitter.com/search?q=%23HTML5" title="#HTML5" class="tweet-url hashtag" target="_blank">#HTML5</a> <a href="http://t.co/A208fLDA3j" target="_blank" urlentities="[object Object]" rel="nofollow">ow.ly/lql1k</a>             <em>            <a target="_blank" class="twtr-timestamp" time="Mon, 27 May 2013 15:25:14 +0000" href="https://twitter.com/OpenWebDevice/status/339039602453127168">2 hours ago</a> ·            <a target="_blank" class="twtr-reply" href="https://twitter.com/intent/tweet?in_reply_to=339039602453127168">reply</a> ·             <a target="_blank" class="twtr-rt" href="https://twitter.com/intent/retweet?tweet_id=339039602453127168">retweet</a> ·             <a target="_blank" class="twtr-fav" href="https://twitter.com/intent/favorite?tweet_id=339039602453127168">favorite</a>             </em>           </p>         </div>       </div></div><div class="twtr-tweet" id="tweet-id-35"><div class="twtr-tweet-wrap">         <div class="twtr-avatar">           <div class="twtr-img"><a target="_blank" href="https://twitter.com/intent/user?screen_name=BlueprintNMedia"><img alt="BlueprintNMedia profile" src="http://a0.twimg.com/profile_images/3698655090/1dd740dee5f786c1d36d6e3ec9fda031_normal.png"></a></div>         </div>         <div class="twtr-tweet-text">           <p>             <a target="_blank" href="https://twitter.com/intent/user?screen_name=BlueprintNMedia" class="twtr-user">BlueprintNMedia</a> Developer Mindshare Q2 2013: Is HTML5 the 3rd horse in the race? <a href="http://t.co/5PtEG6VXLv" target="_blank" urlentities="[object Object]" rel="nofollow">bit.ly/13ZgmHT</a> <a href="http://twitter.com/search?q=%23html5" title="#html5" class="tweet-url hashtag" target="_blank">#html5</a>             <em>            <a target="_blank" class="twtr-timestamp" time="Mon, 27 May 2013 15:23:53 +0000" href="https://twitter.com/BlueprintNMedia/status/339039262018269184">2 hours ago</a> ·            <a target="_blank" class="twtr-reply" href="https://twitter.com/intent/tweet?in_reply_to=339039262018269184">reply</a> ·             <a target="_blank" class="twtr-rt" href="https://twitter.com/intent/retweet?tweet_id=339039262018269184">retweet</a> ·             <a target="_blank" class="twtr-fav" href="https://twitter.com/intent/favorite?tweet_id=339039262018269184">favorite</a>             </em>           </p>         </div>       </div></div><div class="twtr-tweet" id="tweet-id-34"><div class="twtr-tweet-wrap">         <div class="twtr-avatar">           <div class="twtr-img"><a target="_blank" href="https://twitter.com/intent/user?screen_name=TreSensa"><img alt="TreSensa profile" src="http://a0.twimg.com/profile_images/2187266046/tresensa_logo_300_normal.png"></a></div>         </div>         <div class="twtr-tweet-text">           <p>             <a target="_blank" href="https://twitter.com/intent/user?screen_name=TreSensa" class="twtr-user">TreSensa</a> Epic &amp; Mozilla release Unreal Engine 3 <a href="http://twitter.com/search?q=%23HTML5" title="#HTML5" class="tweet-url hashtag" target="_blank">#HTML5</a> demo to the public <a href="http://t.co/HG22a29b0U" target="_blank" urlentities="[object Object]" rel="nofollow">bit.ly/Z4knMU</a>             <em>            <a target="_blank" class="twtr-timestamp" time="Mon, 27 May 2013 15:15:08 +0000" href="https://twitter.com/TreSensa/status/339037059811508224">2 hours ago</a> ·            <a target="_blank" class="twtr-reply" href="https://twitter.com/intent/tweet?in_reply_to=339037059811508224">reply</a> ·             <a target="_blank" class="twtr-rt" href="https://twitter.com/intent/retweet?tweet_id=339037059811508224">retweet</a> ·             <a target="_blank" class="twtr-fav" href="https://twitter.com/intent/favorite?tweet_id=339037059811508224">favorite</a>             </em>           </p>         </div>       </div></div><div class="twtr-tweet" id="tweet-id-33"><div class="twtr-tweet-wrap">         <div class="twtr-avatar">           <div class="twtr-img"><a target="_blank" href="https://twitter.com/intent/user?screen_name=MaximeGaillard"><img alt="MaximeGaillard profile" src="http://a0.twimg.com/profile_images/1328332895/IMG_1751_normal.jpg"></a></div>         </div>         <div class="twtr-tweet-text">           <p>             <a target="_blank" href="https://twitter.com/intent/user?screen_name=MaximeGaillard" class="twtr-user">MaximeGaillard</a> Un dev web dans le coin ? <a href="http://twitter.com/search?q=%23freelance" title="#freelance" class="tweet-url hashtag" target="_blank">#freelance</a> <a href="http://twitter.com/search?q=%23Django" title="#Django" class="tweet-url hashtag" target="_blank">#Django</a> <a href="http://twitter.com/search?q=%23AngularJS" title="#AngularJS" class="tweet-url hashtag" target="_blank">#AngularJS</a> <a href="http://twitter.com/search?q=%23HTML5" title="#HTML5" class="tweet-url hashtag" target="_blank">#HTML5</a> <a href="http://twitter.com/search?q=%23CSS3" title="#CSS3" class="tweet-url hashtag" target="_blank">#CSS3</a> <a href="http://twitter.com/search?q=%23Agile" title="#Agile" class="tweet-url hashtag" target="_blank">#Agile</a> <a href="http://twitter.com/search?q=%23missionlongue" title="#missionlongue" class="tweet-url hashtag" target="_blank">#missionlongue</a> <a href="http://twitter.com/search?q=%23remote" title="#remote" class="tweet-url hashtag" target="_blank">#remote</a> <a href="http://twitter.com/search?q=%23fulltime" title="#fulltime" class="tweet-url hashtag" target="_blank">#fulltime</a>             <em>            <a target="_blank" class="twtr-timestamp" time="Mon, 27 May 2013 15:10:07 +0000" href="https://twitter.com/MaximeGaillard/status/339035798370385922">2 hours ago</a> ·            <a target="_blank" class="twtr-reply" href="https://twitter.com/intent/tweet?in_reply_to=339035798370385922">reply</a> ·             <a target="_blank" class="twtr-rt" href="https://twitter.com/intent/retweet?tweet_id=339035798370385922">retweet</a> ·             <a target="_blank" class="twtr-fav" href="https://twitter.com/intent/favorite?tweet_id=339035798370385922">favorite</a>             </em>           </p>         </div>       </div></div><div class="twtr-tweet" id="tweet-id-32"><div class="twtr-tweet-wrap">         <div class="twtr-avatar">           <div class="twtr-img"><a target="_blank" href="https://twitter.com/intent/user?screen_name=appcelerator"><img alt="appcelerator profile" src="http://a0.twimg.com/profile_images/2179402304/appc-fb_normal.png"></a></div>         </div>         <div class="twtr-tweet-text">           <p>             <a target="_blank" href="https://twitter.com/intent/user?screen_name=appcelerator" class="twtr-user">appcelerator</a> <a href="http://twitter.com/search?q=%23Native" title="#Native" class="tweet-url hashtag" target="_blank">#Native</a> vs. <a href="http://twitter.com/search?q=%23HTML5" title="#HTML5" class="tweet-url hashtag" target="_blank">#HTML5</a> mobile development. Which option is best? - <a href="http://t.co/UGfphgt4UP" target="_blank" urlentities="[object Object]" rel="nofollow">ow.ly/liaUu</a>             <em>            <a target="_blank" class="twtr-timestamp" time="Mon, 27 May 2013 15:06:17 +0000" href="https://twitter.com/appcelerator/status/339034829981102080">2 hours ago</a> ·            <a target="_blank" class="twtr-reply" href="https://twitter.com/intent/tweet?in_reply_to=339034829981102080">reply</a> ·             <a target="_blank" class="twtr-rt" href="https://twitter.com/intent/retweet?tweet_id=339034829981102080">retweet</a> ·             <a target="_blank" class="twtr-fav" href="https://twitter.com/intent/favorite?tweet_id=339034829981102080">favorite</a>             </em>           </p>         </div>       </div></div><div class="twtr-tweet" id="tweet-id-31"><div class="twtr-tweet-wrap">         <div class="twtr-avatar">           <div class="twtr-img"><a target="_blank" href="https://twitter.com/intent/user?screen_name=AwwwardsEvents"><img alt="AwwwardsEvents profile" src="http://a0.twimg.com/profile_images/3479498975/5487ac9da0f99fdee3756e4f7f465b99_normal.jpeg"></a></div>         </div>         <div class="twtr-tweet-text">           <p>             <a target="_blank" href="https://twitter.com/intent/user?screen_name=AwwwardsEvents" class="twtr-user">AwwwardsEvents</a> O'Reilly Fluent Conference | Awwwards <a href="http://t.co/udTls9pPcp" target="_blank" urlentities="[object Object]" rel="nofollow">buff.ly/1aqokgI</a> <a href="http://twitter.com/search?q=%23HTML5" title="#HTML5" class="tweet-url hashtag" target="_blank">#HTML5</a> <a href="http://twitter.com/search?q=%23JavaScript" title="#JavaScript" class="tweet-url hashtag" target="_blank">#JavaScript</a> via <a class="tweet-url username" data-screen-name="fluentconf" href="http://twitter.com/fluentconf" target="_blank">@fluentconf</a>             <em>            <a target="_blank" class="twtr-timestamp" time="Mon, 27 May 2013 15:02:08 +0000" href="https://twitter.com/AwwwardsEvents/status/339033786769633280">2 hours ago</a> ·            <a target="_blank" class="twtr-reply" href="https://twitter.com/intent/tweet?in_reply_to=339033786769633280">reply</a> ·             <a target="_blank" class="twtr-rt" href="https://twitter.com/intent/retweet?tweet_id=339033786769633280">retweet</a> ·             <a target="_blank" class="twtr-fav" href="https://twitter.com/intent/favorite?tweet_id=339033786769633280">favorite</a>             </em>           </p>         </div>       </div></div><div class="twtr-tweet" id="tweet-id-30"><div class="twtr-tweet-wrap">         <div class="twtr-avatar">           <div class="twtr-img"><a target="_blank" href="https://twitter.com/intent/user?screen_name=buzzgames"><img alt="buzzgames profile" src="http://a0.twimg.com/profile_images/663436466/avatara_normal.jpg"></a></div>         </div>         <div class="twtr-tweet-text">           <p>             <a target="_blank" href="https://twitter.com/intent/user?screen_name=buzzgames" class="twtr-user">buzzgames</a> <a href="http://twitter.com/search?q=%23HTML5" title="#HTML5" class="tweet-url hashtag" target="_blank">#HTML5</a> vs. Apps Where The Debate Stands Now, And Why It Matters - Business Insider <a href="http://t.co/KRBMeNJBS7" target="_blank" urlentities="[object Object]" rel="nofollow">read.bi/12J2wdv</a> via <a class="tweet-url username" data-screen-name="pryourblog" href="http://twitter.com/pryourblog" target="_blank">@pryourblog</a>             <em>            <a target="_blank" class="twtr-timestamp" time="Mon, 27 May 2013 15:01:04 +0000" href="https://twitter.com/buzzgames/status/339033519307251712">2 hours ago</a> ·            <a target="_blank" class="twtr-reply" href="https://twitter.com/intent/tweet?in_reply_to=339033519307251712">reply</a> ·             <a target="_blank" class="twtr-rt" href="https://twitter.com/intent/retweet?tweet_id=339033519307251712">retweet</a> ·             <a target="_blank" class="twtr-fav" href="https://twitter.com/intent/favorite?tweet_id=339033519307251712">favorite</a>             </em>           </p>         </div>       </div></div><div class="twtr-tweet" id="tweet-id-29"><div class="twtr-tweet-wrap">         <div class="twtr-avatar">           <div class="twtr-img"><a target="_blank" href="https://twitter.com/intent/user?screen_name=OlivierNourry"><img alt="OlivierNourry profile" src="http://a0.twimg.com/profile_images/3465733777/3ec6fcad021f6c1350f8882ecab6fe99_normal.jpeg"></a></div>         </div>         <div class="twtr-tweet-text">           <p>             <a target="_blank" href="https://twitter.com/intent/user?screen_name=OlivierNourry" class="twtr-user">OlivierNourry</a> Paris Web – Rendre son application <a href="http://twitter.com/search?q=%23HTML5" title="#HTML5" class="tweet-url hashtag" target="_blank">#HTML5</a> accessible en 4 étapes, l'atelier de <a class="tweet-url username" data-screen-name="villainjp" href="http://twitter.com/villainjp" target="_blank">@villainjp</a> à <a href="http://twitter.com/search?q=%23pw2013" title="#pw2013" class="tweet-url hashtag" target="_blank">#pw2013</a> <a href="http://t.co/aRS7ml6OQP" target="_blank" urlentities="[object Object]" rel="nofollow">ow.ly/lqLim</a>             <em>            <a target="_blank" class="twtr-timestamp" time="Mon, 27 May 2013 14:49:11 +0000" href="https://twitter.com/OlivierNourry/status/339030528277745665">2 hours ago</a> ·            <a target="_blank" class="twtr-reply" href="https://twitter.com/intent/tweet?in_reply_to=339030528277745665">reply</a> ·             <a target="_blank" class="twtr-rt" href="https://twitter.com/intent/retweet?tweet_id=339030528277745665">retweet</a> ·             <a target="_blank" class="twtr-fav" href="https://twitter.com/intent/favorite?tweet_id=339030528277745665">favorite</a>             </em>           </p>         </div>       </div></div><div class="twtr-tweet" id="tweet-id-28"><div class="twtr-tweet-wrap">         <div class="twtr-avatar">           <div class="twtr-img"><a target="_blank" href="https://twitter.com/intent/user?screen_name=visionmobile"><img alt="visionmobile profile" src="http://a0.twimg.com/profile_images/70492363/VisionMobile-logo-SQUARE_normal.png"></a></div>         </div>         <div class="twtr-tweet-text">           <p>             <a target="_blank" href="https://twitter.com/intent/user?screen_name=visionmobile" class="twtr-user">visionmobile</a> Developer Mindshare Q2 2013: Is <a href="http://twitter.com/search?q=%23HTML5" title="#HTML5" class="tweet-url hashtag" target="_blank">#HTML5</a> the 3rd horse in the race? <a href="http://t.co/a6kvEbKr7z" target="_blank" urlentities="[object Object]" rel="nofollow">bit.ly/10Bx53r</a> Some early results from our latest <a href="http://twitter.com/search?q=%23DevEcon" title="#DevEcon" class="tweet-url hashtag" target="_blank">#DevEcon</a> survey!             <em>            <a target="_blank" class="twtr-timestamp" time="Mon, 27 May 2013 14:46:57 +0000" href="https://twitter.com/visionmobile/status/339029964261306368">2 hours ago</a> ·            <a target="_blank" class="twtr-reply" href="https://twitter.com/intent/tweet?in_reply_to=339029964261306368">reply</a> ·             <a target="_blank" class="twtr-rt" href="https://twitter.com/intent/retweet?tweet_id=339029964261306368">retweet</a> ·             <a target="_blank" class="twtr-fav" href="https://twitter.com/intent/favorite?tweet_id=339029964261306368">favorite</a>             </em>           </p>         </div>       </div></div><div class="twtr-tweet" id="tweet-id-27"><div class="twtr-tweet-wrap">         <div class="twtr-avatar">           <div class="twtr-img"><a target="_blank" href="https://twitter.com/intent/user?screen_name=technkl"><img alt="technkl profile" src="http://a0.twimg.com/profile_images/3385695223/2dedf7e3ceea840d484afe456838c263_normal.png"></a></div>         </div>         <div class="twtr-tweet-text">           <p>             <a target="_blank" href="https://twitter.com/intent/user?screen_name=technkl" class="twtr-user">technkl</a> Messing around with <a href="http://twitter.com/search?q=%23EdgeAnimate" title="#EdgeAnimate" class="tweet-url hashtag" target="_blank">#EdgeAnimate</a> recreating hover states and playing with animations: <a href="http://t.co/6OW8lamrtJ" target="_blank" urlentities="[object Object]" rel="nofollow">goo.gl/DoVgn</a> <a href="http://twitter.com/search?q=%23HTML5" title="#HTML5" class="tweet-url hashtag" target="_blank">#HTML5</a>             <em>            <a target="_blank" class="twtr-timestamp" time="Mon, 27 May 2013 14:46:21 +0000" href="https://twitter.com/technkl/status/339029813794852864">2 hours ago</a> ·            <a target="_blank" class="twtr-reply" href="https://twitter.com/intent/tweet?in_reply_to=339029813794852864">reply</a> ·             <a target="_blank" class="twtr-rt" href="https://twitter.com/intent/retweet?tweet_id=339029813794852864">retweet</a> ·             <a target="_blank" class="twtr-fav" href="https://twitter.com/intent/favorite?tweet_id=339029813794852864">favorite</a>             </em>           </p>         </div>       </div></div><div class="twtr-tweet" id="tweet-id-26"><div class="twtr-tweet-wrap">         <div class="twtr-avatar">           <div class="twtr-img"><a target="_blank" href="https://twitter.com/intent/user?screen_name=ThemeClub"><img alt="ThemeClub profile" src="http://a0.twimg.com/profile_images/1048363697/icon_normal_normal.jpg"></a></div>         </div>         <div class="twtr-tweet-text">           <p>             <a target="_blank" href="https://twitter.com/intent/user?screen_name=ThemeClub" class="twtr-user">ThemeClub</a> <a href="http://twitter.com/search?q=%23HTML5" title="#HTML5" class="tweet-url hashtag" target="_blank">#HTML5</a> Link Prefetching <a href="http://t.co/UYhAxWpM0U" target="_blank" urlentities="[object Object]" rel="nofollow">bit.ly/Za3ZL0</a>             <em>            <a target="_blank" class="twtr-timestamp" time="Mon, 27 May 2013 14:42:12 +0000" href="https://twitter.com/ThemeClub/status/339028771145392130">2 hours ago</a> ·            <a target="_blank" class="twtr-reply" href="https://twitter.com/intent/tweet?in_reply_to=339028771145392130">reply</a> ·             <a target="_blank" class="twtr-rt" href="https://twitter.com/intent/retweet?tweet_id=339028771145392130">retweet</a> ·             <a target="_blank" class="twtr-fav" href="https://twitter.com/intent/favorite?tweet_id=339028771145392130">favorite</a>             </em>           </p>         </div>       </div></div><div class="twtr-tweet" id="tweet-id-25"><div class="twtr-tweet-wrap">         <div class="twtr-avatar">           <div class="twtr-img"><a target="_blank" href="https://twitter.com/intent/user?screen_name=indiggcom"><img alt="indiggcom profile" src="http://a0.twimg.com/profile_images/3038454439/5cabd467caf6a99df3357d4ba4791598_normal.jpeg"></a></div>         </div>         <div class="twtr-tweet-text">           <p>             <a target="_blank" href="https://twitter.com/intent/user?screen_name=indiggcom" class="twtr-user">indiggcom</a> DRM framework in HTML5 - the Technical Truth  <a href="http://t.co/SOLkJsoWC1" target="_blank" urlentities="[object Object]" rel="nofollow">is.gd/mGBmKv</a> <a href="http://twitter.com/search?q=%23html5" title="#html5" class="tweet-url hashtag" target="_blank">#html5</a> <a href="http://twitter.com/search?q=%23webdesign" title="#webdesign" class="tweet-url hashtag" target="_blank">#webdesign</a>             <em>            <a target="_blank" class="twtr-timestamp" time="Mon, 27 May 2013 14:39:11 +0000" href="https://twitter.com/indiggcom/status/339028010827128832">2 hours ago</a> ·            <a target="_blank" class="twtr-reply" href="https://twitter.com/intent/tweet?in_reply_to=339028010827128832">reply</a> ·             <a target="_blank" class="twtr-rt" href="https://twitter.com/intent/retweet?tweet_id=339028010827128832">retweet</a> ·             <a target="_blank" class="twtr-fav" href="https://twitter.com/intent/favorite?tweet_id=339028010827128832">favorite</a>             </em>           </p>         </div>       </div></div><div class="twtr-tweet" id="tweet-id-24"><div class="twtr-tweet-wrap">         <div class="twtr-avatar">           <div class="twtr-img"><a target="_blank" href="https://twitter.com/intent/user?screen_name=BlueprintNMedia"><img alt="BlueprintNMedia profile" src="http://a0.twimg.com/profile_images/3698655090/1dd740dee5f786c1d36d6e3ec9fda031_normal.png"></a></div>         </div>         <div class="twtr-tweet-text">           <p>             <a target="_blank" href="https://twitter.com/intent/user?screen_name=BlueprintNMedia" class="twtr-user">BlueprintNMedia</a> HTML5 vs. Apps: Where The Debate Stands Now, And Why It ... <a href="http://t.co/mo9lTlJxaL" target="_blank" urlentities="[object Object]" rel="nofollow">read.bi/12IZohR</a> <a href="http://twitter.com/search?q=%23html5" title="#html5" class="tweet-url hashtag" target="_blank">#html5</a>             <em>            <a target="_blank" class="twtr-timestamp" time="Mon, 27 May 2013 14:38:52 +0000" href="https://twitter.com/BlueprintNMedia/status/339027930896297985">2 hours ago</a> ·            <a target="_blank" class="twtr-reply" href="https://twitter.com/intent/tweet?in_reply_to=339027930896297985">reply</a> ·             <a target="_blank" class="twtr-rt" href="https://twitter.com/intent/retweet?tweet_id=339027930896297985">retweet</a> ·             <a target="_blank" class="twtr-fav" href="https://twitter.com/intent/favorite?tweet_id=339027930896297985">favorite</a>             </em>           </p>         </div>       </div></div><div class="twtr-tweet" id="tweet-id-23"><div class="twtr-tweet-wrap">         <div class="twtr-avatar">           <div class="twtr-img"><a target="_blank" href="https://twitter.com/intent/user?screen_name=GreatDealEver"><img alt="GreatDealEver profile" src="http://a0.twimg.com/profile_images/2152320554/deal-or-no-deal_normal.jpg"></a></div>         </div>         <div class="twtr-tweet-text">           <p>             <a target="_blank" href="https://twitter.com/intent/user?screen_name=GreatDealEver" class="twtr-user">GreatDealEver</a> Learn how to make <a href="http://twitter.com/search?q=%23HTML5" title="#HTML5" class="tweet-url hashtag" target="_blank">#HTML5</a>, Facebook, <a href="http://twitter.com/search?q=%23Chrome" title="#Chrome" class="tweet-url hashtag" target="_blank">#Chrome</a> Store games and more! by John Bura <a href="http://t.co/XkUzPdBIxy" target="_blank" urlentities="[object Object]" rel="nofollow">ude.my/7x2d</a>             <em>            <a target="_blank" class="twtr-timestamp" time="Mon, 27 May 2013 14:34:07 +0000" href="https://twitter.com/GreatDealEver/status/339026738162049026">2 hours ago</a> ·            <a target="_blank" class="twtr-reply" href="https://twitter.com/intent/tweet?in_reply_to=339026738162049026">reply</a> ·             <a target="_blank" class="twtr-rt" href="https://twitter.com/intent/retweet?tweet_id=339026738162049026">retweet</a> ·             <a target="_blank" class="twtr-fav" href="https://twitter.com/intent/favorite?tweet_id=339026738162049026">favorite</a>             </em>           </p>         </div>       </div></div><div class="twtr-tweet" id="tweet-id-22"><div class="twtr-tweet-wrap">         <div class="twtr-avatar">           <div class="twtr-img"><a target="_blank" href="https://twitter.com/intent/user?screen_name=clockmaker_en"><img alt="clockmaker_en profile" src="http://a0.twimg.com/profile_images/892858852/icon_normal.png"></a></div>         </div>         <div class="twtr-tweet-text">           <p>             <a target="_blank" href="https://twitter.com/intent/user?screen_name=clockmaker_en" class="twtr-user">clockmaker_en</a> I posted the article about HTML5 performance test on Smartphones. <a href="http://t.co/XTPC64W20y" target="_blank" urlentities="[object Object]" rel="nofollow">ics-web.jp/lab/archives/3…</a> <a href="http://twitter.com/search?q=%23html5" title="#html5" class="tweet-url hashtag" target="_blank">#html5</a> <a href="http://twitter.com/search?q=%23canvas" title="#canvas" class="tweet-url hashtag" target="_blank">#canvas</a>             <em>            <a target="_blank" class="twtr-timestamp" time="Mon, 27 May 2013 14:23:08 +0000" href="https://twitter.com/clockmaker_en/status/339023971821424641">3 hours ago</a> ·            <a target="_blank" class="twtr-reply" href="https://twitter.com/intent/tweet?in_reply_to=339023971821424641">reply</a> ·             <a target="_blank" class="twtr-rt" href="https://twitter.com/intent/retweet?tweet_id=339023971821424641">retweet</a> ·             <a target="_blank" class="twtr-fav" href="https://twitter.com/intent/favorite?tweet_id=339023971821424641">favorite</a>             </em>           </p>         </div>       </div></div><div class="twtr-tweet" id="tweet-id-21"><div class="twtr-tweet-wrap">         <div class="twtr-avatar">           <div class="twtr-img"><a target="_blank" href="https://twitter.com/intent/user?screen_name=JorgeCasar"><img alt="JorgeCasar profile" src="http://a0.twimg.com/profile_images/2633250097/99e778fba9b371ea857797d00b11c6dd_normal.jpeg"></a></div>         </div>         <div class="twtr-tweet-text">           <p>             <a target="_blank" href="https://twitter.com/intent/user?screen_name=JorgeCasar" class="twtr-user">JorgeCasar</a> Do you want to work with <a href="http://twitter.com/search?q=%23TeamBlackBerry" title="#TeamBlackBerry" class="tweet-url hashtag" target="_blank">#TeamBlackBerry</a>? Now we are hiring in Europe! <a href="http://twitter.com/search?q=%23HTML5" title="#HTML5" class="tweet-url hashtag" target="_blank">#HTML5</a> <a href="http://twitter.com/search?q=%23Qt" title="#Qt" class="tweet-url hashtag" target="_blank">#Qt</a> and C++ profiles are welcome • <a href="http://t.co/TRIA2xrdi9" target="_blank" urlentities="[object Object]" rel="nofollow">developer.blackberry.com/jamcommunity/j…</a>             <em>            <a target="_blank" class="twtr-timestamp" time="Mon, 27 May 2013 13:58:34 +0000" href="https://twitter.com/JorgeCasar/status/339017791095054336">3 hours ago</a> ·            <a target="_blank" class="twtr-reply" href="https://twitter.com/intent/tweet?in_reply_to=339017791095054336">reply</a> ·             <a target="_blank" class="twtr-rt" href="https://twitter.com/intent/retweet?tweet_id=339017791095054336">retweet</a> ·             <a target="_blank" class="twtr-fav" href="https://twitter.com/intent/favorite?tweet_id=339017791095054336">favorite</a>             </em>           </p>         </div>       </div></div><div class="twtr-tweet" id="tweet-id-20"><div class="twtr-tweet-wrap">         <div class="twtr-avatar">           <div class="twtr-img"><a target="_blank" href="https://twitter.com/intent/user?screen_name=slidepointnet"><img alt="slidepointnet profile" src="http://a0.twimg.com/profile_images/1519148912/slidepoint_logo_2011_normal.png"></a></div>         </div>         <div class="twtr-tweet-text">           <p>             <a target="_blank" href="https://twitter.com/intent/user?screen_name=slidepointnet" class="twtr-user">slidepointnet</a> Free Cloud App for Making <a href="http://twitter.com/search?q=%23HTML5" title="#HTML5" class="tweet-url hashtag" target="_blank">#HTML5</a> Learning Activites you can Use in your <a href="http://twitter.com/search?q=%23Moodle" title="#Moodle" class="tweet-url hashtag" target="_blank">#Moodle</a> Courses! <a href="http://t.co/ShMoSHQnzp" target="_blank" urlentities="[object Object]" rel="nofollow">bit.ly/pxiRI8</a>             <em>            <a target="_blank" class="twtr-timestamp" time="Mon, 27 May 2013 13:55:57 +0000" href="https://twitter.com/slidepointnet/status/339017133273018368">3 hours ago</a> ·            <a target="_blank" class="twtr-reply" href="https://twitter.com/intent/tweet?in_reply_to=339017133273018368">reply</a> ·             <a target="_blank" class="twtr-rt" href="https://twitter.com/intent/retweet?tweet_id=339017133273018368">retweet</a> ·             <a target="_blank" class="twtr-fav" href="https://twitter.com/intent/favorite?tweet_id=339017133273018368">favorite</a>             </em>           </p>         </div>       </div></div><div class="twtr-tweet" id="tweet-id-19"><div class="twtr-tweet-wrap">         <div class="twtr-avatar">           <div class="twtr-img"><a target="_blank" href="https://twitter.com/intent/user?screen_name=edwinavg"><img alt="edwinavg profile" src="http://a0.twimg.com/profile_images/2602184575/okyhb6x59typzal9cqu0_normal.jpeg"></a></div>         </div>         <div class="twtr-tweet-text">           <p>             <a target="_blank" href="https://twitter.com/intent/user?screen_name=edwinavg" class="twtr-user">edwinavg</a> Excelentes plantillas responsive en <a href="http://twitter.com/search?q=%23HTML5" title="#HTML5" class="tweet-url hashtag" target="_blank">#HTML5</a> y <a href="http://twitter.com/search?q=%23CSS3" title="#CSS3" class="tweet-url hashtag" target="_blank">#CSS3</a> Gratis  via <a class="tweet-url username" data-screen-name="alvarezval" href="http://twitter.com/alvarezval" target="_blank">@alvarezval</a> <a href="http://t.co/4lm4Hd5v31" target="_blank" urlentities="[object Object]" rel="nofollow">shrd.by/W2jTzR</a>             <em>            <a target="_blank" class="twtr-timestamp" time="Mon, 27 May 2013 13:55:30 +0000" href="https://twitter.com/edwinavg/status/339017019808694272">3 hours ago</a> ·            <a target="_blank" class="twtr-reply" href="https://twitter.com/intent/tweet?in_reply_to=339017019808694272">reply</a> ·             <a target="_blank" class="twtr-rt" href="https://twitter.com/intent/retweet?tweet_id=339017019808694272">retweet</a> ·             <a target="_blank" class="twtr-fav" href="https://twitter.com/intent/favorite?tweet_id=339017019808694272">favorite</a>             </em>           </p>         </div>       </div></div><div class="twtr-tweet" id="tweet-id-18"><div class="twtr-tweet-wrap">         <div class="twtr-avatar">           <div class="twtr-img"><a target="_blank" href="https://twitter.com/intent/user?screen_name=clockmaker"><img alt="clockmaker profile" src="http://a0.twimg.com/profile_images/1272050182/mooning_light_core_normal.jpg"></a></div>         </div>         <div class="twtr-tweet-text">           <p>             <a target="_blank" href="https://twitter.com/intent/user?screen_name=clockmaker" class="twtr-user">clockmaker</a> ????????? - HTML5????????????????????????????????????Canvas/CSS3????????????? <a href="http://t.co/lp3wHkmNig" target="_blank" urlentities="[object Object]" rel="nofollow">ics-web.jp/lab/archives/3…</a> <a href="http://twitter.com/search?q=%23html5" title="#html5" class="tweet-url hashtag" target="_blank">#html5</a>             <em>            <a target="_blank" class="twtr-timestamp" time="Mon, 27 May 2013 13:52:14 +0000" href="https://twitter.com/clockmaker/status/339016194487099394">3 hours ago</a> ·            <a target="_blank" class="twtr-reply" href="https://twitter.com/intent/tweet?in_reply_to=339016194487099394">reply</a> ·             <a target="_blank" class="twtr-rt" href="https://twitter.com/intent/retweet?tweet_id=339016194487099394">retweet</a> ·             <a target="_blank" class="twtr-fav" href="https://twitter.com/intent/favorite?tweet_id=339016194487099394">favorite</a>             </em>           </p>         </div>       </div></div><div class="twtr-tweet" id="tweet-id-17"><div class="twtr-tweet-wrap">         <div class="twtr-avatar">           <div class="twtr-img"><a target="_blank" href="https://twitter.com/intent/user?screen_name=mangopeople3"><img alt="mangopeople3 profile" src="http://a0.twimg.com/profile_images/2474790410/ivyqbs1jpr2bek0uli7y_normal.jpeg"></a></div>         </div>         <div class="twtr-tweet-text">           <p>             <a target="_blank" href="https://twitter.com/intent/user?screen_name=mangopeople3" class="twtr-user">mangopeople3</a> How To Use <a href="http://twitter.com/search?q=%23HTML5" title="#HTML5" class="tweet-url hashtag" target="_blank">#HTML5</a> And <a href="http://twitter.com/search?q=%23CSS3" title="#CSS3" class="tweet-url hashtag" target="_blank">#CSS3</a> To Create Fluid Layouts~ <a href="http://t.co/KCKezDDiBm" target="_blank" urlentities="[object Object]" rel="nofollow">techblis.com/how-to-use-htm…</a>             <em>            <a target="_blank" class="twtr-timestamp" time="Mon, 27 May 2013 13:43:28 +0000" href="https://twitter.com/mangopeople3/status/339013988262240256">3 hours ago</a> ·            <a target="_blank" class="twtr-reply" href="https://twitter.com/intent/tweet?in_reply_to=339013988262240256">reply</a> ·             <a target="_blank" class="twtr-rt" href="https://twitter.com/intent/retweet?tweet_id=339013988262240256">retweet</a> ·             <a target="_blank" class="twtr-fav" href="https://twitter.com/intent/favorite?tweet_id=339013988262240256">favorite</a>             </em>           </p>         </div>       </div></div><div class="twtr-tweet" id="tweet-id-16"><div class="twtr-tweet-wrap">         <div class="twtr-avatar">           <div class="twtr-img"><a target="_blank" href="https://twitter.com/intent/user?screen_name=sergioreya"><img alt="sergioreya profile" src="http://a0.twimg.com/profile_images/2414960563/u23k9k04kgvz3o1y311d_normal.jpeg"></a></div>         </div>         <div class="twtr-tweet-text">           <p>             <a target="_blank" href="https://twitter.com/intent/user?screen_name=sergioreya" class="twtr-user">sergioreya</a> Mobello una opción para desarrollar aplicaciones móviles en HTML5 <a href="http://twitter.com/search?q=%23html5" title="#html5" class="tweet-url hashtag" target="_blank">#html5</a> <a href="http://twitter.com/search?q=%23css3" title="#css3" class="tweet-url hashtag" target="_blank">#css3</a> <a href="http://t.co/VXA3g7V4tT" target="_blank" urlentities="[object Object]" rel="nofollow">bit.ly/QWPItJ</a>             <em>            <a target="_blank" class="twtr-timestamp" time="Mon, 27 May 2013 13:31:22 +0000" href="https://twitter.com/sergioreya/status/339010945043030016">3 hours ago</a> ·            <a target="_blank" class="twtr-reply" href="https://twitter.com/intent/tweet?in_reply_to=339010945043030016">reply</a> ·             <a target="_blank" class="twtr-rt" href="https://twitter.com/intent/retweet?tweet_id=339010945043030016">retweet</a> ·             <a target="_blank" class="twtr-fav" href="https://twitter.com/intent/favorite?tweet_id=339010945043030016">favorite</a>             </em>           </p>         </div>       </div></div><div class="twtr-tweet" id="tweet-id-15"><div class="twtr-tweet-wrap">         <div class="twtr-avatar">           <div class="twtr-img"><a target="_blank" href="https://twitter.com/intent/user?screen_name=manuelvanrijn"><img alt="manuelvanrijn profile" src="http://a0.twimg.com/profile_images/1775108142/Manuel_normal.jpg"></a></div>         </div>         <div class="twtr-tweet-text">           <p>             <a target="_blank" href="https://twitter.com/intent/user?screen_name=manuelvanrijn" class="twtr-user">manuelvanrijn</a> <a href="http://twitter.com/search?q=%23html5" title="#html5" class="tweet-url hashtag" target="_blank">#html5</a> features you need to know. Love the dns/link prefetching and the link prerender 
+<a href="http://t.co/4lFqQWEbGb" target="_blank" urlentities="[object Object]" rel="nofollow">daker.me/2013/05/5-html…</a>             <em>            <a target="_blank" class="twtr-timestamp" time="Mon, 27 May 2013 13:25:38 +0000" href="https://twitter.com/manuelvanrijn/status/339009503192285184">4 hours ago</a> ·            <a target="_blank" class="twtr-reply" href="https://twitter.com/intent/tweet?in_reply_to=339009503192285184">reply</a> ·             <a target="_blank" class="twtr-rt" href="https://twitter.com/intent/retweet?tweet_id=339009503192285184">retweet</a> ·             <a target="_blank" class="twtr-fav" href="https://twitter.com/intent/favorite?tweet_id=339009503192285184">favorite</a>             </em>           </p>         </div>       </div></div><div class="twtr-tweet" id="tweet-id-14"><div class="twtr-tweet-wrap">         <div class="twtr-avatar">           <div class="twtr-img"><a target="_blank" href="https://twitter.com/intent/user?screen_name=barthoneynl"><img alt="barthoneynl profile" src="http://a0.twimg.com/profile_images/3611730069/753cc41eb6fd7fc867ac0e8b31e08908_normal.jpeg"></a></div>         </div>         <div class="twtr-tweet-text">           <p>             <a target="_blank" href="https://twitter.com/intent/user?screen_name=barthoneynl" class="twtr-user">barthoneynl</a> What's it like to be caught in a bushfire as it engulfs your town? | Mooi <a href="http://twitter.com/search?q=%23HTML5" title="#HTML5" class="tweet-url hashtag" target="_blank">#HTML5</a> project! <a class="tweet-url username" data-screen-name="guardian" href="http://twitter.com/guardian" target="_blank">@guardian</a> <a href="http://t.co/r3T5bycSPC" target="_blank" urlentities="[object Object]" rel="nofollow">gu.com/p/3g3gv</a>             <em>            <a target="_blank" class="twtr-timestamp" time="Mon, 27 May 2013 13:12:45 +0000" href="https://twitter.com/barthoneynl/status/339006261989371904">4 hours ago</a> ·            <a target="_blank" class="twtr-reply" href="https://twitter.com/intent/tweet?in_reply_to=339006261989371904">reply</a> ·             <a target="_blank" class="twtr-rt" href="https://twitter.com/intent/retweet?tweet_id=339006261989371904">retweet</a> ·             <a target="_blank" class="twtr-fav" href="https://twitter.com/intent/favorite?tweet_id=339006261989371904">favorite</a>             </em>           </p>         </div>       </div></div><div class="twtr-tweet" id="tweet-id-13"><div class="twtr-tweet-wrap">         <div class="twtr-avatar">           <div class="twtr-img"><a target="_blank" href="https://twitter.com/intent/user?screen_name=muehlwitz"><img alt="muehlwitz profile" src="http://a0.twimg.com/profile_images/2554913728/9v8j1byhaygwuopyzzsz_normal.jpeg"></a></div>         </div>         <div class="twtr-tweet-text">           <p>             <a target="_blank" href="https://twitter.com/intent/user?screen_name=muehlwitz" class="twtr-user">muehlwitz</a> html5guy: Learn how to make <a href="http://twitter.com/search?q=%23HTML5" title="#HTML5" class="tweet-url hashtag" target="_blank">#HTML5</a>, Facebook, <a href="http://twitter.com/search?q=%23Chrome" title="#Chrome" class="tweet-url hashtag" target="_blank">#Chrome</a> Store games and more! by John Bura <a href="http://t.co/Iq0ilo4JCX" target="_blank" urlentities="[object Object],[object Object]" rel="nofollow">bit.ly/Zl0yDp</a> ... <a href="http://t.co/UuMfx63ert" target="_blank" urlentities="[object Object],[object Object]" rel="nofollow">bit.ly/Zl0wvk</a>             <em>            <a target="_blank" class="twtr-timestamp" time="Mon, 27 May 2013 13:10:08 +0000" href="https://twitter.com/muehlwitz/status/339005600417595392">4 hours ago</a> ·            <a target="_blank" class="twtr-reply" href="https://twitter.com/intent/tweet?in_reply_to=339005600417595392">reply</a> ·             <a target="_blank" class="twtr-rt" href="https://twitter.com/intent/retweet?tweet_id=339005600417595392">retweet</a> ·             <a target="_blank" class="twtr-fav" href="https://twitter.com/intent/favorite?tweet_id=339005600417595392">favorite</a>             </em>           </p>         </div>       </div></div><div class="twtr-tweet" id="tweet-id-12"><div class="twtr-tweet-wrap">         <div class="twtr-avatar">           <div class="twtr-img"><a target="_blank" href="https://twitter.com/intent/user?screen_name=lumpoflard"><img alt="lumpoflard profile" src="http://a0.twimg.com/profile_images/2141832738/Me_normal.jpg"></a></div>         </div>         <div class="twtr-tweet-text">           <p>             <a target="_blank" href="https://twitter.com/intent/user?screen_name=lumpoflard" class="twtr-user">lumpoflard</a> Brilliant! RT <a class="tweet-url username" data-screen-name="gypsyqveen" href="http://twitter.com/gypsyqveen" target="_blank">@gypsyqveen</a> If you haven't already, you must see this site. <a href="http://t.co/zv457iToGL" target="_blank" urlentities="[object Object]" rel="nofollow">soul-reaper.com</a> great use of <a href="http://twitter.com/search?q=%23HTML5" title="#HTML5" class="tweet-url hashtag" target="_blank">#HTML5</a> <a href="http://twitter.com/search?q=%23Graphicnovel" title="#Graphicnovel" class="tweet-url hashtag" target="_blank">#Graphicnovel</a>             <em>            <a target="_blank" class="twtr-timestamp" time="Mon, 27 May 2013 13:06:08 +0000" href="https://twitter.com/lumpoflard/status/339004596951334913">4 hours ago</a> ·            <a target="_blank" class="twtr-reply" href="https://twitter.com/intent/tweet?in_reply_to=339004596951334913">reply</a> ·             <a target="_blank" class="twtr-rt" href="https://twitter.com/intent/retweet?tweet_id=339004596951334913">retweet</a> ·             <a target="_blank" class="twtr-fav" href="https://twitter.com/intent/favorite?tweet_id=339004596951334913">favorite</a>             </em>           </p>         </div>       </div></div><div class="twtr-tweet" id="tweet-id-11"><div class="twtr-tweet-wrap">         <div class="twtr-avatar">           <div class="twtr-img"><a target="_blank" href="https://twitter.com/intent/user?screen_name=JonathanTorke"><img alt="JonathanTorke profile" src="http://a0.twimg.com/profile_images/3184966442/4654ef92712d685a1615f2c3abd2a72d_normal.png"></a></div>         </div>         <div class="twtr-tweet-text">           <p>             <a target="_blank" href="https://twitter.com/intent/user?screen_name=JonathanTorke" class="twtr-user">JonathanTorke</a> Beeindruckender <a href="http://twitter.com/search?q=%23HTML5" title="#HTML5" class="tweet-url hashtag" target="_blank">#HTML5</a> Homepage-Baukasten - <a href="http://t.co/EBelPeS2dk" target="_blank" urlentities="[object Object]" rel="nofollow">bit.ly/16jYaQy</a>             <em>            <a target="_blank" class="twtr-timestamp" time="Mon, 27 May 2013 12:30:53 +0000" href="https://twitter.com/JonathanTorke/status/338995722630361088">4 hours ago</a> ·            <a target="_blank" class="twtr-reply" href="https://twitter.com/intent/tweet?in_reply_to=338995722630361088">reply</a> ·             <a target="_blank" class="twtr-rt" href="https://twitter.com/intent/retweet?tweet_id=338995722630361088">retweet</a> ·             <a target="_blank" class="twtr-fav" href="https://twitter.com/intent/favorite?tweet_id=338995722630361088">favorite</a>             </em>           </p>         </div>       </div></div><div class="twtr-tweet" id="tweet-id-10"><div class="twtr-tweet-wrap">         <div class="twtr-avatar">           <div class="twtr-img"><a target="_blank" href="https://twitter.com/intent/user?screen_name=s3anmorrow"><img alt="s3anmorrow profile" src="http://a0.twimg.com/profile_images/648614112/legoMeForMessenger_normal.gif"></a></div>         </div>         <div class="twtr-tweet-text">           <p>             <a target="_blank" href="https://twitter.com/intent/user?screen_name=s3anmorrow" class="twtr-user">s3anmorrow</a> Looking to finally upgrade your markup to <a href="http://twitter.com/search?q=%23HTML5" title="#HTML5" class="tweet-url hashtag" target="_blank">#HTML5</a>? If you developed compliant strict XHTML it is surprisingly easy... :)             <em>            <a target="_blank" class="twtr-timestamp" time="Mon, 27 May 2013 12:17:04 +0000" href="https://twitter.com/s3anmorrow/status/338992245065805824">5 hours ago</a> ·            <a target="_blank" class="twtr-reply" href="https://twitter.com/intent/tweet?in_reply_to=338992245065805824">reply</a> ·             <a target="_blank" class="twtr-rt" href="https://twitter.com/intent/retweet?tweet_id=338992245065805824">retweet</a> ·             <a target="_blank" class="twtr-fav" href="https://twitter.com/intent/favorite?tweet_id=338992245065805824">favorite</a>             </em>           </p>         </div>       </div></div><div class="twtr-tweet" id="tweet-id-9"><div class="twtr-tweet-wrap">         <div class="twtr-avatar">           <div class="twtr-img"><a target="_blank" href="https://twitter.com/intent/user?screen_name=elearning"><img alt="elearning profile" src="http://a0.twimg.com/profile_images/2746687449/993a22d19bd74df3d760f792902e82e3_normal.png"></a></div>         </div>         <div class="twtr-tweet-text">           <p>             <a target="_blank" href="https://twitter.com/intent/user?screen_name=elearning" class="twtr-user">elearning</a> RT <a class="tweet-url username" data-screen-name="ArtisanELrng" href="http://twitter.com/ArtisanELrng" target="_blank">@ArtisanELrng</a>: We're excited to see so many <a href="http://twitter.com/search?q=%23html5" title="#html5" class="tweet-url hashtag" target="_blank">#html5</a> issues getting fixed in the latest update to <a class="tweet-url username" data-screen-name="Articulate" href="http://twitter.com/Articulate" target="_blank">@Articulate</a> <a href="http://twitter.com/search?q=%23Storyline" title="#Storyline" class="tweet-url hashtag" target="_blank">#Storyline</a>.             <em>            <a target="_blank" class="twtr-timestamp" time="Mon, 27 May 2013 12:03:19 +0000" href="https://twitter.com/elearning/status/338988784697880578">5 hours ago</a> ·            <a target="_blank" class="twtr-reply" href="https://twitter.com/intent/tweet?in_reply_to=338988784697880578">reply</a> ·             <a target="_blank" class="twtr-rt" href="https://twitter.com/intent/retweet?tweet_id=338988784697880578">retweet</a> ·             <a target="_blank" class="twtr-fav" href="https://twitter.com/intent/favorite?tweet_id=338988784697880578">favorite</a>             </em>           </p>         </div>       </div></div><div class="twtr-tweet" id="tweet-id-8"><div class="twtr-tweet-wrap">         <div class="twtr-avatar">           <div class="twtr-img"><a target="_blank" href="https://twitter.com/intent/user?screen_name=mariodehter"><img alt="mariodehter profile" src="http://a0.twimg.com/profile_images/1077767856/logo_md_normal.png"></a></div>         </div>         <div class="twtr-tweet-text">           <p>             <a target="_blank" href="https://twitter.com/intent/user?screen_name=mariodehter" class="twtr-user">mariodehter</a> Escribiendo un artículo para <a class="tweet-url username" data-screen-name="americalearning" href="http://twitter.com/americalearning" target="_blank">@americalearning</a> pienso que el futuro de la humanidad no depende del triunfo del <a href="http://twitter.com/search?q=%23html5" title="#html5" class="tweet-url hashtag" target="_blank">#html5</a> sobre los objetos de...             <em>            <a target="_blank" class="twtr-timestamp" time="Mon, 27 May 2013 11:49:24 +0000" href="https://twitter.com/mariodehter/status/338985283997556736">5 hours ago</a> ·            <a target="_blank" class="twtr-reply" href="https://twitter.com/intent/tweet?in_reply_to=338985283997556736">reply</a> ·             <a target="_blank" class="twtr-rt" href="https://twitter.com/intent/retweet?tweet_id=338985283997556736">retweet</a> ·             <a target="_blank" class="twtr-fav" href="https://twitter.com/intent/favorite?tweet_id=338985283997556736">favorite</a>             </em>           </p>         </div>       </div></div><div class="twtr-tweet" id="tweet-id-7"><div class="twtr-tweet-wrap">         <div class="twtr-avatar">           <div class="twtr-img"><a target="_blank" href="https://twitter.com/intent/user?screen_name=UrbanGalaxy"><img alt="UrbanGalaxy profile" src="http://a0.twimg.com/profile_images/2974989036/732485be852452408f7f934a0256ac11_normal.jpeg"></a></div>         </div>         <div class="twtr-tweet-text">           <p>             <a target="_blank" href="https://twitter.com/intent/user?screen_name=UrbanGalaxy" class="twtr-user">UrbanGalaxy</a> Its official, the <a href="http://twitter.com/search?q=%23html5" title="#html5" class="tweet-url hashtag" target="_blank">#html5</a> client it out! Time to sharpen our knives and go hunt some bugs.             <em>            <a target="_blank" class="twtr-timestamp" time="Mon, 27 May 2013 11:25:45 +0000" href="https://twitter.com/UrbanGalaxy/status/338979332565393408">6 hours ago</a> ·            <a target="_blank" class="twtr-reply" href="https://twitter.com/intent/tweet?in_reply_to=338979332565393408">reply</a> ·             <a target="_blank" class="twtr-rt" href="https://twitter.com/intent/retweet?tweet_id=338979332565393408">retweet</a> ·             <a target="_blank" class="twtr-fav" href="https://twitter.com/intent/favorite?tweet_id=338979332565393408">favorite</a>             </em>           </p>         </div>       </div></div><div class="twtr-tweet" id="tweet-id-6"><div class="twtr-tweet-wrap">         <div class="twtr-avatar">           <div class="twtr-img"><a target="_blank" href="https://twitter.com/intent/user?screen_name=html5guy"><img alt="html5guy profile" src="http://a0.twimg.com/profile_images/1225786920/html5-guy_normal.jpg"></a></div>         </div>         <div class="twtr-tweet-text">           <p>             <a target="_blank" href="https://twitter.com/intent/user?screen_name=html5guy" class="twtr-user">html5guy</a> 5 HTML5 Features you need to know <a href="http://t.co/0b0KRJa4Ht" target="_blank" urlentities="[object Object],[object Object]" rel="nofollow">daker.me/2013/05/5-html…</a> <a href="http://twitter.com/search?q=%23html5" title="#html5" class="tweet-url hashtag" target="_blank">#html5</a> <a href="http://t.co/1ydquuOloy" target="_blank" urlentities="[object Object],[object Object]" rel="nofollow">bit.ly/17fx1OP</a>             <em>            <a target="_blank" class="twtr-timestamp" time="Mon, 27 May 2013 11:23:34 +0000" href="https://twitter.com/html5guy/status/338978783598112768">6 hours ago</a> ·            <a target="_blank" class="twtr-reply" href="https://twitter.com/intent/tweet?in_reply_to=338978783598112768">reply</a> ·             <a target="_blank" class="twtr-rt" href="https://twitter.com/intent/retweet?tweet_id=338978783598112768">retweet</a> ·             <a target="_blank" class="twtr-fav" href="https://twitter.com/intent/favorite?tweet_id=338978783598112768">favorite</a>             </em>           </p>         </div>       </div></div><div class="twtr-tweet" id="tweet-id-5"><div class="twtr-tweet-wrap">         <div class="twtr-avatar">           <div class="twtr-img"><a target="_blank" href="https://twitter.com/intent/user?screen_name=buzzgames"><img alt="buzzgames profile" src="http://a0.twimg.com/profile_images/663436466/avatara_normal.jpg"></a></div>         </div>         <div class="twtr-tweet-text">           <p>             <a target="_blank" href="https://twitter.com/intent/user?screen_name=buzzgames" class="twtr-user">buzzgames</a> <a href="http://twitter.com/search?q=%23HTML5" title="#HTML5" class="tweet-url hashtag" target="_blank">#HTML5</a> for Publishers | Transmedia Storytelling Berlin <a href="http://t.co/OZUakDHu7A" target="_blank" urlentities="[object Object]" rel="nofollow">bit.ly/10uXG5r</a> via <a class="tweet-url username" data-screen-name="pryourblog" href="http://twitter.com/pryourblog" target="_blank">@pryourblog</a>             <em>            <a target="_blank" class="twtr-timestamp" time="Mon, 27 May 2013 11:22:35 +0000" href="https://twitter.com/buzzgames/status/338978536142536706">6 hours ago</a> ·            <a target="_blank" class="twtr-reply" href="https://twitter.com/intent/tweet?in_reply_to=338978536142536706">reply</a> ·             <a target="_blank" class="twtr-rt" href="https://twitter.com/intent/retweet?tweet_id=338978536142536706">retweet</a> ·             <a target="_blank" class="twtr-fav" href="https://twitter.com/intent/favorite?tweet_id=338978536142536706">favorite</a>             </em>           </p>         </div>       </div></div><div class="twtr-tweet" id="tweet-id-4"><div class="twtr-tweet-wrap">         <div class="twtr-avatar">           <div class="twtr-img"><a target="_blank" href="https://twitter.com/intent/user?screen_name=estebansaiz"><img alt="estebansaiz profile" src="http://a0.twimg.com/profile_images/1268035787/eightbit-d896f791-40b1-4ee1-a452-836b1ce90160_normal.png"></a></div>         </div>         <div class="twtr-tweet-text">           <p>             <a target="_blank" href="https://twitter.com/intent/user?screen_name=estebansaiz" class="twtr-user">estebansaiz</a> 5 HTML5 Features you need to know <a href="http://t.co/qjsUrxYumE" target="_blank" urlentities="[object Object]" rel="nofollow">daker.me/2013/05/5-html…</a> <a href="http://twitter.com/search?q=%23html5" title="#html5" class="tweet-url hashtag" target="_blank">#html5</a>             <em>            <a target="_blank" class="twtr-timestamp" time="Mon, 27 May 2013 11:20:15 +0000" href="https://twitter.com/estebansaiz/status/338977949162295296">6 hours ago</a> ·            <a target="_blank" class="twtr-reply" href="https://twitter.com/intent/tweet?in_reply_to=338977949162295296">reply</a> ·             <a target="_blank" class="twtr-rt" href="https://twitter.com/intent/retweet?tweet_id=338977949162295296">retweet</a> ·             <a target="_blank" class="twtr-fav" href="https://twitter.com/intent/favorite?tweet_id=338977949162295296">favorite</a>             </em>           </p>         </div>       </div></div><div class="twtr-tweet" id="tweet-id-3"><div class="twtr-tweet-wrap">         <div class="twtr-avatar">           <div class="twtr-img"><a target="_blank" href="https://twitter.com/intent/user?screen_name=andreacreativo"><img alt="andreacreativo profile" src="http://a0.twimg.com/profile_images/1277077617/miaimg_IT_normal.png"></a></div>         </div>         <div class="twtr-tweet-text">           <p>             <a target="_blank" href="https://twitter.com/intent/user?screen_name=andreacreativo" class="twtr-user">andreacreativo</a> Giovedì! <a href="http://twitter.com/search?q=%23HTML5" title="#HTML5" class="tweet-url hashtag" target="_blank">#HTML5</a> Codeshow <a href="http://twitter.com/search?q=%23Roma" title="#Roma" class="tweet-url hashtag" target="_blank">#Roma</a> #2 con <a class="tweet-url username" data-screen-name="francesco_1985" href="http://twitter.com/francesco_1985" target="_blank">@francesco_1985</a> <a class="tweet-url username" data-screen-name="lorenzocipriani" href="http://twitter.com/lorenzocipriani" target="_blank">@lorenzocipriani</a> <a class="tweet-url username" data-screen-name="giorgionatili" href="http://twitter.com/giorgionatili" target="_blank">@giorgionatili</a> <a class="tweet-url username" data-screen-name="gillesruppert" href="http://twitter.com/gillesruppert" target="_blank">@gillesruppert</a> <a class="tweet-url username" data-screen-name="ValentinaTibs" href="http://twitter.com/ValentinaTibs" target="_blank">@ValentinaTibs</a> <a href="http://t.co/Dp6lLx8BDO" target="_blank" urlentities="[object Object]" rel="nofollow">ow.ly/lqmL5</a>             <em>            <a target="_blank" class="twtr-timestamp" time="Mon, 27 May 2013 11:00:40 +0000" href="https://twitter.com/andreacreativo/status/338973020813160448">6 hours ago</a> ·            <a target="_blank" class="twtr-reply" href="https://twitter.com/intent/tweet?in_reply_to=338973020813160448">reply</a> ·             <a target="_blank" class="twtr-rt" href="https://twitter.com/intent/retweet?tweet_id=338973020813160448">retweet</a> ·             <a target="_blank" class="twtr-fav" href="https://twitter.com/intent/favorite?tweet_id=338973020813160448">favorite</a>             </em>           </p>         </div>       </div></div><div class="twtr-tweet" id="tweet-id-2"><div class="twtr-tweet-wrap">         <div class="twtr-avatar">           <div class="twtr-img"><a target="_blank" href="https://twitter.com/intent/user?screen_name=BeMyAppItaly"><img alt="BeMyAppItaly profile" src="http://a0.twimg.com/profile_images/3636494280/1a4836c93e6b494b6306a438c1d96249_normal.png"></a></div>         </div>         <div class="twtr-tweet-text">           <p>             <a target="_blank" href="https://twitter.com/intent/user?screen_name=BeMyAppItaly" class="twtr-user">BeMyAppItaly</a> Mancano pochi giorni al <a href="http://twitter.com/search?q=%23HTML5" title="#HTML5" class="tweet-url hashtag" target="_blank">#HTML5</a> Codeshow <a href="http://twitter.com/search?q=%23Roma" title="#Roma" class="tweet-url hashtag" target="_blank">#Roma</a> #2 - iscrivetevi qui <a href="http://t.co/IVJYcosuQj" target="_blank" urlentities="[object Object]" rel="nofollow">ow.ly/lqlY1</a>  dove trovate anche il programma completo!             <em>            <a target="_blank" class="twtr-timestamp" time="Mon, 27 May 2013 10:49:57 +0000" href="https://twitter.com/BeMyAppItaly/status/338970322156019712">6 hours ago</a> ·            <a target="_blank" class="twtr-reply" href="https://twitter.com/intent/tweet?in_reply_to=338970322156019712">reply</a> ·             <a target="_blank" class="twtr-rt" href="https://twitter.com/intent/retweet?tweet_id=338970322156019712">retweet</a> ·             <a target="_blank" class="twtr-fav" href="https://twitter.com/intent/favorite?tweet_id=338970322156019712">favorite</a>             </em>           </p>         </div>       </div></div><div class="twtr-tweet" id="tweet-id-1"><div class="twtr-tweet-wrap">         <div class="twtr-avatar">           <div class="twtr-img"><a target="_blank" href="https://twitter.com/intent/user?screen_name=FindFollowTweet"><img alt="FindFollowTweet profile" src="http://a0.twimg.com/profile_images/1894589991/findfollowtweet_avatar_normal.jpg"></a></div>         </div>         <div class="twtr-tweet-text">           <p>             <a target="_blank" href="https://twitter.com/intent/user?screen_name=FindFollowTweet" class="twtr-user">FindFollowTweet</a> Law &amp; Legal Free Website Template <a href="http://t.co/kDQpYJhess" target="_blank" urlentities="[object Object]" rel="nofollow">regrit.com/law-legal-free…</a> <a href="http://twitter.com/search?q=%23DesignFloat" title="#DesignFloat" class="tweet-url hashtag" target="_blank">#DesignFloat</a> <a href="http://twitter.com/search?q=%23html5" title="#html5" class="tweet-url hashtag" target="_blank">#html5</a>             <em>            <a target="_blank" class="twtr-timestamp" time="Mon, 27 May 2013 10:46:31 +0000" href="https://twitter.com/FindFollowTweet/status/338969460700479488">6 hours ago</a> ·            <a target="_blank" class="twtr-reply" href="https://twitter.com/intent/tweet?in_reply_to=338969460700479488">reply</a> ·             <a target="_blank" class="twtr-rt" href="https://twitter.com/intent/retweet?tweet_id=338969460700479488">retweet</a> ·             <a target="_blank" class="twtr-fav" href="https://twitter.com/intent/favorite?tweet_id=338969460700479488">favorite</a>             </em>           </p>         </div>       </div></div>                  <!-- tweets show here -->                </div>              </div>            </div>            <div class="twtr-ft">              <div><a target="_blank" href="https://twitter.com"><img alt="" src="http://widgets.twimg.com/i/widget-bird.png"></a>                <span><a target="_blank" class="twtr-join-conv" style="color:#ffffff" href="https://twitter.com/search/%23HTML5">Join the conversation</a></span>              </div>            </div>          </div></div>
+  	        </div>
+  	      </section>
+  	      <section>
+  	        <header class="icon">
+  	          <h1>HTML5 Topics on Slashdot</h1>
+  	          <span class="slashdot"></span>
+  	        </header>
+						
+  	        <ul id="slashdot" class="trending">
+			  	          <li>
+				<a href="http://news.slashdot.org/story/12/03/15/1218240/berkeley-html5-timeline-tool-can-show-a-day-or-the-lifetime-of-the-universe" target="_blank">Berkeley HTML5 Timeline Tool Can Show a Day, Or the Lifetime of the Universe</a>
+				<br>
+
+		UC Berkeley Professor Walter Alvarez, most widely known for his theory that dinosaurs were killed by an asteroid impact, is developing an open source HTML5 timeline tool for visualizing all 13.7 billion years...
+
+					  </li>
+						  	          <li>
+				<a href="http://books.slashdot.org/story/12/03/26/1359237/book-review-html5-developers-cookbook" target="_blank">Book Review: HTML5 Developer's Cookbook</a>
+				<br>
+
+		I like the cookbook format myself in situations like this. I'm already familiar with HTML but I want to learn about the new features that exist in HTML5...
+
+					  </li>
+						  	          <li>
+				<a href="http://games.slashdot.org/story/12/03/27/1856205/mozilla-releases-html5-mmo-browserquest" target="_blank">Mozilla Releases HTML5 MMO BrowserQuest</a>
+				<br>
+
+		BrowserQuest is a tribute to classic video-games with a multiplayer twist. You play as a young warrior driven by the thrill of adventure. No princess to save here...
+
+					  </li>
+						  	          <li>
+				<a href="http://tech.slashdot.org/story/12/04/06/0538250/update-on-wayland-and-x11-support" target="_blank">Update On Wayland and X11 Support</a>
+				<br>
+
+		Phoronix was at the Linux Foundation Collaboration Summit and has two articles on the status of Wayland and X11 integration. The second talk was about...
+
+					  </li>
+						    	        </ul>
+  	      </section>
+          <section>
+  	        <header class="icon">
+  	          <h1>Featured Webcasts</h1>
+  	          <span class="webcasts"></span>
+  	        </header>
+						
+  	        <ul id="webcasts" class="trending">
+			  	          <li>
+                   <a href="https://msevents.microsoft.com/CUI/EventDetail.aspx?culture=en-US&amp;EventID=1032501478&amp;CountryCode=US" target="_blank"><img src="/images/webcasts/msdn-webcast.jpg" height="75" width="75">A Lap Around HTML5: HTML5 Graphics</a>
+			  <div class="clear"></div></li>
+						  	          <li>
+                   <a href="https://msevents.microsoft.com/CUI/EventDetail.aspx?culture=en-US&amp;EventID=1032501481&amp;CountryCode=US" target="_blank"><img src="/images/webcasts/msdn-webcast.jpg" height="75" width="75">A Lap Around HTML5: Bringing it Together - Creating an HTML5 Game</a>
+			  <div class="clear"></div></li>
+						    	        </ul>
+  	      </section>
+  	    </div>
+  	    <div class="clear"></div>
+  	    <footer>
+          <ul>
+           <li><a href="/sitemap">Sitemap</a></li>
+           <li><a href="http://slashdotmedia.com/terms-of-use/" target="_blank">Terms of Use</a></li>
+           <li class="last-child"><a href="http://slashdotmedia.com/privacy-statement/" target="_blank">Privacy Policy</a></li>
+          </ul>
+      	</footer>
+  	  </div>
+  	</div>
+  </div>
+  <div class="lightbox_cache" id="video_1">
+    <div class="js-kit-comments" permalink="" uniq="video_1"></div>
+    <script src="http://cdn.js-kit.com/scripts/comments.js"></script>
+  </div>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="/js/libs/jquery-1.6.2.min.js">\x3C/script>')</script>
+  <script src="/js/jquery.cycle.all.js"></script>
+  <script src="/js/lightbox.js"></script>
+  <script gapi_processed="true" type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+  <script src="/js/jquery.snippet.min.js"></script>
+  <link rel="stylesheet" href="/css/lib/snippet.css">
+  <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+  <script src="/js/general.js?v=1.1"></script>
+ 
+<script>
+	$(function(){
+	  FB.init({ 
+	  appId:'112137472229411', cookie:true, 
+	  status:true, xfbml:true 
+	  });
+	})
+</script>
+
+
+<div class=" fb_reset" id="fb-root"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe src="http://static.ak.facebook.com/connect/xd_arbiter.php?version=24#channel=f3763d0becf8c62&amp;origin=http%3A%2F%2Fhtml5center.sourceforge.net&amp;channel_path=%2FBuilding-Live-NASDAQ-Bar-Graphs-without-Plug-Ins%3Ffb_xd_fragment%23xd_sig%3Df3039053eb29ace%26" style="border: medium none;" tab-index="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_http" allowtransparency="true" name="fb_xdm_frame_http" frameborder="0" scrolling="no"></iframe><iframe src="https://s-static.ak.facebook.com/connect/xd_arbiter.php?version=24#channel=f3763d0becf8c62&amp;origin=http%3A%2F%2Fhtml5center.sourceforge.net&amp;channel_path=%2FBuilding-Live-NASDAQ-Bar-Graphs-without-Plug-Ins%3Ffb_xd_fragment%23xd_sig%3Df3039053eb29ace%26" style="border: medium none;" tab-index="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_https" allowtransparency="true" name="fb_xdm_frame_https" frameborder="0" scrolling="no"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe src="https://www.facebook.com/connect/ping?client_id=112137472229411&amp;response_type=token%2Csigned_request%2Ccode&amp;domain=html5center.sourceforge.net&amp;origin=1&amp;redirect_uri=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D24%23cb%3Df21755074be7984%26origin%3Dhttp%253A%252F%252Fhtml5center.sourceforge.net%252Ff3763d0becf8c62%26domain%3Dhtml5center.sourceforge.net%26relation%3Dparent&amp;sdk=joey" style="display: none;" allowtransparency="true" name="f1fb94a30a56cca" frameborder="0" scrolling="no"></iframe></div></div></div><div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div></body>

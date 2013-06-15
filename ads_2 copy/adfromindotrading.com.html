@@ -1,0 +1,62 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>SPLASH</title>
+<link rel="stylesheet" type="text/css" href="css/template_test1.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+
+<script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+<script type="text/javascript">
+	var currentImage;
+    var currentIndex = -1;
+    var interval;
+    function showImage(index){
+        if(index < $('#bigPic img').length){
+        	var indexImage = $('#bigPic img')[index]
+            if(currentImage){   
+            	if(currentImage != indexImage ){
+                    $(currentImage).css('z-index',2);
+                    clearTimeout(myTimer);
+                    $(currentImage).fadeOut(500, function() {
+					    myTimer = setTimeout("showNext()", 3000); //masih 3 detik
+					    $(this).css({'display':'none','z-index':1})
+					});
+                }
+            }
+            $(indexImage).css({'display':'block', 'opacity':1});
+            currentImage = indexImage;
+            currentIndex = index;
+            $('#thumbs li').removeClass('active');
+            $($('#thumbs li')[index]).addClass('active');
+        }
+    }
+    
+    function showNext(){
+        var len = $('#bigPic img').length;
+        var next = currentIndex < (len-1) ? currentIndex + 1 : 0;
+        showImage(next);
+    }
+    
+    var myTimer;
+    
+    $(document).ready(function() {
+	    myTimer = setTimeout("showNext()", 3000); //masih 3 detik
+		showNext(); //loads first image
+        $('#thumbs li').bind('click',function(e){
+        	var count = $(this).attr('rel');
+        	showImage(parseInt(count)-1);
+        });
+	});
+</script>	
+</head>
+
+<body>
+<center>
+<div class="container" style="background:url(images/splash_logo_bgd.png)">
+<embed src="images/splashlogos.swf" style="margin:156px 0px 0px 6px;" height="256" width="270">
+<p></p><center><a href="home.html"><img src="images/splash_btn.png" style="margin:30px 0px 0px 0px;">
+</a><p></p>
+<!-- end .container -->
+</center></div>
+
+
+</center></body>

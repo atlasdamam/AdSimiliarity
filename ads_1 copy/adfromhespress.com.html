@@ -1,0 +1,731 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>ITT Tech - Explore Your Possibilities</title>
+<link rel="stylesheet" href="/branddco/d/css/styles.css" type="text/css">
+<!--[if IE]>
+<link rel="stylesheet" href="/branddco/d/css/styles_ie.css" type="text/css">
+<![endif]-->
+<!--[if !IE]-->
+<link rel="stylesheet" href="/branddco/d/css/styles_all.css" type="text/css">
+<!--[endif]-->
+
+
+
+
+<script src="//www.googleadservices.com/pagead/conversion_async.js" async="" type="text/javascript"></script><script src="http://www.google-analytics.com/ga.js" async="" type="text/javascript"></script><script src="http://tracker.marinsm.com/tracker/async/i7vc2s82p0.js" async="" type="text/javascript"></script><script src="//www.googletagmanager.com/gtm.js?id=GTM-DVR6" async=""></script><script src="/branddco/d/js/brochureservice.js"></script>
+<script src="/branddco/d/js/jquery.js"></script>
+<script src="/branddco/d/js/main.js"></script>
+<script src="/branddco/d/js/formvalidate.js"></script>
+<script src="/branddco/d/js/js.js"></script>
+
+	<script src="/branddco/d/js/float_firefox.js"></script>
+
+<script type="text/javascript" src="/includes/scripts/cfform.js"></script>
+<script type="text/javascript" src="/includes/scripts/masks.js"></script>
+<script type="text/javascript">
+<!--
+    function  _CF_checkfrmLearnMore(_CF_this)
+    {
+        //reset on submit
+        _CF_error_exists = false;
+        _CF_error_messages = new Array();
+        _CF_error_fields = new Object();
+        _CF_FirstErrorField = null;
+
+        //form element FIRSTNAME required check
+        if( !_CF_hasValue(_CF_this['FIRSTNAME'], "TEXT", false ) )
+        {
+            _CF_onError(_CF_this, "FIRSTNAME", _CF_this['FIRSTNAME'].value, "You must enter your first name");
+            _CF_error_exists = true;
+        }
+
+        //form element LASTNAME required check
+        if( !_CF_hasValue(_CF_this['LASTNAME'], "TEXT", false ) )
+        {
+            _CF_onError(_CF_this, "LASTNAME", _CF_this['LASTNAME'].value, "You must enter your last name");
+            _CF_error_exists = true;
+        }
+
+        //form element ADDRESS required check
+        if( !_CF_hasValue(_CF_this['ADDRESS'], "TEXT", false ) )
+        {
+            _CF_onError(_CF_this, "ADDRESS", _CF_this['ADDRESS'].value, "You must enter your street address");
+            _CF_error_exists = true;
+        }
+
+        //form element CITY required check
+        if( !_CF_hasValue(_CF_this['CITY'], "TEXT", false ) )
+        {
+            _CF_onError(_CF_this, "CITY", _CF_this['CITY'].value, "You must enter your city");
+            _CF_error_exists = true;
+        }
+
+        //form element STATE required check
+        if( !_CF_hasValue(_CF_this['STATE'], "SELECT", false ) )
+        {
+            _CF_onError(_CF_this, "STATE", _CF_this['STATE'].value, "You must enter your state of residence");
+            _CF_error_exists = true;
+        }
+
+        //form element zipcode required check
+        if( _CF_hasValue(_CF_this['zipcode'], "TEXT", false ) )
+        {
+            //form element zipcode 'ZIPCODE' validation checks
+            if (!_CF_checkzip(_CF_this['zipcode'].value, true))
+            {
+                _CF_onError(_CF_this, "zipcode", _CF_this['zipcode'].value, "You must enter your zip code");
+                _CF_error_exists = true;
+            }
+
+        }else {
+            _CF_onError(_CF_this, "zipcode", _CF_this['zipcode'].value, "You must enter your zip code");
+            _CF_error_exists = true;
+        }
+
+        //form element phone1 required check
+        if( _CF_hasValue(_CF_this['phone1'], "TEXT", false ) )
+        {
+            //form element phone1 'INTEGER' validation checks
+            if (!_CF_checkinteger(_CF_this['phone1'].value, true))
+            {
+                _CF_onError(_CF_this, "phone1", _CF_this['phone1'].value, "You must enter your phone number");
+                _CF_error_exists = true;
+            }
+
+        }else {
+            _CF_onError(_CF_this, "phone1", _CF_this['phone1'].value, "You must enter your phone number");
+            _CF_error_exists = true;
+        }
+
+        //form element phone2 required check
+        if( _CF_hasValue(_CF_this['phone2'], "TEXT", false ) )
+        {
+            //form element phone2 'INTEGER' validation checks
+            if (!_CF_checkinteger(_CF_this['phone2'].value, true))
+            {
+                _CF_onError(_CF_this, "phone2", _CF_this['phone2'].value, "You must enter your phone number");
+                _CF_error_exists = true;
+            }
+
+        }else {
+            _CF_onError(_CF_this, "phone2", _CF_this['phone2'].value, "You must enter your phone number");
+            _CF_error_exists = true;
+        }
+
+        //form element phone3 required check
+        if( _CF_hasValue(_CF_this['phone3'], "TEXT", false ) )
+        {
+            //form element phone3 'INTEGER' validation checks
+            if (!_CF_checkinteger(_CF_this['phone3'].value, true))
+            {
+                _CF_onError(_CF_this, "phone3", _CF_this['phone3'].value, "You must enter your phone number");
+                _CF_error_exists = true;
+            }
+
+        }else {
+            _CF_onError(_CF_this, "phone3", _CF_this['phone3'].value, "You must enter your phone number");
+            _CF_error_exists = true;
+        }
+
+        //form element yearhsgrad required check
+        if( !_CF_hasValue(_CF_this['yearhsgrad'], "SELECT", false ) )
+        {
+            _CF_onError(_CF_this, "yearhsgrad", _CF_this['yearhsgrad'].value, "You must select your year of High School Graduation or GED");
+            _CF_error_exists = true;
+        }
+
+        //form element email required check
+        if( !_CF_hasValue(_CF_this['email'], "TEXT", false ) )
+        {
+            _CF_onError(_CF_this, "email", _CF_this['email'].value, "You must enter your email address");
+            _CF_error_exists = true;
+        }
+
+        //form element lloc_num required check
+        if( !_CF_hasValue(_CF_this['lloc_num'], "SELECT", false ) )
+        {
+            _CF_onError(_CF_this, "lloc_num", _CF_this['lloc_num'].value, "You must fill out what campus you are interested in.");
+            _CF_error_exists = true;
+        }
+
+        //form element program required check
+        if( !_CF_hasValue(_CF_this['program'], "SELECT", false ) )
+        {
+            _CF_onError(_CF_this, "program", _CF_this['program'].value, "Program is (required)");
+            _CF_error_exists = true;
+        }
+
+
+        //display error messages and return success
+        if( _CF_error_exists )
+        {
+            if( _CF_error_messages.length > 0 )
+            {
+                // show alert() message
+                _CF_onErrorAlert(_CF_error_messages);
+                // set focus to first form error, if the field supports js focus().
+                if( _CF_this[_CF_FirstErrorField].type == "text" )
+                { _CF_this[_CF_FirstErrorField].focus(); }
+
+            }
+            return false;
+        }else {
+            // run userdefined onSubmit javascript. 
+            return validate(this)
+            return true;
+        }
+    }
+//-->
+</script>
+<script src="http://a.adroll.com/j/roundtrip.js" type="text/javascript" async="true"></script></head>
+
+<body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-DVR6"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-DVR6');</script>
+<!-- End Google Tag Manager -->
+
+
+<div id="backgroundtop"></div>
+
+<div id="container">
+	<div id="div-top">
+        <div id="div-logo"><a href="/branddco/d/"><img src="http://images.itt-tech.edu/codebase/lpd/logo-white.png" border="0"></a></div>
+       <div id="div-campus">Over <font class="campusboldfont">140 CAMPUSES</font> nationwide and online</div>
+    </div> <!-- div-top -->
+    
+    <div id="nav_container">
+        <div id="nav">
+        <a href="/branddco/d/programs/" class="programs">Programs</a>
+        <a href="/branddco/d/campus/" class="campuses">Campuses</a>
+        <a href="/branddco/d/fa.cfm" class="finaid">Financial Aid</a>
+        <a href="/branddco/d/about.cfm" class="about">Why ITT Tech</a>
+        </div><!-- /nav -->
+    </div><!-- /nav_container -->
+<div id="gradpicture_berry">
+    <div id="explorepossibilities">
+        <font class="exploreheader">EXPLORE YOUR POSSIBILITIES</font><br>
+        With more than 140 campuses nationwide, you can study close to home or work or online. Degree programs are offered through seven schools of study. To find out more, complete the form to the right and an ITT Tech representative will contact you.
+    </div>
+    <div id="investform">
+    	<form name="frmLearnMore" action="/branddco/d/brochure/step2.cfm" method="post" onsubmit="return _CF_checkfrmLearnMore(this)">
+<table class="form" width="360" border="0" cellpadding="0" cellspacing="0">
+	<tbody><tr>
+    	<th colspan="2" class="formheader">INVEST IN YOUR OWN FUTURE</th>
+    </tr>
+    <tr>
+    	<td colspan="2" class="forminstructions">Complete the short form below to learn more about ITT Tech.</td>
+    </tr>
+    <tr>
+    	<th class="formfield" valign="top">First Name <font color="#FF0000"><strong>*</strong></font></th>
+        <td class="formfield" valign="top"><input name="FIRSTNAME" id="FIRSTNAME" maxlength="20" class="formlong" type="text"></td>
+    </tr>
+    <tr>
+    	<th class="formfield" valign="top">Last Name <font color="#FF0000"><strong>*</strong></font></th>
+        <td class="formfield" valign="top"><input name="LASTNAME" id="LASTNAME" maxlength="40" class="formlong" type="text"></td>
+    </tr>
+    <tr>
+    	<th class="formfield" valign="top">Street Address <font color="#FF0000"><strong>*</strong></font></th>
+        <td class="formfield" valign="top"><input name="ADDRESS" id="ADDRESS" maxlength="60" class="formlong" type="text"></td>
+    </tr>
+    <tr>
+    	<th class="formfield" valign="top">Apartment Number</th>
+        <td class="formfield" valign="top"><input name="ADDRESS2" id="ADDRESS2" maxlength="40" class="formlong" type="text"></td>
+    </tr>
+    <tr>
+    	<th class="formfield" valign="top">City <font color="#FF0000"><strong>*</strong></font></th>
+        <td class="formfield" valign="top"><input name="CITY" id="CITY" maxlength="30" class="formlong" type="text"></td>
+    </tr>
+    <tr>
+    	<th class="formfield" valign="top">State <font color="#FF0000"><strong>*</strong></font></th>
+        <td class="formfield" valign="top">
+            <select name="STATE" class="formlong" id="STATE">
+
+            <option value="">--Select--</option>
+            
+                <option value="AL">AL</option>
+            
+                <option value="AK">AK</option>
+            
+                <option value="AZ">AZ</option>
+            
+                <option value="AR">AR</option>
+            
+                <option value="CA">CA</option>
+            
+                <option value="CO">CO</option>
+            
+                <option value="CT">CT</option>
+            
+                <option value="DE">DE</option>
+            
+                <option value="DC">DC</option>
+            
+                <option value="FL">FL</option>
+            
+                <option value="GA">GA</option>
+            
+                <option value="HI">HI</option>
+            
+                <option value="ID">ID</option>
+            
+                <option value="IL">IL</option>
+            
+                <option value="IN">IN</option>
+            
+                <option value="IA">IA</option>
+            
+                <option value="KS">KS</option>
+            
+                <option value="KY">KY</option>
+            
+                <option value="LA">LA</option>
+            
+                <option value="ME">ME</option>
+            
+                <option value="MD">MD</option>
+            
+                <option value="MA">MA</option>
+            
+                <option value="MI">MI</option>
+            
+                <option value="MN">MN</option>
+            
+                <option value="MS">MS</option>
+            
+                <option value="MO">MO</option>
+            
+                <option value="MT">MT</option>
+            
+                <option value="NE">NE</option>
+            
+                <option value="NV">NV</option>
+            
+                <option value="NH">NH</option>
+            
+                <option value="NJ">NJ</option>
+            
+                <option value="NM">NM</option>
+            
+                <option value="NY">NY</option>
+            
+                <option value="NC">NC</option>
+            
+                <option value="ND">ND</option>
+            
+                <option value="OH">OH</option>
+            
+                <option value="OK">OK</option>
+            
+                <option value="OR">OR</option>
+            
+                <option value="PA">PA</option>
+            
+                <option value="RI">RI</option>
+            
+                <option value="SC">SC</option>
+            
+                <option value="SD">SD</option>
+            
+                <option value="TN">TN</option>
+            
+                <option value="TX">TX</option>
+            
+                <option value="UT">UT</option>
+            
+                <option value="VT">VT</option>
+            
+                <option value="VA">VA</option>
+            
+                <option value="WA">WA</option>
+            
+                <option value="WV">WV</option>
+            
+                <option value="WI">WI</option>
+            
+                <option value="WY">WY</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+    	<th class="formfield" valign="top">Zip Code <font color="#FF0000"><strong>*</strong></font></th>
+        <td class="formfield" valign="top"><input name="zipcode" id="zipcode" maxlength="5" size="15" class="formlong" type="text"></td>
+    </tr>
+    <tr>
+    	<th class="formfield" valign="top">Phone <font color="#FF0000"><strong>*</strong></font></th>
+        <td class="formfield" valign="top">
+            <input name="phone1" id="phone1" maxlength="3" size="3" class="formphone3" type="text"> -
+            <input name="phone2" id="phone2" maxlength="3" size="3" class="formphone3" type="text"> -
+            <input name="phone3" id="phone3" maxlength="4" size="4" class="formphone4" type="text">
+        </td>
+    </tr>
+    <tr>
+    	<th class="formfield" valign="top">Year of High School Graduation <font color="#FF0000"><strong>*</strong></font></th>
+        <td class="formfield" valign="top">
+			<select name="yearhsgrad" class="formlong">
+
+            	<option value="">Select A Year</option>
+                
+                    <option value="2014">2014 or After</option>
+                
+                    <option value="2013">2013</option>
+                
+                    <option value="2012">2012</option>
+                
+                    <option value="2011">2011</option>
+                
+                    <option value="2010">2010</option>
+                
+                    <option value="2009">2009</option>
+                
+                    <option value="2008">2008</option>
+                
+                    <option value="2007">2007</option>
+                
+                    <option value="2006">2006</option>
+                
+                    <option value="2005">2005</option>
+                
+                    <option value="2004">2004</option>
+                
+                    <option value="2003">2003</option>
+                
+                    <option value="2002">2002</option>
+                
+                    <option value="2001">2001</option>
+                
+                    <option value="2000">2000</option>
+                
+                    <option value="1999">1999</option>
+                
+                    <option value="1998">1998</option>
+                
+                    <option value="1997">1997</option>
+                
+                    <option value="1996">1996</option>
+                
+                    <option value="1995">1995</option>
+                
+                    <option value="1994">1994</option>
+                
+                    <option value="1993">1993</option>
+                
+                    <option value="1992">1992</option>
+                
+                    <option value="1991">1991</option>
+                
+                    <option value="1990">1990</option>
+                
+                    <option value="1989">1989</option>
+                
+                    <option value="1988">1988</option>
+                
+                    <option value="1987">1987</option>
+                
+                    <option value="1986">1986</option>
+                
+                    <option value="1985">1985</option>
+                
+                    <option value="1984">1984</option>
+                
+                    <option value="1983">1983</option>
+                
+                    <option value="1982">1982</option>
+                
+                    <option value="1981">1981</option>
+                
+                    <option value="1980">1980</option>
+                
+                <option value="1979">1979 or Before</option>
+            </select>
+		</td>
+    </tr>
+    <tr>
+    	<th class="formfield" valign="top">E-Mail <font color="#FF0000"><strong>*</strong></font></th>
+        <td class="formfield" valign="top"><input name="email" id="email" maxlength="60" class="formlong" type="text"></td>
+    </tr>
+    <tr>
+    	<th class="formfield" valign="top">Campus you would like information on <font color="#FF0000"><strong>*</strong></font></th>
+        <td class="formfield" valign="top">
+        	<select name="lloc_num" onchange="campusUpdate();" class="formlong" id="lloc_num2">
+
+                <option value="">--Select--</option>
+                <option value="82">AL - Bessemer (Birmingham)
+</option><option value="116">AL - Madison (Huntsville)
+</option><option value="112">AL - Mobile
+</option><option value="78">AR - Little Rock
+</option><option value="119">AZ - Phoenix (Central)
+</option><option value="53">AZ - Phoenix (East-Tempe)
+</option><option value="141">AZ - Phoenix (West)
+</option><option value="54">AZ - Tucson
+</option><option value="124">CA - Concord (East Bay)
+</option><option value="133">CA - Corona
+</option><option value="145">CA - Culver City
+</option><option value="61">CA - Fresno (Clovis)
+</option><option value="93">CA - Lathrop (Modesto-Stockton)
+</option><option value="140">CA - Oakland (Bay Area)
+</option><option value="47">CA - Orange
+</option><option value="79">CA - Oxnard
+</option><option value="37">CA - Rancho Cordova
+</option><option value="31">CA - San Bernardino
+</option><option value="39">CA - San Diego (National City)
+</option><option value="539">CA - San Diego (Vista Learning Site)
+</option><option value="41">CA - San Dimas (West Covina)
+</option><option value="42">CA - Sylmar
+</option><option value="38">CA - Torrance
+</option><option value="49">CO - Westminster
+</option><option value="143">CO - Aurora
+</option><option value="155">FL - Deerfield Beach (Boca Raton)
+</option><option value="68">FL - Fort Lauderdale
+</option><option value="126">FL - Fort Myers
+</option><option value="67">FL - Jacksonville
+</option><option value="23">FL - Lake Mary (Orlando)
+</option><option value="88">FL - Miami
+</option><option value="142">FL - Orlando
+</option><option value="158">FL - Pensacola
+</option><option value="107">FL - St. Petersburg
+</option><option value="128">FL - Tallahassee
+</option><option value="40">FL - Tampa
+</option><option value="137">FL - Bradenton
+</option><option value="154">FL - West Palm Beach
+</option><option value="71">GA - Atlanta (Duluth)
+</option><option value="34">GA - Atlanta (Kennesaw)
+</option><option value="109">GA - Atlanta (SW Atlanta)
+</option><option value="166">GA - Atlanta (Douglasville)
+</option><option value="46">ID - Boise
+</option><option value="50">IL - Chicago (Mount Prospect)
+</option><option value="92">IL - Chicago (Oak Brook)
+</option><option value="74">IL - Chicago (Orland Park)
+</option><option value="156">IL - Springfield
+</option><option value="14">IN - Fort Wayne
+</option><option value="11">IN - Indianapolis (North)
+</option><option value="157">IN - Indianapolis (East)
+</option><option value="125">IN - Merrillville
+</option><option value="12">IN - Newburgh (Evansville)
+</option><option value="111">IN - South Bend (South Bend/Mishawaka)
+</option><option value="132">IA - Cedar Rapids
+</option><option value="117">IA - Des Moines (Clive)
+</option><option value="163">KS - Overland Park
+</option><option value="113">KS - Wichita
+</option><option value="102">KY - Lexington
+</option><option value="73">KY - Louisville
+</option><option value="108">LA - Baton Rouge
+</option><option value="98">LA - St. Rose (New Orleans)
+</option><option value="18">MA - Boston North (Wilmington)
+</option><option value="52">MA - Boston South (Norwood)
+</option><option value="148">MD - Hanover
+</option><option value="17">MD - Owings Mills (Baltimore)
+</option><option value="20">MI - Troy (NE Detroit)
+</option><option value="59">MI - Canton (SW Detroit)
+</option><option value="146">MI - Dearborn (SW Detroit)
+</option><option value="160">MI - Grand Rapids North (Plainfield)
+</option><option value="36">MI - Grand Rapids South (Wyoming)
+</option><option value="62">MI - Swartz Creek (Flint)
+</option><option value="164">MI - Southfield (SW Detroit)
+</option><option value="149">MN - Brooklyn Center (N. Minneapolis)
+</option><option value="27">MN - Eden Prairie (Minneapolis)
+</option><option value="527">MN - Woodbury (St. Paul Learning Site) 
+</option><option value="91">MO - Arnold (SE St. Louis)
+</option><option value="16">MO - Earth City (NW St. Louis)
+</option><option value="29">MO - Kansas City
+</option><option value="122">MO - Springfield
+</option><option value="121">MS - Madison (Jackson)
+</option><option value="127">NC - Charlotte North  
+</option><option value="105">NC - Charlotte South (South West)
+</option><option value="115">NC - High Point (Greensboro)
+</option><option value="114">NC - Cary (Raleigh)       
+</option><option value="153">NC - Durham
+</option><option value="66">NE - Omaha
+</option><option value="60">NM - Albuquerque
+</option><option value="90">NV - Las Vegas (Henderson)
+</option><option value="147">NV - Las Vegas (North Las Vegas)
+</option><option value="139">NJ - Marlton
+</option><option value="94">NY - Albany
+</option><option value="95">NY - Liverpool (Syracuse)
+</option><option value="86">NY - Getzville (Buffalo)
+</option><option value="131">OH - Akron
+</option><option value="22">OH - Hilliard (West Columbus)
+</option><option value="118">OH - Columbus (East Columbus)
+</option><option value="13">OH - Dayton
+</option><option value="104">OH - Maumee (Toledo)
+</option><option value="85">OH - Cincinnati (Norwood)         
+</option><option value="165">OH - Cincinnati (West Chester)
+</option><option value="83">OH - Strongsville (W. Cleveland)
+</option><option value="43">OH - Warrensville Heights (E. Cleveland)
+</option><option value="24">OH - Youngstown
+</option><option value="103">OK - Oklahoma City
+</option><option value="69">OK - Tulsa
+</option><option value="33">OR - Portland
+</option><option value="162">OR - Salem
+</option><option value="28">PA - Levittown (NE of Philadelphia)
+</option><option value="101">PA - Dunmore (Wilkes-Barre/Scranton)
+</option><option value="152">PA - Philadelphia
+</option><option value="55">PA - Plymouth Meeting (NW of Philadelphia)
+</option><option value="84">PA - Harrisburg
+</option><option value="89">PA - Pittsburgh (Tarentum)
+</option><option value="70">PA - Pittsburgh (Western Pittsburgh)
+</option><option value="106">SC - Columbia
+</option><option value="72">SC - Greenville
+</option><option value="151">SC - Myrtle Beach
+</option><option value="136">SC - North Charleston
+</option><option value="110">TN - Chattanooga
+</option><option value="134">TN - Johnson City
+</option><option value="57">TN - Knoxville
+</option><option value="48">TN - Memphis (Cordova)
+</option><option value="64">TN - Nashville
+</option><option value="44">TX - Arlington (Fort Worth)
+</option><option value="30">TX - Austin
+</option><option value="135">TX - DeSoto (South Dallas)
+</option><option value="25">TX - Houston North (North Freeway)
+</option><option value="87">TX - Houston South (Webster)
+</option><option value="45">TX - Houston West (South Gessner)
+</option><option value="96">TX - Richardson (Dallas)
+</option><option value="159">TX - San Antonio (San Antonio East)
+</option><option value="56">TX - San Antonio (San Antonio West)
+</option><option value="138">TX - Waco
+</option><option value="15">UT - Murray
+</option><option value="63">VA - Chantilly (N VA/West of DC)
+</option><option value="58">VA - Norfolk
+</option><option value="97">VA - Richmond
+</option><option value="129">VA - Salem (Roanoke)
+</option><option value="35">VA - Springfield (N VA/South of DC)
+</option><option value="77">WA - Everett (North Seattle)
+</option><option value="26">WA - Seattle (South Seattle)
+</option><option value="51">WA - Spokane
+</option><option value="123">WV - Huntington
+</option><option value="161">WI - Germantown (North Milwaukee)
+</option><option value="19">WI - Green Bay (Howard)
+</option><option value="65">WI - Greenfield (South Milwaukee)
+</option><option value="120">WI - Madison
+</option></select>
+        </td>
+    </tr>
+    <tr>
+    	<th class="formfield" valign="top">Program of Study <font color="#FF0000"><strong>*</strong></font></th>
+        <td class="formfield" valign="top">
+            <select name="program" class="formlong" id="program">
+
+            <option value="">--Select--</option>
+            <option value="un">Undecided</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+    	<th class="formdisclaimer" colspan="2">By submitting this form, I authorize ITT Technical Institute to contact me by phone, including cellular phone, SMS-TXT, email or mail and using automatic dialing equipment, to tell me about its programs of study.</th>
+    </tr>
+    <tr>
+    	<td class="requiredinfo" colspan="2"><font color="#FF0000"><strong>*</strong></font> required information</td>
+    </tr>
+    <tr>
+    	<td class="formsubmit" colspan="2">
+        	<input src="http://images.itt-tech.edu/codebase/lpd/request.png" onmouseover="src='http://images.itt-tech.edu/codebase/lpd/request-hover.png'" onmouseout="src='http://images.itt-tech.edu/codebase/lpd/request.png'" type="image">
+        </td>
+    </tr>
+    <tr>
+    	<td class="formlink" colspan="2">
+        	<a href="/branddco/d/onlineprograms/" class="formlink">Click here for information on our Online Programs </a><br>
+            <br><a href="/branddco/d/privacy.cfm" class="formlink">View our Privacy Statement</a>
+        </td>
+    </tr>
+</tbody></table>
+</form>
+
+    </div>
+</div>
+
+
+<div id="copyright"><a href="/branddco/d/copyright.cfm" class="copyright">© 2013 ITT Technical Institute</a> | All Rights Reserved<br>ITT is a registered mark of and is used under license granted by ITT Manuracturing Enterprises, Inc.</div>
+
+<div id="disclaimer"><center>
+<table style="padding-top:15px; padding-bottom:15px;" height="" width="700" align="center" border="0" cellpadding="0" cellspacing="0">
+<tbody><tr valign="top"><td><a href="http://programinfo.itt-tech.edu" target="_new"><img src="http://images.itt-tech.edu/codebase/founddark/fed.jpg" alt="Federal disclaimer" border="0"></a></td><td width="100">&nbsp;<br></td><td><a href="http://programinfo.itt-tech.edu/consumerinfo/" target="_new"><img src="http://images.itt-tech.edu/codebase/founddark/consumer.jpg" alt="Important 
+Consumer Information" border="0"></a>
+</td></tr>
+</tbody></table>
+</center>
+</div>
+
+</div>	<!-- container  -->
+<!-- Google Code for Online Remarketing Visit Conversion Page -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1035118810;
+var google_conversion_language = "en";
+var google_conversion_format = "3";
+var google_conversion_color = "ffffff";
+var google_conversion_label = "notlCM6d9QEQ2tHK7QM";
+var google_conversion_value = 0;
+/* ]]> */
+</script>
+<script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js">
+</script><img src="http://www.googleadservices.com/pagead/conversion/1035118810/?random=1367626302463&amp;cv=7&amp;fst=1367626302463&amp;num=1&amp;fmt=3&amp;value=0&amp;label=notlCM6d9QEQ2tHK7QM&amp;bg=ffffff&amp;hl=en&amp;guid=ON&amp;u_h=1024&amp;u_w=1280&amp;u_ah=984&amp;u_aw=1280&amp;u_cd=24&amp;u_his=50&amp;u_tz=-300&amp;u_java=false&amp;u_nplug=0&amp;u_nmime=0&amp;url=http%3A//www2.itt-tech.edu/branddco/d/%3Fcode%3D25464031901%7Chespress.com%26mkwid%3DckNntPriz%7Cpcrid%7C25464031901%7Cpmt%7C%7Ckw%7C%26gclid%3DCL7p5_eU-7YCFbNzMgodX2AA1w&amp;frm=0" height="1" width="1" border="0">
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/1035118810/?label=notlCM6d9QEQ2tHK7QM&guid=ON&script=0"/>
+</div>
+</noscript>
+
+<script type="text/javascript">
+adroll_adv_id = "DMQLWBQS3VDVPCKGGS7EAX";
+adroll_pix_id = "IEE4AAWCCRGHHCGKNBLM57";
+(function () {
+var oldonload = window.onload;
+window.onload = function(){
+   __adroll_loaded=true;
+   var scr = document.createElement("script");
+   var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+   scr.setAttribute('async', 'true');
+   scr.type = "text/javascript";
+   scr.src = host + "/j/roundtrip.js";
+   ((document.getElementsByTagName('head') || [null])[0] ||
+    document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+   if(oldonload){oldonload()}};
+}());
+</script>
+<img src="http://view.atdmt.com/action/apmit2_ITTHomepage_1" height="1" width="1">
+<!-- Advertiser 'ITT Educational Services',  Include user in segment 'ITT_Retargeting' - DO NOT MODIFY THIS PIXEL IN ANY WAY -->
+<img src="http://ads.bluelithium.com/pixel?id=1394468&amp;t=2" height="1" width="1">
+<!-- End of segment tag -->
+<img src="http://network.realmedia.com/RealMedia/ads/adstream_nx.ads/TRACK_Itttech/Retargeting_Homepage_Nonsecure@Bottom3">
+<img src="http://leadback.advertising.com/adcedge/lb?site=695501&amp;betr=itttechvisited_cs=[+]3[8760]" height="1" width="1" border="0">
+<script type="text/javascript">
+    var _mTrack = _mTrack || [];
+    _mTrack.push(['trackPage']);
+ 
+    (function() {
+         var mClientId = 'i7vc2s82p0';
+         var mProto = ('https:' == document.location.protocol ? 'https://' : 'http://');
+         var mHost = 'tracker.marinsm.com';
+        var mt = document.createElement('script'); mt.type = 'text/javascript'; mt.async = true; mt.src = mProto + mHost + '/tracker/async/' + mClientId + '.js';
+         var fscr = document.getElementsByTagName('script')[0]; fscr.parentNode.insertBefore(mt, fscr);
+    })();
+</script>
+<noscript>
+<img src="https://tracker.marinsm.com/tp?act=1&cid=i7vc2s82p0&script=no">
+</noscript>
+<!-- END: Copyright Marin Software -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-23140253-1']);
+  _gaq.push(['_setDomainName', 'itt-tech.edu']);
+  _gaq.push(['_setAllowHash', false]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  
+</script>
+
+
+
+
+</body>

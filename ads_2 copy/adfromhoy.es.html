@@ -1,0 +1,410 @@
+<!-- InstanceBegin template="Templates/Frente_Basica.dwt.php" codeOutsideHTMLIsLocked="false" --><head>
+
+<!--[if gte IE 9]>    
+<script type="text/javascript">
+Cufon.set('engine', 'canvas');
+</script><![endif]-->
+
+<meta http-equiv="X-UA-Compatible" content="IE=8">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="style.css" rel="stylesheet" type="text/css">
+<script src="https://ssl.google-analytics.com/ga.js" async="" type="text/javascript"></script><script src="jscripts/jquerytools.js" type="text/javascript"></script>
+<script src="jscripts/lytebox.js" type="text/javascript" language="javascript"></script>
+<script src="includes/funciones.js" type="text/javascript"></script>
+<link rel="stylesheet" href="jscripts/lytebox.css" type="text/css" media="screen">
+
+<script type="text/javascript">
+function fecha(){
+fecha = new Date()
+mes = fecha.getMonth()
+diaMes = fecha.getDate()
+diaSemana = fecha.getDay()
+anio = fecha.getFullYear()
+dias = new Array('Domingo','Lunes','Martes','Miercoles','Jueves','Viernes','Sábado')
+meses = new Array('Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre')
+document.write (dias[diaSemana] + ", " + diaMes + " de " + meses[mes] + " de " + anio)
+};
+</script>
+
+<!-- InstanceBeginEditable name="head" -->
+
+<title>Cajalmendralejo - Particulares</title>
+
+
+<script src="jscripts/cufon-yui.js" type="text/javascript"></script><style type="text/css">cufon{text-indent:0!important;}@media screen,projection{cufon{display:inline!important;display:inline-block!important;position:relative!important;vertical-align:middle!important;font-size:1px!important;line-height:1px!important;}cufon cufontext{display:-moz-inline-box!important;display:inline-block!important;width:0!important;height:0!important;overflow:hidden!important;text-indent:-10000in!important;}cufon canvas{position:relative!important;}}@media print{cufon{padding:0!important;}cufon canvas{display:none!important;}}</style>
+<script src="jscripts/Optima_LT_Std_400.font.js" type="text/javascript"></script><script type="text/javascript">
+			Cufon.replace('.cufon', { hover: true });
+			Cufon.replace('.box.links>a', { hover: true });
+</script>
+
+
+<!-- InstanceEndEditable -->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30329654-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })(); 
+
+</script>
+
+</head>
+ 
+<body>
+<div class="header">
+	<div class="logo">
+
+ 
+    <a href="index.php" title="Cajalmendralejo">Cajalmendralejo</a>
+    </div>
+
+<div id="fecha">
+    <script type="text/javascript"> fecha() </script>Sábado, 25 de Mayo de 2013
+</div>
+        
+    <div class="solventia" style="margin:0 0 0 0;"><a href="p.php?id=91"><img src="images/solventia.png" alt="Grupo Cooperativo Solventia" height="27" width="131"></a></div>
+    
+  
+    
+  <a href="index.php" id="btn_par" title="Particulares" class="active">Particulares</a>
+    
+    <a href="empresas.php" id="btn_emp" title="Empresas">Empresas</a>
+
+</div>
+
+
+<div class="contenedor">
+    
+<!-- InstanceBeginEditable name="Contenido" -->
+
+
+  <div class="left">
+    
+    <script type="text/javascript" src="jscripts/labels.js"></script>
+
+
+<!-- BUSCADOR -->
+<div class="buscador">
+    <div class="input">
+		
+		<!-- ver en .htaccess a donde redirige la accion de este formulario -->
+		<form method="post" action="resultados_busqueda.php" name="resultados" id="resultados">
+        <label class="input">
+      <span id="bus">Buscar ...</span>
+			<input name="busqueda" id="busqueda" type="text">
+            </label>
+			<a href="javascript:void(0)" style="margin:-26px -30px 0 0; float:right;" class="submit" id="btnresult"></a>
+		</form>
+		 <script type="text/javascript">
+    						
+                $("a.submit").click(function() {
+                  
+                  if ($("#busqueda").val() != '') $("#resultados").submit();
+                  
+                  return false;
+                });
+            </script>
+	</div>
+
+</div>
+
+    <div class="box_bottom" id="busca"></div>
+    <div class="clear"></div>
+
+    
+    
+<!-- CIERRA BUSCADOR -->
+    
+     <script type="text/javascript" src="jscripts/labels.js"></script>
+
+
+
+<div id="btn_extranet">
+
+
+
+ <form name="cajalnet" method="post" action="https://www.cajalnet.es/SetLoginAction.do">     
+      <label class="input">
+      <span id="us">Usuario</span>
+      <input name="j_username" class="usuario_ex" id="j_username" type="text">
+      </label>
+      
+      <div class="clear"></div>
+      
+      <label class="input">
+      <span id="co">Contraseña</span>
+      <input name="j_password" class="contra" id="j_password" autocomplete="off" type="password">
+      </label>
+    
+    <div class="clear"></div>
+    <a href="https://www.cajalnet.es/vLoginDNI.do" target="_blank" id="dni"></a>
+    
+    <input id="entrar" value="" type="submit">
+     
+     
+     </form>
+     
+     
+        
+    </div>    
+    <div class="box_bottom_izq"></div>
+    
+   <div class="clear"></div>
+   
+              <img src="images/productosServicios.png" alt="Productos y Servicios" style="margin:-15px 0 0 15px;" height="31" width="150">
+	
+       <div class="box links" style="width:150px; margin:0 0 0 14px;">
+         <div>
+                      
+           
+                      
+           <a href="servicio.php?id=98" class="n1 cufon"><cufon style="width: 45px; height: 13px;" alt="Ahorro " class="cufon cufon-canvas"><canvas style="width: 55px; height: 16px; top: -2px; left: 0px;" height="16" width="55"></canvas><cufontext>Ahorro </cufontext></cufon><cufon style="width: 11px; height: 13px;" alt="e " class="cufon cufon-canvas"><canvas style="width: 21px; height: 16px; top: -2px; left: 0px;" height="16" width="21"></canvas><cufontext>e </cufontext></cufon><cufon style="width: 54px; height: 13px;" alt="Inversión" class="cufon cufon-canvas"><canvas style="width: 60px; height: 16px; top: -2px; left: 0px;" height="16" width="60"></canvas><cufontext>Inversión</cufontext></cufon></a>       
+           
+           <div class="separador"></div> 
+           
+                      
+           <a href="servicio.php?id=121" class="n1 cufon"><cufon style="width: 76px; height: 13px;" alt="Financiación" class="cufon cufon-canvas"><canvas style="width: 82px; height: 16px; top: -2px; left: 0px;" height="16" width="82"></canvas><cufontext>Financiación</cufontext></cufon></a>       
+           
+           <div class="separador"></div> 
+           
+                      
+           <a href="servicio.php?id=128" class="n1 cufon"><cufon style="width: 46px; height: 13px;" alt="Seguros" class="cufon cufon-canvas"><canvas style="width: 54px; height: 16px; top: -2px; left: 0px;" height="16" width="54"></canvas><cufontext>Seguros</cufontext></cufon></a>       
+           
+           <div class="separador"></div> 
+           
+                      
+           <a href="servicio.php?id=137" class="n1 cufon"><cufon style="width: 44px; height: 13px;" alt="Tarjetas" class="cufon cufon-canvas"><canvas style="width: 53px; height: 16px; top: -2px; left: 0px;" height="16" width="53"></canvas><cufontext>Tarjetas</cufontext></cufon></a>       
+           
+           <div class="separador"></div> 
+           
+                      
+           <a href="servicio.php?id=179" class="n1 cufon"><cufon style="width: 53px; height: 13px;" alt="Cajalnet " class="cufon cufon-canvas"><canvas style="width: 63px; height: 16px; top: -2px; left: 0px;" height="16" width="63"></canvas><cufontext>Cajalnet </cufontext></cufon><cufon style="width: 15px; height: 13px;" alt="@ " class="cufon cufon-canvas"><canvas style="width: 25px; height: 16px; top: -2px; left: 0px;" height="16" width="25"></canvas><cufontext>@ </cufontext></cufon><cufon style="width: 41px; height: 13px;" alt="Banca " class="cufon cufon-canvas"><canvas style="width: 51px; height: 16px; top: -2px; left: 0px;" height="16" width="51"></canvas><cufontext>Banca </cufontext></cufon><cufon style="width: 66px; height: 13px;" alt="Electrónica" class="cufon cufon-canvas"><canvas style="width: 73px; height: 16px; top: -2px; left: 0px;" height="16" width="73"></canvas><cufontext>Electrónica</cufontext></cufon></a>       
+           
+           <div class="separador"></div> 
+           
+                      
+           <a href="servicio.php?id=217" class="n1 cufon"><cufon style="width: 44px; height: 13px;" alt="Correo " class="cufon cufon-canvas"><canvas style="width: 54px; height: 16px; top: -2px; left: 0px;" height="16" width="54"></canvas><cufontext>Correo </cufontext></cufon><cufon style="width: 28px; height: 13px;" alt="Web" class="cufon cufon-canvas"><canvas style="width: 34px; height: 16px; top: -2px; left: 0px;" height="16" width="34"></canvas><cufontext>Web</cufontext></cufon></a>       
+           
+           <div class="separador"></div> 
+           
+                      
+                      
+           
+           
+         </div>
+       </div>
+       
+       <div class="clear"></div>
+            <div class="box_bottom"></div>
+
+
+  
+
+  </div><!-- left -->
+
+
+  
+  <div class="main"> <a href="servicio.php?id=179"><img src="banners/deposito_cajalnet.gif" alt="Depósito Cajalnet" height="235" width="498"></a>
+<div id="comercio_exterior2c"><a href="https://www.cajalmendralejo.es/servicio.php?id=106"><img src="banners/planesPensiones_animado_ch.gif" alt="Planes de Pensiones" height="102" width="239"></a></div>
+        
+    <div id="tarjetas_2c"> <a href="servicio.php?id=151"><img src="banners/seguros_auto-2013_239.gif" alt="Seguro Automotor" height="102" width="239"></a> </div>
+        
+       
+<div class="clear"></div>
+
+<div id="banner_498"><a href="contacto.php">  <img src="banners/110AniosBanner498x102.gif" height="102" width="498"></a></div><a href="contacto.php">
+        </a><div class="vertodos"><a href="contacto.php">
+	        </a><a href="servicios.php" title="Ver todos los servicios" class="cufon"><cufon style="width: 22px; height: 12px;" alt="Ver " class="cufon cufon-canvas"><canvas style="width: 32px; height: 15px; top: -2px; left: 0px;" height="15" width="32"></canvas><cufontext>Ver </cufontext></cufon><cufon style="width: 34px; height: 12px;" alt="todos " class="cufon cufon-canvas"><canvas style="width: 43px; height: 15px; top: -2px; left: 0px;" height="15" width="43"></canvas><cufontext>todos </cufontext></cufon><cufon style="width: 20px; height: 12px;" alt="los " class="cufon cufon-canvas"><canvas style="width: 29px; height: 15px; top: -2px; left: 0px;" height="15" width="29"></canvas><cufontext>los </cufontext></cufon><cufon style="width: 48px; height: 12px;" alt="servicios" class="cufon cufon-canvas"><canvas style="width: 56px; height: 15px; top: -2px; left: 0px;" height="15" width="56"></canvas><cufontext>servicios</cufontext></cufon></a>
+    	</div>
+        
+      
+          
+          
+    <p></p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+  </div><!-- main -->
+
+
+	<div class="right">
+	  <div class="box links">
+  <h3 class="accesos_rapidos">Accesos Rápidos</h3>
+            
+           <!-- <a href="p.php?id=60" title="Tel&eacute;fonos">Tel&eacute;fonos</a>
+            <div class="separador"></div>-->
+            <a href="https://www.cajalmendralejo.es/contacto.php" title="Contacto"><cufon style="width: 53px; height: 13px;" alt="Contacto" class="cufon cufon-canvas"><canvas style="width: 60px; height: 16px; top: -2px; left: 0px;" height="16" width="60"></canvas><cufontext>Contacto</cufontext></cufon></a>
+            <div class="separador"></div>
+            <a href="oficinas.php" title="Oficinas y cajeros"><cufon style="width: 53px; height: 13px;" alt="Oficinas " class="cufon cufon-canvas"><canvas style="width: 63px; height: 16px; top: -2px; left: 0px;" height="16" width="63"></canvas><cufontext>Oficinas </cufontext></cufon><cufon style="width: 11px; height: 13px;" alt="y " class="cufon cufon-canvas"><canvas style="width: 21px; height: 16px; top: -2px; left: 0px;" height="16" width="21"></canvas><cufontext>y </cufontext></cufon><cufon style="width: 44px; height: 13px;" alt="Cajeros" class="cufon cufon-canvas"><canvas style="width: 53px; height: 16px; top: -2px; left: 0px;" height="16" width="53"></canvas><cufontext>Cajeros</cufontext></cufon></a>
+            <div class="separador"></div>
+            <a href="p.php?id=67" title="Pérdida de Tarjetas"><cufon style="width: 48px; height: 13px;" alt="Pérdida " class="cufon cufon-canvas"><canvas style="width: 58px; height: 16px; top: -2px; left: 0px;" height="16" width="58"></canvas><cufontext>Pérdida </cufontext></cufon><cufon style="width: 19px; height: 13px;" alt="de " class="cufon cufon-canvas"><canvas style="width: 29px; height: 16px; top: -2px; left: 0px;" height="16" width="29"></canvas><cufontext>de </cufontext></cufon><cufon style="width: 44px; height: 13px;" alt="Tarjetas" class="cufon cufon-canvas"><canvas style="width: 53px; height: 16px; top: -2px; left: 0px;" height="16" width="53"></canvas><cufontext>Tarjetas</cufontext></cufon></a>
+            <div class="separador"></div>
+            <a href="https://www.cajalmendralejo.es/extranet/" title="Acceso a Extranet" target="_blank"><cufon style="width: 47px; height: 13px;" alt="Acceso " class="cufon cufon-canvas"><canvas style="width: 57px; height: 16px; top: -2px; left: 0px;" height="16" width="57"></canvas><cufontext>Acceso </cufontext></cufon><cufon style="width: 11px; height: 13px;" alt="a " class="cufon cufon-canvas"><canvas style="width: 21px; height: 16px; top: -2px; left: 0px;" height="16" width="21"></canvas><cufontext>a </cufontext></cufon><cufon style="width: 47px; height: 13px;" alt="Extranet" class="cufon cufon-canvas"><canvas style="width: 57px; height: 16px; top: -2px; left: 0px;" height="16" width="57"></canvas><cufontext>Extranet</cufontext></cufon></a>
+  <div class="separador"></div>
+  
+  			            <!--<a href="servicios.php" title="Todos los servicios">Otros Servicios</a>-->
+        
+        </div>
+        <div class="box_bottom"></div>
+        
+
+
+
+<div class="box links">
+        	<h3 class="informacion_corporativa">Información Coorporativa</h3>
+            
+        	<a href="p.php?id=86" title="Nuestra Entidad"><cufon style="width: 49px; height: 13px;" alt="Nuestra " class="cufon cufon-canvas"><canvas style="width: 59px; height: 16px; top: -2px; left: 0px;" height="16" width="59"></canvas><cufontext>Nuestra </cufontext></cufon><cufon style="width: 44px; height: 13px;" alt="Entidad" class="cufon cufon-canvas"><canvas style="width: 51px; height: 16px; top: -2px; left: 0px;" height="16" width="51"></canvas><cufontext>Entidad</cufontext></cufon></a>
+            <div class="separador"></div>
+            
+            
+        	<a href="p.php?id=91" title="Grupo Coperativo Solventia"><cufon style="width: 58px; height: 13px;" alt="Solventia " class="cufon cufon-canvas"><canvas style="width: 68px; height: 16px; top: -2px; left: 0px;" height="16" width="68"></canvas><cufontext>Solventia </cufontext></cufon><cufon style="width: 20px; height: 13px;" alt="GC" class="cufon cufon-canvas"><canvas style="width: 25px; height: 16px; top: -2px; left: 0px;" height="16" width="25"></canvas><cufontext>GC</cufontext></cufon></a>
+            <div class="separador"></div>
+            
+			<a href="p.php?id=68" title="Atención al cliente"><cufon style="width: 57px; height: 13px;" alt="Atención " class="cufon cufon-canvas"><canvas style="width: 67px; height: 16px; top: -2px; left: 0px;" height="16" width="67"></canvas><cufontext>Atención </cufontext></cufon><cufon style="width: 15px; height: 13px;" alt="al " class="cufon cufon-canvas"><canvas style="width: 25px; height: 16px; top: -2px; left: 0px;" height="16" width="25"></canvas><cufontext>al </cufontext></cufon><cufon style="width: 40px; height: 13px;" alt="cliente" class="cufon cufon-canvas"><canvas style="width: 47px; height: 16px; top: -2px; left: 0px;" height="16" width="47"></canvas><cufontext>cliente</cufontext></cufon></a>
+            <div class="separador"></div>
+            
+            <a href="p.php?id=80" title="Información Legal"><cufon style="width: 75px; height: 13px;" alt="Información " class="cufon cufon-canvas"><canvas style="width: 85px; height: 16px; top: -2px; left: 0px;" height="16" width="85"></canvas><cufontext>Información </cufontext></cufon><cufon style="width: 32px; height: 13px;" alt="Legal" class="cufon cufon-canvas"><canvas style="width: 42px; height: 16px; top: -2px; left: 0px;" height="16" width="42"></canvas><cufontext>Legal</cufontext></cufon></a>
+            <div class="separador"></div>
+            
+            <a href="p.php?id=81" title="Edificio"><cufon style="width: 44px; height: 13px;" alt="Edificio" class="cufon cufon-canvas"><canvas style="width: 51px; height: 16px; top: -2px; left: 0px;" height="16" width="51"></canvas><cufontext>Edificio</cufontext></cufon></a>
+            <div class="separador"></div>
+            
+            <a href="p.php?id=82" title="Cien años de historia"><cufon style="width: 32px; height: 13px;" alt="Cien " class="cufon cufon-canvas"><canvas style="width: 42px; height: 16px; top: -2px; left: 0px;" height="16" width="42"></canvas><cufontext>Cien </cufontext></cufon><cufon style="width: 32px; height: 13px;" alt="años " class="cufon cufon-canvas"><canvas style="width: 42px; height: 16px; top: -2px; left: 0px;" height="16" width="42"></canvas><cufontext>años </cufontext></cufon><cufon style="width: 19px; height: 13px;" alt="de " class="cufon cufon-canvas"><canvas style="width: 29px; height: 16px; top: -2px; left: 0px;" height="16" width="29"></canvas><cufontext>de </cufontext></cufon><cufon style="width: 44px; height: 13px;" alt="historia" class="cufon cufon-canvas"><canvas style="width: 51px; height: 16px; top: -2px; left: 0px;" height="16" width="51"></canvas><cufontext>historia</cufontext></cufon></a>
+            <div class="separador"></div>
+            
+            <a href="p.php?id=69" title="Institucional"><cufon style="width: 72px; height: 13px;" alt="Institucional" class="cufon cufon-canvas"><canvas style="width: 82px; height: 16px; top: -2px; left: 0px;" height="16" width="82"></canvas><cufontext>Institucional</cufontext></cufon></a>
+            <div class="separador"></div>
+            
+            
+            <a href="l.php?cat=88" title="Noticias"><cufon style="width: 49px; height: 13px;" alt="Noticias" class="cufon cufon-canvas"><canvas style="width: 57px; height: 16px; top: -2px; left: 0px;" height="16" width="57"></canvas><cufontext>Noticias</cufontext></cufon></a>
+            <div class="separdor"></div>
+        </div>
+        <div class="box_bottom"></div>
+        
+        
+
+
+<div class="tablon box">
+        
+        	<h3>Tablón de Anuncios</h3>
+            
+            <div class="separador"></div>
+            
+            <div id="pasador_tablon">
+
+
+            <div style="left: -148px;" class="items"><div class="cloned">
+	<a href="d.php?id=102" title="Información trimestral sobre comisiones y tipos practicados más frecuentes a Personas Físicas.">
+		Información trimestral sobre comisiones y tipos practicados más frecuentes a Personas Físicas.	</a>
+</div>
+
+<div>
+	<a href="d.php?id=87" title="Prevención de Blanqueo de Capitales">
+		Prevención de Blanqueo de Capitales	</a>
+</div>
+
+
+<div>
+	<a href="d.php?id=62" title="Información de Interés para Clientes">
+		Información de Interés para Clientes	</a>
+</div>
+
+
+<div>
+	<a href="d.php?id=64" title="Folleto de Tarifas">
+		Folleto de Tarifas	</a>
+</div>
+
+
+<div>
+	<a href="d.php?id=65" title="Tipos de interés y comisiones para descubiertos y excedidos tácitos.">
+		Tipos de interés y comisiones para descubiertos y excedidos tácitos.	</a>
+</div>
+
+
+<div>
+	<a href="d.php?id=99" title="Tipos de Cambio. Operaciones de compraventa hasta 3.000 euros.">
+		Tipos de Cambio. Operaciones de compraventa hasta 3.000 euros.	</a>
+</div>
+
+
+<div>
+	<a href="d.php?id=102" title="Información trimestral sobre comisiones y tipos practicados más frecuentes a Personas Físicas.">
+		Información trimestral sobre comisiones y tipos practicados más frecuentes a Personas Físicas.	</a>
+</div>
+
+            <div class="cloned">
+	<a href="d.php?id=87" title="Prevención de Blanqueo de Capitales">
+		Prevención de Blanqueo de Capitales	</a>
+</div></div>
+            </div>
+            
+            <div class="separador"></div>
+        	
+        	<div class="navi"><a class="active" href="#0"></a><a href="#1"></a><a href="#2"></a><a href="#3"></a><a href="#4"></a><a href="#5"></a></div>
+        </div>
+        <div class="box_bottom"></div>
+        <script type="text/javascript">
+		$(document).ready(function () {
+			$("#pasador_tablon").scrollable({ circular: true }).navigator().autoscroll({ autoplay: true, interval: 5000 })});
+		</script>                     
+  
+        
+<div class="intranet"> 
+         <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+   </div>
+       
+		     
+        
+
+
+	</div><!-- right -->  
+  <!-- InstanceEndEditable -->
+
+<div class="clear"></div>
+<div class="clear"></div>
+</div><!-- contenedor -->
+<br>
+
+<div class="footer">
+  <div class="footerin">
+  
+  <div style="width: 88px; float:left; margin:-8px 15px 0 0;">
+    <a href="http://validator.w3.org/check?uri=referer" onclick="this.href='http://validator.w3.org/check?uri=' + document.URL"><img src="images/valid-html40-blue.png" alt="Valid XHTML 1.0 Transitional" height="31" width="88"></a>
+        </div>
+  
+  	<div class="links_left">
+    	<a href="mapa.php" title="Mapa">Mapa</a> |
+        <a href="p.php?id=73" title="Aviso Legal">Aviso Legal</a>
+    </div>
+  
+  	©2013 - Cajalmendralejo - Todos los Derechos Reservados
+    
+    <a href="http://www.rcymedia.eu" title="RC&amp;Media" id="rcymedia">RC&amp;Media</a>
+    
+     
+  
+  	
+  
+  </div>
+</div>
+        
+
+
+
+
+
+
+
+
+
+<div style="display: none;" class="grey" id="lbOverlay"></div><div style="display: none;" id="lbMain"><div class="grey" id="lbOuterContainer"><div style="display: none;" id="lbIframeContainer"><iframe style="display: none;" name="lbIframe" id="lbIframe"></iframe></div><div id="lbImageContainer"><img id="lbImage"><div id="lbHoverNav"><a href="#" class="grey" id="lbPrev"></a><a href="#" class="grey" id="lbNext"></a></div></div><div id="lbLoading"></div></div><div class="grey" id="lbDetailsContainer"><div class="grey" id="lbDetailsData"><div id="lbDetails"><span id="lbCaption"></span><span id="lbNumberDisplay"></span><span style="display: none;" id="lbNavDisplay"></span></div><div id="lbBottomNav"><a href="#" class="grey" id="lbClose"></a><a style="display: none;" href="#" class="grey" id="lbPause"></a><a style="display: none;" href="#" class="grey" id="lbPlay"></a></div></div></div></div></body><!-- InstanceEnd -->

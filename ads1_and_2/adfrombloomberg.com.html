@@ -1,0 +1,2943 @@
+<head><script src="http://apiservices.krxd.net/user_data/segments/3?pubid=0ccccb05-8c21-4099-9838-fed4ceb7a239&amp;callback=Krux.ns._default.kxjsonp_userData" type="text/javascript"></script><script src="http://platform.twitter.com/js/tfw/hub/client.js" async="" type="text/javascript" id="LR1"></script><div class="kxhead" data-id="IDeZBlqQ" style="display:none;"><span class="kxtag kxinvisible" data-id="16894" data-alias="Krux Track Social"><script src="http://www.google-analytics.com/ga.js" async="" type="text/javascript"></script><script src="//platform.twitter.com/widgets.js" id="twitter-wjs"></script><script type="text/javascript">Krux('social.init');</script></span><span class="kxtag kxinvisible" data-id="16348" data-alias="Krux Load Segments"><script type="text/javascript">Krux('require:segments')</script></span><span class="kxtag kxinvisible" data-id="21267" data-alias="DataLogix provider tag"><script>
+(function(){
+  if (window.KRUX) {
+    var pubid = KRUXSetup.pubid;
+  } else if (window.Krux) {
+    var pubid = Krux.require('data').get('pubid');
+  } else { 
+    return;
+  }
+  var prefix = location.protocol == 'https:' ? "https:" : "http:";
+  var u = prefix + "//apiservices.krxd.net/um?r=http%3A%2F%2Fkrxd.nexac.com%2Fdlx.gif&_kdpid=2dd640a6-6ebd-4d4f-af30-af8baa441a0d&pid=" + pubid + "&pubid=" + pubid;
+  var i = new Image();
+  i.src = u;
+})();
+</script></span><span class="kxtag kxinvisible" data-id="19508" data-alias="AdAdvisor S2S provider tag"><script>
+(function() {
+  // adadvisor redirects to http://logger... so it's not https safe
+  if (location.protocol == "http:") {
+     var u = "http://adadvisor.net/adscores/g.js?sid=9212244187&_kdpid=2111c0af-fc3a-446f-ab07-63aa74fbde8e";
+     (new Image()).src = u;
+   }
+})();
+</script></span><span class="kxtag kxinvisible" data-id="16953" data-alias="Technographic Data provider tag"><script>
+// this tag is intentionally blank
+</script></span><span class="kxtag kxinvisible" data-id="16954" data-alias="Krux Geographic Data provider tag"></span><span class="kxtag kxinvisible" data-id="17537" data-alias="Bizo provider tag"><script>
+(function(){
+  if (window.KRUX) {
+    var pubid = KRUXSetup.pubid;
+  } else if (window.Krux) {
+    var pubid = Krux('get', 'pubid');
+  } else { 
+    return;
+  }
+  var prefix = location.protocol == 'https:' ? "https:" : "http:";
+  var kurl = prefix + '//beacon.krxd.net/data.gif?_kdpid=890a6228-04af-4630-85b6-0b49dee6157f&pid=' + pubid;
+  var u = prefix + '//api.bizographics.com/v1/profile.redirect?api_key=595bae8dbc0c4c42b4544e688b10c002' + 
+        '&callback_url=' + escape(kurl);
+  var i = new Image();
+  i.src = u;
+})();
+</script></span><span class="kxtag kxinvisible" data-id="17538" data-alias="eXelate Media provider tag"><script type="text/javascript">
+  Krux('dataprovider.exelate');
+</script></span><span class="kxtag kxinvisible" data-id="17980" data-alias="Krux Keyword Scraper BL"><script> 
+  Krux('scrape', {
+        page_attr_keywords_BL: {
+            meta_name: "keywords"
+        }
+  });
+</script></span><span class="kxtag kxinvisible" data-id="17389" data-alias="Krux Attribute Scraper"><script>
+// CIDM-2066
+(function() {
+  if (window.Description) {
+     // Bloomberg
+     var split = ("" + window.Description).split('/');
+     Krux('set', 'page_attr_section', split[0].replace('blp.', ''));
+     Krux('set', 'page_attr_subsection', split[1]);
+     Krux('set', 'page_attr_3rdLevel_subsection', split[2]);
+  } else if (window.BBBW_comScore && window.BBBW_comScore.params) {
+     // Business Insider
+     Krux('set', 'page_attr_section', BBBW_comScore.params.bb_cg_1);
+     Krux('set', 'page_attr_subsection', BBBW_comScore.params.bb_cg_2);
+  }
+
+  // ticker_key
+  if (window.ticker_key) {
+     Krux('set', 'page_attr_ticker_key', unescape(window.ticker_key).replace(';', ''));
+  }
+
+  // Author
+  if (window._sf_async_config && window._sf_async_config.authors) {
+     Krux('set', 'page_attr_author', _sf_async_config.authors)
+  } else {
+     try { Krux('set', 'page_attr_author', BBBW_comScore.params.bb_author) } catch (e) {}
+  }
+
+  // Set the section/subsection to the page attributes
+  Krux('set', {
+    section: Krux('get', 'page_attr_section'),
+    subsection: Krux('get', 'page_attr_subsection')
+  });
+
+  //Bloomberg User ID for 1st party reg data
+  if (window.BLOOMBERG && window.BLOOMBERG.user) {
+    var bb_userid = window.BLOOMBERG.user.getBConnectId();
+    if (bb_userid && bb_userid.length > 0) {
+      Krux('set', 'user_attr_bb_userid', bb_userid);
+    }
+  }
+
+})();
+</script></span></div><script src="http://cdn.krxd.net/controltag?confid=IDeZBlqQ" async="" type="text/javascript"></script><script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Luxury - Bloomberg</title>
+    <meta name="keywords" content="luxury, living, lifestyle, property, real estate, gadgets, technology reviews, auto reviews, travel, wine reviews, dining reviews, restaurants, theater, arts, culture, the good life, pursuits">
+
+<meta name="description" content="The Good Life offers the latest news and features on luxury goods, lifestyle, dining, real estate, travel, gadgets, nightlife, music and arts. Also find the latest stories from Bloomberg Markets Pursuits magazine.">
+<meta property="fb:admins" content="1502271052,1617206,500566238,616620419,18776,1396618572,501161086,100001111898866,1223836">
+<meta property="og:title" content="Luxury">
+<meta property="og:site_name" content="Bloomberg">
+<meta property="og:description" content="The Good Life offers the latest news and features on luxury goods, lifestyle, dining, real estate, travel, gadgets, nightlife, music and arts. Also find the latest stories from Bloomberg Markets Pursuits magazine.">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@BloombergNews">
+<meta property="og:url" content="http://www.bloomberg.com/luxury/">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+            <link href="http://cdn.gotraffic.net/v/20130503_110246/stylesheets/main-min-v3_1.css" media="all" rel="stylesheet" type="text/css">        <link href="http://cdn.gotraffic.net/v/20130503_110246/stylesheets/main-min-v3_2.css" media="all" rel="stylesheet" type="text/css">                <link href="http://cdn.gotraffic.net/r/v/20130430_174538/stylesheets/breg-min.css" media="screen" rel="stylesheet" type="text/css">
+        <link href="http://cdn.gotraffic.net/q/v/20130501_171905/stylesheets/q-min.css" media="screen" rel="stylesheet" type="text/css">
+
+<!--[if IE 6]>
+                  <link href="http://cdn.gotraffic.net/v/20130503_110246/stylesheets/ie6-all-v2-min.css" media="all" rel="stylesheet" type="text/css" />                <![endif]-->
+<!--[if lt IE 8]>
+                  <link href="http://cdn.gotraffic.net/v/20130503_110246/stylesheets/blocks_ltie8-min.css" media="all" rel="stylesheet" type="text/css" />                <![endif]-->
+  <link href="http://cdn.gotraffic.net/v/20130503_110246/stylesheets/compiled/channels/channel.css" media="screen" rel="stylesheet" type="text/css">
+<link href="http://cdn.gotraffic.net/v/20130503_110246/stylesheets/compiled/channels/luxury.css" media="screen" rel="stylesheet" type="text/css">
+    <style type="text/css">
+      .home.has_video_module .video_module .cassette .track .share_container{top: 31px;}.home.has_video_module .video_module .cassette .track.first .share_container{top: 35px;}
+#hot_dog_social.custom_top_box_content .custom_content_meta{width:100%;}
+body.home.has_video_module .video_module{z-index:1;position:relative;}
+
+.promoted_event .details .title, #comments .title{font-size:16px}
+.promoted_event .with_discussion{overflow-y:hidden;}
+#ifc_bottom{width:620px;}
+
+body #fancybox-wrap{z-index:100000005;}
+
+#story .byline{ position:static !important; }
+
+.view_article #story_content .assets{margin-right:10px}
+.politics-home #primary_content hr{clear:left;}
+#wide_tout_container.on_article_page .wide_tout img{margin-left:0;}
+.bw_most_popular_news{border-bottom:2px solid #6b7b84;}
+.podcast #footer_container_v3 .subsection.premium {padding: 0;text-transform: none;padding-left: 10px;margin: 0;font-size: 13px;}
+
+#wide_tout_container.on_article_page .wide_tout img{height:auto;}
+#wide_tout_container{margin-bottom:0}
+#wide_tout_container .wide_tout .custom_content_text{bottom:10px;}
+.call_tout_with_hot_dog_container{margin-bottom:0;padding-bottom:0;margin-top:0;}
+#taboola-autosized-1h-homepage { margin-top: 10px; }
+
+body.v2_style #primary_content h3 {text-transform: none !important;}
+
+body.view_section #container #content #primary_content .stories .story.imaged .art { overflow: hidden !important; }
+
+.european_debt_crisis .primary_taboola_container { float: left; }
+body.home #backgroundInterstitial{z-index:9999;}
+
+body.home #ifc_top_right_rail{float:left;}
+body.home .bw_most_popular_news{float:left;width:100%;}
+body.home .dfp_ad_box.ad_box.new_ad_box{float:left;width:100%}
+    </style>
+
+  <script src="/rapi/ads/js_config.js" type="text/javascript"></script>
+        <script src="http://cdn.gotraffic.net/v/20130503_110246/javascripts/main_f-min-v2-jq1.7.2.js" type="text/javascript"></script>    <script type="text/javascript">
+  //<![CDATA[
+    window.Krux||((Krux=function(){Krux.q.push(arguments)}).q=[]);
+    (function(){
+      var k=document.createElement('script');k.type='text/javascript';k.async=true;
+      var m,src=(m=location.href.match(/\bkxsrc=([^&]+)/))&&decodeURIComponent(m[1]);
+      k.src = /^https?:\/\/([^\/]+\.)?krxd\.net(:\d{1,5})?\//i.test(src) ? src : src === "disable" ? "" :
+              (location.protocol==="https:"?"https:":"http:")+"//cdn.krxd.net/controltag?confid=IDeZBlqQ";
+      var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(k,s);
+    
+      //  see https://gist.github.com/dbrans/351e23af05a35a887039
+      function retrieve(n){
+        var m, k='kx'+n;
+        if (window.localStorage) {
+            return window.localStorage[k] || "";
+        } else if (navigator.cookieEnabled) {
+            m = document.cookie.match(k+'=([^;]*)');
+            return (m && unescape(m[1])) || "";
+        } else {
+            return '';
+        }
+      }
+    
+      Krux.user = retrieve('user');
+    
+      Krux.segments = retrieve('segs') ? retrieve('segs').split(',') : [];
+    
+      Krux.injectDartKeyValues = function(url) {
+        // 1a. inject kuid as "kx" sub-parameter of "u" parameter after the "sz" sub-parameter,
+        var u_sub_params = [];
+    
+        if(Krux.user) {
+          u_sub_params.push("kx=" + Krux.user);
+        }
+    
+        if(u_sub_params.length) {
+          url = url.replace(/(u=[^;]*sz=.*?\|)/i,
+              "$1" + u_sub_params.join('|') + "|" );
+        }
+    
+        // 2. Also add segments as their own parameters before the u parameter.
+    
+        if(Krux.segments.length) {
+          url = url.replace(/(;u=)/i, ';ksgmnt=' + Krux.segments.join(';ksgmnt=') + "$1");
+        }
+        return url;
+      };
+    
+    })();
+  //]]>
+</script>
+
+  <script type="text/javascript">
+//<![CDATA[
+    var reg_enabled = true || (BLOOMBERG.util.Cookie.get('reg_enabled') == 'true');
+    var q_enabled = true || (BLOOMBERG.util.Cookie.get('q_enabled') == 'true');
+  
+//]]>
+</script>  
+        
+      <script src="http://cdn.gotraffic.net/v/20130503_110246/javascripts/foresee/foresee-alive.js" type="text/javascript"></script>    <script type="text/javascript">
+      //<![CDATA[
+                      //]]>
+  </script>
+
+    <script type="text/javascript">
+          //<![CDATA[
+        //For omniture
+        Description = "blp.luxury/home";
+        // Setup for surround session
+        var adid="";
+        var surroundTagVal = "";
+        var surroundTag=BLOOMBERG.util.Cookie.get("surroundId"); // Get surround session id from the cookie
+        if(surroundTag == "undefined" || surroundTag == null || surroundTag == ""){ // check if there was a surround session id in the cookie
+            surroundTag="";
+        }else{
+            surroundTagVal="srnd="+surroundTag+";"; // finish setting up the key-value for the ad tags
+        }
+
+        if (typeof surroundTagVal == "undefined" || surroundTagVal == "null") surroundTagVal = "";
+
+        //Market status
+        if (typeof gblvlty == "undefined"){ var gblvlty = 0; }
+        market_status_val = "status=marketstatus" + gblvlty;
+        HCat = "";
+
+        //Setting topic value for topic pages(Lingospot)
+        var topic_referrer = BLOOMBERG.referrer.topic_referrer();
+        if(topic_referrer != null && topic_referrer != ""){
+            topic_refer_key = "topic=" + topic_referrer + ";";
+            topic_refer_name = "blp.news/topic/" + topic_referrer;
+        }else{
+            topic_refer_key = "";
+            topic_refer_name = "blp.news/topic;";
+        }
+
+        sponsor_key = "";
+        var sponsor = BLOOMBERG.referrer.sponsor_referrer();
+        if(sponsor != null && sponsor != ""){
+            sponsor_key = "sponsor=" + sponsor + ";";
+        }
+        var ticker_key = ''
+        
+
+        //Page URL to pass url to ad call
+        var page_url = window.location.pathname;
+        //Getting sumdomain for test site
+        var host_name_list = window.location.hostname.split('.');
+        var sub_domain_name= host_name_list[0];
+
+        HCat = HCat + topic_refer_key + sponsor_key + ticker_key; //Value to be passed to the ad call
+        var no_dfp_interstitial = "false",
+            bbg_show_int = false;
+                            initInterstitialAd();
+                    //]]>
+    </script>
+
+    
+    
+    
+
+    <script type="text/javascript">
+          //<![CDATA[
+        var _sf_startpt=(new Date()).getTime()
+    //]]></script>
+<script src="http://cdn.gotraffic.net/v/20130503_110246/javascripts/jquery.jcarousel.min.js" type="text/javascript"></script>
+<script src="http://cdn.gotraffic.net/v/20130503_110246/javascripts/luxury.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+//<![CDATA[
+        BLOOMBERG.mobile.register_mobile_link();
+    
+//]]>
+</script>
+<style type="text/css" charset="utf-8">#secondary_content .component.subnav{display: none;}#secondary_content .component.subnav#subnav_tv{display: block;}#secondary_content .component.subnav#subnav_radio{display: block;}body.blog ul.sector_tabs{display: none;}body.blog #primary_content .featured_content.first{border-top: none;}</style><script src="http://cdn.gotraffic.net/v/20130503_110246/javascripts/foresee/foresee-surveydef.js" type="text/javascript"></script></head>
+<body data-twttr-rendered="true" class="v2_style luxury channel"><iframe src="https://platform.twitter.com/widgets/hub.html" style="position: absolute; top: -9999em; width: 10px; height: 10px;" name="twttrHubFrameSecure" tabindex="0" allowtransparency="true" id="twttrHubFrameSecure" frameborder="0" scrolling="no"></iframe><iframe src="http://platform.twitter.com/widgets/hub.html" style="position: absolute; top: -9999em; width: 10px; height: 10px;" name="twttrHubFrame" tabindex="0" allowtransparency="true" id="twttrHubFrame" frameborder="0" scrolling="no"></iframe><iframe src="about:blank" style="display: none;" name="iframe_539415458650" id="iframe_539415458650" height="0" width="0"></iframe>
+     <script type="text/javascript">
+//<![CDATA[
+     var noad=0;
+ 
+//]]>
+</script>
+    <div id="showInterstitial">
+
+        <div id="intro_ad_header">
+            <div id="small_logo"><img alt="Bloomberg Logo" src="http://cdn.gotraffic.net/v/20130503_110246/images/logos/logo_bloomberg_22x103.png" height="22" width="103" border="0"></div>
+            <div id="skip_ad"><a onclick="javascript:disableInterstitial();">Skip this ad.</a></div>
+        </div>
+
+        <div id="intro_ad">
+            
+<script xmlns:webad="http://www.bloomberg.com/webad" xmlns:wn="http://www.bloomberg.com/bloomberg-web-news" xmlns:nav="http://www.bloomberg.com/navigation" type="text/javascript">
+     include_u_tag = true;
+     use_krux = true;
+     adType = "DART";
+     Keys = "blp.luxury/home";
+     dcop_val = "";
+     if (typeof surroundTag == "undefined" || surroundTag == "null") surroundTag = "";
+     if (surroundTagVal != ""){
+         surroundTagVal=BLOOMBERG.util.Cookie.get("surroundId");
+         surroundTagVal="srnd="+surroundTagVal+";";
+     }
+     if (typeof surroundTagVal == "undefined" || surroundTagVal == "null") surroundTagVal = "";
+     if (typeof sub_domain_name == "undefined" || sub_domain_name == "null") sub_domain_name = "";
+     Size = "640x480";
+     Tile = "1";
+     Position = ";position=interstitial";
+     if(sub_domain_name == 'bb20ad'){
+       Keys = "blp.test";
+     }
+     ad_location = 'Interstitial';
+     if (ad_location == 'Interstitial'){
+        if(no_dfp_interstitial == "false"){
+            CallDfpAd(adType, HCat+dcop_val+surroundTagVal, Size, Tile, Keys, Position, include_u_tag, use_krux);
+        }
+     }else{
+         CallDfpAd(adType, HCat+dcop_val+surroundTagVal, Size, Tile, Keys, Position, include_u_tag, use_krux);
+     }
+
+</script><script language="JavaScript1.1" src="http://ad.doubleclick.net/adj/blp.luxury/home;url=/luxury/;sz=640x480;status=marketstatus1;position=interstitial;tile=1;u=sz=640x480|kx=IW8RlUZf|rsi=|status=marketstatus1|position=interstitial;ord=323117502?"></script>
+
+    <script type="text/javascript">
+        //<![CDATA[
+      surroundTag=BLOOMBERG.util.Cookie.get("surroundId");
+       if(surroundTag == ""){
+          if((surroundTag == "")&&(adid != "")){ // check if the ad should start a surround session only if a surround session has not yet started
+              surroundTag="srnd="+adid+";"; // setup the key-value for a surround session
+              BLOOMBERG.util.Cookie.set("surroundId",adid,"","/"); // store the surround session id in a cookie.  Set the expiration date of the cookie to determine how long the surround session should last.  For example, if the surround session should last just one day, then set the expiration date for the cookie to tomorrow.
+            }
+       }
+       else{
+            surroundTag="srnd="+surroundTag+";";
+       }
+       //]]>
+    </script>
+
+
+        </div>
+      </div>
+
+        <div id="backgroundInterstitial"></div>
+
+   <script type="text/javascript">
+//<![CDATA[
+    HideIntroAd();
+    if ( (noad !=1) && (bbg_show_int) ) {
+      displayInterstitialAd();
+    }
+   
+//]]>
+</script>    <div id="container" class="module">
+                
+        
+<div class="nav_hat" id="global_nav_hat">
+<div class="item bbg border_none active">
+<a href="/">Bloomberg.com</a>
+</div>
+<div class="item">
+<a href="http://www.businessweek.com">Businessweek.com</a>
+</div>
+<div class="item tv">
+<a href="/tv/">Bloomberg TV</a>
+</div>
+<div class="item has_dropdown" id="nav_premium">
+<a class="more menu_tab">
+Premium
+</a>
+<div class="div_dropdown_container">
+<div class="dropdown_section">
+<ul class="links">
+<li>
+<a href="http://www.bloomberg.com/professional/">Professional Products</a>
+</li>
+<li>
+<a href="http://bba.bloomberg.net">Bloomberg Anywhere</a>
+</li>
+<li>
+<a href="http://www.bloombergtradebook.com">Bloomberg Tradebook</a>
+</li>
+</ul>
+</div>
+<div class="dropdown_section">
+<div class="header">Industry Products</div>
+<ul class="links">
+<li>
+<a href="http://www.bloombergbriefs.com/">Bloomberg Briefs</a>
+</li>
+<li>
+<a href="http://about.bgov.com/">Bloomberg Government</a>
+</li>
+<li>
+<a href="http://about.bloomberglaw.com/">Bloomberg Law</a>
+</li>
+<li>
+<a href="http://www.bna.com/">Bloomberg BNA</a>
+</li>
+<li>
+<a href="http://about.bnef.com">Bloomberg New Energy Finance</a>
+</li>
+<li>
+<a href="https://www.bloombergsports.com/">Bloomberg Sports</a>
+</li>
+</ul>
+</div>
+<div class="dropdown_section">
+<div class="header">Enterprise Products</div>
+<ul class="links">
+<li>
+<a href="http://www.bloomberg.com/bvault/">Compliance Solutions</a>
+</li>
+<li>
+<a href="http://www.bloomberg.com/enterprise/data_solutions/">Data Solutions</a>
+</li>
+<li>
+<a href="http://www.bloomberg.com/enterprise/">Technology Solutions</a>
+</li>
+<li>
+<a href="http://www.bloomberg.com/enterprise/trading_solutions/">Trading Solutions</a>
+</li>
+</ul>
+</div>
+<div class="dropdown_section">
+<div class="header">Consumer Products</div>
+<ul class="links">
+<li>
+<a href="http://www.bloombergblack.com">BloombergBlack</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="item">
+<script type="text/javascript">
+  //<![CDATA[
+    $(document).ready(function() {
+        if (reg_enabled && q_enabled && true) {
+            //BLOOMBERG.q_ui.render_tut_button();
+        }
+    });
+    
+    if (reg_enabled) {
+      document.write('<ul id="user_navigation"><li id="nav_register"><a href="https://login.bloomberg.com/register" onmousedown="BLOOMBERG.tracker.EVENTTRACK.record(\'Module Link Tracking\', \'Nav Register\', null,null, false);document.cookie=\'return_to='+top.window.location.href+'; domain=bloomberg.com; path=/;\';">Register</a></li><li id="login_navigation_item" class="first"><a href="#"></a></li></ul>');
+    } else {
+      document.write('<ul id="user_navigation"></ul>');
+      document.write('<scr' + 'ipt type="text/javascript">BLOOMBERG.user_login.get_user_info($("#user_navigation"));</scr' + 'ipt>');
+    }
+  //]]>
+</script><ul id="user_navigation"><li style="display: list-item;" id="nav_register"><a href="https://login.bloomberg.com/register" onmousedown="BLOOMBERG.tracker.EVENTTRACK.record('Module Link Tracking', 'Nav Register', null,null, false);document.cookie='return_to=http://www.bloomberg.com/luxury/?cmpid=HPTGL120x96; domain=bloomberg.com; path=/;';">Register</a></li><li id="login_navigation_item" class="first"><a href="#">Sign In</a></li></ul>
+
+
+</div>
+<div class="item socials">
+<a href="http://www.facebook.com/bloombergnews" class="facebook"></a>
+<a href="http://www.twitter.com/bloombergnews" class="twitter"></a>
+</div>
+</div>
+<div id="consent-track" style="display:none;">
+This site uses cookies. By continuing to browse the site you are agreeing to our use of cookies.
+<a class="close-consent-track" href="#closeConsentTrack">X</a>
+<span id="consent-track-image"></span>
+</div>
+<script type="text/javascript">
+  //<![CDATA[
+    $(document).ready(function(){
+      $.getScript("http://consent.truste.com/notice?domain=bloomberg.com&c=consent-track-image", function(data, textStatus, jqxhr) { // we are not using these three variables here
+        if ($.fn.trusteConsent) {
+          $("#consent-track").trusteConsent({
+            consentButton: "span#consent-track-image",
+            closeButton: "a.close-consent-track",
+            footerCallback: function() {
+              var $links = $("#footer_support ul");
+              $links.find("li").last().attr("class", ""); // remove class from last el
+              $links.append('<li class="last"><a href="#consentManager">Cookie Preferences</a></li>');
+              return $links.find("li").last();
+            }
+          });
+        }
+      });
+    });
+  //]]>
+</script>
+
+
+<script type="text/javascript">
+  //<![CDATA[
+    $(document).ready(function(){
+      if($("body").hasClass("media"))
+      {
+        $("#global_nav_hat .item.tv").addClass("active");
+        $("#global_nav_hat .item.socials a.facebook").attr("href","http://www.facebook.com/BloombergTelevision");
+        $("#global_nav_hat .item.socials a.twitter").attr("href","http://www.twitter.com/BloombergTV");
+      }
+      else
+      {
+        $("#global_nav_hat .item.bbg").addClass("active");
+        $("#global_nav_hat .item.socials a.facebook").attr("href","http://www.facebook.com/bloombergnews");
+        $("#global_nav_hat .item.socials a.twitter").attr("href","http://www.twitter.com/bloombergnews");
+      }
+    });
+  //]]>
+</script>
+
+    <div class="header_top_unit">
+      
+  <div id="leader_board">
+
+
+
+    
+    <div class="dfp_ad_box">
+             
+<script xmlns:webad="http://www.bloomberg.com/webad" xmlns:wn="http://www.bloomberg.com/bloomberg-web-news" xmlns:nav="http://www.bloomberg.com/navigation" type="text/javascript">
+     include_u_tag = true;
+     use_krux = true;
+     adType = "DART";
+     Keys = "blp.luxury/home";
+     dcop_val = "";
+     if (typeof surroundTag == "undefined" || surroundTag == "null") surroundTag = "";
+     if (surroundTagVal != ""){
+         surroundTagVal=BLOOMBERG.util.Cookie.get("surroundId");
+         surroundTagVal="srnd="+surroundTagVal+";";
+     }
+     if (typeof surroundTagVal == "undefined" || surroundTagVal == "null") surroundTagVal = "";
+     if (typeof sub_domain_name == "undefined" || sub_domain_name == "null") sub_domain_name = "";
+     Size = "728x90,970x66";
+     Tile = "2";
+     Position = ";position=top";
+     if(sub_domain_name == 'bb20ad'){
+       Keys = "blp.test";
+     }
+     ad_location = 'Banner';
+     if (ad_location == 'Interstitial'){
+        if(no_dfp_interstitial == "false"){
+            CallDfpAd(adType, HCat+dcop_val+surroundTagVal, Size, Tile, Keys, Position, include_u_tag, use_krux);
+        }
+     }else{
+         CallDfpAd(adType, HCat+dcop_val+surroundTagVal, Size, Tile, Keys, Position, include_u_tag, use_krux);
+     }
+
+</script><script language="JavaScript1.1" src="http://ad.doubleclick.net/adj/blp.luxury/home;url=/luxury/;sz=728x90,970x66;status=marketstatus1;position=top;tile=2;u=sz=728x90,970x66|kx=IW8RlUZf|rsi=|status=marketstatus1|position=top;ord=323117502?"></script><!-- Copyright 2008 DoubleClick, a division of Google Inc. All rights reserved. -->
+<!-- Code auto-generated on Wed Apr 24 14:21:41 EDT 2013 -->
+<script src="http://s0.2mdn.net/879366/flashwrite_1_2.js"></script>
+<a target="_blank" href="http://ad.doubleclick.net/click%3Bh%3Dv8/3dd7/3/0/%2a/q%3B270576310%3B0-0%3B0%3B96022034%3B3454-728/90%3B53644832/53560527/2%3Bu%3Dsz%3D728x90%2C970x66|kx%3DIW8RlUZf|rsi%3D|status%3Dmarketstatus1|position%3Dtop%3B%7Efdr%3D270307569%3B0-0%3B0%3B93275792%3B3454-728/90%3B53720405/53634154/1%3Bu%3Dsz%3D728x90%2C970x66|kx%3DIW8RlUZf|rsi%3D|status%3Dmarketstatus1|position%3Dtop%3B%7Esscs%3D%3fhttp://corp.bankofamerica.com/business/bi/home?cm_mmc=GBAM-Integrated-_-Bloomberg.com-_-BAC_GBAM_BrandRelaunch_HumanCapital_728x90_final-_-Bloomberg_US_News_ROC_Q2_728x90"><img src="http://s0.2mdn.net/1359940/4-BAC_GBAM_BrandRelaunch_HumanCapital_728x90_final.jpg" alt="Advertisement" galleryimg="no" height="90" width="728" border="0"></a>
+<noscript><a target="_blank" href="http://ad.doubleclick.net/click%3Bh%3Dv8/3dd7/3/0/%2a/q%3B270576310%3B0-0%3B0%3B96022034%3B3454-728/90%3B53644832/53560527/2%3Bu%3Dsz%3D728x90%2C970x66|kx%3DIW8RlUZf|rsi%3D|status%3Dmarketstatus1|position%3Dtop%3B%7Efdr%3D270307569%3B0-0%3B0%3B93275792%3B3454-728/90%3B53720405/53634154/1%3Bu%3Dsz%3D728x90%2C970x66|kx%3DIW8RlUZf|rsi%3D|status%3Dmarketstatus1|position%3Dtop%3B%7Esscs%3D%3fhttp://corp.bankofamerica.com/business/bi/home?cm_mmc=GBAM-Integrated-_-Bloomberg.com-_-BAC_GBAM_BrandRelaunch_HumanCapital_728x90_final-_-Bloomberg_US_News_ROC_Q2_728x90"><img src="http://s0.2mdn.net/1359940/4-BAC_GBAM_BrandRelaunch_HumanCapital_728x90_final.jpg" width="728" height="90" border="0" alt="Advertisement" galleryimg="no"></a></noscript>
+<script src="http://motifcdn2.doubleclick.net/NAM/motif339/dartjavascript/globalWriteJS/globalMacro.js?(ST1@http://cdn.doubleverify.com/dvtp_src.js?ctx=2875&amp;cmp=7397530&amp;sid=622677&amp;plc=96022034&amp;num=&amp;adid=&amp;advid=1359940&amp;adsrv=1&amp;region=30&amp;btreg=270576310&amp;btadsrv=doubleclick&amp;crt=&amp;crtname=&amp;chnl=&amp;unit=&amp;pid=&amp;uid=&amp;dvtagver=6.1.src)"></script><script id="script_539415458650" src="http://cdn.doubleverify.com/dvtp_src.js?ctx=2875&amp;cmp=7397530&amp;sid=622677&amp;plc=96022034&amp;num=&amp;adid=&amp;advid=1359940&amp;adsrv=1&amp;region=30&amp;btreg=270576310&amp;btadsrv=doubleclick&amp;crt=&amp;crtname=&amp;chnl=&amp;unit=&amp;pid=&amp;uid=&amp;dvtagver=6.1.src" language="JavaScript"></script>
+    <script type="text/javascript">
+        //<![CDATA[
+      surroundTag=BLOOMBERG.util.Cookie.get("surroundId");
+       if(surroundTag == ""){
+          if((surroundTag == "")&&(adid != "")){ // check if the ad should start a surround session only if a surround session has not yet started
+              surroundTag="srnd="+adid+";"; // setup the key-value for a surround session
+              BLOOMBERG.util.Cookie.set("surroundId",adid,"","/"); // store the surround session id in a cookie.  Set the expiration date of the cookie to determine how long the surround session should last.  For example, if the surround session should last just one day, then set the expiration date for the cookie to tomorrow.
+            }
+       }
+       else{
+            surroundTag="srnd="+surroundTag+";";
+       }
+       //]]>
+    </script>
+
+
+    </div>
+    
+</div>
+
+
+
+    </div>
+
+
+
+    <div id="header_container" class="base_container">
+      <div id="header_top" class="clearfix">
+        <div id="branding">
+          
+            <a id="header_logo" class="logo_img" href="/">Bloomberg</a>
+                  </div>
+        <ul id="utility_navigation">
+          <li id="about_bloomberg" class="first"><a href="/company/"><abbr title="Learn more about our company">Our Company</abbr></a></li>
+          <li id="bloomberg_professional"><a href="/professional/"><abbr title="Bloomberg Professional">Professional</abbr></a></li>
+          <li id="bloomberg_anywhere" class="last"><a href="https://bba.bloomberg.net/" rel="nofollow"><abbr title="Bloomberg Anywhere">Anywhere</abbr></a></li>
+        </ul>
+                                                                <div id="header_search">
+    <input id="symac_keyword" onblur="symac_delayhandleLoseFocus();" onfocus="symac_handleFocus();" onkeyup="symac_handleKeyUp(event);" onkeydown="symac_handleKeyUp(event);" onmouseup="symac_handleKeyUp(event);" maxlength="90" value="Search News, Quotes and Opinion" autocomplete="off" class="symac_grayText" type="text">
+    </div>
+    </div>
+
+    <div id="header_bottom" class="clearfix">
+      <div id="ext_navigation">
+<div class="header_nav clearfix" id="ext_primary_navigation_v5">
+<ul id="sectional_navigation">
+<li class="nav_menu_item nav_menu_item_with_dropdown" id="nav_home">
+<a class="menu_tab" href="/">
+<span class="menu_text">Home</span>
+<span class="menu_icon"></span>
+</a>
+<div class="div_dropdown_container" id="nav_home_dropdown_container">
+<div class="dropdown_container clearfix">
+<div class="dropdown_section">
+<ul class="link_sections">
+<li class="">
+<a class="section" href="/">
+<div class="text">Bloomberg Homepage</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+</ul>
+</div>
+<div class="dropdown_section">
+<ul class="link_sections">
+<li class="separator more_label">
+<span class="section">More</span>
+</li>
+<li class="">
+<a class="section" href="/mobile/">
+<div class="text">Mobile Apps</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a class="section" href="http://www.businessweek.com/">
+<div class="text">Businessweek.com</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a class="section" href="http://www.bloomberg.com/insights/?cmpid=bbg_more">
+<div class="text">Insights Series</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a class="section" href="http://inside.bloomberg.com/">
+<div class="text">Bloomberg Blog</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+</ul>
+</div>
+
+</div>
+</div></li>
+<li class="nav_menu_item" id="nav_quick">
+<a class="menu_tab" href="/quickview/">
+<span class="menu_text">Quick</span>
+</a>
+</li>
+<li class="nav_menu_item nav_menu_item_with_dropdown" id="nav_news">
+<a class="menu_tab" href="/news/">
+<span class="menu_text">News</span>
+<span class="menu_icon"></span>
+</a>
+<div class="div_dropdown_container" id="nav_news_dropdown_container">
+<div class="dropdown_container clearfix">
+<div class="dropdown_section">
+<ul class="link_sections">
+<li class="">
+<a class="section" href="/news/">
+<div class="text">Top Headlines</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a class="section" href="/popular/">
+<div class="text">Most Popular</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a class="section" href="/news/exclusive/">
+<div class="text">Exclusive</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a class="section" href="/news/law/">
+<div class="text">Law</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a class="section" href="/entrepreneurs/">
+<div class="text">Entrepreneurs</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a class="section" href="/leaders/">
+<div class="text">Leaders</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a class="section" href="/luxury/muse/">
+<div class="text">Muse: Arts &amp; Culture</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a class="section" href="/news/economy/">
+<div class="text">Economy</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a class="section" href="/news/environment/">
+<div class="text">Environment</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a class="section" href="/news/science/">
+<div class="text">Science</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a class="section" href="/sports/">
+<div class="text">Sports</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a class="section" href="/markets-magazine/">
+<div class="text">Markets Magazine</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a class="section" href="http://topics.bloomberg.com/bloomberg-pursuits/">
+<div class="text">Pursuits Magazine</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+</ul>
+</div>
+<div class="dropdown_section">
+<ul class="link_sections">
+<li class="">
+<a class="section" href="/news/regions/">
+<div class="text">Regions</div>
+<div class="right_arrow"></div>
+</a>
+<ul class="link_subsections">
+<li class="">
+<a href="/news/us/">
+<div class="border_top text">U.S.</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/news/china/">
+<div class="text">China</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/news/europe/">
+<div class="text">Europe</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/news/asia/">
+<div class="text">Asia</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/news/uk-ireland/">
+<div class="text">U.K. &amp; Ireland</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/news/australia-newzealand/">
+<div class="text">Australia &amp; New Zealand</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/news/canada/">
+<div class="text">Canada</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/news/india-pakistan/">
+<div class="text">India &amp; Pakistan</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/news/japan/">
+<div class="text">Japan</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/news/africa/">
+<div class="text">Africa</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/news/eastern-europe/">
+<div class="text">Eastern Europe</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="last">
+<a class="more" href="/news/regions/">
+<div class="text">
+<span>More Regions</span>
+<span class="chev_arrow"></span>
+</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="dropdown_section">
+<ul class="link_sections">
+<li class="btm_spacing">
+<a class="section" href="/news/markets/">
+<div class="text">Markets</div>
+<div class="right_arrow"></div>
+</a>
+<ul class="link_subsections">
+<li class="">
+<a href="/news/commodities/">
+<div class="border_top text">Commodities</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/news/currencies/">
+<div class="text">Currencies</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/news/bonds/">
+<div class="text">Bonds</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/news/stocks/">
+<div class="text">Stocks</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/news/energy-markets/">
+<div class="text">Energy Markets</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/news/municipal-bonds/">
+<div class="text">Municipal Bonds</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/news/emerging-markets/">
+<div class="text">Emerging Markets</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/news/funds/">
+<div class="text">Funds</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="http://topics.bloomberg.com/islamic-finance/">
+<div class="text">Islamic Finance</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="last">
+<a class="more" href="/news/markets/">
+<div class="text">
+<span>More Markets</span>
+<span class="chev_arrow"></span>
+</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="dropdown_section">
+<ul class="link_sections">
+<li class="">
+<a class="section" href="/news/industries/">
+<div class="text">Industries</div>
+<div class="right_arrow"></div>
+</a>
+<ul class="link_subsections">
+<li class="">
+<a href="/news/energy/">
+<div class="border_top text">Energy</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/news/technology/">
+<div class="text">Technology</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/news/real-estate/">
+<div class="text">Real Estate</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/news/finance/">
+<div class="text">Finance</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/news/health-care/">
+<div class="text">Health Care</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/news/transportation/">
+<div class="text">Transportation</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/news/insurance/">
+<div class="text">Insurance</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/news/retail/">
+<div class="text">Retail</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/news/media/">
+<div class="text">Media</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="last">
+<a class="more" href="/news/industries/">
+<div class="text">
+<span>More Industries</span>
+<span class="chev_arrow"></span>
+</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+</div>
+</div></li>
+<li class="nav_menu_item nav_menu_item_with_dropdown" id="nav_view">
+<a class="menu_tab" href="/view/">
+<span class="menu_text">Opinion</span>
+<span class="menu_icon"></span>
+</a>
+<div class="div_dropdown_container" id="nav_view_dropdown_container">
+<div class="dropdown_container clearfix">
+<div class="dropdown_section">
+<ul class="link_sections">
+<li class="">
+<a class="section" href="/view/editorials/">
+<div class="text">Editorials</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a class="section" href="/view/commentary/">
+<div class="text">Commentary</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+</ul>
+</div>
+<div class="dropdown_section">
+<ul class="link_sections">
+<li class="separator">
+<a class="section" href="/view/echoes/">
+<div class="text">Echoes</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a class="section" href="/view/the-ticker/">
+<div class="text">The Ticker</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a class="section" href="/view/world-view/">
+<div class="text">World View</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+</ul>
+</div>
+
+</div>
+</div></li>
+<li class="nav_menu_item nav_menu_item_with_dropdown" id="nav_market_data">
+<a class="menu_tab" href="/markets/">
+<span class="menu_text">Market Data</span>
+<span class="menu_icon"></span>
+</a>
+<div class="div_dropdown_container" id="nav_market_data_dropdown_container">
+<div class="dropdown_container clearfix">
+<div class="dropdown_section">
+<ul class="link_sections">
+<li class="btm_spacing">
+<a class="section" href="/markets/stocks/">
+<div class="text">Stocks</div>
+<div class="right_arrow"></div>
+</a>
+<ul class="link_subsections">
+<li class="">
+<a href="/markets/stocks/futures/">
+<div class="border_top text">Stock Futures</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/markets/stocks/world-indexes/">
+<div class="text">World Indexes</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/markets/stocks/movers/dow/">
+<div class="text">Gainers &amp; Losers</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/markets/stocks/regional-indexes/">
+<div class="text">Regional Indexes</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="last">
+<a href="/apps/ecal?c=US">
+<div class="text">Earnings</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+</ul>
+</li>
+<li class="btm_spacing">
+<a class="section" href="/markets/currencies/">
+<div class="text">Currencies</div>
+<div class="right_arrow"></div>
+</a>
+<ul class="link_subsections">
+<li class="">
+<a href="/markets/currencies/americas/">
+<div class="border_top text">World Currencies</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/markets/currencies/cross-rates/">
+<div class="text">Foreign Exchange Rates</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="last">
+<a href="/video/forex-trading/">
+<div class="text">Forex Trading Videos</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="dropdown_section">
+<ul class="link_sections">
+<li class="btm_spacing">
+<a class="section" href="/markets/commodities/futures/">
+<div class="text">Commodities</div>
+<div class="right_arrow"></div>
+</a>
+<ul class="link_subsections">
+<li class="">
+<a href="/energy/">
+<div class="border_top text">Energy Prices</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/markets/commodities/futures/metals/">
+<div class="text">Metals Prices</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="last">
+<a href="/markets/commodities/futures/agriculture/">
+<div class="text">Agricultural Prices</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+</ul>
+</li>
+<li class="">
+<a class="section" href="/markets/rates-bonds/">
+<div class="text">Rates &amp; Bonds</div>
+<div class="right_arrow"></div>
+</a>
+<ul class="link_subsections">
+<li class="">
+<a href="/markets/rates-bonds/government-bonds/us/">
+<div class="border_top text">US Treasuries</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/markets/rates-bonds/government-bonds/uk/">
+<div class="text">UK Gilts</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/markets/rates-bonds/government-bonds/germany/">
+<div class="text">German Bunds</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/markets/rates-bonds/government-bonds/japan/">
+<div class="text">Japanese Bonds</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/markets/rates-bonds/government-bonds/australia/">
+<div class="text">Australian Bonds</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/markets/rates-bonds/corporate-bonds/">
+<div class="text">US Corporate Bonds</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="last">
+<a href="/markets/rates-bonds/consumer-interest-rates/">
+<div class="text">US Consumer Rates</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="dropdown_section">
+<ul class="link_sections">
+<li class="">
+<a class="section" href="/markets/etfs/">
+<div class="text">ETFs</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a class="section" href="/markets/mutual-funds/top-funds/us/">
+<div class="text">Mutual Funds</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a class="section" href="/markets/economic-calendar/">
+<div class="text">Economic Calendar</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a class="section" href="/markets/watchlist/">
+<div class="text">Watchlist</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a class="section" href="/markets/european-debt-crisis/">
+<div class="text">European Debt Crisis</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+</ul>
+</div>
+
+</div>
+</div></li>
+<li class="nav_menu_item nav_menu_item_with_dropdown" id="nav_personal_finance">
+<a class="menu_tab" href="/personal-finance/">
+<span class="menu_text">Personal Finance</span>
+<span class="menu_icon"></span>
+</a>
+<div class="div_dropdown_container" id="nav_personal_finance_dropdown_container">
+<div class="dropdown_container clearfix">
+<div class="dropdown_section">
+<ul class="link_sections">
+<li class="">
+<a class="section" href="/personal-finance/">
+<div class="text">Overview</div>
+<div class="right_arrow"></div>
+</a>
+<ul class="link_subsections">
+<li class="">
+<a href="/personal-finance/saving-and-investing/">
+<div class="text">Saving &amp; Investing</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/personal-finance/wealth/">
+<div class="text">Wealth</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/personal-finance/real-estate/">
+<div class="text">Real Estate</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/personal-finance/retirement-planning/">
+<div class="text">Retirement Planning</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/personal-finance/financial-advisers/">
+<div class="text">Financial Advisers</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/personal-finance/taxes/">
+<div class="text">Taxes</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/personal-finance/consumer-spending/">
+<div class="text">Real Cost Of</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/personal-finance/money-gallery/">
+<div class="text">Money Gallery</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/personal-finance/insurance-and-health/">
+<div class="text">Insurance &amp; Health</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/personal-finance/portfolio-impact/">
+<div class="text">Portfolio Impact</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/personal-finance/calculators/">
+<div class="text">Calculators</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="last">
+<a href="/markets/watchlist/">
+<div class="text">Watchlist (Portfolio Tracker)</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+</div>
+</div></li>
+<li class="nav_menu_item nav_menu_item_with_dropdown" id="nav_technology">
+<a class="menu_tab" href="/technology/">
+<span class="menu_text">Tech</span>
+<span class="menu_icon"></span>
+</a>
+<div class="div_dropdown_container" id="nav_technology_dropdown_container">
+<div class="dropdown_container clearfix">
+<div class="dropdown_section">
+<ul class="link_sections">
+<li class="">
+<a class="section" href="/technology/">
+<div class="text">Overview</div>
+<div class="right_arrow"></div>
+</a>
+<ul class="link_subsections">
+<li class="">
+<a href="/technology/social-media/">
+<div class="text">Social Media</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/technology/mobile-wireless/">
+<div class="text">Mobile &amp; Wireless</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/technology/web/">
+<div class="text">Web</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/technology/enterprise-tech/">
+<div class="text">Enterprise Tech</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/technology/tv-games-movies/">
+<div class="text">TV, Games &amp; Movies</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/technology/apple/">
+<div class="text">Apple</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="http://go.bloomberg.com/tech-deals/">
+<div class="text">Tech Deals</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/blogs/technology/global-tech/">
+<div class="text">Global Tech</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/technology/slideshows/">
+<div class="text">Slideshows</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="last">
+<a href="/video/technology/">
+<div class="text">Videos</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+</div>
+</div></li>
+<li class="nav_menu_item nav_menu_item_with_dropdown" id="nav_politics">
+<a class="menu_tab" href="/politics/">
+<span class="menu_text">Politics</span>
+<span class="menu_icon"></span>
+</a>
+<div class="div_dropdown_container" id="nav_politics_dropdown_container">
+<div class="dropdown_container clearfix">
+<div class="dropdown_section">
+<ul class="link_sections">
+<li class="">
+<a class="section" href="/politics/">
+<div class="text">Overview</div>
+<div class="right_arrow"></div>
+</a>
+<ul class="link_subsections">
+<li class="">
+<a href="/politics/elections/">
+<div class="text">Elections</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/politics/white-house/">
+<div class="text">White House</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/politics/congress/">
+<div class="text">Congress</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/politics/state-local/">
+<div class="text">State &amp; Local</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="http://go.bloomberg.com/political-economy/">
+<div class="text">Political Capital</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/video/politics/">
+<div class="text">Videos</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="last">
+<a href="/politics/live-blogs/">
+<div class="text">Live Blogs</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+</div>
+</div></li>
+<li class="nav_menu_item nav_menu_item_with_dropdown" id="nav_sustainability">
+<a class="menu_tab" href="/sustainability/">
+<span class="menu_text">Sustainability</span>
+<span class="menu_icon"></span>
+</a>
+<div class="div_dropdown_container" id="nav_sustainability_dropdown_container">
+<div class="dropdown_container clearfix">
+<div class="dropdown_section">
+<ul class="link_sections">
+<li class="">
+<a class="section" href="/sustainability/">
+<div class="text">Overview</div>
+<div class="right_arrow"></div>
+</a>
+<ul class="link_subsections">
+<li class="">
+<a href="/sustainability/energy/">
+<div class="text">Energy</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/sustainability/corporate/">
+<div class="text">Corporate Sustainability</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/sustainability/policy/">
+<div class="text">Policy</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/sustainability/natural-resources/">
+<div class="text">Natural Resources</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/sustainability/health-population/">
+<div class="text">Health &amp; Population</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/sustainability/slideshows/">
+<div class="text">Slideshows</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/video/sustainability/">
+<div class="text">Videos</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="last">
+<a href="/sustainability/the-grid/">
+<div class="text">Blog: The Grid</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+</div>
+</div></li>
+<li class="nav_menu_item nav_menu_item_with_dropdown" id="nav_luxury">
+<a class="menu_tab" href="/luxury/">
+<span class="menu_text">Luxury</span>
+<span class="menu_icon"></span>
+</a>
+<div class="div_dropdown_container" id="nav_luxury_dropdown_container">
+<div class="dropdown_container clearfix">
+<div class="dropdown_section">
+<ul class="link_sections">
+<li class="">
+<a class="section" href="/luxury/muse/">
+<div class="text">Muse: Arts &amp; Culture</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a class="section" href="/billionaires/">
+<div class="text">Billionaires</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a class="section" href="/luxury/living/">
+<div class="text">Living</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a class="section" href="/luxury/property/">
+<div class="text">Property</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a class="section" href="/luxury/travel/">
+<div class="text">Travel</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a class="section" href="/luxury/well-spent/">
+<div class="text">Well Spent</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a class="section" href="/blogs/luxury/loot/">
+<div class="text">Loot Blog</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a class="section" href="/video/luxury/">
+<div class="text">Videos</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+</ul>
+</div>
+
+</div>
+</div></li>
+<li class="nav_menu_item nav_menu_item_with_dropdown" id="nav_tv">
+<a class="menu_tab" href="/tv/">
+<span class="menu_text">TV</span>
+<span class="menu_icon"></span>
+</a>
+<div class="div_dropdown_container" id="nav_tv_dropdown_container">
+<div class="dropdown_container clearfix">
+<div class="dropdown_section">
+<ul class="link_sections">
+<li class="">
+<a class="section" href="/tv/">
+<div class="text">Live TV</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a class="section" href="/tv/channel-finder/">
+<div class="text">Channel Finder</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a class="section" href="/personalities/">
+<div class="text">Personalities</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="btm_spacing">
+<a class="section" href="/mobile/tv">
+<div class="text">iPad App</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a class="section" href="/tv/schedule/">
+<div class="text">Schedule</div>
+<div class="right_arrow"></div>
+</a>
+<ul class="link_subsections">
+<li class="">
+<a href="/tv/schedule/">
+<div class="border_top text">U.S.</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/tv/schedule/asia/">
+<div class="text">Asia</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="last">
+<a href="/tv/schedule/europe/">
+<div class="text">Europe</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="dropdown_section">
+<ul class="link_sections">
+<li class="">
+<a class="section" href="/tv/shows/">
+<div class="text">Shows</div>
+<div class="right_arrow"></div>
+</a>
+<ul class="link_subsections">
+<li class="">
+<a href="/video/bloomberg-surveillance/">
+<div class="border_top text">Surveillance</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/video/market-makers/">
+<div class="text">Market Makers</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/video/lunch-money">
+<div class="text">Lunch Money</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/video/street-smart/">
+<div class="text">Street Smart</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/video/bloomberg-west/">
+<div class="text">Bloomberg West</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/video/game-changers/">
+<div class="text">Game Changers</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="last">
+<a class="more" href="/tv/shows/">
+<div class="text">
+<span>More Shows</span>
+<span class="chev_arrow"></span>
+</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+</div>
+</div></li>
+<li class="nav_menu_item nav_menu_item_with_dropdown" id="nav_video">
+<a class="menu_tab" href="/video/">
+<span class="menu_text">Video</span>
+<span class="menu_icon"></span>
+</a>
+<div class="div_dropdown_container" id="nav_video_dropdown_container">
+<div class="dropdown_container clearfix">
+<div class="dropdown_section">
+<ul class="link_sections">
+<li class="">
+<a class="section" href="/video/">
+<div class="text">Must See</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a class="section" href="/video/latest/">
+<div class="text">Latest</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a class="section" href="/video/most-watched/">
+<div class="text">Most Watched</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a class="section" href="/video/interviews/">
+<div class="text">Interviews</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a class="section" href="/playlist/">
+<div class="text">Playlist</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+</ul>
+</div>
+
+</div>
+</div></li>
+<li class="nav_menu_item nav_menu_item_with_dropdown" id="nav_radio">
+<a class="menu_tab" href="/radio/">
+<span class="menu_text">Radio</span>
+<span class="menu_icon"></span>
+</a>
+<div class="div_dropdown_container" id="nav_radio_dropdown_container">
+<div class="dropdown_container clearfix">
+<div class="dropdown_section">
+<ul class="link_sections">
+<li class="">
+<a class="section" href="/radio/">
+<div class="text">Live Radio</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a class="section" href="/radio/shows/">
+<div class="text">Shows</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a class="section" href="/radio/schedule/">
+<div class="text">Schedule</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="btm_spacing">
+<a class="section" href="/personalities/">
+<div class="text">Personalities</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a class="section" href="/podcasts/">
+<div class="text">Podcasts</div>
+<div class="right_arrow"></div>
+</a>
+<ul class="link_subsections">
+<li class="">
+<a href="/podcasts/first-word/">
+<div class="border_top text">First Word</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/podcasts/surveillance/">
+<div class="text">Surveillance</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="">
+<a href="/podcasts/taking-stock/">
+<div class="text">Taking Stock</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+<li class="last">
+<a class="more" href="/podcasts/">
+<div class="text">
+<span>More Podcasts</span>
+<span class="chev_arrow"></span>
+</div>
+<div class="right_arrow"></div>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+</div>
+</div></li>
+</ul>
+</div>
+<ul id="eye_brow_nav">
+<li class="eye_brow_item first_item">
+<div class="item_container">
+<a class="menu_tab is_parent highlight_text" href="/luxury/">Luxury</a>
+</div>
+<div class="highlight_text parent_class_arrow"></div>
+</li>
+<li class="eye_brow_item">
+<div class="item_container">
+<a class="menu_tab  " href="/luxury/muse/">Muse: Arts &amp; Culture</a>
+</div>
+</li>
+<li class="eye_brow_item">
+<div class="item_container">
+<a class="menu_tab  " href="/billionaires/">Billionaires</a>
+</div>
+</li>
+<li class="eye_brow_item">
+<div class="item_container">
+<a class="menu_tab  " href="/luxury/living/">Living</a>
+</div>
+</li>
+<li class="eye_brow_item">
+<div class="item_container">
+<a class="menu_tab  " href="/luxury/property/">Property</a>
+</div>
+</li>
+<li class="eye_brow_item">
+<div class="item_container">
+<a class="menu_tab  " href="/luxury/travel/">Travel</a>
+</div>
+</li>
+<li class="eye_brow_item">
+<div class="item_container">
+<a class="menu_tab  " href="/luxury/well-spent/">Well Spent</a>
+</div>
+</li>
+<li class="eye_brow_item">
+<div class="item_container">
+<a class="menu_tab  " href="/blogs/luxury/loot/">Loot Blog</a>
+</div>
+</li>
+<li class="eye_brow_item">
+<div class="item_container">
+<a class="menu_tab  " href="/video/luxury/">Videos</a>
+</div>
+</li>
+<li class="eye_brow_item has_dropdown more">
+<div class="item_container">
+<a class="menu_tab  " href="#">More</a>
+<div class="dropdown_nav_arrow"></div>
+</div>
+<div class="div_dropdown_container">
+<div class="col_0 dropdown_section">
+<ul class="links_section">
+<li class="">
+<a class="" href="/luxury/art/">Art</a>
+</li>
+<li class="">
+<a class="" href="/luxury/autos/">Autos</a>
+</li>
+<li class="">
+<a class="" href="/luxury/books/">Books</a>
+</li>
+<li class="">
+<a class="" href="/luxury/dining/">Dining</a>
+</li>
+<li class="">
+<a class="" href="/luxury/gadgets/">Gadgets</a>
+</li>
+<li class="">
+<a class="" href="/luxury/movies-tv-theater/">Movies, TV &amp; Theater</a>
+</li>
+<li class="">
+<a class="" href="/luxury/music/">Music</a>
+</li>
+<li class="">
+<a class="" href="/luxury/wine/">Wine</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+</ul>
+
+</div>
+<script type="text/javascript">
+  //<![CDATA[
+    
+    if (BLOOMBERG.noir_2_qv){
+      BLOOMBERG.noir_2_qv.modify_nav_link();
+    }
+    
+    
+    if($('#eye_brow_nav').size() !=0)
+    {
+      $("head").append('<style type="text/css" charset="utf-8">#secondary_content .component.subnav{display: none;}#secondary_content .component.subnav#subnav_tv{display: block;}#secondary_content .component.subnav#subnav_radio{display: block;}body.blog ul.sector_tabs{display: none;}body.blog #primary_content .featured_content.first{border-top: none;}</style>');
+    }
+  //]]>
+</script>
+
+    </div>
+
+</div>
+
+                      <div class="lb_place_holder"></div>
+            
+      <div class="header_logo_container">
+<h1>Luxury - The Good Life</h1>
+</div>
+
+      <div id="content" class="clearfix ">
+                        <div id="primary_content">
+          <div class="lede_container editable" data-section-accessor="carousel_lede" data-title="Carousel Lede" style="">
+<div class="lede_carousel clearfix">
+<div style="position: relative; display: block;" class="jcarousel-container jcarousel-container-horizontal" id="bar_carousel">
+<div style="position: relative;" class="jcarousel-clip jcarousel-clip-horizontal"><ul style="overflow: hidden; position: relative; top: 0px; margin: 0px; padding: 0px; left: 0px; width: 3820px;" class="jcarousel-list jcarousel-list-horizontal">
+<li jcarouselindex="1" style="float: left; list-style: none outside none;" class="jcarousel-item jcarousel-item-horizontal jcarousel-item-1 jcarousel-item-1-horizontal">
+<div class="lede">
+<div id="lead_image">
+<a href="/news/2013-05-02/putin-opens-700-million-new-mariinsky-with-domingo-gala.html"><img alt="Mariinsky Opening " src="http://www.bloomberg.com/image/iteIfhrQEy3o.jpg" height="349" width="620"></a>
+</div>
+<div id="lead_headline">
+<h2><a href="/news/2013-05-02/putin-opens-700-million-new-mariinsky-with-domingo-gala.html" class="q black" data-id="MM6B9F0YHQ0X01" data-type="Story">Putin Opens $700 Million New Mariinsky With Domingo Gala</a><div style="opacity: 1;" class="q_style_button add_to_q" title="Add to queue">Q</div></h2>
+</div>
+<a href="/luxury/movies-tv-theater/" class="category_tag">Movies, TV &amp; Theater</a>
+</div>
+
+</li>
+<li jcarouselindex="2" style="float: left; list-style: none outside none;" class="jcarousel-item jcarousel-item-horizontal jcarousel-item-2 jcarousel-item-2-horizontal">
+<div class="lede">
+<div id="lead_image">
+<a href="/news/2013-05-02/sotheby-s-boosts-private-sales-with-new-gallery-plan.html"><img alt="31 George Street " src="http://www.bloomberg.com/image/iW2IZpd8kFd8.jpg" height="349" width="620"></a>
+</div>
+<div id="lead_headline">
+<h2><a href="/news/2013-05-02/sotheby-s-boosts-private-sales-with-new-gallery-plan.html" class="q black" data-id="MM684H1A74E901" data-type="Story">Sotheby’s Boosts Private Sales With New Gallery Plan</a><div style="opacity: 1;" class="q_style_button add_to_q" title="Add to queue">Q</div></h2>
+</div>
+<a href="/luxury/well-spent/" class="category_tag">Well Spent</a>
+</div>
+
+</li>
+<li jcarouselindex="3" style="float: left; list-style: none outside none;" class="jcarousel-item jcarousel-item-horizontal jcarousel-item-3 jcarousel-item-3-horizontal">
+<div class="lede">
+<div id="lead_image">
+<a href="/news/2013-05-03/nyc-weekend-rihanna-cinco-de-mayo-fest-cross-dressing.html"><img alt="New York Botanical Garden " src="http://www.bloomberg.com/image/iZdjv1mHLRi4.jpg" height="349" width="620"></a>
+</div>
+<div id="lead_headline">
+<h2><a href="/news/2013-05-03/nyc-weekend-rihanna-cinco-de-mayo-fest-cross-dressing.html" class="q black" data-id="MM6NVQ07SXKY01" data-type="Story">Rihanna, Cinco de Mayo Fest, Cross Dressing: NYC</a><div style="opacity: 1;" class="q_style_button add_to_q" title="Add to queue">Q</div></h2>
+</div>
+<a href="/luxury/living/" class="category_tag">Living</a>
+</div>
+
+</li>
+<li jcarouselindex="4" style="float: left; list-style: none outside none;" class="jcarousel-item jcarousel-item-horizontal jcarousel-item-4 jcarousel-item-4-horizontal">
+<div class="lede">
+<div id="lead_image">
+<a href="/news/2013-05-02/smug-banker-dinosaurs-beyonce-food-fest-london-best.html"><img alt="'Calder After the War' " src="http://www.bloomberg.com/image/i347NwcMKKbY.jpg" height="349" width="620"></a>
+</div>
+<div id="lead_headline">
+<h2><a href="/news/2013-05-02/smug-banker-dinosaurs-beyonce-food-fest-london-best.html" class="q black" data-id="MM6G3Q1A1I4H01" data-type="Story">Smug Banker, Dinosaurs, Beyonce, Food Fest: London</a><div style="opacity: 1;" class="q_style_button add_to_q" title="Add to queue">Q</div></h2>
+</div>
+<a href="/luxury/living/" class="category_tag">Living</a>
+</div>
+
+</li>
+<li jcarouselindex="5" style="float: left; list-style: none outside none;" class="jcarousel-item jcarousel-item-horizontal jcarousel-item-5 jcarousel-item-5-horizontal">
+<div class="lede">
+<div id="lead_image">
+<a href="/news/2013-05-02/a-tree-grows-in-manhattan-no-thanks-to-you.html"><img alt="Plants " src="http://www.bloomberg.com/image/i8aAlqvC9VMY.jpg" height="349" width="620"></a>
+</div>
+<div id="lead_headline">
+<h2><a href="/news/2013-05-02/a-tree-grows-in-manhattan-no-thanks-to-you.html" class="q black" data-id="474038f0959f013047ae58d38561c600" data-type="Story">A Tree Grows in Manhattan, No Thanks to You</a><div style="opacity: 1;" class="q_style_button add_to_q" title="Add to queue">Q</div></h2>
+</div>
+<a href="/blogs/luxury/loot/" class="category_tag">Blog: Loot</a>
+</div>
+
+</li>
+</ul></div>
+<div style="display: block;" class="jcarousel-prev jcarousel-prev-horizontal"></div><div style="display: block;" class="jcarousel-next jcarousel-next-horizontal"></div></div>
+<span id="carousel-prev"></span>
+<span id="carousel-next"></span>
+<div class="externalControl carousel_bottom">
+<div class="carousel_buttons">
+<span class="active" id="link1">
+1
+</span>
+<span id="link2">
+2
+</span>
+<span id="link3">
+3
+</span>
+<span id="link4">
+4
+</span>
+<span id="link5">
+5
+</span>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+  //<![CDATA[
+    jQuery(document).ready(function() {
+        BLOOMBERG.luxury_carousel.number_of_items = "5"
+        jQuery('#bar_carousel').jcarousel({
+            start: 1,
+            auto: 5,
+            scroll: 1,
+            wrap: 'circular',
+            itemVisibleInCallback:  BLOOMBERG.luxury_carousel.highlight,
+            itemVisibleOutCallback: BLOOMBERG.luxury_carousel.removehighlight,
+            initCallback: BLOOMBERG.luxury_carousel.carousel_initCallback,
+            itemFallbackDimension: 620
+        });
+        BLOOMBERG.lead_video.initialize('Luxury Lede Video');
+        $('#lead_video_container').hide();
+    });
+  //]]>
+</script>
+
+</div>
+
+<div class="top_news_container thumbnails clearfix">
+<div class="featured_news_container editable" data-section-accessor="featured_news" data-title="Featured News" style="">
+<h2>Featured</h2>
+<div class="clearfix top_story">
+<div class="story_thumbnail_container thumbnail">
+<div class="thumbnail_container">
+<a href="/news/2013-05-02/how-keynes-locked-horns-with-soviet-spy-at-bretton-woods.html">
+<img alt="'The Battle of Bretton Woods' " src="http://www.bloomberg.com/image/iU1ROsOJ32XE.jpg" height="80" width="140">
+</a>
+</div>
+
+</div>
+<a href="/luxury/books/" class="category_tag">Books</a>
+<div class="item_content">
+<a href="/news/2013-05-02/how-keynes-locked-horns-with-soviet-spy-at-bretton-woods.html" class="q black" data-id="MK83LX1A74E901" data-type="Story">How Keynes Locked Horns With Soviet Spy at Bretton Woods</a><div style="opacity: 1;" class="q_style_button add_to_q" title="Add to queue">Q</div>
+</div>
+</div>
+<div class="clearfix top_story">
+<div class="story_thumbnail_container thumbnail">
+<div class="thumbnail_container">
+<a href="/news/2013-05-03/michael-shannon-s-cool-killer-iron-man-s-terror-movies.html">
+<img alt="'Iron Man 3' " src="http://www.bloomberg.com/image/i33qa5nImS10.jpg" height="80" width="140">
+</a>
+</div>
+
+</div>
+<a href="/luxury/movies-tv-theater/" class="category_tag">Movies, TV &amp; Theater</a>
+<div class="item_content">
+<a href="/news/2013-05-03/michael-shannon-s-cool-killer-iron-man-s-terror-movies.html" class="q black" data-id="MM6J6807SXKX01" data-type="Story">Michael Shannon’s Cool Killer; Iron Man’s Terror</a><div style="opacity: 1;" class="q_style_button add_to_q" title="Add to queue">Q</div>
+</div>
+</div>
+<div class="clearfix top_story">
+<div class="story_thumbnail_container thumbnail">
+<div class="thumbnail_container">
+<a href="/news/2013-05-03/airport-play-areas-for-your-next-layover-with-kids.html">
+<img alt="Traveling with Kids: Airport Play Areas for Your Next Long Layov " src="http://www.bloomberg.com/image/ieqSwvMTt5yY.jpg" height="80" width="140">
+</a>
+</div>
+
+</div>
+<a href="/luxury/travel/" class="category_tag">Travel</a>
+<div class="item_content">
+<a href="/news/2013-05-03/airport-play-areas-for-your-next-layover-with-kids.html" class="q black" data-id="53a6a4b0963301304ac258d38561c600" data-type="Story">Airport Play Areas for Your Next Layover With Kids</a><div style="opacity: 1;" class="q_style_button add_to_q" title="Add to queue">Q</div>
+</div>
+</div>
+<div class="clearfix top_story">
+<div class="story_thumbnail_container thumbnail">
+<div class="thumbnail_container">
+<a href="/news/2013-05-02/nahmad-gallery-scraps-monet-richter-show-after-raid.html">
+<img alt="Hillel Nahmad " src="http://www.bloomberg.com/image/i38eujPeifpA.jpg" height="80" width="140">
+</a>
+</div>
+
+</div>
+<a href="/luxury/art/" class="category_tag">Art</a>
+<div class="item_content">
+<a href="/news/2013-05-02/nahmad-gallery-scraps-monet-richter-show-after-raid.html" class="q black" data-id="MM6TFT1A74E901" data-type="Story">Nahmad Gallery Scraps ‘Monet Richter’ Show After Raid</a><div style="opacity: 1;" class="q_style_button add_to_q" title="Add to queue">Q</div>
+</div>
+</div>
+<div class="clearfix top_story">
+<div class="story_thumbnail_container thumbnail">
+<div class="thumbnail_container">
+<a href="/news/2013-05-02/street-legal-170-000-mini-formula-one-races-along-malibu.html">
+<img alt="BAC Mono " src="http://www.bloomberg.com/image/iWP49PNJzOpQ.jpg" height="80" width="140">
+</a>
+</div>
+
+</div>
+<a href="/luxury/autos/" class="category_tag">Autos</a>
+<div class="item_content">
+<a href="/news/2013-05-02/street-legal-170-000-mini-formula-one-races-along-malibu.html" class="q black" data-id="MM0D8U07SXKX01" data-type="Story">Street Legal $170,000 Mini Formula One Races in Malibu</a><div style="opacity: 1;" class="q_style_button add_to_q" title="Add to queue">Q</div>
+</div>
+</div>
+<div class="clearfix last top_story">
+<div class="story_thumbnail_container thumbnail">
+<div class="thumbnail_container">
+<a href="/news/2013-05-03/billionaire-kaiser-exploiting-charity-loophole-with-boats.html">
+<img alt="Billionaire George Kaiser " src="http://www.bloomberg.com/image/i5GPQbHROT2A.jpg" height="80" width="140">
+</a>
+</div>
+
+</div>
+<a href="/billionaires/" class="category_tag">Billionaires</a>
+<div class="item_content">
+<a href="/news/2013-05-03/billionaire-kaiser-exploiting-charity-loophole-with-boats.html" class="q black" data-id="MM6RL56VDKHS01" data-type="Story">Billionaire Kaiser Exploiting Charity Loophole With Boats</a><div style="opacity: 1;" class="q_style_button add_to_q" title="Add to queue">Q</div>
+</div>
+</div>
+
+</div>
+
+<div class="must_see_container editable" data-section-accessor="must_see_news" data-title="Must See News" style="">
+<h2>Must See</h2>
+<div class="clearfix top_story">
+<div class="story_thumbnail_container thumbnail">
+<div class="thumbnail_container">
+<a href="/news/2013-05-03/kitchen-and-bath-remodels-on-the-rebound.html">
+<img alt="Accessible showers " src="http://www.bloomberg.com/image/i.EIBDbbFsFs.jpg">
+</a>
+</div>
+
+</div>
+<a href="/luxury/well-spent/" class="category_tag">Well Spent</a>
+<div class="item_content">
+<a href="/news/2013-05-03/kitchen-and-bath-remodels-on-the-rebound.html" class="q black" data-id="88bdd810963a01304b0058d38561c600" data-type="Story">Kitchen and Bath Remodels on the Rebound</a><div style="opacity: 1;" class="q_style_button add_to_q" title="Add to queue">Q</div>
+</div>
+</div>
+<div class="clearfix top_story">
+<div class="story_thumbnail_container thumbnail">
+<div class="thumbnail_container">
+<a href="/video/this-wine-sells-for-785-a-bottle-is-it-worth-it-GQZktlsuRZyWoct15wQ2Cg.html">
+<img alt="Penfolds Grange 2008: The `Perfect' Wine?" src="http://www.bloomberg.com/image/ivc4b.CQB4J4.jpg">
+<div class="overlay"></div>
+<div class="video_info">
+<span class="duration">2:51</span>
+</div>
+</a>
+</div>
+
+</div>
+<div class="category_tag">Luxury</div>
+<div class="item_content">
+<a href="/video/this-wine-sells-for-785-a-bottle-is-it-worth-it-GQZktlsuRZyWoct15wQ2Cg.html" class="q black" data-id="GQZktlsuRZyWoct15wQ2Cg" data-type="Video">This Wine Sells for $785 a Bottle, Is It Worth It?<span class="camera"></span></a><div style="opacity: 1;" class="q_style_button add_to_q" title="Add to playlist">Q</div>
+</div>
+</div>
+<div class="clearfix top_story">
+<div class="story_thumbnail_container thumbnail">
+<div class="thumbnail_container">
+<a href="/slideshow/2013-05-02/gorgeous-homes-with-knockout-views.html">
+<img alt="Scottsdale, AZ" src="http://www.bloomberg.com/image/i5I5xp4_HWWg.jpg">
+</a>
+</div>
+
+</div>
+<a href="/luxury/property/" class="category_tag">Property</a>
+<div class="item_content">
+<a href="/slideshow/2013-05-02/gorgeous-homes-with-knockout-views.html" class="q black" data-id="cf92bf908e49013001132fa18e9b9a84" data-type="Story">Gorgeous Homes With Knockout Views</a><div style="opacity: 1;" class="q_style_button add_to_q" title="Add to queue">Q</div>
+</div>
+</div>
+<div class="clearfix top_story">
+<div class="story_thumbnail_container thumbnail">
+<div class="thumbnail_container">
+<a href="/video/on-stage-with-violinist-miri-ben-ari-AwOag502Rca70pxAJV9uyQ.html">
+<img alt="On Stage With Violinist Miri Ben-Ari" src="http://www.bloomberg.com/image/iX1F8mg49Qes.jpg">
+<div class="overlay"></div>
+<div class="video_info">
+<span class="duration">6:24</span>
+</div>
+</a>
+</div>
+
+</div>
+<a href="/luxury/music/" class="category_tag">Music</a>
+<div class="item_content">
+<a href="/video/on-stage-with-violinist-miri-ben-ari-AwOag502Rca70pxAJV9uyQ.html" class="q black" data-id="AwOag502Rca70pxAJV9uyQ" data-type="Video">On Stage With Violinist Miri Ben-Ari<span class="camera"></span></a><div style="opacity: 1;" class="q_style_button add_to_q" title="Add to playlist">Q</div>
+</div>
+</div>
+
+</div>
+
+</div>
+<div class="more_content_container clearfix">
+<div class="tetris_boxes">
+<div class="editable left tetris_with_thumbnail" data-section-accessor="tetris_1" data-title="Tetris 1" style="">
+<a href="/luxury/travel/" class="category_tag">Travel</a>
+<div class="thumbnail_with_hl">
+<a href="/news/2013-05-02/don-t-line-up-at-the-airport-use-an-app.html"><img alt="Why You Should Never, Ever Line up at the Airport " src="http://www.bloomberg.com/image/iiwsK77O7TSU.jpg" height="169" width="300"></a>
+</div>
+<div class="hl">
+<a href="/news/2013-05-02/don-t-line-up-at-the-airport-use-an-app.html" class="q black" data-id="9cad725095690130463858d38561c600" data-type="Story">Don't Line Up at the Airport: Use an App</a><div style="opacity: 1;" class="q_style_button add_to_q" title="Add to queue">Q</div>
+</div>
+</div>
+
+<div class="editable right tetris_with_thumbnail" data-section-accessor="tetris_2" data-title="Tetris 2" style="">
+<a href="/luxury/property/" class="category_tag">Property</a>
+<div class="thumbnail_with_hl">
+<a href="/news/2013-05-01/dubai-developers-luring-individuals-with-hotel-boom-real-estate.html"><img alt="Hotel Apartments for Sale Offer a Slice of Dubai’s Tourism Boom " src="http://www.bloomberg.com/image/iVukSVPj8uLk.jpg" height="169" width="300"></a>
+</div>
+<div class="hl">
+<a href="/news/2013-05-01/dubai-developers-luring-individuals-with-hotel-boom-real-estate.html" class="q black" data-id="MLGGTM0YHQ0X01" data-type="Story">Dubai Developers Luring Individuals With Hotel Boom</a><div style="opacity: 1;" class="q_style_button add_to_q" title="Add to queue">Q</div>
+</div>
+</div>
+
+<div class="editable left tetris_with_thumbnail" data-section-accessor="tetris_3" data-title="Tetris 3" style="">
+<a href="/billionaires/" class="category_tag">Billionaires</a>
+<div class="thumbnail_with_hl">
+<a href="/news/2013-05-02/billionaire-tax-haven-liechtenstein-loses-on-bank-reforms.html"><img alt="Billionaire Haven Liechtenstein Seen Losing Amid Bank Reform " src="http://www.bloomberg.com/image/i5yPi6Xezo1s.jpg" height="169" width="300"></a>
+</div>
+<div class="hl">
+<a href="/news/2013-05-02/billionaire-tax-haven-liechtenstein-loses-on-bank-reforms.html" class="q black" data-id="MM4SJF6S972J01" data-type="Story">Billionaire Tax Haven Liechtenstein Loses on Reforms</a><div style="opacity: 1;" class="q_style_button add_to_q" title="Add to queue">Q</div>
+</div>
+</div>
+
+<div class="editable right tetris_with_thumbnail" data-section-accessor="tetris_4" data-title="Tetris 4" style="">
+<a href="/luxury/gadgets/" class="category_tag">Gadgets</a>
+<div class="thumbnail_with_hl">
+<a href="/news/2013-05-01/magellan-brings-gps-into-smartphone-era-rich-jaroslovsky.html"><img alt="Magellan SmartGPS " src="http://www.bloomberg.com/image/imt80veJte_Y.jpg" height="169" width="300"></a>
+</div>
+<div class="hl">
+<a href="/news/2013-05-01/magellan-brings-gps-into-smartphone-era-rich-jaroslovsky.html" class="q black" data-id="MM1DCD1A1I4I01" data-type="Story">Magellan Brings GPS Into Smartphone Era</a><div style="opacity: 1;" class="q_style_button add_to_q" title="Add to queue">Q</div>
+</div>
+</div>
+
+<div class="editable left tetris_with_thumbnail" data-section-accessor="tetris_5" data-title="Tetris 5" style="">
+<a href="/luxury/music/" class="category_tag">Music</a>
+<div class="hls_only">
+<div class="hl">
+<a href="/news/2013-05-01/rolling-stones-tickets-gather-moss-as-600-seats-for-sale.html" class="q black" data-id="MM551U6K50YJ01" data-type="Story">Rolling Stones Tickets Gather Moss as $600 Seats for Sale</a><div style="opacity: 1;" class="q_style_button add_to_q" title="Add to queue">Q</div>
+</div>
+<div class="hl">
+<a href="/news/2013-05-02/beyonce-writhes-in-catsuit-as-pop-hits-get-slick-review.html" class="q black" data-id="MM55SW0YHQ0W01" data-type="Story">Beyonce Writhes in Catsuit as Pop Hits Get Slick</a><div style="opacity: 1;" class="q_style_button add_to_q" title="Add to queue">Q</div>
+</div>
+<div class="hl">
+<a href="/news/2013-05-02/houck-s-phosphorescent-finds-spotlight-s-glow-nyc-music.html" class="q black" data-id="MM2TXF0UQVI901" data-type="Story">Houck’s Phosphorescent Finds Spotlight’s Glow</a><div style="opacity: 1;" class="q_style_button add_to_q" title="Add to queue">Q</div>
+</div>
+<div class="hl last">
+<a href="/news/2013-04-26/keb-mo-brings-blues-larry-carlton-to-suburbia-review.html" class="q black" data-id="MLV4Q31A1I4H01" data-type="Story">Keb’ Mo’ Brings Blues, Larry Carlton to Suburbia</a><div style="opacity: 1;" class="q_style_button add_to_q" title="Add to queue">Q</div>
+</div>
+</div>
+</div>
+
+<div class="editable right tetris_with_thumbnail" data-section-accessor="tetris_6" data-title="Tetris 6" style="">
+<a href="/luxury/art/" class="category_tag">Art</a>
+<div class="thumbnail_with_hl">
+<a href="/news/2013-05-02/new-met-galleries-mean-fewer-blockbusters-gift-shops.html"><img alt="'The Harvesters' " src="http://www.bloomberg.com/image/iWLbq2cnu8MI.jpg" height="169" width="300"></a>
+</div>
+<div class="hl">
+<a href="/news/2013-05-02/new-met-galleries-mean-fewer-blockbusters-gift-shops.html" class="q black" data-id="MM4MNQ0D9L3501" data-type="Story">New Met Galleries Mean Fewer Blockbusters, Gift Shops</a><div style="opacity: 1;" class="q_style_button add_to_q" title="Add to queue">Q</div>
+</div>
+</div>
+
+<div class="editable left tetris_with_thumbnail" data-section-accessor="tetris_7" data-title="Tetris 7" style="">
+<a href="/luxury/living/" class="category_tag">Living</a>
+<div class="thumbnail_with_hl">
+<a href="/news/2013-05-03/vw-10-million-gift-matt-dillon-for-refugees-d-c-scene.html"><img alt="Trust for the National Mall Luncheon " src="http://www.bloomberg.com/image/iV6HecP.Qf4Q.jpg" height="169" width="300"></a>
+</div>
+<div class="hl">
+<a href="/news/2013-05-03/vw-10-million-gift-matt-dillon-for-refugees-d-c-scene.html" class="q black" data-id="MM6RQZ07SXKY01" data-type="Story">VW $10 Million Gift, Matt Dillon for Refugees: D.C. Scene</a><div style="opacity: 1;" class="q_style_button add_to_q" title="Add to queue">Q</div>
+</div>
+</div>
+
+<div class="editable right tetris_with_thumbnail" data-section-accessor="tetris_8" data-title="Tetris 8" style="">
+<a href="/luxury/movies-tv-theater/" class="category_tag">Movies, TV &amp; Theater</a>
+<div class="hls_only">
+<div class="hl">
+<a href="/news/2013-05-01/wolves-attack-rapunzel-ravished-as-grimms-tales-return.html" class="q black" data-id="MM2EL807SXKX01" data-type="Story">Wolves Attack, Rapunzel Ravished as Grimms’ Tales Return</a><div style="opacity: 1;" class="q_style_button add_to_q" title="Add to queue">Q</div>
+</div>
+<div class="hl">
+<a href="/news/2013-05-01/malick-s-wonder-comes-40-years-after-badlands-debut.html" class="q black" data-id="MM2U5E1A74E901" data-type="Story">Malick’s ‘Wonder’ Comes 40 Years After ‘Badlands’</a><div style="opacity: 1;" class="q_style_button add_to_q" title="Add to queue">Q</div>
+</div>
+<div class="hl">
+<a href="/news/2013-05-01/james-cameron-risked-imposion-on-7-mile-dive-to-sea-floor.html" class="q black" data-id="MM11FJ0D9L3701" data-type="Story">James Cameron Risked Imposion on 7-Mile Dive to Sea Floor</a><div style="opacity: 1;" class="q_style_button add_to_q" title="Add to queue">Q</div>
+</div>
+<div class="hl last">
+<a href="/news/2013-04-30/china-s-wine-lust-tim-buckley-drug-horror-tribeca-best.html" class="q black" data-id="MM135Y07SXL001" data-type="Story">China’s Wine Lust; Tim Buckley; Drug Horror: Tribeca Best</a><div style="opacity: 1;" class="q_style_button add_to_q" title="Add to queue">Q</div>
+</div>
+</div>
+</div>
+
+<div class="editable left tetris_with_thumbnail" data-section-accessor="tetris_9" data-title="Tetris 9" style="">
+<a href="/luxury/books/" class="category_tag">Books</a>
+<div class="hls_only">
+<div class="hl">
+<a href="/news/2013-04-30/crazy-traders-greedy-yuppies-drive-ex-banker-s-whodunit.html" class="q black" data-id="ML30RW0YHQ0X01" data-type="Story">Crazy Traders, Greedy Yuppies Drive Ex-Banker’s Whodunit</a><div style="opacity: 1;" class="q_style_button add_to_q" title="Add to queue">Q</div>
+</div>
+<div class="hl">
+<a href="/news/2013-05-01/chrysler-dealer-stole-paige-integrated-dustbowl-team.html" class="q black" data-id="MM2QX50YHQ0X01" data-type="Story">Chrysler Dealer Stole Paige, Integrated Dustbowl Team</a><div style="opacity: 1;" class="q_style_button add_to_q" title="Add to queue">Q</div>
+</div>
+<div class="hl">
+<a href="/news/2013-04-29/smoldering-three-way-infatuation-lights-up-messud-novel.html" class="q black" data-id="MM0V7F0UQVI901" data-type="Story">Smoldering Three-Way Infatuation Lights Up Messud Novel</a><div style="opacity: 1;" class="q_style_button add_to_q" title="Add to queue">Q</div>
+</div>
+<div class="hl last">
+<a href="/news/2013-04-29/deadhead-drops-out-in-garson-s-down-the-up-escalator-.html" class="q black" data-id="MLVB980D9L4L01" data-type="Story">Deadhead Drops Out in Garson’s ‘Down the Up Escalator’</a><div style="opacity: 1;" class="q_style_button add_to_q" title="Add to queue">Q</div>
+</div>
+</div>
+</div>
+
+<div class="editable right tetris_with_thumbnail" data-section-accessor="tetris_10" data-title="Tetris 10" style="">
+<a href="/luxury/autos/" class="category_tag">Autos</a>
+<div class="thumbnail_with_hl">
+<a href="/news/2013-04-30/ferraris-beaten-by-ford-broncos-jeep-in-car-auctions.html"><img alt="Classic 1966 Ford Bronco " src="http://www.bloomberg.com/image/iuy4vm2_a58w.jpg" height="169" width="300"></a>
+</div>
+<div class="hl">
+<a href="/news/2013-04-30/ferraris-beaten-by-ford-broncos-jeep-in-car-auctions.html" class="q black" data-id="MM2S7Y0D9L3901" data-type="Story">Ferraris Beaten by Ford Broncos, Jeep in Car Auctions</a><div style="opacity: 1;" class="q_style_button add_to_q" title="Add to queue">Q</div>
+</div>
+</div>
+
+</div>
+</div>
+        </div>
+        <div id="secondary_content">
+          <div class="twitter_btn_container">
+<div class="twitter_links">
+<iframe data-twttr-rendered="true" title="Twitter Follow Button" style="width: 173px; height: 20px;" class="twitter-follow-button twitter-follow-button" src="http://platform.twitter.com/widgets/follow_button.1367516458.html#_=1367612158583&amp;id=twitter-widget-0&amp;lang=en&amp;screen_name=BloombergLuxury&amp;show_count=false&amp;show_screen_name=true&amp;size=m" allowtransparency="true" frameborder="0" scrolling="no"></iframe>
+<script src="//platform.twitter.com/widgets.js" type="text/javascript"></script>
+</div>
+
+<span>for more luxury news</span>
+</div>
+<div class="component secondary_stories" id="most_popular_stories">
+<div class="header">
+<h3>Luxury most popular
+</h3></div>
+<ul class="news_group right_rail_news items">
+<li class="news_item ">
+<span class="most_pop_number one">
+1
+</span>
+<div class="q_link_wrapper">
+<a class="q story_link bar" data-id="MM551U6K50YJ01" data-type="Story" href="/news/2013-05-01/rolling-stones-tickets-gather-moss-as-600-seats-for-sale.html" suid="MM551U6K50YJ01">Rolling Stones Tickets Gather Moss as $600 Seats for Sale</a><div style="opacity: 1;" class="q_style_button add_to_q" title="Add to queue">Q</div>
+</div>
+</li>
+<li class="news_item ">
+<span class="most_pop_number two">
+2
+</span>
+<div class="q_link_wrapper">
+<a class="q story_link bar" data-id="MM0D8U07SXKX01" data-type="Story" href="/news/2013-05-02/street-legal-170-000-mini-formula-one-races-along-malibu.html" suid="MM0D8U07SXKX01">Street Legal $170,000 Mini Formula One Races Along Malibu</a><div style="opacity: 1;" class="q_style_button add_to_q" title="Add to queue">Q</div>
+</div>
+</li>
+<li class="news_item ">
+<span class="most_pop_number three">
+3
+</span>
+<div class="q_link_wrapper">
+<a class="q story_link bar" data-id="MM6B9F0YHQ0X01" data-type="Story" href="/news/2013-05-02/putin-opens-700-million-new-mariinsky-with-domingo-gala.html" suid="MM6B9F0YHQ0X01">Putin Opens $700 Million New Mariinsky With Domingo Gala</a><div style="opacity: 1;" class="q_style_button add_to_q" title="Add to queue">Q</div>
+</div>
+</li>
+<li class="news_item ">
+<span class="four most_pop_number">
+4
+</span>
+<div class="q_link_wrapper">
+<a class="q story_link bar" data-id="MM6NVQ07SXKY01" data-type="Story" href="/news/2013-05-03/nyc-weekend-rihanna-cinco-de-mayo-fest-cross-dressing.html" suid="MM6NVQ07SXKY01">NYC Weekend: Rihanna, Cinco de Mayo Fest, Cross Dressing</a><div style="opacity: 1;" class="q_style_button add_to_q" title="Add to queue">Q</div>
+</div>
+</li>
+<li class="news_item  last">
+<span class="five most_pop_number">
+5
+</span>
+<div class="q_link_wrapper">
+<a class="q story_link bar" data-id="MM0YJY1A74E901" data-type="Story" href="/news/2013-04-29/noma-topped-by-el-celler-de-can-roca-as-world-s-best.html" suid="MM0YJY1A74E901">Noma Toppled by El Celler de Can Roca as Best Restaurant</a><div style="opacity: 1;" class="q_style_button add_to_q" title="Add to queue">Q</div>
+</div>
+</li>
+</ul>
+</div>
+<script type="text/javascript">
+  //<![CDATA[
+       var most_popular_stories = $("#most_popular_stories .news_group").find("a");
+       most_popular_stories.each(function(){
+          $(this).mousedown(function(){
+            BLOOMBERG.tracker.EVENTTRACK.record('most_popular_link',"event26", this.href);
+          })
+       });
+  //]]>
+</script>
+
+
+
+
+
+<div class="dfp_ad_box ad_box ">
+    <div class="ad_box_title">Advertisement</div>
+                                                 
+<script xmlns:webad="http://www.bloomberg.com/webad" xmlns:wn="http://www.bloomberg.com/bloomberg-web-news" xmlns:nav="http://www.bloomberg.com/navigation" type="text/javascript">
+     include_u_tag = true;
+     use_krux = true;
+     adType = "DART";
+     Keys = "blp.luxury/home";
+     dcop_val = "";
+     if (typeof surroundTag == "undefined" || surroundTag == "null") surroundTag = "";
+     if (surroundTagVal != ""){
+         surroundTagVal=BLOOMBERG.util.Cookie.get("surroundId");
+         surroundTagVal="srnd="+surroundTagVal+";";
+     }
+     if (typeof surroundTagVal == "undefined" || surroundTagVal == "null") surroundTagVal = "";
+     if (typeof sub_domain_name == "undefined" || sub_domain_name == "null") sub_domain_name = "";
+     Size = "300x250,300x600";
+     Tile = "3";
+     Position = ";position=right2";
+     if(sub_domain_name == 'bb20ad'){
+       Keys = "blp.test";
+     }
+     ad_location = 'SideBar';
+     if (ad_location == 'Interstitial'){
+        if(no_dfp_interstitial == "false"){
+            CallDfpAd(adType, HCat+dcop_val+surroundTagVal, Size, Tile, Keys, Position, include_u_tag, use_krux);
+        }
+     }else{
+         CallDfpAd(adType, HCat+dcop_val+surroundTagVal, Size, Tile, Keys, Position, include_u_tag, use_krux);
+     }
+
+</script><script language="JavaScript1.1" src="http://ad.doubleclick.net/adj/blp.luxury/home;url=/luxury/;sz=300x250,300x600;status=marketstatus1;position=right2;tile=3;u=sz=300x250,300x600|kx=IW8RlUZf|rsi=|status=marketstatus1|position=right2;ord=323117502?"></script>
+<!-- Copyright DoubleClick Inc., All rights reserved. -->
+<!-- This code was autogenerated @ Mon Feb 04 12:46:58 EST 2013 -->
+<script src="http://s0.2mdn.net/879366/flashwrite_1_2.js"></script>
+  
+<a target="_top" href="http://ad.doubleclick.net/click%3Bh%3Dv8/3dd7/3/0/%2a/d%3B261685101%3B1-0%3B0%3B93275792%3B4307-300/250%3B52690471/52644284/1%3Bu%3Dsz%3D300x250%2C300x600|kx%3DIW8RlUZf|rsi%3D|status%3Dmarketstatus1|position%3Dright2%3B%7Esscs%3D%3fhttps://login.bloomberg.com/user/most-popular/redirect?refid=rmmp1a300"><img src="http://s0.2mdn.net/3246688/most_popular_backup_300x250.gif" alt="" border="0"></a>
+<noscript><a target="_top" href="http://ad.doubleclick.net/click%3Bh%3Dv8/3dd7/3/0/%2a/d%3B261685101%3B1-0%3B0%3B93275792%3B4307-300/250%3B52690471/52644284/1%3Bu%3Dsz%3D300x250%2C300x600|kx%3DIW8RlUZf|rsi%3D|status%3Dmarketstatus1|position%3Dright2%3B%7Esscs%3D%3fhttps://login.bloomberg.com/user/most-popular/redirect?refid=rmmp1a300"><img src="http://s0.2mdn.net/3246688/most_popular_backup_300x250.gif"  border="0" alt="" ></a></noscript>
+    <script type="text/javascript">
+        //<![CDATA[
+      surroundTag=BLOOMBERG.util.Cookie.get("surroundId");
+       if(surroundTag == ""){
+          if((surroundTag == "")&&(adid != "")){ // check if the ad should start a surround session only if a surround session has not yet started
+              surroundTag="srnd="+adid+";"; // setup the key-value for a surround session
+              BLOOMBERG.util.Cookie.set("surroundId",adid,"","/"); // store the surround session id in a cookie.  Set the expiration date of the cookie to determine how long the surround session should last.  For example, if the surround session should last just one day, then set the expiration date for the cookie to tomorrow.
+            }
+       }
+       else{
+            surroundTag="srnd="+surroundTag+";";
+       }
+       //]]>
+    </script>
+
+
+                    </div>
+
+
+<div class="partner_content_container editable" data-section-accessor="partner_content_1" data-title="Partner Content 1" style="">
+<h2><a href="http://www.cntraveler.com/?mbid=synd_bloomberg" rel="nofollow" target="_blank">News From Condé Nast Traveler</a></h2>
+<div class="external_links">
+<div class="div link_item">
+<a href="http://www.cntraveler.com/ecotourism/2012/12/china-environmental-protection-pollution-wildlife-sustainable-development?mbid=synd_bloomberg" rel="nofollow">Development vs. Preservation in Modern China</a>
+</div>
+<div class="div link_item">
+<a href="http://www.cntraveler.com/features/slideshows/photo-of-the-day?mbid=synd_bloomberg" rel="nofollow">Condé
+Nast Traveler's Collection of Stunning Photography&nbsp;</a>
+</div>
+<div class="div last link_item">
+<a href="http://www.cntraveler.com/technology/2012/09/best-travel-apps-social-media-sites-services?mbid=synd_bloomberg" rel="nofollow">Popular Smartphone Apps and Social Media Sites for Travelers</a>
+</div>
+
+</div>
+</div>
+
+<div class="tweets" style="margin:15px 0;">
+  
+  <iframe title="Twitter Timeline Widget" style="border: medium none; max-width: 100%; min-width: 180px;" allowtransparency="true" class="twitter-timeline twitter-timeline-rendered" id="twitter-widget-1" frameborder="0" height="600" scrolling="no" width="330"></iframe>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+</div>
+
+
+
+
+
+<div class="dfp_ad_box ad_box ">
+    <div class="ad_box_title">Advertisement</div>
+                                                 
+<script xmlns:webad="http://www.bloomberg.com/webad" xmlns:wn="http://www.bloomberg.com/bloomberg-web-news" xmlns:nav="http://www.bloomberg.com/navigation" type="text/javascript">
+     include_u_tag = true;
+     use_krux = true;
+     adType = "DART";
+     Keys = "blp.luxury/home";
+     dcop_val = "";
+     if (typeof surroundTag == "undefined" || surroundTag == "null") surroundTag = "";
+     if (surroundTagVal != ""){
+         surroundTagVal=BLOOMBERG.util.Cookie.get("surroundId");
+         surroundTagVal="srnd="+surroundTagVal+";";
+     }
+     if (typeof surroundTagVal == "undefined" || surroundTagVal == "null") surroundTagVal = "";
+     if (typeof sub_domain_name == "undefined" || sub_domain_name == "null") sub_domain_name = "";
+     Size = "300x250,1x1";
+     Tile = "4";
+     Position = ";position=right3";
+     if(sub_domain_name == 'bb20ad'){
+       Keys = "blp.test";
+     }
+     ad_location = 'SideBar2';
+     if (ad_location == 'Interstitial'){
+        if(no_dfp_interstitial == "false"){
+            CallDfpAd(adType, HCat+dcop_val+surroundTagVal, Size, Tile, Keys, Position, include_u_tag, use_krux);
+        }
+     }else{
+         CallDfpAd(adType, HCat+dcop_val+surroundTagVal, Size, Tile, Keys, Position, include_u_tag, use_krux);
+     }
+
+</script><script language="JavaScript1.1" src="http://ad.doubleclick.net/adj/blp.luxury/home;url=/luxury/;sz=300x250,1x1;status=marketstatus1;position=right3;tile=4;u=sz=300x250,1x1|kx=IW8RlUZf|rsi=|status=marketstatus1|position=right3;ord=323117502?"></script>
+<!-- Copyright DoubleClick Inc., All rights reserved. -->
+<!-- This code was autogenerated @ Wed Apr 17 14:09:41 EDT 2013 -->
+<script src="http://s0.2mdn.net/879366/flashwrite_1_2.js"></script>
+  
+<a target="_top" href="http://ad.doubleclick.net/click%3Bh%3Dv8/3dd7/3/0/%2a/g%3B271414310%3B0-0%3B0%3B93275792%3B4307-300/250%3B53945945/53854966/1%3Bu%3Dsz%3D300x250%2C1x1|kx%3DIW8RlUZf|rsi%3D|status%3Dmarketstatus1|position%3Dright3%3B%7Esscs%3D%3fhttps://login.bloomberg.com/user/newsletter-global-tech/redirect?refid=rmreg1b300"><img src="http://s0.2mdn.net/3246688/tech_backup_300x250.gif" alt="" border="0"></a>
+<noscript><a target="_top" href="http://ad.doubleclick.net/click%3Bh%3Dv8/3dd7/3/0/%2a/g%3B271414310%3B0-0%3B0%3B93275792%3B4307-300/250%3B53945945/53854966/1%3Bu%3Dsz%3D300x250%2C1x1|kx%3DIW8RlUZf|rsi%3D|status%3Dmarketstatus1|position%3Dright3%3B%7Esscs%3D%3fhttps://login.bloomberg.com/user/newsletter-global-tech/redirect?refid=rmreg1b300"><img src="http://s0.2mdn.net/3246688/tech_backup_300x250.gif"  border="0" alt="" ></a></noscript>
+    <script type="text/javascript">
+        //<![CDATA[
+      surroundTag=BLOOMBERG.util.Cookie.get("surroundId");
+       if(surroundTag == ""){
+          if((surroundTag == "")&&(adid != "")){ // check if the ad should start a surround session only if a surround session has not yet started
+              surroundTag="srnd="+adid+";"; // setup the key-value for a surround session
+              BLOOMBERG.util.Cookie.set("surroundId",adid,"","/"); // store the surround session id in a cookie.  Set the expiration date of the cookie to determine how long the surround session should last.  For example, if the surround session should last just one day, then set the expiration date for the cookie to tomorrow.
+            }
+       }
+       else{
+            surroundTag="srnd="+surroundTag+";";
+       }
+       //]]>
+    </script>
+
+
+                    </div>
+
+
+<div class="partner_content_container editable" data-section-accessor="partner_content_2" data-title="Partner Content 2" style="">
+<h2><a href="http://www.zillow.com/" rel="nofollow" target="_blank">Real Estate News from Zillow.com</a></h2>
+<div class="external_links">
+<div class="div link_item">
+<a href="http://www.zillowblog.com/2013-04-26/the-6-worst-types-of-real-estate-investments/" rel="nofollow">The 6 Worst Types of Real Estate Investments</a>
+</div>
+<div class="div link_item">
+<a href="http://www.zillowblog.com/2013-04-26/diy-landscaping-5-ways-to-bust-out-bamboo/" rel="nofollow">DIY Landscaping: 5 Ways to Bust Out Bamboo</a>
+</div>
+<div class="div last link_item">
+<a href="http://www.zillowblog.com/2013-04-26/the-look-for-less-modern-bathrooms/" rel="nofollow">The Look for Less: Modern Bathrooms</a>
+</div>
+
+</div>
+</div>
+
+        </div>
+        
+      </div>
+            
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  //<![CDATA[
+    BLOOMBERG.register_ext_nav_events();
+  //]]>
+</script>
+
+      <div id="symac_suggest"></div>
+    </div>
+    
+
+    <div id="footer_container_v3" class="base_container">
+      <div id="footer" class="clearfix">
+        <div id="footer_top">
+          <div id="footer_top_logo"><a id="footer_logo" class="logo_img" href="/">Bloomberg</a></div>
+          <div id="footer_media">
+            <ul>
+              <li class="radio"><a id="radio" href="http://www.bloomberg.com/radio/">Radio</a></li>
+              <li class="tv"><a id="tv" href="http://www.bloomberg.com/tv/">Live TV</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="wrapper_top">
+          <div id="footer_section_1">
+            <div class="subsection">
+
+              <div class="main_site_links" id="footer_dotcom">
+                <h4>Bloomberg.com</h4>
+                <ul>
+                  <li><a href="http://www.bloomberg.com/news/">News</a></li>
+                  <li><a href="http://www.bloomberg.com/view/">Opinion</a></li>
+                  <li><a href="http://www.bloomberg.com/markets/">Markets</a></li>
+                  <li><a href="http://www.bloomberg.com/personal-finance/">Personal Finance</a></li>
+                  <li><a href="http://www.bloomberg.com/technology/">Tech</a></li>
+                  <li><a href="http://www.bloomberg.com/sustainability/">Sustainability</a></li>
+                  <li><a href="http://www.bloomberg.com/luxury/">Luxury</a></li>
+                  <li><a href="http://www.bloomberg.com/tv/">TV</a></li>
+                  <li><a href="http://www.bloomberg.com/video/">Video</a></li>
+                  <li><a href="http://www.bloomberg.com/radio/">Radio</a></li>
+                  <li class="last"><a href="http://www.bloomberg.com/archive/news/">Archives</a></li>
+                </ul>
+              </div>
+
+              <div id="footer_about">
+                <h4>About</h4>
+                <ul>
+                  <li><a href="http://www.bloomberg.com/company/">Our Company</a></li>
+                  <li><a href="http://www.bloomberg.com/careers/">Careers</a></li>
+                  <li><a href="http://www.bloombergmedia.com/">Advertising</a></li>
+                  <li><a href="http://www.bloomberg.com/contentlicensing">Licensing</a></li>
+                  <li><a href="http://www.bloomberg.com/pressroom/">Press Room</a></li>
+                  <li><a href="http://www.bloomberg.com/trademarks">Trademarks</a></li>
+                  <li><a href="http://www.bloomberg.com/tos">Terms of Service</a></li>
+                  
+                  <li class="last"><a href="http://www.bloomberg.com/privacy">Privacy Policy</a></li>
+                </ul>
+              </div>
+
+              <div id="footer_support">
+                <h4>Support and Contact</h4>
+                <ul>
+                  <li><a href="http://www.bloomberg.com/company/#directory">Customer Support Contacts</a></li>
+                  <li><a href="http://www.bloomberg.com/feedback">Feedback</a></li>
+                  <li><a href="http://www.bloomberg.com/help.html">Help</a></li>
+                  <li class="last"><a href="http://www.bloomberg.com/sitemap/">Sitemap</a></li>
+                </ul>
+              </div>
+
+              <div id="footer_connect">
+                <h4>Stay Connected</h4>
+                <ul>
+                  <li><a rel="external" href="http://twitter.com/bloombergnews" class="twitter">Twitter</a></li>
+                  <li><a rel="external" href="http://www.facebook.com/bloombergnews" class="facebook">Facebook</a></li>
+                  <li>
+                    <a rel="external" href="http://www.linkedin.com/today/bloomberg.com?trk=tod-src-tnav-1000020-0" class="linkedin">Linked
+                      In</a></li>
+                  <li>
+                    <a rel="external" href="https://plus.google.com/b/101169269861152216375/101169269861152216375/posts" class="gplus">google+</a>
+                  </li>
+                  <li>
+                    <a rel="external" href="http://www.stumbleupon.com/channel/Bloomberg" class="stumble_upon">StumbleUpon</a>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+            <div class="wrapper_right">
+            </div>
+
+            <div class="subsection last" id="footer_terminal">
+              <h4>Bloomberg Terminal</h4>
+              <ul>
+                <li><a href="http://www.bloomberg.com/professional/">Professional</a></li>
+                <li><a href="http://bba.bloomberg.net">Subscriber Login</a></li>
+                <li><a href="http://www.bloomberg.com/professional/systems-support/faq">FAQ</a></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+        <div class="wrapper_top">
+          <div id="footer_section_2">
+
+
+            <div class="subsection related" id="footer_related">
+              <h4>Related Bloomberg Sites</h4>
+              <ul class="section_left">
+                <li><a href="http://www.businessweek.com/">Bloomberg Businessweek</a></li>
+                <li><a href="https://www.bloomberginstitute.com/bat/start/">Bloomberg Institute</a></li>
+                <li><a href="http://www.bloomberg.co.jp/">? ??????(???)</a></li>
+                <li><a href="http://about.bloomberg.co.jp/">????(???)</a></li>
+                <li><a href="http://www.bloomberg.cn/">??????</a></li>
+              </ul>
+              <ul>
+                <li><a href="http://www.bloomberg.com/markets-magazine/">Bloomberg Markets Magazine</a></li>
+                <li><a href="http://open.bloomberg.com/">Open Bloomberg</a></li>
+                <li><a href="http://www.bloomberglink.com/gatherings.php">Bloomberg Link</a></li>
+                <li><a href="http://inside.bloomberg.com/">Bloomberg Blog</a></li>
+                <li><a href="http://www.wiley.com/WileyCDA/Section/id-404407.html">Bloomberg Books</a></li>
+              </ul>
+            </div>
+            <div class="wrapper_right">
+            </div>
+
+            <div class="subsection premium" id="footer_premium">
+              <h4>Bloomberg Premium Services</h4>
+              <ul class="section_left">
+                <li><a href="http://www.bloombergbriefs.com/">Bloomberg Briefs</a></li>
+                <li><a href="http://about.bgov.com/">Bloomberg Government</a></li>
+                <li><a href="http://about.bloomberglaw.com/">Bloomberg Law</a></li>
+                <li><a href="http://www.bna.com/">Bloomberg BNA</a></li>
+              </ul>
+              <ul>
+                <li><a href="http://about.bnef.com/">Bloomberg New Energy Finance</a></li>
+                <li><a href="https://www.bloombergsports.com/">Bloomberg Sports</a></li>
+                <li><a href="https://www.bloombergblack.com/">BloombergBlack</a></li>
+              </ul>
+            </div>
+            <div class="wrapper_right">
+            </div>
+
+
+            <div id="footer_mobile" class="subsection last">
+              <h4>Mobile Apps</h4>
+              <ul>
+                <li><a href="http://www.bloomberg.com/mobile/bloomberg/" class="bbg">Bloomberg</a></li>
+                <li><a href="http://www.bloomberg.com/mobile/radio/" class="brd">Bloomberg Radio+</a></li>
+                <li><a href="http://www.bloomberg.com/mobile/tv/" class="btv">Bloomberg TV+</a></li>
+                <li><a href="http://www.bloomberg.com/mobile/businessweek/" class="bbw">Bloomberg Businessweek+</a></li>
+                <li><a href="http://www.bloomberg.com/mobile/marketsmagazine/" class="bmk">Bloomberg Markets+</a></li>
+                <li><a href="http://www.bloomberg.com/professional/bloomberg_anywhere/" class="bba">Bloomberg Anywhere</a></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <div id="footer_bottom">
+          <div id="copyright_statement">
+            <span>©2013 BLOOMBERG L.P. ALL RIGHTS RESERVED.</span>
+          </div>
+          <div id="opinion_lab">
+            <a href="http://jobsearch.bloomberg.com/" id="jobs_by_indeed">Jobs by Indeed</a>
+            <a href="javascript:void(0);" onclick="oOobj2.OnClick()">
+              <img src="http://cdn.gotraffic.net/v/20130503_110246/onlineopinionOO4S/sm_FAB000_oo.gif" title="Rate this Page" style="margin-right:5px;" alt="" border="0">
+              Rate this Page
+            </a>
+            <a href="http://nytm.org/made-in-nyc" target="_blank" rel="nofollow external" id="made_in_nyc">Made in
+              NYC</a>
+            
+            <a href="http://www.bloomberg.com/privacy#advertisements" target="_blank" rel="nofollow external" class="ad_choices">Ad Choices</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+    //<![CDATA[
+    if (reg_enabled) {
+            document.write("<scr" + "ipt type='text/javascript' src='http://cdn.gotraffic.net/r/v/20130430_174538/javascripts/breg-min.js'>" + "</scr" + "ipt>");
+            $(document).ready(function() {
+            if (BLOOMBERG.user){ BLOOMBERG.user.init({"u":"https://login.bloomberg.com","enable_tracking_cookies":true}); }
+        });
+    }
+    if (q_enabled && reg_enabled) {
+            document.write("<scr" + "ipt type='text/javascript' src='http://cdn.gotraffic.net/q/v/20130501_171905/javascripts/q-min.js'>" + "</scr" + "ipt>");
+            $(document).ready(function() {
+            if (BLOOMBERG.queue){ BLOOMBERG.queue.init({"url":"https://q.bloomberg.com"}); }
+        });
+    }
+        //]]>
+</script><script type="text/javascript" src="http://cdn.gotraffic.net/r/v/20130430_174538/javascripts/breg-min.js"></script><script type="text/javascript" src="http://cdn.gotraffic.net/q/v/20130501_171905/javascripts/q-min.js"></script>
+        
+<script type="text/javascript">
+//<![CDATA[
+
+    
+        var bb_v_val = "0";
+    
+    if (/^\/view(\/?$|\/.+)/i.test(window.location.pathname)) {
+        bb_v_val = "1";
+    }
+
+    var recommendation_cookie = BLOOMBERG.util.Cookie.get("hprec201202");
+    var ga_page_name = ((typeof(Description) != 'undefined') ? Description : '').replace(/\//g,":");
+    var ga_companypage = BLOOMBERG.util.Cookie.get("companypage");
+    var ga_markets_video_tab_test = BLOOMBERG.util.Cookie.get("markets_video_tab_test");
+    var tv_reco_test = BLOOMBERG.util.Cookie.get("tv_reco");
+    var video_reco_test = BLOOMBERG.util.Cookie.get("video_reco");
+    var eyebrow_nav_test = BLOOMBERG.util.Cookie.get("eyebrow");
+    var article_page_bars = BLOOMBERG.util.Cookie.get("article_page_bars");
+    var bb_amazon_test = BLOOMBERG.util.Cookie.get("bb_amazon_test");
+    var zillow_test = BLOOMBERG.util.Cookie.get("zillow_test");
+    var pageTrackingVariables = [];
+    var alerts_wigets_rendered = BLOOMBERG.global_var.alerts_wigets_rendered || "";
+    var alerts_cmpid = BLOOMBERG.alerts.getCampaignId();
+    var alerts_widgets_bucket = BLOOMBERG.alerts.getModulePlacementBucket();
+    var bb_attributor = "";
+
+    pageTrackingVariables.push({name:'recommendation_cookie',   value:recommendation_cookie,  scope:1})
+    pageTrackingVariables.push({name:'name',                    value:ga_page_name,           scope:3})
+    pageTrackingVariables.push({name:'companypages',            value:ga_companypage,         scope:1})
+    pageTrackingVariables.push({name:'markets_video_tab_test',  value:ga_markets_video_tab_test,  scope:1})
+    pageTrackingVariables.push({name:'tv_reco',                 value:tv_reco_test,           scope:1})
+    pageTrackingVariables.push({name:'video_reco',              value:video_reco_test,        scope:1})
+    pageTrackingVariables.push({name:'eyebrow',                 value:eyebrow_nav_test,       scope:1})
+    pageTrackingVariables.push({name:'article_page_bars',       value:article_page_bars,      scope:1})
+    pageTrackingVariables.push({name:'bb_amazon_test',          value:bb_amazon_test,         scope:1})
+    pageTrackingVariables.push({name:'zillow_test',             value:zillow_test,            scope:1})
+    pageTrackingVariables.push({name:'bb_v',                    value:bb_v_val,               scope:1});
+    pageTrackingVariables.push({name:'alerts_widgets_rendered', value:alerts_wigets_rendered, scope:3});
+    pageTrackingVariables.push({name:'al_cmpid',                value:alerts_cmpid,           scope:3});
+    pageTrackingVariables.push({name:'alerts_widgets_bucket',   value:alerts_widgets_bucket,  scope:1});
+    pageTrackingVariables.push({name:'bb_attributor',           value:bb_attributor,          scope:3});
+    
+    
+
+//]]>
+</script>
+
+<div id="third_party_trackers">
+  <script type="text/javascript">
+      //<![CDATA[
+    var comScoreTrackingParams = {};
+    for(var i=0;i<pageTrackingVariables.length; i++){
+        comScoreTrackingParams[pageTrackingVariables[i].name] = pageTrackingVariables[i].value;
+    }
+    BLOOMBERG.comscore.track(comScoreTrackingParams);
+          //]]>
+  </script>
+  <noscript><p><img src="http://b.scorecardresearch.com/p?c1=2&amp;c2=3005059" height="1" width="1" alt="*"/></p></noscript>
+
+          <script src="http://cdn.gotraffic.net/v/20130503_110246/onlineopinionOO4S/oo_engine_c_all-min.js" type="text/javascript"></script>  
+  
+
+
+      <script type="text/javascript">
+          // <![CDATA[
+          try {
+              var _gaq = _gaq || [];
+              _gaq.push(['_setAccount', BLOOMBERG.global_var.gaTrackAcct]);
+              for(var i=0;i<pageTrackingVariables.length;i++){
+                                    if (i >= 5){ break; }
+                  _gaq.push(['_setCustomVar',  i+1,  pageTrackingVariables[i].name, pageTrackingVariables[i].value,  pageTrackingVariables[i].scope]);
+              }
+              if(typeof(bbPageTrackUrl) == 'undefined')
+                _gaq.push(['_trackPageview']);
+              else
+                _gaq.push(['_trackPageview', bbPageTrackUrl]);
+
+              (function() {
+                  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+              })();
+          } catch(err) {
+            //
+          }
+          // ]]>
+      </script>
+
+
+        <script type="text/javascript">
+          var _sf_async_config={};
+          _sf_async_config.uid = 15087;
+          _sf_async_config.domain = 'bloomberg.com';
+          _sf_async_config.sections = '';
+          _sf_async_config.authors = '';
+          (function(){
+            function loadChartbeat() {
+              window._sf_endpt=(new Date()).getTime();
+              var e = document.createElement('script');
+              e.setAttribute('language', 'javascript');
+              e.setAttribute('type', 'text/javascript');
+              e.setAttribute('src',
+                 (('https:' == document.location.protocol) ? 'https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/' : 'http://static.chartbeat.com/') +
+                 'js/chartbeat.js');
+              document.body.appendChild(e);
+            }
+            var oldonload = window.onload;
+            window.onload = (typeof window.onload != 'function') ?
+               loadChartbeat : function() { oldonload(); loadChartbeat(); };
+          })();
+      </script>
+  
+           <!-- START Nielsen Online SiteCensus V6.0 -->
+        <!-- COPYRIGHT 2010 Nielsen Online -->
+        <script type="text/javascript">
+            //<![CDATA[
+          $(window).load(function () {
+              var d = new Image(1, 1);
+              d.onerror = d.onload = function () {
+               d.onerror = d.onload = null;
+              };
+              d.src = ["//secure-us.imrworldwide.com/cgi-bin/m?ci=us-905417h&cg=0&cc=1&si=", escape(window.location.href), "&rp=", escape(document.referrer), "&ts=compact&rnd=", (new Date()).getTime()].join('');
+          });
+                //]]>
+        </script>
+        <noscript>
+          <div>
+            <img src="//secure-us.imrworldwide.com/cgi-bin/m?ci=us-905417h&amp;cg=0&amp;cc=1&amp;ts=noscript"
+            width="1" height="1" alt="" />
+          </div>
+        </noscript>
+        <!-- END Nielsen Online SiteCensus V6.0 -->
+    
+  </div>
+
+
+<!--
+  production
+  0.975939 : 2013-05-03 16:15:17 -0400
+-->
+    
+    <script src="http://cdn.gotraffic.net/v/20130503_110246/javascripts/foresee/foresee-trigger.js" type="text/javascript"></script><script type="text/javascript">if (!NREUMQ.f) { NREUMQ.f=function() {
+NREUMQ.push(["load",new Date().getTime()]);
+var e=document.createElement("script");
+e.type="text/javascript";
+e.src=(("http:"===document.location.protocol)?"http:":"https:") + "//" +
+  "d1ros97qkrwjf5.cloudfront.net/42/eum/rum.js";
+document.body.appendChild(e);
+if(NREUMQ.a)NREUMQ.a();
+};
+NREUMQ.a=window.onload;window.onload=NREUMQ.f;
+};
+NREUMQ.push(["nrfj","beacon-2.newrelic.com","32a39e099b",1368463,"JVwPEhAJDlRSQ0tVEx5GEx9NDwxcUkk=",0,18,new Date().getTime(),"","","","",""]);</script>
+
+<div id="reg_proxy_container"></div><iframe style="display: none;" allowtransparency="true" id="rufous-sandbox" frameborder="0" scrolling="no"></iframe><div style="top: 140px;" id="mini_q" class="closed"><a href="#" id="mini_q_tab">Q</a><div id="ie_drop_shadow"></div><div id="mini_q_container"><span class="q_head"><a href="javascript:;" id="close_q" onclick="BLOOMBERG.q_ui.close_mini_q();"></a><a href="javascript:;" class="faq_link q_action">What is the queue?</a></span><div id="items_in_q" class="mini_q_section rounded_top"><div class="mini_q_section_top rounded_top"><a href="/q" class="q_action">More »</a>Items In Your queue</div><div id="mini_q_welcome_message"><h3>This is your Bloomberg Queue</h3><p>The queue will help you find news, save stories for later and take them with you</p><div class="action_buttons"><a href="/q" class="" id="learn_more">Learn More</a><a href="javascript:;" onclick="BLOOMBERG.q_ui.close_mini_q();">Close</a><div style="clear:both;"></div></div></div><div class="q_item first loading"></div><div class="q_item loading"></div></div><div id="suggested_items_in_q" class="mini_q_section rounded_top"><div class="mini_q_section_top rounded_top"><a href="/q" class="q_action">More »</a>  New Suggestions</div><div class="q_item first loading"></div><div class="q_item loading"></div></div></div></div><script src="http://d1ros97qkrwjf5.cloudfront.net/42/eum/rum.js" type="text/javascript"></script><script src="http://static.chartbeat.com/js/chartbeat.js" type="text/javascript" language="javascript"></script><script src="http://beacon-2.newrelic.com/1/32a39e099b?a=1368463&amp;be=342&amp;qt=0&amp;ap=18&amp;dc=2101&amp;fe=3021&amp;to=JVwPEhAJDlRSQ0tVEx5GEx9NDwxcUkk%3D&amp;v=40&amp;jsonp=NREUM.setToken&amp;perf=%7B%22timing%22%3A%7B%22of%22%3A1367612155971%2C%20%22n%22%3A0%2C%20%22u%22%3A265%2C%20%22ue%22%3A328%2C%20%22dl%22%3A265%2C%20%22di%22%3A2469%2C%20%22ds%22%3A2469%2C%20%22de%22%3A2640%2C%20%22dc%22%3A3140%2C%20%22l%22%3A3140%2C%20%22le%22%3A3390%2C%20%22f%22%3A94%2C%20%22dn%22%3A94%2C%20%22dne%22%3A94%2C%20%22c%22%3A94%2C%20%22ce%22%3A94%2C%20%22rq%22%3A94%2C%20%22rp%22%3A265%2C%20%22rpe%22%3A406%7D%2C%20%22navigation%22%3A%7B%7D%7D" type="text/javascript"></script></body>

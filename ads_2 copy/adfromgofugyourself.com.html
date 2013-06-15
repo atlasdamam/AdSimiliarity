@@ -1,0 +1,1242 @@
+<head id="ctl00_Head1"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="description" content="An easy-to-use prepaid card, the prepaid Visa RushCard offers the convenience of a prepaid debit card without the headaches associated with credit cards."><meta name="keywords" content="prepaid debit cards, prepaid credit cards, prepaid visa, prepaid debit cards, visa prepaid cards, prepaid cards, pre paid credit cards, prepaid credit card, prepaid debit card, visa prepaid card, prepaid card, pre paid credit card"><title>
+	
+    Application Form  - Prepaid Cards - Credit, Debit, Prepaid | Rushcard
+
+</title>
+    <script src="https://ssl.google-analytics.com/ga.js" async="" type="text/javascript"></script><script src="https://cdn-secure.magnify360.com/m360lib.js" type="text/javascript"></script>
+    <script src="https://rushcard.magnify360.com/uni/5164/360.js" type="text/javascript"></script> 
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"><link rel="stylesheet" type="text/css" media="all" href="/styles/reset-globals.css"><link rel="stylesheet" type="text/css" media="all" href="/styles/styles.css"><link rel="stylesheet" type="text/css" media="all" href="/styles/tipTip.css">
+
+
+    <!--[if IE 6]>
+		<link rel="stylesheet" type="text/css" media="all" href="../styles/ie6.css" />
+	<![endif]-->
+    <!--[if gte IE 7]>
+        <link rel="stylesheet" type="text/css" media="all" href="/styles/ie.css" />
+	<![endif]-->
+    <!--[if lt IE 8]>
+		<link rel="stylesheet" type="text/css" media="all" href="/styles/ie-all-tmp.css" />
+	<![endif]-->
+    <script type="text/javascript" src="/scripts/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="/scripts/plugins/jquery-ui-1.8.18.custom.min.js"></script>
+    <script type="text/javascript" src="/scripts/livevalidation_standalone.js"></script>
+    <script type="text/javascript" src="/scripts/ApplyPageLiveValidation.js"></script>
+    <script type="text/javascript" src="/scripts/swfobject.js"></script>
+    <script type="text/javascript" src="/scripts/rushcard-tabs.js"></script>
+    <script type="text/javascript" src="/scripts/scripts.js"></script>
+    <script type="text/javascript" src="/scripts/plugins/jquery.tipTip.js"></script>
+	<script type="text/javascript" src="/scripts/cookie.js"></script>
+	<script type="text/javascript" src="/scripts/amplify.min.js"></script>
+    
+<script type="text/javascript">
+	
+				window.rushcard = {
+					tracking: {
+						userId: '',
+						siteType: '',
+						contentChannel: '',
+						landingPageType: '',
+						referrer: '',
+						campaign: '',
+						affid: '',
+						group: '',
+						marketingChannel: '',
+						searchTerm: '',
+						cardSelected: '',
+						segmentation: ''
+					}
+				};
+
+				function processGACookieForPageTagging()
+				{
+					try
+					{
+						var cookieValue = window.rush.readCookie('__utmz');
+						if (cookieValue) {
+							var values = cookieValue.split('|');
+							var utmcsr = '';
+							var utmctr = '';
+							var utmcmd = '';
+							var hadGclid = false;
+							for (var i = 0; i <= values.length - 1; i++) {
+								// check utmcsr
+								if (values[i].indexOf('utmgclid=') >= 0) {
+									hadGclid = true;
+									continue;
+								}
+								else if (values[i].indexOf('utmcsr=') >= 0
+											&& values[i].split('=')[1] != '(direct)') {
+									utmcsr = values[i].split('=')[1];
+									continue;
+								}
+
+								// check utmctr
+								if (values[i].indexOf('utmctr=') >= 0) {
+									utmctr = values[i].split('=')[1];
+									continue;
+								}
+
+								// check utmcmd
+								if (values[i].indexOf('utmcmd=') >= 0) {
+									utmcmd = values[i].split('=')[1];
+									continue;
+								}
+							}
+
+							if (hadGclid) {
+								window.rushcard.tracking.referrer = 'Google';
+								window.rushcard.tracking.marketingChannel = 'SEO';
+								window.rushcard.tracking.searchTerm = utmctr;
+							}
+							else if (utmcsr != '(direct)'
+										&& utmcsr != '') {
+								window.rushcard.tracking.referrer = utmcsr;
+								window.rushcard.tracking.marketingChannel = (utmcmd == 'organic' ? 'SEO' : 'SEM');
+								window.rushcard.tracking.searchTerm = utmctr;
+							}
+						}
+					}
+					catch (e)
+					{
+						// nom nom
+					}
+				}
+
+				function setSegmentationValue()
+				{
+					try
+					{
+						var loopOrder = [
+											window.rushcard.tracking.marketingChannel,
+											window.rushcard.tracking.siteType,
+											window.rushcard.tracking.contentChannel,
+											window.rushcard.tracking.landingPageType,
+											window.rushcard.tracking.group,
+											window.rushcard.tracking.referrer,
+											window.rushcard.tracking.affid,
+											window.rushcard.tracking.campaign,
+											window.rushcard.tracking.searchTerm
+										];
+						var segment = '';
+						for (var i in loopOrder)
+						{
+							if (loopOrder[i].length != 0)
+							{
+								segment += loopOrder[i] + ',';
+							}
+						}
+						if (segment.length > 0)
+						{
+							segment = segment.substr(0, segment.length - 1);
+						}
+
+						// set it
+						window.rushcard.tracking.segmentation = segment;
+			
+					}
+					catch(e)
+					{
+						window.rushcard.tracking.segmentation = '';
+					} 
+				}
+
+				function googleSetVar(pageTracker)
+				{
+					try
+					{
+						if (pageTracker)
+						{
+							var utmb = window.rush.readCookie('__utmb');
+							var id = '1';
+							if (utmb)
+							{
+								id = utmb.split('.')[1];
+							}
+							if (id == '1')
+							{
+								// set segmentation (just to be safe)
+								setSegmentationValue();
+								pageTracker._setVar(window.rushcard.tracking.segmentation);
+							}
+						}
+					}
+					catch (e)
+					{
+						// move along...
+					}
+				}
+	
+	try
+	{
+		window.rushcard.tracking.userId = "";
+		window.rushcard.tracking.siteType = "primary";
+		window.rushcard.tracking.contentChannel = "Application";
+		window.rushcard.tracking.landingPageType = "AffiliateApplication6";
+		window.rushcard.tracking.referrer = "SteelHouse Media";
+		window.rushcard.tracking.campaign = "steelhouse";
+		window.rushcard.tracking.affid = "";
+		window.rushcard.tracking.group = "6";
+		window.rushcard.tracking.marketingChannel = "Affiliate";
+		window.rushcard.tracking.searchTerm = "";
+		window.rushcard.tracking.cardSelected = "";
+		window.rushcard.tracking.segmentation = "";
+	}
+	catch(err)
+	{}
+	
+
+</script>
+        <script type="text/javascript">
+            function recordOutboundLink(account, link, category, action) {
+                try {
+                    if (_gat) {
+                        var pageTracker = _gat._getTracker(account);
+
+                        if (pageTracker) {
+                            pageTracker._trackEvent(category, action);
+                        }
+                    }
+                } catch (err) { }
+            }
+        </script>
+    
+    <link rel="stylesheet" type="text/css" media="all" href="/styles/affiliatelanding1.css?d=20121102">
+    <!--[if gt IE 7]>
+        <style type="text/css">
+			#container .dataentryarea .mainarea .cardarea .cardlabel
+			{
+				cursor: pointer;
+			}
+		</style>
+	<![endif]-->
+    <script type="text/javascript" src="/scripts/plugins/jquery.tools.min.js"></script>
+
+    <script type="text/javascript">
+      window.ClickTaleSettings = { XHRWrapper: { Enable: true, MaxResponseSize: 1000000} };
+    </script>
+    <script type="text/javascript">
+        document.write(unescape("%3Cscript%20src='" +
+(document.location.protocol == 'https:' ? 'https://clicktale.pantherssl.com/' : 'http://s.clicktale.net/') +
+"XHRWrapper.js'%20type='text/javascript'%3E%3C/script%3E"));
+    </script><script src="https://clicktale.pantherssl.com/XHRWrapper.js" type="text/javascript"></script>
+<script src="https://a.analytics.yahoo.com/fpc.pl?v=5.1.0.15.js&amp;a=1000519426162&amp;dpid=4253539424&amp;fpc=ZWgv1GXQ%7CR4qyM82Maa%7Cfses1000519426162%3D%7CR4qyM82Maa%7CZWgv1GXQ%7Cfvis1000519426162%3DZj1odHRwcyUzQSUyRiUyRnd3dy5ydXNoY2FyZC5jb20lMkZpbmRleDMuYXNweCZiPVByZXBhaWQlMjBDYXJkcyUyMC0lMjBDcmVkaXQlMkMlMjBEZWJpdCUyQyUyMFByZXBhaWQlMjAlN0MlMjBSdXNoY2FyZA%3D%3D%7C8M07TT8YMY%7C8M07TT8YMY%7C8M07TT8YMY%7C8%7C8M07TT8YMY%7C8M07TT8YMY&amp;ittidx=0&amp;flv=unknown&amp;n=5&amp;g=en-US&amp;h=N&amp;j=1280x1024&amp;k=24&amp;l=true&amp;f=https%3A%2F%2Fwww.rushcard.com%2Fapply2%2FAffiliateApplication6.aspx%3Fptk%3D106_1_1%26group%3D6%26referer%3Dsteelhouse&amp;b=Application%20Form%20-%20Prepaid%20Cards%20-%20Credit%2C%20Debit%2C%20Prepaid%20%7C%20Rushcard&amp;enc=UTF-8&amp;d=Sat%2C%2025%20May%202013%2001%3A41%3A05%20GMT" type="text/javascript" defer=""></script></head>
+<body id="application">
+    <form method="post" action="AffiliateApplication6.aspx?ptk=106_1_1&amp;group=6&amp;referer=steelhouse" id="aspnetForm">
+<div class="aspNetHidden">
+<input name="__VIEWSTATE" id="__VIEWSTATE" value="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" type="hidden">
+</div>
+
+
+<script src="/scripts/AutoAppSubmit.js" type="text/javascript"></script><script language="javascript">
+                                                function zipCodeMask(obj,validatorId) {
+                                                    if (obj.value != '')
+                                                    {
+                                                        var num = obj.value;
+                                                        num = num.toString().replace(/[^\d]/g,'');
+                                                        obj.value =  num.substring(0,5);
+                                                        if (num.length > 5)
+                                                            obj.value = obj.value + '-' + num.substring(5,9);
+                                                     
+                                                        if(validatorId)
+                                                        {
+                                                            validator = document.getElementById(validatorId);
+                                                            if(/^\d{9}$|^\d{5}$/.test(num.toString()) != true)
+                                                             {      
+                                                                    validator.style.visibility='visible'; 
+                                                                    validator.style.display = 'block'; 
+                                                             }      
+                                                            else 
+                                                              { 
+                                                                validator.style.visibility='hidden';
+                                                                validator.style.display = 'none';
+                                                               }
+                                                        }
+                                                    }
+                                                }</script><script language="javascript">
+                                                        function removeZipCodeMask(obj) 
+                                                        {
+                                                            if (obj.value != '')
+                                                            {
+                                                                var num = obj.value;
+                                                                obj.value = num.toString().replace(/\(|\)|\-|\s/g,'');
+                                                                obj.select();
+                                                             }      
+                                                        }</script><script language="javascript">
+                                                function phoneNumberMask(obj,validatorId) {
+                                                    if (obj.value != '')
+                                                    {
+                                                        var num = obj.value;
+                                                        num = num.toString().replace(/[^\d]/g,'');
+                                                        obj.value = '(' + num.substring(0,3) + ') ' + num.substring(3,6) + '-' + num.substring(6,10);
+                                                     
+                                                        if(validatorId)
+                                                        {
+                                                            validator = document.getElementById(validatorId);
+                                                            if(/\d{10}/.test(num.toString()) != true)
+                                                             {      
+                                                                    validator.style.visibility='visible'; 
+                                                                    validator.style.display = 'block';
+                                                             }      
+                                                            else 
+                                                              { 
+                                                                validator.style.visibility='hidden';
+                                                                validator.style.display = 'none';
+                                                               }
+                                                        }
+                                                    }
+                                                }</script><script language="javascript">
+                                                        function removePhoneNumberMask(obj) 
+                                                        {
+                                                            if (obj.value != '')
+                                                            {
+                                                                var num = obj.value;
+                                                                obj.value = num.toString().replace(/\(|\)|\-|\s/g,'');
+                                                                obj.select();
+                                                             }      
+                                                        }</script><script language="javascript">// created: 2005-08-30
+          // updated: 2005-08-31
+          // mredkj.com
+          function extractNumber(obj, decimalPlaces, allowNegative, type)
+          {
+          	var temp = obj.value;
+            var original = temp;
+          	
+          	// avoid changing things if already formatted correctly
+          	var reg0Str = '[0-9]*';
+          	if (decimalPlaces > 0) {
+                 reg0Str += '\\\\.?[0-9]{0,' + decimalPlaces + '}';
+             } else if (decimalPlaces < 0) {
+                 reg0Str += '\\\\.?[0-9]*';
+             }
+          	reg0Str = allowNegative ? '^-?' + reg0Str : '^' + reg0Str;
+          	reg0Str = reg0Str + '$';
+          	var reg0 = new RegExp(reg0Str);
+          	if (!reg0.test(temp)) 
+            {
+          
+          	// first replace all non numbers
+          	var reg1Str = '[^0-9' + (decimalPlaces != 0 ? '.' : '') 
+          + (allowNegative ? '-' : '') + ']';
+          	var reg1 = new RegExp(reg1Str, 'g');
+          	temp = temp.replace(reg1, '');
+          
+          	if (allowNegative) {
+          		// replace extra negative
+          		var hasNegative = temp.length > 0 && temp.charAt(0) == '-';
+          		var reg2 = /-/g;
+          		temp = temp.replace(reg2, '');
+          		if (hasNegative) temp = '-' + temp;
+          	}
+          	
+          	if (decimalPlaces != 0) {
+          		var reg3 = /\\./g;
+                 var reg3Array = reg3.exec(temp);
+                 if (reg3Array != null) {
+          		    // keep only first occurrence of . 
+             	    //  and the number of places specified by decimalPlaces 
+                    //          or the entire string if decimalPlaces < 0
+          	        var reg3Right = temp.substring(reg3Array.index   + reg3Array[0].length);
+          	        reg3Right = reg3Right.replace(reg3, '');
+          	        reg3Right = decimalPlaces > 0 ? reg3Right.substring(0, decimalPlaces) : reg3Right;
+          	        temp = temp.substring(0,reg3Array.index) + '.' + reg3Right;
+                 }
+             }
+            
+            } //End if regex
+            if(type)
+            {
+                var maxLength = 0;
+                switch(type)
+                {
+                    case 'zipcode': maxLength = 9; break;
+                    case 'ssn': maxLength = 9; break;
+                    case 'phone': 
+                        temp.replace(/^[1]/,'');
+                        maxLength = 10; 
+                        break;
+                    case 'creditcard':
+                        maxLength = 16; 
+                        break;
+                }
+                if(maxLength>0)
+          	        temp = temp.toString().substring(0,maxLength)
+            }
+            if(temp!= original) 
+          	    obj.value = temp;
+          }
+          </script>
+            <script language="javascript">
+            function blockNonNumbers(obj, e, allowDecimal, allowNegative)
+            {
+	            var key;
+	            var isCtrl = false;
+	            var keychar;
+	            var reg;
+	            if(window.event) {
+		            key = e.keyCode;
+		            isCtrl = window.event.ctrlKey
+	            }
+	            else if(e.which) {
+		            key = e.which;
+		            isCtrl = e.ctrlKey;
+	            }
+	            if (isNaN(key)) return true;
+	            keychar = String.fromCharCode(key);
+	            // check for backspace or delete, or if Ctrl was pressed
+	            if (key == 8 || isCtrl)
+	            {
+		            return true;
+	            }
+	            reg = /\d/;
+	            var isFirstN = allowNegative ? keychar == '-' && obj.value.indexOf('-') == -1 : false;
+	            var isFirstD = allowDecimal ? keychar == '.' && obj.value.indexOf('.') == -1 : false;
+                var isEnterKey = key == 13;
+            	
+	            return isFirstN || isFirstD || reg.test(keychar)|| isEnterKey;
+            }
+            </script><script language="javascript">
+                                                function sSNMask(obj,validatorId) {
+                                                    if (obj.value != '')
+                                                    {
+                                                        var num = obj.value;
+                                                        var numlen = num.length;
+
+                                                       var span = document.getElementById('SSNTextHidden');
+                                                        if(  span != null )
+                                                        {
+                                                            if( num != span.value )
+                                                            {
+                                                                span.value = num;
+                                                            }
+                                                        }
+                                                        num = num.replace(/-/g,'');
+                                                        obj.value =  num.substring(0,3)+'-'+num.substring(3,5)+'-' + num.substring(5,9);
+                                                        if(validatorId)
+                                                        {
+                                                            validator = document.getElementById(validatorId);
+                                                            if(/\d{9}/.test(num.toString()) != true)
+                                                                 {      
+                                                                    validator.style.visibility='visible'; 
+                                                                    validator.style.display = 'block';
+                                                             }      
+                                                            else 
+                                                              { 
+                                                                validator.style.visibility='hidden';
+                                                                validator.style.display = 'none';
+                                                               }
+                                                        }
+                                                        
+                                                    }
+                                                }</script><script language="javascript">
+                                                        function removeSSNMask(obj) 
+                                                        {
+                                                            var span = document.getElementById('SSNTextHidden');
+                                                            if(  span != null )
+                                                            {
+                                                                obj.value = span.value;
+                                                                obj.select();
+                                                            }
+                                                        }</script>
+<div class="aspNetHidden">
+
+	<input name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" type="hidden">
+	<input name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="Q+ChmslqdFfXBL2TMrDprrmbgwYEnolQpD2vTKS3lCKpDF21jFLyOUmMhhItDEjeNCMS2ts3tWzAYT5am6rN3nv8E89Cs9lTDqCShd7ldK0YTLvinP6+TCYtqDOvqP3w79F65tkgkYvIB9CFt9sjbCCjSOVqEsntUAxG8jtVGcADQip4rju4M9+VsXxsTxnTiyDHurQdIp10/6OgCshf4gCwTxSpErKSUnkOxOVyvMcHtNW0XSTktGbAObGY3jBOU3tprroNn42ktkTUxBMpRfO59uDNgJPYYZWC7idnbzan4XVnZFAsBXlnHG/Ru7pPEgfu2JYCmupIuNacVCcUwtSElrNpRruo/DO+gnlajOxI6nrjs0la9x+NjJ0jk2Hl2aVzxd/8E0eGt1oFzDzwNdVWg4cROkAHd7OC9NGPJ0S/UKJbxlFnGpA39tEZ0iMnKwLKrP+dzVYv73DQ78iKkXjZarn9Yf3l4YwZ+acYTJRqCpp+cAJLjMDAuvJMBS4DP703A6EGWpL/N7d8nzrCyCyBRBJ8geNy9iN3up2asfhFMB8TTLkgaF23zrIk11/dj5LFlNX33RWa+qW7kRJ6Ep2Xr6nNCGxC5+99P3vCxggqWVZf/fu84XeINUdOJqieIGYD3Y5ygQIl8gMX9Rm5DxEVdtJKId5kx662Sqbo2JM9xOAesfy5pyRWR7ZhSzDaMt39eg+AkQvBfqPWzuNRr3llNvwHQw+VZvPYbKpOJgR4+l2zhxzNV8TlGKGdiOPL4QhZA7IZx6VzBt5NYK7UV1yvD3xiN7qMAtiT2uX+o2TL0cZWyTIvLoLBwUaSorB2i/AnNkd14ucdkV4gRjqrN/V3E8fmjgnwtUOWrmktpqbg+uYvwoJg8nxTHTxSa/w08e48M0/lrlRIpbsAJa36TdYkhe+0pZ1z0SS17VigvWDqnVN4If5nJFhokOa1LzIrpB3LbzEbxQ0qHJUcLVpapZJKph7ik63yWpDhfBYjW0Vpm5uP/9QjkDWhMHZwQEjzZ1bR0wmb+0TvazruP0t4ALdyE3i4mNEwhqj1Y70sk53XaBM5vw95nukHLLmQDnuu8tvC6ty6KYHCREtdnXzcs/db6u2oAKuYN/f5A9ujS6Gsf2VQHjHWCtwWiRejpPSOJ2dL+9aNpC4zKBLIR3CiTekCLO8Ke/Fsj4cjpbgCOYKVB3Evc3CypjKaw1CQcqyiQe7i3AdmPGW4eDSLZ419lB+IPKCIvKbz1mJoyQuelHMszR+2E7mHvCC1/YJPMgpZbufiAKS95uVYhbfhvAJz+3V3vAxpof7Y2hPvsHt7MO14Ixwdvdu/YiOc0N/EvBiRkyWfoDGodoQ6oEtMHXSIyJObMBwq6wgyqBrI6kX/HtXr2krpWa/S8hEfl2mbvyxVOlAtoU/3V8UtVOWQCFfBhF+pvcvOr6DhlyR9fKKcbFalfq4E3+Bpc9ldMp3tIf7pnYExFH+8/nchIowHaL3+cc3q6ecB59K79vKhwh2RbQE3hbzukpe/ZLuyoBr23267jihlp43H4hORJcahXhWLAVbg8Z+mqdawdZzhNLHCM4e0CykbTT5pNeoFeKiqzO0BM0WaV432yVJcSUGrZYhr/irsEOLbIsXCNE7dCPgotmLPhCVJw3qKzDYvwD/sJtOEPhT8KHRolq2W4pH36fyMdrqUBSAUQul4y0KNQ8mq8Uib8NQXqOdxlSp6PqTZ8nJO5zlW56JPrPVmd6NnWljOt7BsQFyzVYAA2qhEknxJRjmw0jidsY2zfNJukbghSWHrHsSC8Nmd/H1fx3VOXIOMkAieWUNNbGNYmmczPBfjhQM0pxo+2WcH6eyDJwEyUvG6kAOXW7oT43LSLIxVkfxpaw==" type="hidden">
+</div>
+    
+    <div id="container">
+        <div id="containerHeader">            
+            &nbsp;</div>
+        <div class="marketingarea">
+            <div class="russell">
+                <img src="/img/affiliate_landing/russell_with_quote.png" alt="Russell Simmons">
+            </div>
+            <div class="benefits">
+                Put money on your Prepaid VisaRushCard© to receive these benefits</div>
+            <div class="bullets">
+                <ul>
+                    <li>Get your payroll or government benefits<br> up to TWO days early*** with Direct Deposit</li>
+                    <li>No Hidden Fees (view <a href="/whyrushcard/scheduleoffees.aspx" target="_blank">
+                        Schedule of Fees</a>)</li>
+                    <li>Free Online Tools</li>
+                    <li>99¢ Card to Card Transfers</li>
+                    <li>Your funds are FDIC-insured through <br> The BankCorp Bank; Member FDIC</li>
+                </ul>
+            </div>
+            <div style="clear: both;">
+            </div>
+        </div>
+        <div class="dataentryarea">
+            <div class="toparea">
+                &nbsp;</div>
+            <div class="mainarea">
+                <div class="signup">
+                    Sign up and enroll in direct deposit!*</div>
+                <div class="columns">
+                    <div class="sectionheader">
+                        1. Select Your Card:
+                    </div>
+                    <div class="cardarea">
+                        <table cellpadding="0" cellspacing="0">
+                            <tbody><tr>
+                                <td style="padding-bottom: 0px; padding-top: 0px; text-align: center;">
+                                    <table style="width: 100%;" cellpadding="0" cellspacing="0">
+                                        <tbody><tr id="ctl00_ContentPlaceHolder1_cardRow1">
+	<td id="ctl00_ContentPlaceHolder1_bdpChoice" class="cardchoice">
+                                                <label for="ctl00_ContentPlaceHolder1_rbBDP" id="ctl00_ContentPlaceHolder1_lblForCardBDP" class="cardlabel">
+                                                    <img src="/img/BDP_40.gif" alt="Black Diamond" class="cardimage">
+                                                    <br>
+                                                    <input id="ctl00_ContentPlaceHolder1_rbBDP" name="ctl00$ContentPlaceHolder1$Cards" value="rbBDP" checked="checked" type="radio">
+                                                    <br>
+                                                    Black Diamond
+                                                    <img src="/img/btn-app-question.gif" class="ToolTip" alt="Card Fee">
+                                                </label>
+                                            </td>
+	<td id="ctl00_ContentPlaceHolder1_klsChoice" class="cardchoice">
+                                                <label for="ctl00_ContentPlaceHolder1_rbKLS" id="ctl00_ContentPlaceHolder1_lblForCardKLS" class="cardlabel">
+                                                    <img src="/img/KLS_40.gif" alt="KLS" class="cardimage">
+                                                    <br>
+                                                    <input id="ctl00_ContentPlaceHolder1_rbKLS" name="ctl00$ContentPlaceHolder1$Cards" value="rbKLS" type="radio">
+                                                    <br>
+                                                    KLS
+                                                    <img src="/img/btn-app-question.gif" class="ToolTip" alt="Card Fee">
+                                                </label>
+                                            </td>
+	<td id="ctl00_ContentPlaceHolder1_pnkdChoice" class="cardchoice">
+                                                <label for="ctl00_ContentPlaceHolder1_rbPNKD" id="ctl00_ContentPlaceHolder1_lblForCardPNKD" class="cardlabel">
+                                                    <img src="/img/PNKD_40.gif" alt="Pink Diamond" class="cardimage">
+                                                    <br>
+                                                    <input id="ctl00_ContentPlaceHolder1_rbPNKD" name="ctl00$ContentPlaceHolder1$Cards" value="rbPNKD" type="radio">
+                                                    <br>
+                                                    Pink Diamond
+                                                    <img src="/img/btn-app-question.gif" class="ToolTip" alt="Card Fee">
+                                                </label>
+                                            </td>
+	<td id="ctl00_ContentPlaceHolder1_rcpChoice" class="cardchoice">
+                                                <label for="ctl00_ContentPlaceHolder1_rbRCP" id="ctl00_ContentPlaceHolder1_lblForCardRCP" class="cardlabel">
+                                                    <img src="/img/RCP_40.gif" alt="Original Black" class="cardimage">
+                                                    <br>
+                                                    <input id="ctl00_ContentPlaceHolder1_rbRCP" name="ctl00$ContentPlaceHolder1$Cards" value="rbRCP" checked="checked" type="radio">
+                                                    <br>
+                                                    Classic
+                                                    <img src="/img/btn-app-question.gif" class="ToolTip" alt="Card Fee"></label>
+                                            </td>
+</tr>
+
+                                    </tbody></table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding-bottom: 0px; padding-top: 0px; text-align: center;">
+                                    <table style="width: 100%;" cellpadding="0" cellspacing="0">
+                                        <tbody><tr id="ctl00_ContentPlaceHolder1_cardRow2">
+	<td id="ctl00_ContentPlaceHolder1_dnstyChoice" class="cardchoice">
+                                                <label for="ctl00_ContentPlaceHolder1_rbDNSTY" id="ctl00_ContentPlaceHolder1_lblForCardDNSTY" class="cardlabel">
+                                                    <img src="/img/DNSTY_40.gif" alt="DYNASTY" class="cardimage">
+                                                    <br>
+                                                    <input id="ctl00_ContentPlaceHolder1_rbDNSTY" name="ctl00$ContentPlaceHolder1$Cards" value="rbDNSTY" type="radio">
+                                                    <br>
+                                                    DYNASTY
+                                                    <img src="/img/btn-app-question.gif" class="ToolTip" alt="Card Fee">
+                                                </label>
+                                            </td>
+	<td id="ctl00_ContentPlaceHolder1_pdpChoice" class="cardchoice">
+                                                <label for="ctl00_ContentPlaceHolder1_rbPDP" id="ctl00_ContentPlaceHolder1_lblForCardPDP" class="cardlabel">
+                                                    <img src="/img/PDP_40.gif" alt="Purple Diamond" class="cardimage">
+                                                    <br>
+                                                    <input id="ctl00_ContentPlaceHolder1_rbPDP" name="ctl00$ContentPlaceHolder1$Cards" value="rbPDP" type="radio">
+                                                    <br>
+                                                    Purple Diamond
+                                                    <img src="/img/btn-app-question.gif" class="ToolTip" alt="Card Fee">
+                                                </label>
+                                            </td>
+	<td id="ctl00_ContentPlaceHolder1_bppChoice" class="cardchoice">
+                                                <label for="ctl00_ContentPlaceHolder1_rbBPP" id="ctl00_ContentPlaceHolder1_lblForCardBPP" class="cardlabel">
+                                                    <img src="/img/BPP_40.gif" alt="Baby Phat" class="cardimage">
+                                                    <br>
+                                                    <input id="ctl00_ContentPlaceHolder1_rbBPP" name="ctl00$ContentPlaceHolder1$Cards" value="rbBPP" type="radio">
+                                                    <br>
+                                                    Baby Phat
+                                                    <img src="/img/btn-app-question.gif" class="ToolTip" alt="Card Fee">
+                                                </label>
+                                            </td>
+</tr>
+
+                                    </tbody></table>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    </div>
+                    <div id="cardFee" class="cardFee">The one time card fee of $3.95 will be charged the first time you load money onto the card.</div>
+                    <div id="didYouKnow" class="didYouKnow"><p class="noIndent">If you’re interested in more stylish card designs, click through the cards above and see the associated one time Card Fee</p></div>
+                    <div style="clear: both;">
+                    </div>
+                    <div class="spacer">
+                        &nbsp;</div>
+                    <div class="sectionheader">
+                        2. Select Your Plan:
+                    </div>
+                    <div class="planarea">
+                        <span class="planlabel"><input id="ctl00_ContentPlaceHolder1_rbRushUnlimited" name="ctl00$ContentPlaceHolder1$Plans" value="rbRushUnlimited" type="radio"><label for="ctl00_ContentPlaceHolder1_rbRushUnlimited">RushUnlimited</label></span>
+                        <img src="/img/btn-app-question.gif" class="ToolTip" alt="">
+                        <br>
+                        <span class="planlabel"><input id="ctl00_ContentPlaceHolder1_rbPAYGO" name="ctl00$ContentPlaceHolder1$Plans" value="rbPAYGO" checked="checked" type="radio"><label for="ctl00_ContentPlaceHolder1_rbPAYGO">Pay As you Go Plan</label></span>
+                        <img src="/img/btn-app-question.gif" class="ToolTip" alt="">
+                        <br>
+                        <span class="planlabel"><input id="ctl00_ContentPlaceHolder1_rbMONTHLY" name="ctl00$ContentPlaceHolder1$Plans" value="rbMONTHLY" type="radio"><label for="ctl00_ContentPlaceHolder1_rbMONTHLY">Monthly Plan</label></span>
+                        <img src="/img/btn-app-question.gif" class="ToolTip" alt="">
+                    </div>
+                                                    <div class="feePlanCalc">
+							View our <a href="/howitworks/scheduleoffees.aspx" target="_blank">Schedule of Fees</a>
+                            <br>
+							Not sure which plan to choose? Use our <a href="/howitworks/pickyourplan.aspx" target="_blank">Plan Calculator</a> to help you decide!
+				    </div>
+                </div>   
+                      
+                <div class="columns">
+                    <div class="sectionheader">
+                        3. Your Information:
+                    </div>
+                    <div class="forminputs">
+                        <table border="0" cellpadding="0" cellspacing="0">
+                            <tbody><tr>
+                                <td>
+                                    First Name:
+                                </td>
+                                <td>
+                                    &nbsp;
+                                </td>
+                                <td>
+                                    Last Name:
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input name="ctl00$ContentPlaceHolder1$txtFirstName" id="ctl00_ContentPlaceHolder1_txtFirstName" tabindex="1" live-val="true" data-live-val-type="FIRSTNAME" data-appprop="FirstName" type="text"><br>
+                                </td>
+                                <td>
+                                </td>
+                                <td>
+                                    <input name="ctl00$ContentPlaceHolder1$txtLastName" id="ctl00_ContentPlaceHolder1_txtLastName" tabindex="2" live-val="true" data-live-val-type="LASTNAME" data-appprop="LastName" type="text"><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Address:
+                                </td>
+                                <td>
+                                </td>
+                                <td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input name="ctl00$ContentPlaceHolder1$txtAddress1" id="ctl00_ContentPlaceHolder1_txtAddress1" tabindex="3" live-val="true" data-live-val-type="ADDRESS" type="text"><br>
+                                </td>
+                                <td>
+                                </td>
+                                <td>
+                                    <input name="ctl00$ContentPlaceHolder1$txtAddress2" id="ctl00_ContentPlaceHolder1_txtAddress2" tabindex="4" type="text"><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    City:
+                                </td>
+                                <td>
+                                </td>
+                                <td>
+                                    State/Zip Code:
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input name="ctl00$ContentPlaceHolder1$txtCity" id="ctl00_ContentPlaceHolder1_txtCity" tabindex="5" live-val="true" data-live-val-type="CITY" type="text">
+                                </td>
+                                <td>
+                                </td>
+                                <td>
+                                    <select name="ctl00$ContentPlaceHolder1$ddlState" id="ctl00_ContentPlaceHolder1_ddlState" tabindex="6" live-val="true" data-live-val-type="STATE" style="width: 45px;">
+	<option value="">--</option>
+	<option value="AL">AL</option>
+	<option value="AK">AK</option>
+	<option value="AR">AR</option>
+	<option value="AZ">AZ</option>
+	<option value="CA">CA</option>
+	<option value="CO">CO</option>
+	<option value="CT">CT</option>
+	<option value="DC">DC</option>
+	<option value="DE">DE</option>
+	<option value="FL">FL</option>
+	<option value="GA">GA</option>
+	<option value="HI">HI</option>
+	<option value="IA">IA</option>
+	<option value="ID">ID</option>
+	<option value="IL">IL</option>
+	<option value="IN">IN</option>
+	<option value="KS">KS</option>
+	<option value="KY">KY</option>
+	<option value="LA">LA</option>
+	<option value="MA">MA</option>
+	<option value="MD">MD</option>
+	<option value="ME">ME</option>
+	<option value="MI">MI</option>
+	<option value="MN">MN</option>
+	<option value="MO">MO</option>
+	<option value="MS">MS</option>
+	<option value="MT">MT</option>
+	<option value="NC">NC</option>
+	<option value="ND">ND</option>
+	<option value="NE">NE</option>
+	<option value="NH">NH</option>
+	<option value="NJ">NJ</option>
+	<option value="NM">NM</option>
+	<option value="NY">NY</option>
+	<option value="NV">NV</option>
+	<option value="OH">OH</option>
+	<option value="OK">OK</option>
+	<option value="OR">OR</option>
+	<option value="PA">PA</option>
+	<option value="RI">RI</option>
+	<option value="SC">SC</option>
+	<option value="SD">SD</option>
+	<option value="TN">TN</option>
+	<option value="TX">TX</option>
+	<option value="UT">UT</option>
+	<option value="VA">VA</option>
+	<option value="WA">WA</option>
+	<option value="WI">WI</option>
+	<option value="WV">WV</option>
+	<option value="WY">WY</option>
+
+</select>
+                                    &nbsp;&nbsp;<input name="ctl00$ContentPlaceHolder1$txtZip$text" id="ctl00_ContentPlaceHolder1_txtZip_text" tabindex="7" onkeyup="extractNumber(this,0,false,'zipcode');" onblur="zipCodeMask(this,'');" onfocus="removeZipCodeMask(this);" live-val="true" data-live-val-type="ZIP" style="width: 90px;" type="text">
+                                    <br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Home Phone:
+                                </td>
+                                <td>
+                                </td>
+                                <td>
+                                    Mobile Phone:
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input name="ctl00$ContentPlaceHolder1$txtHomePhone$text" id="ctl00_ContentPlaceHolder1_txtHomePhone_text" tabindex="8" onkeyup="extractNumber(this,0,false,'phone');extractNumber(this,0,false,'');" onkeypress="return blockNonNumbers(this, event,false,false);" onblur="extractNumber(this,0,false,0);phoneNumberMask(this,'');" onfocus="removePhoneNumberMask(this);" live-val="true" data-live-val-type="HOMEPHONE" type="text">
+                                    <br>
+                                </td>
+                                <td>
+                                </td>
+                                <td>
+                                    <input name="ctl00$ContentPlaceHolder1$txtMobilePhone$text" id="ctl00_ContentPlaceHolder1_txtMobilePhone_text" tabindex="9" onkeyup="extractNumber(this,0,false,'phone');extractNumber(this,0,false,'');" onkeypress="return blockNonNumbers(this, event,false,false);" onblur="extractNumber(this,0,false,0);phoneNumberMask(this,'');" onfocus="removePhoneNumberMask(this);" live-val="true" data-live-val-type="MOBILEPHONE" type="text">
+                                    <br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Email Address:
+                                </td>
+                                <td>
+                                </td>
+                                <td>
+                                    Verify Email Address:
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input name="ctl00$ContentPlaceHolder1$txtEmail" id="ctl00_ContentPlaceHolder1_txtEmail" tabindex="10" live-val="true" data-live-val-type="EMAIL" data-appprop="Email" type="text"><br>
+                                </td>
+                                <td>
+                                </td>
+                                <td>
+                                    <input name="ctl00$ContentPlaceHolder1$txtVerifyEmail" id="ctl00_ContentPlaceHolder1_txtVerifyEmail" tabindex="11" live-val="true" data-live-val-type="EMAILVERIFY" data-live-match-field="txtEmail" type="text"><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Social Security Number:
+                                </td>
+                                <td>
+                                </td>
+                                <td>
+                                    Date of Birth (M/D/Y):
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input name="ctl00$ContentPlaceHolder1$txtSSN$text" id="ctl00_ContentPlaceHolder1_txtSSN_text" tabindex="12" autocomplete="off" onkeyup="extractNumber(this,0,false,'ssn');extractNumber(this,0,false,'');" onkeypress="return blockNonNumbers(this, event,false,false);" onblur="extractNumber(this,0,false,0);sSNMask(this,'');" onfocus="removeSSNMask(this);" live-val="true" data-live-val-type="SSN" type="text">
+                                    <br>
+                                </td>
+                                <td>
+                                </td>
+                                <td>
+                                    <select name="ctl00$ContentPlaceHolder1$ddlMonth" id="ctl00_ContentPlaceHolder1_ddlMonth" tabindex="13" live-val="true" data-live-val-type="DOBMONTH" style="width: 41px;">
+	<option selected="selected" value="">--</option>
+	<option value="1">1</option>
+	<option value="2">2</option>
+	<option value="3">3</option>
+	<option value="4">4</option>
+	<option value="5">5</option>
+	<option value="6">6</option>
+	<option value="7">7</option>
+	<option value="8">8</option>
+	<option value="9">9</option>
+	<option value="10">10</option>
+	<option value="11">11</option>
+	<option value="12">12</option>
+
+</select>
+                                    &nbsp;<select name="ctl00$ContentPlaceHolder1$ddlDay" id="ctl00_ContentPlaceHolder1_ddlDay" tabindex="14" live-val="true" data-live-val-type="DOBDAY" style="width: 41px;">
+	<option selected="selected" value="">--</option>
+	<option value="1">1</option>
+	<option value="2">2</option>
+	<option value="3">3</option>
+	<option value="4">4</option>
+	<option value="5">5</option>
+	<option value="6">6</option>
+	<option value="7">7</option>
+	<option value="8">8</option>
+	<option value="9">9</option>
+	<option value="10">10</option>
+	<option value="11">11</option>
+	<option value="12">12</option>
+	<option value="13">13</option>
+	<option value="14">14</option>
+	<option value="15">15</option>
+	<option value="16">16</option>
+	<option value="17">17</option>
+	<option value="18">18</option>
+	<option value="19">19</option>
+	<option value="20">20</option>
+	<option value="21">21</option>
+	<option value="22">22</option>
+	<option value="23">23</option>
+	<option value="24">24</option>
+	<option value="25">25</option>
+	<option value="26">26</option>
+	<option value="27">27</option>
+	<option value="28">28</option>
+	<option value="29">29</option>
+	<option value="30">30</option>
+	<option value="31">31</option>
+
+</select>
+                                    &nbsp;<select name="ctl00$ContentPlaceHolder1$ddlYear" id="ctl00_ContentPlaceHolder1_ddlYear" tabindex="15" live-val="true" data-live-val-type="DOBYEAR" style="width: 55px;">
+	<option selected="selected" value="">----</option>
+	<option value="2013">2013</option>
+	<option value="2012">2012</option>
+	<option value="2011">2011</option>
+	<option value="2010">2010</option>
+	<option value="2009">2009</option>
+	<option value="2008">2008</option>
+	<option value="2007">2007</option>
+	<option value="2006">2006</option>
+	<option value="2005">2005</option>
+	<option value="2004">2004</option>
+	<option value="2003">2003</option>
+	<option value="2002">2002</option>
+	<option value="2001">2001</option>
+	<option value="2000">2000</option>
+	<option value="1999">1999</option>
+	<option value="1998">1998</option>
+	<option value="1997">1997</option>
+	<option value="1996">1996</option>
+	<option value="1995">1995</option>
+	<option value="1994">1994</option>
+	<option value="1993">1993</option>
+	<option value="1992">1992</option>
+	<option value="1991">1991</option>
+	<option value="1990">1990</option>
+	<option value="1989">1989</option>
+	<option value="1988">1988</option>
+	<option value="1987">1987</option>
+	<option value="1986">1986</option>
+	<option value="1985">1985</option>
+	<option value="1984">1984</option>
+	<option value="1983">1983</option>
+	<option value="1982">1982</option>
+	<option value="1981">1981</option>
+	<option value="1980">1980</option>
+	<option value="1979">1979</option>
+	<option value="1978">1978</option>
+	<option value="1977">1977</option>
+	<option value="1976">1976</option>
+	<option value="1975">1975</option>
+	<option value="1974">1974</option>
+	<option value="1973">1973</option>
+	<option value="1972">1972</option>
+	<option value="1971">1971</option>
+	<option value="1970">1970</option>
+	<option value="1969">1969</option>
+	<option value="1968">1968</option>
+	<option value="1967">1967</option>
+	<option value="1966">1966</option>
+	<option value="1965">1965</option>
+	<option value="1964">1964</option>
+	<option value="1963">1963</option>
+	<option value="1962">1962</option>
+	<option value="1961">1961</option>
+	<option value="1960">1960</option>
+	<option value="1959">1959</option>
+	<option value="1958">1958</option>
+	<option value="1957">1957</option>
+	<option value="1956">1956</option>
+	<option value="1955">1955</option>
+	<option value="1954">1954</option>
+	<option value="1953">1953</option>
+	<option value="1952">1952</option>
+	<option value="1951">1951</option>
+	<option value="1950">1950</option>
+	<option value="1949">1949</option>
+	<option value="1948">1948</option>
+	<option value="1947">1947</option>
+	<option value="1946">1946</option>
+	<option value="1945">1945</option>
+	<option value="1944">1944</option>
+	<option value="1943">1943</option>
+	<option value="1942">1942</option>
+	<option value="1941">1941</option>
+	<option value="1940">1940</option>
+	<option value="1939">1939</option>
+	<option value="1938">1938</option>
+	<option value="1937">1937</option>
+	<option value="1936">1936</option>
+	<option value="1935">1935</option>
+	<option value="1934">1934</option>
+	<option value="1933">1933</option>
+	<option value="1932">1932</option>
+	<option value="1931">1931</option>
+	<option value="1930">1930</option>
+	<option value="1929">1929</option>
+	<option value="1928">1928</option>
+	<option value="1927">1927</option>
+	<option value="1926">1926</option>
+	<option value="1925">1925</option>
+	<option value="1924">1924</option>
+	<option value="1923">1923</option>
+	<option value="1922">1922</option>
+	<option value="1921">1921</option>
+	<option value="1920">1920</option>
+	<option value="1919">1919</option>
+	<option value="1918">1918</option>
+	<option value="1917">1917</option>
+	<option value="1916">1916</option>
+	<option value="1915">1915</option>
+	<option value="1914">1914</option>
+	<option value="1913">1913</option>
+	<option value="1912">1912</option>
+	<option value="1911">1911</option>
+	<option value="1910">1910</option>
+	<option value="1909">1909</option>
+	<option value="1908">1908</option>
+	<option value="1907">1907</option>
+	<option value="1906">1906</option>
+	<option value="1905">1905</option>
+	<option value="1904">1904</option>
+	<option value="1903">1903</option>
+	<option value="1902">1902</option>
+	<option value="1901">1901</option>
+	<option value="1900">1900</option>
+
+</select>
+                                    <br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Referral Code:
+                                </td>
+                                <td>
+                                </td>
+                                <td>
+                                    Promotional Code:
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input name="ctl00$ContentPlaceHolder1$txtReferral" value="(optional)" id="ctl00_ContentPlaceHolder1_txtReferral" tabindex="18" type="text">
+                                </td>
+                                <td>
+                                </td>
+                                <td>
+                                    <input name="ctl00$ContentPlaceHolder1$txtPromo" value="(optional)" id="ctl00_ContentPlaceHolder1_txtPromo" tabindex="19" type="text">
+                                </td>
+                            </tr>
+                            <tr><td colspan="3">
+                            <strong>** Rush Text Alerts</strong><br>
+                            Get instant text alerts on your balance, deposits, and recent transaction information anywhere, anytime, on your mobile phone. There is
+                             no charge for Rush Text alerts; however, standard message and data rates from your service provider may apply.<br>
+                                 <input id="ctl00_ContentPlaceHolder1_smsCheckBox" name="ctl00$ContentPlaceHolder1$smsCheckBox" type="checkbox"><label for="ctl00_ContentPlaceHolder1_smsCheckBox">Yes, I would like to receive Rush Text alerts.</label>
+                            </td></tr>
+                            <tr>
+                                <td colspan="3">
+                                    Language Preference: I prefer all future communications with RushCard to be in:
+                                    <img src="/img/btn-app-question.gif" class="ToolTip" alt="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <input id="ctl00_ContentPlaceHolder1_rbEnglish" name="ctl00$ContentPlaceHolder1$Language" value="rbEnglish" checked="checked" tabindex="16" type="radio"><label for="ctl00_ContentPlaceHolder1_rbEnglish" id="ctl00_ContentPlaceHolder1_lblForEnglish" style="cursor: pointer;">English</label>
+                                    <input id="ctl00_ContentPlaceHolder1_rbSpanish" name="ctl00$ContentPlaceHolder1$Language" value="rbSpanish" tabindex="17" type="radio"><label for="ctl00_ContentPlaceHolder1_rbSpanish" id="ctl00_ContentPlaceHolder1_lblForSpanish" style="cursor: pointer;">Spanish</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <table style="width: 100%;" border="0" cellpadding="0" cellspacing="0">
+                                        <tbody><tr>
+                                            <td style="width: 8%;">
+                                                <input id="ctl00_ContentPlaceHolder1_cbFinancialFreedom" name="ctl00$ContentPlaceHolder1$cbFinancialFreedom" type="checkbox"><label for="ctl00_ContentPlaceHolder1_cbFinancialFreedom">Yes, I have read and agree to the <a href="/cardholder.aspx" target="_blank"><u>Cardholder Agreement</u></a>, <a href="/esignconsent.aspx" target="_blank"><u>Consent for the Electronic Disclosure of Information</u></a>, and the <a href="/rushcardbancorpprivacypolicies.pdf" target="_blank"><u>RushCard and The Bancorp Bank Privacy Policies</u></a>. I want the financial freedom and respect provided by RushCard.</label>
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <!-- begin errors -->
+                                    <div id="ctl00_ContentPlaceHolder1_errorBox" class="errorbox" style="display: none;">
+                                        <ul id="ctl00_ContentPlaceHolder1_ulErrorList">
+                                        </ul>
+                                    </div>
+                                    <!-- end errors -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" style="text-align: center;">
+                                    <input name="ctl00$ContentPlaceHolder1$btnSubmit" id="ctl00_ContentPlaceHolder1_btnSubmit" class="submitButton" src="/img/affiliate_landing/btn_getrushcard2.png" alt="Get My RushCard!" type="image">
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    </div>
+                </div>
+                <div style="clear: both;">
+                </div>
+            </div>
+            <div class="bottomarea">
+                &nbsp;</div>
+            <div class="disclaimersarea">
+                <div class="spacer">
+                    &nbsp;</div>
+                <div class="footer">
+                    The Prepaid Visa RushCard is issued by The Bancorp Bank, Member FDIC, pursuant to
+                    a license from Visa U.S.A. Inc. and may be used everywhere Visa debit cards are
+                    accepted.
+                    <br>
+                    <br>
+                    <div id="footercontainer">
+        
+<div class="cb">
+    <!-- &nbsp; -->
+</div>
+<div id="ftr">
+    <div class="fl">
+        <a title="About Us" href="/aboutus.aspx">About Us</a>&nbsp;|&nbsp;
+        <a title="Terms of Use" href="/terms.aspx">Terms of Use</a>&nbsp;|&nbsp;
+        <a title="Cardholder Agreement" href="/cardholder.aspx?update=true">Cardholder Agreement</a>&nbsp;|&nbsp;
+        <a title="RushCard &amp; Bancorp Privacy Policies" href="/RushCardBancorpPrivacyPolicies.pdf" target="_blank">RushCard &amp; Bancorp Privacy Policies</a>&nbsp;|&nbsp;
+        
+        <a title="Site Map" href="/sitemap.aspx">Site Map</a>&nbsp;|&nbsp;
+        <a title="Partners" href="https://retail.rushcard.com">Partners</a>
+        <br>
+        <br>
+        <span style="padding-left: 10px;">
+            Copyright © 2009-12 UniRush, LLC. All Right Reserved.</span>
+    </div>
+    <div class="fr">
+        <a title="Customer Service" href="/faq">Customer Service</a>&nbsp;|&nbsp;
+        <a title="Contact Us" href="/contactus.aspx">Contact Us</a>&nbsp;|&nbsp;
+        <span class="pl pr">866-RUSHCARD</span>
+    </div>
+    <div class="cb">
+        The Prepaid Visa® RushCard is issued by The Bancorp Bank, Member FDIC, pursuant to a license from Visa U.S.A. Inc. and may be used everywhere Visa debit cards are accepted.
+        <br>
+        <br>
+        <div style="font-size: 7pt;">
+            *IMPORTANT INFORMATION ABOUT PROCEDURES FOR OPENING A NEW CARD ACCOUNT: To help the government fight the funding of terrorism and money laundering activities, federal law requires all financial institutions to obtain, verify, and record information that identifies each person who opens a Card Account. What this means for you: When you open a Card Account, we will ask for your name, address, date of birth, and other information that will allow us to identify you. We may also ask to see a copy of your driver’s license or other identifying documents. Approval of your request for a Prepaid Visa RushCard or Rushcard requires passing our identification verification process.
+            <br>
+            
+            <div><br>
+                *** There is no charge for Rush Text alerts; however, standard message and data rates from your service provider may apply. Charges are dependent on your service plan, which may include fees from your carrier to send and receive text messages. Charges will appear on your wireless bill or be deducted from your prepaid phone balance. Message frequency will be determined by the alert options you select. For more information, refer to our Rush Text Terms of Service or text the word "HELP" to 697874 (MYRUSH). To unsubscribe, text the word "STOP" to 697874 (MYRUSH). 
+            </div>
+            <div><br>
+                † You may also be charged a fee by the ATM operator even if you do not complete a transaction.
+            </div>
+        </div>
+    </div>
+</div>
+
+        <div style="margin: -80px 0px 0px 0px;">
+                 
+<div class="patriotAct">
+    ** There is no charge for Rush Text alerts; however, standard message and data rates
+    from your service provider may apply. Charges are dependent on your service plan,
+    which may include fees from your carrier to send and receive text messages. Charges
+    will appear on your wireless bill or be deducted from your prepaid phone balance.
+    Message frequency will be determined by the alert options you select. For more information,
+    refer to our Rush Text Terms of Service or text the word "HELP" to 697874 (MYRUSH).
+    To unsubscribe, text the word "STOP" to 697874 (MYRUSH).
+</div>
+
+                             <div style="margin: 0px 50px 40px 35px; font-size: 10px;">
+         **Applies to payroll Direct Deposit. Faster access to funds is based on comparison of traditional banking policies versus electronic Direct Deposit. Direct Deposit and early deposit capability is subject to payer's support of the feature and timing of the payer's funding. 
+         </div>
+        </div>
+        <br>
+        The Visa Zero Liability policy covers U.S.–issued cards only and does not apply to ATM transactions, PIN transactions not processed by Visa, or certain commercial card transactions. Cardholder must notify issuer promptly of any unauthorized use. Consult issuer for additional details or visit www.visa.com/security.
+    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+        <script type="text/javascript" src="/scripts/affiliateapplication1.js?d=20121102"></script>
+
+    
+
+    
+<input value="" name="hidEai" id="hidEai" type="hidden">
+
+    <div id="ctl00_webAnalytics" style="display:none;">
+	<!-- BEGIN Web Analytics for ApplicationStarted --> 
+    
+    <!-- Google Code for Visitors to First Page of Application Remarketing List -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1067978052;
+var google_conversion_language = "en";
+var google_conversion_format = "3";
+var google_conversion_color = "666666";
+var google_conversion_label = "ibymCIys5wEQxJqg_QM";
+var google_conversion_value = 0;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script><img src="https://www.googleadservices.com/pagead/conversion/1067978052/?random=1369446065538&amp;cv=7&amp;fst=1369446065538&amp;num=1&amp;fmt=3&amp;value=0&amp;label=ibymCIys5wEQxJqg_QM&amp;bg=666666&amp;hl=en&amp;guid=ON&amp;u_h=1024&amp;u_w=1280&amp;u_ah=984&amp;u_aw=1280&amp;u_cd=24&amp;u_his=50&amp;u_tz=-300&amp;u_java=false&amp;u_nplug=0&amp;u_nmime=0&amp;url=https%3A//www.rushcard.com/apply2/AffiliateApplication6.aspx%3Fptk%3D106_1_1%26group%3D6%26referer%3Dsteelhouse&amp;frm=0" height="1" width="1" border="0">
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://www.googleadservices.com/pagead/conversion/1067978052/?label=ibymCIys5wEQxJqg_QM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+<!-- AOL Pixel -->
+<img src="https://secure.leadback.advertising.com/adcedge/lb?site=695501&amp;srvc=1&amp;betr=rushcard_cs=1&amp;betq=12715=433258" height="1" width="1" border="0">
+
+<!-- BEGIN: Google AdWords -->
+<div id="ctl00_ctl13_ctlGoogleAdWordsPixel_pnlApplicationStartPixel">
+		
+	<!-- Google Code for Visitors to the apply page who don&#39;t convert Remarketing List -->
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		var google_conversion_id = 975228415;
+		var google_conversion_language = "en";
+		var google_conversion_format = "3";
+		var google_conversion_color = "666666";
+		var google_conversion_label = "shwuCOHKzgIQ_5uD0QM";
+		var google_conversion_value = 0;
+		/* ]]> */
+	</script>
+	<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+	</script><img src="https://www.googleadservices.com/pagead/conversion/975228415/?random=1369446065601&amp;cv=7&amp;fst=1369446065538&amp;num=2&amp;fmt=3&amp;value=0&amp;label=shwuCOHKzgIQ_5uD0QM&amp;bg=666666&amp;hl=en&amp;guid=ON&amp;u_h=1024&amp;u_w=1280&amp;u_ah=984&amp;u_aw=1280&amp;u_cd=24&amp;u_his=50&amp;u_tz=-300&amp;u_java=false&amp;u_nplug=0&amp;u_nmime=0&amp;url=https%3A//www.rushcard.com/apply2/AffiliateApplication6.aspx%3Fptk%3D106_1_1%26group%3D6%26referer%3Dsteelhouse&amp;frm=0" height="1" width="1" border="0">
+	<noscript>
+		<div style="display:inline;">
+			<img height="1" width="1" style="border-style:none;" alt="" src="https://www.googleadservices.com/pagead/conversion/975228415/?label=shwuCOHKzgIQ_5uD0QM&amp;guid=ON&amp;script=0"/>
+		</div>
+	</noscript>
+
+	</div>
+
+
+
+
+
+
+<!-- END: Google AdWords -->
+
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+window.rushTrack = { visitorId : 183322482, referer : 'steelhouse', pageFlow : 106 };//]]>
+</script>
+</form>
+    
+	<script type="text/javascript">
+	    (function ($) {
+	        $('.ToolTip').tipTip({ edgeOffset: 15, fadeOut: 1500 });
+	    } (jQuery));
+	</script><div id="tiptip_holder" style="max-width:200px;"><div id="tiptip_arrow"><div id="tiptip_arrow_inner"></div></div><div id="tiptip_content"></div></div>
+	<!-- GOOGLE TRACKING TAG -->
+	<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script><script src="https://ssl.google-analytics.com/ga.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		try {
+			var pageTracker = _gat._getTracker("UA-296800-6");
+			pageTracker._trackPageview();
+			processGACookieForPageTagging();
+			setSegmentationValue();
+			googleSetVar(pageTracker);
+		} catch (err) { }
+	</script>
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-296800-16']);
+		_gaq.push(['_trackPageview']);
+
+		(function () {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+	
+    
+
+<script type="text/javascript">
+	(function ($) {
+
+		try {
+			if (_gat) {
+				var href = window.location.pathname + window.location.search;
+				var parameter = "appdetails=1";
+				if (href.indexOf("?") > 0) {
+					href = href + "&";
+				} else {
+					href = href + "?";
+				}
+				_gat._getTracker("UA-296800-16")._trackPageview(href + parameter);
+			}
+		} catch (err) { }
+
+	} (jQuery));
+	
+</script>
+
+    <!-- END GOOGLE TRACKING TAG -->
+    <!-- Yahoo! Web Analytics - All rights reserved -->
+   <script type="text/javascript" src="https://s.yimg.com/mi/ywa.js"></script>
+    <script type="text/javascript">
+        var YWATracker = YWA.getTracker("1000519426162");
+       YWATracker.submit();
+    </script>
+    <noscript>
+        <div>
+            <img src="https://a.analytics.yahoo.com/p.pl?a=1000519426162&js=no" width="1" height="1"
+                alt="" />
+        </div>
+    </noscript>
+    <!-- End of Yahoo! Web Analytics Code -->
+    <!-- BEGIN STEELHOUSE TRACKING PIXEL -->
+    <iframe src="/scripts/steelhouse.html" frameborder="0" height="0" width="0"></iframe>
+    <!-- END STEELHOUSE TRACKING PIXEL -->
+	<!-- CLICKTALE XML CODE INSERT LINE MARKER : DO NOT REMOVE -->
+    <!-- BEGIN: ClickTale -->
+    <script type="text/javascript" src="/scripts/ClickTale-Rushcard.js"></script>
+    <!-- END: ClickTale -->
+
+
+ </body>

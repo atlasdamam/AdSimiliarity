@@ -1,0 +1,1013 @@
+<head id="ctl00_Head1"><link href="/css/site.css" rel="stylesheet" type="text/css"><link href="/css/ajax.css" rel="stylesheet" type="text/css"><link href="/js/fancybox/jquery.fancybox.css" rel="stylesheet" type="text/css"><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta name="autosize" content="off"><meta http-equiv="imagetoolbar" content="no"><meta name="robots" content="index,follow"><meta name="Author" content="GolfNow Inc."><link rel="shortcut icon" href="/favicon.ico"><link rel="bookmark" href="/favicon.ico">	
+    <div class="kxhead" data-id="HxufzCf9" style="display:none;"><span class="kxtag kxinvisible" data-id="11327" data-alias="Technographic Data provider tag"><script src="http://ping.crowdscience.com/max_log.js?a=7881f43af0&amp;lv=9:9&amp;v=&amp;h=www.golfnow.com&amp;cs=&amp;sr=1&amp;fl=www.golfnow.com%7Ctop100/&amp;fr=3&amp;fd=5&amp;fk=&amp;ft=5&amp;fp=1&amp;fb=2&amp;fs=24a6f6bd23:-1.75:4:gm_1|1420fa5cba:-0.807:2:gm_1|" async="" type="text/javascript"></script><script>
+// this tag is intentionally blank
+</script></span><span class="kxtag kxinvisible" data-id="11108" data-alias="Acxiom provider tag"><script>
+// This tag intentionally empty
+</script></span><span class="kxtag kxinvisible" data-id="11109" data-alias="eXelate Media provider tag"><script type="text/javascript">
+  Krux('dataprovider.exelate');
+</script></span><span class="kxtag kxinvisible" data-id="19045" data-alias="AdAdvisor S2S provider tag"><script>
+(function() {
+  // adadvisor redirects to http://logger... so it's not https safe
+  if (location.protocol == "http:") {
+     var u = "http://adadvisor.net/adscores/g.js?sid=9212244187&_kdpid=2111c0af-fc3a-446f-ab07-63aa74fbde8e";
+     (new Image()).src = u;
+   }
+})();
+</script></span><span class="kxtag kxinvisible" data-id="18290" data-alias="Acxiom S2S provider tag"><script>
+(function(){
+  var prefix = location.protocol == 'https:' ? "https:" : "http:";
+  var r_url = prefix + '//p.acxiom-online.com/pixel/sci'
+  var kurl = prefix + '//apiservices.krxd.net/um?partner=acxiom&r=' + r_url;
+  var i = new Image();
+  i.src = kurl;
+})();
+</script></span><span class="kxtag kxinvisible" data-id="16002" data-alias="Quantcast provider tag"></span><span class="kxtag kxinvisible" data-id="14019" data-alias="Bizo provider tag"><script>
+(function(){
+  if (window.KRUX) {
+    var pubid = KRUXSetup.pubid;
+  } else if (window.Krux) {
+    var pubid = Krux('get', 'pubid');
+  } else { 
+    return;
+  }
+  var prefix = location.protocol == 'https:' ? "https:" : "http:";
+  var kurl = prefix + '//beacon.krxd.net/data.gif?_kdpid=890a6228-04af-4630-85b6-0b49dee6157f&pid=' + pubid;
+  var u = prefix + '//api.bizographics.com/v1/profile.redirect?api_key=595bae8dbc0c4c42b4544e688b10c002' + 
+        '&callback_url=' + escape(kurl);
+  var i = new Image();
+  i.src = u;
+})();
+</script></span><span class="kxtag kxinvisible" data-id="15821" data-alias="Targus/AdAdvisor provider tag"><script>
+(function() {
+  // adadvisor redirects to http://logger... so it's not https safe
+  if (location.protocol == "http:") {
+     var u = "http://adadvisor.net/adscores/g.js?sid=9212244187&_kdpid=911765d2-536f-4475-8fd5-92b73478fb8f";
+     (new Image()).src = u;
+   }
+})();
+</script>
+</span><span class="kxtag kxinvisible" data-id="14072" data-alias="Nielsen (via Exelate) provider tag"><script>
+// Blank
+</script></span><span class="kxtag kxinvisible" data-id="12072" data-alias="IDX Cookie Scraper"><script>
+(function() {
+  // Do the SNAS cookies taste like IDX cookies?
+  var idx_cookie = Krux('scrape.cookie', 'idx_d'),
+      snas_cookie = Krux('scrape.cookie', 'snas_d'),
+      cookie = idx_cookie || snas_cookie;
+  if ( ! cookie ) {
+    return;
+  }
+  var m3 = cookie.match(/([0-9]{3})$/);
+  if (m3) {
+     Krux('set', 'user_attr_idx_3', m3[1]);
+  }
+  var m2 = cookie.match(/(65151g|15112g)/);
+  if (m2) {
+     Krux('set', 'user_attr_idx_2', m2[1]);
+  }
+  var stripped = cookie.replace(/(65151|15112)/, '').replace(/[0-9]{3}$/, '');
+  var m1 = stripped.match(/[0-9]{2,5}[Lg]/g);
+  if (m1) {
+     Krux('set', 'user_attr_idx_1', m1);
+  }
+
+  var idx_u_cookie = Krux('scrape.cookie', 'idx_u');
+  if (idx_u_cookie) {
+    Krux('set', 'user_attr_idx_uid', idx_u_cookie);
+  } 
+})();
+</script></span><span class="kxtag kxinvisible" data-id="14704" data-alias="AudienceScience - P&amp;G"><script src="//js.revsci.net/gateway/gw.js?csid=F09828&amp;auto=t" type="text/javascript" language="JavaScript"></script></span><span class="kxtag kxinvisible" data-id="11476" data-alias="krux-dfp-site-zone"><script type="text/javascript"> 
+(function() { 
+  function findEl(els) {
+    for(var i = 0; i < els.length; ++i) {
+      try {
+        var pathname = (m = els[i].src.match(/\.doubleclick\.net(\/[^;]*)/)) ? 
+          m[1] : '';
+        
+        if(pathname) {
+          var parts = pathname.split('/');
+          Krux.require('util').set({
+            page_attr_dfpsite: parts[2],
+            page_attr_dfpzone: parts[3]
+          });
+          return true;   
+        }
+      } catch (e) {}
+    }
+  }
+  
+  findEl(document.getElementsByTagName('SCRIPT')) ||
+  findEl(document.getElementsByTagName('IFRAME'));
+  
+})();
+</script></span><span class="kxtag kxinvisible" data-id="15596" data-alias="Quantcast / Krux"><script>
+(function () {
+    if (location.protocol.indexOf('s') > -1) {
+       return;
+    }
+    var u = "http://pixel.quantserve.com/seg/r;a=p-9eJ8k4iSzux46;rand=" +
+        Math.round(Math.random() * 999999942) + ";redirect=" +
+        "http://beacon.krxd.net/data.gif?_kdpid=c28722fa-1ec3-4a33-838f-d360c76c0aca&segs=!qcsegs";
+
+    (new Image()).src = u;
+})();
+</script></span><span class="kxtag kxinvisible" data-id="20727" data-alias="Crowd Science (NBCU) provider tag"><script charset="utf-8" type="text/javascript">
+  function CS_data_callback(cs_data) {
+    if (cs_data && cs_data.segments) {
+      var p = location.protocol === 'https:' ? 'https:' : 'http:';
+      new Image().src = p + '//beacon.krxd.net/data.gif?_kdpid=b1f402c1-9cee-4d2c-95e8-f87ec628694e&cs_segs=' + 
+        encodeURIComponent(cs_data.segments.join(','));
+    }
+  } 
+</script> 
+<script charset="utf-8" type="text/javascript" src="http://static.crowdscience.com/max-7881f43af0.js?callback=CS_data_callback"></script> </span></div><script async="" src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en_US.pq-TpXiLgaE.O/m=plusone/rt=j/sv=1/d=1/ed=1/am=EQ/rs=AItRSTOY9mIG3t5Os0XGQNrlA_ssOaR9lA/cb=gapi.loaded_0"></script><script src="http://cdn.krxd.net/controltag?confid=HxufzCf9" async="" type="text/javascript"></script><script gapi_processed="true" src="https://apis.google.com/js/plusone.js" async="" type="text/javascript"></script><script src="http://b.scorecardresearch.com/beacon.js" async=""></script><script src="http://b.monetate.net/js/1/a-751a36a7/p/golfnow.com/380404/g" async="" type="text/javascript"></script><script type="text/javascript" src="/js/jquery/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="/js/global.js"></script>
+    <script type="text/javascript" src="/js/fancybox/jquery.fancybox.js"></script>
+    <script type="text/javascript" src="/js/jquery.cookie.js"></script>
+    <link href="https://plus.google.com/113075387634007708536" rel="publisher">
+<!-- Begin Monetate tag v6. Place at start of document head. DO NOT ALTER. -->
+<script type="text/javascript">
+var monetateT = new Date().getTime();
+(function() {
+    var p = document.location.protocol;
+    if (p == "http:" || p == "https:") {
+        var m = document.createElement('script'); m.type = 'text/javascript'; m.async = true; m.src = (p == "https:" ? "https://s" : "http://") + "b.monetate.net/js/1/a-751a36a7/p/golfnow.com/" + Math.floor((monetateT + 2652199) / 3600000) + "/g";
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(m, s);
+    }
+})();
+</script>
+<!-- End Monetate tag. -->
+
+
+<script> 
+var _comscore = _comscore || []; 
+_comscore.push({ c1: "2", c2: "3005200", c3: "", c4: "http://www.golfnow.com/top100" });
+(function() { 
+var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; 
+s.async = true; 
+s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js"; 
+el.parentNode.insertBefore(s, el); })(); 
+</script>
+<noscript> 
+<img src="http://b.scorecardresearch.com/p?c1=2&c2=3005200&c3=&c4=http://www.golfnow.com/top100&c5=&c6=&c15=&cv=2.0&cj=1" /> </noscript>
+<script src="http://www.golfnow.com/golfdigest/scripts/quicksand.js" type="text/javascript"></script><script src="http://www.gcnewmedia.com/golfdigest/scripts/golfdigest.js" type="text/javascript"></script>
+
+<meta name="keywords" content="golf digest top 100 courses, top golf courses, best golf courses, top 100 golf courses, top 100 courses, best golf courses, top 100 golf courses"><meta name="description" content="GOLFNOW &amp;reg; has tee times at many Golf Digest Top 100 golf courses. Book today at the best golf courses around the country."><link rel="canonical" href="http://www.golfnow.com/top100"><title>
+	Top 100 Golf Courses by Golf Digest, Best Golf Courses | GolfNow.com®
+</title><script async="" src="http://d.monetate.net/trk/3/s/a-751a36a7/p/golfnow.com/1218447125?mr=t1364587500&amp;mi='2.2119733759.1369453178990'&amp;mt=!n&amp;cs=!t&amp;e=!(viewPage)&amp;pt=unknown&amp;r=''&amp;sw=1280&amp;sh=1024&amp;sc=24&amp;j=!f&amp;u='http://www.golfnow.com/top100/%3F/TRK%3DBAN_GNOW_HP450x100_1'&amp;eoq=!t" type="text/javascript"></script><style type="text/css">.gsfe_a{border:1px solid #b9b9b9;border-top-color:#a0a0a0;box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);-moz-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);-webkit-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);}.gsfe_b{border:1px solid #4d90fe;outline:none;box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);-moz-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);-webkit-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);}.gssb_c{border:0;position:absolute;z-index:989}.gssb_e{border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-moz-box-shadow:0 2px 4px rgba(0,0,0,0.2);cursor:default}.gssb_f{visibility:hidden;white-space:nowrap}.gssb_k{border:0;display:block;position:absolute;top:0;z-index:988}.gsdd_a{border:none!important}.gsib_a{width:100%;padding:4px 6px 0}.gsib_a,.gsib_b{vertical-align:top}.gssb_a{padding:0 7px}.gssb_a,.gssb_a td{white-space:nowrap;overflow:hidden;line-height:22px}#gssb_b{font-size:11px;color:#36c;text-decoration:none}#gssb_b:hover{font-size:11px;color:#36c;text-decoration:underline}.gssb_g{text-align:center;padding:8px 0 7px;position:relative}.gssb_h{font-size:15px;height:28px;margin:0.2em}.gssb_i{background:#eee}.gss_ifl{visibility:hidden;padding-left:5px}.gssb_i .gss_ifl{visibility:visible}a.gssb_j{font-size:13px;color:#36c;text-decoration:none;line-height:100%}a.gssb_j:hover{text-decoration:underline}.gssb_l{height:1px;background-color:#e5e5e5}.gssb_m{color:#000;background:#fff}.gscsep_a{display:none}.gsq_a{padding:0}.gscb_a{display:inline-block;font:27px/13px arial,sans-serif}.gsst_a .gscb_a{color:#a1b9ed;cursor:pointer}.gsst_a:hover .gscb_a,.gsst_a:focus .gscb_a{color:#36c}.gsst_a{display:inline-block}.gsst_a{cursor:pointer;padding:0 4px}.gsst_a:hover{text-decoration:none!important}.gsst_b{font-size:16px;padding:0 2px;user-select:none;-moz-user-select:none;white-space:nowrap}.gsst_e{opacity:0.55;}.gsst_a:hover .gsst_e,.gsst_a:focus .gsst_e{opacity:0.72;}.gsst_a:active .gsst_e{opacity:1;}.gsst_f{background:white;text-align:left}.gsst_g{background-color:white;border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-moz-box-shadow:0 2px 4px rgba(0,0,0,0.2);margin:-1px -3px;padding:0 6px}.gsst_h{background-color:white;height:1px;margin-bottom:-1px;position:relative;top:-1px}.gssb_a{padding:0 2px}.gssb_e{border:0}.gssb_l{margin:5px 0}.gssb_c .gsc-completion-container{position:static}.gssb_c{z-index:5000}.gsc-completion-container table{background:transparent;font-size:inherit;font-family:inherit}.gssb_c > tbody > tr,.gssb_c > tbody > tr > td,.gssb_d,.gssb_d > tbody > tr,.gssb_d > tbody > tr > td,.gssb_e,.gssb_e > tbody > tr,.gssb_e > tbody > tr > td{padding:0;margin:0;border:0}.gssb_a table,.gssb_a table tr,.gssb_a table tr td{padding:0;margin:0;border:0}</style></head>
+<body id="ctl00_bodyTag"><script src="http://ads.revsci.net/adserver/ako?activate&amp;csid=f09828" type="text/javascript"></script><script src="http://pix04.revsci.net/F09828/b3/0/3/1008211/753791274.js?D=DM_LOC%3Dhttp%253A%252F%252Fwww.golfnow.com%252Ftop100%252F%253F%252FTRK%253DBAN_GNOW_HP450x100_1%2526bpid%253D%2526_rsiL%253D0%26DM_EOM%3D1&amp;C=F09828" type="text/javascript"></script><!-- USZGNWSWP003LL --> <!-- fR3sH|<0d€ -->
+  <!-- start outer -->
+    <div id="outer">
+    <!-- start container -->
+    <div id="container">
+        
+        <div class="topAd">
+           
+        </div>
+        <div class="clear"></div>
+
+        <div class="utilityTop">
+            
+	<div class="left link">
+		<a href="/course-directory/">Course Directory</a>
+		<a id="ctl00_UtilityLinks1_golfNewsResourcesLink" rel="nofollow" href="/news-and-resources/">Golf News &amp; Resources</a>
+		<a href="/about-us/">About Us</a>
+		<a href="/support">Customer Support</a>
+	</div>
+	<div class="right">
+	<div id="ctl00_UtilityLinks1_divSearchBox" class="searchBox">
+	    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+		<script type="text/javascript">
+		    google.load('search', '1');
+		    google.setOnLoadCallback(function () {
+		        google.search.CustomSearchControl.attachAutoCompletion(
+			  '007303455812586135015:nvjwcsw4ekc',
+			  document.getElementById('q'),
+			  'cse-search-box');
+		    });
+		</script><script src="http://www.google.com/uds/?file=search&amp;v=1" type="text/javascript"></script><link href="http://www.google.com/uds/api/search/1.0/5530b85faafd53e1d394092d8d1eb26a/default+en.css" type="text/css" rel="stylesheet"><script src="http://www.google.com/uds/api/search/1.0/5530b85faafd53e1d394092d8d1eb26a/default+en.I.js" type="text/javascript"></script>
+		<form action="/searchresults" id="cse-search-box">
+		  <div>
+			<input name="cx" value="007303455812586135015:nvjwcsw4ekc" type="hidden">
+			<input name="cof" value="FORID:10" type="hidden">
+			<input name="ie" value="UTF-8" type="hidden">
+			<input spellcheck="false" dir="ltr" style="border: 1px solid rgb(126, 157, 185); padding: 2px; background: url(&quot;http://www.google.com/cse/intl/en/images/google_site_search_watermark.gif&quot;) no-repeat scroll left center rgb(255, 255, 255); outline: medium none;" class="googleSearchInput" name="q" id="q" autocomplete="off" size="31" type="text">
+			<input name="sa" value="" class="googleSearchBtn" type="submit">
+		  </div>
+		<input value="www.golfnow.com/top100/?/TRK=BAN_GNOW_HP450x100_1" name="siteurl" type="hidden"><input name="ref" type="hidden"><input name="ss" type="hidden"></form>
+		<script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&amp;lang=en&amp;sitesearch=true"></script>
+	</div>
+	</div>
+	<div class="clear"></div>
+
+        </div>
+		<form name="aspnetForm" method="post" action="/top100" id="aspnetForm">
+<div>
+<input name="ctl00_ScriptManager1_HiddenField" id="ctl00_ScriptManager1_HiddenField" value=";;AjaxControlToolkit, Version=3.0.20820.30826, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e:en-US:87b4617b-5646-4675-b6fc-aee3b74b59b7:e2e86ef9:1df13a87:fde3863c" type="hidden">
+<input name="__EVENTTARGET" id="__EVENTTARGET" value="" type="hidden">
+<input name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" type="hidden">
+<input name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJOTg0Nzg5NzI2D2QWAmYPZBYEAgEPZBYCAgwPZBYEZg8WAh4HVmlzaWJsZWdkAgIPFgIeBFRleHQFxwQ8c2NyaXB0PiANCnZhciBfY29tc2NvcmUgPSBfY29tc2NvcmUgfHwgW107IA0KX2NvbXNjb3JlLnB1c2goeyBjMTogIjIiLCBjMjogIjMwMDUyMDAiLCBjMzogIiIsIGM0OiAiaHR0cDovL3d3dy5nb2xmbm93LmNvbS90b3AxMDAiIH0pOw0KKGZ1bmN0aW9uKCkgeyANCnZhciBzID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgic2NyaXB0IiksIGVsID0gZG9jdW1lbnQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoInNjcmlwdCIpWzBdOyANCnMuYXN5bmMgPSB0cnVlOyANCnMuc3JjID0gKGRvY3VtZW50LmxvY2F0aW9uLnByb3RvY29sID09ICJodHRwczoiID8gImh0dHBzOi8vc2IiIDogImh0dHA6Ly9iIikgKyAiLnNjb3JlY2FyZHJlc2VhcmNoLmNvbS9iZWFjb24uanMiOyANCmVsLnBhcmVudE5vZGUuaW5zZXJ0QmVmb3JlKHMsIGVsKTsgfSkoKTsgDQo8L3NjcmlwdD4NCjxub3NjcmlwdD4gDQo8aW1nIHNyYz0iaHR0cDovL2Iuc2NvcmVjYXJkcmVzZWFyY2guY29tL3A/YzE9MiZjMj0zMDA1MjAwJmMzPSZjND1odHRwOi8vd3d3LmdvbGZub3cuY29tL3RvcDEwMCZjNT0mYzY9JmMxNT0mY3Y9Mi4wJmNqPTEiIC8+IDwvbm9zY3JpcHQ+ZAIDD2QWCAIGD2QWBAIBDw8WAh8AaGRkAgMPZBYCZg9kFgJmDxYCHwEF65kBPHNjcmlwdCBzcmM9Imh0dHBzOi8vYWpheC5nb29nbGVhcGlzLmNvbS9hamF4L2xpYnMvanF1ZXJ5dWkvMS44LjE1L2pxdWVyeS11aS5taW4uanMiIHR5cGU9InRleHQvamF2YXNjcmlwdCI+PC9zY3JpcHQ+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4NCg0KDQoNCg0KDQoNCg0KDQouY3Rib2R5IHtwYWRkaW5nOjAgIWltcG9ydGFudDt9IDwvc3R5bGU+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4NCg0KDQoNCg0KDQoNCg0KDQoNCi5zZWxlY3RCYXIgaW5wdXQsIC5zZWxlY3RCYXIgc2VsZWN0e30NCg0KDQoNCgkJCWRpdi5tYWluQ29udGFpbmVyIHsNCgkJCQl3aWR0aDo5NzRweDsNCgkJCQlvdmVyZmxvdzphdXRvOw0KCQkJCW1hcmdpbjowIGF1dG87DQoJCQl9DQoJCQlkaXYuaW1hZ2UtZ3JpZCB7DQoJCQkJb3ZlcmZsb3c6YXV0bzsNCgkJCX0NCgkJCWRpdi5jb250ZW50QXJlYSB7DQoJCQkJd2lkdGg6OTQwcHg7DQoJCQkJb3ZlcmZsb3c6YXV0bzsNCgkJCQliYWNrZ3JvdW5kLWNvbG9yOiNmYWZhZmE7DQoJCQkJYmFja2dyb3VuZC1pbWFnZTp1cmwoaHR0cDovL3d3dy5nb2xmbm93LmNvbS9nb2xmZGlnZXN0L2ltYWdlcy9tYWluX2JhY2suanBnKTsNCgkJCQliYWNrZ3JvdW5kLXJlcGVhdDpyZXBlYXQteDsNCgkJCX0NCgkJCWRpdi5zZWxlY3RCYXIgew0KCQkJCXBhZGRpbmc6MjBweCAxNXB4IDhweCAxNXB4Ow0KCQkJCWZvbnQtZmFtaWx5OlZlcmRhbmEsIEhlbHZldGljYSwgc2Fucy1zZXJpZjsNCgkJCQlmb250LXNpemU6MTJweDsNCgkJCQljb2xvcjojMzIzMjMyOw0KCQkJfQ0KCQkJZGl2LnNlbGVjdEJhciBhOmxpbmsgew0KCQkJCWNvbG9yOiMzMjMyMzI7DQoJCQl9DQoJCQlkaXYuc2VsZWN0QmFyIGE6YWN0aXZlIHsNCgkJCQljb2xvcjojMzIzMjMyOw0KCQkJfQ0KCQkJZGl2LnNlbGVjdEJhciBhOnZpc2l0ZWQgew0KCQkJCWNvbG9yOiMzMjMyMzI7DQoJCQl9DQoJCQlkaXYuc2VsZWN0QmFyIGE6aG92ZXIgew0KCQkJCWNvbG9yOiNlMjkzMzI7DQoJCQl9DQoJCQlkaXYuYW5pbWF0ZSB7DQoJCQkJZmxvYXQ6bGVmdDsNCgkJCQlwYWRkaW5nOjBweCAwcHggMHB4IDBweDsNCgkJCQlkaXNwbGF5OmJsb2NrOw0KCQkJCW1hcmdpbjoxNXB4Ow0KCQkJCXRleHQtYWxpZ246bGVmdDsNCgkJCX0NCgkJCWRpdi5udW1iZXJCb3ggew0KCQkJCXdpZHRoOjMxcHg7DQoJCQkJaGVpZ2h0OjQ4cHg7DQoJCQkJZmxvYXQ6bGVmdDsNCgkJCQl0ZXh0LWFsaWduOmNlbnRlcjsNCgkJCQlmb250LWZhbWlseTpWZXJkYW5hLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWY7DQoJCQkJZm9udC1zaXplOjEycHg7DQoJCQkJY29sb3I6IzMyMzIzMjsNCgkJCQlwYWRkaW5nLXRvcDoyNXB4Ow0KCQkJCWJvcmRlcjoxcHggc29saWQgI2RlZGVkZTsNCgkJCQliYWNrZ3JvdW5kLWltYWdlOnVybChodHRwOi8vd3d3LmdvbGZub3cuY29tL2dvbGZkaWdlc3QvaW1hZ2VzL251bWJlcl9iYWNrLmpwZyk7DQoJCQkJYmFja2dyb3VuZC1yZXBlYXQ6cmVwZWF0LXg7DQoJCQl9DQoJCQlkaXYuY291cnNlUGljIHsNCgkJCQl3aWR0aDo5OHB4Ow0KCQkJCWhlaWdodDo3M3B4Ow0KCQkJCWZsb2F0OmxlZnQ7DQoJCQkJYm9yZGVyOjFweCBzb2xpZCAjZGVkZWRlOw0KCQkJCWJvcmRlci1sZWZ0OjBweDsNCgkJCX0NCgkJCWRpdi5ib29rTm93IHsNCgkJCQljbGVhcjpib3RoOw0KCQkJCXBhZGRpbmc6MTBweCAwcHggMHB4IDMycHg7DQoJCQl9DQoJCQlkaXYuY291cnNlSW5mbyB7DQoJCQkJd2lkdGg6MTMwcHg7DQoJCQkJaGVpZ2h0OjczcHg7DQoJCQkJZmxvYXQ6bGVmdDsNCgkJCQlwYWRkaW5nLWxlZnQ6MTBweDsNCgkJCQlmb250LWZhbWlseTpWZXJkYW5hLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWY7DQoJCQkJZm9udC1zaXplOjEycHg7DQoJCQkJY29sb3I6IzMyMzIzMjsNCgkJCX0NCgkJCWRpdi5jb3Vyc2VJbmZvIGgxIHsNCgkJCQlmb250LXNpemU6MTZweDsNCgkJCQltYXJnaW46MDsNCgkJCX0NCgkJCWRpdi5mb290ZXIgew0KCQkJCXdpZHRoOjk3NHB4Ow0KCQkJCWhlaWdodDoyMHB4Ow0KCQkJCWNsZWFyOmJvdGg7DQoJCQl9DQoJCQkuZm9ybUVsZW1lbnRTdHlsZSB7DQoJCQkJYmFja2dyb3VuZC1jb2xvcjojMzMzMzMzICFpbXBvcnRhbnQ7DQoJCQkJY29sb3I6I0ZGRkZGRjsNCgkJCQlmb250LXNpemU6MTFweDsNCgkJCX0NCgkJCSNib29rTm93IHsNCgkJCQlkaXNwbGF5OiBibG9jazsNCgkJCQl3aWR0aDogMTAxcHg7DQoJCQkJaGVpZ2h0OiAyNXB4Ow0KCQkJCWJhY2tncm91bmQ6IHVybCgiaHR0cDovL3d3dy5nb2xmbm93LmNvbS9nb2xmZGlnZXN0L2ltYWdlcy9ib29rbm93X2J1dHRvbi5qcGciKSBuby1yZXBlYXQgMCAwOw0KCQkJfQ0KCQkJI2Jvb2tOb3c6aG92ZXIgew0KCQkJCWJhY2tncm91bmQtcG9zaXRpb246IDAgLTI1cHg7DQoJCQl9DQoJCQkjYm9va05vdyBzcGFuIHsNCgkJCQlwb3NpdGlvbjogYWJzb2x1dGU7DQoJCQkJdG9wOiAtOTk5ZW07DQoJCQl9DQoJCTwvc3R5bGU+DQo8ZGl2IGNsYXNzPSJtYWluQ29udGFpbmVyIj48aW1nIGFsdD0iIiBzcmM9Imh0dHA6Ly93d3cuZ29sZm5vdy5jb20vZ29sZmRpZ2VzdC9pbWFnZXMvbWFpbl9oZWFkZXIuanBnIiAvPg0KPGRpdiBjbGFzcz0iY29udGVudEFyZWEiPg0KPGRpdiBjbGFzcz0ic2VsZWN0QmFyIj48aW5wdXQgaWQ9InZpZXdBbGwiIHR5cGU9ImJ1dHRvbiIgZGF0YS1zdGF0ZT0iMCIgdmFsdWU9IlZpZXcgQWxsIiAvPg0KPGZvcm0gc3R5bGU9ImRpc3BsYXk6IGlubGluZSIgaWQ9ImZpbHRlciI+DQogICAgPHNlbGVjdCBpZD0ic3RhdGUiIG5hbWU9InN0YXRlIj4NCiAgICA8b3B0aW9uIHZhbHVlPSIwIiBzZWxlY3RlZD0ic2VsZWN0ZWQiPkZpbHRlciBCeSBTdGF0ZTwvb3B0aW9uPg0KICAgIDxvcHRpb24gdmFsdWU9ImNhbGlmb3JuaWEiPkNhbGlmb3JuaWE8L29wdGlvbj4NCiAgICA8b3B0aW9uIHZhbHVlPSJjb2xvcmFkbyI+Q29sb3JhZG88L29wdGlvbj4NCiAgICA8b3B0aW9uIHZhbHVlPSJkZWxhd2FyZSI+RGVsYXdhcmU8L29wdGlvbj4NCiAgICA8b3B0aW9uIHZhbHVlPSJmbG9yaWRhIj5GbG9yaWRhPC9vcHRpb24+DQogICAgPG9wdGlvbiB2YWx1ZT0iaGF3YWlpIj5IYXdhaWk8L29wdGlvbj4NCiAgICA8b3B0aW9uIHZhbHVlPSJtaWNoaWdhbiI+TWljaGlnYW48L29wdGlvbj4NCiAgICA8b3B0aW9uIHZhbHVlPSJtaW5uZXNvdGEiPk1pbm5lc290YTwvb3B0aW9uPg0KICAgIDxvcHRpb24gdmFsdWU9Im5ldmFkYSI+TmV2YWRhPC9vcHRpb24+DQogICAgPG9wdGlvbiB2YWx1ZT0ib2hpbyI+T2hpbzwvb3B0aW9uPg0KICAgIDxvcHRpb24gdmFsdWU9Im9yZWdvbiI+T3JlZ29uPC9vcHRpb24+DQogICAgPG9wdGlvbiB2YWx1ZT0icGVubnN5bHZhbmlhIj5QZW5uc3lsdmFuaWE8L29wdGlvbj4NCiAgICA8b3B0aW9uIHZhbHVlPSJzb3V0aGNhcm9saW5hIj5Tb3V0aCBDYXJvbGluYTwvb3B0aW9uPg0KICAgIDxvcHRpb24gdmFsdWU9InZpcmdpbmlhIj5WaXJnaW5pYTwvb3B0aW9uPg0KICAgIDwvc2VsZWN0Pg0KPC9mb3JtPg0KPGhyIC8+DQo8L2Rpdj4NCjxkaXYgaWQ9ImFwcGxpY2F0aW9ucyIgY2xhc3M9ImltYWdlLWdyaWQiPg0KPGRpdiBjbGFzcz0iYW5pbWF0ZSIgZGF0YS1zdGF0ZT0iZmxvcmlkYSIgZGF0YS1pZD0iaWQtOSI+DQo8ZGl2IGNsYXNzPSJudW1iZXJCb3giPk5PLjxiciAvPg0KOTwvZGl2Pg0KPGRpdiBjbGFzcz0iY291cnNlUGljIj48aW1nIGFsdD0iIiB3aWR0aD0iOTgiIGhlaWdodD0iNzMiIHNyYz0iaHR0cDovL3d3dy5nb2xmbm93LmNvbS9jb3Vyc2VkaXJlY3RvcnkvaW1nL2ZsL3BvbnRlLXZlZHJhLWJlYWNoL3RwYy1zYXdncmFzcy9kZWZhdWx0LmpwZ3giIC8+PC9kaXY+DQo8ZGl2IGNsYXNzPSJjb3Vyc2VJbmZvIj4NCjxoMT5UUEMgU2F3Z3Jhc3M8L2gxPg0KTG9jYXRpb246IFBvbnRlIFZlZHJhIEJlYWNoLCBGTDwvZGl2Pg0KPGRpdiBjbGFzcz0iYm9va05vdyI+PGEgaWQ9ImJvb2tOb3ciIHRpdGxlPSJCb29rIE5vdyIgaHJlZj0iaHR0cDovL3d3dy5nb2xmbm93LmNvbS9qYWNrc29udmlsbGUvdGVlLXRpbWVzL2dvbGYtY291cnNlcy9mbC0tLWphY2tzb252aWxsZS1lYXN0LWFuZC1iZWFjaGVzL3RwYy1zYXdncmFzcy9zZWFyY2giPjxzcGFuPkJvb2sgTm93PC9zcGFuPjwvYT48L2Rpdj4NCjwvZGl2Pg0KPGRpdiBjbGFzcz0iYW5pbWF0ZSIgZGF0YS1zdGF0ZT0ibWlubmVzb3RhIiBkYXRhLWlkPSJpZC0yMCI+DQo8ZGl2IGNsYXNzPSJudW1iZXJCb3giPk5PLjxiciAvPg0KMjA8L2Rpdj4NCjxkaXYgY2xhc3M9ImNvdXJzZVBpYyI+PGltZyBhbHQ9IiIgd2lkdGg9Ijk4IiBoZWlnaHQ9IjczIiBzcmM9Imh0dHA6Ly93d3cuZ29sZm5vdy5jb20vY291cnNlZGlyZWN0b3J5L2ltZy9tbi9iaXdhYmlrL2dpYW50cy1yaWRnZS1nb2xmLWFuZC1za2ktcmVzb3J0L2RlZmF1bHQuanBneCIgLz48L2Rpdj4NCjxkaXYgY2xhc3M9ImNvdXJzZUluZm8iPg0KPGgxPlRoZSBRdWFycnkgYXQgR2lhbnRzIFJpZGdlPC9oMT4NCkxvY2F0aW9uOiBCaXdhYmlrLCBNTjwvZGl2Pg0KPGRpdiBjbGFzcz0iYm9va05vdyI+PGEgaWQ9ImJvb2tOb3ciIHRpdGxlPSJCb29rIE5vdyIgaHJlZj0iaHR0cDovL3d3dy5nb2xmbm93LmNvbS9taW5uZWFwb2xpcy90ZWUtdGltZXMvZ29sZi1jb3Vyc2VzL21uLS0tYnJhaW5lcmRub3J0aGVybi9naWFudHMtcmlkZ2UtcXVhcnJ5L3NlYXJjaCI+PHNwYW4+Qm9vayBOb3c8L3NwYW4+PC9hPjwvZGl2Pg0KPC9kaXY+DQo8ZGl2IGNsYXNzPSJhbmltYXRlIiBkYXRhLXN0YXRlPSJoYXdhaWkiIGRhdGEtaWQ9ImlkLTIyIj4NCjxkaXYgY2xhc3M9Im51bWJlckJveCI+Tk8uPGJyIC8+DQoyMjwvZGl2Pg0KPGRpdiBjbGFzcz0iY291cnNlUGljIj48aW1nIGFsdD0iIiB3aWR0aD0iOTgiIGhlaWdodD0iNzMiIHNyYz0iaHR0cDovL3d3dy5nb2xmbm93LmNvbS9jb3Vyc2VkaXJlY3RvcnkvaW1nL2hpL3ByaW5jZXZpbGxlL3ByaW5jZXZpbGxlLWdvbGYtY2x1Yi0tLXByaW5jZS1jb3Vyc2UvZGVmYXVsdC5qcGd4IiAvPjwvZGl2Pg0KPGRpdiBjbGFzcz0iY291cnNlSW5mbyI+DQo8aDE+UHJpbmNldmlsbGUgR29sZiBDbHViIC0gUHJpbmNlIENvdXJzZTwvaDE+DQpMb2NhdGlvbjogUHJpbmNldmlsbGUsIEhJPC9kaXY+DQo8ZGl2IGNsYXNzPSJib29rTm93Ij48YSBpZD0iYm9va05vdyIgdGl0bGU9IkJvb2sgTm93IiBocmVmPSJodHRwOi8vd3d3LmdvbGZub3cuY29tL2hhd2FpaS90ZWUtdGltZXMvZ29sZi1jb3Vyc2VzL2hpLS0ta2F1YWkvcHJpbmNldmlsbGUtYXQtaGFuYWxlaS1wcmluY2UtY291cnNlL3NlYXJjaCI+PHNwYW4+Qm9vayBOb3c8L3NwYW4+PC9hPjwvZGl2Pg0KPC9kaXY+DQo8ZGl2IGNsYXNzPSJhbmltYXRlIiBkYXRhLXN0YXRlPSJtaWNoaWdhbiIgZGF0YS1pZD0iaWQtMjMiPg0KPGRpdiBjbGFzcz0ibnVtYmVyQm94Ij5OTy48YnIgLz4NCjIzPC9kaXY+DQo8ZGl2IGNsYXNzPSJjb3Vyc2VQaWMiPjxpbWcgYWx0PSIiIHdpZHRoPSI5OCIgaGVpZ2h0PSI3MyIgc3JjPSJodHRwOi8vd3d3LmdvbGZub3cuY29tL2NvdXJzZWRpcmVjdG9yeS9pbWcvbWkvcm9zY29tbW9uL2ZvcmVzdC1kdW5lcy1nb2xmLWNsdWIvZ2VuZXJhbC5qcGd4IiAvPjwvZGl2Pg0KPGRpdiBjbGFzcz0iY291cnNlSW5mbyI+DQo8aDE+Rm9yZXN0IER1bmVzIEdvbGYgQ291cnNlPC9oMT4NCkxvY2F0aW9uOiBSb3Njb21tb24sIE1JPC9kaXY+DQo8ZGl2IGNsYXNzPSJib29rTm93Ij48YSBpZD0iYm9va05vdyIgdGl0bGU9IkJvb2sgTm93IiBocmVmPSJodHRwOi8vd3d3LmdvbGZub3cuY29tL25vcnRoLW1pY2hpZ2FuL3RlZS10aW1lcy9nb2xmLWNvdXJzZXMvbWktLS1ub3J0aC1taWNoaWdhbi9mb3Jlc3QtZHVuZXMtZ29sZi1jbHViL3NlYXJjaCI+PHNwYW4+Qm9vayBOb3c8L3NwYW4+PC9hPjwvZGl2Pg0KPC9kaXY+DQo8ZGl2IGNsYXNzPSJhbmltYXRlIiBkYXRhLXN0YXRlPSJvcmVnb24iIGRhdGEtaWQ9ImlkLTI4Ij4NCjxkaXYgY2xhc3M9Im51bWJlckJveCI+Tk8uPGJyIC8+DQoyODwvZGl2Pg0KPGRpdiBjbGFzcz0iY291cnNlUGljIj48aW1nIGFsdD0iIiB3aWR0aD0iOTgiIGhlaWdodD0iNzMiIHNyYz0iaHR0cDovL3d3dy5nb2xmbm93LmNvbS9jb3Vyc2VkaXJlY3RvcnkvaW1nL29yL2JlbmQvdGhlLWNsdWItYXQtcHJvbmdob3JuL2RlZmF1bHQuanBneCIgLz48L2Rpdj4NCjxkaXYgY2xhc3M9ImNvdXJzZUluZm8iPg0KPGgxPlRoZSBDbHViIEF0IFByb25naG9ybjwvaDE+DQpMb2NhdGlvbjogQmVuZCwgT1I8L2Rpdj4NCjxkaXYgY2xhc3M9ImJvb2tOb3ciPjxhIGlkPSJib29rTm93IiB0aXRsZT0iQm9vayBOb3ciIGhyZWY9Imh0dHA6Ly93d3cuZ29sZm5vdy5jb20vcG9ydGxhbmQvdGVlLXRpbWVzL2dvbGYtY291cnNlcy9vci0tLWJlbmRjZW50cmFsLW9yZWdvbi9wcm9uZ2hvcm4tY2x1Yi1hbmQtcmVzb3J0L3NlYXJjaCI+PHNwYW4+Qm9vayBOb3c8L3NwYW4+PC9hPjwvZGl2Pg0KPC9kaXY+DQo8ZGl2IGNsYXNzPSJhbmltYXRlIiBkYXRhLXN0YXRlPSJoYXdhaWkiIGRhdGEtaWQ9ImlkLTMxIj4NCjxkaXYgY2xhc3M9Im51bWJlckJveCI+Tk8uPGJyIC8+DQozMTwvZGl2Pg0KPGRpdiBjbGFzcz0iY291cnNlUGljIj48aW1nIGFsdD0iIiB3aWR0aD0iOTgiIGhlaWdodD0iNzMiIHNyYz0iaHR0cDovL3d3dy5nb2xmbm93LmNvbS9jb3Vyc2VkaXJlY3RvcnkvaW1nL2hpL2thbXVlbGEvbWF1bmEta2VhLXJlc29ydC9kZWZhdWx0LmpwZ3giIC8+PC9kaXY+DQo8ZGl2IGNsYXNzPSJjb3Vyc2VJbmZvIj4NCjxoMT5NYXVuYSBLZWEgUmVzb3J0PC9oMT4NCkxvY2F0aW9uOiBLb2hhbGEgQ29hc3QsIEhJPC9kaXY+DQo8ZGl2IGNsYXNzPSJib29rTm93Ij48YSBpZD0iYm9va05vdyIgdGl0bGU9IkJvb2sgTm93IiBocmVmPSJodHRwOi8vd3d3LmdvbGZub3cuY29tL2hhd2FpaS90ZWUtdGltZXMvZ29sZi1jb3Vyc2VzL2hpLS0tYmlnLWlzbGFuZC9tYXVuYS1rZWEtZ29sZi1jb3Vyc2Uvc2VhcmNoIj48c3Bhbj5Cb29rIE5vdzwvc3Bhbj48L2E+PC9kaXY+DQo8L2Rpdj4NCjxkaXYgY2xhc3M9ImFuaW1hdGUiIGRhdGEtc3RhdGU9Imhhd2FpaSIgZGF0YS1pZD0iaWQtMzMiPg0KPGRpdiBjbGFzcz0ibnVtYmVyQm94Ij5OTy48YnIgLz4NCjMzPC9kaXY+DQo8ZGl2IGNsYXNzPSJjb3Vyc2VQaWMiPjxpbWcgYWx0PSIiIHdpZHRoPSI5OCIgaGVpZ2h0PSI3MyIgc3JjPSJodHRwOi8vd3d3LmdvbGZub3cuY29tL2NvdXJzZWRpcmVjdG9yeS9pbWcvaGkvbGFuYWktY2l0eS90aGUtY2hhbGxlbmdlLWF0LW1hbmVsZS9kZWZhdWx0LmpwZ3ggIiAvPjwvZGl2Pg0KPGRpdiBjbGFzcz0iY291cnNlSW5mbyI+DQo8aDE+VGhlIENoYWxsZW5nZSBhdCBNYW5lbGU8L2gxPg0KTG9jYXRpb246IExhbmFpLCBISTwvZGl2Pg0KPGRpdiBjbGFzcz0iYm9va05vdyI+PGEgaWQ9ImJvb2tOb3ciIHRpdGxlPSJCb29rIE5vdyIgaHJlZj0iaHR0cDovL3d3dy5nb2xmbm93LmNvbS9oYXdhaWkvdGVlLXRpbWVzL2dvbGYtY291cnNlcy9oaS0tLWxhbmFpL3RoZS1jaGFsbGVuZ2UtYXQtbWFuZWxlL3NlYXJjaCI+PHNwYW4+Qm9vayBOb3c8L3NwYW4+PC9hPjwvZGl2Pg0KPC9kaXY+DQo8ZGl2IGNsYXNzPSJhbmltYXRlIiBkYXRhLXN0YXRlPSJjYWxpZm9ybmlhIiBkYXRhLWlkPSJpZC00MyI+DQo8ZGl2IGNsYXNzPSJudW1iZXJCb3giPk5PLjxiciAvPg0KNDM8L2Rpdj4NCjxkaXYgY2xhc3M9ImNvdXJzZVBpYyI+PGltZyBhbHQ9IiIgd2lkdGg9Ijk4IiBoZWlnaHQ9IjczIiBzcmM9Imh0dHA6Ly93d3cuZ29sZm5vdy5jb20vY291cnNlZGlyZWN0b3J5L2ltZy9jYS9sYS1xdWludGEvcGdhLXdlc3QmcmVnOy0tLXRwYy1zdGFkaXVtLWNvdXJzZS9kZWZhdWx0LmpwZ3giIC8+PC9kaXY+DQo8ZGl2IGNsYXNzPSJjb3Vyc2VJbmZvIj4NCjxoMT5QR0EgV0VTVDxzdXA+JnJlZzs8L3N1cD4gLSBUUEMgU3RhZGl1bSBDb3Vyc2U8L2gxPg0KTG9jYXRpb246IExhIFF1aW50YSwgQ0E8L2Rpdj4NCjxkaXYgY2xhc3M9ImJvb2tOb3ciPjxhIGlkPSJib29rTm93IiB0aXRsZT0iQm9vayBOb3ciIGhyZWY9Imh0dHA6Ly93d3cuZ29sZm5vdy5jb20vcGFsbXNwcmluZ3MvdGVlLXRpbWVzL2dvbGYtY291cnNlcy9jYS0tLXBhbG0tc3ByaW5ncy9wZ2Etd2VzdCVjMiVhZS0lZTIlODAlOTMtdHBjLXN0YWRpdW0tY291cnNlLS9zZWFyY2giPjxzcGFuPkJvb2sgTm93PC9zcGFuPjwvYT48L2Rpdj4NCjwvZGl2Pg0KPGRpdiBjbGFzcz0iYW5pbWF0ZSIgZGF0YS1zdGF0ZT0ibWljaGlnYW4iIGRhdGEtaWQ9ImlkLTQ1Ij4NCjxkaXYgY2xhc3M9Im51bWJlckJveCI+Tk8uPGJyIC8+DQo0NTwvZGl2Pg0KPGRpdiBjbGFzcz0iY291cnNlUGljIj48aW1nIGFsdD0iIiB3aWR0aD0iOTgiIGhlaWdodD0iNzMiIHNyYz0iaHR0cDovL3d3dy5nb2xmbm93LmNvbS9jb3Vyc2VkaXJlY3RvcnkvaW1nL21pL3N0YW53b29kL3R1bGx5bW9yZS1nb2xmLWNsdWIvZGVmYXVsdC5qcGd4IiAvPjwvZGl2Pg0KPGRpdiBjbGFzcz0iY291cnNlSW5mbyI+DQo8aDE+VHVsbHltb3JlIEdvbGYgQ2x1YjwvaDE+DQpMb2NhdGlvbjogU3Rhbndvb2QsIE1JPC9kaXY+DQo8ZGl2IGNsYXNzPSJib29rTm93Ij48YSBpZD0iYm9va05vdyIgdGl0bGU9IkJvb2sgTm93IiBocmVmPSJodHRwOi8vd3d3LmdvbGZub3cuY29tL2dyYW5kLXJhcGlkcy1rYWxhbWF6b28vdGVlLXRpbWVzL2dvbGYtY291cnNlcy9taS0tLWxhbnNpbmctbXQtcGxlYXNhbnQvdHVsbHltb3JlLWdvbGYtY2x1Yi9zZWFyY2giPjxzcGFuPkJvb2sgTm93PC9zcGFuPjwvYT48L2Rpdj4NCjwvZGl2Pg0KPGRpdiBjbGFzcz0iYW5pbWF0ZSIgZGF0YS1zdGF0ZT0ib2hpbyIgZGF0YS1pZD0iaWQtNTEiPg0KPGRpdiBjbGFzcz0ibnVtYmVyQm94Ij5OTy48YnIgLz4NCjUxPC9kaXY+DQo8ZGl2IGNsYXNzPSJjb3Vyc2VQaWMiPjxpbWcgYWx0PSIiIHdpZHRoPSI5OCIgaGVpZ2h0PSI3MyIgc3JjPSJodHRwOi8vd3d3LmdvbGZub3cuY29tL2NvdXJzZWRpcmVjdG9yeS9pbWcvb2gvbmFzaHBvcnQvbG9uZ2FiZXJnZXItZ29sZi1jbHViL2RlZmF1bHQuanBneCIgLz48L2Rpdj4NCjxkaXYgY2xhc3M9ImNvdXJzZUluZm8iPg0KPGgxPkxvbmdhYmVyZ2VyIEdvbGYgQ2x1YjwvaDE+DQpMb2NhdGlvbjogTmFzaHBvcnQsIE9IPC9kaXY+DQo8ZGl2IGNsYXNzPSJib29rTm93Ij48YSBpZD0iYm9va05vdyIgdGl0bGU9IkJvb2sgTm93IiBocmVmPSJodHRwOi8vd3d3LmdvbGZub3cuY29tL2NvbHVtYnVzL3RlZS10aW1lcy9nb2xmLWNvdXJzZXMvb2gtLS1jb2x1bWJ1cy9sb25nYWJlcmdlci1nb2xmLWNsdWIvc2VhcmNoIj48c3Bhbj5Cb29rIE5vdzwvc3Bhbj48L2E+PC9kaXY+DQo8L2Rpdj4NCjxkaXYgY2xhc3M9ImFuaW1hdGUiIGRhdGEtc3RhdGU9InNvdXRoY2Fyb2xpbmEiIGRhdGEtaWQ9ImlkLTUyIj4NCjxkaXYgY2xhc3M9Im51bWJlckJveCI+Tk8uPGJyIC8+DQo1MjwvZGl2Pg0KPGRpdiBjbGFzcz0iY291cnNlUGljIj48aW1nIGFsdD0iIiB3aWR0aD0iOTgiIGhlaWdodD0iNzMiIHNyYz0iaHR0cDovL3d3dy5nb2xmbm93LmNvbS9jb3Vyc2VkaXJlY3RvcnkvaW1nL3NjL215cnRsZS1iZWFjaC90aGUtZHVuZXMtZ29sZi1hbmQtYmVhY2gtY2x1Yi9kZWZhdWx0LmpwZ3giIC8+PC9kaXY+DQo8ZGl2IGNsYXNzPSJjb3Vyc2VJbmZvIj4NCjxoMT5UaGUgRHVuZXMgR29sZiAmYW1wOyBCZWFjaCBDbHViPC9oMT4NCkxvY2F0aW9uOiBNeXJ0bGUgQmVhY2gsIFNDPC9kaXY+DQo8ZGl2IGNsYXNzPSJib29rTm93Ij48YSBpZD0iYm9va05vdyIgdGl0bGU9IkJvb2sgTm93IiBocmVmPSJodHRwOi8vd3d3LmdvbGZub3cuY29tL215cnRsZS1iZWFjaC90ZWUtdGltZXMvZ29sZi1jb3Vyc2VzL3NjLS0tbXlydGxlLWJlYWNoL2R1bmVzLWNsdWIvc2VhcmNoIj48c3Bhbj5Cb29rIE5vdzwvc3Bhbj48L2E+PC9kaXY+DQo8L2Rpdj4NCjxkaXYgY2xhc3M9ImFuaW1hdGUiIGRhdGEtc3RhdGU9InZpcmdpbmlhIiBkYXRhLWlkPSJpZC01OCI+DQo8ZGl2IGNsYXNzPSJudW1iZXJCb3giPk5PLjxiciAvPg0KNTg8L2Rpdj4NCjxkaXYgY2xhc3M9ImNvdXJzZVBpYyI+PGltZyBhbHQ9IiIgd2lkdGg9Ijk4IiBoZWlnaHQ9IjczIiBzcmM9Imh0dHA6Ly93d3cuZ29sZm5vdy5jb20vY291cnNlZGlyZWN0b3J5L2ltZy92YS9nb3Jkb25zdmlsbGUvc3ByaW5nLWNyZWVrL2RlZmF1bHQuanBneCIgLz48L2Rpdj4NCjxkaXYgY2xhc3M9ImNvdXJzZUluZm8iPg0KPGgxPlNwcmluZyBDcmVlazwvaDE+DQpMb2NhdGlvbjogR29yZG9uc3ZpbGxlLCBWQTwvZGl2Pg0KPGRpdiBjbGFzcz0iYm9va05vdyI+PGEgaWQ9ImJvb2tOb3ciIHRpdGxlPSJCb29rIE5vdyIgaHJlZj0iaHR0cDovL3d3dy5nb2xmbm93LmNvbS93YXNoaW5ndG9uZGMvdGVlLXRpbWVzL2dvbGYtY291cnNlcy92YS0tLWNlbnRyYWwvc3ByaW5nLWNyZWVrLWdvbGYtY2x1Yi9zZWFyY2giPjxzcGFuPkJvb2sgTm93PC9zcGFuPjwvYT48L2Rpdj4NCjwvZGl2Pg0KPGRpdiBjbGFzcz0iYW5pbWF0ZSIgZGF0YS1zdGF0ZT0ib3JlZ29uIiBkYXRhLWlkPSJpZC02MyI+DQo8ZGl2IGNsYXNzPSJudW1iZXJCb3giPk5PLjxiciAvPg0KNjM8L2Rpdj4NCjxkaXYgY2xhc3M9ImNvdXJzZVBpYyI+PGltZyBhbHQ9IiIgd2lkdGg9Ijk4IiBoZWlnaHQ9IjczIiBzcmM9Imh0dHA6Ly93d3cuZ29sZm5vdy5jb20vY291cnNlZGlyZWN0b3J5L2ltZy9vci9ub3J0aC1wbGFpbnMvcHVtcGtpbi1yaWRnZS1nb2xmLWNsdWItLS1naG9zdC1jcmVlay1jb3Vyc2UvZGVmYXVsdC5qcGd4IiAvPjwvZGl2Pg0KPGRpdiBjbGFzcz0iY291cnNlSW5mbyI+DQo8aDE+UHVtcGtpbiBSaWRnZSBHb2xmIENsdWIgLSBHaG9zdCBDcmVlayBDb3Vyc2U8L2gxPg0KTG9jYXRpb246IE5vcnRoIFBsYWlucywgT1I8L2Rpdj4NCjxkaXYgY2xhc3M9ImJvb2tOb3ciPjxhIGlkPSJib29rTm93IiB0aXRsZT0iQm9vayBOb3ciIGhyZWY9Imh0dHA6Ly93d3cuZ29sZm5vdy5jb20vcG9ydGxhbmQvdGVlLXRpbWVzL2dvbGYtY291cnNlcy9vci0tLXBvcnRsYW5kL3B1bXBraW4tcmlkZ2UtLS1naG9zdC1jcmVlay9zZWFyY2giPjxzcGFuPkJvb2sgTm93PC9zcGFuPjwvYT48L2Rpdj4NCjwvZGl2Pg0KPCEtLSA8ZGl2IGNsYXNzPSJhbmltYXRlIiBkYXRhLXN0YXRlPSJtaW5uZXNvdGEiIGRhdGEtaWQ9ImlkLTY3Ij4NCjxkaXYgY2xhc3M9Im51bWJlckJveCI+Tk8uPGJyIC8+DQo2NzwvZGl2Pg0KPGRpdiBjbGFzcz0iY291cnNlUGljIj48aW1nIGFsdD0iIiB3aWR0aD0iOTgiIGhlaWdodD0iNzMiIHNyYz0iaHR0cDovL3d3dy5nb2xmbm93LmNvbS9jb3Vyc2VkaXJlY3RvcnkvaW1nL21uL2JyYWluZXJkL21hZGRlbnMtb24tZ3VsbC1sYWtlLS0tcGluZS1iZWFjaC1lYXN0LWNvdXJzZS9nZW5lcmFsLmpwZ3giIC8+PC9kaXY+DQo8ZGl2IGNsYXNzPSJjb3Vyc2VJbmZvIj4NCjxoMT5NYWRkZW4ncyBvbiBHdWxsIExha2UgLSBUaGUgQ2xhc3NpYyBDb3Vyc2U8L2gxPg0KTG9jYXRpb246IEJyYWluZXJkLCBNTjwvZGl2Pg0KPGRpdiBjbGFzcz0iYm9va05vdyI+PGEgaWQ9ImJvb2tOb3ciIHRpdGxlPSJCb29rIE5vdyIgaHJlZj0iaHR0cDovL3d3dy5nb2xmbm93LmNvbS9taW5uZWFwb2xpcy90ZWUtdGltZXMvZ29sZi1jb3Vyc2VzL21uLS0tLW1pbm5lYXBvbGlzL3RoZS1jbGFzc2ljLWF0LW1hZGRlbnMvc2VhcmNoIj48c3Bhbj5Cb29rIE5vdzwvc3Bhbj48L2E+PC9kaXY+DQo8L2Rpdj4gLS0+DQo8ZGl2IGNsYXNzPSJhbmltYXRlIiBkYXRhLXN0YXRlPSJmbG9yaWRhIiBkYXRhLWlkPSJpZC03NCI+DQo8ZGl2IGNsYXNzPSJudW1iZXJCb3giPk5PLjxiciAvPg0KNzQ8L2Rpdj4NCjxkaXYgY2xhc3M9ImNvdXJzZVBpYyI+PGltZyBhbHQ9IiIgd2lkdGg9Ijk4IiBoZWlnaHQ9IjczIiBzcmM9Imh0dHA6Ly93d3cuZ29sZm5vdy5jb20vY291cnNlZGlyZWN0b3J5L2ltZy9mbC9wYW5hbWEtY2l0eS1iZWFjaC9jYW1wLWNyZWVrLWdvbGYtY2x1Yi9kZWZhdWx0LmpwZ3giIC8+PC9kaXY+DQo8ZGl2IGNsYXNzPSJjb3Vyc2VJbmZvIj4NCjxoMT5DYW1wIENyZWVrIEdvbGYgQ2x1YjwvaDE+DQpMb2NhdGlvbjogUGFuYW1hIENpdHkgQmVhY2gsIEZMPC9kaXY+DQo8ZGl2IGNsYXNzPSJib29rTm93Ij48YSBpZD0iYm9va05vdyIgdGl0bGU9IkJvb2sgTm93IiBocmVmPSJodHRwOi8vd3d3LmdvbGZub3cuY29tL3BlbnNhY29sYS90ZWUtdGltZXMvZ29sZi1jb3Vyc2VzL2ZsLS0tcGFuYW1hLWNpdHktYmVhY2gvY2FtcC1jcmVlay1nb2xmLWNsdWIvc2VhcmNoIj48c3Bhbj5Cb29rIE5vdzwvc3Bhbj48L2E+PC9kaXY+DQo8L2Rpdj4NCjxkaXYgY2xhc3M9ImFuaW1hdGUiIGRhdGEtc3RhdGU9InBlbm5zeWx2YW5pYSIgZGF0YS1pZD0iaWQtNzUiPg0KPGRpdiBjbGFzcz0ibnVtYmVyQm94Ij5OTy48YnIgLz4NCjc1PC9kaXY+DQo8ZGl2IGNsYXNzPSJjb3Vyc2VQaWMiPjxpbWcgYWx0PSIiIHdpZHRoPSI5OCIgaGVpZ2h0PSI3MyIgc3JjPSJodHRwOi8vd3d3LmdvbGZub3cuY29tL2NvdXJzZWRpcmVjdG9yeS9pbWcvcGEvZmFybWluZ3Rvbi9uZW1hY29saW4td29vZGxhbmRzLXJlc29ydC1hbmQtc3BhL2RlZmF1bHQuanBneCIgLz48L2Rpdj4NCjxkaXYgY2xhc3M9ImNvdXJzZUluZm8iPg0KPGgxPk5lbWFjb2xpbiBXb29kbGFuZHMgUmVzb3J0IC0gTXlzdGljIFJvY2sgQ291cnNlPC9oMT4NCkxvY2F0aW9uOiBGYXJtaW5ndG9uLCBQQTwvZGl2Pg0KPGRpdiBjbGFzcz0iYm9va05vdyI+PGEgaWQ9ImJvb2tOb3ciIHRpdGxlPSJCb29rIE5vdyIgaHJlZj0iaHR0cDovL3d3dy5nb2xmbm93LmNvbS9waXR0c2J1cmdoL3RlZS10aW1lcy9nb2xmLWNvdXJzZXMvcGEtLS1waXR0c2J1cmdoL215c3RpYy1yb2NrLWF0LW5lbWFjb2xpbi13b29kbGFuZHMtcmVzb3J0L3NlYXJjaCI+PHNwYW4+Qm9vayBOb3c8L3NwYW4+PC9hPjwvZGl2Pg0KPC9kaXY+DQo8ZGl2IGNsYXNzPSJhbmltYXRlIiBkYXRhLXN0YXRlPSJmbG9yaWRhIiBkYXRhLWlkPSJpZC03NiI+DQo8ZGl2IGNsYXNzPSJudW1iZXJCb3giPk5PLjxiciAvPg0KNzY8L2Rpdj4NCjxkaXYgY2xhc3M9ImNvdXJzZVBpYyI+PGltZyBhbHQ9IiIgd2lkdGg9Ijk4IiBoZWlnaHQ9IjczIiBzcmM9Imh0dHA6Ly93d3cuZ29sZm5vdy5jb20vY291cnNlZGlyZWN0b3J5L2ltZy9mbC9icm9va3N2aWxsZS93b3JsZC13b29kcy1nb2xmLWNsdWItLS1waW5lLWJhcnJlbnMtY291cnNlL2RlZmF1bHQuanBneCIgLz48L2Rpdj4NCjxkaXYgY2xhc3M9ImNvdXJzZUluZm8iPg0KPGgxPldvcmxkIFdvb2RzIEdvbGYgQ2x1YiAtIFBpbmUgQmFycmVucyBDb3Vyc2U8L2gxPg0KTG9jYXRpb246IEJyb29rc3ZpbGxlLCBGTDwvZGl2Pg0KPGRpdiBjbGFzcz0iYm9va05vdyI+PGEgaWQ9ImJvb2tOb3ciIHRpdGxlPSJCb29rIE5vdyIgaHJlZj0iaHR0cDovL3d3dy5nb2xmbm93LmNvbS90YW1wYS90ZWUtdGltZXMvZ29sZi1jb3Vyc2VzL2ZsLS0tbi10YW1wYWJyb29rc3ZpbGxlL3dvcmxkLXdvb2RzLWdvbGYtY2x1Yi0tLXBpbmUtYmFycmVucy9zZWFyY2giPjxzcGFuPkJvb2sgTm93PC9zcGFuPjwvYT48L2Rpdj4NCjwvZGl2Pg0KPGRpdiBjbGFzcz0iYW5pbWF0ZSIgZGF0YS1zdGF0ZT0iZGVsYXdhcmUiIGRhdGEtaWQ9ImlkLTc5Ij4NCjxkaXYgY2xhc3M9Im51bWJlckJveCI+Tk8uPGJyIC8+DQo3OTwvZGl2Pg0KPGRpdiBjbGFzcz0iY291cnNlUGljIj48aW1nIGFsdD0iIiB3aWR0aD0iOTgiIGhlaWdodD0iNzMiIHNyYz0iaHR0cDovL3d3dy5nb2xmbm93LmNvbS9jb3Vyc2VkaXJlY3RvcnkvaW1nL2RlL3NlbGJ5dmlsbGUvYmF5c2lkZS1yZXNvcnQtZ29sZi1jbHViL2RlZmF1bHQuanBneCIgLz48L2Rpdj4NCjxkaXYgY2xhc3M9ImNvdXJzZUluZm8iPg0KPGgxPkJheXNpZGUgUmVzb3J0IEdvbGYgQ2x1YjwvaDE+DQpMb2NhdGlvbjogU2VsYnl2aWxsZSwgREU8L2Rpdj4NCjxkaXYgY2xhc3M9ImJvb2tOb3ciPjxhIGlkPSJib29rTm93IiB0aXRsZT0iQm9vayBOb3ciIGhyZWY9Imh0dHA6Ly93d3cuZ29sZm5vdy5jb20vcmljaG1vbmQvdGVlLXRpbWVzL2dvbGYtY291cnNlcy9tZC0tb2NlYW4tY2l0eWVhc3Qtc2hvcmUvYmF5c2lkZS1yZXNvcnQtZ29sZi1jbHViL3NlYXJjaCI+PHNwYW4+Qm9vayBOb3c8L3NwYW4+PC9hPjwvZGl2Pg0KPC9kaXY+DQo8ZGl2IGNsYXNzPSJhbmltYXRlIiBkYXRhLXN0YXRlPSJoYXdhaWkiIGRhdGEtaWQ9ImlkLTgwIj4NCjxkaXYgY2xhc3M9Im51bWJlckJveCI+Tk8uPGJyIC8+DQo4MDwvZGl2Pg0KPGRpdiBjbGFzcz0iY291cnNlUGljIj48aW1nIGFsdD0iIiB3aWR0aD0iOTgiIGhlaWdodD0iNzMiIHNyYz0iaHR0cDovL3d3dy5nb2xmbm93LmNvbS9jb3Vyc2VkaXJlY3RvcnkvaW1nL2hpL3ByaW5jZXZpbGxlL3ByaW5jZXZpbGxlLW1ha2FpLWdvbGYtY2x1Yi9kZWZhdWx0LmpwZ3giIC8+PC9kaXY+DQo8ZGl2IGNsYXNzPSJjb3Vyc2VJbmZvIj4NCjxoMT5QcmluY2V2aWxsZSBNYWthaSBHb2xmIENsdWI8L2gxPg0KTG9jYXRpb246UHJpbmNldmlsbGUsIEhJPC9kaXY+DQo8ZGl2IGNsYXNzPSJib29rTm93Ij48YSBpZD0iYm9va05vdyIgdGl0bGU9IkJvb2sgTm93IiBocmVmPSJodHRwOi8vd3d3LmdvbGZub3cuY29tL2hhd2FpaS90ZWUtdGltZXMvZ29sZi1jb3Vyc2VzL2hpLS0ta2F1YWkvcHJpbmNldmlsbGUtbWFrYWktdHJvb24tZ29sZi9zZWFyY2giPjxzcGFuPkJvb2sgTm93PC9zcGFuPjwvYT48L2Rpdj4NCjwvZGl2Pg0KPGRpdiBjbGFzcz0iYW5pbWF0ZSIgZGF0YS1zdGF0ZT0iaGF3YWlpIiBkYXRhLWlkPSJpZC04MiI+DQo8ZGl2IGNsYXNzPSJudW1iZXJCb3giPk5PLjxiciAvPg0KODI8L2Rpdj4NCjxkaXYgY2xhc3M9ImNvdXJzZVBpYyI+PGltZyBhbHQ9IiIgd2lkdGg9Ijk4IiBoZWlnaHQ9IjczIiBzcmM9Imh0dHA6Ly93d3cuZ29sZm5vdy5jb20vY291cnNlZGlyZWN0b3J5L2ltZy9oaS9rYW5lb2hlL2tvb2xhdS1nb2xmLWNsdWIvZGVmYXVsdC5qcGd4IiAvPjwvZGl2Pg0KPGRpdiBjbGFzcz0iY291cnNlSW5mbyI+DQo8aDE+S28nb2xhdSBHb2xmIENsdWI8L2gxPg0KTG9jYXRpb246IEthbmVvaGUsIEhJPC9kaXY+DQo8ZGl2IGNsYXNzPSJib29rTm93Ij48YSBpZD0iYm9va05vdyIgdGl0bGU9IkJvb2sgTm93IiBocmVmPSJodHRwOi8vd3d3LmdvbGZub3cuY29tL2hhd2FpaS90ZWUtdGltZXMvZ29sZi1jb3Vyc2VzL2hpLS0tb2FodS9rb29sYXUtZ29sZi1jbHViL3NlYXJjaCI+PHNwYW4+Qm9vayBOb3c8L3NwYW4+PC9hPjwvZGl2Pg0KPC9kaXY+DQo8IS0tICAgIDxkaXYgY2xhc3M9ImFuaW1hdGUiIGRhdGEtc3RhdGU9IiIgZGF0YS1pZD0iaWQtODgiPg0KICAgICAgICA8ZGl2IGNsYXNzPSJudW1iZXJCb3giPk5PLjxiciAvPg0KICAgICAgICAgIDg4PC9kaXY+DQogICAgICAgIDxkaXYgY2xhc3M9ImNvdXJzZVBpYyI+PGltZyBhbHQ9IiIgd2lkdGg9Ijk4IiBoZWlnaHQ9IjczIiBzcmM9IiIgLz48L2Rpdj4NCiAgICAgICAgPGRpdiBjbGFzcz0iY291cnNlSW5mbyI+DQogICAgICAgICAgPGgxPjwvaDE+DQogICAgICAgICAgTG9jYXRpb246IDwvZGl2Pg0KICAgICAgICA8ZGl2IGNsYXNzPSJib29rTm93Ij48YSBpZD0iYm9va05vdyIgdGl0bGU9IkJvb2sgTm93IiBocmVmPSIiPjxzcGFuPkJvb2sgTm93PC9zcGFuPjwvYT48L2Rpdj4NCiAgICAgIDwvZGl2PiAtLT4NCjxkaXYgY2xhc3M9ImFuaW1hdGUiIGRhdGEtc3RhdGU9ImNhbGlmb3JuaWEiIGRhdGEtaWQ9ImlkLTg5Ij4NCjxkaXYgY2xhc3M9Im51bWJlckJveCI+Tk8uPGJyIC8+DQo4OTwvZGl2Pg0KPGRpdiBjbGFzcz0iY291cnNlUGljIj48aW1nIGFsdD0iIiB3aWR0aD0iOTgiIGhlaWdodD0iNzMiIHNyYz0iaHR0cDovL3d3dy5nb2xmbm93LmNvbS9jb3Vyc2VkaXJlY3RvcnkvaW1nL2NhL3Bvd2F5L21hZGVyYXMtZ29sZi1jbHViL2RlZmF1bHQuanBneCIgLz48L2Rpdj4NCjxkaXYgY2xhc3M9ImNvdXJzZUluZm8iPg0KPGgxPk1hZGVyYXMgR29sZiBDbHViPC9oMT4NCkxvY2F0aW9uOiBQb3dheSwgQ0E8L2Rpdj4NCjxkaXYgY2xhc3M9ImJvb2tOb3ciPjxhIGlkPSJib29rTm93IiB0aXRsZT0iQm9vayBOb3ciIGhyZWY9Imh0dHA6Ly93d3cuZ29sZm5vdy5jb20vc2FuZGllZ28vdGVlLXRpbWVzL2dvbGYtY291cnNlcy9jYS0tLXNhbi1kaWVnby1ub3J0aC9tYWRlcmFzLWdvbGYtY2x1Yi9zZWFyY2giPjxzcGFuPkJvb2sgTm93PC9zcGFuPjwvYT48L2Rpdj4NCjwvZGl2Pg0KPGRpdiBjbGFzcz0iYW5pbWF0ZSIgZGF0YS1zdGF0ZT0iaGF3YWlpIiBkYXRhLWlkPSJpZC05MSI+DQo8ZGl2IGNsYXNzPSJudW1iZXJCb3giPk5PLjxiciAvPg0KOTE8L2Rpdj4NCjxkaXYgY2xhc3M9ImNvdXJzZVBpYyI+PGltZyBhbHQ9IiIgd2lkdGg9Ijk4IiBoZWlnaHQ9IjczIiBzcmM9Imh0dHA6Ly93d3cuZ29sZm5vdy5jb20vY291cnNlZGlyZWN0b3J5L2ltZy9oaS9rb2xvYS9wb2lwdS1iYXktcmVzb3J0LWdvbGYtY291cnNlL2RlZmF1bHQuanBneCIgLz48L2Rpdj4NCjxkaXYgY2xhc3M9ImNvdXJzZUluZm8iPg0KPGgxPlBvaXB1IEJheSBSZXNvcnQgR29sZiBDb3Vyc2U8L2gxPg0KTG9jYXRpb246IEtvbG9hLCBISTwvZGl2Pg0KPGRpdiBjbGFzcz0iYm9va05vdyI+PGEgaWQ9ImJvb2tOb3ciIHRpdGxlPSJCb29rIE5vdyIgaHJlZj0iaHR0cDovL3d3dy5nb2xmbm93LmNvbS9oYXdhaWkvdGVlLXRpbWVzL2dvbGYtY291cnNlcy9oaS0tLWthdWFpL3BvaXB1LWJheS1nb2xmLWNvdXJzZS9zZWFyY2giPjxzcGFuPkJvb2sgTm93PC9zcGFuPjwvYT48L2Rpdj4NCjwvZGl2Pg0KPGRpdiBjbGFzcz0iYW5pbWF0ZSIgZGF0YS1zdGF0ZT0ibmV2YWRhIiBkYXRhLWlkPSJpZC05MiI+DQo8ZGl2IGNsYXNzPSJudW1iZXJCb3giPk5PLjxiciAvPg0KOTI8L2Rpdj4NCjxkaXYgY2xhc3M9ImNvdXJzZVBpYyI+PGltZyBhbHQ9IiIgd2lkdGg9Ijk4IiBoZWlnaHQ9IjczIiBzcmM9Imh0dHA6Ly93d3cuZ29sZm5vdy5jb20vY291cnNlZGlyZWN0b3J5L2ltZy9udi9zdGF0ZWxpbmUvZWRnZXdvb2QtdGFob2UtZ29sZi1jb3Vyc2UvZGVmYXVsdC5qcGd4IiAvPjwvZGl2Pg0KPGRpdiBjbGFzcz0iY291cnNlSW5mbyI+DQo8aDE+RWRnZXdvb2QgVGFob2UgR29sZiBDb3Vyc2U8L2gxPg0KTG9jYXRpb246IFN0YXRlbGluZSwgTlY8L2Rpdj4NCjxkaXYgY2xhc3M9ImJvb2tOb3ciPjxhIGlkPSJib29rTm93IiB0aXRsZT0iQm9vayBOb3ciIGhyZWY9Imh0dHA6Ly93d3cuZ29sZm5vdy5jb20vcmVuby90ZWUtdGltZXMvZ29sZi1jb3Vyc2VzL2NhLS0tLWxha2UtdGFob2UvZWRnZXdvb2QtdGFob2UtZ29sZi1jb3Vyc2Uvc2VhcmNoIj48c3Bhbj5Cb29rIE5vdzwvc3Bhbj48L2E+PC9kaXY+DQo8L2Rpdj4NCjxkaXYgY2xhc3M9ImFuaW1hdGUiIGRhdGEtc3RhdGU9Imhhd2FpaSIgZGF0YS1pZD0iaWQtOTMiPg0KPGRpdiBjbGFzcz0ibnVtYmVyQm94Ij5OTy48YnIgLz4NCjkzPC9kaXY+DQo8ZGl2IGNsYXNzPSJjb3Vyc2VQaWMiPjxpbWcgYWx0PSIiIHdpZHRoPSI5OCIgaGVpZ2h0PSI3MyIgc3JjPSJodHRwOi8vd3d3LmdvbGZub3cuY29tL2NvdXJzZWRpcmVjdG9yeS9pbWcvaGkva2loZWkvd2FpbGVhLWdvbGYtY2x1Yi9kZWZhdWx0LmpwZ3giIC8+PC9kaXY+DQo8ZGl2IGNsYXNzPSJjb3Vyc2VJbmZvIj4NCjxoMT5XYWlsZWEgR29sZiBDbHViIC0gR29sZCBDb3Vyc2U8L2gxPg0KTG9jYXRpb246IFdhaWxlYSwgTWF1aSwgSEk8L2Rpdj4NCjxkaXYgY2xhc3M9ImJvb2tOb3ciPjxhIGlkPSJib29rTm93IiB0aXRsZT0iQm9vayBOb3ciIGhyZWY9Imh0dHA6Ly93d3cuZ29sZm5vdy5jb20vaGF3YWlpL3RlZS10aW1lcy9nb2xmLWNvdXJzZXMvaGktLS1tYXVpL3dhaWxlYS1nb2xmLWNsdWItLS1nb2xkLWNvdXJzZS9zZWFyY2giPjxzcGFuPkJvb2sgTm93PC9zcGFuPjwvYT48L2Rpdj4NCjwvZGl2Pg0KPGRpdiBjbGFzcz0iYW5pbWF0ZSIgZGF0YS1zdGF0ZT0ic291dGhjYXJvbGluYSIgZGF0YS1pZD0iaWQtOTciPg0KPGRpdiBjbGFzcz0ibnVtYmVyQm94Ij5OTy48YnIgLz4NCjk3PC9kaXY+DQo8ZGl2IGNsYXNzPSJjb3Vyc2VQaWMiPjxpbWcgYWx0PSIiIHdpZHRoPSI5OCIgaGVpZ2h0PSI3MyIgc3JjPSJodHRwOi8vd3d3LmdvbGZub3cuY29tL2NvdXJzZWRpcmVjdG9yeS9pbWcvc2MvcGF3bGV5cy1pc2xhbmQvY2FsZWRvbmlhLWdvbGYtYW5kLWZpc2gtY2x1Yi9kZWZhdWx0LmpwZ3giIC8+PC9kaXY+DQo8ZGl2IGNsYXNzPSJjb3Vyc2VJbmZvIj4NCjxoMT5DYWxlZG9uaWEgR29sZiAmYW1wOyBGaXNoIENsdWI8L2gxPg0KTG9jYXRpb246IFBhd2xleXMgSXNsYW5kLCBTQzwvZGl2Pg0KPGRpdiBjbGFzcz0iYm9va05vdyI+PGEgaWQ9ImJvb2tOb3ciIHRpdGxlPSJCb29rIE5vdyIgaHJlZj0iaHR0cDovL3d3dy5nb2xmbm93LmNvbS9teXJ0bGUtYmVhY2gvdGVlLXRpbWVzL2dvbGYtY291cnNlcy9zYy0tLW15cnRsZS1iZWFjaC9jYWxlZG9uaWEtZ29sZi1hbmQtZmlzaC1jbHViL3NlYXJjaCI+PHNwYW4+Qm9vayBOb3c8L3NwYW4+PC9hPjwvZGl2Pg0KPC9kaXY+DQo8ZGl2IGNsYXNzPSJhbmltYXRlIiBkYXRhLXN0YXRlPSJzb3V0aGNhcm9saW5hIiBkYXRhLWlkPSJpZC05OCI+DQo8ZGl2IGNsYXNzPSJudW1iZXJCb3giPk5PLjxiciAvPg0KOTg8L2Rpdj4NCjxkaXYgY2xhc3M9ImNvdXJzZVBpYyI+PGltZyBhbHQ9IiIgd2lkdGg9Ijk4IiBoZWlnaHQ9IjczIiBzcmM9Imh0dHA6Ly93d3cuZ29sZm5vdy5jb20vY291cnNlZGlyZWN0b3J5L2ltZy9zYy9tdXJyZWxscy1pbmxldC90cGMtb2YtbXlydGxlLWJlYWNoL2RlZmF1bHQuanBneCIgLz48L2Rpdj4NCjxkaXYgY2xhc3M9ImNvdXJzZUluZm8iPg0KPGgxPlRQQyBvZiBNeXJ0bGUgQmVhY2g8L2gxPg0KTG9jYXRpb246IE11cnJlbGxzIElubGV0LCBTQzwvZGl2Pg0KPGRpdiBjbGFzcz0iYm9va05vdyI+PGEgaWQ9ImJvb2tOb3ciIHRpdGxlPSJCb29rIE5vdyIgaHJlZj0iaHR0cDovL3d3dy5nb2xmbm93LmNvbS9teXJ0bGUtYmVhY2gvdGVlLXRpbWVzL2dvbGYtY291cnNlcy9zYy0tLW15cnRsZS1iZWFjaC90cGMtbXlydGxlLWJlYWNoL3NlYXJjaCI+PHNwYW4+Qm9vayBOb3c8L3NwYW4+PC9hPjwvZGl2Pg0KPC9kaXY+DQo8ZGl2IGNsYXNzPSJhbmltYXRlIiBkYXRhLXN0YXRlPSJjb2xvcmFkbyIgZGF0YS1pZD0iaWQtOTkiPg0KPGRpdiBjbGFzcz0ibnVtYmVyQm94Ij5OTy48YnIgLz4NCjk5PC9kaXY+DQo8ZGl2IGNsYXNzPSJjb3Vyc2VQaWMiPjxpbWcgYWx0PSIiIHdpZHRoPSI5OCIgaGVpZ2h0PSI3MyIgc3JjPSJodHRwOi8vd3d3LmdvbGZub3cuY29tL2NvdXJzZWRpcmVjdG9yeS9pbWcvY28vZ3JhbmQtanVuY3Rpb24vdGhlLWdvbGYtY2x1Yi1hdC1yZWRsYW5kcy1tZXNhL2RlZmF1bHQuanBneCIgLz48L2Rpdj4NCjxkaXYgY2xhc3M9ImNvdXJzZUluZm8iPg0KPGgxPlRoZSBHb2xmIENsdWIgQXQgUmVkbGFuZHMgTWVzYTwvaDE+DQpMb2NhdGlvbjogR3JhbmQgSnVuY3Rpb24sIENPPC9kaXY+DQo8ZGl2IGNsYXNzPSJib29rTm93Ij48YSBpZD0iYm9va05vdyIgdGl0bGU9IkJvb2sgTm93IiBocmVmPSJodHRwOi8vd3d3LmdvbGZub3cuY29tL2RlbnZlci90ZWUtdGltZXMvZ29sZi1jb3Vyc2VzL2NvLS0tZ3JhbmQtanVuY3Rpb25tb250cm9zZS9yZWRsYW5kcy1tZXNhLWdvbGYtY2x1Yi9zZWFyY2giPjxzcGFuPkJvb2sgTm93PC9zcGFuPjwvYT48L2Rpdj4NCjwvZGl2Pg0KPC9kaXY+DQo8ZGl2IGNsYXNzPSJmb290ZXIiPiZuYnNwOzwvZGl2Pg0KPC9kaXY+DQo8L2Rpdj5kAggPZBYCZg9kFgZmD2QWAmYPFgIeC18hSXRlbUNvdW50ZmQCAQ8WAh8AZ2QCAw8PFgIfAQUQMjAxMyBHb2xmTm93LmNvbWRkAgoPZBYCAgIPFgIfAQWjBTwhLS0gYmVnaW4gTWFyaW4gU29mdHdhcmUgVHJhY2tpbmcgU2NyaXB0IC0tPg0KPHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPg0KdmFyIF9tYXJpbkNsaWVudElkID0gImhrM3BibThwbDAiOw0KdmFyIF9tYXJpblByb3RvID0gKCgiaHR0cHM6IiA9PSBkb2N1bWVudC5sb2NhdGlvbi5wcm90b2NvbCkgPyAiaHR0cHM6Ly8iIDogImh0dHA6Ly8iKTsNCmRvY3VtZW50LndyaXRlKHVuZXNjYXBlKCIlM0NzY3JpcHQgc3JjPSciICsgX21hcmluUHJvdG8gKyAidHJhY2tlci5tYXJpbnNtLmNvbS90cmFja2VyLyIgKw0KX21hcmluQ2xpZW50SWQgKyAiLmpzJyB0eXBlPSd0ZXh0L2phdmFzY3JpcHQnJTNFJTNDL3NjcmlwdCUzRSIpKTsNCjwvc2NyaXB0Pg0KPHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPg0KdHJ5IHsNCl9tYXJpblRyYWNrLnRyYWNrUGFnZSgpOw0KfSBjYXRjaChlcnIpIHt9DQo8L3NjcmlwdD4NCjxub3NjcmlwdD4NCjxpbWcgc3JjPSJodHRwczovL3RyYWNrZXIubWFyaW5zbS5jb20vdHA/YWN0PTEmY2lkPWhrM3BibThwbDAmc2NyaXB0PW5vIiA+DQo8L25vc2NyaXB0Pg0KPCEtLSBlbmQgQ29weXJpZ2h0IE1hcmluIFNvZnR3YXJlIC0tPgoKPHNjcmlwdCBzcmM9Ii8vd3d3Lm5iY3VkaWdpdGFsYWRvcHMuY29tL2hvc3RlZC9nbG9iYWwuanMiPjwvc2NyaXB0PmQCDA9kFgQCAQ8WAh8BBVk8c2NyaXB0IGxhbmd1YWdlPSJKYXZhU2NyaXB0IiB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iL2dsb2JhbC9qcy9zX2NvZGUuanMiPjwvc2NyaXB0PmQCAw8WAh8BBbAFPHNjcmlwdCBsYW5ndWFnZT0iSmF2YVNjcmlwdCI+PCEtLQ0Kcy5wYWdlTmFtZT0iVG9wIDEwMCI7DQpzLnNlcnZlcj0id3d3LmdvbGZub3cuY29tIjsNCnMuY2hhbm5lbD0iZ2xvYmFsIjsNCnMucGFnZVR5cGU9IiI7DQpzLnByb3AxPSIiOw0Kcy5wcm9wMj0iIjsNCnMucHJvcDM9IiI7DQpzLnByb3A0PSJob21lIjsNCnMucHJvcDY9IiI7DQpzLnByb3A3PSIiOw0Kcy5wcm9wMTA9IiI7DQpzLnByb3AxMT0iIjsNCnMucHJvcDEyPSIiOw0Kcy5wcm9wMTM9IiI7DQovKiBFLWNvbW1lcmNlIFZhcmlhYmxlcyAqLw0Kcy5jYW1wYWlnbj0iIjsNCnMuc3RhdGU9IiI7DQpzLnppcD0iIjsNCnMuZXZlbnRzPSIiOw0Kcy5wcm9kdWN0cz0iIjsNCnMucHVyY2hhc2VJRD0iIjsNCnMuZVZhcjE9IiI7DQpzLmVWYXIyPSIiOw0Kcy5lVmFyMz0iIjsNCnMuZVZhcjQ9IiI7DQpzLmVWYXI1PSIiOw0Kcy5lVmFyNj0iIjsNCnMuZVZhcjc9IiI7DQpzLmVWYXI4PSIiOw0Kcy5lVmFyMTA9IiI7DQpzLmVWYXIxMT0iIjsNCnMuZVZhcjEyPSIiOw0Kcy5lVmFyMTM9IiI7DQpzLmVWYXIxNz0iIjsNCi8qKioqKioqKioqKioqIERPIE5PVCBBTFRFUiBBTllUSElORyBCRUxPVyBUSElTIExJTkUgISAqKioqKioqKioqKioqKi8NCnZhciBzX2NvZGU9cy50KCk7aWYoc19jb2RlKWRvY3VtZW50LndyaXRlKHNfY29kZSkvLy0tPjwvc2NyaXB0PmQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgEFJGN0bDAwJEhlYWRlcjEkdWNaaXBDb2RlJGJ0blppcFN1Ym1pdEUDMyRFdJsb4NhFfDM35+BQmy6f" type="hidden">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=h_gFIfCHZgmNUhPJeJC8vw272g85F8etPJWzYt3uWipHgpVI5V_iZUNOjKibla2OivmaWXUCYcA1UXPtYBWKfQC41381&amp;t=634604425351482412" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=K7ZdyNKahxhmbxGk_ftAvQH9nra7Dvt5lyKx6w7pOSlgV-3TznXZFzn9_OVdTplQ7n1JbYQBIMuNqIZM0JuxG96hYRwMoMb_toXlMzCw6q6ZTuLBSdUnDiu9FMETkZW7lwrXzQPRNXmst6MyupNmYQQZS_81&amp;t=ffffffffb868b5f4" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=B-faYDfRguCeH_JJOdbilFfS7dHIi2yiWjvyLidOC4PMPxfq15ltBJfqqSKbqnHdWwfuq4wNEC8TZWZpvaAzVllAG8TrlsQ3I_vUTfCuCGc7FH-WEGxWHTBpZ_JnMm-u6twtvjYgRIMRoxd9rqIDsg8yokIL9aSWBvbAQxNobU0Xbo0P0&amp;t=ffffffffb868b5f4" type="text/javascript"></script>
+<script src="../CombineScriptsHandler.ashx?_TSM_HiddenField_=ctl00_ScriptManager1_HiddenField&amp;_TSM_CombinedScripts_=%3b%3bAjaxControlToolkit%2c+Version%3d3.0.20820.30826%2c+Culture%3dneutral%2c+PublicKeyToken%3d28f01b0e84b6d53e%3aen-US%3a87b4617b-5646-4675-b6fc-aee3b74b59b7%3ae2e86ef9%3a1df13a87%3afde3863c" type="text/javascript"></script>
+<div>
+
+	<input name="__PREVIOUSPAGE" id="__PREVIOUSPAGE" value="3uDaWc7w77Im-2fbJx8Ojg3ow74c9UrikuB5gQwTAwY3OxI9rQOegxvsDqpANQSGA7421E3f26_pW-DhDaUPHcqbukk1" type="hidden">
+</div>
+			<script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', document.getElementById('aspnetForm'));
+Sys.WebForms.PageRequestManager.getInstance()._updateControls([], [], [], 90);
+//]]>
+</script>
+
+
+        <div id="header">
+            
+
+  <a id="usernamePopup" href="/UsernamePopUp.aspx" style="display:none;"></a>
+
+	    <div class="logo"><a title="Tee Times" href="/"><img src="/img/golfnow-logo.jpg" alt="Tee Times" border="0"></a></div>
+	    <div id="ctl00_Header1_SupressID1_otmSpot" class="oldTom"><img src="/img/old-tom.png" alt="Tee Times" border="0"></div>
+   
+     
+        <div id="ctl00_Header1_userInfo" class="userInfo">
+	
+            
+            
+              <div id="ctl00_Header1_facebookLike" style="float:right;">
+                <iframe allowtransparency="true" style="border: medium none; overflow: hidden; width: 80px; height: 21px;" src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FGolfNowcom%2F126539453722&amp;layout=button_count&amp;show_faces=true&amp;width=115&amp;action=like&amp;font=lucida+grande&amp;colorscheme=light&amp;height=21" frameborder="0" scrolling="no"></iframe>
+            </div>
+            
+            <div id="ctl00_Header1_googlePlus" style="float:right; padding:5px 0 0 0;">
+            <!-- Place this tag where you want the +1 button to render -->
+            <div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 70px; height: 15px;"><iframe title="+1" data-gapiattached="true" allowtransparency="true" src="https://plusone.google.com/_/+1/fastbutton?bsv&amp;size=small&amp;hl=en-US&amp;origin=http%3A%2F%2Fwww.golfnow.com&amp;url=http%3A%2F%2Fwww.golfnow.com%2Ftop100&amp;ic=1&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en_US.pq-TpXiLgaE.O%2Fm%3D__features__%2Fam%3DEQ%2Frt%3Dj%2Fd%3D1%2Frs%3DAItRSTOY9mIG3t5Os0XGQNrlA_ssOaR9lA#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled&amp;id=I0_1369453183503&amp;parent=http%3A%2F%2Fwww.golfnow.com&amp;rpctoken=69420104" name="I0_1369453183503" id="I0_1369453183503" vspace="0" tabindex="0" style="position: static; top: 0px; width: 70px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 15px;" marginwidth="0" marginheight="0" hspace="0" frameborder="0" scrolling="no" width="100%"></iframe></div>
+
+
+            
+            <!-- Place this render call where appropriate -->
+            <script type="text/javascript">
+                (function() {
+                    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                    po.src = 'https://apis.google.com/js/plusone.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                })();
+            </script>
+            
+            </div>
+            
+          
+            <div class="clear"></div>
+            <div id="ctl00_Header1_ucZipCode_zipCodeWrapper">
+<div id="ctl00_Header1_ucZipCode_pnlZipEntry" class="zipData">
+		
+<div class="ziptxt">US/CAN Billing Zip/Postal Code:</div>
+<input name="ctl00$Header1$ucZipCode$btnZipSubmit" id="ctl00_Header1_ucZipCode_btnZipSubmit" class="zipGo" src="/img/btn-zip-go.jpg" alt="GO" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Header1$ucZipCode$btnZipSubmit&quot;, &quot;&quot;, false, &quot;&quot;, &quot;/top100/?/TRK=BAN_GNOW_HP450x100_1&quot;, false, false))" style="border-width:0px;" type="image">
+<input name="ctl00$Header1$ucZipCode$txtZipCode" maxlength="7" id="ctl00_Header1_ucZipCode_txtZipCode" class="zipInput" type="text">
+
+<div class="clear"></div>
+
+	</div>
+
+
+
+<div class="clear"></div>
+</div>
+<p class="copy"><a href="/my-account/sign-in/signin">Sign In</a> | <strong>Sign up for our</strong> <a href="/sign-up">Email Club</a></p>
+
+
+
+
+        
+</div>
+       
+       <div id="otherCommOverlay" style="display:none;">
+           
+           <div class="otherCommHdr"> 
+                <h2>Other Communities</h2>
+                </div>
+                <div class="modalct">
+                  <div class="otherCommunities">
+<h3 style="color: #666666; padding-top: 5px">United States</h3>
+<div class="otherCol"><a href="/anchorage">AK - Anchorage</a> <a href="/alabama">AL - Birmingham</a> <a href="/alabama">AL - Montgomery</a> <a href="/alabama">AL - RTJ Trail</a> <a href="/arkansas">AR - Fayetteville</a> <a href="/arkansas">AR - Little Rock</a> <a href="/arkansas">AR - S. Arkansas</a> <a href="/mesa">AZ - Mesa</a> <a href="/phoenix">AZ - Phoenix Metro</a> <a href="/scottsdale">AZ - Scottsdale</a> <a href="/tucson">AZ - Tucson</a> <a href="/fresno">CA - Fresno</a> <a href="/inlandempire">CA - Inland Empire</a> <a href="/losangeles">CA - Los Angeles</a> <a href="/monterey">CA - Monterey</a> <a href="/napa-sonoma">CA - Napa/Sonoma</a> <a href="/oakland-east-bay">CA - Oakland/East Bay</a> <a href="/orangecounty">CA - Orange County</a> <a href="/palmsprings">CA - Palm Springs</a> <a href="/reno">CA - Reno Lake Tahoe</a> <a href="/sacramento">CA - Sacramento</a> <a href="/sandiego">CA - San Diego</a> <a href="/sandiego-east-county">CA - San Diego East County</a> <a href="/sandiego-north-county">CA - San Diego North County</a> <a href="/sanfrancisco">CA - San Francisco Bay Area</a> <a href="/san-jose">CA - San Jose/South Bay</a> <a href="/santa-barbara">CA - Santa Barbara</a> <a href="/temecula">CA - Temecula</a> <a href="/denver">CO - Colorado Springs</a> <a href="/denver">CO - Denver</a> <a href="/denver">CO - Grand Junction</a> <a href="/denver">CO - Mountain</a> <a href="/denver">CO - Pueblo</a> <a href="/hartford">CT - Hartford/Central</a> <a href="/new-haven">CT - New Haven/Southern</a> <a href="/washingtondc">DC - Washington DC</a> <a href="/wilmington">DE - Wilmington</a> <a href="/daytona-space-coast">FL - Daytona/Space Coast</a> <a href="/jacksonville">FL - Jacksonville</a> <a href="/lakeland-florida">FL - Lakeland/Sebring</a> <a href="/miami">FL - Miami/South Florida</a> <a href="/naples">FL - Naples</a> <a href="/ocala">FL - Ocala</a> <a href="/orlando">FL - Orlando</a> <a href="/pensacola">FL - Panama City/Pensacola</a> <a href="/sarasota">FL - Sarasota</a> <a href="/tampa">FL - Tampa Bay / Saint Petersburg</a> <a href="/west-palm-beach">FL - West Palm Beach</a> <a href="/athens-gainesville">GA - Athens/Gainesville</a> <a href="/atlanta">GA - Atlanta</a> <a href="/augusta">GA - Augusta </a><a href="/coastalgeorgia">GA - Coastal Georgia</a> <a href="/macon-columbus">GA - Macon/Columbus</a> <a href="/atlanta/tee-times/golf-courses/georgia---macon---mid-ga/search">GA - Macon - Mid GA</a> <a href="/athens-gainesville">GA - NE GA Mountains</a> <a href="/hawaii">HI - Big Island</a> <a href="/kauai">HI - Kauai</a> <a href="/maui">HI - Maui</a> <a href="/oahu">HI - Oahu</a> <a href="/des-moines">IA - Des Moines</a> <a href="/omaha">IA - Omaha NE</a> <a href="/spokane">ID - Coeur D'Alene / Northern Idaho</a> <a href="/spokane">ID - Spokane</a></div>
+<div class="otherCol"><a href="/central-illinois">IL - Central Illinois</a> <a href="/chicago">IL - Chicago</a> <a href="/chicago">IL - Northwest Indiana</a> <a href="/quad-cities">IL - Quad Cities</a> <a href="/stlouis">IL - St Louis Metro</a> <a href="/fort-wayne">IN - Fort Wayne</a> <a href="/indianapolis">IN - Indianapolis</a> <a href="/chicago">IN - Northwest</a> <a href="/louisville">IN - Southern</a><a href="/indianapolis">IN - Terre Haute</a> <a href="/kansascity">KS - Kansas City</a> <a href="/wichita">KS - Wichita</a> <a href="/lexington">KY - Eastern</a> <a href="/lexington">KY - Lake Cumberland</a> <a href="/lexington">KY - Lexington</a> <a href="/louisville">KY - Louisville</a> <a href="/louisville">KY - Western</a> <a href="/louisiana">LA - Baton Rouge</a> <a href="/louisiana">LA - Lafayette</a> <a href="/louisiana">LA - New Orleans</a> <a href="/louisiana">LA - Shreveport Golf</a> <a href="/cape-cod">MA - Cape Cod</a> <a href="/newengland">MA - New England</a> <a href="/springfield-ma">MA - Springfield</a> <a href="/philadelphia">MD - Baltimore</a> <a href="/washingtondc">MD - Metro DC</a> <a href="/ocean-city">MD - Ocean City</a> <a href="/portland-maine">ME - Portland</a> <a href="/detroit-northeast">MI - Detroit Northeast</a> <a href="/detroit">MI - Detroit Southeast</a> <a href="/detroit-northwest">MI - Detroit Northwest</a> <a href="/detroit-southwest">MI - Detroit Southwest</a> <a href="http://www.golfnow.com/grand-rapids-kalamazoo">MI - Grand Rapids-Kalamazoo</a> <a href="http://www.golfnow.com/lansing">MI - Lansing</a> <a href="http://www.golfnow.com/north-michigan">MI - Northern Michigan</a> <a href="/minneapolis">MN - Minneapolis</a> <a href="/springfield-branson">MO - Branson</a> <a href="/kansascity">MO - Kansas City</a> <a href="/kansascity/tee-times/golf-courses/missouri---lake-of-the-ozarks/search">MO - Lake of the Ozarks</a> <a href="/springfield-branson">MO - Springfield</a> <a href="/stlouis">MO - St. Louis</a> <a href="/mississippi">MS - Mississippi</a> <a href="/billings">MT - Billings</a> <a href="/billings">MT - Western Montana</a> <a href="/asheville ">NC - Asheville</a> <a href="/charlotte">NC - Charlotte</a> <a href="/coastal-north-carolina">NC - Coastal</a> <a href="/greensboro">NC - Greensboro</a> <a href="/raleigh-durham">NC - Raleigh-Durham</a> <a href="/village-of-pinehurst">NC - Village of Pinehurst</a> <a href="/fargo-bismarck">ND - Fargo/Bismarck</a> <a href="/omaha">NE - Omaha / Lincoln</a> <a href="/atlantic-city">NJ - Atlantic City</a> <a href="/crystal-springs-resort-nj">NJ - Crystal Springs</a> <a href="/north-new-jersey">NJ - North New Jersey</a> <a href="/south-new-jersey">NJ - South New Jersey</a> <a href="/newmexico">NM - Albuquerque</a> <a href="/newmexico">NM - North/South New Mexico</a> <a href="/lasvegas">NV - Las Vegas</a></div>
+<div class="otherCol"><a href="/laughlin">NV - Laughlin</a> <a href="/reno">NV - Reno / Lake Tahoe</a> <a href="/albany-schenectady">NY - Albany/Schenectady</a> <a href="/western-ny">NY - Buffalo</a> <a href="/hudson-valley">NY - Hudson Valley</a> <a href="/long-island">NY - Long Island</a> <a href="/newyork">NY - New York Metro</a> <a href="/western-ny">NY - Rochester</a> <a href="/western-ny">NY - Western NY</a> <a href="/cincinnati">OH - Cincinnati</a> <a href="/cleveland">OH - Cleveland</a> <a href="/columbus">OH - Columbus</a> <a href="/dayton">OH - Dayton </a><a href="/toledo">OH - Toledo</a> <a href="/oklahomacity">OK - Oklahoma City</a> <a href="/tulsa">OK - Tulsa</a> <a href="/bend-central-oregon">OR - Bend/Central Oregon</a> <a href="/eugene">OR - Eugene</a> <a href="/oregon-coast">OR - Oregon Coast</a> <a href="/portland">OR - Portland</a> <a href="/salem">OR - Salem</a> <a href="/southern-oregon">OR - Southern Oregon</a> <a href="/lehigh-valley">PA - Lehigh Valley</a> <a href="/philadelphia">PA - Philadelphia</a> <a href="/pittsburgh">PA - Pittsburgh</a> <a href="http://www.golfnow.com/pocono-mountains">PA - Pocono Mountains</a> <a href="/south-central-pennsylvania">PA - South Central</a> <a href="http://www.golfnow.com/puerto-rico">PR - Puerto Rico</a> <a href="/charleston">SC - Charleston</a> <a href="/columbia">SC - Columbia</a> <a href="/greenville">SC - Greenville</a> <a href="/hilton-head">SC - Hilton Head</a> <a href="/myrtle-beach">SC - Myrtle Beach</a> <a href="/sioux-falls">SD - Sioux Falls</a> <a href="/knoxville">TN - Knoxville</a> <a href="/memphis">TN - Memphis</a> <a href="/nashville">TN - Nashville</a> <a href="/amarillo-lubbock">TX - Amarillo/Lubbock</a> <a href="/dallas">TX - Dallas / Ft. Worth</a> <a href="/houston">TX - Houston</a> <a href="/austin">TX - NE/SE Austin</a> <a href="/austin">TX - NW/SW Austin</a> <a href="/san-antonio">TX - San Antonio</a> <a href="/salt-lake-city">UT - Salt Lake City</a> <a href="/st-george">UT - St. George</a> <a href="/richmond">VA - Richmond</a> <a href="/washingtondc">VA - Washington/VA</a> <a href="/bellingham">WA - Bellingham</a> <a href="/seattle">WA - Seattle Metro</a> <a href="/spokane">WA - Spokane / Eastern Washington</a> <a href="/southwest-washington">WA - Southwest Washington</a> <a href="/tacoma-olympia">WA - Tacoma / Olympia</a> <a href="/wenatchee">WA - Wenatchee / Central Washington</a> <a href="/wenatchee">WA - Yakima / Tri-Cities</a> <a href="/greenbay">WI - Green Bay/North WI</a> <a href="/lake-geneva">WI - Lake Geneva</a> <a href="/madison">WI - Madison/Dells</a> <a href="/milwaukee">WI - Milwaukee</a> <a href="/washingtondc">WV - Washington DC/WV</a> <a href="/casper">WY - Casper</a></div>
+<div class="clear">&nbsp;</div>
+<div class="otherCol">
+<h3 style="color: #666666">Canada</h3>
+<a href="/alberta">AB - Alberta</a> <a href="/british-columbia">BC - British Columbia</a> <a href="/barrie">ON - Barrie/North</a> <a href="/burlington">ON - Burlington</a> <a href="/collingwood-ontario/">ON - Collingwood</a> <a href="/hamilton-ontario">ON - Hamilton</a> <a href="/indoor-golf-ontario">ON - Indoor Golf Ontario</a> <a href="/kitchener">ON - Kitchener/West</a> <a href="/london-ontario">ON - London</a> <a href="/muskoka">ON - Muskoka</a> <a href="/niagara">ON - Niagara</a> <a href="/northern-ontario">ON - Northern Ontario</a> <a href="/ottawa">ON - Ottawa/Outaouais</a> <a href="/peterborough">ON - Peterborough/East</a> <a href="/toronto">ON - Toronto/GTA</a> <a href="/prince-edward-island">PEI - Prince Edward Island</a> <a href="/montreal">QC - Montreal</a></div>
+<div class="otherCol">
+<h3 style="color: #666666">Bermuda</h3>
+<a href="/bermuda">BER - Bermuda</a>
+<div class="clear">&nbsp;</div>
+<h3 style="color: #666666">Mexico</h3>
+<a href="/mexico">MEX - Mexico</a> <a href="/riviera-maya-mexico">MEX - Cancun region</a> <a href="/riviera-maya-mexico">MEX - Cozumel region</a> <a href="/los-cabos-mexico">MEX - Los Cabos</a> <a href="/puerto-vallarta-mexico">MEX - Puerto Vallarta</a></div>
+<div class="otherCol">
+<h3 style="color: rgb(102,102,102)">Ireland</h3>
+<div class="otherCol"><a href="/ireland">IRL - Ireland</a> <a href="/northern-ireland">IRL - Northern Ireland</a> <a href="/west-northwest-ireland">IRL - West/Northwest Ireland</a> <a href="/east-ireland">IRL - East Ireland</a> <a href="/southwest-ireland">IRL - Southwest Ireland</a></div>
+<div class="clear">&nbsp;</div>
+<h3 style="color: rgb(102,102,102)">Scotland</h3>
+<div class="otherCol"><a href="/scotland">SCT - Scotland</a> <a href="/highlands-scotland">SCT - Highlands/Islands</a> <a href="/fife-tay-coasts-scotland">SCT - Fife &amp; Tay Coasts</a> <a href="/west-coast-scotland">SCT - West Coast</a> <a href="/edinburgh-scotland">SCT - Edinburgh &amp; East Lothian</a></div>
+</div>
+</div>
+<div class="clear">&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+                 </div>
+           
+           </div>
+       
+    
+  
+  <div class="clear"></div>    
+<script type="text/javascript">
+	var required = 'false'.toLowerCase() == 'true';
+
+	$(function() {
+		$('#usernamePopup').fancybox({
+			type: 'iframe',
+			scrolling: 'no',
+			maxWidth: 680,
+			maxHeight: 280,
+			autoSize: false,
+			closeBtn: !required,
+			afterClose: function() {
+				location.reload();
+			},
+			helpers: { overlay: { closeClick: false} }
+		});
+
+		var isAuthenticated = 'False';
+		var showPopup = '';
+
+		if (isAuthenticated == 'True' && showPopup == 'True')
+			showUsernamePopup();
+	});
+
+	function showUsernamePopup() {
+		$('#usernamePopup').click();
+	}
+  </script>
+        </div>
+
+        <div id="gnnav"> 
+            
+<ul>
+
+    <li class=" navFirst navLast"><div><a href="/">Home</a></div></li>
+
+   
+</ul>
+<div class="clear"></div>
+
+        </div>
+
+        <div id="gnsubnav">
+            &nbsp;
+
+
+
+        </div>
+        
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.initialize();
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.FilteredTextBoxBehavior, {"FilterType":3,"ValidChars":"abceghjklmnprstvwxyz ABCEGHJKLMNPRSTVWXYZ0123456789","id":"ctl00_Header1_ucZipCode_FilteredTextBoxExtender1"}, null, null, $get("ctl00_Header1_ucZipCode_txtZipCode"));
+});
+//]]>
+</script>
+</form>
+        <div class="content">    
+            
+
+<!-- TEMPLATE DATA START -->
+
+<div class="ctsub t1">
+	
+	<div class="ctbody">
+	    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.15/jquery-ui.min.js" type="text/javascript"></script><style type="text/css">
+
+
+
+
+
+
+
+
+.ctbody {padding:0 !important;} </style><style type="text/css">
+
+
+
+
+
+
+
+
+
+.selectBar input, .selectBar select{}
+
+
+
+			div.mainContainer {
+				width:974px;
+				overflow:auto;
+				margin:0 auto;
+			}
+			div.image-grid {
+				overflow:auto;
+			}
+			div.contentArea {
+				width:940px;
+				overflow:auto;
+				background-color:#fafafa;
+				background-image:url(http://www.golfnow.com/golfdigest/images/main_back.jpg);
+				background-repeat:repeat-x;
+			}
+			div.selectBar {
+				padding:20px 15px 8px 15px;
+				font-family:Verdana, Helvetica, sans-serif;
+				font-size:12px;
+				color:#323232;
+			}
+			div.selectBar a:link {
+				color:#323232;
+			}
+			div.selectBar a:active {
+				color:#323232;
+			}
+			div.selectBar a:visited {
+				color:#323232;
+			}
+			div.selectBar a:hover {
+				color:#e29332;
+			}
+			div.animate {
+				float:left;
+				padding:0px 0px 0px 0px;
+				display:block;
+				margin:15px;
+				text-align:left;
+			}
+			div.numberBox {
+				width:31px;
+				height:48px;
+				float:left;
+				text-align:center;
+				font-family:Verdana, Helvetica, sans-serif;
+				font-size:12px;
+				color:#323232;
+				padding-top:25px;
+				border:1px solid #dedede;
+				background-image:url(http://www.golfnow.com/golfdigest/images/number_back.jpg);
+				background-repeat:repeat-x;
+			}
+			div.coursePic {
+				width:98px;
+				height:73px;
+				float:left;
+				border:1px solid #dedede;
+				border-left:0px;
+			}
+			div.bookNow {
+				clear:both;
+				padding:10px 0px 0px 32px;
+			}
+			div.courseInfo {
+				width:130px;
+				height:73px;
+				float:left;
+				padding-left:10px;
+				font-family:Verdana, Helvetica, sans-serif;
+				font-size:12px;
+				color:#323232;
+			}
+			div.courseInfo h1 {
+				font-size:16px;
+				margin:0;
+			}
+			div.footer {
+				width:974px;
+				height:20px;
+				clear:both;
+			}
+			.formElementStyle {
+				background-color:#333333 !important;
+				color:#FFFFFF;
+				font-size:11px;
+			}
+			#bookNow {
+				display: block;
+				width: 101px;
+				height: 25px;
+				background: url("http://www.golfnow.com/golfdigest/images/booknow_button.jpg") no-repeat 0 0;
+			}
+			#bookNow:hover {
+				background-position: 0 -25px;
+			}
+			#bookNow span {
+				position: absolute;
+				top: -999em;
+			}
+		</style>
+<div class="mainContainer"><img alt="" src="http://www.golfnow.com/golfdigest/images/main_header.jpg">
+<div class="contentArea">
+<div class="selectBar"><input id="viewAll" data-state="0" value="View All" type="button">
+<form style="display: inline" id="filter">
+    <select id="state" name="state">
+    <option value="0" selected="selected">Filter By State</option>
+    <option value="california">California</option>
+    <option value="colorado">Colorado</option>
+    <option value="delaware">Delaware</option>
+    <option value="florida">Florida</option>
+    <option value="hawaii">Hawaii</option>
+    <option value="michigan">Michigan</option>
+    <option value="minnesota">Minnesota</option>
+    <option value="nevada">Nevada</option>
+    <option value="ohio">Ohio</option>
+    <option value="oregon">Oregon</option>
+    <option value="pennsylvania">Pennsylvania</option>
+    <option value="southcarolina">South Carolina</option>
+    <option value="virginia">Virginia</option>
+    </select>
+</form>
+<hr>
+</div>
+<div id="applications" class="image-grid">
+<div class="animate" data-state="florida" data-id="id-9">
+<div class="numberBox">NO.<br>
+9</div>
+<div class="coursePic"><img alt="" src="http://www.golfnow.com/coursedirectory/img/fl/ponte-vedra-beach/tpc-sawgrass/default.jpgx" height="73" width="98"></div>
+<div class="courseInfo">
+<h1>TPC Sawgrass</h1>
+Location: Ponte Vedra Beach, FL</div>
+<div class="bookNow"><a id="bookNow" title="Book Now" href="http://www.golfnow.com/jacksonville/tee-times/golf-courses/fl---jacksonville-east-and-beaches/tpc-sawgrass/search"><span>Book Now</span></a></div>
+</div>
+<div class="animate" data-state="minnesota" data-id="id-20">
+<div class="numberBox">NO.<br>
+20</div>
+<div class="coursePic"><img alt="" src="http://www.golfnow.com/coursedirectory/img/mn/biwabik/giants-ridge-golf-and-ski-resort/default.jpgx" height="73" width="98"></div>
+<div class="courseInfo">
+<h1>The Quarry at Giants Ridge</h1>
+Location: Biwabik, MN</div>
+<div class="bookNow"><a id="bookNow" title="Book Now" href="http://www.golfnow.com/minneapolis/tee-times/golf-courses/mn---brainerdnorthern/giants-ridge-quarry/search"><span>Book Now</span></a></div>
+</div>
+<div class="animate" data-state="hawaii" data-id="id-22">
+<div class="numberBox">NO.<br>
+22</div>
+<div class="coursePic"><img alt="" src="http://www.golfnow.com/coursedirectory/img/hi/princeville/princeville-golf-club---prince-course/default.jpgx" height="73" width="98"></div>
+<div class="courseInfo">
+<h1>Princeville Golf Club - Prince Course</h1>
+Location: Princeville, HI</div>
+<div class="bookNow"><a id="bookNow" title="Book Now" href="http://www.golfnow.com/hawaii/tee-times/golf-courses/hi---kauai/princeville-at-hanalei-prince-course/search"><span>Book Now</span></a></div>
+</div>
+<div class="animate" data-state="michigan" data-id="id-23">
+<div class="numberBox">NO.<br>
+23</div>
+<div class="coursePic"><img alt="" src="http://www.golfnow.com/coursedirectory/img/mi/roscommon/forest-dunes-golf-club/general.jpgx" height="73" width="98"></div>
+<div class="courseInfo">
+<h1>Forest Dunes Golf Course</h1>
+Location: Roscommon, MI</div>
+<div class="bookNow"><a id="bookNow" title="Book Now" href="http://www.golfnow.com/north-michigan/tee-times/golf-courses/mi---north-michigan/forest-dunes-golf-club/search"><span>Book Now</span></a></div>
+</div>
+<div class="animate" data-state="oregon" data-id="id-28">
+<div class="numberBox">NO.<br>
+28</div>
+<div class="coursePic"><img alt="" src="http://www.golfnow.com/coursedirectory/img/or/bend/the-club-at-pronghorn/default.jpgx" height="73" width="98"></div>
+<div class="courseInfo">
+<h1>The Club At Pronghorn</h1>
+Location: Bend, OR</div>
+<div class="bookNow"><a id="bookNow" title="Book Now" href="http://www.golfnow.com/portland/tee-times/golf-courses/or---bendcentral-oregon/pronghorn-club-and-resort/search"><span>Book Now</span></a></div>
+</div>
+<div class="animate" data-state="hawaii" data-id="id-31">
+<div class="numberBox">NO.<br>
+31</div>
+<div class="coursePic"><img alt="" src="http://www.golfnow.com/coursedirectory/img/hi/kamuela/mauna-kea-resort/default.jpgx" height="73" width="98"></div>
+<div class="courseInfo">
+<h1>Mauna Kea Resort</h1>
+Location: Kohala Coast, HI</div>
+<div class="bookNow"><a id="bookNow" title="Book Now" href="http://www.golfnow.com/hawaii/tee-times/golf-courses/hi---big-island/mauna-kea-golf-course/search"><span>Book Now</span></a></div>
+</div>
+<div class="animate" data-state="hawaii" data-id="id-33">
+<div class="numberBox">NO.<br>
+33</div>
+<div class="coursePic"><img alt="" src="http://www.golfnow.com/coursedirectory/img/hi/lanai-city/the-challenge-at-manele/default.jpgx " height="73" width="98"></div>
+<div class="courseInfo">
+<h1>The Challenge at Manele</h1>
+Location: Lanai, HI</div>
+<div class="bookNow"><a id="bookNow" title="Book Now" href="http://www.golfnow.com/hawaii/tee-times/golf-courses/hi---lanai/the-challenge-at-manele/search"><span>Book Now</span></a></div>
+</div>
+<div class="animate" data-state="california" data-id="id-43">
+<div class="numberBox">NO.<br>
+43</div>
+<div class="coursePic"><img alt="" src="http://www.golfnow.com/coursedirectory/img/ca/la-quinta/pga-west®---tpc-stadium-course/default.jpgx" height="73" width="98"></div>
+<div class="courseInfo">
+<h1>PGA WEST<sup>®</sup> - TPC Stadium Course</h1>
+Location: La Quinta, CA</div>
+<div class="bookNow"><a id="bookNow" title="Book Now" href="http://www.golfnow.com/palmsprings/tee-times/golf-courses/ca---palm-springs/pga-west%c2%ae-%e2%80%93-tpc-stadium-course-/search"><span>Book Now</span></a></div>
+</div>
+<div class="animate" data-state="michigan" data-id="id-45">
+<div class="numberBox">NO.<br>
+45</div>
+<div class="coursePic"><img alt="" src="http://www.golfnow.com/coursedirectory/img/mi/stanwood/tullymore-golf-club/default.jpgx" height="73" width="98"></div>
+<div class="courseInfo">
+<h1>Tullymore Golf Club</h1>
+Location: Stanwood, MI</div>
+<div class="bookNow"><a id="bookNow" title="Book Now" href="http://www.golfnow.com/grand-rapids-kalamazoo/tee-times/golf-courses/mi---lansing-mt-pleasant/tullymore-golf-club/search"><span>Book Now</span></a></div>
+</div>
+<div class="animate" data-state="ohio" data-id="id-51">
+<div class="numberBox">NO.<br>
+51</div>
+<div class="coursePic"><img alt="" src="http://www.golfnow.com/coursedirectory/img/oh/nashport/longaberger-golf-club/default.jpgx" height="73" width="98"></div>
+<div class="courseInfo">
+<h1>Longaberger Golf Club</h1>
+Location: Nashport, OH</div>
+<div class="bookNow"><a id="bookNow" title="Book Now" href="http://www.golfnow.com/columbus/tee-times/golf-courses/oh---columbus/longaberger-golf-club/search"><span>Book Now</span></a></div>
+</div>
+<div class="animate" data-state="southcarolina" data-id="id-52">
+<div class="numberBox">NO.<br>
+52</div>
+<div class="coursePic"><img alt="" src="http://www.golfnow.com/coursedirectory/img/sc/myrtle-beach/the-dunes-golf-and-beach-club/default.jpgx" height="73" width="98"></div>
+<div class="courseInfo">
+<h1>The Dunes Golf &amp; Beach Club</h1>
+Location: Myrtle Beach, SC</div>
+<div class="bookNow"><a id="bookNow" title="Book Now" href="http://www.golfnow.com/myrtle-beach/tee-times/golf-courses/sc---myrtle-beach/dunes-club/search"><span>Book Now</span></a></div>
+</div>
+<div class="animate" data-state="virginia" data-id="id-58">
+<div class="numberBox">NO.<br>
+58</div>
+<div class="coursePic"><img alt="" src="http://www.golfnow.com/coursedirectory/img/va/gordonsville/spring-creek/default.jpgx" height="73" width="98"></div>
+<div class="courseInfo">
+<h1>Spring Creek</h1>
+Location: Gordonsville, VA</div>
+<div class="bookNow"><a id="bookNow" title="Book Now" href="http://www.golfnow.com/washingtondc/tee-times/golf-courses/va---central/spring-creek-golf-club/search"><span>Book Now</span></a></div>
+</div>
+<div class="animate" data-state="oregon" data-id="id-63">
+<div class="numberBox">NO.<br>
+63</div>
+<div class="coursePic"><img alt="" src="http://www.golfnow.com/coursedirectory/img/or/north-plains/pumpkin-ridge-golf-club---ghost-creek-course/default.jpgx" height="73" width="98"></div>
+<div class="courseInfo">
+<h1>Pumpkin Ridge Golf Club - Ghost Creek Course</h1>
+Location: North Plains, OR</div>
+<div class="bookNow"><a id="bookNow" title="Book Now" href="http://www.golfnow.com/portland/tee-times/golf-courses/or---portland/pumpkin-ridge---ghost-creek/search"><span>Book Now</span></a></div>
+</div>
+<!-- <div class="animate" data-state="minnesota" data-id="id-67">
+<div class="numberBox">NO.<br />
+67</div>
+<div class="coursePic"><img alt="" width="98" height="73" src="http://www.golfnow.com/coursedirectory/img/mn/brainerd/maddens-on-gull-lake---pine-beach-east-course/general.jpgx" /></div>
+<div class="courseInfo">
+<h1>Madden's on Gull Lake - The Classic Course</h1>
+Location: Brainerd, MN</div>
+<div class="bookNow"><a id="bookNow" title="Book Now" href="http://www.golfnow.com/minneapolis/tee-times/golf-courses/mn----minneapolis/the-classic-at-maddens/search"><span>Book Now</span></a></div>
+</div> -->
+<div class="animate" data-state="florida" data-id="id-74">
+<div class="numberBox">NO.<br>
+74</div>
+<div class="coursePic"><img alt="" src="http://www.golfnow.com/coursedirectory/img/fl/panama-city-beach/camp-creek-golf-club/default.jpgx" height="73" width="98"></div>
+<div class="courseInfo">
+<h1>Camp Creek Golf Club</h1>
+Location: Panama City Beach, FL</div>
+<div class="bookNow"><a id="bookNow" title="Book Now" href="http://www.golfnow.com/pensacola/tee-times/golf-courses/fl---panama-city-beach/camp-creek-golf-club/search"><span>Book Now</span></a></div>
+</div>
+<div class="animate" data-state="pennsylvania" data-id="id-75">
+<div class="numberBox">NO.<br>
+75</div>
+<div class="coursePic"><img alt="" src="http://www.golfnow.com/coursedirectory/img/pa/farmington/nemacolin-woodlands-resort-and-spa/default.jpgx" height="73" width="98"></div>
+<div class="courseInfo">
+<h1>Nemacolin Woodlands Resort - Mystic Rock Course</h1>
+Location: Farmington, PA</div>
+<div class="bookNow"><a id="bookNow" title="Book Now" href="http://www.golfnow.com/pittsburgh/tee-times/golf-courses/pa---pittsburgh/mystic-rock-at-nemacolin-woodlands-resort/search"><span>Book Now</span></a></div>
+</div>
+<div class="animate" data-state="florida" data-id="id-76">
+<div class="numberBox">NO.<br>
+76</div>
+<div class="coursePic"><img alt="" src="http://www.golfnow.com/coursedirectory/img/fl/brooksville/world-woods-golf-club---pine-barrens-course/default.jpgx" height="73" width="98"></div>
+<div class="courseInfo">
+<h1>World Woods Golf Club - Pine Barrens Course</h1>
+Location: Brooksville, FL</div>
+<div class="bookNow"><a id="bookNow" title="Book Now" href="http://www.golfnow.com/tampa/tee-times/golf-courses/fl---n-tampabrooksville/world-woods-golf-club---pine-barrens/search"><span>Book Now</span></a></div>
+</div>
+<div class="animate" data-state="delaware" data-id="id-79">
+<div class="numberBox">NO.<br>
+79</div>
+<div class="coursePic"><img alt="" src="http://www.golfnow.com/coursedirectory/img/de/selbyville/bayside-resort-golf-club/default.jpgx" height="73" width="98"></div>
+<div class="courseInfo">
+<h1>Bayside Resort Golf Club</h1>
+Location: Selbyville, DE</div>
+<div class="bookNow"><a id="bookNow" title="Book Now" href="http://www.golfnow.com/richmond/tee-times/golf-courses/md--ocean-cityeast-shore/bayside-resort-golf-club/search"><span>Book Now</span></a></div>
+</div>
+<div class="animate" data-state="hawaii" data-id="id-80">
+<div class="numberBox">NO.<br>
+80</div>
+<div class="coursePic"><img alt="" src="http://www.golfnow.com/coursedirectory/img/hi/princeville/princeville-makai-golf-club/default.jpgx" height="73" width="98"></div>
+<div class="courseInfo">
+<h1>Princeville Makai Golf Club</h1>
+Location:Princeville, HI</div>
+<div class="bookNow"><a id="bookNow" title="Book Now" href="http://www.golfnow.com/hawaii/tee-times/golf-courses/hi---kauai/princeville-makai-troon-golf/search"><span>Book Now</span></a></div>
+</div>
+<div class="animate" data-state="hawaii" data-id="id-82">
+<div class="numberBox">NO.<br>
+82</div>
+<div class="coursePic"><img alt="" src="http://www.golfnow.com/coursedirectory/img/hi/kaneohe/koolau-golf-club/default.jpgx" height="73" width="98"></div>
+<div class="courseInfo">
+<h1>Ko'olau Golf Club</h1>
+Location: Kaneohe, HI</div>
+<div class="bookNow"><a id="bookNow" title="Book Now" href="http://www.golfnow.com/hawaii/tee-times/golf-courses/hi---oahu/koolau-golf-club/search"><span>Book Now</span></a></div>
+</div>
+<!--    <div class="animate" data-state="" data-id="id-88">
+        <div class="numberBox">NO.<br />
+          88</div>
+        <div class="coursePic"><img alt="" width="98" height="73" src="" /></div>
+        <div class="courseInfo">
+          <h1></h1>
+          Location: </div>
+        <div class="bookNow"><a id="bookNow" title="Book Now" href=""><span>Book Now</span></a></div>
+      </div> -->
+<div class="animate" data-state="california" data-id="id-89">
+<div class="numberBox">NO.<br>
+89</div>
+<div class="coursePic"><img alt="" src="http://www.golfnow.com/coursedirectory/img/ca/poway/maderas-golf-club/default.jpgx" height="73" width="98"></div>
+<div class="courseInfo">
+<h1>Maderas Golf Club</h1>
+Location: Poway, CA</div>
+<div class="bookNow"><a id="bookNow" title="Book Now" href="http://www.golfnow.com/sandiego/tee-times/golf-courses/ca---san-diego-north/maderas-golf-club/search"><span>Book Now</span></a></div>
+</div>
+<div class="animate" data-state="hawaii" data-id="id-91">
+<div class="numberBox">NO.<br>
+91</div>
+<div class="coursePic"><img alt="" src="http://www.golfnow.com/coursedirectory/img/hi/koloa/poipu-bay-resort-golf-course/default.jpgx" height="73" width="98"></div>
+<div class="courseInfo">
+<h1>Poipu Bay Resort Golf Course</h1>
+Location: Koloa, HI</div>
+<div class="bookNow"><a id="bookNow" title="Book Now" href="http://www.golfnow.com/hawaii/tee-times/golf-courses/hi---kauai/poipu-bay-golf-course/search"><span>Book Now</span></a></div>
+</div>
+<div class="animate" data-state="nevada" data-id="id-92">
+<div class="numberBox">NO.<br>
+92</div>
+<div class="coursePic"><img alt="" src="http://www.golfnow.com/coursedirectory/img/nv/stateline/edgewood-tahoe-golf-course/default.jpgx" height="73" width="98"></div>
+<div class="courseInfo">
+<h1>Edgewood Tahoe Golf Course</h1>
+Location: Stateline, NV</div>
+<div class="bookNow"><a id="bookNow" title="Book Now" href="http://www.golfnow.com/reno/tee-times/golf-courses/ca----lake-tahoe/edgewood-tahoe-golf-course/search"><span>Book Now</span></a></div>
+</div>
+<div class="animate" data-state="hawaii" data-id="id-93">
+<div class="numberBox">NO.<br>
+93</div>
+<div class="coursePic"><img alt="" src="http://www.golfnow.com/coursedirectory/img/hi/kihei/wailea-golf-club/default.jpgx" height="73" width="98"></div>
+<div class="courseInfo">
+<h1>Wailea Golf Club - Gold Course</h1>
+Location: Wailea, Maui, HI</div>
+<div class="bookNow"><a id="bookNow" title="Book Now" href="http://www.golfnow.com/hawaii/tee-times/golf-courses/hi---maui/wailea-golf-club---gold-course/search"><span>Book Now</span></a></div>
+</div>
+<div class="animate" data-state="southcarolina" data-id="id-97">
+<div class="numberBox">NO.<br>
+97</div>
+<div class="coursePic"><img alt="" src="http://www.golfnow.com/coursedirectory/img/sc/pawleys-island/caledonia-golf-and-fish-club/default.jpgx" height="73" width="98"></div>
+<div class="courseInfo">
+<h1>Caledonia Golf &amp; Fish Club</h1>
+Location: Pawleys Island, SC</div>
+<div class="bookNow"><a id="bookNow" title="Book Now" href="http://www.golfnow.com/myrtle-beach/tee-times/golf-courses/sc---myrtle-beach/caledonia-golf-and-fish-club/search"><span>Book Now</span></a></div>
+</div>
+<div class="animate" data-state="southcarolina" data-id="id-98">
+<div class="numberBox">NO.<br>
+98</div>
+<div class="coursePic"><img alt="" src="http://www.golfnow.com/coursedirectory/img/sc/murrells-inlet/tpc-of-myrtle-beach/default.jpgx" height="73" width="98"></div>
+<div class="courseInfo">
+<h1>TPC of Myrtle Beach</h1>
+Location: Murrells Inlet, SC</div>
+<div class="bookNow"><a id="bookNow" title="Book Now" href="http://www.golfnow.com/myrtle-beach/tee-times/golf-courses/sc---myrtle-beach/tpc-myrtle-beach/search"><span>Book Now</span></a></div>
+</div>
+<div class="animate" data-state="colorado" data-id="id-99">
+<div class="numberBox">NO.<br>
+99</div>
+<div class="coursePic"><img alt="" src="http://www.golfnow.com/coursedirectory/img/co/grand-junction/the-golf-club-at-redlands-mesa/default.jpgx" height="73" width="98"></div>
+<div class="courseInfo">
+<h1>The Golf Club At Redlands Mesa</h1>
+Location: Grand Junction, CO</div>
+<div class="bookNow"><a id="bookNow" title="Book Now" href="http://www.golfnow.com/denver/tee-times/golf-courses/co---grand-junctionmontrose/redlands-mesa-golf-club/search"><span>Book Now</span></a></div>
+</div>
+</div>
+<div class="footer">&nbsp;</div>
+</div>
+</div>
+	    <div class="clear"></div>
+	</div>
+</div>
+
+<!-- TEMPLATE DATA END -->
+
+
+        </div>
+        <!-- start footer -->        
+        <div class="clear"></div>
+        <div id="footer">
+            
+
+
+	<div class="footerBlock">
+		<div class="top">Global Links:</div>
+		<div class="links">
+		<a href="/sign-up" rel="nofollow">Sign up for our email Club</a>
+		<a rel="nofollow" href="/news-and-resources/">Golf News &amp; Resources</a>
+		<a href="/support" rel="nofollow">Customer Support</a>
+		<a href="/support/feedback" rel="nofollow">Website Feedback</a>
+		</div>
+	</div>
+
+	<div id="ctl00_Footer1_ctl00_golfNowResources" class="footerBlock">
+	<div class="top">GolfNow Resources:</div>
+		<div class="links">
+		<!-- <a href="/searchresults" id="ctl00_Footer1_ctl00_searchGolfNow" rel="nofollow">Search GolfNow</a> -->
+		<a href="/course-directory">Course Directory</a>
+		<a href="/affiliate-program" rel="nofollow">Affiliate Program</a>
+		
+		</div>
+	</div>
+	<div class="footerBlock">
+	<div class="top">About Us:</div>
+		<div class="links">
+		<a href="/about-us">Company Information</a>
+		<a href="/about-us/privacy-policy">Privacy Policy</a>
+		<a href="/about-us/terms-of-use">Terms of Use</a>
+		<a href="http://www.comcast.com/independentprogramming">Independent Programming Report</a>
+		<a href="/support/contact-us">Contact Us</a>
+		<a href="/support/feedback">Feedback</a>				
+		</div>
+	</div>
+	<div class="footerBlock fbright">
+	<div class="top">Golf Channel Solutions:</div>
+		<div class="links">
+		<a href="http://www.golfchannelsolutions.com" target="_blank" rel="nofollow">Course Operators</a>
+		<a href="http://www.golfchannelsolutions.com" target="_blank" rel="nofollow">Partner Programs</a>
+		<a href="http://www.golfchannelsolutions.com" target="_blank" rel="nofollow">Advertisers</a>
+		</div>
+		<div class="poweredby"><a href="http://www.golfchannel.com" target="_blank"></a></div>
+	</div>
+
+<div class="clear"></div>
+<div class="utilityFooter">
+<div class="left copyright">© <span>2013 GolfNow.com</span> | <a href="/sitemap/">Site Map</a></div>
+<div class="clear"></div>
+	</div>
+	<div class="clear"></div>
+	
+	
+<!-- Steel House Tracking -->
+<script src="http://px.steelhousemedia.com/st?aid=9530&amp;cb=37721416055725640&amp;shcv=&amp;shcq=&amp;shcp=&amp;shpn=&amp;shpc=&amp;shpp=&amp;shpb=&amp;shpi=&amp;shps=&amp;tdr=&amp;plh=http%3A%2F%2Fwww.golfnow.com%2Ftop100%2F%3F%2FTRK%3DBAN_GNOW_HP450x100_1" type="text/javascript"></script><script type="text/javascript">
+var shver='2.8.6'; 
+var shpn='';
+var shpc='';
+var shpp='';
+var shpb='';
+var shpi='';
+var shps='';
+var shcv='';
+var shcq='';
+var shcp=''; 
+var additional='';
+var aid='9530';var tdr='';if (top.document.referrer != ''){tdr = encodeURIComponent(top.document.referrer);}var plh='';if (parent.location.href != ''){plh = encodeURIComponent(parent.location.href);}shpi = encodeURIComponent(shpi);(function(){steelhouse={add:function(a,b,c,d){d=d||false;if(a.addEventListener){a.addEventListener(b,c,d)}else if(a.attachEvent){a.attachEvent("on"+b,c)}},load:function(){var a;if(typeof a=='undefined'){a=Math.random()*100000000000000000}var b=document.createElement('script');var c='px.steelhousemedia.com/st?aid='+aid+'&cb='+a+'&shcv='+shcv+'&shcq='+shcq+'&shcp='+shcp+'&shpn='+shpn+'&shpc='+shpc+'&shpp='+shpp+'&shpb='+shpb+'&shpi='+shpi+'&shps='+shps+'&tdr='+tdr+'&plh='+plh+additional;b.type='text/javascript';b.src=('https:'==document.location.protocol?'https://':'http://')+c;var d=document.getElementsByTagName('script');var e=Number(d.length)-1;var f=document.getElementsByTagName('script')[e];f.parentNode.insertBefore(b,f)}};steelhouse.load();})();
+</script>
+<!-- Steel House Tracking -->
+
+
+<!-- Google Code for Q4 2012 Remarketing Test -->
+<!-- Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. For instructions on adding this tag and more information on the above requirements, read the setup guide: google.com/ads/remarketingsetup -->
+<script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = 1027931205;
+    var google_conversion_label = "1bkwCM-J5gMQxfiT6gM";
+    var google_custom_params = window.google_tag_params;
+    var google_remarketing_only = true;
+    /* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script><iframe name="google_conversion_frame" src="http://googleads.g.doubleclick.net/pagead/viewthroughconversion/1027931205/?random=1369453182884&amp;cv=7&amp;fst=1369453182884&amp;num=1&amp;fmt=1&amp;label=1bkwCM-J5gMQxfiT6gM&amp;guid=ON&amp;u_h=1024&amp;u_w=1280&amp;u_ah=984&amp;u_aw=1280&amp;u_cd=24&amp;u_his=50&amp;u_tz=-300&amp;u_java=false&amp;u_nplug=0&amp;u_nmime=0&amp;url=http%3A//www.golfnow.com/top100/%3F/TRK%3DBAN_GNOW_HP450x100_1&amp;frm=0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" frameborder="0" height="13" scrolling="no" width="300"><img height="1" width="1" border="0" src="http://googleads.g.doubleclick.net/pagead/viewthroughconversion/1027931205/?frame=0&random=1369453182884&cv=7&fst=1369453182884&num=1&fmt=1&label=1bkwCM-J5gMQxfiT6gM&guid=ON&u_h=1024&u_w=1280&u_ah=984&u_aw=1280&u_cd=24&u_his=50&u_tz=-300&u_java=false&u_nplug=0&u_nmime=0&url=http%3A//www.golfnow.com/top100/%3F/TRK%3DBAN_GNOW_HP450x100_1&frm=0" /></iframe>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1027931205/?value=0&amp;label=1bkwCM-J5gMQxfiT6gM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript> 
+<!-- Google Code for Q4 2012 Remarketing Test -->
+
+<!-- Fetchback -->
+<iframe src="https://pixel.fetchback.com/serve/fb/pdj?cat=&amp;name=landing&amp;sid=4436" marginheight="0" marginwidth="0" frameborder="0" height="1" scrolling="no" width="1"></iframe>
+<!-- Fetchback -->
+
+
+	
+
+        </div>
+        <div class="clear"></div>
+        <div class="bottomAd">
+            
+        </div>
+        <!-- end footer -->
+
+    <!-- end container -->
+    </div>
+    <!-- end outer -->
+    <div class="clear" style="display:none;">
+
+<!-- begin Marin Software Tracking Script -->
+<script type="text/javascript">
+var _marinClientId = "hk3pbm8pl0";
+var _marinProto = (("https:" == document.location.protocol) ? "https://" : "http://");
+document.write(unescape("%3Cscript src='" + _marinProto + "tracker.marinsm.com/tracker/" +
+_marinClientId + ".js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="http://tracker.marinsm.com/tracker/hk3pbm8pl0.js" type="text/javascript"></script>
+<script type="text/javascript">
+try {
+_marinTrack.trackPage();
+} catch(err) {}
+</script><img src="http://tracker.marinsm.com/tp?act=1&amp;cid=hk3pbm8pl0&amp;tz=5&amp;ref=&amp;page=http%3A%2F%2Fwww.golfnow.com%2Ftop100%2F%3F%2FTRK%3DBAN_GNOW_HP450x100_1&amp;uuid=0F19BAC4-81ED-48EC-9A55-FEEE868496E9&amp;rnd=599971467" height="1" width="1" border="0">
+<noscript>
+<img src="https://tracker.marinsm.com/tp?act=1&cid=hk3pbm8pl0&script=no" >
+</noscript>
+<!-- end Copyright Marin Software -->
+
+<script src="//www.nbcudigitaladops.com/hosted/global.js"></script><script src="//www.nbcudigitaladops.com/hosted/jscript/golfnow_com.js"></script><!-- BEGIN Krux Control Tag for NBC Sports - GolfNow --><script class="kxct" data-id="HxufzCf9" data-version="async:1.7" type="text/javascript">  window.Krux||((Krux=function(){Krux.q.push(arguments)}).q=[]);  (function(){    var k=document.createElement('script');k.type='text/javascript';k.async=true;    var m,src=(m=location.href.match(/\bkxsrc=([^&]+)/))&&decodeURIComponent(m[1]);        k.src = /^https?:\/\/([^\/]+\.)?krxd\.net(:\d{1,5})?\//i.test(src) ? src : src === "disable" ? "" :      (location.protocol==="https:"?"https:":"http:")+"//cdn.krxd.net/controltag?confid=HxufzCf9";    var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(k,s);  })();</script><!-- END Krux Controltag --><img src="//www.nbcudigitaladops.com/hosted/housepix.gif" style="display:none" height="0" width="0">
+</div>
+      </div>
+    
+
+<!-- Omniture code goes at the bottom of the page above the </body> tags -->
+<script language="JavaScript" type="text/javascript" src="/global/js/s_code.js"></script>
+
+
+<script language="JavaScript"><!--
+s.pageName="Top 100";
+s.server="www.golfnow.com";
+s.channel="global";
+s.pageType="";
+s.prop1="";
+s.prop2="";
+s.prop3="";
+s.prop4="home";
+s.prop6="";
+s.prop7="";
+s.prop10="";
+s.prop11="";
+s.prop12="";
+s.prop13="";
+/* E-commerce Variables */
+s.campaign="";
+s.state="";
+s.zip="";
+s.events="";
+s.products="";
+s.purchaseID="";
+s.eVar1="";
+s.eVar2="";
+s.eVar3="";
+s.eVar4="";
+s.eVar5="";
+s.eVar6="";
+s.eVar7="";
+s.eVar8="";
+s.eVar10="";
+s.eVar11="";
+s.eVar12="";
+s.eVar13="";
+s.eVar17="";
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)//--></script>
+
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="http://www.google-analytics.com/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-275414-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>    
+
+
+
+<table class="gstl_0 gssb_c" style="width: 215px; display: none; top: 40px; left: 782px; position: absolute;" cellpadding="0" cellspacing="0"><tbody><tr><td class="gssb_f"></td><td style="width: 100%;" class="gssb_e"></td></tr></tbody></table></body>

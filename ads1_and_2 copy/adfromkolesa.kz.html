@@ -1,0 +1,1603 @@
+<head><script async="" src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en_US.d8yU-wcNYlQ.O/m=plusone/rt=j/sv=1/d=1/ed=1/am=UQ/rs=AItRSTNFCVmDFU3r-qDb4qDOc5bk3EYiag/cb=gapi.loaded_0"></script>
+<title>?????. ???????????? ? ?????????? — ?????????? ? ??????? ???????????? ??????????</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="«?????» — ?????? ?????? ?????????? ????? ? ???????????? ???????????? ? ??????????. ???????, ??????? ? ?????? ???????, ?????, ??????, ???????? ?? ????? ??????????.">
+<meta name="keywords" content="????????????, ?????, ??????, ???????, ???????, ????????, ????, ????, ?????????">
+<meta http-equiv="X-UA-Compatible" content="IE=7">
+<link href="http://static.kr.kcdn.kz/css/undohtml.css" media="screen" rel="stylesheet" type="text/css">
+<link href="http://static.kr.kcdn.kz/css/styles.css?t=20130501171006" media="screen" rel="stylesheet" type="text/css">
+<link href="http://static.kr.kcdn.kz/js/jquery/fancybox/jquery.fancybox-1.3.1.css" media="screen" rel="stylesheet" type="text/css"><script src="//connect.facebook.net/ru_RU/all.js#xfbml=1&amp;appId=467515939986813" id="facebook-jssdk"></script><script src="//platform.twitter.com/widgets.js" id="twitter-wjs"></script><script gapi_processed="true" src="https://apis.google.com/js/plusone.js" async="" type="text/javascript"></script><script src="http://stats.g.doubleclick.net/dc.js" async="" type="text/javascript"></script><script type="text/javascript" src="http://static.kr.kcdn.kz/js/jquery/jquery-1.4.2.min.js"></script>
+<script type="text/javascript">
+    //<![CDATA[
+$(document).ready(function(){return function(event){
+$("#fs-choose-btn-1,#fs-choose-btn-2,#fs-choose-btn-3").css({visibility: "hidden"});
+$("#sgeo").show().geoSearch({
+    fader: "#regionFade",
+    overlay: "#sgeo_overlay",
+    selects: "#map_geo_id_1,#map_geo_id_2,#map_geo_id_3",
+    buttons: "#fs-choose-btn-1,#fs-choose-btn-2,#fs-choose-btn-3,#fs-choose-btn-4",
+    handle: "#sgeo_handle",
+    url: "/ajax/regions",
+    defaultText: "?? ???? ????????",
+    onLoad: function(data) {$("#sgeo").attr(data); },
+    onClick: function(data) {$("input.geoLatLon").remove(); $("#sgeo").removeAttr("la").removeAttr("lo").attr(data).trigger('region_select');}
+});
+function applyRegionChoose(){
+    if($("#fs-choose-btn-1").css("visibility")!="hidden") $("#fs-choose-btn-1").click();
+    if($("#fs-choose-btn-2").css("visibility")!="hidden") $("#fs-choose-btn-2").click();
+    if($("#fs-choose-btn-3").css("visibility")!="hidden") $("#fs-choose-btn-3").click();
+    return true;
+}
+$("#regionFade").click(function() {applyRegionChoose(); });
+$("#sgeo_handle").click(function() {applyRegionChoose();});
+
+}}());    //]]>
+</script>
+<script type="text/javascript" src="http://static.kr.kcdn.kz/js/select-chain.js?t=20130405085113"></script>
+<script type="text/javascript" src="http://static.kr.kcdn.kz/js/sgeo.js?t=20130404160720"></script>
+<script type="text/javascript" src="http://static.kr.kcdn.kz/js/flot/jquery.flot.js"></script>
+<script type="text/javascript" src="http://static.kr.kcdn.kz/js/jquery/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://static.kr.kcdn.kz/js/jquery/fancybox/jquery.fancybox-1.3.1.pack.js"></script>
+<script type="text/javascript" src="http://static.kr.kcdn.kz/js/jquery/jquery.pngbutton.js"></script>
+<script type="text/javascript" src="http://static.kr.kcdn.kz/js/fav.js?t=20130404160720"></script>
+<script type="text/javascript" src="http://static.kr.kcdn.kz/js/common.js?t=20130404160720"></script>    <!--GoogleAnalytics-->
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-20095530-1']);
+    _gaq.push(['_setDomainName', 'krisha.kz']);
+    _gaq.push(['_clearOrganic']);
+    _gaq.push(['_addOrganic', 'yandex.ru', 'query']);
+    _gaq.push(['_addOrganic', 'yandex.kz', 'query']);
+    _gaq.push(['_addOrganic', 'yandex.ua', 'query']);
+    _gaq.push(['_addOrganic', 'images.yandex.ru', 'text']);
+    _gaq.push(['_addOrganic', 'blogs.yandex.ru', 'text']);
+    _gaq.push(['_addOrganic', 'video.yandex.ru', 'text']);
+    _gaq.push(['_addOrganic', 'images.yandex.kz', 'text']);
+    _gaq.push(['_addOrganic', 'google.ru', 'q']);
+    _gaq.push(['_addOrganic', 'google.com', 'q']);
+    _gaq.push(['_addOrganic', 'images.google.com', 'q']);
+    _gaq.push(['_addOrganic', 'images.google.kz', 'q']);
+    _gaq.push(['_addOrganic', 'maps.google.com', 'q']);
+    _gaq.push(['_addOrganic', 'mail.ru', 'q']);
+    _gaq.push(['_addOrganic', 'go.mail.ru', 'q']);
+    _gaq.push(['_addOrganic', 'google.kz', 'q']);
+    _gaq.push(['_addOrganic', 'google.com.ua', 'q']);
+    _gaq.push(['_addOrganic', 'images.google.ru', 'q']);
+    _gaq.push(['_addOrganic', 'maps.google.ru', 'q']);
+    _gaq.push(['_addOrganic', 'rambler.ru', 'words']);
+    _gaq.push(['_addOrganic', 'nova.rambler.ru', 'query']);
+    _gaq.push(['_addOrganic', 'nova.rambler.ru', 'words']);
+    _gaq.push(['_addOrganic', 'gogo.ru', 'q']);
+    _gaq.push(['_addOrganic', 'nigma.ru', 's']);
+    _gaq.push(['_addOrganic', 'search.qip.ru', 'query']);
+    _gaq.push(['_addOrganic', 'webalta.ru', 'q']);
+    _gaq.push(['_addOrganic', 'sm.aport.ru', 'r']);
+    _gaq.push(['_addOrganic', 'meta.ua', 'q']);
+    _gaq.push(['_addOrganic', 'search.bigmir.net', 'z']);
+    _gaq.push(['_addOrganic', 'search.i.ua', 'q']);
+    _gaq.push(['_addOrganic', 'index.online.ua', 'q']);
+    _gaq.push(['_addOrganic', 'web20.a.ua', 'query']);
+    _gaq.push(['_addOrganic', 'search.ukr.net', 'search_query']);
+    _gaq.push(['_addOrganic', 'search.com.ua', 'q']);
+    _gaq.push(['_addOrganic', 'search.ua', 'q']);
+    _gaq.push(['_addOrganic', 'poisk.ru', 'text']);
+    _gaq.push(['_addOrganic', 'go.km.ru', 'sq']);
+    _gaq.push(['_addOrganic', 'liveinternet.ru', 'ask']);
+    _gaq.push(['_addOrganic', 'gde.ru', 'keywords']);
+    _gaq.push(['_addOrganic', 'affiliates.quintura.com', 'request']);
+    _gaq.push(['_addOrganic', 'akavita.by', 'z']);
+    _gaq.push(['_addOrganic', 'search.tut.by', 'query']);
+    _gaq.push(['_addOrganic', 'all.by', 'query']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+<!--/GoogleAnalytics-->
+        <script type="text/javascript" src="//vk.com/js/api/openapi.js?83"></script>
+    <script type="text/javascript">
+        VK.init({apiId: 3505118, onlyWidgets: true});
+        VK.Widgets.Like("vk_like", {type: "mini"});
+    </script>
+
+<!--[if IE]>
+    <script language="javascript" type="text/javascript" src="http://static.kr.kcdn.kz/js/flot/excanvas.pack.js"></script>
+    <script type="text/javascript">
+        window.attachEvent('onload', mmWidth);
+        window.attachEvent('onresize', mmWidth);
+
+        function mmWidth()
+            {
+            var DCW = document.documentElement.clientWidth;
+            var BCW = document.body.clientWidth;
+
+            var width = '100%';
+
+            if((DCW || BCW) < 990)
+                { width = '990px'; }
+            else if((DCW || BCW) > 1200)
+                {
+                width = '1200px';
+                document.getElementById('layout').style.marginLeft = ((BCW - 1200) / 2) + 'px';
+                }
+
+            //var width = ((document.documentElement.clientWidth || document.body.clientWidth) < 990) ? '990px' : ((document.documentElement.clientWidth || document.body.clientWidth) > 1320) ? '1320px' : '100%';
+            document.getElementById('layout').style.width = width;
+
+            };
+
+    </script>
+<![endif]-->
+<script type="text/javascript">
+    function brGet(obj, placeCode, id, dir) {
+        $.get("/index/br", {placeCode: placeCode, id: id, dir: dir}, function(data) {
+            $("#br_" + id).replaceWith(data);
+        }, "html");
+
+        return false;
+    }
+
+    function brLeft(obj, placeCode, id) {
+        return brGet(obj, placeCode, id, -1);
+    }
+
+    function brRight(obj, placeCode, id) {
+        return brGet(obj, placeCode, id, 1);
+    }
+</script>
+
+<link href="/favicon.ico" rel="shortcut icon">
+
+    <script type="text/javascript">
+    (function() {
+        var useSSL = 'https:' == document.location.protocol;
+        var src = (useSSL ? 'https:' : 'http:') +
+                '//www.googletagservices.com/tag/js/gpt.js';
+        document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+    })();
+</script><script src="http://www.googletagservices.com/tag/js/gpt.js"></script>
+
+<script type="text/javascript">
+    googletag.defineSlot('/47763208/krisha_home_240x400', [240, 400], 'div-gpt-ad-1355909730799-0').addService(googletag.pubads());
+googletag.defineSlot('/47763208/krisha_search_top_240x400', [240, 400], 'div-gpt-ad-1355909953969-0').addService(googletag.pubads());
+googletag.defineSlot('/47763208/krisha_search_bottom_240x400', [240, 400], 'div-gpt-ad-1355910008876-0').addService(googletag.pubads());
+googletag.defineSlot('/47763208/krisha_search_bottom_550x80', [550, 80], 'div-gpt-ad-1355910234844-0').addService(googletag.pubads());
+googletag.defineSlot('/47763208/krisha_search_top_550x80', [550, 80], 'div-gpt-ad-1355910119185-0').addService(googletag.pubads());
+googletag.defineSlot('/47763208/krisha_ad_240x400', [240, 400], 'div-gpt-ad-1355911028497-0').addService(googletag.pubads());
+googletag.defineSlot('/47763208/krisha_vip_980x100', [980, 100], 'div-gpt-ad-1361353908903-0').addService(googletag.pubads());
+    googletag.pubads().collapseEmptyDivs();
+    googletag.pubads().enableSyncRendering();
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+</script><script type="text/javascript" src="http://partner.googleadservices.com/gampad/google_ads_gpt.js"></script>
+
+<script src="http://pagead2.googlesyndication.com/pagead/osd.js" type="text/javascript"></script><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}
+.fb_invisible{display:none}
+.fb_reset{background:none;border-spacing:0;border:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}
+.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}
+.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}
+.fb_dialog_content{background:#fff;color:#333}
+.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px;top:8px\9;right:7px\9}
+.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}
+.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}
+.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}
+.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}
+.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}
+.fb_dialog_top_left,
+.fb_dialog_top_right,
+.fb_dialog_bottom_left,
+.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}
+/* @noflip */
+.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}
+/* @noflip */
+.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}
+/* @noflip */
+.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}
+/* @noflip */
+.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right,
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right{width:10px;height:100%}
+.fb_dialog_vert_left{margin-left:-10px}
+.fb_dialog_vert_right{right:0;margin-right:-10px}
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{width:100%;height:10px}
+.fb_dialog_horiz_top{margin-top:-10px}
+.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}
+.fb_dialog_iframe{line-height:0}
+.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}
+.fb_dialog_content .dialog_title > span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif)
+no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}
+body.fb_hidden{-webkit-transform:none;height:100%;margin:0;left:-10000px;overflow:visible;position:absolute;top:-10000px;width:100%
+}
+.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif)
+white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}
+.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}
+#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}
+#fb-root #fb_dialog_ipad_overlay.hidden{display:none}
+.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}
+.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0 0, 0 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}
+.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%
+}
+.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0 0, 0 100%, from(#4966A6),
+color-stop(0.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset,
+rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}
+.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}
+.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}
+.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}
+#fb_dialog_loader_close{float:left}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}
+.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}
+.fb_iframe_widget iframe{position:absolute}
+.fb_iframe_widget_lift{z-index:1}
+.fb_hide_iframes iframe{position:relative;left:-10000px}
+.fb_iframe_widget_loader{position:relative;display:inline-block}
+.fb_iframe_widget_fluid{display:inline}
+.fb_iframe_widget_fluid span{width:100%}
+.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}
+.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_connect_bar_container div,
+.fb_connect_bar_container span,
+.fb_connect_bar_container a,
+.fb_connect_bar_container img,
+.fb_connect_bar_container strong{background:none;border-spacing:0;border:0;direction:ltr;font-style:normal;font-variant:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal;vertical-align:baseline}
+.fb_connect_bar_container{position:fixed;left:0 !important;right:0 !important;height:42px !important;padding:0 25px !important;margin:0 !important;vertical-align:middle !important;border-bottom:1px solid #333 !important;background:#3b5998 !important;z-index:99999999 !important;overflow:hidden !important}
+.fb_connect_bar_container_ie6{position:absolute;top:expression(document.compatMode=="CSS1Compat"? document.documentElement.scrollTop+"px":body.scrollTop+"px")}
+.fb_connect_bar{position:relative;margin:auto;height:100%;width:100%;padding:6px 0 0 0 !important;background:none;color:#fff !important;font-family:"lucida grande", tahoma, verdana, arial, sans-serif !important;font-size:13px !important;font-style:normal !important;font-variant:normal !important;font-weight:normal !important;letter-spacing:normal !important;line-height:1 !important;text-decoration:none !important;text-indent:0 !important;text-shadow:none !important;text-transform:none !important;white-space:normal !important;word-spacing:normal !important}
+.fb_connect_bar a:hover{color:#fff}
+.fb_connect_bar .fb_profile img{height:30px;width:30px;vertical-align:middle;margin:0 6px 5px 0}
+.fb_connect_bar div a,
+.fb_connect_bar span,
+.fb_connect_bar span a{color:#bac6da;font-size:11px;text-decoration:none}
+.fb_connect_bar .fb_buttons{float:right;margin-top:7px}
+.fb_edge_widget_with_comment{position:relative;*z-index:1000}
+.fb_edge_widget_with_comment span.fb_edge_comment_widget{position:absolute}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget{z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget .FB_Loader{left:0;top:1px;margin-top:6px;margin-left:0;background-position:50% 50%;background-color:#fff;height:150px;width:394px;border:1px #666 solid;border-bottom:2px solid #283e6c;z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.dark .FB_Loader{background-color:#000;border-bottom:2px solid #ccc}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.siderender
+.FB_Loader{margin-top:0}
+.fbpluginrecommendationsbarleft,
+.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}
+/* @noflip */
+.fbpluginrecommendationsbarleft{left:10px}
+/* @noflip */
+.fbpluginrecommendationsbarright{right:10px}</style></head>
+<body data-twttr-rendered="true">
+    <div class="layout" id="layout">
+        <div style="background:url(http://static.kr.kcdn.kz/passport/016/791/br/bg.png/full.png)"><div class="topb super-vip"><div id="br_1616"><a href="http://krisha.kz/index/click/?id=1616" target="_blank"><img src="http://static.kr.kcdn.kz/passport/016/791/br/kolesa_kz_900x30.jpg/full.jpg" alt="" height="30" width="100%"></a><div class="banner-buttons"><a href="#" id="br_l_1616" onclick="return brLeft(this, 'super-vip', 1616)" style="" class="prev-b">&nbsp;&nbsp;&nbsp;</a><a href="#" id="br_r_1616" onclick="return brRight(this, 'super-vip', 1616)" style="" class="next-b">&nbsp;&nbsp;&nbsp;</a></div><script type="text/javascript">$("#br_l_1616, #br_r_1616").show();</script></div><div id="vip-banner-close"><a title="?????? ??????" href="#"><img src="http://static.kr.kcdn.kz/i/close-banner-new.png"></a></div></div></div><script>$(document).ready(function(){$('#vip-banner-close a').click(function(){$.cookie('super-vip-close-1616', 1, {expires : 60});$('.super-vip').hide();return false;});});</script>        <div class="switchSite">
+        <ul class="sites">
+            <li><a href="http://kolesa.kz">??????????</a></li>
+            <li><strong>????????????</strong></li>
+        </ul>
+        <ul class="user">
+                    <li class="key"><a href="/my">?????? ???????</a></li>
+            <li><a href="/passport/register">???????????</a></li>
+                </ul>
+        <div class="switchArrow"></div>
+</div>
+        <table width="100%" cellpadding="0" cellspacing="0">
+    <tbody><tr>
+        <td style="position: relative; z-index:100;" class="region-container" valign="top" width="174px" align="center">
+            <div style="position: relative;">            <img src="http://static.kr.kcdn.kz/i/logo.png" id="logo" alt="?????" title="???????????? ??????????" height="47" width="156" align="left">
+                        <br><div class="clear"></div>
+            <span class="place4more" id="regionContainer" style="display: block"><a href="#" class="heading region-select" id="regionSelect">??? ???????<img src="http://static.kr.kcdn.kz/i/0.gif" height="4" width="7"></a></span><div class="region-hint" id="region_hint"><nobr>???????? ??? ?????. <a class="close" href="javascript: cl($('#region_hint'))">×</a></nobr></div><div class="region-select-panel" style="display:none" id="regionSelectPanel"><div class="region-corner"></div><form action="/index/set-region" method="post"><ul><li><a href="#" data-id="">??? ???????</a></li><li><a href="#" data-id="2">??????</a></li><li><a href="#" data-id="105">??????</a></li><li><a href="#" data-id="112">??????????? ???.</a></li><li><a href="#" data-id="124">??????????? ???.</a></li><li><a href="#" data-id="132">??????????? ???.</a></li><li><a href="#" data-id="213">?????????? ???.</a></li><li><a href="#" data-id="216">????????-????????????? ???.</a></li><li><a href="#" data-id="227">??????????? ???.</a></li><li><a href="#" data-id="232">???????-????????????? ???.</a></li><li><a href="#" data-id="235">?????????????? ???.</a></li><li><a href="#" data-id="247">???????????? ???.</a></li><li><a href="#" data-id="253">?????????????? ???.</a></li><li><a href="#" data-id="257">????????????? ???.</a></li><li><a href="#" data-id="260">???????????? ???.</a></li><li><a href="#" data-id="264">??????-????????????? ???.</a></li><li><a href="#" data-id="270">????-????????????? ???.</a></li></ul><input id="region-selected" value="" class="region-selected" name="region" type="hidden"><input name="backUrl" value="/" id="backUrl" type="hidden"></form></div>
+                        <script type="text/javascript">
+                $().ready(function(){
+                    $("#regionContainer #regionSelect").click(function(){
+                        cl($('#region_hint'));
+                    });
+                });
+                                    if ($.cookie('saw_region_hint') != '1') {
+                    $('<div class="region-hint" id="region_hint"><nobr>???????? ??? ?????. <a class="close" href="javascript: cl($(\'#region_hint\'))">&times;</a></nobr></div>').insertAfter("#regionContainer");
+                }
+
+                if (location.href.indexOf("a/show") != -1 && navigator.appVersion.indexOf("MSIE") != -1) {
+                    $(document).ready(function () {
+                        $('.lcol:first').css({marginTop: "15px"});
+                    });
+                }
+                                </script>
+            </div>
+        </td>
+        <td valign="top">
+            <div id="menu">
+                <a href="http://krisha.kz/prodazha/" class="first">???????</a> <a href="http://krisha.kz/arenda/">??????</a> <a href="http://krisha.kz/shop">????????</a> <a href="http://krisha.kz/complex/">????? ?????????</a> <a href="http://krisha.kz/prochee/">??????</a> <a href="http://krisha.kz/content" class="last">????????</a>             </div>
+        </td>
+        <td id="myLinksCont" valign="top">
+            <div id="myLinks">
+                <div id="create">
+                    <a href="/a/new"><img src="http://static.kr.kcdn.kz/i/create.gif" alt="" title="" align="absmiddle">??????&nbsp;??????????</a><br>
+                    <small class="gray">100 078 ??????????<br>??? ?? ?????</small>                </div>
+            </div>
+        </td>
+    </tr>
+</tbody></table>
+
+<!--noindex-->
+<form action="/a/search-redirect" method="get" id="searchForm">
+    <input name="cat" value="" type="hidden">
+    <div id="search">
+        <table style="padding:0;margin:0;"><tbody><tr><td>
+<nobr>
+    <select name="for_rent">
+        <option value="0" selected="selected">??????&nbsp;&nbsp;</option>
+        <option value="1">?????</option>
+    </select>
+    &nbsp;
+    <select name="what" class="what_sell">
+        <option value="flat" selected="selected">????????</option>
+        <option value="house">???</option>
+        <option value="dacha">????</option>
+        <option value="land">???????</option>
+        <option value="office">????</option>
+        <option value="premises">?????????</option>
+        <option value="building">??????</option>
+        <option value="shop">???????, ?????</option>
+        <option value="industrial">????????, ?????</option>
+        <option value="estate">?????? ????????????</option>
+    </select>
+    <select name="what" disabled="" style="display: none" class="what_rent">
+        <option value="flat" selected="selected">????????</option>
+        <option value="house">???</option>
+        <option value="room">???????</option>
+        <option value="dacha">????</option>
+        <option value="office">????</option>
+        <option value="premises">?????????</option>
+        <option value="building">??????</option>
+        <option value="shop">???????, ?????</option>
+        <option value="industrial">????????, ?????</option>
+        <option value="estate">?????? ????????????</option>
+    </select>
+    <span style="display: inline;" class="specs_flat">&nbsp;
+        <select name="das[live.rooms]">
+            <option value="" selected="selected">????? ???????????&nbsp;&nbsp;</option>
+            <option value="1">1 ????.</option>
+            <option value="1.2">1-2 ????.</option>
+            <option value="2">2 ????.</option>
+            <option value="2.3">2-3 ????.</option>
+            <option value="3">3 ????.</option>
+            <option value="3.4">3-4 ????.</option>
+            <option value="4">4 ????.</option>
+            <option value="4.5">4-5 ????.</option>
+            <option value="5.999">5 ? ????? ????.</option>
+        </select>
+    </span>
+    <span style="display:none" class="specs_house">&nbsp;
+        <select name="das[live.rooms]" disabled="">
+            <option value="" selected="selected">????? ???????????&nbsp;</option>
+            <option value="1.3">1-3 ????.</option>
+            <option value="4.5">4-5 ????.</option>
+            <option value="5.6">5-6 ????.</option>
+            <option value="6.7">6-7 ????.</option>
+            <option value="7.9">7-9 ????.</option>
+            <option value="10.999">10 ? ????? ????.</option>
+        </select>
+    </span>
+    <span style="display:none" class="specs_dacha specs_land">&nbsp;?? <input disabled="" name="das[land.square][l]" value="" id="land_square_l" size="4" class="text" type="text"> ?? <input disabled="" name="das[land.square][h]" value="" id="land_square_h" size="4" class="text" type="text"> ?????</span>
+    <span style="display:none" class="specs_building specs_office specs_premises specs_building specs_shop">&nbsp;?? <input disabled="" name="das[com.square][l]" value="" id="com_square_l" size="4" class="text" type="text"> ?? <input disabled="" name="das[com.square][h]" value="" id="com_square_h" size="4" class="text" type="text"> ?<sup>2</sup></span>
+    &nbsp;
+    <div class="fs-overlay-c">
+    <div class="fading" id="regionFade"></div>
+
+    <div id="sgeo_overlay" class="fs-overlay " style="z-index:4; display:none">
+        <div class="fs-handle"><a href="#" id="sgeo_handle" class="flink fselect" onclick="return false;">?? ???? ????????</a></div>
+        <div class="fs-bg">
+            <table>
+                <tbody><tr>
+                                        <td>
+                        <select size="16" id="map_geo_id_1" name="das[map.geo_id]"><option value="all">?? ???? ????????</option><option value="" disabled="disabled" m="" t="" la="" lo="" z="" bigcity="" alias=""></option><option value="2" m="yandex" t="road" la="43.2859" lo="76.9129" z="11" bigcity="1" alias="almaty">??????</option><option value="105" m="yandex" t="road" la="51.1583" lo="71.4314" z="11" bigcity="1" alias="astana">??????</option><option value="112" m="google" t="road" la="52.1358" lo="70.0004" z="6" bigcity="0" alias="akmolinskaja-oblast">??????????? ???.</option><option value="124" m="yandex" t="road" la="49.1891" lo="57.2893" z="7" bigcity="0" alias="aktjubinskaja-oblast">??????????? ???.</option><option value="132" m="yandex" t="road" la="45.2151" lo="77.3393" z="6" bigcity="0" alias="almatinskaja-oblast">??????????? ???.</option><option value="213" m="google" t="road" la="47.6679" lo="51.3676" z="6" bigcity="0" alias="atyrauskaja-oblast">?????????? ???.</option><option value="216" m="yandex" t="road" la="48.8247" lo="81.2285" z="6" bigcity="0" alias="vostochno-kazahstanskaja-oblast">????????-????????????? ???.</option><option value="227" m="google" t="road" la="44.2558" lo="72.0988" z="6" bigcity="0" alias="zhambylskaja-oblast">??????????? ???.</option><option value="232" m="yandex" t="road" la="49.989" lo="50.5107" z="7" bigcity="0" alias="zapadno-kazahstanskaja-oblast">???????-????????????? ???.</option><option value="235" m="yandex" t="road" la="48.5337" lo="70.396" z="6" bigcity="0" alias="karagandinskaja-oblast">?????????????? ???.</option><option value="247" m="yandex" t="road" la="51.4697" lo="63.9799" z="6" bigcity="0" alias="kostanajskaja-oblast">???????????? ???.</option><option value="253" m="yandex" t="road" la="45.3425" lo="63.2988" z="6" bigcity="0" alias="kyzylordinskaja-oblast">?????????????? ???.</option><option value="257" m="yandex" t="road" la="44.2648" lo="53.7627" z="6" bigcity="0" alias="mangistauskaja-oblast">????????????? ???.</option><option value="260" m="yandex" t="road" la="52.0809" lo="76.7461" z="6" bigcity="0" alias="pavlodarskaja-oblast">???????????? ???.</option><option value="264" m="yandex" t="road" la="54.4275" lo="68.6491" z="7" bigcity="0" alias="severo-kazahstanskaja-oblast">??????-????????????? ???.</option><option value="270" m="yandex" t="road" la="43.4955" lo="68.4294" z="6" bigcity="0" alias="juzhno-kazahstanskaja-oblast">????-????????????? ???.</option><option value="" disabled="disabled" m="" t="" la="" lo="" z="" bigcity="" alias=""></option><option value="zn">?????????? ????????????</option></select>                        <br>
+                        <input id="fs-choose-btn-1-orig" value="???????" style="display:none" type="button"><input style="position:absolute; right:100000px;" value="???????" type="submit"><a href="#" style="height: 35px; display: inline-block; text-decoration: none; outline: medium none; white-space: nowrap; visibility: hidden;" id="fs-choose-btn-1"><span style="width: 18px; background: url(&quot;http://static.kr.kcdn.kz/i/btn-all.png&quot;) no-repeat scroll 0px 0px transparent; display: inline-block; color: rgb(0, 0, 0); cursor: default; height: 27px; padding: 8px 0px 0px;">&nbsp;</span><span style="background: url(&quot;http://static.kr.kcdn.kz/i/btn-all.png&quot;) repeat-x scroll 0px -35px transparent; display: inline-block; color: rgb(0, 0, 0); cursor: default; height: 27px; padding: 8px 0px 0px;">???????</span><span style="width: 18px; background: url(&quot;http://static.kr.kcdn.kz/i/btn-all.png&quot;) no-repeat scroll -18px 0px transparent; display: inline-block; color: rgb(0, 0, 0); cursor: default; height: 27px; padding: 8px 0px 0px;">&nbsp;</span></a>
+                        <script type="text/javascript">try {
+                            $('#fs-choose-btn-1-orig').pngbutton({btnId:"fs-choose-btn-1"});
+                        } catch (e) {
+                        }</script>
+                    </td>
+                    <td>
+                        <select size="16" id="map_geo_id_2" name="das[map.geo_id]"></select>                        <br>
+                        <input id="fs-choose-btn-2-orig" value="???????" style="display:none" type="button"><input style="position:absolute; right:100000px;" value="???????" type="submit"><a href="#" style="height: 35px; display: inline-block; text-decoration: none; outline: medium none; white-space: nowrap; visibility: hidden;" id="fs-choose-btn-2"><span style="width: 18px; background: url(&quot;http://static.kr.kcdn.kz/i/btn-all.png&quot;) no-repeat scroll 0px 0px transparent; display: inline-block; color: rgb(0, 0, 0); cursor: default; height: 27px; padding: 8px 0px 0px;">&nbsp;</span><span style="background: url(&quot;http://static.kr.kcdn.kz/i/btn-all.png&quot;) repeat-x scroll 0px -35px transparent; display: inline-block; color: rgb(0, 0, 0); cursor: default; height: 27px; padding: 8px 0px 0px;">???????</span><span style="width: 18px; background: url(&quot;http://static.kr.kcdn.kz/i/btn-all.png&quot;) no-repeat scroll -18px 0px transparent; display: inline-block; color: rgb(0, 0, 0); cursor: default; height: 27px; padding: 8px 0px 0px;">&nbsp;</span></a>
+                        <script type="text/javascript">try {
+                            $('#fs-choose-btn-2-orig').pngbutton({btnId:"fs-choose-btn-2"});
+                        } catch (e) {
+                        }</script>
+                    </td>
+                    <td>
+                        <select size="16" id="map_geo_id_3" name="das[map.geo_id]"></select>                        <br>
+                        <input id="fs-choose-btn-3-orig" value="???????" style="display:none" type="button"><input style="position:absolute; right:100000px;" value="???????" type="submit"><a href="#" style="height: 35px; display: inline-block; text-decoration: none; outline: medium none; white-space: nowrap; visibility: hidden;" id="fs-choose-btn-3"><span style="width: 18px; background: url(&quot;http://static.kr.kcdn.kz/i/btn-all.png&quot;) no-repeat scroll 0px 0px transparent; display: inline-block; color: rgb(0, 0, 0); cursor: default; height: 27px; padding: 8px 0px 0px;">&nbsp;</span><span style="background: url(&quot;http://static.kr.kcdn.kz/i/btn-all.png&quot;) repeat-x scroll 0px -35px transparent; display: inline-block; color: rgb(0, 0, 0); cursor: default; height: 27px; padding: 8px 0px 0px;">???????</span><span style="width: 18px; background: url(&quot;http://static.kr.kcdn.kz/i/btn-all.png&quot;) no-repeat scroll -18px 0px transparent; display: inline-block; color: rgb(0, 0, 0); cursor: default; height: 27px; padding: 8px 0px 0px;">&nbsp;</span></a>
+                        <script type="text/javascript">try {
+                            $('#fs-choose-btn-3-orig').pngbutton({btnId:"fs-choose-btn-3"});
+                        } catch (e) {
+                        }</script>
+                    </td>
+
+                </tr>
+            </tbody></table>
+        </div>
+    </div>
+</div>
+<a href="#" id="sgeo" class="flink fselect " style="" onclick="return false;">?? ???? ????????</a>
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+    <input id="_price_srch_l" class="text gray_input" size="6" value="??" name="das[_price.srch][l]" type="text"> —
+    <input id="_price_srch_h" class="text gray_input" size="6" value="??" name="das[_price.srch][h]" type="text">&nbsp;
+
+    <span class="rent_currency"><select name="das[price.currency]">
+            <option value="1">$</option>
+            <option value="2">??</option>
+            <option value="3">€</option>
+        </select></span>
+    <span class="rent_currency2" style="display: none;">/???.</span>
+
+    <span class="rent_select_currency" style="display: none;"><select disabled="disabled" name="das[price.currency]">
+        <option value="1">$</option>
+        <option value="2">??</option>
+        <option value="3">€</option>
+    </select></span>
+
+    <span class="rent_square" style="display: none;">
+        <select name="das[rent.square]" id="rent_square" disabled="disabled">
+            <option value=""></option><option value="1">?? ??.?.</option>
+            <option value="2">?? ???</option>
+        </select>
+    </span>
+</nobr>
+</td><td class="checks"><br>
+    <input name="das[_sys.hasphoto]" value="" type="hidden"><input name="das[_sys.hasphoto]" value="1" id="_sys_hasphoto" type="checkbox">
+ <br>
+    <label for="_sys_hasphoto"><nobr>? ????</nobr></label>
+</td><td class="checks"><br>
+    <input name="on_map" id="on_map" value="1" type="checkbox"><br>
+    <label for="on_map"><nobr>?? ?????</nobr></label>
+</td><td>
+    <nobr>&nbsp;<input style="display: none;" value="?????" id="pngbutton" type="submit"><input style="position:absolute; right:100000px;" value="?????" type="submit"><a href="#" style="height:35px; display:inline-block;text-decoration: none;outline: none;white-space: nowrap;" id="pngButton"><span style="width: 18px; background: url(&quot;http://static.kr.kcdn.kz/i/btn-all.png&quot;) no-repeat scroll 0px 0px transparent; display: inline-block; color: rgb(0, 0, 0); cursor: default; height: 27px; padding: 8px 0px 0px;">&nbsp;</span><span style="background: url(&quot;http://static.kr.kcdn.kz/i/btn-all.png&quot;) repeat-x scroll 0px -35px transparent; display: inline-block; color: rgb(0, 0, 0); cursor: default; height: 27px; padding: 8px 0px 0px;">?????</span><span style="width: 18px; background: url(&quot;http://static.kr.kcdn.kz/i/btn-all.png&quot;) no-repeat scroll -18px 0px transparent; display: inline-block; color: rgb(0, 0, 0); cursor: default; height: 27px; padding: 8px 0px 0px;">&nbsp;</span></a></nobr>
+</td></tr></tbody></table>
+<script type="text/javascript">try{$('#pngbutton').pngbutton();}catch(e){}
+$().ready(function(){
+    $("#_price_srch_l, #_price_srch_h").focus(function(){
+        if ($(this).val()=="??" || $(this).val()=="??") {
+            $(this).val("");
+        }
+    });
+    $("#_price_srch_l").blur(function(){ if (!$(this).val().length) $(this).val("??"); });
+    $("#_price_srch_h").blur(function(){ if (!$(this).val().length) $(this).val("??"); });
+    $("select[name='for_rent']").bind("change keyup", function(){
+        if ($(this).val()==1) {
+            $("select.what_rent option:eq(0)").attr("selected", true);
+            $("select.what_sell").attr('disabled', true).hide();
+            $("select.what_rent").attr('disabled', false).show().change();
+
+            $("select[name='what_rent']").change();
+        } else {
+            $("select.what_sell option:eq(0)").attr("selected", true);
+            $("select.what_sell").attr('disabled', false).show().change();
+            $("select.what_rent").attr('disabled', true).hide();
+
+            $("select[name='what_rent']").change();
+        }
+    });
+    $("select[name='what']").bind("change keyup", function(){
+        $(".specs_flat, .specs_house, .specs_dacha, .specs_building").hide();
+        $(".specs_" + $(this).val()).show();
+        $(".specs_flat, .specs_house, .specs_dacha, .specs_building").each(function(){ $(this).find('input, select').attr('disabled', true) });
+        $(".specs_" + $(this).val() + " input, .specs_" + $(this).val() + " select").attr('disabled', false);
+    });
+    $("select.what_rent").bind("change keyup", function(){
+        if ( $(this).val() == 'office' || $(this).val() == 'premises' || $(this).val() == 'building' || $(this).val() == 'shop') {
+            $(".rent_square select").attr('disabled', false).parent().show();
+        } else {
+            $(".rent_square select").attr('disabled', true).parent().hide();
+        }
+        if ( $(this).val() == 'flat' || $(this).val() == 'house' || $(this).val() == 'dacha' ) {
+            $(".rent_select_currency").show().find('select').attr('disabled', false);
+            $(".rent_currency").hide();
+        } else {
+            $(".rent_select_currency").hide().find('select').attr('disabled', true);
+            $(".rent_currency").show();
+        }
+        if ( $(this).val() == 'industrial' || $(this).val() == 'estate'  || $(this).val() == 'room' ) {
+            $(".rent_currency2").show();
+        } else {
+            $(".rent_currency2").hide();
+        }
+    });
+    $("select[name='for_rent']").keyup();
+});
+</script>
+    </div>
+</form>
+<!--/noindex--><div id="hotMenu">
+    <h1>??????? ??????????? ???????????? ??????????</h1><a href="/content/special/services/hot">??? ???? ????????</a>
+</div>
+<div class="clear"></div>
+<div id="wideHot" class="hotV2">
+    <div class="hot-shelf-sell" style="position:relative; z-index:5"></div>
+    <div class="hotV2blockSell">
+        <div class="hotV2categories">
+            <div class="titleBlock">???????</div>
+            <span><a href="http://krisha.kz/prodazha/kvartiry/">????????</a></span>
+            <span><a href="http://krisha.kz/prodazha/doma/">????</a></span>
+            <span><a href="http://krisha.kz/prodazha/dachi/">????</a></span>
+            <span><a href="http://krisha.kz/prodazha/uchastkov/">???????</a></span>
+            <span><a href="http://krisha.kz/prodazha/ofisa/">?????</a></span>
+            <span><a href="http://krisha.kz/prodazha/pomeshhenija/">?????????</a></span>
+            <span><a href="http://krisha.kz/prodazha/zdanija/">??????</a></span>
+            <span><a href="http://krisha.kz/prodazha/magazina/">????????</a></span>
+            <span><a href="http://krisha.kz/prodazha/prombazy/">????????</a></span>
+            <span><a href="http://krisha.kz/prodazha/prochej-nedvizhimosti/">??????</a></span>
+            <span><a href="http://krisha.kz/prodazha/zarubezhnoj-nedvizhimosti/">?????????? ????????????</a></span>
+        </div>
+        <div class="hi" style="top: 50px; left: 15px;" id="hot_6165836"><a href="/a/show/6165836"><img src="http://a.photos.kr.kcdn.kz/50/d02c9190ef469420a105bf33bde9a1/46-120x90.jpg" alt="??????. ???????? 3 ????..  ??? ??????-3, ??????????? — ?????????. 245 555 $" title="???????? 3 ????..  ??? ??????-3, ??????????? — ?????????" height="90" width="120"></a><div class="price"><nobr>245 555 $</nobr></div><div class="gray">3 ????. ??? ??????-3</div><div class="hotHover" style="top: 50px; left: 15px;"><div class="hhLine1">??????<span>14 ????</span></div><a href="/a/show/6165836"><img src="http://a.photos.kr.kcdn.kz/50/d02c9190ef469420a105bf33bde9a1/46-200x150.jpg" alt="??????. ???????? 3 ????..  ??? ??????-3, ??????????? — ?????????. 245 555 $" title="???????? 3 ????..  ??? ??????-3, ??????????? — ?????????" height="150" width="200"></a><div class="hhLine2"><nobr>245 555 $</nobr></div><div class="hhText">???????? 3 ????.<sup></sup></div><div class="hhAddress"> ??? ??????-3, ??????????? — ?????????</div></div></div><div class="hi" style="top: 180px; left: 15px;" id="hot_6951366"><a href="/a/show/6951366"><img src="http://a.photos.kr.kcdn.kz/01/2f5b91ac363273ef874a0a0cef61fd/2-120x90.jpg" alt=". ???????? 1 ????..  ?????????. 33 000 €" title="???????? 1 ????..  ?????????" height="90" width="120"></a><div class="price"><nobr>33 000 €</nobr></div><div class="gray">1 ????. ?????????</div><div class="hotHover" style="top: 180px; left: 15px;"><div class="hhLine1"><span>5 ????</span></div><a href="/a/show/6951366"><img src="http://a.photos.kr.kcdn.kz/01/2f5b91ac363273ef874a0a0cef61fd/2-200x150.jpg" alt=". ???????? 1 ????..  ?????????. 33 000 €" title="???????? 1 ????..  ?????????" height="150" width="200"></a><div class="hhLine2"><nobr>33 000 €</nobr></div><div class="hhText">???????? 1 ????.<sup></sup></div><div class="hhAddress"> ?????????</div></div></div><div class="hi" style="top: 50px; left: 145px;" id="hot_6899979"><a href="/a/show/6899979"><img src="http://a.photos.kr.kcdn.kz/aa/554fc3c5dc016b62ec16bbd6c9a34d/4-120x90.jpg" alt="??????. ???????? 3 ????.. . 170 000 $" title="???????? 3 ????.. " height="90" width="120"></a><div class="price"><nobr>170 000 $</nobr></div><div class="gray">3 ????.</div><div class="hotHover" style="top: 50px; left: 145px;"><div class="hhLine1">??????<span>6 ????</span></div><a href="/a/show/6899979"><img src="http://a.photos.kr.kcdn.kz/aa/554fc3c5dc016b62ec16bbd6c9a34d/4-200x150.jpg" alt="??????. ???????? 3 ????.. . 170 000 $" title="???????? 3 ????.. " height="150" width="200"></a><div class="hhLine2"><nobr>170 000 $</nobr></div><div class="hhText">???????? 3 ????.<sup></sup></div><div class="hhAddress"></div></div></div><div class="hi" style="top: 180px; left: 145px;" id="hot_4851621"><a href="/a/show/4851621"><img src="http://a.photos.kr.kcdn.kz/ea/b6b3d13aba2a2be97a6c503d7c396e/1-120x90.jpg" alt="????????. ??? 6 ????. (313&nbsp;?2, 7&nbsp;???.) .  ???????????. 250 000 $" title="??? 6 ????. (313&nbsp;?2, 7&nbsp;???.) .  ???????????" height="90" width="120"></a><div class="price"><nobr>250 000 $</nobr></div><div class="gray">??? 6 ????. (313&nbsp;?<sup>2</sup>, 7&nbsp;???.)  ???????????</div><div class="hotHover" style="top: 180px; left: 145px;"><div class="hhLine1">????????<span>14 ????</span></div><a href="/a/show/4851621"><img src="http://a.photos.kr.kcdn.kz/ea/b6b3d13aba2a2be97a6c503d7c396e/1-200x150.jpg" alt="????????. ??? 6 ????. (313&nbsp;?2, 7&nbsp;???.) .  ???????????. 250 000 $" title="??? 6 ????. (313&nbsp;?2, 7&nbsp;???.) .  ???????????" height="150" width="200"></a><div class="hhLine2"><nobr>250 000 $</nobr></div><div class="hhText">??? 6 ????. (313&nbsp;?<sup>2</sup>, 7&nbsp;???.) <sup></sup></div><div class="hhAddress"> ???????????</div></div></div><div class="hi" style="top: 50px; left: 275px;" id="hot_7033704"><a href="/a/show/7033704"><img src="http://a.photos.kr.kcdn.kz/6e/1cf6283edee4d4d1b21b9009b0fdc2/1-120x90.jpg" alt="?????? (???? ??????). ??? 4 ????. (100&nbsp;?2, 4&nbsp;???.) .  ???????????. 72 000 $" title="??? 4 ????. (100&nbsp;?2, 4&nbsp;???.) .  ???????????" height="90" width="120"></a><div class="price"><nobr>72 000 $</nobr></div><div class="gray">??? 4 ????. (100&nbsp;?<sup>2</sup>, 4&nbsp;???.)  ???????????</div><div class="hotHover" style="top: 50px; left: 275px;"><div class="hhLine1">?????? (???? ??????)<span>5 ????</span></div><a href="/a/show/7033704"><img src="http://a.photos.kr.kcdn.kz/6e/1cf6283edee4d4d1b21b9009b0fdc2/1-200x150.jpg" alt="?????? (???? ??????). ??? 4 ????. (100&nbsp;?2, 4&nbsp;???.) .  ???????????. 72 000 $" title="??? 4 ????. (100&nbsp;?2, 4&nbsp;???.) .  ???????????" height="150" width="200"></a><div class="hhLine2"><nobr>72 000 $</nobr></div><div class="hhText">??? 4 ????. (100&nbsp;?<sup>2</sup>, 4&nbsp;???.) <sup></sup></div><div class="hhAddress"> ???????????</div></div></div><div class="hi" style="top: 180px; left: 275px;" id="hot_1364"><a href="/a/show/1364"><img src="http://a.photos.kr.kcdn.kz/d8/dc5342ece12a4808cdcc62fbefe785/13-120x90.jpg" alt="??????. ??? 8 ????. (500&nbsp;?2, 26&nbsp;???.) .  ??? ??????-3, ????????. 799 000 $" title="??? 8 ????. (500&nbsp;?2, 26&nbsp;???.) .  ??? ??????-3, ????????" height="90" width="120"></a><div class="price"><nobr>799 000 $</nobr></div><div class="gray">??? 8 ????. (500&nbsp;?<sup>2</sup>, 26&nbsp;???.)  ??? ??????-3</div><div class="hotHover" style="top: 180px; left: 275px;"><div class="hhLine1">??????<span>11 ????</span></div><a href="/a/show/1364"><img src="http://a.photos.kr.kcdn.kz/d8/dc5342ece12a4808cdcc62fbefe785/13-200x150.jpg" alt="??????. ??? 8 ????. (500&nbsp;?2, 26&nbsp;???.) .  ??? ??????-3, ????????. 799 000 $" title="??? 8 ????. (500&nbsp;?2, 26&nbsp;???.) .  ??? ??????-3, ????????" height="150" width="200"></a><div class="hhLine2"><nobr>799 000 $</nobr></div><div class="hhText">??? 8 ????. (500&nbsp;?<sup>2</sup>, 26&nbsp;???.) <sup></sup></div><div class="hhAddress"> ??? ??????-3, ????????</div></div></div><div class="hi" style="top: 50px; left: 405px;" id="hot_5943791"><a href="/a/show/5943791"><img src="http://a.photos.kr.kcdn.kz/23/2d5b725bd37b002a5acb56ac36e34c/1-120x90.jpg" alt="?????????. ???????  7 ???..  ??????????. 40 000 $" title="???????  7 ???..  ??????????" height="90" width="120"></a><div class="price"><nobr>40 000 $</nobr></div><div class="gray">???????  7 ???. ??????????</div><div class="hotHover" style="top: 50px; left: 405px;"><div class="hhLine1">?????????<span>6 ????</span></div><a href="/a/show/5943791"><img src="http://a.photos.kr.kcdn.kz/23/2d5b725bd37b002a5acb56ac36e34c/1-200x150.jpg" alt="?????????. ???????  7 ???..  ??????????. 40 000 $" title="???????  7 ???..  ??????????" height="150" width="200"></a><div class="hhLine2"><nobr>40 000 $</nobr></div><div class="hhText">???????  7 ???.<sup></sup></div><div class="hhAddress"> ??????????</div></div></div><div class="hi" style="top: 180px; left: 405px;" id="hot_4962042"><a href="/a/show/4962042"><img src="http://a.photos.kr.kcdn.kz/2d/1d29508c2c86d0169715a517b8bde7/1-120x90.jpg" alt="????-???????????. ???????  250 ???.. . 150 000 $" title="???????  250 ???.. " height="90" width="120"></a><div class="price"><nobr>150 000 $</nobr></div><div class="gray">???????  250 ???.</div><div class="hotHover" style="top: 180px; left: 405px;"><div class="hhLine1">????-???????????<span>2 ????</span></div><a href="/a/show/4962042"><img src="http://a.photos.kr.kcdn.kz/2d/1d29508c2c86d0169715a517b8bde7/1-200x150.jpg" alt="????-???????????. ???????  250 ???.. . 150 000 $" title="???????  250 ???.. " height="150" width="200"></a><div class="hhLine2"><nobr>150 000 $</nobr></div><div class="hhText">???????  250 ???.<sup></sup></div><div class="hhAddress"></div></div></div><div class="hi" style="top: 50px; left: 535px;" id="hot_5178743"><a href="/a/show/5178743"><img src="http://a.photos.kr.kcdn.kz/bd/2b7bffe9f4794317b3f970a69b2ca1/7-120x90.jpg" alt="??????. ??? 8 ????. (550&nbsp;?2, 23&nbsp;???.) .  ???????. 1 495 000 $" title="??? 8 ????. (550&nbsp;?2, 23&nbsp;???.) .  ???????" height="90" width="120"></a><div class="price"><nobr>1 495 000 $</nobr></div><div class="gray">??? 8 ????. (550&nbsp;?<sup>2</sup>, 23&nbsp;???.)  ???????</div><div class="hotHover" style="top: 50px; left: 535px;"><div class="hhLine1">??????<span>13 ????</span></div><a href="/a/show/5178743"><img src="http://a.photos.kr.kcdn.kz/bd/2b7bffe9f4794317b3f970a69b2ca1/7-200x150.jpg" alt="??????. ??? 8 ????. (550&nbsp;?2, 23&nbsp;???.) .  ???????. 1 495 000 $" title="??? 8 ????. (550&nbsp;?2, 23&nbsp;???.) .  ???????" height="150" width="200"></a><div class="hhLine2"><nobr>1 495 000 $</nobr></div><div class="hhText">??? 8 ????. (550&nbsp;?<sup>2</sup>, 23&nbsp;???.) <sup></sup></div><div class="hhAddress"> ???????</div></div></div><div class="hi" style="top: 180px; left: 535px;" id="hot_7008447"><a href="/a/show/7008447"><img src="http://a.photos.kr.kcdn.kz/4f/ec8d667263df2704d051e079daec89/1-120x90.jpg" alt="??????. ???????? 4 ????..  ????. 77 000 $" title="???????? 4 ????..  ????" height="90" width="120"></a><div class="price"><nobr>77 000 $</nobr></div><div class="gray">4 ????. ????</div><div class="hotHover" style="top: 180px; left: 535px;"><div class="hhLine1">??????<span>6 ????</span></div><a href="/a/show/7008447"><img src="http://a.photos.kr.kcdn.kz/4f/ec8d667263df2704d051e079daec89/1-200x150.jpg" alt="??????. ???????? 4 ????..  ????. 77 000 $" title="???????? 4 ????..  ????" height="150" width="200"></a><div class="hhLine2"><nobr>77 000 $</nobr></div><div class="hhText">???????? 4 ????.<sup></sup></div><div class="hhAddress"> ????</div></div></div><div class="hi" style="top: 50px; left: 665px;" id="hot_7041512"><a href="/a/show/7041512"><img src="http://a.photos.kr.kcdn.kz/35/cc526b13d44c9d64d80805bf05cb50/1-120x90.jpg" alt="??????. ???????? 1 ????..  ??? ?????????-3. 56 500 $" title="???????? 1 ????..  ??? ?????????-3" height="90" width="120"></a><div class="price"><nobr>56 500 $</nobr></div><div class="gray">1 ????. ??? ?????????-3</div><div class="hotHover" style="top: 50px; left: 665px;"><div class="hhLine1">??????<span>8 ????</span></div><a href="/a/show/7041512"><img src="http://a.photos.kr.kcdn.kz/35/cc526b13d44c9d64d80805bf05cb50/1-200x150.jpg" alt="??????. ???????? 1 ????..  ??? ?????????-3. 56 500 $" title="???????? 1 ????..  ??? ?????????-3" height="150" width="200"></a><div class="hhLine2"><nobr>56 500 $</nobr></div><div class="hhText">???????? 1 ????.<sup></sup></div><div class="hhAddress"> ??? ?????????-3</div></div></div><div class="hi" style="top: 180px; left: 665px;" id="hot_7034439"><a href="/a/show/7034439"><img src="http://a.photos.kr.kcdn.kz/dd/20579a919263a8bbf99f70ba6d6ee5/4-120x90.jpg" alt="??????. ???????? 2 ????..  ??? ????????, ??????????? — ???????. 126 000 $" title="???????? 2 ????..  ??? ????????, ??????????? — ???????" height="90" width="120"></a><div class="price"><nobr>126 000 $</nobr></div><div class="gray">2 ????. ??? ????????</div><div class="hotHover" style="top: 180px; left: 665px;"><div class="hhLine1">??????<span>5 ????</span></div><a href="/a/show/7034439"><img src="http://a.photos.kr.kcdn.kz/dd/20579a919263a8bbf99f70ba6d6ee5/4-200x150.jpg" alt="??????. ???????? 2 ????..  ??? ????????, ??????????? — ???????. 126 000 $" title="???????? 2 ????..  ??? ????????, ??????????? — ???????" height="150" width="200"></a><div class="hhLine2"><nobr>126 000 $</nobr></div><div class="hhText">???????? 2 ????.<sup></sup></div><div class="hhAddress"> ??? ????????, ??????????? — ???????</div></div></div><div class="hi" style="top: 50px; left: 795px;" id="hot_7034269"><a href="/a/show/7034269"><img src="http://a.photos.kr.kcdn.kz/b5/c85776e239d9d9b652f27d0a3410e4/1-120x90.jpg" alt="??????. ???????? 2 ????..  ??? ????????, ??????????? — ???????. 89 000 $" title="???????? 2 ????..  ??? ????????, ??????????? — ???????" height="90" width="120"></a><div class="price"><nobr>89 000 $</nobr></div><div class="gray">2 ????. ??? ????????</div><div class="hotHover" style="top: 50px; left: 795px;"><div class="hhLine1">??????<span>5 ????</span></div><a href="/a/show/7034269"><img src="http://a.photos.kr.kcdn.kz/b5/c85776e239d9d9b652f27d0a3410e4/1-200x150.jpg" alt="??????. ???????? 2 ????..  ??? ????????, ??????????? — ???????. 89 000 $" title="???????? 2 ????..  ??? ????????, ??????????? — ???????" height="150" width="200"></a><div class="hhLine2"><nobr>89 000 $</nobr></div><div class="hhText">???????? 2 ????.<sup></sup></div><div class="hhAddress"> ??? ????????, ??????????? — ???????</div></div></div><div class="hi" style="top: 180px; left: 795px;" id="hot_3949569"><a href="/a/show/3949569"><img src="http://a.photos.kr.kcdn.kz/e8/b06903ae9340c9ac3eb4b0f6399385/1-120x90.jpg" alt="??????. ??? 6 ????. (212.8&nbsp;?2, 5&nbsp;???.) .  ???? ???? — ?????????. 250 000 $" title="??? 6 ????. (212.8&nbsp;?2, 5&nbsp;???.) .  ???? ???? — ?????????" height="90" width="120"></a><div class="price"><nobr>250 000 $</nobr></div><div class="gray">??? 6 ????. (212.8&nbsp;?<sup>2</sup>, 5&nbsp;???.)  ???? ???? ?????????</div><div class="hotHover" style="top: 180px; left: 795px;"><div class="hhLine1">??????<span>6 ????</span></div><a href="/a/show/3949569"><img src="http://a.photos.kr.kcdn.kz/e8/b06903ae9340c9ac3eb4b0f6399385/1-200x150.jpg" alt="??????. ??? 6 ????. (212.8&nbsp;?2, 5&nbsp;???.) .  ???? ???? — ?????????. 250 000 $" title="??? 6 ????. (212.8&nbsp;?2, 5&nbsp;???.) .  ???? ???? — ?????????" height="150" width="200"></a><div class="hhLine2"><nobr>250 000 $</nobr></div><div class="hhText">??? 6 ????. (212.8&nbsp;?<sup>2</sup>, 5&nbsp;???.) <sup></sup></div><div class="hhAddress"> ???? ???? — ?????????</div></div></div><div class="hi" style="top: 50px; left: 925px;" id="hot_5619710"><a href="/a/show/5619710"><img src="http://a.photos.kr.kcdn.kz/3b/bce8606db1b0369833e159d1e008c5/2-120x90.jpg" alt="?????. ??? 8 ????. (330&nbsp;?2, 10.5&nbsp;???.) .  ?????-1. 460 000 $" title="??? 8 ????. (330&nbsp;?2, 10.5&nbsp;???.) .  ?????-1" height="90" width="120"></a><div class="price"><nobr>460 000 $</nobr></div><div class="gray">??? 8 ????. (330&nbsp;?<sup>2</sup>, 10.5&nbsp;???.)  ?????-1</div><div class="hotHover" style="top: 50px; left: 925px;"><div class="hhLine1">?????<span>15 ????</span></div><a href="/a/show/5619710"><img src="http://a.photos.kr.kcdn.kz/3b/bce8606db1b0369833e159d1e008c5/2-200x150.jpg" alt="?????. ??? 8 ????. (330&nbsp;?2, 10.5&nbsp;???.) .  ?????-1. 460 000 $" title="??? 8 ????. (330&nbsp;?2, 10.5&nbsp;???.) .  ?????-1" height="150" width="200"></a><div class="hhLine2"><nobr>460 000 $</nobr></div><div class="hhText">??? 8 ????. (330&nbsp;?<sup>2</sup>, 10.5&nbsp;???.) <sup></sup></div><div class="hhAddress"> ?????-1</div></div></div><div class="hi" style="top: 180px; left: 925px;" id="hot_6256361"><a href="/a/show/6256361"><img src="http://a.photos.kr.kcdn.kz/f9/4d2a8e9c800b3faa1ef9f8b57c6958/7-120x90.jpg" alt="??????. ???????? ?????! ??.... . 670 $" title="???????? ?????! ??.... " height="90" width="120"></a><div class="price"><nobr>670 $</nobr></div><div class="gray">???????? ?????! ??...</div><div class="hotHover" style="top: 180px; left: 925px;"><div class="hhLine1">??????<span>4 ????</span></div><a href="/a/show/6256361"><img src="http://a.photos.kr.kcdn.kz/f9/4d2a8e9c800b3faa1ef9f8b57c6958/7-200x150.jpg" alt="??????. ???????? ?????! ??.... . 670 $" title="???????? ?????! ??.... " height="150" width="200"></a><div class="hhLine2"><nobr>670 $</nobr></div><div class="hhText">???????? ?????! ??...<sup></sup></div><div class="hhAddress"></div></div></div><div class="hi" style="top: 50px; left: 1055px;" id="hot_6895839"><a href="/a/show/6895839"><img src="http://a.photos.kr.kcdn.kz/a7/5e03634a67ec181f8d97955923c040/8-120x90.jpg" alt="???????? (????????). ??? 4 ????. (65&nbsp;?2, 10&nbsp;???.) . . 55 000 $" title="??? 4 ????. (65&nbsp;?2, 10&nbsp;???.) . " height="90" width="120"></a><div class="price"><nobr>55 000 $</nobr></div><div class="gray">??? 4 ????. (65&nbsp;?<sup>2</sup>, 10&nbsp;???.) </div><div class="hotHover" style="top: 50px; left: 1055px;"><div class="hhLine1">???????? (????????)<span>6 ????</span></div><a href="/a/show/6895839"><img src="http://a.photos.kr.kcdn.kz/a7/5e03634a67ec181f8d97955923c040/8-200x150.jpg" alt="???????? (????????). ??? 4 ????. (65&nbsp;?2, 10&nbsp;???.) . . 55 000 $" title="??? 4 ????. (65&nbsp;?2, 10&nbsp;???.) . " height="150" width="200"></a><div class="hhLine2"><nobr>55 000 $</nobr></div><div class="hhText">??? 4 ????. (65&nbsp;?<sup>2</sup>, 10&nbsp;???.) <sup></sup></div><div class="hhAddress"></div></div></div><div class="hi" style="top: 180px; left: 1055px;" id="hot_7007871"><a href="/a/show/7007871"><img src="http://a.photos.kr.kcdn.kz/5d/895e36688556c5d7ae1019bc006d1b/2-120x90.jpg" alt="????????. ???????? 3 ????..  ???????????. 62 000 $" title="???????? 3 ????..  ???????????" height="90" width="120"></a><div class="price"><nobr>62 000 $</nobr></div><div class="gray">3 ????. ???????????</div><div class="hotHover" style="top: 180px; left: 1055px;"><div class="hhLine1">????????<span>11 ????</span></div><a href="/a/show/7007871"><img src="http://a.photos.kr.kcdn.kz/5d/895e36688556c5d7ae1019bc006d1b/2-200x150.jpg" alt="????????. ???????? 3 ????..  ???????????. 62 000 $" title="???????? 3 ????..  ???????????" height="150" width="200"></a><div class="hhLine2"><nobr>62 000 $</nobr></div><div class="hhText">???????? 3 ????.<sup></sup></div><div class="hhAddress"> ???????????</div></div></div>        <div style="clear: both"></div>
+    </div>
+    <div style="clear: both"></div>
+    
+    <div class="hot-shelf-rent" style="position:relative; z-index:5"></div>
+    <div class="hotV2blockRent">
+        <div class="hotV2categories">
+            <div class="titleBlock">??????</div>
+            <span><a href="http://krisha.kz/arenda/kvartiry/">????????</a></span>
+            <span><a href="http://krisha.kz/arenda/doma/">????</a></span>
+            <span><a href="http://krisha.kz/arenda/dachi/">????</a></span>
+            <span><a href="http://krisha.kz/arenda/komnaty/">???????</a></span>
+            <span><a href="http://krisha.kz/arenda/ofisa/">?????</a></span>
+            <span><a href="http://krisha.kz/arenda/pomeshhenija/">?????????</a></span>
+            <span><a href="http://krisha.kz/arenda/zdanija/">??????</a></span>
+            <span><a href="http://krisha.kz/arenda/magazina/">????????</a></span>
+            <span><a href="http://krisha.kz/arenda/prombazy/">????????</a></span>
+            <span><a href="http://krisha.kz/arenda/prochej-nedvizhimosti/">??????</a></span>
+        </div>
+        <div class="hi" style="top: 50px; left: 15px;" id="hot_5934190"><a href="/a/show/5934190"><img src="http://a.photos.kr.kcdn.kz/43/093137946c2a762383102edcf9f931/2-120x90.jpg" alt="??????. ????  110 ?2.  ?????? — ????????. 400 000 ??. ?? ???" title="????  110 ?2.  ?????? — ????????" height="90" width="120"></a><div class="price"><nobr>400 000 ??. ?? ???</nobr></div><div class="gray">????  110 ?<sup>2</sup> ?????? ????????</div><div class="hotHover" style="top: 50px; left: 15px;"><div class="hhLine1">??????<span>3 ????</span></div><a href="/a/show/5934190"><img src="http://a.photos.kr.kcdn.kz/43/093137946c2a762383102edcf9f931/2-200x150.jpg" alt="??????. ????  110 ?2.  ?????? — ????????. 400 000 ??. ?? ???" title="????  110 ?2.  ?????? — ????????" height="150" width="200"></a><div class="hhLine2"><nobr>400 000 ??. ?? ???</nobr></div><div class="hhText">????  110 ?<sup>2</sup><sup></sup></div><div class="hhAddress"> ?????? — ????????</div></div></div><div class="hi" style="top: 180px; left: 15px;" id="hot_3767161"><a href="/a/show/3767161"><img src="http://a.photos.kr.kcdn.kz/38/00212b0b03c9dcb3455aa509821baa/16-120x90.jpg" alt=". ???????? 1 ????..  ??????????? — ???????. 12 000 ??. ?????????" title="???????? 1 ????..  ??????????? — ???????" height="90" width="120"></a><div class="price"><nobr>12 000 ??.</nobr></div><div class="gray">1 ????. ????????? ??????????? ???????</div><div class="hotHover" style="top: 180px; left: 15px;"><div class="hhLine1"><span>4 ????</span></div><a href="/a/show/3767161"><img src="http://a.photos.kr.kcdn.kz/38/00212b0b03c9dcb3455aa509821baa/16-200x150.jpg" alt=". ???????? 1 ????..  ??????????? — ???????. 12 000 ??. ?????????" title="???????? 1 ????..  ??????????? — ???????" height="150" width="200"></a><div class="hhLine2"><nobr>12 000 ??. ?????????</nobr></div><div class="hhText">???????? 1 ????.<sup></sup></div><div class="hhAddress"> ??????????? — ???????</div></div></div><div class="hi" style="top: 50px; left: 145px;" id="hot_7022764"><a href="/a/show/7022764"><img src="http://a.photos.kr.kcdn.kz/3a/1cf1079d3a5a839b761fc3887d21a8/1-120x90.jpg" alt="??????. ??? 6 ????. (312&nbsp;?2, 7&nbsp;???.) .  ??? ?????? ??????. 3 000 $ ?????????" title="??? 6 ????. (312&nbsp;?2, 7&nbsp;???.) .  ??? ?????? ??????" height="90" width="120"></a><div class="price"><nobr>3 000 $</nobr></div><div class="gray">??? 6 ????. (312&nbsp;?<sup>2</sup>, 7&nbsp;???.)  ????????? ??? ?????? ??????</div><div class="hotHover" style="top: 50px; left: 145px;"><div class="hhLine1">??????<span>6 ????</span></div><a href="/a/show/7022764"><img src="http://a.photos.kr.kcdn.kz/3a/1cf1079d3a5a839b761fc3887d21a8/1-200x150.jpg" alt="??????. ??? 6 ????. (312&nbsp;?2, 7&nbsp;???.) .  ??? ?????? ??????. 3 000 $ ?????????" title="??? 6 ????. (312&nbsp;?2, 7&nbsp;???.) .  ??? ?????? ??????" height="150" width="200"></a><div class="hhLine2"><nobr>3 000 $ ?????????</nobr></div><div class="hhText">??? 6 ????. (312&nbsp;?<sup>2</sup>, 7&nbsp;???.) <sup></sup></div><div class="hhAddress"> ??? ?????? ??????</div></div></div><div class="hi" style="top: 180px; left: 145px;" id="hot_6792216"><a href="/a/show/6792216"><img src="http://a.photos.kr.kcdn.kz/7a/dc2784f8703f0033b0b5a23ee7cd78/1-120x90.jpg" alt="????????? (?????? ???????). ??????.  ?-? ????????. 120 000 ??." title="??????.  ?-? ????????" height="90" width="120"></a><div class="price"><nobr>120 000 ??.</nobr></div><div class="gray">?????? ?-? ????????</div><div class="hotHover" style="top: 180px; left: 145px;"><div class="hhLine1">????????? (?????? ???????)<span>4 ????</span></div><a href="/a/show/6792216"><img src="http://a.photos.kr.kcdn.kz/7a/dc2784f8703f0033b0b5a23ee7cd78/1-200x150.jpg" alt="????????? (?????? ???????). ??????.  ?-? ????????. 120 000 ??." title="??????.  ?-? ????????" height="150" width="200"></a><div class="hhLine2"><nobr>120 000 ??.</nobr></div><div class="hhText">??????<sup></sup></div><div class="hhAddress"> ?-? ????????</div></div></div><div class="hi" style="top: 50px; left: 275px;" id="hot_7000974"><a href="/a/show/7000974"><img src="http://a.photos.kr.kcdn.kz/53/276d25bbf57ec143abc02b60611712/1-120x90.jpg" alt="??????. ???????? 2 ????..  ??????? — ??????. 10 000 ??. ?????????" title="???????? 2 ????..  ??????? — ??????" height="90" width="120"></a><div class="price"><nobr>10 000 ??.</nobr></div><div class="gray">2 ????. ????????? ??????? ??????</div><div class="hotHover" style="top: 50px; left: 275px;"><div class="hhLine1">??????<span>2 ????</span></div><a href="/a/show/7000974"><img src="http://a.photos.kr.kcdn.kz/53/276d25bbf57ec143abc02b60611712/1-200x150.jpg" alt="??????. ???????? 2 ????..  ??????? — ??????. 10 000 ??. ?????????" title="???????? 2 ????..  ??????? — ??????" height="150" width="200"></a><div class="hhLine2"><nobr>10 000 ??. ?????????</nobr></div><div class="hhText">???????? 2 ????.<sup></sup></div><div class="hhAddress"> ??????? — ??????</div></div></div><div class="hi" style="top: 180px; left: 275px;" id="hot_7001388"><a href="/a/show/7001388"><img src="http://a.photos.kr.kcdn.kz/bd/b1e1f8df3dc35f6e68036d77add6d4/1-120x90.jpg" alt="??????. ???????? 2 ????..  ????????. 10 000 ??. ?????????" title="???????? 2 ????..  ????????" height="90" width="120"></a><div class="price"><nobr>10 000 ??.</nobr></div><div class="gray">2 ????. ????????? ????????</div><div class="hotHover" style="top: 180px; left: 275px;"><div class="hhLine1">??????<span>3 ????</span></div><a href="/a/show/7001388"><img src="http://a.photos.kr.kcdn.kz/bd/b1e1f8df3dc35f6e68036d77add6d4/1-200x150.jpg" alt="??????. ???????? 2 ????..  ????????. 10 000 ??. ?????????" title="???????? 2 ????..  ????????" height="150" width="200"></a><div class="hhLine2"><nobr>10 000 ??. ?????????</nobr></div><div class="hhText">???????? 2 ????.<sup></sup></div><div class="hhAddress"> ????????</div></div></div><div class="hi" style="top: 50px; left: 405px;" id="hot_3758883"><a href="/a/show/3758883"><img src="http://a.photos.kr.kcdn.kz/15/f0f2f3ee6a9cf3b80757c6cca6574d/33-120x90.jpg" alt="??????. ??? 8 ????. (547&nbsp;?2, 400&nbsp;???.) .  ??? ?????? ??????, ?????????. 220 $ ?????????" title="??? 8 ????. (547&nbsp;?2, 400&nbsp;???.) .  ??? ?????? ??????, ?????????" height="90" width="120"></a><div class="price"><nobr>220 $</nobr></div><div class="gray">??? 8 ????. (547&nbsp;?<sup>2</sup>, 400&nbsp;???.)  ????????? ??? ?????? ??????</div><div class="hotHover" style="top: 50px; left: 405px;"><div class="hhLine1">??????<span>29 ????</span></div><a href="/a/show/3758883"><img src="http://a.photos.kr.kcdn.kz/15/f0f2f3ee6a9cf3b80757c6cca6574d/33-200x150.jpg" alt="??????. ??? 8 ????. (547&nbsp;?2, 400&nbsp;???.) .  ??? ?????? ??????, ?????????. 220 $ ?????????" title="??? 8 ????. (547&nbsp;?2, 400&nbsp;???.) .  ??? ?????? ??????, ?????????" height="150" width="200"></a><div class="hhLine2"><nobr>220 $ ?????????</nobr></div><div class="hhText">??? 8 ????. (547&nbsp;?<sup>2</sup>, 400&nbsp;???.) <sup></sup></div><div class="hhAddress"> ??? ?????? ??????, ?????????</div></div></div><div class="hi" style="top: 180px; left: 405px;" id="hot_7010256"><a href="/a/show/7010256"><img src="http://a.photos.kr.kcdn.kz/40/c1140c15ffd1e108c9fc53d50a7621/1-120x90.jpg" alt="??????. ???????? 1 ????..  ???????? — ????????. 5 000 ??. ?????????" title="???????? 1 ????..  ???????? — ????????" height="90" width="120"></a><div class="price"><nobr>5 000 ??.</nobr></div><div class="gray">1 ????. ????????? ???????? ????????</div><div class="hotHover" style="top: 180px; left: 405px;"><div class="hhLine1">??????<span>6 ????</span></div><a href="/a/show/7010256"><img src="http://a.photos.kr.kcdn.kz/40/c1140c15ffd1e108c9fc53d50a7621/1-200x150.jpg" alt="??????. ???????? 1 ????..  ???????? — ????????. 5 000 ??. ?????????" title="???????? 1 ????..  ???????? — ????????" height="150" width="200"></a><div class="hhLine2"><nobr>5 000 ??. ?????????</nobr></div><div class="hhText">???????? 1 ????.<sup></sup></div><div class="hhAddress"> ???????? — ????????</div></div></div><div class="hi" style="top: 50px; left: 535px;" id="hot_6972673"><a href="/a/show/6972673"><img src="http://a.photos.kr.kcdn.kz/ab/0a355e97e806b5cb4ce2a73cb9fb20/1-120x90.jpg" alt="??????. ????  500 ?2.  ???????. 4 000 $ ?? ???" title="????  500 ?2.  ???????" height="90" width="120"></a><div class="price"><nobr>4 000 $ ?? ???</nobr></div><div class="gray">????  500 ?<sup>2</sup> ???????</div><div class="hotHover" style="top: 50px; left: 535px;"><div class="hhLine1">??????<span>6 ????</span></div><a href="/a/show/6972673"><img src="http://a.photos.kr.kcdn.kz/ab/0a355e97e806b5cb4ce2a73cb9fb20/1-200x150.jpg" alt="??????. ????  500 ?2.  ???????. 4 000 $ ?? ???" title="????  500 ?2.  ???????" height="150" width="200"></a><div class="hhLine2"><nobr>4 000 $ ?? ???</nobr></div><div class="hhText">????  500 ?<sup>2</sup><sup></sup></div><div class="hhAddress"> ???????</div></div></div><div class="hi" style="top: 180px; left: 535px;" id="hot_6770198"><a href="/a/show/6770198"><img src="http://a.photos.kr.kcdn.kz/4a/f9def1028a7ce9d292a62aeaf909ee/1-120x90.jpg" alt="?????. ???????? 2 ????..  ??? 14. 2 500 $ ?????????" title="???????? 2 ????..  ??? 14" height="90" width="120"></a><div class="price"><nobr>2 500 $</nobr></div><div class="gray">2 ????. ????????? ??? 14</div><div class="hotHover" style="top: 180px; left: 535px;"><div class="hhLine1">?????<span>5 ????</span></div><a href="/a/show/6770198"><img src="http://a.photos.kr.kcdn.kz/4a/f9def1028a7ce9d292a62aeaf909ee/1-200x150.jpg" alt="?????. ???????? 2 ????..  ??? 14. 2 500 $ ?????????" title="???????? 2 ????..  ??? 14" height="150" width="200"></a><div class="hhLine2"><nobr>2 500 $ ?????????</nobr></div><div class="hhText">???????? 2 ????.<sup></sup></div><div class="hhAddress"> ??? 14</div></div></div><div class="hi" style="top: 50px; left: 665px;" id="hot_7020183"><a href="/a/show/7020183"><img src="http://a.photos.kr.kcdn.kz/6a/c94511eac003f03f160a25daacb54c/1-120x90.jpg" alt="??????. ?????????  90 ?2.  ?????????? — ??????. 880 000 ??. ?? ???" title="?????????  90 ?2.  ?????????? — ??????" height="90" width="120"></a><div class="price"><nobr>880 000 ??. ?? ???</nobr></div><div class="gray">?????????  90 ?<sup>2</sup> ?????????? ??????</div><div class="hotHover" style="top: 50px; left: 665px;"><div class="hhLine1">??????<span>5 ????</span></div><a href="/a/show/7020183"><img src="http://a.photos.kr.kcdn.kz/6a/c94511eac003f03f160a25daacb54c/1-200x150.jpg" alt="??????. ?????????  90 ?2.  ?????????? — ??????. 880 000 ??. ?? ???" title="?????????  90 ?2.  ?????????? — ??????" height="150" width="200"></a><div class="hhLine2"><nobr>880 000 ??. ?? ???</nobr></div><div class="hhText">?????????  90 ?<sup>2</sup><sup></sup></div><div class="hhAddress"> ?????????? — ??????</div></div></div><div class="hi" style="top: 180px; left: 665px;" id="hot_535825"><a href="/a/show/535825"><img src="http://a.photos.kr.kcdn.kz/bf/423d48a3ce8d7a208c0c7983372f7b/1-120x90.jpg" alt="??????. ???????? 2 ????..  ?????????? — ????????. 12 000 ??. ?????????" title="???????? 2 ????..  ?????????? — ????????" height="90" width="120"></a><div class="price"><nobr>12 000 ??.</nobr></div><div class="gray">2 ????. ????????? ?????????? ????????</div><div class="hotHover" style="top: 180px; left: 665px;"><div class="hhLine1">??????<span>8 ????</span></div><a href="/a/show/535825"><img src="http://a.photos.kr.kcdn.kz/bf/423d48a3ce8d7a208c0c7983372f7b/1-200x150.jpg" alt="??????. ???????? 2 ????..  ?????????? — ????????. 12 000 ??. ?????????" title="???????? 2 ????..  ?????????? — ????????" height="150" width="200"></a><div class="hhLine2"><nobr>12 000 ??. ?????????</nobr></div><div class="hhText">???????? 2 ????.<sup></sup></div><div class="hhAddress"> ?????????? — ????????</div></div></div><div class="hi" style="top: 50px; left: 795px;" id="hot_4707792"><a href="/a/show/4707792"><img src="http://a.photos.kr.kcdn.kz/96/d3c93578778b6599750438ce862534/4-120x90.jpg" alt="??????. ???????? 1 ????..  ??????? — ???????. 6 000 ??. ?????????" title="???????? 1 ????..  ??????? — ???????" height="90" width="120"></a><div class="price"><nobr>6 000 ??.</nobr></div><div class="gray">1 ????. ????????? ??????? ???????</div><div class="hotHover" style="top: 50px; left: 795px;"><div class="hhLine1">??????<span>3 ????</span></div><a href="/a/show/4707792"><img src="http://a.photos.kr.kcdn.kz/96/d3c93578778b6599750438ce862534/4-200x150.jpg" alt="??????. ???????? 1 ????..  ??????? — ???????. 6 000 ??. ?????????" title="???????? 1 ????..  ??????? — ???????" height="150" width="200"></a><div class="hhLine2"><nobr>6 000 ??. ?????????</nobr></div><div class="hhText">???????? 1 ????.<sup></sup></div><div class="hhAddress"> ??????? — ???????</div></div></div><div class="hi" style="top: 180px; left: 795px;" id="hot_4953004"><a href="/a/show/4953004"><img src="http://a.photos.kr.kcdn.kz/20/d7172f5bdfe6c127c4795f6d5a972c/2-120x90.jpg" alt="??????. ???????? 1 ????..  ?????? — ???????. 7 000 ??. ?????????" title="???????? 1 ????..  ?????? — ???????" height="90" width="120"></a><div class="price"><nobr>7 000 ??.</nobr></div><div class="gray">1 ????. ????????? ?????? ???????</div><div class="hotHover" style="top: 180px; left: 795px;"><div class="hhLine1">??????<span>2 ????</span></div><a href="/a/show/4953004"><img src="http://a.photos.kr.kcdn.kz/20/d7172f5bdfe6c127c4795f6d5a972c/2-200x150.jpg" alt="??????. ???????? 1 ????..  ?????? — ???????. 7 000 ??. ?????????" title="???????? 1 ????..  ?????? — ???????" height="150" width="200"></a><div class="hhLine2"><nobr>7 000 ??. ?????????</nobr></div><div class="hhText">???????? 1 ????.<sup></sup></div><div class="hhAddress"> ?????? — ???????</div></div></div><div class="hi" style="top: 50px; left: 925px;" id="hot_7022847"><a href="/a/show/7022847"><img src="http://a.photos.kr.kcdn.kz/8d/1eeac131c8267acc98163163fa8f8a/1-120x90.jpg" alt="??????. ??????, ???????????. . " title="??????, ???????????. " height="90" width="120"></a><div class="gray">??????, ???????????</div><div class="hotHover" style="top: 50px; left: 925px;"><div class="hhLine1">??????<span>1 ????</span></div><a href="/a/show/7022847"><img src="http://a.photos.kr.kcdn.kz/8d/1eeac131c8267acc98163163fa8f8a/1-200x150.jpg" alt="??????. ??????, ???????????. . " title="??????, ???????????. " height="150" width="200"></a><div class="hhLine2"><nobr></nobr></div><div class="hhText">??????, ???????????<sup></sup></div><div class="hhAddress"></div></div></div><div class="hi" style="top: 180px; left: 925px;" id="hot_6093655"><a href="/a/show/6093655"><img src="http://a.photos.kr.kcdn.kz/c2/73cbaad106380fa39b768ad4645bc9/4-120x90.jpg" alt="?????????. ????? ?????????????????.  ???????????. 2 300 ??." title="????? ?????????????????.  ???????????" height="90" width="120"></a><div class="price"><nobr>2 300 ??.</nobr></div><div class="gray">????? ????????????????? ???????????</div><div class="hotHover" style="top: 180px; left: 925px;"><div class="hhLine1">?????????<span>5 ????</span></div><a href="/a/show/6093655"><img src="http://a.photos.kr.kcdn.kz/c2/73cbaad106380fa39b768ad4645bc9/4-200x150.jpg" alt="?????????. ????? ?????????????????.  ???????????. 2 300 ??." title="????? ?????????????????.  ???????????" height="150" width="200"></a><div class="hhLine2"><nobr>2 300 ??.</nobr></div><div class="hhText">????? ?????????????????<sup></sup></div><div class="hhAddress"> ???????????</div></div></div><div class="hi" style="top: 50px; left: 1055px;" id="hot_6924091"><a href="/a/show/6924091"><img src="http://a.photos.kr.kcdn.kz/da/120188350e2764d8e6a4ce021d1be6/1-120x90.jpg" alt="??????. ????  20.8 ?2.  ????????? — ?????? ??. 400 $ ?? ???" title="????  20.8 ?2.  ????????? — ?????? ??" height="90" width="120"></a><div class="price"><nobr>400 $ ?? ???</nobr></div><div class="gray">????  20.8 ?<sup>2</sup> ????????? ?????? ??</div><div class="hotHover" style="top: 50px; left: 1055px;"><div class="hhLine1">??????<span>3 ????</span></div><a href="/a/show/6924091"><img src="http://a.photos.kr.kcdn.kz/da/120188350e2764d8e6a4ce021d1be6/1-200x150.jpg" alt="??????. ????  20.8 ?2.  ????????? — ?????? ??. 400 $ ?? ???" title="????  20.8 ?2.  ????????? — ?????? ??" height="150" width="200"></a><div class="hhLine2"><nobr>400 $ ?? ???</nobr></div><div class="hhText">????  20.8 ?<sup>2</sup><sup></sup></div><div class="hhAddress"> ????????? — ?????? ??</div></div></div><div class="hi" style="top: 180px; left: 1055px;" id="hot_7037182"><a href="/a/show/7037182"><img src="http://a.photos.kr.kcdn.kz/ae/ff8b12a7d90896c6b94d322122d6e1/1-120x90.jpg" alt="??????. ???????? 1 ????..  ????????? — ???????????. 40 000 ??. ?????????" title="???????? 1 ????..  ????????? — ???????????" height="90" width="120"></a><div class="price"><nobr>40 000 ??.</nobr></div><div class="gray">1 ????. ????????? ????????? ???????????</div><div class="hotHover" style="top: 180px; left: 1055px;"><div class="hhLine1">??????<span>4 ????</span></div><a href="/a/show/7037182"><img src="http://a.photos.kr.kcdn.kz/ae/ff8b12a7d90896c6b94d322122d6e1/1-200x150.jpg" alt="??????. ???????? 1 ????..  ????????? — ???????????. 40 000 ??. ?????????" title="???????? 1 ????..  ????????? — ???????????" height="150" width="200"></a><div class="hhLine2"><nobr>40 000 ??. ?????????</nobr></div><div class="hhText">???????? 1 ????.<sup></sup></div><div class="hhAddress"> ????????? — ???????????</div></div></div>        <div style="clear: both"></div>
+    </div>
+    <div style="clear: both"></div>
+</div>
+
+<script type="text/javascript">
+    $(".hotV2 div.hi").hover(
+        function(){
+            var hotType = $(this).parent().attr("class");
+            if (hotType == 'hotV2blockSell') { hotType = '.hot-shelf-sell'; } else {
+                if (hotType == 'hotV2blockRent') { hotType = '.hot-shelf-rent'; } else { return; }
+            }
+            var $elem = $(this).find('.hotHover').clone(),
+                elemSelector = hotType+" #hover_" + $(this).attr('id');
+            if ($(elemSelector).length == 0) {
+                $elem.attr('id', 'hover_' + $(this).attr('id'));
+                $elem.hover(function(){
+                    $(this).parent().find('.hotHover').hide();
+                    $(this).show();
+                },function(){ $(this).hide(); });
+                $(hotType).append($elem);
+                $(elemSelector).show();
+            } else if ($(elemSelector).length) {
+                $(elemSelector).show();
+            }
+            delete $elem;
+        }
+    );
+</script>
+
+<div class="content">
+    <div class="contentInner">
+        <div class="colsCont">
+            <div class="index" style="padding-bottom: 20px;">
+                <div class="firstCol news" style="margin-left: 20px;">
+                    <h2><a href="/content/news">???????</a></h2>&nbsp;&nbsp;<small class="gray">1508</small><br>
+                    <ul><li class="firstLi"><img src="http://static.kr.kcdn.kz/content/003/529/70-3.jpg/full.jpg" title="" alt="" height="50" width="70" align="left"><a style="display:block" href="/content/news/2013/dachi_broscheny">?&nbsp;????-???????????? ??-?? ?????? ????? ????????? ?????? ???????</a><span class="gray"><p>
+	???????? ???????? ??????, ?????&nbsp;?? ?&nbsp;???? ???? ????????????? ???????? ?&nbsp;????????????? ?????????.</p>
+</span></li><li><a href="/content/news/2013/solnechnaya_elektrostanciya">?&nbsp;????????? ???????? ????????? ??????????????</a></li><li><a href="/content/news/2013/veterany_elektroenergiya">?&nbsp;??? ????????? ??? ??????? ??????????????</a></li><li><a href="/content/news/2013/massovaya_posadka">???????? ??????? ????????</a></li>                </ul></div>
+                <div class="secondCol articles" style="margin-right: 2%; width: 44%;">
+                    <h2><a href="/content/articles">??????</a></h2>&nbsp;&nbsp;<small class="gray">738</small><br>
+                    <ul><li class="first"><img src="http://f.krisha.kz/content/002/877/70.jpg/full.jpg" title="" alt="" height="50" width="70" align="left"><a style="display:block" href="/content/articles/2013_/dostoinyi_dom">????????? ????? ??&nbsp;????????? ????</a><span class="gray"><p>
+	??&nbsp;«????????? ?????»</p>
+<div align="left">
+	<span id="note">?? ?????? ???????</span></div>
+</span></li><li><a href="/content/articles/2013_/adal_residence">??????? ??????? ?&nbsp;?????????? ?&nbsp;??&nbsp;«ADAL RESIDENCE»</a></li><li><a href="/content/articles/2013_/apple_town">Apple Town</a></li><li><a href="/content/articles/2013_/nedvijimost_v_Turcji">???????????? ?&nbsp;?????? ?&nbsp;????????? ??&nbsp;???????????</a></li>                </ul></div>
+            </div>
+
+            <div>
+                <div class="firstCol" style="margin-right: 20px;padding-right: 3%;">
+                                        
+                    <h2 style="display:inline-block; padding: 0 0 4px 0; _display:inline;">???????????</h2><br>
+                    <div class="avg_price_text">??????? ??????? ???? ??????????? ? ?????? - 1884 $/?2</div>
+
+                    <div style="margin: 1em 0" id="plot_toggles"><strong class="graphSwitch">????????? ??????</strong><a href="" onclick="plotToggleClick(this); return false;" class="flink graphSwitch all">??? ??????? ???????</a><br><br></div>
+
+                    <div style="margin: 1em 0px; width: 320px; height: 150px; position: relative;" id="supah_graph"><canvas width="320" height="150"></canvas><canvas style="position:absolute;left:0px;top:0px;" width="320" height="150"></canvas><div class="tickLabels" style="font-size:smaller;color:#545454"><div style="position:absolute;top:138px;left:27.627712031558186px;width:53.333333333333336px;text-align:center" class="tickLabel">1 ???.</div><div style="position:absolute;top:138px;left:80.27268244575937px;width:53.333333333333336px;text-align:center" class="tickLabel">1 ???.</div><div style="position:absolute;top:138px;left:132.91765285996058px;width:53.333333333333336px;text-align:center" class="tickLabel">1 ???.</div><div style="position:absolute;top:138px;left:180.46794871794873px;width:53.333333333333336px;text-align:center" class="tickLabel">1 ?????</div><div style="position:absolute;top:138px;left:233.11291913214993px;width:53.333333333333336px;text-align:center" class="tickLabel">1 ???.</div><div style="position:absolute;top:138px;left:284.05966469428006px;width:53.333333333333336px;text-align:center" class="tickLabel">1 ???</div><div style="position:absolute;top:127px;right:300px;width:20px;text-align:right" class="tickLabel">1880</div><div style="position:absolute;top:76.93832401518671px;right:300px;width:20px;text-align:right" class="tickLabel">1900</div><div style="position:absolute;top:26.876648030373424px;right:300px;width:20px;text-align:right" class="tickLabel">1920</div></div></div>
+
+                    <script language="javascript" type="text/javascript">
+                    var supahPlot = null;
+
+                    function opt() {
+                        return {xaxis: {mode: "time", timeformat: "%d %b", monthNames: ["???.", "???.", "?????", "???.", "???", "????", "????", "???.", "???.", "???.", "????.", "???."], tickSize: [1, "month"]}, grid: {borderWidth: 1, hoverable: true}};
+                    }
+                    var plotOptions = opt();
+                    var plotOptionsWide = opt();
+                    plotOptionsWide.xaxis.tickSize = [6, "month"];
+                    plotOptionsWide.xaxis.timeformat = "%b<br/>%y";
+                    plotOptionsWide.xaxis.monthNames = ["???.", "???.", "????", "???.", "???", "????", "????", "???.", "???.", "???.", "????.", "???."];
+
+                    $(document).ready(function () {
+                        supahPlot = $.plot($("#supah_graph"), [[[1367431200000, 1884], [1366740000000, 1885], [1366135200000, 1885], [1365530400000, 1891], [1364925600000, 1888], [1364320800000, 1895], [1363716000000, 1902], [1363111200000, 1887], [1362506400000, 1906], [1361901600000, 1903], [1361296800000, 1908], [1360692000000, 1903], [1360087200000, 1916], [1359482400000, 1901], [1358877600000, 1912], [1358272800000, 1916], [1357668000000, 1929], [1356458400000, 1911], [1355853600000, 1916], [1355248800000, 1908], [1354644000000, 1903], [1354039200000, 1901], [1353434400000, 1883], [1352829600000, 1893]]], plotOptions);
+
+                        function showTooltip(x, y, contents) {
+                            $("<div id=\"tooltip\">" + contents + "</div>").css( {
+                                position: "absolute",
+                                display: "none",
+                                top: y - 25,
+                                left: x + 6,
+                                padding: "2px",
+                                "background-color": "#fff",
+                                opacity: 0.80,
+                                "font-weight": "bold"
+                            }).appendTo("body").show();
+                        }
+
+                        previousPoint = null;
+                        $("#supah_graph").bind("plothover", function (event, pos, item) {
+                            if(item) {
+                                if (previousPoint != item.datapoint) {
+                                    previousPoint = item.datapoint;
+
+                                    $("#tooltip").remove();
+                                    var y = item.datapoint[1];
+
+                                    showTooltip(item.pageX, item.pageY, y + " $");
+                                }
+                            } else {
+                                $("#tooltip").remove();
+                                previousPoint = null;
+                            }
+                        });
+
+                        $("#plot_toggles").html("<strong class=\"graphSwitch\">????????? ??????</strong><a href=\"\" onclick=\"plotToggleClick(this); return false;\" class=\"flink graphSwitch all\">??? ??????? ???????</a><br/><br/>");
+                    });
+
+                    function plotToggleClick(obj) {
+                        if($(obj).hasClass("all"))
+                            $("#plot_toggles").html("<a href=\"\" onclick=\"plotToggleClick(this); return false;\" class=\"flink graphSwitch\">????????? ??????</a><strong class=\"graphSwitch\">??? ??????? ???????</strong><br/><br/>");
+                        else
+                            $("#plot_toggles").html("<strong class=\"graphSwitch\">????????? ??????</strong><a href=\"\" onclick=\"plotToggleClick(this); return false;\" class=\"flink graphSwitch all\">??? ??????? ???????</a><br/><br/>");
+
+                        changeIndex();
+
+                        return false;
+                    }
+
+                    function changeIndex() {
+                        if($("#supah_graph")) {
+                            $("#supah_graph").css({visibility: "hidden"});
+                        }
+
+                        var fullToggle = $("#plot_toggles A");
+
+                        $.ajax({
+                            url: "/ajax/index-data?key=ef481c40e0b12d366737782fca6fe039&period="+(fullToggle.is("A") && fullToggle.hasClass("all") ? "" : "full"),
+                            dataType: "json",
+                            success: function(data) {
+                                if(supahPlot && data) {
+                                    $("#supah_graph").css({visibility: "visible"});
+
+                                    supahPlot = $.plot($('#supah_graph'), [data], fullToggle.is("A") && fullToggle.hasClass("all") ? plotOptions : plotOptionsWide);
+
+                                    //supahPlot.setData([req.responseJS[1]]);
+                                    //supahPlot.setupGrid();
+                                    //supahPlot.draw();
+                                }
+                            }
+                        });
+                    }
+                    </script>
+                </div>
+                <div class="secondCol" style="margin-right: 2%; width: 44%;">
+                    <h2 style="display:inline-block; padding: 0 0 4px 0; _display:inline;"><a href="/content/analitics">?????????</a></h2>&nbsp;&nbsp;<small class="gray">357</small><br>
+                    <span class="gray">?????? ??????????? ??&nbsp;????? ????????????</span><br>
+
+                    <ul class="articles"><li class="firstLi"><a href="/content/analitics/week/2013/1_mai">????? ??????????? ?? ????? ????????????   ? ?????? 24.04-01.05.2013</a><br><span class="gray"><p>
+	??????? ???????: ??????? ??&nbsp;?????? ?????? ??&nbsp;?????? ????????????? ????????, ????? ????? ??????????? ??????? ??????????.</p>
+<p>
+	?????? ???????: ????? ?????? ?????? ??&nbsp;?????? ?????? ?????, ????? ????? ??????????? ????????? ?????????????.</p>
+</span></li><li><a href="/content/analitics/month/2013___/price_apriel">???? ????????? ?&nbsp;?????? ??????????? ??&nbsp;???????? ?&nbsp;?????? 2013&nbsp;????. ?????? ????????????? ????????????</a></li><li><a href="/content/analitics/month/2013___/april_2013">????? ??????????? ??&nbsp;????? ???????????? ?????? ?&nbsp;?????? 2013 ????</a></li><li><a href="/content/analitics/week/2013/24_april">????? ??????????? ??&nbsp;????? ???????????? ?&nbsp;??????&nbsp;<nobr>17.04-24.04.2013</nobr></a></li>                </ul></div>
+            </div>
+
+            <br clear="all">
+            <div class="tad-corner"><div class="item tad" style="margin-top: 30px;"><script type="text/javascript">
+yandex_partner_id = 97780;
+yandex_site_bg_color = 'FFF2CF';
+yandex_stat_id = 2;
+yandex_site_charset = 'utf-8';
+yandex_ad_format = 'direct';
+yandex_font_size = 1;
+yandex_direct_type = 'horizontal';
+yandex_direct_limit = 1;
+yandex_direct_title_font_size = 3;
+yandex_direct_title_color = '996633';
+yandex_direct_url_color = '996633';
+yandex_direct_text_color = '996633';
+yandex_direct_hover_color = 'FF0000';
+yandex_direct_favicon = true;
+document.write('<sc'+'ript type="text/javascript" src="http://an.yandex.ru/system/context.js"></sc'+'ript>');
+</script><script type="text/javascript" src="http://an.yandex.ru/system/context.js"></script><script type="text/javascript" src="//an.yandex.ru/resource/context_static_r604.js" yandex_load_check="yes"></script><script type="text/javascript" src="//an.yandex.ru/page/97780?callback=Ya%5B1367704460748%5D&amp;target-ref=http%3A%2F%2Fkrisha.kz%2F&amp;rnd=434045&amp;charset=utf-8&amp;stat-id=2&amp;grab=dNCa0YDRi9GI0LAuINCd0LXQtNCy0LjQttC40LzQvtGB0YLRjCDQsiDQmtCw0LfQsNGF0YHRgtCw0L3QtSDigJQg0L7QsdGK0Y_QstC70LXQvdC40Y8g0L4g0L_RgNC-0LTQsNC20LUg0L3QtdC00LLQuNC20LjQvNC-0YHRgtC4INCa0LDQt9Cw0YXRgdGC0LDQvdCwCjHQk9C-0YDRj9GH0LjQtSDQv9GA0LXQtNC70L7QttC10L3QuNGPINC90LXQtNCy0LjQttC40LzQvtGB0YLQuCDQmtCw0LfQsNGF0YHRgtCw0L3QsCAKMtCd0L7QstC-0YHRgtC4IAoy0KHRgtCw0YLRjNC4IAoy0JrRgNGL0YjQtdC40L3QtNC10LrRgSAKMtCQ0L3QsNC70LjRgtC40LrQsCA="></script><style type="text/css">body .ya-partner .ya-partner__hidden {
+    display: none !important;
+}
+ .ya-partner {
+    font-size: 100% !important;
+    position: relative !important;
+    display: block !important;
+    overflow: hidden !important;
+    text-align: left !important;
+    line-height: normal !important;
+    border-radius: 4px 4px 4px 4px !important;
+    -webkit-box-sizing: border-box !important;
+    -moz-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+    white-space: normal !important;
+}
+ .ya-partner__l-table, .ya-partner__l-tr, .ya-partner__l-td {
+    background: transparent none no-repeat scroll 0 0 !important;
+    border: none !important;
+    border-radius: none !important;
+    border-spacing: 0 !important;
+    border-collapse: collapse !important;
+    -moz-box-sizing: content-box !important;
+    box-sizing: content-box !important;
+    clear: none !important;
+    clip: auto !important;
+    color: inherit !important;
+    cursor: auto !important;
+    empty-cells: show !important;
+    float: none !important;
+    font: inherit !important;
+    height: auto !important;
+    letter-spacing: normal !important;
+    line-height: normal !important;
+    margin: 0 !important;
+    max-height: none !important;
+    max-width: none !important;
+    min-height: 0 !important;
+    min-width: 0 !important;
+    outline: none !important;
+    overflow: visible !important;
+    padding: 0 !important;
+    position: static !important;
+    table-layout: auto !important;
+    text-align: left !important;
+    text-decoration: none !important;
+    text-indent: 0 !important;
+    text-transform: none !important;
+    vertical-align: middle !important;
+    visibility: visible !important;
+    white-space: normal !important;
+    width: auto !important;
+    word-spacing: normal !important;
+    z-index: auto !important;
+}
+ .ya-partner, .ya-partner__ads-l, .ya-partner__ads-l em, .ya-partner__ads-r, .ya-partner__item, .ya-partner__title-link-text, .ya-partner__text, .ya-partner__domain, .ya-partner__region, ya-partner__pic-container, ya-partner__pic, .ya-partner__list tbody, .ya-partner__list tr, .ya-partner__list td {
+    font-size: inherit !important;
+    font-style: normal !important;
+    text-indent: 0 !important;
+}
+ .ya-partner_text_clickable a.ya-partner__text {
+    text-decoration: none !important;
+    cursor: pointer !important;
+}
+ .ya-partner_text_clickable a.ya-partner__text:hover {
+    text-decoration: underline !important;
+}
+ .ya-partner__pic-container {
+    display: block !important;
+    margin: 3px 0 !important;
+}
+ .ya-partner__item_piclayout_left .ya-partner__pic-container {
+    margin: 0 0.4em 0 0 !important;
+}
+ .ya-partner__item_piclayout_float .ya-partner__pic-container {
+    margin: 0.4em 0.4em 0 0 !important;
+    float: left !important;
+}
+ .ya-partner__item_piclayout_float .ya-partner__address, .ya-partner__item_piclayout_float .ya-partner__domain, .ya-partner__item_piclayout_float .ya-partner__region {
+    white-space: nowrap !important;
+}
+ .ya-partner__clearfix {
+    background: transparent none no-repeat scroll 0 0 !important;
+    border: none !important;
+    border-radius: none !important;
+    border-spacing: 0 !important;
+    border-collapse: collapse !important;
+    -moz-box-sizing: content-box !important;
+    box-sizing: content-box !important;
+    clear: both !important;
+    clip: auto !important;
+    color: inherit !important;
+    cursor: auto !important;
+    empty-cells: show !important;
+    float: none !important;
+    font: inherit !important;
+    height: 0 !important;
+    letter-spacing: normal !important;
+    line-height: 0 !important;
+    margin: 0 !important;
+    max-height: none !important;
+    max-width: none !important;
+    min-height: 0 !important;
+    min-width: 0 !important;
+    outline: none !important;
+    overflow: visible !important;
+    padding: 0 !important;
+    position: static !important;
+    table-layout: auto !important;
+    text-align: left !important;
+    text-decoration: none !important;
+    text-indent: 0 !important;
+    text-transform: none !important;
+    vertical-align: baseline !important;
+    visibility: visible !important;
+    white-space: normal !important;
+    width: auto !important;
+    word-spacing: normal !important;
+    z-index: auto !important;
+    font-size: 0 !important;
+    display: block !important;
+}
+ .ya-partner__pic, .ya-partner__pic:link, .ya-partner__pic:hover, .ya-partner__pic:visited {
+    background: transparent 0 0 no-repeat scroll !important;
+    border: none !important;
+    border-radius: none !important;
+    border-spacing: 0 !important;
+    border-collapse: collapse !important;
+    -moz-box-sizing: content-box !important;
+    box-sizing: content-box !important;
+    clear: none !important;
+    clip: auto !important;
+    color: inherit !important;
+    cursor: pointer !important;
+    empty-cells: show !important;
+    float: none !important;
+    font: inherit !important;
+    height: auto !important;
+    letter-spacing: normal !important;
+    line-height: normal !important;
+    margin: 0 !important;
+    max-height: none !important;
+    max-width: none !important;
+    min-height: 0 !important;
+    min-width: 0 !important;
+    outline: none !important;
+    overflow: visible !important;
+    padding: 0 !important;
+    position: static !important;
+    table-layout: auto !important;
+    text-align: left !important;
+    text-decoration: none !important;
+    text-indent: 0 !important;
+    text-transform: none !important;
+    vertical-align: baseline !important;
+    visibility: visible !important;
+    white-space: normal !important;
+    width: auto !important;
+    word-spacing: normal !important;
+    z-index: auto !important;
+    display: block !important;
+}
+ .ya-partner yatag {
+    text-align: left !important;
+    font-family: inherit !important;
+}
+ .ya-partner__list {
+    display: block !important;
+    line-height: normal !important;
+    font-size: inherit !important;
+    text-indent: 0 !important;
+}
+ .ya-partner__title-link, .ya-partner__address, .ya-partner__ads-link {
+    background: transparent none no-repeat scroll 0 0 !important;
+    border: none !important;
+    border-radius: none !important;
+    border-spacing: 0 !important;
+    border-collapse: collapse !important;
+    -moz-box-sizing: content-box !important;
+    box-sizing: content-box !important;
+    clear: none !important;
+    clip: auto !important;
+    color: inherit !important;
+    cursor: pointer !important;
+    empty-cells: show !important;
+    float: none !important;
+    font: inherit !important;
+    height: auto !important;
+    letter-spacing: normal !important;
+    line-height: normal !important;
+    margin: 0 !important;
+    max-height: none !important;
+    max-width: none !important;
+    min-height: 0 !important;
+    min-width: 0 !important;
+    outline: none !important;
+    overflow: visible !important;
+    padding: 0 !important;
+    position: static !important;
+    table-layout: auto !important;
+    text-align: left !important;
+    text-decoration: none !important;
+    text-indent: 0 !important;
+    text-transform: none !important;
+    vertical-align: baseline !important;
+    visibility: visible !important;
+    white-space: normal !important;
+    width: auto !important;
+    word-spacing: normal !important;
+    z-index: auto !important;
+    font-size: inherit !important;
+    font-style: normal !important;
+    display: inline !important;
+}
+ a.ya-partner__address:link, a.ya-partner__address:hover, a.ya-partner__address:visited {
+    text-decoration: underline !important;
+}
+ .ya-partner__address {
+    margin-right: 0.3em !important;
+}
+ a.ya-partner__ads-link:link, a.ya-partner__ads-link:hover, a.ya-partner__ads-link:visited {
+    text-decoration: none !important;
+    font-weight: normal !important;
+}
+ .ya-partner__ads-link em {
+    font-style: normal !important;
+    font-weight: normal !important;
+    background: none repeat scroll 0 0 transparent !important;
+}
+ .ya-partner__item {
+    border-radius: 4px 4px 4px 4px !important;
+    border: none !important;
+    padding: 0.2em 0.3em !important;
+    line-height: normal !important;
+}
+ body .ya-partner__item_pos_last {
+    margin-bottom: 0 !important;
+}
+ .ya-partner_ads_inner-up .ya-partner__item_pos_first, .ya-partner_ads_inner-up-down .ya-partner__item_pos_first, .ya-partner_ads_inner-down .ya-partner__item_pos_last {
+    border-radius: 0 4px 4px 4px !important;
+}
+ .ya-partner_ads_inner-down .ya-partner__item_pos_last, .ya-partner_ads_inner-up-down .ya-partner__item_pos_last {
+    border-radius: 4px !important;
+}
+ .ya-partner_ads_inner-down .ya-partner__item_pos_first.ya-partner__item_pos_last {
+    border-radius: 4px 4px 4px 0 !important;
+}
+ .ya-partner__url {
+    font-size: 87% !important;
+    display: block !important;
+}
+ .ya-partner__hide-urls .ya-partner__list .ya-partner__url {
+    display: none !important;
+}
+ .ya-partner__warn {
+    font-size: 70% !important;
+    border-radius: 2px !important;
+    -moz-border-radius: 2px !important;
+    -webkit-border-radius: 2px !important;
+    padding: 0.25em 0.3em 0.25em !important;
+    line-height: 1.1em !important;
+}
+ .ya-partner__agewarn-cont {
+    padding-left: .3em !important;
+    display: inline-block !important;
+    float: right !important;
+}
+ .ya-partner__text .ya-partner__agewarn-cont {
+    display: none !important;
+}
+ .ya-partner__hide-urls .ya-partner__text .ya-partner__agewarn-cont {
+    display: inline-block !important;
+    padding-left: 0 !important;
+}
+ yatag.ya-partner__agewarn {
+    font: normal normal 85% Tahoma, Arial, sans-serif !important;
+    border-radius: 5px !important;
+    padding: 0 1px !important;
+    vertical-align: baseline !important;
+}
+ .ya-partner__url .ya-partner__agewarn {
+    font-size: 90% !important;
+}
+ .ya-partner__ads {
+    white-space: nowrap !important;
+    font-size: 87% !important;
+}
+ .ya-partner__icon {
+    font: 0/0 a !important;
+    margin: 0 4px -2px 0 !important;
+    vertical-align: baseline !important;
+    border: 0 !important;
+    display: inline !important;
+    width: auto !important;
+    float: none !important;
+}
+ .ya-partner__ads-link {
+    position: relative !important;
+    z-index: 10 !important;
+    margin-left: 5px !important;
+    line-height: normal !important;
+    white-space: nowrap !important;
+}
+ .ya-partner__ads-l {
+    display: inline-block !important;
+    position: relative !important;
+    background: none repeat scroll 0 0 transparent !important;
+    padding-right: .75em !important;
+}
+ .ya-partner__ads-r {
+    display: inline-block !important;
+    margin-left: -5px !important;
+    padding: 0 0 0 10px !important;
+}
+ .ya-partner__ads-r .ya-partner__ads-link {
+    margin: 0 5px 0 0 !important;
+}
+ a.ya-partner__ads-link-r,a.ya-partner__ads-link-r:link,a.ya-partner__ads-link-r:hover,a.ya-partner__ads-link-r:visited,a.ya-partner__ads-link-r:active,a.ya-partner__ads-link-r:focus,a.ya-partner__ads-link-l,a.ya-partner__ads-link-l:link,a.ya-partner__ads-link-l:hover,a.ya-partner__ads-link-l:visited,a.ya-partner__ads-link-l:active,a.ya-partner__ads-link-l:focus {
+    font-weight: normal !important;
+}
+ a.ya-partner__title-link,a.ya-partner__title-link:link,a.ya-partner__title-link:hover,a.ya-partner__title-link:visited,a.ya-partner__title-link:active,a.ya-partner__title-link:focus {
+    font-weight: normal !important;
+    line-height: normal !important;
+    text-decoration: none !important;
+}
+ a.ya-partner__title-link .ya-partner__title-link-text,a.ya-partner__title-link .ya-partner__title-link-text:link,a.ya-partner__title-link .ya-partner__title-link-text:hover,a.ya-partner__title-link .ya-partner__title-link-text:visited,a.ya-partner__title-link .ya-partner__title-link-text:active,a.ya-partner__title-link .ya-partner__title-link-text:focus {
+    display: inline !important;
+    text-decoration: underline !important;
+}
+ .ya-partner_text_clickable a.ya-partner__title-link .ya-partner__title-link-text, .ya-partner_text_clickable a.ya-partner__address {
+    text-decoration: none !important;
+}
+ .ya-partner_text_clickable a.ya-partner__title-link:hover .ya-partner__title-link-text, .ya-partner_text_clickable a.ya-partner__address:hover {
+    text-decoration: underline !important;
+}
+ .ya-partner_ads-up .ya-partner__ads {
+    position: relative !important;
+    display: block !important;
+}
+ .ya-partner_ads-up .ya-partner__ads-l {
+    padding-bottom: 1px !important;
+    vertical-align: top !important;
+    border-radius: 4px 0 0 0 !important;
+    -moz-border-radius: 4px 0 0 0 !important;
+    -webkit-border-radius: 4px 0 0 0 !important;
+}
+ .ya-partner_ads-up .ya-partner__ads-r {
+    padding-bottom: 1px !important;
+    vertical-align: top !important;
+    border-radius: 0 0 4px 0 !important;
+    -moz-border-radius: 0 0 4px 0 !important;
+    -webkit-border-radius: 0 0 4px 0 !important;
+}
+ .ya-partner_ads-down .ya-partner__ads {
+    position: absolute !important;
+    bottom: 0 !important;
+}
+ .ya-partner_ads-down .ya-partner__list {
+    padding-bottom: 1em !important;
+}
+ .ya-partner_ads-down .ya-partner__ads-l {
+    border-radius: 0 0 0 3px !important;
+    -moz-border-radius: 0 0 0 3px !important;
+    -webkit-border-radius: 0 0 0 3px !important;
+}
+ .ya-partner_ads-down .ya-partner__ads-r {
+    border-radius: 0 4px 0 0 !important;
+    -moz-border-radius: 0 4px 0 0 !important;
+    -webkit-border-radius: 0 4px 0 0 !important;
+}
+ .ya-partner_ads_inner-up-down .ya-partner__list {
+    margin: 0 0 1em !important;
+}
+ .ya-partner_ads-up-down .ya-partner__list {
+    margin: 1em 0 !important;
+}
+ .ya-partner_ads_inner-up-down .ya-partner__ads-l, .ya-partner_ads-up-down .ya-partner__ads-l {
+    border-radius: 3px 0 0 0 !important;
+    -moz-border-radius: 3px 0 0 0 !important;
+    -webkit-border-radius: 3px 0 0 0 !important;
+}
+ .ya-partner_ads-up-down .ya-partner__ads-l {
+    position: absolute !important;
+    top: 0 !important;
+}
+ .ya-partner_ads-up-down .ya-partner__ads-link {
+    display: inline-block !important;
+    padding-bottom: 2px !important;
+}
+ .ya-partner_ads-up-down .ya-partner__ads-r .ya-partner__ads-link {
+    padding-bottom: 1px !important;
+}
+ .ya-partner_ads_inner-up-down .ya-partner__ads-r, .ya-partner_ads-up-down .ya-partner__ads-r {
+    position: absolute !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 0 0 4px 4px !important;
+    -moz-border-radius: 0 0 4px 4px !important;
+    -webkit-border-radius: 0 0 4px 4px !important;
+}
+ .ya-partner_ads_inner-up-down .ya-partner__ads-r {
+    left: 0 !important;
+}
+ .ya-partner_ads-up-down .ya-partner__ads-r {
+    border-radius: 0 0 3px 3px !important;
+    -moz-border-radius: 0 0 3px 3px !important;
+    -webkit-border-radius: 0 0 3px 3px !important;
+}
+ .ya-partner_ads_inner-up-down .ya-partner__ads-link, .ya-partner_ads-up-down .ya-partner__ads-link {
+    margin-left: 5px !important;
+}
+ .ya-partner_ads_inner-up .ya-partner__ads {
+    display: block !important;
+}
+ .ya-partner_ads_inner-up .ya-partner__ads-l, .ya-partner_ads_inner-up .ya-partner__ads-r {
+    vertical-align: top !important;
+}
+ .ya-partner_ads_inner-up .ya-partner__ads-l {
+    border-radius: 4px 0 0 0 !important;
+    -moz-border-radius: 4px 0 0 0 !important;
+    -webkit-border-radius: 4px 0 0 0 !important;
+}
+ .ya-partner_ads_inner-up .ya-partner__ads-r {
+    border-radius: 0 4px 0 0 !important;
+    -moz-border-radius: 0 4px 0 0 !important;
+    -webkit-border-radius: 0 4px 0 0 !important;
+}
+ .ya-partner_ads_inner-down .ya-partner__ads {
+    display: block !important;
+}
+ .ya-partner_ads_inner-down .ya-partner__ads-l {
+    border-radius: 0 0 0 4px !important;
+    -moz-border-radius: 0 0 0 4px !important;
+    -webkit-border-radius: 0 0 0 4px !important;
+}
+ .ya-partner_ads_inner-down .ya-partner__ads-r {
+    border-radius: 0 0 4px 0 !important;
+    -moz-border-radius: 0 0 4px 0 !important;
+    -webkit-border-radius: 0 0 4px 0 !important;
+}
+ .ya-partner_ads_inner-down .ya-partner__ads-link, .ya-partner_ads-down .ya-partner__ads-link {
+    display: inline-block !important;
+    padding-bottom: 1px !important;
+}
+ .ya-partner_ads_only-arrow .ya-partner__ads {
+    margin-right: 0.5em !important;
+}
+ .ya-partner_margin_yes .ya-partner__icon {
+    margin-left: -20px !important;
+}
+ .ya-partner_margin_yes .ya-partner__item {
+    padding-left: 20px !important;
+}
+ .ya-partner__wrap-fit {
+    display: block !important;
+    zoom: 1 !important;
+    position: relative !important;
+    padding-bottom: 1px !important;
+    font-size: inherit !important;
+    border-radius: 4px 4px 4px 4px !important;
+}
+ .ya-partner_type_horiz {
+    display: inline-block !important;
+    width: 100% !important;
+    -moz-box-sizing: border-box !important;
+    -webkit-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+}
+ :root .ya-partner_type_horiz {
+    display: table\0/IE9 !important;
+    width: 100%\0/IE9 !important;
+}
+ :root .ya-partner_type_horiz.ya-partner_border.ya-partner_ads-down .ya-partner__ads {
+    bottom: 1px\0/IE9 !important;
+}
+ .ya-partner_type_horiz:before,.ya-partner_type_horiz:after {
+    content: "" !important;
+    display: table !important;
+    border-spacing: 0 !important;
+    border: 0 !important;
+}
+ .ya-partner_type_horiz .ya-partner__list {
+    display: table !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    border-spacing: 0 !important;
+    font-size: inherit !important;
+}
+ .ya-partner_ads-down table.ya-partner__list {
+    margin-bottom: 1em !important;
+}
+ body .ya-partner_type_horiz .ya-partner__item {
+    position: static !important;
+}
+ .ya-partner_type_horiz .ya-partner__tr {
+    font-size: inherit !important;
+}
+ .ya-partner_type_horiz .ya-partner__item {
+    padding: 0.5em !important;
+    vertical-align: top !important;
+    border-spacing: 0 !important;
+    font-size: inherit !important;
+    border-collapse: separate !important;
+}
+ .ya-partner_type_horiz .ya-partner__gap {
+    font-size: 10px !important;
+    width: 0.5em !important;
+    margin: 0 !important;
+    border: none !important;
+    background: none !important;
+}
+ .ya-partner_type_horiz table.ya-partner__list, .ya-partner_type_horiz td.ya-partner__item,.ya-partner_type_horiz td.ya-partner__gap {
+    border-collapse: separate !important;
+}
+ .ya-partner_type_horiz .ya-partner__warn,.ya-partner_type_horiz .ya-partner__inner,.ya-partner_type_horiz .ya-partner__text,.ya-partner_type_horiz .ya-partner__url {
+    display: block !important;
+}
+ .ya-partner_type_horiz.ya-partner_ads_inner-down .ya-partner__item_pos_first {
+    border-radius: 4px 4px 4px 0 !important;
+    -moz-border-radius: 4px 4px 4px 0 !important;
+    -webkit-border-radius: 4px 4px 4px 0 !important;
+}
+ .ya-partner_type_horiz .ya-partner__item_pos_last {
+    margin-right: 0 !important;
+}
+ .ya-partner_type_horiz .ya-partner__text, .ya-partner_type_horiz .ya-partner__warn {
+    margin: 0.4em 0 !important;
+}
+ .ya-partner_type_horiz .ya-context__list_item_2.ya-context__list_picnum_2 .ya-partner__item {
+    width: 42% !important;
+}
+ .ya-partner_type_horiz .ya-context__list_item_2.ya-context__list_picnum_2 .ya-partner__item.ya-partner__item_pic_yes {
+    width: 50% !important;
+}
+ .ya-partner_type_horiz .ya-context__list_item_2.ya-context__list_picnum_1 .ya-partner__item {
+    width: 46% !important;
+}
+ .ya-partner_type_horiz .ya-context__list_item_2.ya-context__list_picnum_1 .ya-partner__item.ya-partner__item_pic_yes {
+    width: 55% !important;
+}
+ .ya-partner_type_horiz .ya-context__list_item_2.ya-context__list_picnum_0 .ya-partner__item {
+    width: 50% !important;
+}
+ .ya-partner_type_horiz .ya-context__list_item_2.ya-context__list_picnum_0 .ya-partner__item.ya-partner__item_pic_yes {
+    width: 60% !important;
+}
+ .ya-partner_type_horiz .ya-context__list_item_3.ya-context__list_picnum_3 .ya-partner__item {
+    width: 28% !important;
+}
+ .ya-partner_type_horiz .ya-context__list_item_3.ya-context__list_picnum_3 .ya-partner__item.ya-partner__item_pic_yes {
+    width: 34% !important;
+}
+ .ya-partner_type_horiz .ya-context__list_item_3.ya-context__list_picnum_2 .ya-partner__item {
+    width: 30% !important;
+}
+ .ya-partner_type_horiz .ya-context__list_item_3.ya-context__list_picnum_2 .ya-partner__item.ya-partner__item_pic_yes {
+    width: 36% !important;
+}
+ .ya-partner_type_horiz .ya-context__list_item_3.ya-context__list_picnum_1 .ya-partner__item {
+    width: 32% !important;
+}
+ .ya-partner_type_horiz .ya-context__list_item_3.ya-context__list_picnum_1 .ya-partner__item.ya-partner__item_pic_yes {
+    width: 38% !important;
+}
+ .ya-partner_type_horiz .ya-context__list_item_3.ya-context__list_picnum_0 .ya-partner__item {
+    width: 34% !important;
+}
+ .ya-partner_type_horiz .ya-context__list_item_3.ya-context__list_picnum_0 .ya-partner__item.ya-partner__item_pic_yes {
+    width: 40% !important;
+}
+ .ya-partner_type_horiz .ya-context__list_item_4.ya-context__list_picnum_4 .ya-partner__item {
+    width: 21% !important;
+}
+ .ya-partner_type_horiz .ya-context__list_item_4.ya-context__list_picnum_4 .ya-partner__item.ya-partner__item_pic_yes {
+    width: 25% !important;
+}
+ .ya-partner_type_horiz .ya-context__list_item_4.ya-context__list_picnum_3 .ya-partner__item {
+    width: 22% !important;
+}
+ .ya-partner_type_horiz .ya-context__list_item_4.ya-context__list_picnum_3 .ya-partner__item.ya-partner__item_pic_yes {
+    width: 27% !important;
+}
+ .ya-partner_type_horiz .ya-context__list_item_4.ya-context__list_picnum_2 .ya-partner__item {
+    width: 23% !important;
+}
+ .ya-partner_type_horiz .ya-context__list_item_4.ya-context__list_picnum_2 .ya-partner__item.ya-partner__item_pic_yes {
+    width: 28% !important;
+}
+ .ya-partner_type_horiz .ya-context__list_item_4.ya-context__list_picnum_1 .ya-partner__item {
+    width: 24% !important;
+}
+ .ya-partner_type_horiz .ya-context__list_item_4.ya-context__list_picnum_1 .ya-partner__item.ya-partner__item_pic_yes {
+    width: 29% !important;
+}
+ .ya-partner_type_horiz .ya-context__list_item_4.ya-context__list_picnum_0 .ya-partner__item {
+    width: 25% !important;
+}
+ .ya-partner_type_horiz .ya-context__list_item_4.ya-context__list_picnum_0 .ya-partner__item.ya-partner__item_pic_yes {
+    width: 30% !important;
+}
+#ya_partner_0 .ya-partner__title-link-text:visited {
+    color: #996633 !important;
+}
+ #ya_partner_0 .ya-partner__title-link-text:link {
+    color: #996633 !important;
+}
+ #ya_partner_0 .ya-partner__title-link-text:hover {
+    color: #FF0000 !important;
+}
+ #ya_partner_0 .ya-partner__title-link-text {
+    color: #996633 !important;
+    font-size: 130% !important;
+}
+ #ya_partner_0 .ya-partner__region {
+    color: #996633 !important;
+}
+ #ya_partner_0 .ya-partner__domain {
+    color: #996633 !important;
+}
+ #ya_partner_0 .ya-partner__address {
+    color: #996633 !important;
+}
+ #ya_partner_0 .ya-partner {
+    font-family: inherit !important;
+    color: #996633 !important;
+    font-size: 1em !important;
+    background: undefined !important;
+    border-radius: 0 !important;
+}
+ #ya_partner_0 .ya-partner__text {
+    font-family: inherit !important;
+    color: #996633 !important;
+}
+ #ya_partner_0 .ya-partner_ads-down .ya-partner__ads-l {
+    border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+}
+ #ya_partner_0 .ya-partner_ads-up .ya-partner__ads-l {
+    border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+}
+ #ya_partner_0 .ya-partner__wrap-fit {
+    border-radius: 0 !important;
+}
+ #ya_partner_0 .ya-partner__item {
+    border-radius: 0 !important;
+}
+ #ya_partner_0 .ya-partner__warn {
+    border: 1px solid #EFDDB7 !important;
+    background-color: #FFFAEF !important;
+}
+ #ya_partner_0 .ya-partner__agewarn {
+    border: 1px solid #EFDDB7 !important;
+    background-color: #FFFAEF !important;
+}
+ #ya_partner_0 a.ya-partner__ads-link-r:link {
+    text-decoration: underline !important;
+    color: #000 !important;
+}
+ #ya_partner_0 a.ya-partner__ads-link-r:hover {
+    text-decoration: underline !important;
+    color: #000 !important;
+}
+ #ya_partner_0 a.ya-partner__ads-link-r:visited {
+    text-decoration: underline !important;
+    color: #000 !important;
+}
+ #ya_partner_0 a.ya-partner__ads-link-l:link {
+    text-decoration: underline !important;
+    color: #000 !important;
+}
+ #ya_partner_0 a.ya-partner__ads-link-l:hover {
+    text-decoration: underline !important;
+    color: #000 !important;
+}
+ #ya_partner_0 a.ya-partner__ads-link-l:visited {
+    text-decoration: underline !important;
+    color: #000 !important;
+}</style><div id="ya_partner_0" style="background:transparent none no-repeat scroll 0 0 !important;border:none !important;border-radius:none !important;border-spacing:0 !important;border-collapse:collapse !important;-moz-box-sizing:content-box !important;box-sizing:content-box !important;clear:none !important;clip:auto !important;color:inherit !important;cursor:auto !important;empty-cells:show !important;float:none !important;font:inherit !important;height:auto !important;letter-spacing:normal !important;line-height:normal !important;margin:0 !important;max-height:none !important;max-width:none !important;min-height:0 !important;min-width:0 !important;outline:none !important;overflow:visible !important;padding:0 !important;position:static !important;table-layout:auto !important;text-align:left !important;text-decoration:none !important;text-indent:0 !important;text-transform:none !important;vertical-align:baseline !important;visibility:visible !important;white-space:normal !important;width:auto !important;word-spacing:normal !important;z-index:auto !important;display:block !important;"><yatag class="ya-partner_ads-up ya-partner_theme_horizontal  ya-partner ya-partner_type_horiz"><yatag class="ya-partner__ads"><yatag class="ya-partner__ads-l"><a href="http://direct.yandex.ru/?partner" class="ya-partner__ads-link ya-partner__ads-link-l" target="_blank">??????.??????</a></yatag><yatag class="ya-partner__ads-r"><a href="http://direct.yandex.ru/search?from=http://krisha.kz/&amp;ref-page=97780" class="ya-partner__ads-link ya-partner__ads-link-r" target="_blank">??? ??????????</a></yatag></yatag><table class="ya-partner__list ya-context__list_item_1 ya-context__list_picnum_0" cellpadding="0" cellspacing="0"><tbody><tr class="ya-partner__tr"><td class="ya-partner__item ya-partner__item_pos_first ya-partner__item_pos_last"><a href="http://an.yandex.ru/count/HQ3hR1OsYe040000ZhStM1W5XPJV5vK2cm5kGxS2Am68iH8Ke0A9eWWAG9X4dWATeD421foz3_T70PQg_v7Jkl2G6pmro8kT3vgcQlkdagZkPLscAOgXNU0QgW6bhW8Q0P6vAGyX1e-rlvlD29-pkuPy2fDKcLT2Z90r3A2G5n6la3KCb9B85QU6dwYlNWHofB00003ghliPy85AWUlR1B2vjO2a0x41k-CVqaBJLjSEVHG0?stat-id=2&amp;test-tag=541329473" class="ya-partner__title-link" target="_blank"><img class="ya-partner__icon" src="//favicon.yandex.net/favicon/astana.afy.ru" alt=""><yatag class="ya-partner__title-link-text">???????????? ??????</yatag></a> <yatag class="ya-partner__text">?????? ???? ????????????. ????????, ????, ????????? ??????? ?&nbsp;?.?.</yatag> <yatag class="ya-partner__url"><yatag class="ya-partner__domain">astana.afy.ru</yatag> <yatag class="ya-partner__region"></yatag></yatag></td></tr></tbody></table></yatag></div>
+</div></div>        </div>
+    </div>
+    <div class="rightCol">
+        <div class="board"><div class="forMoney"><!-- krisha_home_240x400 -->
+<div id="div-gpt-ad-1355909730799-0" style="width:240px; height:400px;">
+<script type="text/javascript">
+googletag.display('div-gpt-ad-1355909730799-0');
+</script><script type="text/javascript" src="http://pubads.g.doubleclick.net/gampad/ads?gdfp_req=1&amp;correlator=4406607676986756&amp;output=json_html&amp;callback=googletag.impl.pubads.setAdContentsBySlotForSync&amp;impl=ss&amp;json_a=1&amp;eid=108809002&amp;iu_parts=47763208%2Ckrisha_home_240x400%2Ckrisha_search_top_240x400%2Ckrisha_search_bottom_240x400%2Ckrisha_search_bottom_550x80%2Ckrisha_search_top_550x80%2Ckrisha_ad_240x400%2Ckrisha_vip_980x100&amp;enc_prev_ius=%2F0%2F1%2C%2F0%2F2%2C%2F0%2F3%2C%2F0%2F4%2C%2F0%2F5%2C%2F0%2F6%2C%2F0%2F7&amp;prev_iu_szs=240x400%2C240x400%2C240x400%2C550x80%2C550x80%2C240x400%2C980x100&amp;cookie_enabled=1&amp;lmt=1367704457&amp;dt=1367704461275&amp;cc=100&amp;biw=1247&amp;bih=883&amp;oid=3&amp;gut=v2&amp;ifi=1&amp;u_tz=-300&amp;u_his=50&amp;u_h=1024&amp;u_w=1280&amp;u_ah=984&amp;u_aw=1280&amp;u_cd=24&amp;u_sd=1&amp;flash=0&amp;url=http%3A%2F%2Fkrisha.kz%2F&amp;adks=2833977581%2C2736300538%2C2358820167%2C514661448%2C1307688503%2C2612557266%2C3967387915&amp;vrg=20&amp;vrp=20&amp;ga_vid=611182639.1367704459&amp;ga_sid=1367704459&amp;ga_hid=1206707883&amp;ga_fc=true"></script><div id="div-gpt-ad-1355909730799-0_ad_container">
+<ins style="width: 240px; height: 400px; display: inline-table; position: relative; border: 0px none;"><ins style="width: 240px; height: 400px; display: block; position: relative; border: 0px none;"><iframe style="border: 0px none; position: absolute; top: 0px; left: 0px;" marginheight="0" marginwidth="0" name="google_ads_iframe_/47763208/krisha_home_240x400_0" id="google_ads_iframe_/47763208/krisha_home_240x400_0" frameborder="0" height="400" scrolling="no" width="240"></iframe></ins></ins></div>
+<script>googletag.impl.pubads.createDomIframe("div-gpt-ad-1355909730799-0_ad_container" ,"/47763208/krisha_home_240x400_0",false,undefined);</script>
+</div>
+</div></div>
+        <div class="main_answer_block_outer"><div class="main_answer_block"><div class="main_answer_h"><a href="/content/answer">?????? ?? ???????</a></div><div class="qa_q"><p></p><p>
+	??&nbsp;????? ?&nbsp;????????????????? <nobr>3-?????????</nobr> ????????. ?&nbsp;???????? ???????????? ??????? ??? ????, ??? ????, ?&nbsp;?&nbsp;??? ?????????????????? ????. ?????????? ?????? ??&nbsp;?????????????? ?????????, ??????????? ???????? ???? ??&nbsp;?????. ??? ??? ????????? ???????? ?&nbsp;???????????? ??? ????? ????????? ?????</p>
+<p></p></div><div class="qalinks"><a href="/content/answer/lawyer#qa8212">?????? ?????</a><a href="/content/answer" class="qa-load">???</a></div></div></div>            <script type="text/javascript">$().ready(function(){
+                $("a.qa-load").click(function(){
+                    $.get('/ajax/get-next-question',
+                    function(data) {
+                        var ex = data.split('|');
+                        $(".main_answer_block .qa_q").html(ex[1]);
+                        $(".main_answer_block .qalinks a:eq(0)").attr("href", ex[0]);
+                    });
+                    return false;
+                });
+            });</script>
+            </div>
+</div>
+
+<div id="usefull">
+    <strong>????????</strong>
+    <a href="/content/answer/lawyer"><img src="http://static.kr.kcdn.kz/i/just.gif" alt="" title="">???????????? ??????</a>
+    <!--a href="/content/answer/taxes"><img src="http://static.kr.kcdn.kz/i/tax-ico.gif" alt="" title="" />??????? ? ???????</a-->
+    <a href="/content/answer/ksk"><img src="http://static.kr.kcdn.kz/i/ksk-ico.gif" alt="" title="" style="margin-top: -4px">??? ? ???</a>
+    <a href="/content/answer/information"><img src="http://static.kr.kcdn.kz/i/info-ico.gif" alt="" title="">?????????? ????</a>
+</div>
+
+<div class="se-maincontent">
+    <h3>«??? ?????? ???? ??????...»</h3>
+    <p>?????? ??????? ???? ?? ??? ? ????? ????? ????????? ???????????? ? ?????????? ?? ????? ????????????. ? ?????????????, ???? ??? ?? ????? ?? ??????????? ???? ???????????? ??????????, ???????? ? ??????????, ??????? ???????? ????????? ????????????. </p>
+    <p>??????????? ?????? ?? ??? ??????? ? ???????????? ??????? ???????? ???????? ??? ????, ? ?????? ??? ????? ??????? ???????????. ????? ????, ???? ?????? ?????, ??? ??????? ???????? ? ?????????? ?????????? – ??? ?? ?????? ??? ??????. </p>
+    <p>?????? ??????, ??? ???????????? – ??? ???????????? ????? ????? ?????, ???? krisha.kz, ? ???????????? ???????? ?? ?????? ?????? ????????? ??????? ??? ????????? ?????, ????? ????????? ? ?????????? ??? ????? ???. ??? ?? ?? ?? ????:  ????????, ?????????? ??????? ??????????? ????????, ???????????, ?????????, ??????????? ??? ????????????? – ??? ???? ????? ????? ???????? ??? ???. </p>
+    <p>krisha.kz – ??? ?????????? ?????? ? ?????????? ???? ?????????? ? ???????, ???????, ?????? ???????, ?????, ???, ????????? ???????? ? ??????? ? ????? ??????????, ? ????? ? ?????????? ? ????? ????? ???????????? ????????????. ?? ???? ??????????? ??????? ???? ???????, ??? ????? ????? ??? ??????? ?????????? ????????. </p>
+    <p>??????? ???????, ????????????? ????????? ? ?????? ? ????????? ? ???????????? ?????. ????????? ??????? — ? ?? ? ????????????? ?? ??? ???????. ???? ???????????? ?????? ?????? ???????? ??? ????????? ??????? ???? ?? ??????, ? ? ?????? ???????????????? ???????? ?????? ?????? ?????? ??? ?????????? ???????? ??????. ??????? ? ???????????? ? ???????, ??????? ? ??????, ?? ?????? ?????? ????? ???????? ???? . </p>
+    <p>? ???? ? ??????? ???? ????????????? ??????????? ??????, ???????, ?????, ????? ??? ???????? ???????????? ??? ???????????. ?? ???? ?? ?? ???????, ??? ??????? ???????????? ? ??????????? ?????????, ??? ?? ?????-?? ??????? ?? ?????? ??????? ?????????? ??????? ?????? ?????????? ?????????, ??????????? ? ??????????????. ??? ?????? krisha.kz ?? ????? ????????? ???????? ?????????? ??????????? ? ??????????? ????????, ??????? ????????? ???? ????? ? ?????? ????? ??? ????? ????????? ? ?????????????. </p>
+    <p>?? krisha.kz ????? ????????? ?????????? ?? ??????? ?? ????????????? ? ???????, ?????????????? ? ???????, ???????????????, ????????, ??????? ?????? ? ??????????. ?? ???????? ?????? ? ????? ?????????? ??????????? ? ?????? ??? ?????????, ????? ?? ????? ???????? ??????! </p>
+</div>
+<div class="se-mainmenu"><div class="colsibling"><div class="shead">???????</div><a href="http://krisha.kz/prodazha/dachi/">??????? ???</a> <a href="http://krisha.kz/prodazha/doma/">??????? ?????</a> <a href="http://krisha.kz/prodazha/zdanija/">??????? ??????</a> <a href="http://krisha.kz/prodazha/kvartiry/">??????? ???????</a> <a href="http://krisha.kz/prodazha/magazina/">??????? ????????? ? ???????</a> <a href="http://krisha.kz/prodazha/ofisa/">??????? ??????</a> <a href="http://krisha.kz/prodazha/pomeshhenija/">??????? ?????????</a> <a href="http://krisha.kz/prodazha/prombazy/">??????? ???????, ???????</a> <a href="http://krisha.kz/prodazha/prochej-nedvizhimosti/">??????? ?????? ????????????</a> <a href="http://krisha.kz/prodazha/uchastkov/">??????? ????????</a> </div><div class="colsibling"><div class="shead">???????????? ?:</div><a href="http://krisha.kz/catalog/aktau/">?????</a> <a href="http://krisha.kz/catalog/aktobe/">??????</a> <a href="http://krisha.kz/catalog/almaty/">??????</a> <a href="http://krisha.kz/catalog/astana/">??????</a> <a href="http://krisha.kz/catalog/atyrau/">??????</a> <a href="http://krisha.kz/catalog/dzezkazgan/">??????????</a> <a href="http://krisha.kz/catalog/karaganda/">?????????</a> <a href="http://krisha.kz/catalog/kokshetau/">????????</a> <a href="http://krisha.kz/catalog/kostanay/">????????</a> <a href="http://krisha.kz/catalog/kyzylorda/">?????????</a> <a href="http://krisha.kz/catalog/pavlodar/">?????????</a> <a href="http://krisha.kz/catalog/petropavlovsk/">??????????????</a> <a href="http://krisha.kz/catalog/rudniy/">??????</a> <a href="http://krisha.kz/catalog/semei/">?????</a> <a href="http://krisha.kz/catalog/taldykrgan/">????????????</a> <a href="http://krisha.kz/catalog/taraz/">??????</a> <a href="http://krisha.kz/catalog/temirtau/">????????</a> <a href="http://krisha.kz/catalog/uralsk/">????????</a> <a href="http://krisha.kz/catalog/ust-kamenogorsk/">????-????????????</a> <a href="http://krisha.kz/catalog/shymkent/">????????</a> <a href="http://krisha.kz/catalog/ekibastuz/">??????????</a> </div><div class="colsibling"><div class="shead">??????</div><a href="http://krisha.kz/arenda/dachi/">?????? ???</a> <a href="http://krisha.kz/arenda/doma/">?????? ?????</a> <a href="http://krisha.kz/arenda/zdanija/">?????? ??????</a> <a href="http://krisha.kz/arenda/kvartiry/">?????? ???????</a> <a href="http://krisha.kz/arenda/komnaty/">?????? ??????</a> <a href="http://krisha.kz/arenda/magazina/">?????? ????????? ? ???????</a> <a href="http://krisha.kz/arenda/ofisa/">?????? ??????</a> <a href="http://krisha.kz/arenda/pomeshhenija/">?????? ?????????</a> <a href="http://krisha.kz/arenda/prombazy/">?????? ???????, ???????</a> <a href="http://krisha.kz/arenda/prochej-nedvizhimosti/">?????? ?????? ????????????</a> <a href="http://krisha.kz/arenda/vozmu-v-arendu/">?????? ? ??????</a> </div><div style="clear: both;"></div></div>
+
+<script type="text/javascript">
+    <!--//--><![CDATA[//><!--
+    var pp_gemius_identifier = 'cjgwsssnyxcRuuTCG4lzOoXBTKkpJRB8Y0vPJyJATQL.k7';
+    //--><!]]>
+</script>
+<script type="text/javascript" src="http://static.kr.kcdn.kz/js/xgemius.js"></script>
+<div class="clear"></div>
+<div class="footer">
+    <div class="fLeft">
+        <p class="gray">© 2006–2013 «?????»</p>
+        <a href="/content/special/info/copyright">??????? ????????????? ?????????? ?????</a>
+        <a href="http://krisha.kz/sitemap/" title="???????? ????? ?????">????? ?????</a>    </div>
+    <div class="fCenter">
+        <div class="f50">
+            ?????????? <a href="/content/special/info/site">? ?????</a> ? <a href="/content/special/info/paper">??????</a><br>
+            <a href="/content/special/write-us/message">???????? ??? ??????</a>
+        </div>
+        <div class="f50">
+            <ul>
+                <li style="display: list-item;" id="ffav"><a href="/a/my/">? ??? ??? ????????? ??????????</a></li>
+                <li class="ficons_1"><a href="/my">?????? ???????</a></li>
+                <li class="ficons_2"><a href="/a/new">?????? ??????????</a></li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+        <div class="fSocial">
+            <div class="ffacebook"><div fb-xfbml-state="parsed" class="fb-like fb_edge_widget_with_comment fb_iframe_widget" data-send="false" data-width="200" data-show-faces="false"><span style="height: 35px; width: 225px;"><iframe src="http://www.facebook.com/plugins/like.php?api_key=467515939986813&amp;locale=ru_RU&amp;sdk=joey&amp;channel_url=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D24%23cb%3Df1936aeda5807f%26origin%3Dhttp%253A%252F%252Fkrisha.kz%252Ff6f7f4902b547e%26domain%3Dkrisha.kz%26relation%3Dparent.parent&amp;href=http%3A%2F%2Fkrisha.kz%2F&amp;node_type=link&amp;width=225&amp;layout=standard&amp;colorscheme=light&amp;show_faces=false&amp;send=false&amp;extended_social_context=false" class="fb_ltr" title="Like this content on Facebook." style="border: medium none; overflow: hidden; height: 35px; width: 225px;" name="f15c6f54e13ee7c" id="f380a1e6e53c3d6" scrolling="no"></iframe></span></div></div>
+            <div class="fvk"><div style="height: 22px; width: 100px; background: none repeat scroll 0% 0% transparent; position: relative; clear: both;" id="vk_like"><iframe style="overflow: hidden; height: 22px; width: 100px; z-index: 150;" id="vkwidget1" src="http://vk.com/widget_like.php?app=3505118&amp;width=100%&amp;_ver=1&amp;page=0&amp;url=http%3A%2F%2Fkrisha.kz%2F&amp;type=mini&amp;verb=0&amp;title=%D0%9A%D1%80%D1%8B%D1%88%D0%B0.%20%D0%9D%D0%B5%D0%B4%D0%B2%D0%B8%D0%B6%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C%20%D0%B2%20%D0%9A%D0%B0%D0%B7%D0%B0%D1%85%D1%81%D1%82%D0%B0%D0%BD%D0%B5%20%E2%80%94%20%D0%BE%D0%B1%D1%8A%D1%8F%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F%20%D0%BE%20%D0%BF%D1%80%D0%BE%D0%B4%D0%B0%D0%B6%D0%B5%20%D0%BD%D0%B5%D0%B4%D0%B2%D0%B8%D0%B6%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8%20%D0%9A%D0%B0%D0%B7%D0%B0%D1%85%D1%81%D1%82%D0%B0%D0%BD%D0%B0&amp;description=%C2%AB%D0%9A%D1%80%D1%8B%D1%88%D0%B0%C2%BB%20%E2%80%94%20%D1%82%D1%8B%D1%81%D1%8F%D1%87%D0%B8%20%D1%81%D0%B2%D0%B5%D0%B6%D0%B8%D1%85%20%D0%BE%D0%B1%D1%8A%D1%8F%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B9%20%D0%B6%D0%B8%D0%BB%D0%BE%D0%B9%20%D0%B8%20%D0%BA%D0%BE%D0%BC%D0%BC%D0%B5%D1%80%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B9%20%D0%BD%D0%B5%D0%B4%D0%B2%D0%B8%D0%B6%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8%20%D0%B2%20%D0%9A%D0%B0%D0%B7%D0%B0%D1%85%D1%81%D1%82%D0%B0%D0%BD%D0%B5.%20%D0%9F%D1%80%D0%BE%D0%B4%D0%B0%D0%B6%D0%B0%2C%20%D0%BF%D0%BE%D0%BA%D1%83%D0%BF%D0%BA%D0%B0%20%D0%B8%20%D0%B0%D1%80%D0%B5%D0%BD%D0%B4%D0%B5%20%D0%BA%D0%B2%D0%B0%D1%80%D1%82%D0%B8%D1%80%2C%20%D0%B4%D0%BE%D0%BC%D0%BE%D0%B2%2C%20%D0%BE%D1%84%D0%B8%D1%81%D0%BE%D0%B2%2C%20%D1%83%D1%87%D0%B0%D1%81%D1%82%D0%BA%D0%BE%D0%B2%20%D0%BF%D0%BE%20%D0%B2%D1%81%D0%B5%D0%BC%D1%83%20%D0%9A%D0%B0%D0%B7%D0%B0%D1%85%D1%81%D1%82%D0%B0%D0%BD...&amp;image=&amp;text=&amp;h=22&amp;13e7189e27b" name="fXD7d759" frameborder="0" height="22" scrolling="no" width="100%"></iframe></div></div>
+            <div class="ftwitter"><iframe data-twttr-rendered="true" title="Twitter Tweet Button" style="width: 74px; height: 20px;" class="twitter-share-button twitter-count-none" src="http://platform.twitter.com/widgets/tweet_button.1367516458.html#_=1367704461581&amp;count=none&amp;id=twitter-widget-0&amp;lang=ru&amp;original_referer=http%3A%2F%2Fkrisha.kz%2F&amp;size=m&amp;text=%D0%9A%D1%80%D1%8B%D1%88%D0%B0.%20%D0%9D%D0%B5%D0%B4%D0%B2%D0%B8%D0%B6%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C%20%D0%B2%20%D0%9A%D0%B0%D0%B7%D0%B0%D1%85%D1%81%D1%82%D0%B0%D0%BD%D0%B5%20%E2%80%94%20%D0%BE%D0%B1%D1%8A%D1%8F%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F%20%D0%BE%20%D0%BF%D1%80%D0%BE%D0%B4%D0%B0%D0%B6%D0%B5%20%D0%BD%D0%B5%D0%B4%D0%B2%D0%B8%D0%B6%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8%20%D0%9A%D0%B0%D0%B7%D0%B0%D1%85%D1%81%D1%82%D0%B0%D0%BD%D0%B0&amp;url=http%3A%2F%2Fkrisha.kz%2F" allowtransparency="true" frameborder="0" scrolling="no"></iframe></div>
+            <div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 32px; height: 20px;"><iframe title="? ???? ???????? +1" data-gapiattached="true" allowtransparency="true" src="https://plusone.google.com/_/+1/fastbutton?bsv&amp;annotation=none&amp;size=medium&amp;hl=ru&amp;origin=http%3A%2F%2Fkrisha.kz&amp;url=http%3A%2F%2Fkrisha.kz%2F&amp;ic=1&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en_US.d8yU-wcNYlQ.O%2Fm%3D__features__%2Fam%3DUQ%2Frt%3Dj%2Fd%3D1%2Frs%3DAItRSTNFCVmDFU3r-qDb4qDOc5bk3EYiag#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Conload&amp;id=I0_1367704461558&amp;parent=http%3A%2F%2Fkrisha.kz&amp;rpctoken=12571611" name="I0_1367704461558" id="I0_1367704461558" vspace="0" tabindex="0" style="position: static; top: 0px; width: 32px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" marginwidth="0" marginheight="0" hspace="0" frameborder="0" scrolling="no" width="100%"></iframe></div>
+            <div class="google-plus">
+                <a href="http://google.com/+krishakz" rel="publisher" target="_blank">
+                    <img src="http://static.kr.kcdn.kz/i/google-plus.png" alt="????? ? Google+">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="fRight">
+        <a href="/content/special/info/pr" class="adverts">??????????????</a>
+        <p>?????? ???? ?&nbsp;??? ???????? ????. ??&nbsp;?????? ????? <strong>130&nbsp;????? ???????</strong> «?????????????» ????? <strong>????&nbsp;????????? ???????</strong> ?????? ?????.</p>
+        <!-- Start CountZero code  -->
+<span id="cz"><a href="http://zero.kz/?u=4278" target="_blank" rel="nofollow"><img src="http://zero.kz/c.php?u=4278&amp;t=1&amp;wd=1280&amp;hg=1024&amp;du=http%3A//krisha.kz/&amp;rf=" alt="CountZero" height="31px" width="88px" border="0px"></a></span>
+<noscript><a href='http://zero.kz/?u=4278' rel='nofollow' target='_blank'><img src='http://zero.kz/c.php?u=4278' border='0px' width='88px' height='31px' alt='CountZero'></a></noscript>
+<script type="text/javascript">
+    $(function () {
+        var cz_user = 4278;
+        var cz_type = 1;
+        var cz_str = "&wd=" + screen.width;
+        cz_str += "&hg=" + screen.height;
+        cz_str += "&du=" + escape(document.URL);
+        cz_str += "&rf=" + escape(document.referrer);
+        cz_str = "<a href='http://zero.kz/?u=" + cz_user + "' target='_blank' rel='nofollow'>" + "<img src='http://zero.kz/c.php?u=" + cz_user + "&t=" + cz_type + cz_str + "'" + " border='0px' width='88px' height='31px' alt='CountZero'>" + "<\/a>";
+        $("#cz").prepend(cz_str);
+    });
+</script>
+<!-- End CountZero code  -->
+<!--Openstat-->
+<span id="openstat759166"><a href="http://rating.openstat.ru/site/759166" target="_blank"><img src="http://openstat.net/digits?cid=759166&amp;ls=0&amp;ln=5042" alt="Openstat" border="0"></a></span>
+<script type="text/javascript">
+    var openstat = { counter:759166, image:5042, next:openstat };
+    document.write(unescape("%3Cscript%20src=%22http" +
+            (("https:" == document.location.protocol) ? "s" : "") +
+            "://openstat.net/cnt.js%22%20defer=%22defer%22%3E%3C/script%3E"));
+</script><script src="http://openstat.net/cnt.js" defer="defer"></script>
+<!--/Openstat-->
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/rating/kz/realty/index.html#krisha.kz' rel='nofollow' " +
+        "target=_blank><img src='//counter.yadro.ru/hit?t15.1;r" +
+        escape(document.referrer) + ((typeof(screen) == "undefined") ? "" :
+        ";s" + screen.width + "*" + screen.height + "*" + (screen.colorDepth ?
+                screen.colorDepth : screen.pixelDepth)) + ";u" + escape(document.URL) +
+        ";" + Math.random() +
+        "' alt='' title='LiveInternet: ???????? ????? ?????????? ?? 24" +
+        " ????, ??????????? ?? 24 ???? ? ?? ???????' " +
+        "border='0' width='88' height='31'><\/a>")
+//--></script><a href="http://www.liveinternet.ru/rating/kz/realty/index.html#krisha.kz" rel="nofollow" target="_blank"><img src="//counter.yadro.ru/hit?t15.1;r;s1280*1024*24;uhttp%3A//krisha.kz/;0.062031940684696196" alt="" title="LiveInternet: ???????? ????? ?????????? ?? 24 ????, ??????????? ?? 24 ???? ? ?? ???????" height="31" width="88" border="0"></a><!--/LiveInternet-->    </div>
+    <div class="clear"></div>
+</div>
+
+<div class=" fb_reset" id="fb-root"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe src="http://static.ak.facebook.com/connect/xd_arbiter.php?version=24#channel=f6f7f4902b547e&amp;origin=http%3A%2F%2Fkrisha.kz&amp;channel_path=%2F%3Ffb_xd_fragment%23xd_sig%3Df1377581ab2c8d4%26" style="border: medium none;" tab-index="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_http" allowtransparency="true" name="fb_xdm_frame_http" frameborder="0" scrolling="no"></iframe><iframe src="https://s-static.ak.facebook.com/connect/xd_arbiter.php?version=24#channel=f6f7f4902b547e&amp;origin=http%3A%2F%2Fkrisha.kz&amp;channel_path=%2F%3Ffb_xd_fragment%23xd_sig%3Df1377581ab2c8d4%26" style="border: medium none;" tab-index="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_https" allowtransparency="true" name="fb_xdm_frame_https" frameborder="0" scrolling="no"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe src="https://www.facebook.com/dialog/oauth?client_id=467515939986813&amp;response_type=token%2Csigned_request%2Ccode&amp;display=none&amp;domain=krisha.kz&amp;origin=1&amp;redirect_uri=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D24%23cb%3Df1990fb6d2438e%26origin%3Dhttp%253A%252F%252Fkrisha.kz%252Ff6f7f4902b547e%26domain%3Dkrisha.kz%26relation%3Dparent&amp;sdk=joey" style="display: none;" allowtransparency="true" name="f391de3052daae8" frameborder="0" scrolling="no"></iframe></div></div></div>
+<script>
+    $().ready(function(){
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/ru_RU/all.js#xfbml=1&appId=467515939986813";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    });
+</script>
+
+<script type="text/javascript">
+    window.___gcfg = {lang: 'ru'};
+    (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+</script>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    </div>
+
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+var yaParams = {/*????? ????????? ??????*/};
+</script>
+
+<div style="display:none;"><script type="text/javascript">
+(function(w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter10575199 = new Ya.Metrika({id:10575199,
+                    clickmap:true,
+                    accurateTrackBounce:true,
+                    ut:"noindex",params:window.yaParams||{ }});
+        }
+        catch(e) { }
+    });
+})(window, "yandex_metrika_callbacks");
+</script></div>
+<script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+<noscript><div><img src="//mc.yandex.ru/watch/10575199?ut=noindex" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<!-- tns-counter.ru -->
+<script language="JavaScript" type="text/javascript">
+    var img = new Image();
+    img.src = 'http://kz.tns-counter.ru/V13a***R>' + document.referrer.replace(/\*/g,'%2a') + '*krisha_kz/ru/UTF-8/tmsec=krisha_total/' + Math.round(Math.random() * 1000000000);
+</script>
+<noscript>
+    <img src="http://kz.tns-counter.ru/V13a****krisha_kz/ru/UTF-8/tmsec=krisha_total/" width="1" height="1" alt="">
+</noscript>
+<!--/ tns-counter.ru -->
+
+<div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancy-bg" id="fancy-bg-n"></div><div class="fancy-bg" id="fancy-bg-ne"></div><div class="fancy-bg" id="fancy-bg-e"></div><div class="fancy-bg" id="fancy-bg-se"></div><div class="fancy-bg" id="fancy-bg-s"></div><div class="fancy-bg" id="fancy-bg-sw"></div><div class="fancy-bg" id="fancy-bg-w"></div><div class="fancy-bg" id="fancy-bg-nw"></div><div id="fancybox-inner"></div><a id="fancybox-close"></a><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div></body>

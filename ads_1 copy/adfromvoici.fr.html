@@ -1,0 +1,495 @@
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="title" content="Harrys - Recettes">
+    <meta property="og:title" content="Toast Mimosa">
+<meta property="og:type" content="food">
+<meta property="og:url" content="http://www.harrys.fr/recettes">
+<meta property="og:image" content="http://www.harrys.fr/images/bg_iphones.jpg">
+    <title>Harrys - Recettes</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/rst.css">
+<link rel="stylesheet" type="text/css" media="screen" href="/css/harrys_main.css">
+<link rel="stylesheet" type="text/css" media="screen" href="/css/jquery.jscrollpane.css">
+<link rel="stylesheet" type="text/css" media="screen" href="/css/recipe_tab.css">
+<link rel="stylesheet" type="text/css" media="screen" href="/css/colorbox/colorbox.css">
+<link rel="stylesheet" type="text/css" media="screen" href="/css/breakfastguidehome.css">
+	<link rel="stylesheet" type="text/css" media="print" href="/css/harrys_main_print.css">
+  <link rel="stylesheet" type="text/css" media="all" href="http://static.ak.fbcdn.net/connect.php/css/share-button-css">
+	<!--[if lt IE 9]>
+	<script src="/js/modernizr.custom.20143.js" type="text/javascript"></script>
+	<![endif]-->
+    <script src="//connect.facebook.net/fr_FR/all.js#xfbml=1" id="facebook-jssdk"></script><script src="http://www.google-analytics.com/ga.js" async="" type="text/javascript"></script><script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript" src="/js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="/js/jquery.jscrollpane.min.js"></script>
+<script type="text/javascript" src="/js/jquery.jcarousel.min.js"></script>
+<script type="text/javascript" src="/js/jquery.filters.js"></script>
+<script type="text/javascript" src="/js/harrys_binds.js"></script>
+<script type="text/javascript" src="/js/libs/jquery.colorbox-min.js"></script>
+<script type="text/javascript" src="/js/sharing.js"></script>
+<script type="text/javascript" src="/js/breakfastguidehome.js"></script>
+    <script src="/js/ga.js" type="text/javascript"></script>
+	<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
+	<link rel="shortcut icon" href="/images/favicon.png">
+  <style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}
+.fb_invisible{display:none}
+.fb_reset{background:none;border-spacing:0;border:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}
+.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}
+.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}
+.fb_dialog_content{background:#fff;color:#333}
+.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px;top:8px\9;right:7px\9}
+.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}
+.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}
+.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}
+.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}
+.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}
+.fb_dialog_top_left,
+.fb_dialog_top_right,
+.fb_dialog_bottom_left,
+.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}
+/* @noflip */
+.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}
+/* @noflip */
+.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}
+/* @noflip */
+.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}
+/* @noflip */
+.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right,
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right{width:10px;height:100%}
+.fb_dialog_vert_left{margin-left:-10px}
+.fb_dialog_vert_right{right:0;margin-right:-10px}
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{width:100%;height:10px}
+.fb_dialog_horiz_top{margin-top:-10px}
+.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}
+.fb_dialog_iframe{line-height:0}
+.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}
+.fb_dialog_content .dialog_title > span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif)
+no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}
+body.fb_hidden{-webkit-transform:none;height:100%;margin:0;left:-10000px;overflow:visible;position:absolute;top:-10000px;width:100%
+}
+.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif)
+white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}
+.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}
+#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}
+#fb-root #fb_dialog_ipad_overlay.hidden{display:none}
+.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}
+.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0 0, 0 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}
+.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%
+}
+.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0 0, 0 100%, from(#4966A6),
+color-stop(0.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset,
+rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}
+.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}
+.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}
+.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}
+#fb_dialog_loader_close{float:left}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}
+.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}
+.fb_iframe_widget iframe{position:absolute}
+.fb_iframe_widget_lift{z-index:1}
+.fb_hide_iframes iframe{position:relative;left:-10000px}
+.fb_iframe_widget_loader{position:relative;display:inline-block}
+.fb_iframe_widget_fluid{display:inline}
+.fb_iframe_widget_fluid span{width:100%}
+.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}
+.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_connect_bar_container div,
+.fb_connect_bar_container span,
+.fb_connect_bar_container a,
+.fb_connect_bar_container img,
+.fb_connect_bar_container strong{background:none;border-spacing:0;border:0;direction:ltr;font-style:normal;font-variant:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal;vertical-align:baseline}
+.fb_connect_bar_container{position:fixed;left:0 !important;right:0 !important;height:42px !important;padding:0 25px !important;margin:0 !important;vertical-align:middle !important;border-bottom:1px solid #333 !important;background:#3b5998 !important;z-index:99999999 !important;overflow:hidden !important}
+.fb_connect_bar_container_ie6{position:absolute;top:expression(document.compatMode=="CSS1Compat"? document.documentElement.scrollTop+"px":body.scrollTop+"px")}
+.fb_connect_bar{position:relative;margin:auto;height:100%;width:100%;padding:6px 0 0 0 !important;background:none;color:#fff !important;font-family:"lucida grande", tahoma, verdana, arial, sans-serif !important;font-size:13px !important;font-style:normal !important;font-variant:normal !important;font-weight:normal !important;letter-spacing:normal !important;line-height:1 !important;text-decoration:none !important;text-indent:0 !important;text-shadow:none !important;text-transform:none !important;white-space:normal !important;word-spacing:normal !important}
+.fb_connect_bar a:hover{color:#fff}
+.fb_connect_bar .fb_profile img{height:30px;width:30px;vertical-align:middle;margin:0 6px 5px 0}
+.fb_connect_bar div a,
+.fb_connect_bar span,
+.fb_connect_bar span a{color:#bac6da;font-size:11px;text-decoration:none}
+.fb_connect_bar .fb_buttons{float:right;margin-top:7px}
+.fb_edge_widget_with_comment{position:relative;*z-index:1000}
+.fb_edge_widget_with_comment span.fb_edge_comment_widget{position:absolute}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget{z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget .FB_Loader{left:0;top:1px;margin-top:6px;margin-left:0;background-position:50% 50%;background-color:#fff;height:150px;width:394px;border:1px #666 solid;border-bottom:2px solid #283e6c;z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.dark .FB_Loader{background-color:#000;border-bottom:2px solid #ccc}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.siderender
+.FB_Loader{margin-top:0}
+.fbpluginrecommendationsbarleft,
+.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}
+/* @noflip */
+.fbpluginrecommendationsbarleft{left:10px}
+/* @noflip */
+.fbpluginrecommendationsbarright{right:10px}</style></head>
+  <body class="breakfastGuideHome"><div style="display: none;" id="cboxOverlay"></div><div class="" id="colorbox" style="padding-bottom: 57px; padding-right: 28px; display: none;"><div style="" id="cboxWrapper"><div style=""><div style="float: left;" id="cboxTopLeft"></div><div style="float: left;" id="cboxTopCenter"></div><div style="float: left;" id="cboxTopRight"></div></div><div style="clear: left;"><div style="float: left;" id="cboxMiddleLeft"></div><div style="float: left;" id="cboxContent"><div class="" style="width: 0px; height: 0px; overflow: hidden;" id="cboxLoadedContent"></div><div class="" style="" id="cboxLoadingOverlay"></div><div class="" style="" id="cboxLoadingGraphic"></div><div class="" style="" id="cboxTitle"></div><div class="" style="" id="cboxCurrent"></div><div class="" style="" id="cboxNext"></div><div class="" style="" id="cboxPrevious"></div><div class="" style="" id="cboxSlideshow"></div><div class="" style="" id="cboxClose"></div></div><div style="float: left;" id="cboxMiddleRight"></div></div><div style="clear: left;"><div style="float: left;" id="cboxBottomLeft"></div><div style="float: left;" id="cboxBottomCenter"></div><div style="float: left;" id="cboxBottomRight"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div></div>
+    <div class="wrapper">
+      <header>
+            <div class="headWrapper">
+    <div class="siteTitle">
+      <h1>
+        <img onclick="window.location.href = '/';" style="cursor: pointer;" src="/images/logo_harrys_phrase.png" alt="HARRYS" title="HARRYS" height="120" width="648">
+      </h1>
+    </div>
+    <nav>
+            <ul class="nav5">
+                  <li class="first">
+            <a class="current" href="/products/" target="">Produits</a>
+          </li>
+                  <li class="second">
+            <a href="/recettes" target="">Recettes</a>
+          </li>
+                  <li class="fifth">
+            <a href="/harrys-o-metre" target="">Harrys'o'Meter</a>
+          </li>
+                  <li class="third">
+            <a href="http://doowap.harrys.fr" target="_blank">DooWap Play</a>
+          </li>
+                  <li class="fourth">
+            <a href="/page/qui-sommes-nous/la-marque/notre-histoire" target="">Qui sommes-nous ?</a>
+          </li>
+              </ul>
+          </nav>
+    <div class="clear"></div>
+  </div>      </header>
+      <div class="main">
+            <div class="mainContent">
+  <script type="text/javascript">
+    var axel = Math.random() + "";
+    var a = axel * 10000000000000;
+    document.write('<iframe src="http://1777692.fls.doubleclick.net/activityi;src=1777692;type=diver596;cat=hpdoo403;ord=1;num=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+    </script><iframe src="http://1777692.fls.doubleclick.net/activityi;src=1777692;type=diver596;cat=hpdoo403;ord=1;num=9629308118444.365?" style="display:none" frameborder="0" height="1" width="1"></iframe>
+    <noscript>
+    <iframe src="http://1777692.fls.doubleclick.net/activityi;src=1777692;type=diver596;cat=hpdoo403;ord=1;num=1?" width="1" height="1" frameborder="0" style="display:none"></iframe>
+    </noscript>
+	<div class="breadcrumbs">
+    	<a href="/">Accueil</a> / Recettes
+    </div>
+	<div class="content">
+		<section class="picturescHeader">
+    <a href="http://mbsimple.pixibox.com/Offers/WSOfferPrint.aspx?mbsimple=1&amp;Param=b452b2cff43b73d4176c80c61150e33d&amp;PartnerKey=880E3EB524&amp;opmb=http://www.harrys.fr/recettes" target="blank"><img src="/images/stickers.png" alt="" style="position: relative; z-index: 8000; top: 280px; left: 10px; border: 0;"></a>
+         
+			<section class="guideFilters">
+                  <div class="inspirez">
+                    <p class="desyrel">Inspirez-vous !</p>
+                    <p>Trouvez la recette qui vous fait envie</p>
+                  </div>		            
+		            <section class="filter creativity">
+	<div class="offState">
+		<a href="javascript:void(0);">
+		<span class="filterLabel">Envie de ?</span>
+		<span class="selectedItem">Tartines-Toasts</span>
+	  </a>
+	</div>
+	<div class="onState">
+		<div class="optionsList">
+		<ul>
+							<li><a href="#" id="1">Tartines-Toasts</a></li>
+							<li><a href="#" id="2">Sandwichs-Croques</a></li>
+							<li><a href="#" id="3">Mouillettes-Croutons</a></li>
+							<li><a href="#" id="4">Chaussons-Roulés</a></li>
+						<li><a href="#" id="">Indifférent</a></li>	
+		</ul>
+	  </div>
+	  <div class="optionsScrollers">
+		<a href="#" class="upScroll">&nbsp;</a>
+		<a href="#" class="downScroll">&nbsp;</a>
+	  </div>
+	</div>
+</section>
+
+<script>
+	$(document).ready(function() {
+		$("#creativity").val("1");
+	});
+</script>					<section class="filter preptime">
+	<div class="offState">
+		<a href="javascript:void(0);">
+    <span class="filterLabel">En combien de temps ?</span>
+		<span class="selectedItem">5-10 min</span>
+	  </a>
+	</div>
+	<div class="onState">
+		<div class="optionsList">
+		<ul>			
+							<li><a href="#" id="0">5-10 min</a></li>
+							<li><a href="#" id="1">10-20 min</a></li>
+							<li><a href="#" id="2">20 min et +</a></li>
+						<li><a href="#" id="">Indifférent</a></li>	
+		</ul>
+	  </div>
+	  <div class="optionsScrollers">
+		<a href="#" class="upScroll">&nbsp;</a>
+		<a href="#" class="downScroll">&nbsp;</a>
+	  </div>
+	</div>
+</section>
+
+<script>
+	$(document).ready(function() {
+		$("#preptime").val("0");
+	});
+</script>					<section class="filter instant">
+	<div class="offState">
+		<a href="javascript:void(0);">
+    <span class="filterLabel">Quand ?</span>
+		<span class="selectedItem">Petit déjeuner</span>
+	  </a>
+	</div>
+	<div class="onState">
+		<div class="optionsList">
+		<ul>
+							<li style="height: 36px;"><a href="#" id="1">Petit déjeuner</a></li>
+							<li style="height: 36px;"><a href="#" id="2">Déjeuner - Dîner</a></li>
+							<li style="height: 36px;"><a href="#" id="3">Goûter</a></li>
+							<li style="height: 36px;"><a href="#" id="4">Apéritif</a></li>
+						<li><a href="#" id="">Indifférent</a></li>	
+		</ul>
+	  </div>
+	  <div class="optionsScrollers">
+		<a href="#" class="upScroll">&nbsp;</a>
+		<a href="#" class="downScroll">&nbsp;</a>
+	  </div>
+	</div>
+</section>
+
+<script>
+	$(document).ready(function() {
+		$("#instant").val("1");
+	});
+</script>		            
+					<section class="filter nutrition">
+	<div class="offState">
+		<a href="javascript:void(0);">
+		<span class="filterLabel">Comment ?</span>
+		<span class="selectedItem">Energique</span>
+	  </a>
+	</div>
+	<div class="onState">
+		<div class="optionsList">
+		<ul>
+							<li><a href="#" id="1">Energique</a></li>
+							<li><a href="#" id="2">Gourmand</a></li>
+							<li><a href="#" id="3">Equilibré</a></li>
+						<li><a href="#" id="">Indifférent</a></li>	
+		</ul>
+	  </div>
+	  <div class="optionsScrollers">
+		<a href="#" class="upScroll">&nbsp;</a>
+		<a href="#" class="downScroll">&nbsp;</a>
+	  </div>
+	</div>
+</section>
+
+<script>
+	$(document).ready(function() {
+		$("#nutrition").val("1");
+	});
+</script>					<section class="filter submit">
+						<form method="get" action="/recettes-resultat">
+							<input value="1" id="instant" name="instant" type="hidden">
+							<input value="1" id="nutrition" name="nutrition" type="hidden">
+							<input value="1" id="creativity" name="creativity" type="hidden">
+							<input value="0" id="preptime" name="preptime" type="hidden">
+							<input class="submiter" value="Trouver une recette" type="submit">
+						</form>
+					</section>
+			</section>
+        </section>
+        <section class="mobAppDown recetteHomePage">
+        	<section class="mobAppContent">
+            <div class="apps">
+              <div class="title recetteHomePage">Guide du p'tit Déj</div>
+              <p><span>De l’inspiration au quotidien avec Harrys.</span><br>Téléchargez aussi votre guide sur votre mobile et profitez partout et à tout moment des astuces et idées créatives de votre Guide du p’tit Déj.</p>
+              <div class="images recetteHomePage">
+                  <a href="http://itunes.apple.com/fr/app/ptit-dej-harrys/id515899249?mt=8" onclick="gaEventThenUrlBlank(this,'BreakfastGuide', 'Click - Iphone'); return false;"><img src="/images/appstore.png" style="margin-top: 21px;"></a>
+                  <a href="https://play.google.com/store/apps/details?id=pyco.com.harry" onclick="gaEventThenUrlBlank(this,'BreakfastGuide', 'Click - Android'); return false;"><img src="/images/android.png"></a>
+              </div>
+            </div>
+          </section>
+          <section class="mobAppSocial">
+            <div class="likePoints recettePageHome">
+              <fb:like class=" fb_edge_widget_with_comment fb_iframe_widget" fb-xfbml-state="parsed" href="http://www.harrys.fr/recettes" send="false" layout="button_count" width="90" show_faces="false" font="arial" style="padding:0;font-size:9px; color:#FFF;"><span style="height: 21px; width: 90px;"><iframe src="http://www.facebook.com/plugins/like.php?api_key=&amp;locale=fr_FR&amp;sdk=joey&amp;channel_url=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D24%23cb%3Df10dfe7561dddfc%26origin%3Dhttp%253A%252F%252Fwww.harrys.fr%252Ff3ffee9e22b081%26domain%3Dwww.harrys.fr%26relation%3Dparent.parent&amp;href=http%3A%2F%2Fwww.harrys.fr%2Frecettes&amp;node_type=link&amp;width=90&amp;font=arial&amp;layout=button_count&amp;colorscheme=light&amp;show_faces=false&amp;send=false&amp;extended_social_context=false" class="fb_ltr" title="Like this content on Facebook." style="border: medium none; overflow: hidden; height: 21px; width: 90px;" name="f34d9ae93b55c24" id="f1681eef1b3e9b4" scrolling="no"></iframe></span></fb:like>
+            </div>
+            <div class="sharePoints recettePageHome">
+              <a class="fbShare " href="http://www.harrys.fr/recettes#recette" style="text-decoration: none;"><img src="/images/picto_fb.png" class="fbProduct" alt=""><span class="FBConnectButton_Simple"><span class="FBConnectButton_Text_Simple">Partager</span></span></a> 
+            </div>
+            <div class="mailPoints recetteHome">
+              <a href="http://www.harrys.fr/recettes"><img src="/images/picto_mail.png" class="fbProduct" alt=""><span>Envoyer</span></a>
+            </div>
+          </section>
+      </section>		
+	</div>
+</div> 
+<div style="display:none;">  
+          <div id="shareByMailOverlay" style="display: none;">
+          <div>
+              <form name="shareByMailForm" action="/harrys-o-metre/do-sharing-by-mail" method="post" id="shareByMailForm">
+                <input name="shareByMailForm[_csrf_token]" value="e077f70de53ec080eb44a870ce36aaca" id="shareByMailForm__csrf_token" type="hidden">                 <div class="row "><label for="shareByMailForm_email">Envoyer à </label><span class="text long"><input maxlength="255" name="shareByMailForm[email]" id="shareByMailForm_email" type="text"></span></div>
+                 <div id="error" class="error"></div>
+                                  <div class="row buttons">
+                  <a class="button short" href="javascript:void(0);">Envoyer</a>
+               </div>
+              </form>
+          </div>
+        </div></div>        <div class="clear">&nbsp;</div> 
+      </div>
+      <footer class="newHomePage">
+            <p class="footerTop">Pour votre santé, pratiquez une activité physique régulière. <a href="http://www.mangerbouger.fr" target="_blank">www.mangerbouger.fr</a></p>
+    <script>        
+		var mentions = ["Pour votre santé, mangez au moins cinq fruits et légumes par jour. <a href='http://www.mangerbouger.fr' target='_blank'>www.mangerbouger.fr</a>",
+		        		"Pour votre santé, pratiquez une activité physique régulière. <a href='http://www.mangerbouger.fr' target='_blank'>www.mangerbouger.fr</a>",
+		        		"Pour votre santé, évitez de manger trop gras, trop sucré, trop salé. <a href='http://www.mangerbouger.fr' target='_blank'>www.mangerbouger.fr</a>",
+		        		"Pour votre santé, évitez de grignoter entre les repas. <a href='http://www.mangerbouger.fr' target='_blank'>www.mangerbouger.fr</a>"];
+		var txtDisplay = 1;
+		setInterval("changeTxt()",5000);
+		function changeTxt()
+		{
+			$(".footerTop").html(mentions[txtDisplay])
+			txtDisplay++
+			if(txtDisplay==mentions.length) txtDisplay=0;
+		}
+	</script> 
+  <nav class="navHomePage">
+    <div class="row1">
+      <div class="leftCol">Harrys.fr © 2011</div>
+      <div class="left1"><a href="/page/qui-sommes-nous/contactez-nous">Contactez-nous</a></div>
+      <div class="right1"><a href="/page/qui-sommes-nous/mentions-legales">Mentions légales</a></div>
+    </div>
+    </nav>
+    <nav class="bottom">
+    <div>
+      <div class="leftCol">
+        <h2><a href="/products/">Produits</a></h2>
+        <ul>
+          <li><a href="/products/pain-de-mie/american-sandwich">Pain de mie</a></li>
+          <li><a href="/products/pour-les-enfants/doowap">Pour les enfants</a></li>
+          <li><a href="/products/viennoiseries/brioches-tranchees">Viennoiseries</a></li>
+          <li><a href="/products/beau-bon">Beau et bon </a></li>
+        </ul>
+      </div>
+      <div class="left1">
+        <h2><a href="/products/">Recettes</a></h2>
+        <ul>
+          <li><a href="/recettes-resultat?instant=&amp;nutrition=&amp;creativity=2&amp;preptime=">Sandwich</a></li>
+          <li><a href="/recettes-resultat?instant=&amp;nutrition=&amp;creativity=3&amp;preptime=">Croutons</a></li>
+          <li><a href="/recettes-resultat?instant=&amp;nutrition=&amp;creativity=1&amp;preptime=">Toast</a></li>
+          <li><a href="/recettes-resultat?instant=&amp;nutrition=&amp;creativity=3&amp;preptime=">Mouillette</a></li>
+          <li><a href="/recettes-resultat?instant=&amp;nutrition=&amp;creativity=1&amp;preptime=">Tartine</a></li>
+          <li><a href="/recettes-resultat?instant=&amp;nutrition=&amp;creativity=2&amp;preptime=">Croque</a></li>
+          <li><a href="/recettes-resultat?instant=&amp;nutrition=&amp;creativity=4&amp;preptime=">Roulé</a></li>
+          <li><a href="/recettes-resultat?instant=&amp;nutrition=&amp;creativity=4&amp;preptime=">Chaussons</a></li>
+        </ul>
+      </div>
+      <div class="right1">
+          <h2><a href="/harrys-o-metre/gagnez-des-points">Harrys'o'Mètre</a></h2>
+          <ul>
+            <li><a href="/harrys-o-metre">Imprimer mes bons</a></li>
+          </ul>
+      </div>
+      <div class="right1">
+          <h2><a href="http://doowap.harrys.fr" target="_blank">DooWap Play</a></h2>
+          <ul>
+            <li><a href="http://doowap.harrys.fr" target="_blank">Joue et crée ton mix</a></li>
+          </ul>
+      </div>
+      <div class="rightCol">
+        <h2><a href="/page/qui-sommes-nous/la-marque/notre-histoire">Qui sommes-nous ?</a></h2>
+        <ul>
+          <li><a href="/page/qui-sommes-nous/la-marque/notre-histoire">La Marque</a></li>
+          <li><a href="/page/qui-sommes-nous/pub-tv">Pubs TV</a></li>
+          <li><a href="/page/qui-sommes-nous/notre-engagement/la-qualite">Notre Engagement</a></li>
+          <li><a href="/page/qui-sommes-nous/recrutement">Recrutement</a></li>
+          <li><a href="/page/qui-sommes-nous/faq">FAQ</a></li>
+          <li><a href="/page/qui-sommes-nous/contactez-nous">Contactez-nous</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>      </footer>
+    </div>
+	<div class=" fb_reset" id="fb-root"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe src="http://static.ak.facebook.com/connect/xd_arbiter.php?version=24#channel=f3ffee9e22b081&amp;origin=http%3A%2F%2Fwww.harrys.fr&amp;channel_path=%2Frecettes%3Ffb_xd_fragment%23xd_sig%3Df2f3ef62a9a3df6%26" style="border: medium none;" tab-index="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_http" allowtransparency="true" name="fb_xdm_frame_http" frameborder="0" scrolling="no"></iframe><iframe src="https://s-static.ak.facebook.com/connect/xd_arbiter.php?version=24#channel=f3ffee9e22b081&amp;origin=http%3A%2F%2Fwww.harrys.fr&amp;channel_path=%2Frecettes%3Ffb_xd_fragment%23xd_sig%3Df2f3ef62a9a3df6%26" style="border: medium none;" tab-index="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_https" allowtransparency="true" name="fb_xdm_frame_https" frameborder="0" scrolling="no"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
+<script type="text/javascript">
+$(function(){
+	 $('a.fbShare').bind('click', function(e){
+		    e.preventDefault();
+		    var url = $(this).attr('href');
+		    var param = $(this).attr('class');
+		    param = param.replace("fbShare ", "");
+		    FB.ui(
+		    	       {
+		    	         method: 'stream.share',
+		    	         u: url
+		    	       },
+		    	       function(response) {
+		    	         if (response == false) {
+		    	             $.ajax({
+		    	                 url: '/harrys-o-metre/do-action?param=' + param + '&url=' + url,
+		    	                 type: "GET",
+		    	                 cache: false,
+		    	                 error: function(response){
+		    	                 },
+		    	                 success: function(response){
+		    	                   setTimeout('document.location.reload()',0);
+		    	                 }
+		    	             });
+		    	         }
+		    	       }
+		    	    );
+	});
+});
+
+/* <![CDATA[ */
+(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+window.fbAsyncInit = function() {
+  FB.init({
+    status  : true,
+    cookie  : true,
+    xfbml   : true
+  });
+
+  // whenever the user logs in, we refresh the page
+  FB.Event.subscribe('auth.login', function(response) {
+      setTimeout('document.location.reload()',0);
+  });
+
+  FB.Event.subscribe('edge.create', function (url) {
+	    
+      $.ajax({
+          url: '/harrys-o-metre/do-action?param=aa&url=' + url,
+          type: "GET",
+          cache: false,
+          error: function(response){
+          },
+          success: function(response){
+          }
+      });
+  });
+
+  /*
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.src = 'http://static.ak.fbcdn.net/connect.php/js/FB.Share';
+  s.async = true;
+  document.getElementById('fb-root').appendChild(s);
+  */
+};
+/* ]]> */
+</script>  
+</body>

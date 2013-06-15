@@ -1,0 +1,326 @@
+<head><script src="//ct1.addthis.com/static/r07/auth013.js" type="text/javascript"></script><link media="all" href="//ct1.addthis.com/static/r07/widget114.css" type="text/css" rel="stylesheet">
+		<title>Searching and Scanning | TradeStation Tour</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="CODE_LANGUAGE" content="C#">
+        <meta name="vs_defaultClientScript" content="JavaScript">
+        <meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+		<!-- included when default layout is created
+        <link href="/default.css" rel="stylesheet" />
+        -->
+        <link rel="stylesheet" type="text/css" media="all" href="/Styles/Tscom/css/global.css">   
+        <link rel="stylesheet" type="text/css" media="all" href="/Styles/Tscom/css/Apps.css">
+        
+        <script src="http://www.google-analytics.com/ga.js" async="" type="text/javascript"></script><script src="https://www.googletagmanager.com/gtm.js?id=GTM-QFXN" async=""></script><script src="/Scripts/Tscom/js/jquery-1.7.2.min.js" type="text/javascript"></script>
+        <link rel="stylesheet" type="text/css" media="all" href="/Styles/Tscom/css/jquery.fancybox.css">
+        <script src="/Scripts/Tscom/js/jquery.fancybox.js" type="text/javascript"></script>
+
+        
+        <!--[if lte IE 7.0]>
+        	<link rel="stylesheet" type="text/css" media="all" href="/Styles/Tscom/css/ie.css" />
+        <![endif]-->
+        <link rel="stylesheet" type="text/css" media="print" href="/Styles/Tscom/css/print.css">
+        <script type="text/javascript">
+        	document.documentElement.className = 'js';
+        </script>        
+        <meta name="Description" content="Scour the markets for opportunities as they happen, with the criteria you choose">
+        <meta name="Keywords" content="">        
+        <link href="/layouts/System/VisitorIdentification.aspx" rel="stylesheet" type="text/css">
+    <div id="_atssh" style="visibility: hidden; height: 1px; width: 1px; position: absolute; z-index: 100000;"><iframe src="//ct1.addthis.com/static/r07/sh116.html#" style="height: 1px; width: 1px; position: absolute; z-index: 100000; border: 0px none; left: 0px; top: 0px;" title="AddThis utility frame" id="_atssh27"></iframe></div><script src="http://ct1.addthis.com/static/r07/core078.js" type="text/javascript"></script></head>
+    <body><form method="post" action="/why-tradestation/tour/find-opportunities/scanning" id="mainform">
+<div class="aspNetHidden">
+<input name="__EVENTTARGET" id="__EVENTTARGET" value="" type="hidden">
+<input name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" type="hidden">
+<input name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE1NDY5NTY1NTYPZBYCAgEQZGQWAgIBD2QWAmYPZBYCZg9kFgICAQ9kFgRmD2QWAmYPZBYCAgEPZBYCZg9kFgJmD2QWBAIDD2QWAmYPZBYCAgEPDxYCHgRUZXh0BRI8c3Bhbj5Mb2dpbjwvc3Bhbj5kZAIFD2QWAmYPZBYCZg8WAh8ABcwCPGRpdiBjbGFzcz0ibGl2ZS1jaGF0Ij48cD48aW1nIHNyYz0iL2ltYWdlcy9Uc2NvbS91aS9jb250YWN0LWdsb2JhbC9jbGllbnQtY2VudGVyLnBuZyIgYWx0PSJDbGllbnQgQ2VudGVyIi8+PGEgaHJlZj0iaHR0cHM6Ly9jbGllbnRjZW50ZXIudHJhZGVzdGF0aW9uLmNvbSIgdGFyZ2V0PSJfYmxhbmsiPkNsaWVudCBDZW50ZXI8L2E+PC9wPjwvZGl2Pgk8ZGl2IGNsYXNzPSJvcmdhbml6YXRpb24gdmNhcmQiPgk8cD4JPHNwYW4gY2xhc3M9ImZuIG9yZyI+Q2FsbCBUcmFkZVN0YXRpb24JPC9zcGFuPgk8c3BhbiBjbGFzcz0idGVsIj44MDAuODA4LjkzMzYJPC9zcGFuPjwvcD48L2Rpdj5kAgEPZBYCZg9kFgQCBQ9kFgJmD2QWAmYPZBYCAgEPDxYCHwAFBlNlYXJjaGRkAgkPZBYCZg9kFgJmD2QWAgIBDxYCHwAF+0M8dWwgY2xhc3M9Im5hdi1jb250YWluZXIiPjxsaSBjbGFzcz0ibmF2LWl0ZW0gaGFzLXN1YiAgZmlyc3QtY2hpbGQgc2VsZWN0ZWQiPjxkaXYgY2xhc3M9Im5hdi1pdGVtLWlubmVyIj4gPGEgaHJlZj0iL3doeS10cmFkZXN0YXRpb24iPldoeSBUcmFkZVN0YXRpb248L2E+PC9kaXY+PHVsIGNsYXNzPSJuYXYtY29udGFpbmVyLXN1YiI+PGxpIGNsYXNzPSJuYXYtaXRlbS1zdWIiPjxhIGhyZWY9Ii93aHktdHJhZGVzdGF0aW9uL2F3YXJkcyIgdGFyZ2V0PSJfc2VsZiI+PGRpdiBjbGFzcz0iaW5uZXIiPjxkaXYgY2xhc3M9Imljb24iPjxpbWcgc3JjPSJ+L21lZGlhL0ltYWdlcy9UcmFkZVN0YXRpb24vTWVudSBJbWFnZXMvQXdhcmRzLUljb24uYXNoeCIgYWx0PSJBd2FyZHMgJiBBY2NvbGFkZXMiIC8+PC9kaXY+PGRpdiBjbGFzcz0idGV4dCI+QXdhcmRzIDxiciAvPiYgQWNjb2xhZGVzPC9kaXY+PC9kaXY+PC9hPjwvbGk+PGxpIGNsYXNzPSJuYXYtaXRlbS1zdWIgc2VsZWN0ZWQiPjxhIGhyZWY9Ii93aHktdHJhZGVzdGF0aW9uL3RvdXIvZmluZC1vcHBvcnR1bml0aWVzL3JhZGFyc2NyZWVuIiB0YXJnZXQ9Il9zZWxmIj48ZGl2IGNsYXNzPSJpbm5lciI+PGRpdiBjbGFzcz0iaWNvbiI+PGltZyBzcmM9In4vbWVkaWEvSW1hZ2VzL1RyYWRlU3RhdGlvbi9NZW51IEltYWdlcy9WaWRlby1Ub3VyLmFzaHgiIGFsdD0iVHJhZGVTdGF0aW9uIFZpZGVvIFRvdXIiIC8+PC9kaXY+PGRpdiBjbGFzcz0idGV4dCI+VHJhZGVTdGF0aW9uIDxiciAvPlZpZGVvIFRvdXI8L2Rpdj48L2Rpdj48L2E+PC9saT48bGkgY2xhc3M9Im5hdi1pdGVtLXN1YiBsYXN0LWNoaWxkIiA+IDxhIGhyZWY9IiMiPjwvYT48L2xpPjwvdWw+PC9saT48bGkgY2xhc3M9Im5hdi1pdGVtIGhhcy1zdWIgIj48ZGl2IGNsYXNzPSJuYXYtaXRlbS1pbm5lciI+IDxhIGhyZWY9Ii9wcm9kdWN0cyI+UHJvZHVjdHM8L2E+PC9kaXY+PHVsIGNsYXNzPSJuYXYtY29udGFpbmVyLXN1YiI+PGxpIGNsYXNzPSJuYXYtaXRlbS1zdWIgZmlyc3QtY2hpbGQiPjxhIGhyZWY9Ii9wcm9kdWN0cy9zdG9ja3MtYW5kLWV0ZnMiIHRhcmdldD0iX3NlbGYiPjxkaXYgY2xhc3M9ImlubmVyIj48ZGl2IGNsYXNzPSJpY29uIj48aW1nIHNyYz0ifi9tZWRpYS9JbWFnZXMvVHJhZGVTdGF0aW9uL01lbnUgSW1hZ2VzL2ljb24tc3RvY2tzLWV0ZnMuYXNoeD8yMDExMDcxOFQwNDU4MDAxMDgwIiBhbHQ9IlN0b2NrcyBhbmQgRVRGcyIgLz48L2Rpdj48ZGl2IGNsYXNzPSJ0ZXh0Ij5TdG9ja3MgPGJyIC8+YW5kIEVURnM8L2Rpdj48L2Rpdj48L2E+PC9saT48bGkgY2xhc3M9Im5hdi1pdGVtLXN1YiI+PGEgaHJlZj0iL3Byb2R1Y3RzL29wdGlvbnMiIHRhcmdldD0iX3NlbGYiPjxkaXYgY2xhc3M9ImlubmVyIj48ZGl2IGNsYXNzPSJpY29uIj48aW1nIHNyYz0ifi9tZWRpYS9JbWFnZXMvVHJhZGVTdGF0aW9uL01lbnUgSW1hZ2VzL2ljb24tb3B0aW9ucy5hc2h4PzIwMTEwNzE4VDA0NTczMzY1NDUiIGFsdD0iT3B0aW9ucyIgLz48L2Rpdj48ZGl2IGNsYXNzPSJ0ZXh0Ij5PcHRpb25zPC9kaXY+PC9kaXY+PC9hPjwvbGk+PGxpIGNsYXNzPSJuYXYtaXRlbS1zdWIiPjxhIGhyZWY9Ii9wcm9kdWN0cy9mdXR1cmVzIiB0YXJnZXQ9Il9zZWxmIj48ZGl2IGNsYXNzPSJpbm5lciI+PGRpdiBjbGFzcz0iaWNvbiI+PGltZyBzcmM9In4vbWVkaWEvSW1hZ2VzL1RyYWRlU3RhdGlvbi9NZW51IEltYWdlcy9pY29uLWZ1dHVyZXMuYXNoeCIgYWx0PSJGdXR1cmVzIiAvPjwvZGl2PjxkaXYgY2xhc3M9InRleHQiPkZ1dHVyZXM8L2Rpdj48L2Rpdj48L2E+PC9saT48bGkgY2xhc3M9Im5hdi1pdGVtLXN1YiI+PGEgaHJlZj0iL3Byb2R1Y3RzL2ZvcmV4IiB0YXJnZXQ9Il9zZWxmIj48ZGl2IGNsYXNzPSJpbm5lciI+PGRpdiBjbGFzcz0iaWNvbiI+PGltZyBzcmM9In4vbWVkaWEvSW1hZ2VzL1RyYWRlU3RhdGlvbi9NZW51IEltYWdlcy9pY29uLWZvcmV4LmFzaHg/MjAxMTA3MThUMDQ1NjUxMTYzMCIgYWx0PSJGb3JleCIgLz48L2Rpdj48ZGl2IGNsYXNzPSJ0ZXh0Ij5Gb3JleDwvZGl2PjwvZGl2PjwvYT48L2xpPjxsaSBjbGFzcz0ibmF2LWl0ZW0tc3ViIj48YSBocmVmPSIvcHJvZHVjdHMvb3RoZXItaW5zdHJ1bWVudHMiIHRhcmdldD0iX3NlbGYiPjxkaXYgY2xhc3M9ImlubmVyIj48ZGl2IGNsYXNzPSJpY29uIj48aW1nIHNyYz0ifi9tZWRpYS9JbWFnZXMvVHJhZGVTdGF0aW9uL01lbnUgSW1hZ2VzL2ljb24tb3RoZXItaW5zdHJ1bWVudHMuYXNoeD8yMDExMDcxOFQwNDU2MjU0NDU2IiBhbHQ9Ik90aGVyIEluc3RydW1lbnRzIiAvPjwvZGl2PjxkaXYgY2xhc3M9InRleHQiPk90aGVyIDxiciAvPkluc3RydW1lbnRzPC9kaXY+PC9kaXY+PC9hPjwvbGk+PGxpIGNsYXNzPSJuYXYtaXRlbS1zdWIgbGFzdC1jaGlsZCIgPiA8YSBocmVmPSIjIj48L2E+PC9saT48L3VsPjwvbGk+PGxpIGNsYXNzPSJuYXYtaXRlbSBoYXMtc3ViICI+PGRpdiBjbGFzcz0ibmF2LWl0ZW0taW5uZXIiPiA8YSBocmVmPSIvdHJhZGluZy10ZWNobm9sb2d5Ij5UcmFkaW5nIFRlY2hub2xvZ3k8L2E+PC9kaXY+PHVsIGNsYXNzPSJuYXYtY29udGFpbmVyLXN1YiI+PGxpIGNsYXNzPSJuYXYtaXRlbS1zdWIgZmlyc3QtY2hpbGQiPjxhIGhyZWY9Ii90cmFkaW5nLXRlY2hub2xvZ3kvdHJhZGVzdGF0aW9uLXBsYXRmb3JtIiB0YXJnZXQ9Il9zZWxmIj48ZGl2IGNsYXNzPSJpbm5lciI+PGRpdiBjbGFzcz0iaWNvbiI+PGltZyBzcmM9In4vbWVkaWEvSW1hZ2VzL1RyYWRlU3RhdGlvbi9NZW51IEltYWdlcy9pY29uLXBsYXRmb3JtLmFzaHg/MjAxMTA3MThUMDQ1NTUyMzMyNyIgYWx0PSJUcmFkZVN0YXRpb24gUGxhdGZvcm0iIC8+PC9kaXY+PGRpdiBjbGFzcz0idGV4dCI+VHJhZGVTdGF0aW9uIDxiciAvPlBsYXRmb3JtPC9kaXY+PC9kaXY+PC9hPjwvbGk+PGxpIGNsYXNzPSJuYXYtaXRlbS1zdWIiPjxhIGhyZWY9Ii90cmFkaW5nLXRlY2hub2xvZ3kvdHJhZGVzdGF0aW9uLXdlYnRyYWRpbmciIHRhcmdldD0iX3NlbGYiPjxkaXYgY2xhc3M9ImlubmVyIj48ZGl2IGNsYXNzPSJpY29uIj48aW1nIHNyYz0ifi9tZWRpYS9JbWFnZXMvVHJhZGVTdGF0aW9uL01lbnUgSW1hZ2VzL2ljb24td2VidHJhZGluZy5hc2h4PzIwMTEwNzE4VDA0NTUyMzc0MTAiIGFsdD0iVHJhZGVTdGF0aW9uIFdlYlRyYWRpbmciIC8+PC9kaXY+PGRpdiBjbGFzcz0idGV4dCI+VHJhZGVTdGF0aW9uIDxiciAvPldlYlRyYWRpbmc8L2Rpdj48L2Rpdj48L2E+PC9saT48bGkgY2xhc3M9Im5hdi1pdGVtLXN1YiI+PGEgaHJlZj0iL3RyYWRpbmctdGVjaG5vbG9neS90cmFkZXN0YXRpb24tbW9iaWxlIiB0YXJnZXQ9Il9zZWxmIj48ZGl2IGNsYXNzPSJpbm5lciI+PGRpdiBjbGFzcz0iaWNvbiI+PGltZyBzcmM9In4vbWVkaWEvSW1hZ2VzL1RyYWRlU3RhdGlvbi9NZW51IEltYWdlcy9pY29uLW1vYmlsZS5hc2h4PzIwMTEwNzE4VDA0NTQyNTEzNzciIGFsdD0iVHJhZGVTdGF0aW9uIE1vYmlsZSIgLz48L2Rpdj48ZGl2IGNsYXNzPSJ0ZXh0Ij5UcmFkZVN0YXRpb24gPGJyIC8+TW9iaWxlPC9kaXY+PC9kaXY+PC9hPjwvbGk+PGxpIGNsYXNzPSJuYXYtaXRlbS1zdWIiPjxhIGhyZWY9Ii90cmFkaW5nLXRlY2hub2xvZ3kvb3JkZXItZXhlY3V0aW9uIiB0YXJnZXQ9Il9zZWxmIj48ZGl2IGNsYXNzPSJpbm5lciI+PGRpdiBjbGFzcz0iaWNvbiI+PGltZyBzcmM9In4vbWVkaWEvSW1hZ2VzL1RyYWRlU3RhdGlvbi9NZW51IEltYWdlcy9pY29uLW9yZGVyLWV4ZWN1dGlvbi5hc2h4PzIwMTEwNzE4VDA0NTQwMTU3NzMiIGFsdD0iT3JkZXIgRXhlY3V0aW9uIiAvPjwvZGl2PjxkaXYgY2xhc3M9InRleHQiPk9yZGVyIDxiciAvPkV4ZWN1dGlvbjwvZGl2PjwvZGl2PjwvYT48L2xpPjxsaSBjbGFzcz0ibmF2LWl0ZW0tc3ViIj48YSBocmVmPSIvdHJhZGluZy10ZWNobm9sb2d5L21hcmtldC1kYXRhIiB0YXJnZXQ9Il9zZWxmIj48ZGl2IGNsYXNzPSJpbm5lciI+PGRpdiBjbGFzcz0iaWNvbiI+PGltZyBzcmM9In4vbWVkaWEvSW1hZ2VzL1RyYWRlU3RhdGlvbi9NZW51IEltYWdlcy9pY29uLW1hcmtldC1kYXRhLmFzaHg/MjAxMTA3MThUMDQ1MzM3ODEzMCIgYWx0PSJNYXJrZXQgRGF0YSIgLz48L2Rpdj48ZGl2IGNsYXNzPSJ0ZXh0Ij5NYXJrZXQgPGJyIC8+RGF0YTwvZGl2PjwvZGl2PjwvYT48L2xpPjxsaSBjbGFzcz0ibmF2LWl0ZW0tc3ViIj48YSBocmVmPSIvdHJhZGluZy10ZWNobm9sb2d5L2NoYXJ0LXBhdHRlcm4tcmVjb2duaXRpb24iIHRhcmdldD0iX3NlbGYiPjxkaXYgY2xhc3M9ImlubmVyIj48ZGl2IGNsYXNzPSJpY29uIj48aW1nIHNyYz0ifi9tZWRpYS9JbWFnZXMvVHJhZGVTdGF0aW9uL01lbnUgSW1hZ2VzL2ljb24tcmVjb2duaWEyLmFzaHgiIGFsdD0iQ2hhcnQmbmJzcDtQYXR0ZXJuPGJyPlJlY29nbml0aW9uIiAvPjwvZGl2PjxkaXYgY2xhc3M9InRleHQiPkNoYXJ0Jm5ic3A7UGF0dGVybjxicj5SZWNvZ25pdGlvbjwvZGl2PjwvZGl2PjwvYT48L2xpPjxsaSBjbGFzcz0ibmF2LWl0ZW0tc3ViIGxhc3QtY2hpbGQiID4gPGEgaHJlZj0iIyI+PGRpdj48L2Rpdj48L2E+PC9saT48L3VsPjwvbGk+PGxpIGNsYXNzPSJuYXYtaXRlbSBoYXMtc3ViICI+PGRpdiBjbGFzcz0ibmF2LWl0ZW0taW5uZXIiPiA8YSBocmVmPSIvcHJpY2luZyI+UHJpY2luZzwvYT48L2Rpdj48dWwgY2xhc3M9Im5hdi1jb250YWluZXItc3ViIj48bGkgY2xhc3M9Im5hdi1pdGVtLXN1YiBmaXJzdC1jaGlsZCI+PGEgaHJlZj0iL3ByaWNpbmcvc3RvY2tzLWFuZC1ldGYtcHJpY2luZyIgdGFyZ2V0PSJfc2VsZiI+PGRpdiBjbGFzcz0iaW5uZXIiPjxkaXYgY2xhc3M9Imljb24iPjxpbWcgc3JjPSJ+L21lZGlhL0ltYWdlcy9UcmFkZVN0YXRpb24vTWVudSBJbWFnZXMvaWNvbi1zdG9ja3MtZXRmcy5hc2h4PzIwMTEwNzE4VDA0NTI0OTY3OTIiIGFsdD0iU3RvY2tzIGFuZCBFVEYgUHJpY2luZyIgLz48L2Rpdj48ZGl2IGNsYXNzPSJ0ZXh0Ij5TdG9ja3MgPGJyIC8+YW5kIEVURiBQcmljaW5nPC9kaXY+PC9kaXY+PC9hPjwvbGk+PGxpIGNsYXNzPSJuYXYtaXRlbS1zdWIiPjxhIGhyZWY9Ii9wcmljaW5nL29wdGlvbnMtcHJpY2luZyIgdGFyZ2V0PSJfc2VsZiI+PGRpdiBjbGFzcz0iaW5uZXIiPjxkaXYgY2xhc3M9Imljb24iPjxpbWcgc3JjPSJ+L21lZGlhL0ltYWdlcy9UcmFkZVN0YXRpb24vTWVudSBJbWFnZXMvaWNvbi1vcHRpb25zLmFzaHg/MjAxMTA3MThUMDQ1MjI3MTQ4OSIgYWx0PSJPcHRpb25zIiAvPjwvZGl2PjxkaXYgY2xhc3M9InRleHQiPk9wdGlvbnM8L2Rpdj48L2Rpdj48L2E+PC9saT48bGkgY2xhc3M9Im5hdi1pdGVtLXN1YiI+PGEgaHJlZj0iL3ByaWNpbmcvZnV0dXJlcy1wcmljaW5nIiB0YXJnZXQ9Il9zZWxmIj48ZGl2IGNsYXNzPSJpbm5lciI+PGRpdiBjbGFzcz0iaWNvbiI+PGltZyBzcmM9In4vbWVkaWEvSW1hZ2VzL1RyYWRlU3RhdGlvbi9NZW51IEltYWdlcy9pY29uLWZ1dHVyZXMuYXNoeD8yMDExMDcxOFQwNDUxNDAwNTYzIiBhbHQ9IkZ1dHVyZXMiIC8+PC9kaXY+PGRpdiBjbGFzcz0idGV4dCI+RnV0dXJlczwvZGl2PjwvZGl2PjwvYT48L2xpPjxsaSBjbGFzcz0ibmF2LWl0ZW0tc3ViIj48YSBocmVmPSIvcHJpY2luZy9mb3JleC1wcmljaW5nIiB0YXJnZXQ9Il9zZWxmIj48ZGl2IGNsYXNzPSJpbm5lciI+PGRpdiBjbGFzcz0iaWNvbiI+PGltZyBzcmM9In4vbWVkaWEvSW1hZ2VzL1RyYWRlU3RhdGlvbi9NZW51IEltYWdlcy9pY29uLWZvcmV4LmFzaHg/MjAxMTA3MThUMDQ1MjAzMDE5NiIgYWx0PSJGb3JleCIgLz48L2Rpdj48ZGl2IGNsYXNzPSJ0ZXh0Ij5Gb3JleDwvZGl2PjwvZGl2PjwvYT48L2xpPjxsaSBjbGFzcz0ibmF2LWl0ZW0tc3ViIj48YSBocmVmPSIvcHJpY2luZy9zb2Z0d2FyZS1hbmQtZGF0YS1wcmljaW5nIiB0YXJnZXQ9Il9zZWxmIj48ZGl2IGNsYXNzPSJpbm5lciI+PGRpdiBjbGFzcz0iaWNvbiI+PGltZyBzcmM9In4vbWVkaWEvSW1hZ2VzL1RyYWRlU3RhdGlvbi9NZW51IEltYWdlcy9pY29uLXNvZnR3YXJlLWRhdGEuYXNoeD8yMDExMDcxOFQwNDUxMTY4ODc5IiBhbHQ9IlNvZnR3YXJlIGFuZCBEYXRhIFByaWNpbmciIC8+PC9kaXY+PGRpdiBjbGFzcz0idGV4dCI+U29mdHdhcmUgPGJyIC8+YW5kIERhdGEgUHJpY2luZzwvZGl2PjwvZGl2PjwvYT48L2xpPjxsaSBjbGFzcz0ibmF2LWl0ZW0tc3ViIj48YSBocmVmPSIvcHJpY2luZy9vdGhlci1yYXRlcy1hbmQtZmVlcyIgdGFyZ2V0PSJfc2VsZiI+PGRpdiBjbGFzcz0iaW5uZXIiPjxkaXYgY2xhc3M9Imljb24iPjxpbWcgc3JjPSJ+L21lZGlhL0ltYWdlcy9UcmFkZVN0YXRpb24vTWVudSBJbWFnZXMvaWNvbi1vdGhlci1yYXRlcy1mZWVzLmFzaHg/MjAxMTA3MThUMDQ1MDQ1Mzc2MSIgYWx0PSJPdGhlciBSYXRlcyBhbmQgRmVlcyIgLz48L2Rpdj48ZGl2IGNsYXNzPSJ0ZXh0Ij5PdGhlciA8YnIgLz5SYXRlcyBhbmQgRmVlczwvZGl2PjwvZGl2PjwvYT48L2xpPjxsaSBjbGFzcz0ibmF2LWl0ZW0tc3ViIGxhc3QtY2hpbGQiID4gPGEgaHJlZj0iIyI+PC9hPjwvbGk+PC91bD48L2xpPjxsaSBjbGFzcz0ibmF2LWl0ZW0gaGFzLXN1YiAiPjxkaXYgY2xhc3M9Im5hdi1pdGVtLWlubmVyIj4gPGEgaHJlZj0iL2VkdWNhdGlvbiI+RWR1Y2F0aW9uPC9hPjwvZGl2Pjx1bCBjbGFzcz0ibmF2LWNvbnRhaW5lci1zdWIiPjxsaSBjbGFzcz0ibmF2LWl0ZW0tc3ViIGZpcnN0LWNoaWxkIj48YSBocmVmPSIvZWR1Y2F0aW9uL2xhYnMiIHRhcmdldD0iX3NlbGYiPjxkaXYgY2xhc3M9ImlubmVyIj48ZGl2IGNsYXNzPSJpY29uIj48aW1nIHNyYz0ifi9tZWRpYS9JbWFnZXMvVHJhZGVTdGF0aW9uL01lbnUgSW1hZ2VzL2ljb24tc3RvY2tzLWV0ZnMuYXNoeD8yMDExMDcxOFQwNTAwMzQ4NTQ4IiBhbHQ9IkxhYnMiIC8+PC9kaXY+PGRpdiBjbGFzcz0idGV4dCI+TGFiczwvZGl2PjwvZGl2PjwvYT48L2xpPjxsaSBjbGFzcz0ibmF2LWl0ZW0tc3ViIj48YSBocmVmPSIvZWR1Y2F0aW9uL3VuaXZlcnNpdHkvc2Nob29sLW9mLXRyYWRlc3RhdGlvbi1iYXNpY3MiIHRhcmdldD0iX3NlbGYiPjxkaXYgY2xhc3M9ImlubmVyIj48ZGl2IGNsYXNzPSJpY29uIj48aW1nIHNyYz0ifi9tZWRpYS9JbWFnZXMvVHJhZGVTdGF0aW9uL01lbnUgSW1hZ2VzL2ljb24tdW5pdmVyc2l0eS5hc2h4PzIwMTEwNzE4VDA1MTUzNDc2MTMiIGFsdD0iVW5pdmVyc2l0eSIgLz48L2Rpdj48ZGl2IGNsYXNzPSJ0ZXh0Ij5Vbml2ZXJzaXR5PC9kaXY+PC9kaXY+PC9hPjwvbGk+PGxpIGNsYXNzPSJuYXYtaXRlbS1zdWIiPjxhIGhyZWY9Ii9lZHVjYXRpb24vZXZlbnRzIiB0YXJnZXQ9Il9zZWxmIj48ZGl2IGNsYXNzPSJpbm5lciI+PGRpdiBjbGFzcz0iaWNvbiI+PGltZyBzcmM9In4vbWVkaWEvSW1hZ2VzL1RyYWRlU3RhdGlvbi9NZW51IEltYWdlcy9pY29uLWV2ZW50cy5hc2h4PzIwMTEwNzE4VDA1MDEzNzU0MDQiIGFsdD0iRXZlbnRzIiAvPjwvZGl2PjxkaXYgY2xhc3M9InRleHQiPkV2ZW50czwvZGl2PjwvZGl2PjwvYT48L2xpPjxsaSBjbGFzcz0ibmF2LWl0ZW0tc3ViIj48YSBocmVmPSIvZWR1Y2F0aW9uL2FjYWRlbWljLXByb2dyYW0vb3ZlcnZpZXciIHRhcmdldD0iX3NlbGYiPjxkaXYgY2xhc3M9ImlubmVyIj48ZGl2IGNsYXNzPSJpY29uIj48aW1nIHNyYz0ifi9tZWRpYS9JbWFnZXMvVHJhZGVTdGF0aW9uL01lbnUgSW1hZ2VzL2ljb24tYnJva2VyYWdlLXNlcnZpY2VzLmFzaHgiIGFsdD0iQWNhZGVtaWMgUHJvZ3JhbSIgLz48L2Rpdj48ZGl2IGNsYXNzPSJ0ZXh0Ij5BY2FkZW1pYyA8YnIgLz5Qcm9ncmFtPC9kaXY+PC9kaXY+PC9hPjwvbGk+PGxpIGNsYXNzPSJuYXYtaXRlbS1zdWIgbGFzdC1jaGlsZCIgPiA8YSBocmVmPSIjIj48L2E+PC9saT48L3VsPjwvbGk+PGxpIGNsYXNzPSJuYXYtaXRlbSBoYXMtc3ViICBsYXN0LWNoaWxkIj48ZGl2IGNsYXNzPSJuYXYtaXRlbS1pbm5lciI+IDxhIGhyZWY9Ii9jb21tdW5pdHkiPkNvbW11bml0eTwvYT48L2Rpdj48dWwgY2xhc3M9Im5hdi1jb250YWluZXItc3ViIj48bGkgY2xhc3M9Im5hdi1pdGVtLXN1YiBmaXJzdC1jaGlsZCI+PGEgaHJlZj0iaHR0cHM6Ly9jb21tdW5pdHkudHJhZGVzdGF0aW9uLmNvbS93aWtpLyIgdGFyZ2V0PSJfc2VsZiI+PGRpdiBjbGFzcz0iaW5uZXIiPjxkaXYgY2xhc3M9Imljb24iPjxpbWcgc3JjPSJ+L21lZGlhL0ltYWdlcy9UcmFkZVN0YXRpb24vTWVudSBJbWFnZXMvaWNvbi13aWtpLmFzaHg/MjAxMTA3MThUMDUwMjE1ODg5NiIgYWx0PSJUcmFkZVN0YXRpb24gV2lraSIgLz48L2Rpdj48ZGl2IGNsYXNzPSJ0ZXh0Ij5UcmFkZVN0YXRpb24gPGJyIC8+V2lraTwvZGl2PjwvZGl2PjwvYT48L2xpPjxsaSBjbGFzcz0ibmF2LWl0ZW0tc3ViIj48YSBocmVmPSJodHRwczovL2NvbW11bml0eS50cmFkZXN0YXRpb24uY29tL0Rpc2N1c3Npb25zIiB0YXJnZXQ9Il9zZWxmIj48ZGl2IGNsYXNzPSJpbm5lciI+PGRpdiBjbGFzcz0iaWNvbiI+PGltZyBzcmM9In4vbWVkaWEvSW1hZ2VzL1RyYWRlU3RhdGlvbi9NZW51IEltYWdlcy9pY29uLWZvcnVtcy5hc2h4PzIwMTEwNzE4VDA1MTIyNjQ5ODUiIGFsdD0iRGlzY3Vzc2lvbiBGb3J1bXMiIC8+PC9kaXY+PGRpdiBjbGFzcz0idGV4dCI+RGlzY3Vzc2lvbiA8YnIgLz5Gb3J1bXM8L2Rpdj48L2Rpdj48L2E+PC9saT48bGkgY2xhc3M9Im5hdi1pdGVtLXN1YiBsYXN0LWNoaWxkIiA+IDxhIGhyZWY9IiMiPjwvYT48L2xpPjwvdWw+PC9saT48L3VsPmQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgEFJmJvZHlfMCRwYWdlXzEkaGVhZGVyc2VhcmNoXzAkYnRuU2VhcmNoFAu9IfdkMtYYWAs7Ji3mBV4bwlE=" type="hidden">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['mainform'];
+if (!theForm) {
+    theForm = document.mainform;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div class="aspNetHidden">
+
+	<input name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBAKEqon+AgKgu6EzAvv0ub8OAoHN9OYLoz90Dgr0+XXPOjEWTYXTu67mZJY=" type="hidden">
+</div>
+        <div class="Body" id="Body">
+        	<div class="Page" id="Page"><div class="GlobalHeader" id="GlobalHeader">
+<div class="header-global-wrap">
+<div class="header-global">
+<div class="nav-global-wrap">
+
+<div class="nav-global">
+      <ul class="nav-container">
+        
+                <li class="nav-item first-child selected">
+            
+            <a href="http://www.tradestation.com/" target="_self">
+            <span>TradeStation</span>
+           
+          </a></li>
+        
+            <li class="nav-item">
+            
+            <a href="https://strategynetwork.tradestation.com" target="_blank">
+            <span>Strategy Network</span>
+           
+          </a></li>
+        
+            <li class="nav-item">
+            
+            <a href="https://developer.tradestation.com" target="_blank">
+            <span>Developer Center</span>
+           
+          </a></li>
+        
+            <li class="nav-item">
+            
+            <a href="http://www.tradestationprime.com" target="_blank">
+            <span>Prime Services</span>
+           
+          </a></li>
+        
+      </ul>
+    </div></div>
+<div class="contact-global-wrap">
+<div class="contact-global">
+
+<div class="login">
+    <p><img src="/images/Tscom/ui/contact-global/login.png" alt="Login"><a id="body_0_page_0_globalheader_0_ctl01_lnkLoginBtn" href="javascript:__doPostBack('body_0$page_0$globalheader_0$ctl01$lnkLoginBtn','')"><span>Login</span></a></p>
+</div>
+
+
+
+
+<div class="live-chat"><p><img src="/images/Tscom/ui/contact-global/client-center.png" alt="Client Center"><a href="https://clientcenter.tradestation.com" target="_blank">Client Center</a></p></div>	<div class="organization vcard">	<p>	<span class="fn org">Call TradeStation	</span>	<span class="tel">800.808.9336	</span></p></div>
+</div>
+</div>
+</div>
+</div></div><div class="header-main" style="height:245px;">
+    <div style="margin:10px;">
+        <div style="float:left;"><img src="~/media/Images/TradeStation/Site Logo/tradestation-logo.ashx" alt="TradeStation" height="43" width="215"></div>
+        <div style="float:right; width:700px; margin-top:10px;">
+            <div style="float:right; margin-left:10px; width:150px;">
+<div class="button green24px open-account">
+    <a id="body_0_page_1_headernewaccount_0_lnkOpenAccount" href="https://getstarted.tradestation.com" target="_blank"><span>OPEN AN ACCOUNT</span></a>
+</div>
+</div>
+            <div style="float:right; margin-left:10px; width:225px;">
+<script type="text/javascript">
+    function doClear(inputField) {
+        if (inputField.value == inputField.defaultValue) {
+            inputField.value = "";
+            inputField.style.color = "black";
+        }
+    }
+    function Button1_onclick() {
+
+    }
+
+</script>
+
+<div class="search-wrap">
+    <div class="search">
+   
+   
+
+<fieldset>
+<input name="body_0$page_1$headersearch_0$txtCriteria" value="Search" id="body_0_page_1_headersearch_0_txtCriteria" class="text search-field" onfocus="doClear(this)" type="text">
+<input name="body_0$page_1$headersearch_0$btnSearch" id="body_0_page_1_headersearch_0_btnSearch" class="search-button" src="/images/Tscom/ui/common-assets/transparent.png" type="image">
+
+</fieldset>
+
+    
+   
+    </div>
+</div>
+
+</div>
+            <div style="float:right; margin-top:5px;"><p><strong><span>Welcome </span></strong></p></div>
+        </div>
+        <div style="clear:both; height:0px;"></div>
+    </div>
+    <div style="z-index:3;" class="nav-main-wrap">
+<!-- Navigation -->
+<div class="nav-main sub-nav-open">
+     <ul class="nav-container"><li class="nav-item has-sub  first-child selected"><div class="nav-item-inner"> <a href="/why-tradestation">Why TradeStation</a></div><ul class="nav-container-sub"><li class="nav-item-sub"><a href="/why-tradestation/awards" target="_self"><div class="inner"><div class="icon"><img src="~/media/Images/TradeStation/Menu Images/Awards-Icon.ashx" alt="Awards &amp; Accolades"></div><div class="text">Awards <br>&amp; Accolades</div></div></a></li><li class="nav-item-sub selected"><a href="/why-tradestation/tour/find-opportunities/radarscreen" target="_self"><div class="inner"><div class="icon"><img src="~/media/Images/TradeStation/Menu Images/Video-Tour.ashx" alt="TradeStation Video Tour"></div><div class="text">TradeStation <br>Video Tour</div></div></a></li><li class="nav-item-sub last-child"> <a href="#"></a></li></ul></li><li class="nav-item has-sub "><div class="nav-item-inner"> <a href="/products">Products</a></div><ul class="nav-container-sub"><li class="nav-item-sub first-child"><a href="/products/stocks-and-etfs" target="_self"><div class="inner"><div class="icon"><img src="~/media/Images/TradeStation/Menu Images/icon-stocks-etfs.ashx?20110718T0458001080" alt="Stocks and ETFs"></div><div class="text">Stocks <br>and ETFs</div></div></a></li><li class="nav-item-sub"><a href="/products/options" target="_self"><div class="inner"><div class="icon"><img src="~/media/Images/TradeStation/Menu Images/icon-options.ashx?20110718T0457336545" alt="Options"></div><div class="text">Options</div></div></a></li><li class="nav-item-sub"><a href="/products/futures" target="_self"><div class="inner"><div class="icon"><img src="~/media/Images/TradeStation/Menu Images/icon-futures.ashx" alt="Futures"></div><div class="text">Futures</div></div></a></li><li class="nav-item-sub"><a href="/products/forex" target="_self"><div class="inner"><div class="icon"><img src="~/media/Images/TradeStation/Menu Images/icon-forex.ashx?20110718T0456511630" alt="Forex"></div><div class="text">Forex</div></div></a></li><li class="nav-item-sub"><a href="/products/other-instruments" target="_self"><div class="inner"><div class="icon"><img src="~/media/Images/TradeStation/Menu Images/icon-other-instruments.ashx?20110718T0456254456" alt="Other Instruments"></div><div class="text">Other <br>Instruments</div></div></a></li><li class="nav-item-sub last-child"> <a href="#"></a></li></ul></li><li class="nav-item has-sub "><div class="nav-item-inner"> <a href="/trading-technology">Trading Technology</a></div><ul class="nav-container-sub"><li class="nav-item-sub first-child"><a href="/trading-technology/tradestation-platform" target="_self"><div class="inner"><div class="icon"><img src="~/media/Images/TradeStation/Menu Images/icon-platform.ashx?20110718T0455523327" alt="TradeStation Platform"></div><div class="text">TradeStation <br>Platform</div></div></a></li><li class="nav-item-sub"><a href="/trading-technology/tradestation-webtrading" target="_self"><div class="inner"><div class="icon"><img src="~/media/Images/TradeStation/Menu Images/icon-webtrading.ashx?20110718T0455237410" alt="TradeStation WebTrading"></div><div class="text">TradeStation <br>WebTrading</div></div></a></li><li class="nav-item-sub"><a href="/trading-technology/tradestation-mobile" target="_self"><div class="inner"><div class="icon"><img src="~/media/Images/TradeStation/Menu Images/icon-mobile.ashx?20110718T0454251377" alt="TradeStation Mobile"></div><div class="text">TradeStation <br>Mobile</div></div></a></li><li class="nav-item-sub"><a href="/trading-technology/order-execution" target="_self"><div class="inner"><div class="icon"><img src="~/media/Images/TradeStation/Menu Images/icon-order-execution.ashx?20110718T0454015773" alt="Order Execution"></div><div class="text">Order <br>Execution</div></div></a></li><li class="nav-item-sub"><a href="/trading-technology/market-data" target="_self"><div class="inner"><div class="icon"><img src="~/media/Images/TradeStation/Menu Images/icon-market-data.ashx?20110718T0453378130" alt="Market Data"></div><div class="text">Market <br>Data</div></div></a></li><li class="nav-item-sub"><a href="/trading-technology/chart-pattern-recognition" target="_self"><div class="inner"><div class="icon"><img src="~/media/Images/TradeStation/Menu Images/icon-recognia2.ashx" alt="Chart&nbsp;Pattern<br>Recognition"></div><div class="text">Chart&nbsp;Pattern<br>Recognition</div></div></a></li><li class="nav-item-sub last-child"> <a href="#"><div></div></a></li></ul></li><li class="nav-item has-sub "><div class="nav-item-inner"> <a href="/pricing">Pricing</a></div><ul class="nav-container-sub"><li class="nav-item-sub first-child"><a href="/pricing/stocks-and-etf-pricing" target="_self"><div class="inner"><div class="icon"><img src="~/media/Images/TradeStation/Menu Images/icon-stocks-etfs.ashx?20110718T0452496792" alt="Stocks and ETF Pricing"></div><div class="text">Stocks <br>and ETF Pricing</div></div></a></li><li class="nav-item-sub"><a href="/pricing/options-pricing" target="_self"><div class="inner"><div class="icon"><img src="~/media/Images/TradeStation/Menu Images/icon-options.ashx?20110718T0452271489" alt="Options"></div><div class="text">Options</div></div></a></li><li class="nav-item-sub"><a href="/pricing/futures-pricing" target="_self"><div class="inner"><div class="icon"><img src="~/media/Images/TradeStation/Menu Images/icon-futures.ashx?20110718T0451400563" alt="Futures"></div><div class="text">Futures</div></div></a></li><li class="nav-item-sub"><a href="/pricing/forex-pricing" target="_self"><div class="inner"><div class="icon"><img src="~/media/Images/TradeStation/Menu Images/icon-forex.ashx?20110718T0452030196" alt="Forex"></div><div class="text">Forex</div></div></a></li><li class="nav-item-sub"><a href="/pricing/software-and-data-pricing" target="_self"><div class="inner"><div class="icon"><img src="~/media/Images/TradeStation/Menu Images/icon-software-data.ashx?20110718T0451168879" alt="Software and Data Pricing"></div><div class="text">Software <br>and Data Pricing</div></div></a></li><li class="nav-item-sub"><a href="/pricing/other-rates-and-fees" target="_self"><div class="inner"><div class="icon"><img src="~/media/Images/TradeStation/Menu Images/icon-other-rates-fees.ashx?20110718T0450453761" alt="Other Rates and Fees"></div><div class="text">Other <br>Rates and Fees</div></div></a></li><li class="nav-item-sub last-child"> <a href="#"></a></li></ul></li><li class="nav-item has-sub "><div class="nav-item-inner"> <a href="/education">Education</a></div><ul class="nav-container-sub"><li class="nav-item-sub first-child"><a href="/education/labs" target="_self"><div class="inner"><div class="icon"><img src="~/media/Images/TradeStation/Menu Images/icon-stocks-etfs.ashx?20110718T0500348548" alt="Labs"></div><div class="text">Labs</div></div></a></li><li class="nav-item-sub"><a href="/education/university/school-of-tradestation-basics" target="_self"><div class="inner"><div class="icon"><img src="~/media/Images/TradeStation/Menu Images/icon-university.ashx?20110718T0515347613" alt="University"></div><div class="text">University</div></div></a></li><li class="nav-item-sub"><a href="/education/events" target="_self"><div class="inner"><div class="icon"><img src="~/media/Images/TradeStation/Menu Images/icon-events.ashx?20110718T0501375404" alt="Events"></div><div class="text">Events</div></div></a></li><li class="nav-item-sub"><a href="/education/academic-program/overview" target="_self"><div class="inner"><div class="icon"><img src="~/media/Images/TradeStation/Menu Images/icon-brokerage-services.ashx" alt="Academic Program"></div><div class="text">Academic <br>Program</div></div></a></li><li class="nav-item-sub last-child"> <a href="#"></a></li></ul></li><li class="nav-item has-sub  last-child"><div class="nav-item-inner"> <a href="/community">Community</a></div><ul class="nav-container-sub"><li class="nav-item-sub first-child"><a href="https://community.tradestation.com/wiki/" target="_self"><div class="inner"><div class="icon"><img src="~/media/Images/TradeStation/Menu Images/icon-wiki.ashx?20110718T0502158896" alt="TradeStation Wiki"></div><div class="text">TradeStation <br>Wiki</div></div></a></li><li class="nav-item-sub"><a href="https://community.tradestation.com/Discussions" target="_self"><div class="inner"><div class="icon"><img src="~/media/Images/TradeStation/Menu Images/icon-forums.ashx?20110718T0512264985" alt="Discussion Forums"></div><div class="text">Discussion <br>Forums</div></div></a></li><li class="nav-item-sub last-child"> <a href="#"></a></li></ul></li></ul>	
+</div></div>
+</div><div class="Main" id="Main">
+
+    <div style="background-color:#FFFFFF; background-image:url('/images/Tscom/ui/content-main/assets/content-main-wrap-bg.gif'); background-repeat:repeat-x;">
+      <div style="margin:0 auto; width:980px; z-index:auto !important;">
+        <div>
+    
+        <div class="content-main-wrap" id="main">
+  
+<div class="content-header">
+    <ul class="breadcrumbs nav-container"><li class="nav-item first-child"><a href="/en"><img src="~/media/Images/TradeStation/Site Wide Items/home-icon.ashx" alt="Home">&nbsp;</a></li><li class="nav-item"><a href="/en/why-tradestation">Why TradeStation</a></li><li class="nav-item"><a href="/en/why-tradestation/tour/find-opportunities/radarscreen">Tour</a></li><li class="nav-item"><a href="#">Find Opportunities</a></li><li class="nav-item last-child"><a href="#">RadarScreen</a></li></ul>
+
+</div>
+
+</div><div class="content-main-internal">
+  <div style="background-color:#FFFFFF; border-left:1px #e5e5e5 solid; border-right:1px #e5e5e5 solid; padding-top:15px;">
+    <div style="margin:0 15px 15px 15px;">
+      <div xmlns:addthis="http://www.addthis.com/help/client-api"><div style="float:left; width:453px;"><div style="margin-bottom:10px"><a href="#VideoLB" class="fancybox" onclick="showPlayer();"><img src="~/media/Images/TradeStation/Why TradeStation/Video Tour/scanner-full.ashx?h=342&amp;thn=1&amp;w=453" alt="Scanner" height="342" width="453" border="0"></a></div><div><div style="float:left; width:330px;"><span><strong>Searching &amp; Scanning (3:45)</strong><br>Scour the markets for opportunities as they happen, with the criteria you choose.</span></div><div style="float:right; width:60px; height:40px; text-align:right;"><div class="addthis_toolbox addthis_default_style" addthis:url="http://www.tradestation.com/why-tradestation/tour/find-opportunities/scanning"><a href="#" class="addthis_button_facebook at300b" title="Send to Facebook"><img src="~/media/images/tradestation/social-media/16px/facebook
+" alt="Send to Facebook" height="16" width="16" border="0"></a><a href="#" class="addthis_button_twitter at300b" title="Tweet This"><img src="~/media/images/tradestation/social-media/16px/twitter" alt="Tweet This" height="16" width="16" border="0"></a><a target="_blank" href="http://www.addthis.com/bookmark.php?v=300&amp;winname=addthis&amp;pub=ra-4f71c60b0f924bfb&amp;source=tbx-300&amp;lng=en-US&amp;s=google_plusone_share&amp;url=http%3A%2F%2Fwww.tradestation.com%2Fwhy-tradestation%2Ftour%2Ffind-opportunities%2Fscanning&amp;title=Searching%20and%20Scanning%20%7C%20TradeStation%20Tour&amp;ate=AT-ra-4f71c60b0f924bfb/-/-/51a31de15b8cc7e0/2&amp;frommenu=1&amp;uid=51a31de187ff7e05&amp;ct=1&amp;tt=0&amp;captcha_provider=nucaptcha" class="addthis_button_google_plusone_share at300b" title="Share on Google+"><img src="~/media/images/tradestation/social-media/16px/google-plus" alt="Share on Google+" height="16" width="16" border="0"></a><div class="atclear"></div></div><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4f71c60b0f924bfb"></script></div></div></div><div style="float:right; width:470px;"><div style="margin-bottom:37px;"><div style="margin-bottom:20px"><img alt="Welcome to the TradeStation Tour" src="~/media/2981BBA0C8724391B00774F820F04FFA.ashx" height="178" width="422"></div></div><div><span style="font-size:16px; margin-bottom:10px;"><em><strong>UP NEXT ON THE TOUR</strong></em></span></div><div><div style="float:left; width:155px"><div><a href="/why-tradestation/tour/execute/order-entry"><img src="~/media/Images/TradeStation/Why TradeStation/Video Tour/order-entry-full.ashx?h=106&amp;thn=1&amp;w=140" alt="Order Entry" height="106" width="140" border="0"></a></div><div><span style="font-size:12px; font-weight:bold;">Order Entry (2:30)</span></div></div><div style="float:left; width:155px"><div><a href="/why-tradestation/tour/execute/trade-management"><img src="~/media/Images/TradeStation/Why TradeStation/Video Tour/trade-management-full.ashx?h=106&amp;thn=1&amp;w=140" alt="Trade Management" height="106" width="140" border="0"></a></div><div><span style="font-size:12px; font-weight:bold;">Trade Management (2:30)</span></div></div><div style="float:left; width:155px"><div><a href="/why-tradestation/tour/execute/strategy-testing"><img src="~/media/Images/TradeStation/Why TradeStation/Video Tour/Strategy-testing-full.ashx?h=106&amp;thn=1&amp;w=140" alt="Strategy Testing" height="106" width="140" border="0"></a></div><div><span style="font-size:12px; font-weight:bold;">Strategy Testing (2:30)</span></div></div></div></div></div><div style="clear:both;" xmlns:addthis="http://www.addthis.com/help/client-api"></div><div><div style="border-bottom:1px #CCCCCC solid; margin-top:15px;"><h2>The Tour Continues</h2></div><div><div style="float:left; margin-bottom:30px; height:155px"><div style="margin-bottom:6px;"><h3>Find Opportunities</h3></div><div style="float:left; margin-right:15px; width:179"><div><a href="/why-tradestation/tour/find-opportunities/radarscreen"><img src="~/media/Images/TradeStation/Why TradeStation/Video Tour/radar-screen-full.ashx?h=131&amp;thn=1&amp;w=174" alt="RadarScreen" height="131" width="174" border="0"></a><br><span style="font-size:12px; font-weight:bold;">RadarScreen (2:30)</span></div></div><div style="float:left; margin-right:15px; width:179"><div><a href="/why-tradestation/tour/find-opportunities/scanning"><img src="~/media/Images/TradeStation/Why TradeStation/Video Tour/scanner-full.ashx?h=131&amp;thn=1&amp;w=174" alt="Scanner" height="131" width="174" border="0"></a><br><span style="font-size:12px; font-weight:bold;">Searching &amp; Scanning (3:45)</span></div></div></div><div style="float:left; margin-bottom:30px; height:155px"><div style="margin-bottom:6px;"><h3>Execute</h3></div><div style="float:left; margin-right:15px; width:179"><div><a href="/why-tradestation/tour/execute/order-entry"><img src="~/media/Images/TradeStation/Why TradeStation/Video Tour/order-entry-full.ashx?h=131&amp;thn=1&amp;w=174" alt="Order Entry" height="131" width="174" border="0"></a><br><span style="font-size:12px; font-weight:bold;">Order Entry (2:30)</span></div></div><div style="float:left; margin-right:15px; width:179"><div><a href="/why-tradestation/tour/execute/trade-management"><img src="~/media/Images/TradeStation/Why TradeStation/Video Tour/trade-management-full.ashx?h=131&amp;thn=1&amp;w=174" alt="Trade Management" height="131" width="174" border="0"></a><br><span style="font-size:12px; font-weight:bold;">Trade Management (2:30)</span></div></div><div style="float:left; margin-right:15px; width:179"><div><a href="/why-tradestation/tour/execute/strategy-testing"><img src="~/media/Images/TradeStation/Why TradeStation/Video Tour/Strategy-testing-full.ashx?h=131&amp;thn=1&amp;w=174" alt="Strategy Testing" height="131" width="174" border="0"></a><br><span style="font-size:12px; font-weight:bold;">Strategy Testing (2:30)</span></div></div></div><div style="float:left; margin-bottom:30px; height:155px"><div style="margin-bottom:6px;"><h3>Analyze</h3></div><div style="float:left; margin-right:15px; width:179"><div><a href="/why-tradestation/tour/analyze/charting"><img src="~/media/Images/TradeStation/Why TradeStation/Video Tour/charting-full.ashx?h=131&amp;thn=1&amp;w=174" alt="Charting" height="131" width="174" border="0"></a><br><span style="font-size:12px; font-weight:bold;">Charting (1:44)</span></div></div><div style="float:left; margin-right:15px; width:179"><div><a href="/why-tradestation/tour/analyze/optionstation-pro"><img src="~/media/Images/TradeStation/Why TradeStation/Video Tour/optionstation-pro.ashx?h=131&amp;thn=1&amp;w=174" alt="OptionStation Pro" height="131" width="174" border="0"></a><br><span style="font-size:12px; font-weight:bold;">OptionStation Pro (2:28)</span></div></div><div style="float:left; margin-right:15px; width:179"><div><a href="/why-tradestation/tour/analyze/walk-forward-optimizer"><img src="~/media/Images/TradeStation/Why TradeStation/Video Tour/walk-forward-full.ashx?h=131&amp;thn=1&amp;w=174" alt="Walk-Forward" height="131" width="174" border="0"></a><br><span style="font-size:12px; font-weight:bold;">Walk-Forward Optimizer (1:42)</span></div></div></div><div style="float:left; margin-bottom:30px; height:155px"><div style="margin-bottom:6px;"><h3>Extend the Possibilities</h3></div><div style="float:left; margin-right:15px; width:179"><div><a href="/why-tradestation/tour/extend-the-possibilities/easylanguage"><img src="~/media/Images/TradeStation/Why TradeStation/Video Tour/easylanguage-full.ashx?h=131&amp;thn=1&amp;w=174" alt="EasyLanguage" height="131" width="174" border="0"></a><br><span style="font-size:12px; font-weight:bold;">EasyLanguage (1:13)</span></div></div><div style="float:left; margin-right:15px; width:179"><div><a href="/why-tradestation/tour/extend-the-possibilities/strategy-network"><img src="~/media/Images/TradeStation/Why TradeStation/Video Tour/strategy-network-full.ashx?h=131&amp;thn=1&amp;w=174" alt="Strategy Network" height="131" width="174" border="0"></a><br><span style="font-size:12px; font-weight:bold;">Strategy Network (1:38)</span></div></div></div></div></div><div style="clear:both;"></div><br><script src="/Scripts/Tscom/js/jQuery.tubeplayer.min.js" type="text/javascript" xmlns:addthis="http://www.addthis.com/help/client-api"></script><div id="VideoLB" style="display:none;" xmlns:addthis="http://www.addthis.com/help/client-api"><div id="youtube-player-container" style="width:900px; height:507px;"></div><div id="post-youtube-content" style="width:900px; height:507px; padding-top:20px; display:none"><table style="margin: 188px 0px 0px 250px; font-family: arial, helvetica, sans-serif; font-size: 36px;" width="500" border="0" cellpadding="3" cellspacing="2">
+    <tbody>
+        <tr>
+            <td style="width: 65px;" valign="middle"><a href="/why-tradestation/tour/execute/order-entry" target="_blank" title="Watch the next video"><img style="border: 0px solid;" alt="Watch the next video" src="~/media/Images/TradeStation/Why TradeStation/Video Tour/tours-play.ashx" height="52" width="65"></a></td>
+            <td style="width: 435px;" valign="middle" align="left"><a href="/why-tradestation/tour/execute/order-entry" style="text-decoration:none;" target="_blank" title="Watch the next video"><span style="color:#333399">Watch</span> <span style="color:#666666;">the next video</span></a></td>
+        </tr>
+        <tr>
+            <td valign="middle"><a href="http://www.tradestation.com/contact-us" target="_blank" title="Call to ask a question"><img style="border: 0px solid;" alt="Call to ask a question" src="~/media/Images/TradeStation/Why TradeStation/Video Tour/tours-phone.ashx" height="52" width="65"></a></td>
+            <td valign="middle" align="left"><a href="http://www.tradestation.com/contact-us" style="text-decoration:none;" target="_blank" title="Call to ask a question"><span style="color:#333399;">Call</span> <span style="color:#666666;">to ask a question</span></a></td>
+        </tr>
+        <tr>
+            <td valign="middle"><a href="https://getstarted.tradestation.com" target="_blank" title="Open an account"><img style="border: 0px solid;" alt="Open an account" src="~/media/Images/TradeStation/Why TradeStation/Video Tour/tours-uptick.ashx" height="52" width="65"></a></td>
+            <td valign="middle" align="left"><a href="https://getstarted.tradestation.com" style="text-decoration:none;" target="_blank" title="Open an account"><span style="color:#333399;">Open</span> <span style="color:#666666;">an account</span></a></td>
+        </tr>
+    </tbody>
+</table></div><div style="height:40px; text-align:center; margin-top:15px"><div class="button blue24px"><a href="https://getstarted.tradestation.com" target="_blank"><span>OPEN AN ACCOUNT</span></a></div></div></div><script language="javascript" xmlns:addthis="http://www.addthis.com/help/client-api">
+		$(".fancybox").fancybox({
+			'beforeClose': function() {
+				$("#youtube-player-container").tubeplayer("destroy");
+				$("#post-youtube-content").css("display","none");
+			},
+			'closeClick': true
+		});
+		
+		function showPlayer(){
+			$("#youtube-player-container").tubeplayer("destroy");
+			$("#youtube-player-container").css("display","block");
+			$("#post-youtube-content").css("display","none");
+			//$("#VideoLB").css({'width':'900px','height':'600px'});
+			//alert("build player");
+			$("#youtube-player-container").tubeplayer({
+				width: 900, // the width of the player
+				height: 507, // the height of the player
+				initialVideo: "e2rEV135tBg", // the video that is loaded into the player
+				allowFullScreen: "true", // true by default, allow user to go full screen
+				preferredQuality: "default",// preferred quality: default, small, medium, large, hd720
+				modestbranding: true, // specify to include/exclude the YouTube watermark
+				autoPlay: true,
+				onPlayerEnded: function(){
+					//alert("destroy player");
+					$("#youtube-player-container").tubeplayer("destroy"); //when the player returns a state of ended
+					$("#youtube-player-container").css("display","none");					
+					$("#post-youtube-content").css("display","block");
+				} 
+			});
+		}
+	
+	</script>
+    </div>
+    <div style="clear:both;"></div>
+  </div>
+</div>
+        
+        </div>
+      </div>
+    </div>
+
+</div><div style="background-color:#FFFFFF;">
+  <div style="height:1px; clear:both;">&nbsp;</div>
+  <div class="footer-wrap">
+    <div class="footer">
+      <div style="margin:15px 0 0 0; background-color:#FFFFFF;">
+        <div>
+          <!--
+Start of DoubleClick Floodlight Tag: Please do not remove
+Activity name of this tag: TradeStation Tour Video: Searching & Scanning
+URL of the webpage where the tag is expected to be placed: http://www.tradestation.com/why-tradestation/tour/find-opportunities/scanning 
+This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+Creation Date: 05/23/2012
+-->
+<script type="text/javascript">
+var axel = Math.random() + "";
+var a = axel * 10000000000000;
+document.write('<iframe src="http://fls.doubleclick.net/activityi;src=3060916;type=trade143;cat=trade567;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+</script><iframe src="http://fls.doubleclick.net/activityi;src=3060916;type=trade143;cat=trade567;ord=395925514726.4973?" style="display:none" frameborder="0" height="1" width="1"></iframe>
+<noscript>
+<iframe src="http://fls.doubleclick.net/activityi;src=3060916;type=trade143;cat=trade567;ord=1?" width="1" height="1" frameborder="0" style="display:none"></iframe>
+</noscript>
+
+<!-- End of DoubleClick Floodlight Tag: Please do not remove -->
+        </div>
+        <div>
+          <div class="organization vcard" style="float:left; width:48%;">
+            <div>
+	<div style="float:left;"><p><span class="fn org">Call a TradeStation Specialist</span><span class="tel"> 800.808.9336</span></p></div>
+    <div style="float:left; margin-top:-3px; margin-left:10px;">
+        <div class="button green24px open-account">
+            <a href="https://getstarted.tradestation.com" target="_blank"><span>OPEN AN ACCOUNT</span></a>
+        </div>
+    </div>
+</div>
+          </div>
+          <div style="float:right; width:48%; text-align:right;">
+            
+          </div>
+          <div style="clear:both; height:0px;">&nbsp;</div>
+        </div>
+        <hr style="height:1px; color:#e5e5e5;">
+        <div>
+          
+<div class="nav-footer col1">
+    <ul><li><a href="/en/sitemap" target="_self">Sitemap</a></li><li><a href="/en/contact-us" target="_self">Contact Us</a></li><li><a href="/en/about-us" target="_self">About Us</a></li><li><a href="/other-information#terms-of-use" target="_self">Terms of Use</a></li><li><a href="/other-information#online-security" target="_self">Online Security</a></li><li><a href="/other-information#online-security" target="_self">Privacy Policy</a></li><li><a href="/other-information#customer-agreements" target="_self">Customer Agreements</a></li><li><a href="/en/other-information" target="_self">Other Information</a></li><li><a href="http://careers.tradestation.com" target="_self">Careers</a></li></ul>
+</div>
+        </div>
+        <div style="margin-top:15px;">
+          <p><strong>IMPORTANT INFORMATION:</strong></p>
+<p>&nbsp;</p>
+<p>No offer or solicitation to buy or sell securities, securities derivative, futures products or off-exchange foreign currency (forex) transactions of any kind, or any type of trading or investment advice, recommendation or strategy, is made, given or in any manner endorsed by any TradeStation affiliate and the information made available on this Website is not an offer or solicitation of any kind in any jurisdiction where any TradeStation affiliate is not authorized to do business, including but not limited to Japan.</p>
+<p>&nbsp;</p>
+<p>Past performance, whether actual or indicated by historical tests of strategies, is no guarantee of future performance or success. There is a possibility that you may sustain a loss equal to or greater than your entire investment regardless of which asset class you trade (equities, options futures or forex); therefore, you should not invest or risk money that you cannot afford to lose. Options trading is not suitable for all investors. Your account application to trade options will be considered and approved or disapproved based on all relevant factors, including your trading experience. Please click here to view the document titled <a href="/site-wide-items/disclaimers/legal/disclosures/characteristics-standardized" class="lb-route">Characteristics and Risks of Standardized Options</a>. Before trading any asset class, customers must read the relevant risk disclosure statements on our&nbsp;<a href="/other-information">Other Information</a>&nbsp;page. System access and trade placement and execution may be delayed or fail due to market volatility and volume, quote delays, system and software errors, Internet traffic, outages and other factors.</p>
+<p>&nbsp;</p>
+<p>TradeStation Group, Inc. Affiliates: All proprietary technology in TradeStation is owned by TradeStation Technologies, Inc. Equities, equities options, and commodity futures products and services are offered by TradeStation Securities, Inc. (Member <a href="http://www.nyse.com/" target="_blank">NYSE</a>, <a href="http://www.finra.org/index.htm" target="_blank">FINRA</a>,&nbsp;<a href="http://www.nfa.futures.org/" target="_blank">NFA</a> and <a href="http://www.sipc.org/" target="_blank">SIPC</a>). TradeStation Securities, Inc.’s SIPC coverage is available only for equities and equities options accounts. Forex products and services  are offered by the TradeStation Forex divisions of IBFX, Inc. (Member NFA) and  IBFX Australia Pty Ltd (ASIC registered).</p>
+<p>&nbsp;</p>
+<p>Copyright © 2001-2012 TradeStation Group, Inc.</p>
+<!-- Google Tag Manager -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-QFXN"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-QFXN');</script>
+<!-- End Google Tag Manager -->
+<script type="text/javascript">
+
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-2089198-1']);
+	_gaq.push(['_trackPageview']);
+
+	(function () {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+
+</script>
+        </div>
+      </div>
+    </div>
+    <div style="clear:both;"></div>
+  </div>
+</div></div>
+        </div>
+        </form>
+		<script src="/Scripts/Tscom/js/global.js" type="text/javascript"></script>
+
+        <!--[if IE 6]>
+        	<script type="text/javascript" src="/Scripts/Tscom/lib/DD_belatedPNG.js"></script>
+        <![endif]-->
+
+<div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div></body>

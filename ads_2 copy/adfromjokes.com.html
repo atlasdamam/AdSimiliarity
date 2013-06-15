@@ -1,0 +1,868 @@
+<head><style class="flux4Style" type="text/css">.flux4Widget#flux_widgets4_tooltip_control{position:relative}.flux4Widget .tooltip4001{position:absolute;z-index:9998;vertical-align:baseline}.flux4Widget .tooltip4001 .pointer{position:absolute}.flux4Widget .tooltip4001.bigTooltip .bottomLine,.flux4Widget .tooltip4001.bigTooltip .topLine{background:url('http://cus.fluxstatic.com/Img/widgets/Tooltip/BigTooltip/tooltip_h.png?1') repeat-x}.flux4Widget .tooltip4001.bigTooltip .leftBorder,.flux4Widget .tooltip4001.bigTooltip .rightBorder{background:url('http://cus.fluxstatic.com/Img/widgets/Tooltip/BigTooltip/tooltip_v.png?1') repeat-y}.flux4Widget .tooltip4001.bigTooltip .topLeftBorder,.flux4Widget .tooltip4001.bigTooltip .topRightBorder,.flux4Widget .tooltip4001.bigTooltip .bottomLeftBorder,.flux4Widget .tooltip4001.bigTooltip .pointer,.flux4Widget .tooltip4001.bigTooltip .bottomRightBorder{background:url('http://cus.fluxstatic.com/Img/widgets/Tooltip/BigTooltip/tooltip_corners.png?2') no-repeat}.flux4Widget .tooltip4001.bigTooltip .topLeftBorder{font-size:1px;background-position:left -27px;padding-left:12px;margin-left:15px}.flux4Widget .tooltip4001.bigTooltip .topRightBorder{background-position:right 0;padding-right:13px;margin-right:16px}.flux4Widget .tooltip4001.bigTooltip .topLine{background-position:0 top;*width:265px;line-height:13px;height:13px;padding-left:10px;padding-right:10px;margin-top:10px;font-size:1px}.flux4Widget .tooltip4001.bigTooltip .leftBorder{background-position:left top;padding-left:12px;margin-left:15px}.flux4Widget .tooltip4001.bigTooltip .rightBorder{background-position:right top;padding-right:13px;margin-right:16px}.flux4Widget .tooltip4001.bigTooltip .tooltipContent{background:#fff;padding:7px 10px 8px 10px;width:267px;color:#333}.flux4Widget .tooltip4001.bigTooltip .bottomLeftBorder{padding-left:12px;margin-left:15px;background-position:left -41px}.flux4Widget .tooltip4001.bigTooltip .bottomRightBorder{padding-right:13px;margin-right:16px;background-position:right -14px}.flux4Widget .tooltip4001.bigTooltip .bottomLine{background-position:0 bottom;margin-bottom:16px;line-height:12px;font-size:1px}.flux4Widget .tooltip4001.bigTooltip .pointer.pointerDown{background-position:0 -133px;bottom:0;left:100px;width:28px;height:28px}.flux4Widget .tooltip4001.bigTooltip .pointer.pointerUp{background-position:0 -110px;top:0;left:100px;width:20px;height:23px}.flux4Widget .tooltip4001.bigTooltip .pointer.pointerLeft{background-position:right -82px;left:0;top:20px;width:27px;height:28px}.flux4Widget .tooltip4001.bigTooltip .pointer.pointerRight{background-position:left -54px;right:0;top:20px;width:29px;height:28px}.flux4Widget .tooltip4001.bigTooltip .asyncLoader{padding:80px 0}.flux4Widget .tooltip4001.standardTooltip .bottomLine,.flux4Widget .tooltip4001.standardTooltip .topLine{background:url('http://cus.fluxstatic.com/Img/widgets/Tooltip/tooltip_h.png?2') repeat-x}.flux4Widget .tooltip4001.standardTooltip .leftBorder,.flux4Widget .tooltip4001.standardTooltip .rightBorder{background:url('http://cus.fluxstatic.com/Img/widgets/Tooltip/tooltip_v.png?2') repeat-y}.flux4Widget .tooltip4001.standardTooltip .topLeftBorder,.flux4Widget .tooltip4001.standardTooltip .topRightBorder,.flux4Widget .tooltip4001.standardTooltip .bottomLeftBorder,.flux4Widget .tooltip4001.standardTooltip .pointer,.flux4Widget .tooltip4001.standardTooltip .bottomRightBorder{background:url('http://cus.fluxstatic.com/Img/widgets/Tooltip/tooltip_corners.png?4') no-repeat}.flux4Widget .tooltip4001.standardTooltip .topLeftBorder{font-size:1px;background-position:left -9px;padding-left:7px;margin-left:5px}.flux4Widget .tooltip4001.standardTooltip .topRightBorder{background-position:right 0;padding-right:9px;margin-right:4px}.flux4Widget .tooltip4001.standardTooltip .topLine{background-position:0 top;*width:200px;line-height:8px;height:8px;padding-left:10px;padding-right:10px;margin-top:5px;font-size:1px}.flux4Widget .tooltip4001.standardTooltip .leftBorder{background-position:left top;padding-left:7px;margin-left:5px}.flux4Widget .tooltip4001.standardTooltip .rightBorder{background-position:right top;padding-right:9px;margin-right:4px}.flux4Widget .tooltip4001.standardTooltip .tooltipContent{background:#fff;padding:7px 10px 8px 10px;width:200px;color:#333}.flux4Widget .tooltip4001.standardTooltip .bottomLeftBorder{padding-left:7px;margin-left:5px;background-position:left -28px}.flux4Widget .tooltip4001.standardTooltip .bottomRightBorder{padding-right:9px;margin-right:4px;background-position:right -18px}.flux4Widget .tooltip4001.standardTooltip .bottomLine{background-position:0 bottom;margin-bottom:5px;line-height:9px;font-size:1px}.flux4Widget .tooltip4001.standardTooltip .pointer.pointerDown{background-position:0 -38px;bottom:0;width:14px;height:14px}.flux4Widget .tooltip4001.standardTooltip .pointer.pointerUp{background-position:0 -53px;top:0;left:100px;width:14px;height:13px}.flux4Widget .tooltip4001.standardTooltip .pointer.pointerLeft{background-position:right -67px;left:0;top:20px;width:12px;height:11px}.flux4Widget .tooltip4001.standardTooltip .pointer.pointerRight{background-position:left -79px;right:0;top:20px;width:13px;height:12px}.flux4Widget .tooltip4001.standardTooltip .asyncLoader{padding:5px 0}.flux4Widget .tooltip4001 .asyncLoader div{background:url('http://cus.fluxstatic.com/Img/ajax-loader.gif') no-repeat center top;width:32px;height:32px}</style><style class="flux4Style" type="text/css">.flux4Widget .toggle4001 .jtoggle{position:relative;cursor:pointer;overflow:hidden;zoom:1}.flux4Widget .toggle4001 .jtoggle label{display:block;cursor:pointer;position:absolute;overflow:hidden}.flux4Widget .toggle4001 .jtoggle label span{display:block;position:absolute}.flux4Widget .toggle4001 .jtoggle label.labelOn{left:0}.flux4Widget .toggle4001 .jtoggle label.labelOff{right:0}.flux4Widget .toggle4001 .jtoggle .handle{height:100%;width:50%;position:absolute}.flux4Widget .toggle4001 .jtoggle{background:transparent;border-radius:5px;height:18px;width:50px}.flux4Widget .toggle4001 .jtoggle label{border-radius:5px;width:25px;height:18px}.flux4Widget .toggle4001 .jtoggle label span{font-family:Tahoma;font-size:10px;color:#fff;top:2px}.flux4Widget .toggle4001 .jtoggle label.labelOn{background:#87cefa}.flux4Widget .toggle4001 .jtoggle label.labelOff{background:#f08080}.flux4Widget .toggle4001 .jtoggle label.labelOn span{left:5px}.flux4Widget .toggle4001 .jtoggle label.labelOff span{right:3px}.flux4Widget .toggle4001 .jtoggle .handle{background:#dcdcdc;border-radius:5px}</style><style class="flux4Style" type="text/css">.flux4Widget .fbTimelineToggle{overflow:hidden;zoom:1;display:block}.flux4Widget .fbTimelineToggle .roadBlocker{position:absolute;top:0;left:0;width:100%;height:100%;background-image:url('http://cus.fluxstatic.com/Img/_.gif')}.flux4Widget .fbTimelineToggle .tooltip4001.standardTooltip.fbActivityTooltipControl .tooltipContent{padding:11px;height:auto;width:auto}.flux4Widget .fbTimelineToggle .tooltip4001.standardTooltip.fbActivityTooltipControl .tooltipContent .activityWidgetWrap{width:485px;height:320px;margin:-11px;background:#fff url('http://cus.fluxstatic.com/Img/ajax-loader.gif') center center no-repeat}.flux4Widget .fbTimelineToggle .fbActivityTooltip .reconnectHint{width:220px;margin-left:-15px;margin-right:-15px;margin-bottom:-13px;margin-top:-16px;font-size:12px;font-weight:normal;color:#333;position:relative;font-family:Arial,Helvetica,sans-serif}.flux4Widget .fbTimelineToggle .fbActivityTooltip .reconnectHint .overlayBody{padding-top:10px;text-align:center}.flux4Widget .fbTimelineToggle .fbActivityTooltip .reconnectHint .topBodyText{margin-bottom:0;font-size:11px;line-height:15px;margin-left:0;margin-right:0}.flux4Widget .fbTimelineToggle .fbActivityTooltip .reconnectHint .topBodyText.mostTop{font-size:12px;margin:0;margin-top:0;margin-bottom:8px;font-weight:bold;font-family:Arial,Helvetica,sans-serif;border-bottom:solid 1px #e1e1e1;padding-bottom:4px;margin-left:5px;margin-right:5px}.flux4Widget .fbTimelineToggle .fbActivityTooltip .reconnectHint .buttonsLine{margin-top:7px;margin-bottom:15px}.flux4Widget .fbTimelineToggle .fbActivityTooltip .reconnectHint .buttonsLine a{font-size:12px}.flux4Widget .fbTimelineToggle .fbActivityTooltip .reconnectHint .buttonsLine a.primaryButton{color:#fff}.flux4Widget .fbTimelineToggle .fbActivityTooltip .reconnectHint .facebookIcon{height:14px;width:14px;display:inline-block;background-image:url('http://cus.fluxstatic.com/Img/widgets/FacebookTimeline/icons.png');margin-bottom:-2px}.flux4Widget .fbTimelineToggle .fbIcon{display:block;width:14px;height:14px;float:left;margin-top:4px;margin-right:5px;background-image:url('http://cus.fluxstatic.com/Img/widgets/UserBar/social_disabled.png')}.flux4Widget .fbTimelineToggle .fbIcon.enabled{background-image:url('http://cus.fluxstatic.com/Img/widgets/UserBar/social.png')}.flux4Widget .fbTimelineToggle .tooltip4001.standardTooltip .tooltipContent{width:150px;padding:11px}.flux4Widget .fbTimelineToggle .fbIconTooltip *,.flux4Widget .fbTimelineToggle .fbHelpTooltip *{font-size:12px}.flux4Widget .fbTimelineToggle .fbHelpTooltip *{font-size:12px}.flux4Widget .fbTimelineToggle .fbIconTooltip .tooltip1,.flux4Widget .fbTimelineToggle .fbIconTooltip .tooltip2,.flux4Widget .fbTimelineToggle .fbHelpTooltip .tooltip1,.flux4Widget .fbTimelineToggle .fbHelpTooltip .tooltip3{display:block}.flux4Widget .fbTimelineToggle .fbIconTooltip .state,.flux4Widget .fbTimelineToggle .fbIconTooltip .settings-link,.flux4Widget .fbTimelineToggle .fbHelpTooltip .state,.flux4Widget .fbTimelineToggle .fbHelpTooltip .settings-link{font-weight:bold}.flux4Widget .fbTimelineToggle .fbIconTooltip .tooltip1,.flux4Widget .fbTimelineToggle .fbHelpTooltip .tooltip1{padding-bottom:11px;border-bottom:1px solid #e4e4e4}.flux4Widget .fbTimelineToggle .fbIconTooltip .tooltip2,.flux4Widget .fbTimelineToggle .fbHelpTooltip .tooltip3{padding-top:11px}.flux4Widget .fbTimelineToggle .fbIconTooltip .tooltip1,.flux4Widget .fbTimelineToggle .fbHelpTooltip .tooltip1{padding-top:0}.flux4Widget .fbTimelineToggle .toggleContainer{float:left}.flux4Widget .fbTimelineToggle .fbTimelineCheckboxes{float:left}.flux4Widget .fbTimelineToggle .jtoggle{height:19px;border:1px solid #c4c4c4;border-radius:3px;width:46px}.flux4Widget .fbTimelineToggle .jtoggle label{height:19px;border-radius:2px;width:23px}.flux4Widget .fbTimelineToggle .jtoggle label span{font-size:7px;font-weight:bold;top:5px}.flux4Widget .fbTimelineToggle .jtoggle label.labelOn{background:#006ead;background:-moz-linear-gradient(top,rgba(0,110,173,1) 0%,rgba(53,177,239,1) 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,rgba(0,110,173,1)),color-stop(100%,rgba(53,177,239,1)));background:-webkit-linear-gradient(top,rgba(0,110,173,1) 0%,rgba(53,177,239,1) 100%);background:-o-linear-gradient(top,rgba(0,110,173,1) 0%,rgba(53,177,239,1) 100%);background:-ms-linear-gradient(top,rgba(0,110,173,1) 0%,rgba(53,177,239,1) 100%);background:linear-gradient(top,rgba(0,110,173,1) 0%,rgba(53,177,239,1) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#006ead',endColorstr='#35b1ef',GradientType=0)}.flux4Widget .fbTimelineToggle .jtoggle label.labelOff{background:#5b5b5b;background:-moz-linear-gradient(top,rgba(91,91,91,1) 0%,rgba(127,127,127,1) 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,rgba(91,91,91,1)),color-stop(100%,rgba(127,127,127,1)));background:-webkit-linear-gradient(top,rgba(91,91,91,1) 0%,rgba(127,127,127,1) 100%);background:-o-linear-gradient(top,rgba(91,91,91,1) 0%,rgba(127,127,127,1) 100%);background:-ms-linear-gradient(top,rgba(91,91,91,1) 0%,rgba(127,127,127,1) 100%);background:linear-gradient(top,rgba(91,91,91,1) 0%,rgba(127,127,127,1) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5b5b5b',endColorstr='#7f7f7f',GradientType=0)}.flux4Widget .fbTimelineToggle .jtoggle label.labelOff span{right:5px}.flux4Widget .fbTimelineToggle .jtoggle label.labelOn span{left:6px}.flux4Widget .fbTimelineToggle .jtoggle .handle{height:19px;border-radius:2px;width:23px;background:#fff;background:-moz-linear-gradient(top,rgba(255,255,255,1) 0%,rgba(195,193,194,1) 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,rgba(255,255,255,1)),color-stop(100%,rgba(195,193,194,1)));background:-webkit-linear-gradient(top,rgba(255,255,255,1) 0%,rgba(195,193,194,1) 100%);background:-o-linear-gradient(top,rgba(255,255,255,1) 0%,rgba(195,193,194,1) 100%);background:-ms-linear-gradient(top,rgba(255,255,255,1) 0%,rgba(195,193,194,1) 100%);background:linear-gradient(top,rgba(255,255,255,1) 0%,rgba(195,193,194,1) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#c3c1c2',GradientType=0)}.flux4Widget .fbTimelineToggle .jtoggle .handle:after{content:"||||";color:#aeacad;display:block;margin:3px 0 0 6px;font-size:9px}.flux4Widget .inputField.help{margin-left:5px;margin-top:3px;margin-right:11px}.flux4Widget .publishingPrefix{float:left;margin-right:5px;margin-top:2px}</style><style class="flux4Style" type="text/css">body{}.achNotify a:visited{text-decoration:none;color:#25a0e7}.achNotify a{text-decoration:none}.achNotify a:hover{text-decoration:underline}.achNitify .badgeDescription{color:#333;margin-top:5px}.achNotify{position:fixed;left:20px;bottom:20px;width:350px;font-size:12px;z-index:10}.achNotify .message{background-color:#fff;padding:10px;color:#333;font-family:Arial,helvetica,sans-serif;border:solid 2px #e5e5e5}.achNotify .btnClose{float:right;display:block;width:16px;height:16px;clear:both;display:block;background:url(http://s.fluxstatic.com/activity/Img/widgets/btnClose.png) transparent no-repeat left top}.achNotify h2{font-size:16px;font-weight:bold;margin:10px 0 5px 0;padding:0}.achNotify .infoText{font-weight:bold;font-size:12px;font-family:Arial,helvetica,sans-serif;color:#333;margin:0 0 10px 0;width:300px;word-wrap:break-word;word-break:break-word}.achNotify .badgeContainer{padding:5px;border:solid 1px #e5e5e5}.achNotify .badge{padding:5px;background:#ececec}.achNotify .badgeImg{float:left;margin:6px 0 6px 6px;clear:both;display:block}.achNotify .badgeImg img{border:none}.achNotify .badgeText{color:#333;padding:0 0 0 0;word-wrap:break-word;word-break:break-word;margin-left:66px}.achNotify .badgeMoreInfo{color:#333;word-wrap:break-word;word-break:nreal-word;margin:10px 10px}.achNotify .badgeTitle{color:#333;font-size:16px;font-weight:bold;margin-top:10px;display:block}.achNotify .message.official{background-color:#fffdd6}.achNotify .message .flyupAlertPreview .itemPreview{background-color:#ececec;padding:10px}.achNotify .message .flyupAlertPreview .itemPreview img{float:left;width:90px}.achNotify .message .flyupAlertPreview .itemPreview.noContent img,.achNotify .message .flyupAlertPreview .itemPreview.noContent .description .contentLink,.achNotify .message .flyupAlertPreview .itemPreview.noContentThumbnail img{display:none}.achNotify .message .flyupAlertPreview .itemPreview.noContent .description,.achNotify .message .flyupAlertPreview .itemPreview.noContentThumbnail .description{margin-left:0}.achNotify .message .flyupAlertPreview .itemPreview .description{margin-left:100px;word-break:break-word;word-wrap:break-word;max-width:100%}.achNotify .message .flyupAlertPreview .itemPreview .description .alertHeader{font-size:16px;font-weight:bold}.achNotify .message .flyupAlertPreview .itemPreview .description .alertMessage{color:#7e7e7e}.achNotify .message .flyupAlertPreview .itemPreview .description .contentLink{margin-top:5px;font-weight:bold;color:#25a0e7;display:block}</style><style class="flux4Style" type="text/css">.flux4 .overlayContentWrapper.timelineOverlayContentWrapper.flyoutOverlay{margin:inherit;position:inherit;visibility:inherit;font-family:auto;font-size:inherit;padding:inherit;border-left:none;border-top:none;border-right:none;border-bottom:none;box-shadow:none;-webkit-box-shadow:none;-moz-box-shadow:none;background:inherit;z-index:inherit;display:inherit}.flux4Widget.flux4 .userBar ul.elements .barElement.fbPublishingElement .elementContainer{z-index:1003}.flux4Widget.flux4 .userBar ul.elements .barElement.fbPublishingElement .elementContainer .buttonsLine a.editSettings,.flux4Widget.flux4 .userBar ul.elements .barElement.myStuffElement .elementContainer .buttonsLine a.editSettings,.flux4Widget.flux4 .userBar ul.elements .barElement .buttonsLine a.editSettings,html body #cmt-nav-social .flux4Widget.flux4 .userBar ul.elements .buttonsLine a.editSettings,.flux4Widget.flux4 .userBar ul.elements .barElement.fbPublishingElement .elementContainer .buttonsLine a.btnDelete,.flux4Widget.flux4 .userBar ul.elements .barElement.myStuffElement .elementContainer .buttonsLine a.btnDelete,.flux4Widget.flux4 .userBar ul.elements .barElement .buttonsLine a.btnDelete,html body #cmt-nav-social .flux4Widget.flux4 .userBar ul.elements .buttonsLine a.btnDelete{color:#25a0e7}.flux4Widget .actionLine .tooltip4001.bigTooltip .tooltipContent,.flux4Widget .userBar .tooltip4001.bigTooltip .tooltipContent,.flux4Widget .fbTimelineToggle .tooltip4001.bigTooltip .tooltipContent{width:auto}.flux4.flux4Widget .timelineOverlayContentWrapper.flyoutOverlay{margin-left:-15px;margin-right:-15px;margin-bottom:-13px;margin-top:-16px}.flux4 .timelineOverlayContentWrapper.flyoutOverlay .closeButton,.flux4 .overlayContentWrapper.flyoutOverlay .closeButton{top:13px;right:20px;width:14px;height:14px;position:absolute;cursor:pointer;zoom:1;z-index:9001}.flux4Widget .FacebookTimeline4003.wasPostedOverlay{margin-top:11px}.flux4Widget .FacebookTimeline4003.firstTimeOverlay,.flux4Widget .FacebookTimeline4003.continueOverlay,.flux4Widget .FacebookTimeline4003.wasPostedOverlay{font-size:12px;font-weight:normal;color:#333;position:relative;font-family:Arial,Helvetica,sans-serif}.flux4Widget .FacebookTimeline4003.firstTimeOverlay,.flux4Widget .FacebookTimeline4003.continueOverlay{width:220px}.flux4Widget .FacebookTimeline4003.wasPostedOverlay{width:270px}.flux4Widget .FacebookTimeline4003 .nowrap{white-space:nowrap}.flux4Widget .FacebookTimeline4003.firstTimeOverlay .overlayBody,.flux4Widget .FacebookTimeline4003.continueOverlay .overlayBody,.flux4Widget .FacebookTimeline4003.wasPostedOverlay .overlayBody{padding-top:10px;text-align:center}.flux4Widget .FacebookTimeline4003.wasPostedOverlay .overlayBody{padding-top:2px;min-width:226px}.flux4Widget .FacebookTimeline4003.wasPostedOverlay .overlayBody .topBodyTextHeader,.flux4Widget .FacebookTimeline4003.continueOverlay .overlayBody .topBodyTextHeader{padding-left:10px;padding-right:10px;background-color:#eee;margin-top:-6px;padding-bottom:8px;padding-top:4px}.flux4Widget .FacebookTimeline4003.wasPostedOverlay .overlayBody .topBodyTextHeader{font-size:12px;margin-top:-10px}.flux4Widget .FacebookTimeline4003.firstTimeOverlay .overlayBody .topBodyText,.flux4Widget .FacebookTimeline4003.continueOverlay .overlayBody .topBodyText,.flux4Widget .FacebookTimeline4003.wasPostedOverlay .overlayBody .topBodyText{font-size:12px;margin-bottom:0}.flux4Widget .FacebookTimeline4003.firstTimeOverlay .overlayBody .topBodyText,.flux4Widget .FacebookTimeline4003.continueOverlay .overlayBody .topBodyText{font-size:11px;line-height:15px;margin-left:0;margin-right:0}.flux4Widget .FacebookTimeline4003.wasPostedOverlay .overlayBody .topBodyText{margin-top:5px;margin-bottom:0}.flux4Widget .FacebookTimeline4003.wasPostedOverlay.collapsedDetails .overlayBody .topBodyText,.flux4Widget .FacebookTimeline4003.wasPostedOverlay.collapsedDetails .overlayBody.removedOverlay .topBodyText{margin-top:30px}.flux4Widget .FacebookTimeline4003.firstTimeOverlay .overlayBody .topBodyText.mostTop,.flux4Widget .FacebookTimeline4003.continueOverlay .overlayBody .topBodyText.mostTop{font-size:12px;margin:0;margin-top:0;margin-bottom:8px;font-weight:bold;font-family:Arial,Helvetica,sans-serif;border-bottom:solid 1px #e1e1e1;padding-bottom:4px}.flux4Widget .FacebookTimeline4003.wasPostedOverlay .overlayBody.removedOverlay .topBodyText{margin-top:10px;font-size:12px}.flux4Widget .FacebookTimeline4003.wasPostedOverlay.collapsedDetails .overlayBody .bottomBody{margin-top:20px;margin-bottom:7px}.flux4Widget .FacebookTimeline4003.wasPostedOverlay .overlayBody.removedOverlay .buttonsLine{margin-top:10px}.flux4Widget .FacebookTimeline4003 .overlayBody .buttonsLine{margin-top:7px;margin-bottom:15px}.flux4Widget .FacebookTimeline4003.wasPostedOverlay .overlayBody .buttonsLine{margin-top:8px}.flux4Widget .FacebookTimeline4003.firstTimeOverlay .overlayBody .buttonsLine a{font-size:12px}.flux4Widget .FacebookTimeline4003 .overlayBody .buttonsLine a.primaryButton{color:#fff}.flux4Widget .FacebookTimeline4003.continueOverlay .overlayBody .buttonsLine a{font-size:11px}.flux4Widget .FacebookTimeline4003.firstTimeOverlay .facebookIcon,.flux4Widget .FacebookTimeline4003.continueOverlay .facebookIcon,.flux4Widget .FacebookTimeline4003.wasPostedOverlay .facebookIcon{height:14px;width:14px;display:inline-block;background-image:url('http://cus.fluxstatic.com/Img/widgets/FacebookTimeline/icons.png');margin-bottom:-2px}.flux4Widget .FacebookTimeline4003.wasPostedOverlay .checkIcon{height:9px;width:10px;display:inline-block;background-image:url('http://cus.fluxstatic.com/Img/UI/check.png');margin-bottom:0}</style><style class="flux4Style" type="text/css">.flux4 .socialAuth.vertical{width:196px;margin:10px}.flux4 .socialAuth .socialButtons.defaultSocialAuthElementWidth a{width:174px;padding:6px 0 6px 0;line-height:21px;font-size:12px;color:#fff;text-align:center;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px}.flux4 .socialAuth.horizontal.singleButton .socialButtons.defaultSocialAuthElementWidth a{width:280px}.flux4 .socialAuth.horizontal .socialButtons.defaultSocialAuthElementWidth a{display:inline-block;width:190px;font-size:14px;padding:9px 0 8px 0;margin:0 3px 0 3px}.flux4 .socialAuth.vertical .socialButtons.defaultSocialAuthElementWidth a{display:block;clear:both;margin:10px}.flux4 .socialAuth .socialButtons .button .img{display:inline-block;height:21px;line-height:21px;margin-right:4px}.flux4 .socialAuth .socialButtons .button:hover{-moz-box-shadow:0 0 5px 1px #ccc;-webkit-box-shadow:0 0 5px 1px #ccc;box-shadow:0 0 5px 1px #ccc}.flux4 .socialAuth .socialButtons .button.fb .img{width:11px;background:url('http://cus.fluxstatic.com/Img/UI/facebook_icon.png')}.flux4 .socialAuth .socialButtons .button.fb{background:#527cc8;background:-moz-linear-gradient(top,#527cc8 0%,#1b428d 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#527cc8),color-stop(100%,#1b428d));background:-webkit-linear-gradient(top,#527cc8 0%,#1b428d 100%);background:-o-linear-gradient(top,#527cc8 0%,#1b428d 100%);background:-ms-linear-gradient(top,#527cc8 0%,#1b428d 100%);background:linear-gradient(to bottom,#527cc8 0%,#1b428d 100%);filter:progid:DXImageTranssocialAuth.Microsoft.gradient(startColorstr='#527cc8',endColorstr='#1b428d',GradientType=0)}.flux4 .socialAuth .socialButtons .button.fb:active{background:#1b428d;background:-moz-linear-gradient(top,#1b428d 0%,#527cc8 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#1b428d),color-stop(100%,#527cc8));background:-webkit-linear-gradient(top,#1b428d 0%,#527cc8 100%);background:-o-linear-gradient(top,#1b428d 0%,#527cc8 100%);background:-ms-linear-gradient(top,#1b428d 0%,#527cc8 100%);background:linear-gradient(to bottom,#1b428d 0%,#527cc8 100%);filter:progid:DXImageTranssocialAuth.Microsoft.gradient(startColorstr='#1b428d',endColorstr='#527cc8',GradientType=0)}.flux4 .socialAuth .socialButtons .button.tw .img{width:24px;background:url('http://cus.fluxstatic.com/Img/UI/twitter_icon.png')}.flux4 .socialAuth .socialButtons .button.tw{background:#62d3ff;background:-moz-linear-gradient(top,#62d3ff 0%,#1386c9 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#62d3ff),color-stop(100%,#1386c9));background:-webkit-linear-gradient(top,#62d3ff 0%,#1386c9 100%);background:-o-linear-gradient(top,#62d3ff 0%,#1386c9 100%);background:-ms-linear-gradient(top,#62d3ff 0%,#1386c9 100%);background:linear-gradient(to bottom,#62d3ff 0%,#1386c9 100%);filter:progid:DXImageTranssocialAuth.Microsoft.gradient(startColorstr='#62d3ff',endColorstr='#1386c9',GradientType=0)}.flux4 .socialAuth .socialButtons .button.tw:active{background:#1386c9;background:-moz-linear-gradient(top,#1386c9 0%,#62d3ff 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#1386c9),color-stop(100%,#62d3ff));background:-webkit-linear-gradient(top,#1386c9 0%,#62d3ff 100%);background:-o-linear-gradient(top,#1386c9 0%,#62d3ff 100%);background:-ms-linear-gradient(top,#1386c9 0%,#62d3ff 100%);background:linear-gradient(to bottom,#1386c9 0%,#62d3ff 100%);filter:progid:DXImageTranssocialAuth.Microsoft.gradient(startColorstr='#1386c9',endColorstr='#62d3ff',GradientType=0)}.flux4 .socialAuth .socialButtons .button.fb.clicked .img{background:url('http://cus.fluxstatic.com/Img/fb-loader.gif') no-repeat 0 center;padding-right:4px;margin-right:0}</style><style class="flux4Style" type="text/css">.flux4 .socialAuth.vertical{width:196px;margin:10px}.flux4 .socialAuth .socialButtons.defaultSocialAuthElementWidth a{width:174px;padding:6px 0 6px 0;line-height:21px;font-size:12px;color:#fff;text-align:center;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px}.flux4 .socialAuth.horizontal.singleButton .socialButtons.defaultSocialAuthElementWidth a{width:280px}.flux4 .socialAuth.horizontal .socialButtons.defaultSocialAuthElementWidth a{display:inline-block;width:190px;font-size:14px;padding:9px 0 8px 0;margin:0 3px 0 3px}.flux4 .socialAuth.vertical .socialButtons.defaultSocialAuthElementWidth a{display:block;clear:both;margin:10px}.flux4 .socialAuth .socialButtons .button .img{display:inline-block;height:21px;line-height:21px;margin-right:4px}.flux4 .socialAuth .socialButtons .button:hover{-moz-box-shadow:0 0 5px 1px #ccc;-webkit-box-shadow:0 0 5px 1px #ccc;box-shadow:0 0 5px 1px #ccc}.flux4 .socialAuth .socialButtons .button.fb .img{width:11px;background:url('http://cus.fluxstatic.com/Img/UI/facebook_icon.png')}.flux4 .socialAuth .socialButtons .button.fb{background:#527cc8;background:-moz-linear-gradient(top,#527cc8 0%,#1b428d 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#527cc8),color-stop(100%,#1b428d));background:-webkit-linear-gradient(top,#527cc8 0%,#1b428d 100%);background:-o-linear-gradient(top,#527cc8 0%,#1b428d 100%);background:-ms-linear-gradient(top,#527cc8 0%,#1b428d 100%);background:linear-gradient(to bottom,#527cc8 0%,#1b428d 100%);filter:progid:DXImageTranssocialAuth.Microsoft.gradient(startColorstr='#527cc8',endColorstr='#1b428d',GradientType=0)}.flux4 .socialAuth .socialButtons .button.fb:active{background:#1b428d;background:-moz-linear-gradient(top,#1b428d 0%,#527cc8 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#1b428d),color-stop(100%,#527cc8));background:-webkit-linear-gradient(top,#1b428d 0%,#527cc8 100%);background:-o-linear-gradient(top,#1b428d 0%,#527cc8 100%);background:-ms-linear-gradient(top,#1b428d 0%,#527cc8 100%);background:linear-gradient(to bottom,#1b428d 0%,#527cc8 100%);filter:progid:DXImageTranssocialAuth.Microsoft.gradient(startColorstr='#1b428d',endColorstr='#527cc8',GradientType=0)}.flux4 .socialAuth .socialButtons .button.tw .img{width:24px;background:url('http://cus.fluxstatic.com/Img/UI/twitter_icon.png')}.flux4 .socialAuth .socialButtons .button.tw{background:#62d3ff;background:-moz-linear-gradient(top,#62d3ff 0%,#1386c9 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#62d3ff),color-stop(100%,#1386c9));background:-webkit-linear-gradient(top,#62d3ff 0%,#1386c9 100%);background:-o-linear-gradient(top,#62d3ff 0%,#1386c9 100%);background:-ms-linear-gradient(top,#62d3ff 0%,#1386c9 100%);background:linear-gradient(to bottom,#62d3ff 0%,#1386c9 100%);filter:progid:DXImageTranssocialAuth.Microsoft.gradient(startColorstr='#62d3ff',endColorstr='#1386c9',GradientType=0)}.flux4 .socialAuth .socialButtons .button.tw:active{background:#1386c9;background:-moz-linear-gradient(top,#1386c9 0%,#62d3ff 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#1386c9),color-stop(100%,#62d3ff));background:-webkit-linear-gradient(top,#1386c9 0%,#62d3ff 100%);background:-o-linear-gradient(top,#1386c9 0%,#62d3ff 100%);background:-ms-linear-gradient(top,#1386c9 0%,#62d3ff 100%);background:linear-gradient(to bottom,#1386c9 0%,#62d3ff 100%);filter:progid:DXImageTranssocialAuth.Microsoft.gradient(startColorstr='#1386c9',endColorstr='#62d3ff',GradientType=0)}.flux4 .socialAuth .socialButtons .button.fb.clicked .img{background:url('http://cus.fluxstatic.com/Img/fb-loader.gif') no-repeat 0 center;padding-right:4px;margin-right:0}.flux4 .socialAuth .socialButtons .button.tw.clicked .img{background:url('http://cus.fluxstatic.com/Img/tw-loader.gif') no-repeat center center}.flux4Widget .userBar,.flux4Widget .userBar span,.flux4Widget .userBar a{font-size:11px}.flux4Widget .userBar .bar{height:35px;width:100%}.flux4Widget .userBar .persistentTop .bar{position:fixed;z-index:9000;top:0;left:0;border-bottom:1px solid #d3d3d3}.flux4Widget .userBar .persistentBottom .bar{position:fixed;z-index:9000;bottom:0;left:0;border-top:1px solid #d3d3d3}.flux4Widget .userBar .expander{cursor:pointer;display:none}.flux4Widget .userBar .backgroundPanel{height:35px}.flux4Widget .userBar .persistentTop .backgroundPanel,.flux4Widget .userBar .persistentBottom .backgroundPanel,.flux4Widget .userBar .expander{background:#f5f5f5;background:-moz-linear-gradient(top,#fff 0%,#ddd 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#fff),color-stop(100%,#ddd));background:-webkit-linear-gradient(top,#fff 0%,#ddd 100%);background:-o-linear-gradient(top,#fff 0%,#ddd 100%);background:-ms-linear-gradient(top,#fff 0%,#ddd 100%);background:linear-gradient(top,#fff 0%,#ddd 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#dddddd',GradientType=0)}.flux4Widget .userBar .expander:hover{background:#f5f5f5;background:-moz-linear-gradient(top,#ddd 0%,#fff 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#ddd),color-stop(100%,#fff));background:-webkit-linear-gradient(top,#ddd 0%,#fff 100%);background:-o-linear-gradient(top,#ddd 0%,#fff 100%);background:-ms-linear-gradient(top,#ddd 0%,#fff 100%);background:linear-gradient(top,#ddd 0%,#fff 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dddddd',endColorstr='#ffffff',GradientType=0)}.flux4Widget .userBar .expander.expanded{height:35px;width:35px}.flux4Widget .userBar .persistentTop .expander,.flux4Widget .userBar .persistentBottom .expander{display:block}.flux4Widget .userBar .persistentTop .expander.collapsed{top:0;right:4px}.flux4Widget .userBar .persistentBottom .expander.collapsed{bottom:0;right:4px}.flux4Widget .userBar .persistentTop .bar,.flux4Widget .userBar .persistentBottom .bar,.flux4Widget .userBar .expander.collapsed{box-shadow:0 0 2px 1px #e3e3e3;-webkit-box-shadow:0 0 2px 1px #e3e3e3;-moz-box-shadow:0 0 2px 1px #e3e3e3}.flux4Widget .userBar .expander .arrow{width:19px;height:12px;background-image:url('http://cus.fluxstatic.com/Img/widgets/UserBar/icons.png')}.flux4Widget .userBar .expander.expanded{float:right}.flux4Widget .userBar .expander.expanded .innerBorder{margin:2px 0;height:18px;border-left:1px solid #d8d8d8;padding-top:10px}.flux4Widget .userBar .expander.expanded .arrow{margin-top:0;margin-left:8px}.flux4Widget .userBar .expander.collapsed{position:fixed;z-index:9000;border:1px solid #d3d3d3}.flux4Widget .userBar .expander.collapsed .arrow{margin-left:5px;margin-right:5px}.flux4Widget .userBar .persistentTop .expander.collapsed .arrow{margin-bottom:2px}.flux4Widget .userBar .persistentBottom .expander.collapsed .arrow{margin-top:2px}.flux4Widget .userBar .persistentTop .expander.expanded .arrow,.flux4Widget .userBar .persistentBottom .expander.collapsed .arrow{background-position:left -12px}.flux4Widget .userBar .persistentTop .expander.collapsed .arrow,.flux4Widget .userBar .persistentBottom .expander.expanded .arrow{background-position:left 0}.flux4Widget .userBar .persistentTop .expander.expanded:hover .arrow,.flux4Widget .userBar .persistentBottom .expander.collapsed:hover .arrow{background-position:left -119px}.flux4Widget .userBar .persistentTop .expander.collapsed:hover .arrow,.flux4Widget .userBar .persistentBottom .expander.expanded:hover .arrow{background-position:left -107px}.flux4Widget .userBar ul.elements{list-style:none}.flux4Widget .userBar .barElement{float:left;border-right:1px solid #d8d8d8;margin:2px 0;height:31px}.flux4Widget .userBar .barElement.activityFeedElement{float:right;position:relative}.flux4Widget .userBar .lastBarElement{border-right:0}.flux4Widget .userBar ul.elements .elementContainer{height:31px;position:relative;z-index:1002}.flux4Widget .userBar ul.elements .elementContainer .elementContent{margin-left:12px;margin-right:14px;padding-top:9px}.flux4Widget .userBar ul.elements .elementContainer .elementContent h2{background-color:#eee;margin:0;padding:15px 15px 15px 15px;font-size:16px;font-weight:bold;color:#333;height:20px}.flux4Widget .userBar ul.elements .activityFeedElement .elementContainer .elementContent{margin-right:4px;padding-top:9px;display:inline-block}.flux4Widget .userBar .openedElement .elementTitle{color:#3a3a3a}.flux4Widget .userBar ul.elements .withDropdown{cursor:pointer}.flux4Widget .userBar .elementTitle{float:left}.flux4Widget .userBar .barElement.activityFeedElement .pointersContainer{position:absolute;top:0;z-index:1030;left:auto;right:0;padding:5px 0}.flux4Widget .userBar .barElement.activityFeedElement .pointersContainer .barPointerUp,.flux4Widget .userBar .barElement.activityFeedElement .pointersContainer .barPointerDown{padding:10px}.flux4Widget .userBar .barPointerUp .pointer,.flux4Widget .userBar .barPointerDown .pointer{border-color:#25a0e7 transparent transparent transparent;width:0;height:0;border-style:solid;border-width:5px 5px 0 5px}.flux4Widget .userBar .barPointerUp .pointer{border-color:transparent transparent #25a0e7 transparent;border-width:0 5px 5px 5px}.flux4Widget .userBar .barPointerUp,.flux4Widget .userBar .barPointerDown{padding:5px 0 5px 5px;float:left}.flux4Widget .userBar .barPointerUp,.flux4Widget .userBar .persistentBottom .barPointerDown,.flux4Widget .userBar .embeddedBottom .barPointerDown{display:none}.flux4Widget .userBar .barPointerDown,.flux4Widget .userBar .persistentBottom .barPointerUp,.flux4Widget .userBar .embeddedBottom .barPointerUp{display:block}.flux4Widget .userBar .activityFeedElement .elementContainer .barPointerDown,.flux4Widget .userBar .activityFeedElement .elementContainer .barPointerUp{padding:8px 10px 8px 0}.flux4Widget .userBar .dropdownAnimation{position:absolute}.flux4Widget .userBar .persistentTop .activityFeedElement .dropdownAnimation,.flux4Widget .userBar .embeddedTop .activityFeedElement .dropdownAnimation{z-index:1003}.flux4Widget .userBar .dropdownWrapper{position:absolute;z-index:1003;padding-right:8px;left:-1px;*background-color:#fff;*top:1px;*padding-right:0}.flux4Widget .userBar .dropdown{position:relative}.flux4Widget .userBar .persistentBottom .dropdown,.flux4Widget .userBar .embeddedBottom .dropdown{margin-bottom:0}.flux4Widget .userBar .dropdownContent{position:relative;top:-1px;background-color:#fff;border:1px solid #d3d3d3;box-shadow:1px 1px 1px 1px #e3e3e3;-webkit-box-shadow:1px 1px 1px 1px #e3e3e3;-moz-box-shadow:1px 1px 1px 1px #e3e3e3}.flux4Widget .userBar .persistentBottom .dropdownContent,.flux4Widget .userBar .embeddedBottom .dropdownContent{top:0}.flux4Widget .userBar .dropdownIndent{border-left:1px solid #d3d3d3;border-right:1px solid #d3d3d3;background-color:#fff;position:relative;height:4px;top:0;z-index:3;*height:1px}.flux4Widget .userBar .activityFeedElement .dropdownIndent{*display:none}.flux4Widget .userBar .persistentBottom .dropdownIndent,.flux4Widget .userBar .embeddedBottom .dropdownIndent{top:-1px}.flux4Widget .userBar .hoverElement{border-left:1px solid #d3d3d3;border-right:1px solid #d3d3d3;position:relative;height:36px;background-color:#fff;box-shadow:1px 1px 1px 1px #e3e3e3;-webkit-box-shadow:1px 1px 1px 1px #e3e3e3;-moz-box-shadow:1px 1px 1px 1px #e3e3e3;top:-33px;left:-1px;z-index:1001}.flux4Widget .userBar .persistentBottom .hoverElement,.flux4Widget .userBar .embeddedBottom .hoverElement{top:-34px}.flux4Widget .userBar .myStuffElement{margin-right:-1px;float:right}.flux4Widget .userBar .myStuffElement .barPointerUp,.flux4Widget .userBar .myStuffElement .barPointerDown{margin-top:7px}.flux4Widget .userBar .myStuffElement .elementContainer .elementContent{padding-top:1px!important;line-height:29px}.flux4Widget .userBar .myStuffElement img.smallOptionalThumbnail{float:left;margin-top:2px}.flux4Widget .userBar .myStuffElement .loggedOut,.flux4Widget .userBar .myStuffElement .loggedIn{float:left}.flux4Widget .userBar .myStuffElement .elementContainer .elementContent .loggedOut a{line-height:29px}.flux4Widget .userBar .myStuffElement.openedElement .elementContainer .elementContent .loggedOut a{color:#25a0e7!important}.flux4Widget .userBar .myStuffElement .loggedInMenu{padding:8px;width:232px}.flux4Widget .userBar .myStuffElement .loggedInMenu a.loggedProfileUrl{font-weight:bold}.flux4Widget .userBar .myStuffElement .loggedInMenu .hi{background-color:#e7e7e7;padding:7px;padding-bottom:0;color:#3a3a3a}.flux4Widget .userBar .myStuffElement .loggedInMenu .hi img{border:3px solid #fff;margin-right:7px;margin-bottom:7px;float:left}.flux4Widget .userBar .myStuffElement .loggedInMenu .hi .hiText{margin-top:13px;font-weight:bold}.flux4Widget .userBar .myStuffElement .loggedInMenu .hi .hiText *{font-size:12px}.flux4Widget .userBar .myStuffElement .loggedInMenu .hi.notMember .hiText{margin-top:0}.flux4Widget .userBar .myStuffElement .loggedInMenu .hi .notMemberMessage{font-weight:bold;margin-top:1px;margin-bottom:10px}.flux4Widget .userBar .myStuffElement .loggedInMenu .hi .joinCommunity{color:#fff;padding:5px 8px;background:#0098e4;background:-webkit-gradient(linear,left top,left bottom,from(#00aeff),to(#0082c8));background:-moz-linear-gradient(top,#00aeff,#0082c8);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#00aeff,endColorstr=#0082c8);-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#00aeff, endColorstr=#0082c8)";cursor:pointer;font-weight:bold;display:inline-block;margin-right:5px;position:relative;margin-bottom:7px}.flux4Widget .userBar .myStuffElement .loggedInMenu .hi .help{display:inline-block;position:relative;top:-1px;*top:-8px}.flux4Widget .userBar .myStuffElement .loggedInMenu ol.links{padding:0 5px 0 7px}.flux4Widget .userBar .myStuffElement .loggedInMenu ol.links li{padding:8px 2px;border-bottom:1px solid #d3d3d3}.flux4Widget .userBar .myStuffElement .loggedInMenu ol.links li.last{border-bottom:0;padding-bottom:5px}.flux4Widget .userBar .joinMessage{font-size:11px;text-align:justify}.flux4Widget .userBar .shareElement .dropdownWrapper{min-width:76px}.flux4Widget .userBar .shareElement .share{width:260px;border:none;padding:0}.flux4Widget .userBar .shareElement .share .serviceList{margin:10px;margin-top:15px;margin-bottom:-5px}.flux4Widget .userBar .embeddedBottom .shareElement .share,.flux4Widget .userBar .persistentBottom .shareElement .share{padding-bottom:0}.flux4Widget .userBar .embeddedTop .shareElement .share,.flux4Widget .userBar .persistentTop .shareElement .share{padding-top:0;padding-bottom:0}.flux4Widget .userBar .shareElement .share .secondaryHeadline{background-color:#eee;margin:0;padding:0 15px;height:50px}.flux4Widget .userBar .shareElement .share .secondaryHeadline>div{display:table;height:50px}.flux4Widget .userBar .shareElement .share .secondaryHeadline>div>p{display:table-cell;vertical-align:middle;font-size:16px}.flux4Widget .userBar .shareElement .share .buttonWithCounter .buttonContainer{margin:0;padding:0}.flux4Widget .userBar .shareElement .serviceList>li{height:auto;float:left}.flux4Widget .userBar .shareElement .buttonWithCounter a.button{margin:0;text-align:left}.flux4Widget .userBar .shareElement .serviceList .serviceButton{margin-bottom:10px;min-width:53px;text-align:left;padding-right:0}.flux4Widget .userBar .embeddedBottom .shareElement .horizontalView .serviceList .lastButton,.flux4Widget .userBar .persistentBottom .shareElement .horizontalView .serviceList .lastButton{margin-bottom:9px}.flux4Widget .userBar .embeddedBottom .shareElement .serviceList .lastButton,.flux4Widget .userBar .persistentBottom .shareElement .serviceList .lastButton{margin-bottom:3px}.flux4Widget .userBar .embeddedTop .shareElement .serviceList .firstButton,.flux4Widget .userBar .persistentTop .shareElement .serviceList .firstButton{margin-top:3px}.flux4Widget .userBar .shareElement .buttonIcon nobr{font-size:10px;font-weight:normal}.flux4Widget .userBar .shareElement .share .serviceButton.twitter .buttonIcon nobr{}.flux4Widget .userBar .shareElement .serviceList>li.more{line-height:normal;margin-bottom:10px}.flux4Widget .userBar .shareElement a.moreShare .buttonIcon,.flux4Widget .userBar .shareElement a.myfeedShare .buttonIcon,.flux4Widget .userBar .shareElement a.mygroupsShare .buttonIcon{padding-left:0}.flux4Widget .userBar .shareElement .shareWidget div{width:100%}.flux4Widget .userBar .activityFeedContent{float:left;padding-right:25px}.flux4Widget .userBar .customLinkElement a{display:block;font-weight:bold}.flux4Widget .userBar .followElement .elementTitle{}.flux4 .barElement.followElement .followIcon{background:none}.flux4Widget .userBar .follow .verticalView{width:280px;padding:0}.flux4Widget .userBar .follow .verticalView .followedObject{padding:13px 15px 10px 15px}.flux4Widget .userBar .follow .verticalView .followServices{padding:0 15px}.flux4Widget .userBar .follow .horizontalView{border-width:0;padding:0 0 0 0;margin-top:-3px}.flux4Widget .userBar .follow .horizontalView .objectTitle{color:#7e7e7e;font-size:11px;margin-top:1px}.flux4Widget .userBar .follow .isFollowedByLoggedUser .horizontalView .successIcon{display:none}.flux4Widget .userBar .follow .isFollowedByLoggedUser .horizontalView .objectTitle{margin-left:0}.flux4Widget .userBar .follow .horizontalView .followService .followButtonContainer{margin-right:0}.flux4Widget .userBar .follow .horizontalView .followService .followCounter{font-weight:bold}.flux4Widget .userBar .follow .horizontalView .twitterService a.followButton{background-image:url('http://cus.fluxstatic.com/Img/widgets/UserBar/icons.png');background-position:-25px -25px}.flux4Widget .userBar .follow .horizontalView .twitterService .followCounter{color:#2c7192;font-weight:bold;border-top:1px solid #cde3f0;border-bottom:1px solid #cde3f0}.flux4Widget .userBar .follow .horizontalView .twitterService .leftCounterCorner{background-image:url('http://cus.fluxstatic.com/Img/widgets/UserBar/icons.png');background-position:0 -50px}.flux4Widget .userBar .follow .horizontalView .twitterService .rightCounterCorner{background-image:url('http://cus.fluxstatic.com/Img/widgets/UserBar/icons.png');background-position:right -75px}.flux4Widget .userBar .follow .horizontalView .serviceDelimiter{border-right:1px solid #d6d6d6}.flux4Widget .userBar .myStuffElement .publishToTimeline{display:block;padding-bottom:14px}.flux4Widget .userBar .myStuffElement .publishToTimeline .facebookIcon{height:14px;width:14px;display:block;background-image:url('http://cus.fluxstatic.com/Img/widgets/UserBar/social.png');float:left}.flux4Widget .userBar .myStuffElement .publishToTimeline .facebookLink{display:block;float:left;padding-left:6px}.flux4Widget .userBar .myStuffElement .publishToTimeline .facebookLink a{font-weight:bold}.flux4Widget .userBar .myStuffElement .publishToTimeline .facebookCheckbox{float:right}.flux4Widget .userBar .loggedInMenu .publishToTimeline .facebookCheckbox{float:right;margin-top:-4px}.flux4Widget .userBar .barElement.fbPublishingElement{margin:0;padding:0;float:right;display:block;border:0}.flux4Widget .userBar ul.elements .fbPublishingElement .elementContainer{display:block}.flux4Widget .userBar ul.elements .fbPublishingElement .elementContainer .elementContent.flux4Widget.flux4{margin:0;padding:0;display:block}.flux4Widget .userBar ul.elements .fbPublishingElement .elementContainer .elementContent.flux4Widget.flux4 .fbTimelineToggle{margin:0;padding:0;display:block;overflow:visible;margin:0}.flux4Widget .userBar ul.elements .fbPublishingElement .elementContainer .elementContent.flux4Widget.flux4 .fbTimelineToggle>div{width:71px;margin-top:8px;margin-right:14px;margin-left:12px}.flux4Widget .userBar .persistentBottom .follow .facebookService .fb_edge_comment_widget{top:-145px!important}.flux4Widget .userBar .elements .follow .facebookService .fb_edge_widget_with_comment span,.flux4Widget .userBar .elements .follow .facebookService .fb_edge_widget_with_comment iframe{min-width:230px!important;min-height:28px!important}.flux4Widget .userBar .elements .share .facebook .fb_edge_widget_with_comment span,.flux4Widget .userBar .elements .share .facebook .fb_edge_widget_with_comment span iframe{min-width:128px!important;min-height:20px!important}.flux4Widget .userBar .loggedOutMenu{width:192px;padding:13px 13px 15px 13px}.flux4Widget .userBar .loggedOutMenu .button+.button,.flux4Widget .userBar .loggedOutMenu .thirdPartyButtonsContainer+.button{margin-top:5px}.flux4Widget .userBar .loggedOutMenu .thirdPartyButtonsContainer .socialAuth.vertical{margin:0;width:auto}.flux4Widget .userBar .loggedOutMenu .thirdPartyButtonsContainer .socialAuth.vertical .button{margin:0;width:auto;line-height:12px;padding:3px 0;margin:5px 0}.flux4Widget .userBar .loggedOutMenu .button a{display:block;text-align:center;font-size:12px;padding:5px 0;line-height:12px;word-wrap:break-word;text-decoration:none}.flux4Widget .userBar .loggedOutMenu .button .text{font-size:12px;vertical-align:top;display:inline-block;margin-top:4px}.flux4Widget .userBar .loggedOutMenu .button a.twitter{background:#62d3ff;background:-webkit-gradient(linear,left top,left bottom,from(#62d3ff),to(#1386c9));background:-moz-linear-gradient(top,#62d3ff,#1386c9);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#62D3FF,endColorstr=#1386C9);-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#62D3FF, endColorstr=#1386C9)"}.flux4Widget .userBar .loggedOutMenu .button a.facebook{background:#527cc8;background:-webkit-gradient(linear,left top,left bottom,from(#527cc8),to(#1b428d));background:-moz-linear-gradient(top,#527cc8,#1b428d);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#527CC8,endColorstr=#1B428D);-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#527CC8, endColorstr=#1B428D)"}.flux4Widget .userBar .loggedOutMenu .button a.fluxSingInButton{padding:8px 0}.flux4Widget .userBar .loggedOutMenu .button .icon{display:inline-block;height:17px;margin-right:4px}.flux4Widget .userBar .loggedOutMenu .button .facebook .icon{width:9px;background:url('http://cus.fluxstatic.com/Img/UI/facebook_icon_small.png') left top no-repeat}.flux4Widget .userBar .loggedOutMenu .button .twitter .icon{width:20px;background:url('http://cus.fluxstatic.com/Img/UI/twitter_icon_small.png') left top no-repeat}</style><link href="http://s.fluxstatic.com/widgets4/CSS/common.css?v=28" rel="stylesheet" type="text/css"><!--[if IE 9]><link rel='stylesheet' type='text/css' href='http://s.fluxstatic.com/widgets4/CSS/common-ie9.css?v=28'/><![endif]-->
+		<title>The Colbert Report App | Colbert Nation | Comedy Central</title>
+		<meta name="description" content="Download The Colbert Report app for your iPhone, iPad, Android, Kindle Fire, or Windows device. The app is entirely free. Watch the latest videos featuring Stephen Colbert, browse a full archive, and read up on this week's upcoming guests. Full episodes are not available in this app, but they are available for download in the iTunes store.">
+		<meta name="keywords" content="iPhone, iPad, Android, Kindle Fire, Windows 8, Stephen Colbert, The Colbert Report, download, free, The Word, mobile app, devices, best new apps, top ten, television, watch, videos, exclusive, politics, satire, comedy, latest videos, Super Pac, truthiness, The Word, Difference Makers, Nation, archive, videos, alerts, on the go, free apps, iTunes store, App Store, Android Marketplace, Google Play, Windows 8, Microsoft, Surface">
+		<meta name="robots" content="noydir,noodp">
+		<meta name="apple-itunes-app" content="app-id=605799487">
+		
+			
+			  <meta property="og:site_name" content="Colbert Nation">
+		  <meta property="og:type" content="website">
+		  <meta property="og:url" content="http://www.colbertnation.com/the-colbert-report-app">
+		  <meta property="og:title" content="The Colbert Report App | Colbert Nation | Comedy Central">
+		  <meta property="og:description" content="Download The Colbert Report app for your iPhone, iPad, Android, Kindle Fire, or Windows device. The app is entirely free. Watch the latest videos featuring Stephen Colbert, browse a full archive, and read up on this week's upcoming guests. Full episodes are not available in this app, but they are available for download in the iTunes store.">
+		  <meta property="og:image" content="http://www.colbertnation.com//sitewide/images/default_image.jpg">
+	<meta property="fb:app_id" content="137674243479">				
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+		
+		
+		<link rel="stylesheet" type="text/css" href="http://www.colbertnation.com/media/styles.css">
+		
+				
+		
+		<script src="http://www.google-analytics.com/ga.js" async="" type="text/javascript"></script><script type="text/javascript" src="http://www.colbertnation.com/media/top.js"></script>
+ 		
+		
+					<script src="http://widgets4.flux.com/Core" type="text/javascript" id="C7E3FFFF018143DE0002FFFFE3C7"></script>
+				
+		
+				<script type="text/javascript" src="http://w.sharethis.com/button/sharethis.js#publisher=652a9aec-19bf-462c-9b82-fcc52d843233&amp;type=website&amp;embeds=true&amp;button=false"></script><link type="text/css" rel="stylesheet" href="http://w.sharethis.com/button/css/sharethis.f8aeb821aa52b7af5ae4d3675118594c.css">
+			<script src="http://btg.mtvnservices.com/aria/uuid.html" type="text/javascript"></script><script src="//mtvn.demdex.net/event?d_stuff=1&amp;d_dst=1&amp;d_rtbd=json&amp;d_cts=1&amp;d_cb=aam_tnt_cb" type="text/javascript"></script><script src="//cus.flux.com/api/ContextService/Context?communityUcid=C7E3FFFF018143DE0002FFFFE3C7" type="text/javascript"></script><script src="http://rtax.criteo.com/delivery/rta/rta.js?netId=1513&amp;cookieName=cto_via&amp;rnd=813993378400143200&amp;varName=crtg_content" type="text/javascript"></script><script src="//edge.quantserve.com/quant.js" type="text/javascript"></script><script src="http://b.scorecardresearch.com/beacon.js?c1=2&amp;c2=6036034&amp;c3=&amp;c4=http%253A%2F%2Fwww.colbertnation.com%2Fthe-colbert-report-app&amp;c5=20000&amp;c6=&amp;c15=" type="text/javascript"></script><script src="//mtvn.demdex.net/event?d_rtbd=json&amp;d_dst=1&amp;d_cts=1&amp;d_cb=btg.Demdex.response&amp;c_uuid=ddebe109-5f01-8d48-3872-8ebc178ff27d&amp;c_visit=www.colbertnation.com_visit" type="text/javascript"></script><script src="//mtvn.demdex.net/event?d_rtbd=json&amp;d_dst=1&amp;d_cts=1&amp;d_cb=btg.Demdex.response&amp;c_pageName=shows%2Fcolbertnation%2Fdefault%2Fthe-colbert-report-app&amp;c_ch=colbert&amp;c_c21=ALLTRAFFIC%3AColbertNation&amp;c_c35=shows%2Fcolbertnation%2Fdefault%2Fthe-colbert-report-app&amp;c_c8=colbertnation&amp;c_h1=shows%2Fcolbertnation%2Fdefault%2Fthe-colbert-report-app&amp;c_c9=no%20rule%20name%20set&amp;c_v9=shows%2Fcolbertnation%2Fdefault%2Fthe-colbert-report-app&amp;c_v10=ALLTRAFFIC%3AColbertNation&amp;c_v6=colbertnation&amp;c_events=event16&amp;c_v49=colbert&amp;c_c34=7%3A30PM&amp;c_v46=7%3A30PM&amp;c_c33=Saturday&amp;c_v45=Saturday&amp;c_v57=ddebe109-5f01-8d48-3872-8ebc178ff27d&amp;c_c6=not%20logged-in&amp;c_c5=non-member&amp;c_visitorNamespace=mtvn&amp;c_v67=ddebe109-5f01-8d48-3872-8ebc178ff27d_1369525920752&amp;c_c41=New&amp;c_host=www.colbertnation.com" type="text/javascript"></script><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}
+.fb_invisible{display:none}
+.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}
+.fb_reset > div{overflow:hidden}
+.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}
+.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}
+.fb_dialog_content{background:#fff;color:#333}
+.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px;top:8px\9;right:7px\9}
+.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}
+.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}
+.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}
+.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}
+.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}
+.fb_dialog_top_left,
+.fb_dialog_top_right,
+.fb_dialog_bottom_left,
+.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}
+/* @noflip */
+.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}
+/* @noflip */
+.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}
+/* @noflip */
+.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}
+/* @noflip */
+.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right,
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right{width:10px;height:100%}
+.fb_dialog_vert_left{margin-left:-10px}
+.fb_dialog_vert_right{right:0;margin-right:-10px}
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{width:100%;height:10px}
+.fb_dialog_horiz_top{margin-top:-10px}
+.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}
+.fb_dialog_iframe{line-height:0}
+.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}
+.fb_dialog_content .dialog_title > span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif)
+no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}
+body.fb_hidden{-webkit-transform:none;height:100%;margin:0;left:-10000px;overflow:visible;position:absolute;top:-10000px;width:100%
+}
+.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif)
+white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}
+.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}
+#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}
+#fb-root #fb_dialog_ipad_overlay.hidden{display:none}
+.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}
+.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0 0, 0 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}
+.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%
+}
+.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0 0, 0 100%, from(#4966A6),
+color-stop(0.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset,
+rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}
+.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}
+.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}
+.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}
+#fb_dialog_loader_close{float:left}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}
+.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}
+.fb_iframe_widget iframe{position:absolute}
+.fb_iframe_widget_lift{z-index:1}
+.fb_hide_iframes iframe{position:relative;left:-10000px}
+.fb_iframe_widget_loader{position:relative;display:inline-block}
+.fb_iframe_widget_fluid{display:inline}
+.fb_iframe_widget_fluid span{width:100%}
+.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}
+.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_connect_bar_container div,
+.fb_connect_bar_container span,
+.fb_connect_bar_container a,
+.fb_connect_bar_container img,
+.fb_connect_bar_container strong{background:none;border-spacing:0;border:0;direction:ltr;font-style:normal;font-variant:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal;vertical-align:baseline}
+.fb_connect_bar_container{position:fixed;left:0 !important;right:0 !important;height:42px !important;padding:0 25px !important;margin:0 !important;vertical-align:middle !important;border-bottom:1px solid #333 !important;background:#3b5998 !important;z-index:99999999 !important;overflow:hidden !important}
+.fb_connect_bar_container_ie6{position:absolute;top:expression(document.compatMode=="CSS1Compat"? document.documentElement.scrollTop+"px":body.scrollTop+"px")}
+.fb_connect_bar{position:relative;margin:auto;height:100%;width:100%;padding:6px 0 0 0 !important;background:none;color:#fff !important;font-family:"lucida grande", tahoma, verdana, arial, sans-serif !important;font-size:13px !important;font-style:normal !important;font-variant:normal !important;font-weight:normal !important;letter-spacing:normal !important;line-height:1 !important;text-decoration:none !important;text-indent:0 !important;text-shadow:none !important;text-transform:none !important;white-space:normal !important;word-spacing:normal !important}
+.fb_connect_bar a:hover{color:#fff}
+.fb_connect_bar .fb_profile img{height:30px;width:30px;vertical-align:middle;margin:0 6px 5px 0}
+.fb_connect_bar div a,
+.fb_connect_bar span,
+.fb_connect_bar span a{color:#bac6da;font-size:11px;text-decoration:none}
+.fb_connect_bar .fb_buttons{float:right;margin-top:7px}
+.fb_edge_widget_with_comment{position:relative;*z-index:1000}
+.fb_edge_widget_with_comment span.fb_edge_comment_widget{position:absolute}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget{z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget .FB_Loader{left:0;top:1px;margin-top:6px;margin-left:0;background-position:50% 50%;background-color:#fff;height:150px;width:394px;border:1px #666 solid;border-bottom:2px solid #283e6c;z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.dark .FB_Loader{background-color:#000;border-bottom:2px solid #ccc}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.siderender
+.FB_Loader{margin-top:0}
+.fbpluginrecommendationsbarleft,
+.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}
+/* @noflip */
+.fbpluginrecommendationsbarleft{left:10px}
+/* @noflip */
+.fbpluginrecommendationsbarright{right:10px}</style></head>
+	
+	<body id="cn_colbert_report_app"><div style="visibility: visible; display: block;" class="mboxDefault"></div>
+	<div class=" fb_reset" id="fb-root"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe src="http://static.ak.facebook.com/connect/xd_arbiter.php?version=24#channel=f2339148f9d784e&amp;origin=http%3A%2F%2Fwww.colbertnation.com&amp;channel_path=%2Fthe-colbert-report-app%3Ffb_xd_fragment%23xd_sig%3Df3be1f43f454d7c%26" style="border: medium none;" tab-index="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_http" allowtransparency="true" name="fb_xdm_frame_http" frameborder="0" scrolling="no"></iframe><iframe src="https://s-static.ak.facebook.com/connect/xd_arbiter.php?version=24#channel=f2339148f9d784e&amp;origin=http%3A%2F%2Fwww.colbertnation.com&amp;channel_path=%2Fthe-colbert-report-app%3Ffb_xd_fragment%23xd_sig%3Df3be1f43f454d7c%26" style="border: medium none;" tab-index="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_https" allowtransparency="true" name="fb_xdm_frame_https" frameborder="0" scrolling="no"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
+ 	<script src="http://connect.facebook.net/en_US/all.js"></script>
+	<script type="text/javascript">
+		window.fbAsyncInit = function() {
+			FB.init({
+				appId:'137674243479',
+				status:true,
+				cookie:true,
+				xfbml:true
+			});
+		};
+
+		FB.Event.subscribe('edge.create');
+	</script>
+	
+	<script type="text/javascript" src="http://www.mtv.com/global/scripts/special/projx.jhtml?channelname=Comedy%20Central"></script>
+	
+	<!-- Begin Ad/Reporting Setup -->
+<script src="/sitewide/scripts/gen_ads_reporting.js" type="text/javascript"></script>
+<script src="http://btg.mtvnservices.com/aria/coda.html?site=colbertnation.com" type="text/javascript"></script><style>.mboxDefault { visibility:hidden; }</style><div id="mboxMarker-default-viathedailyshow-0" style="visibility:hidden;display:none">&nbsp;</div><script src="http://mtvnetworks.tt.omtrdc.net/m2/mtvnetworks/mbox/standard?mboxHost=www.colbertnation.com&amp;mboxSession=1369525920572-154293&amp;mboxPage=1369525920572-154293&amp;screenHeight=1024&amp;screenWidth=1280&amp;browserWidth=1244&amp;browserHeight=893&amp;browserTimeOffset=-300&amp;colorDepth=24&amp;mboxCount=1&amp;channel=the-colbert-report-app&amp;pageType=&amp;loggedIn=No&amp;mbox=viathedailyshow&amp;mboxId=0&amp;mboxTime=1369507920576&amp;mboxURL=http%3A%2F%2Fwww.colbertnation.com%2Fthe-colbert-report-app&amp;mboxReferrer=&amp;mboxVersion=41" language="JavaScript"></script>
+<script src="http://repo.comedycentral.com/feeds/init/colbertnation.com?url=%2Fthe-colbert-report-app&amp;cmsPageId=&amp;pageType=" type="text/javascript"></script>
+
+
+	<!-- 6x6 POE Ad Call -->
+	
+
+
+ 
+ 
+ 
+ 
+ 
+
+	
+	
+
+	
+			
+		<div class="ad_6x6" id="ad_">
+	<script type="text/javascript">
+	var thisKeyValueString = ( typeof (allKeyString) != 'undefined' ) ? allKeyString : '';
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+			
+		
+		
+		
+					suppressThisAd = (adCall6x6 != true) ? true : false;
+				if ( !suppressThisAd ) {
+			mtvn.btg.ads.AdManager.placeAd({size:'6x6',keyValues:thisKeyValueString, contentType:"adj", isReloadable:false, reloadInterval:90000000 });
+		}
+	
+	onAdNumber++; // Increment Ad Number
+	</script><script type="text/javascript" id="ad_1" src="http://ad.doubleclick.net/adj/tcr.mtvi/atf_j_s/colbertnation/_df/the-colbert-report-app;sec0=colbertnation;sec1=_df;sec2=the-colbert-report-app;pos=atf;tag=adj;mtype=standard;mtfIFPath=/asm/doubleclick/;sz=6x6;tile=1;dcopt=ist;!category=vertical;!category=colbertnation;u=ddebe109-5f01-8d48-3872-8ebc178ff27d%7Csec0%3Dcolbertnation%3Bsec1%3D_df%3Bsec2%3Dthe-colbert-report-app;ord=880891746651522200?"></script><img src="http://s0.2mdn.net/868366/1x1_transparent.gif" height="1" width="1" border="0">
+</div>	  
+
+	<div id="backgroundHolder">
+		
+					
+
+	
+
+	
+
+
+
+	
+
+
+
+
+
+	<div id="mod_385578" class="module cappy">
+
+
+	
+	
+		<div class="middle ">
+			<div class="logo"><a href="http://www.comedycentral.com">Comedy Central</a></div>
+		
+			<ul class="moreSites">
+				<li class="moreLinks"><a href="http://www.comedycentral.com/shows/index.jhtml">More Links</a>
+					
+					
+	<ul class="links">
+									<li><a href="http://www.comedycentral.com/">Comedy Central</a></li>
+							<li><a href="http://www.thedailyshow.com/">The Daily Show with Jon Stewart</a></li>
+							<li><a href="http://www.comedycentral.com/indecision">Comedy Central's Indecision</a></li>
+							<li><a href="http://www.southparkstudios.com/">South Park</a></li>
+							<li><a href="http://tosh.comedycentral.com/">Tosh.0</a></li>
+							<li><a href="http://www.comedycentral.com/shows/workaholics/index.jhtml">Workaholics</a></li>
+							<li><a href="http://www.comedycentral.com/shows/the-burn-with-jeff-ross">The Burn with Jeff Ross</a></li>
+							<li><a href="http://www.comedycentral.com/shows/kroll-show">Kroll Show</a></li>
+							<li><a href="http://www.comedycentral.com/shows/brickleberry">Brickleberry</a></li>
+							<li><a href="http://www.comedycentral.com/stand-up">CC:Stand-Up</a></li>
+							<li><a href="http://www.atom.com/">CC:Studios</a></li>
+							<li><a href="http://www.comedycentral.com/shows/index.jhtml" class="last">See All Shows</a></li>
+						</ul>
+
+				</li>
+			</ul>
+		
+		
+			<div id="flux_userBar" class="sm4Widget flux4Widget flux4" data-widget="userBar"><div class="userBar"><div class="embeddedTop flux4Widget flux4"><div class="bar">
+	<div class="backgroundPanel">
+		<div title="Hide user bar" class="expander expanded"><div class="innerBorder"><div class="arrow"></div></div></div>
+		<ul class="elements"><li class="barElement myStuffElement"><div class="elementContainer withDropdown"><div class="elementContent">
+	<div class="loggedOut" style="">
+		<a class="signIn bold link">Sign In</a>
+	</div>
+    <div class="loggedIn" style="display: none">
+        <img class="loggedProfileUrl loggedUserThumbnail smallOptionalThumbnail">
+        <b class="displayName link elementTitle">&nbsp;&nbsp;</b>
+        <b class="nonC3PMember link elementTitle">&nbsp;&nbsp;Join Now</b>
+    </div>
+    <div class="barPointerUp link"><div class="pointer"></div></div><div class="barPointerDown link"><div class="pointer"></div></div>
+</div></div><div class="dropdownAnimation"><div style="display: none;" class="hoverElement"></div><div style="display: none;" class="dropdownWrapper"><div class="dropdown"><div class="dropdownIndent"></div><div class="loggedOutMenu dropdownContent">
+    <div class="thirdPartyButtonsContainer flux4Widget flux4"><div class="socialAuth vertical">
+    <div class="socialButtons defaultSocialAuthElementWidth">
+        
+            <a class="button primaryButton fb">
+                <span class="img">&nbsp;</span>
+                <span class="text">Login with Facebook</span>
+            </a>
+        
+        
+            <a class="button primaryButton tw">
+                <span class="img">&nbsp;</span>
+                <span class="text">Login with Twitter</span>
+            </a>
+        
+    </div>
+</div></div>
+    <div class="button">
+        <a class="secondaryButton fluxSingInButton">Use your email address</a>
+    </div>
+</div></div></div></div></li><li class="barElement fbPublishingElement lastBarElement"><div class="elementContainer"><div class="elementContent flux4Widget flux4">
+<div class="fbTimelineToggle"><div><div class="publishingPrefix" style="display: none">
+	Publishing
+</div>
+<a class="fbIcon"></a><span class="fbLabel"></span>
+<div class="fbIconTooltip" style="display: none">
+    <div class="tooltip1">Your Facebook publishing settings are: <span class="state">OFF</span></div>
+    <div class="tooltip2 loggedIn" style="display: none">Click toggle to turn <span class="state">ON</span> or visit <a class="settings-link" href="">Social Settings</a></div>
+    <div class="tooltip2 loggedOut">Click toggle to turn it <span class="state">ON</span></div>
+</div>
+<div class="fbHelpTooltip" style="display: none">
+    <span class="tooltip1">Enabling this will automatically publish your&nbsp;Colbert Nation&nbsp;activity to Facebook.</span>
+    <span class="tooltip3">You can choose to be reminded every time you publish to Facebook.</span>
+</div>
+<div class="fbActivityTooltip" style="display: none">
+    <div class="reconnectHint" style="display: none">
+        <div class="overlayBody">
+            <div class="topBodyText mostTop"><span class="nowrap"><span class="facebookIcon"></span></span>&nbsp;Facebook Sharing</div>
+            <div class="topBodyText">We need you to reconnect to Facebook</div>
+            <div class="topBodyText">to complete this action</div>
+            <div class="buttonsLine">
+                <a class="primaryButton btnReconnect">Reconnect to Facebook</a>
+            </div>
+        </div>
+    </div>
+    <div class="activityWidgetWrap" style="display: none">
+        <fb:shared-activity width="485" height="320"></fb:shared-activity>    
+    </div>
+</div>
+<div class="toggleContainer"><div class="toggle4001">
+    <div class="jtoggle"><input class="unchecked" style="visibility: hidden; position: absolute; width: 1px; height: 1px; top: -2px; left: -2px;" type="checkbox"><label style="display: inline-block; width: 0px;" class="labelOn"><span>ON</span></label><label style="display: inline-block; width: 100%;" class="labelOff"><span>OFF</span></label><div style="left: 0px;" class="handle"></div></div>
+</div></div>
+<div class="fbTimelineCheckboxes" style="display: none">
+	<div class="inputField help"></div>
+	<span class="onCheckbox"><label><input type="checkbox">Alert me each time something is published to Facebook</label></span>
+	<span class="offCheckbox"><label><input type="checkbox">Ask me about Facebook publishing when available</label></span>
+</div></div></div></div></div></li></ul>
+	</div>
+</div>
+<div title="Show user bar" class="expander collapsed">
+	<div class="arrow"></div>
+</div><div class="flux4Widget flux4" style="display: none;"><div class="facebookTimeline"><div></div></div></div><div class="notification"><div></div></div></div></div></div>
+		
+	<div class="quickmenu_clear"></div>
+	<div class="clearAll"></div>
+
+</div>
+	
+	
+
+
+	</div>
+
+
+<!-- cappy -->
+
+	
+				
+		<div id="bodyHolder">
+			
+							<div id="visibleHeader">
+	<div id="topNav">
+		<a href="/" class="index" title="Home">Colbertnation Home</a>
+		<a href="/video" class="video" title="Video">The Colbert Report Videos</a>
+		<a href="/full-episodes/" class="fullEpisode" title="Full Episode Player">The Colbert Report Full Episodes</a>
+		
+		<a href="/about" class="about" title="About">About The Colbert Report</a>
+		<a href="/tickets" class="tickets" title="Tickets">Tickets for The Colbert Report</a>
+		<a href="http://shop.comedycentral.com/category/41229863321/1/The-Colbert-Report.htm" class="shop" title="Shop">Buy The Colbert Report Merchandise</a>
+	</div>
+	<div id="searchHolder">
+		<form class="ms_search" name="searchFormTop" action="/video" id="searchForm" onsubmit="return submitSite('#searchForm', '#searchterm');">
+			<input autocomplete="off" id="searchterm" class="typeahead ms_searchterm ms_search_text ac_input" name="keywords" size="35" value="Search" onclick="clearSearch(this)" onblur="blurSearch(this)" type="text">
+			<input class="thisSite" type="button">
+			<input class="theWeb" type="button">
+		</form>
+	</div>
+	<div class="clearAll"></div>
+			<table id="leaderboard" width="100%">
+			<tbody><tr>
+			<td align="center">
+												
+
+
+ 
+ 
+ 
+ 
+ 
+
+	
+	
+
+	
+			
+		<div class="ad_728x90" id="ad_">
+	<script type="text/javascript">
+	var thisKeyValueString = ( typeof (allKeyString) != 'undefined' ) ? allKeyString : '';
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+			
+		
+		
+		
+					suppressThisAd = false;
+				if ( !suppressThisAd ) {
+			mtvn.btg.ads.AdManager.placeAd({size:'728x90',keyValues:thisKeyValueString});
+		}
+	
+	onAdNumber++; // Increment Ad Number
+	</script><iframe allowtransparency="true" src="http://ad.doubleclick.net/adi/tcr.mtvi/atf_i_s/colbertnation/_df/the-colbert-report-app;sec0=colbertnation;sec1=_df;sec2=the-colbert-report-app;pos=atf;tag=adi;mtype=standard;mtfIFPath=/asm/doubleclick/;sz=728x90;tile=2;!category=vertical;!category=colbertnation;u=ddebe109-5f01-8d48-3872-8ebc178ff27d%7Csec0%3Dcolbertnation%3Bsec1%3D_df%3Bsec2%3Dthe-colbert-report-app;ord=880891746651522200?" onload="btg.Events['AD_LOAD'].fire('ad_2');" id="ad_2" name="ad_2" marginheight="0" marginwidth="0" frameborder="0" height="90" scrolling="no" width="728"></iframe>
+</div>	  
+			</td>
+			</tr>
+		</tbody></table>
+	</div>
+<div class="clearAll"></div>						
+			<div id="contentHolder" class="two_column_a">
+
+
+
+
+
+	<style type="text/css" name="override_cn_colbert_report_app">
+					#backgroundHolder {
+				background:url(http://colbertnation.mtvnimages.com/images/shows/colbert_report/site/CN_BG2013.jpg) no-repeat 50% 0 !important;
+			}
+							#backgroundHolder {
+				background-color:#000000 !important;
+			}
+			</style>
+		<link rel="stylesheet" href="http://www.comedycentral.com/images/asm/test/colbert_nation_promo_tout/cn_home_promo_tout.css">
+	
+
+	<div id="rightColumn">
+				
+
+	
+
+
+	
+									
+
+
+	<div id="promo_422604" class="module generic_promo generic_promo_side notext wide_generic">
+						
+					<div class="middle">
+				<div class="textHolder">
+																	<div class="imageHolder" style="width:300px;height:89px;overflow:hidden;">
+							<a class="" href="https://itunes.apple.com/us/app/the-colbert-report/id605799487?ls=1&amp;mt=8"><img src="http://colbertnation.mtvnimages.com/images/shows/colbert_report/tcr_app/CN_AppStoreBadge_300x100_2.jpg?width=300&amp;height=89&amp;quality=0.91&amp;crop=true" title="" alt="" height="89" width="300"></a>
+						</div>
+															<div class="copy">
+						
+					</div>
+				</div>
+				<div class="clearAll"></div>
+													<div class="clearAll"></div>
+				
+								<div class="clearAll"></div>
+			</div>
+			<div class="footer"></div>
+			</div>
+
+
+
+				
+
+	
+
+
+	
+									
+
+
+	<div id="promo_422602" class="module generic_promo generic_promo_side notext wide_generic">
+						
+					<div class="middle">
+				<div class="textHolder">
+																	<div class="imageHolder" style="width:300px;height:100px;overflow:hidden;">
+							<a class="" href="http://www.amazon.com/Comedy-Central-The-Colbert-Report/dp/B00BTLIME0"><img src="http://colbertnation.mtvnimages.com/images/shows/colbert_report/tcr_app/CN_AmazonBadge_300x100.jpg?width=300&amp;height=100&amp;quality=0.91&amp;crop=true" title="" alt="" height="100" width="300"></a>
+						</div>
+															<div class="copy">
+						
+					</div>
+				</div>
+				<div class="clearAll"></div>
+													<div class="clearAll"></div>
+				
+								<div class="clearAll"></div>
+			</div>
+			<div class="footer"></div>
+			</div>
+
+
+
+				
+
+	
+
+
+	
+									
+
+
+	<div id="promo_422603" class="module generic_promo generic_promo_side notext wide_generic">
+						
+					<div class="middle">
+				<div class="textHolder">
+																	<div class="imageHolder" style="width:300px;height:100px;overflow:hidden;">
+							<a class="" href="https://play.google.com/store/apps/details?id=com.mtvn.android.colbert&amp;hl=en"><img src="http://colbertnation.mtvnimages.com/images/shows/colbert_report/tcr_app/CN_GooglePlayBadge_300x100.jpg?width=300&amp;height=100&amp;quality=0.91&amp;crop=true" title="" alt="" height="100" width="300"></a>
+						</div>
+															<div class="copy">
+						
+					</div>
+				</div>
+				<div class="clearAll"></div>
+													<div class="clearAll"></div>
+				
+								<div class="clearAll"></div>
+			</div>
+			<div class="footer"></div>
+			</div>
+
+
+
+			
+
+
+ 
+ 
+ 
+ 
+ 
+
+	
+	
+
+	
+			
+		<div class="ad_300x250" id="ad_">
+	<script type="text/javascript">
+	var thisKeyValueString = ( typeof (allKeyString) != 'undefined' ) ? allKeyString : '';
+
+	
+	
+	
+	
+	
+			thisKeyValueString += '!category=auto';
+	
+	
+	
+	
+	
+			
+		
+		
+		
+					suppressThisAd = false;
+				if ( !suppressThisAd ) {
+			mtvn.btg.ads.AdManager.placeAd({size:'300x250',keyValues:thisKeyValueString});
+		}
+	
+	onAdNumber++; // Increment Ad Number
+	</script><iframe allowtransparency="true" src="http://ad.doubleclick.net/adi/tcr.mtvi/atf_i_s/colbertnation/_df/the-colbert-report-app;sec0=colbertnation;sec1=_df;sec2=the-colbert-report-app;pos=atf;tag=adi;mtype=standard;mtfIFPath=/asm/doubleclick/;sz=300x250;tile=3;!category=vertical;!category=colbertnation;!category=auto;u=ddebe109-5f01-8d48-3872-8ebc178ff27d%7Csec0%3Dcolbertnation%3Bsec1%3D_df%3Bsec2%3Dthe-colbert-report-app;ord=880891746651522200?" onload="btg.Events['AD_LOAD'].fire('ad_3');" id="ad_3" name="ad_3" marginheight="0" marginwidth="0" frameborder="0" height="250" scrolling="no" width="300"></iframe>
+</div>	  
+
+				
+
+	
+
+
+	
+									
+
+
+	<div id="promo_424818" class="module generic_promo generic_promo_side wide_generic">
+						
+					<div class="middle">
+				<div class="textHolder">
+															<div class="copy">
+						<p><font size="1">• Apple, the Apple logo is a trademark of Apple Inc., registered in the U.S. and other countries. App Store is a service mark of Apple Inc. <br>• Google Play is a trademark of Google Inc.<br>• Amazon logo is a trademark of Amazon.com, Inc. or its affiliates. </font>
+					</p></div>
+				</div>
+				<div class="clearAll"></div>
+												<div class="clearAll"></div>
+				
+								<div class="clearAll"></div>
+			</div>
+			<div class="footer"></div>
+			</div>
+
+
+
+		&nbsp;
+</div>
+<div id="leftColumn">
+				
+
+	
+
+
+	
+									
+
+
+	<div id="promo_422623" class="module generic_promo generic_promo_side notext wide_generic">
+						
+					<div class="middle">
+				<div class="textHolder">
+																	<div class="imageHolder" style="width:650px;height:40px;overflow:hidden;">
+							<img src="http://colbertnation.mtvnimages.com/images/shows/colbert_report/tcr_app/CN_AppPageHeader_650x40.jpg?width=650&amp;height=40&amp;quality=0.91&amp;crop=true" title="" alt="" height="40" width="650">
+						</div>
+															<div class="copy">
+						
+					</div>
+				</div>
+				<div class="clearAll"></div>
+												<div class="clearAll"></div>
+				
+								<div class="clearAll"></div>
+			</div>
+			<div class="footer"></div>
+			</div>
+
+
+
+				
+
+	
+
+
+	
+									
+
+
+	<div id="promo_422605" class="module generic_promo generic_promo_side wide_generic">
+						
+					<div class="middle">
+				<div class="textHolder">
+															<div class="copy">
+						<div align="center"><img src="http://colbertnation.mtvnimages.com/images/shows/colbert_report/tcr_app/CN_AppPromoImage_2.jpg?width=620&amp;height=400&amp;quality=0.91&amp;crop=true"><br><br><font size="3"><strong>Available on iPhone, iPad, Android and Kindle Fire.</strong></font></div><br><strong>Features:</strong><br><br><img src="http://thedailyshow.mtvnimages.com/images/shows/tds/extras/bullet4.jpg?width=15&amp;height=15&amp;quality=0.91&amp;crop=true"> Watch the latest videos from the show<br><img src="http://thedailyshow.mtvnimages.com/images/shows/tds/extras/bullet4.jpg?width=15&amp;height=15&amp;quality=0.91&amp;crop=true"> Sort new clips by popularity<br><img src="http://thedailyshow.mtvnimages.com/images/shows/tds/extras/bullet4.jpg?width=15&amp;height=15&amp;quality=0.91&amp;crop=true"> Explore the show's classic segments via the quote section<br><img src="http://thedailyshow.mtvnimages.com/images/shows/tds/extras/bullet4.jpg?width=15&amp;height=15&amp;quality=0.91&amp;crop=true">Browse the archive for videos you missed or want to watch again<br><img src="http://thedailyshow.mtvnimages.com/images/shows/tds/extras/bullet4.jpg?width=15&amp;height=15&amp;quality=0.91&amp;crop=true">Set TV tune-in reminders so you never miss another show<br><img src="http://thedailyshow.mtvnimages.com/images/shows/tds/extras/bullet4.jpg?width=15&amp;height=15&amp;quality=0.91&amp;crop=true">Share videos on Facebook, Twitter, text or e-mail.<br><br><p><strong>Full episodes are not available in this app, but they are available for download through the iTunes store and Amazon Instant Video.</strong><script type="text/javascript">if (/(android|ipad|iphone|ipod)/i.test(navigator.userAgent)) {document.location.href = "http://m.comedycentral.com/colbert-nation/app.rbml";}</script>
+					</p></div>
+				</div>
+				<div class="clearAll"></div>
+												<div class="clearAll"></div>
+				
+								<div class="clearAll"></div>
+			</div>
+			<div class="footer"></div>
+			</div>
+
+
+
+		&nbsp;
+</div>
+
+
+			<div class="contentHolderClear"></div>
+		</div> 
+
+		<div class="clearAll"></div>
+
+		<div id="footer">
+			<!-- begin footer -->
+                <div id="ft">
+                    <div id="cn_footer">
+                        <div class="cn_footer_content">
+                            <div class="cn_footer_search" align="center">
+                                <!-- search -->
+                                <form class="ms_search" name="searchFormBottom" action="/video/" id="searchFormBottom" onsubmit="return submitSite('#searchFormBottom', 'input.ms_search_text');">
+                                    <input class="typeahead ms_searchterm ms_search_text" size="35" value="Search" onclick="clearSearch(this);" onblur="blurSearch(this);" name="keywords" type="text">
+                                    <input class="ms_search_button_site_cc" onclick="submitSite('/video', 'keywords', this.form);" type="button">
+                                    <input class="ms_search_button_web_cc" onclick="submitWeb('VCM037','en-US', 'keywords', this.form);" type="button">
+                                </form>
+                            </div>
+
+                            <div class="cn_footer_clear"></div>
+                                                                    <div class="cn_footer_column">
+                                        <h6>ColbertNation.com</h6>
+                                                                                    <a href="http://www.colbertnation.com/home">Colbert Nation Home</a>
+                                                                                    <a href="http://www.colbertnation.com/full-episodes/">The Colbert Report Full Episodes</a>
+                                                                                    <a href="http://www.colbertnation.com/video/tag/Alpha+Dog+of+the+Week">Alpha Dog of the Week</a>
+                                                                                    <a href="http://www.colbertnation.com/video/tag/Barack+Obama">Barack Obama</a>
+                                                                                    <a href="http://www.colbertnation.com/video/tag/Better+Know+a+District">Better Know a District</a>
+                                                                                    <a href="http://www.colbertnation.com/video/tag/Bill+O%27Reilly">Bill O'Reilly</a>
+                                                                                    <a href="http://www.colbertnation.com/video/tag/Cheating+Death">Cheating Death</a>
+                                                                                    <a href="http://www.colbertnation.com/video/tags/5%20x%20Five">5 x Five</a>
+                                                                                    <a href="http://www.colbertnation.com/video/tags/Mitt%2BRomney">Mitt Romney</a>
+                                                                                    <a href="http://www.colbertnation.com/video/tag/The+Word">The Word</a>
+                                                                                    <a href="http://www.colbertnation.com/video/tags/Tip%257EWag">Tip of the Hat, Wag of the Finger</a>
+                                                                                    <a href="http://www.ColbertSuperPAC.com">Colbert SuperPAC</a>
+                                                                                    <a href="http://www.facebook.com/thecolbertreport">The Colbert Report on Facebook</a>
+                                                                                    <a href="https://twitter.com/ColbertReport">The Colbert Report on Twitter</a>
+                                                                                    <a href="https://plus.google.com/110429199002930072088/posts">The Colbert Report on Google +</a>
+                                                                                                                    </div>
+                                                                    <div class="cn_footer_column">
+                                        <h6>Featured</h6>
+                                                                                    <a href="http://www.thedailyshow.com/">The Daily Show with Jon Stewart</a>
+                                                                                    <a href="http://www.colbertnation.com/">The Colbert Report</a>
+                                                                                    <a href="http://www.southparkstudios.com/">South Park</a>
+                                                                                    <a href="http://tosh.comedycentral.com/">Tosh.0 with Daniel Tosh</a>
+                                                                                    <a href="http://www.comedycentral.com/shows/workaholics/index.jhtml">Workaholics</a>
+                                                                                    <a href="http://www.comedycentral.com/shows/key-and-peele/index.jhtml">Key &amp; Peele</a>
+                                                                                    <a href="http://www.comedycentral.com/shows/ugly_americans/index.jhtml">Ugly Americans</a>
+                                                                                    <a href="http://www.comedycentral.com/shows/futurama/index.jhtml">Futurama</a>
+                                                                                    <a href="http://www.comedycentral.com/indecision">Indecision Political Humor</a>
+                                                                                    <a href="http://itunes.apple.com/us/app/futurama-head-in-a-jar/id435997883?mt=8">Futurama Head in a Jar iPhone App</a>
+                                                                                    <a href="http://itunes.apple.com/us/app/tosh-0/id391522923">Tosh.0 app for iPad and iPhone</a>
+                                                                                    <a href="http://tosh.comedycentral.com/blog/">Tosh Blog</a>
+                                                                                    <a href="http://www.southparkstudios.com/fans/book-of-mormon-tickets">The Book of Mormon</a>
+                                                                                    <a href="http://www.thecomedyawards.com/">The Comedy Awards</a>
+                                                                                    <a href="http://comedycentral.tumblr.com/">Comedy Centrl Tumblr</a>
+                                                                                                                    </div>
+                                                                    <div class="cn_footer_column">
+                                        <h6>Friends of Comedy Central</h6>
+                                                                                    <a href="http://www.comedycentral.com">Comedy</a>
+                                                                                    <a href="http://www.jokes.com/">Jokes</a>
+                                                                                    <a href="http://www.comedycentral.com/stand-up">Stand-Up Comedy</a>
+                                                                                    <a href="http://www.comedycentral.com/funny_videos/index.jhtml">Funny Videos</a>
+                                                                                    <a href="http://www.spike.com/">Spike</a>
+                                                                                    <a href="http://www.spike.com/shows/coal">COAL</a>
+                                                                                    <a href="http://www.gametrailers.com/">Game Trailers</a>
+                                                                                    <a href="http://www.wikicheats.com">Cheat Codes</a>
+                                                                                    <a href="http://www.addictinggames.com">Free Games</a>
+                                                                                    <a href="http://www.gametrailers.com/">Playstation Move</a>
+                                                                                    <a href="http://www.gametrailers.com/">Kinect</a>
+                                                                                    <a href="http://www.nextmovie.com/">Next Movie - Movie News And Trailers</a>
+                                                                                    <a href="http://www.mtv.com/">MTV</a>
+                                                                                    <a href="http://www.logotv.com/">Gay Videos</a>
+                                                                                    <a href="http://www.mtviggy.com/">MTV Iggy</a>
+                                                                                    <a href="http://www.comedycentral.com/tribes">Partners</a>
+                                                                                    <a href="http://www.tvland.com/shows/hot-in-cleveland">Betty White</a>
+                                                                                    <a href="http://www.tvland.com/shows/hot-in-cleveland">Hot in Cleveland</a>
+                                                                                    <a href="http://www.spike.com/mma-sports/">MMA &amp; Sports</a>
+                                                                                    <a href="http://www.gametrailers.com/e3">e3 2011</a>
+                                                                                    <a href="http://www.videobash.com">Videobash</a>
+                                                                                                                    </div>
+                                                                    <div class="cn_footer_column">
+                                        <h6>Legal &amp; Business</h6>
+                                                                                    <a href="http://www.colbertnation.com/legal/content-submission">User Content Submission Agreement</a>
+                                                                                    <a href="http://www.colbertnation.com/legal/privacy-policy">Privacy Policy - California Privacy Rights</a>
+                                                                                    <a href="http://www.colbertnation.com/legal/terms-of-use">Terms and Conditions</a>
+                                                                                    <a href="http://www.colbertnation.com/legal/content-submission">Copyright Compliance</a>
+                                                                                    <a href="http://www.socialproject.com/PrivacyPolicy.html">The Social Project Privacy Policy</a>
+                                                                                    <a href="http://www.socialproject.com/TermsOfUse.html">The Social Project Terms of Use</a>
+                                                                                    <a href="http://media.viacom.com/accessibility/">Closed Captioning Contact</a>
+                                                                                    <a href="http://www.mtvncareers.com">Job Postings</a>
+                                                                                    <a href="http://adspecs-it.mtvn.com/?page_id=11">Advertising</a>
+                                                                                    <a href="http://www.comedycentral.com/help/help.jhtml">Help/FAQ</a>
+                                                                                    <a href="http://srp.mtvn.com/sitefaq.html"><span style="position:relative;top:-4px;">Ad Choices</span> <img src="http://www.comedycentral.com/images/footer/Advertising-Option-Icon.png"></a>
+                                                                                                                            <div class="viacom">
+                                            	<img src="http://www.comedycentral.com/images/logos/logo_viacom_blue_125.png" alt="" class="cn_footer_mtv_logo" height="19" width="125" align="right" border="0">
+                                        		<span>Viacom Entertainment Group</span>
+                                        	</div>
+                                                                            </div>
+                                                            <div class="cn_footer_clear"></div>
+                            <div class="cn_footer_column cn_footer_wide">
+								<h6>&nbsp;</h6>
+																	
+
+
+ 
+ 
+ 
+ 
+ 
+
+	
+	
+
+	
+			
+		<div class="ad_5x5" id="ad_">
+	<script type="text/javascript">
+	var thisKeyValueString = ( typeof (allKeyString) != 'undefined' ) ? allKeyString : '';
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+			
+		
+							
+		
+					suppressThisAd = false;
+				if ( !suppressThisAd ) {
+			mtvn.btg.ads.AdManager.placeAd({size:'5x5',keyValues:thisKeyValueString+'promobox=globaltxtad;'});
+		}
+	
+	onAdNumber++; // Increment Ad Number
+	</script><iframe allowtransparency="true" src="http://ad.doubleclick.net/adi/tcr.mtvi/atf_i_s/colbertnation/_df/the-colbert-report-app;sec0=colbertnation;sec1=_df;sec2=the-colbert-report-app;pos=atf;tag=adi;mtype=standard;mtfIFPath=/asm/doubleclick/;promobox=globaltxtad;sz=5x5;tile=4;!category=vertical;!category=colbertnation;u=ddebe109-5f01-8d48-3872-8ebc178ff27d%7Csec0%3Dcolbertnation%3Bsec1%3D_df%3Bsec2%3Dthe-colbert-report-app;ord=880891746651522200?" onload="btg.Events['AD_LOAD'].fire('ad_4');" id="ad_4" name="ad_4" marginheight="0" marginwidth="0" frameborder="0" height="5" scrolling="no" width="5"></iframe>
+</div>	  
+								                            </div>
+                            <div class="cn_footer_column">
+                                <h6>&nbsp;</h6>
+                                <div align="right">© 2013 Comedy Partners.</div>
+								<div align="right">All Rights Reserved.  Comedy Central and all related titles, logos and characters are trademarks of Comedy Partners.</div>
+                            </div>
+                            <div class="cn_footer_clear"></div>
+
+                        </div>
+	 					<br>
+                </div>
+                <!-- end footer -->
+
+                                	<!-- null promo -->
+						</div>
+
+	</div> 
+<script type="text/javascript" src="http://www.colbertnation.com/media/bottom.js"></script>
+<script type="text/javascript">
+if (typeof(cnDocReady) != 'undefined') {
+	$(document).ready(cnDocReady);
+}
+</script>
+</div> 
+
+<!-- 1x2 Survey Call -->
+
+
+
+ 
+ 
+ 
+ 
+ 
+
+	
+	
+
+	
+			
+		<div class="ad_1x2" id="ad_">
+	<script type="text/javascript">
+	var thisKeyValueString = ( typeof (allKeyString) != 'undefined' ) ? allKeyString : '';
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+			
+		
+							
+		
+					suppressThisAd = (useSurveyString != true) ? true : false;
+				if ( !suppressThisAd ) {
+			mtvn.btg.ads.AdManager.placeAd({size:'1x2',keyValues:thisKeyValueString+'research=survey;', contentType:"adj", isReloadable:false, reloadInterval:90000000 });
+		}
+	
+	onAdNumber++; // Increment Ad Number
+	</script>
+</div>	  
+<!-- PAGEOK -->
+
+</div><iframe src="http://fast.mtvn.demdex.net/DSD-gz/mtvn-dest.html?targus=1&amp;targusvalidttl=14400&amp;bizo=1&amp;bizovalidttl=14400&amp;nexac=1&amp;nexacvalidttl=14400&amp;acx=1&amp;acxvalidttl=14400&amp;addthis=1&amp;addthisvalidttl=14400&amp;is_exelate=1&amp;exvalidttl=302400&amp;is_mediamath=1&amp;mmvalidttl=10080&amp;rubicon=1&amp;rubiconvalidttl=14400" style="height:1px;width:1px;visibility:hidden;position:absolute;bottom:0;left:-1000px"></iframe><div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div><iframe style="display:none;" src="http://seg.sharethis.com/getSegment.php?purl=http%3A%2F%2Fwww.colbertnation.com%2Fthe-colbert-report-app&amp;jsref=&amp;rnd=1369525920984" name="stSegmentFrame" id="stSegmentFrame" frameborder="0" height="0px" scrolling="no" width="0px"></iframe><div class="flux4Widget flux4" style="position: absolute; width: 1px; height: 1px; left: -1000px; top: -1000px;"><div class="auth"><div><form action="" method="GET">
+    <input name="product" type="hidden">
+    <input name="productLocation" type="hidden">
+    <input name="title" type="hidden">
+    <input name="touch" type="hidden">
+    <input name="device" type="hidden">
+    <input name="redirectUrl" type="hidden">
+    <input name="cookieEnabled" type="hidden">
+    <input name="email" type="hidden">
+    <input name="verificationValue" type="hidden">
+</form>
+</div></div></div><div class="flux4Widget flux4" style="position: absolute; width: 1px; height: 1px; left: -1000px; top: -1000px;"><div class="socialAuth"><div></div></div></div><div class="flux4Widget flux4" id="flux_widgets4_tooltip_control"></div></body>

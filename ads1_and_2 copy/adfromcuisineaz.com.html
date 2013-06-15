@@ -1,0 +1,132 @@
+<head><title>
+	Grand jeu concours : Gagnez plein de cadeaux avec CuisineAZ!!
+</title><meta id="metaDescription" runat="server" name="description" content="3 lots Tajine et Wok de Tefal à gagner"><link href="Jeu_monde-0413/css/layout.css" rel="stylesheet" type="text/css"><link href="Jeu_monde-0413/css/default.css" rel="stylesheet" type="text/css">
+    
+    <!-- autocompletion de la recherche -->
+    <script type="text/javascript" src="/library/js/jquery.js"></script>
+    <script type="text/javascript" src="/library/js/autocomplete/jquery.autocomplete.js"></script>
+    <script type="text/javascript" src="/library/js/autocomplete/autoCompleteData.js"></script>
+    <link rel="stylesheet" type="text/css" href="/library/js/autoComplete/jquery.autocomplete.css">
+<!-- JS -->
+<script type="text/javascript">
+$().ready(function()
+{  
+	$("#fai").autocomplete(fai);  
+});
+function rst()
+{
+if (document.getElementById("email").value = "Votre email")
+    document.getElementById("email").value = "";
+}
+
+function share_on_Fbk()
+{
+    u = location.href.substring(0,location.href.indexOf('?'));
+    tabParam = window.location.search.split('&');
+
+    for (var i in tabParam) {
+        if (tabParam[i].substring(0, 3) == '?id')
+            u = u + tabParam[i];
+        else if (tabParam[i].substring(0, 2) == 'id')
+            u = u + '?' + tabParam[i];
+    }
+
+	t=document.title;
+	window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');
+	return false;
+}
+</script>
+
+
+</head>
+<body>
+    <form method="post" action="?tc=JE&amp;mc=AU&amp;id=monde-0413&amp;origin=homefocus_jeu_monde-0413&amp;utm_source=caz-website&amp;utm_medium=homefocus&amp;utm_campaign=monde-0413" id="form1">
+<div class="aspNetHidden">
+<input name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTg1NzQxNzA4NQ9kFgQCAQ9kFgQCAQ8WAh4EVGV4dAVxPG1ldGEgaWQ9Im1ldGFEZXNjcmlwdGlvbiIgcnVuYXQ9InNlcnZlciIgbmFtZT0iZGVzY3JpcHRpb24iIGNvbnRlbnQ9IjMgbG90cyBUYWppbmUgZXQgV29rIGRlIFRlZmFsIMOgIGdhZ25lciIgLz5kAgIPFgIfAAWfATxsaW5rIGhyZWY9IkpldV9tb25kZS0wNDEzL2Nzcy9sYXlvdXQuY3NzIiAgcmVsPSJzdHlsZXNoZWV0IiB0eXBlPSJ0ZXh0L2NzcyIgLz48bGluayBocmVmPSJKZXVfbW9uZGUtMDQxMy9jc3MvZGVmYXVsdC5jc3MiICByZWw9InN0eWxlc2hlZXQiIHR5cGU9InRleHQvY3NzIiAvPmQCAw9kFgoCEw8WAh4HVmlzaWJsZWhkAhUPDxYEHgZUYXJnZXQFBl9ibGFuax4LTmF2aWdhdGVVcmwFIy9KZXVfbW9uZGUtMDQxMy9tb2RlbC9wcml6ZVBhZ2UuaHRtZGQCFw8PFgQfAgUGX2JsYW5rHwMFIy9KZXVfbW9uZGUtMDQxMy9tb2RlbC9SdWxlc1BhZ2UuaHRtZGQCGQ8PFgQfAgUGX2JsYW5rHwMFNWh0dHA6Ly9nYW1lLmN1aXNpbmVhei5jb20vZ2FnbmFudHMvaWxzLW9udC1nYWduZS5hc3B4ZGQCHQ8WAh4Dc3JjBThodHRwOi8vZ2FtZS5jdWlzaW5lYXouY29tL0pldV9tb25kZS0wNDEzL2ltZy92aXN1TG90LmpwZ2QYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgQFCm9wdGlvbl95ZXMFCm9wdGlvbl95ZXMFCW9wdGlvbl9ubwUJb3B0aW9uX25vWVTVLH6Rk0Nkh9aQuMQxwC3mIJc=" type="hidden">
+</div>
+
+<div class="aspNetHidden">
+
+	<input name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBgK49+HWDAKyzcaDDQKHlOGrDAKniqCPBQKRirCYAQLeopjNB9HsiDDyD55YQBlOwV25sHjaQLoD" type="hidden">
+</div>
+        <div id="wrapper">
+            <!-- HEADER -->
+            <div id="header" class="header">
+            </div>
+            
+            <div id="main">          
+                <!-- CONTENT -->
+                <div class="cleared">
+                </div>
+                <p>
+                    <span id="intro_1">J'accepte de recevoir occasionnellement les offres des
+                partenaires de CuisineAZ (bons de réductions, offres promotionnelles,
+                jeu concours...)</span> 
+                    <br>
+                    <!--<span id="intro_2" style="font-size: 9px;">(envoi de livrets recettes, échantillons, cadeaux, annonces de jeux concours) </span>      -->
+                 </p>
+                 <input name="email" value="Votre Email" id="email" class="txtbox" onfocus="javascript:rst();" type="text">
+                 <span id="lblAt" class="txtbox">@</span>
+                 <input name="cx" value="003198751674731024891:ovffo1orlum" type="hidden"> <input name="ie" value="UTF-8" type="hidden">
+                 <input autocomplete="off" name="fai" id="fai" class="txtbox ac_input" type="text">
+                 <span id="lblExMail">martin.dupond</span>
+                 <span id="lblExAt">@</span>
+                 <span id="lblExFai">hotmail.com</span>
+                 <div class="cleared"></div>
+                 <div id="lineRadio">
+                     <div id="visible_div">
+                     <span class="input_title"> Oui </span>
+                     <span class="radiobutton"><input id="option_yes" name="optin" value="option_yes" type="radio"></span>
+                     <span class="input_title"> Non </span>
+                     <span class="radiobutton"><input id="option_no" name="optin" value="option_no" type="radio"></span>
+                     </div>
+                </div>
+                
+                 <!-- ERROR -->
+                 
+                <!-- END CONTENT -->
+                <div style="padding-left:10px">
+                    <img src="http://b.static.ak.fbcdn.net/images/share/facebook_share_icon.gif?8:26981" alt="cuisineAZ Facebook">
+			        <a href="http://www.sherlock-tracking.com/link/?t=ae7gzwbhJg0%3d" onclick="return share_on_Fbk()" target="_blank">
+				        partager sur Facebook
+				    </a>
+                </div>
+            </div>
+            
+            <!-- FOOTER -->
+            <div id="footer">
+                <div class="cleared"></div>
+                <a id="btn_lot" href="/Jeu_monde-0413/model/prizePage.htm" target="_blank"></a>
+                <a id="btn_reglement" href="/Jeu_monde-0413/model/RulesPage.htm" target="_blank"></a>
+                <a id="btn_gagnants" href="http://game.cuisineaz.com/gagnants/ils-ont-gagne.aspx" target="_blank"></a>
+                <span id="espace"></span>
+                <!-- VALIDATION BUTTON -->
+                <input name="btn_valid" value="" id="btn_valid" class="img_btn btn_valid" type="submit">
+                <div class="legalFooter">
+                    Votre adresse e-mail est destinée à cuisineAZ. Conformément à la loi "Informatique et libertés" du 6 janvier 1978,
+                    vous disposez d'un droit d'accès, de rectification et d'opposition des informations qui vous concernent.
+                    Vous pouvez exercer ce droit à l'adresse suivante : bdd@cuisineaz.com ou par courrier, CuisineAZ, CIL/Service Juridique, 45 Boulevard du Général Leclerc 59100 ROUBAIX.
+                </div> 
+                <div class="clearer">  
+                </div>
+            </div>
+            <img src="http://game.cuisineaz.com/Jeu_monde-0413/img/visuLot.jpg" id="imgHid" style="display:none;">
+        </div>
+    </form>
+
+<script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="http://www.google-analytics.com/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+    try 
+    {
+        var pageTracker = _gat._getTracker("UA-642667-15");
+        pageTracker._trackPageview();
+    }
+    catch(err)
+    {
+    }
+</script>
+
+</body>

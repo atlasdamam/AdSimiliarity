@@ -1,0 +1,1306 @@
+<head>
+
+
+<title>Offerte Viaggi Canarie - eDreams</title>
+<meta name="googlebot" content="index,follow">
+<meta name="description" content="Clicca e scopri le offerte di vacanze Canarie">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<link rel="shortcut icon" href="/favicon.ico">
+
+	<script src="http://www.google-analytics.com/ga.js" async="" type="text/javascript"></script><script type="text/javascript" src="/js/jquery.tools.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.ba-bbq.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.jgfeed.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/js/jquery.json-2.2.min.js"></script>
+	<script type="text/javascript" src="/js/rison.js"></script>
+	<script type="text/javascript" src="/js/swfobject.js"></script>
+	<script type="text/javascript" src="/js/common.js"></script>
+	<script type="text/javascript" src="/js/wishlist.js"></script>
+
+	<link rel="stylesheet" href="/css/common.css" type="text/css">
+	<!--[if gt IE 7]>
+		<link rel="stylesheet" href="/css/pie.css" type="text/css" />
+	<![endif]-->
+	<link rel="stylesheet" href="/css/modal.css" type="text/css">
+	<script type="text/javascript" src="/static/destinazioni.js"></script>
+	<script type="text/javascript" src="/static/promotions.js"></script>
+	<script type="text/javascript" src="/static/searchbox-items_opodo.js"></script>
+	<script type="text/javascript" src="/js/searchbox.js"></script>
+
+	<link rel="stylesheet" href="/css/searchbox.css" type="text/css">
+
+	<script type="text/javascript" src="/js/datepick/jquery.datepick.min.js"></script>
+	<script type="text/javascript" src="/js/datepick/jquery.datepick.ext.min.js"></script>
+	<script type="text/javascript" src="/js/datepick/jquery.datepick-it.js"></script>
+
+	<link rel="stylesheet" href="/css/datepick/yalla.datepick.css" type="text/css">
+	<script type="text/javascript" src="/static/trattamenti.js"></script>
+	<script type="text/javascript" src="/static/promozioni.js?ver=2"></script>
+
+
+<link href="/css/jquery.ui.base.css" rel="stylesheet" type="text/css">
+<link href="/css/jquery.ui.theme.css" rel="stylesheet" type="text/css">
+<link href="/css/jquery.ui.autocomplete.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="/js/jquery.ui.core.js"></script>
+<script type="text/javascript" src="/js/jquery.ui.position.js"></script>
+<script type="text/javascript" src="/js/jquery.ui.widget.js"></script>  
+<script type="text/javascript" src="/js/jquery.ui.autocomplete.js"></script>
+<script type="text/javascript" src="/js/results.js"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+var srcDestinazione = "Canarie";
+if(srcDestinazione == "" && $j.bbq.getState("Dest")) srcDestinazione = $j.bbq.getState("Dest");
+var srcLocalita = "";
+if(srcLocalita == "" && $j.bbq.getState("City")) srcLocalita = $j.bbq.getState("City");
+var srcDataPartenza = "";
+if(srcDataPartenza == "" && $j.bbq.getState("Data")) srcDataPartenza = $j.bbq.getState("Data");
+var srcLuogoPartenzaCode = "";
+if(srcLuogoPartenzaCode == "" && $j.bbq.getState("Aerop")) srcLuogoPartenzaCode = $j.bbq.getState("Aerop");
+var srcLuogoPartenza = "";
+var srcNumAdulti = "";
+if(srcNumAdulti == "" && $j.bbq.getState("Adulti")) srcNumAdulti = $j.bbq.getState("Adulti");
+srcNumAdulti = srcNumAdulti.isNaN || srcNumAdulti == "" ? 2 : (parseInt(srcNumAdulti) > 6 ? 6 : parseInt(srcNumAdulti));
+var srcNumBambini = "";
+if(srcNumBambini == "" && $j.bbq.getState("Bambini")) srcNumBambini = $j.bbq.getState("Bambini");
+var srcEtaBambini = "";
+if(srcEtaBambini == "" && $j.bbq.getState("EtaBambini")) srcEtaBambini = $j.bbq.getState("EtaBambini");
+var srcArea = "";
+var srcTipo = "";
+var scrPromoCode = "";
+var srcAccomodName = "";
+var srcPromotion = "";
+
+var srcEtaBambini_;
+var srcDataPartenza_;
+var srcLuogoPartenzaCode_;
+
+$j(document).ready(function() {
+	srcNumAdulti = srcNumAdulti.isNaN || srcNumAdulti == "" ? 2 : (parseInt(srcNumAdulti) > 6 ? 6 : parseInt(srcNumAdulti));
+
+	srcNumBambini = srcNumBambini.isNaN || srcNumBambini == "" ? 0 : (parseInt(srcNumBambini) > 5 ? 5 : parseInt(srcNumBambini));
+	if(srcNumBambini && srcEtaBambini != "") {
+		srcEtaBambini_ = srcEtaBambini.split("-");
+		for(var scrE = 0; scrE < srcEtaBambini_.length; scrE++) {
+			switch(srcEtaBambini_[scrE]) {
+			case "0":
+			case "1":
+			case "2":
+			case "3":
+			case "4":
+			case "5":
+			case "6":
+			case "7":
+			case "8":
+			case "9":
+			case "10":
+			case "11":
+			case "12":
+			case "13":
+			case "14":
+			case "15":
+			case "16":
+			case "17":
+				break;
+			default:
+				srcEtaBambini_.remove(scrE--);
+			}
+		}
+		if(srcEtaBambini_.length) {
+			srcNumBambini = srcEtaBambini_.length;
+			srcEtaBambini = srcEtaBambini_.join("-");
+		} else {
+			srcNumBambini = 0;
+			srcEtaBambini = "";
+		}
+	} else {
+		srcNumBambini = 0;
+		srcEtaBambini = "";
+	}
+
+	srcDataPartenza_ = Number.NaN;
+	try {
+		srcDataPartenza_ = new Date(parseInt(srcDataPartenza.split("/")[2],10), parseInt(srcDataPartenza.split("/")[1],10) - 1, parseInt(srcDataPartenza.split("/")[0],10));
+		srcDataPartenza_ = srcDataPartenza_.getTime();
+	} catch(err) {
+		srcDataPartenza_ = Number.NaN;
+	}
+
+	var promoName = "";
+	var promoCode = "";
+	if (srcPromotion!=""){
+	    var arrPromotion = srcPromotion.split(";");
+	    for (k=0;k<arrPromotion.length;k++){
+	        //for (i = 0; i < SearchBoxPromotionsData.length; i++) {
+	        for (i = 0; i < SearchBoxItems.length; i++) {
+	            if (SearchBoxItems[i][4]==arrPromotion[k]){
+                    //promoCode += SearchBoxPromotionsData[i].Code+";";
+                    //promoName += SearchBoxPromotionsData[i].Name+";";
+                    promoCode += SearchBoxItems[i][4]+";";
+                    promoName += SearchBoxItems[i][3].replace('&#176;','')+";";
+                    //i=SearchBoxPromotionsData.length;
+	            }
+	        }
+	        
+	     }
+	}
+	$j("#search_ws_Promozione").val(promoCode);
+	
+	var search_Destinazione="";
+	search_Destinazione=srcDestinazione+";"+srcLocalita+";"+promoName;
+	arrSearchDestinazione = search_Destinazione.split(";");
+	search_Destinazione="";
+	for(i = 0; i < arrSearchDestinazione.length; i++) {
+	    if (arrSearchDestinazione[i].length>0)
+	       search_Destinazione+=arrSearchDestinazione[i]+";";
+	}
+	 $j("#search_Destinazione").val(search_Destinazione);
+	 
+	if(srcDestinazione != "") {
+		if (srcDestinazione.substring(srcDestinazione.length-1)==";"){
+			$j("#search_ws_Destinazione").val(srcDestinazione);
+		}else{
+			$j("#search_ws_Destinazione").val(srcDestinazione+";");
+		}
+	} 
+	if(srcLocalita != "") {
+	    if (srcLocalita.substring(srcLocalita.length-1)==";"){
+		    $j("#search_ws_Localita").val("");
+		    $j("#search_ws_Localita").val(srcLocalita);
+		}else{
+		    $j("#search_ws_Localita").val("");
+		    $j("#search_ws_Localita").val(srcLocalita+";");
+		}
+	}
+	
+	
+	$j("#search_Tipo").val(1);
+	
+	SetPartenze3($j("#search_Destinazione").val());
+	
+	if(!isNaN(srcDataPartenza_)) {
+		$j("#search_Data").val(FormattaData("/Date(" + srcDataPartenza_ + ")/", "gg/mm/aaaa"));
+		$j("#PopupPartenzeMesi").datepick("setDate", new Date(parseInt(srcDataPartenza.split("/")[2],10), parseInt(srcDataPartenza.split("/")[1],10) - 1, parseInt(srcDataPartenza.split("/")[0],10)));
+	}
+
+	$j("#search_Adulti").val(srcNumAdulti);
+	if(srcNumBambini && srcEtaBambini != "") {
+		$j("#search_Bambini").val(srcNumBambini);
+		SetBambini(srcNumBambini);
+		for(scrE = 0; scrE < srcEtaBambini.split("-").length; scrE++) $j("#search_Bambino" + (scrE + 1)).val(srcEtaBambini.split("-")[scrE]);
+	}
+	if(srcLuogoPartenzaCode != "") {
+		srcAeroportiNomi = [];
+		srcAeroportiCodici = [];
+
+		if(srcLuogoPartenzaCode == "ALL") {
+			srcLuogoPartenza = "Tutti gli aeroporti";
+			srcLuogoPartenzaCode = "";
+		} else {
+			srcAeroportiCodici = srcLuogoPartenzaCode.split("-");
+			var srcC, srcA;
+			for(srcC = 0; srcC < srcAeroportiCodici.length; srcC++) {
+				for(srcA = 0; srcA < IATA_airports.length; srcA++) {
+					if(srcAeroportiCodici[srcC] == IATA_airports[srcA][0]) {
+						if($j.inArray(IATA_airports[srcA][1], srcAeroportiNomi) == -1) srcAeroportiNomi.push(IATA_airports[srcA][1]);
+						break;
+					}
+				}
+			}
+			srcLuogoPartenza = srcAeroportiNomi.sort().join(", ");
+		}
+	}
+	if(srcLuogoPartenzaCode != "") $j("#search_CodiceAeroporto").val(srcLuogoPartenzaCode);
+	if(srcLuogoPartenza != "") $j("#search_Aeroporto").val(srcLuogoPartenza);
+	if($j("#search_Destinazione").val() != "" && $j("#search_Data").val() != "" && $j("#search_Data").val() != "gg/mm/aaaa") SetAeroporti($j("#search_Destinazione").val(), $j("#search_Data").val());
+	else SetAeroporti($j("#search_Destinazione").val(),$j("#search_Data").val());
+	
+	
+});
+/*]]>*/
+</script>
+
+<style type="text/css">
+/*<![CDATA[*/
+.recommendedYellow{
+
+    background: url("/images/recommendedYellow.png") no-repeat scroll 0 0 transparent;
+    float: left;
+	height: 66px;
+    left: 10px;
+    position: absolute;
+    top: -3px;
+    width: 55px;
+}
+.reccImg{
+	background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    font-size: 100%;
+    margin: 0;
+    outline: 0 none;
+    padding: 0;
+	position:relative;
+}
+.TooltipPromo {
+	display: none;
+	padding: 15px;
+	text-align: left;
+	border: 1px solid #e4e4e4;
+
+	opacity: 1.0;
+	-moz-border-radius: 6px;
+	-moz-box-shadow: 0 0 50px #000000;
+	-webkit-border-radius: 6px;
+	-webkit-box-shadow: 0 0 50px #000000;
+	border-radius: 6px;
+	box-shadow: 0 0 50px #000000;
+}
+
+
+.PriceBalloonPlaceHolder {
+	float: right;
+	height: 0px;
+	display: none;
+}
+.PriceBalloonBS {
+	position: relative;
+	float: left;
+	width: 270px;
+	height: 126px;
+	background: url(/images/balloon-small.png) no-repeat;
+	top: -60px;
+	left: -350px;
+}
+.PriceBalloonBS div {
+	font-size: 13px;
+	 margin: 0 35px;
+	line-height: 25px;
+}
+.PriceBalloon {
+	position: relative;
+	float: right;
+	width: 190px;
+	height: 126px;
+	background: url(/images/balloon-small.png) no-repeat;
+	top: -64px;
+	left: 24px;
+}
+.AccBalloon {
+	position: relative;
+	float: right;
+	width: 190px;
+	height: 126px;
+	background: url(/images/balloon-small.png) no-repeat;
+	background-size:190px 120px;
+	top: -194px;
+	left: 24px;
+}
+.PriceBalloon div {
+	font-size: 13px;
+	margin: 10px 12px;
+	line-height: 20px;
+	text-align: center;
+	z-index:1000;
+}
+
+
+/*]]>*/
+</style>
+
+<script type="text/javascript">
+/*<![CDATA[*/
+
+var srcPagina = "";
+PaginaNumero = srcPagina.isNaN ? PaginaNumero : parseInt(srcPagina);
+PaginaNumero = PaginaNumero ? PaginaNumero : 1;
+
+var srcOrdine = "";
+switch(srcOrdine) {
+case "PA":
+case "PA2":
+case "PD":
+case "SA":
+case "SD":
+	OrdineRisultati = srcOrdine;
+	break;
+default:
+	OrdineRisultati = "PA";
+}
+
+var srcFiltri = "";
+if(srcFiltri == "" && $j.bbq.getState("Filter")) srcFiltri = $j.bbq.getState("Filter");
+if(srcFiltri != "") {
+	srcFiltri = srcFiltri.split("^");
+	for(var srcF = 0; srcF < srcFiltri.length; srcF++) {
+		FiltriImpostati.push([srcFiltri[srcF].split(",")[0], srcFiltri[srcF].split(",")[1]]);
+	}
+}
+var DestinazioneVacanza = "";
+$j(function() {
+	$j("#Ordine_Risultati").val(OrdineRisultati);
+
+	//var DestinazioneVacanza = srcDestinazione != "" ? srcDestinazione : srcLocalita;
+	
+	if (srcDestinazione!=null && srcDestinazione!=""){
+	    DestinazioneVacanza = srcDestinazione + ";"
+	}
+	if ( srcLocalita!="")
+		DestinazioneVacanza  = DestinazioneVacanza + srcLocalita + ";";
+	if(DestinazioneVacanza != "" || srcLuogoPartenza != "") {
+		if(DestinazioneVacanza == "") $j("#PercorsoSelezionato").html("Da <span class=\"pink normal\">" + srcLuogoPartenza + "</span>");
+		if(srcLuogoPartenza == "") $j("#PercorsoSelezionato").html("Destinazione <span class=\"pink normal\"><h1 style=\"display:inline; font-size:13px\">" + DestinazioneVacanza + "</h1></span>");
+		if(DestinazioneVacanza != "" && srcLuogoPartenza != "") $j("#PercorsoSelezionato").html("Da <span class=\"pink normal\">" + srcLuogoPartenza + "</span> a <span class=\"pink normal\">" + DestinazioneVacanza + "</span>");
+		//if (promoName!="" && DestinazioneVacanza=="")$j("#PercorsoSelezionato").html("Destinazione <span class=\"pink normal\"><h1 style=\"display:inline; font-size:13px\">" + DestinazioneVacanza + "</h1></span>");
+		
+		
+	}
+	$j("#testoSEO").html("");
+		
+		
+	if(!isNaN(srcDataPartenza_)) $j("#DataPartenzaSelezionata").html("<strong>Partenza</strong> " + FormattaData("/Date(" + srcDataPartenza_ + ")/", "W G M aaaa") + " (+/&ndash; 7 giorni)");
+	
+	var ReturnURLWL = "/wishlist.aspx?returnUrl="+escape(location.pathname);
+		//if(ReturnURLWL.substr(ReturnURLWL.length - 1) != "/") ReturnURLWL += "/";
+		//if(PaginaNumero > 1) ReturnURLWL += (ReturnURLWL.indexOf("?") != -1 ? "&amp;" : "?") + "Pag=" + PaginaNumero;
+		//if(OrdineRisultati != "PA") ReturnURLWL += (ReturnURLWL.indexOf("?") != -1 ? "&amp;" : "?") + "Ord=" + OrdineRisultati;
+		//if(FiltriImpostati.join("^") != "") ReturnURLWL += (ReturnURLWL.indexOf("?") != -1 ? "&amp;" : "?") + "Filter=" + escape(FiltriImpostati.join("^"));
+	$j("#keepMyUpdate").attr("href", ReturnURLWL)
+	
+	$j("#keepMyUpdate").show();
+});
+/*]]>*/
+</script>
+<style media="screen" type="text/css">#DuckyPopupSWF {visibility:hidden}</style></head>
+
+<body>
+
+<div style="clear: both;
+    margin: 0 auto;
+    width: 960px;">
+<iframe style="width: 100%;height:130px;" src="http://www.edreams.it/engine/header/header-iframe.jsp?theTab=viaggi&amp;isSecure=false" frameborder="0" scrolling="no"><!----></iframe>
+</div>
+
+<div id="PageWrapper">
+
+<!-- CONTENT -->
+<form id="search_Form" action="/risultati/" method="post" name="search_Form" onsubmit="return false">
+<div id="Content">
+<!-- BREAD CRUMBS -->
+	<div id="BreadCrumbs">
+	    <div class="Briciole"><span class="Titoletto">Sei in:</span> <a href="/" title="home page">home page</a> &gt; <a href="/risultati/destinazione/Canarie/" title="Destinazioni">canarie</a> </div>
+		<div class="TestoDestro pink font12" id="NumRisultatiRicerca"><span class="font14 bold">4</span> <span class="black">risultati della tua ricerca</span></div>
+		<div class="clear"></div>
+    </div>
+<!-- /BREAD CRUMBS -->
+<!-- SEARCH BOX -->
+<div id="SearchBox">
+    <div id="SearchBoxSteps">
+        <div style="background-color: #EDEDED;
+                    border: 1px solid #CCCCCC;
+                    clear: both;
+                    display: block;
+                    margin: 0 0 0.7em;
+                    padding: 0.7em;
+                    position: relative;margin-top: 20px !important;">
+                
+					<div class="Steps Step1">
+					<table>
+					<tbody><tr><td>
+						<span class="Titolo">Dove vuoi andare?</span>
+						<table>
+						<tbody><tr>
+							
+							<td>
+							<div style="background-position: 0 0;
+                              
+                                cursor: pointer;
+                                font-family: Arial,Helvetica,Sans-Serif;
+                                height: 32px;">
+							<input id="search_Destinazione" name="search_Destinazione" class="PopupTrigger" style="width:240px;" readonly="readonly" type="text">
+							<input id="search_Tipo" name="search_Tipo" value="1" type="hidden">
+							<input id="search_ws_Destinazione" name="search_ws_Destinazione" value="Canarie;" type="hidden">
+							<input id="search_ws_Localita" name="search_ws_Localita" value="" type="hidden">
+							<input id="search_ws_Promozione" name="search_ws_Promozione" value="" type="hidden">
+							</div>
+							<div class="font10 gray" style="padding-left:25px">&nbsp;</div>
+							</td>
+							<td><img id="Img1" src="/images/ico/destination.gif" alt="Dove vuoi andare?" class="PopupTrigger" style="position:relative;top:-5px;"></td>
+						</tr>
+						</tbody></table>
+					</td><td><div style="padding-left:20px;">
+						<span class="Titolo">Quando vuoi partire?</span>
+						<table>
+						<tbody><tr>
+							<td>
+							
+							<input id="search_Data" name="search_Data" class="PopupTrigger" style="width: 90px; border-right: 1px solid #C07C25;" readonly="readonly" value="gg/mm/aaaa" type="text"></td>
+							<td><span style="height: 17px; font-size: 10px; display: block;"><img id="search_Data_Ico" src="/images/ico/calendar.gif" alt="Quando vuoi partire?" class="PopupTrigger" style="position:relative;top:-8px;left:-1px/></span></td>
+							<td class=" font8="" gray"="">
+							
+							</span></td>
+						</tr>
+						</tbody></table>
+						</div>
+						<div class="font10 gray" style="padding-left:25px">+/- 7 giorni</div>
+				</td>
+				
+				<td style="padding-left:20px">
+						<span class="Titolo">Numero di persone?</span>
+						<table>
+						<tbody><tr>
+							<td>
+								<div style="background-position: 0 0;
+                                    border-right: 1px solid #C07C25;
+                                    cursor: pointer;
+                                    font-family: Arial,Helvetica,Sans-Serif;
+                                    height: 32px;
+                                    background: url('/images/shared/home/sprite-home.png') no-repeat scroll 0 0 #FFFFFF;
+                                    border: 0 none;
+                                    width:72px;
+                                    border-right: 1px solid #C07C25;
+                                    ">
+								<select id="search_Adulti" name="search_Adulti" style="width:70px">
+									<option value="1">1</option>
+									<option value="2" selected="selected">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+								</select>
+								</div>
+								<div class="font10 gray">Adulti 18 o più</div>
+							</td>
+							<td style="padding-left: 8px;">
+								
+								<div style="background-position: 0 0;
+                                    border-right: 1px solid #C07C25;
+                                    cursor: pointer;
+                                    font-family: Arial,Helvetica,Sans-Serif;
+                                    height: 32px;
+                                    background: url('/images/shared/home/sprite-home.png') no-repeat scroll 0 0 #FFFFFF;
+                                    border: 0 none;
+                                    width:72px;
+                                    border-right: 1px solid #C07C25;">
+								<select id="search_Bambini" name="search_Bambini" style="width: 70px;" onchange="javascript: SetBambini(this.value)">
+									<option value="0" selected="selected">0</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<!--<option value="4">4</option>-->
+									<!--<option value="5">5</option>-->
+								</select>
+								</div>
+								<div class="font10 gray">Bambini 0 - 17</div>
+							</td>
+							<td id="search_Bambino1_box" style="padding-left: 8px; display: none;">
+								
+								<div style="background-position: 0 0;
+                                    border-right: 1px solid #C07C25;
+                                    cursor: pointer;
+                                    font-family: Arial,Helvetica,Sans-Serif;
+                                    height: 32px;
+                                    background: url('/images/shared/home/sprite-home.png') no-repeat scroll 0 0 #FFFFFF;
+                                    border: 0 none;
+                                    width:72px;
+                                    border-right: 1px solid #C07C25;">
+								<select id="search_Bambino1" name="search_Bambino1" style="width: 70px;">
+									<option value="-1" selected="selected"></option>
+									<option value="0">0</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+									<option value="7">7</option>
+									<option value="8">8</option>
+									<option value="9">9</option>
+									<option value="10">10</option>
+									<option value="11">11</option>
+									<option value="12">12</option>
+									<option value="13">13</option>
+									<option value="14">14</option>
+									<option value="15">15</option>
+									<option value="16">16</option>
+									<option value="17">17</option>
+								</select>
+								</div>
+								<div class="font9 gray">Età bambino 1</div>
+							</td>
+							<td id="search_Bambino2_box" style="padding-left: 8px; display: none;">
+								
+								<div style="background-position: 0 0;
+                                    border-right: 1px solid #C07C25;
+                                    cursor: pointer;
+                                    font-family: Arial,Helvetica,Sans-Serif;
+                                    height: 32px;
+                                    background: url('/images/shared/home/sprite-home.png') no-repeat scroll 0 0 #FFFFFF;
+                                    border: 0 none;
+                                    width:72px;
+                                    border-right: 1px solid #C07C25;">
+								<select id="search_Bambino2" name="search_Bambino2" style="width: 70px;">
+									<option value="-1" selected="selected"></option>
+									<option value="0">0</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+									<option value="7">7</option>
+									<option value="8">8</option>
+									<option value="9">9</option>
+									<option value="10">10</option>
+									<option value="11">11</option>
+									<option value="12">12</option>
+									<option value="13">13</option>
+									<option value="14">14</option>
+									<option value="15">15</option>
+									<option value="16">16</option>
+									<option value="17">17</option>
+								</select>
+								</div>
+								<div class="font9 gray">Età bambino 2</div>
+							</td>
+							<td id="search_Bambino3_box" style="padding-left: 8px; display: none;">
+								
+								<div style="background-position: 0 0;
+                                    border-right: 1px solid #C07C25;
+                                    cursor: pointer;
+                                    font-family: Arial,Helvetica,Sans-Serif;
+                                    height: 32px;
+                                    background: url('/images/shared/home/sprite-home.png') no-repeat scroll 0 0 #FFFFFF;
+                                    border: 0 none;
+                                    width:72px;
+                                    border-right: 1px solid #C07C25;">
+								<select id="search_Bambino3" name="search_Bambino3" style="width: 70px;">
+									<option value="-1" selected="selected"></option>
+									<option value="0">0</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+									<option value="7">7</option>
+									<option value="8">8</option>
+									<option value="9">9</option>
+									<option value="10">10</option>
+									<option value="11">11</option>
+									<option value="12">12</option>
+									<option value="13">13</option>
+									<option value="14">14</option>
+									<option value="15">15</option>
+									<option value="16">16</option>
+									<option value="17">17</option>
+								</select>
+								</div>
+								<div class="font9 gray">Età bambino 3</div>
+							</td>
+							<td id="search_Bambino4_box" style="padding-left: 8px; display: none;">
+								
+								<div style="background-position: 0 0;
+                                    border-right: 1px solid #C07C25;
+                                    cursor: pointer;
+                                    font-family: Arial,Helvetica,Sans-Serif;
+                                    height: 32px;
+                                    background: url('/images/shared/home/sprite-home.png') no-repeat scroll 0 0 #FFFFFF;
+                                    border: 0 none;
+                                    width:72px;
+                                    border-right: 1px solid #C07C25;">
+								<select id="search_Bambino4" name="search_Bambino4" style="width: 70px;">
+									<option value="-1" selected="selected"></option>
+									<option value="0">0</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+									<option value="7">7</option>
+									<option value="8">8</option>
+									<option value="9">9</option>
+									<option value="10">10</option>
+									<option value="11">11</option>
+									<option value="12">12</option>
+									<option value="13">13</option>
+									<option value="14">14</option>
+									<option value="15">15</option>
+									<option value="16">16</option>
+									<option value="17">17</option>
+								</select>
+								</div>
+								<div class="font9 gray">Età bambino 4</div>
+							</td>
+							<td id="search_Bambino5_box" style="padding-left: 8px; display: none;">
+								Età<br>
+								<div style="background-position: 0 0;
+                                    border-right: 1px solid #C07C25;
+                                    cursor: pointer;
+                                    font-family: Arial,Helvetica,Sans-Serif;
+                                    height: 32px;
+                                    background: url('/images/shared/home/sprite-home.png') no-repeat scroll 0 0 #FFFFFF;
+                                    border: 0 none;
+                                    width:72px;
+                                    border-right: 1px solid #C07C25;">
+								<select id="search_Bambino5" name="search_Bambino5" style="width: 70px;">
+									<option value="-1" selected="selected"></option>
+									<option value="0">0</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+									<option value="7">7</option>
+									<option value="8">8</option>
+									<option value="9">9</option>
+									<option value="10">10</option>
+									<option value="11">11</option>
+									<option value="12">12</option>
+									<option value="13">13</option>
+									<option value="14">14</option>
+									<option value="15">15</option>
+									<option value="16">16</option>
+									<option value="17">17</option>
+								</select>
+								</div>
+								<div class="font9 gray">bambino 5</div>
+							</td>
+						</tr>
+						</tbody></table>
+						
+						</td></tr>
+					</tbody></table>
+					</div>
+					<div class="Steps Step4">
+						<p class="Titolo">Da dove vuoi partire?</p>
+						<table style="width:100%">
+						<tbody><tr>
+						<td>
+						<div style="background-position: 0 0;
+    cursor: pointer;
+    font-family: Arial,Helvetica,Sans-Serif;
+    height: 32px;
+    background: url('/images/shared/home/sprite-home.png') no-repeat scroll 0 0 #FFFFFF;
+    border: 0 none;
+    border-right: 1px solid #C07C25;width:100px;">
+						<input id="search_Aeroporto" name="search_Aeroporto" style="width: 240px;" readonly="readonly" class="PopupTrigger" type="text"><input value="" id="search_CodiceAeroporto" name="search_CodiceAeroporto" type="hidden">
+						</div>
+						</td>
+						<td style="float:right">
+						
+						<a href="javascript:void(0)" title="Trova la tua vacanza" id="search_DoSearch" onclick="DoSearch();"><img alt="Trova la tua vacanza" src="/images/button/trova_home.png"></a>
+						</td>
+						</tr>
+						</tbody></table>
+						
+					</div>
+					
+        </div>  
+        </div>
+</div>
+
+
+
+    <div id="main">
+	<!-- LEFT CONTENT -->
+	<div id="LeftContent">
+
+
+<div style=" background-color: #FFFFFF;clear: both;color: #000000;display: none;float: left; margin: 0 0 0.7em; position: absolute;width: 177px;">
+<div style="border: 1px solid #CCCCCC;height:60px;">
+<div style="top:10px;left:8px;">
+<h3 class="pink" style="font-size:12px">
+<a class="ToolTipTrattamenti InfoTip Burgundy">
+scegli e confronta le offerte
+</a></h3>
+
+<div style="padding: 8px 5px 10px;">
+<span style="font-size:12px">
+hai aggiunto n.<span id="WishListHolder"><span class="pink bold">0</span> offerte</span>
+</span>
+<br>
+<a class="pink no-underline font12" style="background: none; padding-left: 0;" href="/wishlist" target="_top">visualizza, compara e prenota!</a>
+</div>
+</div>
+</div>
+</div>
+		<!-- FILTERS -->
+		<div id="FiltersBox" class="MostraConRisultati" style="">
+		<div style="border: 1px solid #CCCCCC;  border-bottom-left-radius: 5px;    border-bottom-right-radius: 5px; border-top-left-radius: 5px;    border-top-right-radius: 5px;">
+			<div id="FiltersBoxTop"><h3 class="pink">Filtra la tua ricerca</h3></div>
+			<div id="FiltersBoxCenter"><div class="FiltersBoxTitle FiltersBoxTitle1st"><a id="ToggleFilter1" href="javascript:void(0)" class="blue no-underline Espanso" onclick="ToggleFilter(this, 1)" style="top:0px">Nome hotel</a></div><div id="Filter1" class="FiltersBoxOptions" style="display: block;"><table style="width: 100%;"><tbody><tr><td><div style="border-right: 1px solid #C07C25;width:100px;"><input aria-haspopup="true" aria-autocomplete="list" role="textbox" autocomplete="off" class="ui-autocomplete-input" name="txtFiltroStruttura" id="txtFiltroStruttura" value="" style="width: 200px" type="text"></div></td><td><a id="btnClearFiltroHotel" href="#" class="clearCombo" onclick="return removeFilterHotel()"><img src="/images/ico/close.png" alt="Pulisci il filtro Hotel"></a></td></tr></tbody></table></div><div class="FiltersBoxTitle"><a id="ToggleFilter2" href="javascript:void(0)" class="blue no-underline Espanso" onclick="ToggleFilter(this, 2)">Località</a></div><div id="Filter2" class="FiltersBoxOptions" style="display: block;"><table style="width: 100%;"><tbody><tr><td class="vtop" style="width: 20px; padding-top: 2px;"><input name="FiltroLocalita" id="FiltroLocalita_0" value="fuerteventura" onclick="ImpostaFiltro(this.name, this.value, this.checked)" type="checkbox"></td><td>Fuerteventura</td><td class="vtop font11 right" style="padding-top: 2px;">2 Offerte</td></tr><tr><td class="vtop" style="width: 20px; padding-top: 2px;"><input name="FiltroLocalita" id="FiltroLocalita_1" value="fuerteventura-corralejo" onclick="ImpostaFiltro(this.name, this.value, this.checked)" type="checkbox"></td><td>Fuerteventura <span class="font11">(Corralejo)</span></td><td class="vtop font11 right" style="padding-top: 2px;">2 Offerte</td></tr></tbody></table></div><div id="Filter3" class="FiltersBoxOptions"><table style="width: 100%;"><tbody><tr><td class="vtop" style="width: 20px; padding-top: 2px;"><input name="FiltroDataPartenza" id="FiltroDataPartenza_0" value="20130506" onclick="ImpostaFiltro(this.name, this.value, this.checked)" type="checkbox"></td><td>06/05/2013</td><td class="vtop font11 right" style="padding-top: 2px;">4 Offerte</td></tr></tbody></table></div><div class="FiltersBoxTitle"><a id="ToggleFilter4" href="javascript:void(0)" class="blue no-underline Espanso" onclick="ToggleFilter(this, 4)">Luogo di partenza</a></div><div id="Filter4" class="FiltersBoxOptions" style="display: block;"><table style="width: 100%;"><tbody><tr><td class="vtop" style="width: 20px; padding-top: 2px;"><input name="FiltroLuogoPartenza" id="FiltroLuogoPartenza_0" value="MXP" onclick="ImpostaFiltro(this.name, this.value, this.checked)" type="checkbox"></td><td>Milano Malpensa</td><td class="vtop font11 right" style="padding-top: 2px;">3 Offerte</td></tr><tr><td class="vtop" style="width: 20px; padding-top: 2px;"><input name="FiltroLuogoPartenza" id="FiltroLuogoPartenza_1" value="VRN" onclick="ImpostaFiltro(this.name, this.value, this.checked)" type="checkbox"></td><td>Verona </td><td class="vtop font11 right" style="padding-top: 2px;">1 Offerta</td></tr></tbody></table></div><div class="FiltersBoxTitle"><a id="ToggleFilter5" href="javascript:void(0)" class="blue no-underline Espanso" onclick="ToggleFilter(this, 5)">Prezzo</a></div><div id="Filter5" class="FiltersBoxOptions" style="display: block;"><table style="width: 100%;"><tbody><tr><td class="vtop" style="width: 20px; padding-top: 2px;"><input name="FiltroPrezzo" id="FiltroPrezzo_0" value="1350|1550" onclick="ImpostaFiltro(this.name, this.value, this.checked)" type="checkbox"></td><td>€ 1.350 - € 1.550</td><td class="vtop font11 right" style="padding-top: 2px;">1 Offerta</td></tr><tr><td class="vtop" style="width: 20px; padding-top: 2px;"><input name="FiltroPrezzo" id="FiltroPrezzo_1" value="1550|1700" onclick="ImpostaFiltro(this.name, this.value, this.checked)" type="checkbox"></td><td>€ 1.550+</td><td class="vtop font11 right" style="padding-top: 2px;">2 Offerte</td></tr></tbody></table></div><div id="Filter6" class="FiltersBoxOptions"><table style="width: 100%;"><tbody><tr><td class="vtop" style="width: 20px; padding-top: 2px;"><input name="FiltroStelle" id="FiltroStelle_0" value="4" onclick="ImpostaFiltro(this.name, this.value, this.checked)" type="checkbox"></td><td>4 stelle</td><td class="vtop font11 right" style="padding-top: 2px;">4 Offerte</td></tr></tbody></table></div><div class="FiltersBoxTitle"><a id="ToggleFilter7" href="javascript:void(0)" class="blue no-underline Espanso" onclick="ToggleFilter(this, 7)">Trattamento</a></div><div id="Filter7" class="FiltersBoxOptions" style="display: block;"><table style="width: 100%;"><tbody><tr><td class="vtop" style="width: 20px; padding-top: 2px;"><input name="FiltroTrattamento" id="FiltroTrattamento_0" value="AI" onclick="ImpostaFiltro(this.name, this.value, this.checked)" type="checkbox"></td><td>All Inclusive</td><td class="vtop font11 right" style="padding-top: 2px;">2 Offerte</td></tr><tr><td class="vtop" style="width: 20px; padding-top: 2px;"><input name="FiltroTrattamento" id="FiltroTrattamento_1" value="HB" onclick="ImpostaFiltro(this.name, this.value, this.checked)" type="checkbox"></td><td>Mezza pensione bevande escluse</td><td class="vtop font11 right" style="padding-top: 2px;">2 Offerte</td></tr></tbody></table></div><div class="FiltersBoxTitle"><a id="ToggleFilter8" href="javascript:void(0)" class="blue no-underline Espanso" onclick="ToggleFilter(this, 8)">Promozione</a></div><div id="Filter8" class="FiltersBoxOptions" style="display: block;"><table style="width: 100%;"><tbody><tr><td class="vtop" style="width: 20px; padding-top: 2px;"><input name="FiltroPromozione" id="FiltroPromozione_0" value="ESTATE" onclick="ImpostaFiltro(this.name, this.value, this.checked)" type="checkbox"></td><td>Anteprima Estate</td><td class="vtop font11 right" style="padding-top: 2px;">1 Offerta</td></tr><tr><td class="vtop" style="width: 20px; padding-top: 2px;"><input name="FiltroPromozione" id="FiltroPromozione_1" value="AB" onclick="ImpostaFiltro(this.name, this.value, this.checked)" type="checkbox"></td><td>Prenota Prima</td><td class="vtop font11 right" style="padding-top: 2px;">2 Offerte</td></tr><tr><td class="vtop" style="width: 20px; padding-top: 2px;"><input name="FiltroPromozione" id="FiltroPromozione_2" value="SC" onclick="ImpostaFiltro(this.name, this.value, this.checked)" type="checkbox"></td><td>Speciale Bambini</td><td class="vtop font11 right" style="padding-top: 2px;">1 Offerta</td></tr></tbody></table></div><div id="Filter9" class="FiltersBoxOptions"><table style="width: 100%;"><tbody><tr><td class="vtop" style="width: 20px; padding-top: 2px;"><input name="FiltroTipo" id="FiltroTipo_0" value="Pacchetto" onclick="ImpostaFiltro(this.name, this.value, this.checked)" type="checkbox"></td><td>Pacchetto</td><td class="vtop font11 right" style="padding-top: 2px;">4 Offerte</td></tr></tbody></table></div><div id="Filter10" class="FiltersBoxOptions"><table style="width: 100%;"><tbody><tr><td class="vtop" style="width: 20px; padding-top: 2px;"><input name="FiltroDurata" id="FiltroDurata_0" value="7" onclick="ImpostaFiltro(this.name, this.value, this.checked)" type="checkbox"></td><td>7 notti</td><td class="vtop font11 right" style="padding-top: 2px;">4 Offerte</td></tr></tbody></table></div></div>
+			<div id="FiltersBoxBottom"></div>
+			</div>
+		</div>
+		<!-- /FILTERS -->
+	</div>
+	<!-- /LEFT CONTENT -->
+
+	<!-- RIGHT CONTENT -->
+	<div id="RightContent">
+
+		
+
+		<div style="padding: 0 4px 0 15px;">
+			<div style="float: left;">
+				<div class="font16 bold" style="margin-top: 6px; width: 420px;" id="PercorsoSelezionato">Destinazione <span class="pink normal"><h1 style="display:inline; font-size:13px">Canarie;</h1></span></div>
+				<div class="font13" id="DataPartenzaSelezionata"></div>
+				<div class="clear" style="height:5px;"></div>
+				<div class="font13" id="testoSEO" style="width:485px"></div>
+			</div>
+			<div class="ToolBox">
+				<div><a href="javascript:void(0)" onclick="self.print();" title="Stampa"><img src="/images/ico/stampa.png" alt="Stampa" height="26" width="27"></a><a href="javascript:void(0)" onclick="self.print();" class="no-underline" title="Stampa">Stampa</a></div>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+		<div class="separator" style="margin-left: 4px; margin-top: 10px; height: 2px;"></div>
+
+		<div class="MostraConRisultati" style="padding: 10px 4px 10px 5px;">
+			<div class="font13 black" style="float: left;">Ordina risultati per
+			    <div style="background-position: 0 0; border-right: 1px solid #C07C25; cursor: pointer; font-family: Arial,Helvetica,Sans-Serif; height: 32px; background: url('/images/shared/home/sprite-home.png') no-repeat scroll 0 0 #FFFFFF; border: 0 none; width:72px; border-right: 1px solid #C07C25; width:100px;">
+				<select id="Ordine_Risultati" onchange="ImpostaOrdineRisultati(this.value)">
+				<option value="PA">Seleziona</option>
+					<option value="PA2">prezzo (dal più economico al più caro)</option>
+					<option value="PD">prezzo (dal più caro al più economico)</option>
+					
+				</select>
+				</div>
+			</div>
+			<div class="font13" style="float: right; margin-right: 4px; white-space: pre;" id="Paginazione"> <span style="background: none repeat scroll 0 0 #FFCC00;color: #000000;font-weight: bold;margin: 0 0 0 0.09em;padding: 0.25em;">1</span></div>
+			<div class="clear"></div>
+		</div>
+
+		<div class="YellowMessage MostraConRisultati pink bold font20 center" style="line-height: 40px;">Questo è il prezzo finale</div>
+
+		<div class="MostraConErroreFiltri" style="display: none; margin-top: 10px; margin-left: 4px;">
+			<div class="BoxTop"><div class="BoxBottom"><div class="BoxCenter">
+				<p style="line-height: 22px; font-size: 13px; padding: 0 12px;"><strong>La tua ricerca non ha prodotto risultati</strong>, riprova togliendo alcuni filtri di ricerca.<br><a href="javascript:void(0)" onclick="javascript:AnnullaFiltri(false);">Clicca qui</a> per togliere l'ultimo filtro impostato oppure <a href="javascript:void(0)" onclick="javascript:AnnullaFiltri(true);">clicca qui</a> per togliere tutti i filtri.<br>In alternativa contatta il nostro Servizio Clienti al numero 892.244.</p>
+			</div></div></div>
+		</div>
+
+		<div class=" MostraSenzaRisultati" style="display: none; margin-top: 10px; margin-left: 4px;">
+			<div class="BoxTop"><div class="BoxBottom"><div class="BoxCenter">
+				<p style="line-height: 22px; font-size: 13px; padding: 0 12px;"><strong>La tua ricerca non ha prodotto risultati</strong>, riprova variando il numero di persone e/o la destinazione.<br>In alternativa contatta il nostro Servizio Clienti al numero 892.244.</p>
+			</div></div></div>
+		</div>
+
+		<div class=" MostraConErroreServer" style="display: none; margin-top: 10px; margin-left: 4px;">
+			<div class="BoxTop"><div class="BoxBottom"><div class="BoxCenter">
+				<p style="line-height: 22px; font-size: 13px; padding: 0 12px;"><strong>La tua ricerca non ha prodotto risultati</strong>, riprova variando il numero di persone e/o la destinazione.<br>In alternativa contatta il nostro Servizio Clienti al numero 892.244.</p>
+			</div></div></div>
+		</div>
+		
+        <div id="attesa" style="margin-top: 10px; margin-left: 184px; background-color: rgb(0, 51, 153); display: none;">
+			<div><img src="/images/logo.png"><img src="/images/loader.gif"></div>
+			
+		</div>
+		
+		 <div id="ListaRisultati">		<div class="MainBox">			<div class="MainBoxTop">				<div style="padding-left:5px;height:45px;vertical-align: middle;display: table-cell;">					<h2 class="blue">1. AMBAR BEACH RESORT &amp; SPA <img src="/images/ico/star.png" alt="4 stelle" height="13" width="14"><img src="/images/ico/star.png" alt="4 stelle" height="13" width="14"><img src="/images/ico/star.png" alt="4 stelle" height="13" width="14"><img src="/images/ico/star.png" alt="4 stelle" height="13" width="14"></h2>					<h3 class="blue">Fuerteventura, Canarie</h3>				</div>			</div>			<div class="MainBoxCenterYellow">				<div class="Info1">					<div class="reccImg"><small class="recommendedYellow"></small><img src="http://www.yallayalla.it/offersImages/ambar-beach-resort---spa/ambar-beach-resort---spa_2.jpg" alt="AMBAR BEACH RESORT &amp; SPA 4 stelle, 7 notti, Fuerteventura, Canarie" height="102" width="198"></div>					<table class="ToolBox">					<tbody><tr>						<td><a href="void(0);" onclick="popUpGallery('http://yalla.smugmug.com/photos/swfpopup.mg?AlbumID=15311912&amp;AlbumKey=QQ2jY');return false;" title="Guarda la galleria fotografica"><img src="/images/ico/foto.png" alt="Guarda la galleria fotografica" height="26" width="27"></a></td>						<td><a href="void(0);" onclick="popUpGallery('http://yalla.smugmug.com/photos/swfpopup.mg?AlbumID=15311912&amp;AlbumKey=QQ2jY');return false;" class="black" title="Guarda la galleria fotografica">Guarda la galleria fotografica</a></td>					</tr>					<tr>						<td><a id="wlLink1_1" href="javascript:void(0)" onclick="ToggleWishList(0, 1);" title="aggiungi e confronta le offerte lista dei desideri"><img id="wlImg_1" src="/images/ico/wishlist_add.png" alt="aggiungi e confronta le offerte lista dei desideri" height="26" width="27"></a></td>						<td><span id="wlCheckMark_1" style="display:none"><img src="/images/checkmarkblue.jpg" alt="rimuovi"><span class="pink font12 bold">aggiunta</span></span> <a id="wlLink2_1" href="javascript:void(0)" onclick="ToggleWishList(0, 1);" class="black" title="aggiungi e confronta le offerte lista dei desideri">aggiungi e confronta le offerte</a></td>					</tr>					</tbody></table>				</div>				<div class="Info2" style="width:420px">					<p>Trattamento <span class="bold pink"><a class="ToolTipTrattamenti InfoTip pink" href="javascript:void(0)">All Inclusive</a></span></p>					<p>Partenze da<span class="bold pink"> Milano Malpensa</span></p>					<p>Partenze il <span class="bold pink">6 maggio</span></p>				</div>				<div class="contenitore_prezzo">					<div class="BoxPrice" onmouseover="MostraBalloon(1)" onmouseout="NascondiBalloon(1)">							<div style="padding: 3px 16px 8px;">								<p class="font11" style="line-height: 16px;">Volo + Trasferimento + Soggiorno <br>7 notti - 2 adulti in 1 doppia + Costi accessori</p><table align="right"><tbody><tr><td style="width:120px;line-height: 22px;" class="font12 bold">Prezzo per persona</td><td class="font19 pink bold" style="text-align:right;">€ 676</td></tr><tr><td style="line-height: 25px;" class="font12">Prezzo totale</td><td style="text-align:right;">€ 1.352 <font class="gray font10">anzichè</font>  <font class="gray font11"><strike>1.380</strike></font></td></tr></tbody></table>								<div class="promozione font11" style="line-height: 16px;">					<span class="EtichettaPromozioni" style="background-color: #FF9900;color: #ffffff;">Anteprima Estate</span></div>							</div>							<div style="padding: 8px 16px 0;text-align:left;">								<p class="font15 bold pink">Sconto weekend</p>							</div><div style="padding: 8px 16px 0;text-align:left;"><p><span class="ToolTipCarburante InfoTip"><img src="/images/risultati/adeguamento.png"></span></p></div>					</div>					<div class="clear"></div>					<a href="/dettaglio.aspx?Dest=Canarie&amp;City=&amp;Data=&amp;Aerop=&amp;Adulti=2&amp;Bambini=&amp;EtaBambini=&amp;Durata=7&amp;Sel=2570363&amp;Pacchetti=2570363&amp;Packages=2570363&amp;ReturnURL=/risultati/destinazione/Canarie/" onclick="LoadOffer(0, '/dettaglio.aspx?Dest=Canarie&amp;City=&amp;Data=&amp;Aerop=&amp;Adulti=2&amp;Bambini=&amp;EtaBambini=&amp;Durata=7&amp;Sel=2570363&amp;Pacchetti=2570363&amp;Packages=2570363&amp;ReturnURL=/risultati/destinazione/Canarie/')">					<img type="image" id="VediDettagli1" src="/images/button/vedi_maggiori_dettaglibs.png" style="width: 207px; height: 29px;padding-top:5px;" title="Vedi maggiori dettagli per AMBAR BEACH RESORT &amp; SPA 4 stelle, 7 notti, Fuerteventura, Canarie" alt="Vedi maggiori dettagli per AMBAR BEACH RESORT &amp; SPA 4 stelle, 7 notti, Fuerteventura, Canarie">				</a>&nbsp;&nbsp;&nbsp;				</div>				<div class="clear"></div>			</div>		</div>		<div class="MainBox">			<div class="MainBoxTop">				<div style="padding-left:5px;height:45px;vertical-align: middle;display: table-cell;">					<h2 class="blue">2. AMBAR BEACH RESORT &amp; SPA <img src="/images/ico/star.png" alt="4 stelle" height="13" width="14"><img src="/images/ico/star.png" alt="4 stelle" height="13" width="14"><img src="/images/ico/star.png" alt="4 stelle" height="13" width="14"><img src="/images/ico/star.png" alt="4 stelle" height="13" width="14"></h2>					<h3 class="blue">Fuerteventura, Canarie</h3>				</div>			</div>			<div class="MainBoxCenter">				<div class="Info1">					<div><img src="http://www.yallayalla.it/offersImages/ambar-beach-resort---spa/ambar-beach-resort---spa_1.jpg" alt="AMBAR BEACH RESORT &amp; SPA 4 stelle, 7 notti, Fuerteventura, Canarie" height="102" width="198"></div>					<table class="ToolBox">					<tbody><tr>						<td><a href="void(0);" onclick="popUpGallery('http://yalla.smugmug.com/photos/swfpopup.mg?AlbumID=15311912&amp;AlbumKey=QQ2jY');return false;" title="Guarda la galleria fotografica"><img src="/images/ico/foto.png" alt="Guarda la galleria fotografica" height="26" width="27"></a></td>						<td><a href="void(0);" onclick="popUpGallery('http://yalla.smugmug.com/photos/swfpopup.mg?AlbumID=15311912&amp;AlbumKey=QQ2jY');return false;" class="black" title="Guarda la galleria fotografica">Guarda la galleria fotografica</a></td>					</tr>					<tr>						<td><a id="wlLink1_2" href="javascript:void(0)" onclick="ToggleWishList(1, 2);" title="aggiungi e confronta le offerte lista dei desideri"><img id="wlImg_2" src="/images/ico/wishlist_add.png" alt="aggiungi e confronta le offerte lista dei desideri" height="26" width="27"></a></td>						<td><span id="wlCheckMark_2" style="display:none"><img src="/images/checkmarkblue.jpg" alt="rimuovi"><span class="pink font12 bold">aggiunta</span></span> <a id="wlLink2_2" href="javascript:void(0)" onclick="ToggleWishList(1, 2);" class="black" title="aggiungi e confronta le offerte lista dei desideri">aggiungi e confronta le offerte</a></td>					</tr>					</tbody></table>				</div>				<div class="Info2" style="width:420px">					<p>Trattamento <span class="bold pink"><a class="ToolTipTrattamenti InfoTip pink" href="javascript:void(0)">All Inclusive</a></span></p>					<p>Partenze da<span class="bold pink"> Milano Malpensa</span></p>					<p>Partenze il <span class="bold pink">6 maggio</span></p>				</div>				<div class="contenitore_prezzo">					<div class="BoxPrice" onmouseover="MostraBalloon(2)" onmouseout="NascondiBalloon(2)">							<div style="padding: 3px 16px 8px;">								<p class="font11" style="line-height: 16px;">Volo + Trasferimento + Soggiorno <br>7 notti - 2 adulti in 1 doppia + Costi accessori</p><table align="right"><tbody><tr><td style="width:120px;line-height: 22px;" class="font12 bold">Prezzo per persona</td><td class="font19 pink bold" style="text-align:right;">€ 783</td></tr><tr><td style="line-height: 25px;" class="font12">Prezzo totale</td><td style="text-align:right;">€ 1.566 <font class="gray font10">anzichè</font>  <font class="gray font11"><strike>1.598</strike></font></td></tr></tbody></table>								<div class="promozione font11" style="line-height: 16px;">					<span class="EtichettaPromozioni" style="background-color: #009953;color: #ffffff;">Speciale Bambini</span></div>							</div>							<div style="padding: 8px 16px 0;text-align:left;">								<p class="font15 bold pink">Sconto weekend</p>							</div><div style="padding: 8px 16px 0;text-align:left;"><p><span class="ToolTipCarburante InfoTip"><img src="/images/risultati/adeguamento.png"></span></p></div>					</div>					<div class="clear"></div>					<a href="/dettaglio.aspx?Dest=Canarie&amp;City=&amp;Data=&amp;Aerop=&amp;Adulti=2&amp;Bambini=&amp;EtaBambini=&amp;Durata=7&amp;Sel=2570150&amp;Pacchetti=2570150&amp;Packages=2570150&amp;ReturnURL=/risultati/destinazione/Canarie/" onclick="LoadOffer(1, '/dettaglio.aspx?Dest=Canarie&amp;City=&amp;Data=&amp;Aerop=&amp;Adulti=2&amp;Bambini=&amp;EtaBambini=&amp;Durata=7&amp;Sel=2570150&amp;Pacchetti=2570150&amp;Packages=2570150&amp;ReturnURL=/risultati/destinazione/Canarie/')">					<img type="image" id="VediDettagli2" src="/images/button/vedi_maggiori_dettagli.png" style="width: 207px; height: 29px;padding-top:5px;" title="Vedi maggiori dettagli per AMBAR BEACH RESORT &amp; SPA 4 stelle, 7 notti, Fuerteventura, Canarie" alt="Vedi maggiori dettagli per AMBAR BEACH RESORT &amp; SPA 4 stelle, 7 notti, Fuerteventura, Canarie">				</a>&nbsp;&nbsp;&nbsp;				</div>				<div class="clear"></div>			</div>		</div>		<div class="MainBox">			<div class="MainBoxTop">				<div style="padding-left:5px;height:45px;vertical-align: middle;display: table-cell;">					<h2 class="blue">3. ATLANTIS DUNAPARK HOTEL <img src="/images/ico/star.png" alt="4 stelle" height="13" width="14"><img src="/images/ico/star.png" alt="4 stelle" height="13" width="14"><img src="/images/ico/star.png" alt="4 stelle" height="13" width="14"><img src="/images/ico/star.png" alt="4 stelle" height="13" width="14"></h2>					<h3 class="blue">Fuerteventura (Corralejo), Canarie</h3>				</div>			</div>			<div class="MainBoxCenter">				<div class="Info1">					<div><img src="http://www.yallayalla.it/offersImages/141_atlantis-dunapark-hotel/4371atlantis-dunapark-hotel_1.jpg" alt="ATLANTIS DUNAPARK HOTEL 4 stelle, 7 notti, Fuerteventura, Canarie" height="102" width="198"></div>					<table class="ToolBox">					<tbody><tr>						<td><a href="void(0);" onclick="popUpGallery('http://yalla.smugmug.com/photos/swfpopup.mg?AlbumID=20782756&amp;AlbumKey=tsG7HW');return false;" title="Guarda la galleria fotografica"><img src="/images/ico/foto.png" alt="Guarda la galleria fotografica" height="26" width="27"></a></td>						<td><a href="void(0);" onclick="popUpGallery('http://yalla.smugmug.com/photos/swfpopup.mg?AlbumID=20782756&amp;AlbumKey=tsG7HW');return false;" class="black" title="Guarda la galleria fotografica">Guarda la galleria fotografica</a></td>					</tr>					<tr>						<td><a id="wlLink1_3" href="javascript:void(0)" onclick="ToggleWishList(2, 3);" title="aggiungi e confronta le offerte lista dei desideri"><img id="wlImg_3" src="/images/ico/wishlist_add.png" alt="aggiungi e confronta le offerte lista dei desideri" height="26" width="27"></a></td>						<td><span id="wlCheckMark_3" style="display:none"><img src="/images/checkmarkblue.jpg" alt="rimuovi"><span class="pink font12 bold">aggiunta</span></span> <a id="wlLink2_3" href="javascript:void(0)" onclick="ToggleWishList(2, 3);" class="black" title="aggiungi e confronta le offerte lista dei desideri">aggiungi e confronta le offerte</a></td>					</tr>					</tbody></table>				</div>				<div class="Info2" style="width:420px">					<p>Trattamento <span class="bold pink"><a class="ToolTipTrattamenti InfoTip pink" href="javascript:void(0)">Mezza pensione bevande escluse</a></span></p>					<p>Partenze da<span class="bold pink"> Milano Malpensa</span></p>					<p>Partenze il <span class="bold pink">6 maggio</span></p><p>Tipologia <span class="bold pink">Camera Vista Piscina o Giardino</span></p>				</div>				<div class="contenitore_prezzo">					<div class="BoxPrice" onmouseover="MostraBalloon(3)" onmouseout="NascondiBalloon(3)">							<div style="padding: 3px 16px 8px;">								<p class="font11" style="line-height: 16px;">Volo + Trasferimento + Soggiorno <br>7 notti - 2 adulti in 1 doppia + Costi accessori</p><table align="right"><tbody><tr><td style="width:120px;line-height: 22px;" class="font12 bold">Prezzo per persona</td><td class="font19 pink bold" style="text-align:right;">€ 806</td></tr><tr><td style="line-height: 25px;" class="font12">Prezzo totale</td><td style="text-align:right;">€ 1.611 <font class="gray font10">anzichè</font>  <font class="gray font11"><strike>1.644</strike></font></td></tr></tbody></table>								<div class="promozione font11" style="line-height: 16px;">					<span class="EtichettaPromozioni" style="background-color: #ffba00;color: #ffffff;">Prenota Prima</span></div>							</div>							<div style="padding: 8px 16px 0;text-align:left;">								<p class="font15 bold pink">Sconto weekend</p>							</div><div style="padding: 8px 16px 0;text-align:left;"><p><span class="ToolTipCarburante InfoTip"><img src="/images/risultati/adeguamento.png"></span></p></div>					</div>					<div class="clear"></div>					<a href="/dettaglio.aspx?Dest=Canarie&amp;City=&amp;Data=&amp;Aerop=&amp;Adulti=2&amp;Bambini=&amp;EtaBambini=&amp;Durata=7&amp;Sel=2746578&amp;Pacchetti=2746578&amp;Packages=2746578&amp;ReturnURL=/risultati/destinazione/Canarie/" onclick="LoadOffer(2, '/dettaglio.aspx?Dest=Canarie&amp;City=&amp;Data=&amp;Aerop=&amp;Adulti=2&amp;Bambini=&amp;EtaBambini=&amp;Durata=7&amp;Sel=2746578&amp;Pacchetti=2746578&amp;Packages=2746578&amp;ReturnURL=/risultati/destinazione/Canarie/')">					<img type="image" id="VediDettagli3" src="/images/button/vedi_maggiori_dettagli.png" style="width: 207px; height: 29px;padding-top:5px;" title="Vedi maggiori dettagli per ATLANTIS DUNAPARK HOTEL 4 stelle, 7 notti, Fuerteventura, Canarie" alt="Vedi maggiori dettagli per ATLANTIS DUNAPARK HOTEL 4 stelle, 7 notti, Fuerteventura, Canarie">				</a>&nbsp;&nbsp;&nbsp;				</div>				<div class="clear"></div>			</div>		</div>		<div class="MainBox">			<div class="MainBoxTop">				<div style="padding-left:5px;height:45px;vertical-align: middle;display: table-cell;">					<h2 class="blue">4. ATLANTIS DUNAPARK HOTEL <img src="/images/ico/star.png" alt="4 stelle" height="13" width="14"><img src="/images/ico/star.png" alt="4 stelle" height="13" width="14"><img src="/images/ico/star.png" alt="4 stelle" height="13" width="14"><img src="/images/ico/star.png" alt="4 stelle" height="13" width="14"></h2>					<h3 class="blue">Fuerteventura (Corralejo), Canarie</h3>				</div>			</div>			<div class="MainBoxCenter">				<div class="Info1">					<div><img src="http://www.yallayalla.it/offersImages/141_atlantis-dunapark-hotel/6982atlantis-dunapark-hotel_2.jpg" alt="ATLANTIS DUNAPARK HOTEL 4 stelle, 7 notti, Fuerteventura, Canarie" height="102" width="198"></div>					<table class="ToolBox">					<tbody><tr>						<td><a href="void(0);" onclick="popUpGallery('http://yalla.smugmug.com/photos/swfpopup.mg?AlbumID=20782756&amp;AlbumKey=tsG7HW');return false;" title="Guarda la galleria fotografica"><img src="/images/ico/foto.png" alt="Guarda la galleria fotografica" height="26" width="27"></a></td>						<td><a href="void(0);" onclick="popUpGallery('http://yalla.smugmug.com/photos/swfpopup.mg?AlbumID=20782756&amp;AlbumKey=tsG7HW');return false;" class="black" title="Guarda la galleria fotografica">Guarda la galleria fotografica</a></td>					</tr>					<tr>						<td><a id="wlLink1_4" href="javascript:void(0)" onclick="ToggleWishList(3, 4);" title="aggiungi e confronta le offerte lista dei desideri"><img id="wlImg_4" src="/images/ico/wishlist_add.png" alt="aggiungi e confronta le offerte lista dei desideri" height="26" width="27"></a></td>						<td><span id="wlCheckMark_4" style="display:none"><img src="/images/checkmarkblue.jpg" alt="rimuovi"><span class="pink font12 bold">aggiunta</span></span> <a id="wlLink2_4" href="javascript:void(0)" onclick="ToggleWishList(3, 4);" class="black" title="aggiungi e confronta le offerte lista dei desideri">aggiungi e confronta le offerte</a></td>					</tr>					</tbody></table>				</div>				<div class="Info2" style="width:420px">					<p>Trattamento <span class="bold pink"><a class="ToolTipTrattamenti InfoTip pink" href="javascript:void(0)">Mezza pensione bevande escluse</a></span></p>					<p>Partenze da<span class="bold pink"> Verona </span></p>					<p>Partenze il <span class="bold pink">6 maggio</span></p><p>Tipologia <span class="bold pink">Camera Vista Piscina o Giardino</span></p>				</div>				<div class="contenitore_prezzo">					<div class="BoxPrice" onmouseover="MostraBalloon(4)" onmouseout="NascondiBalloon(4)">							<div style="padding: 3px 16px 8px;">								<p class="font11" style="line-height: 16px;">Volo + Trasferimento + Soggiorno <br>7 notti - 2 adulti in 1 doppia + Costi accessori</p><table align="right"><tbody><tr><td style="width:120px;line-height: 22px;" class="font12 bold">Prezzo per persona</td><td class="font19 pink bold" style="text-align:right;">€ 833</td></tr><tr><td style="line-height: 25px;" class="font12">Prezzo totale</td><td style="text-align:right;">€ 1.666 <font class="gray font10">anzichè</font>  <font class="gray font11"><strike>1.700</strike></font></td></tr></tbody></table>								<div class="promozione font11" style="line-height: 16px;">					<span class="EtichettaPromozioni" style="background-color: #ffba00;color: #ffffff;">Prenota Prima</span></div>							</div>							<div style="padding: 8px 16px 0;text-align:left;">								<p class="font15 bold pink">Sconto weekend</p>							</div><div style="padding: 8px 16px 0;text-align:left;"><p><span class="ToolTipCarburante InfoTip"><img src="/images/risultati/adeguamento.png"></span></p></div>					</div>					<div class="clear"></div>					<a href="/dettaglio.aspx?Dest=Canarie&amp;City=&amp;Data=&amp;Aerop=&amp;Adulti=2&amp;Bambini=&amp;EtaBambini=&amp;Durata=7&amp;Sel=2746603&amp;Pacchetti=2746603&amp;Packages=2746603&amp;ReturnURL=/risultati/destinazione/Canarie/" onclick="LoadOffer(3, '/dettaglio.aspx?Dest=Canarie&amp;City=&amp;Data=&amp;Aerop=&amp;Adulti=2&amp;Bambini=&amp;EtaBambini=&amp;Durata=7&amp;Sel=2746603&amp;Pacchetti=2746603&amp;Packages=2746603&amp;ReturnURL=/risultati/destinazione/Canarie/')">					<img type="image" id="VediDettagli4" src="/images/button/vedi_maggiori_dettagli.png" style="width: 207px; height: 29px;padding-top:5px;" title="Vedi maggiori dettagli per ATLANTIS DUNAPARK HOTEL 4 stelle, 7 notti, Fuerteventura, Canarie" alt="Vedi maggiori dettagli per ATLANTIS DUNAPARK HOTEL 4 stelle, 7 notti, Fuerteventura, Canarie">				</a>&nbsp;&nbsp;&nbsp;				</div>				<div class="clear"></div>			</div>		</div></div>
+
+		
+		
+		<div class="clear"></div>
+
+		<div class="MostraConRisultati" style="padding: 10px 4px 0px 15px;">
+			<div class="font13" style="float: right; margin-right: 4px; white-space: pre;" id="PaginazioneBottom"> <span style="background: none repeat scroll 0 0 #FFCC00;color: #000000;font-weight: bold;margin: 0 0 0 0.09em;padding: 0.25em;">1</span></div>
+			<div class="clear"></div>
+		</div>
+	</div>
+	<!-- /RIGHT CONTENT -->
+
+	<div class="clear"></div>
+	</div>
+</div>
+</form>
+<!-- /CONTENT -->
+
+
+<div style="clear: both;
+    margin: 0 auto;
+    width: 960px;">
+<iframe style="width: 100%; height:175px;" src="http://www.edreams.it/engine/footer/footer-iframe.jsp?isSecure=false" frameborder="0" scrolling="no"><!----></iframe>
+</div>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-33460751-1']);
+  
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+
+
+	_gaq.push(['_trackPageview']); 
+
+
+
+</script>
+
+</div>
+
+<!-- SEARCH BOX POPUP -->
+<div class="Popup" id="PopupDestinazioni" style="z-index:99999">
+	<div class="PopupFumetto" style="width:630px">
+		<img src="/images/balloon-callout.png" alt="" style="position: absolute; left: -23px; top: 24px;" height="51" width="23">
+		<img class="PopupClose" src="/images/ico/close.png" alt="Chiudi" height="17" width="17">
+		<div id="PopupDestinazioniWrapper"><div id="layMaxDest" class="font13" style="color: #0489CB;font-weight: bold;" align="center">Puoi selezionare fino a 3 destinazioni</div><div style="float:right"><a href="javascript:void(0)" title="Vai" id="search_Go_TopPopup" onclick="ChiudiDestinazioni();"><img src="/images/button/vai.png" alt="Vai" height="31" width="62"></a></div><h1><img src="/images/ico/popup/cliccate.png" style="position: relative; top: 7px;" alt="Le più cliccate" height="30" width="28"> Le più cliccate</h1><div style="width: 630px; margin-left: 0px;"><table style="width: 100%;"><tbody><tr><td width="20%"><input id="cbpnl00" value="Sharm el Sheikh" onclick="SetLocalita('Sharm el Sheikh','Sharm el Sheikh','cbpnl00','hlink','hl00')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetLocalita('Sharm el Sheikh','Sharm el Sheikh','cbpnl00','hlink','hl00');" id="hl00">Sharm el Sheikh</a></td><td width="20%"><input id="cbpnl01" value="Turchia" onclick="SetDestinazione('Turchia','Turchia','cbpnl01','hlink','hl01')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Turchia','Turchia','cbpnl01','hlink','hl01');" id="hl01">Turchia</a></td><td width="20%"><input id="cbpnl02" value="Canarie" onclick="SetDestinazione('Canarie','Canarie','cbpnl02','hlink','hl02')" checked="checked" type="checkbox">&nbsp;<a href="javascript:void(0)" style="color:#003399" onclick="SetDestinazione('Canarie','Canarie','cbpnl02','hlink','hl02');" id="hl02">Canarie</a></td><td width="20%"><input id="cbpnl03" value="Marsa Alam" onclick="SetLocalita('Marsa Alam','Marsa Alam','cbpnl03','hlink','hl03')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetLocalita('Marsa Alam','Marsa Alam','cbpnl03','hlink','hl03');" id="hl03">Marsa Alam</a></td><td width="20%"><input id="cbpnl04" value="Tunisia" onclick="SetDestinazione('Tunisia','Tunisia','cbpnl04','hlink','hl04')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Tunisia','Tunisia','cbpnl04','hlink','hl04');" id="hl04">Tunisia</a></td></tr><tr><td width="20%"><input id="cbpnl05" value="Grecia" onclick="SetDestinazione('Grecia','Grecia','cbpnl05','hlink','hl05')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Grecia','Grecia','cbpnl05','hlink','hl05');" id="hl05">Grecia</a></td><td width="20%"><input id="cbpnl06" value="Creta" onclick="SetLocalita('Creta','Creta','cbpnl06','hlink','hl06')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetLocalita('Creta','Creta','cbpnl06','hlink','hl06');" id="hl06">Creta</a></td><td width="20%"><input id="cbpnl07" value="Repubblica Dominicana" onclick="SetDestinazione('Repubblica Dominicana','Repubblica Dominicana','cbpnl07','hlink','hl07')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Repubblica Dominicana','Repubblica Dominicana','cbpnl07','hlink','hl07');" id="hl07">Repubblica Dominicana</a></td><td width="20%"><input id="cbpnl08" value="Maiorca" onclick="SetLocalita('Maiorca','Maiorca','cbpnl08','hlink','hl08')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetLocalita('Maiorca','Maiorca','cbpnl08','hlink','hl08');" id="hl08">Maiorca</a></td><td width="20%"><input id="cbpnl09" value="Capo Verde" onclick="SetDestinazione('Capo Verde','Capo Verde','cbpnl09','hlink','hl09')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Capo Verde','Capo Verde','cbpnl09','hlink','hl09');" id="hl09">Capo Verde</a></td></tr><tr></tr></tbody></table></div><div class="dot-separator" style="height: 1px; margin: 12px 16px 4px 32px;"></div><h1><img src="/images/ico/popup/paperella.png" style="position: relative; top: 7px;" alt="Promozioni" height="30" width="28"> Promozioni</h1><div style="width: 630px; margin-left: 0px;"><table style="width: 100%;"><tbody><tr><td width="25%"><input id="cbpnl110" value="Lastminute" onclick="SetPromotion('LM','Lastminute','cbpnl110','hlink','hl110')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetPromotion('LM','Lastminute','cbpnl110','hlink','hl110');" id="hl110">Lastminute</a></td><td width="25%"><input id="cbpnl111" value="Speciale Tour" onclick="SetPromotion('TOUR','Speciale Tour','cbpnl111','hlink','hl111')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetPromotion('TOUR','Speciale Tour','cbpnl111','hlink','hl111');" id="hl111">Speciale Tour</a></td><td width="25%"><input id="cbpnl112" value="Speciale Bambini" onclick="SetPromotion('SC','Speciale Bambini','cbpnl112','hlink','hl112')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetPromotion('SC','Speciale Bambini','cbpnl112','hlink','hl112');" id="hl112">Speciale Bambini</a></td><td width="25%"><input id="cbpnl113" value="Prenota Prima" onclick="SetPromotion('AB','Prenota Prima','cbpnl113','hlink','hl113')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetPromotion('AB','Prenota Prima','cbpnl113','hlink','hl113');" id="hl113">Prenota Prima</a></td></tr><tr></tr></tbody></table></div><div class="dot-separator" style="height: 1px; margin: 12px 16px 4px 32px;"></div><h1><img src="/images/ico/popup/mare1.png" style="position: relative; top: 7px;" alt="Egitto e Mar Rosso" height="30" width="28"> Egitto e Mar Rosso</h1><div style="width: 630px; margin-left: 0px;"><table style="width: 100%;"><tbody><tr><td width="20%"><input id="cbpnl214" value="Sharm el Sheikh" onclick="SetLocalita('Sharm el Sheikh','Sharm el Sheikh','cbpnl214','hlink','hl214')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetLocalita('Sharm el Sheikh','Sharm el Sheikh','cbpnl214','hlink','hl214');" id="hl214">Sharm el Sheikh</a></td><td width="20%"><input id="cbpnl215" value="Berenice" onclick="SetLocalita('Berenice','Berenice','cbpnl215','hlink','hl215')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetLocalita('Berenice','Berenice','cbpnl215','hlink','hl215');" id="hl215">Berenice</a></td><td width="20%"><input id="cbpnl216" value="Marsa Alam" onclick="SetLocalita('Marsa Alam','Marsa Alam','cbpnl216','hlink','hl216')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetLocalita('Marsa Alam','Marsa Alam','cbpnl216','hlink','hl216');" id="hl216">Marsa Alam</a></td><td width="20%"><input id="cbpnl217" value="Dahab" onclick="SetLocalita('Dahab','Dahab','cbpnl217','hlink','hl217')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetLocalita('Dahab','Dahab','cbpnl217','hlink','hl217');" id="hl217">Dahab</a></td><td width="20%"><input id="cbpnl218" value="El Quseir" onclick="SetLocalita('El Quseir','El Quseir','cbpnl218','hlink','hl218')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetLocalita('El Quseir','El Quseir','cbpnl218','hlink','hl218');" id="hl218">El Quseir</a></td></tr><tr><td width="20%"><input id="cbpnl219" value="Hurghada" onclick="SetLocalita('Hurghada','Hurghada','cbpnl219','hlink','hl219')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetLocalita('Hurghada','Hurghada','cbpnl219','hlink','hl219');" id="hl219">Hurghada</a></td><td width="20%"><input id="cbpnl220" value="Taba" onclick="SetLocalita('Taba','Taba','cbpnl220','hlink','hl220')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetLocalita('Taba','Taba','cbpnl220','hlink','hl220');" id="hl220">Taba</a></td><td width="20%"><input id="cbpnl221" value="Crociera sul Nilo" onclick="SetLocalita('Crociera sul Nilo','Crociera sul Nilo','cbpnl221','hlink','hl221')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetLocalita('Crociera sul Nilo','Crociera sul Nilo','cbpnl221','hlink','hl221');" id="hl221">Crociera sul Nilo</a></td><td width="20%"><input id="cbpnl222" value="Marsa Matrouh" onclick="SetLocalita('Marsa Matrouh','Marsa Matrouh','cbpnl222','hlink','hl222')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetLocalita('Marsa Matrouh','Marsa Matrouh','cbpnl222','hlink','hl222');" id="hl222">Marsa Matrouh</a></td><td width="20%"><input id="cbpnl223" value="El Alamein" onclick="SetLocalita('El Alamein','El Alamein','cbpnl223','hlink','hl223')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetLocalita('El Alamein','El Alamein','cbpnl223','hlink','hl223');" id="hl223">El Alamein</a></td></tr><tr></tr></tbody></table></div><div class="dot-separator" style="height: 1px; margin: 12px 16px 4px 32px;"></div><h1><img src="/images/ico/popup/mare2.png" style="position: relative; top: 7px;" alt="Mediterraneo" height="30" width="28"> Mediterraneo</h1><div style="width: 630px; margin-left: 0px;"><table style="width: 100%;"><tbody><tr><td width="20%"><input id="cbpnl324" value="Antalya" onclick="SetLocalita('Antalya','Antalya','cbpnl324','hlink','hl324')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetLocalita('Antalya','Antalya','cbpnl324','hlink','hl324');" id="hl324">Antalya</a></td><td width="20%"><input id="cbpnl325" value="Baleari" onclick="SetDestinazione('Baleari','Baleari','cbpnl325','hlink','hl325')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Baleari','Baleari','cbpnl325','hlink','hl325');" id="hl325">Baleari</a></td><td width="20%"><input id="cbpnl326" value="Bodrum" onclick="SetLocalita('Bodrum','Bodrum','cbpnl326','hlink','hl326')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetLocalita('Bodrum','Bodrum','cbpnl326','hlink','hl326');" id="hl326">Bodrum</a></td><td width="20%"><input id="cbpnl327" value="Corfù" onclick="SetLocalita('Corfù','Corfù','cbpnl327','hlink','hl327')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetLocalita('Corfù','Corfù','cbpnl327','hlink','hl327');" id="hl327">Corfù</a></td><td width="20%"><input id="cbpnl328" value="Cipro" onclick="SetDestinazione('Cipro','Cipro','cbpnl328','hlink','hl328')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Cipro','Cipro','cbpnl328','hlink','hl328');" id="hl328">Cipro</a></td></tr><tr><td width="20%"><input id="cbpnl329" value="Creta" onclick="SetLocalita('Creta','Creta','cbpnl329','hlink','hl329')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetLocalita('Creta','Creta','cbpnl329','hlink','hl329');" id="hl329">Creta</a></td><td width="20%"><input id="cbpnl330" value="Formentera" onclick="SetLocalita('Formentera','Formentera','cbpnl330','hlink','hl330')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetLocalita('Formentera','Formentera','cbpnl330','hlink','hl330');" id="hl330">Formentera</a></td><td width="20%"><input id="cbpnl331" value="Ibiza" onclick="SetLocalita('Ibiza','Ibiza','cbpnl331','hlink','hl331')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetLocalita('Ibiza','Ibiza','cbpnl331','hlink','hl331');" id="hl331">Ibiza</a></td><td width="20%"><input id="cbpnl332" value="Ios" onclick="SetLocalita('Ios','Ios','cbpnl332','hlink','hl332')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetLocalita('Ios','Ios','cbpnl332','hlink','hl332');" id="hl332">Ios</a></td><td width="20%"><input id="cbpnl333" value="Kos" onclick="SetLocalita('Kos','Kos','cbpnl333','hlink','hl333')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetLocalita('Kos','Kos','cbpnl333','hlink','hl333');" id="hl333">Kos</a></td></tr><tr><td width="20%"><input id="cbpnl334" value="Maiorca" onclick="SetLocalita('Maiorca','Maiorca','cbpnl334','hlink','hl334')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetLocalita('Maiorca','Maiorca','cbpnl334','hlink','hl334');" id="hl334">Maiorca</a></td><td width="20%"><input id="cbpnl335" value="Minorca" onclick="SetLocalita('Minorca','Minorca','cbpnl335','hlink','hl335')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetLocalita('Minorca','Minorca','cbpnl335','hlink','hl335');" id="hl335">Minorca</a></td><td width="20%"><input id="cbpnl336" value="Malta" onclick="SetDestinazione('Malta','Malta','cbpnl336','hlink','hl336')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Malta','Malta','cbpnl336','hlink','hl336');" id="hl336">Malta</a></td><td width="20%"><input id="cbpnl337" value="Mykonos" onclick="SetLocalita('Mykonos','Mykonos','cbpnl337','hlink','hl337')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetLocalita('Mykonos','Mykonos','cbpnl337','hlink','hl337');" id="hl337">Mykonos</a></td><td width="20%"><input id="cbpnl338" value="Naxos" onclick="SetLocalita('Naxos','Naxos','cbpnl338','hlink','hl338')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetLocalita('Naxos','Naxos','cbpnl338','hlink','hl338');" id="hl338">Naxos</a></td></tr><tr><td width="20%"><input id="cbpnl339" value="Rodi" onclick="SetLocalita('Rodi','Rodi','cbpnl339','hlink','hl339')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetLocalita('Rodi','Rodi','cbpnl339','hlink','hl339');" id="hl339">Rodi</a></td><td width="20%"><input id="cbpnl340" value="Samos" onclick="SetLocalita('Samos','Samos','cbpnl340','hlink','hl340')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetLocalita('Samos','Samos','cbpnl340','hlink','hl340');" id="hl340">Samos</a></td><td width="20%"><input id="cbpnl341" value="Santorini" onclick="SetLocalita('Santorini','Santorini','cbpnl341','hlink','hl341')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetLocalita('Santorini','Santorini','cbpnl341','hlink','hl341');" id="hl341">Santorini</a></td><td width="20%"><input id="cbpnl342" value="Skiathos" onclick="SetLocalita('Skiathos','Skiathos','cbpnl342','hlink','hl342')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetLocalita('Skiathos','Skiathos','cbpnl342','hlink','hl342');" id="hl342">Skiathos</a></td><td width="20%"><input id="cbpnl343" value="Turchia" onclick="SetDestinazione('Turchia','Turchia','cbpnl343','hlink','hl343')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Turchia','Turchia','cbpnl343','hlink','hl343');" id="hl343">Turchia</a></td></tr><tr></tr></tbody></table></div><div class="dot-separator" style="height: 1px; margin: 12px 16px 4px 32px;"></div><h1><img src="/images/ico/popup/paperella.png" style="position: relative; top: 7px;" alt="Italia ed Isole" height="30" width="28"> Italia ed Isole</h1><div style="width: 630px; margin-left: 0px;"><table style="width: 100%;"><tbody><tr><td width="33%"><input id="cbpnl444" value="Basilicata" onclick="SetDestinazione('Basilicata','Basilicata','cbpnl444','hlink','hl444')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Basilicata','Basilicata','cbpnl444','hlink','hl444');" id="hl444">Basilicata</a></td><td width="33%"><input id="cbpnl445" value="Calabria" onclick="SetDestinazione('Calabria','Calabria','cbpnl445','hlink','hl445')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Calabria','Calabria','cbpnl445','hlink','hl445');" id="hl445">Calabria</a></td><td width="33%"><input id="cbpnl446" value="Ischia" onclick="SetLocalita('Ischia','Ischia','cbpnl446','hlink','hl446')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetLocalita('Ischia','Ischia','cbpnl446','hlink','hl446');" id="hl446">Ischia</a></td></tr><tr><td width="33%"><input id="cbpnl447" value="Lampedusa" onclick="SetLocalita('Lampedusa','Lampedusa','cbpnl447','hlink','hl447')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetLocalita('Lampedusa','Lampedusa','cbpnl447','hlink','hl447');" id="hl447">Lampedusa</a></td><td width="33%"><input id="cbpnl448" value="Pantelleria" onclick="SetLocalita('Pantelleria','Pantelleria','cbpnl448','hlink','hl448')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetLocalita('Pantelleria','Pantelleria','cbpnl448','hlink','hl448');" id="hl448">Pantelleria</a></td><td width="33%"><input id="cbpnl449" value="Puglia" onclick="SetDestinazione('Puglia','Puglia','cbpnl449','hlink','hl449')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Puglia','Puglia','cbpnl449','hlink','hl449');" id="hl449">Puglia</a></td></tr><tr><td width="33%"><input id="cbpnl450" value="Sardegna" onclick="SetDestinazione('Sardegna','Sardegna','cbpnl450','hlink','hl450')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Sardegna','Sardegna','cbpnl450','hlink','hl450');" id="hl450">Sardegna</a></td><td width="33%"><input id="cbpnl451" value="Sicilia" onclick="SetDestinazione('Sicilia','Sicilia','cbpnl451','hlink','hl451')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Sicilia','Sicilia','cbpnl451','hlink','hl451');" id="hl451">Sicilia</a></td><td width="33%"><input id="cbpnl452" value="Toscana" onclick="SetDestinazione('Toscana','Toscana','cbpnl452','hlink','hl452')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Toscana','Toscana','cbpnl452','hlink','hl452');" id="hl452">Toscana</a></td></tr><tr></tr></tbody></table></div><div class="dot-separator" style="height: 1px; margin: 12px 16px 4px 32px;"></div><h1><img src="/images/ico/popup/mappamondo.png" style="position: relative; top: 7px;" alt="Tutte le destinazioni" height="30" width="28"> Tutte le destinazioni</h1><div style="width: 630px; margin-left: 0px;"><table style="width: 100%;"><tbody><tr><td width="20%"><input id="cb0" value="39,1044,1,Sharm el Sheikh,Sharm el Sheikh" onclick="SetDestinazione('Abruzzo','Abruzzo','cb0','checkbox','hl0')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Abruzzo','Abruzzo','cb0','hlink','hl0');" id="hl0">Abruzzo</a><br><input id="cb1" value="39,1045,0,Turchia,Turchia" onclick="SetDestinazione('Antigua e Barbuda','Antigua e Barbuda','cb1','checkbox','hl1')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Antigua e Barbuda','Antigua e Barbuda','cb1','hlink','hl1');" id="hl1">Antigua e Barbuda</a><br><input id="cb2" value="39,1047,0,Canarie,Canarie" onclick="SetDestinazione('Aruba','Aruba','cb2','checkbox','hl2')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Aruba','Aruba','cb2','hlink','hl2');" id="hl2">Aruba</a><br><input id="cb3" value="39,1049,1,Marsa Alam,Marsa Alam" onclick="SetDestinazione('Austria','Austria','cb3','checkbox','hl3')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Austria','Austria','cb3','hlink','hl3');" id="hl3">Austria</a><br><input id="cb5" value="39,1051,0,Grecia,Grecia" onclick="SetDestinazione('Baleari','Baleari','cb5','checkbox','hl5')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Baleari','Baleari','cb5','hlink','hl5');" id="hl5">Baleari</a><br><input id="cb6" value="39,1052,1,Creta,Creta" onclick="SetDestinazione('Basilicata','Basilicata','cb6','checkbox','hl6')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Basilicata','Basilicata','cb6','hlink','hl6');" id="hl6">Basilicata</a><br><input id="cb7" value="39,1053,0,Repubblica Dominicana,Repubblica Dominicana" onclick="SetDestinazione('Bermuda','Bermuda','cb7','checkbox','hl7')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Bermuda','Bermuda','cb7','hlink','hl7');" id="hl7">Bermuda</a><br><input id="cb8" value="39,1054,1,Maiorca,Maiorca" onclick="SetDestinazione('Calabria','Calabria','cb8','checkbox','hl8')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Calabria','Calabria','cb8','hlink','hl8');" id="hl8">Calabria</a><br><input id="cb9" value="39,1700,0,Capo Verde,Capo Verde" onclick="SetDestinazione('Campania','Campania','cb9','checkbox','hl9')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Campania','Campania','cb9','hlink','hl9');" id="hl9">Campania</a><br><input id="cb10" value="40,1055,2,Lastminute,LM" onclick="SetDestinazione('Canarie','Canarie','cb10','checkbox','hl10')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Canarie','Canarie','cb10','hlink','hl10');" id="hl10">Canarie</a><br><input id="cb11" value="40,1056,2,Speciale Tour,TOUR" onclick="SetDestinazione('Capo Verde','Capo Verde','cb11','checkbox','hl11')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Capo Verde','Capo Verde','cb11','hlink','hl11');" id="hl11">Capo Verde</a><br><input id="cb12" value="40,1057,2,Speciale Bambini,SC" onclick="SetDestinazione('Caraibi','Caraibi','cb12','checkbox','hl12')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Caraibi','Caraibi','cb12','hlink','hl12');" id="hl12">Caraibi</a><br><input id="cb13" value="40,1058,2,Prenota Prima,AB" onclick="SetDestinazione('Croazia','Croazia','cb13','checkbox','hl13')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Croazia','Croazia','cb13','hlink','hl13');" id="hl13">Croazia</a><br><input id="cb14" value="41,1059,1,Sharm el Sheikh,Sharm el Sheikh" onclick="SetDestinazione('Cuba','Cuba','cb14','checkbox','hl14')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Cuba','Cuba','cb14','hlink','hl14');" id="hl14">Cuba</a><br><input id="cb15" value="41,1060,1,Berenice,Berenice" onclick="SetDestinazione('Egitto','Egitto','cb15','checkbox','hl15')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Egitto','Egitto','cb15','hlink','hl15');" id="hl15">Egitto</a><br><input id="cb16" value="41,1061,1,Marsa Alam,Marsa Alam" onclick="SetDestinazione('Emilia Romagna','Emilia Romagna','cb16','checkbox','hl16')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Emilia Romagna','Emilia Romagna','cb16','hlink','hl16');" id="hl16">Emilia Romagna</a><br></td><td width="20%"><input id="cb17" value="41,1062,1,Dahab,Dahab" onclick="SetDestinazione('Emirati Arabi','Emirati Arabi','cb17','checkbox','hl17')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Emirati Arabi','Emirati Arabi','cb17','hlink','hl17');" id="hl17">Emirati Arabi</a><br><input id="cb18" value="41,1063,1,El Quseir,El Quseir" onclick="SetDestinazione('Francia','Francia','cb18','checkbox','hl18')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Francia','Francia','cb18','hlink','hl18');" id="hl18">Francia</a><br><input id="cb19" value="41,1064,1,Hurghada,Hurghada" onclick="SetDestinazione('Germania','Germania','cb19','checkbox','hl19')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Germania','Germania','cb19','hlink','hl19');" id="hl19">Germania</a><br><input id="cb20" value="41,1065,1,Taba,Taba" onclick="SetDestinazione('Giamaica','Giamaica','cb20','checkbox','hl20')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Giamaica','Giamaica','cb20','hlink','hl20');" id="hl20">Giamaica</a><br><input id="cb21" value="41,1066,1,Crociera sul Nilo,Crociera sul Nilo" onclick="SetDestinazione('Giordania','Giordania','cb21','checkbox','hl21')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Giordania','Giordania','cb21','hlink','hl21');" id="hl21">Giordania</a><br><input id="cb22" value="41,1067,1,Marsa Matrouh,Marsa Matrouh" onclick="SetDestinazione('Grecia','Grecia','cb22','checkbox','hl22')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Grecia','Grecia','cb22','hlink','hl22');" id="hl22">Grecia</a><br><input id="cb23" value="41,1068,1,El Alamein,El Alamein" onclick="SetDestinazione('Islanda','Islanda','cb23','checkbox','hl23')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Islanda','Islanda','cb23','hlink','hl23');" id="hl23">Islanda</a><br><input id="cb24" value="46,1146,1,Antalya,Antalya" onclick="SetDestinazione('Kenya','Kenya','cb24','checkbox','hl24')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Kenya','Kenya','cb24','hlink','hl24');" id="hl24">Kenya</a><br><input id="cb25" value="46,1147,0,Baleari,Baleari" onclick="SetDestinazione('Lazio','Lazio','cb25','checkbox','hl25')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Lazio','Lazio','cb25','hlink','hl25');" id="hl25">Lazio</a><br><input id="cb26" value="46,1148,1,Bodrum,Bodrum" onclick="SetDestinazione('Liguria','Liguria','cb26','checkbox','hl26')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Liguria','Liguria','cb26','hlink','hl26');" id="hl26">Liguria</a><br><input id="cb27" value="46,1149,1,Corfù,Corfù" onclick="SetDestinazione('Lombardia','Lombardia','cb27','checkbox','hl27')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Lombardia','Lombardia','cb27','hlink','hl27');" id="hl27">Lombardia</a><br><input id="cb28" value="46,1150,0,Cipro,Cipro" onclick="SetDestinazione('Madagascar','Madagascar','cb28','checkbox','hl28')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Madagascar','Madagascar','cb28','hlink','hl28');" id="hl28">Madagascar</a><br><input id="cb29" value="46,1152,1,Creta,Creta" onclick="SetDestinazione('Maldive','Maldive','cb29','checkbox','hl29')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Maldive','Maldive','cb29','hlink','hl29');" id="hl29">Maldive</a><br><input id="cb30" value="46,1153,1,Formentera,Formentera" onclick="SetDestinazione('Malta','Malta','cb30','checkbox','hl30')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Malta','Malta','cb30','hlink','hl30');" id="hl30">Malta</a><br><input id="cb31" value="46,1154,1,Ibiza,Ibiza" onclick="SetDestinazione('Mar Rosso','Mar Rosso','cb31','checkbox','hl31')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Mar Rosso','Mar Rosso','cb31','hlink','hl31');" id="hl31">Mar Rosso</a><br><input id="cb32" value="46,1155,1,Ios,Ios" onclick="SetDestinazione('Marche','Marche','cb32','checkbox','hl32')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Marche','Marche','cb32','hlink','hl32');" id="hl32">Marche</a><br></td><td width="20%"><input id="cb33" value="46,1156,1,Kos,Kos" onclick="SetDestinazione('Marocco','Marocco','cb33','checkbox','hl33')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Marocco','Marocco','cb33','hlink','hl33');" id="hl33">Marocco</a><br><input id="cb34" value="46,1157,1,Maiorca,Maiorca" onclick="SetDestinazione('Mauritius','Mauritius','cb34','checkbox','hl34')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Mauritius','Mauritius','cb34','hlink','hl34');" id="hl34">Mauritius</a><br><input id="cb35" value="46,1158,1,Minorca,Minorca" onclick="SetDestinazione('Messico','Messico','cb35','checkbox','hl35')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Messico','Messico','cb35','hlink','hl35');" id="hl35">Messico</a><br><input id="cb38" value="46,1161,1,Naxos,Naxos" onclick="SetDestinazione('Oman','Oman','cb38','checkbox','hl38')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Oman','Oman','cb38','hlink','hl38');" id="hl38">Oman</a><br><input id="cb39" value="46,1162,1,Rodi,Rodi" onclick="SetDestinazione('Paesi Bassi','Paesi Bassi','cb39','checkbox','hl39')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Paesi Bassi','Paesi Bassi','cb39','hlink','hl39');" id="hl39">Paesi Bassi</a><br><input id="cb40" value="46,1164,1,Samos,Samos" onclick="SetDestinazione('Polonia','Polonia','cb40','checkbox','hl40')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Polonia','Polonia','cb40','hlink','hl40');" id="hl40">Polonia</a><br><input id="cb41" value="46,1165,1,Santorini,Santorini" onclick="SetDestinazione('Portogallo','Portogallo','cb41','checkbox','hl41')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Portogallo','Portogallo','cb41','hlink','hl41');" id="hl41">Portogallo</a><br><input id="cb42" value="46,1166,1,Skiathos,Skiathos" onclick="SetDestinazione('Puglia','Puglia','cb42','checkbox','hl42')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Puglia','Puglia','cb42','hlink','hl42');" id="hl42">Puglia</a><br><input id="cb43" value="46,1167,0,Turchia,Turchia" onclick="SetDestinazione('Regno Unito','Regno Unito','cb43','checkbox','hl43')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Regno Unito','Regno Unito','cb43','hlink','hl43');" id="hl43">Regno Unito</a><br><input id="cb44" value="47,1168,0,Basilicata,Basilicata" onclick="SetDestinazione('Repubblica Ceca','Repubblica Ceca','cb44','checkbox','hl44')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Repubblica Ceca','Repubblica Ceca','cb44','hlink','hl44');" id="hl44">Repubblica Ceca</a><br><input id="cb45" value="47,1169,0,Calabria,Calabria" onclick="SetDestinazione('Repubblica Dominicana','Repubblica Dominicana','cb45','checkbox','hl45')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Repubblica Dominicana','Repubblica Dominicana','cb45','hlink','hl45');" id="hl45">Repubblica Dominicana</a><br><input id="cb46" value="47,1170,1,Ischia,Ischia" onclick="SetDestinazione('Sardegna','Sardegna','cb46','checkbox','hl46')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Sardegna','Sardegna','cb46','hlink','hl46');" id="hl46">Sardegna</a><br><input id="cb47" value="47,1171,1,Lampedusa,Lampedusa" onclick="SetDestinazione('Senegal','Senegal','cb47','checkbox','hl47')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Senegal','Senegal','cb47','hlink','hl47');" id="hl47">Senegal</a><br><input id="cb48" value="47,1172,1,Pantelleria,Pantelleria" onclick="SetDestinazione('Seychelles','Seychelles','cb48','checkbox','hl48')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Seychelles','Seychelles','cb48','hlink','hl48');" id="hl48">Seychelles</a><br><input id="cb49" value="47,1173,0,Puglia,Puglia" onclick="SetDestinazione('Sicilia','Sicilia','cb49','checkbox','hl49')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Sicilia','Sicilia','cb49','hlink','hl49');" id="hl49">Sicilia</a><br><input id="cb50" value="47,1174,0,Sardegna,Sardegna" onclick="SetDestinazione('Slovenia','Slovenia','cb50','checkbox','hl50')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Slovenia','Slovenia','cb50','hlink','hl50');" id="hl50">Slovenia</a><br></td><td width="20%"><input id="cb51" value="47,1175,0,Sicilia,Sicilia" onclick="SetDestinazione('Spagna','Spagna','cb51','checkbox','hl51')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Spagna','Spagna','cb51','hlink','hl51');" id="hl51">Spagna</a><br><input id="cb52" value="47,1176,0,Toscana,Toscana" onclick="SetDestinazione('Thailandia','Thailandia','cb52','checkbox','hl52')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Thailandia','Thailandia','cb52','hlink','hl52');" id="hl52">Thailandia</a><br><input id="cb53" value="undefined" onclick="SetDestinazione('Toscana','Toscana','cb53','checkbox','hl53')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Toscana','Toscana','cb53','hlink','hl53');" id="hl53">Toscana</a><br><input id="cb54" value="undefined" onclick="SetDestinazione('Trentino Alto Adige','Trentino Alto Adige','cb54','checkbox','hl54')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Trentino Alto Adige','Trentino Alto Adige','cb54','hlink','hl54');" id="hl54">Trentino Alto Adige</a><br><input id="cb55" value="undefined" onclick="SetDestinazione('Tunisia','Tunisia','cb55','checkbox','hl55')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Tunisia','Tunisia','cb55','hlink','hl55');" id="hl55">Tunisia</a><br><input id="cb56" value="undefined" onclick="SetDestinazione('Turchia','Turchia','cb56','checkbox','hl56')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Turchia','Turchia','cb56','hlink','hl56');" id="hl56">Turchia</a><br><input id="cb57" value="undefined" onclick="SetDestinazione('Umbria','Umbria','cb57','checkbox','hl57')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Umbria','Umbria','cb57','hlink','hl57');" id="hl57">Umbria</a><br><input id="cb58" value="undefined" onclick="SetDestinazione('Ungheria','Ungheria','cb58','checkbox','hl58')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Ungheria','Ungheria','cb58','hlink','hl58');" id="hl58">Ungheria</a><br><input id="cb59" value="undefined" onclick="SetDestinazione('Venezuela','Venezuela','cb59','checkbox','hl59')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Venezuela','Venezuela','cb59','hlink','hl59');" id="hl59">Venezuela</a><br><input id="cb60" value="undefined" onclick="SetDestinazione('Zanzibar','Zanzibar','cb60','checkbox','hl60')" type="checkbox">&nbsp;<a href="javascript:void(0)" onclick="SetDestinazione('Zanzibar','Zanzibar','cb60','hlink','hl60');" id="hl60">Zanzibar</a><br></td></tr></tbody></table></div><div style="float: right;margin-top: -13px;"><a href="javascript:void(0)" title="Vai" id="search_Go_BottomPopup" onclick="ChiudiDestinazioni();"><img src="/images/button/vai.png" alt="Vai" height="31" width="62"></a></div><div class="clear"></div></div>
+	</div>
+</div>
+
+<div class="Popup" id="PopupPartenze" style="z-index:99999">
+	<div class="PopupFumetto">
+		<img src="/images/balloon-callout.png" alt="" style="position: absolute; left: -23px; top: 24px;" height="51" width="23">
+		<img class="PopupClose" src="/images/ico/close.png" alt="Chiudi" height="17" width="17">
+		<div class="hasDatepick" id="PopupPartenzeMesi"><div style="width: 330px;" class="datepick datepick-multi"><div class="datepick-nav"><a href="javascript:void(0)" title="Mese precedente" class="datepick-cmd datepick-cmd-prev  datepick-disabled">«</a><a href="javascript:void(0)" title="Mese selezionato" class="datepick-cmd datepick-cmd-current ">Seleziona una data</a><a href="javascript:void(0)" title="Mese successivo" class="datepick-cmd datepick-cmd-next ">»</a></div><div class="datepick-month-row"><div class="datepick-month first"><div class="datepick-month-header">Maggio 2013</div><table><thead><tr><th><span class="datepick-dow-1" title="Lunedì">Lu</span></th><th><span class="datepick-dow-2" title="Martedì">Ma</span></th><th><span class="datepick-dow-3" title="Mercoledì">Me</span></th><th><span class="datepick-dow-4" title="Giovedì">Gi</span></th><th><span class="datepick-dow-5" title="Venerdì">Ve</span></th><th><span class="datepick-dow-6" title="Sabato">Sa</span></th><th><span class="datepick-dow-0" title="Domenica">Do</span></th></tr></thead><tbody><tr><td><span class="dp1367211600000  datepick-other-month">&nbsp;</span></td><td><span class="dp1367298000000  datepick-other-month">&nbsp;</span></td><td><span class="dp1367384400000 ">1</span></td><td><span class="dp1367470800000 ">2</span></td><td><a href="javascript:void(0)" class="dp1367557200000   datepick-today datepick-highlight" title="Seleziona Ven, Mag 3">3</a></td><td><a href="javascript:void(0)" class="dp1367643600000   datepick-weekend" title="Seleziona Sab, Mag 4">4</a></td><td><a href="javascript:void(0)" class="dp1367730000000   datepick-weekend" title="Seleziona Dom, Mag 5">5</a></td></tr><tr><td><a href="javascript:void(0)" class="dp1367816400000  " title="Seleziona Lun, Mag 6">6</a></td><td><a href="javascript:void(0)" class="dp1367902800000  " title="Seleziona Mar, Mag 7">7</a></td><td><a href="javascript:void(0)" class="dp1367989200000  " title="Seleziona Mer, Mag 8">8</a></td><td><a href="javascript:void(0)" class="dp1368075600000  " title="Seleziona Gio, Mag 9">9</a></td><td><a href="javascript:void(0)" class="dp1368162000000  " title="Seleziona Ven, Mag 10">10</a></td><td><a href="javascript:void(0)" class="dp1368248400000   datepick-weekend" title="Seleziona Sab, Mag 11">11</a></td><td><a href="javascript:void(0)" class="dp1368334800000   datepick-weekend" title="Seleziona Dom, Mag 12">12</a></td></tr><tr><td><a href="javascript:void(0)" class="dp1368421200000  " title="Seleziona Lun, Mag 13">13</a></td><td><a href="javascript:void(0)" class="dp1368507600000  " title="Seleziona Mar, Mag 14">14</a></td><td><a href="javascript:void(0)" class="dp1368594000000  " title="Seleziona Mer, Mag 15">15</a></td><td><a href="javascript:void(0)" class="dp1368680400000  " title="Seleziona Gio, Mag 16">16</a></td><td><a href="javascript:void(0)" class="dp1368766800000  " title="Seleziona Ven, Mag 17">17</a></td><td><a href="javascript:void(0)" class="dp1368853200000   datepick-weekend" title="Seleziona Sab, Mag 18">18</a></td><td><a href="javascript:void(0)" class="dp1368939600000   datepick-weekend" title="Seleziona Dom, Mag 19">19</a></td></tr><tr><td><a href="javascript:void(0)" class="dp1369026000000  " title="Seleziona Lun, Mag 20">20</a></td><td><a href="javascript:void(0)" class="dp1369112400000  " title="Seleziona Mar, Mag 21">21</a></td><td><a href="javascript:void(0)" class="dp1369198800000  " title="Seleziona Mer, Mag 22">22</a></td><td><a href="javascript:void(0)" class="dp1369285200000  " title="Seleziona Gio, Mag 23">23</a></td><td><a href="javascript:void(0)" class="dp1369371600000  " title="Seleziona Ven, Mag 24">24</a></td><td><a href="javascript:void(0)" class="dp1369458000000   datepick-weekend" title="Seleziona Sab, Mag 25">25</a></td><td><a href="javascript:void(0)" class="dp1369544400000   datepick-weekend" title="Seleziona Dom, Mag 26">26</a></td></tr><tr><td><a href="javascript:void(0)" class="dp1369630800000  " title="Seleziona Lun, Mag 27">27</a></td><td><a href="javascript:void(0)" class="dp1369717200000  " title="Seleziona Mar, Mag 28">28</a></td><td><a href="javascript:void(0)" class="dp1369803600000  " title="Seleziona Mer, Mag 29">29</a></td><td><a href="javascript:void(0)" class="dp1369890000000  " title="Seleziona Gio, Mag 30">30</a></td><td><a href="javascript:void(0)" class="dp1369976400000  " title="Seleziona Ven, Mag 31">31</a></td><td><span class="dp1370062800000  datepick-weekend datepick-other-month">&nbsp;</span></td><td><span class="dp1370149200000  datepick-weekend datepick-other-month">&nbsp;</span></td></tr><tr><td><span class="dp1370235600000  datepick-other-month">&nbsp;</span></td><td><span class="dp1370322000000  datepick-other-month">&nbsp;</span></td><td><span class="dp1370408400000  datepick-other-month">&nbsp;</span></td><td><span class="dp1370494800000  datepick-other-month">&nbsp;</span></td><td><span class="dp1370581200000  datepick-other-month">&nbsp;</span></td><td><span class="dp1370667600000  datepick-weekend datepick-other-month">&nbsp;</span></td><td><span class="dp1370754000000  datepick-weekend datepick-other-month">&nbsp;</span></td></tr></tbody></table></div><div class="datepick-month last"><div class="datepick-month-header">Giugno 2013</div><table><thead><tr><th><span class="datepick-dow-1" title="Lunedì">Lu</span></th><th><span class="datepick-dow-2" title="Martedì">Ma</span></th><th><span class="datepick-dow-3" title="Mercoledì">Me</span></th><th><span class="datepick-dow-4" title="Giovedì">Gi</span></th><th><span class="datepick-dow-5" title="Venerdì">Ve</span></th><th><span class="datepick-dow-6" title="Sabato">Sa</span></th><th><span class="datepick-dow-0" title="Domenica">Do</span></th></tr></thead><tbody><tr><td><span class="dp1369630800000  datepick-other-month">&nbsp;</span></td><td><span class="dp1369717200000  datepick-other-month">&nbsp;</span></td><td><span class="dp1369803600000  datepick-other-month">&nbsp;</span></td><td><span class="dp1369890000000  datepick-other-month">&nbsp;</span></td><td><span class="dp1369976400000  datepick-other-month">&nbsp;</span></td><td><a href="javascript:void(0)" class="dp1370062800000   datepick-weekend" title="Seleziona Sab, Giu 1">1</a></td><td><a href="javascript:void(0)" class="dp1370149200000   datepick-weekend" title="Seleziona Dom, Giu 2">2</a></td></tr><tr><td><a href="javascript:void(0)" class="dp1370235600000  " title="Seleziona Lun, Giu 3">3</a></td><td><a href="javascript:void(0)" class="dp1370322000000  " title="Seleziona Mar, Giu 4">4</a></td><td><a href="javascript:void(0)" class="dp1370408400000  " title="Seleziona Mer, Giu 5">5</a></td><td><a href="javascript:void(0)" class="dp1370494800000  " title="Seleziona Gio, Giu 6">6</a></td><td><a href="javascript:void(0)" class="dp1370581200000  " title="Seleziona Ven, Giu 7">7</a></td><td><a href="javascript:void(0)" class="dp1370667600000   datepick-weekend" title="Seleziona Sab, Giu 8">8</a></td><td><a href="javascript:void(0)" class="dp1370754000000   datepick-weekend" title="Seleziona Dom, Giu 9">9</a></td></tr><tr><td><a href="javascript:void(0)" class="dp1370840400000  " title="Seleziona Lun, Giu 10">10</a></td><td><a href="javascript:void(0)" class="dp1370926800000  " title="Seleziona Mar, Giu 11">11</a></td><td><a href="javascript:void(0)" class="dp1371013200000  " title="Seleziona Mer, Giu 12">12</a></td><td><a href="javascript:void(0)" class="dp1371099600000  " title="Seleziona Gio, Giu 13">13</a></td><td><a href="javascript:void(0)" class="dp1371186000000  " title="Seleziona Ven, Giu 14">14</a></td><td><a href="javascript:void(0)" class="dp1371272400000   datepick-weekend" title="Seleziona Sab, Giu 15">15</a></td><td><a href="javascript:void(0)" class="dp1371358800000   datepick-weekend" title="Seleziona Dom, Giu 16">16</a></td></tr><tr><td><a href="javascript:void(0)" class="dp1371445200000  " title="Seleziona Lun, Giu 17">17</a></td><td><a href="javascript:void(0)" class="dp1371531600000  " title="Seleziona Mar, Giu 18">18</a></td><td><a href="javascript:void(0)" class="dp1371618000000  " title="Seleziona Mer, Giu 19">19</a></td><td><a href="javascript:void(0)" class="dp1371704400000  " title="Seleziona Gio, Giu 20">20</a></td><td><a href="javascript:void(0)" class="dp1371790800000  " title="Seleziona Ven, Giu 21">21</a></td><td><a href="javascript:void(0)" class="dp1371877200000   datepick-weekend" title="Seleziona Sab, Giu 22">22</a></td><td><a href="javascript:void(0)" class="dp1371963600000   datepick-weekend" title="Seleziona Dom, Giu 23">23</a></td></tr><tr><td><a href="javascript:void(0)" class="dp1372050000000  " title="Seleziona Lun, Giu 24">24</a></td><td><a href="javascript:void(0)" class="dp1372136400000  " title="Seleziona Mar, Giu 25">25</a></td><td><a href="javascript:void(0)" class="dp1372222800000  " title="Seleziona Mer, Giu 26">26</a></td><td><a href="javascript:void(0)" class="dp1372309200000  " title="Seleziona Gio, Giu 27">27</a></td><td><a href="javascript:void(0)" class="dp1372395600000  " title="Seleziona Ven, Giu 28">28</a></td><td><a href="javascript:void(0)" class="dp1372482000000   datepick-weekend" title="Seleziona Sab, Giu 29">29</a></td><td><a href="javascript:void(0)" class="dp1372568400000   datepick-weekend" title="Seleziona Dom, Giu 30">30</a></td></tr><tr><td><span class="dp1372654800000  datepick-other-month">&nbsp;</span></td><td><span class="dp1372741200000  datepick-other-month">&nbsp;</span></td><td><span class="dp1372827600000  datepick-other-month">&nbsp;</span></td><td><span class="dp1372914000000  datepick-other-month">&nbsp;</span></td><td><span class="dp1373000400000  datepick-other-month">&nbsp;</span></td><td><span class="dp1373086800000  datepick-weekend datepick-other-month">&nbsp;</span></td><td><span class="dp1373173200000  datepick-weekend datepick-other-month">&nbsp;</span></td></tr></tbody></table></div></div><div class="datepick-clear-fix"></div></div></div>
+		<div id="PopupPartenzeAlert" class="PopupAlert"></div>
+	</div>
+</div>
+
+<div class="Popup" id="PopupPartenzeStruttura" style="z-index:99999">
+	<div class="PopupFumetto">
+		<img src="/images/balloon-callout.png" alt="" style="position: absolute; left: -23px; top: 24px;" height="51" width="23">
+		<img class="PopupClose" src="/images/ico/close.png" alt="Chiudi" height="17" width="17">
+		<div id="PopupPartenzeMesiStruttura"></div>
+		<div id="Div3" class="PopupPartenzeAlertStruttura"></div>
+	</div>
+</div>
+
+<div class="Popup" id="PopupAeroporti" style="z-index:99999">
+	<div class="PopupFumetto">
+		<img src="/images/balloon-callout.png" alt="" style="position: absolute; left: -23px; top: 24px;" height="51" width="23">
+		<img class="PopupClose" src="/images/ico/close.png" alt="Chiudi" height="17" width="17">
+		<div id="PopupAeroportiTitolo"><h1 style="margin-right: 8px;">Seleziona uno o più</h1></div>
+		<div class="PopupLinks" id="PopupAeroportiLista"></div>
+		<div id="PopupAeroportiAlert" class="PopupAlert"></div>
+	</div>
+</div>
+<div class="Popup" id="PopupAeroportiStruttura">
+	<div class="PopupFumetto">
+		<img src="/images/balloon-callout.png" alt="" style="position: absolute; left: -23px; top: 24px;" height="51" width="23">
+		<img class="PopupClose" src="/images/ico/close.png" alt="Chiudi" height="17" width="17">
+		<div id="PopupAeroportiTitoloStruttura"><h1 style="margin-right: 8px;">Seleziona uno o più</h1></div>
+		<div class="PopupLinks" id="PopupAeroportiListaStruttura"></div>
+		<div id="PopupAeroportiAlertStruttura" class="PopupAlert"></div>
+	</div>
+</div>
+<div class="Popup" id="PopupRicerca" style="z-index:99999">
+	<div class="PopupFumetto">
+		<img class="PopupClose" src="/images/ico/close.png" alt="Chiudi" height="17" width="17">
+		<div id="PopupRicercaAlert" class="PopupAlert"></div>
+	</div>
+</div>
+<!-- /SEARCH BOX POPUP --><!-- MESSAGE POPUP -->
+<div class="Popup" id="PopupMessaggio">
+	<div class="PopupFumetto">
+		<img class="PopupClose" src="/images/ico/close.png" alt="Chiudi" height="17" width="17">
+		<div class="PopupText"></div>
+		<div class="PopupButtons"><img class="PopupOK" src="/images/button/ok.png" alt="OK" height="31" width="56"></div>
+	</div>
+</div>
+<!-- /MESSAGE POPUP -->
+
+<!-- DUCKY POPUP -->
+<div class="Popup" id="DuckyPopup">
+	<div class="DuckyPopup"><div class="DuckyPopupWrapper"><div id="DuckyPopupSWF" style="display: none; visibility: visible;"><img src="/images/duckyloader.gif" alt="Attendere prego..." height="58" width="58"></div></div></div>
+</div>
+
+<div class="Popup" id="DuckyPopupSearch" style="width:100%">
+	<div id="DuckyPopupLaySearch" style="display: none; width:100%;">
+    
+	    
+	</div>
+	</div>
+
+<!-- /DUCKY POPUP -->
+
+<!-- INVIA A UN AMICO -->
+<div class="Popup" id="SendToFriend">
+	<div class="PopupFumetto">
+		<img class="PopupClose" src="/images/ico/close.png" alt="Chiudi" height="17" width="17">
+		<form id="sendtofriend_Form" action="/SendToFriend.aspx" method="post" name="sendtofriend_Form" target="frame_SendToFriend">
+			<div class="PopupText">
+				<h2 style="margin-bottom: 8px;">Invia questa pagina a un amico o a te stesso<br>come promemoria</h2>
+				<table>
+				<tbody><tr>
+					<td class="font13 bold">Da (nome):</td>
+					<td class="font13 bold" style="padding-left: 16px;">Da (e-mail):</td>
+				</tr>
+				<tr>
+					<td style="padding-bottom: 8px;"><input id="sendtofriend_DaNome" name="sendtofriend_DaNome" style="width: 170px;" type="text"></td>
+					<td style="padding-left: 16px; padding-bottom: 8px;"><input id="sendtofriend_DaEmail" name="sendtofriend_DaEmail" style="width: 170px;" type="text"></td>
+				</tr>
+				<tr>
+					<td class="font13 bold">A (nome):</td>
+					<td class="font13 bold" style="padding-left: 16px;">A (e-mail):</td>
+				</tr>
+				<tr>
+					<td style="padding-bottom: 8px;"><input id="sendtofriend_ANome" name="sendtofriend_ANome" style="width: 170px;" type="text"></td>
+					<td style="padding-left: 16px; padding-bottom: 8px;"><input id="sendtofriend_AEmail" name="sendtofriend_AEmail" style="width: 170px;" type="text"></td>
+				</tr>
+				<tr>
+					<td colspan="2" class="font13 bold">Messaggio personalizzato:</td>
+				</tr>
+				<tr>
+					<td colspan="2"><textarea id="sendtofriend_Messaggio" name="sendtofriend_Messaggio" rows="5" cols="78" style="width: 358px;"></textarea></td>
+				</tr>
+				</tbody></table>
+				<input id="sendtofriend_URL" name="sendtofriend_URL" value="http://viaggi.edreams.it/Risultati.aspx?Area=&amp;Dest=Canarie&amp;City=&amp;Data=&amp;Adulti=&amp;Bambini=&amp;EtaBambini=&amp;Aerop=&amp;PromoCode=&amp;" type="hidden">
+			</div>
+			<div class="PopupButtons">
+				<iframe src="about:blank" id="frame_SendToFriend" name="frame_SendToFriend" frameborder="0" height="1" width="1"></iframe>
+				<input src="/images/button/continua.png" style="width: 102px; height: 31px;" type="image">
+				<img class="PopupAnnulla" src="/images/button/annulla.png" alt="Annulla" height="31" width="85">
+			</div>
+		</form>
+	</div>
+</div>
+<!-- /INVIA A UN AMICO -->
+<style>
+.dock {
+    bottom: 0;
+    height: 27px;
+    position: fixed;
+    
+    z-index: 777;
+    
+    margin: 0 auto;
+    width: 99%;
+}
+.dock_content {
+    background-color: #DEDEDE;
+    border-left: 1px solid #949494;
+    border-top: 1px solid #949494;
+    margin-right: 26px;
+    text-align: right;
+}
+.dock_content_wrap:after {
+    clear: both;
+    content: "";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.dock_content_wrap {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #EEEEEE -moz-use-text-color #EEEEEE #EEEEEE;
+    border-style: solid none solid solid;
+    border-width: 1px 0 1px 1px;
+}
+.dock_compare {
+    background: url("/images/dock/bg_dock_compare.png") no-repeat scroll 0 50% transparent;
+    float: right;
+    margin: -1px 0;
+    padding-left: 21px;
+     border-right: 1px solid #949494;
+}
+.dock_hotels {
+    float: right;
+    height: 42px;
+    margin-top: -23px;
+}
+.dock_hotel {
+    background-color: #F5F5F5;
+    border: 1px solid #292929;
+    box-shadow: 0 0 2px #808080;
+    float: left;
+    margin: 0 10px 10px 0;
+    position: relative;
+}
+.dock_hotel_remove:hover{background:#194AB1 }
+
+.dock_hotel_name {
+    left: -75px;
+    position: absolute;
+    
+}
+.dock_compare_link {
+    background-color: #FFFFFF;
+    display: block;
+    padding: 6px 12px 6px 10px;
+}
+.dock_content {
+    text-align: right;
+}
+.dock_compare_link:link, .dock_compare_link:visited {
+    color: #194AB1 ;
+    font-weight: bold;
+}
+.dock_favorite_label {
+    border-left: 1px solid #EEEEEE;
+    border-right: 1px solid #EEEEEE;
+    color: #272727;
+    float: right;
+    font-size:12px;
+    padding: 4px 16px 4px 13px;
+}
+
+.dock_hotel_remove {
+    background-color: #194AB1 ;
+    border-radius: 0.5em 0.5em 0.5em 0.5em;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 1;
+    position: absolute;
+    right: 5px;
+    text-align: center;
+    top: 30px;
+    width: 50px;
+}
+
+</style>
+
+
+
+<div class="dock">
+    <div class="dock_content"><div class="dock_content_wrap">
+    <div class="dock_compare"><a class="dock_compare_link" href="/wishList.aspx/">confronta i miei preferiti</a></div>
+    <div class="dock_hotels" id="compareView">
+        <div id="dock">
+	        <ul id="list">
+	        </ul>
+        </div>
+    </div>
+    <div class="dock_favorite_label pink">i miei preferiti</div><a href="/wishlist.aspx?returnUrl=/risultati/destinazione/Canarie/" id="keepMyUpdate" style="" class="dock_favorite_label no-underline pink">lascia la tua mail per ricevere gli aggiornamenti su queste offerte</a>
+</div></div>
+</div>
+
+
+
+
+<style>
+	/* Dock */
+	#dock {
+		
+	}
+ 
+	
+	/* Dock Icons */
+	#dock li {
+		display: inline-block;
+		vertical-align: bottom;
+		margin: 0px;
+		padding: 5px;
+		position: relative;
+		overflow: visible;
+	}
+ 
+	.aWishStructure {
+	
+		width: 48px;
+		display: inline-block;
+		text-align: center;
+		position: relative;
+		vertical-align: bottom;
+		text-decoration: none;
+		color: black;
+		white-space: normal;
+		letter-spacing: normal;	
+		line-height: 1.3em;
+		text-align: center;
+		font-family: Arial;
+		padding-top: -40px;
+		
+		overflow: visible;
+	}
+ 
+	
+ 
+ 
+	.imgStructure {
+		height: auto;
+		width: 100%;
+		position: absolute;
+		left: 0px;
+		 bottom: -9px;
+		text-align: center;
+		border: 0px none;
+		margin-bottom: 2    5px;
+ 
+		box-reflect: below 1px gradient(linear, left top, left bottom, from(transparent), color-stop(0.5, transparent), to(rgba(255,255,255,0.1)));
+		-webkit-box-reflect: below 1px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.5, transparent), to(rgba(255,255,255,0.1)));
+		-moz-box-reflect: below 1px -moz-gradient(linear, left top, left bottom, from(transparent), color-stop(0.5, transparent), to(rgba(255,255,255,0.1)));
+	}
+</style>
+<!--[if lte IE 9]> 
+<style>
+.AccBalloon {
+	position: relative;
+	float: right;
+	width: 190px;
+	height: 126px;
+	background: url(/images/balloon-small.png) no-repeat;
+	
+	top: -154px;
+	left: 24px;
+}
+</style>
+<![endif]-->
+
+<!--[if lte IE 7]>
+<style>
+			/* Inline block fix */
+			#dock ul {
+				display: inline;
+				zoom: 1;
+			}
+
+			#dock li, #dock li a {
+				display: inline;
+				zoom: 1;
+			}
+
+			/* Image quality fix */
+			img {
+				-ms-interpolation-mode: bicubic;
+			}
+
+			
+		</style>
+<![endif]-->
+<script type="text/javascript" src="http://static.criteo.net/js/universal/v0_5_4/criteo_ld.js" async="true"></script>
+ <script type="text/javascript" src="/js/results-data.aspx?Dest=Canarie&amp;City=&amp;Data=&amp;Data1=&amp;Data2=&amp;Adulti=&amp;Bambini=&amp;EtaBambini=&amp;Aerop=&amp;Area=&amp;Tipo=&amp;PromoCode=&amp;AccomodName=&amp;PageLink=http%3a%2f%2fviaggi.edreams.it%2fRisultati.aspx%3fArea%3d%26Dest%3dCanarie%26City%3d%26Data%3d%26Adulti%3d%26Bambini%3d%26EtaBambini%3d%26Aerop%3d%26PromoCode%3d%26"></script>
+<script>
+    //library
+    function distance(x0, y0, x1, y1) {
+        var xDiff = x1 - x0;
+        var yDiff = y1 - y0;
+
+        return Math.sqrt(xDiff * xDiff + yDiff * yDiff);
+    }
+
+    //remove
+    var proximity = 180;
+    var iconSmall = 48, iconLarge = 128; //css also needs changing to compensate with size
+    var iconDiff = (iconLarge - iconSmall);
+    var mouseX, mouseY;
+    var dock = $j("#dock");
+    var animating = false, redrawReady = false;
+
+    $j(document.body).removeClass("no_js");
+
+    //below are methods for maintaining a constant 60fps redraw for the dock without flushing
+    $j(document).bind("mousemove", function(e) {
+        if (dock.is(":visible")) {
+            mouseX = e.pageX;
+            mouseY = e.pageY;
+
+            redrawReady = true;
+            registerConstantCheck();
+        }
+    });
+
+    function registerConstantCheck() {
+        if (!animating) {
+            animating = true;
+
+            window.setTimeout(callCheck, 15);
+        }
+    }
+
+    function callCheck() {
+        sizeDockIcons();
+
+        animating = false;
+
+        if (redrawReady) {
+            redrawReady = false;
+            registerConstantCheck();
+        }
+    }
+
+    //do the maths and resize each icon
+    function sizeDockIcons() {
+        dock.find("li").each(function() {
+            //find the distance from the center of each icon
+            var centerX = $j(this).offset().left + ($j(this).outerWidth() / 2.0);
+            var centerY = $j(this).offset().top + ($j(this).outerHeight() / 2.0);
+
+            var dist = distance(centerX, centerY, mouseX, mouseY);
+
+            //determine the new sizes of the icons from the mouse distance from their centres
+            var newSize = (1 - Math.min(1, Math.max(0, dist / proximity))) * iconDiff + iconSmall;
+            $j(this).find("a").css({ width: newSize });
+        });
+    }
+
+
+    var wlReady = 0;
+    var wlObj = [];
+    var wlIdx = [];
+    var wlAmenity = [];
+    wlItems = parseInt($j.cookie("wlItems"));
+CaricaWishList();
+
+    function CaricaWishList() {
+        var i, j, w,p;
+
+        for (i = 1, j = 0; i <= wlItems; i++) {
+            w = $j.cookie("wlItem" + i, { path: "/" });
+            if (w != null && w != undefined && w != "") {
+                //wlObj[j] = $j.secureEvalJSON(w);
+                wlObj[j] = rison.decode(w);
+                wlIdx[j] = i;
+                wlAmenity[j] = wlObj[j].a.split("|");
+                j++;
+            }
+        }
+
+        //controllo se l'offerta è ancora attiva e con lo stesso prezzo
+        for (p = 0; p < wlObj.length; p++) {
+            var stelleWish = "";
+            if (wlObj[p].s != "" && wlObj[p].s != null) {
+                for (j = 1; j <= parseInt(wlObj[p].s.split("/")[0]); j++) stelleWish += '<img src="/images/ico/star.png" width="10" height="10" alt="" />';
+                if (wlObj[p].s.split("/").length > 1) {
+                    stelleWish += ' / ';
+                    for (j = 1; j <= parseInt(wlObj[p].s.split("/")[1]); j++) stelleWish += '<img src="/images/ico/star.png" width="10" height="10" alt="" />';
+                }
+            }
+            if (wlObj[p].S != "" && wlObj[p].S != null) stelleWish += ' ' + wlObj[p].S;
+            var htmlBookMark2 = '<li id="dock_hotel2' + (p + 1).toString() + '">' +
+                '<a href="javascript:void(0)" class="aWishStructure" onmouseover="ShowAccName(\'PlaceHolderAcc' + (p + 1).toString() + '\')" onmouseout="HideAccName(\'PlaceHolderAcc' + (p + 1).toString() + '\')">' + 
+                '<div id="PlaceHolderAcc' + (p + 1).toString() + '" class="PriceBalloonPlaceHolder" >' +
+                '<div id="acc_' + (p + 1).toString() + '" class="AccBalloon"><br/>' + wlObj[p].n + '<br/>' + stelleWish + '<br/>€ ' + wlObj[p].C + '</div></div>' +
+                '<img src="' + wlObj[p].I + '"  width="80" height="80" alt="' + wlObj[p].n + '" class="imgStructure"/></a>' +
+                '<a id="wlLink32_' + (p + 1).toString() + '" class="dock_hotel_remove white" title="rimuovi" onclick="RemoveFromWishList(' + (p + 1).toString() + ');" href="javascript:void(0)">Rimuovi</a>' +
+                '</li>';
+            $j("#list").append(htmlBookMark2);
+        }
+        sizeDockIcons();
+       
+    }
+
+
+
+    function RemoveFromWishList(iItem) {
+        $j("#dock_hotel2" + iItem).remove();
+
+        
+            for (var i = iItem; i < wlItems; i++) $j.cookie("wlItem" + i, $j.cookie("wlItem" + (i + 1)), { expires: wlExpire, path: "/" });
+            $j.cookie("wlItem" + wlItems, null, { path: "/" });
+            wlItems--;
+            $j.cookie("wlItems", wlItems, { expires: wlExpire, path: "/" });
+            if (wlItems > 1 ? wording = "<span class='pink bold'>" + wlItems + "</span> offerte" : wording = "<span class='pink bold'>" + wlItems + "</span> offerta");
+            $j("#WishListHolder, #WishListFooter").html(wlItems ? wording : "<span class='pink bold'>0</span> offerte");
+            return wlItems;
+       
+    }
+</script>
+
+
+<ul style="z-index: 1; top: 0px; left: 0px; display: none;" aria-activedescendant="ui-active-menuitem" role="listbox" class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all"></ul><img src="http://widget.criteo.com/pvx/display.js?resptype=gif&amp;t1=sendEvent&amp;p1=v%3D2%26pt1%3D3%26wi%3D7726433%26i1%3D21%26i2%3D1779&amp;t2=sendEvent&amp;p2=v%3D2%26pt1%3D4%26wi%3D7726433%26din%3D2013-05-04%26dout%3D2013-05-11" style="display: none;" height="0" width="0"></body>

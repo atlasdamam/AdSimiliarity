@@ -1,0 +1,689 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Assinatura Mensal Grátis</title>
+
+
+<!--Começa aqui a paradinha-->
+
+
+<script type="text/javascript">
+
+function mudarCombo() {
+
+	var valor = document.getElementById("soubeCombo").value;
+	
+	if(valor == "1") {
+
+		document.getElementById("indicacaoInput").disabled = false;
+
+	} else {
+
+		document.getElementById("indicacaoInput").disabled= true;
+
+		document.getElementById("indicacaoInput").value = "";
+
+	}
+	
+	
+}
+
+function ValidaCadastro(form) {
+
+  if(form.nome.value == "") {
+
+    alert('Digite seu nome.');
+
+	form.nome.focus();
+
+	return false;
+
+  }
+
+ if(form.cpf.value == "") {
+
+    alert('Digite seu CPF.');
+
+	form.cpf.focus();
+
+	return false;
+
+  }
+
+  if(form.estadoCivil.value == "") {
+
+    alert('Digite seu estado civil.');
+
+	form.estadoCivil.focus();
+
+	return false;
+
+  }
+
+  if(form.ocupacao.value == "") {
+
+    alert('Digite sua ocupa&ccedil;&atilde;o.');
+
+	form.ocupacao.focus();
+
+	return false;
+
+  }
+
+  if(form.nascimento.value == "") {
+
+    alert('Digite sua data de nascimento.');
+
+	form.nascimento.focus();
+
+	return false;
+
+  }
+
+
+  if(form.endereco.value == "") {
+
+    alert('Digite o endereço.');
+
+	form.endereco.focus();
+
+	return false;
+
+  }
+
+  if(form.num.value == "") {
+
+    alert('Digite o número.');
+
+	form.num.focus();
+
+	return false;
+
+  }
+
+
+  if(form.bairro.value == "") {
+
+    alert('Digite o bairro.');
+
+	form.bairro.focus();
+
+	return false;
+
+  }
+
+  if(form.cidade.value == "") {
+
+    alert('Digite a cidade.');
+
+	form.cep.focus();
+
+	return false;
+
+  }
+
+  if(form.cep.value == "") {
+
+    alert('Digite o CEP.');
+
+	form.cep.focus();
+
+	return false;
+
+  }
+
+
+  if(form.email.value == "") {
+
+    alert('Digite seu email.');
+
+	form.email.focus();
+
+	return false;
+
+  }
+   
+
+  if(form.telRes.value == "") {
+
+    alert('Digite o Telefone.');
+
+	form.telRes.focus();
+
+	return false;
+
+  }
+
+  if(form.referencia.value == "") {
+
+    alert('Digite uma referência.');
+
+	form.telRes.focus();
+
+	return false;
+
+  }
+
+  
+  if(form.indicacao.value == "") {
+
+    alert('Escolha uma opção: Onde você soube da promoção.');
+
+	form.telRes.focus();
+
+	return false;
+
+  }
+
+
+  form.action = form.action+'?action=ENVIAR';
+
+  form.submit();
+
+}
+</script>
+<style type="text/css">
+
+	
+body{
+	background-image:url(bgDegustacao.jpg);
+	background-position:center top;
+	background-repeat:no-repeat;
+	margin:0;
+	padding:0;
+		font-size:12px;
+}
+html{background-image:url(bgHtml.jpg);
+	background-position:center top;
+	background-repeat:repeat-x;
+	background-color:#595959;}
+
+label{
+	/*text-transform:uppercase;*/
+	color:#fff;
+	/*background-color:#FFF;*/
+	margin:0;
+	padding:0px 10px 0px 10px;
+	font-size:14px;
+	border:none;
+}
+fieldset{
+	float:left;
+	/*background-image:url(bgField.jpg);
+	background-repeat:no-repeat;*/
+	padding:5px;
+	border:none;
+	margin-bottom:10px;
+	margin-left:3px;
+	height:22px;
+}
+input{
+	border:none;
+	font-size:12px;
+	font-family:Verdana, Geneva, sans-serif;
+	color:#039;
+	background-color:#FFF;
+	height:20px;
+}
+
+	
+/*.nome{
+	width:199px;}*/
+	fieldset.nome input{
+		width:300px;
+		/*background-color:#ebebeb;*/
+		font-size:12px;
+	}
+	
+/*.sexo{
+	width:205px;
+	}*/ 
+	fieldset.sexo select{
+		width:50px;
+		/*background-color:#ebebeb;*/
+		font-size:14px;
+		padding-bottom:3px;
+		border:none;
+	}	
+	
+/*.cpf{
+	width:199px;}*/
+	fieldset.cpf input{
+		width:170px;
+		/*background-color:#ebebeb;*/
+		font-size:12px;
+	}
+/*.estadoCivil{
+	width:235px;
+	}*/ 
+	fieldset.estadoCivil select{
+		width:170px;
+		/*background-color:#ebebeb;*/
+		font-size:14px;
+		padding-bottom:3px;
+		border:none;
+	}
+/*.ocupacao{
+	width:205px;
+	}*/ 
+	fieldset.ocupacao select{
+		width:170px;
+		/*background-color:#ebebeb;*/
+		font-size:14px;
+		padding-bottom:3px;
+		border:none;
+	}
+/*.nascimento{
+	width:px;
+	} */
+	fieldset.nascimento input{
+		width:170px;
+		/*background-color:#ebebeb;*/
+		font-size:12px;
+	}
+/*.endereco{
+	width:370px;
+	} */
+	fieldset.endereco input{
+		width:365px;
+		/*background-color:#ebebeb;*/
+		font-size:12px;
+	}
+/*.num{
+	width:112px;
+	}*/ 
+	fieldset.num input{
+		width:50px;
+		/*background-color:#ebebeb;*/
+		font-size:12px;
+	}
+/*.complemento{
+	width:300px;
+	}*/
+	fieldset.complemento input{
+		width:290px;
+		/*background-color:#ebebeb;*/
+		font-size:12px;
+	}
+/*.bairro{
+	width:245px;} */
+	fieldset.bairro input{
+		width:170px;
+		/*background-color:#ebebeb;*/
+		font-size:12px;
+	}
+/*.cep{
+	width:px;}*/ 
+	fieldset.cep input{
+		width:170px;
+		/*background-color:#ebebeb;*/
+		font-size:12px;
+	}
+/*.referencia{
+	width:425px;} */
+	fieldset.referencia input{
+		width:170px;
+		/*background-color:#ebebeb;*/
+		font-size:12px;
+	}
+	
+/*.indicacao{
+	width:425px;} */
+	fieldset.indicacao input{
+		width:160px;
+		/*background-color:#ebebeb;*/
+		font-size:12px;
+	}	
+	
+/*.email{
+	width:315px;}*/ 
+	fieldset.email input{
+		width:170px;
+		/*background-color:#ebebeb;*/
+		font-size:12px;
+	}
+	
+/*.celular{
+	width:425px;} */
+	fieldset.celular input{
+		width:170px;
+		/*background-color:#ebebeb;*/
+		font-size:12px;
+	}	
+/*.telRes{
+	width:370px;}*/ 
+	fieldset.telRes input{
+		width:170px;
+		/*background-color:#ebebeb;*/
+		font-size:12px;
+	}
+/*.telCom{
+	width:370px;}*/
+	fieldset.telCom input{
+		width:170px;
+		/*background-color:#ebebeb;*/
+		font-size:12px;
+	}
+
+	fieldset.check{
+		font-size:12px;
+		width:100%;
+		}
+fieldset{
+		font-size:12px;
+		font-family:Tahoma, Geneva, sans-serif;
+		}
+
+
+.conteudo{
+	width:990px;
+	height:auto;
+	margin:0 auto;
+	/*background-color:#FFF;
+	background-image:url(bgFormularioNew.jpg);
+	background-repeat:no-repeat;
+	background-position:bottom center;*/
+	padding-bottom:25px;
+}
+form{
+	padding-top:200px;
+	width:400px;
+	margin:0 auto;
+	float:right;
+	color:#FFF;
+}
+h3{color:#FFF;}
+/*label{
+	margin-top:-30px;
+}*/
+-->
+
+/*/////////////////////////////RODAPE//////////////////////////////////////*/
+
+/*#rodape{ float:left; margin: 15px 0; width:100%; display:block; height:200px; overflow:hidden;}
+
+#buscaBase{ padding-top:10px; padding-left:10px; margin:0 auto; width:980px; } 
+	#buscaBase .BuscaTopoBotao{	margin-top:5px; } */
+#rodape{ background-color:#FFF;}
+
+.menuRodape{ width:985px; border-top: 1px solid #CCC; border-bottom: 1px solid #CCC; padding:5px; padding-left:1px; margin:0 auto; }
+	.menuRodape li{ display: inline; list-style-image: none; list-style-type: none; margin:0; padding:10px; }
+	.menuRodape img{ margin-bottom:-2px; }
+	
+.menuRodapeEsquerda{ width:700px; padding-left:1px; font-weight:bold; color:#333; float:left; font-family:tahoma, arial, sans-serif; font-size:12px; }
+	.menuRodapeEsquerda li{ padding:25px; }
+	.menuRodapeEsquerda a{ font-weight:bold; color:#333; }
+	
+.menuRodapeDireita{ padding-right:10px; color:#333; font-size:10px; text-align:right; width:200px; float:right; }
+	.menuRodapeDireita ul li a{ display:inline; color:#666; }
+	.menuRodapeDireita ul li a:visited{ color:#666; }
+
+.institucionalRodape{ width:979px; border-bottom: 1px solid #ebebeb; padding:5px; padding-left:12px; font-size:10px; margin:0 auto; }
+
+.privacidadeRodape{ width:979px; padding:5px; padding-left:12px; font-size:10px; padding-bottom:30px; margin:0 auto; }
+
+.menor{font-size:12px; font-weight:normal; }
+</style>
+
+<script src="jquery.js" type="text/javascript"></script>
+<script src="jquery.maskedinput-1.2.2.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<div class="conteudo">
+
+<script type="text/javascript">
+   jQuery(function($) {
+      $.mask.definitions['~']='[+-]';
+      $('#data').mask('99/99/9999');
+      $('#cep').mask('99.999-999');
+      $('#telefone').mask("(99) 9999-9999");
+	  $('#telefoneRes').mask("(99) 9999-9999");
+	  $('#telefoneCom').mask("(99) 9999-9999");
+      $("#cpf").mask("999.999.999-99");
+      //$("#ssn").mask("999-99-9999");
+      //$("#product").mask("a*-999-a999",{placeholder:" ",completed:function(){alert("You typed the following: "+this.val());}});
+      //$("#eyescript").mask("~9.99 ~9.99 999");
+   });</script>
+<!--Inicio de formulario-->
+		
+	  <form id="form1" name="filmes" method="post" action="http://cgiserver.atarde.com.br/cgi-bin/FormMail.pl">
+		<input name="recipient" value="cortesia.atarde@grupoatarde.com.br" type="hidden">      
+		<input name="redirect" value="http://www.atarde.com.br/assinaturacortesia/obrigado/obrigado.html" type="hidden">
+		<input name="subject" value="Cortesia Jornal A TARDE" type="hidden">
+		<input name="required" value="nome, sexo, cpf, estadoCivil, ocupacao, nascimento, endereco, num,  bairro, cep, referencia, cidade, email, telRes, indicacao, criancas" type="hidden">
+        
+     
+        <fieldset class="nome"><label>*Nome:</label><br><input name="nome" type="text"></fieldset>
+        
+        <fieldset class="sexo"><label>*Sexo:<br></label>
+            <select name="sexo">
+                <option value="Masculino">M</option>
+                <option value="Feminino">F</option>
+            </select>
+        </fieldset>
+        
+        <br clear="all">
+	    <fieldset class="cpf"><label>*CPF:<br></label><input name="cpf" id="cpf" type="text"></fieldset>
+        <fieldset class="estadoCivil"><label>*Estado civil:<br></label>
+            <select name="estadoCivil">
+                <option value="Solteiro">Solteiro (a)</option>
+                <option value="Casado">Casado (a)</option>
+                <option value="Divorciado">Divorciado (a)</option>
+                <option value="Viúvo">Viúvo (a)</option>
+            </select>
+        <!--<input name="estadoCivil" />-->
+        </fieldset>  
+        <br clear="all">
+		<fieldset class="ocupacao"><label>*Ocupação:<br></label> 
+        <select name="ocupacao">
+        	<option value="Academia">Academia</option>
+            <option value="Administrador de empresas">Administrador de empresas</option>
+            <option value="Advocacia">Advocacia</option>
+            <option value="Agente de turismo">Agente de turismo</option>
+            <option value="Agricultura">Agricultura</option>
+            <option value="Agronomia">Agronomia</option>
+            <option value="Análise de Sistemas">Análise de Sistemas</option>
+            <option value="Aposentado">Aposentado</option>
+            <option value="Arquitetura">Arquitetura</option>
+            <option value="Artista Plástico">Artista Plástico</option>
+            <option value="Assessoria de imprensa">Assessoria de imprensa</option>
+            <option value="Assistência Social">Assistência Social</option>
+            <option value="Atendente/Recepcionista">Atendente/Recepcionista</option>
+            <option value="Ator">Ator</option>
+            <option value="Auditoria">Auditoria</option>
+            <option value="Autônomo">Autônomo</option>
+            <option value="Bancário">Bancário</option>
+            <option value="Bibliotecário/Arquivista">Bibliotecário/Arquivista</option>
+            <option value="Biologia">Biologia</option>
+            <option value="Bombeiro">Bombeiro</option>
+            <option value="Call center">Call center</option>
+            <option value="Carnaval">Carnaval</option>
+            <option value="Cinema">Cinema</option>
+            <option value="Comissário">Comissário</option>
+            <option value="Consultoria">Consultoria</option>
+            <option value="Contabilidade">Contabilidade</option>
+            <option value="Corretagem de imóveis">Corretagem de imóveis</option>
+            <option value="Corretagem de seguros">Corretagem de seguros</option>
+            <option value="Dançarino">Dançarino</option>
+            <option value="Decoração">Decoração</option>
+            <option value="Design">Design</option>
+            <option value="Direção e produção">Direção e produção</option>
+            <option value="Doméstica">Doméstica</option>
+            <option value="Dona de casa">Dona de casa</option>
+            <option value="Economia">Economia</option>
+            <option value="Editoração">Editoração</option>
+            <option value="Encontros Pessoais">Encontros Pessoais</option>
+            <option value="Enfermagem">Enfermagem</option>
+            <option value="Engenharia civil">Engenharia civil</option>
+            <option value="Engenharia elétrica">Engenharia elétrica</option>
+            <option value="Engenharia mecânica">Engenharia mecânica</option>
+            <option value="Engenharia química">Engenharia química</option>
+            <option value="Estatística">Estatística</option>
+            <option value="Estética">Estética</option>
+            <option value="Estoque">Estoque</option>
+            <option value="Estudante">Estudante</option>
+            <option value="Farmárcia">Farmárcia</option>
+            <option value="Ferroviário">Ferroviário</option>
+            <option value="Fisioterapia">Fisioterapia</option>
+            <option value="Fonoaudiologia">Fonoaudiologia</option>
+            <option value="Fotógrafo">Fotógrafo</option>
+            <option value="Funcionalismo Público">Funcionalismo Público</option>
+            <option value="Garçom e serviços de atendimento">Garçom e serviços de atendimento</option>
+            <option value="Gastronomia e culinária">Gastronomia e culinária</option>
+            <option value="Geólogia">Geólogia</option>
+            <option value="Industrial">Industrial</option>
+            <option value="Internet">Internet</option>
+            <option value="Jornalismo">Jornalismo</option>
+            <option value="Judiciário">Judiciário</option>
+            <option value="Legislativo">Legislativo</option>
+            <option value="Limpeza geral">Limpeza geral</option>
+            <option value="Locução">Locução</option>
+            <option value="Logística">Logística</option>
+            <option value="Lojista">Lojista</option>
+            <option value="Manicure, depilação e etc">Manicure, depilação e etc</option>
+            <option value="Manutenção telefonia">Manutenção telefonia</option>
+            <option value="Marcenaria">Marcenaria</option>
+            <option value="Marinheiro">Marinheiro</option>
+            <option value="Marketing">Marketing</option>
+            <option value="Mecânica">Mecânica</option>
+            <option value="Medicina">Medicina</option>
+            <option value="Militar">Militar</option>
+            <option value="Misticos">Misticos</option>
+            <option value="Moda">Moda</option>
+            <option value="Motorista">Motorista</option>
+            <option value="Museologia">Museologia</option>
+            <option value="Musica">Musica</option>
+            <option value="Não identificado">Não identificado</option>
+            <option value="Nutrição">Nutrição</option>
+            <option value="Odontologia">Odontologia</option>
+            <option value="Operador mercado">Operador mercado</option>
+            <option value="Paisagismo">Paisagismo</option>
+            <option value="Pecuária">Pecuária</option>
+            <option value="Pedagogia">Pedagogia</option>
+            <option value="Pesquisador">Pesquisador</option>
+            <option value="Piloto">Piloto</option>
+            <option value="Policial">Policial</option>
+            <option value="Político">Político</option>
+            <option value="Procuradoria">Procuradoria</option>
+            <option value="Programação">Programação</option>
+            <option value="Psicologia">Psicologia</option>
+            <option value="Publicidade">Publicidade</option>
+            <option value="Química">Química</option>
+            <option value="Recepção">Recepção</option>
+            <option value="Recreação">Recreação</option>
+            <option value="Redação">Redação</option>
+            <option value="Reitoria">Reitoria</option>
+            <option value="Relações Públicas">Relações Públicas</option>
+            <option value="Representação">Representação</option>
+            <option value="Sociologia">Sociologia</option>
+            <option value="Suporte">Suporte</option>
+            <option value="Taxista">Taxista</option>
+            <option value="Técnico em telefonia">Técnico em telefonia</option>
+            <option value="Vendas">Vendas</option>
+            <option value="Veterinaria">Veterinaria</option>
+            <option value="Vigilância e segurança privada">Vigilância e segurança privada</option>
+        </select>
+        <!--<input name="ocupacao" type="text" />-->
+        </fieldset>
+	  	<fieldset class="nascimento"><label>*Data de nascimento:<br></label><input name="nascimento" id="data" type="text"></fieldset>
+        <br clear="all">
+        
+        <fieldset class="endereco"><label>*Endereço:<br></label><input name="endereco" type="text"></fieldset>  
+		<br clear="all">
+        <fieldset class="num"><label>*N°.:<br></label><input name="num" type="text"></fieldset>
+        <fieldset class="complemento"><label>Complemento:<br></label><input name="complemento" type="text"></fieldset>        
+		<br clear="all">
+        <fieldset class="bairro"><label>*Bairro:<br></label><input name="bairro" type="text"></fieldset>        
+		<fieldset class="cep"><label>*CEP:<br></label><input name="cep" id="cep" type="text"></fieldset>
+        <br clear="all">
+        
+        <fieldset class="referencia"><label>*Cidade:<br></label><input name="cidade" type="text"></fieldset> 
+        <fieldset class="referencia"><label>*Ponto de referência:<br></label><input name="referencia" type="text"></fieldset> 
+        <br clear="all">
+               
+	  	<fieldset class="email"><label>*E-mail:<br></label><input name="email" type="text"></fieldset>
+        <fieldset class="celular"><label>Celular:<br></label><input name="celular" id="telefone" type="text"></fieldset>
+        <br clear="all">
+        
+        <fieldset class="telRes"><label>*Tel residencial:<br></label><input name="telRes" id="telefoneRes" type="text"></fieldset>        
+		<fieldset class="telCom"><label>Tel comercial:<br></label><input name="telCom" id="telefoneCom" type="text"></fieldset>
+        <br clear="all">
+        
+        <fieldset class="indicacao"><label>*Onde soube da promoção?<br></label>
+            <select name="indicacao" onchange="mudarCombo();" id="soubeCombo">
+            	    <option selected="selected" value="">selecione</option>
+                    <option value="Site Jornal A TARDE">Site Jornal A TARDE</option>
+                    <option value="Site A TARDE FM">Site A TARDE FM</option>
+                    <option value="Site Corretores de Imóveis">Site Corretores de Imóveis</option>
+                    <option value="Site Cadê o Síndico">Site Cadê o Síndico</option>
+                    <option value="MOBI">MOBI</option>
+		    <option value="1">Outro</option>
+                </select>
+            </fieldset> 
+	
+	
+        <fieldset class="indicacao"><label>Outro:<br></label>
+            <input name="indicacaoOutro" id="indicacaoInput" disabled="true" type="text">
+        </fieldset>
+
+	
+        <br clear="all">
+        
+        <fieldset class="check"><label>*Possui crianças em casa:<br></label>
+        	<input name="criancas" value="Não" checked="" type="radio">Não 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input name="criancas" value="Sim, menores de 12 anos" type="radio">Sim, menores de 12 anos &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input name="criancas" value="Sim, maiores de 12 anos" type="radio">Sim, maiores de 12 anos
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input name="criancas" value="Ambas as Idades" type="radio">Ambas as Idades
+            
+        </fieldset>
+        <br><br><br><br>
+        <br clear="all">
+        
+        <fieldset class="check">
+        	<label><input name="aceito" value="Aceito" checked="checked" type="checkbox">Deseja receber informações sobre nossas promoções no seu e-mail?</label>
+        </fieldset>
+        
+<p align="center"><a onclick="JavaScript: ValidaCadastro(document.filmes); return false;"><img src="botao.gif" height="41" hspace="95" vspace="1" width="96"></a></p>  
+      
+	</form>
+	
+<br clear="all">
+	
+<!--Fim de formulario-->
+
+
+
+
+</div>
+
+<div id="rodape">
+        
+          	
+          
+			<div class="institucionalRodape">
+				<img src="http://www.atarde.com.br/fw/img/2009/04/empresas.png" alt="Empresas do Grupo" title="Empresas do Grupo" usemap="#Map" border="0">
+				<map name="Map" id="Map">
+				  <area shape="rect" coords="13,29,117,65" href="http://www.jornalatarde.com.br">
+				  <area shape="rect" coords="158,29,270,64" href="http://www.atarde.com.br">
+				  <area shape="rect" coords="309,29,421,64" href="http://www.atardefm.com.br">
+				  <area shape="rect" coords="459,29,590,64" href="http://www.agenciaatarde.com.br">
+				  <area shape="rect" coords="620,29,699,64" href="http://www.mobiatarde.com.br">
+				  <area shape="rect" coords="727,29,837,64" href="http://www.atardeservicosgraficos.com.br">
+				  <area shape="rect" coords="860,29,961,64" href="http://www.avance.net.br">
+				</map>
+
+
+			</div>
+
+          <div class="institucionalRodape">Rua Prof. Milton Cayres de Brito n° 204 - Caminho das Árvores, CEP-41820570.</div>
+          
+          <div class="privacidadeRodape">Copyright © 1997 - <t:outputtext value="#{portalUtilFaces.ano}"> Grupo A TARDE Todos os direitos reservados.</t:outputtext></div>
+          
+</div>
+
+
+
+</body>

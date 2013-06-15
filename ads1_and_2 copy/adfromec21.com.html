@@ -1,0 +1,1707 @@
+<head>
+		<title>tradeKorea, B2B Marketplace for Manufacturers, Suppliers, Importers, Exporters</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="Keywords" content="b2b, b2b marketplace, business to business, manufacturer, exporters, importers, suppliers, buyers, trade leads, global sourcing, china, korea, tradekorea, tradeKorea.com">
+		<meta name="Description" content="Business to Business (B2B) marketplace for export and import, offers company directory, product catalogs and trade leads to importer, exporter, manufacturer, supplier, buyer.- tradeKorea.com">
+		<meta name="verify-v1" content="kyxOeaIeCbuHF0dvREYp4hirBaIvkZWrphopKrYAnjI=">
+		<meta name="y_key" content="dbc1d14a7a4950b0">
+		<meta name="msvalidate.01" content="1FB54F39E64CC279D0F7299FAED2EA3C">
+
+		<link rel="shortcut icon" href="http://web.tradekorea.com/images/icon/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="http://web.tradekorea.com/css/eng.css">
+		<link href="http://web.tradekorea.com/css/banner_carousel.css" rel="stylesheet" type="text/css">
+		<script src="http://www.google-analytics.com/ga.js" async="" type="text/javascript"></script><script type="text/javascript" src="http://web.tradekorea.com/js/eng.js"></script>
+
+		<script type="text/javascript" src="http://web.tradekorea.com/js/ext/jquery-1.3.1.min.js"></script><noscript></noscript>
+		<script type="text/javascript" src="http://web.tradekorea.com/js/ext/plugin/jquery.cookie.js"></script>
+		<script type="text/javascript" src="http://web.tradekorea.com/js/ext/plugin/jcarousellite_1.0.1.pack.js"></script><noscript></noscript>
+		<script type="text/javascript" src="http://web.tradekorea.com/js/ext/plugin/jquery.blockUI.js"></script>
+		<script type="text/javascript" src="http://web.tradekorea.com/js/tk_core.js"></script><noscript></noscript>
+		<script type="text/javascript" src="http://web.tradekorea.com/js/tk_search.js"></script><noscript></noscript>
+		<script type="text/javascript" src="http://web.tradekorea.com/js/tradekorea.js"></script><noscript></noscript>
+		<script type="text/javascript" src="http://web.tradekorea.com/js/tk/tk_carousel.js"></script><noscript></noscript>
+		<script type="text/javascript" src="http://web.tradekorea.com/js/tk_search_autocom.js"></script><noscript></noscript>
+		<script type="text/javascript" src="http://web.tradekorea.com/js/facebook.js"></script>
+		<script>
+			var oT = null;
+			var rollingInterval;
+			
+			//???? ???? ??(???)
+			function checkLang() {
+				var type = navigator.appName;
+				var lang;
+				var domain = "www.tradekorea.com";
+				if(type == "Netscape")
+					lang = navigator.language;
+				else
+					lang = navigator.userLanguage;
+
+				//?????? ?2??? ??
+				lang = lang.substr(0,2);
+
+				if(lang == "ko")
+					domain = "kr.tradekorea.com";
+
+				return domain;
+			}
+
+			function premium_search(){
+				var searchAction;
+				var premium_kwd = $( "input[name=premium_kwd]", "form[name=gnbPremiumForm]" ).val();
+
+				if( $.trim(premium_kwd).length > 0 ) {
+					searchAction = ""
+						+ "/premium-suppliers"
+						+ "/"+premium_kwd+".html";
+
+					$( "form[name=gnbPremiumForm]" ).attr( "action", searchAction );
+					$( "form[name=gnbPremiumForm]" ).attr( "target", "_blank" );
+					$( "form[name=gnbPremiumForm]" ).submit();
+				} else {
+					alert("Please Enter Search Keyword.");
+				}
+			}
+
+			//????
+			function autocomSubmit(){
+				searchGnb();
+			}
+
+			//?? ?? ???
+//			function openPopupNotice(id, top, left, width, height){
+//				var url = "/noticepopup/showWorkPopupNotice.mvc?noticePopupId=" + id;
+//				var feature = "menubar=no,toolbar=no,location=no,status=no,scrollbars=no,resizable=no,width=" + width + ",height=" + (height+30) + ",left=" + left + ",top=" + top;
+
+//				self.open(url, "popup_"+id, feature);
+//			}
+
+
+
+
+			//?? ?? ???
+			function openPopupNotice(id,file,link, top, left, width, height){
+				var url = "/noticepopup/showWorkPopupNotice.mvc?noticePopupId=" + id;
+				var feature = "menubar=no,toolbar=no,location=no,status=no,scrollbars=no,resizable=no,width=" + width + ",height=" + (height+30) + ",left=" + left + ",top=" + top;
+
+				if(link == "" || link == null){
+					var link = "";
+				}
+
+				var layer = document.getElementById("layer");
+				var html = "";
+
+				html += "<div id=" + id + " class='pop_layer' name='pop_layer' ";
+				html += "style='float: left;margin-top:30px; border: 4px solid #77A8DB;height: 330px;width: 318px;display:block;'>";
+				html += "<a href=" + link + "><img src=" + "http://web.tradekorea.com" +  file + "  width='318' height='305' /></a>";
+				html += "<div style='height:25px; background-color:white;margin: 0 auto;'>";
+				html += "<div style='float: left;width: 260px;	padding-top: 4px;padding-left: 10px;text-align: left;'><a href=\"javascript:closeWin(true ,'" + id + "');\" >";
+					if(checkLang()!="kr.tradekorea.com"){				
+					html += "<u>This window will not open today</u>";
+				}else{
+					html += "<u>?? ?? ? ?? ?? ??</u>";
+				}
+				html += "</a></div>";
+				html += "<div style='width: 48px;text-align: right;float: left;'>";
+				html += "<img onclick=\"closePopup('" + id + "');\" ";
+				html += "style='cursor:pointer;'";
+				html += "src='http://web.tradekorea.com/images/index/close.gif' /></div></div></div>";
+
+
+
+				layer.innerHTML += html;
+
+
+
+
+//				alert(file);
+//				self.open(url, "popup_"+id, feature);
+			}
+
+			function closePopup(id) {
+				$('#' + id).remove();
+
+				var sz = $('.pop_layer').length;
+
+				if(sz == 0){
+					$( "#layer_block" ).remove();
+					$( "#layer" ).remove();
+				}
+			}
+
+
+			// ?? ?? ?? 20110427
+			function showTopBanner( idx )
+			{
+
+				$( "#topBanner" ).unbind("click");
+				if( idx == "1" ) {
+					$( "#topBanner" ).attr( "src", "http://web.tradekorea.com/images/index/top_spot_02.jpg" );
+					$( "#topBanner" ).attr( "alt", "Featured Exporters of Jeju" );
+					$( "#topBannerSelectBtn1" ).attr( "src", "http://web.tradekorea.com/images/btn/bn_1_on.gif" );
+					$( "#topBannerSelectBtn2" ).attr( "src", "http://web.tradekorea.com/images/btn/bn_2_off.gif" );
+					$( "#topBannerSelectBtn3" ).attr( "src", "http://web.tradekorea.com/images/btn/bn_3_off.gif" );
+
+					$( "#topBanner" ).bind( "click", function(){
+						location.href = "/service/expo/exhibition/specialshow.mvc?expoId=EX0961";
+					});
+				} else if( idx == "2" ) {
+					$( "#topBanner" ).attr( "src", "http://web.tradekorea.com/images/index/top_spot_01.jpg" );
+					$( "#topBanner" ).attr( "alt", "ETI" );
+					$( "#topBannerSelectBtn1" ).attr( "src", "http://web.tradekorea.com/images/btn/bn_1_off.gif" );
+					$( "#topBannerSelectBtn2" ).attr( "src", "http://web.tradekorea.com/images/btn/bn_2_on.gif" );
+					$( "#topBannerSelectBtn3" ).attr( "src", "http://web.tradekorea.com/images/btn/bn_3_off.gif" );
+
+					$( "#topBanner" ).bind( "click", function(){
+						location.href = "/service/expo/exhibition/specialshow.mvc?expoId=EX0603";
+					});
+				} else if( idx == "3" ) {
+					$( "#topBanner" ).attr( "src", "http://web.tradekorea.com/images/index/top_spot_03.jpg" );
+					$( "#topBanner" ).attr( "alt", "Global Business Matching Service" );
+					$( "#topBannerSelectBtn1" ).attr( "src", "http://web.tradekorea.com/images/btn/bn_1_off.gif" );
+					$( "#topBannerSelectBtn2" ).attr( "src", "http://web.tradekorea.com/images/btn/bn_2_off.gif" );
+					$( "#topBannerSelectBtn3" ).attr( "src", "http://web.tradekorea.com/images/btn/bn_3_on.gif" );
+
+					$( "#topBanner" ).bind( "click", function(){
+						location.href = "/bizmatching/app/intro.mvc";
+					});
+				}
+			}
+
+			function logOut(){
+				document.logOutForm.submit();
+				//http://han.tradekorea.com/servlet/wizard.servlet.main.mainServlet?command=tklogout
+				var win = window.open("http://han.tradekorea.com/servlet/wizard.servlet.main.mainServlet?command=tklogout",
+						"logout","width=10,height=10,top=3000");
+				win.close();
+			}
+
+			$(window).ready(function(){
+				TK.Ajax.send({
+					url:"/noticepopup/listWorkPopupNoticeAjax.mvc",
+					type : "get",
+					data : {
+						siteType : checkLang()
+					},
+					success : function(data){
+						var JSONData = TK.Ajax.parseJson(data);
+						var sz = JSONData.length;
+
+						if (sz > 0) {
+							for(var i=0; i<JSONData.length; i++){
+								if (i == 0) {
+									document.getElementById("layer_block").style.display = "block";
+								}
+								var cookieName =  JSONData[i].noticePopupId;
+								var popupNoticeCookie = $.cookie( cookieName );
+								if( popupNoticeCookie == null || popupNoticeCookie != "view"){
+									openPopupNotice(JSONData[i].noticePopupId, JSONData[i].imgPath, JSONData[i].link, JSONData[i].top, JSONData[i].left, JSONData[i].width, JSONData[i].height);
+								}
+else{
+									document.getElementById("layer_block").style.display = "none";
+									document.getElementById("layer").style.display = "none";
+									document.getElementById("layer").style.zIndex = 0;
+								}
+							}
+						} else {
+							$("#layer_block").remove();
+							$("#layer").remove();
+						}
+					},
+					error : function(respText) {  }
+				});
+
+				// contextPath ??.
+				contextPath = "";
+
+				// ???? ??.
+				oT_Init(contextPath, 487);
+
+				$(".cycleContainer").each(function(){
+					new TKCarousel($(this)).start(500, 2500);
+				});
+
+				// ?? ?? ?? ???
+				// cnt?? ??? -1? ???.
+				var cnt = 1;
+				var random = (Math.round(cnt * Math.random())+1);
+				showTopBanner(random);
+
+				header();
+				sec1();
+				
+				// ?? ?? 5?
+				rollingInterval = setInterval(secRolling,5000);
+
+				// contextPath ??.
+				contextPath = "";
+
+				// ???? ??.
+				oT_Init(contextPath, 181);
+
+				setSearchCategoryList();
+			});
+
+			//rolling
+			function secRolling(){
+				var obj = $('#container .sec1');
+				var btn_obj = obj.find('.img_menu li');
+				btn_obj.each(function(i){ this.nums = i });
+				var img_obj = obj.find('.img_wrap li');
+				var state = 0;
+				var flag = false;
+				btn_obj.each(function(){
+					if(flag==false) state++;
+					if(flag==false && $(this).attr("class") == "on"){ 
+						flag=true;
+					}
+				});
+
+				function move(nums){
+					img_obj.fadeOut();
+					img_obj.eq(nums).fadeIn();
+					btn_obj.removeClass('on');
+					btn_obj.eq(nums).addClass('on');
+				}
+
+				if(btn_obj.length<=state){
+					move(0);
+				}else{
+					move(state);
+				}	
+			}
+
+			function clearIntervalBanner(){
+				clearInterval(rollingInterval);
+			}
+
+			function startIntervalBanner(){
+				rollingInterval=setInterval(secRolling,5000);
+			}
+				
+			// ???? ?? ??? ??
+			function setSearchCategoryList()
+			{
+				var gnbCatCd = "";
+				var gnbCatNm = "";
+
+				TK.Ajax.send( {
+					url : "/category/listCategoryTopLevelCategoriesAjax.mvc",
+					type : "get",
+					success : function(JSONData, respText){
+							//alert(JSONData);
+						var obj = TK.Ajax.parseJson(JSONData);
+						var size = obj.length;
+
+						// ??? ?? ??
+						if(size > 0) {
+							var categoryItem;
+							for(i = 0; i < size; i++) {
+								var category = obj[i];
+
+								//categoryItem = '<li code="' + category.catCd + '" class="cursor">' + category.catNm + '</li>';
+								categoryItem = "<li><a href='javascript:setCategoryInfo(\"" + category.catCd + "\",\"" + category.catNm + "\");'>" + category.catNm + "</a></li>";
+								$( categoryItem ).appendTo( "div[id=sch_drop_02] ul" );
+							}
+
+							// ???? ???? ??? ?? ??
+							if(gnbCatCd != "") {
+								gnbCatIdx = $( "li", "#sch_drop_02" ).index( $( "li[code=" + gnbCatCd + "]", "#sch_drop_02" ) );
+
+								// ?? ??????? ?? ??
+								if(gnbCatIdx < 0) {
+									$( "ul", "#sch_drop_02" ).append( "<li code=\"" + gnbCatCd + "\" class=\"cursor\">" + gnbCatNm + "</li>" );
+								}
+
+								// ?? ?? ??? ???? ?? ??
+								$( "input[name=catCd]", "form[name=gnbForm]" ).val( gnbCatCd );
+								$( "#categoryNm" ).text( gnbCatNm );
+							}
+
+							// ???? ??? ??? ???
+							//searchCategoryListBind();
+						}
+					},
+					error : function(respText){
+						alert("Error!!");
+					}
+				} );
+			}
+
+			// tradeKorea bookMark
+			function tkBookMark()
+			{
+				var url = "http://www.tradekorea.com";
+				var title = "Global B2B Marketplace";
+				var msie = $.browser.msie;
+				var mozilla = $.browser.mozilla;
+				var opera = $.browser.opera;
+				var safari = $.browser.safari;
+
+				if(msie) {
+					window.external.AddFavorite(url, title);
+				} else if(mozilla) {
+					window.sidebar.addPanel(title, url, "");
+				} else if(opera) {
+					var elem = document.createElement('a');
+					elem.setAttribute('href',url);
+					elem.setAttribute('title',title);
+					elem.setAttribute('rel','sidebar');
+					elem.click();
+				} else if(safari) {
+					alert("Safari and Chorme is not execute.");
+				}
+			}
+
+			// footer ?? ??? ??.
+			function openEmpFooterPopup(type)
+			{
+				if( type == "policy" ) {
+					window.open( "http://www.tradekorea.com/emp/information/privacyPopup.mvc", "empPrivacy", "width=694, height=554, top=100, left=100, resizable=no, scrollbar=no, status=no" );
+				} else if ( type == "terms" ) {
+					window.open( "http://www.tradekorea.com/emp/information/termsOfUsePopup.mvc", "empPrivacy", "width=694, height=554, top=100, left=100, resizable=no, scrollbar=no, status=no" );
+				} else if ( type == "contact" ) {
+					window.open( "http://www.tradekorea.com/service/question/writePopup.mvc?categoryId=Q010102", "empPrivacy", "width=574, height=424, top=100, left=100, resizable=no, scrollbar=no, status=no" );
+				}
+			}
+
+			function moveBizMatcingOnline()
+			{
+				location.href = "/bizmatching/app/intro.mvc";
+			}
+
+			function setCountryCd(cd,nm){
+				$( "input[name=nationCd]", "form[name=gnbForm]" ).val( cd );
+				$( "#countryNm" ).text(nm);
+			}
+
+			function setCategoryInfo(cd,nm){
+				$( "input[name=catCd]", "form[name=gnbForm]" ).val( cd );
+				$( "#categoryNm" ).text(nm);
+			}
+
+			function setItemInfo(cd,nm) {
+				$("input[name=itemCd]", "form[name=gnbForm]" ).val( cd );
+				$("#itemNm").text(nm);
+			}
+
+			// ?? ?? ??
+			function searchGnb(){
+				var searchAction;
+				var keyword = $( "input[name=keyword]", "form[name=gnbForm]" ).val();
+				var catCd = $( "input[name=catCd]", "form[name=gnbForm]" ).val();
+				var nationCd = $( "input[name=nationCd]", "form[name=gnbForm]" ).val();
+				var itemCd = $("input[name=itemCd]", "form[name=gnbForm]").val();
+
+				// ???? ??? ??? ??? ?? ??
+				if( $.trim(keyword).length > 0 && checkSearchTipKeyword(keyword) == false ) {
+					searchAction = ""
+								+ "/" + itemCd //+ $( currentGnbEl ).attr( "action" ) ?? ???? ???? ?? products? ?????
+								+ "/";
+
+					// ???? ??? ?? ??
+					if(catCd != "" && catCd != null) {
+						searchAction += catCd + "/";
+					}
+
+					// ???? ?? ??
+					if(keyword != "" && keyword != null) {
+						$( "input[name=keyword]", "form[name=gnbDetailForm]" ).val( keyword );
+					} else {
+						$( "input[name=keyword]", "form[name=gnbDetailForm]" ).remove();
+					}
+
+					searchAction += keyword + ".html";
+
+					// ?? ??? ?? ??
+					if(nationCd != "" && nationCd != null) {
+						$( "input[name=nationCd]", "form[name=gnbDetailForm]" ).val( nationCd );
+					} else {
+						$( "input[name=nationCd]", "form[name=gnbDetailForm]" ).remove();
+					}
+					$( "input[name=certNm]", "form[name=gnbDetailForm]" ).remove();
+
+					$( "form[name=gnbDetailForm]" ).attr( "action", searchAction );
+					$( "form[name=gnbDetailForm]" ).submit();
+				} else {
+					alert("Please Enter Search Keyword.");
+					$( "input[name=keyword]", "form[name=gnbForm]" ).focus();
+				}
+			}
+			//google check
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-7348898-6']);
+			_gaq.push(['_trackPageview']);
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	<style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}
+.fb_invisible{display:none}
+.fb_reset{background:none;border-spacing:0;border:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}
+.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}
+.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}
+.fb_dialog_content{background:#fff;color:#333}
+.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px;top:8px\9;right:7px\9}
+.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}
+.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}
+.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}
+.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}
+.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}
+.fb_dialog_top_left,
+.fb_dialog_top_right,
+.fb_dialog_bottom_left,
+.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}
+/* @noflip */
+.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}
+/* @noflip */
+.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}
+/* @noflip */
+.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}
+/* @noflip */
+.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right,
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right{width:10px;height:100%}
+.fb_dialog_vert_left{margin-left:-10px}
+.fb_dialog_vert_right{right:0;margin-right:-10px}
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{width:100%;height:10px}
+.fb_dialog_horiz_top{margin-top:-10px}
+.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}
+.fb_dialog_iframe{line-height:0}
+.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}
+.fb_dialog_content .dialog_title > span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif)
+no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}
+body.fb_hidden{-webkit-transform:none;height:100%;margin:0;left:-10000px;overflow:visible;position:absolute;top:-10000px;width:100%
+}
+.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif)
+white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}
+.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}
+#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}
+#fb-root #fb_dialog_ipad_overlay.hidden{display:none}
+.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}
+.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0 0, 0 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}
+.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%
+}
+.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0 0, 0 100%, from(#4966A6),
+color-stop(0.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset,
+rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}
+.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}
+.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}
+.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}
+#fb_dialog_loader_close{float:left}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}
+.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}
+.fb_iframe_widget iframe{position:absolute}
+.fb_iframe_widget_lift{z-index:1}
+.fb_hide_iframes iframe{position:relative;left:-10000px}
+.fb_iframe_widget_loader{position:relative;display:inline-block}
+.fb_iframe_widget_fluid{display:inline}
+.fb_iframe_widget_fluid span{width:100%}
+.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}
+.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_connect_bar_container div,
+.fb_connect_bar_container span,
+.fb_connect_bar_container a,
+.fb_connect_bar_container img,
+.fb_connect_bar_container strong{background:none;border-spacing:0;border:0;direction:ltr;font-style:normal;font-variant:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal;vertical-align:baseline}
+.fb_connect_bar_container{position:fixed;left:0 !important;right:0 !important;height:42px !important;padding:0 25px !important;margin:0 !important;vertical-align:middle !important;border-bottom:1px solid #333 !important;background:#3b5998 !important;z-index:99999999 !important;overflow:hidden !important}
+.fb_connect_bar_container_ie6{position:absolute;top:expression(document.compatMode=="CSS1Compat"? document.documentElement.scrollTop+"px":body.scrollTop+"px")}
+.fb_connect_bar{position:relative;margin:auto;height:100%;width:100%;padding:6px 0 0 0 !important;background:none;color:#fff !important;font-family:"lucida grande", tahoma, verdana, arial, sans-serif !important;font-size:13px !important;font-style:normal !important;font-variant:normal !important;font-weight:normal !important;letter-spacing:normal !important;line-height:1 !important;text-decoration:none !important;text-indent:0 !important;text-shadow:none !important;text-transform:none !important;white-space:normal !important;word-spacing:normal !important}
+.fb_connect_bar a:hover{color:#fff}
+.fb_connect_bar .fb_profile img{height:30px;width:30px;vertical-align:middle;margin:0 6px 5px 0}
+.fb_connect_bar div a,
+.fb_connect_bar span,
+.fb_connect_bar span a{color:#bac6da;font-size:11px;text-decoration:none}
+.fb_connect_bar .fb_buttons{float:right;margin-top:7px}
+.fb_edge_widget_with_comment{position:relative;*z-index:1000}
+.fb_edge_widget_with_comment span.fb_edge_comment_widget{position:absolute}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget{z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget .FB_Loader{left:0;top:1px;margin-top:6px;margin-left:0;background-position:50% 50%;background-color:#fff;height:150px;width:394px;border:1px #666 solid;border-bottom:2px solid #283e6c;z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.dark .FB_Loader{background-color:#000;border-bottom:2px solid #ccc}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.siderender
+.FB_Loader{margin-top:0}
+.fbpluginrecommendationsbarleft,
+.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}
+/* @noflip */
+.fbpluginrecommendationsbarleft{left:10px}
+/* @noflip */
+.fbpluginrecommendationsbarright{right:10px}</style></head>
+	<body class="eng">
+	<div class=" fb_reset" id="fb-root"><script async="" src="http://connect.facebook.net/en_US/all.js" type="text/javascript"></script><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe src="http://static.ak.facebook.com/connect/xd_arbiter.php?version=24#channel=f251875203a69e6&amp;origin=http%3A%2F%2Ftradekorea.com&amp;channel_path=%2F%3Ffb_xd_fragment%23xd_sig%3Df19ba70a632ce7e%26" style="border: medium none;" tab-index="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_http" allowtransparency="true" name="fb_xdm_frame_http" frameborder="0" scrolling="no"></iframe><iframe src="https://s-static.ak.facebook.com/connect/xd_arbiter.php?version=24#channel=f251875203a69e6&amp;origin=http%3A%2F%2Ftradekorea.com&amp;channel_path=%2F%3Ffb_xd_fragment%23xd_sig%3Df19ba70a632ce7e%26" style="border: medium none;" tab-index="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_https" allowtransparency="true" name="fb_xdm_frame_https" frameborder="0" scrolling="no"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe src="https://www.facebook.com/dialog/oauth?client_id=363043447124285&amp;response_type=token%2Csigned_request%2Ccode&amp;display=none&amp;domain=tradekorea.com&amp;origin=1&amp;redirect_uri=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D24%23cb%3Df36902f9d1fe2a4%26origin%3Dhttp%253A%252F%252Ftradekorea.com%252Ff251875203a69e6%26domain%3Dtradekorea.com%26relation%3Dparent&amp;sdk=joey" style="display: none;" allowtransparency="true" name="f2f621ab71c16ae" frameborder="0" scrolling="no"></iframe></div></div></div>
+	<div id="wrap">
+		<div id="header">
+			<h1 class="bookmark">Global B2B Marketplace  - </h1><span><a href="javascript:tkBookMark();" rel="nofollow"> Bookmark <img src="http://web.tradekorea.com/images/renew/eng/ico_star.gif" alt=""></a></span>
+ 
+			<div id="logo"><a title="Global e-Marketplace, tradeKorea" href="http://www.tradekorea.com">Global e-Marketplace, tradeKorea</a></div>
+
+			<form method="POST" name="logOutForm" action="http://www.tradekorea.com/logout"></form>
+			<ul class="global">
+
+	
+	
+
+				<li><strong><a href="https://www.tradekorea.com/join/editMember.mvc" rel="nofollow">Join Free</a></strong></li>
+				<li><a href="https://www.tradekorea.com/security/login.mvc" rel="nofollow">Sign In</a></li>
+				<li><a href="/emp/whatTradeKorea.mvc">About tradeKorea</a></li>
+				<li><a href="/service/article/notice/list.mvc">News</a></li>
+				<li><a href="/emp/help/preview.mvc">Help</a></li>
+				<li><a href="javascript:openEmpFooterPopup('contact');" rel="nofollow">Contact us</a></li>
+				<li class="last"><a href="http://kr.tradekorea.com"><img src="http://web.tradekorea.com/images/renew/eng/btn_korea.gif" alt="Korea"></a></li>
+	
+
+			</ul>
+
+			<ul class="sub_global">
+
+	
+	
+		<li><a href="https://www.tradekorea.com/security/login.mvc" rel="nofollow"><img src="http://web.tradekorea.com/images/renew/eng/btn_signin.gif" alt="Sign In"></a></li>
+		<li><a href="/service/article/notice/show.mvc?articleid=19642" rel="nofollow"><img src="http://web.tradekorea.com/images/renew/eng/btn_mytkguide.gif" alt="How to use tradeKorea"></a></li>
+		<li><a href="/security/login.mvc" rel="nofollow"><img src="http://web.tradekorea.com/images/renew/eng/btn_mytk.gif" alt="My tradeKorea"></a></li>
+	
+
+				<li class="ms"><a href="javascript:moveBizMatcingOnline();"><img src="http://web.tradekorea.com/images/renew/eng/btn_ms.gif" alt="Global Business Matching Service "></a></li>
+			</ul>
+
+			<!-- SearchWrap -->
+			
+
+
+
+		
+			<script type="text/javascript" language="javascript">
+			jQuery(document).ready(function() {
+				contextPath = "";
+				TK.Ajax.send( {
+					url : contextPath + "/common/listNationAjax.mvc",
+					type : "get",
+					success : function(JSONData, respText){
+						var obj = TK.Ajax.parseJson(JSONData);
+						var size = obj.length;
+
+						if(size > 0) {
+							var strHtml = "";
+							for(var i = 0; i < size; i++) {
+								var nation = obj[i];
+								strHtml += "<li><a href=\"javascript:setCountryCd('" + nation.nationCd + "', '" + nation.nationNm + "');\">" + nation.nationNm + "</a></li>";
+							}
+							$("#nationList").html(strHtml);
+						}
+					},
+					error : function(respText){
+						alert("error!!!");
+					}
+				});
+			});
+			</script>
+		
+
+		<div class="search_wrap">
+			<form method="get" id="gnbDetailForm" name="gnbDetailForm">
+				<input id="keyword" name="keyword" type="hidden">
+				<input id="nationCd" name="nationCd" type="hidden">
+				<input id="certNm" name="certNm" type="hidden">
+			</form>
+			<form method="get" id="gnbForm" name="gnbForm" onsubmit="searchGnb();return false;">
+			<input id="catCd" name="catCd" type="hidden">
+			<input id="nationCd" name="nationCd" type="hidden">
+			<input id="itemCd" name="itemCd" value="products" type="hidden">
+				<div class="inner_box">
+					<dl class="selection1">
+						<dt></dt>
+						<dd>
+							<a id="itemNm" href="javascript:sch03_onoff();" class="item" style="line-height: 120%">Products</a>
+							<div id="sch_drop_03" style="right:-85px; top:32px;" class="dns">
+								<ul>
+									<li action="products"><a href="javascript:setItemInfo('products', 'Products');">Products</a></li>
+									<li action="sell-leads"><a href="javascript:setItemInfo('sell-leads', 'Selling Leads');">Selling Leads</a></li>
+									<li action="buyers"><a href="javascript:setItemInfo('buyers', 'Buying Leads');">Buying Leads</a></li>
+									<li action="companies"><a href="javascript:setItemInfo('companies', 'Companies');">Companies</a></li>
+								</ul>
+							</div>
+						</dd>
+					</dl>
+					<input autocomplete="off" class="it" id="keyword" value="" name="keyword" onfocus="checkKeyword('gnbForm');" title="Key words input zone" onkeydown="oT_search(event);" onmousedown="oT.click();" style="font-size: 12px; height: 18px;" type="text">
+					<dl class="selection">
+						<dt></dt>
+						<dd>
+							<p class="country_area"><nobr>
+								<a id="countryNm" href="javascript:sch01_onoff();" class="country" style="line-height: 120%">Country</a></nobr>
+							</p>
+							<div id="sch_drop_01" class="dns" style="display:none;">
+								<ul id="nationList"><li><a href="javascript:setCountryCd('KR', 'South Korea');">South Korea</a></li><li><a href="javascript:setCountryCd('CN', 'China');">China</a></li><li><a href="javascript:setCountryCd('US', 'U.S.A');">U.S.A</a></li><li><a href="javascript:setCountryCd('IN', 'India');">India</a></li><li><a href="javascript:setCountryCd('AS', 'A.Samoa');">A.Samoa</a></li><li><a href="javascript:setCountryCd('AF', 'Afghanistan');">Afghanistan</a></li><li><a href="javascript:setCountryCd('AL', 'Albania');">Albania</a></li><li><a href="javascript:setCountryCd('DZ', 'Algeria');">Algeria</a></li><li><a href="javascript:setCountryCd('AD', 'Andorra');">Andorra</a></li><li><a href="javascript:setCountryCd('AO', 'Angola');">Angola</a></li><li><a href="javascript:setCountryCd('AI', 'Anguilla');">Anguilla</a></li><li><a href="javascript:setCountryCd('AQ', 'Antarctica');">Antarctica</a></li><li><a href="javascript:setCountryCd('AG', 'Antigua Barbuda');">Antigua Barbuda</a></li><li><a href="javascript:setCountryCd('AR', 'Argentina');">Argentina</a></li><li><a href="javascript:setCountryCd('AM', 'Armenia');">Armenia</a></li><li><a href="javascript:setCountryCd('AW', 'Aruba');">Aruba</a></li><li><a href="javascript:setCountryCd('AU', 'Australia');">Australia</a></li><li><a href="javascript:setCountryCd('AT', 'Austria');">Austria</a></li><li><a href="javascript:setCountryCd('AZ', 'Azerbaijani');">Azerbaijani</a></li><li><a href="javascript:setCountryCd('IO', 'B.I.O.T');">B.I.O.T</a></li><li><a href="javascript:setCountryCd('BS', 'Bahamas');">Bahamas</a></li><li><a href="javascript:setCountryCd('BH', 'Bahrain');">Bahrain</a></li><li><a href="javascript:setCountryCd('BD', 'Bangladesh');">Bangladesh</a></li><li><a href="javascript:setCountryCd('BB', 'Barbados');">Barbados</a></li><li><a href="javascript:setCountryCd('BY', 'Belarus');">Belarus</a></li><li><a href="javascript:setCountryCd('BE', 'Belgium');">Belgium</a></li><li><a href="javascript:setCountryCd('BZ', 'Belize');">Belize</a></li><li><a href="javascript:setCountryCd('BJ', 'Benin');">Benin</a></li><li><a href="javascript:setCountryCd('BM', 'Bermuda');">Bermuda</a></li><li><a href="javascript:setCountryCd('BT', 'Bhutan');">Bhutan</a></li><li><a href="javascript:setCountryCd('BO', 'Bolivia');">Bolivia</a></li><li><a href="javascript:setCountryCd('BA', 'Bosnia-Herzegov');">Bosnia-Herzegov</a></li><li><a href="javascript:setCountryCd('BW', 'Botswana');">Botswana</a></li><li><a href="javascript:setCountryCd('BV', 'Bouvet Island');">Bouvet Island</a></li><li><a href="javascript:setCountryCd('BQ', 'Br.Antarc.T');">Br.Antarc.T</a></li><li><a href="javascript:setCountryCd('VG', 'Br.Virgin Is.');">Br.Virgin Is.</a></li><li><a href="javascript:setCountryCd('BR', 'Brazil');">Brazil</a></li><li><a href="javascript:setCountryCd('BN', 'Brunei');">Brunei</a></li><li><a href="javascript:setCountryCd('BG', 'Bulgaria');">Bulgaria</a></li><li><a href="javascript:setCountryCd('BF', 'Burkina Faso');">Burkina Faso</a></li><li><a href="javascript:setCountryCd('BI', 'Burundi');">Burundi</a></li><li><a href="javascript:setCountryCd('DM', 'C.Dominica');">C.Dominica</a></li><li><a href="javascript:setCountryCd('KH', 'Cambodia');">Cambodia</a></li><li><a href="javascript:setCountryCd('CM', 'Cameroon');">Cameroon</a></li><li><a href="javascript:setCountryCd('CA', 'Canada');">Canada</a></li><li><a href="javascript:setCountryCd('PZ', 'Canal Zone');">Canal Zone</a></li><li><a href="javascript:setCountryCd('CT', 'Canton&amp;E. Is');">Canton&amp;E. Is</a></li><li><a href="javascript:setCountryCd('CV', 'Cape Verde');">Cape Verde</a></li><li><a href="javascript:setCountryCd('KY', 'Cayman');">Cayman</a></li><li><a href="javascript:setCountryCd('CF', 'Cen.Afr.');">Cen.Afr.</a></li><li><a href="javascript:setCountryCd('TD', 'Chad');">Chad</a></li><li><a href="javascript:setCountryCd('CL', 'Chile');">Chile</a></li><li><a href="javascript:setCountryCd('CN', 'China');">China</a></li><li><a href="javascript:setCountryCd('CX', 'Christmas Is.');">Christmas Is.</a></li><li><a href="javascript:setCountryCd('CC', 'Cocos Islands');">Cocos Islands</a></li><li><a href="javascript:setCountryCd('CO', 'Colombia');">Colombia</a></li><li><a href="javascript:setCountryCd('KM', 'Comoros');">Comoros</a></li><li><a href="javascript:setCountryCd('CG', 'Congo');">Congo</a></li><li><a href="javascript:setCountryCd('CK', 'Cook(Br)');">Cook(Br)</a></li><li><a href="javascript:setCountryCd('CR', 'Costa Rica');">Costa Rica</a></li><li><a href="javascript:setCountryCd('CI', 'Cote Divoire');">Cote Divoire</a></li><li><a href="javascript:setCountryCd('HR', 'Croatia');">Croatia</a></li><li><a href="javascript:setCountryCd('CU', 'Cuba');">Cuba</a></li><li><a href="javascript:setCountryCd('CY', 'Cyprus');">Cyprus</a></li><li><a href="javascript:setCountryCd('CZ', 'Czecho Republic');">Czecho Republic</a></li><li><a href="javascript:setCountryCd('CD', 'Democrat Republic Of Congo (Zaire)');">Democrat Republic Of Congo (Zaire)</a></li><li><a href="javascript:setCountryCd('DK', 'Denmark');">Denmark</a></li><li><a href="javascript:setCountryCd('DJ', 'Djibouti');">Djibouti</a></li><li><a href="javascript:setCountryCd('DO', 'Dominican Rep.');">Dominican Rep.</a></li><li><a href="javascript:setCountryCd('NQ', 'Dro.M.L');">Dro.M.L</a></li><li><a href="javascript:setCountryCd('GQ', 'E.Guinea');">E.Guinea</a></li><li><a href="javascript:setCountryCd('TP', 'East Timor');">East Timor</a></li><li><a href="javascript:setCountryCd('EC', 'Ecuador');">Ecuador</a></li><li><a href="javascript:setCountryCd('EG', 'Egypt');">Egypt</a></li><li><a href="javascript:setCountryCd('SV', 'El Salvador');">El Salvador</a></li><li><a href="javascript:setCountryCd('ER', 'Eritrea');">Eritrea</a></li><li><a href="javascript:setCountryCd('EE', 'Estonia');">Estonia</a></li><li><a href="javascript:setCountryCd('ET', 'Ethiopia');">Ethiopia</a></li><li><a href="javascript:setCountryCd('GF', 'F.Guiana');">F.Guiana</a></li><li><a href="javascript:setCountryCd('PF', 'F.Polynesia');">F.Polynesia</a></li><li><a href="javascript:setCountryCd('TF', 'F.S.A.T');">F.S.A.T</a></li><li><a href="javascript:setCountryCd('FK', 'Falkland');">Falkland</a></li><li><a href="javascript:setCountryCd('FO', 'Faroe Is.');">Faroe Is.</a></li><li><a href="javascript:setCountryCd('FJ', 'Fiji');">Fiji</a></li><li><a href="javascript:setCountryCd('FI', 'Finland');">Finland</a></li><li><a href="javascript:setCountryCd('FR', 'France');">France</a></li><li><a href="javascript:setCountryCd('FX', 'France, Metropolitan');">France, Metropolitan</a></li><li><a href="javascript:setCountryCd('GW', 'G.Bissau');">G.Bissau</a></li><li><a href="javascript:setCountryCd('GA', 'Gabon');">Gabon</a></li><li><a href="javascript:setCountryCd('GM', 'Gambia');">Gambia</a></li><li><a href="javascript:setCountryCd('GE', 'Georgia');">Georgia</a></li><li><a href="javascript:setCountryCd('DE', 'Germany');">Germany</a></li><li><a href="javascript:setCountryCd('GH', 'Ghana');">Ghana</a></li><li><a href="javascript:setCountryCd('GI', 'Gibraltar');">Gibraltar</a></li><li><a href="javascript:setCountryCd('GR', 'Greece');">Greece</a></li><li><a href="javascript:setCountryCd('GL', 'Greenland');">Greenland</a></li><li><a href="javascript:setCountryCd('GD', 'Grenada');">Grenada</a></li><li><a href="javascript:setCountryCd('GP', 'Guadeloupe');">Guadeloupe</a></li><li><a href="javascript:setCountryCd('GT', 'Guatemala');">Guatemala</a></li><li><a href="javascript:setCountryCd('GN', 'Guinea');">Guinea</a></li><li><a href="javascript:setCountryCd('GY', 'Guyana');">Guyana</a></li><li><a href="javascript:setCountryCd('HM', 'H.M.Isl');">H.M.Isl</a></li><li><a href="javascript:setCountryCd('HT', 'Haiti');">Haiti</a></li><li><a href="javascript:setCountryCd('HN', 'Honduras');">Honduras</a></li><li><a href="javascript:setCountryCd('HK', 'Hong Kong(China)');">Hong Kong(China)</a></li><li><a href="javascript:setCountryCd('HU', 'Hungary');">Hungary</a></li><li><a href="javascript:setCountryCd('IS', 'Iceland');">Iceland</a></li><li><a href="javascript:setCountryCd('IN', 'India');">India</a></li><li><a href="javascript:setCountryCd('ID', 'Indonesia');">Indonesia</a></li><li><a href="javascript:setCountryCd('IR', 'Iran');">Iran</a></li><li><a href="javascript:setCountryCd('IQ', 'Iraq');">Iraq</a></li><li><a href="javascript:setCountryCd('IE', 'Ireland');">Ireland</a></li><li><a href="javascript:setCountryCd('IL', 'Israel');">Israel</a></li><li><a href="javascript:setCountryCd('IT', 'Italy');">Italy</a></li><li><a href="javascript:setCountryCd('JM', 'Jamaica');">Jamaica</a></li><li><a href="javascript:setCountryCd('JP', 'Japan');">Japan</a></li><li><a href="javascript:setCountryCd('JT', 'Johnston Is');">Johnston Is</a></li><li><a href="javascript:setCountryCd('JO', 'Jordan');">Jordan</a></li><li><a href="javascript:setCountryCd('KZ', 'Kazakhstan');">Kazakhstan</a></li><li><a href="javascript:setCountryCd('KE', 'Kenya');">Kenya</a></li><li><a href="javascript:setCountryCd('KI', 'Kiribati');">Kiribati</a></li><li><a href="javascript:setCountryCd('KW', 'Kuwait');">Kuwait</a></li><li><a href="javascript:setCountryCd('KG', 'Kyrgyzstan');">Kyrgyzstan</a></li><li><a href="javascript:setCountryCd('LA', 'Laos');">Laos</a></li><li><a href="javascript:setCountryCd('LV', 'Latbia');">Latbia</a></li><li><a href="javascript:setCountryCd('LB', 'Lebanon');">Lebanon</a></li><li><a href="javascript:setCountryCd('LS', 'Lesotho');">Lesotho</a></li><li><a href="javascript:setCountryCd('LR', 'Liberia');">Liberia</a></li><li><a href="javascript:setCountryCd('LY', 'Libya');">Libya</a></li><li><a href="javascript:setCountryCd('LI', 'Liechtenstein');">Liechtenstein</a></li><li><a href="javascript:setCountryCd('LT', 'Lithuania');">Lithuania</a></li><li><a href="javascript:setCountryCd('LU', 'Luxembourg');">Luxembourg</a></li><li><a href="javascript:setCountryCd('MO', 'Macao(China)');">Macao(China)</a></li><li><a href="javascript:setCountryCd('YM', 'Macedonia');">Macedonia</a></li><li><a href="javascript:setCountryCd('MK', 'Macedonia');">Macedonia</a></li><li><a href="javascript:setCountryCd('MG', 'Madagascar');">Madagascar</a></li><li><a href="javascript:setCountryCd('MW', 'Malawi');">Malawi</a></li><li><a href="javascript:setCountryCd('MY', 'Malaysia');">Malaysia</a></li><li><a href="javascript:setCountryCd('MV', 'Maldives');">Maldives</a></li><li><a href="javascript:setCountryCd('ML', 'Mali');">Mali</a></li><li><a href="javascript:setCountryCd('MT', 'Malta');">Malta</a></li><li><a href="javascript:setCountryCd('MH', 'Marshalls');">Marshalls</a></li><li><a href="javascript:setCountryCd('MQ', 'Martinique');">Martinique</a></li><li><a href="javascript:setCountryCd('MR', 'Mauritania');">Mauritania</a></li><li><a href="javascript:setCountryCd('MU', 'Mauritius');">Mauritius</a></li><li><a href="javascript:setCountryCd('YT', 'Mayotte');">Mayotte</a></li><li><a href="javascript:setCountryCd('MX', 'Mexico');">Mexico</a></li><li><a href="javascript:setCountryCd('FM', 'Micronesia');">Micronesia</a></li><li><a href="javascript:setCountryCd('MI', 'Midway Is(Us)');">Midway Is(Us)</a></li><li><a href="javascript:setCountryCd('PU', 'Misc, Pacific Island.(Us)');">Misc, Pacific Island.(Us)</a></li><li><a href="javascript:setCountryCd('MD', 'Moldova');">Moldova</a></li><li><a href="javascript:setCountryCd('MC', 'Monaco');">Monaco</a></li><li><a href="javascript:setCountryCd('MN', 'Mongolia');">Mongolia</a></li><li><a href="javascript:setCountryCd('MS', 'Montserrat');">Montserrat</a></li><li><a href="javascript:setCountryCd('MA', 'Morocco');">Morocco</a></li><li><a href="javascript:setCountryCd('MZ', 'Mozambique');">Mozambique</a></li><li><a href="javascript:setCountryCd('MM', 'Myanmar');">Myanmar</a></li><li><a href="javascript:setCountryCd('MP', 'N. Marianas');">N. Marianas</a></li><li><a href="javascript:setCountryCd('NC', 'N.Caledonia');">N.Caledonia</a></li><li><a href="javascript:setCountryCd('NZ', 'N.Zealand');">N.Zealand</a></li><li><a href="javascript:setCountryCd('NA', 'Namibia');">Namibia</a></li><li><a href="javascript:setCountryCd('NR', 'Nauru');">Nauru</a></li><li><a href="javascript:setCountryCd('NP', 'Nepal');">Nepal</a></li><li><a href="javascript:setCountryCd('AN', 'Neth.Antilles');">Neth.Antilles</a></li><li><a href="javascript:setCountryCd('NL', 'Netherland');">Netherland</a></li><li><a href="javascript:setCountryCd('NT', 'Neutral Zone');">Neutral Zone</a></li><li><a href="javascript:setCountryCd('NH', 'New Hebrides');">New Hebrides</a></li><li><a href="javascript:setCountryCd('NI', 'Nicaragua');">Nicaragua</a></li><li><a href="javascript:setCountryCd('NE', 'Niger');">Niger</a></li><li><a href="javascript:setCountryCd('NG', 'Nigeria');">Nigeria</a></li><li><a href="javascript:setCountryCd('NU', 'Niue');">Niue</a></li><li><a href="javascript:setCountryCd('NF', 'Norfolk Is');">Norfolk Is</a></li><li><a href="javascript:setCountryCd('KP', 'North Korea');">North Korea</a></li><li><a href="javascript:setCountryCd('NO', 'Norway');">Norway</a></li><li><a href="javascript:setCountryCd('OM', 'Oman');">Oman</a></li><li><a href="javascript:setCountryCd('PC', 'P.I.T.T');">P.I.T.T</a></li><li><a href="javascript:setCountryCd('PK', 'Pakistan');">Pakistan</a></li><li><a href="javascript:setCountryCd('PW', 'Palau');">Palau</a></li><li><a href="javascript:setCountryCd('PS', 'Palestine (Polisario)');">Palestine (Polisario)</a></li><li><a href="javascript:setCountryCd('PA', 'Panama');">Panama</a></li><li><a href="javascript:setCountryCd('PG', 'Papua N.Gunea');">Papua N.Gunea</a></li><li><a href="javascript:setCountryCd('PY', 'Paraguay');">Paraguay</a></li><li><a href="javascript:setCountryCd('PE', 'Peru');">Peru</a></li><li><a href="javascript:setCountryCd('PH', 'Philippines');">Philippines</a></li><li><a href="javascript:setCountryCd('PN', 'Pitcairn Is');">Pitcairn Is</a></li><li><a href="javascript:setCountryCd('PO', 'Plo');">Plo</a></li><li><a href="javascript:setCountryCd('PL', 'Poland');">Poland</a></li><li><a href="javascript:setCountryCd('PT', 'Portugal');">Portugal</a></li><li><a href="javascript:setCountryCd('PR', 'Puerto Rico');">Puerto Rico</a></li><li><a href="javascript:setCountryCd('QA', 'Qatar');">Qatar</a></li><li><a href="javascript:setCountryCd('RE', 'Reunion Is');">Reunion Is</a></li><li><a href="javascript:setCountryCd('RO', 'Romania');">Romania</a></li><li><a href="javascript:setCountryCd('RU', 'Russia');">Russia</a></li><li><a href="javascript:setCountryCd('RW', 'Rwanda');">Rwanda</a></li><li><a href="javascript:setCountryCd('YD', 'S. Yemen');">S. Yemen</a></li><li><a href="javascript:setCountryCd('SJ', 'S.J.M.I');">S.J.M.I</a></li><li><a href="javascript:setCountryCd('ST', 'S.T&amp;P.Is');">S.T&amp;P.Is</a></li><li><a href="javascript:setCountryCd('WS', 'Samoa');">Samoa</a></li><li><a href="javascript:setCountryCd('SM', 'San Marino');">San Marino</a></li><li><a href="javascript:setCountryCd('SA', 'Saudi Arabia');">Saudi Arabia</a></li><li><a href="javascript:setCountryCd('SN', 'Senegal');">Senegal</a></li><li><a href="javascript:setCountryCd('CS', 'Serbia and Montenegro');">Serbia and Montenegro</a></li><li><a href="javascript:setCountryCd('SC', 'Seychelles');">Seychelles</a></li><li><a href="javascript:setCountryCd('SL', 'Sierra Leone');">Sierra Leone</a></li><li><a href="javascript:setCountryCd('SG', 'Singapore');">Singapore</a></li><li><a href="javascript:setCountryCd('SK', 'Slovak');">Slovak</a></li><li><a href="javascript:setCountryCd('SI', 'Slovenia');">Slovenia</a></li><li><a href="javascript:setCountryCd('SB', 'Solomon');">Solomon</a></li><li><a href="javascript:setCountryCd('SO', 'Somalia');">Somalia</a></li><li><a href="javascript:setCountryCd('ZA', 'South Africa');">South Africa</a></li><li><a href="javascript:setCountryCd('GS', 'South Georgia');">South Georgia</a></li><li><a href="javascript:setCountryCd('KR', 'South Korea');">South Korea</a></li><li><a href="javascript:setCountryCd('ES', 'Spain');">Spain</a></li><li><a href="javascript:setCountryCd('LK', 'Sri Lanka');">Sri Lanka</a></li><li><a href="javascript:setCountryCd('SH', 'St.Helena');">St.Helena</a></li><li><a href="javascript:setCountryCd('KN', 'St.Kitts-Nevis');">St.Kitts-Nevis</a></li><li><a href="javascript:setCountryCd('LC', 'St.Lucia');">St.Lucia</a></li><li><a href="javascript:setCountryCd('PM', 'St.P&amp;M');">St.P&amp;M</a></li><li><a href="javascript:setCountryCd('VC', 'St.Vincent');">St.Vincent</a></li><li><a href="javascript:setCountryCd('SD', 'Sudan');">Sudan</a></li><li><a href="javascript:setCountryCd('SR', 'Suriname');">Suriname</a></li><li><a href="javascript:setCountryCd('SZ', 'Swaziland');">Swaziland</a></li><li><a href="javascript:setCountryCd('SE', 'Sweden');">Sweden</a></li><li><a href="javascript:setCountryCd('CH', 'Switzerland');">Switzerland</a></li><li><a href="javascript:setCountryCd('SY', 'Syria');">Syria</a></li><li><a href="javascript:setCountryCd('TT', 'T.Tobago');">T.Tobago</a></li><li><a href="javascript:setCountryCd('TJ', 'Tadjikstan');">Tadjikstan</a></li><li><a href="javascript:setCountryCd('TW', 'Taiwan');">Taiwan</a></li><li><a href="javascript:setCountryCd('TZ', 'Tanzania');">Tanzania</a></li><li><a href="javascript:setCountryCd('TH', 'Thailand');">Thailand</a></li><li><a href="javascript:setCountryCd('TL', 'Timor');">Timor</a></li><li><a href="javascript:setCountryCd('TG', 'Togo');">Togo</a></li><li><a href="javascript:setCountryCd('TK', 'Tokelau');">Tokelau</a></li><li><a href="javascript:setCountryCd('TO', 'Tonga');">Tonga</a></li><li><a href="javascript:setCountryCd('TN', 'Tunisia');">Tunisia</a></li><li><a href="javascript:setCountryCd('TR', 'Turkey');">Turkey</a></li><li><a href="javascript:setCountryCd('TM', 'Turkmenistan');">Turkmenistan</a></li><li><a href="javascript:setCountryCd('TC', 'Turks&amp;Caicos Is');">Turks&amp;Caicos Is</a></li><li><a href="javascript:setCountryCd('TV', 'Tuvalu');">Tuvalu</a></li><li><a href="javascript:setCountryCd('GB', 'U. Kingdom');">U. Kingdom</a></li><li><a href="javascript:setCountryCd('AE', 'U.A.E.');">U.A.E.</a></li><li><a href="javascript:setCountryCd('US', 'U.S.A');">U.S.A</a></li><li><a href="javascript:setCountryCd('UM', 'U.S.M.I');">U.S.M.I</a></li><li><a href="javascript:setCountryCd('UG', 'Uganda');">Uganda</a></li><li><a href="javascript:setCountryCd('UA', 'Ukraine');">Ukraine</a></li><li><a href="javascript:setCountryCd('UY', 'Uruguay');">Uruguay</a></li><li><a href="javascript:setCountryCd('SU', 'Ussr');">Ussr</a></li><li><a href="javascript:setCountryCd('UZ', 'Uzbekistan');">Uzbekistan</a></li><li><a href="javascript:setCountryCd('VU', 'Vanuatu');">Vanuatu</a></li><li><a href="javascript:setCountryCd('VA', 'Vatican City');">Vatican City</a></li><li><a href="javascript:setCountryCd('VE', 'Venezuela');">Venezuela</a></li><li><a href="javascript:setCountryCd('VN', 'Viet Nam');">Viet Nam</a></li><li><a href="javascript:setCountryCd('VI', 'Virgin Is.(Us)');">Virgin Is.(Us)</a></li><li><a href="javascript:setCountryCd('WF', 'W.A.F.I');">W.A.F.I</a></li><li><a href="javascript:setCountryCd('WK', 'Wake Island');">Wake Island</a></li><li><a href="javascript:setCountryCd('EH', 'Western Sahara');">Western Sahara</a></li><li><a href="javascript:setCountryCd('YE', 'Yemen');">Yemen</a></li><li><a href="javascript:setCountryCd('YU', 'Yugoslavia');">Yugoslavia</a></li><li><a href="javascript:setCountryCd('ZR', 'Zaire');">Zaire</a></li><li><a href="javascript:setCountryCd('ZM', 'Zambia');">Zambia</a></li><li><a href="javascript:setCountryCd('ZW', 'Zimbabwe');">Zimbabwe</a></li></ul>
+							</div>
+						</dd>
+						<dd>
+							<p class="category_area"><nobr>
+								<a id="categoryNm" href="javascript:sch02_onoff();" class="country" style="line-height: 120%">Category</a></nobr>
+							</p>
+							<div id="sch_drop_02" style="right:-85px; top:32px;" class="dns">
+								<ul>
+									
+								<li><a href="javascript:setCategoryInfo(&quot;01&quot;,&quot;Agriculture&quot;);">Agriculture</a></li><li><a href="javascript:setCategoryInfo(&quot;02&quot;,&quot;Apparel&quot;);">Apparel</a></li><li><a href="javascript:setCategoryInfo(&quot;03&quot;,&quot;Automobiles &amp; Motorcycles&quot;);">Automobiles &amp; Motorcycles</a></li><li><a href="javascript:setCategoryInfo(&quot;04&quot;,&quot;Business Services&quot;);">Business Services</a></li><li><a href="javascript:setCategoryInfo(&quot;05&quot;,&quot;Chemicals&quot;);">Chemicals</a></li><li><a href="javascript:setCategoryInfo(&quot;06&quot;,&quot;Computer Hardware &amp; Software&quot;);">Computer Hardware &amp; Software</a></li><li><a href="javascript:setCategoryInfo(&quot;07&quot;,&quot;Construction &amp; Real Estate&quot;);">Construction &amp; Real Estate</a></li><li><a href="javascript:setCategoryInfo(&quot;08&quot;,&quot;Consumer Electronics&quot;);">Consumer Electronics</a></li><li><a href="javascript:setCategoryInfo(&quot;09&quot;,&quot;Electrical Equipment &amp; Supplies&quot;);">Electrical Equipment &amp; Supplies</a></li><li><a href="javascript:setCategoryInfo(&quot;10&quot;,&quot;Electronic Components &amp; Supplies&quot;);">Electronic Components &amp; Supplies</a></li><li><a href="javascript:setCategoryInfo(&quot;11&quot;,&quot;Energy&quot;);">Energy</a></li><li><a href="javascript:setCategoryInfo(&quot;12&quot;,&quot;Environment&quot;);">Environment</a></li><li><a href="javascript:setCategoryInfo(&quot;13&quot;,&quot;Excess Inventory&quot;);">Excess Inventory</a></li><li><a href="javascript:setCategoryInfo(&quot;14&quot;,&quot;Fashion Accessories&quot;);">Fashion Accessories</a></li><li><a href="javascript:setCategoryInfo(&quot;15&quot;,&quot;Food &amp; Beverage&quot;);">Food &amp; Beverage</a></li><li><a href="javascript:setCategoryInfo(&quot;16&quot;,&quot;Furniture &amp; Furnishings&quot;);">Furniture &amp; Furnishings</a></li><li><a href="javascript:setCategoryInfo(&quot;17&quot;,&quot;General Industrial Equipment&quot;);">General Industrial Equipment</a></li><li><a href="javascript:setCategoryInfo(&quot;18&quot;,&quot;General Mechanical Components&quot;);">General Mechanical Components</a></li><li><a href="javascript:setCategoryInfo(&quot;19&quot;,&quot;Gifts &amp; Crafts&quot;);">Gifts &amp; Crafts</a></li><li><a href="javascript:setCategoryInfo(&quot;20&quot;,&quot;Hardware&quot;);">Hardware</a></li><li><a href="javascript:setCategoryInfo(&quot;21&quot;,&quot;Health &amp; Medical&quot;);">Health &amp; Medical</a></li><li><a href="javascript:setCategoryInfo(&quot;22&quot;,&quot;Home &amp; Garden&quot;);">Home &amp; Garden</a></li><li><a href="javascript:setCategoryInfo(&quot;23&quot;,&quot;Home Appliances&quot;);">Home Appliances</a></li><li><a href="javascript:setCategoryInfo(&quot;24&quot;,&quot;Lights &amp; Lighting&quot;);">Lights &amp; Lighting</a></li><li><a href="javascript:setCategoryInfo(&quot;25&quot;,&quot;Luggage, Bags &amp; Cases&quot;);">Luggage, Bags &amp; Cases</a></li><li><a href="javascript:setCategoryInfo(&quot;26&quot;,&quot;Manufacturing &amp; Processing Machinery&quot;);">Manufacturing &amp; Processing Machinery</a></li><li><a href="javascript:setCategoryInfo(&quot;27&quot;,&quot;Measurement &amp; Analysis Instruments&quot;);">Measurement &amp; Analysis Instruments</a></li><li><a href="javascript:setCategoryInfo(&quot;28&quot;,&quot;Minerals &amp; Metallurgy&quot;);">Minerals &amp; Metallurgy</a></li><li><a href="javascript:setCategoryInfo(&quot;29&quot;,&quot;Office &amp; School Supplies&quot;);">Office &amp; School Supplies</a></li><li><a href="javascript:setCategoryInfo(&quot;30&quot;,&quot;Packaging &amp; Paper&quot;);">Packaging &amp; Paper</a></li><li><a href="javascript:setCategoryInfo(&quot;31&quot;,&quot;Personal Care&quot;);">Personal Care</a></li><li><a href="javascript:setCategoryInfo(&quot;32&quot;,&quot;Printing &amp; Publishing&quot;);">Printing &amp; Publishing</a></li><li><a href="javascript:setCategoryInfo(&quot;33&quot;,&quot;Rubber &amp; Plastics&quot;);">Rubber &amp; Plastics</a></li><li><a href="javascript:setCategoryInfo(&quot;34&quot;,&quot;Security &amp; Protection&quot;);">Security &amp; Protection</a></li><li><a href="javascript:setCategoryInfo(&quot;35&quot;,&quot;Service Equipment&quot;);">Service Equipment</a></li><li><a href="javascript:setCategoryInfo(&quot;36&quot;,&quot;Shoes &amp; Accessories&quot;);">Shoes &amp; Accessories</a></li><li><a href="javascript:setCategoryInfo(&quot;37&quot;,&quot;Sports &amp; Entertainment&quot;);">Sports &amp; Entertainment</a></li><li><a href="javascript:setCategoryInfo(&quot;38&quot;,&quot;Telecommunications&quot;);">Telecommunications</a></li><li><a href="javascript:setCategoryInfo(&quot;39&quot;,&quot;Textiles &amp; Leather Products&quot;);">Textiles &amp; Leather Products</a></li><li><a href="javascript:setCategoryInfo(&quot;40&quot;,&quot;Timepieces, Jewelry, Eyewear&quot;);">Timepieces, Jewelry, Eyewear</a></li><li><a href="javascript:setCategoryInfo(&quot;41&quot;,&quot;Tools&quot;);">Tools</a></li><li><a href="javascript:setCategoryInfo(&quot;42&quot;,&quot;Toys&quot;);">Toys</a></li><li><a href="javascript:setCategoryInfo(&quot;43&quot;,&quot;Transportation&quot;);">Transportation</a></li></ul>
+							</div>
+						</dd>
+					</dl>
+				</div>
+				<a href="javascript:searchGnb();" class="sh_btn"><img src="http://web.tradekorea.com/images/renew/eng/btn_search.gif" alt="Search"></a>
+			</form>
+		</div>
+
+			<!-- Autocomplete Code Start-->
+			<div class="ac_sch_layer" id="ac_layer" style="background:#fff; border:1px solid #ccc; z-index:120;">
+			<iframe id="ifr_ac" name="ifr_ac" src="/emp/search/emp_search_autocomAjax.mvc" marginwidth="0px" marginheight="0px" frameborder="0" scrolling="no" width="260px"></iframe>
+			</div>
+			<!-- Autocomplete Code End-->
+
+
+
+			<dl class="hotkey_wrap">
+				<dt><strong>Hot Keyword</strong></dt>
+				<dd>
+					
+
+
+<!-- 
+
+-->
+
+		
+			<script type="text/javascript" language="javascript">
+			jQuery(document).ready(function() {
+				$.ajax({
+					type : "get"
+					, url : contextPath + "/common/getHotKeywordListAjax.mvc"
+					, dataType : "xml"
+					, timeout : 5000
+					, success : function(xml) {
+						var strHtml = "";
+						var size = $(xml).find("document").find("result").find("item").length;
+						var i = 0;
+						$(xml).find("item").each(function() {
+							var itemText = $(this).text();
+							var rank = $(this).find("rank").text();
+							var keyword = $(this).find("keyword").text();
+							
+							strHtml += "<a href=\"http://www.tradekorea.com/products/" + keyword + ".html\">" + keyword + "</a>";
+							if (i < size-1) {
+								strHtml += ", ";
+							}
+							i++;
+						});
+						$("#hotkeyword").html(strHtml);
+					}, error : function(xhr, errmsg, errobj) {
+						alert(xhr + errobj + errmsg);
+					}
+				});
+			});
+			</script>
+		
+
+		<p id="hotkeyword"><a href="http://www.tradekorea.com/products/machine.html">machine</a>, <a href="http://www.tradekorea.com/products/steel.html">steel</a>, <a href="http://www.tradekorea.com/products/valve.html">valve</a>, <a href="http://www.tradekorea.com/products/filter.html">filter</a>, <a href="http://www.tradekorea.com/products/Pad.html">Pad</a>, <a href="http://www.tradekorea.com/products/Electric.html">Electric</a>, <a href="http://www.tradekorea.com/products/heater.html">heater</a>, <a href="http://www.tradekorea.com/products/Light.html">Light</a>, <a href="http://www.tradekorea.com/products/LCD.html">LCD</a>, <a href="http://www.tradekorea.com/products/accessories.html">accessories</a></p>
+
+
+				</dd>
+			</dl>
+
+			<div class="gnb">
+            <ul class="gnb_cata">
+            <li><a href="#self" class="btn_gnb"><img src="http://web.tradekorea.com/images/renew/eng/gnb.gif" alt="Category"></a></li>
+              <li class="gnb_sat"><a href="http://www.tradekorea.com/statistics/index.mvc"><img src="http://web.tradekorea.com/images/renew/eng/btn_ktss.gif"></a></li>
+                </ul>
+		
+				<div class="dns">
+				
+
+
+
+	
+	
+
+<ul>
+
+
+	<li><ul>
+	
+		
+		
+			<li><a href="http://www.tradekorea.com/products/01/Agriculture.html">Agriculture</a></li>
+		
+		
+	
+		
+		
+			<li><a href="http://www.tradekorea.com/products/02/Apparel.html">Apparel</a></li>
+		
+		
+	
+		
+		
+			<li><a href="http://www.tradekorea.com/products/03/Automobiles___Motorcycles.html">Automobiles &amp; Motorcycles</a></li>
+		
+		
+	
+		
+		
+			<li><a href="http://www.tradekorea.com/products/04/Business_Services.html">Business Services</a></li>
+		
+		
+	
+		
+		
+			<li><a href="http://www.tradekorea.com/products/05/Chemicals.html">Chemicals</a></li>
+		
+		
+	
+		
+		
+			<li><a href="http://www.tradekorea.com/products/06/Computer_Hardware___Software.html">Computer Hardware &amp; Software</a></li>
+		
+		
+	
+		
+		
+			<li><a href="http://www.tradekorea.com/products/07/Construction___Real_Estate.html">Construction &amp; Real Estate</a></li>
+		
+		
+	
+		
+		
+			<li><a href="http://www.tradekorea.com/products/08/Consumer_Electronics.html">Consumer Electronics</a></li>
+		
+		
+	
+		
+		
+			<li><a href="http://www.tradekorea.com/products/09/Electrical_Equipment___Supplies.html">Electrical Equipment &amp; Supplies</a></li>
+		
+		
+	
+		
+		
+			<li><a href="http://www.tradekorea.com/products/10/Electronic_Components___Supplies.html">Electronic Components &amp; Supplies</a></li>
+		
+		
+	
+		
+		
+			<li><a href="http://www.tradekorea.com/products/11/Energy.html">Energy</a></li>
+		
+		
+	
+		
+			</ul></li><li><ul>
+		
+		
+			<li><a href="http://www.tradekorea.com/products/12/Environment.html">Environment</a></li>
+		
+		
+	
+		
+		
+			<li><a href="http://www.tradekorea.com/products/13/Excess_Inventory.html">Excess Inventory</a></li>
+		
+		
+	
+		
+		
+			<li><a href="http://www.tradekorea.com/products/14/Fashion_Accessories.html">Fashion Accessories</a></li>
+		
+		
+	
+		
+		
+			<li><a href="http://www.tradekorea.com/products/15/Food___Beverage.html">Food &amp; Beverage</a></li>
+		
+		
+	
+		
+		
+			<li><a href="http://www.tradekorea.com/products/16/Furniture___Furnishings.html">Furniture &amp; Furnishings</a></li>
+		
+		
+	
+		
+		
+			<li><a href="http://www.tradekorea.com/products/17/General_Industrial_Equipment.html">General Industrial Equipment</a></li>
+		
+		
+	
+		
+		
+			<li><a href="http://www.tradekorea.com/products/18/General_Mechanical_Components.html">General Mechanical Components</a></li>
+		
+		
+	
+		
+		
+			<li><a href="http://www.tradekorea.com/products/19/Gifts___Crafts.html">Gifts &amp; Crafts</a></li>
+		
+		
+	
+		
+		
+			<li><a href="http://www.tradekorea.com/products/20/Hardware.html">Hardware</a></li>
+		
+		
+	
+		
+		
+			<li><a href="http://www.tradekorea.com/products/21/Health___Medical.html">Health &amp; Medical</a></li>
+		
+		
+	
+		
+		
+			<li><a href="http://www.tradekorea.com/products/22/Home___Garden.html">Home &amp; Garden</a></li>
+		
+		
+	
+		
+			</ul></li><li><ul>
+		
+		
+			<li><a href="http://www.tradekorea.com/products/23/Home_Appliances.html">Home Appliances</a></li>
+		
+		
+	
+		
+		
+			<li><a href="http://www.tradekorea.com/products/24/Lights___Lighting.html">Lights &amp; Lighting</a></li>
+		
+		
+	
+		
+		
+			<li><a href="http://www.tradekorea.com/products/25/Luggage__Bags___Cases.html">Luggage, Bags &amp; Cases</a></li>
+		
+		
+	
+		
+		
+			<li><a href="http://www.tradekorea.com/products/26/Manufacturing___Processing_Machinery.html">Manufacturing &amp; Processing Machinery</a></li>
+		
+		
+	
+		
+		
+			<li><a href="http://www.tradekorea.com/products/27/Measurement___Analysis_Instruments.html">Measurement &amp; Analysis Instruments</a></li>
+		
+		
+	
+		
+		
+			<li><a href="http://www.tradekorea.com/products/28/Minerals___Metallurgy.html">Minerals &amp; Metallurgy</a></li>
+		
+		
+	
+		
+		
+			<li><a href="http://www.tradekorea.com/products/29/Office___School_Supplies.html">Office &amp; School Supplies</a></li>
+		
+		
+	
+		
+		
+			<li><a href="http://www.tradekorea.com/products/30/Packaging___Paper.html">Packaging &amp; Paper</a></li>
+		
+		
+	
+		
+		
+			<li><a href="http://www.tradekorea.com/products/31/Personal_Care.html">Personal Care</a></li>
+		
+		
+	
+		
+		
+			<li><a href="http://www.tradekorea.com/products/32/Printing___Publishing.html">Printing &amp; Publishing</a></li>
+		
+		
+	
+		
+		
+			<li><a href="http://www.tradekorea.com/products/33/Rubber___Plastics.html">Rubber &amp; Plastics</a></li>
+		
+		
+	
+		
+			</ul></li><li><ul>
+		
+		
+			<li><a href="http://www.tradekorea.com/products/34/Security___Protection.html">Security &amp; Protection</a></li>
+		
+		
+	
+		
+		
+			<li><a href="http://www.tradekorea.com/products/35/Service_Equipment.html">Service Equipment</a></li>
+		
+		
+	
+		
+		
+			<li><a href="http://www.tradekorea.com/products/36/Shoes___Accessories.html">Shoes &amp; Accessories</a></li>
+		
+		
+	
+		
+		
+			<li><a href="http://www.tradekorea.com/products/37/Sports___Entertainment.html">Sports &amp; Entertainment</a></li>
+		
+		
+	
+		
+		
+			<li><a href="http://www.tradekorea.com/products/38/Telecommunications.html">Telecommunications</a></li>
+		
+		
+	
+		
+		
+			<li><a href="http://www.tradekorea.com/products/39/Textiles___Leather_Products.html">Textiles &amp; Leather Products</a></li>
+		
+		
+	
+		
+		
+			<li><a href="http://www.tradekorea.com/products/40/Timepieces__Jewelry__Eyewear.html">Timepieces, Jewelry, Eyewear</a></li>
+		
+		
+	
+		
+		
+			<li><a href="http://www.tradekorea.com/products/41/Tools.html">Tools</a></li>
+		
+		
+	
+		
+		
+			<li><a href="http://www.tradekorea.com/products/42/Toys.html">Toys</a></li>
+		
+		
+	
+		
+		
+			<li><a href="http://www.tradekorea.com/products/43/Transportation.html">Transportation</a></li>
+		
+		
+	
+	</ul></li>
+
+</ul>
+				</div>
+			</div>
+		</div>
+
+		<div id="container">
+			
+			<script>
+				function setCookie(name, value, expiredays){
+					var todayDate = new Date();
+					todayDate.setDate(todayDate.getDate() + expiredays);
+					document.cookie = name + "=" + escape(value) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+				}
+
+				function closeWin(flag, id){
+					if(flag) {
+						setCookie(id, "view", 1);
+					}
+
+					$('#' + id).remove();
+					var sz = $('.pop_layer').length;
+
+					if(sz == 0){
+						$( "#layer_block" ).remove();
+						$( "#layer" ).remove();
+					}
+				}
+
+
+			</script>
+
+
+
+			
+			<div class="section_wrap pb30">
+				<div class="sec1">
+					<ul class="img_wrap" onmouseover="clearIntervalBanner();" onmouseout="startIntervalBanner();">
+                        <li style="display: list-item;"><a href="/bizmatching/app/intro.mvc"><img src="http://web.tradekorea.com/images/renew/eng/img_main130328.gif" alt="GBMS"></a></li>	
+				
+                        <li style="display: none;"><a href="/service/article/notice/show.mvc?articleid=19501"><img src="http://web.tradekorea.com/images/renew/eng/img_main130227.gif" alt="News"></a></li>
+						
+                        <!--<li><a href="javascript:window.open('http://www.kita.net/event/notice/Koreas_FTAs.html','FTAPOP','width=715px,height=580px,scrollbars=1');" onclick="window.open('http://www.kita.net/event/notice/Koreas_FTAs.html','FTAPOP','width=715px,height=580px,scrollbars=1');return false;"><img src="http://web.tradekorea.com/images/renew/eng/img_main130312.gif" alt="News" /></a></li>-->	
+					</ul>
+					<ul class="img_menu" onmouseover="clearIntervalBanner();" onmouseout="startIntervalBanner();">
+                         <li class="on"><h2>GBMS</h2></li>
+						
+                    	<li class=""><h2 class="last">News</h2></li>
+                        <!--<li><h2 class="last">News</h2></li>-->
+					</ul>
+				</div>
+				<div class="sec2">
+					<div class="title_area">
+						<h2>Featured Products<!--img src="http://web.tradekorea.com/images/renew/eng/tit_eng1.gif" alt="Featured Products" /--></h2>
+						<!-- <a href="#self" class="more"><img src="http://web.tradekorea.com/images/renew/eng/btn_more.gif" alt="more" /></a> -->
+					</div>
+					
+
+
+
+
+<ul class="product_list">
+
+	
+	<li>
+		<p class="pic"><a href="http://www.tradekorea.com/product-detail/P00317584/Reflective_vest.html" title="Reflective vest"><img src="http://web.tradekorea.com/upload_file2/product/584/P00317584/cbe9caa6_42df22e0_209a_4f29_a371_bcda9803032d_thumb.JPG" onerror="TK.Image.setNoImage(this, '117', '114');" alt="/upload_file2/product/584/P00317584/cbe9caa6_42df22e0_209a_4f29_a371_bcda9803032d_thumb.JPG"></a></p>
+		<p class="name"><a href="http://www.tradekorea.com/product-detail/P00317584/Reflective_vest.html" title="Reflective vest">
+		
+		
+			
+		Reflective vest</a></p>
+	</li>
+	
+	<li>
+		<p class="pic"><a href="http://www.tradekorea.com/product-detail/P00315437/Ceramic_Mineral_Ball.html" title="Ceramic Mineral Ball"><img src="http://web.tradekorea.com/upload_file2/product/437/P00315437/cbe9caa6_c0244a3e_3ab3_4a3d_80c1_e0718c1ab1ad_thumb.jpg" onerror="TK.Image.setNoImage(this, '117', '114');" alt="/upload_file2/product/437/P00315437/cbe9caa6_c0244a3e_3ab3_4a3d_80c1_e0718c1ab1ad_thumb.jpg"></a></p>
+		<p class="name"><a href="http://www.tradekorea.com/product-detail/P00315437/Ceramic_Mineral_Ball.html" title="Ceramic Mineral Ball">
+		
+		
+			
+		Ceramic Mineral Ball</a></p>
+	</li>
+	
+	<li>
+		<p class="pic"><a href="http://www.tradekorea.com/product-detail/P00311140/Cold_Drawn_Bar.html" title="Cold Drawn Bar"><img src="http://web.tradekorea.com/upload_file2/product/140/P00311140/cbe9caa6_ba93bd3c_41ff_4f63_8a47_9030e02121ee_thumb.JPG" onerror="TK.Image.setNoImage(this, '117', '114');" alt="/upload_file2/product/140/P00311140/cbe9caa6_ba93bd3c_41ff_4f63_8a47_9030e02121ee_thumb.JPG"></a></p>
+		<p class="name"><a href="http://www.tradekorea.com/product-detail/P00311140/Cold_Drawn_Bar.html" title="Cold Drawn Bar">
+		
+		
+			
+		Cold Drawn Bar</a></p>
+	</li>
+	
+	<li>
+		<p class="pic"><a href="http://www.tradekorea.com/product-detail/P00294210/Massage_sneakers_socks.html" title="Massage sneakers socks"><img src="http://web.tradekorea.com/upload_file2/product/210/P00294210/cbe9caa5_553b7418_8b01_4191_8985_cf340526a4e0_thumb.jpg" onerror="TK.Image.setNoImage(this, '117', '114');" alt="/upload_file2/product/210/P00294210/cbe9caa5_553b7418_8b01_4191_8985_cf340526a4e0_thumb.jpg"></a></p>
+		<p class="name"><a href="http://www.tradekorea.com/product-detail/P00294210/Massage_sneakers_socks.html" title="Massage sneakers socks">
+		
+		
+			
+		Massage sneakers socks</a></p>
+	</li>
+	
+	<li>
+		<p class="pic"><a href="http://www.tradekorea.com/product-detail/P00285886/Digital_Salt_Meter.html" title="Digital Salt Meter"><img src="http://web.tradekorea.com/upload_file2/product/886/P00285886/cbe9caa5_26c20460_8f77_446d_b8c0_45b00d892aba_thumb.jpg" onerror="TK.Image.setNoImage(this, '117', '114');" alt="/upload_file2/product/886/P00285886/cbe9caa5_26c20460_8f77_446d_b8c0_45b00d892aba_thumb.jpg"></a></p>
+		<p class="name"><a href="http://www.tradekorea.com/product-detail/P00285886/Digital_Salt_Meter.html" title="Digital Salt Meter">
+		
+		
+			
+		Digital Salt Meter</a></p>
+	</li>
+	
+	<li>
+		<p class="pic"><a href="http://www.tradekorea.com/product-detail/P00258464/Dome_Camera.html" title="Dome Camera"><img src="http://web.tradekorea.com/upload_file2/product/464/P00258464/cbe9caa6_68327d9a_c5e0_4f5a_a1d3_5920cdf6c444_thumb.jpg" onerror="TK.Image.setNoImage(this, '117', '114');" alt="/upload_file2/product/464/P00258464/cbe9caa6_68327d9a_c5e0_4f5a_a1d3_5920cdf6c444_thumb.jpg"></a></p>
+		<p class="name"><a href="http://www.tradekorea.com/product-detail/P00258464/Dome_Camera.html" title="Dome Camera">
+		
+		
+			
+		Dome Camera</a></p>
+	</li>
+	
+
+</ul>
+
+				</div>
+			</div>
+
+			<div class="section_wrap pb30">
+				<div class="sec3">
+					<div class="title_area_line">
+						<h2>Premium supplier’s PR<!--img src="http://web.tradekorea.com/images/renew/eng/tit_eng2.gif" alt="Premium supplier’s PR" /--></h2>
+						<a href="/service/bizpr/list.mvc" class="more"><img src="http://web.tradekorea.com/images/renew/eng/btn_more.gif" alt="more"></a>
+					</div>
+					
+
+
+
+
+<ul class="pr_list">
+	<li>
+		<dl>
+			<dt>
+				<!--a href="/service/bizpr/list.mvc?catCd=PR00000001"><img src="http://web.tradekorea.com/images/index/pr_01.gif" alt="TV" /></a-->
+				<a href="http://www.tradekorea.com/service/bizpr/list.mvc?catCd=PR00000082"><img src="http://web.tradekorea.com/images/index/201305_main_big_3_1/pr_01.gif" alt="Health &amp; Medical"></a>
+			</dt>
+			<!--dd>
+				<a href="/service/bizpr/show.mvc?bizId=C0021642">SHINIL ENTERPRISE CO.</a><br />
+				<a href="/service/bizpr/show.mvc?bizId=C0023240">GUMJOO MARINER</a><br />
+				<a href="/service/bizpr/show.mvc?bizId=C0046905">SEONGJIN ENGINEERING CO.</a><br />
+				<a href="/service/bizpr/show.mvc?bizId=C0011450">BAN SEOK</a><br />
+				<a href="/service/bizpr/show.mvc?bizId=C0000784">IZ-FOG CO.</a>
+			</dd-->
+			<dd class="first">
+				<!--a href="/service/bizpr/show.mvc?bizId=C0021642">SHINIL ENTERPRISE CO.</a><br />
+				<a href="/service/bizpr/show.mvc?bizId=C0023240">GUMJOO MARINER</a><br />
+				<a href="/service/bizpr/show.mvc?bizId=C0046905">SEONGJIN ENGINEERING CO.</a><br />
+				<a href="/service/bizpr/show.mvc?bizId=C0011450">BAN SEOK</a><br />
+				<a href="/service/bizpr/show.mvc?bizId=C0000784">IZ-FOG CO.</a-->
+
+				<a href="http://www.tradekorea.com/e-catalogue/tsm1215/">Trismed Co..</a><br>
+				<a href="http://www.tradekorea.com/e-catalogue/kaycey/">JMT Co., Ltd.</a><br>
+				<a href="http://www.tradekorea.com/e-catalogue/songsg3/">IREA CHEMICAL..</a><br>
+				<a href="http://www.tradekorea.com/e-catalogue/ktmed2108/">KTMED INC.</a><br>
+				<a href="http://www.tradekorea.com/e-catalogue/dajung/">Dajung Co., Ltd. </a>
+			</dd>
+		</dl>
+	</li>
+	<li style="padding-top:1px;">
+		<dl>
+			<dt>
+				<!--a href="/service/bizpr/list.mvc?catCd=PR00000002"><img src="http://web.tradekorea.com/images/index/pr_02.gif" alt="" /></a-->
+				<a href="http://www.tradekorea.com/service/bizpr/list.mvc?catCd=PR00000062"><img src="http://web.tradekorea.com/images/index/201305_main_big_3_1/pr_02.gif" alt="Personal Care"></a>
+			</dt>
+			<dd class="first">
+				<!--a href="/service/bizpr/show.mvc?bizId=C0035123">UNICHAL INC.</a><br />
+				<a href="/service/bizpr/show.mvc?bizId=C0035798">SHINMYUNG DIGITAL CO.,LTD</a><br />
+				<a href="/service/bizpr/show.mvc?bizId=C0034143">VIEWTECH CO., LTD.</a><br />
+				<a href="/service/bizpr/show.mvc?bizId=C0042531">SARO TECH CO.,LTD.</a><br />
+				<a href="/service/bizpr/show.mvc?bizId=C0044894">SYSTEM BASE CO., LTD.</a-->
+
+				<a href="http://www.tradekorea.com/e-catalogue/hyunjin81/">HYUN JIN BRUSH..</a><br>
+				<a href="http://www.tradekorea.com/e-catalogue/rhee9247/">DAE JONG MEDICAL</a><br>
+				<a href="http://www.tradekorea.com/e-catalogue/medicalsnj/">SNJ Co., Ltd</a><br>
+				<a href="http://www.tradekorea.com/e-catalogue/edkspa/">EDK Spa Solution</a><br>
+				<a href="http://www.tradekorea.com/e-catalogue/lioele77/">Lioele Cosmetic..</a>
+			</dd>
+		</dl>
+	</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				</div>
+
+				<div class="sec4">
+					<div class="title_area_line"><h2>Latest Leads<!--img src="http://web.tradekorea.com/images/renew/eng/tit_eng3.gif" alt="Latest Leads" /--></h2></div>
+					<div class="title_small_area">
+						<h3>Buying</h3>
+						<a href="http://www.tradekorea.com/buyers/" class="more"><img src="http://web.tradekorea.com/images/renew/eng/btn_more2.gif" alt="more"></a>
+					</div>
+					
+
+
+
+
+	
+	
+
+<div class="tk_would_roofWrap" style="position:relative;overflow:hidden;height:128px;">
+<ul class="cycleContainer lead_list" style="position: relative; height: 300px; top: 0px;">
+	
+		
+		
+		
+		
+		
+		
+		
+		<li>
+			<code style="width:100px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;"><nobr><a href="#self" rel="nofollow"><img src="http://web.tradekorea.com/images/flags/TH.gif" alt="">&nbsp;</a><a href="http://www.tradekorea.com/buyer-detail/B00003140/Rice_Husk_Ash_from_Thailand_.html">Rice Husk Ash from Tha...</a></nobr></code>
+			<span class="date">APR 29, 2013</span>
+		</li>
+		
+		
+		
+		<li>
+			<code style="width:100px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;"><nobr><a href="#self" rel="nofollow"><img src="http://web.tradekorea.com/images/flags/KR.gif" alt="">&nbsp;</a><a href="http://www.tradekorea.com/buyer-detail/B00003138/Inquiry_on_Alloyed_Steel_Sheet.html">Inquiry on Alloyed Ste...</a></nobr></code>
+			<span class="date">APR 27, 2013</span>
+		</li>
+		
+		
+		
+		<li>
+			<code style="width:100px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;"><nobr><a href="#self" rel="nofollow"><img src="http://web.tradekorea.com/images/flags/GB.gif" alt="">&nbsp;</a><a href="http://www.tradekorea.com/buyer-detail/B00003135/2_5__Sata_HDD_Enquiry.html">2.5" Sata HDD Enq...</a></nobr></code>
+			<span class="date">APR 26, 2013</span>
+		</li>
+		
+		
+		
+		<li>
+			<code style="width:100px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;"><nobr><a href="#self" rel="nofollow"><img src="http://web.tradekorea.com/images/flags/BD.gif" alt="">&nbsp;</a><a href="http://www.tradekorea.com/buyer-detail/B00003133/LD_3_Container.html">LD-3 Container</a></nobr></code>
+			<span class="date">APR 25, 2013</span>
+		</li>
+		
+		
+		
+		<li>
+			<code style="width:100px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;"><nobr><a href="#self" rel="nofollow"><img src="http://web.tradekorea.com/images/flags/PL.gif" alt="">&nbsp;</a><a href="http://www.tradekorea.com/buyer-detail/B00003131/Cooperation.html">Cooperation</a></nobr></code>
+			<span class="date">APR 20, 2013</span>
+		</li>
+		
+		
+		
+		<li>
+			<code style="width:100px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;"><nobr><a href="#self" rel="nofollow"><img src="http://web.tradekorea.com/images/flags/CN.gif" alt="">&nbsp;</a><a href="http://www.tradekorea.com/buyer-detail/B00003130/CNC_aluminum__maching_sample.html">CNC aluminum  maching/...</a></nobr></code>
+			<span class="date">APR 20, 2013</span>
+		</li>
+		
+		
+		
+		<li>
+			<code style="width:100px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;"><nobr><a href="#self" rel="nofollow"><img src="http://web.tradekorea.com/images/flags/TG.gif" alt="">&nbsp;</a><a href="http://www.tradekorea.com/buyer-detail/B00003126/WE_WANT_TO_BUY_CAMERAS.html">WE WANT TO BUY CAMERAS</a></nobr></code>
+			<span class="date">APR 19, 2013</span>
+		</li>
+		
+		
+		
+		<li>
+			<code style="width:100px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;"><nobr><a href="#self" rel="nofollow"><img src="http://web.tradekorea.com/images/flags/CN.gif" alt="">&nbsp;</a><a href="http://www.tradekorea.com/buyer-detail/B00003125/buy_antimony_materials.html">buy antimony materials</a></nobr></code>
+			<span class="date">APR 18, 2013</span>
+		</li>
+		
+		
+		
+		<li>
+			<code style="width:100px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;"><nobr><a href="#self" rel="nofollow"><img src="http://web.tradekorea.com/images/flags/MX.gif" alt="">&nbsp;</a><a href="http://www.tradekorea.com/buyer-detail/B00003120/request_slitter_knives__slitter_blades__razor_blades_or_cutters.html">request slitter knives...</a></nobr></code>
+			<span class="date">APR 13, 2013</span>
+		</li>
+		
+	
+<li>
+			<code style="width:100px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;"><nobr><a href="#self" rel="nofollow"><img src="http://web.tradekorea.com/images/flags/KR.gif" alt="">&nbsp;</a><a href="http://www.tradekorea.com/buyer-detail/B00003141/compressor__fan_motor__heat_exchanger.html">compressor, fan motor,...</a></nobr></code>
+			<span class="date">APR 30, 2013</span>
+		</li></ul>
+</div>
+
+					<div class="title_small_area" style="margin-top:-3px;">
+						<h3>Selling</h3>
+						<a href="http://www.tradekorea.com/sell-leads" class="more"><img src="http://web.tradekorea.com/images/renew/eng/btn_more2.gif" alt="more"></a>
+					</div>
+					
+
+
+
+
+	
+	
+
+<div class="tk_would_roofWrap" style="position:relative;overflow:hidden;height:128px;">
+<ul class="cycleContainer lead_list" style="position: relative; height: 300px; top: 0px;">
+	
+		
+		
+		
+		
+		
+		
+		
+		<li>
+			<code style="width:100px;display:inline;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;"><nobr><img src="http://web.tradekorea.com/images/flags/GH.gif" alt="">&nbsp;<a href="http://www.tradekorea.com/sell-leads-detail/S00064373/Activated_Charcoal.html">Activated Charcoal</a></nobr></code>
+			<span class="date">MAY 02, 2013</span>
+		</li>
+		
+		
+		
+		<li>
+			<code style="width:100px;display:inline;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;"><nobr><img src="http://web.tradekorea.com/images/flags/PK.gif" alt="">&nbsp;<a href="http://www.tradekorea.com/sell-leads-detail/S00064331/Rice_Husk.html">Rice Husk</a></nobr></code>
+			<span class="date">MAY 02, 2013</span>
+		</li>
+		
+		
+		
+		<li>
+			<code style="width:100px;display:inline;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;"><nobr><img src="http://web.tradekorea.com/images/flags/ZA.gif" alt="">&nbsp;<a href="http://www.tradekorea.com/sell-leads-detail/S00064313/Extra_Virgin_Olive_Oil.html">Extra Virgin Olive Oil</a></nobr></code>
+			<span class="date">APR 30, 2013</span>
+		</li>
+		
+		
+		
+		<li>
+			<code style="width:100px;display:inline;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;"><nobr><img src="http://web.tradekorea.com/images/flags/ID.gif" alt="">&nbsp;<a href="http://www.tradekorea.com/sell-leads-detail/S00064312/Trek_Superfly_100_Elite_SL_MTB_2013.html">Trek Superfly 100 Elit...</a></nobr></code>
+			<span class="date">APR 30, 2013</span>
+		</li>
+		
+		
+		
+		<li>
+			<code style="width:100px;display:inline;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;"><nobr><img src="http://web.tradekorea.com/images/flags/TW.gif" alt="">&nbsp;<a href="http://www.tradekorea.com/sell-leads-detail/S00064296/Optech_Invites_You_to_Visit_Our_Booth_at_Computex_2013.html">Optech Invites You to ...</a></nobr></code>
+			<span class="date">APR 30, 2013</span>
+		</li>
+		
+		
+		
+		<li>
+			<code style="width:100px;display:inline;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;"><nobr><img src="http://web.tradekorea.com/images/flags/KR.gif" alt="">&nbsp;<a href="http://www.tradekorea.com/sell-leads-detail/S00064228/3v_lithium_battery__For_LED_float__Accessory__Arrow_Nock_.html">3v lithium battery (Fo...</a></nobr></code>
+			<span class="date">APR 29, 2013</span>
+		</li>
+		
+		
+		
+		<li>
+			<code style="width:100px;display:inline;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;"><nobr><img src="http://web.tradekorea.com/images/flags/IN.gif" alt="">&nbsp;<a href="http://www.tradekorea.com/sell-leads-detail/S00064207/Alprazolam_Xanax_restyl_anti_anxiety.html">Alprazolam Xanax resty...</a></nobr></code>
+			<span class="date">APR 28, 2013</span>
+		</li>
+		
+		
+		
+		<li>
+			<code style="width:100px;display:inline;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;"><nobr><img src="http://web.tradekorea.com/images/flags/PK.gif" alt="">&nbsp;<a href="http://www.tradekorea.com/sell-leads-detail/S00064134/Tungsten_Carbide_Scissors.html">Tungsten Carbide Sciss...</a></nobr></code>
+			<span class="date">APR 26, 2013</span>
+		</li>
+		
+		
+		
+		<li>
+			<code style="width:100px;display:inline;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;"><nobr><img src="http://web.tradekorea.com/images/flags/CN.gif" alt="">&nbsp;<a href="http://www.tradekorea.com/sell-leads-detail/S00064034/sell_forage_dryer.html">sell forage dryer</a></nobr></code>
+			<span class="date">APR 26, 2013</span>
+		</li>
+		
+	
+<li>
+			<code style="width:100px;display:inline;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;"><nobr><img src="http://web.tradekorea.com/images/flags/KR.gif" alt="">&nbsp;<a href="http://www.tradekorea.com/sell-leads-detail/S00064374/HTD001_1__Garden_Trowel.html">HTD001-1, Garden Trowe...</a></nobr></code>
+			<span class="date">MAY 02, 2013</span>
+		</li></ul>
+</div>
+
+				</div>
+
+				<div class="sec5">
+					<div class="title_area_line">
+						<h2>Online Exhibition<!--img src="http://web.tradekorea.com/images/renew/eng/tit_eng4.gif" alt="Online Exhibition" /--></h2>
+						<!-- <a href="#self" class="more"><img src="http://web.tradekorea.com/images/renew/eng/btn_more.gif" alt="more" /></a> -->
+					</div>
+					<ul class="oe_list">
+<li><a href="service/expo/exhibition/specialshow.mvc?expoId=EX1241"><img src="http://web.tradekorea.com/images/renew/eng/right_banner_photonics.gif" alt="Photonics Sourcing Korea 2013"></a></li>
+						<li><a href="/service/expo/exhibition/specialshow.mvc?expoId=EX1101"><img src="http://web.tradekorea.com/images/renew/eng/right_banner_kwave.gif" alt="K-WAVE in tradeKorea"></a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="sec6">
+				<div class="title_area_line">
+					<h2>New Products<!--img src="http://web.tradekorea.com/images/renew/eng/tit_eng5.gif" alt="New Products" /--></h2>
+					<!-- <a href="#self" class="more"><img src="http://web.tradekorea.com/images/renew/eng/btn_more.gif" alt="more" /></a> -->
+				</div>
+				
+
+
+
+
+<ul class="product_list">
+
+	
+
+	<li>
+		<p class="pic"><a href="http://www.tradekorea.com/product-detail/P00257882/Engine_Parts.html" title="Engine Parts"><img src="http://web.tradekorea.com/upload_file2/product/882/P00257882/cbe9caa5_8b3f5ce2_e53f_43a9_8535_39927467393d_thumb.JPG" onerror="TK.Image.setNoImage(this, '117', '114');" alt="/upload_file2/product/882/P00257882/cbe9caa5_8b3f5ce2_e53f_43a9_8535_39927467393d_thumb.JPG"></a></p>
+		<p class="name"><a href="http://www.tradekorea.com/product-detail/P00257882/Engine_Parts.html" title="Engine Parts">
+
+		
+			
+		Engine Parts
+		</a></p>
+	</li>
+	
+
+	<li>
+		<p class="pic"><a href="http://www.tradekorea.com/product-detail/P00310537/Woven_Fabrics.html" title="Woven Fabrics"><img src="http://web.tradekorea.com/upload_file2/product/537/P00310537/oimg_GC07487855_CA07487984_thumb.jpg" onerror="TK.Image.setNoImage(this, '117', '114');" alt="/upload_file2/product/537/P00310537/oimg_GC07487855_CA07487984_thumb.jpg"></a></p>
+		<p class="name"><a href="http://www.tradekorea.com/product-detail/P00310537/Woven_Fabrics.html" title="Woven Fabrics">
+
+		
+			
+		Woven Fabrics
+		</a></p>
+	</li>
+	
+
+	<li>
+		<p class="pic"><a href="http://www.tradekorea.com/product-detail/P00305154/Cryogenic_Valve.html" title="Cryogenic Valve"><img src="http://web.tradekorea.com/upload_file2/product/154/P00305154/oimg_GC00146561_CA07309031_thumb.jpg" onerror="TK.Image.setNoImage(this, '117', '114');" alt="/upload_file2/product/154/P00305154/oimg_GC00146561_CA07309031_thumb.jpg"></a></p>
+		<p class="name"><a href="http://www.tradekorea.com/product-detail/P00305154/Cryogenic_Valve.html" title="Cryogenic Valve">
+
+		
+			
+		Cryogenic Valve
+		</a></p>
+	</li>
+	
+
+	<li>
+		<p class="pic"><a href="http://www.tradekorea.com/product-detail/P00285679/Lampex_Swing_Messenger.html" title="Lampex Swing Messenger"><img src="http://web.tradekorea.com/upload_file2/product/679/P00285679/cbe9caa5_0518fbbe_5d29_4073_a29b_de933f4e3e3f_thumb.JPG" onerror="TK.Image.setNoImage(this, '117', '114');" alt="/upload_file2/product/679/P00285679/cbe9caa5_0518fbbe_5d29_4073_a29b_de933f4e3e3f_thumb.JPG"></a></p>
+		<p class="name"><a href="http://www.tradekorea.com/product-detail/P00285679/Lampex_Swing_Messenger.html" title="Lampex Swing Messenger">
+
+		
+			
+		Lampex Swing Messenger
+		</a></p>
+	</li>
+	
+
+	<li>
+		<p class="pic"><a href="http://www.tradekorea.com/product-detail/P00273165/Door_Closer.html" title="Door Closer"><img src="http://web.tradekorea.com/upload_file2/product/165/P00273165/oimg_GC04853035_CA04853067_thumb.jpg" onerror="TK.Image.setNoImage(this, '117', '114');" alt="/upload_file2/product/165/P00273165/oimg_GC04853035_CA04853067_thumb.jpg"></a></p>
+		<p class="name"><a href="http://www.tradekorea.com/product-detail/P00273165/Door_Closer.html" title="Door Closer">
+
+		
+			
+		Door Closer
+		</a></p>
+	</li>
+	
+
+	<li>
+		<p class="pic"><a href="http://www.tradekorea.com/product-detail/P00058770/Sensor.html" title="Sensor"><img src="http://web.tradekorea.com/upload_file/prod/marketing/mkt_files/new_company//koino/img_en/o_P293728_thumb.jpg" onerror="TK.Image.setNoImage(this, '117', '114');" alt="/upload_file/prod/marketing/mkt_files/new_company//koino/img_en/o_P293728_thumb.jpg"></a></p>
+		<p class="name"><a href="http://www.tradekorea.com/product-detail/P00058770/Sensor.html" title="Sensor">
+
+		
+			
+		Sensor
+		</a></p>
+	</li>
+	
+
+</ul>
+
+			</div>
+
+			<div class="section_wrap pb30">
+				<div class="sec7">
+					<div class="title_area_line">
+						<h2>Facebook Share<!--img src="http://web.tradekorea.com/images/renew/eng/tit_eng6.gif" alt="Facebook" /--></h2>
+						<!-- <a href="#self" class="more"><img src="http://web.tradekorea.com/images/renew/eng/btn_more.gif" alt="more" /></a> -->
+					</div>
+					
+
+
+
+
+
+	<ul class="facebook_list">
+	
+		
+		
+		
+		<li><span class="l"><a href="http://www.tradekorea.com/product-detail/P00320550/SMARTIUM_Series.html" title="SMARTIUM Series">1. SMARTIUM Series</a></span><span class="r"><a href="http://www.facebook.com/share.php?app_id=363043447124285&amp;u=http://www.tradekorea.com/product-detail/P00320550/" onclick="window.open(this.href,'','width=640 height=320'); return false;"><img src="http://web.tradekorea.com/images/common/facebook_share.jpg"></a></span></li>
+		
+	
+		
+		
+		
+		<li><span class="l"><a href="http://www.tradekorea.com/product-detail/P00320682/Cellular_Phone_Case.html" title="Cellular Phone Case">2. Cellular Phone Case</a></span><span class="r"><a href="http://www.facebook.com/share.php?app_id=363043447124285&amp;u=http://www.tradekorea.com/product-detail/P00320682/" onclick="window.open(this.href,'','width=640 height=320'); return false;"><img src="http://web.tradekorea.com/images/common/facebook_share.jpg"></a></span></li>
+		
+	
+		
+		
+		
+		<li><span class="l"><a href="http://www.tradekorea.com/product-detail/P00319994/Skin_Care_-_Cleansing_OIL.html" title="Skin Care - Cleansing OIL">3. Skin Care - Cleansing OIL</a></span><span class="r"><a href="http://www.facebook.com/share.php?app_id=363043447124285&amp;u=http://www.tradekorea.com/product-detail/P00319994/" onclick="window.open(this.href,'','width=640 height=320'); return false;"><img src="http://web.tradekorea.com/images/common/facebook_share.jpg"></a></span></li>
+		
+	
+		
+		
+		
+		<li><span class="l"><a href="http://www.tradekorea.com/product-detail/P00316025/Magnetic_Separator.html" title="Magnetic Separator">4. Magnetic Separator</a></span><span class="r"><a href="http://www.facebook.com/share.php?app_id=363043447124285&amp;u=http://www.tradekorea.com/product-detail/P00316025/" onclick="window.open(this.href,'','width=640 height=320'); return false;"><img src="http://web.tradekorea.com/images/common/facebook_share.jpg"></a></span></li>
+		
+	
+		
+		
+		
+		<li><span class="l"><a href="http://www.tradekorea.com/product-detail/P00320525/Educational_Solution.html" title="Educational Solution">5. Educational Solution</a></span><span class="r"><a href="http://www.facebook.com/share.php?app_id=363043447124285&amp;u=http://www.tradekorea.com/product-detail/P00320525/" onclick="window.open(this.href,'','width=640 height=320'); return false;"><img src="http://web.tradekorea.com/images/common/facebook_share.jpg"></a></span></li>
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+	</ul>
+	<ul class="facebook_list fr">
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+		
+		 
+		<li><span class="l"><a href="http://www.tradekorea.com/product-detail/P00319278/Food_Grinder.html" title="Food Grinder">6. Food Grinder</a></span><span class="r"><a href="http://www.facebook.com/share.php?app_id=363043447124285&amp;u=http://www.tradekorea.com/product-detail/P00319278/" onclick="window.open(this.href,'','width=640 height=320'); return false;"><img src="http://web.tradekorea.com/images/common/facebook_share.jpg"></a></span></li>
+		
+	
+		
+		
+		 
+		<li><span class="l"><a href="http://www.tradekorea.com/product-detail/P00318704/Sun-Block_Cream.html" title="Sun-Block Cream">7. Sun-Block Cream</a></span><span class="r"><a href="http://www.facebook.com/share.php?app_id=363043447124285&amp;u=http://www.tradekorea.com/product-detail/P00318704/" onclick="window.open(this.href,'','width=640 height=320'); return false;"><img src="http://web.tradekorea.com/images/common/facebook_share.jpg"></a></span></li>
+		
+	
+		
+		
+		 
+		<li><span class="l"><a href="http://www.tradekorea.com/product-detail/P00318228/Fan_&amp;_Shroud.html" title="Fan &amp; Shroud">8. Fan &amp; Shroud</a></span><span class="r"><a href="http://www.facebook.com/share.php?app_id=363043447124285&amp;u=http://www.tradekorea.com/product-detail/P00318228/" onclick="window.open(this.href,'','width=640 height=320'); return false;"><img src="http://web.tradekorea.com/images/common/facebook_share.jpg"></a></span></li>
+		
+	
+		
+		
+		 
+		<li><span class="l"><a href="http://www.tradekorea.com/product-detail/P00320938/PET_Protective_Film.html" title="PET Protective Film">9. PET Protective Film</a></span><span class="r"><a href="http://www.facebook.com/share.php?app_id=363043447124285&amp;u=http://www.tradekorea.com/product-detail/P00320938/" onclick="window.open(this.href,'','width=640 height=320'); return false;"><img src="http://web.tradekorea.com/images/common/facebook_share.jpg"></a></span></li>
+		
+	
+		
+		
+		 
+		<li><span class="l"><a href="http://www.tradekorea.com/product-detail/P00318885/Therapy_Station.html" title="Therapy Station">10. Therapy Station</a></span><span class="r"><a href="http://www.facebook.com/share.php?app_id=363043447124285&amp;u=http://www.tradekorea.com/product-detail/P00318885/" onclick="window.open(this.href,'','width=640 height=320'); return false;"><img src="http://web.tradekorea.com/images/common/facebook_share.jpg"></a></span></li>
+		
+	
+	</ul>
+
+				</div>
+
+				<div class="sec8">
+					<div class="title_area_line">
+						<h2>Social Network Channel <!--img src="http://web.tradekorea.com/images/renew/eng/tit_eng7.gif" alt="Facebook Chanel" /--></h2>
+						<!-- <a href="#self" class="more"><img src="http://web.tradekorea.com/images/renew/eng/btn_more.gif" alt="more" /></a> -->
+					</div>
+					<ul class="chanel_list">
+						<li><a href="http://www.facebook.com/KITA.tradekorea"><img src="http://web.tradekorea.com/images/renew/eng/btn_facebook.gif" height="21" width="290"></a></li>
+	                    <li><a href="http://www.linkedin.com/company/tradekorea"><img src="http://web.tradekorea.com/images/renew/eng/btn_linkdin.gif" height="21" width="290"></a></li>
+                      <li><a href="https://plus.google.com/114083964393394604158/posts"><img src="http://web.tradekorea.com/images/renew/eng/btn_google.gif" height="21" width="290"></a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="cont_box5 margin2">
+				<div style="visibility: visible; overflow: hidden; position: relative; z-index: 2; left: 0px; width: 945px;" class="bannerCarousel">
+					<ul style="margin: 0px; padding: 0px; position: relative; list-style-type: none; z-index: 1; width: 3969px; left: -945px;"><li style="overflow: hidden; float: left; width: 171px; height: 39px;"><a href="http://www.chamber.uz/index.php?lang=en" target="_blank" rel="nofollow"><img src="http://web.tradekorea.com/images/banner/chamber_mainbanner_logo.gif" alt="Chamber" title="Chamber"></a></li><li style="overflow: hidden; float: left; width: 171px; height: 39px;"><a href="http://www.jetro.go.jp/ttppoas/index.html" target="_blank" rel="nofollow"><img src="http://web.tradekorea.com/images/banner/jetro_mainbanner_logo.gif" alt="JETRO" title="JETRO"></a></li><li style="overflow: hidden; float: left; width: 171px; height: 39px;"><a href="http://www.kita.org" target="_blank" rel="nofollow"><img src="http://web.tradekorea.com/images/banner/kita_mainbanner_logo.gif" alt="KITA.ORG" title="KITA.ORG"></a></li><li style="overflow: hidden; float: left; width: 171px; height: 39px;"><a href="http://english.yonhapnews.co.kr/" target="_blank" rel="nofollow"><img src="http://web.tradekorea.com/images/banner/yonhap_mainbanner_logo.gif" alt="YONHAP NEWS" title="YONHAP NEWS"></a></li><li style="overflow: hidden; float: left; width: 171px; height: 39px;"><a href="http://www.kicox.or.kr/home/eng/index.jsp" target="_blank" rel="nofollow"><img src="http://web.tradekorea.com/images/banner/kicox_mainbanner_logo.gif" alt="KICOX" title="KICOX"></a></li>
+						<!--li><a href="http://www.alibaba.com" target="_blank" rel="nofollow"><img src="http://web.tradekorea.com/images/banner/alibaba.gif" width="111" height="25" alt="" /></a></li-->
+                        <li style="overflow: hidden; float: left; width: 171px; height: 39px;"><a href="http://www.thaitrade.com/" target="_blank" rel="nofollow"><img src="http://web.tradekorea.com/images/banner/thaitrade_mainbanner_logo.gif" alt="THAITRADE.COM" title="THAITRADE.COM"></a></li>
+						<li style="overflow: hidden; float: left; width: 171px; height: 39px;"><a href="http://www.tradeindia.com/" target="_blank" rel="nofollow"><img src="http://web.tradekorea.com/images/banner/tradeindia_mainbanner_logo.gif" alt="Tradeindia.com" title="Tradeindia.com"></a></li>
+						<li style="overflow: hidden; float: left; width: 171px; height: 39px;"><a href="http://www.taiwantrade.com.tw/" target="_blank" rel="nofollow"><img src="http://web.tradekorea.com/images/banner/taiwantrade_mainbanner_logo.gif" alt="Taiwantrade" title="Taiwantrade"></a></li>
+						<li style="overflow: hidden; float: left; width: 171px; height: 39px;"><a href="http://www.sbf.org.sg" target="_blank" rel="nofollow"><img src="http://web.tradekorea.com/images/banner/sbf_mainbanner_logo.gif" alt="sbf" title="sbf"></a></li>
+						<li style="overflow: hidden; float: left; width: 171px; height: 39px;"><a href="http://english.sccci.org.sg/" target="_blank" rel="nofollow"><img src="http://web.tradekorea.com/images/banner/scc_mainbanner_logo.gif" alt="SCC" title="SCC"></a></li>
+						<li style="overflow: hidden; float: left; width: 171px; height: 39px;"><a href="http://www.finpro.fi/en-US/finpro/" target="_blank" rel="nofollow"><img src="http://web.tradekorea.com/images/banner/finpro_mainbanner_logo.gif" alt="FINPRO" title="FINPRO"></a></li>
+						<li style="overflow: hidden; float: left; width: 171px; height: 39px;"><a href="http://www.chamber.uz/index.php?lang=en" target="_blank" rel="nofollow"><img src="http://web.tradekorea.com/images/banner/chamber_mainbanner_logo.gif" alt="Chamber" title="Chamber"></a></li>
+						<li style="overflow: hidden; float: left; width: 171px; height: 39px;"><a href="http://www.jetro.go.jp/ttppoas/index.html" target="_blank" rel="nofollow"><img src="http://web.tradekorea.com/images/banner/jetro_mainbanner_logo.gif" alt="JETRO" title="JETRO"></a></li>
+						<li style="overflow: hidden; float: left; width: 171px; height: 39px;"><a href="http://www.kita.org" target="_blank" rel="nofollow"><img src="http://web.tradekorea.com/images/banner/kita_mainbanner_logo.gif" alt="KITA.ORG" title="KITA.ORG"></a></li>
+						<li style="overflow: hidden; float: left; width: 171px; height: 39px;"><a href="http://english.yonhapnews.co.kr/" target="_blank" rel="nofollow"><img src="http://web.tradekorea.com/images/banner/yonhap_mainbanner_logo.gif" alt="YONHAP NEWS" title="YONHAP NEWS"></a></li>
+						<li style="overflow: hidden; float: left; width: 171px; height: 39px;"><a href="http://www.kicox.or.kr/home/eng/index.jsp" target="_blank" rel="nofollow"><img src="http://web.tradekorea.com/images/banner/kicox_mainbanner_logo.gif" alt="KICOX" title="KICOX"></a></li>
+						<!--<li><a href="http://www.okta.net" target="_blank" rel="nofollow"><img src="http://web.tradekorea.com/images/banner/okta.gif" width="111" height="25" alt="" /></a></li>-->
+						<!--<li><a href="http://www.okf.or.kr" target="_blank" rel="nofollow"><img src="http://web.tradekorea.com/images/banner/okf.gif" width="111" height="25" alt="" /></a></li>-->
+						<!--li><a href="http://www.buysingapore.com/" target="_blank" rel="nofollow"><img src="http://web.tradekorea.com/images/banner/buysingapore.gif" width="111" height="25" alt="" /></a></li>
+						<li><a href="http://www.abh-ace.org" target="_blank" rel="nofollow"><img src="http://web.tradekorea.com/images/banner/bfta.gif" width="111" height="25" alt="" /></a></li>
+						<li><a href="http://www.bw-i.de/eng" target="_blank" rel="nofollow"><img src="http://web.tradekorea.com/images/banner/bwi.gif" width="111" height="25" alt="" /></a></li>
+						<li><a href="http://www.china-yuqiao.com" target="_blank" rel="nofollow"><img src="http://web.tradekorea.com/images/banner/nb.gif" width="111" height="25" alt="" /></a></li>
+						<li><a href="http://www.fkcci.com/" target="_blank" rel="nofollow"><img src="http://web.tradekorea.com/images/banner/fkcci.gif" width="111" height="25" alt="" /></a></li-->
+					<li style="overflow: hidden; float: left; width: 171px; height: 39px;"><a href="http://www.thaitrade.com/" target="_blank" rel="nofollow"><img src="http://web.tradekorea.com/images/banner/thaitrade_mainbanner_logo.gif" alt="THAITRADE.COM" title="THAITRADE.COM"></a></li><li style="overflow: hidden; float: left; width: 171px; height: 39px;"><a href="http://www.tradeindia.com/" target="_blank" rel="nofollow"><img src="http://web.tradekorea.com/images/banner/tradeindia_mainbanner_logo.gif" alt="Tradeindia.com" title="Tradeindia.com"></a></li><li style="overflow: hidden; float: left; width: 171px; height: 39px;"><a href="http://www.taiwantrade.com.tw/" target="_blank" rel="nofollow"><img src="http://web.tradekorea.com/images/banner/taiwantrade_mainbanner_logo.gif" alt="Taiwantrade" title="Taiwantrade"></a></li><li style="overflow: hidden; float: left; width: 171px; height: 39px;"><a href="http://www.sbf.org.sg" target="_blank" rel="nofollow"><img src="http://web.tradekorea.com/images/banner/sbf_mainbanner_logo.gif" alt="sbf" title="sbf"></a></li><li style="overflow: hidden; float: left; width: 171px; height: 39px;"><a href="http://english.sccci.org.sg/" target="_blank" rel="nofollow"><img src="http://web.tradekorea.com/images/banner/scc_mainbanner_logo.gif" alt="SCC" title="SCC"></a></li></ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		// ???? ??? ???.
+		$(".bannerCarousel").jCarouselLite({
+			auto	: 2000,
+			speed	: 2000,
+			visible	: 5
+		});
+	</script>
+	<style type="text/css">
+	.all_ap {margin:3px 0 3px 0;}
+	.all_ap a{padding:0 3px 0 3px;}
+	</style>
+	<div id="footer">
+		<div class="footer_inner">
+		
+			<p><a href="http://www.tradekorea.com/buyers/">Buying Leads</a> -
+			<a href="http://www.tradekorea.com/sell-leads">Selling Leads</a> -
+				<a href="http://www.tradekorea.com/mytradekorea/main.mvc" rel="nofollow">My tradeKorea</a> -
+			<a href="javascript:moveBizMatcingOnline();">Global Business Matching Service</a> -
+			<a href="http://www.tradekorea.com/emp/help/preview.mvc">Help</a><br>
+			<a href="javascript:openEmpFooterPopup('policy');">Privacy Policy</a> -
+			<a href="javascript:openEmpFooterPopup('terms');">Terms of Use</a> -
+			<a href="http://www.tradekorea.com/emp/whatTradeKorea.mvc">What's tradeKorea</a> -
+            <a href="http://www.tradekorea.com/emp/help/partners/partners.mvc">Partnerships</a> -
+			<a href="/sitemap.html">Site Map</a> - 
+			<a href="javascript:openEmpFooterPopup('contact');">Contact Us</a> -
+			<a href="/emp/index.mvc">Korean Manufacturers</a></p>
+			<p class="all_ap">
+				All Products:
+				<a href="/all-products/0-9.html">0-9</a>
+				<a href="/all-products/a.html">A</a>
+				<a href="/all-products/b.html">B</a>
+				<a href="/all-products/c.html">C</a>
+				<a href="/all-products/d.html">D</a>
+				<a href="/all-products/e.html">E</a>
+				<a href="/all-products/f.html">F</a>
+				<a href="/all-products/g.html">G</a>
+				<a href="/all-products/h.html">H</a>
+				<a href="/all-products/i.html">I</a>
+				<a href="/all-products/j.html">J</a>
+				<a href="/all-products/k.html">K</a>
+				<a href="/all-products/l.html">L</a>
+				<a href="/all-products/m.html">M</a>
+				<a href="/all-products/n.html">N</a>
+				<a href="/all-products/o.html">O</a>
+				<a href="/all-products/p.html">P</a>
+				<a href="/all-products/q.html">Q</a>
+				<a href="/all-products/r.html">R</a>
+				<a href="/all-products/s.html">S</a>
+				<a href="/all-products/t.html">T</a>
+				<a href="/all-products/u.html">U</a>
+				<a href="/all-products/v.html">V</a>
+				<a href="/all-products/w.html">W</a>
+				<a href="/all-products/x.html">X</a>
+				<a href="/all-products/y.html">Y</a>
+				<a href="/all-products/z.html">Z</a>
+			</p>
+			<p class="pb20">Copyright Notice ? 2000 - 2013 KITA (KOREA INTERNATIONAL TRADE ASSOCIATION). All rights reserved.</p>
+			<p class="pb20">tradeKorea.com is a Global Business to Business (B2B) Online Marketplace that helps facilitate online trade between exporters and importers from around the world.</p>
+			<p><img src="http://web.tradekorea.com/images/renew/eng/flogo.gif" alt="kita"></p>
+		</div>
+	</div>
+
+
+	
+
+</body>

@@ -9,7 +9,9 @@ import os
 
 
 #Global Variables
-
+non_english = 0
+not_valid = 0
+contains_Q = 0
 
 def get_language_likelihood(input_text):
     """Return a dictionary of languages and their likelihood of being the 
@@ -35,6 +37,9 @@ def get_language(input_text):
     return sorted(likelihoods, key=likelihoods.get, reverse=True)[0]
 
 def cleanFiles(soup, file_path):
+    global not_valid
+    global non_english
+    global contains_Q
 
     headText = ""
 
@@ -44,6 +49,7 @@ def cleanFiles(soup, file_path):
     if title=="":
         #This file has no title, so it does not have all of the things we require: title, description, keywords. Therefore, delete it.
         print "This file has no title. Deleting " + file_path
+        not_valid += 1
         os.remove(file_path)
         return
     elif title!="":
@@ -57,6 +63,7 @@ def cleanFiles(soup, file_path):
         except:
             #Since there is no content in the keywords meta tag, this file does not contain descriptions and keywords and a title. Therefore, delete it.
             print "There exists a keywords meta tag in this file which has no content. Deleting" + file_path
+            not_valid += 1
             os.remove(file_path)
             return
         #try: 
@@ -73,6 +80,7 @@ def cleanFiles(soup, file_path):
         except:
             #Since there is no content in the keywords meta tag, this file does not contain descriptions and keywords and a title. Therefore, delete it.
             print "There exists a description meta tag in this file which has no content. Deleting" + file_path
+            not_valid += 1
             os.remove(file_path)
             return
         #try: 
@@ -80,17 +88,25 @@ def cleanFiles(soup, file_path):
         #except: 
         #    print "Conversion to unicode failed."
 
+
     #This double-checks to make sure the file has keywords, description, and a title.
     if not(keywords!=[] and description!=[] and title!=""):
         print "File does not have all of the following: keywords, description, and title. Deleting " + file_path
+        not_valid += 1
         os.remove(file_path)
         return
 
     print "language: " + get_language(headText)
     if not(get_language(headText)=='english'):
         print "File not in english. Deleting " + file_path
+        non_english += 1
         os.remove(file_path)
         return
+
+    if "?????" in headText:
+        print "File contains question marks. Deleting " + file_path
+        contains_Q += 1
+        os.remove(file_path)
 
     return 
 
@@ -98,7 +114,7 @@ def cleanFiles(soup, file_path):
 
 
 #listofAds = ["adfromhtml.it.html", "adfromnews247.gr.html", "adfromradio.de.html", "adfrom9minecraft.net.html", "adfromaddictinggames.com.html", "adfromallmusic.com.html", "adfromamctheatres.com.html", "adfromandroidcommunity.com.html", "adfromlos40.com.html", "adfromsearch.ch.html", "adfromzalando.pl.html"]
-path = "/Users/scottneaves/Desktop/Online Advertising/AdSimiliarity/ads_new"
+path = "/Users/scottneaves/Desktop/Online Advertising/AdSimiliarity/ads1_and_2"
 listing = os.listdir(path)
 for infile in listing:
     print infile
@@ -109,6 +125,14 @@ for infile in listing:
     cleanFiles(adsoup, os.path.join(path, infile))
     print
 
+
+
+print "Number of non-english files: "
+print non_english
+print "Number of files which are lacking one of the following: keywords, description, title: "
+print not_valid
+print "Number of files which contain question marks: "
+print contains_Q
 
 print "Done cleaning files."    
 

@@ -1,0 +1,174 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Mutua Madrileña</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="robots" content="nofollow, noindex">
+<meta name="viewport" content="width=device-width">
+
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/propio.css">
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/jquery.ui.1.8.16.ie.css">
+<link rel="stylesheet" href="css/jquery-ui-1.8.16.custom.css">
+<link href="css/cupertino/jquery-ui-1.8.23.custom.css" rel="stylesheet" type="text/css">
+
+
+<script src="http://www.google-analytics.com/ga.js" async="" type="text/javascript"></script><script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script> 
+<script type="text/javascript" src="js/jquery.xdomainajax.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.23.custom.min.js"></script>
+<script type="text/javascript" src="js/jquery.ui.core.js"></script>
+<script type="text/javascript" src="js/jquery.ui.widget.js"></script>
+<script type="text/javascript" src="js/jquery.ui.mouse.js"></script>
+<script type="text/javascript" src="js/jquery.ui.draggable.js"></script>
+<script type="text/javascript" src="js/jquery.ui.position.js"></script>
+<script type="text/javascript" src="js/jquery.ui.resizable.js"></script>
+<script type="text/javascript" src="js/jquery.ui.dialog.js"></script>
+<script type="text/javascript" src="js/jquery.tools.min.js"></script>
+
+<script type="text/javascript" src="js/script.custom.js"> </script>
+
+<!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
+<![endif]-->
+
+<script src="https://app.webphone.net/script/script.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#dialog-data').dialog({
+                autoOpen: false,
+                width: 300,
+                modal: true,
+                resizable: false,
+	    		draggable: false,
+                buttons: {
+                    "Ok": function() {
+                        $(this).dialog("close");
+                    }
+                },
+		    	position: ['auto', 'auto']
+            });
+
+		        $("#telForm").submit(function(e){
+	    		if( document.telForm.formulario_terms_chk.checked ){
+                    var tlf = parseInt($("#mailing_telefono").val());
+                    tlf= '0034'+tlf;
+                    wph.callFromObject(227,tlf);
+					return false;
+		    	} else {
+                    $("p#dialog-title").html("<div class='errorMessage'>Debe aceptar la politica legal</div>");
+                    $('#dialog-data').dialog('open');
+    				 return false;
+	    		} 
+    	});
+    });
+		</script>
+
+</head>
+
+<body>
+
+<div class="main_container">
+    <div class="container">
+        <div class="row">
+            <div class="span12 top"><img src="images/logotipo.png" alt="Mutua Madrileña" height="50" width="334"></div>
+        </div>
+    </div>
+    
+    <div class="container banner">
+        <div class="row">
+            <div class="span8">
+            	<div class="mm_sello"></div>
+                <div class="mm_eslogan well">Garantía sellada le facilita la venta de su vehículo</div>
+            </div>
+            <div class="span3 webphone">
+				<span class="bold">No deje pasar esta gran oportunidad</span>, tan solo introduzca su teléfono y <span class="bold">le llamamos gratis</span>
+                <label id="llamenos_al">... o si lo prefiere llámenos al  </label>
+                <label id="numero_llamar">91 291 37 40 </label>
+                <label id="horario_llamar">Lunes a Viernes de 9:00 a 22:00 horas Sábados de 9:00 a 14:00 horas</label>
+                <div class="webphone_textarea">
+                <form id="telForm" name="telForm" method="post" accept-charset="utf-8">
+                	<input name="mailing_telefono" id="mailing_telefono" maxlength="9" value="introduzca su número de teléfono" onclick="this.value='';" onkeyup="return soloNumerosCeroIzq(this);" pattern="^[6789]\d{8}" required="required" placeholder="" type="tel">
+                </form></div>
+                <div class="check_form"><input name="formulario_terms_chk" id="formulario_terms_chk" class="webphone_terms_chk" value="" required="required" type="checkbox"></div>
+                <div class="check_text">
+                    He leido y acepto <a href="" rel="nofollow" class="link_condiciones_legales" onclick="window.open('politica_sellada.html','popup','location=0,status=0,scrollbars=1,width=800,height=500'); return false;">la política de privacidad</a>.
+                </div>
+                <button class="btn btn-large btn-success btn-block btn-primary mm_btn_gen" type="submit" id="dialog_link" onclick="">LE LLAMAMOS GRATIS</button>
+                
+          
+				<a href="" rel="nofollow" onclick="window.open('correo_as.html','popup','location=0,status=0,scrollbars=1,width=320,height=430'); return false;" class="hidden-phone"><div class="mm_email">Haga clic aquí<br>si quiere más<br>información</div></a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container bottom">
+        <div class="row">
+        
+        <div class="span8">
+        <p class="texto">
+        En Mutua hemos creado el producto que necesita para vender su coche mucho antes: GARANTIA SELLADA. Porque si lo contrata:
+        </p>
+                <div class="span1 icons">
+                	<img src="images/revision_icon.png" class="uno" height="31" width="32"><br>
+                	<img src="images/asesor_icon.png" class="dos" height="31" width="32"><br>
+                    <img src="images/gran_revision_icon.png" class="tres" height="32" width="32">
+                </div>
+                <div class="span7 texto">
+                    <p><strong>Revisamos gratis</strong> los principales puntos de su automóvil (Caja de cambios, módulo electrónico principal de control del motor, culata, bloque de motor, pistones, bielas, cigüeñal, bomba de aceite y bombas inyectoras).
+                    </p>
+                    <br>
+                    <p>Le damos nuestro <strong>sello oficial</strong> para que pueda incorporarlo a su anuncio de Segundamano.es, Autoscout24.es o Coches.com. <strong>Este sello destacará su anuncio y lo diferenciará del resto.</strong></p>
+                    <br>
+                    <p><strong>Disfrutara de la cobertura GRAN REPARACIÓN </strong> mientras vende su coche. Una cobertura que cubre las averías más costosas durante 1 año.</p>
+				</div>
+<p class="texto"><strong>GARANTIA SELLADA es un producto que puede contratar independientemente de la compañía en la que tenga su seguro de coche.</strong></p>
+        </div>
+        <div class="span4 prices">
+                <img src="images/mm-prize-300.png" height="78" width="131">
+                <img src="images/mm-prize-149.png" height="78" width="160"><br>
+                <!--<a href="https://www.mutua.es/seguros-coche/jsp/garantia-sellada.jsp?CA=TTAxMzEwMDE=" >-->
+                <a href="redirect.html?html=as.html" target="_blank">
+                <div class="mm_btn_gen">CONTRATAR/PUBLICAR SELLO</div></a>
+                
+                <div class="texto_prices">
+                    <p>Y además, si su comprador contrata el seguro con La Mutua disfrutará de estas ventajas:</p>
+                    <ul>
+                    	<li>Gran Reparación gratis</li>
+                    	<li>100€ de regalo</li>
+                    	<li>Gestoría compra-venta gratuita (excepto tasas)</li>
+                    </ul>
+				</div>
+           	</div>
+        </div>
+    </div>
+</div>
+<div class="main_container_sombra" id="main_container_sombra">
+	© Mutua Madrileña | Todos los derechos reservados | <a href="" rel="nofollow" onclick="window.open('legales_sellada.html','popup','location=0,status=0,scrollbars=1,width=800,height=600'); return false;" class="color-negro link_pie">Aviso legal</a>
+</div>
+        <div style="display:none;">
+           <div style="cursor: pointer; display: inline;" id="div-227"><img title="Pulsa y te llamaremos" alt="Pulsa y te llamaremos" src="https://app.webphone.net:443/img/28/widgets/images/28_button_515ac66ce0ceb_default.png?ac=1367983471440" id="img-227"></div>
+        </div>
+        
+        <script type="text/javascript">
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-38773195-1']);
+		  _gaq.push(['_trackPageview']);
+		
+		  (function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		
+		</script>
+
+<div aria-labelledby="ui-dialog-title-dialog-data" role="dialog" tabindex="-1" class="ui-dialog ui-widget ui-widget-content ui-corner-all" style="display: none; z-index: 1000; outline: 0px none;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span id="ui-dialog-title-dialog-data" class="ui-dialog-title">Mutua Madrileña</span><a role="button" class="ui-dialog-titlebar-close ui-corner-all" href="#"><span class="ui-icon ui-icon-closethick">close</span></a></div><div class="ui-dialog-content ui-widget-content" id="dialog-data" style="">
+              <p id="dialog-title"></p>
+              <p id="dialog-email"></p>
+          </div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><div class="ui-dialog-buttonset"><button type="button">Ok</button></div></div></div></body>

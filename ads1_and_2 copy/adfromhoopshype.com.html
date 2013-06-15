@@ -1,0 +1,260 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="content-language" content="en-us">
+<title>American Family Insurance: Auto Insurance Quote</title>
+
+<!-- mp_trans_remove_start -->
+<link rel="stylesheet" href="style_autoQuote.css" type="text/css" media="screen" charset="utf-8">
+<!-- mp_trans_remove_end -->
+<!--mp_trans_disable_start -->
+<!-- mp_trans_add   
+<link rel="stylesheet" href="style_autoQuote-es.css" type="text/css" media="screen" charset="utf-8" />
+--> <!--mp_trans_disable_end -->
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<script language="JavaScript" src="http://www.amfam.com/site-assets/js/mbox.js"></script><style>.mboxDefault { visibility:hidden; }</style>
+
+<script language="javascript">
+
+$(document).ready(function() {
+
+	$("#zipStamps #zipCode").focus(function(srcc)
+    {
+        if ($(this).val() == $(this)[0].title)
+        {
+            $(this).removeClass("lightText");
+            $(this).addClass("darkText");
+            $(this).val("");
+        }
+    });
+    
+    $("#zipStamps #zipCode").blur(function()
+    {
+        if ($(this).val() == "")
+        {
+            $(this).addClass("lightText");
+            $(this).removeClass("darkText");
+            $(this).val($(this)[0].title);
+        }
+    });
+	
+	$('#zipStamps').submit(function() {
+        window.open('', 'Quote', 'status=0, toolbar=0, location=0, menubar=0, resizable=0, scrollbars=0, height=768, width=1024');
+        this.target = 'Quote';
+    });
+
+});
+
+function getZipCode(){
+var getZipCode = document.zipStamps.zipCode.value;
+var getStampsURL = "http://apps.amfam.com/stamps/stamps.do?servLine=Auto&servLineCat=Car&action=Estimate&lang=en&zipCode="+ getZipCode + "&agentID=&userid=";
+	document.zipStamps.action=getStampsURL;
+	document.zipStamps.submit();
+}
+function keyPressed(e){
+	var keyID = (window.event)? e.keyCode : e.which;
+	if(keyID =='13'){
+		getZipCode();
+	}
+}
+
+</script>
+
+</head>
+
+       <!--[if lt IE 7 ]> <body class="ie6"> <![endif]-->
+          <!--[if IE 7 ]> <body class="ie7"> <![endif]-->
+          <!--[if IE 8 ]> <body class="ie8"> <![endif]-->
+          <!--[if IE 9 ]> <body class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]> <!--> <body> <!--<![endif]-->
+<div style="visibility: visible; display: block;" class="mboxDefault">
+
+<div id="wrapper">
+	<div id="container">
+		<div id="containerLeft">
+			<div id="containerRight">
+            <div id="AmFam_Logo">
+            	<a href="http://www.amfam.com" id="amFamLogo">American Family Insurance</a></div>
+                <ul id="autoQuote_nav">
+                	<li id="one"><a href="http://www.amfam.com">AmFam.com</a></li>
+					<li id="two"><a href="http://www.amfamlatino.com">AmFamLatino.com</a></li>
+					<li id="three"><a href="http://apps.amfam.com/agentlocator">Find An Agent</a></li>
+                </ul>
+                <p id="autoInsurance">Auto Insurance</p>
+                <p id="callUs">Call us toll free at 1-800-692-6326</p>
+                <div id="content">
+                	<h1>Looking for Auto Insurance? <span>Get a Quote!</span></h1>
+                    <h2 id="fastFreeEasy">It's Fast, Free and Easy!</h2>
+                    
+                    <form method="get" name="zipStamps" id="zipStamps" action="../get-a-quote/auto-quote-launch.asp">
+                    <input name="zipCode" title="ZIP Code" value="ZIP Code" size="18" maxlength="10" id="zipCode" class="lightText" type="text">
+                    <!-- mp_trans_remove_start -->
+                    <input name="lang" id="autoLang" value="en" type="hidden">
+                    <!-- mp_trans_remove_end -->
+                    <!-- mp_trans_add   
+                    <input type="hidden" name="lang" id="autoLang" value="es"/>                    
+                    -->                    
+                    <!-- mp_trans_remove_start -->
+                    <input src="images_autoQuote/btn_go.png" id="goAuto" type="image">
+                    <!-- mp_trans_remove_end -->
+                    <!-- mp_trans_add   
+                    <input type="image" src="images_autoQuote/btn_go-es.png" id="goAuto" />                  
+                    -->
+                    </form>
+                    <h2 id="discountsAvailable">Discounts Available!</h2>                    
+                    <!-- mp_trans_remove_start -->
+                    <p>You may qualify for our multiple policy discounts.</p>
+                    <!-- mp_trans_remove_end -->
+                    <!-- mp_trans_add
+                    <p>Puede calificar para obtener descuentos en m&uacute;ltiples p&oacute;lizas.</p>                    
+                    -->                    
+                    <p><a href="http://www.amfam.com/products/insurance-discounts.asp">Learn more about getting discounts with multiple policies and auto insurance.</a></p>                
+                </div><!-- /content -->
+       	  </div><!-- /containerRight -->
+        </div><!-- /containerLeft -->
+	</div><!-- /container -->    
+</div><!-- /wrapper -->
+        
+    <div id="footer">
+		<style>	
+#nav_tertiary{margin: 12px 0; font-size:10px;text-align:center}
+#nav_tertiary li{display: inline;list-style: none;padding: 0 11px 0 0;margin: 0 10px 0 0;background: url('http://www.amfam.com/site-assets/img/separators/nav_tertiary.gif') right center no-repeat}
+#nav_tertiary li.last{background: none;margin-right: 0;padding-right: 0}
+#nav_tertiary li a{text-decoration: underline;color: #666}
+#nav_tertiary li a:hover{text-decoration: none;color: #368CC2}
+a.external {background:url('http://www.amfam.com/site-assets/img/icons/external.gif') no-repeat center right;padding-right:14px}
+</style>
+
+<script language="JavaScript"> 
+
+
+
+
+
+
+
+/*
+addEvent function from http://www.quirksmode.org/blog/archives/2005/10/_and_the_winner_1.html
+*/
+function addEvent( obj, type, fn )
+{
+	if (obj.addEventListener) {
+		obj.addEventListener(type,function(){getNewWindowLinks();},false)}
+	else if (obj.attachEvent)
+	{
+		obj["e"+"load"+function(){getNewWindowLinks();}] = function(){getNewWindowLinks();};
+		obj["load"+function(){getNewWindowLinks();}] = function() { obj["e"+"load"+function(){getNewWindowLinks();}]( window.event ); }
+		obj.attachEvent( "on"+"load", obj[type+function(){getNewWindowLinks();}] );
+	}
+
+}
+
+/*
+Create the new window
+*/
+function openInNewWindow() {
+	// Change "_blank" to something like "newWindow" to load all links in the same new window
+    var newWindow = window.open(this.getAttribute('href'),'newWindow','width=700,height=600,scrollbars=yes');
+    newWindow.focus();
+    return false;
+}
+
+/*
+Add the openInNewWindow function to the onclick event of links with a class name of "new-window"
+*/
+function getNewWindowLinks() {
+	// Check that the browser is DOM compliant
+	if (document.getElementById && document.createElement && document.appendChild) {
+		// Change this to the text you want to use to alert the user that a new window will be opened
+		var strNewWindowAlert = "";
+		// Find all links
+		var links = document.getElementsByTagName('a');
+		var objWarningText;
+		var strWarningText;
+		var link;
+		for (var i = 0; i < links.length; i++) {
+			link = links[i];
+			// Find all links with a class name of "non-html"
+			if (/\bnon\-html\b/.exec(link.className)) {
+				// Create an em element containing the new window warning text and insert it after the link text
+				objWarningText = document.createElement("em");
+				strWarningText = document.createTextNode(strNewWindowAlert);
+				objWarningText.appendChild(strWarningText);
+				link.appendChild(objWarningText);
+				link.onclick = openInNewWindow;
+			}
+		}
+		objWarningText = null;
+	}
+}
+
+addEvent(window, 'load', getNewWindowLinks());
+</script>
+
+  <ul id="nav_tertiary">
+    <li><a id="company_identification" href="http://www.amfam.com/security/identification.asp" class="non-html external">Company Information<em></em></a></li>
+    <li><a id="company_privacy" href="http://www.amfam.com/security/privacy.asp" class="non-html external">Privacy and Security Policy<em></em></a></li>
+    <li class="last"><a id="company_legal" href="http://www.amfam.com/security/legal.asp" class="non-html external">Legal Notice<em></em></a></li>
+  </ul>
+        <p class="call">Call us any time at <strong>1-800-MY-AMFAM (1-800-692-6326)</strong>
+        </p><p>©2010 American Family Insurance. All Rights Reserved.</p>
+	</div> <!-- /footer -->
+    </div><script type="text/javascript">
+mboxCreate("autoQuoteStart_content");
+</script><div id="mboxMarker-default-autoQuoteStart_content-0" style="visibility:hidden;display:none">&nbsp;</div><script src="http://amfaminsurance.tt.omtrdc.net/m2/amfaminsurance/mbox/standard?mboxHost=www.amfam.com&amp;mboxSession=1369424874425-363113&amp;mboxPage=1369424874425-363113&amp;screenHeight=1024&amp;screenWidth=1280&amp;browserWidth=1184&amp;browserHeight=323&amp;browserTimeOffset=-300&amp;colorDepth=24&amp;mboxXDomain=enabled&amp;mboxCount=1&amp;mbox=autoQuoteStart_content&amp;mboxId=0&amp;mboxTime=1369406874431&amp;mboxURL=http%3A%2F%2Fwww.amfam.com%2Fquote%2Fquote_auto.asp%3Fdfaid%3D1&amp;mboxReferrer=&amp;mboxVersion=41" language="JavaScript"></script><div style="visibility: hidden; display: none" id="mboxImported-default-autoQuoteStart_content-0"><!-- Offer Id: 65227  --><script type="text/javascript">
+/*T&T to SiteCat v4 ==>Response Plugin*/
+window.s_tnt=window.s_tnt||'',tntVal='41738:0:0,';
+if (window.s_tnt.indexOf(tntVal)==-1){window.s_tnt+=tntVal}if (mboxCurrent.getFetcher().getType()=='ajax'&&(window.s && window.s.tl)){s.tl('TnT', 'o', 'TnT');}</script></div>
+    
+<div style="display:none;">
+  <!-- SiteCatalyst code version: H.8.
+Copyright 1997-2006 Omniture, Inc. More info available at
+http://www.omniture.com -->
+  <script language="JavaScript" src="http://www.amfam.com/site-assets/js/s_code.js"></script>  
+</div>
+
+<script type="text/javascript">
+s.hier1="Amfam:Quote:Quote_auto"
+</script><script type="text/javascript">
+s.channel="Quote"
+
+</script>
+<script language="JavaScript"><!--
+/* You may give each page an identifying name, server, and channel on
+the next lines. */
+var omnTitle=omnTitle
+if (omnTitle=="") {
+omnTitle=document.title
+}
+if (typeof omnTitle=="undefined"){
+omnTitle=document.title
+}
+
+
+s.pageName=omnTitle
+s.server=""
+s.pageType=""
+s.prop1=""
+s.prop2=""
+s.prop3=""
+s.prop4=""
+s.prop5=""
+s.prop7=""
+s.prop9="english"
+s.prop10=omnTitle
+/* E-commerce Variables */
+s.campaign=""
+s.events=""
+s.products=""
+s.eVar14=""
+s.eVar15=""
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)//--></script>
+
+<!-- End SiteCatalyst code version: H.8. -->
+
+
+
+
+
+</body>

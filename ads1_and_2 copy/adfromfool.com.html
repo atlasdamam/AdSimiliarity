@@ -1,0 +1,341 @@
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <link rel="stylesheet" type="text/css" href="http://g.foolcdn.com/includes/css/20071107/Screen.css" title="usmf"><style type="text/css" media="all">
+	@import "http://g.fool.com/shop/shared/style_penfed.css";
+</style><script src="http://www.google-analytics.com/ga.js" async="" type="text/javascript"></script><script src="http://www.google-analytics.com/ga.js" async="" type="text/javascript"></script><script src="http://g.foolcdn.com/common/js/prototype_fool.min.js" type="text/javascript" language="javascript"> </script><script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-3262475-1']);
+_gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script language="javascript" type="text/javascript">
+					// <![CDATA[
+					
+					var LandingPage = {
+						tuid: "",
+						productId: "",
+						
+						initialize: function() {
+							Fool.Util.setLayout();
+							this.setOrderLinks();
+							Event.observe(window, 'resize', function() { Fool.Util.setLayout(); } );
+							this.setSubmitButtonForGoogleAnalytics();
+						},
+						
+						setOrderLinks: function() {
+							var self = this;
+							$$("a").each(function(link){
+								if (link.href.toLowerCase().indexOf("order.asp") != -1
+									|| link.href.replace(/-[0-9][0-9]/,"").toLowerCase().indexOf("order.aspx") != -1
+									|| link.href.toLowerCase().indexOf("formbounce.asp") != -1)
+								{
+									self.appendLink(link, this.tuid);
+									self.attachLinkClickTrackingEvent(link);
+								}
+							});
+						},
+						
+						appendLink: function(link, tuid) {
+							link.href += "&tuid=" + tuid;
+						},
+						
+						attachLinkClickTrackingEvent: function(link) {
+							Event.observe(link, "click", this.notifyGoogleAnalyticsOfLinkClick.bind(this));
+						},
+						
+						setSubmitButtonForGoogleAnalytics: function() {
+							var submitBtn = $$("input.btn")[0];
+							if(submitBtn) {
+								Event.observe(submitBtn, "click", this.notifyGoogleAnalyticsOfFormSubmission.bind(this));
+							}	
+						},
+						
+						notifyGoogleAnalyticsOfLinkClick: function() {
+							if(_gaq) {
+								_gaq.push(['_trackEvent', 'click', 'order page', 'text link']);
+							}
+						},
+						
+						notifyGoogleAnalyticsOfFormSubmission: function() {
+							if(_gaq) {
+								_gaq.push(['_trackEvent', 'click', 'order page', 'button']);
+							}
+						}
+					};
+					
+					document.observe("dom:loaded", function() {
+						LandingPage.initialize();
+					});
+					
+					// ]]></script>
+		<!--Start Google Analytics-->
+		<script type="text/javascript" xmlns="">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-3262475-1']);
+			_gaq.push(['_setDomainName', 'fool.com']);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+		<!--End Google Analytics-->
+		</head>
+  <body class="">
+    <div id="lp-orderform">
+      <div id="page-body">
+        <div id="page-copy"><div style="width:810px">
+
+
+<h3 style="font-family:Arial, Helvetica, sans-serif; color:#414142; font-size: 34px; margin-top:20px; margin-left:0px; margin-bottom:10px; text-align:center;">Now the only thing restricting <br>your travel destination...<br><br>
+... is your imagination</h3>
+<br>
+
+<table style="margin-bottom:15px;" width="550" align="center" cellpadding="0" cellspacing="0">
+<tbody><tr>
+<td>
+<p style="margin-left:10px; margin-right:15px; margin-bottom:25px; text-align:center;">
+<img src="http://g.fool.com/art/shop/newsletters/tmf/tmfpenfed-travel-250.png" height="160" width="248"><br><span style="font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#414142; line-height:20px;"><a href="https://www.penfed.org/TMF-PenFed-Premium-Travel-Rewards-American-Express-Card/">Pricing and Terms</a></span></p>
+</td>
+
+<td align="center">
+<p style="font-family:Arial, Helvetica, sans-serif; color:#414142; font-size: 16px; margin-left:20px; margin-right:00px; font-weight:normal; ">Get <strong>5,000 bonus</strong> points when you make your first purchase!</p>
+
+
+
+<p style="font-family:Arial, Helvetica, sans-serif; font-size:22px; color:#414142; line-height:24px; margin-bottom:15px; margin-left:20px; text-align:center;"><a href="https://www.penfed.org/Support/NMRedirectProc.aspx?productCode=AMX&amp;eligcode=981&amp;adCode=TMF" style="-moz-box-shadow:inset 0px 1px 0px 0px #fff6af;-webkit-box-shadow:inset 0px 1px 0px 0px #fff6af;		box-shadow:inset 0px 1px 0px 0px #fff6af;		background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffec64), color-stop(1, #ffab23) );		background:-moz-linear-gradient( center top, #ffec64 5%, #ffab23 100% );	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffec64', endColorstr='#ffab23');	background-color:#ffec64;	-moz-border-radius:6px; -webkit-border-radius:6px;	border-radius:6px;	border:1px solid #ffaa22; display:inline-block; color:#333333; font-family:arial; font-size:16px;	font-weight:bold; padding:6px 24px; text-decoration:none;	text-shadow:1px 1px 0px #ffee66;">Apply Now!</a></p>
+
+
+<p style="font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#414142; line-height:14px; margin-bottom:15px; margin-left:20px; text-align:center;"><a href="https://www.penfed.org/TMF-PenFed-Premium-Travel-Rewards-American-Express-Card/">Existing PenFed member? <br>
+  Click here to apply</a></p>
+
+</td>
+</tr>
+</tbody></table>
+
+<table style="margin-top:10px;" width="650" align="center" cellpadding="0" cellspacing="0">
+	<tbody><tr>
+    <td colspan="2">
+    <h3 style="font-family:Arial, Helvetica, sans-serif; color:#414142; font-size:18px; margin-bottom:0px;">Introducing The Motley Fool PenFed Premium Travel Rewards <br>
+      American Express<sup>®</sup> Card</h3>
+    
+    </td>
+    </tr>
+    
+    <tr>   
+		<td valign="top" width="400">
+        <p style="font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#414142; margin-bottom:1em; line-height:1.4em; margin-top:10px; margin-right:10px; margin-right:15px;">Sign  up now and you'll  receive a <u>complimentary</u> 12-month subscription to our  world-renowned flagship newsletter <em>Motley  Fool Stock Advisor </em>(valued at $199)! That means you get two stock picks a month—one each  from the legendary investing brother duo of David and Tom Gardner. As well as  insightful and easy-to-understand daily financial articles. Not to mention our  entire backlog of picks over the last decade, why we loved each company, and  our track record from each pick. </p>
+        <p style="font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#414142; margin-bottom:1em; line-height:1.4em; margin-top:10px; margin-right:10px; margin-right:15px;">If you are a saavy traveler that  appreciates rich rewards and extraordinary benefits, The Motley Fool PenFed Premium Travel  Rewards American Express® Card is the card for your wallet.&nbsp; <em>Preview  below some additional benefits of carrying this card:</em></p></td>
+
+<td style="padding:5px;" valign="top">
+    <p style="font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#414142; line-height:14px; margin-bottom:0px; text-transform:uppercase; margin-top:10px;"><strong><u>Unlimited</u> rewards points!</strong></p>
+<ul>
+<li style="font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#414142; margin-bottom:5px; line-height:19px; margin-top:5px; ">5x points on airfare purchases<sup>†</sup></li>
+<li style="font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#414142; margin-bottom:5px; line-height:19px; ">3x points on The Motley Fool purchases<sup>†</sup>(including subscriptions)</li>
+<li style="font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#414142; margin-bottom:5px; line-height:19px; ">1 point per $1 on all other purchases<sup>†</sup> </li>
+</ul>
+</td>
+	</tr>
+    
+    <tr>
+    <td colspan="2">
+    
+        
+    <p style="font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#414142; line-height:14px; margin-bottom:0px; text-transform:uppercase;"><strong>Other great benefits</strong></p>
+<ul>
+<li style="font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#414142; margin-bottom:5px; line-height:19px; ">No foreign transaction fees</li>
+<li style="font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#414142; margin-bottom:5px; line-height:19px; ">No annual fees</li>
+<li style="font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#414142; margin-bottom:5px; line-height:19px; ">Complimentary 24/7 concierge and travel planning service</li>
+<li style="font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#414142; margin-bottom:5px; line-height:19px; ">Access  to Travel Privileges from American Express</li>
+
+<li style="font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#414142; margin-bottom:5px; line-height:19px; ">2 Complimentary visits to &gt;350 VIP airport  lounges in 200 cities worldwide  after spending $15,000 annually.</li>
+
+<li style="font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#414142; margin-bottom:5px; line-height:19px; ">Comprehensive suite of  travel protection and insurance products</li>
+
+<li style="font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#414142; margin-bottom:5px; line-height:19px; ">Receive 5,000 bonus points after your first purchase within the first 90 days</li>
+
+
+</ul>
+    
+    </td>
+    </tr>
+    
+    
+</tbody></table>
+
+    <h3 style="font-family:Arial, Helvetica, sans-serif; color:#414142; font-size:18px; margin-bottom:10px; margin-top:20px; text-align:center">The Motley Fool PenFed Travel Rewards American Express<sup>®</sup> Card offers richer rewards <br>
+    and better features than most other rewards cards. Don't believe it? See for yourself:</h3>
+
+
+
+<!-- comparison chart -->
+<table width="100%" cellpadding="0" cellspacing="0">
+	<tbody><tr>
+		<td style="border-right: 1px solid #e2e2e2; border-top: 1px solid #e2e2e2; border-left: 1px solid #e2e2e2;"></td>
+    
+		<td style="padding:5px; border-top: 1px solid #e2e2e2; border-right: 1px solid #e2e2e2;" width="150" bgcolor="#f5ffe0"><p style="font-size:14px; font-family:Arial, Helvetica, sans-serif; text-align:center; margin-bottom:10px;">The Motley Fool PenFed Premium Travel Rewards American Express<sup>®</sup> Card</p></td>
+
+		<td style="padding:5px; border-top: 1px solid #e2e2e2; border-right: 1px solid #e2e2e2;" width="150"><p style="font-size:14px; font-family:Arial, Helvetica, sans-serif; text-align:center; margin-bottom:10px;">Chase Sapphire Preferred</p></td>
+
+		<td style="padding:5px; border-top: 1px solid #e2e2e2; border-right: 1px solid #e2e2e2; " width="150"><p style="font-size:14px; font-family:Arial, Helvetica, sans-serif; text-align:center; margin-bottom:10px;">United Mileage Plus Chase Explorer</p></td>
+
+		<td style="padding:5px; border-top: 1px solid #e2e2e2; border-right: 1px solid #e2e2e2;" width="150"><p style="font-size:14px; font-family:Arial, Helvetica, sans-serif; text-align:center; margin-bottom:10px;">Capital One Venture</p></td>
+    </tr>
+
+	<tr>
+		<td style="border-right: 1px solid #e2e2e2; border-left: 1px solid #e2e2e2;"></td>
+		<td style="border-right: 1px solid #e2e2e2;" width="150" align="center" bgcolor="#f5ffe0"><img src="http://g.fool.com/art/shop/newsletters/tmf/AMEX-100.png" alt="Motley Fool Card" style="margin-bottom:5px;" height="63" width="100" align="middle" border="0">
+        
+                <p style="font-family:Arial, Helvetica, sans-serif; font-size:22px; color:#414142; line-height:24px; margin-bottom:5px; text-align:center; margin-top:5px;"><a href="https://www.penfed.org/Support/NMRedirectProc.aspx?productCode=AMX&amp;eligcode=981&amp;adCode=TMF" style="-moz-box-shadow:inset 0px 1px 0px 0px #fff6af;-webkit-box-shadow:inset 0px 1px 0px 0px #fff6af;		box-shadow:inset 0px 1px 0px 0px #fff6af;		background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffec64), color-stop(1, #ffab23) );		background:-moz-linear-gradient( center top, #ffec64 5%, #ffab23 100% );	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffec64', endColorstr='#ffab23');	background-color:#ffec64;	-moz-border-radius:6px; -webkit-border-radius:6px;	border-radius:6px;	border:1px solid #ffaa22; display:inline-block; color:#333333; font-family:arial; font-size:12px;	font-weight:bold; padding:3px 14px; text-decoration:none;	text-shadow:1px 1px 0px #ffee66;">Apply Now!</a></p>
+        
+</td>
+<td style="border-right: 1px solid #e2e2e2;" width="150" align="center">
+<img src="http://g.fool.com/art/shop/newsletters/tmf/ChaseSapphire.png" alt="Motley Fool Card" style="margin-bottom:5px;" height="64" width="100" align="middle" border="0"></td>
+
+<td style="border-right: 1px solid #e2e2e2;" width="150" align="center"><img src="http://g.fool.com/art/shop/newsletters/tmf/UnitedMileage.jpg" alt="Motley Fool Card" style="margin-bottom:5px;" height="64" width="100" align="middle" border="0"></td>
+
+<td style="border-right: 1px solid #e2e2e2;" width="150" align="center"><img src="http://g.fool.com/art/shop/newsletters/tmf/capitalOneVenture.png" alt="Motley Fool Card" style="margin-bottom:5px;" height="64" width="100" align="middle" border="0"></td>
+</tr>
+
+
+<tr style="padding:5px;">
+	<td style="padding:10px; border-right: 1px solid #e2e2e2; border-left: 1px solid #e2e2e2;"><p style="text-align:right; font-size:12px; font-weight:bold; font-family:Arial, Helvetica, sans-serif;"> No Annual Fee</p></td>
+
+	<td style="border-top: 1px solid #e2e2e2; border-right: 1px solid #e2e2e2;" width="100" bgcolor="#f5ffe0">
+    <p style="font-size:14px; font-family:Arial, Helvetica, sans-serif; text-align:center;"><img src="http://g.fool.com/art/shop/newsletters/tmf/tmf-plus-25.gif" alt="Motley Fool Card" height="25" width="25" align="middle" border="0"></p></td>
+    
+	<td style="border-top: 1px solid #e2e2e2; border-right: 1px solid #e2e2e2;" width="100"><p style="font-size:12px; font-family:Arial, Helvetica, sans-serif; text-align:center;">$95</p></td>
+	<td style="border-top: 1px solid #e2e2e2; border-right: 1px solid #e2e2e2;" width="100"><p style="font-size:12px; font-family:Arial, Helvetica, sans-serif; text-align:center;">$95</p></td>
+<td style="border-top: 1px solid #e2e2e2; border-right: 1px solid #e2e2e2;" width="100"> <p style="font-size:12px; font-family:Arial, Helvetica, sans-serif; text-align:center;">$59</p></td>
+</tr>
+
+<tr style="padding:5px;">
+	<td style="padding:10px; border-right: 1px solid #e2e2e2; border-left: 1px solid #e2e2e2;"><p style="text-align:right; font-size:12px; font-weight:bold; font-family:Arial, Helvetica, sans-serif;">No Foreign Transaction Fee
+</p></td>
+
+<td style="border-top: 1px solid #e2e2e2; border-right: 1px solid #e2e2e2;" bgcolor="#f5ffe0"><p style="font-size:14px; font-family:Arial, Helvetica, sans-serif; text-align:center;"><img src="http://g.fool.com/art/shop/newsletters/tmf/tmf-plus-25.gif" alt="Motley Fool Card" height="25" width="25" align="middle" border="0"></p></td>
+
+<td style="border-top: 1px solid #e2e2e2; border-right: 1px solid #e2e2e2;"><p style="font-size:12px; font-family:Arial, Helvetica, sans-serif; text-align:center;"><img src="http://g.fool.com/art/shop/newsletters/tmf/tmf-plus-25.gif" alt="Motley Fool Card" height="25" width="25" align="middle" border="0"></p></td>
+
+<td style="border-top: 1px solid #e2e2e2; border-right: 1px solid #e2e2e2;"><p style="font-size:12px; font-family:Arial, Helvetica, sans-serif; text-align:center;"><img src="http://g.fool.com/art/shop/newsletters/tmf/tmf-minus-25.gif" alt="Motley Fool Card" height="25" width="25" align="middle" border="0"></p></td>
+
+<td style="border-top: 1px solid #e2e2e2; border-right: 1px solid #e2e2e2;"><p style="font-size:12px; font-family:Arial, Helvetica, sans-serif;  text-align:center;"><img src="http://g.fool.com/art/shop/newsletters/tmf/tmf-plus-25.gif" alt="Motley Fool Card" height="25" width="25" align="middle" border="0"></p></td>
+</tr>
+
+
+
+<tr>
+	<td style="padding:10px; border-right: 1px solid #e2e2e2; border-left: 1px solid #e2e2e2;"><p style="text-align:right; font-size:12px; font-weight:bold; font-family:Arial, Helvetica, sans-serif;">Points Earning Structure</p></td>
+
+<td style="padding:5px; border-top: 1px solid #e2e2e2; border-right: 1px solid #e2e2e2;" width="150" bgcolor="#f5ffe0">
+
+<ul style="margin-bottom:0px; margin-top:0px;">
+<li style="font-size:12px; line-height:16px; font-family:Arial, Helvetica, sans-serif; text-align:left; margin-left:-20px;">5 points/$1 on airfare purchases<sup>†</sup></li> 
+<li style="font-size:12px; line-height:16px; font-family:Arial, Helvetica, sans-serif; text-align:left; margin-left:-20px;">3 points/$1 on Motley Fool purchases<sup>†</sup></li>
+<li style="font-size:12px; line-height:16px; font-family:Arial, Helvetica, sans-serif; text-align:left; margin-left:-20px;">1 point/$1 on all other purchases<sup>†</sup></li>
+</ul>
+</td>
+
+
+<td style="padding:5px; border-top: 1px solid #e2e2e2; border-right: 1px solid #e2e2e2;" width="150">
+<ul style="margin-bottom:0px; margin-top:0px;">
+<li style="font-size:12px; line-height:16px; font-family:Arial, Helvetica, sans-serif; text-align:left; margin-left:-20px;">2 points/$1 on travel &amp; restaurants</li>
+<li style="font-size:12px; line-height:16px; font-family:Arial, Helvetica, sans-serif; text-align:left; margin-left:-20px;">1 point/$1 on all other purchases</li>
+<li style="font-size:12px; line-height:16px; font-family:Arial, Helvetica, sans-serif; text-align:left; margin-left:-20px;">1:1 point transfer to participating frequent travel programs</li></ul></td>
+
+<td style="padding:5px; border-top: 1px solid #e2e2e2; border-right: 1px solid #e2e2e2;" width="150">
+<ul style="margin-bottom:0px; margin-top:0px;">
+<li style="font-size:12px; line-height:16px; font-family:Arial, Helvetica, sans-serif; text-align:left; margin-left:-20px;">2x miles/$1 on United ticket purchases</li>
+<li style="font-size:12px; line-height:16px; font-family:Arial, Helvetica, sans-serif; text-align:left; margin-left:-20px;">1 mile/$1 on all other </li></ul></td>
+
+
+<td style="padding:5px; border-top: 1px solid #e2e2e2; border-right: 1px solid #e2e2e2;" width="150" align="left">
+
+<ul style="margin-bottom:0px; margin-top:0px;">
+<li style="font-size:12px; line-height:16px; font-family:Arial, Helvetica, sans-serif; text-align:left; margin-left:-20px;">2x miles/$1 with every purchase</li></ul></td>
+</tr>
+
+<tr>
+	<td style="padding:10px; border-right: 1px solid #e2e2e2; border-left: 1px solid #e2e2e2;"><p style="text-align:right; font-size:12px; font-weight:bold; font-family:Arial, Helvetica, sans-serif;">Purchase APRs
+</p></td>
+
+<td style="padding:5px; border-top: 1px solid #e2e2e2; border-right: 1px solid #e2e2e2;" bgcolor="#f5ffe0"><p style="font-size:12px; font-family:Arial, Helvetica, sans-serif; text-align:center;">13.99% Variable</p></td>
+<td style="padding:10px; border-top: 1px solid #e2e2e2; border-right: 1px solid #e2e2e2;"><p style="font-size:12px; font-family:Arial, Helvetica, sans-serif; text-align:center;">15.24%
+      Variable
+</p></td>
+<td style="padding:5px; border-top: 1px solid #e2e2e2; border-right: 1px solid #e2e2e2;"><p style="font-size:12px; font-family:Arial, Helvetica, sans-serif; text-align:center;">15.24% 
+      Variable
+</p></td>
+<td style="border-top: 1px solid #e2e2e2; border-right: 1px solid #e2e2e2;"><p style="padding:10px; font-size:12px; font-family:Arial, Helvetica, sans-serif; text-align:center;">13.9% - 20.9% 
+     Variable
+</p></td>
+</tr>
+
+<tr>
+	<td style="padding:10px; border-right: 1px solid #e2e2e2; border-left: 1px solid #e2e2e2;"><p style="text-align:right; font-size:12px; font-weight:bold; font-family:Arial, Helvetica, sans-serif;">Cash Advance APRs
+</p></td>
+
+<td style="padding:5px; border-top: 1px solid #e2e2e2; border-right: 1px solid #e2e2e2;" bgcolor="#f5ffe0"><p style="font-size:12px; font-family:Arial, Helvetica, sans-serif; text-align:center;">13.99% Variable
+</p></td>
+<td style="padding:5px; border-top: 1px solid #e2e2e2; border-right: 1px solid #e2e2e2;"><p style="font-size:12px; font-family:Arial, Helvetica, sans-serif; text-align:center;">19.24%
+      Variable
+</p></td>
+<td style="padding:5px; border-top: 1px solid #e2e2e2; border-right: 1px solid #e2e2e2;"><p style="font-size:12px; font-family:Arial, Helvetica, sans-serif; text-align:center;">19.24%   
+     Variable
+</p></td>
+<td style="border-top: 1px solid #e2e2e2; border-right: 1px solid #e2e2e2;"><p style="padding:10px; font-size:12px; font-family:Arial, Helvetica, sans-serif; text-align:center; ">24.9% Variable </p></td>
+</tr>
+
+<tr>
+	<td style="padding:10px; border-right: 1px solid #e2e2e2; border-left: 1px solid #e2e2e2;"><p style="text-align:right; font-size:12px; font-weight:bold; font-family:Arial, Helvetica, sans-serif;">Airport VIP Lounge</p></td>
+
+<td style="padding:5px; border-top: 1px solid #e2e2e2; border-right: 1px solid #e2e2e2;" width="150" bgcolor="#f5ffe0"><p style="font-size:12px; font-family:Arial, Helvetica, sans-serif; text-align:center;">2 Complimentary visits to &gt;350 VIP airport lounges in 200 cities worldwide after spending $15,000 annually.</p></td>
+    
+<td style="padding:5px; border-top: 1px solid #e2e2e2; border-right: 1px solid #e2e2e2;" width="150"><p style="font-size:12px; font-family:Arial, Helvetica, sans-serif; text-align:center;"><img src="http://g.fool.com/art/shop/newsletters/tmf/tmf-minus-25.gif" alt="Motley Fool Card" height="25" width="25" align="middle" border="0"></p></td>
+
+<td style="padding:5px; border-top: 1px solid #e2e2e2; border-right: 1px solid #e2e2e2;" width="150"><p style="font-size:12px; font-family:Arial, Helvetica, sans-serif; text-align:center;">2 one-time passes each year to the United Club</p></td>
+
+<td style="border-top: 1px solid #e2e2e2; border-right: 1px solid #e2e2e2;" width="150"><p style="padding:10px; font-size:12px; font-family:Arial, Helvetica, sans-serif; text-align:center;"><img src="http://g.fool.com/art/shop/newsletters/tmf/tmf-minus-25.gif" alt="Motley Fool Card" style="margin-bottom:5px;" height="25" width="25" align="middle" border="0"></p></td>
+</tr>
+
+
+<tr>
+	<td style="padding:10px; border-right: 1px solid #e2e2e2; border-left: 1px solid #e2e2e2; border-bottom: 1px solid #e2e2e2;"><p style="text-align:right; font-size:12px; font-weight:bold; font-family:Arial, Helvetica, sans-serif;">Concierge Service</p></td>
+
+<td style="padding:5px; border-top: 1px solid #e2e2e2; border-bottom: 1px solid #e2e2e2; border-right: 1px solid #e2e2e2;" bgcolor="#f5ffe0"><p style="font-size:14px; font-family:Arial, Helvetica, sans-serif; text-align:center;"><img src="http://g.fool.com/art/shop/newsletters/tmf/tmf-plus-25.gif" alt="Motley Fool Card" height="25" width="25" align="middle" border="0"></p></td>
+
+<td style="padding:5px; border-top: 1px solid #e2e2e2; border-bottom: 1px solid #e2e2e2; border-right: 1px solid #e2e2e2;"><p style="font-size:12px; font-family:Arial, Helvetica, sans-serif; text-align:center;"><img src="http://g.fool.com/art/shop/newsletters/tmf/tmf-minus-25.gif" alt="Motley Fool Card" height="25" width="25" align="middle" border="0"></p></td>
+
+<td style="padding:5px; border-top: 1px solid #e2e2e2; border-right: 1px solid #e2e2e2; border-bottom: 1px solid #e2e2e2;"><p style="font-size:12px; font-family:Arial, Helvetica, sans-serif; text-align:center;"><img src="http://g.fool.com/art/shop/newsletters/tmf/tmf-plus-25.gif" alt="Motley Fool Card" height="25" width="25" align="middle" border="0"></p></td>
+
+<td style="border-top: 1px solid #e2e2e2; border-bottom: 1px solid #e2e2e2; border-right: 1px solid #e2e2e2;"><p style="padding:5px; font-size:12px; font-family:Arial, Helvetica, sans-serif; text-align:center;"><img src="http://g.fool.com/art/shop/newsletters/tmf/tmf-plus-25.gif" alt="Motley Fool Card" height="25" width="25" align="middle" border="0"></p></td>
+</tr>
+</tbody></table>
+
+
+
+<p style=" font-size:10px; text-align:center; font-family:Arial, Helvetica, sans-serif;"><em>Source:  chase.com; capitalone.com (as of 4/17/2013)</em></p>
+
+<p style=" font-size:10px; text-align:left; font-family:Arial, Helvetica, sans-serif;"> <em>Rates and offers current as of April 2013 and are subject to change. * The PenFed Premium Travel Rewards American Express® Credit Card program is issued and administered by PenFed. American Express<sup>®</sup> is a federally registered Service mark of American Express<sup>®</sup> and is used by PenFed pursuant to a license. <sup>†</sup>Cash advances, credit card checks, and balance transfers are excluded from earning point rewards.</em></p>
+
+</div>
+</div>
+      </div>
+      <div class="disclaimer">
+        <p>©
+							1995-2013 The Motley Fool. All rights reserved. |
+							<a onclick="bNoPop=true" target="_blank" href="http://www.fool.com/help/index.htm?display=about03">Legal Information</a> |<a href="javascript:void(0);" onclick="history.back();return false;bNoPop=true">Return to previous page</a>
+        </p>
+      </div>
+    </div>
+  
+</body>

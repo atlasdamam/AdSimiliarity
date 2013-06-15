@@ -1,0 +1,791 @@
+<head>
+<meta content="noindex,nofollow" name="robots">
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script async="" src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en_US.r3QWApkN4KM.O/m=iframes_styles_bubble/exm=plusone/rt=j/sv=1/d=1/ed=1/am=EQ/rs=AItRSTMXOSfYHNeCWAliTFzzK4EPtqRvFg/cb=gapi.loaded_1"></script><script async="" src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en_US.r3QWApkN4KM.O/m=plusone/rt=j/sv=1/d=1/ed=1/am=EQ/rs=AItRSTMXOSfYHNeCWAliTFzzK4EPtqRvFg/cb=gapi.loaded_0"></script><script type="text/javascript">(function() { var b=window,e="jstiming",g="tick";(function(){function d(a){this.t={};this.tick=function(a,d,c){c=void 0!=c?c:(new Date).getTime();this.t[a]=[c,d]};this[g]("start",null,a)}var a=new d;b.jstiming={Timer:d,load:a};if(b.performance&&b.performance.timing){var a=b.performance.timing,c=b[e].load,f=a.navigationStart,a=a.responseStart;0<f&&a>=f&&(c[g]("_wtsrt",void 0,f),c[g]("wtsrt_","_wtsrt",a),c[g]("tbsd_","wtsrt_"))}try{a=null,b.chrome&&b.chrome.csi&&(a=Math.floor(b.chrome.csi().pageT),c&&0<f&&(c[g]("_tbnd",void 0,b.chrome.csi().startE),
+c[g]("tbnd_","_tbnd",f))),null==a&&b.gtbExternal&&(a=b.gtbExternal.pageT()),null==a&&b.external&&(a=b.external.pageT,c&&0<f&&(c[g]("_tbnd",void 0,b.external.startE),c[g]("tbnd_","_tbnd",f))),a&&(b[e].pt=a)}catch(l){}})();b.tickAboveFold=function(d){var a=0;if(d.offsetParent){do a+=d.offsetTop;while(d=d.offsetParent)}d=a;750>=d&&b[e].load[g]("aft")};var h=!1;function k(){h||(h=!0,b[e].load[g]("firstScrollTime"))}b.addEventListener?b.addEventListener("scroll",k,!1):b.attachEvent("onscroll",k);
+ })();</script>
+<meta content="true" name="MSSmartTagsPreventParsing">
+<meta content="blogger" name="generator">
+<link href="http://doubleclickpublishersapi.blogspot.com/favicon.ico" rel="icon" type="image/x-icon">
+<link href="http://doubleclickpublishersapi.blogspot.com/" rel="canonical">
+<link rel="alternate" type="application/atom+xml" title="Google's DoubleClick for Publishers API - Atom" href="http://doubleclickpublishersapi.blogspot.com/feeds/posts/default">
+<link rel="alternate" type="application/rss+xml" title="Google's DoubleClick for Publishers API - RSS" href="http://doubleclickpublishersapi.blogspot.com/feeds/posts/default?alt=rss">
+<link rel="service.post" type="application/atom+xml" title="Google's DoubleClick for Publishers API - Atom" href="http://www.blogger.com/feeds/2678367915787379754/posts/default">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.blogger.com/rsd.g?blogID=2678367915787379754">
+<link rel="openid.server" href="http://www.blogger.com/openid-server.g">
+<link rel="openid.delegate" href="http://doubleclickpublishersapi.blogspot.com/">
+<!--[if IE]> <script> (function() { var html5 = ("abbr,article,aside,audio,canvas,datalist,details," + "figure,footer,header,hgroup,mark,menu,meter,nav,output," + "progress,section,time,video").split(','); for (var i = 0; i < html5.length; i++) { document.createElement(html5[i]); } try { document.execCommand('BackgroundImageCache', false, true); } catch(e) {} })(); </script> <![endif]-->
+<title>Google's DoubleClick for Publishers API</title>
+<meta content="The official source of information about the DFP API" name="Description">
+<link href="http://www.google.com/uds/css/gsearch.css" rel="stylesheet" type="text/css">
+<link href="http://www.google.com/uds/css/gsearch_darkgrey.css" rel="stylesheet" type="text/css">
+<link href="http://www.google.com/css/gooey.css" rel="stylesheet" type="text/css">
+<link href="http://www.google.com/googleblogs/css/template_styles.css" rel="stylesheet" type="text/css">
+<link href="http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.css" rel="stylesheet" type="text/css">
+<script src="http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.js" type="text/javascript"></script>
+<script src="http://www.google.com/jsapi?key=internal-googleblogs" type="text/javascript"></script>
+<script type="text/javascript">
+function OnLoad() {
+  prettyPrint();
+}
+    google.setOnLoadCallback(OnLoad, true);
+</script>
+<link type="text/css" rel="stylesheet" href="//www.blogger.com/static/v1/widgets/1832531788-widget_css_bundle.css">
+<link type="text/css" rel="stylesheet" href="//www.google.com/uds/css/gsearch.css">
+<link type="text/css" rel="stylesheet" href="//www.blogger.com/dyn-css/authorization.css?targetBlogID=2678367915787379754&amp;zx=6dfdc5a1-ab5a-43e1-ada1-7c47fd8f9b1a">
+<style id="page-skin-1" type="text/css"><!--
+/* Put a border around prettyprinted code snippets. */
+pre { border:none !important; background: none; overflow-x: visible !important; overflow-y: visible !important;}
+--></style>
+<script type="text/javascript">var a=navigator,b="userAgent",c="indexOf",f="&m=1",g="(^|&)m=",h="?",k="?m=1";function l(){var d=window.location.href,e=d.split(h);switch(e.length){case 1:return d+k;case 2:return 0<=e[1].search(g)?null:d+f;default:return null}}if(-1!=a[b][c]("Mobile")&&-1!=a[b][c]("WebKit")&&-1==a[b][c]("iPad")||-1!=a[b][c]("Opera Mini")||-1!=a[b][c]("IEMobile")){var m=l();m&&window.location.replace(m)};
+</script><script type="text/javascript">
+if (window.jstiming) window.jstiming.load.tick('headEnd');
+</script><script src="//pagead2.googlesyndication.com/pagead/js/google_top_exp.js" type="text/javascript"></script><style>.gc-bubbleDefault{background-color:transparent !important;text-align:left;padding:0 !important;margin:0 !important;border:0 !important;table-layout:auto !important}.gc-reset{background-color:transparent !important;border:0 !important;padding:0 !important;margin:0 !important;text-align:left}.pls-bubbleTop{border-bottom:1px solid #ccc !important}.pls-topTail,.pls-vertShimLeft,.pls-contentLeft{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/border_3.gif) !important}.pls-topTail{background-repeat:repeat-x !important;background-position:bottom !important}.pls-vertShim{background-color:#fff !important;text-align:right}.tbl-grey .pls-vertShim{background-color:#f5f5f5 !important}.pls-vertShimLeft{background-repeat:repeat-y !important;background-position:right !important;height:4px}.pls-vertShimRight{height:4px}.pls-confirm-container .pls-vertShim{background-color:#fff3c2 !important}.pls-contentWrap{background-color:#fff !important;position:relative !important;vertical-align:top}.pls-contentLeft{background-repeat:repeat-y;background-position:right;vertical-align:top}.pls-dropRight{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleDropR_3.png) !important;background-repeat:repeat-y !important;vertical-align:top}.pls-vert,.pls-tailleft,.pls-dropTR .pls-dropBR,.pls-dropBL,.pls-vert img{vertical-align:top}.pls-dropBottom{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleDropB_3.png) !important;background-repeat:repeat-x !important;width:100%;vertical-align:top}.pls-topLeft{background:inherit !important;text-align:right;vertical-align:bottom}.pls-topRight{background:inherit !important;text-align:left;vertical-align:bottom}.pls-bottomLeft{background:inherit !important;text-align:right}.pls-bottomRight{background:inherit !important;text-align:left;vertical-align:top}.pls-tailtop,.pls-tailright,.pls-tailbottom,.pls-tailleft{display:none;position:relative}.pls-tailbottom,.pls-tailtop,.pls-tailright,.pls-tailleft,.pls-dropTR,.pls-dropBR,.pls-dropBL{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleSprite_3.png) !important;background-repeat:no-repeat}.tbl-grey .pls-tailbottom,.tbl-grey .pls-tailtop,.tbl-grey .pls-tailright,.tbl-grey .pls-tailleft,.tbl-grey .pls-dropTR,.tbl-grey .pls-dropBR,.tbl-grey .pls-dropBL{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleSprite-grey.png) !important}.pls-tailbottom{background-position:-23px 0}.pls-confirm-container .pls-tailbottom{background-position:-23px -10px}.pls-tailtop{background-position:-19px -20px}.pls-tailright{background-position:0 0}.pls-tailleft{background-position:-10px 0}.pls-tailtop{vertical-align:top}.gc-bubbleDefault td{line-height:0;font-size:0}.pls-topLeft img,.pls-topRight img,.pls-tailbottom{vertical-align:bottom}.pls-bottomLeft img,.bubbleDropTR,.pls-dropBottomL img,.pls-dropBottom img,.pls-dropBottomR img,.pls-bottomLeft{vertical-align:top}.pls-dropTR{background-position:0 -22px}.pls-dropBR{background-position:0 -27px}.pls-dropBL{background-position:0 -16px}.pls-spacertop,.pls-spacerright,.pls-spacerbottom,.pls-spacerleft{position:static !important}.pls-spinner{bottom:0;position:absolute;left:0;margin:auto;right:0;top:0}</style><script src="http://www.google.com/uds/?file=search&amp;v=1&amp;hl=en&amp;async=2" type="text/javascript"></script><link rel="stylesheet" href="http://www.google.com/uds/api/search/1.0/5530b85faafd53e1d394092d8d1eb26a/default+en.css" type="text/css"><script src="http://www.google.com/uds/api/search/1.0/5530b85faafd53e1d394092d8d1eb26a/default+en.I.js" type="text/javascript"></script></head>
+<body>
+<div class="navbar section" id="navbar"><div class="widget Navbar" id="Navbar1"><script type="text/javascript">
+    function setAttributeOnload(object, attribute, val) {
+      if(window.addEventListener) {
+        window.addEventListener('load',
+          function(){ object[attribute] = val; }, false);
+      } else {
+        window.attachEvent('onload', function(){ object[attribute] = val; });
+      }
+    }
+  </script>
+<div id="navbar-iframe-container"><iframe src="http://www.blogger.com/navbar.g?targetBlogID=2678367915787379754&amp;blogName=Google%27s+DoubleClick+for+Publishers+API&amp;publishMode=PUBLISH_MODE_BLOGSPOT&amp;navbarType=BLUE&amp;layoutType=LAYOUTS&amp;searchRoot=http://doubleclickpublishersapi.blogspot.com/search&amp;blogLocale=en&amp;v=2&amp;homepageUrl=http://doubleclickpublishersapi.blogspot.com/&amp;vt=3593068724844071215&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en_US.r3QWApkN4KM.O%2Fm%3D__features__%2Fam%3DEQ%2Frt%3Dj%2Fd%3D1%2Frs%3DAItRSTMXOSfYHNeCWAliTFzzK4EPtqRvFg#rpctoken=811979094&amp;_methods=_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart&amp;id=navbar-iframe&amp;parent=http%3A%2F%2Fdoubleclickpublishersapi.blogspot.com" name="navbar-iframe" id="navbar-iframe" vspace="0" tabindex="0" style="" marginwidth="0" marginheight="0" hspace="0" frameborder="0" scrolling="no" width="100%"></iframe></div>
+<script gapi_processed="true" type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript">
+        gapi.load("iframes-styles-bubble", function() {
+          if (window.iframes && iframes.open) {
+            iframes.open(
+                '//www.blogger.com/navbar.g?targetBlogID\0752678367915787379754\46blogName\75Google\47s+DoubleClick+for+Publishers+API\46publishMode\75PUBLISH_MODE_BLOGSPOT\46navbarType\75BLUE\46layoutType\75LAYOUTS\46searchRoot\75http://doubleclickpublishersapi.blogspot.com/search\46blogLocale\75en\46v\0752\46homepageUrl\75http://doubleclickpublishersapi.blogspot.com/\46vt\0753593068724844071215',
+                {
+                  container: "navbar-iframe-container",
+                  id: "navbar-iframe"
+                },
+                {
+                });
+          }
+        });
+      </script><script type="text/javascript">
+(function() {
+var script = document.createElement('script');
+script.type = 'text/javascript';
+script.src = '//pagead2.googlesyndication.com/pagead/js/google_top_exp.js';
+var head = document.getElementsByTagName('head')[0];
+if (head) {
+head.appendChild(script);
+}})();
+</script>
+</div></div>
+<div class="template_white" id="template_fixed">
+<div id="main-wrapper">
+<!-- skip links for text browsers -->
+<span id="skiplinks" style="display:none;">
+<a href="#main">skip to main </a> |
+<a href="#sidebar">skip to sidebar</a>
+</span>
+<div id="header-graphic" style="width:100%;background-image:url(http://2.bp.blogspot.com/_V2u72bkLOM0/S38w8qsCgaI/AAAAAAAAABM/BdRsQaSqCqo/s1600/logo.png)">
+<a href="http://doubleclickpublishersapi.blogspot.com/" style="text-decoration:none;">
+<div class="content">
+<div class="section" id="header_titles"><div class="widget HTML" id="HTML26">
+<div class="widget-content">
+<h1 class="title">DoubleClick for Publishers API Blog</h1>
+</div>
+</div><div class="widget HTML" id="HTML27">
+<div class="widget-content">
+<h1 class="subheader">The official source of information about the DFP API</h1>
+</div>
+</div></div>
+</div>
+<div class="bottom"><div></div></div>
+</a>
+</div>
+<br style="clear:both;">
+<div id="content-wrapper">
+<div id="sidebar">
+<div class="sidebar section" id="sidebar"><div class="widget HTML" id="HTML4">
+<div class="widget-content">
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="http://www.google-analytics.com/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-9603638-3");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="//www.blogger.com/rearrange?blogID=2678367915787379754&amp;widgetType=HTML&amp;widgetId=HTML4&amp;action=editWidget&amp;sectionId=sidebar" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;HTML4&quot;));" target="configHTML4" title="Edit">
+<img alt="" src="http://img1.blogblog.com/img/icon18_wrench_allbkg.png" height="18" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div><div class="widget CustomSearch" id="CustomSearch1">
+<h2 class="title">Search This Blog</h2>
+<div class="widget-content">
+<div id="CustomSearch1_form"><form accept-charset="utf-8" class="gsc-search-box"><table class="gsc-search-box" cellpadding="0" cellspacing="0"><tbody><tr><td class="gsc-input"><input title="search" name="search" class=" gsc-input" size="10" autocomplete="off" type="text"></td><td class="gsc-search-button"><input title="search" class="gsc-search-button" value="Search" type="submit"></td></tr></tbody></table><table class="gsc-branding" cellpadding="0" cellspacing="0"><tbody><tr style="display: none;"><td class="gsc-branding-user-defined"></td><td class="gsc-branding-text"><div class="gsc-branding-text">powered by</div></td><td class="gsc-branding-img-noclear"><img class="gsc-branding-img-noclear" src="http://www.google.com/uds/css/small-logo.png"></td></tr></tbody></table></form></div>
+</div>
+<style type="text/css">
+      #uds-searchControl .gs-result .gs-title,
+      #uds-searchControl .gs-result .gs-title *,
+      #uds-searchControl .gsc-results .gsc-trailing-more-results,
+      #uds-searchControl .gsc-results .gsc-trailing-more-results * {
+        color:#00c;
+      }
+
+      #uds-searchControl .gs-result .gs-title a:visited,
+      #uds-searchControl .gs-result .gs-title a:visited * {
+        color:#00c;
+      }
+
+      #uds-searchControl .gs-relativePublishedDate,
+      #uds-searchControl .gs-publishedDate {
+        color: #6f6f6f;
+      }
+
+      #uds-searchControl .gs-result a.gs-visibleUrl,
+      #uds-searchControl .gs-result .gs-visibleUrl {
+        color: #00c;
+      }
+
+      #uds-searchControl .gsc-results {
+        border-color: #6f6f6f;
+        background-color: #fff;
+      }
+
+      #uds-searchControl .gsc-tabhActive {
+        border-color: #6f6f6f;
+        border-top-color: #6f6f6f;
+        background-color: #fff;
+        color: #000;
+      }
+
+      #uds-searchControl .gsc-tabhInactive {
+        border-color: #6f6f6f;
+        background-color: transparent;
+        color: #00c;
+      }
+
+      #uds-searchClearResults {
+        border-color: #6f6f6f;
+      }
+
+      #uds-searchClearResults:hover {
+        border-color: #6f6f6f;
+      }
+
+      #uds-searchControl .gsc-cursor-page {
+        color: #00c;
+      }
+
+      #uds-searchControl .gsc-cursor-current-page {
+        color: #000;
+      }
+    </style>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="//www.blogger.com/rearrange?blogID=2678367915787379754&amp;widgetType=CustomSearch&amp;widgetId=CustomSearch1&amp;action=editWidget&amp;sectionId=sidebar" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;CustomSearch1&quot;));" target="configCustomSearch1" title="Edit">
+<img alt="" src="http://img1.blogblog.com/img/icon18_wrench_allbkg.png" height="18" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div><div class="widget BlogArchive" id="BlogArchive1">
+<h2>Archives</h2>
+<div class="widget-content">
+<div id="ArchiveList">
+<div id="BlogArchive1_ArchiveList">
+<select id="BlogArchive1_ArchiveMenu">
+<option value="">Archives</option>
+<option value="http://doubleclickpublishersapi.blogspot.com/2011_11_01_archive.html">November 2011 (1)</option>
+<option value="http://doubleclickpublishersapi.blogspot.com/2011_10_01_archive.html">October 2011 (1)</option>
+<option value="http://doubleclickpublishersapi.blogspot.com/2011_09_01_archive.html">September 2011 (1)</option>
+<option value="http://doubleclickpublishersapi.blogspot.com/2011_08_01_archive.html">August 2011 (2)</option>
+<option value="http://doubleclickpublishersapi.blogspot.com/2011_07_01_archive.html">July 2011 (1)</option>
+<option value="http://doubleclickpublishersapi.blogspot.com/2011_06_01_archive.html">June 2011 (1)</option>
+<option value="http://doubleclickpublishersapi.blogspot.com/2011_05_01_archive.html">May 2011 (2)</option>
+<option value="http://doubleclickpublishersapi.blogspot.com/2011_03_01_archive.html">March 2011 (1)</option>
+<option value="http://doubleclickpublishersapi.blogspot.com/2011_02_01_archive.html">February 2011 (2)</option>
+<option value="http://doubleclickpublishersapi.blogspot.com/2010_12_01_archive.html">December 2010 (1)</option>
+<option value="http://doubleclickpublishersapi.blogspot.com/2010_11_01_archive.html">November 2010 (1)</option>
+<option value="http://doubleclickpublishersapi.blogspot.com/2010_10_01_archive.html">October 2010 (1)</option>
+<option value="http://doubleclickpublishersapi.blogspot.com/2010_06_01_archive.html">June 2010 (1)</option>
+<option value="http://doubleclickpublishersapi.blogspot.com/2010_05_01_archive.html">May 2010 (1)</option>
+<option value="http://doubleclickpublishersapi.blogspot.com/2010_03_01_archive.html">March 2010 (2)</option>
+<option value="http://doubleclickpublishersapi.blogspot.com/2010_02_01_archive.html">February 2010 (1)</option>
+</select>
+</div>
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="//www.blogger.com/rearrange?blogID=2678367915787379754&amp;widgetType=BlogArchive&amp;widgetId=BlogArchive1&amp;action=editWidget&amp;sectionId=sidebar" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;BlogArchive1&quot;));" target="configBlogArchive1" title="Edit">
+<img alt="" src="http://img1.blogblog.com/img/icon18_wrench_allbkg.png" height="18" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div>
+</div><div class="widget HTML" id="HTML1">
+<h2 class="title">Follow us</h2>
+<div class="widget-content">
+<br><a href="http://feeds.feedburner.com/dfpapi"><img src="http://www.google.com/images/feed-icon.gif"></a> <a href="http://feeds.feedburner.com/dfpapi" target="_blank">Site Feed</a><br><br>
+<p><a href="http://fusion.google.com/add?feedurl=http://feeds.feedburner.com/dfpapi" target="_blank"><img src="http://buttons.googlesyndication.com/fusion/add.gif" style="border:0" alt="Add to Google Reader or Homepage" height="17" width="104"></a></p>
+<p><a href="http://www.twitter.com/googledfpapi"><img src="http://twitter-badges.s3.amazonaws.com/t_mini-b.png" target="_blank" alt="Follow googledfpapi on Twitter"></a>&nbsp;<a href="http://www.twitter.com/googledfpapi" target="_blank">Follow googledfpapi on Twitter</a></p>
+<p><a href="http://feeds.feedburner.com/dfpapi"><img src="http://feeds.feedburner.com/~fc/dfpapi?bg=99CCFF&amp;fg=444444&amp;anim=0" style="border:0" alt="" height="26" width="88"></a></p>
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="//www.blogger.com/rearrange?blogID=2678367915787379754&amp;widgetType=HTML&amp;widgetId=HTML1&amp;action=editWidget&amp;sectionId=sidebar" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;HTML1&quot;));" target="configHTML1" title="Edit">
+<img alt="" src="http://img1.blogblog.com/img/icon18_wrench_allbkg.png" height="18" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div><div class="widget HTML" id="HTML3">
+<h2 class="title">Useful Links</h2>
+<div class="widget-content">
+<a href="http://code.google.com/apis/dfp/forum/discussions.html">Support forum</a><br>
+<a href="http://code.google.com/apis/dfp/">API Home Page</a><br>
+<a href="https://www.google.com/dfp/info">DFP Info</a>
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="//www.blogger.com/rearrange?blogID=2678367915787379754&amp;widgetType=HTML&amp;widgetId=HTML3&amp;action=editWidget&amp;sectionId=sidebar" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;HTML3&quot;));" target="configHTML3" title="Edit">
+<img alt="" src="http://img1.blogblog.com/img/icon18_wrench_allbkg.png" height="18" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div><div class="widget HTML" id="HTML2">
+<h2 class="title">More Blogs from Google</h2>
+<div class="widget-content">
+Visit our <a href="http://www.google.com/press/blogs/directory.html#tab0"> directory</a> for more information about Google blogs.
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="//www.blogger.com/rearrange?blogID=2678367915787379754&amp;widgetType=HTML&amp;widgetId=HTML2&amp;action=editWidget&amp;sectionId=sidebar" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;HTML2&quot;));" target="configHTML2" title="Edit">
+<img alt="" src="http://img1.blogblog.com/img/icon18_wrench_allbkg.png" height="18" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div></div>
+</div>
+<div id="main-content">
+<div class="main section" id="main"><div id="uds-searchControl"><a name="uds-search-results"></a><div id="uds-searchResults"><div dir="ltr" class="gsc-control"><div class="gsc-results-wrapper-nooverlay"><div class="gsc-tabsAreaInvisible"><div class="gsc-tabHeader gsc-inline-block gsc-tabhActive">This Blog</div><span class="gs-spacer"> </span><div class=" gsc-tabHeader gsc-tabhInactive gsc-inline-block" tabindex="0">Linked From Here</div><span class="gs-spacer"> </span><div class=" gsc-tabHeader gsc-tabhInactive gsc-inline-block" tabindex="0">The Web</div><span class="gs-spacer"> </span></div><div class="gsc-above-wrapper-area-invisible"><table class="gsc-above-wrapper-area-container" cellpadding="0" cellspacing="0"><tbody><tr><td class="gsc-result-info-container"><div class="gsc-result-info-invisible"></div></td></tr></tbody></table></div><div class="gsc-resultsbox-invisible"><div class="gsc-resultsRoot gsc-tabData gsc-tabdActive"><table class="gsc-resultsHeader" cellpadding="0" cellspacing="0"><tbody><tr><td class="gsc-twiddleRegionCell"><div class="gsc-twiddle"><div class="gsc-title">This Blog</div></div><div class="gsc-stats"></div><div class="gsc-results-selector gsc-more-results-active"><div title="show one result" class="gsc-result-selector gsc-one-result">&nbsp;</div><div title="show more results" class="gsc-result-selector gsc-more-results">&nbsp;</div><div title="show all results" class="gsc-result-selector gsc-all-results">&nbsp;</div></div></td><td class="gsc-configLabelCell"><span title="settings" class="gsc-configLabel gsc-twiddle-closed">&nbsp;</span></td></tr></tbody></table><div style="display: none;" class="gsc-config gsc-blogConfig"><form class="gsc-config gsc-blogConfig"></form></div><div><div class="gsc-expansionArea"></div></div></div><div class="gsc-resultsRoot gsc-tabData gsc-tabdInactive"><table class="gsc-resultsHeader" cellpadding="0" cellspacing="0"><tbody><tr><td class="gsc-twiddleRegionCell"><div class="gsc-twiddle"><div class="gsc-title">Linked From Here</div></div><div class="gsc-stats"></div><div class="gsc-results-selector gsc-more-results-active"><div title="show one result" class="gsc-result-selector gsc-one-result">&nbsp;</div><div title="show more results" class="gsc-result-selector gsc-more-results">&nbsp;</div><div title="show all results" class="gsc-result-selector gsc-all-results">&nbsp;</div></div></td><td class="gsc-configLabelCell"></td></tr></tbody></table><div><div class="gsc-expansionArea"></div></div></div><div class="gsc-resultsRoot gsc-tabData gsc-tabdInactive"><table class="gsc-resultsHeader" cellpadding="0" cellspacing="0"><tbody><tr><td class="gsc-twiddleRegionCell"><div class="gsc-twiddle"><div class="gsc-title">The Web</div></div><div class="gsc-stats"></div><div class="gsc-results-selector gsc-more-results-active"><div title="show one result" class="gsc-result-selector gsc-one-result">&nbsp;</div><div title="show more results" class="gsc-result-selector gsc-more-results">&nbsp;</div><div title="show all results" class="gsc-result-selector gsc-all-results">&nbsp;</div></div></td><td class="gsc-configLabelCell"></td></tr></tbody></table><div><div class="gsc-expansionArea"></div></div></div></div></div></div></div><div style="display: none;" class="gsc-clear-button" id="uds-searchClearResults">&nbsp;</div></div><div class="widget Blog" id="Blog1">
+<div id="post-wrapper">
+<div class="blog-posts hfeed">
+<!-- google_ad_section_start -->
+<div class="post">
+<a name="2241690821623662205"></a>
+<h3>
+<a href="http://doubleclickpublishersapi.blogspot.com/2011/11/say-hello-to-your-new-one-stop-shop-for.html">Say hello to your new one-stop shop for ads developer news</a>
+</h3>
+<p class="post-subhead">
+Monday, November 21, 2011 | 9:00 AM
+</p>
+<p class="post-subhead">
+Labels:
+<a href="http://doubleclickpublishersapi.blogspot.com/search/label/dfp_api" rel="tag">dfp_api</a>
+</p>
+<div class="post-body">
+<p></p><p>When we originally launched this blog in 2010, we sought to provide you with the most up-to-date information on the DoubleClick for Publishers (DFP) API, as well as useful resources to help with API development. Recently, we’ve realized that the content we produce can be shared between multiple Ads API developer communities and for this reason we have decided to create one central blog. With this in mind, we'll now be posting on the new <a href="http://googleadsdeveloper.blogspot.com/">Google Ads Developer blog</a>. There, you'll also find information on our AdSense API, AdWords API, DoubleClick for Advertisers API, and Google AdMob SDK products.</p>
+
+<p>
+If you’re a subscriber of this blog, your feed will automatically be redirected, so you won't have to do a thing to keep getting the latest news. If you decide you'd like to subscribe to a particular label on the new blog (for example, only receive those posts labeled as <a href="http://feeds.feedburner.com/blogspot/BgIHu">dfp_api</a>), you can choose to do that as well. Also, the old content of this blog is not going anywhere and will continue to be available, even after we switch to the new blog.</p>
+
+<p>
+The Ads Developer blog will continue to be run by the same team, bringing you all the information you need as an ads developer. We look forward to seeing you over at <a href="http://googleadsdeveloper.blogspot.com/">http://googleadsdeveloper.blogspot.com/</a>.</p>
+
+<p>
+Posted by the DFP API Team
+</p>
+<p></p>
+</div>
+<div class="post-footer">
+<p>
+<span class="post-footer-link">
+</span>
+<span class="post-footer-link">
+</span>
+<span class="post-footer-link">
+</span></p>
+</div>
+</div>
+<div class="post">
+<a name="6414866230193047933"></a>
+<h3>
+<a href="http://doubleclickpublishersapi.blogspot.com/2011/10/we-are-out-of-beta.html">We are out of beta!</a>
+</h3>
+<p class="post-subhead">
+Thursday, October 27, 2011 | 12:12 PM
+</p>
+<p class="post-subhead">
+Labels:
+<a href="http://doubleclickpublishersapi.blogspot.com/search/label/dfp" rel="tag">dfp</a>,
+<a href="http://doubleclickpublishersapi.blogspot.com/search/label/sign-up" rel="tag">sign-up</a>
+</p>
+<div class="post-body">
+<p>In February 2010, we
+<a href="http://doubleclickpublishersapi.blogspot.com/2010/02/introducing-googles-doubleclick-for.html">announced</a>&nbsp;the new DFP API and have come a long way since the announcement. We’ve been busy innovating and have released seven versions of the API, including production access to the API in October last year.
+   
+  <br>
+<br>
+Today we’re excited to announce that the DFP API is moving out of beta and is available to all publishers. &nbsp;As part of this announcement, the DFP API program policies and terms of service have been updated to reflect this change. Additionally, activating your account to use the API can now be
+<a href="http://code.google.com/apis/dfp/docs/prod_signup.html">enabled</a>&nbsp;by your account administrator.
+   
+  <br>
+<br>
+If you have previously signed up for the DFP API using our production sign-up form, your API access will continue to work but please
+<a href="http://code.google.com/apis/dfp/docs/prod_signup.html">review and agree</a>&nbsp;to the new terms of service.
+   
+  <br>
+<br>
+We’re excited to take the API out of beta and make it available to all publishers, and we’d like to say a special thank you to the developer community who has provided us with great feedback to help get the API to this point.<br>
+<br>
+DFP API Team
+</p>
+</div>
+<div class="post-footer">
+<p>
+<span class="post-footer-link">
+</span>
+<span class="post-footer-link">
+</span>
+<span class="post-footer-link">
+</span></p>
+</div>
+</div>
+<div class="post">
+<a name="5514397199387435679"></a>
+<h3>
+<a href="http://doubleclickpublishersapi.blogspot.com/2011/09/announcing-v201108.html">Announcing v201108</a>
+</h3>
+<p class="post-subhead">
+Friday, September 9, 2011 | 3:41 PM
+</p>
+<p class="post-subhead">
+Labels:
+<a href="http://doubleclickpublishersapi.blogspot.com/search/label/ad%20unit%20sizes" rel="tag">ad unit sizes</a>,
+<a href="http://doubleclickpublishersapi.blogspot.com/search/label/creative%20placeholder" rel="tag">creative placeholder</a>,
+<a href="http://doubleclickpublishersapi.blogspot.com/search/label/custom%20creative" rel="tag">custom creative</a>,
+<a href="http://doubleclickpublishersapi.blogspot.com/search/label/postal%20code%20targeting" rel="tag">postal code targeting</a>,
+<a href="http://doubleclickpublishersapi.blogspot.com/search/label/v201108" rel="tag">v201108</a>,
+<a href="http://doubleclickpublishersapi.blogspot.com/search/label/video%20support" rel="tag">video support</a>
+</p>
+<div class="post-body">
+<p></p><div class="c6">
+Today, we’re pleased to announce the <span class="c1"><a class="c3" href="http://code.google.com/apis/dfp/docs/rel_notes.html">v201108</a></span>&nbsp;release of the DoubleClick for Publishers (DFP) API. In this release, we have included support for video,&nbsp;postal code targeting, custom creatives, creative placeholders and more.</div>
+<div class="c6">
+<br></div>
+<div class="c5">
+</div>
+<div class="c6">
+<span class="c8"><b>Video Support</b></span></div>
+<div class="c6">
+<span class="c8"><b><br></b></span></div>
+<div class="c6">
+<span class="c4">The API now supports video environments </span>(including Flash applications) in addition to the traditional browser environment<span class="c4">. &nbsp;We added the </span><span class="c1 c4"><a class="c3" href="http://code.google.com/apis/dfp/docs/reference/v201108/LineItemService.LineItem.html#environmentType">environmentType</a></span><span class="c4">&nbsp;attribute in </span><span class="c1"><a class="c3" href="http://code.google.com/apis/dfp/docs/reference/v201108/LineItemService.LineItem.html#environmentType">l</a></span><span class="c1"><a class="c3" href="http://code.google.com/apis/dfp/docs/reference/v201108/LineItemService.LineItem.html#environmentType">ine item</a></span>&nbsp;and <span class="c1"><a class="c3" href="http://code.google.com/apis/dfp/docs/reference/v201108/InventoryService.AdUnitSize.html#environmentType">ad unit size</a></span>&nbsp;to distinguish whether the line item or ad unit targets a <span class="c1"><a class="c3" href="http://code.google.com/apis/dfp/docs/reference/v201108/LineItemService.EnvironmentType.html#BROWSER">browser</a></span>&nbsp;or <span class="c1"><a class="c3" href="http://code.google.com/apis/dfp/docs/reference/v201108/LineItemService.EnvironmentType.html#VIDEO_PLAYER">video player</a></span>. When a line item is set to target video players, it can only target ad units with ad unit sizes that also have the video player environment type. Ad unit sizes set to target video players can have <span class="c1"><a class="c3" href="http://code.google.com/apis/dfp/docs/reference/v201108/InventoryService.AdUnitSize.html#companions">companions</a></span>, which are a set of ad unit sizes that will display alongside the video player ad. &nbsp;</div>
+<div class="c6">
+<br></div>
+<div class="c5">
+<span class="c8"></span></div>
+<div class="c6">
+<b><span class="c8">Postal Code </span><span class="c8">Targeting</span></b></div>
+<div class="c6">
+<b><span class="c8"><br></span></b></div>
+<div class="c6">
+The postal code targeting feature is now available in the DFP API. &nbsp;As a developer, you can use this feature by creating a Location with an ID and adding&nbsp;that to your <span class="c1"><a class="c3" href="http://code.google.com/apis/dfp/docs/reference/v201108/LineItemService.GeoTargeting.html">geoTargeting</a></span>&nbsp;object. &nbsp;The correct ID can be fetched using the <span class="c1"><a class="c3" href="http://code.google.com/apis/dfp/docs/reference/latest/PublisherQueryLanguageService.html">PublisherQueryLanguageService</a></span>&nbsp;on the Postal Codes table. For examples on how to fetch IDs and set targets in the DFP API, please take a look at our previous <span class="c1"><a class="c3" href="http://doubleclickpublishersapi.blogspot.com/2011/05/v201104-simplified-apis-for.html">geographical targeting blog post</a></span>.</div>
+<div class="c6">
+<br></div>
+<div class="c5">
+</div>
+<div class="c6">
+<span class="c8"><b>Custom Creatives</b></span></div>
+<div class="c6">
+<span class="c8"><b><br></b></span></div>
+<div class="c6">
+Also available as a DFP Premium Solution feature, the <span class="c1"><a class="c3" href="http://code.google.com/apis/dfp/docs/reference/v201108/CreativeService.CustomCreative.html">C</a></span><span class="c1"><a class="c3" href="http://code.google.com/apis/dfp/docs/reference/v201108/CreativeService.CustomCreative.html">ustomCreative</a></span>&nbsp;type provides a way to represent&nbsp;a creative&nbsp;with an arbitrary HTML snippet along with its associated file assets. The&nbsp;<span class="c1"><a class="c3" href="http://code.google.com/apis/dfp/docs/reference/v201108/CreativeService.CustomCreative.html#customCreativeAssets">custom creative assets</a></span>&nbsp;in a custom creative can be images, CSS stylesheets, and JavaScript files that are referenced in the HTML snippet.&nbsp;In this release, creative asset IDs will be shown on creatives that have assets, but they cannot be fetched directly. The ability to create and update assets through the API will come in a future release.</div>
+<div class="c6">
+<br></div>
+<div class="c5">
+</div>
+<div class="c6">
+<span class="c8"><b>Creative Placeholders in Line Item</b></span></div>
+<div class="c6">
+<span class="c8"><b><br></b></span></div>
+<div class="c6">
+<span class="c1"><a class="c3" href="http://code.google.com/apis/dfp/docs/reference/v201108/LineItemService.LineItem.html">Line item</a></span><span class="c1"><a class="c3" href="http://code.google.com/apis/dfp/docs/reference/v201108/LineItemService.LineItemSummary.html">s</a></span>&nbsp;now have a <span class="c1"><a class="c3" href="http://code.google.com/apis/dfp/docs/reference/v201108/LineItemService.LineItem.html#creativePlaceholders">creativePlaceholders</a></span>&nbsp;attribute which replaces the <span class="c1"><a class="c3" href="http://code.google.com/apis/dfp/docs/reference/v201107/LineItemService.LineItem.html#creativeSizes">creativeSizes</a></span>&nbsp;attribute&nbsp;in older versions. The attribute is required and represents a slot that a creative is expected to fill in a line item. A creative placeholder can have <span class="c1"><a class="c3" href="http://code.google.com/apis/dfp/docs/reference/v201108/LineItemService.CreativePlaceholder.html#companions">companions</a></span>, but only if the line item’s environment is set to video player.</div>
+<div class="c6">
+<br></div>
+<div class="c5">
+<span class="c4"></span></div>
+<div class="c6">
+<span class="c8"><b>Ad Unit Sizes</b></span></div>
+<div class="c6">
+<span class="c8"><b><br></b></span></div>
+<div class="c6">
+The <span class="c1"><a class="c3" href="http://code.google.com/apis/dfp/docs/reference/v201108/InventoryService.AdUnit.html#adUnitSizes">adUnitSizes</a></span>&nbsp;attribute replaces the <span class="c1"><a class="c3" href="http://code.google.com/apis/dfp/docs/reference/v201107/InventoryService.AdUnit.html#sizes">sizes</a></span>&nbsp;attribute in the <span class="c1"><a class="c3" href="http://code.google.com/apis/dfp/docs/reference/v201108/InventoryService.AdUnit.html">AdUnit</a></span>&nbsp;object. The permissible creative size in an ad unit is now specified in the <span class="c1"><a class="c3" href="http://code.google.com/apis/dfp/docs/reference/v201108/InventoryService.AdUnitSize.html#size">size</a></span>&nbsp;attribute of an&nbsp;<span class="c1"><a class="c3" href="http://code.google.com/apis/dfp/docs/reference/v201108/InventoryService.AdUnitSize.html">AdUnitSize</a></span>&nbsp;object.<br>
+<br></div>
+<div class="c5">
+</div>
+<div class="c6">
+<span class="c4">These highlights are just some of the features we have in the v201108 release; more details can be found in our </span><span class="c1 c4"><a class="c3" href="http://code.google.com/apis/dfp/docs/rel_notes.html">release notes</a></span><span class="c4">. &nbsp;We value developer </span><span class="c4">feedback</span><span class="c4">, so if there are any features that you would like to see in future releases, please let us know at our </span><span class="c1 c4"><a class="c3" href="http://code.google.com/apis/dfp/forum/discussions.html">forum</a></span><span class="c4">.</span><br>
+<span class="c4"><br></span></div>
+<img src="http://1.bp.blogspot.com/-amItKtZC7UE/TjnOzFwLCUI/AAAAAAAAAC8/aJdxbgaEYBM/s1600/shamjeff_ldap_pic.png" width="50" align="absmiddle">&nbsp;&nbsp;Jeffrey Sham, DFP API Team
+<p></p>
+</div>
+<div class="post-footer">
+<p>
+<span class="post-footer-link">
+</span>
+<span class="post-footer-link">
+</span>
+<span class="post-footer-link">
+</span></p>
+</div>
+</div>
+<div class="post">
+<a name="2717609227982457384"></a>
+<h3>
+<a href="http://doubleclickpublishersapi.blogspot.com/2011/08/sunset-reminder.html">Sunset reminder</a>
+</h3>
+<p class="post-subhead">
+Wednesday, August 24, 2011 | 5:00 PM
+</p>
+<p class="post-subhead">
+Labels:
+<a href="http://doubleclickpublishersapi.blogspot.com/search/label/deprecation" rel="tag">deprecation</a>,
+<a href="http://doubleclickpublishersapi.blogspot.com/search/label/v201004" rel="tag">v201004</a>,
+<a href="http://doubleclickpublishersapi.blogspot.com/search/label/v201010" rel="tag">v201010</a>,
+<a href="http://doubleclickpublishersapi.blogspot.com/search/label/v201101" rel="tag">v201101</a>
+</p>
+<div class="post-body">
+<p>As mentioned in <a href="http://doubleclickpublishersapi.blogspot.com/2011/05/deprecation-of-v201101-v201010-and.html">our recent deprecation blog post</a>, we will be sunsetting (turning off) versions v201101, v201010, and v201004. We’ve added an extra week to our sunset date; the versions will now be turned off on <b>August 31st</b>. Our <a href="http://code.google.com/apis/dfp/docs/clients.html">client libraries</a> always have the most recent versions and are a great way to stay ahead of the curve. As always, if you have any questions about our deprecation policy or how to upgrade, please let us know on our <a href="http://code.google.com/apis/dfp/forum/discussions.html">forum</a>.<br>
+<br>
+</p><div>
+<div class="c2">
+<img src="https://lh5.googleusercontent.com/-Kh7gn5eBfCg/AAAAAAAAAAI/AAAAAAAAAAA/c4O1WqAkDcg/photo.jpg?sz=50" height="50" width="50" align="absmiddle">
+      Adam Rogal, DFP API Team
+</div>
+<p></p>
+</div>
+<div class="post-footer">
+<p>
+<span class="post-footer-link">
+</span>
+<span class="post-footer-link">
+</span>
+<span class="post-footer-link">
+</span></p>
+</div>
+</div>
+<div class="post">
+<a name="6031260253562883773"></a>
+<h3>
+<a href="http://doubleclickpublishersapi.blogspot.com/2011/08/recently-we-have-migrated-google-apps.html">Resolving Conflicts after Google Apps Account Migration</a>
+</h3>
+<p class="post-subhead">
+Monday, August 8, 2011 | 10:35 AM
+</p>
+<p class="post-subhead">
+</p>
+<div class="post-body">
+<p></p><div class="c4">
+<span class="c0">Recently</span><span class="c0">, we have migrated the Google Apps accounts to a new infrastructure that includes all Personal Google accounts. &nbsp;This has introduced a conflict for API users who have the </span><span class="c0 c9">same email address </span><span class="c0">for both types of accounts. &nbsp;As a result, you will not be able to generate a </span><span class="c0">ClientLogin</span><span class="c0">&nbsp;token </span><span class="c0">and will be presented</span><span class="c0">&nbsp;with an AuthenticationError.NO_NETWORKS_TO_ACCESS in the SOAP response. &nbsp;You can also verify whether your account in conflict by making a request directly to the Client Login API.</span></div>
+<div class="c1">
+<span class="c0"></span></div>
+<br>
+<div class="c4">
+<span class="c0 c8"><b>Request:</b></span></div>
+<br>
+<div class="c4">
+<span class="c0 c8">https://www.google.com/accounts/ClientLogin?accountType=GOOGLE&amp;Email=</span><span class="c0">my_email_address</span><span class="c0 c8">&amp;Passwd=my_password</span></div>
+<div class="c1">
+<span class="c0 c8"></span></div>
+<br>
+<div class="c4">
+<span class="c0 c8"><b>Response:</b></span></div>
+<br>
+<div class="c4">
+<span class="c0">Error=Unknown\nUrl=https://www.google.com/accounts/ErrorMsg?Email=my_email_address&amp;service=gam&amp;id=unknown</span></div>
+<br>
+<div class="c1">
+<span class="c5 c0 c11"></span></div>
+<div class="c4">
+<span class="c0">Before the migration, it was possible to have a Google Apps account with your domain (jane@altostrat.com) and a Personal Google account for DFP, </span><span class="c0">Picasa</span><span class="c0">, Reader, etc. with the same email address. &nbsp;With the new infrastructure, both types of accounts are in one unified system so when you try to generate a ClientLogin token with jane@altostrat.com, we do not know which account you are trying to use. &nbsp;More details about conflicting accounts can be found at the </span><span class="c5 c0"><a class="c6" href="http://www.google.com/support/accounts/bin/static.py?page=guide.cs&amp;guide=29934&amp;topic=29936">Google Accounts Help Article</a></span><span class="c0">.</span>
+</div>
+<div class="separator" style="clear: both; text-align: center;">
+<span class="Apple-style-span" style="font-family: Times, 'Times New Roman', serif; margin-left: 1em; margin-right: 1em;"><img src="http://2.bp.blogspot.com/-Ql7S8xMzhUc/TjnNbDpnNzI/AAAAAAAAAC4/N9SGHgLh4zQ/s400/image00.png" height="210" width="400" border="0">
+</span>
+</div>
+<br>
+<br>
+<div class="c4">
+<span class="c0">To differentiate between your conflicting accounts, we have created a temporary account </span><span class="c0">(jane%altostrat.com@gtempaccount.com) for you to temporarily hold your data</span><span class="c0">. &nbsp;You can log into </span><span class="c0 c5"><a class="c6" href="http://www.google.com/accounts">http://www.google.com/accounts</a></span><span class="c0">&nbsp;with your gtempaccount and use the wizard to resolve your conflicts. &nbsp;A full walkthrough on the data migration wizard can be found at the </span><span class="c5 c0"><a class="c6" href="http://www.google.com/support/accounts/bin/static.py?page=guide.cs&amp;guide=1299064&amp;topic=1316468">Data Migration Getting Started Guide</a></span><span class="c0">.</span></div>
+<div class="c1">
+<span class="c0"></span></div>
+<br>
+<div class="c4">
+<span class="c0">As always, please post any questions to the </span><span class="c5 c0"><a class="c6" href="http://groups.google.com/group/google-doubleclick-for-publishers-api/topics">DFP API Forum</a></span><span class="c0">.</span></div>
+<br>
+<img src="http://1.bp.blogspot.com/-amItKtZC7UE/TjnOzFwLCUI/AAAAAAAAAC8/aJdxbgaEYBM/s1600/shamjeff_ldap_pic.png" width="50" align="absmiddle">&nbsp;&nbsp;Jeffrey Sham, DFP API Team
+<p></p>
+</div>
+<div class="post-footer">
+<p>
+<span class="post-footer-link">
+</span>
+<span class="post-footer-link">
+</span>
+<span class="post-footer-link">
+</span></p>
+</div>
+</div>
+<div class="post">
+<a name="1637125547824328342"></a>
+<h3>
+<a href="http://doubleclickpublishersapi.blogspot.com/2011/07/v201107-is-out.html">v201107 is out</a>
+</h3>
+<p class="post-subhead">
+Friday, July 29, 2011 | 11:30 AM
+</p>
+<p class="post-subhead">
+Labels:
+<a href="http://doubleclickpublishersapi.blogspot.com/search/label/labels" rel="tag">labels</a>,
+<a href="http://doubleclickpublishersapi.blogspot.com/search/label/LabelService" rel="tag">LabelService</a>,
+<a href="http://doubleclickpublishersapi.blogspot.com/search/label/LineItemService" rel="tag">LineItemService</a>,
+<a href="http://doubleclickpublishersapi.blogspot.com/search/label/OrderService" rel="tag">OrderService</a>,
+<a href="http://doubleclickpublishersapi.blogspot.com/search/label/PublisherQueryLanguageService" rel="tag">PublisherQueryLanguageService</a>,
+<a href="http://doubleclickpublishersapi.blogspot.com/search/label/targeting" rel="tag">targeting</a>,
+<a href="http://doubleclickpublishersapi.blogspot.com/search/label/v201107" rel="tag">v201107</a>
+</p>
+<div class="post-body">
+<p></p><div class="c2">
+Today, we’re excited to release <a href="http://code.google.com/apis/dfp/docs/rel_notes.html">v201107</a> of the DoubleClick for Publishers (DFP) API. In this release, you’ll find support for labels, technology (browsing) targeting, and more.</div>
+<div class="c3 c2">
+</div>
+<div class="c2">
+<span class="c4"><br></span></div>
+<div class="c2">
+<b>Labels</b>
+</div>
+<div class="c3 c2">
+<span class="c4"></span></div>
+<div class="c2">
+<br></div>
+<div class="c2">
+Labels can help you categorize your advertisers, orders, and line items,&nbsp;prevent line items from competing advertisers from delivering to the same webpage, and can be used to set frequency caps to ad units. These tasks can now be accomplished via the API using <span class="c1"><a class="c0" href="http://code.google.com/apis/dfp/docs/reference/v201107/LabelService.LabelType.html#COMPETITIVE_EXCLUSION">COMPETITIVE_EXCLUSION</a></span> and <span class="c1"><a class="c0" href="http://code.google.com/apis/dfp/docs/reference/v201107/LabelService.LabelType.html#AD_UNIT_FREQUENCY_CAP">AD_UNIT_FREQUENCY_CAP</a></span>&nbsp;respectively.</div>
+<div class="c3 c2">
+</div>
+<div class="c2">
+<br></div>
+<div class="c2">
+Labels can be applied to <span class="c1"><a class="c0" href="http://code.google.com/apis/dfp/docs/reference/v201107/CompanyService.Company.html#appliedLabels">companies</a></span>, <span class="c1"><a class="c0" href="http://code.google.com/apis/dfp/docs/reference/v201107/OrderService.Order.html#appliedLabels">orders</a></span>, and <span class="c1"><a class="c0" href="http://code.google.com/apis/dfp/docs/reference/v201107/LineItemService.LineItem.html#appliedLabels">line items</a></span>&nbsp;and are inherited. This means that if you apply a label to an advertiser, it will be applied to the advertiser's orders and line items automatically. If you apply a label to an order, it will be applied to the order's line items automatically. The <span class="c1"><a class="c0" href="http://code.google.com/apis/dfp/docs/reference/v201107/LineItemService.LineItem.html#effectiveAppliedLabels">LineItem.effectiveAppliedLabels</a></span>&nbsp;and <span class="c1"><a class="c0" href="http://code.google.com/apis/dfp/docs/reference/v201107/OrderService.Order.html#effectiveAppliedLabels">Order.effectiveAppliedLabels</a></span>&nbsp;fields can be used to determine all labels that are both inherited and defined on the object itself, but the <a href="http://code.google.com/apis/dfp/docs/reference/v201107/OrderService.Order.html#appliedLabels">appliedLabels</a> field should be used to update objects.</div>
+<div class="c3 c2">
+</div>
+<div class="c2">
+<br></div>
+<div class="c2">
+For more information about labels, please refer to the <span class="c1"><a class="c0" href="http://www.google.com/support/dfp_premium/bin/answer.py?answer=190565">create, apply, and remove labels</a></span>&nbsp;Help Center article.</div>
+<div class="c3 c2">
+</div>
+<div class="c2">
+<span class="c4"><br></span></div>
+<div class="c2">
+<b>Competitive exclusion for small business publishers</b></div>
+<div class="c3 c2">
+</div>
+<div class="c2">
+<br></div>
+<div class="c2">
+For DFP&nbsp;small business publishers, we have exposed functionality similar to competitive exclusion labels. The <span class="c1"><a class="c0" href="http://code.google.com/apis/dfp/docs/reference/v201107/CompanyService.Company.html#enableSameAdvertiserCompetitiveExclusion">Company.</a></span><span class="c1 c8"><a class="c0" href="http://code.google.com/apis/dfp/docs/reference/v201107/CompanyService.Company.html#enableSameAdvertiserCompetitiveExclusion">enableSameAdvertiserCompetitiveExclusion</a></span><span class="c8">&nbsp;field prevents ads from the same company from competing with each other. In other words, if two orders exist with the same company or there are two line items from the same order that are eligible to serve on the same page, this field will prevent those two ads from competing with each other. The </span><span class="c1 c8"><a class="c0" href="http://code.google.com/apis/dfp/docs/reference/v201107/LineItemService.LineItem.html#disableSameAdvertiserCompetitiveExclusion">LineItem.disableSameAdvertiserCompetitiveExclusion</a></span><span class="c8">, on the other hand, will allow all line items with this set to true to compete with each other, regardless of their labels or company settings.</span></div>
+<div class="c3 c2">
+</div>
+<div class="c2">
+<span class="c4"><br></span></div>
+<div class="c2">
+<b>Technology targeting</b></div>
+<div class="c3 c2">
+</div>
+<div class="c2">
+<br></div>
+<div class="c2">
+Technology (browsing) targeting is also included in this release. Technology targeting allows you to target specific information about the user browsing your site including <a href="http://code.google.com/apis/dfp/docs/reference/v201107/PublisherQueryLanguageService.html">bandwidth, browser, browser language, and operating system details</a>. The new field <a href="http://code.google.com/apis/dfp/docs/reference/v201107/LineItemService.Targeting.html#technologyTargeting">Targeting.technologyTargeting</a> can be set with a <a href="http://code.google.com/apis/dfp/docs/reference/latest/LineItemService.TechnologyTargeting.html">TechnologyTargeting</a> object with fields for each type of targeting.</div>
+<div class="c3 c2">
+</div>
+<div class="c2">
+<br></div>
+<div class="c2">
+To add a new target, first fetch&nbsp;the ID from the respective <a href="http://code.google.com/apis/dfp/docs/reference/v201107/PublisherQueryLanguageService.html">PublisherQueryLanguageService</a> table and create a <span class="c1"><a class="c0" href="http://code.google.com/apis/dfp/docs/reference/v201107/LineItemService.Technology.html">Technology</a></span>&nbsp;object with just the ID filled in. When fetching targets from the API, the objects will be subclassed correctly depending on type. For a refresher on how to set targets using IDs in the DFP API, please refer to the <span class="c1"><a class="c0" href="http://doubleclickpublishersapi.blogspot.com/2011/05/v201104-simplified-apis-for.html">geographical targeting blog post</a></span>.</div>
+<div class="c3 c2">
+</div>
+<div class="c2">
+<span class="c4"><br></span></div>
+<div class="c2">
+<b>External IDs</b></div>
+<div class="c3 c2">
+</div>
+<div class="c2">
+<br></div>
+<div class="c2">
+To help developers who need to reconcile DFP system objects with other systems, we’ve added external IDs to the <a href="http://code.google.com/apis/dfp/docs/reference/v201107/LineItemService.LineItem.html#externalId">LineItem</a> and <a href="http://code.google.com/apis/dfp/docs/reference/v201107/OrderService.Order.html#externalOrderId">Order</a> objects. Before v201107, the <a href="http://code.google.com/apis/dfp/docs/reference/v201104/OrderService.Order.html#externalId">externalId</a> field on Order objects represented the PO Number in the UI. We’ve updated this by renaming it to <a href="http://code.google.com/apis/dfp/docs/reference/v201107/OrderService.Order.html#poNumber">poNumber</a>&nbsp;and exposing a brand new <a href="http://code.google.com/apis/dfp/docs/reference/v201107/OrderService.Order.html#externalOrderId">externalOrderId</a> field. As a developer, you will be able to rename all instances in which you reference externalId as a PO number and use the new field for additional reconciliation.</div>
+<div class="c2 c3">
+</div>
+<div class="c2">
+<br></div>
+<div class="c2">
+This blog post has only scratched the surface of the features v201107 brings; to learn more, please visit our <span class="c1"><a class="c0" href="http://code.google.com/apis/dfp/docs/rel_notes.html">release notes page</a></span>.&nbsp;As always, developer feedback is important to us; if there are any features you are dying to see become a part of the API, please let us know at our <span class="c1"><a class="c0" href="http://code.google.com/apis/dfp/forum/discussions.html">forum</a></span>. </div>
+<div class="c3 c2">
+</div>
+<div class="c2">
+<br></div>
+<div class="c2">
+<img src="https://lh5.googleusercontent.com/-Kh7gn5eBfCg/AAAAAAAAAAI/AAAAAAAAAAA/c4O1WqAkDcg/photo.jpg?sz=50" height="50" width="50" align="absmiddle">
+      Adam Rogal, DFP API Team
+</div>
+<p></p>
+</div>
+<div class="post-footer">
+<p>
+<span class="post-footer-link">
+</span>
+<span class="post-footer-link">
+</span>
+<span class="post-footer-link">
+</span></p>
+</div>
+</div>
+<div class="post">
+<a name="5061432745021090644"></a>
+<h3>
+<a href="http://doubleclickpublishersapi.blogspot.com/2011/06/whats-new-with-api.html">What's new with the API</a>
+</h3>
+<p class="post-subhead">
+Thursday, June 30, 2011 | 12:30 PM
+</p>
+<p class="post-subhead">
+Labels:
+<a href="http://doubleclickpublishersapi.blogspot.com/search/label/LineItemService" rel="tag">LineItemService</a>,
+<a href="http://doubleclickpublishersapi.blogspot.com/search/label/playground" rel="tag">playground</a>,
+<a href="http://doubleclickpublishersapi.blogspot.com/search/label/ruby" rel="tag">ruby</a>,
+<a href="http://doubleclickpublishersapi.blogspot.com/search/label/sandbox" rel="tag">sandbox</a>
+</p>
+<div class="post-body">
+<p></p><div>
+<b>Documentation updates</b>
+</div>
+<br>
+<div>
+From our developer day meetings and our user <a href="http://code.google.com/apis/dfp/forum/discussions.html" id="kssf" title="forum">forum</a>, we've received feedback from many of you that while a robust documentation library is needed to learn a new API, sample code is also helpful in order to get started. Therefore, in our documentation, you will now find a side bar with relevant code examples to help you easily learn and implement each service.
+</div>
+<br>
+<div align="center"><a href="http://1.bp.blogspot.com/-c9UzAqkDDZw/TgzV4-IXjmI/AAAAAAAAAC0/mt0zbU1vyL0/s1600/d3dfddb_252ns4qvbc7_b.png" imageanchor="1"><img src="http://1.bp.blogspot.com/-c9UzAqkDDZw/TgzV4-IXjmI/AAAAAAAAAC0/mt0zbU1vyL0/s1600/d3dfddb_252ns4qvbc7_b.png" border="1px solid black"></a></div>
+<br>
+<div id="j74i" style="text-align: left;">
+The side bar will also contain relevant blog posts, videos, and updates to help you stay up to date on the API. You can view an example of the sidebar on the <a href="http://code.google.com/apis/dfp/docs/reference/latest/LineItemService.html" id="f8d-" title="the LineItemService reference page">LineItemService reference page</a>.
+<br>
+<br></div>
+<div id="txyc" style="text-align: left;">
+<b>Ruby client library</b>
+</div>
+<div id="isa1" style="text-align: left;">
+<br></div>
+<div id="qgr7" style="text-align: left;">
+We've received <a href="http://groups.google.com/group/google-doubleclick-for-publishers-api/search?group=google-doubleclick-for-publishers-api&amp;q=ruby&amp;qt_g=Search+this+group" id="dnhn" title="numerous requests">numerous requests</a> from many developers on the forum&nbsp; asking for a Ruby DFP API library. As with all feedback, we took this to heart, and we're excited to announce that you can now download a Ruby library <a href="http://code.google.com/p/google-api-ads-ruby/" id="vmyr" title="here">here</a>. To help you get started, please review the <a href="http://code.google.com/apis/dfp/docs/start.html#ruby_quickstart" id="pft3" title="quick start guide">quick start guide</a>&nbsp;on our documentation site.
+</div>
+<div id="y:8q" style="text-align: left;">
+<br></div>
+<div id="iujk" style="text-align: left;">
+<b>Updates to the sandbox playground</b>
+<br>
+<b><br></b></div>
+<div id="g-lx" style="text-align: left;">
+Today, we've also pushed an updated version of the <a href="http://dfpsandbox.googlecodesamples.com/" id="vk.j" title="DFP Sandbox Playground">DFP Sandbox Playground</a>. You'll find that the backend has been updated to v201104 and that a new pane for custom targeting has been added. We've also added the ability to view multiple networks per account. You'll see a drop down at the top of page where you can select any network your email address belongs to. You can try this out by signing up for <a href="http://code.google.com/apis/dfp/docs/signup.html" id="nvpk" title="a new account">a new account</a>&nbsp;with a different email address, and adding <a href="http://code.google.com/p/google-api-dfp-java/source/browse/trunk/examples/v201104/userservice/CreateUsersExample.java" id="rd.w" title="that email address to your existing network">that email address to your existing network</a>. Once you sign in with that new email address, you'll be presented with your old network, and your new network in the drop down. As always, this application is <a href="http://code.google.com/p/google-api-dfp-php/source/browse/trunk#trunk%2Fwebapp" id="j5du" title="open source">open source</a> so let us know if you would like to contribute.
+</div>
+<div id="lllb" style="text-align: left;">
+<b><br></b><br>
+<b>Future updates</b>
+</div>
+<div id="b04u">
+<br>
+In addition to today's update, over the upcoming weeks we will be releasing a new version of the API which will help bring the API even closer to offering the full functionality of the DFP UI. We're committed to allow you to perform all operations that you can perform in the UI directly from the API. <br>
+<div>
+Your feedback is always welcome, and iff there are features or operations that you feel would make your API experience better, please do not hesitate to let us know on the <a href="http://code.google.com/apis/dfp/forum/discussions.html" id="wkid" title="forum">forum</a> or on <a href="http://twitter.com/#!/googledfpapi" id="iuwa" title="twitter">Twitter</a>.
+  <br>
+<br>
+<br></div>
+</div>
+<img src="https://lh5.googleusercontent.com/-Kh7gn5eBfCg/AAAAAAAAAAI/AAAAAAAAAAA/c4O1WqAkDcg/photo.jpg?sz=50" height="50" width="50" align="absmiddle">
+      Adam Rogal, DFP API Team
+<p></p>
+</div>
+<div class="post-footer">
+<p>
+<span class="post-footer-link">
+</span>
+<span class="post-footer-link">
+</span>
+<span class="post-footer-link">
+</span></p>
+</div>
+</div>
+<!-- google_ad_section_end -->
+</div>
+<div class="blog-pager" id="blog-pager"><p>
+<a class="blog-pager-older-link" href="http://doubleclickpublishersapi.blogspot.com/search?updated-max=2011-06-30T12:30:00-07:00&amp;max-results=7" id="Blog1_blog-pager-older-link" title="Older Posts">Older Posts</a>
+</p>
+</div>
+<div class="clear"></div>
+<div class="blog-feeds">
+<div class="feed-links">
+Subscribe to:
+<a class="feed-link" href="http://doubleclickpublishersapi.blogspot.com/feeds/posts/default" target="_blank" type="application/atom+xml">Posts (Atom)</a>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+<!-- end content-wrapper -->
+</div>
+<!-- end outer-wrapper -->
+<div id="footer-graphic">
+<div class="footer section" id="footer"><div class="widget HTML" id="HTML25">
+<p class="widget-content">
+©2009 Google - <a href="http://google.com/intl/en/privacy.html">Privacy Policy</a> - <a href="http://www.google.com/accounts/TOS?hl=en">Terms of Service</a>
+</p>
+</div></div>
+</div></div>
+<script type="text/javascript">
+if (window.jstiming) window.jstiming.load.tick('widgetJsBefore');
+</script><script type="text/javascript" src="//www.blogger.com/static/v1/widgets/2292841073-widgets.js"></script>
+<script type="text/javascript" src="//www.google.com/jsapi"></script>
+<script gapi_processed="true" type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript">
+if (typeof(BLOG_attachCsiOnload) != 'undefined' && BLOG_attachCsiOnload != null) { window['blogger_templates_experiment_id'] = "templatesV1";window['blogger_blog_id'] = '2678367915787379754';BLOG_attachCsiOnload(''); }_WidgetManager._Init('//www.blogger.com/rearrange?blogID\x3d2678367915787379754','//doubleclickpublishersapi.blogspot.com/','2678367915787379754');
+_WidgetManager._SetDataContext([{'name': 'blog', 'data': {'blogId': '2678367915787379754', 'bloggerUrl': 'http://www.blogger.com', 'title': 'Google\47s DoubleClick for Publishers API', 'pageType': 'index', 'url': 'http://doubleclickpublishersapi.blogspot.com/', 'canonicalUrl': 'http://doubleclickpublishersapi.blogspot.com/', 'canonicalHomepageUrl': 'http://doubleclickpublishersapi.blogspot.com/', 'homepageUrl': 'http://doubleclickpublishersapi.blogspot.com/', 'blogspotFaviconUrl': 'http://doubleclickpublishersapi.blogspot.com/favicon.ico', 'enabledCommentProfileImages': false, 'adultContent': false, 'disableAdSenseWidget': false, 'analyticsAccountNumber': '', 'searchLabel': '', 'searchQuery': '', 'pageName': '', 'pageTitle': 'Google\47s DoubleClick for Publishers API', 'encoding': 'UTF-8', 'locale': 'en', 'localeUnderscoreDelimited': 'en', 'isPrivate': false, 'isMobile': false, 'isMobileRequest': false, 'mobileClass': '', 'isPrivateBlog': false, 'languageDirection': 'ltr', 'feedLinks': '\74link rel\75\42alternate\42 type\75\42application/atom+xml\42 title\75\42Google\46#39;s DoubleClick for Publishers API - Atom\42 href\75\42http://doubleclickpublishersapi.blogspot.com/feeds/posts/default\42 /\76\n\74link rel\75\42alternate\42 type\75\42application/rss+xml\42 title\75\42Google\46#39;s DoubleClick for Publishers API - RSS\42 href\75\42http://doubleclickpublishersapi.blogspot.com/feeds/posts/default?alt\75rss\42 /\76\n\74link rel\75\42service.post\42 type\75\42application/atom+xml\42 title\75\42Google\46#39;s DoubleClick for Publishers API - Atom\42 href\75\42http://www.blogger.com/feeds/2678367915787379754/posts/default\42 /\76\n\74link rel\75\42EditURI\42 type\75\42application/rsd+xml\42 title\75\42RSD\42 href\75\42http://www.blogger.com/rsd.g?blogID\0752678367915787379754\42 /\076', 'meTag': '', 'openIdOpTag': '\74link rel\75\42openid.server\42 href\75\42http://www.blogger.com/openid-server.g\42 /\76\n\74link rel\75\42openid.delegate\42 href\75\42http://doubleclickpublishersapi.blogspot.com/\42 /\76\n', 'imageSrcTag': '', 'latencyHeadScript': '\74script type\75\42text/javascript\42\76(function() { var b\75window,e\75\42jstiming\42,g\75\42tick\42;(function(){function d(a){this.t\75{};this.tick\75function(a,d,c){c\75void 0!\75c?c:(new Date).getTime();this.t[a]\75[c,d]};this[g](\42start\42,null,a)}var a\75new d;b.jstiming\75{Timer:d,load:a};if(b.performance\46\46b.performance.timing){var a\75b.performance.timing,c\75b[e].load,f\75a.navigationStart,a\75a.responseStart;0\74f\46\46a\76\75f\46\46(c[g](\42_wtsrt\42,void 0,f),c[g](\42wtsrt_\42,\42_wtsrt\42,a),c[g](\42tbsd_\42,\42wtsrt_\42))}try{a\75null,b.chrome\46\46b.chrome.csi\46\46(a\75Math.floor(b.chrome.csi().pageT),c\46\0460\74f\46\46(c[g](\42_tbnd\42,void 0,b.chrome.csi().startE),\nc[g](\42tbnd_\42,\42_tbnd\42,f))),null\75\75a\46\46b.gtbExternal\46\46(a\75b.gtbExternal.pageT()),null\75\75a\46\46b.external\46\46(a\75b.external.pageT,c\46\0460\74f\46\46(c[g](\42_tbnd\42,void 0,b.external.startE),c[g](\42tbnd_\42,\42_tbnd\42,f))),a\46\46(b[e].pt\75a)}catch(l){}})();b.tickAboveFold\75function(d){var a\0750;if(d.offsetParent){do a+\75d.offsetTop;while(d\75d.offsetParent)}d\75a;750\76\75d\46\46b[e].load[g](\42aft\42)};var h\75!1;function k(){h||(h\75!0,b[e].load[g](\42firstScrollTime\42))}b.addEventListener?b.addEventListener(\42scroll\42,k,!1):b.attachEvent(\42onscroll\42,k);\n })();\74/script\076', 'mobileHeadScript': '', 'view': '', 'dynamicViewsCommentsSrc': '//www.blogblog.com/dynamicviews/4224c15c4e7c9321/js/comments.js', 'dynamicViewsScriptSrc': '//www.blogblog.com/dynamicviews/437c8f2d6b1382a8', 'plusOneApiSrc': 'https://apis.google.com/js/plusone.js', 'sf': 'n'}}, {'name': 'skin', 'data': {'vars': {}, 'override': ' Put a border around prettyprinted code snippets. */\npre { border:none !important; background: none; overflow-x: visible !important; overflow-y: visible !important;}'}}, {'name': 'view', 'data': {'classic': {'name': 'classic', 'url': '/?view\75classic'}, 'flipcard': {'name': 'flipcard', 'url': '/?view\75flipcard'}, 'magazine': {'name': 'magazine', 'url': '/?view\75magazine'}, 'mosaic': {'name': 'mosaic', 'url': '/?view\75mosaic'}, 'sidebar': {'name': 'sidebar', 'url': '/?view\75sidebar'}, 'snapshot': {'name': 'snapshot', 'url': '/?view\75snapshot'}, 'timeslide': {'name': 'timeslide', 'url': '/?view\75timeslide'}}}]);
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML25', 'footer', null, document.getElementById('HTML25'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML26', 'header_titles', null, document.getElementById('HTML26'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML27', 'header_titles', null, document.getElementById('HTML27'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML4', 'sidebar', null, document.getElementById('HTML4'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_CustomSearchView', new _WidgetInfo('CustomSearch1', 'sidebar', null, document.getElementById('CustomSearch1'), {'title': 'Search This Blog', 'includeBlog': true, 'includePostLinks': true, 'includeWeb': true, 'linkLists': [], 'blogUrl': 'http://doubleclickpublishersapi.blogspot.com/', 'loadingMsg': 'Loading...', 'thisBlogMsg': 'This Blog', 'linkedFromHereMsg': 'Linked From Here', 'theWebMsg': 'The Web', 'backgroundColor': '#fff', 'textColor': '#000', 'dateColor': '#6f6f6f', 'linkColor': '#00c', 'urlColor': '#00c', 'visitedLinkColor': '#00c', 'borderColor': '#6f6f6f', 'activeBorderColor': '#6f6f6f'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_BlogArchiveView', new _WidgetInfo('BlogArchive1', 'sidebar', null, document.getElementById('BlogArchive1'), {'languageDirection': 'ltr'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML1', 'sidebar', null, document.getElementById('HTML1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML3', 'sidebar', null, document.getElementById('HTML3'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML2', 'sidebar', null, document.getElementById('HTML2'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_NavbarView', new _WidgetInfo('Navbar1', 'navbar', null, document.getElementById('Navbar1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_BlogView', new _WidgetInfo('Blog1', 'main', null, document.getElementById('Blog1'), {'cmtInteractionsEnabled': false, 'lightboxEnabled': true, 'lightboxModuleUrl': '//www.blogger.com/static/v1/jsbin/971269924-lbx.js', 'lightboxCssUrl': '//www.blogger.com/static/v1/v-css/228702327-lightbox_bundle.css'}, 'displayModeFull'));
+</script>
+
+</div><iframe src="//googleads.g.doubleclick.net/pagead/blank.html" style="height: 0px; width: 0px; position: absolute;" name="google_top_static_frame" id="google_top_static_frame" frameborder="0"></iframe><link href="//www.blogger.com/static/v1/v-css/228702327-lightbox_bundle.css" rel="stylesheet" type="text/css"><script src="//www.blogger.com/static/v1/jsbin/971269924-lbx.js" type="text/javascript"></script></body>

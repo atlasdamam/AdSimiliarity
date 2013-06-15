@@ -1,0 +1,121 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Shakey's Pizza</title>
+<link href="css/stylesheet.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div id="container">
+
+		
+<script type="text/javascript"> 
+var currenttime = 'May 22, 2013 9:33:10 am' 
+var montharray=new Array("January","February","March","April","May","June","July","August","September","October","November","December")
+var serverdate=new Date(currenttime)
+ 
+function padlength(what){
+	var output=(what.toString().length==1)? "0"+what : what
+	return output
+}
+ 
+function displaytime() { 
+	var nhours=serverdate.getHours();
+	var nmins=serverdate.getMinutes();
+	var nsecn=serverdate.getSeconds();
+	 
+	var AorP=" ";
+	 
+	if (nhours>=12)
+		AorP="P.M.";
+	else
+		AorP="A.M.";
+	 
+	if (nhours>=13)
+		nhours-=12;
+	 
+	if (nhours==0)
+	 nhours=12;
+	 
+	if (nsecn<10)
+	 nsecn="0"+nsecn;
+	 
+	if (nmins<10)
+	 nmins="0"+nmins;
+	 
+	serverdate.setSeconds(serverdate.getSeconds()+1)
+	var datestring=montharray[serverdate.getMonth()]+" "+padlength(serverdate.getDate())+", "+serverdate.getFullYear()
+	var timestring=nhours+":"+nmins+":"+nsecn+" "+AorP;
+	document.getElementById("clock").innerHTML = "Philippine Time: " +timestring+" | "+datestring
+} 
+setInterval("displaytime()", 1000)
+</script>
+
+<div id="header">
+    <div id="logo">
+        <a href="#">this is the logo</a>
+    </div>
+    
+    <div id="nav">
+        <ul>
+            <li><a href="index.asp" id="home">home</a></li>
+            <li><a href="store-finder.asp" id="store">store finder</a></li>
+            <li><a href="menus.asp" id="menus">menus</a></li>
+            <li><a href="whats-hot.asp" id="hot">what' hot</a></li>
+            <li><a href="franchising.asp" id="franchising">frachising</a></li>
+            <li><a href="careers.asp" id="careers">careers</a></li>
+        </ul>
+       <div style="color:#FFF; padding-top:14px; font-size:11px; font-weight:bold;">
+       	<div style="float:left; padding-left:20px;" id="clock">Philippine Time: 9:33:10 A.M. | May 22, 2013</div>
+       	<div style="float:left; padding-left:10px;"><img src="images/link1.jpg" onclick="window.open('http://www.facebook.com/ShakeysPH?ref=ts', '_blank')" style="cursor:pointer" border="0">&nbsp;&nbsp;&nbsp;<img src="images/link2.jpg" onclick="window.open('http://www.twitter.com/shakeysphils', '_blank')" style="cursor:pointer" border="0"></div>
+
+       </div>
+    <div class="clear"></div>
+    </div>
+</div>
+
+
+	    
+        <div id="content">
+<div id="left">
+      <div id="body_">
+       	<div class="top_"></div>
+           	<div id="info">
+           		<img src="images/titles/select-delivery.jpg" style="margin-top:10px;">
+                <p>
+                    </p><center><div style="height:50px;"></div>
+                    <img src="images/misc/method-delivery.jpg" style="cursor:pointer; margin-top:-20px;" onclick="location.href='order.asp?mode=delivery'">
+                    <img src="images/misc/method-padala.jpg" style="cursor:pointer; padding-left:120px; margin-top:-20px;" onclick="location.href='select-payment-mode.asp'">
+                    </center>
+                    <div style="height:5px;"></div>
+                    <center>Delivery is available in Metro Manila, Philippines only. Padala transactions can also be consumed for <br>Dine-in in your selected Shakey's Store. Prices in some stores may differ from prices online.</center>
+                    <div style="height:10px;"></div>
+                    <center>Make sure that you don't change your delivery method once you've start placing your order to avoid shopping cart reset.</center>
+                    <p align="right">
+                    <img src="images/misc/paypal.jpg" style="padding-right:20px; margin-top:-30px;">
+                    </p>
+                    <div style="height:15px;"></div>
+                <p></p>
+            </div>
+        <div class="bottom_"></div>
+      </div>  
+      </div>
+        <div class="clear"></div>
+       	<div id="bottom"></div>
+  		</div>
+
+		<div id="footer">
+    <p>
+        <a href="index.asp">Home</a> - 
+        <a href="about-us.asp">About Us</a> - 
+        <a href="feedback-form.asp">Feedback Form</a> - 
+        <a href="privacy-policy.asp">Privacy Policy</a> - 
+        <a href="terms-conditions.asp">Terms and Conditions</a> - 
+        <a href="faq.asp">FAQs</a>
+	</p>
+</div>
+
+
+</div>
+
+
+</body>

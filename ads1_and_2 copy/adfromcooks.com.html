@@ -1,0 +1,82 @@
+<head>
+        <title>Value cannot be null.&lt;br&gt;Parameter name: key</title>
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Lucida Console";font-size: .9em}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><h1>Server Error in '/' Application.<hr size="1" width="100%" color="silver"></h1>
+
+            <h2> <i>Value cannot be null.<br>Parameter name: key</i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> Description: </b>An unhandled exception occurred during the execution of the current web request. Please review the stack trace for more information about the error and where it originated in the code.
+
+            <br><br>
+
+            <b> Exception Details: </b>System.ArgumentNullException: Value cannot be null.<br>Parameter name: key<br><br>
+
+            <b>Source Error:</b> <br><br>
+
+            <table width="100%" bgcolor="#ffffcc">
+               <tbody><tr>
+                  <td>
+                      <code><pre>
+Line 36:         if(!string.IsNullOrEmpty(dataCollectionID))
+Line 37:             CollectData(dataCollectionID, adid, placementID, pin);
+<font color="red">Line 38:         context.Response.Redirect(Credentials[dataCollectionID].GetURL(pin));
+</font>Line 39:     }
+Line 40: </pre></code>
+
+                  </td>
+               </tr>
+            </tbody></table>
+
+            <br>
+
+            <b> Source File: </b> d:\inetpub\wwwroot\Apps\CouponsInc\coupon.ashx<b> &nbsp;&nbsp; Line: </b> 38
+            <br><br>
+
+            <b>Stack Trace:</b> <br><br>
+
+            <table width="100%" bgcolor="#ffffcc">
+               <tbody><tr>
+                  <td>
+                      <code><pre>
+[ArgumentNullException: Value cannot be null.
+Parameter name: key]
+   System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument) +44
+   System.Collections.Generic.Dictionary`2.FindEntry(TKey key) +7458641
+   System.Collections.Generic.Dictionary`2.get_Item(TKey key) +12
+   coupon.ProcessRequest(HttpContext context) in d:\inetpub\wwwroot\Apps\CouponsInc\coupon.ashx:38
+   System.Web.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute() +181
+   System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously) +75
+</pre></code>
+
+                  </td>
+               </tr>
+            </tbody></table>
+
+            <br>
+
+            <hr size="1" width="100%" color="silver">
+
+            <b>Version Information:</b>&nbsp;Microsoft .NET Framework Version:2.0.50727.3643; ASP.NET Version:2.0.50727.3634
+
+            </font>
+
+    
+
+</body>

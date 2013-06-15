@@ -1,0 +1,265 @@
+<head>
+<title>Ram Trucks - Market Code</title>
+<script language="JavaScript" type="text/javascript" charset="utf-8" src="/crossbrand/shared/javascripts/vendor/nr_c.js"></script>
+
+<script language="javascript">
+////////////////////////////////////////////////////////////////////////////////////////
+//function to prep call to bridge pages
+function wrap(argApp, argTracking, argFamily, argModel) {
+  argApp = argApp.toLowerCase();
+  var sizedWin = false;
+
+  if (model_year == "") {
+    model_year = argFamily.substr(0,4);
+	if (isNaN(model_year)) {
+		model_year = "";
+	} else {
+		//year must be prepended, so family var is what is left after the four digit year
+		argFamily = argFamily.substr(4);
+	}
+  }
+
+  var launchUrl = getDomain() + "/bridge/index.html?";
+  if( argTracking != '' ) launchUrl += argTracking + "&";
+  launchUrl += "app=" + argApp + "&family=" + argFamily + "&model=" + argModel + "&year=" + model_year;
+
+  if( argApp == "edmunds" || argApp == "compcomp" ) {
+    sizedWin = true;
+    var winWidth = 792, winHeight = ( window.screen.availHeight - 130 );
+    var options = "resizable,scrollbars,toolbar,"
+    options += "width=" + winWidth + ",height=" + winHeight;
+    if( window.screen ) {
+      var xPos = ( screen.availWidth - winWidth ) / 2;
+      var yPos = ( ( screen.availHeight - winHeight ) / 2 ) - 40;
+      options += ",left=" + xPos + ",screenX=" + xPos;
+      options += ",top=" + yPos + ",screenY=" + yPos;
+    }
+  }
+
+  if(sizedWin) {
+    window.open( launchUrl, "universal", options );
+  } else {
+    window.location.replace(launchUrl);
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////
+// get proper domain for global navigation images and links
+function getDomain( argLink ) {
+    var curUrl = document.location.href;
+    var newUrl = "";
+    var thisDomain = "ramtrucks.com";
+
+    if( curUrl.indexOf( "iw-mount" ) >= 0 || curUrl.indexOf( "sapient" ) >= 0 ) {
+        // preserve virtualization
+        newUrl = "";
+    } else if( curUrl.indexOf( "://test" ) >= 0 ) {
+        newUrl = "http://test";
+    } else if( curUrl.indexOf( "://uat" ) >= 0 ) {
+        newUrl = "http://uat";
+    } else {
+        newUrl = "http://www";
+    }
+    if (newUrl != ""){
+    	newUrl = newUrl + "." + thisDomain;
+    }
+    if( argLink ) {
+        if( argLink.indexOf( "javascript:" ) >= 0 || argLink.indexOf( "/" ) != 0 ) {
+            return argLink;
+        } else {
+            return newUrl + argLink;
+        }
+    } else {
+        return newUrl;
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////
+//Universal function to get parameter from url srting.
+function getParameter( argParam ) {
+  var queryString = new String( location.search.substring(1, location.search.length) );
+  var params = queryString.split( "&" );
+  var val = "";
+  if( argParam ) {
+   for(i=0;i<params.length;i++) {
+    if( params[i].split( "=" )[0] == argParam )
+     val = params[i].split( "=" )[1];
+   }
+   if (typeof(val) == "undefined") val = "";
+   return val;
+  }
+ }
+/////////////////////////////////////////////////////////////////////////////////////////
+
+
+//////////////////////////////////////////
+//////////////////////////////////////////
+// --- Anametrix Reporting Code ---
+var nr_t = new nr_tag();
+
+var anametrixPN = 'index.html';
+var anametrixPath = '/ramtrucks/mktcode';
+
+nr_t.dataset = "100367"
+if (typeof pv == "undefined") {
+    pv = new Object();
+}
+nr_t.gwlist = ["gw.anametrix.net"];
+nr_t.link_tracking = 1;
+nr_t.form_tracking = 1;
+nr_t.init();
+
+function setPageViewVariables() {
+	var pageViewVariables = new Object();
+    var a = (anametrixPath+ "/" + anametrixPN).toLowerCase().replace(/\/\//g, "/");
+	pageViewVariables.name = a;
+
+	var _v = a.split('/');
+    var x = 1;
+    var y = _v.length;
+    for(x; x<y;x++){pageViewVariables['p.a_'+(x)]=_v[x];}
+	
+	var gcp = getCampaign();
+	(gcp != 'noValue' )?pageViewVariables['cmp'] = gcp:'';
+    (typeof nr_t != "undefined") ? nr_t.pageView(pageViewVariables): "";
+	redirect();
+}
+
+function getCampaign(){
+	var qs = nr_t.pu(document.location);
+	if (qs.qsh['channel'] != undefined && qs.qsh['channel'] != " ") {
+		var campaignId = qs.qsh['sid'] + "-" + qs.qsh['adid'] + "-" + qs.qsh['pid'];
+		var campaignResponse = [{ 
+		id: campaignId, 
+		a_1: qs.qsh['sid'], 
+		a_2: qs.qsh['bid'], 
+		a_3: qs.qsh['adid'], 
+		a_4: qs.qsh['pid'], 
+		a_5: qs.qsh['channel'], 
+		a_6: qs.qsh['KWNM'], 
+		a_7: qs.qsh['KWID'], 
+		a_8: qs.qsh['spid'],  
+		a_9: qs.qsh['cid'],  
+		a_10: qs.qsh['buytype'],  
+		a_11: qs.qsh['TR'],   
+		a_12: "",  
+		a_13: "",  
+		a_14: "ramtrucks",  
+		a_15: ((typeof mobile === "object" && typeof mobile.tracking === "object")?"mobile":"desktop"),  
+		a_16: ((typeof cur_vehicle !== "undefined")?cur_vehicle:(typeof context !== "undefined")?context.vehicle:""),  
+		a_17: ""  
+		}];
+		return campaignResponse;  
+	}
+	return 'noValue';
+}
+
+
+// -- end Anametrix Reporting Code ---
+//////////////////////////////////////////
+function redirect(){
+  if (app != null && app != ""){
+    // for links targeting apps we need to set a parent window for apps in a popup
+    // today, only edmunds is in a popup, all others are in full windows
+    var bounceUrl = "/index.html";
+
+    if (family != null && family != "") {
+      bounceUrl = "/" + family + bounceUrl;
+    } else{
+      bounceUrl = "/index.html";
+    }
+
+    if(app == "dealer") app = "cdl";
+    // loadup windows
+
+	wrap(app,'zipcode=' + zipcode + '&dealerid=' + dealerid, family,'');
+
+    if(app == 'edmunds'){
+        window.location.replace(bounceUrl + "?hrf=" + escape(document.referrer));
+    }
+  }
+}
+
+var dealerid = getParameter("dealerid");
+var app = getParameter("app");
+var family = getParameter("family");
+var zipcode = getParameter("zipcode");
+
+var model_year = getParameter("year");		
+		var qs = nr_t.pu(document.location);
+		/*Get parameters*/
+		var id_val = "default";
+		var page_id 	= qs.qsh["pid"];
+		var banner_id 	= qs.qsh["adid"];
+		var creative_id	= qs.qsh["spid"];
+		var site_id = qs.qsh["sid"];
+		var buy_id = qs.qsh["bid"];
+		var market_programm_id 	= qs.qsh["mktprgm"];
+		var pricing_id 	= qs.qsh["pref"];
+		var kewword_id = qs.qsh["KWID"];
+		var kewword_name = qs.qsh["KWNM"];
+		var channel_id 	= qs.qsh["channel"];
+		
+		var dart_creative_id = qs.qsh["cid"];
+		var creative_name_id = qs.qsh["crid"];
+		var buy_type = qs.qsh["buytype"];
+		var strategy_id = qs.qsh["stid"];
+		var tier_id = qs.qsh["TR"];
+		var target_id = qs.qsh["tarid"];
+		var target_brand = "ramtrucks";
+		var device_id = (typeof mobile === "object" && typeof mobile.tracking === "object")?"mobile":"desktop";
+		var nameplate_id = (typeof cur_vehicle !== "undefined")?cur_vehicle:" ";
+		var campaign_name_id = qs.qsh["ccid"];
+
+		/*Setting default values*/
+		if((site_id == "") || (site_id == undefined) || (site_id == "%esid!")){var id_val = "nothing";}
+		if(typeof site_id == ("undefined" || "")) site_id = " ";
+		if(typeof buy_id == ("undefined" || "")) buy_id = " ";
+		if(typeof page_id == ("undefined" || "")) page_id = " ";
+		if(typeof banner_id == ("undefined" || "")) banner_id = " ";
+		if(typeof creative_id == ("undefined" || "")) creative_id = " ";
+		if(typeof market_programm_id == ("undefined" || "")) market_programm_id = "unset";
+		if(typeof pricing_id == ("undefined" || "")) pricing_id = " ";
+		if (typeof kewword_id == ("undefined" || "")) {kewword_id = " ";kewword_name = " ";}
+		/* we only set the market code rid variable to zero when the pid and adid are numbers (doubleclick data) and rid is blank*/
+		if (isNaN(page_id) == false && page_id != " " && isNaN(banner_id) == false && banner_id != " "){
+			if (creative_id == "" || creative_id == " ") creative_id = "0";
+		}
+		
+		if(typeof campaign_name_id == ("undefined" || "")) campaign_name_id = " ";
+		if(typeof buy_type == ("undefined" || "")) buy_type = " ";
+		if(typeof strategy_id == ("undefined" || "")) strategy_id = " ";
+		if(typeof tier_id == ("undefined" || "")) tier_id = " ";
+		if(typeof target_id == ("undefined" || "")) target_id = " ";
+		if(typeof target_brand == ("undefined" || "")) target_brand = " ";
+		if(typeof dart_creative_id == ("undefined" || "")) dart_creative_id = " ";
+
+		/*Set cookie if needed*/
+		if(id_val != "nothing"){
+		  var cookieName = "mktcodes";
+		  var myDate = new Date();
+		  var value = "|" + unescape(page_id) + "|" + unescape(banner_id) + "|" + unescape(creative_id) + "|" + unescape(market_programm_id) + "|" + myDate.valueOf() + "|" + unescape(pricing_id) + "|" + unescape(site_id) + "|" + unescape(channel_id) + "|" + unescape(buy_id)+"|"+unescape(kewword_id)+"|"+unescape(kewword_name)+ "|" + unescape(campaign_name_id)+ "|" + unescape(buy_type)+ "|" + unescape(strategy_id)+ "|" + unescape(tier_id)+ "|" + unescape(target_id)+ "|" + unescape(target_brand)+ "|" + unescape(device_id)+ "|" + unescape(nameplate_id)+ "|" + unescape(dart_creative_id);
+		  var expires = new Date(); /*Cookie expires in 45 days*/
+		  expires.setDate(expires.getDate() + 45);
+		  var cPath = "/";
+		  /* get the full url string, http://www..com/dir/page.html?x=y...*/
+		  var curUrl = new String( window.location );
+		  /* strip off the leading protocol ("http://") and strip any trailing file-path and query string*/
+		  var domain = curUrl.substring(7, curUrl.indexOf( ".com/"));
+		  /* strip off any preceding subdomains (www.sub.subsub...)*/
+		  domain = domain.substring(domain.lastIndexOf(".") + 1, domain.length) + ".com";
+		  /*set the domain for the cookie*/
+		  var cookieDomain = curUrl.substring(7, curUrl.indexOf( ".com/"))+".com";
+		  document.cookie = cookieName+"="+value+";expires="+expires.toGMTString()+";path="+cPath+";host="+cookieDomain+";false";
+		}
+
+
+</script>
+
+</head>
+
+<body topmargin="0" leftmargin="0" onload="setPageViewVariables();" marginheight="0" marginwidth="0" bgcolor="#000000">
+
+
+
+</body>

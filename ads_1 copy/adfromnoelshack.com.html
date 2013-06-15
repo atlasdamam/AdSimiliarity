@@ -1,0 +1,315 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html;  charset=UTF-8">
+<link rel="shortcut icon" type="image/gif" href="http://www.noelshack.com/favicon.gif">
+<meta name="Description" content="Vous avez des images? Envoyez-les et partagez-les super rapidement avec NoelShack!">
+<meta name="Keywords" content="hébergement d'images gratuit, hébergeur images, hébergement images,  photos, upload gratuit, upload images, noelshack, noelshack.com">
+<title>NoelShack - Héberger puis partager vos images et photos en un clic - Upload gratuit</title>
+<link rel="stylesheet" type="text/css" href="/css/defaut.css">
+<script src="http://www.google-analytics.com/ga.js" async="" type="text/javascript"></script><script charset="utf-8" src="/js/jquery.js"></script>
+<script charset="utf-8" src="/js/jquery.ui.widget.js"></script>
+<script charset="utf-8" src="/js/base.js"></script>
+<script charset="utf-8" src="/oi/js/modal.js"></script>
+<script charset="utf-8" src="/js/jquery.iframe-transport.js"></script>
+<script charset="utf-8" src="/js/jquery.fileupload.js"></script>
+<script charset="utf-8" src="/js/tmpl.js"></script>
+<script charset="utf-8" src="/js/noelshack.js"></script>
+</head>
+<body>
+<div id="en_tete">
+    <div class="bloc980 slogan">
+        <div id="bloc_connect">
+                        <a class="modal" href="http://www.noelshack.com/profil/connect.php" rel="nofollow"> Connexion</a>
+                    </div>
+        <a href="http://www.noelshack.com/" id="lien_img_accueil"><img src="http://www.noelshack.com/pics/header_logo.png" alt="Accueil NoelShack.com"></a>
+        <div id="bloc_slogan"><span>Le service d'hébergement d'images en ligne<br>pour envoyer et partager vos images et photos</span></div>
+        <a href="http://www.noelshack.com/" id="bloc_envoi"><span>Envoyer des images</span></a>
+    </div>
+</div>
+
+<div id="content">
+<div class="bloc980">
+    <div class="col1">
+        <div id="bloc_telechargement" class="bloc_center">
+            <h1>Vos téléchargements <span id="progress_all" style="font-size: 0.6em;float: right"></span></h1>
+            <div id="nocookies" class="cacher">
+                <strong>Cookies non actifs.</strong> La fonction de mémorisation des envois est donc inactive.
+            </div>
+            <noscript>
+                <div >
+                <h2>Upload image</h2>
+                <div class="hint"><strong>JavaScript inactif.</strong> Veuillez l'activer .</div>
+                </div>
+            </noscript>
+
+            <ul id="liste_img_upload"><li style="z-index: 499;" class="select"> </li><li style="z-index: 498;" class="select"> </li><li style="z-index: 497;" class="select"> </li><li style="z-index: 496;" class="select  upload_fourth"> </li></ul>
+
+            <div id="actions_liens_img">
+                <span>Vous n'avez aucune image.</span>
+                <a href="#all_liens" class="button cacher modal">Voir tous les liens</a>
+                <a href="#save_all_liens" class="button cacher modal" id="btn_save_all_liens">Sauvegarder tous les liens</a>
+                <a href="#reset" class="button button_icon cacher modal" id="btn_reset"><span></span>Reset</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div id="bloc_erreur" class="bloc_center cacher">
+            <h2>Les fichiers suivants n'ont pu être uploadés</h2>
+            <div id="ligne_fermeture"><a href="#" class="button button_icon btn_close"><span></span>Fermer</a></div>
+        </div>
+
+        <div id="bloc_upload" class="bloc_center">
+            <h1>Envoyer des images</h1>
+            <p id="format_autorise">Formats autorisés : PNG, JPEG, GIF, SVG, BMP, TIFF, PSD - Taille maxi : 20 Mo.</p>
+            <ul id="bloc_btn_envoi_img">
+                <li id="upload_pc"><input aria-disabled="true" style="display: none;" id="input_envoi_image" class="input_envoi_image blueimp-fileupload-disabled ui-state-disabled" name="fichier[]" multiple="multiple" type="file"><span>Upload depuis votre ordinateur</span></li>
+            </ul>
+            <a id="upload_web" href="#mode_publication" class="modal"><span>Upload depuis une adresse internet</span></a>
+            <p id="publication">Publication en mode <span>privé</span> <a href="#mode_publication" class="modal">Modifier</a></p>
+        </div>
+
+    </div>
+    <div class="col2">
+            <div id="content_pub_carre"><div id="bloc_pub_carre">
+                    <!-- BEGIN Hi-Media Media AdTag, noelshack.com 300x250 - v1.0 -->
+        <div id="adl_300x250">
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tbody><tr><td id="pub_carre" height="250" valign="top" width="300"><div id="p-noelshack.com-homepage-s300x250-1-target-wrapper" class="s300x250-1"><div style="" id="div_adnxs_tag_809.7625793819776"><iframe style="visibility: visible; width: 300px; height: 250px;" allowtransparency="true" border="0" marginheight="0" marginwidth="0" name="adnxs_tag_809.7625793819776" id="adnxs_tag_809.7625793819776" frameborder="0" height="250" scrolling="no" width="300"></iframe></div><div style="width: 300px; height: 250px; display: none;" id="ph_adnxs_tag_809.7625793819776"><iframe style="visibility: hidden;" allowtransparency="true" border="0" marginheight="0" marginwidth="0" frameborder="0" height="250px" scrolling="no" width="300px"></iframe></div><span id="p-noelshack.com-homepage-s300x250-1-target" style="display:none;"></span></div></td></tr>
+            </tbody></table>
+        </div>
+        <!-- END Hi-Media Media AdTag, noelshack.com 300x250 - v1.0 -->
+                </div></div>
+    </div>
+    <div class="clear"></div>
+</div>
+
+
+<script id="template-standard" type="text/html">
+    <li style="z-index: {%=(500 - o.index)%};" class="select"> </li>
+</script>
+
+<script id="template-envoi" type="text/html">
+    <li style="z-index: {%=(500 - o.index)%};" class="progress">
+     <div class="infos_upload">
+        <div class="txt_upload">{%=o.fichier.nom%}</div>
+        <div class="progress_bar"><div style="width:0px;"></div></div>
+        <div class="pourcent">0%</div>
+    </div>
+    </li>
+</script>
+
+<script id="template-fichier" type="text/html">
+    <li style="z-index: {%=(500 - o.index)%};" class="fichier">
+        <a class="btn_lien_fermer btn_lien" href="#"><span></span>Liens</a>
+        <div class="bloc_infos_liens cacher">
+            <div class="bloc_liste_liens">
+                <div><span>Chats :</span><input type="text" value="{%=o.fichier.chats%}" readonly="readonly"><a class="button" href="#">Sélectionner</a></div>
+                <div><span>Forums :</span><input type="text" value="{%=o.fichier.forums%}" readonly="readonly"><a class="button" href="#">Sélectionner</a></div>
+                <div><span>Blogs :</span><input type="text" value="{%=o.fichier.blogs%}" readonly="readonly"><a class="button" href="#">Sélectionner</a></div>
+                <div><span>URL :</span><input type="text" value="{%=o.fichier.url%}" readonly="readonly"><a class="button" href="#">Sélectionner</a></div>
+            </div>
+        </div>
+        <a href="{%=o.fichier.chats%}" target="_blank">
+        <img alt="" src="{%=o.fichier.mini%}">
+        </a>
+    </li>
+</script>
+
+<script id="template-erreur" type="text/html">
+    <div class="ligne_error"><div class="a_gauche nom_fichier">{%=o.nom%}</div><div class="a_droite">{%=o.msg%}</div></div>
+</script>
+
+<script id="data" type="application/json">
+</script>
+
+
+<!-- modal -->
+
+<!-- BLOC MODE PUBLICATION -->
+<div class="popup greybox_generic" id="mode_publication">
+<div class="conteneur_grey">
+    <div class="bloc_center">
+        <h1>Mode de publication</h1>
+        <a class="button button_icon btn_close fermer" href="#"><span></span>Fermer</a>
+        <div class="content_grey">
+            <p><span class="highlight gras">Lisez attentivement le message suivant :</span></p>
+            <p>Toutes les images seront hébergées <span class="highlight">par défaut en mode "public"</span>. Cela signifie qu'elles seront visibles dans la galerie.</p>
+            <p>Si toutefois, vous ne souhaitez pas voir vos images apparaître dans la galerie, changez le mode de publication en choisissant le mode "privé".</p>
+            <p>Vous pouvez basculer entre les deux modes à tout moment.</p>
+            <div id="bloc_mode_publi">
+                <p class="highlight gras">Sélectionnez le mode de publication :</p>
+                <div><input name="m_publi" value="1" id="m_public" checked="checked" tabindex="1" type="radio"><label for="m_public">Mode public (attention, images visibles dans la galerie)</label></div>
+                <div><input name="m_publi" value="0" id="m_prive" tabindex="2" type="radio"><label for="m_prive">Mode privé</label></div>
+                <button class="btn_envoi" tabindex="3" id="BtnValidePubli">Valider</button>
+            <button class="btn_envoi" tabindex="3" id="BtnValidePubli1">Valider</button><ul id="BtnValidePubli2"><li><input class="input_envoi_image" multiple="multiple" name="fichier[]" type="file"><button class="btn_envoi" tabindex="3">Valider</button></li></ul></div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- BLOC ENVOYER DEPUIS UNE ADRESSE WEB -->
+<div class="popup greybox_generic" id="send_from_web">
+<div class="conteneur_grey">
+    <div class="bloc_center">
+        <h1>Envoyer depuis une adresse Internet</h1>
+        <a class="button button_icon btn_close fermer" href="#"><span></span>Fermer</a>
+        <div class="content_grey">
+            <form>
+                <label for="urls_img">Saisissez les URLs des images (une par ligne)</label>
+                <textarea tabindex="1" id="urls_img" name="urls_img"></textarea>
+                <button tabindex="2" class="btn_envoi" id="telecharger_image">Envoyer</button>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- BLOC SAUVEGARDER TOUS LES LIENS -->
+<div class="popup greybox_generic" id="save_all_liens">
+<div class="conteneur_grey">
+    <div class="bloc_center">
+        <h1>Sauvegarder tous les liens</h1>
+        <a class="button button_icon btn_close fermer" href="#"><span></span>Fermer</a>
+        <div class="content_grey">
+                        <p>Vous pouvez recevoir un e-mail contenant tous les liens de ces images.</p>
+            <p>Entrez l'adresse d'une autre personne pour lui envoyer la liste des liens.</p>
+            <form class="modal" method="get" action="http://www.noelshack.com/recevoir.php">
+                <label for="adresse_mail">Saisir une adresse de courrier électronique :</label>
+                <input name="signature" value="e57456dc99e1b03a72933cbc59c62a92" type="hidden">
+                <input id="adresse_mail" name="adresse_mail" tabindex="1" value="" type="text">
+                <button tabindex="2" class="btn_envoi" id="btn_sauvegarde_mail">Envoyer par mail</button>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- BLOC RESET -->
+<div class="popup greybox_generic" id="reset">
+<div class="conteneur_grey">
+    <div class="bloc_center">
+        <h1>Reset</h1>
+        <a class="button button_icon btn_close fermer" href="#"><span></span>Fermer</a>
+        <div class="content_grey">
+            <img src="/css/images/commun/stop.png" alt="Stop" id="img_stop" height="74" width="74">
+            <p>Attention ! Vous êtes sur le point d'effacer votre liste d'images.</p>
+            <p>Tous les liens vers vos images seront perdus.<br>Avez-vous pensé à les copier ou à les sauvegarder ?</p>
+            <div id="bloc_erase">
+                <p class="gras">Effacer cette liste d'images ?</p>
+                <button class="btn_envoi" id="reset_oui">OUI</button><button class="btn_envoi fermer" id="reset_non">NON</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- BLOC TOUS LES LIENS -->
+<div class="popup greybox_generic" id="all_liens">
+<div class="conteneur_grey">
+    <div class="bloc_center">
+        <h1>Tous les liens</h1>
+        <a class="button button_icon btn_close fermer" href="#"><span></span>Fermer</a>
+        <div class="content_grey">
+            <p class="highlight" for="listeUrl">Partager via email ou messagerie (JVC)</p>
+                <textarea rows="5" readonly="readonly" id="listeUrl"></textarea>
+            <p class="highlight" for="listeForums">Poster sur les forums (bbcode)</p>
+                <textarea rows="5" readonly="readonly" id="listeForums"></textarea>
+            <p class="highlight" for="listeBlogs">Publier sur les sites et blogs (html)</p>
+                <textarea rows="5" readonly="readonly" id="listeBlogs"></textarea>
+            <p class="highlight" for="listeUrls">URL des images</p>
+                <textarea rows="5" readonly="readonly" id="listeUrls"></textarea>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- modal fin -->
+
+<script type="text/javascript">
+
+    (function () {
+        if (!navigator.cookieEnabled) {
+            $("#nocookies").show();
+        }
+        $("#liste_img_upload").envoi({signature:'e57456dc99e1b03a72933cbc59c62a92'});
+        modal();
+    })(jQuery);
+
+</script>
+
+</div>
+<div id="pub_banner">
+<div class="bloc980"><div id="content_banner"><div id="bloc_banner">
+<!-- BEGIN Hi-Media Media Settings - v1.0 -->
+<script type="text/javascript">
+var adlSite = 'noelshack.com';
+var adlZone = 'homepage';
+var adlKv = '';
+var adlHasDcopt = false;
+var adlPro=window.location.protocol=='https:'?'https:':'http:';
+document.write('<'+'sc'+'ript type="text/javascript" src="'+adlPro+'//js.himediads.com/js?lang=fr&s='+adlSite+'&z='+adlZone+'&d='+Math.floor(Math.random()*10000000000)+'"><\/'+'sc'+'ript>');
+</script><script src="http://cdn.adnxs.com/megatag.js" type="text/javascript"></script><script type="text/javascript" src="http://js.himediads.com/js?lang=fr&amp;s=noelshack.com&amp;z=homepage&amp;d=4557323095"></script>
+<!-- END Hi-Media Media Settings - v1.0 -->
+        <!-- BEGIN Hi-Media Media AdTag, noelshack.com 728x90 - v1.0 -->
+        <div id="adl_728x90">
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tbody><tr>
+                    <td height="90" valign="top" width="728">
+                        <script src="http://cdn.adnxs.com/megatag.js" type="text/javascript"></script><script src="http://js.himediads.com/tracking_site?site=noelshack.com&amp;zone=homepage&amp;format=728x90&amp;country=fr&amp;position=above&amp;d=2519304953" async="" type="text/javascript"></script><script type="text/javascript">if (typeof getAdLinkAdTag=='function') getAdLinkAdTag( '728x90' );</script><div id="p-noelshack.com-homepage-s728x90-1-target-wrapper" class="s728x90-1"><div style="" id="div_adnxs_tag_59.075016393611676"><iframe style="visibility: visible; width: 728px; height: 90px;" allowtransparency="true" border="0" marginheight="0" marginwidth="0" name="adnxs_tag_59.075016393611676" id="adnxs_tag_59.075016393611676" frameborder="0" height="90" scrolling="no" width="728"></iframe></div><div style="width: 728px; height: 90px; display: none;" id="ph_adnxs_tag_59.075016393611676"><iframe style="visibility: hidden;" allowtransparency="true" border="0" marginheight="0" marginwidth="0" frameborder="0" height="90px" scrolling="no" width="728px"></iframe></div><span id="p-noelshack.com-homepage-s728x90-1-target" style="display:none;"></span></div>
+                        <noscript>
+                            <a href="http://rd.himediads.com/fr/jump/noelshack.com/homepage;sz=728x90;tile=1;ord=" target="_blank"><img src="http://rd.himediads.com/fr/ad/noelshack.com/homepage;sz=728x90;tile=1;ord=?" width="728" height="90" alt="" /></a>
+                        </noscript>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        <!-- END Hi-Media Media AdTag, noelshack.com 728x90 - v1.0 -->
+        </div></div></div>
+</div>
+<div id="utility">
+    <div class="bloc980">
+        <div id="liens_utiles" class="bloc_lien1">
+            <h3>Liens utiles</h3>
+            <ul id="utile_first_col">
+                <li><a href="http://www.noelshack.com/faq.php">Questions fréquentes</a></li>
+                <li><a href="http://www.noelshack.com/tos.php">Conditions générales d'utilisation</a></li>
+            </ul>
+            <ul id="utile_second_col">
+                <li><a href="http://www.noelshack.com/contact.php">Contacter NoelShack</a></li>
+                <li><a href="mailto:moderation@noelshack.com">moderation@noelshack.com</a></li>
+            </ul>
+        </div>
+        <div id="mobile">
+            <h3>NoelShack sur votre mobile</h3>
+            <a id="app_store" href="http://itunes.apple.com/fr/app/noelshack.com/id496492878?mt=8"><span>Disponible sur App Store</span></a>
+            <a id="google_play" href="https://play.google.com/store/apps/details?id=com.jeuxvideo.noelshack"><span>Disponible sur Android Market</span></a>
+        </div>
+    </div>
+</div>
+
+<div id="pied">
+    <div class="bloc980">© 2012-2013 NoelShack. Tous droits réservés. Créé initialement par David Phan.</div>
+</div>
+        <div id="pub_carre_preload">
+            <script src="http://cdn.adnxs.com/megatag.js" type="text/javascript"></script><script src="http://js.himediads.com/tracking_site?site=noelshack.com&amp;zone=homepage&amp;format=300x250&amp;country=fr&amp;position=above&amp;d=8831705643" async="" type="text/javascript"></script><script type="text/javascript">
+                if (typeof getAdLinkAdTag=='function') getAdLinkAdTag( '300x250' );
+                (function($){$(function(){$("#pub_carre").append($("#pub_carre_preload>:not('script,noscript')"));});})(jQuery);
+            </script>
+            <noscript>
+                <a href="http://rd.himediads.com/fr/jump/noelshack.com/ros;sz=300x250;tile=1;ord=" target="_blank"><img src="http://rd.himediads.com/fr/ad/noelshack.com/ros;sz=300x250;tile=1;ord=?" width="300" height="250" alt="" /></a>
+            </noscript>
+        </div>
+        
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-27746222-1']);
+            _gaq.push(['_setDomainName', 'noelshack.com']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+
+<div style="display: none;"><iframe style="display: none;" name="mtjif_ 718.7023680549931" id="mtjif_718.7023680549931"></iframe></div></body>

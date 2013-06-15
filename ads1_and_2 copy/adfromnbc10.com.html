@@ -1,0 +1,3236 @@
+<head><div class="kxhead" data-id="Hhr_tYbL" style="display:none;"><span class="kxtag kxinvisible" data-id="10855" data-alias="Krux loadSegments"><script src="http://apiservices.krxd.net/user_data/segments/3?pubid=54983c83-8810-4a6b-9ff1-81f7349ce967&amp;callback=Krux.ns._default.kxjsonp_userData" type="text/javascript"></script><script src="http://platform.twitter.com/js/tfw/hub/client.js" async="" type="text/javascript" id="LR1"></script><script type="text/javascript">Krux('require:segments')</script></span><span class="kxtag kxinvisible" data-id="13132" data-alias="Krux Scraper - sym and xa"><script type="text/javascript">
+  // Scrape dart
+  Krux('scrape.dart', {
+    page_attr_dart: "sym,xa".split(",")
+  });
+
+</script></span><span class="kxtag kxinvisible" data-id="10688" data-alias="Krux Scraper - Hierarchy and Attributes"><script type="text/javascript">
+  // Scrape dart
+  Krux('scrape.dart', {
+    page_attr_dart: "aff,area,b,chan,daypart,genre,f,package,pkid,ref,season,sect,show,site,sport,sub,sub2,t,tag,type,pageid".split(",")
+  });
+  // Set section/subsection
+  Krux('set', {
+    section: Krux('get', 'domain'),
+    subsection: Krux('get', 'page_attr_dart_sect')
+  });
+</script></span><span class="kxtag kxinvisible" data-id="10957" data-alias="Internal NBC Metrics: SNAS - (w/SegFilterActive)"><script>var __nbcsnasadops={init:function(){if(!top.__nbcudigitaladops_header){return false}this.segfilter=['94118g','12053g','55053g','65151g','15112g','43118g'];this.h=top.__nbcudigitaladops_header;this.sc='snas';this.dc='snas_d';this.nic='snas_noinfo';this.drtp='ssg';this.s=this.h.gc(this.sc)||'';this.d=this.h.gc(this.dc)||'';this.ni=this.h.gc(this.nic)||'';this.u='';this.cookiesEnabled=document.cookie.length>0;if(this.ni){return false}if(this.d){this.populateDartTags();this.setLocalCookies()}else{if(this.s){this.u=this.extractUUID();this.getDemoByUUID()}else{this.getGlobal()}}},populateDartTags:function(){if(!this.d){return false}var demo=this.d.indexOf('%')>-1?unescape(this.d):this.d;var sdarr=demo.split(';');for(var i=0;i<sdarr.length;i++){for(var j=0;j<this.segfilter.length;j++){if(sdarr[i]==this.segfilter[j]){this.h.dtprm(this.drtp+'='+sdarr[i]+';')}}}},getGlobal:function(){var callback='__nbcsnasadops.doSCallback';var url='http://snas.nbcuni.com/snas/api/getRemoteDomainCookies?callback=';this.jsonp(url,callback)},doSCallback:function(j){if(!j||!j.cookie){return false}this.s=j.cookie[this.sc]||'';if(!this.s){this.setNoInfoCookie();return false}this.u=this.extractUUID();this.d=j.cookie[this.dc]||'';if(this.d){this.populateDartTags();this.setLocalCookies()}else{if(this.u){this.getDemoByUUID()}else{this.setNoInfoCookie()}}},getDemoByUUID:function(){var callback='__nbcsnasadops.doUCallback';var url='http://demographics.nbcuni.com/demographics/api/getFormattedPersonDemographics/';url+=this.u+'/bt-in-script/';this.jsonp(url,callback)},doUCallback:function(j){if(!j||!j.personDemographics){return false}var d=j.personDemographics||'';if(d){this.d=d;this.populateDartTags();this.setLocalCookies()}},extractUUID:function(){if(this.s.indexOf('data='>-1)){var uuid=this.s.replace(/.*data=(\w+).*/i,"$1");return uuid}return''},setLocalCookies:function(){if(this.d&&(!this.h.gc(this.dc))){var demo=this.d.indexOf(';')>-1?escape(this.d):this.d;var d=new Date((new Date().valueOf())+2592000000).toUTCString();var c=this.dc+'='+demo+'; expires='+d+'; path=/;';document.cookie=c}if(this.s&&(!this.h.gc(this.sc))){var d=new Date((new Date().valueOf())+2592000000).toUTCString();var c=this.sc+'='+this.s+'; expires='+d+'; path=/;';document.cookie=c}return true},saveNBCUNIMetricsDataLocal:function(){},setNoInfoCookie:function(){var c=this.nic+'=1; expires=; path=/;';document.cookie=c},jsonp:function(src,cbk){var head=document.getElementsByTagName("head")[0];var script=document.createElement("script");script.src=src+=cbk;var done=false;script.onload=script.onreadystatechange=function(){if(!done&&(!this.readyState||this.readyState=="loaded"||this.readyState=="complete")){done=true;script.onload=script.onreadystatechange=null;head.removeChild(script)}};head.appendChild(script)}};__nbcsnasadops.init();</script></span><span class="kxtag kxinvisible" data-id="10960" data-alias="LEGOLAS - ALL NBCU - WITH DART TARGETING"><script>var __nbcadops_legolas={init:function(){if(!top.__nbcudigitaladops_header){return false}this.segfilter=['32889','40216','40261','40248','40235','40275'];this.h=top.__nbcudigitaladops_header;this.vc='lsg';this.vc_data=unescape(this.h.gc(this.vc))||'';this.drt_param='lsg';this.populateDartTags()},populateDartTags:function(){if(!this.vc_data){return false}var params='';var cookie=this.vc_data.split('s');for(var i=0;i<cookie.length;i++){for(var j=0;j<this.segfilter.length;j++){if(cookie[i]==this.segfilter[j]){params+=this.drt_param+'='+cookie[i]+';'}}}this.h.dtprm(params)}};__nbcadops_legolas.init();</script></span><span class="kxtag kxinvisible" data-id="10971" data-alias="Internal NBC Metrics: SNAS - saveActivity"><script>
+if( top.__nbcudigitaladops_header ){
+        top.__nbcudigitaladops_header.fnc = function(){
+                var uuid = '';
+                var s = top.__nbcudigitaladops_header.gc('snas');
+                if(s.indexOf('data='>-1)){
+                        uuid = s.replace(/.*data=(\w+).*/i,"$1");
+                }else{
+                        var sn_user = unescape(top.__nbcudigitaladops_header.gc('sn_nbc_b')).split('|');
+                        uuid = sn_user[1];
+                }
+                if( !uuid ){ return false; }
+                var rand = Math.round(Math.random()*1000000000000);
+                var snas_d = top.__nbcudigitaladops_header.gc('snas_d');
+                if(snas_d.indexOf('%')>-1){ snas_d = unescape(snas_d); }
+                var docurl = document.location.href+'';
+                var siteurlpieces = document.location.hostname.split('.');
+                var siteurl = siteurlpieces[siteurlpieces.length-2]+'.'+siteurlpieces[siteurlpieces.length-1];
+                var snasurl = 'http://snas.nbcuni.com/snas/api/saveActivity?URL='+escape(docurl);
+                snasurl += '&contentType=PAGE&personUUID='+uuid+'&siteName='+siteurl+'&siteDomainName='+siteurl;
+                snasurl += '&snas_d='+snas_d+'&rand='+rand;
+                document.write('<img src="'+snasurl+'" width="1" height="1" />');
+        };
+        top.__nbcudigitaladops_header.fnc();
+}
+</script></span><span class="kxtag kxinvisible" data-id="10972" data-alias="LEGOLAS - Simple vendor call"><script src="http://rt.legolas-media.com/lgrt?ci=2&amp;ei=9&amp;ti=28&amp;pbi=37"></script></span><span class="kxtag kxinvisible" data-id="11327" data-alias="Technographic Data provider tag"><script>
+// this tag is intentionally blank
+</script></span><span class="kxtag kxinvisible" data-id="11108" data-alias="Acxiom provider tag"><script>
+// This tag intentionally empty
+</script></span><span class="kxtag kxinvisible" data-id="11109" data-alias="eXelate Media provider tag"><script type="text/javascript">
+  Krux('dataprovider.exelate');
+</script></span><span class="kxtag kxinvisible" data-id="19045" data-alias="AdAdvisor S2S provider tag"><script>
+(function() {
+  // adadvisor redirects to http://logger... so it's not https safe
+  if (location.protocol == "http:") {
+     var u = "http://adadvisor.net/adscores/g.js?sid=9212244187&_kdpid=2111c0af-fc3a-446f-ab07-63aa74fbde8e";
+     (new Image()).src = u;
+   }
+})();
+</script></span><span class="kxtag kxinvisible" data-id="18290" data-alias="Acxiom S2S provider tag"><script>
+(function(){
+  var prefix = location.protocol == 'https:' ? "https:" : "http:";
+  var r_url = prefix + '//p.acxiom-online.com/pixel/sci'
+  var kurl = prefix + '//apiservices.krxd.net/um?partner=acxiom&r=' + r_url;
+  var i = new Image();
+  i.src = kurl;
+})();
+</script></span><span class="kxtag kxinvisible" data-id="16002" data-alias="Quantcast provider tag"></span><span class="kxtag kxinvisible" data-id="14019" data-alias="Bizo provider tag"><script>
+(function(){
+  if (window.KRUX) {
+    var pubid = KRUXSetup.pubid;
+  } else if (window.Krux) {
+    var pubid = Krux('get', 'pubid');
+  } else { 
+    return;
+  }
+  var prefix = location.protocol == 'https:' ? "https:" : "http:";
+  var kurl = prefix + '//beacon.krxd.net/data.gif?_kdpid=890a6228-04af-4630-85b6-0b49dee6157f&pid=' + pubid;
+  var u = prefix + '//api.bizographics.com/v1/profile.redirect?api_key=595bae8dbc0c4c42b4544e688b10c002' + 
+        '&callback_url=' + escape(kurl);
+  var i = new Image();
+  i.src = u;
+})();
+</script></span><span class="kxtag kxinvisible" data-id="15821" data-alias="Targus/AdAdvisor provider tag"><script>
+(function() {
+  // adadvisor redirects to http://logger... so it's not https safe
+  if (location.protocol == "http:") {
+     var u = "http://adadvisor.net/adscores/g.js?sid=9212244187&_kdpid=911765d2-536f-4475-8fd5-92b73478fb8f";
+     (new Image()).src = u;
+   }
+})();
+</script>
+</span><span class="kxtag kxinvisible" data-id="14072" data-alias="Nielsen (via Exelate) provider tag"><script>
+// Blank
+</script></span><span class="kxtag kxinvisible" data-id="12072" data-alias="IDX Cookie Scraper"><script>
+(function() {
+  // Do the SNAS cookies taste like IDX cookies?
+  var idx_cookie = Krux('scrape.cookie', 'idx_d'),
+      snas_cookie = Krux('scrape.cookie', 'snas_d'),
+      cookie = idx_cookie || snas_cookie;
+  if ( ! cookie ) {
+    return;
+  }
+  var m3 = cookie.match(/([0-9]{3})$/);
+  if (m3) {
+     Krux('set', 'user_attr_idx_3', m3[1]);
+  }
+  var m2 = cookie.match(/(65151g|15112g)/);
+  if (m2) {
+     Krux('set', 'user_attr_idx_2', m2[1]);
+  }
+  var stripped = cookie.replace(/(65151|15112)/, '').replace(/[0-9]{3}$/, '');
+  var m1 = stripped.match(/[0-9]{2,5}[Lg]/g);
+  if (m1) {
+     Krux('set', 'user_attr_idx_1', m1);
+  }
+
+  var idx_u_cookie = Krux('scrape.cookie', 'idx_u');
+  if (idx_u_cookie) {
+    Krux('set', 'user_attr_idx_uid', idx_u_cookie);
+  } 
+})();
+</script></span><span class="kxtag kxinvisible" data-id="14704" data-alias="AudienceScience - P&amp;G"><script src="//js.revsci.net/gateway/gw.js?csid=F09828&amp;auto=t" type="text/javascript" language="JavaScript"></script></span><span class="kxtag kxinvisible" data-id="11476" data-alias="krux-dfp-site-zone"><script type="text/javascript"> 
+(function() { 
+  function findEl(els) {
+    for(var i = 0; i < els.length; ++i) {
+      try {
+        var pathname = (m = els[i].src.match(/\.doubleclick\.net(\/[^;]*)/)) ? 
+          m[1] : '';
+        
+        if(pathname) {
+          var parts = pathname.split('/');
+          Krux.require('util').set({
+            page_attr_dfpsite: parts[2],
+            page_attr_dfpzone: parts[3]
+          });
+          return true;   
+        }
+      } catch (e) {}
+    }
+  }
+  
+  findEl(document.getElementsByTagName('SCRIPT')) ||
+  findEl(document.getElementsByTagName('IFRAME'));
+  
+})();
+</script></span><span class="kxtag kxinvisible" data-id="15596" data-alias="Quantcast / Krux"><script>
+(function () {
+    if (location.protocol.indexOf('s') > -1) {
+       return;
+    }
+    var u = "http://pixel.quantserve.com/seg/r;a=p-9eJ8k4iSzux46;rand=" +
+        Math.round(Math.random() * 999999942) + ";redirect=" +
+        "http://beacon.krxd.net/data.gif?_kdpid=c28722fa-1ec3-4a33-838f-d360c76c0aca&segs=!qcsegs";
+
+    (new Image()).src = u;
+})();
+</script></span><span class="kxtag kxinvisible" data-id="20727" data-alias="Crowd Science (NBCU) provider tag"><script charset="utf-8" type="text/javascript">
+  function CS_data_callback(cs_data) {
+    if (cs_data && cs_data.segments) {
+      var p = location.protocol === 'https:' ? 'https:' : 'http:';
+      new Image().src = p + '//beacon.krxd.net/data.gif?_kdpid=b1f402c1-9cee-4d2c-95e8-f87ec628694e&cs_segs=' + 
+        encodeURIComponent(cs_data.segments.join(','));
+    }
+  } 
+</script> 
+<script charset="utf-8" type="text/javascript" src="http://static.crowdscience.com/max-7881f43af0.js?callback=CS_data_callback"></script></span><span class="kxtag kxinvisible" data-id="21805" data-alias="Audience Science P&amp;G"></span></div><script src="http://a.visualrevenue.com/vrs.js" async=""></script><script src="http://cdn.krxd.net/controltag?confid=Hhr_tYbL" async="" type="text/javascript"></script><script src="http://widgets.digg.com/buttons/count?url=http%3A//www.nbcphiladelphia.com/shows/wednesdays-child/" async="true" type="text/javascript"></script><link href="http://widgets.digg.com/css/buttons3.css" type="text/css" rel="stylesheet"><link media="screen" href="http://www.nbcphiladelphia.com/assets/pdk449/pdk/style/default.css" rel="stylesheet" type="text/css">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="imagetoolbar" content="false">
+
+
+
+
+        <meta name="viewport" content="width=device-width, user-scalable=yes, maximum-scale=1.0">
+
+<meta name="robots" content="noodp,noydir">
+<meta property="fb:app_id" content="196375740321">
+<meta property="og:url" content="http://www.nbcphiladelphia.com/shows/wednesdays-child/">
+<meta property="og:site_name" content="NBC 10 Philadelphia">
+<meta property="og:title" content="">
+<meta property="og:image" content="http://media.nbcphiladelphia.com/designimages/nbcphi_station_logo.jpg">
+<meta property="og:description" content="The Freddie Mac Foundation's Wednesday's Child program started in Washington, D.C., in 1992, a partnership with NBC4 and the Council of Governments. Its phenomenal success there encouraged the Freddie Mac Foundation to expand the program nationwide.
+">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@nbcphiladelphia">
+<meta name="twitter:creator" content="@nbcphiladelphia">
+<meta name="twitter:url" content="http://www.nbcphiladelphia.com/shows/wednesdays-child/">
+<meta name="twitter:title" content="">
+<meta name="twitter:description" content="The Freddie Mac Foundation's Wednesday's Child program started in Washington, D.C., in 1992, a partnership with NBC4 and the Council of Governments. Its phenomenal success there encouraged the Freddie Mac Foundation to expand the program nationwide.
+">
+<meta name="twitter:image" content="http://media.nbcphiladelphia.com/designimages/nbcphi_station_logo.jpg">
+
+
+<meta name="tp:preferredRuntimes" content="Flash,HTML5">
+<meta name="tp:preferredFormats" content="mpeg4,webm,ogg,flv,F4M">
+
+ <script src="http://widgets.digg.com/buttons.js" type="text/javascript"></script><script src="http://b.scorecardresearch.com/beacon.js" async=""></script><script src="//connect.facebook.net/en_US/all.js#xfbml=1&amp;appId=196375740321" id="facebook-jssdk"></script><script src="http://www.nbcphiladelphia.com/includes/jquery-1.6.4.min.js" type="text/javascript"></script>
+ 
+
+
+
+<script type="text/javascript" src="/assets/pdk449/pdk/tpPdk.js"></script><style id="tpHeaderLoading">.tpHeader > * { display: none !important; }</style><style id="tpNavigationLoading">.tpNavigation > * { display: none !important; }</style><style id="tpClipInfoLoading">.tpClipInfo > * { display: none !important; }</style><style id="tpCategoryListLoading">.tpCategoryList > * { display: none !important; }</style><style id="tpSearchLoading">.tpSearch > * { display: none !important; }</style><style id="tpReleaseModelLoading">.tpReleaseModel > * { display: none !important; }</style><style id="tpReleaseListLoading">.tpReleaseList > * { display: none !important; }</style><style id="tpCategoryModelLoading">.tpCategoryModel > * { display: none !important; }</style><script><!--
+window.__gwtStatsEvent && window.__gwtStatsEvent({moduleName:"PDK", sessionId:window.__gwtStatsSessionId, subSystem:"startup",evtGroup: "loadExternalRefs", millis:(new Date()).getTime(),type: "end"});window.__gwtStatsEvent && window.__gwtStatsEvent({moduleName:"PDK", sessionId:window.__gwtStatsSessionId, subSystem:"startup",evtGroup: "moduleStartup", millis:(new Date()).getTime(),type: "moduleRequested"});document.write("<script src=\"http://www.nbcphiladelphia.com/assets/pdk449/pdk/js/app/A986AE28BC5C22F6237025E907F80364.cache.js\"></scr" + "ipt>");
+--></script><script src="http://www.nbcphiladelphia.com/assets/pdk449/pdk/js/app/A986AE28BC5C22F6237025E907F80364.cache.js"></script>
+<script type="text/javascript">
+
+    // Iniitialize the global video object.
+    var nbcVideoPageUtils = {};
+    
+</script>
+<title>Wednesday's Child  | NBC 10 Philadelphia</title>
+<link rel="canonical" href="http://www.nbcphiladelphia.com/shows/wednesdays-child">
+<meta itemprop="name" content="">  <meta name="description" content="The Freddie Mac Foundation's Wednesday's Child program started in Washington, D.C., in 1992, a partnership with NBC4 and the Council of Governments. Its phenomenal success there encouraged the Freddie Mac Foundation to expand the program nationwide.
+">
+ <meta itemprop="description" content="The Freddie Mac Foundation's Wednesday's Child program started in Washington, D.C., in 1992, a partnership with NBC4 and the Council of Governments. Its phenomenal success there encouraged the Freddie Mac Foundation to expand the program nationwide.
+">           <meta name="google-site-verification" content="iX8vSduotr2caoKewJTjB_DuIV8JD1F-760cjvSCqrM">
+            <meta name="google-site-verification" content="cevpgi1mPtg1PBZ0BxeIy8rQXzD6cQmPr8T2ZoW3YB0">
+  
+  <meta name="msvalidate.01" content="5F608F06D6E14702E38810B4446FD779">
+
+
+
+<link rel="shortcut icon" href="http://media.nbcphiladelphia.com/designimages/favicon.ico">
+
+
+
+
+<!--startclickprintexclude-->
+ <link rel="stylesheet" href="http://www.nbcphiladelphia.com/templates/nbc_v3_global_alt.css?r=2013-05-23CC" type="text/css">
+
+<!--endclickprintexclude-->
+
+ <link rel="stylesheet" href="http://www.nbcphiladelphia.com/templates/nbc_v3.css?r=2013-05-23CC" type="text/css">
+
+ <link rel="stylesheet" href="http://www.nbcphiladelphia.com/templates/nbc_old-css_v3.css?r=2013-05-23CC" type="text/css">
+
+<script type="text/javascript">
+  var nbc = {
+    brand:               "NBC 10 Philadelphia",			
+    cityName:            "Philadelphia",			
+    domain:              "www.nbcphiladelphia.com",           
+    host:                "nbcphiladelphia.com",             
+    market:              "nbcphiladelphia",           
+    gmtOffset:           "4",      
+    path:                "/shows/wednesdays-child",             
+    section:             "shows",         
+    subsection:          "wednesdays-child",      
+    subsectionPageTitle: "Wednesday's Child",           
+    fullDomain:          "http://www.nbcphiladelphia.com",       
+    fullPath:            "http://www.nbcphiladelphia.com/shows/wednesdays-child",             
+    env:                 "",           
+    siteKey:             "phi", 
+    mediaDomain:         "http://media.nbcphiladelphia.com", 
+    debug:               false,                  
+    roadblockOrdNumber:  124924661,
+    defaultLat:          "39.95",    
+    defaultLong:         "-75.16",   
+    gmapKey:             "ABQIAAAAqVLuG7bZfizR7HmRA5SLvRRwOdGRI0CGodwpzrQsuMFou4uTzRTqYVrR4U-VZjvmRcBe_ABGadIW1A",       
+    fbApiKey:            "85ab812aa7574de43da6e627c9970950"   
+  };
+  nbc.omniture = {
+    firedRegistration: "test",
+    ageRange: "",
+    userGender: "",
+    postalCode: "",
+    pageType: "show"
+    };
+
+			var zoneSec = nbc.section.replace(/-/g,"_");
+		var zoneSubsec = nbc.subsection.replace(/-/g,"_");
+		nbc.zone = zoneSec + "-" + zoneSubsec + "-" + nbc.omniture.pageType;
+	
+</script>
+ <script type="text/javascript">var thisIsAGalleryPage = false;</script>
+<script type="text/javascript">
+	// mmModule is now deprecated, do not add to object.
+	mmModule = {}
+	mmModule.omni = "nbculimdivisionprod,nbculimphiladelphiaprod";
+	
+	nbc.omniture.suite = "nbculimdivisionprod,nbculimphiladelphiaprod";
+
+	
+</script>
+
+<script src="http://www.nbcphiladelphia.com/includes/customOmnitureData.js?r=2013-05-23CC" type="text/javascript"></script>
+
+ <script src="http://www.nbcphiladelphia.com/includes/utils.js?r=2013-05-23CC" type="text/javascript"></script>
+  <script src="http://www.nbcphiladelphia.com/includes/swfobject-41.js" type="text/javascript"></script>
+
+ <script src="http://www.nbcphiladelphia.com/includes/nbc_v3_major.js?r=2013-05-23CC" type="text/javascript"></script>
+  <script src="http://www.nbcphiladelphia.com/includes/ots_omniture_tracker.js" type="text/javascript"></script>
+
+ <script src="http://www.nbcphiladelphia.com/includes/nbc_videoplayer_442.js?r=2013-05-23CC" type="text/javascript"></script>
+
+
+
+
+<script type="text/javascript">
+    // Random number generator for DART
+    var randDARTNumber=0;
+    
+    function genSetRandDARTNumber() {
+        randDARTNumber = Math.round(Math.random()*1000000000000);
+    }
+    
+    genSetRandDARTNumber();
+    
+        
+</script>
+
+
+   <script type="text/javascript">
+
+if(U.readCookie("zipCode")) { 
+    weatherAdZipCode =  U.readCookie("zipCode");
+ }
+ else {
+    weatherAdZipCode = "19101";
+ }
+
+nbc.weather= {
+  validatedZip: "",
+  adZipCode:weatherAdZipCode
+ };
+
+
+   
+</script>
+
+
+
+
+
+
+<!--nbc.siteKey phi -->
+
+
+ <link rel="stylesheet" href="http://www.nbcphiladelphia.com/templates/nbc_story.css?r=2013-05-23CC" type="text/css">
+
+ <link rel="stylesheet" href="http://www.nbcphiladelphia.com/templates/nbc_video.css?r=2013-05-23CC" type="text/css">
+
+ <link rel="stylesheet" href="http://www.nbcphiladelphia.com/templates/nbc_show.css?r=2013-05-23CC" type="text/css">
+
+ <link rel="stylesheet" href="http://www.nbcphiladelphia.com/templates/nbc_comments.css?r=2013-05-23CC" type="text/css">
+
+<style type="text/css">
+body {background-color:;font-family:;color:;}
+body a {color:;}
+#body {background:  url('http://media.nbcphiladelphia.com/designimages/${cms.websiteSection.backgroundImage.filename}') no-repeat 50% 0 #fff;height:1240px;}
+#body {background-color: ;}
+#show .storyBody p {color:;}
+#show .title {}
+#show .details .summary {color:;}
+#show .feature_top .title a {color:;font-family:;}
+#show .comingUpText {font-family:;}
+#show #view_more_spotlight a {color:;}
+#show .storyBody {color:;background-color:;font-family:;}
+#show .storyBody a {color:;}
+#show #showDropList {background-color:;border-bottom:1px solid ;border-left:1px solid ;border-right:1px solid ;color:;}
+#show #storyColumn .title {color:;font-family:;}
+#show #video_additional .story .title a {color:;font-family:;}
+#show #contentAdditionalRight .story .title a {color:;font-family:;}
+#show .design-begin-300 {font-family:;}
+#show .design-mid-300 {font-family:;}
+#show #showDropList {background-color: ;font-family:;}
+#show #showDropList li {border-top:1px solid ;font-family:;}
+#show #secondary .details .title a, #article .shows #secondary .details .title a {color:;font-family:;} 
+#show #nbcVideoContainer #offleads #video_additional .dropshadow .bordermask, #show #contentAdditionalRight .dropshadow .bordermask {border: 2px solid ;}
+#show #secondary .dropshadow .bordermask {border:1px solid ;}
+#show #secondary .story .summary {font-family:}
+#videoPlayer {width:576px;height:324px;}
+#show a.videoLink {background:url("http://media.nbcphiladelphia.com/designimages/nbc_u_link.gif") no-repeat scroll 0 0 transparent; clear:left; height:23px; margin-top:2px; width:45px;}
+#show .videoLink {float:left;}
+#show a.videoLink:hover {background-position:0 -22px;}
+#show .share_user_email {background:url("http://media.nbcphiladelphia.com/designimages/nbc_u_email.jpg") no-repeat scroll 0 0 transparent; display:block; float:left; height:18px; padding-right:5px; width:41px;}
+#show a.share_user_email:hover {background-position:0 -18px;}
+#show .share_user_share {background:url("http://media.nbcphiladelphia.com/designimages/nbc_u_share.jpg") no-repeat scroll 0 0 transparent; display:block; float:left; height:18px; width:46px;}
+#show .yahoo_buzz a {color:#555555; cursor:pointer; font-family:arial; font-size:9px; text-decoration:none; text-transform:uppercase;}
+#show #videoLinkShare {background-color:#FFFFFF; border:2px solid #DBDBDB; left:20px; position:absolute; text-align:center; top:420px; width:300px; z-index:999;}
+#show #videoLinkShare .share_header {float:left; height:25px; padding:5px 0 0 1px;}
+#show .storyBody a:hover {color:#006699; text-decoration:underline;}
+#show a.share_user_share:hover {background-position:0 -18px;}
+#show #videoLinkShare .share_header h3 {background:url("http://media.nbcphiladelphia.com/designimages/hd_u_link.gif") no-repeat scroll 0 0 transparent; display:block; height:18px; width:300px;}
+#show #videoLinkShare .share_close {cursor:pointer; position:absolute; right:3px; top:4px;}
+#show #videoLinkShare a.share_close {background:url("http://media.nbcphiladelphia.com/designimages/btn_close_dark_grey_new.gif") no-repeat scroll 0 0 transparent; height:12px; margin:0; overflow:hidden; width:34px;}
+#show #videoLinkShare #videoLinkShareText {color:#666666; font-family:georgia; font-size:13px; margin:5px; width:280px;}
+#show #videoLinkShare #videoLinkShareSelect {float:right; padding-right:5px;}
+#show .share_user_email .nocss {display:none !important;}
+#show .share_user_share .nocss {display:none !important;}
+#show .show_share {width: 570px; height: 27px; background: #ffffff;}
+#show #nbcVideoContainer .imwarelist {padding:5px;}
+</style>
+  <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+<script type="text/javascript">	
+		var LOGIN_PLUGIN_ENABLED = true;
+	var SHARE_BAR_PLUGIN_ENABLED = true;
+	var CHAT_PLUGIN_ENABLED = true;
+	var ACTIVITY_PLUGIN_ENABLED = true;
+	var MOST_SHARED_PLUGIN_ENABLED = false;
+</script>
+	
+<script type="text/javascript" src="http://cdn.gigya.com/JS/socialize.js?APIKey=3_-UlDIyjL1Q-IWY8D5l6WFicSxLym5yGuzre_mM0xQSDu8TloWKcPmW8Fr1RC0ckn">
+{
+	enabledProviders: 'facebook,twitter,google',
+	connectWithoutLoginBehavior: 'alwaysLogin',
+	forceAuthentication: 'true'
+
+}
+</script>
+ <link rel="stylesheet" href="http://www.nbcphiladelphia.com/templates/nbc_socialize.css" type="text/css">
+  <script src="http://www.nbcphiladelphia.com/includes/nbc_socialize.js" type="text/javascript"></script>
+ <script src="http://cdn.gigya.com/js/gigya.services.socialize.plugins.min.js" charset="UTF-8" type="text/javascript" async=""></script><script src="http://cdn.gigya.com/js/gigya.services.socialize.plugins.reactions.min.js" charset="UTF-8" type="text/javascript" async=""></script><style type="text/css">.gig-bar-container *, div.gig-reactions-container, .gig-reactions-container span, .gig-reactions-container a:hover, .gig-reactions-container a:visited, .gig-reactions-container a:link, .gig-reactions-container a:active{ font-size:12px;border:none; padding:0px;margin:0px;color:inherit;text-decoration:none;width:auto;float:none;-moz-border-radius:0;border-radius:0; font-family:arial;font-size:10px;color:#4D4D4D;background:none} table.gig-reactions-container{border-collapse:separate;} div.gig-button-container {padding:0 5px 0 0}  div.gig-button-container-vertical {padding:0 0 5px 0} div.gig-button {cursor:pointer;} div.gig-button-disabled {cursor:default;} div.gig-counter{margin:0 auto;position:relative;zoom:1;} span.gig-counter-text{position:relative;font-weight:bold;zoom:1} td.gig-button-td{vertical-align:middle} *.gig-bar-container img {display:block} div.gig-button-container-twitter-tweet iframe,div.gig-button-container-twitter-hashtag iframe,div.gig-button-container-twitter-mention iframe {display:block} div.gig-counter-top {margin-bottom: 1px;} div.gig-counter-right {margin-left: 1px;} div.gig-button-count-top table {margin:0 auto;text-align:center;} div.gig-bar-button-icon {position:absolute;padding-top:1px;} span.gig-bar-button-text {padding-left:19px;white-space:nowrap;zoom:1;} a.gig-bar-button,a:hover.gig-bar-button,a:link.gig-bar-button,a:active.gig-bar-button,a:visited.gig-bar-button { white-space:nowrap;line-height: 18px;position:relative;border-radius: 3px; color:#4d4d4d;cursor:pointer; font-size: 11px;padding: 0 5px; border: 1px solid #C5C7C7;display:inline-block;zoom:1;vertical-align:middle; text-align:center; } a.gig-bar-button,a:link.gig-bar-button,a:active.gig-bar-button,a:visited.gig-bar-button { background: #FFFFFF; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#FFFFFF", endColorstr="#EAEBEB"); background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#EAEBEB)); background: -moz-linear-gradient(top,  #FFFFFF,  #EAEBEB)} a:hover.gig-bar-button, a.gig-bar-button-down,a:link.gig-bar-button-down,a:active.gig-bar-button-down,a:visited.gig-bar-button-down { background: #EAEBEB; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#EAEBEB", endColorstr="#FFFFFF"); background: -webkit-gradient(linear, left top, left bottom, from(#EAEBEB), to(#FFFFFF)); background: -moz-linear-gradient(top,  #EAEBEB,  #FFFFFF)}</style><style type="text/css">div.gig-button-text {white-space:nowrap;font-size:11px;color:#333333; padding: 0 3px 0 3px;} span.gig-counter-text-right{left:1px;font-size:11px;line-height:20px;} span.gig-counter-text-top{top:-2px;font-size:14px} div.gig-button-container-facebook-like-count-right {height:20px} div.gig-button-container-facebook-like-count-top {height:62px} div.gig-button-container-facebook-send {height:20px}</style><script src="http://cdn.gigya.com/js/gigya.services.socialize.plugins.shareCounts.min.js" charset="UTF-8" type="text/javascript" async=""></script><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}
+.fb_invisible{display:none}
+.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}
+.fb_reset > div{overflow:hidden}
+.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}
+.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}
+.fb_dialog_content{background:#fff;color:#333}
+.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px;top:8px\9;right:7px\9}
+.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}
+.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}
+.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}
+.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}
+.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}
+.fb_dialog_top_left,
+.fb_dialog_top_right,
+.fb_dialog_bottom_left,
+.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}
+/* @noflip */
+.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}
+/* @noflip */
+.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}
+/* @noflip */
+.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}
+/* @noflip */
+.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right,
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right{width:10px;height:100%}
+.fb_dialog_vert_left{margin-left:-10px}
+.fb_dialog_vert_right{right:0;margin-right:-10px}
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{width:100%;height:10px}
+.fb_dialog_horiz_top{margin-top:-10px}
+.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}
+.fb_dialog_iframe{line-height:0}
+.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}
+.fb_dialog_content .dialog_title > span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif)
+no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}
+body.fb_hidden{-webkit-transform:none;height:100%;margin:0;left:-10000px;overflow:visible;position:absolute;top:-10000px;width:100%
+}
+.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif)
+white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}
+.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}
+#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}
+#fb-root #fb_dialog_ipad_overlay.hidden{display:none}
+.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}
+.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0 0, 0 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}
+.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%
+}
+.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0 0, 0 100%, from(#4966A6),
+color-stop(0.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset,
+rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}
+.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}
+.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}
+.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}
+#fb_dialog_loader_close{float:left}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}
+.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}
+.fb_iframe_widget iframe{position:absolute}
+.fb_iframe_widget_lift{z-index:1}
+.fb_hide_iframes iframe{position:relative;left:-10000px}
+.fb_iframe_widget_loader{position:relative;display:inline-block}
+.fb_iframe_widget_fluid{display:inline}
+.fb_iframe_widget_fluid span{width:100%}
+.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}
+.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_connect_bar_container div,
+.fb_connect_bar_container span,
+.fb_connect_bar_container a,
+.fb_connect_bar_container img,
+.fb_connect_bar_container strong{background:none;border-spacing:0;border:0;direction:ltr;font-style:normal;font-variant:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal;vertical-align:baseline}
+.fb_connect_bar_container{position:fixed;left:0 !important;right:0 !important;height:42px !important;padding:0 25px !important;margin:0 !important;vertical-align:middle !important;border-bottom:1px solid #333 !important;background:#3b5998 !important;z-index:99999999 !important;overflow:hidden !important}
+.fb_connect_bar_container_ie6{position:absolute;top:expression(document.compatMode=="CSS1Compat"? document.documentElement.scrollTop+"px":body.scrollTop+"px")}
+.fb_connect_bar{position:relative;margin:auto;height:100%;width:100%;padding:6px 0 0 0 !important;background:none;color:#fff !important;font-family:"lucida grande", tahoma, verdana, arial, sans-serif !important;font-size:13px !important;font-style:normal !important;font-variant:normal !important;font-weight:normal !important;letter-spacing:normal !important;line-height:1 !important;text-decoration:none !important;text-indent:0 !important;text-shadow:none !important;text-transform:none !important;white-space:normal !important;word-spacing:normal !important}
+.fb_connect_bar a:hover{color:#fff}
+.fb_connect_bar .fb_profile img{height:30px;width:30px;vertical-align:middle;margin:0 6px 5px 0}
+.fb_connect_bar div a,
+.fb_connect_bar span,
+.fb_connect_bar span a{color:#bac6da;font-size:11px;text-decoration:none}
+.fb_connect_bar .fb_buttons{float:right;margin-top:7px}
+.fb_edge_widget_with_comment{position:relative;*z-index:1000}
+.fb_edge_widget_with_comment span.fb_edge_comment_widget{position:absolute}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget{z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget .FB_Loader{left:0;top:1px;margin-top:6px;margin-left:0;background-position:50% 50%;background-color:#fff;height:150px;width:394px;border:1px #666 solid;border-bottom:2px solid #283e6c;z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.dark .FB_Loader{background-color:#000;border-bottom:2px solid #ccc}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.siderender
+.FB_Loader{margin-top:0}
+.fbpluginrecommendationsbarleft,
+.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}
+/* @noflip */
+.fbpluginrecommendationsbarleft{left:10px}
+/* @noflip */
+.fbpluginrecommendationsbarright{right:10px}</style><script src="http://platform.twitter.com/widgets.js" charset="UTF-8" type="text/javascript" async=""></script><script src="http://connect.facebook.net/en_US/all.js" charset="UTF-8" type="text/javascript" async=""></script><script src="undefined" type="text/javascript"></script><script src="http://pglb.buzzfed.com/257394/4f0224f6ed47b9ecaede8cb4ab75fb76?callback=BF_PARTNER.gate_response&amp;cb=3994"></script><script src="http://content.dl-rms.com/dt/s/22388/s.js"></script></head>
+  <body data-twttr-rendered="true" id="show" class="show-phi phi shows   "><script src="http://pix04.revsci.net/F09828/b3/0/3/1008211/321768930.js?D=DM_LOC%3Dhttp%253A%252F%252Fwww.nbcphiladelphia.com%252Fshows%252Fwednesdays-child%252F%253Fbpid%253D%2526_rsiL%253D0%26DM_EOM%3D1&amp;C=F09828" type="text/javascript"></script><iframe src="https://cdns.gigya.com/gs/sso.htm?APIKey=3_F7DvL9i4ENrHnMnnzlIyfeiIeEJUL5XK9F966tcNX7QuyId-1X-RjYOvSSl4nGKm&amp;version=1#1369539305726&amp;m=getToken&amp;d=http%3A%2F%2Fwww.nbcphiladelphia.com&amp;lid=flid1369539305721&amp;callbackID=gig_sso_cb1369539305726&amp;sAPIKey=3_-UlDIyjL1Q-IWY8D5l6WFicSxLym5yGuzre_mM0xQSDu8TloWKcPmW8Fr1RC0ckn" id="gig_sso" style="width: 30px; height: 10px; position: absolute; top: -1000px; left: -1000px;"></iframe><iframe src="https://platform.twitter.com/widgets/hub.html" style="position: absolute; top: -9999em; width: 10px; height: 10px;" name="twttrHubFrameSecure" tabindex="0" allowtransparency="true" id="twttrHubFrameSecure" frameborder="0" scrolling="no"></iframe><iframe src="http://platform.twitter.com/widgets/hub.html" style="position: absolute; top: -9999em; width: 10px; height: 10px;" name="twttrHubFrame" tabindex="0" allowtransparency="true" id="twttrHubFrame" frameborder="0" scrolling="no"></iframe><div id="fb-root"></div>
+
+<script language="JavaScript">
+s_linkInternalFilters="javascript:,nbcphiladelphia.com,media.nbcphiladelphia.com,events.nbcphiladelphia.com,tsn.nbcphiladelphia.com,autos.nbcphiladelphia.com";
+var nbcu_account="nbcuotsdivisionprod,nbcuotsphiladelphia";
+var nbcu_prop8 ="nbc";
+var nbcu_prop9 ="PH";
+var nbcu_prop10 ="WCAU";nbc.callLetters = "WCAU";
+nbc.contentType = "";
+document.write('<s'+'cript src="http://www.nbcphiladelphia.com/includes/ots_omniture_code.js"></s'+'cript>');
+</script><script src="http://www.nbcphiladelphia.com/includes/ots_omniture_code.js"></script>
+
+<script type="text/javascript">
+  var nbcfacebook = {
+    connected: "no"
+  };
+</script>
+<div class=" fb_reset" id="fb-root"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe src="http://static.ak.facebook.com/connect/xd_arbiter.php?version=24#channel=f2ed1cc17642726&amp;origin=http%3A%2F%2Fwww.nbcphiladelphia.com&amp;channel_path=%2Fshows%2Fwednesdays-child%2F%3Ffb_xd_fragment%23xd_sig%3Df3f62744a86828e%26" style="border: medium none;" tab-index="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_http" allowtransparency="true" name="fb_xdm_frame_http" frameborder="0" scrolling="no"></iframe><iframe src="https://s-static.ak.facebook.com/connect/xd_arbiter.php?version=24#channel=f2ed1cc17642726&amp;origin=http%3A%2F%2Fwww.nbcphiladelphia.com&amp;channel_path=%2Fshows%2Fwednesdays-child%2F%3Ffb_xd_fragment%23xd_sig%3Df3f62744a86828e%26" style="border: medium none;" tab-index="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_https" allowtransparency="true" name="fb_xdm_frame_https" frameborder="0" scrolling="no"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=196375740321";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div id="canvas">
+
+
+
+
+  	
+	<style type="text/css">
+	#userBox {
+	  height:28px;
+	}
+	#canvas {
+    padding-top:30px;
+  }
+	</style>
+
+<div id="header">
+
+<!-- // masthead \\ -->
+        
+                      
+<div id="dd_wrap">
+<div class="dd_news dd_top_pos">
+   <div class="dd_div">    
+   <ul>   
+            <li><a href="/news/local/" title="" name="&amp;lpos=navigation hover&amp;lid=local">Local</a></li>
+                 <li><a href="/news/national-international/" title="" name="&amp;lpos=navigation hover&amp;lid=u.s. &amp; world">U.S. &amp; World</a></li>
+                 <li><a href="/news/health/" title="" name="&amp;lpos=navigation hover&amp;lid=health">Health</a></li>
+                 <li><a href="/news/tech/" title="" name="&amp;lpos=navigation hover&amp;lid=tech">Tech</a></li>
+                 <li><a href="/weather/" title="" name="&amp;lpos=navigation hover&amp;lid=weather">Weather</a></li>
+                 <li class="last"><a href="/traffic/" title="" name="&amp;lpos=navigation hover&amp;lid=traffic">Traffic</a></li>
+           </ul>
+   </div>
+      </div>
+<div class="dd_entertainment dd_top_pos">
+   <div class="dd_div">    
+     <ul>   
+                         <li><a href="/entertainment/entertainment-news" title="" name="&amp;lpos=navigation hover&amp;lid=entertainment news">Entertainment News</a></li>
+                                 <li><a href="/entertainment/the-scene" title="" name="&amp;lpos=navigation hover&amp;lid=the scene">The Scene</a></li>
+                                 <li class="last"><a href="/events" title="" name="&amp;lpos=navigation hover&amp;lid=events">Events</a></li>
+                     </ul>
+   </div>
+         </div>
+   <div class="dd_sports dd_top_pos">
+   <div class="dd_div">    
+     <ul>   
+                        <li><a href="http://nbcphiladelphia.csnphilly.com/phillies" title="" name="&amp;lpos=navigation hover&amp;lid=phillies">Phillies</a></li>
+                                 <li><a href="http://nbcphiladelphia.csnphilly.com/eagles" title="" name="&amp;lpos=navigation hover&amp;lid=eagles">Eagles</a></li>
+                                 <li><a href="http://nbcphiladelphia.csnphilly.com/flyers" title="" name="&amp;lpos=navigation hover&amp;lid=flyers">Flyers</a></li>
+                                 <li><a href="http://nbcphiladelphia.csnphilly.com/sixers" title="" name="&amp;lpos=navigation hover&amp;lid=sixers">Sixers</a></li>
+                                 <li><a href="http://nbcphiladelphia.csnphilly.com/ncaa" title="" name="&amp;lpos=navigation hover&amp;lid=ncaa">NCAA</a></li>
+                                 <li class="last"><a href="http://nbcphiladelphia.csnphilly.com/union" title="" name="&amp;lpos=navigation hover&amp;lid=union">Union</a></li>
+                     </ul>
+   </div>
+            <div class="dd_div right">
+      <span class="nav_blogs_hdr">Blogs</span>    
+        <ul class="franchise">   
+          
+                                   <li><a href="http://www.nbcphiladelphia.com/blogs/philthy-stuff/" title="" name="&amp;lpos=navigation hover&amp;lid=philthy stuff">Philthy Stuff</a></li>
+                                                 <li class="last"><a href="http://www.nbcphiladelphia.com/blogs/birds-nest/" title="" name="&amp;lpos=navigation hover&amp;lid=birds nest">Birds Nest</a></li>
+                                </ul>
+      </div>
+      </div>
+<div class="dd_weather dd_top_pos">
+<div class="dd_div">    
+  <ul>   
+                 <li><a href="/weather/" title="" name="&amp;lpos=navigation hover&amp;lid=forecast">Forecast</a></li>
+                         <li><a href="/weather/maps/" title="" name="&amp;lpos=navigation hover&amp;lid=maps &amp; radar">Maps &amp; Radar</a></li>
+                         <li><a href="/weather/severe-weather-alerts/" title="" name="&amp;lpos=navigation hover&amp;lid=severe weather alerts">Severe Weather Alerts</a></li>
+                         <li><a href="/weather/school-closings/" title="" name="&amp;lpos=navigation hover&amp;lid=school closing alerts">School Closing Alerts</a></li>
+                         <li class="last"><a href="/weather/stories/" title="" name="&amp;lpos=navigation hover&amp;lid=weather stories">Weather Stories</a></li>
+              </ul>
+</div>
+</div>
+<div class="dd_offers dd_top_pos">
+<div class="dd_div">    
+  <ul>   
+                	      		<li><a href="http://www.thegoods.com" title="" onclick="theGoodsExit('http://thegoods.nbcphiladelphia.com','navbar');" target="_blank" name="&amp;lpos=navigation hover&amp;lid=the goods">The Goods</a></li>
+      	       
+                        	      		<li class="last"><a href="/on-air/contests/" title="" name="&amp;lpos=navigation hover&amp;lid=contests">Contests</a></li>
+      	              </ul>
+</div>
+      </div>
+<div class="dd_contact dd_top_pos">
+   <div class="dd_div">    
+     <ul>   
+                         <li><a href="/contact-us/about-us/" title="" name="&amp;lpos=navigation hover&amp;lid=about us">About Us</a></li>
+                                 <li><a href="/contact-us/community/" title="" name="&amp;lpos=navigation hover&amp;lid=community">Community</a></li>
+                                 <li class="last"><a href="/contact-us/tv-listings/" title="" name="&amp;lpos=navigation hover&amp;lid=tv listings">TV Listings</a></li>
+                     </ul>
+   </div>
+      </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function() {
+ $('div.dd_shows').remove();
+});
+</script>
+
+<div id="masthead" style="position:relative;">
+  <div id="mastheadLinks" style="position:relative;">  
+    <div id="mastheadLeftLinks"> 
+                      <div class="nojsv" id="logocont"><a href="/" title="NBC 10 Philadelphia" id="logo" target="_parent" name="&amp;lpos=logo&amp;lid=nbc 10 philadelphia"><img alt="NBC 10 Philadelphia" src="http://media.nbcbayarea.com/designimages/nbcphi_logo.png"></a></div>
+                </div>
+    <script type="text/javascript">
+            //<![CDATA[
+            function createCookieHour(name, value) {
+              var date = new Date();
+              date.setTime(date.getTime() + (1 * 60 * 60 * 1000));
+              var expires = "; expires="+date.toGMTString();
+              document.cookie = name + "=" + value+expires + "; path=/";
+            }
+            $(document).ready(function() {
+              // U.log(" cookie for full site "+U.getQueryParam("fullSite"));
+              if(U.getQueryParam("fullSite") == "y") {
+                if(U.readCookie("mobileFullSite")) {
+                  // dont store cookie
+                }
+                else {
+                  createCookieHour('mobileFullSite', 'y');   
+                }
+              }
+            });   
+            //]]>  
+    </script>
+    <script type="text/javascript">
+      //<![CDATA[
+      $(document).ready(function(event) {
+        $("#sponsoredBackgrd").click(function(event) {
+          if( event.stopPropagation ) { event.stopPropagation(); } //For 'Good' browsers
+          else { event.cancelBubble = true; } //For IE
+        });
+      });
+      //]]> 
+    </script>  
+    <div id="mastheadRightLinks">
+                                                  <div id="mastheadWeatherModule"><div id="mastheadWeatherModule1">
+		
+
+
+
+
+
+
+        
+        
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+    
+
+        
+        
+        
+  
+	
+        	    	    
+    	        	    	    
+    	        	    	    
+    	        	    	    
+    	        	    	    
+    	        	    	    
+    	        	    	    
+    	        	    	    
+    	        	    	    
+    	        	    
+    
+         	    	      
+    	        	    	      
+    	        	    	      
+    	        	    	      
+    	        	    	      
+    	        	    	      
+    	        	    	      
+    	        	    	      
+    	        	    	      
+    	        	    	      
+    	        	    	      
+    	        	        
+
+					<div id="mastheadWeatherIcon"><a href="/weather" title="Click for weather" target="_parent" name="&amp;lpos=masthead&amp;lid=weather"><img src="http://media.nbcphiladelphia.com/designimages/new_wx_98.png" height="40" width="40"></a></div>
+	<div id="mastheadWeatherTemp">
+		<p id="mastheadWeatherTempNow"><a href="/weather" title="Click for weather" target="_parent" name="&amp;lpos=masthead&amp;lid=weather">55°<span class="scale">F</span></a></p>
+							</div>	    
+</div></div>
+          <script type="text/javascript">
+          //<![CDATA[
+                $(document).ready(function() {
+                  if(U.readCookie("zipCode")) { 
+                    weatherZipCode =  U.readCookie("zipCode");
+                  }
+                  else {
+                    weatherZipCode = "19101";
+                  }
+                  dataString="h=v3_topweathermodule&zipCode="+weatherZipCode;
+                  var urlpost='http://www.nbcphiladelphia.com/i/dispatcher/';
+                  jQuery.ajax({
+                    type: "GET",
+                    url: urlpost,
+                    data: dataString,
+                    cache:false,
+                    dataType: "html",
+                    success: function(data){
+                      trimdata = jQuery.trim(data);
+                                            $("#mastheadWeatherModule").html(trimdata);
+                      $("#mastheadWeatherModule1").show();
+                    }
+                  });
+                });
+                //]]>
+          </script>
+                    	  		<div id="ugcBox"><a href="/newsletters" name="&amp;lpos=masthead&amp;lid=newsletters">Newsletters</a> | <a href="/ugc/" class="ugcLink" name="&amp;lpos=masthead&amp;lid=submit photos">Send Pics</a> | <a href="mailto:tips@nbcphiladelphia.com?body=Thanks%20for%20contacting%20NBC 10 Philadelphia.%20Please%20use%20this%20e-mail%20to%20send%20us%20news%20tips.%20Be%20sure%20to%20include%20a%20phone%20number,%20so%20we%20can%20contact%20you%20quickly,%20if%20necessary.%20If%20your%20tip%20is%20urgent,%20call%20%20our%20news%20desk%20at%20610-668-5510." class="tipsLink">Tips</a> | <span id="socializeLoggedoutState" style="display:none;"><a onclick="socializeLogin({screenSet:'Login-web', startScreen:'gigya-login-screen'});" href="#" id="loginLink">Login</a></span><span id="socializeLoggedinState" style="display:none;"><a onclick="socializeDropDown();" href="#" id="myAccount">Profile Name<span></span></a><ul class="profileDropDown" style="display:none;"><li><a onclick="socializeLogout();" href="#">Sign Out</a></li></ul></span></div>
+	        <form id="searchForm" action="http://www.nbcphiladelphia.com/results/" method="get" target="_parent">
+        <input tabindex="1" size="24" value="Search" name="keywords" id="searchText" onclick="this.value='';" onfocus="this.select()" onblur="this.value=!this.value?'Search':this.value;" type="text">
+        <input value="Go" src="http://media.nbcphiladelphia.com/designimages/nbc_v3_search_mag.gif" class="submit" id="searchSubmit" type="image">
+      </form>
+    </div>   </div>
+</div>
+<!-- \\ masthead // -->
+
+
+
+
+<!-- // nav \\ -->
+<div id="nav">
+  <ul>
+    <li class="navItem_home" id="navItem_0"><a target="_parent" class="home" title="Home" href="/" onclick="omnitureTrackNavBar(nbc.market,nbc.section+'/'+nbc.subsection,this.title+'-button');" name="&amp;lpos=section navigation&amp;lid=home">home</a></li>
+                                                                                          <li id="navItem_1" class="navItem_news news first"><a href="/news/" title="News" target="_parent" onclick="omnitureTrackNavBar(nbc.market,nbc.section+'/'+nbc.subsection,this.title+'-button');" name="&amp;lpos=section navigation&amp;lid=news">news</a></li>
+                                                                                                    <li id="navItem_2" class="navItem_video video"><a href="/video/" title="Video" target="_parent" onclick="omnitureTrackNavBar(nbc.market,nbc.section+'/'+nbc.subsection,this.title+'-button');" name="&amp;lpos=section navigation&amp;lid=video">Video</a></li>
+                                                                                                    <li id="navItem_3" class="navItem_weather weather"><a href="/weather/" title="Weather" target="_parent" onclick="omnitureTrackNavBar(nbc.market,nbc.section+'/'+nbc.subsection,this.title+'-button');" name="&amp;lpos=section navigation&amp;lid=weather">Weather</a></li>
+                                                                                                    <li id="navItem_4" class="navItem_investigations investigations"><a href="/investigations" title="Investigations" target="_parent" onclick="omnitureTrackNavBar(nbc.market,nbc.section+'/'+nbc.subsection,this.title+'-button');" name="&amp;lpos=section navigation&amp;lid=investigations">Investigations</a></li>
+                                                                                                    <li id="navItem_5" class="navItem_entertainment entertainment"><a href="/entertainment/" title="Entertainment" target="_parent" onclick="omnitureTrackNavBar(nbc.market,nbc.section+'/'+nbc.subsection,this.title+'-button');" name="&amp;lpos=section navigation&amp;lid=entertainment">Entertainment</a></li>
+                                                                                                    <li id="navItem_6" class="navItem_sports sports"><a href="http://nbcphiladelphia.csnphilly.com/" title="Sports" target="_parent" onclick="omnitureTrackNavBar(nbc.market,nbc.section+'/'+nbc.subsection,this.title+'-button');" name="&amp;lpos=section navigation&amp;lid=sports">Sports</a></li>
+                                                                                                    <li id="navItem_7" class="navItem_traffic traffic"><a href="/traffic/" title="Traffic" target="_parent" onclick="omnitureTrackNavBar(nbc.market,nbc.section+'/'+nbc.subsection,this.title+'-button');" name="&amp;lpos=section navigation&amp;lid=traffic">Traffic</a></li>
+                                                                                                    <li id="navItem_8" class="navItem_contests contests"><a href="/on-air/contests" title="Contests" target="_parent" onclick="omnitureTrackNavBar(nbc.market,nbc.section+'/'+nbc.subsection,this.title+'-button');" name="&amp;lpos=section navigation&amp;lid=contests">Contests</a></li>
+                                                                                                    <li id="navItem_9" class="navItem_contact contact last"><a href="/contact-us/" title="Contact Us" target="_parent" onclick="omnitureTrackNavBar(nbc.market,nbc.section+'/'+nbc.subsection,this.title+'-button');" name="&amp;lpos=section navigation&amp;lid=contact">Contact Us</a></li>
+                      <li class="socialNavButtons">
+      <div id="followLinks">
+                                                <ul>
+              <li><a href="http://www.facebook.com/nbcphiladelphia" id="fbLink" target="_blank" name="&amp;lpos=section navigation&amp;lid=facebook button"></a></li>       
+              <li><a href="http://www.twitter.com/nbcphiladelphia" id="twitterLink" target="_blank" name="&amp;lpos=section navigation&amp;lid=twitter button"></a></li>
+              <li><a href="http://plus.google.com/115181052736294416606" id="gplusLink" target="_blank" name="&amp;lpos=section navigation&amp;lid=google plus button"></a></li>
+            </ul>
+      </div>     </li>
+  </ul>
+</div>
+   <script src="http://www.nbcphiladelphia.com/includes/nbc_v3_top_nav_dropdown.js?r=2013-05-23CC" type="text/javascript"></script>
+
+   
+
+
+      
+        
+
+
+
+
+
+
+
+          
+        
+        
+        
+                   
+       
+         <div id="ad_hdr_2" class="ad">
+
+
+
+
+
+           <script language="javascript" type="text/javascript">
+       document.write('<scr'+'ipt language="javascript" type="text/javascript" src="http://iv.doubleclick.net/adj/nbcu.lim.phi/shows-wednesdays-child;!category=phi;!category=shows;;site=phi;pid=;sect=shows;sub=wednesdays-child;sub2=;contentid=;;kw=;mtfIFPath=/includes/;!category=phi;!category=shows;dcopt=ist;tile=1;pos=1;sz=728x90,970x66;' + (top.__nbcudigitaladops_dtparams||'') + 'zc=' + nbc.weather.adZipCode + ';ord='+ randDARTNumber+';" ></scr'+'ipt>');
+       </script><script language="javascript" type="text/javascript" src="http://iv.doubleclick.net/adj/nbcu.lim.phi/shows-wednesdays-child;!category=phi;!category=shows;;site=phi;pid=;sect=shows;sub=wednesdays-child;sub2=;contentid=;;kw=;mtfIFPath=/includes/;!category=phi;!category=shows;dcopt=ist;tile=1;pos=1;sz=728x90,970x66;zc=19101;ord=945944013749;"></script><!-- Template ID = 4439 Template Name = Image Banner - Open in New Window -->
+
+<a href="http://iv.doubleclick.net/click%3Bh%3Dv8/3dee/3/0/%2a/j%3B243013498%3B0-0%3B1%3B60865534%3B3454-728/90%3B52204014/52163662/1%3B%3B%7Eokv%3D%3B%21category%3Dphi%3B%21category%3Dshows%3B%3Bsite%3Dphi%3Bpid%3D%3Bsect%3Dshows%3Bsub%3Dwednesdays-child%3Bsub2%3D%3Bcontentid%3D%3B%3Bkw%3D%3BmtfIFPath%3D/includes/%3B%21category%3Dphi%3B%21category%3Dshows%3Bdcopt%3Dist%3Btile%3D1%3Bpos%3D1%3Bsz%3D728x90%2C970x66%3Bzc%3D19101%3B%3B%7Eaopt%3D2/0/cb/0%3B%7Esscs%3D%3fhttp://www.freddiemacfoundation.org/ourwork/founwedn.html" target="_blank">
+<img src="http://s0.2mdn.net/2530400/Freddie-Mac-Generic-728x90_2jan2013.jpg" height="90" width="728" border="0">
+</a>
+<!-- Begin Interstitial Ad -->
+<script language="JavaScript" src="http://iv.doubleclick.net/imp;v7;j;269700557;0-0;1;60865534;0/0;47940616/47955609/1;;~aopt=6/0/ff/0;~okv=;!category=phi;!category=shows;;site=phi;pid=;sect=shows;sub=wednesdays-child;sub2=;contentid=;;kw=;mtfIFPath=/includes/;!category=phi;!category=shows;dcopt=ist;tile=1;pos=1;sz=728x90,970x66;zc=19101;;~cs=y%3fhttp://c5.zedo.com/jsc/c5/fo.js"></script><script language="javascript" src="http://c7.zedo.com/bar/v17-007/c5/jsc/fm.js?c=10584/290/1&amp;a=0&amp;f=&amp;n=305&amp;r=1&amp;d=15&amp;q=&amp;$=&amp;s=182&amp;zsm=0&amp;z=0.09180794930831959"></script><span id="Zedo-Ad=1354701_10584_182_1_1;Domain=.zedo.com"></span><script>var _comscore = _comscore || [];_comscore.push({ c1: "8", c2: "15579784" ,c3: "65203" });(function() {var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";el.parentNode.insertBefore(s, el);})();</script><noscript><img src="http://b.scorecardresearch.com/p?c1=8&c2=15579784&c3=65203&c15=&cv=2.0&cj=1" /></noscript><script src="https://tags.crwdcntrl.net/c/2651/cc_af.js"></script><iframe src="http://c5.zedo.com/jsc/c5/bh.html?n=305;g=20;a=790;s=1;t=i" frameborder="0" height="1" width="1"></iframe>
+<!-- end ZEDO for channel: NBC Philadelphia - 2 , publisher: NBC Universal , Ad Dimension: Pixel/Popup - 1 x 1 -->
+
+
+
+       <noscript>
+       <a href="http://iv.doubleclick.net/jump/nbcu.lim.phi/shows-wednesdays-child;!category=phi;!category=shows;;site=phi;pid=;sect=shows;sub=wednesdays-child;sub2=;contentid=;;kw=;mtfIFPath=/includes/;!category=phi;!category=shows;tile=1;pos=1;sz=728x90,970x66;ord=${!p_adOrd};" target="_blank"><img src="http://iv.doubleclick.net/ad/nbcu.lim.phi/shows-wednesdays-child;!category=phi;!category=shows;;site=phi;pid=;sect=shows;sub=wednesdays-child;sub2=;contentid=;;kw=;mtfIFPath=/includes/;tile=1;pos=1;sz=970x66;ord=${!p_adOrd};" border="0" alt="Click Here!" /></a>
+       </noscript>
+   </div>
+   </div>
+
+
+
+
+  <div id="showIdGraphic">
+    <a href="/shows/wednesdays-child"><img src="http://media.nbcphiladelphia.com/designimages/WED+CHILD+970.jpg" alt="Wednesday's Child"></a>
+  </div>
+  
+
+   
+
+ 
+
+	<script type="text/javascript" src="http://objects.tremormedia.com/embed/js/banners.js"></script>
+	<script type="text/javascript">function displayCompanionBanners(banners) { tmDisplayBanner(banners, "adCompanionBanner", 300, 250); } </script>
+
+    
+
+
+
+
+
+
+
+                   
+      
+            
+          
+      
+        
+        
+                    
+<script type="text/javascript">
+/*
+var comment_setting = {   
+"cid" :  "208733891",
+"max" :  "10",
+"initmax" : "2"};
+          
+$(document).ready(function() { 
+  var f = new NBC.Comment();
+  f.ini();
+});
+
+$(document).ready(function() { 
+  var vid = new NBC.Video();
+  vid.ini();
+});
+*/
+</script>
+
+             <div id="body">
+    <div id="main">
+        <div id="nbcVideoContainer">
+          <div id="videoTop">
+                        <div class="feature_top">
+                                                                                                      
+
+ 
+
+
+
+            
+               
+
+
+
+
+
+                      
+                    	                 			             
+                                                  	      	      	      	                                                                                                                                                                                                                                            	     	               	               	               	                
+	            		   		
+		                               	                                     	             	                                                                                                               
+
+
+
+ 
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+            
+
+           
+                                                                                                                                                                                                                                                                                                                                                                                                                  
+       
+
+
+
+  
+    
+    
+   
+
+
+
+
+
+
+               
+  
+       	  	  		                                                        
+  
+
+ 
+
+
+  
+
+  
+
+
+ 
+          
+
+  
+        
+
+         
+
+  
+                
+  
+  
+             
+
+
+
+                                  
+
+
+
+                                  
+
+
+
+                                  
+
+
+                        <div class=" video_release  story4 ">  
+                                                                    
+  
+
+  
+
+
+                      
+                    	                 			             
+                                                  	      	      	      	                                                                                                                                                                                                                                            	     	               	               	               	                
+	            		   		
+		                               	                                     	             	                                                                                                               
+
+
+
+
+  
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+               
+  
+       	  	  		                                                        
+  
+
+ 
+
+
+   <div class="dropshadow thumbImage">
+        <span class="bordermask"><a href="http://www.nbcphiladelphia.com/video/#!/on-air/as-seen-on/Wednesdays-Child_-Nyzeir/204191641" title="Wednesday's Child: Nyzeir"><img style="margin-left:-18px" src="http://media.nbcphiladelphia.com/images/157*90/0422wedchildnazir.jpg" alt="Wednesday's Child: Nyzeir" height="90" width="157"></a></span>
+      </div>
+
+  
+                                  <div class="details">
+                                    <h3 class="title"><a href="http://www.nbcphiladelphia.com/video/#!/on-air/as-seen-on/Wednesdays-Child_-Nyzeir/204191641" title="Wednesday's Child: Nyzeir">Wednesday's Child: Nyzeir</a></h3>
+                                  </div>
+                              </div>
+                                                                            
+
+ 
+
+
+
+            
+               
+
+
+
+
+
+                
+                    	                 			             
+                                                  	      	      	      	                                                                                                                                                                                                                                            	     	               	               	               	                
+	            		   		
+		                               	                                     	                                                                                                               
+
+
+
+ 
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+            
+
+           
+                                                                                                                                                                                                                                                                                                                                                                                                                  
+       
+
+
+
+  
+    
+    
+   
+
+
+
+
+
+
+               
+  
+       	  	  		                                                        
+  
+
+ 
+
+
+  
+
+  
+
+
+ 
+          
+
+  
+        
+
+         
+
+  
+                
+  
+  
+             
+    
+                                                                                                                                                                                                                                                                                                                                                                                                                            
+
+
+                        
+
+
+
+                        
+
+
+
+                        
+
+
+                        <div class=" video_release  story4 ">  
+                                                                    
+  
+
+  
+
+
+                
+                    	                 			             
+                                                  	      	      	      	                                                                                                                                                                                                                                            	     	               	               	               	                
+	            		   		
+		                               	                                     	                                                                                                               
+
+
+
+
+  
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+               
+  
+       	  	  		                                                        
+  
+
+ 
+
+
+   <div class="dropshadow thumbImage">
+        <span class="bordermask"><a href="http://www.nbcphiladelphia.com/video/#!/shows/wednesdays-child/Wednesdays-Child_-Gio/202417411" title="Wednesday's Child: Gio"><img style="margin-left:-20px" src="http://media.nbcphiladelphia.com/images/160*90/Gio-wed-child.jpg" alt="Wednesday's Child: Gio" height="90" width="160"></a></span>
+      </div>
+
+  
+                                  <div class="details">
+                                    <h3 class="title"><a href="http://www.nbcphiladelphia.com/video/#!/shows/wednesdays-child/Wednesdays-Child_-Gio/202417411" title="Wednesday's Child: Gio">Wednesday's Child: Gio</a></h3>
+                                  </div>
+                              </div>
+                                                                            
+
+ 
+
+
+
+            
+               
+
+
+
+
+
+                
+                    	                 			             
+                                                  	      	      	      	                                                                                                                                                                                                                                            	     	               	               	               	                
+	            		   		
+		                               	                                     	                                                                                                               
+
+
+
+ 
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+            
+
+           
+                                                                                                                                                                                                                                                                                                                                                                                                                  
+       
+
+
+
+  
+    
+    
+   
+
+
+
+
+
+
+               
+  
+       	  	  		                                                        
+  
+
+ 
+
+
+  
+
+  
+
+
+ 
+          
+
+  
+        
+
+         
+
+  
+                
+  
+  
+             
+
+
+
+                        
+
+
+
+                        
+
+
+
+                        
+
+
+                        <div class=" video_release  story4 ">  
+                                                                    
+  
+
+  
+
+
+                
+                    	                 			             
+                                                  	      	      	      	                                                                                                                                                                                                                                            	     	               	               	               	                
+	            		   		
+		                               	                                     	                                                                                                               
+
+
+
+
+  
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+               
+  
+       	  	  		                                                        
+  
+
+ 
+
+
+   <div class="dropshadow thumbImage">
+        <span class="bordermask"><a href="http://www.nbcphiladelphia.com/video/#!/shows/wednesdays-child/Wednesdays-Child_-Welcome-Back-Kareem/201360081" title="Wednesday's Child: Welcome Back Kareem"><img style="margin-left:-20px" src="http://media.nbcphiladelphia.com/images/160*90/Kareem_Wednesdays_Child.jpg" alt="Wednesday's Child: Welcome Back Kareem" height="90" width="160"></a></span>
+      </div>
+
+  
+                                  <div class="details">
+                                    <h3 class="title"><a href="http://www.nbcphiladelphia.com/video/#!/shows/wednesdays-child/Wednesdays-Child_-Welcome-Back-Kareem/201360081" title="Wednesday's Child: Welcome Back Kareem">Wednesday's Child: Welcome Back Kareem</a></h3>
+                                  </div>
+                              </div>
+                                                                            
+
+ 
+
+
+
+            
+               
+
+
+
+
+
+                
+                    	                 			             
+                                                  	      	      	      	                                                                                                                                                                                                                                            	     	               	               	               	                
+	            		   		
+		                               	                                     	                                                                                                               
+
+
+
+ 
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+            
+
+           
+                                                                                                                                                                                                                                                                                                                                                                                                                  
+       
+
+
+
+  
+    
+    
+   
+
+
+
+
+
+
+               
+  
+       	  	  		                                                        
+  
+
+ 
+
+
+  
+
+  
+
+
+ 
+          
+
+  
+        
+
+         
+
+  
+                
+  
+  
+             
+
+
+
+                        
+
+
+
+                        
+
+
+
+                        
+
+
+                        <div class=" video_release  story4 ">  
+                                                                    
+  
+
+  
+
+
+                
+                    	                 			             
+                                                  	      	      	      	                                                                                                                                                                                                                                            	     	               	               	               	                
+	            		   		
+		                               	                                     	                                                                                                               
+
+
+
+
+  
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+               
+  
+       	  	  		                                                        
+  
+
+ 
+
+
+   <div class="dropshadow thumbImage">
+        <span class="bordermask"><a href="http://www.nbcphiladelphia.com/video/#!/shows/wednesdays-child/Wednesdays-Child_-Nasir/200433041" title="Wednesday's Child: Nasir"><img style="margin-left:-20px" src="http://media.nbcphiladelphia.com/images/160*90/Wednesdays_Child_Nazeer.jpg" alt="Wednesday's Child: Nasir" height="90" width="160"></a></span>
+      </div>
+
+  
+                                  <div class="details">
+                                    <h3 class="title"><a href="http://www.nbcphiladelphia.com/video/#!/shows/wednesdays-child/Wednesdays-Child_-Nasir/200433041" title="Wednesday's Child: Nasir">Wednesday's Child: Nasir</a></h3>
+                                  </div>
+                              </div>
+                                                </div>
+                         <div id="videoContainerLeft">
+              <div class="tpPlayer" id="videoPlayer"><div class="tpBackground" style="background-color: #131313; border-color: #545759"></div><div class="player" id="player0">  <div style="width: 100%; height: 100%; position: absolute; margin-left: -1000px;" id="player0.player"><div style="width: 100%; height: 100%; background-color: rgb(19, 19, 19); padding: 0px; margin: 0px;" id="player0.content"><video tabindex="0" style="height: 100%; width: 100%;"></video></div></div>  <div style="position: absolute; display: none; background-color: transparent; height: 100%; width: 100%; overflow: hidden;" id="player0.controlBlocker"><a href="#" style="width: 100%; height: 100%; z-index: 1; background: none repeat scroll 0% 0% transparent; display: block; cursor: default;"></a></div>  <div style="background-color: rgb(19, 19, 19); position: absolute; overflow: hidden; height: 100%; width: 100%; display: none;" id="player0.blocker"></div>  <div style="width: 100%; position: absolute;" id="player0.plugins"></div>  <div style="width: 100%; height: 100%; position: absolute; overflow: hidden;" id="player0.standby"><img class="preview" style="position: absolute; top: 0px; left: 0px; width: 100%; height: auto; display: none;"><div id="player0.standby.playButtonHolder" style="overflow: hidden; width: 100%; height: 100%; top: 0px; left: 0px; position: absolute;"><a style="display: none; position: absolute; top: 50%; left: 50%; line-height: 162px; text-align: center; margin-left: -81px; margin-top: -81px;" href="#"><canvas width="162" height="162" style="opacity: 0.7;"></canvas></a></div></div><div id="player0.subtitles" class="tpSubtitles" style="pointer-events:none"></div>  <div id="player0.cards" style="pointer-events:none;z-index:801;-webkit-touch-callout: text;-webkit-user-select: text;-khtml-user-select: text;-moz-user-select: text;-ms-user-select: text;user-select: text;"></div>  <div class="controlsLayer" id="player0.controls" style="z-index: 800; top: 0px; left: 0px; background-color: transparent; float: left; width: 100%; height: 100%;"></div></div></div>  
+            <div id="storyColumn" class="story as_seen_on video_release">
+                <div class="storyBody">
+                                  
+
+ 
+
+
+
+            
+                     
+
+
+
+
+
+                
+                    	                 			             
+                                                  	      	      	      	                                                                                                                                                                                                                                            	     	               	               	               	                
+	            		   		
+		                               	                                     	                                                                                                 
+                               
+                              
+                                        
+
+
+
+ 
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+            
+
+           
+                                                                                                                                                                                                                                                                                                                                                                                                                  
+       
+
+
+
+  
+    
+    
+   
+
+
+
+
+
+
+               
+  
+       	  	  		            	  	  	  	                                                  
+  
+
+ 
+
+
+  
+
+  
+
+
+ 
+          
+
+  
+        
+
+         
+
+  
+                
+  
+  
+             
+
+
+
+                        
+
+
+
+                        
+
+
+
+                        
+
+
+                  <h2 class="title">Wednesday's Child: Joe</h2>
+                    
+                                      <p class="story">14-year-old Joe is an inquisitive young man with an intriguing imagination. He loves to bake and showed off his decorating skills on a recent trip to Whipped Bakery with Vai.</p>
+                                    
+                                       <!-- // share \\ -->
+                   <div class="show_share">  
+                      <a href="javascript:void();" class="videoLink" onclick="javascript:document.getElementById('videoLinkShare').style.display='block';"><span class="nocss">Link</span></a>
+                      <div id="videoLinkShare" style="display:none;">
+                      <span class="share_header">
+                               <h3></h3>
+                               <span class="share_close"><a alt="Close" class="share_close" onclick="javascript:getElementById('videoLinkShare').style.display='none'" href="javascript:void(0);"></a></span>
+                              </span>
+                      <form>
+                         <textarea id="videoLinkShareText" rows="3" cols="10" readonly="readonly">http://www.nbcphiladelphia.com/on-air/as-seen-on/Wednesday_s-Child_-Joe_Philadelphia.html</textarea>
+                       </form>
+                       <a id="videoLinkShareSelect" href="javascript:void(0);" onclick="javascript:document.getElementById('videoLinkShareText').select();">select</a>
+                      </div>
+                      <script type="text/javascript">
+nbc.omniture = {shareOption: ""}
+</script>
+<div class="imwarelist">
+  <div id="shareBar_gig_containerParent" class="user_interaction">
+    
+
+  <script src="http://www.nbcphiladelphia.com/includes/position.js" language="javascript" type="text/javascript"></script>
+        
+
+<script type="text/javascript">
+      function position(o) {
+    var pos = Position.get(o);
+    Position.set('share_box',pos);
+  }
+</script>
+
+   
+
+
+                
+                    	                 			             
+                                                  	      	      	      	                                                                                                                                                                                                                                            	     	               	               	               	                
+	            		   		
+		                               	                                     	                                                                                                 
+                               
+                              
+                                        
+
+
+
+ 
+     
+
+
+<!-- // start nbc_share_icon \\ -->
+
+  
+
+
+<a class="share_user_share" href="javascript:void(0);" onclick="document.getElementById('share_box').style.display='inline'; positionShare(this);" title="Share this article!"><span class="nocss">Share</span></a>
+<!-- \\ end nbc_share_icon // --> 
+ 
+ 
+
+    
+
+    
+<script type="text/javascript">
+  (function() {
+    var s  = document.createElement('SCRIPT');
+    var s1 = document.getElementsByTagName('SCRIPT')[0];
+    s.type = 'text/javascript';
+    s.src  = 'http://widgets.digg.com/buttons.js';
+    s1.parentNode.insertBefore(s, s1);
+  })();
+</script>
+
+<span class="db-wrapper db-clear db-compact"><span><span class="db-container db-submit"><span class="db-body db-compact"><span class="db-count"></span><span class="db-copy"></span><a class="db-anchor">digg</a></span></span></span></span>
+
+									
+																																																																																																																																																																																																																																																																																												<style type="text/css">
+			#shareBar {float:left;margin:0 0 0 10px;}
+		</style>
+				<div style="visibility: visible;" gigid="showShareBarUI" id="shareBar"><div class="gig-bar-container gig-share-bar-container"><table cellpadding="0" cellspacing="0"><tbody><tr><td style="vertical-align:bottom; white-space:nowrap;zoom:1;"><div class="gig-button-container gig-button-container-count-right gig-button-container-twitter-tweet gig-button-container-twitter-tweet-count-right gig-share-button-container"><div id="shareBar-reaction0_tweet1369539309038"><iframe data-twttr-rendered="true" title="Twitter Tweet Button" style="width: 109px; height: 20px;" class="twitter-share-button twitter-count-horizontal" src="http://platform.twitter.com/widgets/tweet_button.1368146021.html#_=1369539309774&amp;count=horizontal&amp;counturl=http%3A%2F%2Fwww.nbcphiladelphia.com%2Fshows%2Fwednesdays-child%2F&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=http%3A%2F%2Fwww.nbcphiladelphia.com%2Fshows%2Fwednesdays-child%2F&amp;size=m&amp;text=Wednesday's%20Child&amp;url=http%3A%2F%2Fwww.nbcphiladelphia.com%2Fshows%2Fwednesdays-child%2F&amp;via=nbcphiladelphia" allowtransparency="true" frameborder="0" scrolling="no"></iframe></div></div></td><td style="vertical-align:bottom; white-space:nowrap;zoom:1;"><div class="gig-button-container gig-button-container-count-right gig-button-container-facebook-like gig-button-container-facebook-like-count-right gig-share-button-container"><div id="shareBar-reaction1"><div fb-xfbml-state="rendered" class="fb-like fb_edge_widget_with_comment fb_iframe_widget" style="zoom:1" data-width="160" data-send="false" data-show-faces="false" data-ref="s=showShareBarUI:p=facebook-like" data-href="http://www.nbcphiladelphia.com/shows/wednesdays-child/" data-layout="button_count" data-action="recommend" data-gig-btnid="shareBar-reaction11369539309040" data-colorscheme="" data-font="arial"><span style="height: 20px; width: 114px;"><iframe src="http://www.facebook.com/plugins/like.php?api_key=196375740321&amp;locale=en_US&amp;sdk=joey&amp;ref=s%3DshowShareBarUI%3Ap%3Dfacebook-like&amp;channel_url=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D24%23cb%3Df2bb52c4af1870a%26origin%3Dhttp%253A%252F%252Fwww.nbcphiladelphia.com%252Ff2ed1cc17642726%26domain%3Dwww.nbcphiladelphia.com%26relation%3Dparent.parent&amp;href=http%3A%2F%2Fwww.nbcphiladelphia.com%2Fshows%2Fwednesdays-child%2F&amp;node_type=link&amp;width=160&amp;font=arial&amp;layout=button_count&amp;colorscheme=light&amp;action=recommend&amp;show_faces=false&amp;send=false&amp;extended_social_context=false" class="fb_ltr" title="Like this content on Facebook." style="border: medium none; overflow: hidden; height: 20px; width: 114px;" name="f227f1e54f846a6" id="f42a7885621e44" scrolling="no"></iframe></span></div></div></div></td><td style="vertical-align:bottom; white-space:nowrap;zoom:1;"><div class="gig-button-container gig-button-container-count-right gig-button-container-facebook-send gig-button-container-facebook-send-count-right gig-share-button-container"><div id="shareBar-reaction2"><div fb-xfbml-state="rendered" class="fb-send fb_edge_widget_with_comment fb_iframe_widget" data-ref="s=showShareBarUI:p=facebook-send" data-href="http://www.nbcphiladelphia.com/shows/wednesdays-child/" data-colorscheme="" data-font=""><span style="height: 20px; width: 50px;"><iframe src="http://www.facebook.com/plugins/send.php?api_key=196375740321&amp;locale=en_US&amp;sdk=joey&amp;ref=s%3DshowShareBarUI%3Ap%3Dfacebook-send&amp;channel=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D24%23cb%3Df1ddb6efaf7d6d8%26origin%3Dhttp%253A%252F%252Fwww.nbcphiladelphia.com%252Ff2ed1cc17642726%26domain%3Dwww.nbcphiladelphia.com%26relation%3Dparent.parent&amp;colorscheme=light&amp;href=http%3A%2F%2Fwww.nbcphiladelphia.com%2Fshows%2Fwednesdays-child%2F&amp;extended_social_context=false" class="fb_ltr" title="Facebook Social Plugin" style="border: medium none; overflow: hidden; height: 20px; width: 50px;" name="f1f3905dd0e4016" id="f141d8a4a5319bc" scrolling="no"></iframe></span></div></div></div></td></tr></tbody></table></div></div>
+						
+
+														
+				
+		
+																																																																																																																																																																																																																																																																																													
+																		 
+	 		
+					
+				
+			
+
+						<script type="text/javascript">
+			var ua = new gigya.socialize.UserAction(); 
+			ua.setLinkBack("http://www.nbcphiladelphia.com/shows/wednesdays-child/");
+			ua.setTitle("Wednesday\'s Child");
+			ua.setDescription("14-year-old Joe is an inquisitive young man with an intriguing imagination. He loves to bake and showed off his decorating skills on a recent trip to Whipped Bakery with Vai.");
+			// Define Share Bar plugin's Parameters
+			var shareBarParams ={ 
+				userAction:ua,
+				shareButtons:[{provider:"twitter-tweet",via:"nbcphiladelphia",defaultText:"Wednesday's Child",countURL:"http://www.nbcphiladelphia.com/shows/wednesdays-child/"},{provider:"facebook-like",tooltip:"Recommend this on Facebook",action:"recommend",width:"160",font:"arial"},{provider:"facebook-send"}],
+				containerID:'shareBar' // location of the Share Bar plugin
+			}
+			var activityContext = new Object();
+			activityContext["ACTION_CONTEXT"] = "subsection_stories";
+			activityContext["ACTION_CONTENT_ID"] = "208733891";
+			activityContext["ACTION_CONTENT_TITLE"] = "Wednesday\'s Child";
+			activityContext["ACTION_CONTENT_LINK"] = "http://www.nbcphiladelphia.com/on-air/as-seen-on/Wednesday_s-Child_-Joe_Philadelphia.html";
+			activityContext["ACTION_CONTENT_DESCRIPTION"] = "14-year-old Joe is an inquisitive young man with an intriguing imagination. He loves to bake and showed off his decorating skills on a recent trip to Whipped Bakery with Vai.";
+			activityContext["ACTION_ACTIVITY_FEED_ID"] = "www.nbcphiladelphia.com_2";	
+			activityContext["USER_ACTION"] = ua;	
+					
+			// Load Share Bar plugin
+			showShareBar(shareBarParams,activityContext);					
+		</script>
+	  </div>
+</div>
+
+                  </div>    
+                   <!-- \\ share // -->
+                                    </div>
+              </div>
+             </div>
+             <div id="videoContainerRight">
+                                         <div id="showComingUp">
+                       <div class="design-begin-300">
+                                                                    <img src="http://media.nbcphiladelphia.com/designimages/show-about-this-show.gif" alt="About This Show">
+                                                                                                         </div>
+                      <div class="design-mid-300">
+                                     
+                                    
+                                                                 <ul class="comingUp">
+                        <li class="comingUpText">
+                          <p>Wednesday's Child is a weekly televised feature that helps recruit adoptive families who can provide permanent and loving homes for foster children living in Philadelphia, New Jersey and Delaware.</p>
+<p>&nbsp;</p>
+<p>Tune into NBC 10 every Wednesday at 5 p.m. and Saturdays at 9 a.m. to hear their amazing stories and learn what family means to them.</p>
+<p>&nbsp;</p>
+<p>Thank you for watching!</p>
+                        </li>
+                      </ul>
+                                                                
+                                                               </div>  
+                       <span class="design-end-300"></span>
+                    </div>
+                   
+    
+                                    <div id="ad300-250" style="float:left;width:300px;">
+                     
+
+
+   <script type="text/javascript">
+    document.write('<iframe id="nbcad_300x250_iframe" src="http://iv.doubleclick.net/adi/nbcu.lim.phi/shows-wednesdays-child;contentgroup=Wednesdays-Child;category=Wednesdays-Child;;site=phi;pid=;sect=shows;sub=wednesdays-child;sub2=;contentid=;;kw=;mtfIFPath=/includes/;tile=1;pos=1;sz=300x250,300x251;!category=refresh;refresh=true;' + (top.__nbcudigitaladops_dtparams||'') + 'zc=' + nbc.weather.adZipCode + ';ord='+randDARTNumber+'?"  width="300" height="250" frameborder="0" marginwidth="0" marginheight="0" scrolling="no">');
+          document.write('<a href="http://iv.doubleclick.net/jump/nbcu.lim.phi/shows-wednesdays-child;contentgroup=Wednesdays-Child;category=Wednesdays-Child;;site=phi;pid=;sect=shows;sub=wednesdays-child;sub2=;contentid=;;kw=;mtfIFPath=/includes/;tile=1;pos=1;sz=300x250,300x251;' + (top.__nbcudigitaladops_dtparams||'') + 'ord=123456a?" target="_blank"><img src="http://iv.doubleclick.net/ad/nbcu.lim.phi/shows-wednesdays-child;contentgroup=Wednesdays-Child;category=Wednesdays-Child;;site=phi;pid=;sect=shows;sub=wednesdays-child;sub2=;contentid=;;kw=;mtfIFPath=/includes/;tile=1;pos=1;sz=300x250,300x251;' + (top.__nbcudigitaladops_dtparams||'') + 'zc=' + nbc.weather.adZipCode + ';ord=123456a?"border="0" alt="Click Here!" /></a>');
+    document.write('</iframe>');
+  </script><iframe id="nbcad_300x250_iframe" src="http://iv.doubleclick.net/adi/nbcu.lim.phi/shows-wednesdays-child;contentgroup=Wednesdays-Child;category=Wednesdays-Child;;site=phi;pid=;sect=shows;sub=wednesdays-child;sub2=;contentid=;;kw=;mtfIFPath=/includes/;tile=1;pos=1;sz=300x250,300x251;!category=refresh;refresh=true;zc=19101;ord=945944013749?" marginwidth="0" marginheight="0" frameborder="0" height="250" scrolling="no" width="300"><a href="http://iv.doubleclick.net/jump/nbcu.lim.phi/shows-wednesdays-child;contentgroup=Wednesdays-Child;category=Wednesdays-Child;;site=phi;pid=;sect=shows;sub=wednesdays-child;sub2=;contentid=;;kw=;mtfIFPath=/includes/;tile=1;pos=1;sz=300x250,300x251;ord=123456a?" target="_blank"><img src="http://iv.doubleclick.net/ad/nbcu.lim.phi/shows-wednesdays-child;contentgroup=Wednesdays-Child;category=Wednesdays-Child;;site=phi;pid=;sect=shows;sub=wednesdays-child;sub2=;contentid=;;kw=;mtfIFPath=/includes/;tile=1;pos=1;sz=300x250,300x251;zc=19101;ord=123456a?"border="0" alt="Click Here!" /></a></iframe>
+
+                  </div>
+                              </div>
+          </div>
+          
+                      <div id="videoBottom">
+                    
+          
+          <div id="showDropList" style="display:none;">
+              <ul>
+          
+                                                  
+                                                                                       
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                </ul>
+           </div>
+              <div id="videoAdditionalLeft">
+               <div id="videoAdditionalLeftHeader">
+                  <h3 class="video_label">
+                                      <img src="http://media.nbcphiladelphia.com/designimages/show-video.gif" alt="Video">
+                                    </h3>
+                              </div>
+            
+                   <script type="text/javascript">
+                   // initiatest poll function  
+                   function processVideo() {
+                        var pagesBefore = 3;
+                        var pagesAfter = 3;
+                        var page = $("#vidPage").html();
+                        var maxPage = $("#maxVidPage").html();
+                        var type = $("#type").html();
+                        var category = $("#category").html();
+                        var sectionId = $("#section_id").html();
+                        var UrlArr = window.location.href.split('/'); // gets domain         
+                        var url = 'http://' + UrlArr[2] + '/i/dispatcher/?h=video&action=getshowcontent&page='+page+'&type='+type+'&category='+category+"&sectionId="+sectionId;
+                        getShowData(url, type, page);
+                    }   
+
+                   $(document).ready(function() {
+                       // shows comments
+                         $("#showComments").click( function() {
+                             $("#commentsContainer").slideDown("fast");
+                         });
+                      // hides comments
+                         $("#hideComments").click( function() {
+                             $("#commentsContainer").slideUp("fast");
+                         });
+                    // flips the drop down arrow
+                     $("#showDrop").click( function() {
+                       if ($("#showDropList").is(":hidden")) {
+                         $("#showDropList").slideDown("fast");
+                         $("#showDropArrow").removeClass('showDropArrowDown');
+                         $("#showDropArrow").addClass('showDropArrowUp');
+                       } else {
+                         $("#showDropList").slideUp("fast");
+                         $("#showDropArrow").removeClass('showDropArrowUp');
+                         $("#showDropArrow").addClass('showDropArrowDown');
+                       }
+                        });
+                    });
+
+                 function closeDropDown() {
+                      $("#showDropList").slideUp("fast");
+                      $("#showDropArrow").removeClass('showDropArrowUp');
+                      $("#showDropArrow").addClass('showDropArrowDown');
+                 }
+
+                   
+                  function updateVideo(page, category){
+                   if(document.getElementById('dropDownLabel')){
+                      var lbl = document.getElementById('dropDownLabel').innerHTML;
+                      U.log("label:"+lbl+" category:"+category);
+                      if( lbl != 'All' && category == '' ){                        
+                        document.getElementById('category').innerHTML = lbl;
+                        category = lbl;
+                      }
+                    
+                      if(category == ''){
+                        category = 'All';
+                      }
+                    
+                      if( category != 'All' ){                          
+                        document.getElementById('displayPages').innerHTML = false;
+                        document.getElementById('dropDownLabel').innerHTML = category;
+                        document.getElementById('category').innerHTML = category;
+                      } else {
+                        document.getElementById('displayPages').innerHTML = true;
+                        document.getElementById('dropDownLabel').innerHTML = 'All';
+                        document.getElementById('category').innerHTML = '';
+                      }
+                    }
+                    
+                    if( page == 'next'){
+                      var page = document.getElementById('vidPage').innerHTML;
+                      page = parseInt(page)+1;
+                      document.getElementById('vidPage').innerHTML = page;
+                    }
+                    else if (page == 'prev'){
+                      var page = document.getElementById('vidPage').innerHTML;
+                      page = parseInt(page) - 1;
+                      document.getElementById('vidPage').innerHTML = page;
+                    }
+                    else {
+                      document.getElementById('vidPage').innerHTML = page;                          
+                    }
+                    document.getElementById('type').innerHTML = 'video';
+                    closeDropDown();
+                  } 
+                      
+                  function updateNonVideo(page){   
+                    document.getElementById('category').innerHTML = "";                   
+                    if( page == 'next'){
+                      var page = document.getElementById('nonVidPage').innerHTML;
+                      page = parseInt(page)+1;
+                      document.getElementById('nonVidPage').innerHTML = page;
+                    }
+                    else if (page == 'prev'){
+                      var page = document.getElementById('nonVidPage').innerHTML;
+                      page = parseInt(page) - 1;
+                      document.getElementById('nonVidPage').innerHTML = page;
+                    }
+                    else {
+                      document.getElementById('nonVidPage').innerHTML = page;                          
+                    }
+                    document.getElementById('type').innerHTML = '';
+                  }
+
+
+                  // initiatest poll function  
+                    $('a.video').click(function(event) {
+                       var sortType = "";
+                       sortType = $("#filter").html();
+                       var section = $("#searchSection").html();
+                       var maxItems = $("#maxItems").html();
+                       maxItems = trim(maxItems);
+                       var showPage = $("#showPage").html();
+                       var UrlArr = window.location.href.split('/'); // gets domain         
+                       var url = 'http://' + UrlArr[2] + '/i/dispatcher/?command=GetVideo&action=getcontent&section='+section+'&sort='+sortType.toLowerCase()+'&items='+maxItems+'&showPage='+showPage;
+                       getData(url);  
+                       $("#currFilter span").removeClass('dd-interesting');
+                       $("#currFilter span").removeClass('dd-recent');
+                       $("#currFilter span").addClass('dd-' + sortType);      
+                    })   
+                  
+                  
+                  $("#subnav_filter").change(function() {
+                   $(this).find("option:selected").each(function () {
+                      var sortType ="";
+                      sortType = $(this).text();
+                      var section = $("#searchSection").html();
+                      var maxItems = $("#maxItems").html();
+                      maxItems = trim(maxItems);
+                      var showPage = $("#showPage").html();
+                      var UrlArr = window.location.href.split('/'); // gets domain          
+                    var url = 'http://' + UrlArr[2] + '/i/dispatcher/?command=GetVideo&action=getcontent&section='+section+'&sort='+sortType.toLowerCase()+'&items='+maxItems+'&showPage='+showPage;
+                    getData(url);
+                   })
+                  })    
+                
+                       // initiatest poll function  
+                  function articleProcess() {
+                       var page = $("#nonVidPage").html();
+                       var type = $("#type").html();
+                       var maxPage =$("#maxNonVidPage").html();
+                       var sectionId = $("#section_id").html();
+                       var UrlArr = window.location.href.split('/'); // gets domain         
+                       var url = 'http://' + UrlArr[2] + '/i/dispatcher/?h=video&action=getshowcontent&page='+page+'&type='+type+'&sectionId='+sectionId;
+                       getShowData(url, type, page);  
+                       
+                       page = parseInt(page);
+                       if( page == 1 ){           
+                         document.getElementById('page_nonvideo_prev').style.display = "none";
+                       } else {
+                         document.getElementById('page_nonvideo_prev').style.display = "block";
+                       }
+                       
+                       //next page link
+                       if( page == maxPage || maxPage < page){
+                         document.getElementById('page_nonvideo_next').style.display = "none";
+                       } else {
+                         document.getElementById('page_nonvideo_next').style.display = "block";
+                       }
+                   }  
+                
+                function setFilter2(filval) {
+                  filter = filval;
+                  $("filter").html(filter);
+                    var section = $("#searchSection").html();
+                    var maxItems = $("#maxItems").html();
+                    var showPage = $("#showPage").html();
+                    maxItems = trim(maxItems);
+                    var UrlArr = window.location.href.split('/'); // gets domain          
+                    var url = 'http://' + UrlArr[2] + '/i/dispatcher/?command=GetVideo&action=getcontent&section='+section+'&sort='+filter+'&items='+maxItems+'&showPage='+showPage;
+                    getData(url);
+                    runSubjax();
+                    $("#currFilter span").removeClass('dd-interesting');
+                    $("#currFilter span").removeClass('dd-recent');
+                    $("#currFilter span").addClass('dd-' + filter);
+                }
+                  
+                  function getData(url){
+                    jQuery.ajax({
+                         type: "GET",
+                         url: url,
+                         dataType: "html",
+                         success: function(data) {
+                          $("#video_additional").html(data);
+                         }
+                       });      
+                       runSubjax();
+                  }
+                  
+                  function getShowData(url, type, currentPage){
+                    var result = "";
+                    jQuery.ajax({
+                         type: "GET",
+                         url: url,
+                         dataType: "html",
+                         success: function(data) {
+                           result = data;
+                           
+                           if (type == 'video'){
+                              var dataSplit = result.split("|||")
+                               var estimatedPages = dataSplit[0];
+                               $("#video_additional").html(dataSplit[1]);
+                             
+                               currentPage = parseInt(currentPage); 
+                             
+                               //previous page link
+                               if( currentPage == 1 ){
+                                 document.getElementById('page_prev').style.display = "none";
+                               } else {
+                                 document.getElementById('page_prev').style.display = "block";
+                               }
+                             
+                               //next page link
+                               estimatedPages = parseInt(trim(estimatedPages));
+                               if( currentPage == estimatedPages || estimatedPages == 0 ){
+                                 document.getElementById('page_next').style.display = "none";
+                               } else {
+                                 document.getElementById('page_next').style.display = "block";
+                               }
+                            } else {
+                              var dataSplit = result.split("|||")
+                               var estimatedPages = dataSplit[0];
+                               $("#spotlightContent").html(dataSplit[1]);
+                             
+                               currentPage = parseInt(currentPage); 
+                            }
+                         }
+                     });  
+                  }
+                  
+                  function trim(stringToTrim) {
+                  return stringToTrim.replace(/^\s+|\s+$/g,"");
+                } 
+                </script>
+                    <div id="section_id" style="display:none">530307</div>
+                    <div id="maxVidPage" style="display:none">25</div>
+                    <div id="vidPage" style="display:none">1</div>
+                    <div id="maxNonVidPage" style="display:none">2</div>
+                    <div id="nonVidPage" style="display:none">1</div>
+                    <div id="category" style="display:none"></div>
+                    <div id="type" style="display:none">video</div>
+                    <div id="displayPages" style="display:none">true</div>
+                    <div id="offleads">
+                                        <div id="video_additional"> 
+                                                                      
+
+ 
+
+
+
+            
+                     
+
+
+
+
+
+                
+                    	                 			             
+                                                  	      	      	      	                                                                                                                                                                                                                                            	     	               	               	               	                
+	            		   		
+		                               	                                     	                                                                                                 
+                               
+                              
+                                        
+
+
+
+ 
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+            
+
+           
+                                                                                                                                                                                                                                                                                                                                                                                                                  
+       
+
+
+
+  
+    
+    
+   
+
+
+
+
+
+
+               
+  
+       	  	  		            	  	  	  	                                                  
+  
+
+ 
+
+
+  
+
+  
+
+
+ 
+          
+
+  
+        
+
+         
+
+  
+                
+  
+  
+             
+
+
+
+                        
+
+
+
+                        
+
+
+
+                        
+
+
+                                                
+                                          <div class="story as_seen_on video_release">
+                                                                                        
+  
+
+  
+
+
+                
+                    	                 			             
+                                                  	      	      	      	                                                                                                                                                                                                                                            	     	               	               	               	                
+	            		   		
+		                               	                                     	                                                                                                 
+                               
+                              
+                                        
+
+
+
+
+  
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+               
+  
+       	  	  		            	  	  	  	                                                  
+  
+
+ 
+
+
+   <div class="dropshadow thumbImage">
+        <span class="bordermask"><a href="http://www.nbcphiladelphia.com/on-air/as-seen-on/Wednesday_s-Child_-Joe_Philadelphia.html" title="Wednesday's Child: Joe"><img style="margin-left:-17px" src="http://media.nbcphiladelphia.com/images/154*90/wednesdays-child-joe-523.jpg" alt="Wednesday's Child: Joe" height="90" width="154"></a></span>
+      </div>
+
+  
+                                            <h4 class="title"><a href="http://www.nbcphiladelphia.com/on-air/as-seen-on/Wednesday_s-Child_-Joe_Philadelphia.html" title="Wednesday's Child: Joe">Wednesday's Child: Joe</a></h4>
+                                          </div>
+                                                                
+
+ 
+
+
+
+            
+                     
+
+
+
+
+
+                
+                    	                 			             
+                                                  	      	      	      	                                                                                                                                                                                                                                            	     	               	               	               	                
+	            		   		
+		                               	                                     	                                                                                                 
+                               
+                              
+                                        
+
+
+
+ 
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+            
+
+           
+                                                                                                                                                                                                                                                                                                                                                                                                                  
+       
+
+
+
+  
+    
+    
+   
+
+
+
+
+
+
+               
+  
+       	  	  		            	  	  	  	                                                  
+  
+
+ 
+
+
+  
+
+  
+
+
+ 
+          
+
+  
+        
+
+         
+
+  
+                
+  
+  
+             
+
+
+
+                        
+
+
+
+                        
+
+
+
+                        
+
+
+                                                
+                                          <div class="story community video_release">
+                                                                                        
+  
+
+  
+
+
+                
+                    	                 			             
+                                                  	      	      	      	                                                                                                                                                                                                                                            	     	               	               	               	                
+	            		   		
+		                               	                                     	                                                                                                 
+                               
+                              
+                                        
+
+
+
+
+  
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+               
+  
+       	  	  		            	  	  	  	                                                  
+  
+
+ 
+
+
+   <div class="dropshadow thumbImage">
+        <span class="bordermask"><a href="http://www.nbcphiladelphia.com/on-air/community/Wednesday_s-Child_-Lakeisha_Philadelphia.html" title="Wednesday's Child: Lakeisha"><img style="margin-left:-20px" src="http://media.nbcphiladelphia.com/images/160*90/wednesdays-child-lakesha-0515.jpg" alt="Wednesday's Child: Lakeisha" height="90" width="160"></a></span>
+      </div>
+
+  
+                                            <h4 class="title"><a href="http://www.nbcphiladelphia.com/on-air/community/Wednesday_s-Child_-Lakeisha_Philadelphia.html" title="Wednesday's Child: Lakeisha">Wednesday's Child: Lakeisha</a></h4>
+                                          </div>
+                                                                
+
+ 
+
+
+
+            
+                     
+
+
+
+
+
+                
+                    	                 			             
+                                                  	      	      	      	                                                                                                                                                                                                                                            	     	               	               	               	                
+	            		   		
+		                               	                                     	                                                                                                 
+                               
+                              
+                                        
+
+
+
+ 
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+            
+
+           
+                                                                                                                                                                                                                                                                                                                                                                                                                  
+       
+
+
+
+  
+    
+    
+   
+
+
+
+
+
+
+               
+  
+       	  	  		            	  	  	  	                                                  
+  
+
+ 
+
+
+  
+
+  
+
+
+ 
+          
+
+  
+        
+
+         
+
+  
+                
+  
+  
+             
+
+
+
+                        
+
+
+
+                        
+
+
+
+                        
+
+
+                                                
+                                          <div class="story as_seen_on video_release">
+                                                                                        
+  
+
+  
+
+
+                
+                    	                 			             
+                                                  	      	      	      	                                                                                                                                                                                                                                            	     	               	               	               	                
+	            		   		
+		                               	                                     	                                                                                                 
+                               
+                              
+                                        
+
+
+
+
+  
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+               
+  
+       	  	  		            	  	  	  	                                                  
+  
+
+ 
+
+
+   <div class="dropshadow thumbImage">
+        <span class="bordermask"><a href="http://www.nbcphiladelphia.com/on-air/as-seen-on/Wednesday_s-Child_-Quason-and-Daequan_Philadelphia.html" title="Wednesday's Child: Quason and Daequan"><img style="margin-left:-22px" src="http://media.nbcphiladelphia.com/images/164*90/wednesdayschildquasondaequan.jpg" alt="Wednesday's Child: Quason and Daequan" height="90" width="164"></a></span>
+      </div>
+
+  
+                                            <h4 class="title"><a href="http://www.nbcphiladelphia.com/on-air/as-seen-on/Wednesday_s-Child_-Quason-and-Daequan_Philadelphia.html" title="Wednesday's Child: Quason and Daequan">Wednesday's Child: Quason and Daequan</a></h4>
+                                          </div>
+                                                                
+
+ 
+
+
+
+            
+                     
+
+
+
+
+
+                
+                    	                 			             
+                                                  	      	      	      	                                                                                                                                                                                                                                            	     	               	               	               	                
+	            		   		
+		                               	                                     	                                                                                                 
+                               
+                              
+                                        
+
+
+
+ 
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+            
+
+           
+                                                                                                                                                                                                                                                                                                                                                                                                                  
+       
+
+
+
+  
+    
+    
+   
+
+
+
+
+
+
+               
+  
+       	  	  		            	  	  	  	                                                  
+  
+
+ 
+
+
+  
+
+  
+
+
+ 
+          
+
+  
+        
+
+         
+
+  
+                
+  
+  
+             
+
+
+
+                        
+
+
+
+                        
+
+
+
+                        
+
+
+                                                
+                                          <div class="story as_seen_on video_release">
+                                                                                        
+  
+
+  
+
+
+                
+                    	                 			             
+                                                  	      	      	      	                                                                                                                                                                                                                                            	     	               	               	               	                
+	            		   		
+		                               	                                     	                                                                                                 
+                               
+                              
+                                        
+
+
+
+
+  
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+               
+  
+       	  	  		            	  	  	  	                                                  
+  
+
+ 
+
+
+   <div class="dropshadow thumbImage">
+        <span class="bordermask"><a href="http://www.nbcphiladelphia.com/on-air/as-seen-on/Wednesday_s-Child_-Tatum_Philadelphia.html" title="Wednesday's Child: Tatum"><img style="margin-left:-20px" src="http://media.nbcphiladelphia.com/images/160*90/Wednesdays-Child-Tatum-0502.jpg" alt="Wednesday's Child: Tatum" height="90" width="160"></a></span>
+      </div>
+
+  
+                                            <h4 class="title"><a href="http://www.nbcphiladelphia.com/on-air/as-seen-on/Wednesday_s-Child_-Tatum_Philadelphia.html" title="Wednesday's Child: Tatum">Wednesday's Child: Tatum</a></h4>
+                                          </div>
+                                                               </div>
+                      <div id="view_all_link" style="display:block">                                   
+                                                    <span id="page_prev" style="display:none"><a href="javascript:void(0);" class="showvideo" onclick="updateVideo('prev','');processVideo();"><span class="nocss">Prev</span></a></span>                          
+                          <span id="page_next"><a href="javascript:void(0);" class="showvideo" onclick="updateVideo('next','');processVideo();"><span class="nocss">Next</span></a></span>
+                      </div>
+                      
+                    </div>
+               </div>
+               <div id="contentAdditionalRight">
+               <h3 class="spotlight">
+                              <img src="http://media.nbcphiladelphia.com/designimages/show-spotlight.gif" alt="Spotlight">
+                              </h3>          
+                                  <div id="spotlightContent">
+                                    
+
+ 
+
+
+
+            
+               
+
+
+
+
+
+                
+                    	                 			             
+                                                  	      	      	      	                                                                                                                                                                                                                                            	     	               	               	               	                
+	            		   		
+		                               	                                     	                                                                             
+
+
+
+ 
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+            
+
+          
+                                                                                                                                                                                                                                                                                                                                                                                                                  
+                 
+
+
+
+  
+    
+    
+   
+
+
+
+
+
+
+               
+  
+       	  	  		            	  	  	  	                                                  
+  
+
+ 
+
+
+  
+
+  
+
+
+ 
+          
+
+  
+        
+
+         
+
+  
+                
+  
+  
+             
+    
+                                                                                                                                                                                                                                                                                                                                                                                                                            
+
+
+                        
+
+
+
+                        
+
+
+
+                        
+
+
+                   <div class="story wednesdays_child article">
+                                              
+  
+
+  
+
+
+                
+                    	                 			             
+                                                  	      	      	      	                                                                                                                                                                                                                                            	     	               	               	               	                
+	            		   		
+		                               	                                     	                                                                             
+
+
+
+
+  
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+               
+  
+       	  	  		            	  	  	  	                                                  
+  
+
+ 
+
+
+   <div class="dropshadow thumbImage">
+        <span class="bordermask"><a href="http://www.nbcphiladelphia.com/shows/wednesdays-child/Wednesdays-Child-Meet-Danny-155513775.html" title="Wednesday's Child: Meet Danny!"><img style="margin-left:-20px" src="http://media.nbcphiladelphia.com/images/160*90/Danny3.jpg" alt="Wednesday's Child: Meet Danny!" height="90" width="160"></a></span>
+      </div>
+
+  
+                       <h4 class="title"><a href="http://www.nbcphiladelphia.com/shows/wednesdays-child/Wednesdays-Child-Meet-Danny-155513775.html" title="Wednesday's Child: Meet Danny!">Wednesday's Child: Meet Danny!</a></h4>
+                   </div>
+                                    
+
+ 
+
+
+
+            
+                     
+
+
+
+
+
+                
+                    	                 			             
+                                                  	      	      	      	                                                                                                                                                                                                                                            	     	               	               	               	                
+	            		   		
+		                               	                                     	                                                                             
+
+
+
+ 
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+            
+
+          
+                                                                                                                                                                                                                                                                                                                                                                                                                  
+                 
+
+
+
+  
+    
+    
+   
+
+
+
+
+
+
+               
+  
+       	  	  		            	  	  	  	                                                  
+  
+
+ 
+
+
+  
+
+  
+
+
+ 
+          
+
+  
+        
+
+         
+
+  
+                
+  
+  
+             
+    
+                                                                                                                                                                                                                                                                                                                                                                                                                            
+
+
+                        
+
+
+
+                        
+
+
+
+                        
+
+
+                   <div class="story wednesdays_child article">
+                                              
+  
+
+  
+
+
+                
+                    	                 			             
+                                                  	      	      	      	                                                                                                                                                                                                                                            	     	               	               	               	                
+	            		   		
+		                               	                                     	                                                                             
+
+
+
+
+  
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+               
+  
+       	  	  		            	  	  	  	                                                  
+  
+
+ 
+
+
+   <div class="dropshadow thumbImage">
+        <span class="bordermask"><a href="http://www.nbcphiladelphia.com/shows/wednesdays-child/Meet-Timar-141645963.html" title="Meet Timar"><img style="margin-left:-20px" src="http://media.nbcphiladelphia.com/images/160*90/Timar.jpg" alt="Meet Timar" height="90" width="160"></a></span>
+      </div>
+
+  
+                       <h4 class="title"><a href="http://www.nbcphiladelphia.com/shows/wednesdays-child/Meet-Timar-141645963.html" title="Meet Timar">Meet Timar</a></h4>
+                   </div>
+                                   </div>
+                 <div id="view_more_spotlight">
+                   <span id="page_nonvideo_prev" style="display:none"><a href="javascript:void(0);" class="shownonvideo" onclick="updateNonVideo('prev');articleProcess();">Prev</a></span>
+                   <span id="page_nonvideo_next"><a href="javascript:void(0);" class="shownonvideo" onclick="updateNonVideo('next');articleProcess();">Next</a></span>
+                 </div>
+               </div>
+               
+             </div>
+         </div>
+        </div>
+<div id="secondary">
+  
+
+
+		  
+  
+
+
+
+
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+    
+    
+
+
+
+
+
+
+
+
+  
+</div>
+
+</div>
+<div id="showFooter">
+
+
+
+  
+<div id="footer">
+  <div id="footerDiv">
+		<div id="footerLinks">
+       <div class="footCol">
+         <ul class="news">
+           <li class="header"><a href="/news/" name="&amp;lpos=footer&amp;lid=news">News</a></li>
+                                      <li><a href="/news/local/" title="Local" name="&amp;lpos=footer&amp;lid=local">Local</a></li>
+                          <li><a href="/news/national-international/" title="U.S. &amp; World" name="&amp;lpos=footer&amp;lid=u.s. &amp; world">U.S. &amp; World</a></li>
+                          <li><a href="/news/health/" title="Health" name="&amp;lpos=footer&amp;lid=health">Health</a></li>
+                          <li><a href="/news/tech/" title="Tech" name="&amp;lpos=footer&amp;lid=tech">Tech</a></li>
+                          <li><a href="/weather/" title="Weather" name="&amp;lpos=footer&amp;lid=weather">Weather</a></li>
+                          <li><a href="/traffic/" title="Traffic" name="&amp;lpos=footer&amp;lid=traffic">Traffic</a></li>
+                                             </ul>
+       </div>
+			 <div class="footCol">
+         <ul class="weather">
+					<li class="header"><a href="/weather/" name="&amp;lpos=footer&amp;lid=weather">Weather</a></li>
+                        							<li><a href="/weather/" title="Forecast" name="&amp;lpos=footer&amp;lid=forecast">Forecast</a></li>
+            							<li><a href="/weather/maps/" title="Maps &amp; Radar" name="&amp;lpos=footer&amp;lid=maps &amp; radar">Maps &amp; Radar</a></li>
+            							<li><a href="/weather/severe-weather-alerts/" title="Severe Weather Alerts" name="&amp;lpos=footer&amp;lid=severe weather alerts">Severe Weather Alerts</a></li>
+            							<li><a href="/weather/school-closings/" title="School Closing Alerts" name="&amp;lpos=footer&amp;lid=school closing alerts">School Closing Alerts</a></li>
+            							<li><a href="/weather/stories/" title="Weather Stories" name="&amp;lpos=footer&amp;lid=weather stories">Weather Stories</a></li>
+                                             </ul>
+       </div>
+       <div class="footCol">
+         <ul class="entertainment">
+          <li class="header"><a href="/entertainment/" name="&amp;lpos=footer&amp;lid=entertainment">Entertainment</a></li>
+                                      <li><a href="/entertainment/entertainment-news" title="Entertainment News" name="&amp;lpos=footer&amp;lid=entertainment news">Entertainment News</a></li>
+                          <li><a href="/entertainment/the-scene" title="The Scene" name="&amp;lpos=footer&amp;lid=the scene">The Scene</a></li>
+                          <li><a href="/events" title="Events" name="&amp;lpos=footer&amp;lid=events">Events</a></li>
+                                             </ul>
+       </div>
+			 <div class="footCol">
+				<ul class="contact-us">
+					<li class="header"><a href="/contact-us/" name="&amp;lpos=footer&amp;lid=contact us">Contact Us</a></li>
+																<li><a href="/contact-us/about-us/" title="About Us" name="&amp;lpos=footer&amp;lid=about us">About Us</a></li>
+											<li><a href="/contact-us/community/" title="Community" name="&amp;lpos=footer&amp;lid=community">Community</a></li>
+											<li><a href="/contact-us/tv-listings/" title="TV Listings" name="&amp;lpos=footer&amp;lid=tv listings">TV Listings</a></li>
+																									         </ul>
+       </div> 
+			 <div class="footCol last">
+				<ul class="traffic">
+         <li class="header"><a href="/traffic/" name="&amp;lpos=footer&amp;lid=traffic">Traffic</a></li>
+                                                         </ul>
+			 </div>
+     </div>
+     <div id="footerLogo">
+			<div class="right">
+  			<div id="leftShare">
+          <ul>
+                                    <li><a href="http://www.facebook.com/nbcphiladelphia" id="fb_footer"></a></li>
+            <li><a href="http://www.twitter.com/nbcphiladelphia" id="tw_footer"></a></li>
+            <li><a href="/mobile/" id="ph_footer" name="&amp;lpos=footer&amp;lid=mobile"></a></li>
+            <li><a href="/rss/" id="rss_footer" name="&amp;lpos=footer&amp;lid=rss"></a></li>
+            <li style="border:0px;"><a href="/newsletters/" id="em_footer" name="&amp;lpos=footer&amp;lid=newsletters"></a></li>
+          </ul>  
+          </div>
+  			<div class="leftTerms about">
+					<a href="/send-feedback/" name="&amp;lpos=footer&amp;lid=send feedback">Send Feedback</a><a>|</a><a href="/terms/" name="&amp;lpos=footer&amp;lid=terms of service">Terms Of Service</a><a>|</a><a href="/privacy/" name="&amp;lpos=footer&amp;lid=privacy policy">Privacy Policy</a>
+				</div>
+			</div>
+  		<div class="left">
+  			<div id="leftCopy">
+  				© 2013 NBCUniversal Media, LLC. All rights reserved. Portions by Broadcast Interactive Media.
+  			</div>
+  			<br>
+          <div class="leftTerms"><a href="http://corporate.comcast.com/news-information/nbcuniversal-transaction/independent-programming" target="_blank">FCC Independent Programming Report</a></div>
+          <div class="leftTerms"><a href="http://corporate.comcast.com/news-information/nbcuniversal-transaction/news-and-information-programming">FCC News and Information Programming Report</a></div>
+          <div class="leftTerms" style="width:358px;"><a href="/non-profit-reports/NBC-Non-Profit-News-Partnership-Reports-138336674.html" name="&amp;lpos=footer&amp;lid=non-profit news partnership reports">NBC Non-Profit News Partnership Reports</a></div>
+          
+                              <div class="leftTerms"><a href="https://stations.fcc.gov/station-profile/wcau" target="_blank">WCAU Public Inspection File</a></div>
+                    <a id="_bapw-link" class="leftTerms" style="cursor:pointer !important;text-decoration:none !important;float:left;margin-top:10px;color: #B6D4EE;font: 11px arial;"><img src="http://cdn.betrad.com/pub/icon1.png" id="_bapw-icon" style="display:inline !important;vertical-align:middle !important"> <span style="vertical-align:middle !important">AdChoices</span></a>
+          <script>(function(){var e=document,b,a=(e.location.protocol=="https:"?"https":"http"),c=(a=="https"?"https://info.evidon.com/c/betrad/pub/":"http://cdn.betrad.com/pub/");e.getElementById("_bapw-icon").src=c+"icon1.png";e.getElementById("_bapw-link").onclick=function(){var f=this;function d(i,l){var j=e.getElementsByTagName("head")[0]||e.documentElement,h=false,g=e.createElement("script");function k(){g.onload=g.onreadystatechange=null;j.removeChild(g);l()}g.src=i;g.onreadystatechange=function(){if(!h&&(this.readyState=="loaded"||this.readyState=="complete")){h=true;k()}};g.onload=k;j.insertBefore(g,j.firstChild)}this.onclick="return false";d(a+"://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js",function(){d(c+"pub1.js",function(){BAPW.i(f,{pid:187,ocid:908},false)})});return false};b=new Image();b.src=a+"://l.betrad.com/pub/p.gif?pid=187&ocid=908&ii=1&r="+Math.random()}());</script>
+       </div>
+		 </div>
+  </div>
+</div>
+
+
+</div>
+ 
+
+
+
+<script language="Javascript">var js="0.0";</script><script language="Javascript1.0">js="1.0";</script><script language="Javascript1.1">js="1.1";</script><script language="Javascript1.2">js="1.2";</script><script language="Javascript1.3">js="1.3";</script><script language="Javascript1.4">js="1.4";</script><script language="Javascript1.5">js="1.5";</script><script language="Javascript1.6">js="1.6";</script><script language="Javascript1.7">js="1.7";</script><script language="Javascript1.8">js="1.8";</script><script language="Javascript1.9">js="1.9";</script><script language="javascript1.1" type="text/javascript"> 
+<!-- 
+var bb=new Image();var _ti=910;var _q="";var na=(navigator.appName=="Netscape");var ns=(navigator.appName.substring(0,9)=="Microsoft");var _qDate=new Date();var _r=(document.referrer.indexOf(getdomain(location))>-1?"":document.referrer);_q+="&5="+parseInt(_qDate.getTimezoneOffset());_q+="&35="+parseInt(_qDate.toString().indexOf("aylight")>-1?1:0);_q+="&6=900530307";_q+="&7=530307";_q+="&8="+encodeURIComponent(document.location);_q+="&9="+encodeURIComponent(_r);_q+="&10="+encodeURIComponent(document.title);_q+="&11="+encodeURIComponent(navigator.userAgent);_q+="&12="+encodeURIComponent((na?navigator.language:navigator.userLanguage));_q+="&13="+((navigator.javaEnabled()?'1':'0'));_q+="&14="+encodeURIComponent(js);if(document.cookie.indexOf("cc")==-1)document.cookie="cc=t;";_q+="&15="+((document.cookie.indexOf("cc")==-1)?"0":"1");_q+="&16="+encodeURIComponent((screen.width+'x'+screen.height));_q+="&17="+encodeURIComponent(((ns)?screen.colorDepth:screen.pixelDepth));_q+="&18="+encodeURIComponent(Math.random());_q+="&19="+_ti;bb.src="http://s.clickability.com/s?"+_q;
+function getdomain(a){var i=a.host.indexOf(":");return (i>=0)?a.host.substring(0,i):a.host;}if(self['setupalready']){var dosetup = false;alert('There are two $imware.tracker calls on this page. Please alert Client Services');}else{var dosetup = true;var hasonload=false;}//-->
+</script><noscript>
+<img width="1" height="1" src="http://s.clickability.com/s?19=990&14=0&6=900530307&7=530307&25=0&18=0.23621973909078364">
+</noscript>
+
+
+                            
+<!-- FULL URI | /shows/wednesdays-child/ -->
+<!-- SiteCatalyst code version: H.2.
+Copyright 1997-2008 Omniture, Inc. More info available at
+http://www.omniture.com -->
+<script language="JavaScript">
+s_linkInternalFilters="javascript:,nbcphiladelphia.com,media.nbcphiladelphia.com,events.nbcphiladelphia.com,tsn.nbcphiladelphia.com,autos.nbcphiladelphia.com";
+var s_account="nbcuglobal,nbculimdivisionprod,nbculimphiladelphiaprod";
+var s_prop8 ="nbc";
+var s_prop9 ="WCAU";
+nbc.callLetters = "WCAU";
+nbc.contentType = "";
+document.write('<s'+'cript src="http://www.nbcphiladelphia.com/includes/s_code.js"></s'+'cript>');
+</script><script src="http://www.nbcphiladelphia.com/includes/s_code.js"></script>
+   <script language="JavaScript"><!--
+   /* You may give each page an identifying name, server, and channel on
+   the next lines. */
+   s.pageName=document.title.replace(/^\s+|\n+|\t+|\s+$/g,''); // can be hard-coded, or set to equal document.title to read the title tag
+   s.server=""; // 
+   s.channel="shows"; // Site Section
+   s.pageType=""; // used for 404 Error message page only
+   s.prop1=""; // Registration LX TV future use
+   s.prop3=""; // Content Type
+   s.prop4="wednesdays-child"; // Sub-Section
+   s.prop5=""; // Sub-Sub Section
+   s.prop7=""; // Content Source
+   s.prop10="NBC 10 Philadelphia"; // Site
+
+      
+      
+       s.prop54 = document.title.replace(/^\s+|\n+|\t+|\s+$/g,'');
+      /* E-commerce Variables */
+   s.events=""; // filled with an event # as needed - example event1, or event19
+   
+   s.eVar1 = 'Non-Registered'; // Registration
+   
+      
+   s.eVar2="";  // User Level
+   s.eVar3="";  // User_ID
+   s.eVar4="";  // AB Testing only
+   s.eVar5="";  // Multivariate Testing only
+   
+   s.eVar10="";  // Share Text
+   s.eVar11="";  // Share Slideshow
+   
+   s.eVar30 = ""; // dominant mood of a page
+   s.eVar30 = ""; // dominant mood of a page
+   s.eVar31 = ""; // dominant mood for header status 
+   s.eVar34 = "";  // age range  
+   s.eVar35 = "";  // gender
+   s.eVar41 = ""; // content id #
+   
+   if (typeof user != 'undefined') {
+         if (user.isLoggedIn()) {
+             s.eVar1 = 'Registered';
+   
+             if (user.isFacebookUser()) {
+                 s.eVar1 = 'Registered-Facebook';
+             }
+   
+           var ageRangeOmn = NBC_UserOverlay.convertAgeRange(parseInt(user.userAge));
+    nbc.omniture.ageRange = ageRangeOmn;
+    nbc.omniture.userGender = NBC_UserOverlay.convertGender(user.userGender);
+    nbc.omniture.postalCode = user.postalCode;
+   
+             s.eVar34 = nbc.omniture.ageRange; 
+             s.eVar35 = nbc.omniture.userGender;
+         }
+   }
+   
+   /************* THE GOODS TRACKING **************/
+   function theGoodsExit(link, clicksource){
+      //clicksource: navbar or module
+      //link: target url
+      //sitesection: city site section/subsection exited from
+      //exitpage: exit page name or url
+      
+      sitesection="shows"+" "+"wednesdays-child";
+      
+      //adding this in for allison
+      if(sitesection==" "){
+         sitesection="home";
+      }
+      
+      exitpage=location.href;
+      //s.tl(this,'o',s.prop10 +' : Nav Click : '+link+ ' : Click Source : '+clicksource + ' : Site Section : '+sitesection + ' : Exit Page : '+exitpage);
+        s.tl(this,'o',s.prop10 +': '+link+ ':'+clicksource + ':'+sitesection + ':'+exitpage);
+   }
+      
+   
+   /************* NAVIGATION TRACKING **************/
+   
+   function omnitureTrackNavBar(city, section, button) {
+		nbcu.un = nbcu_account;
+		nbcu.tl(this,'o',' link tracking');
+		s.un = s_account;
+		s.linkTrackVars = 'prop55';
+		s.prop55 = city+ ':' + section + ':' + button; 
+		s.tl(this,"o","Track Nav Bar");
+	}
+	
+   /************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+   var s_code=s.t();if(s_code)document.write(s_code)//--></script>
+   <script language="JavaScript"><!--
+   if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'!-'+'-')
+   //--></script><!--/DO NOT REMOVE/-->
+   <!-- End SiteCatalyst code version: H.2. -->
+      
+   
+
+
+
+
+<style type="text/css">
+	#BF_WIDGET_1{overflow:hidden;}
+</style>
+
+  
+<script src="http://www.nbcudigitaladops.com/hosted/global.js"></script><script src="//www.nbcudigitaladops.com/hosted/jscript/nbcphiladelphia_com.js"></script><script>_qoptions = {    qacct:"p-9eJ8k4iSzux46"};_qfilter = ['9218','316','317','318','319','320','322','325','326','330','331','332','333','334','335','336','337','376','377','378','381','383','384','1914','1915','1953','1956','1957','1960','1964','1997','2005','2006','13267','13268','13269','14057','14058','14059','14060','15755','Q_15755','q_15755','q_325','q_377','q_383','q_378'];document.write('<scr'+'ipt type="text/javascript" src="//pixel.quantserve.com/seg/'+_qoptions.qacct+'.js"></scr'+'ipt>');function _quantgc(n) {        var c=document.cookie;if(!c)return '';        var i=c.indexOf(n+"=");if(-1==i)return '';        var len=i+n.length+1;        var end=c.indexOf(";", len);        return c.substring(len,end<0?c.length:end);};var quantSegs = "";var _qsegs = _quantgc('__qseg').split('|');for(var i=0;i<_qsegs.length;i++){  var qArr=_qsegs[i].split("_");  if (qArr.length>1) {     for(var j=0;j<_qfilter.length;j++){      if (qArr[1]==_qfilter[j]){        quantSegs += ("qsg=" + qArr[1] + ";");        break;      }    }  }}if(top.__nbcudigitaladops_header){  top.__nbcudigitaladops_header.dtprm(quantSegs);}</script><script type="text/javascript" src="//pixel.quantserve.com/seg/p-9eJ8k4iSzux46.js"></script><!-- BEGIN Krux Controltag for LIM --><script class="kxct" data-id="Hhr_tYbL" data-version="async:1.6" type="text/javascript">  window.Krux||((Krux=function(){Krux.q.push(arguments)}).q=[]);  (function(){    var k=document.createElement('script');k.type='text/javascript';k.async=true;var m,src=(m=location.href.match(/\bkxsrc=([^&]+)\b/))&&decodeURIComponent(m[1]);    k.src=src||(location.protocol==='https:'?'https:':'http:')+'//cdn.krxd.net/controltag?confid=Hhr_tYbL';    var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(k,s);  })();</script><!-- END Krux Controltag --><script>var __referreradops={init:function(){if(!top.__nbcudigitaladops_header){return false}this.sitefilter=['google.com','go','ask.com','as','aol.com','ao','yahoo.com','ya'];this.h=top.__nbcudigitaladops_header;this.drt_r='ref';this.rcode='';this.loadReferrerData();if(this.rcode!=''){this.populateDartTags()}},loadReferrerData:function(){var r=document.referrer,dlen='',ref='';r=r.replace(/^https*:\/\//i,'');r=r.split('/')[0];r=r.split('.');if(r!=''){ref=r[r.length-2]+'.'+r[r.length-1];dlen=r[r.length-2].length}this.ref=ref;var f=this.sitefilter;for(var x=0;x<f.length;x+=2){if(f[x].toLowerCase()==this.ref){this.rcode=f[x+1]+dlen}}},populateDartTags:function(){this.h.dtprm(this.drt_r+'='+this.rcode+';')}};__referreradops.init();</script><script>_qacct="p-9eJ8k4iSzux46";document.write('<' + 'script language="javascript" type="text/javascript" src="//secure.quantserve.com/quant.js"' + '>' +'</' + 'script'+ '>');</script><script language="javascript" type="text/javascript" src="//secure.quantserve.com/quant.js"></script><img src="//www.nbcudigitaladops.com/hosted/housepix.gif" style="display:none" height="0" width="0"><script type="text/javascript">  (function () {    var d = new Image(1, 1);    d.onerror = d.onload = function () {      d.onerror = d.onload = null;    };    d.src = ["//secure-us.imrworldwide.com/cgi-bin/m?ci=us-503541h&cg=0&cc=1&si=", escape(window.location.href), "&rp=", escape(document.referrer), "&ts=compact&rnd=", (new Date()).getTime()].join('');  })();</script><script type="text/javascript">function sitePerformedInvite(id){var r = /(REMO_INVITE)=([^;]*)/gi.exec(document.cookie);return (r && unescape(r[2]));}function siteInvited(id){id != undefined || ( id = '1');var ex = new Date(new Date().getTime() + (86400000*30)); document.cookie = 'REMO_INVITE' + '=' + escape(id) + ((!ex || !(ex instanceof Date))? '' : ('; expires=' + ex.toGMTString()))+ ';path=/;domain=nbcnewyork.com';} </script>
+<script type="text/javascript">
+//<![CDATA[
+
+var _sf_async_config={uid:15527,domain:"www.nbcphiladelphia.com"};
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement('script');
+    e.setAttribute('language', 'javascript');
+    e.setAttribute('type', 'text/javascript');
+    e.setAttribute('src',
+       (("https:" == document.location.protocol) ? "https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/" : "http://") +
+       "static.chartbeat.com/js/chartbeat.js");
+    document.body.appendChild(e);
+//for newsbeat
+    _sf_async_config.sections = "shows,wednesdays-child";
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != 'function') ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+
+//]]> 
+</script>
+
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+<div id="fb-root" style="display:none;"></div>
+<script type="text/javascript">
+//<![CDATA[
+var api_key = "85ab812aa7574de43da6e627c9970950";
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : api_key, // App ID
+      channelUrl : '//www.nbcphiladelphia.com/templates/channel.html', // Channel File
+      status     : true, // check login status
+      cookie     : true, // enable cookies to allow the server to access the session
+      xfbml      : true  // parse XFBML
+    });
+
+    // Additional initialization code here
+  };
+
+  // Load the SDK Asynchronously
+  (function(d){
+     var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement('script'); js.id = id; js.async = true;
+     js.src = "//connect.facebook.net/en_US/all.js";
+     ref.parentNode.insertBefore(js, ref);
+   }(document));
+//]]>
+</script>
+
+ <script src="http://www.nbcphiladelphia.com/includes/nbc_carousel_v3.js?r=2013-05-23CC" type="text/javascript"></script>
+
+
+
+
+
+
+
+
+<div id="BF_WIDGET_1">&nbsp;<script src="http://ct.buzzfeed.com/wd/UserWidget?u=Nbcphiladelphia.com&amp;to=1&amp;or=vb&amp;wid=1&amp;cb=1369539309309" type="text/javascript"></script></div>
+<script type="text/javascript">
+(function( ){
+BF_WIDGET_JS=document.createElement("script"); BF_WIDGET_JS.type="text/javascript";
+BF_WIDGET_SRC="http://ct.buzzfeed.com/wd/UserWidget?u=Nbcphiladelphia.com&to=1&or=vb&wid=1&cb=" + (new Date()).getTime();
+setTimeout(function() {document.getElementById("BF_WIDGET_1").appendChild(BF_WIDGET_JS);BF_WIDGET_JS.src=BF_WIDGET_SRC},1);
+})();
+</script>
+
+
+
+<!--Visual Revenue Reader Response Tracking Script (v6) -->
+<script type="text/javascript">
+   var _vrq = _vrq || [];
+   _vrq.push(['id', 167]);
+   _vrq.push(['automate', false]);
+   _vrq.push(['track', function(){}]);
+   (function(d, a){
+      var s = d.createElement(a),
+      x = d.getElementsByTagName(a)[0];
+      s.async = true;
+      s.src = 'http://a.visualrevenue.com/vrs.js';
+      x.parentNode.insertBefore(s, x);
+   })(document, 'script');
+</script>
+<!-- End of VR RR Tracking Script - All rights reserved -->
+
+
+<script type="text/javascript">
+  initSocialize();
+</script>
+
+
+      <script src="http://content.dl-rms.com/rms/22388/nodetag.js"></script>
+   
+
+
+
+</div>
+<iframe style="border: 0px none; width: 0px; height: 0px; display: block;" src="http://bcp.crwdcntrl.net/5/c=2651/rand=285049777/pv=y/rt=ifr" id="LOTCCFrameSat May 25 2013 22:35:11 GMT-0500 (Central Daylight Time)"></iframe><script src="http://static.chartbeat.com/js/chartbeat.js" type="text/javascript" language="javascript"></script></body>

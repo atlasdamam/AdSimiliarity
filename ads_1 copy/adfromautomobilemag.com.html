@@ -1,0 +1,780 @@
+<head>
+    <title>Your Local Ford Dealer</title>
+    <meta name="description" content=""> 
+    <meta name="keywords" content=""> 
+    
+    <meta property="og:title" content="">
+    <meta property="og:image" content="/Content/Ford_Common/Images/driveone.jpg">
+    <meta property="og:description" content="">
+
+    
+
+    <link rel="image_src" href="/Content/Ford_Common/Images/driveone.jpg">
+
+    
+
+<script src="http://www.google-analytics.com/ga.js" async="" type="text/javascript"></script><script type="text/javascript" src="/Scripts/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/Scripts/jquery.tools.min.js"></script>
+<script type="text/javascript" src="/Scripts/wambatech.bellman.js"></script>
+<script type="text/javascript" src="/Scripts/wambatech.reporting.js"></script>
+<script type="text/javascript" src="/Scripts/wambatech.utility.js"></script>
+<script type="text/javascript" src="/Scripts/jquery.maskedinput.min.js"></script>
+<script type="text/javascript" src="/Scripts/jquery.cycle.min.js"></script>
+<script type="text/javascript" src="/Scripts/jquery.jqprint.0.3.js"></script>
+<script type="text/javascript" src="/Scripts/jquery.cookie.js"></script>
+<script type="text/javascript" src="/Scripts/swfobject.js"></script>
+<script type="text/javascript" src="/Scripts/wambatech.backmanager.js"></script>
+<script type="text/javascript" src="/Scripts/jquery.ba-bbq.min.js"></script>
+<script type="text/javascript" src="/Scripts/jquery.watermark.min.js"></script>
+<script type="text/javascript" src="/Scripts/modernizr-1.7.min.js"></script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript" src="http://connect.facebook.net/en_US/all.js"></script>
+<script type="text/javascript" src="/Scripts/wambatech.omniture.js"></script>
+<script type="text/javascript" src="/Scripts/OmnitureNational.js"></script>
+<script type="text/javascript" src="https://www.everestjs.net/static/st.js"></script>
+<script type="text/javascript" src="/Scripts/jquery.masonry.min.js"></script>
+<script type="text/javascript" src="/Scripts/wambatech.scrollinghero.js"></script>
+<script type="text/javascript" src="/Scripts/json2.js"></script>
+<script type="text/javascript" src="/Scripts/ford-evidon-script.js"></script>
+
+
+
+<link rel="Stylesheet" href="/Content/Ford_Common/CSS/Default.css">
+<link rel="Stylesheet" href="/Content/Common/CSS/serviceCouponSupport.css">
+
+
+
+<script type="text/javascript">
+    function sendReportingEventToServer(sessionId, pageId, assetId, actionId, detail, vehicle, paCode, callback) {
+        $.post(
+            '/Services/AcceptReportingEvent',
+            {
+                sessionId: sessionId,
+                pageId: pageId,
+                assetId: assetId,
+                actionId: actionId,
+                detail: detail,
+                vehicle: vehicle,
+                paCode: paCode
+            },
+            function (result) {
+
+                if (callback != null && callback != undefined)
+                    callback(result);
+            });
+
+            /*
+        $("#googleAnalyticsAssetContainer").load(
+            '/Asset',
+            {
+                pageName: pageName,
+                instanceName: "googleAnalyticsEventTracking",
+                assetId: assetId,
+                detail : detail,
+                vehicle: vehicle,
+                paCode : paCode
+            },
+            function (result) {
+
+                if (callback != null && callback != undefined)
+                    callback(result);
+            });*/
+    }
+
+    function sendDartReportingToServer(pageName, instanceName, nameplate, trim, color, callback) {
+
+        $("#dartAssetContainer").load(
+            '/Asset',
+            {
+                pageName: pageName,
+                instanceName: instanceName,
+                nameplate: nameplate,
+                trim: trim,
+                color: color
+            },
+            function (result) {
+
+                if (callback != null && callback != undefined)
+                    callback(result);
+            });
+    }
+
+    function sendOmnitureReportingToServer(pageName, instanceName, nameplate, modelYear, paCode, emailOptIn, trim, exteriorColor, interiorColor, vehicleOptions, pageNumber, network, offerId, sweepstakesName, customPageName, customData, callback) {
+
+        $("<div>").load(
+            '/Asset',
+            {
+                pageName: pageName,
+                instanceName: instanceName,
+                nameplate: nameplate,
+                year: modelYear,
+                paCode: paCode,
+                emailOptIn: emailOptIn,
+                trim: trim,
+                exteriorColor: exteriorColor,
+                interiorColor: interiorColor,
+                vehicleOptions: vehicleOptions,
+                page: pageNumber,
+                network: network,
+                offerId: offerId,
+                sweepstakesName: sweepstakesName,
+                customPageName: customPageName,
+                customData : customData
+            },
+            function (result) {
+
+                $("#omnitureAssetContainer").append($(this).html());
+
+                if (callback != null && callback != undefined)
+                    callback(result);
+            });
+    }
+</script>
+
+<meta name="google-site-verification" content="">
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        
+    });
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-2191560-47']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+        <link rel="Stylesheet" href="/Content/Ford_SpecialEvent/CSS/offersOverrides.css">    
+    
+
+    <!--[if lt IE 9]>
+            <link rel="stylesheet" href="/Content/Common/css/ieAdjust.css">
+    <![endif]-->
+
+<style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}
+.fb_invisible{display:none}
+.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}
+.fb_reset > div{overflow:hidden}
+.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}
+.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}
+.fb_dialog_content{background:#fff;color:#333}
+.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px;top:8px\9;right:7px\9}
+.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}
+.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}
+.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}
+.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}
+.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}
+.fb_dialog_top_left,
+.fb_dialog_top_right,
+.fb_dialog_bottom_left,
+.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}
+/* @noflip */
+.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}
+/* @noflip */
+.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}
+/* @noflip */
+.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}
+/* @noflip */
+.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right,
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right{width:10px;height:100%}
+.fb_dialog_vert_left{margin-left:-10px}
+.fb_dialog_vert_right{right:0;margin-right:-10px}
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{width:100%;height:10px}
+.fb_dialog_horiz_top{margin-top:-10px}
+.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}
+.fb_dialog_iframe{line-height:0}
+.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}
+.fb_dialog_content .dialog_title > span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif)
+no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}
+body.fb_hidden{-webkit-transform:none;height:100%;margin:0;left:-10000px;overflow:visible;position:absolute;top:-10000px;width:100%
+}
+.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif)
+white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}
+.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}
+#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}
+#fb-root #fb_dialog_ipad_overlay.hidden{display:none}
+.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}
+.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0 0, 0 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}
+.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%
+}
+.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0 0, 0 100%, from(#4966A6),
+color-stop(0.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset,
+rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}
+.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}
+.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}
+.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}
+#fb_dialog_loader_close{float:left}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}
+.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}
+.fb_iframe_widget iframe{position:absolute}
+.fb_iframe_widget_lift{z-index:1}
+.fb_hide_iframes iframe{position:relative;left:-10000px}
+.fb_iframe_widget_loader{position:relative;display:inline-block}
+.fb_iframe_widget_fluid{display:inline}
+.fb_iframe_widget_fluid span{width:100%}
+.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}
+.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_connect_bar_container div,
+.fb_connect_bar_container span,
+.fb_connect_bar_container a,
+.fb_connect_bar_container img,
+.fb_connect_bar_container strong{background:none;border-spacing:0;border:0;direction:ltr;font-style:normal;font-variant:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal;vertical-align:baseline}
+.fb_connect_bar_container{position:fixed;left:0 !important;right:0 !important;height:42px !important;padding:0 25px !important;margin:0 !important;vertical-align:middle !important;border-bottom:1px solid #333 !important;background:#3b5998 !important;z-index:99999999 !important;overflow:hidden !important}
+.fb_connect_bar_container_ie6{position:absolute;top:expression(document.compatMode=="CSS1Compat"? document.documentElement.scrollTop+"px":body.scrollTop+"px")}
+.fb_connect_bar{position:relative;margin:auto;height:100%;width:100%;padding:6px 0 0 0 !important;background:none;color:#fff !important;font-family:"lucida grande", tahoma, verdana, arial, sans-serif !important;font-size:13px !important;font-style:normal !important;font-variant:normal !important;font-weight:normal !important;letter-spacing:normal !important;line-height:1 !important;text-decoration:none !important;text-indent:0 !important;text-shadow:none !important;text-transform:none !important;white-space:normal !important;word-spacing:normal !important}
+.fb_connect_bar a:hover{color:#fff}
+.fb_connect_bar .fb_profile img{height:30px;width:30px;vertical-align:middle;margin:0 6px 5px 0}
+.fb_connect_bar div a,
+.fb_connect_bar span,
+.fb_connect_bar span a{color:#bac6da;font-size:11px;text-decoration:none}
+.fb_connect_bar .fb_buttons{float:right;margin-top:7px}
+.fb_edge_widget_with_comment{position:relative;*z-index:1000}
+.fb_edge_widget_with_comment span.fb_edge_comment_widget{position:absolute}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget{z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget .FB_Loader{left:0;top:1px;margin-top:6px;margin-left:0;background-position:50% 50%;background-color:#fff;height:150px;width:394px;border:1px #666 solid;border-bottom:2px solid #283e6c;z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.dark .FB_Loader{background-color:#000;border-bottom:2px solid #ccc}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.siderender
+.FB_Loader{margin-top:0}
+.fbpluginrecommendationsbarleft,
+.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}
+/* @noflip */
+.fbpluginrecommendationsbarleft{left:10px}
+/* @noflip */
+.fbpluginrecommendationsbarright{right:10px}</style><script src="http://wd-edge.sharethis.com/button/checkOAuth.esi" type="text/javascript"></script><link href="http://w.sharethis.com/button/css/buttons.20a85a6a67053717023e8d12a9dba430.css" type="text/css" rel="stylesheet"></head>
+<body onclick="if(stWidget.buttonClicked==false){stWidget.stopClosing=false;stWidget.openDuration=0;stWidget.stClose(100);}">
+    <script type="text/javascript">
+                                     
+        var bellman = new BellMan();
+        var reporting = new Reporting();
+        var backmanager = new BackManager();
+
+        $(document).ready(function () {
+            FB.XFBML.parse();
+            initDebug();
+            reportSiteEvent("Page Template", "Page Ready", 3);
+        });
+
+        function imageError(target) {
+            $(target).attr("src", '/Content/Common/Images/ImageNotFound.png');
+        }
+    </script>
+
+    <div class="page">
+        <div id="pageHeader">
+            
+
+<style type="text/css">
+    .header				{position: relative; height: 67px; margin-bottom:0px; }
+    .headerGraphic		{display:none; position:absolute;  top:0px; left:0px; z-index:1;}
+
+	.header .logo					{ padding:10px 0 0 0;  }
+
+   .header .socialNav					{ background-image:none; background-color:transparent; margin-bottom:3px; }
+   .header .socialNav p					{ display: block; float: left; margin: 0; padding: 0px 0 7px 14px; }
+   .header .socialNav p .spanishLink	{ line-height:22px; }
+   
+   
+   .header .btn						{ height:26px; margin-left:3px; }
+   .header .btn:hover				{ background-position:0 -27px; }
+   
+   .header .dealerLocatorLink		{ background:url(/Content/Ford_SpecialEvent/Images/nav/FindaDealer.png) no-repeat 0 0; width:103px; }
+   .header .inventoryLink			{ background:url(/Content/Ford_SpecialEvent/Images/nav/SearchInventory.png) no-repeat 0 0; width:103px; }
+   .header .researchLink			{ background:url(/Content/Ford_SpecialEvent/Images/nav/ResearchFord.png) no-repeat 0 0; width:103px; }
+   .header .applyForCreditLink		{ background:url(/Content/Ford_SpecialEvent/Images/nav/ApplyforCredit.png) no-repeat 0 0; width:133px; }
+   .header .appraiseVehicleLink		{ background:url(/Content/Ford_SpecialEvent/Images/nav/AppraiseVehicle.png) no-repeat 0 0; width:103px; }
+   .header .fordStoryLink			{ background:url(/Content/Ford_SpecialEvent/Images/nav/FordStory.png) no-repeat 0 0; width:103px; }
+   .header .homeLink				{ background:url(/Content/Ford_SpecialEvent/Images/nav/Home.png) no-repeat 0 0; width:63px; }
+   
+</style>
+
+<script type="text/javascript">
+
+    function zipCodeReturn(zipCode, target) {
+        
+        $.getJSON(
+            '/Services/GetRegionFromZipCode',
+            {
+                brandId : 1,
+                zipCode : zipCode
+            },
+            function(result) {
+
+                if (result == null)
+                {
+                    alert("Unknown zip code " + zipCode + ".  Please enter a new zip code and try again.");
+                    return;
+                }
+
+                switch(target) {
+                    case "dealerLocator" :
+                        window.location = 'http://!!DOMAIN!!/Dealers/?leadsource=FLM-SpecialEvent&fmccmp=nse-ecbevent-201300402&altleadsource=EcoboostBannerAdNonDSS&altleadsourceid=&leadsourceid=&zipcode=!!ZIPCODE!!'.replace("!!DOMAIN!!", result.domain).replace("!!ZIPCODE!!", zipCode);
+                    break;
+                    case "searchInventory" :
+                        window.location = 'http://!!DOMAIN!!/Inventory/?leadsource=FLM-SpecialEvent&fmccmp=nse-ecbevent-201300402&altleadsource=EcoboostBannerAdNonDSS&altleadsourceid=&leadsourceid=&zipcode=!!ZIPCODE!!'.replace("!!DOMAIN!!", result.domain).replace("!!ZIPCODE!!", zipCode);
+                    break;
+                }
+            });
+    }
+
+    function gatherFSEZipCode(target) {
+
+        var zipCodeAssetUrl = '/Asset/LightBox?pageName=Ecoboost%20Challenge&instanceName=zipCodeForm&target=' + target;
+
+        $("#lightboxAssetContainer").load(zipCodeAssetUrl, function() {
+        });
+    }
+
+    $(document).ready(function () {
+
+        // omniture reporting
+        $(".header .applyForCreditLink").click(function() { sendOmnitureReportingToServer('Ecoboost Challenge', 'omnitureFordCreditClick', "", "", "", "false", "", "", "", "", "0", "", "", "", "", "", null); });
+
+        $(".header .researchLink").click(function() { sendOmnitureReportingToServer('Ecoboost Challenge', 'omnitureFordHomeClick', "", "", "", "false", "", "", "", "", "0", "", "", "", "", "", null); });
+
+        $(".header .dealerLocatorLink").click(function() { sendOmnitureReportingToServer('Ecoboost Challenge', 'omnitureFordDealerClick', "", "", "", "false", "", "", "", "", "0", "", "", "", "", "", null); });
+
+        $(".header .fordStoryLink").click(function() { sendOmnitureReportingToServer('Ecoboost Challenge', 'omnitureFordStoryClick', "", "", "", "false", "", "", "", "", "0", "", "", "", "", "", null); });
+
+        $(".header .appraiseVehicleLink").click(function() { sendOmnitureReportingToServer('Ecoboost Challenge', 'omnitureOutboundTradeInReferral', "", "", "", "false", "", "", "", "", "0", "", "", "", "", "", null); });
+
+        // dart reporting
+        $(".header .applyForCreditLink").click(function() { sendDartReportingToServer('Ecoboost Challenge', 'dartCreditStart', "", "", "", null); });
+
+        $(".header .appraiseVehicleLink").click(function() { sendDartReportingToServer('Ecoboost Challenge', 'dartVehicleAppraisal', "", "", "", null); });
+
+        // internal reporting
+        $(".header .homeLink").click(function() { reporting.report('6237872452120167322', 264, 14, 2, "Home", "", ""); });
+        $(".header .offersLink").click(function() { reporting.report('6237872452120167322', 264, 14, 2, "Local Offers", "", ""); });
+        $(".header .inventoryLink").click(function() { reporting.report('6237872452120167322', 264, 14, 2, "Search Inventory", "", ""); });
+        $(".header .cpoLink").click(function() { reporting.report('6237872452120167322', 264, 14, 2, "CPO", "", ""); });
+        $(".header .appraiseVehicleLink").click(function() { reporting.report('6237872452120167322', 264, 14, 2, "Appraise Vehicle", "", ""); });
+        $(".header .applyForCreditLink").click(function() { reporting.report('6237872452120167322', 264, 14, 2, "Apply for Credit", "", ""); });
+        $(".header .compareLink").click(function() { reporting.report('6237872452120167322', 264, 14, 2, "Compare", "", ""); });
+        $(".header .serviceSpecialsLink").click(function() { reporting.report('6237872452120167322', 264, 14, 2, "Service Specials", "", ""); });
+        $(".header .dealerLocatorLink").click(function() { reporting.report('6237872452120167322', 264, 14, 2, "Dealer Locator", "", ""); });
+        $(".header .videoBinLink").click(function() { reporting.report('6237872452120167322', 264, 14, 2, "YouTube Video Bin", "", ""); });
+        $(".header .newsLink").click(function() { reporting.report('6237872452120167322', 264, 14, 2, "News", "", ""); });
+        $(".header .buildAndPriceLink").click(function() { reporting.report('6237872452120167322', 264, 14, 2, "Build and Price", "", ""); });
+        $(".header .fordStoryLink").click(function() { reporting.report('6237872452120167322', 264, 14, 2, "The Ford Story External Link", "", ""); });
+        $(".header .researchLink").click(function() { reporting.report('6237872452120167322', 264, 14, 2, "Research", "", ""); });
+        $(".header .st_sharethis_button").click(function() { reporting.report('6237872452120167322', 264, 14, 2, "Share This", "", ""); });
+        $(".header .spanishLink").click(function() { reporting.report('6237872452120167322', 264, 14, 2, "Spanish Link", "", ""); });
+        $(".header .englishLink").click(function() { reporting.report('6237872452120167322', 264, 14, 2, "English Link", "", ""); });
+        $(".header .regionLogoLink").click(function() { reporting.report('6237872452120167322', 264, 14, 2, "Regional Logo", "", ""); });
+
+        reportSiteEvent("Page Navigation", "Asset Ready", 3);
+    });
+</script>
+
+<div class="header">
+	<div class="logo" style="z-index:10; position: absolute;"><a href="/" class="regionLogoLink"><img src="/Content/Ford_SpecialEvent/Images/ford_logo.png" alt="" border="0"></a></div>
+
+	<div style="float:right;float:none;">
+
+		<div style="width:100:%; float:right; display:block;">
+			<div class="socialNav">
+				<p><span st_processed="yes" class="st_sharethis_button" st_title="" displaytext="ShareThis"><span class="stButton" style="text-decoration:none;color:#000000;display:inline-block;cursor:pointer;"><span style="background-image: url(&quot;http://w.sharethis.com/images/sharethis_counter.png&quot;);" class="stMainServices st-sharethis-counter">&nbsp;<img style="position: absolute; top: -7px; right: -7px; width: 19px; height: 19px; max-width: 19px; max-height: 19px; display: none;" src="http://w.sharethis.com/images/check-big.png"></span></span></span></p>
+				<p><a href="http://es.fordspecialevent.com" class="spanishLink" title="Spanish Site">Español</a></p> 
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div style="width:100:%; float:right; display:block;">
+			<table cellpadding="0" cellspacing="0">
+    			<tbody><tr>
+					<td><a href="/" class="homeLink btn" title="Home"><span>Home</span></a></td>
+        			<td><a href="http://www.thinkfordfirst.com/Dealers/?leadsource=FLM-SpecialEvent&amp;fmccmp=nse-ecbevent-201300402&amp;altleadsource=EcoboostBannerAdNonDSS&amp;altleadsourceid=&amp;leadsourceid=&amp;zipcode=48083" class="dealerLocatorLink btn" title="Find a Dealer"><span>Dealer<br>Locator</span></a></td>
+					<td><a href="http://www.thinkfordfirst.com/Inventory/?leadsource=FLM-SpecialEvent&amp;fmccmp=nse-ecbevent-201300402&amp;altleadsource=EcoboostBannerAdNonDSS&amp;altleadsourceid=&amp;leadsourceid=&amp;zipcode=48083" class="inventoryLink btn" title="Search Inventory"><span>New<br>Inventory</span></a></td>
+					<td><a href="http://www.showroom.ford.com/Showroom.jsp?fmccmp=nse-ecbevent-201300402&amp;leadsource=FDAF-FordDirect&amp;AltLeadSource=fse&amp;zipCode=48083" target="_blank" class="researchLink btn" title="Research Ford Vehicles"><span>Research Ford</span></a></td>
+					<td><a href="https://www.onlinevehiclefinancing.com/ovfui/fcovfui?ATD_SERVLET_ACTION=PA&amp;ATD_SERVLET_PAGE_CLASS=AAExternal&amp;WindowStyle=P&amp;SourceOfData=FDV&amp;fmccmp=nse-ecbevent-201300402" target="_blank" class="applyForCreditLink btn" title="Apply for Credit"><span>Apply For<br>Credit</span></a></td>
+					<td><a href="http://staging.intelliprice.com/intellipricedealer/start.htm?dealerid=1107023&amp;AltLeadSource=EcoboostBannerAdNonDSS" target="_blank" class="appraiseVehicleLink btn" title="Appraise a Vehicle"><span>Appraise<br>Vehicle</span></a></td>
+					<td><a href="http://thefordstory.com?fmccmp=nse-ecbevent-201300402" target="_blank" class="fordStoryLink btn" title="The Ford Story"><span>Ford Social</span></a></td>
+				</tr>
+			</tbody></table>
+		</div>
+		<div class="clear"></div>
+
+	</div>
+
+</div>
+<div class="clear"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+        <div class="clear"></div>
+
+        
+            <div id="pageNavigation">
+                
+            </div>
+            <div class="clear"></div>
+        
+
+        <div id="pageContent" class="contentBody">
+            
+
+<style type="text/css">
+    
+    .EcoboostChallenge .wrap                        { background:url("/Content/Ford_Common/Images/Pages/EcoBoost/Background.jpg") top center no-repeat transparent; background-color: #fff; }
+    .EcoboostChallenge .banner                      { padding:10px 20px 0px 0px; height: 150px; text-align:right; }
+    
+    .EcoboostChallenge .contentArea                 { width: 100%; height: 357px;  margin-top: 10px; margin-bottom: 10px; position:relative; }
+    .EcoboostChallenge .contentArea .compare        { top:10px; left:10px; position:absolute; }
+    .EcoboostChallenge .contentArea .click          { bottom:10px; left:10px; position:absolute; }
+    .EcoboostChallenge .contentArea .videoTarget    { width: 500px; height: 282px; border: 0px none #000; float:left; margin:10px 0px 0px 10px; }
+    .EcoboostChallenge .contentArea .data           { float: left; }
+    .EcoboostChallenge .contentArea .content        { background:url("/Content/Ford_Common/Images/Pages/EcoBoost/background_popup.png") top center transparent; height: 364px; }
+    .EcoboostChallenge .contentArea .offer          { margin:20px 0px 0px 30px; }
+    .EcoboostChallenge .contentArea .close          { position:absolute; top:8px; right:8px; cursor: pointer; }
+    .EcoboostChallenge .contentArea .disclaimer     { font-size:10px; padding:10px; }
+    #bgoff                                          { background:none; }
+    
+    .EcoboostChallenge .vehicleMenu                 { margin-top: 10px; padding:0px 0px 0px 2px; background:url("/Content/Ford_Common/Images/Pages/EcoBoost/videoContainer.png") top center no-repeat transparent; height:347px;}
+    .EcoboostChallenge .vehicleMenu .vehicle        { float: left; text-align: center; font-size: 15px; cursor: pointer; margin:8px 0px 0px 8px; }
+    .EcoboostChallenge .vehicleMenu .vehicle img    {  }
+    .EcoboostChallenge .vehicleMenu .secondRow      { margin:40px 0px 0px 0px; }
+    .EcoboostChallenge .btn.quickquote		        { width:282px; height:39px; background-image:url("/Content/Ford_Common/Images/Pages/EcoBoost/b_quickquote.png"); margin:10px 0 10px 45px; }
+    .hack:hover                                     { background-position: 0 -40px; }
+}                                 
+    
+</style>
+
+<script type="text/javascript">
+    
+    var lastPlayer = "";
+
+    $(document).ready(function () {
+    
+        // omniture
+        sendOmnitureReportingToServer('Ecoboost Challenge', 'omnitureEcoboostChallenge', "", "", "", "false", "", "", "", "", "0", "", "", "", "", "", null);
+            
+        $(".EcoboostChallenge .contentArea .close").click(function() {
+            
+            changeContent(null);
+        });
+
+        $(".EcoboostChallenge .vehicleMenu .vehicle").click(function () {
+
+            var vehicle = $(this).attr("vehicle");
+            var message = vehicle + " Vehicle Panel Display";
+            
+            reporting.report('6237872452120167322', 264, 40, 2, message, vehicle, "", null); 
+
+            sendOmnitureReportingToServer('Ecoboost Challenge', 'omnitureEcoboostChallengeVideoClick', "", "", "", "false", "", "", "", "", "0", "", "", "", "", "", null);   
+
+            changeContent($(this).attr("vehicle"));
+        });
+
+        $(".EcoboostChallenge .contentArea .content .quickquote").click(function () {
+
+            var vehicle = $(this).parent("div").parent(".content").attr("vehicle");
+            var message = vehicle + " Get a Quote Form";
+            
+            reporting.report('6237872452120167322', 264, 40, 2, message, vehicle, "", null); 
+
+            showQuickQuote(vehicle);
+        });
+
+        if ("" != "")
+            changeContent("");
+    });
+
+    function changeContent(_which) {
+
+        if (lastPlayer != "") {
+
+            $(".EcoboostChallenge .contentArea .content[vehicle='" + lastPlayer + "'] .videoTarget").empty();
+            $(".EcoboostChallenge .contentArea .content[vehicle='" + lastPlayer + "']").hide();
+            lastPlayer = "";
+        }
+
+        if (_which != null) {
+
+            lastPlayer = _which;
+
+            $(".EcoboostChallenge .contentArea .content").hide();
+            $(".EcoboostChallenge .contentArea .content[vehicle='" + _which + "']").show();
+            playVideo(_which);
+        } else {
+
+            $("#bgoff").show();
+        }
+    }
+
+    function showQuickQuote(_which) {
+    
+        var getAQuoteAssetUrl = "/Asset/LightBox?pageName=Ecoboost%20Challenge&instanceName=ecoBoostChallengeGeneralLeadForm&vehicle=" + escape(_which);
+
+        $("#lightboxAssetContainer").load(getAQuoteAssetUrl);
+    }
+
+    function playVideo(_which) {
+
+        var message = "Ecoboost Challenge Video: " + _which;
+
+        reporting.report('6237872452120167322', 264, 40, 2, message, "", "", null);
+
+        var videoUrl = "/Asset?pageName=Ecoboost%20Challenge&instanceName=" + "ecoBoostVideo" + (_which.replace(/ /g,'').replace(/-/g,''));
+        $(".EcoboostChallenge .contentArea .content[vehicle='" + _which + "'] .videoTarget").load(videoUrl);
+    }
+</script>
+
+<div class="EcoboostChallenge">
+	<div class="wrap">
+
+        <div class="banner"><img src="/Content/Ford_Common/Images/Pages/EcoBoost/logo.png"></div>
+        
+        <div class="contentArea">
+            <div class="content" vehicle="" id="bgoff">
+                <img src="/Content/Ford_Common/Images/Pages/EcoBoost/compare.png" class="compare">       
+                <img src="/Content/Ford_Common/Images/Pages/EcoBoost/clickavideo.png" class="click">           
+            </div>
+
+            <div class="content" vehicle="2013 Ford Fiesta" style="display:none;">
+                <div class="videoTarget"></div>
+                <div class="data">
+                    <img src="/Content/Ford_Common/Images/Pages/EcoBoost/offers/fiesta.png" class="offer">  
+                    <img src="/Content/Ford_Common/Images/Pages/EcoBoost/close.png" class="close"> 
+                    <a href="#" class="btn hack quickquote"><span>get quick quote</span></a>
+                </div> 
+                <div class="clear"></div>
+                <div class="disclaimer">* Not all buyers will qualify for Ford Credit financing.   60 months at $16.67 per month per $1,000 financed regardless of down payment. Take new retail delivery from dealer stock by 5/31/13.  See dealer for complete details.</div>               
+            </div>
+
+            <div class="content" vehicle="2013 Ford Focus" style="display:none;">
+                <div class="videoTarget"></div>
+                <div class="data">
+                    <img src="/Content/Ford_Common/Images/Pages/EcoBoost/offers/focus.png" class="offer">  
+                    <img src="/Content/Ford_Common/Images/Pages/EcoBoost/close.png" class="close"> 
+                    <a href="#" class="btn hack quickquote"><span>get quick quote</span></a>
+                </div>
+                <div class="clear"></div>
+                <div class="disclaimer">* Not all buyers will qualify for Ford Credit financing.   60 months at $16.67 per month per $1,000 financed regardless of down payment. Take new retail delivery from dealer stock by 5/31/13.  Excludes Focus BEV and Focus ST .  See dealer for complete details.</div>
+            </div>
+
+            <div class="content" vehicle="2013 Ford Fusion" style="display:none;">
+                <div class="videoTarget"></div>
+                <div class="data">
+                    <img src="/Content/Ford_Common/Images/Pages/EcoBoost/offers/fusion.png" class="offer">  
+                    <img src="/Content/Ford_Common/Images/Pages/EcoBoost/close.png" class="close"> 
+                    <a href="#" class="btn hack quickquote"><span>get quick quote</span></a>
+                </div>
+                <div class="clear"></div>
+                <div class="disclaimer">* Not all buyers will qualify for Ford Credit financing.   60 months at $16.67 per month per $1,000 financed regardless of down payment. Take new retail delivery from dealer stock by 5/31/13.  Excludes Fusion Hybrid and Fusion Energi. See dealer for complete details.</div>
+            </div>
+
+            <div class="content" vehicle="2013 Ford Mustang" style="display:none;">
+                <div class="videoTarget"></div>
+                <div class="data">
+                    <img src="/Content/Ford_Common/Images/Pages/EcoBoost/offers/mustang.png" class="offer">  
+                    <img src="/Content/Ford_Common/Images/Pages/EcoBoost/close.png" class="close"> 
+                    <a href="#" class="btn hack quickquote"><span>get quick quote</span></a>
+                </div>
+                <div class="clear"></div>
+                <div class="disclaimer">* Not all buyers will qualify for Ford Credit financing.   60 months at $16.67 per month per $1,000 financed regardless of down payment. Take new retail delivery from dealer stock by 5/31/13. Not available on Mustang Shelby GT and Boss 302. See dealer for complete details.</div>
+            </div>
+
+            <div class="content" vehicle="2013 Ford Taurus" style="display:none;">
+                <div class="videoTarget"></div>
+                <div class="data">
+                    <img src="/Content/Ford_Common/Images/Pages/EcoBoost/offers/taurus.png" class="offer">  
+                    <img src="/Content/Ford_Common/Images/Pages/EcoBoost/close.png" class="close"> 
+                    <a href="#" class="btn hack quickquote"><span>get quick quote</span></a>
+                </div>
+                <div class="clear"></div>
+                <div class="disclaimer">* Not all buyers will qualify for Ford Credit financing.   60 months at $16.67 per month per $1,000 financed regardless of down payment. Take new retail delivery from dealer stock by 5/31/13.  Not available on Taurus SE.  See dealer for complete details.</div>
+            </div>
+
+            <div class="content" vehicle="2013 Ford C-MAX" style="display:none;">
+                <div class="videoTarget"></div>
+                <div class="data">
+                    <img src="/Content/Ford_Common/Images/Pages/EcoBoost/offers/cmax.png" class="offer">  
+                    <img src="/Content/Ford_Common/Images/Pages/EcoBoost/close.png" class="close"> 
+                    <a href="#" class="btn hack quickquote"><span>get quick quote</span></a>
+                </div>
+                <div class="clear"></div>
+                <div class="disclaimer">* Take new retail delivery from dealer stock by 5/31/13.  See dealer for complete details.</div>
+            </div>
+
+            <div class="content" vehicle="2013 Ford Edge" style="display:none;">
+                <div class="videoTarget"></div>
+                <div class="data">
+                    <img src="/Content/Ford_Common/Images/Pages/EcoBoost/offers/edge.png" class="offer">  
+                    <img src="/Content/Ford_Common/Images/Pages/EcoBoost/close.png" class="close"> 
+                    <a href="#" class="btn hack quickquote"><span>get quick quote</span></a>
+                </div>
+                <div class="clear"></div>
+                <div class="disclaimer">* Not all buyers will qualify for Ford Credit financing.   60 months at $16.67 per month per $1,000 financed regardless of down payment.. Take new retail delivery from dealer stock by 5/31/13.  See dealer for complete details.</div>
+            </div>
+
+            <div class="content" vehicle="2013 Ford Escape" style="display:none;">
+                <div class="videoTarget"></div>
+                <div class="data">
+                    <img src="/Content/Ford_Common/Images/Pages/EcoBoost/offers/escape.png" class="offer"> 
+                    <img src="/Content/Ford_Common/Images/Pages/EcoBoost/close.png" class="close">  
+                    <a href="#" class="btn hack quickquote"><span>get quick quote</span></a>
+                </div>
+                <div class="clear"></div>
+                <div class="disclaimer">* Not all buyers will qualify for Ford Credit financing.   60 months at $16.67 per month per $1,000 financed regardless of down payment. Take new retail delivery from dealer stock by 5/31/13.   See dealer for complete details.</div>
+            </div>
+
+            <div class="content" vehicle="2013 Ford Explorer" style="display:none;">
+                <div class="videoTarget"></div>
+                <div class="data">
+                    <img src="/Content/Ford_Common/Images/Pages/EcoBoost/offers/explorer.png" class="offer"> 
+                    <img src="/Content/Ford_Common/Images/Pages/EcoBoost/close.png" class="close">  
+                    <a href="#" class="btn hack quickquote"><span>get quick quote</span></a>
+                </div>
+                <div class="clear"></div>
+                <div class="disclaimer">* Not all buyers will qualify for Ford Credit financing.   60 months at $16.67 per month per $1,000 financed regardless of down payment. Take new retail delivery from dealer stock by 5/31/13.  See dealer for complete details.</div>
+            </div>
+
+            <div class="content" vehicle="2013 Ford F-150" style="display:none;">
+                <div class="videoTarget"></div>
+                <div class="data">
+                    <img src="/Content/Ford_Common/Images/Pages/EcoBoost/offers/f150.png" class="offer">  
+                    <img src="/Content/Ford_Common/Images/Pages/EcoBoost/close.png" class="close"> 
+                    <a href="#" class="btn hack quickquote"><span>get quick quote</span></a>
+                </div>
+                <div class="clear"></div>
+                <div class="disclaimer">* Not all buyers will qualify for Ford Credit financing.   60 months at $16.67 per month per $1,000 financed regardless of down payment. Take new retail delivery from dealer stock by 5/31/13. Not available on Raptor.  See dealer for complete details.</div>
+            </div>
+        </div>
+        <div class="vehicleMenu">
+            <div>
+                <div class="vehicle" vehicle="2013 Ford Fiesta">
+                    <img src="/Content/Ford_Common/Images/Pages/EcoBoost/thumb_fiesta.png">
+                </div>
+
+                <div class="vehicle" vehicle="2013 Ford Focus">
+                    <img src="/Content/Ford_Common/Images/Pages/EcoBoost/thumb_focus.png">
+                </div>
+
+                <div class="vehicle" vehicle="2013 Ford Fusion">
+                    <img src="/Content/Ford_Common/Images/Pages/EcoBoost/thumb_fusion.png">
+                </div>
+
+                <div class="vehicle" vehicle="2013 Ford Mustang">
+                    <img src="/Content/Ford_Common/Images/Pages/EcoBoost/thumb_mustang.png">
+                </div>
+
+                <div class="vehicle" vehicle="2013 Ford Taurus">
+                    <img src="/Content/Ford_Common/Images/Pages/EcoBoost/thumb_taurus.png">
+                </div>
+            </div>
+            <div class="clear" style="height: 5px;"></div>
+            <div class="secondRow">
+                <div class="vehicle" vehicle="2013 Ford C-MAX">
+                   <img src="/Content/Ford_Common/Images/Pages/EcoBoost/thumb_cmax.png">
+                </div>
+
+                <div class="vehicle" vehicle="2013 Ford Edge">
+                    <img src="/Content/Ford_Common/Images/Pages/EcoBoost/thumb_edge.png">
+                </div>
+
+                <div class="vehicle" vehicle="2013 Ford Escape">
+                    <img src="/Content/Ford_Common/Images/Pages/EcoBoost/thumb_escape.png">
+                </div>
+
+                <div class="vehicle" vehicle="2013 Ford Explorer">
+                    <img src="/Content/Ford_Common/Images/Pages/EcoBoost/thumb_explorer.png">
+                </div>
+
+                <div class="vehicle" vehicle="2013 Ford F-150">
+                    <img src="/Content/Ford_Common/Images/Pages/EcoBoost/thumb_f150.png">
+                </div>
+            </div>
+        </div>        
+    </div>
+    <div class="clear">&nbsp;</div>
+</div>
+
+        </div>
+        <div class="clear"></div>
+        <div id="pageFooter">
+            
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#footerPrivacyLink").click(function() { reporting.report('6237872452120167322', 264, 17, 2, "Privacy Policy", "", ""); });
+        $("#footerCAPrivacyLink").click(function() { reporting.report('6237872452120167322', 264, 17, 2, "California Privacy Policy", "", ""); });
+        $("#additionalDisclaimersLink").click(function() { reporting.report('6237872452120167322', 264, 17, 2, "Additional Disclaimers", "", ""); });
+        
+        reportSiteEvent("Page Footer", "Asset Ready", 3);
+    });
+</script>
+
+<div class="footer">
+    <div class="pad">
+        <a href="/Privacy" target="_blank" id="footerPrivacyLink">Privacy</a>
+        <a href="/CAPrivacy?jumpTo=CaliforniaPrivacy" target="_blank" id="footerCAPrivacyLink">Your CA Privacy Rights</a>
+        <a href="/AdditionalDisclosures?jumpTo=AdditionalDisclosures" target="_blank" id="additionalDisclaimersLink">Additional Disclosures</a>
+        
+        <a id="_bapw-link" href="#" target="_blank">
+            <span>AdChoices</span>
+        </a>
+        
+        <div class="right">
+            <img src="/Content/Ford_Common/Images/Icons/poweredbyfd.png">
+        </div>
+    </div>
+    <div class="disclaimer">
+        
+    </div>
+</div>
+
+        </div>
+        <div class="clear"></div>
+
+        <div class="pageDisclaimers" style="padding-bottom:20px;">
+            
+          +Based on highest EPA fuel economy ratings for 2013 vehicles in each segment.
+        
+        </div>
+    </div>
+
+    
+
+<div id="omnitureAssetContainer">
+
+
+<div id="omnitureUpdateZone"></div></div>
+<div id="dartAssetContainer"></div>
+<div id="googleAnalyticsAssetContainer"></div>
+<div id="efficientFrontierAssetContainer"></div>
+<div id="lightboxAssetContainer"></div>
+<iframe name="ieFormSubmission" id="ieFormSubmission" style="display:none;" border="0" frameborder="0" height="0" width="0"></iframe>
+
+
+<div class=" fb_reset" id="fb-root"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div><iframe style="display:none;" src="http://seg.sharethis.com/getSegment.php?purl=http%3A%2F%2Fwww.fordspecialevent.com%2Fecoboostchallenge%3FLeadSource%3DFDAF-BannerAdNonDSS%26AltLeadSource%3DEcoboostBannerAdNonDSS%26Campaign%3DEcoboostBannerAdNonDSS%26LeadSourceId%3D%26bannerid%3D364693%7C95688400%7C270040312&amp;jsref=&amp;rnd=1369243044400" name="stSegmentFrame" id="stSegmentFrame" frameborder="0" height="0px" scrolling="no" width="0px"></iframe><div style="visibility: hidden; top: -999px; left: -999px;" class="stwrapper" id="stwrapper"><div class="stclose"></div><iframe src="http://edge.sharethis.com/share4x/index.c2670ee4b52a2b88a02bd11172df6393.html" style="top: 0px; left: 0px;" name="stLframe" class="stLframe" id="stLframe" allowtransparency="true" frameborder="0" height="350px" scrolling="no" width="353px"></iframe></div></body>

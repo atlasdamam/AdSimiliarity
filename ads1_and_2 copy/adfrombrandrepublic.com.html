@@ -1,0 +1,280 @@
+<head><style type="text/css">@media print {  .gmnoprint {    display:none  }}@media screen {  .gmnoscreen {    display:none  }}</style><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+	
+		<title>The Strategy Studio for Global brands</title>
+		<link rel="stylesheet" href="css/screen.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="css/mash2.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="fonts/fonts.css" type="text/css" media="screen">
+		<!--[if lt IE 8]><link rel="stylesheet" href="../blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
+		<script src="http://www.google-analytics.com/ga.js" async="" type="text/javascript"></script><script src="//platform.twitter.com/widgets.js" id="twitter-wjs"></script><script type="text/javascript" language="Javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script type="text/javascript" language="Javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
+		<script type="text/javascript" language="Javascript" src="js/jquery.cycle.js"></script>
+		<script type="text/javascript" language="Javascript" src="js/mash.js"></script>
+		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyB_InW271Vswf58Qc2jX0KEuE76h2mC4wQ&amp;sensor=false">
+    </script><script src="http://maps.gstatic.com/intl/en_us/mapfiles/api-3/13/1/main.js" type="text/javascript"></script>
+    
+    <script>
+		$(function() {
+			var c=new Image();
+			c.src="assets/images/slides_130522/Slide-1.jpg";
+			c.onload=function(){
+				$('.firstimage').fadeTo(500,1, function() {
+					$('.cyclethis').cycle({
+						delay:0,
+						speed:1500,
+						timeout:4500,
+						pager: '#pager2'		    	
+					});
+				});
+			}
+		});   
+    </script>
+    
+    <script type="text/javascript">
+		  function initialise() {
+		  // Create an array of styles.
+		  var pinkParksStyles = [
+		  {
+		    featureType: "road",
+		    stylers: [
+		      { saturation: -99 }
+		    ]
+		  },{
+		    featureType: "poi.park",
+		    stylers: [
+		      { saturation: -99 }
+		    ]
+		  },{
+		    featureType: "landscape",
+		    stylers: [
+		      { saturation: -99 }
+		    ]
+		  },{
+		    featureType: "water",
+		    stylers: [
+		      { saturation: -99 }
+		    ]
+		  },{
+		    featureType: "transit",
+		    stylers: [
+		      { saturation: -99 }
+		    ]
+		  }
+		];		
+		  // Create a new StyledMapType object, passing it the array of styles,
+		  // as well as the name to be displayed on the map type control.
+		  var pinkMapType = new google.maps.StyledMapType(pinkParksStyles,
+		    {name: "Mash"});
+		
+		  // Create a map object, and include the MapTypeId to add
+		  // to the map type control.
+		  var mapOptions = {
+		    zoom: 16,
+		    center: new google.maps.LatLng(51.51176, -0.13402),
+		    mapTypeControlOptions: {
+		      		mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'pink_parks']
+		    	}
+		  	};
+		  
+			var map = new google.maps.Map(document.getElementById('map_canvas'),
+		    mapOptions);
+		
+		  //Associate the styled map with the MapTypeId and set it to display.
+		  map.mapTypes.set('pink_parks', pinkMapType);
+		  map.setMapTypeId('pink_parks');
+		   var markPos = new google.maps.LatLng(51.51176, -0.13402);  
+		   var marker = new google.maps.Marker({
+					        position: markPos,
+					        map: map,
+					        title: 'Mash'
+			});
+		}
+</script>
+<script src="http://maps.gstatic.com/cat_js/intl/en_us/mapfiles/api-3/13/1/%7Bcommon,map,util,marker%7D.js" charset="UTF-8" type="text/javascript"></script><script src="http://maps.gstatic.com/cat_js/intl/en_us/mapfiles/api-3/13/1/%7Bonion%7D.js" charset="UTF-8" type="text/javascript"></script><script src="http://maps.googleapis.com/maps/api/js/ViewportInfoService.GetViewportInfo?1m6&amp;1m2&amp;1d51.50253705835708&amp;2d-0.15624493466009426&amp;2m2&amp;1d51.52116626210501&amp;2d-0.11177522248760852&amp;2u16&amp;4sen-US&amp;5e0&amp;6sm%40216000000&amp;7b0&amp;8e0&amp;9b0&amp;callback=_xdc_._mnzdng&amp;token=120670" charset="UTF-8" type="text/javascript"></script><script src="http://maps.gstatic.com/cat_js/intl/en_us/mapfiles/api-3/13/1/%7Bcontrols,stats%7D.js" charset="UTF-8" type="text/javascript"></script><script src="http://mt0.googleapis.com/mapslt/ft?hl=en-US&amp;lyrs=m%40216000000%7Csalt%3A1856103374&amp;las=twvwvwvwvvvuuwvu,twvwvwvwvvvuuwvw,twvwvwvwvvvuuwwt,twvwvwvwvvvuuwwu,twvwvwvwvvvuuwwv,twvwvwvwvvvuuwww,twvwvwvwvvvuwutu,twvwvwvwvvvuwutw,twvwvwvwvvvuwuut,twvwvwvwvvvuwuuu,twvwvwvwvvvuwuuv,twvwvwvwvvvuwuuw,twvwvwvwvvwttvvt,twvwvwvwvvwttvvv,twvwvwvwvvwtvttt,twvwvwvwvvwtvttv&amp;z=16&amp;src=apiv3&amp;xc=1&amp;style=59%2C37%7Csmartmaps&amp;apistyle=s.t%3A3%7Cp.s%3A-99%2Cs.t%3A40%7Cp.s%3A-99%2Cs.t%3A5%7Cp.s%3A-99%2Cs.t%3A6%7Cp.s%3A-99%2Cs.t%3A4%7Cp.s%3A-99&amp;callback=_xdc_._dz3y2p&amp;token=114853" charset="UTF-8" type="text/javascript"></script><script src="http://mt0.googleapis.com/mapslt/ft?hl=en-US&amp;lyrs=m%40216285110%7Csalt%3A1856103374&amp;las=twvwvwvwvvvuuwvu,twvwvwvwvvvuuwvw,twvwvwvwvvvuuwwt,twvwvwvwvvvuuwwu,twvwvwvwvvvuuwwv,twvwvwvwvvvuuwww,twvwvwvwvvvuwutu,twvwvwvwvvvuwutw,twvwvwvwvvvuwuut,twvwvwvwvvvuwuuu,twvwvwvwvvvuwuuv,twvwvwvwvvvuwuuw,twvwvwvwvvwttvvt,twvwvwvwvvwttvvv,twvwvwvwvvwtvttt,twvwvwvwvvwtvttv&amp;z=16&amp;src=apiv3&amp;xc=1&amp;style=59%2C37%7Csmartmaps&amp;apistyle=s.t%3A3%7Cp.s%3A-99%2Cs.t%3A40%7Cp.s%3A-99%2Cs.t%3A5%7Cp.s%3A-99%2Cs.t%3A6%7Cp.s%3A-99%2Cs.t%3A4%7Cp.s%3A-99&amp;callback=_xdc_._ggd73x&amp;token=107334" charset="UTF-8" type="text/javascript"></script></head>
+	<body data-twttr-rendered="true" onload="initialise()">
+	<div style="width: 1264px; height: 675px;" id="holder">
+			<div id="masthead" class="span-24">
+				<div class="span-22 clearfix first"><img class="home" src="assets/images/brandflag.png"></div>
+			</div> <!-- end #masthead -->
+			
+			<div style="height: 605px; width: 1264px;" class="top-container">
+				<div class="clearfix slidebackground2 relative">
+					<div id="text-box">
+						
+						<div style="position: relative; width: 946px; height: 443px;" class="cyclethis">
+							
+							<div class="firstimage" style="width: 946px; height: 443px; background: url(&quot;assets/images/slides_130522/Slide-1.jpg&quot;) repeat scroll 0% 0% transparent; opacity: 1; position: absolute; top: 0px; left: 0px; display: block; z-index: 5;"></div>
+							<div style="display: none; width: 946px; height: 443px; background: url(&quot;assets/images/slides_130522/Slide-2.jpg&quot;) repeat scroll 0% 0% transparent; position: absolute; top: 0px; left: 0px; z-index: 3; opacity: 0;"></div>
+							<div style="display: none; width: 946px; height: 443px; background: url(&quot;assets/images/slides_130522/Slide-3.jpg&quot;) repeat scroll 0% 0% transparent; position: absolute; top: 0px; left: 0px; z-index: 2; opacity: 0;"></div>
+							<div style="display: none; width: 946px; height: 443px; background: url(&quot;assets/images/slides_130522/Slide-4.jpg&quot;) repeat scroll 0% 0% transparent; position: absolute; top: 0px; left: 0px; z-index: 1; opacity: 0;"></div>
+														
+						</div>
+						<div id="pager2"><a class="activeSlide" href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a></div>
+						
+						<div id="downloadpdf">
+							<a target="_blank" href="assets/seven_steps_mash.pdf" style="color:#444;"><p style="line-height:16px;float:left;margin-right:10px;width:200px;padding-top:5px;text-align:right;">Download ”7 STEPS to unlocking what you know“ here</p>
+							<img src="assets/images/downloadpdf.png" alt="download pdf"></a>
+						</div>
+						
+						
+						
+					</div>
+				</div> <!-- end slidebackground -->
+			</div> <!-- end container -->
+			<div style="width: 1264px;" class="bot-container">
+					<div id="content-holder">
+						<div id="navigation">
+							<ul id="nav">
+								<li><div id="contactCircle" class="off contact"></div><button class="contact inactive">Contact</button></li>
+								<li><div id="howCircle" class="off how"></div><button class="how inactive">Our approach</button></li>
+								<li><div id="aboutCircle" class="off about"></div><button class="about inactive">About us</button></li>
+
+							
+							</ul>
+						</div>
+						<div class="terms"><span style="padding-bottom:2px;">© 2013 Mash</span>
+						<iframe data-twttr-rendered="true" title="Twitter Follow Button" style="width: 137px; height: 20px;" class="twitter-follow-button twitter-follow-button" src="http://platform.twitter.com/widgets/follow_button.1368146021.html#_=1369643962512&amp;id=twitter-widget-0&amp;lang=en&amp;screen_name=mashsocial&amp;show_count=false&amp;show_screen_name=true&amp;size=m" allowtransparency="true" frameborder="0" scrolling="no"></iframe>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
+					</div>
+					
+					
+					<div id="content-holder">
+						<div id="content-inner">
+							<div id="content-about" class="textspread">
+								<div class="span-24 last">
+									<h1>The Strategy Studio for Global brands</h1>
+								</div>
+								<div class="span-12">
+									<h2>Who we are</h2>
+									<p>A team of experienced creative problem solvers who combine brand strategy, research and internal communications skills</p>
+									<h2>What we do</h2>
+									<p>Help drive change for global brands – working on the ground in the world’s largest and fastest growing markets.&nbsp;Recently we’ve worked in China, Brazil, India, Turkey, the US and Europe</p>										
+									</div>
+									
+									<div class="span-12 last">
+										<h2>Beautiful Thinking</h2>
+										<p>There is an <strong>explosion of information</strong> about consumers – in databases, in reports, in peoples’ heads, in culture and social media. This is a massive and often untapped opportunity</p>
+										<p>We …</p>
+										<p> … Unlock the power of <strong>existing information</strong> sources and <br>
+										… <strong>Land thinking</strong> through engaging multimedia experiences</p>
+										<p>Because Beautiful Thinking gets noticed, inspires peoples and elicits change</p>
+								</div>
+								
+								
+								<div class="span-18" style="padding-top:20px;">
+										<h2>Our five areas of expertise</h2>
+										<img src="assets/images/Pillars.png" style="padding-top:10px;" width="700">
+								</div>
+								<div class="span-6 last" style="padding-top:20px;">
+								<h2>Our clients</h2>
+										<div style="position: relative; width: 180px; height: 105px;" id="logos">
+											<img style="position: absolute; top: 0px; left: 0px; display: block; z-index: 8; opacity: 1;" src="assets/images/logo1.png" width="180">
+											<img style="position: absolute; top: 0px; left: 0px; display: none; z-index: 6; opacity: 0;" src="assets/images/logo2.png" width="180">
+											<img style="position: absolute; top: 0px; left: 0px; display: none; z-index: 5; opacity: 0;" src="assets/images/logo3.png" width="180">
+											<img style="position: absolute; top: 0px; left: 0px; display: none; z-index: 4; opacity: 0;" src="assets/images/logo4.png" width="180">
+											<img style="position: absolute; top: 0px; left: 0px; display: none; z-index: 3; opacity: 0;" src="assets/images/logo5.png" width="180">
+											<img style="position: absolute; top: 0px; left: 0px; display: none; z-index: 2; opacity: 0;" src="assets/images/logo6.png" width="180">
+											<img style="position: absolute; top: 0px; left: 0px; display: none; z-index: 1; opacity: 0;" src="assets/images/logo7.png" width="180">
+											<!-- <img src="assets/images/logo8.png" width="180"/> -->
+										
+										</div>
+								</div>
+							</div>
+							
+							
+							<div id="content-how" class="textspread">
+								<div style="position: relative; width: 946px; height: 447px;" class="cyclethis-how">							
+									<div style="width: 946px; height: 447px; background: url(&quot;assets/images/How1.jpg&quot;) repeat scroll 0% 0% transparent; position: absolute; top: 0px; left: 0px; display: block; z-index: 6; opacity: 1;">
+									</div>
+									<div style="width: 946px; height: 447px; background: url(&quot;assets/images/How2.jpg&quot;) repeat scroll 0% 0% transparent; position: absolute; top: 0px; left: 0px; display: none; z-index: 4; opacity: 0;">
+									</div>
+									<div style="width: 946px; height: 447px; background: url(&quot;assets/images/How3.jpg&quot;) repeat scroll 0% 0% transparent; position: absolute; top: 0px; left: 0px; display: none; z-index: 3; opacity: 0;">
+									</div>
+									<div style="width: 946px; height: 447px; background: url(&quot;assets/images/How4.jpg&quot;) repeat scroll 0% 0% transparent; position: absolute; top: 0px; left: 0px; display: none; z-index: 2; opacity: 0;">
+									</div>
+									<div style="width: 946px; height: 447px; background: url(&quot;assets/images/How5.jpg&quot;) repeat scroll 0% 0% transparent; position: absolute; top: 0px; left: 0px; display: none; z-index: 1; opacity: 0;">
+									</div>														
+								</div>
+							<div id="pager"><a class="activeSlide" href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a></div>
+						</div>
+
+							
+							<div id="content-contact" class="textspread">
+								<div class="span-6">
+									<h2>Jonathan Williams</h2>
+									<p>+44 7734 563541<br>
+									<a href="mailto:jonathanw@mash.uk.com">jonathanw@mash.uk.com</a></p>
+									<h2>Conrad Persons</h2>
+									<p>+44 7837 077387<br>
+									<a href="mailto:conradp@mash.uk.com">conradp@mash.uk.com</a></p>
+									<h2>Emma Sant</h2>
+									<p>+44 7795 838439<br>
+									<a href="mailto:emmas@mash.uk.com">emmas@mash.uk.com</a></p>
+									<h2>Contact</h2>
+									<p>Unit 18<br>
+									Archer St. Studios<br>
+									10 - 11 Archer Street<br>
+									London W1D 7AZ</p>								
+									<p>T +44 20 3176 2462<br>
+									F +44 20 3031 1462<br>
+									E <a href="mailto:info@mash.uk.com">info@mash.uk.com</a></p>
+									
+								</div>
+								<div class="span-18 last">
+									<div id="map_canvas" style="width: 680px; height: 450px; position: relative; background-color: rgb(229, 227, 223); overflow: hidden;"><div style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: 0;"><div style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: 0;"><div style="position: absolute; left: 0px; top: 0px; z-index: 1; cursor: url(&quot;http://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;), default;"><div style="position: absolute; left: 0px; top: 0px; z-index: 200;"><div style="position: absolute; left: 0px; top: 0px; z-index: 101;"></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 201;"><div style="position: absolute; left: 0px; top: 0px; z-index: 102;"><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div style="position: absolute; left: 0px; top: 0px; z-index: 1;"><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 186px; top: -61px;"><canvas width="256" height="256" style="-moz-user-select: none; position: absolute; left: 0px; top: 0px; height: 256px; width: 256px;"></canvas></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 186px; top: 195px;"><canvas width="256" height="256" style="-moz-user-select: none; position: absolute; left: 0px; top: 0px; height: 256px; width: 256px;"></canvas></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 442px; top: -61px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 442px; top: 195px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -70px; top: -61px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -70px; top: 195px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 186px; top: -317px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 186px; top: 451px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 442px; top: -317px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 442px; top: 451px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 698px; top: -61px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 698px; top: 195px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -70px; top: -317px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -70px; top: 451px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 698px; top: -317px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 698px; top: 451px;"></div></div></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 103;"><div style="position: absolute; left: 0px; top: 0px; z-index: -1;"><div style="position: absolute; left: 0px; top: 0px; z-index: 1;"><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 186px; top: -61px;"><canvas width="256" height="256" style="-moz-user-select: none; position: absolute; left: 0px; top: 0px; height: 256px; width: 256px;"></canvas></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 186px; top: 195px;"><canvas width="256" height="256" style="-moz-user-select: none; position: absolute; left: 0px; top: 0px; height: 256px; width: 256px;"></canvas></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 442px; top: -61px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 442px; top: 195px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -70px; top: -61px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -70px; top: 195px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 186px; top: -317px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 186px; top: 451px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 442px; top: -317px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 442px; top: 451px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 698px; top: -61px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 698px; top: 195px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -70px; top: -317px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -70px; top: 451px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 698px; top: -317px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 698px; top: 451px;"></div></div></div></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 202;"><div style="position: absolute; left: 0px; top: 0px; z-index: 104;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 105;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 106;"></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 100;"><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div style="position: absolute; left: 0px; top: 0px; z-index: 1;"><div style="width: 256px; height: 256px; position: absolute; left: 186px; top: -61px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 186px; top: 195px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 442px; top: -61px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 442px; top: 195px;"></div><div style="width: 256px; height: 256px; position: absolute; left: -70px; top: -61px;"></div><div style="width: 256px; height: 256px; position: absolute; left: -70px; top: 195px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 186px; top: -317px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 186px; top: 451px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 442px; top: -317px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 442px; top: 451px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 698px; top: -61px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 698px; top: 195px;"></div><div style="width: 256px; height: 256px; position: absolute; left: -70px; top: -317px;"></div><div style="width: 256px; height: 256px; position: absolute; left: -70px; top: 451px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 698px; top: -317px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 698px; top: 451px;"></div></div></div></div><div style="position: absolute; z-index: 0; left: 0px; top: 0px;"><div style="overflow: hidden;"></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div style="position: absolute; left: 0px; top: 0px; z-index: 1;"></div></div></div></div><div style="margin: 2px 5px 2px 2px; z-index: 1000000; position: absolute; left: 0px; bottom: 0px;"><a title="Click to see this area on Google Maps" href="http://maps.google.com/maps?ll=51.51176,-0.13402&amp;z=16&amp;hl=en-US" target="_blank" style="position: static; overflow: visible; float: none; display: inline;"><div style="width: 62px; height: 24px; visibility: hidden; cursor: pointer;"><img draggable="false" src="http://maps.gstatic.com/mapfiles/transparent.png" style="position: absolute; left: 0px; top: 0px; width: 62px; height: 24px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div></a></div><div style="z-index: 1000001; position: absolute; right: 0px; bottom: 0px;" class="gmnoprint"><div style="height: 19px; -moz-user-select: none; line-height: 19px; padding-right: 2px; padding-left: 50px; background: -moz-linear-gradient(left center , rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.5) 50px) repeat scroll 0% 0% transparent; font-family: Arial,sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right;"><a style="color: rgb(68, 68, 68); text-decoration: underline; cursor: pointer; display: none;">Map Data</a><span>Map data ©2013 Google</span><span> - </span><a target="_blank" href="http://www.google.com/intl/en-US_US/help/terms_maps.html" style="color: rgb(68, 68, 68); text-decoration: underline; cursor: pointer;">Terms of Use</a></div></div><div style="background-color: white; padding: 15px 21px; border: 1px solid rgb(171, 171, 171); font-family: Arial,sans-serif; color: rgb(34, 34, 34); box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2); z-index: 10000002; display: none; width: 256px; height: 148px; position: absolute; left: 190px; top: 135px;"><div style="padding: 0px 0px 10px; font-size: 16px;">Map Data</div><div style="font-size: 13px;">Map data ©2013 Google</div><div style="width: 10px; height: 10px; overflow: hidden; position: absolute; opacity: 0.7; right: 12px; top: 12px; z-index: 10000; cursor: pointer;"><img draggable="false" src="http://maps.gstatic.com/mapfiles/transparent.png" style="position: absolute; left: -18px; top: -44px; width: 68px; height: 67px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div></div><div style="position: absolute; right: 0px; bottom: 0px;" class="gmnoscreen"><div style="font-family: Arial,sans-serif; font-size: 10px; color: rgb(68, 68, 68); direction: ltr; text-align: right; background-color: rgb(245, 245, 245);">Map data ©2013 Google</div></div><div style="font-size: 10px; height: 17px; background-color: rgb(245, 245, 245); border: 1px solid rgb(220, 220, 220); line-height: 19px; display: none; position: absolute; right: 0px; bottom: 0px;" class="gmnoprint"><a href="http://maps.google.com/maps?ll=51.51176,-0.13402&amp;z=16&amp;hl=en-US&amp;skstate=action:mps_dialog$apiref:1&amp;output=classic" style="font-family: Arial,sans-serif; font-size: 85%; font-weight: bold; bottom: 1px; padding: 1px 3px; color: rgb(68, 68, 68); text-decoration: none; position: relative;" title="Report errors in the road map or imagery to Google" target="_new">Report a map error</a></div><div controlheight="348" controlwidth="78" style="margin: 5px; -moz-user-select: none; position: absolute; left: 0px; top: 0px;" class="gmnoprint"><div style="cursor: url(&quot;http://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;), default; width: 78px; height: 78px; position: absolute; left: 0px; top: 0px;" controlheight="80" controlwidth="78" class="gmnoprint"><div style="width: 78px; height: 78px; position: absolute; left: 0px; top: 0px;" controlheight="80" controlwidth="78" class="gmnoprint"><div style="visibility: hidden;"><svg viewBox="0 0 78 78" height="78px" width="78px" overflow="hidden" version="1.1" style="position: absolute; left: 0px; top: 0px;"><circle stroke="#f2f4f6" fill="#f2f4f6" fill-opacity="0.2" stroke-width="3" r="35" cy="39" cx="39"></circle><g transform="rotate(0 39 39)"><rect fill="#f2f4f6" stroke-width="1" stroke="#a6a6a6" height="11" width="12" ry="4" rx="4" y="0" x="33"></rect><polyline stroke="#000" fill="#f2f4f6" stroke-width="1.5" stroke-linejoin="bevel" points="36.5,8.5 36.5,2.5 41.5,8.5 41.5,2.5"></polyline></g></svg></div></div><div style="position: absolute; left: 10px; top: 11px;" controlheight="59" controlwidth="59" class="gmnoprint"><div style="width: 59px; height: 59px; overflow: hidden; position: relative;"><img draggable="false" src="http://maps.gstatic.com/mapfiles/transparent.png" style="position: absolute; left: 0px; top: 0px; width: 59px; height: 492px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"><div title="Pan left" style="position: absolute; left: 0px; top: 20px; width: 19.6667px; height: 19.6667px; cursor: pointer;"></div><div title="Pan right" style="position: absolute; left: 39px; top: 20px; width: 19.6667px; height: 19.6667px; cursor: pointer;"></div><div title="Pan up" style="position: absolute; left: 20px; top: 0px; width: 19.6667px; height: 19.6667px; cursor: pointer;"></div><div title="Pan down" style="position: absolute; left: 20px; top: 39px; width: 19.6667px; height: 19.6667px; cursor: pointer;"></div></div></div></div><div controlheight="40" controlwidth="32" style="cursor: url(&quot;http://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;), default; position: absolute; left: 23px; top: 85px;"><div style="width: 32px; height: 40px; overflow: hidden; position: absolute; left: 0px; top: 0px;"><img draggable="false" src="http://maps.gstatic.com/mapfiles/transparent.png" style="position: absolute; left: -9px; top: -102px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div><div style="width: 32px; height: 40px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;"><img draggable="false" src="http://maps.gstatic.com/mapfiles/transparent.png" style="position: absolute; left: -107px; top: -102px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div><div style="width: 32px; height: 40px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;"><img draggable="false" src="http://maps.gstatic.com/mapfiles/transparent.png" style="position: absolute; left: -58px; top: -102px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div><div style="width: 32px; height: 40px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;"><img draggable="false" src="http://maps.gstatic.com/mapfiles/transparent.png" style="position: absolute; left: -205px; top: -102px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div></div><div controlheight="0" controlwidth="0" style="opacity: 0.6; display: none; position: absolute;" class="gmnoprint"><img title="Rotate map 90 degrees" style="-moz-user-select: none; border: 0px none; padding: 0px; margin: 0px; cursor: pointer;" draggable="false" src="http://maps.gstatic.com/mapfiles/transparent.png"></div><div controlheight="218" controlwidth="25" style="position: absolute; left: 27px; top: 130px;" class="gmnoprint"><div title="Zoom in" style="width: 23px; height: 24px; overflow: hidden; position: relative; cursor: pointer; z-index: 1;"><img draggable="false" src="http://maps.gstatic.com/mapfiles/transparent.png" style="position: absolute; left: -17px; top: -400px; width: 59px; height: 492px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div><div title="Click to zoom" style="width: 25px; height: 170px; overflow: hidden; position: relative; cursor: pointer; top: -4px;"><img draggable="false" src="http://maps.gstatic.com/mapfiles/transparent.png" style="position: absolute; left: -17px; top: -87px; width: 59px; height: 492px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div><div title="Drag to zoom" style="width: 21px; height: 14px; overflow: hidden; position: absolute; transition: top 0.25s ease 0s; z-index: 2; cursor: url(&quot;http://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;), default; left: 2px; top: 52px;"><img draggable="false" src="http://maps.gstatic.com/mapfiles/transparent.png" style="position: absolute; left: 0px; top: -384px; width: 59px; height: 492px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div><div title="Zoom out" style="width: 23px; height: 23px; overflow: hidden; position: relative; cursor: pointer; top: -4px; z-index: 3;"><img draggable="false" src="http://maps.gstatic.com/mapfiles/transparent.png" style="position: absolute; left: -17px; top: -361px; width: 59px; height: 492px; -moz-user-select: none; border: 0px none; padding: 0px; margin: 0px;"></div></div></div><div style="margin: 5px; z-index: 0; position: absolute; cursor: pointer; right: 0px; top: 0px;" class="gmnoprint"><div style="float: left;"><div title="Show street map" style="direction: ltr; overflow: hidden; text-align: center; position: relative; color: rgb(51, 51, 51); font-family: Arial,sans-serif; -moz-user-select: none; font-size: 13px; background: none repeat scroll 0% 0% rgb(255, 255, 255); padding: 1px 6px; border: 1px solid rgb(113, 123, 135); box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4); font-weight: normal; min-width: 29px;">Map</div></div><div style="float: left;"><div style="direction: ltr; overflow: hidden; text-align: center; position: relative; color: rgb(0, 0, 0); font-family: Arial,sans-serif; -moz-user-select: none; font-size: 13px; background: none repeat scroll 0% 0% rgb(255, 255, 255); padding: 1px 6px; border-width: 1px 1px 1px 0px; border-style: solid solid solid none; border-color: rgb(113, 123, 135) rgb(113, 123, 135) rgb(113, 123, 135) -moz-use-text-color; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4); font-weight: bold; min-width: 34px;">Mash</div></div></div></div></div>
+								</div>
+								
+								
+							
+						</div>
+					</div>
+				</div>
+										
+			</div> <!-- end bot container -->
+		</div> <!-- end holder -->
+		
+				
+		<script type="text/javascript">
+
+		
+		$(document).ready(function(){
+
+			$('#logos').cycle({
+	    	delay:0,
+	    	speed:1500,
+	    	timeout:3500		    	
+	    });
+	    
+			$('.cyclethis-how').cycle({
+	    	delay:0,
+	    	speed:1500,
+	    	timeout:4500,
+	    	pager:  '#pager' 		    	
+	    });
+	    
+	    $('#pager a').click(function() {
+		    $('.cyclethis-how').cycle('pause');
+	    });
+	    
+	    $('#pager2 a').click(function() {
+		    $('.cyclethis').cycle('pause');
+	    });
+
+		});
+		</script>
+		<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-37189739-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+	
+
+</body>

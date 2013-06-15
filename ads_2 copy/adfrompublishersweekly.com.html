@@ -1,0 +1,148 @@
+<head><title>
+	Book Freight
+</title><link href="styles/main.css?tid=12345" rel="stylesheet" type="text/css">
+    <!--[if IE 7]>
+        <link rel="stylesheet" type="text/css" href="styles/ie7.css" />
+    <![endif]-->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/location_map.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.6.4.min.js" type="text/javascript"></script>
+</head>
+<body>
+    <form method="post" action="default.aspx?cid=12" id="form1">
+<div class="aspNetHidden">
+<input name="__EVENTTARGET" id="__EVENTTARGET" value="" type="hidden">
+<input name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" type="hidden">
+<input name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJOTcwNjgxNjMwD2QWAmYPZBYCAgMPZBYEAgEPZBYCAgEPFgIeBFRleHQFhhw8dGFibGUgYm9yZGVyPSIwIiBjZWxscGFkZGluZz0iMCIgY2VsbHNwYWNpbmc9IjAiIGNsYXNzPSJ0YWJsZSI+DQoJPHRib2R5Pg0KCQk8dHI+DQoJCQk8dGQgc3R5bGU9InZlcnRpY2FsLWFsaWduOnRvcDsgd2lkdGg6NDYzcHg7Ij4NCgkJCQk8aDE+DQoJCQkJCUdsb2JhbCBTdXBwbHkgQ2hhaW4gTWFuYWdlbWVudCAmYW1wOyBTbWFydCBTb2x1dGlvbnMgZm9yIHRoZSBQdWJsaXNoaW5nIEluZHVzdHJ5PC9oMT4NCgkJCQk8ZGl2IGNsYXNzPSJjb3B5Ij4NCgkJCQkJPHA+DQoJCQkJCQk8Zm9udCBjb2xvcj0iIzgyODI4MiIgZmFjZT0iQXJpYWwsIFRhaG9tYSIgc2l6ZT0iMiI+PGZvbnQgY29sb3I9IiM4MjgyODIiIGZhY2U9IkFyaWFsLCBUYWhvbWEiIHNpemU9IjIiPk92ZXIgdGhlIGxhc3QgZmV3IHllYXJzIHRoZSBwdWJsaXNoaW5nIGluZHVzdHJ5IGhhcyBjaGFuZ2VkIGRyYW1hdGljYWxseSwgZXNwZWNpYWxseSBpbiBkaXN0cmlidXRpb24gdGVybXMuIEJvb2tGcmVpZ2h0IGhhcyBlbWJyYWNlZCB0aGlzIGV2b2x1dGlvbiB3aXRoIG91ciBwdWJsaXNoaW5nIHBhcnRuZXJzIGFuZCBkZWxpdmVyZWQgaW5ub3ZhdGl2ZSBzb2x1dGlvbnMgdGhhdCBoYXZlIHNhdmVkIG91ciBjbGllbnRzIHRob3VzYW5kcy48L2ZvbnQ+PC9mb250PjwvcD4NCgkJCQkJPHA+DQoJCQkJCQkmbmJzcDs8L3A+DQoJCQkJCTxwPg0KCQkJCQkJPGZvbnQgY29sb3I9IiM4MjgyODIiIGZhY2U9IkFyaWFsLCBUYWhvbWEiIHNpemU9IjIiPjxmb250IGNvbG9yPSIjODI4MjgyIiBmYWNlPSJBcmlhbCwgVGFob21hIiBzaXplPSIyIj5Xb3VsZCB5b3UgbGlrZSB0byBmaW5kIG91dCwgaG93IHRvIHRha2Ugc2lnbmlmaWNhbnQgY29zdHMgb3V0IG9mIHlvdXIgU3VwcGx5IENoYWluPyBTaW1wbHkgYXNrIGZvciBvdXI8c3Ryb25nPiBGcmVlIDwvc3Ryb25nPmNvbmZpZGVudGlhbCBTbWFydCBBdWRpdC4gPC9mb250PjwvZm9udD48Zm9udCBmYWNlPSJBcmlhbCwgVGFob21hIiBzaXplPSIyIj48Zm9udCBmYWNlPSJBcmlhbCwgVGFob21hIiBzaXplPSIyIj48c3Ryb25nPjxhIGhyZWY9Imh0dHA6Ly9ib29rZnJlaWdodC5jb20vZGVmYXVsdC5hc3B4P2NpZD0xNiIgdGFyZ2V0PSJfc2VsZiI+PHNwYW4gc3R5bGU9ImNvbG9yOiAjNjk2OTY5Ij5Db250YWN0IHVzIHRvZGF5PC9zcGFuPjwvYT48L3N0cm9uZz48L2ZvbnQ+PC9mb250PjxzcGFuIHN0eWxlPSJjb2xvcjogIzY5Njk2OSI+PGZvbnQgZmFjZT0iQXJpYWwsIFRhaG9tYSIgc2l6ZT0iMiI+PGZvbnQgZmFjZT0iQXJpYWwsIFRhaG9tYSIgc2l6ZT0iMiI+PHN0cm9uZz4uPC9zdHJvbmc+PC9mb250PjwvZm9udD48L3NwYW4+PC9wPg0KCQkJCQk8cD4NCgkJCQkJCTxmb250IGNvbG9yPSIjODI4MjgyIiBmYWNlPSJBcmlhbCwgVGFob21hIiBzaXplPSIyIj4mbmJzcDs8L2ZvbnQ+PC9wPg0KCQkJCQk8cD4NCgkJCQkJCTxmb250IGNvbG9yPSIjODI4MjgyIiBmYWNlPSJBcmlhbCwgVGFob21hIiBzaXplPSIyIj48Zm9udCBjb2xvcj0iIzgyODI4MiIgZmFjZT0iQXJpYWwsIFRhaG9tYSIgc2l6ZT0iMiI+Tm90IG9ubHkgY2FuIHdlIGVuaGFuY2UgeW91ciBTdXBwbHkgQ2hhaW4sIG91ciBjdXN0b21pemVkIHRlY2hub2xvZ3kgZW5hYmxlcyB5b3UgdG8gb2J0YWluIGluc3RhbnQgcXVvdGVzLCB0aHJvdWdoIG91ciBvbmxpbmUgPHN0cm9uZz48ZW0+Qm9va0ZyZWlnaHQgUmF0ZSBDYWxjdWxhdG9yPC9lbT48L3N0cm9uZz4uIFlvdSBjYW4gc3BlY2lmeSBieSB3ZWlnaHQsIHZvbHVtZSBvciBib29rIHNwZWNpZmljYXRpb24uIFlvdSBjYW4gYWxzbyB0cmFjayB5b3VyIHNoaXBtZW50cyBvbmxpbmUsIHZpYSB0aGUgPHN0cm9uZz48ZW0+Qm9va0ZyZWlnaHQgT25saW5lIE1hbmFnZW1lbnQgU3lzdGVtLjwvZW0+PC9zdHJvbmc+IDwvZm9udD48L2ZvbnQ+PC9wPg0KCQkJCQk8cD4NCgkJCQkJCSZuYnNwOzxmb250IGNvbG9yPSIjODI4MjgyIiBmYWNlPSJBcmlhbCwgVGFob21hIiBzaXplPSIyIj4mbmJzcDs8L2ZvbnQ+PC9wPg0KCQkJCQk8cD4NCgkJCQkJCTxmb250IGNvbG9yPSIjODI4MjgyIiBmYWNlPSJBcmlhbCwgVGFob21hIiBzaXplPSIyIj48Zm9udCBjb2xvcj0iIzgyODI4MiIgZmFjZT0iQXJpYWwsIFRhaG9tYSIgc2l6ZT0iMiI+PHNwYW4gZmFjZT0iIj5UaGUgZW52aXJvbm1lbnQgaXMgYWxzbyBhIGJpZyBjb25jZXJuIGZvciBtYW55IG9mIHVzIHRoZXNlIGRheXMsIGFuZCB0aGF0IGlzIHdoeSBCb29rRnJlaWdodCBoYXMgZGV2ZWxvcGVkIGEgdW5pcXVlIDxzdHJvbmc+Qm9va0ZyZWlnaHQgQ28yIENhbGN1bGF0b3I8L3N0cm9uZz4sIHNvIHlvdSBjYW4ga2VlcCB0cmFjayBvZiB5b3VyIGNhcmJvbiBmb290cHJpbnQuPC9zcGFuPjwvZm9udD48L2ZvbnQ+PC9wPg0KCQkJCQk8cD4NCgkJCQkJCSZuYnNwOzwvcD4NCgkJCQkJPHA+DQoJCQkJCQk8Zm9udCBjb2xvcj0iIzgyODI4MiIgZmFjZT0iQXJpYWwsIFRhaG9tYSIgc2l6ZT0iMiI+PGZvbnQgY29sb3I9IiM4MjgyODIiIGZhY2U9IkFyaWFsLCBUYWhvbWEiIHNpemU9IjIiPjxzcGFuIGZhY2U9IiI+Qm9va0ZyZWlnaHQgdW5kZXJzdGFuZHMgdGhlIGNvbXBsZXhpdGllcyBvZiBkaXN0cmlidXRpb24gYW5kIGRlbGl2ZXJzIGN1dHRpbmcgLSBlZGdlIHRlY2hub2xvZ3kgd2l0aCBvdXRzdGFuZGluZyBjdXN0b21lciBzZXJ2aWNlLCBhbmQgdGhhdCBpcyB3aHkgUHVibGlzaGVycyBoYXZlIGNob3NlbiB0byBzaGlwIG92ZXIgMjUwIG1pbGxpb24gYm9va3Mgd2l0aCB1cyBsYXN0IHllYXIgYWxvbmUuIDwvc3Bhbj48L2ZvbnQ+PC9mb250PjwvcD4NCgkJCQkJPHA+DQoJCQkJCQkmbmJzcDs8L3A+DQoJCQkJCTxwPg0KCQkJCQkJPGZvbnQgZmFjZT0iQXJpYWwsIFRhaG9tYSIgc2l6ZT0iMiI+PGZvbnQgZmFjZT0iQXJpYWwsIFRhaG9tYSIgc2l6ZT0iMiI+PHNwYW4gZmFjZT0iIj48c3Ryb25nPjxhIGhyZWY9Imh0dHA6Ly9ib29rZnJlaWdodC5jb20vZGVmYXVsdC5hc3B4P2NpZD0xNiIgdGFyZ2V0PSJfc2VsZiI+PHNwYW4gc3R5bGU9ImNvbG9yOiAjNjk2OTY5Ij5Db250YWN0IHVzIHRvZGF5PC9zcGFuPjwvYT48L3N0cm9uZz48L3NwYW4+PC9mb250PjwvZm9udD48Zm9udCBjb2xvcj0iIzgyODI4MiIgZmFjZT0iQXJpYWwsIFRhaG9tYSIgc2l6ZT0iMiI+PGZvbnQgY29sb3I9IiM4MjgyODIiIGZhY2U9IkFyaWFsLCBUYWhvbWEiIHNpemU9IjIiPjxzcGFuIGZhY2U9IiI+IHRvIGZpbmQgb3V0LCBob3cgYSBjdXN0b21pemVkIGFwcHJvYWNoIHRvIHlvdXIgZGlzdHJpYnV0aW9uIGNhbiBzYXZlIHlvdSB0aG91c2FuZHMuPC9zcGFuPjwvZm9udD48L2ZvbnQ+PC9wPg0KCQkJCTwvZGl2Pg0KCQkJPC90ZD4NCgkJCTx0ZCBzdHlsZT0idmVydGljYWwtYWxpZ246dG9wOyI+DQoJCQkJPGltZyBhbHQ9IiIgc3JjPSJodHRwOi8vd3d3LmJvb2tmcmVpZ2h0LmNvbS9nZngvdWwvcGljcy1ob21lLnBuZyIgc3R5bGU9ImJvcmRlci13aWR0aDogMHB4OyBib3JkZXItc3R5bGU6IHNvbGlkOyBmbG9hdDogcmlnaHQ7IHdpZHRoOiA0MjNweDsgaGVpZ2h0OiA0ODdweDsiIC8+PC90ZD4NCgkJPC90cj4NCgk8L3Rib2R5Pg0KPC90YWJsZT4NCjxwPg0KCSZuYnNwOzwvcD4NCmQCAg8WAh8ABYUFPGEgaHJlZj0iZGVmYXVsdC5hc3B4P2xpZD0xJmNpZD0xMiI+PGltZyBjbGFzcz0iRmxhZ0ltYWdlIiBzcmM9ImdmeC9mbGFnLWVuZ2xpc2gucG5nIiBhbHQ9IkdCUiIgLz48YnIgLz48c3Bhbj5FbmdsaXNoPC9zcGFuPjwvYT48YSBocmVmPSJkZWZhdWx0LmFzcHg/bGlkPTImY2lkPTEyIj48aW1nIGNsYXNzPSJGbGFnSW1hZ2UiIHNyYz0iZ2Z4L2ZsYWctZGV1dGNoLnBuZyIgYWx0PSJHRVIiIC8+PGJyIC8+PHNwYW4+RGV1dHNjaDwvc3Bhbj48L2E+PGEgaHJlZj0iZGVmYXVsdC5hc3B4P2xpZD0zJmNpZD0xMiI+PGltZyBjbGFzcz0iRmxhZ0ltYWdlIiBzcmM9ImdmeC9mbGFnLWVzcGFub2wucG5nIiBhbHQ9IkVTUCIgLz48YnIgLz48c3Bhbj5Fc3Bhbm9sPC9zcGFuPjwvYT48YSBocmVmPSJkZWZhdWx0LmFzcHg/bGlkPTQmY2lkPTEyIj48aW1nIGNsYXNzPSJGbGFnSW1hZ2UiIHNyYz0iZ2Z4L2ZsYWctZnJhbmNhaXNlLnBuZyIgYWx0PSJGUkEiIC8+PGJyIC8+PHNwYW4+RnJhbmNhaXNlPC9zcGFuPjwvYT48YSBocmVmPSJkZWZhdWx0LmFzcHg/bGlkPTUmY2lkPTEyIj48aW1nIGNsYXNzPSJGbGFnSW1hZ2UiIHNyYz0iZ2Z4L2ZsYWctaXRhbGlhbm8ucG5nIiBhbHQ9IklUQSIgLz48YnIgLz48c3Bhbj5JdGFsaWFubzwvc3Bhbj48L2E+ZGQqIYoWX1YiO1rFMXUT0c8MSfhYBns9/vQDnYRPCHGPfw==" type="hidden">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div class="aspNetHidden">
+
+	<input name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAQzfNdkyEC2DKqdgozFf5oYe9N9AWjfs0zS4DSCd7H2hy/PSAvxybIG70Gi7lMSo2EtK3ooSxA3iJyxPow4MMiPyMV5gkotxLfrA9JOfy+Iky1LBX4593uRCD3g2xIaS4s=" type="hidden">
+</div>
+    <div id="container">
+        <div id="header">
+            
+            <div id="header-login">
+                <div id="pnlLogIn" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'lnkLogin')">
+	
+                    <table id="login-table" border="0" cellpadding="0" cellspacing="0">
+                        <tbody><tr>
+                            <td><span>Username:</span><input name="ctl00$txtUserName" id="txtUserName" style="height:15px;" type="text"></td>                            
+                        </tr>
+                        <tr>
+                            <td><span style="margin-left:3px;">Password:</span><input name="ctl00$txtPassword" id="txtPassword" style="height:15px;" type="password"></td>
+                        </tr>
+                        <tr>
+                            <td><a id="lnkLogin" href="javascript:__doPostBack('ctl00$lnkLogin','')">login</a></td> 
+                        </tr>
+                    </tbody></table>                                                                                
+                
+</div>
+            </div>
+
+            <div id="logo-home-link" onclick="top.location.href='default.aspx';"></div>
+        </div>
+
+        <div id="menubar">
+            <ul>
+<li><a href="default.aspx?cid=12"><p>Home</p></a></li><li><a href="default.aspx?cid=13"><p>
+	About Us</p>
+</a></li><li><a href="default.aspx?cid=14"><p>
+ Service</p>
+</a></li><li><a href="default.aspx?cid=34">IPS</a></li><li><a href="default.aspx?cid=15"><p>
+	Events/Media</p>
+</a></li><li><a href="default.aspx?cid=16"><p>Contact Us</p></a></li><li><a href="default.aspx?cid=17"><p>
+ Links</p>
+</a></li></ul>
+
+            
+        </div>
+
+        <div id="content">
+            
+    <table class="table" border="0" cellpadding="0" cellspacing="0">
+	<tbody>
+		<tr>
+			<td style="vertical-align:top; width:463px;">
+				<h1>
+					Global Supply Chain Management &amp; Smart Solutions for the Publishing Industry</h1>
+				<div class="copy">
+					<p>
+						<font face="Arial, Tahoma" size="2" color="#828282"><font face="Arial, Tahoma" size="2" color="#828282">Over the last few years the publishing industry has changed dramatically, especially in distribution terms. BookFreight has embraced this evolution with our publishing partners and delivered innovative solutions that have saved our clients thousands.</font></font></p>
+					<p>
+						&nbsp;</p>
+					<p>
+						<font face="Arial, Tahoma" size="2" color="#828282"><font face="Arial, Tahoma" size="2" color="#828282">Would you like to find out, how to take significant costs out of your Supply Chain? Simply ask for our<strong> Free </strong>confidential Smart Audit. </font></font><font face="Arial, Tahoma" size="2"><font face="Arial, Tahoma" size="2"><strong><a href="http://bookfreight.com/default.aspx?cid=16" target="_self"><span style="color: #696969">Contact us today</span></a></strong></font></font><span style="color: #696969"><font face="Arial, Tahoma" size="2"><font face="Arial, Tahoma" size="2"><strong>.</strong></font></font></span></p>
+					<p>
+						<font face="Arial, Tahoma" size="2" color="#828282">&nbsp;</font></p>
+					<p>
+						<font face="Arial, Tahoma" size="2" color="#828282"><font face="Arial, Tahoma" size="2" color="#828282">Not only can we enhance your Supply Chain, our customized technology enables you to obtain instant quotes, through our online <strong><em>BookFreight Rate Calculator</em></strong>. You can specify by weight, volume or book specification. You can also track your shipments online, via the <strong><em>BookFreight Online Management System.</em></strong> </font></font></p>
+					<p>
+						&nbsp;<font face="Arial, Tahoma" size="2" color="#828282">&nbsp;</font></p>
+					<p>
+						<font face="Arial, Tahoma" size="2" color="#828282"><font face="Arial, Tahoma" size="2" color="#828282"><span face="">The environment is also a big concern for many of us these days, and that is why BookFreight has developed a unique <strong>BookFreight Co2 Calculator</strong>, so you can keep track of your carbon footprint.</span></font></font></p>
+					<p>
+						&nbsp;</p>
+					<p>
+						<font face="Arial, Tahoma" size="2" color="#828282"><font face="Arial, Tahoma" size="2" color="#828282"><span face="">BookFreight understands the complexities of distribution and delivers cutting - edge technology with outstanding customer service, and that is why Publishers have chosen to ship over 250 million books with us last year alone. </span></font></font></p>
+					<p>
+						&nbsp;</p>
+					<p>
+						<font face="Arial, Tahoma" size="2"><font face="Arial, Tahoma" size="2"><span face=""><strong><a href="http://bookfreight.com/default.aspx?cid=16" target="_self"><span style="color: #696969">Contact us today</span></a></strong></span></font></font><font face="Arial, Tahoma" size="2" color="#828282"><font face="Arial, Tahoma" size="2" color="#828282"><span face=""> to find out, how a customized approach to your distribution can save you thousands.</span></font></font></p>
+				</div>
+			</td>
+			<td style="vertical-align:top;">
+				<img alt="" src="http://www.bookfreight.com/gfx/ul/pics-home.png" style="border-width: 0px; border-style: solid; float: right; width: 423px; height: 487px;"></td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	&nbsp;</p>
+
+
+        </div>
+
+        
+
+    </div>
+
+    <div id="hGroup">
+        <h2>Delivering Freight Solutions Globally</h2>
+        <h3>Online • On Time • On Demand</h3>
+    </div>
+
+    <div id="footer">
+        <div class="FlagsContainer"><a href="default.aspx?lid=1&amp;cid=12"><img class="FlagImage" src="gfx/flag-english.png" alt="GBR"><br><span>English</span></a><a href="default.aspx?lid=2&amp;cid=12"><img class="FlagImage" src="gfx/flag-deutch.png" alt="GER"><br><span>Deutsch</span></a><a href="default.aspx?lid=3&amp;cid=12"><img class="FlagImage" src="gfx/flag-espanol.png" alt="ESP"><br><span>Espanol</span></a><a href="default.aspx?lid=4&amp;cid=12"><img class="FlagImage" src="gfx/flag-francaise.png" alt="FRA"><br><span>Francaise</span></a><a href="default.aspx?lid=5&amp;cid=12"><img class="FlagImage" src="gfx/flag-italiano.png" alt="ITA"><br><span>Italiano</span></a></div>
+        
+    </div>
+
+
+    <div id="corporate-footer"> 
+        <p class="copyRights">All Rights Reserved, BookFreight © 2013</p>
+    </div>
+
+    
+<script src="/WebResource.axd?d=YwO8PyCXhEIRzCc8isAFcOuCHsRXa5TRpmlqxhiW0I0anpZ0_bwneA7u1VabcEb9hV6LwJpivsH7KJK_IIhuFL4o_f95Bhhw4bV_XYFu-rs1&amp;t=634970873020000000" type="text/javascript"></script>
+</form>
+    
+
+
+</body>

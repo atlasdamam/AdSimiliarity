@@ -1,0 +1,1481 @@
+<head>
+
+<!-- Begin Metadata -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="http://www.ibm.com/systems/pureflex/flex_overview.html" rel="canonical">
+<link rel="schema.DC" href="http://purl.org/DC/elements/1.0/">
+<link rel="SHORTCUT ICON" href="http://www.ibm.com/favicon.ico">
+<meta name="description" content="IBM Flex System overview">
+<meta name="abstract" content="IBM Flex System overview">
+<meta name="keywords" content="IBM,Flex,systems">
+<meta name="owner" content="Monica Stipe/Menlo Park/IBM">
+<meta name="robots" content="index,follow">
+<meta name="Security" content="Public">
+<meta name="Source" content="v17 Template Generator, Template 17.02">
+<meta name="DC.date" scheme="iso8601" content="2011-12-15">
+<meta name="DC.language" scheme="rfc1766" content="en-US">
+<meta name="DC.publisher" content="IBM Corporation">
+<meta name="DC.Rights" content="Copyright IBM Corporation 2011">
+<meta name="DC.subject" scheme="IBM_SubjectTaxonomy" content="HW180">
+<meta name="DC.type" scheme="IBM_ContentClassTaxonomy" content="CT505">
+<meta name="IBM.Country" content="US">
+<meta name="IBM.Effective" scheme="W3CDTF" content="2012-03-04">
+<meta name="IBM.Expires" scheme="W3CDTF" content="2014-04-11">
+<meta name="IBM.Industry" scheme="IBM_IndustryTaxonomy" content="ZZ">
+<!-- End Metadata -->
+<!-- Begin Browser Title -->
+<title>IBM Flex System overview</title>
+<!-- End Browser Title -->
+
+
+<!-- BEGIN STANDARD SCRIPTS -->
+<link href="//1.www.s81c.com/common/v17/css/www.css" rel="stylesheet" title="www" type="text/css">
+<script src="//1.www.s81c.com/common/js/dojo/www.js" type="text/javascript">//</script><link title="IBM Search" href="//www.ibm.com/search/opensearch/description.xml" type="application/opensearchdescription+xml" rel="search">
+<link href="/systems/resources/stg-common2.css" rel="stylesheet" title="www" type="text/css">
+<!-- END STANDARD SCRIPTS -->
+<!-- BEGIN CUSTOM SCRIPTS -->
+<script type="text/javascript" src="/systems/resources/mobile-redir-flex-ad.js">//</script>
+
+<script type="text/javascript" src="/systems/resources/stg-pureflex-common.js">//</script>
+<script type="text/javascript">
+	
+//<![CDATA[
+jQuery(function() {
+	
+	ibmSCsearchdetect();
+	ibmPageExpandSection('ibmdatacard');
+//	ibmCardInit();
+
+jQuery('.newsticker-jcarousellite').jCarouselLite({
+		vertical: true,
+		hoverPause:true,
+		visible: 1,
+		scroll: 0,
+		auto:5000,
+		speed:2500
+	});
+	
+
+	
+	jQuery('#ibm-events-container').load(jQuery('#ibm-events-link').attr('href') + ' #ibm-events-table')
+	dojo.require('ibmweb.table');
+});
+//]]>
+</script>
+
+<script type="text/javascript" src="//www.ibm.com/software/info/js/cvlu.js">//</script>
+
+<!-- Unbox overlay -->
+<script type="text/javascript" language="JavaScript"> 
+
+document.getElementsByClassName = function(cl) {
+var retnode = [];
+var myclass = new RegExp('\\b'+cl+'\\b');
+var elem = this.getElementsByTagName('*');
+for (var i = 0; i < elem.length; i++) {
+var classes = elem[i].className;
+if (myclass.test(classes)) retnode.push(elem[i]);
+}
+return retnode;
+}; 
+
+function fcshow(){
+var c = 0;
+	for (c=0;c<document.getElementsByClassName("custom-hideable").length;c++)
+	{
+	 document.getElementsByClassName("custom-hideable")[c].style.display = "";
+	 document.getElementById("csbutton").className = "custom-active";
+	 document.getElementById("chbutton").className = "custom-not-active";
+	}
+}
+
+function fchide(){
+var c = 0;
+	for (c=0;c<document.getElementsByClassName("custom-hideable").length;c++)
+	{
+	 document.getElementsByClassName("custom-hideable")[c].style.display = "none";
+	 document.getElementById("csbutton").className = "custom-not-active";
+	 document.getElementById("chbutton").className = "custom-active";
+	}
+}
+
+
+function showCat(idCat)
+{
+	 document.getElementById("tabcqaSovPuN2").className = "";
+	 document.getElementById("tab5VqWrJbcUUE").className = "";
+	 document.getElementById("tabGA2dzcyq4").className = "";
+
+	 document.getElementById("tab"+idCat).className = "ibm-highlight-tab";
+
+	for (c=0;c<document.getElementsByClassName("cat-hideable").length;c++)
+	{
+	var str = document.getElementsByClassName("cat-hideable")[c].title;
+
+		if (str.search(idCat)!=-1)
+		{
+		document.getElementsByClassName("cat-hideable")[c].style.display = "";
+		}
+		else 
+		{
+		document.getElementsByClassName("cat-hideable")[c].style.display = "none";
+		}
+	}
+}
+
+</script>
+<!-- Unbox overlay -->
+
+<script type="text/javascript">
+ibmweb.config.set({
+	siteid: 'www',
+	expertise: {
+		enabled: true,
+		template: 'col-6-2',			
+		listid: '18',
+		displaytype: 'multi',
+		blogdisplay: 'roll',
+		placeat: 'expertWidget',
+		aboutmedisplay: 'partial'
+	}
+});
+</script>
+
+<style type="text/css">
+/* LEADSPACE STYLES */
+.ibm-landing-page #ibm-leadspace-head
+{ background: url(/systems/resources/systems_pureflex_portalflex_2000x140.png) 10% 50%;
+  
+ }
+.ibm-landing-page #ibm-leadspace-head.ibm-alternate h1 {color:#000 !important; text-shadow:none !important;}
+
+
+
+</style>
+
+<style type="text/css">
+
+#ibm-navigation-trail li a{
+	color: #000 !important;
+	text-shadow: none !important;
+}
+
+</style>
+
+<script type="text/javascript">
+// ------------------------------------------------------------------------------------- Rotating box
+(function ($) {
+	
+	// namespace 'news' for news ticker	
+	var bulletin = {
+		
+		preferences: {
+			// translation for link 'Previous',
+			previous: "Previous",
+			// translation for link 'Next',
+			next: "Next",
+			// rotation time in seconds
+			time: "10",
+			// should we generate also "previous" / "next" container ?
+			pn: false
+		},
+		
+		storage: {
+			// number of boxes to display
+			n: 0,
+			// currently displayed box
+			c: 0,
+			obj: null,
+			// interval ID
+			interval: null
+		},
+		
+		// load XML data from file
+		init: function (el) {
+			bulletin.storage.obj = el;
+			var temp = $(el).parent();
+			
+			$ (bulletin.storage.obj).css ({width: "620", height: "26px", overflow: "hidden", zIndex: "0", position: "relative"});
+			
+			bulletin.storage.n = $ ('div.box-link-content', bulletin.storage.obj).length;
+			if (bulletin.preferences.pn) {
+				bulletin.createButtons ();
+			}
+			
+			$ ("div.box-link-content", bulletin.storage.obj).css ({ position: "absolute", top: "0px", left: "-660px", zIndex: "0", height: "26px", width: "620px" });
+						
+			// everything is ready
+			// now we will display the first news
+			bulletin.adjustHeight (0);
+			$("div.box-link-content:eq(0)", bulletin.storage.obj).animate ({left: 0}, 1000);
+			// and we can initialize the ticker
+			bulletin.run ();
+		},
+		
+		// will create and apped 'Next' / 'Previous' buttons
+		createButtons: function () {
+			$ ('#ibm-rotating-link-box').after ('<div class="ibm-col-6-4" id="v16-bulletin-buttons">');
+			$ ("#v16-bulletin-buttons").css ({textAlign: "center"}).append ('<p><strong><a target="" title="" href="#' + bulletin.preferences.previous + '"  class="bulletin-previous">' + bulletin.preferences.previous + '</a></strong><span class="ibm-sep"> | </span><strong><a target="" title="" href="#' + bulletin.preferences.next + '"  class="bulletin-next">' + bulletin.preferences.next + '</a></strong>');
+			
+			// set CSS and attach event handler for each link
+			$ ("a.bulletin-previous").css ({ background: "url(http://www.ibm.com/common/js/rssdisplaymodule/buttons/default/back.png) no-repeat 0 -1px", height: "1%", padding: "0px 0px 0px 18px"})
+				.click (function () { bulletin.rotatePrevious () });
+			$ ("a.bulletin-next").css ({ background: "url(http://www.ibm.com/common/js/rssdisplaymodule/buttons/default/next.png) no-repeat right -1px", height: "1%", padding: "0px 18px 0px 0px"})
+				.click (function () { bulletin.rotate () });
+		},
+		
+		// this function will take care of showing the first news and cycling through them
+		run: function () {
+			bulletin.storage.interval = setInterval (this.rotate, this.preferences.time * 1000);
+			// make sure we stop hovering once user is over the box with mouse
+			var parent = $(bulletin.storage.obj).parent ();
+			$ (parent).hover (function () {
+				// mouse over -> clear interval
+				clearInterval (bulletin.storage.interval);														  
+			}, function () {
+				// mouse out -> set interval again and do one rotation right now
+				bulletin.storage.interval = setInterval (bulletin.rotate, bulletin.preferences.time * 1000);
+			});
+		},
+		
+		// the cool efect for cycling through news
+		rotatePrevious: function () {
+			// which box should we display now
+			var n = (bulletin.storage.c + 1) % bulletin.storage.n;		
+			// move current box to right, so it will dissapear
+			$("div.box-link-content:eq(" + bulletin.storage.c + ")", bulletin.storage.obj).animate ({left: 660}, 1000, function () {
+			// now that it's in right, we will return it to basic position, left from the box, hidden
+				$ (this).css ({ left: "-660px" });																											
+			});
+			
+			// at the same time, move new box to center, so we can see it
+			$("div.box-link-content:eq(" + n + ")", bulletin.storage.obj).animate ({left: 0}, 1000);
+
+			//bulletin.adjustHeight (n);
+			
+			// set current values to storage
+			bulletin.storage.c = n;
+		
+		},
+		
+		// and go back
+		rotate: function () {
+			// which box should we display now
+			var n = (bulletin.storage.c - 1) % bulletin.storage.n;
+			if (n == -1) {
+				n = bulletin.storage.n - 1;
+			}			
+			// move the new box to the right
+			$("div.box-link-content:eq(" + n + ")", bulletin.storage.obj).css ({left: 660});		
+			// move current box to left, so it will dissapear
+			$("div.box-link-content:eq(" + bulletin.storage.c + ")", bulletin.storage.obj).animate ({left: -660}, 1000);		
+			// at the same time, move new box to center, so we can see it
+			$("div.box-link-content:eq(" + n + ")", bulletin.storage.obj).animate ({left: 0}, 1000);
+			
+			//bulletin.adjustHeight (n);	
+			
+			// set current values to storage
+			bulletin.storage.c = n;
+		},
+		
+		adjustHeight: function (n) {
+			// now the tricky part
+			// if text we are about to display is too long, some part of it might get lost beneath the box
+			// so we need to get it's height and compare to current box height
+			// and set it so it would fit
+			$ (bulletin.storage.obj).height ($("div.box-link-content:eq(" + n + ")", bulletin.storage.obj).height () );
+		},
+		
+		// function for displaying error messages.
+		error: function (t) {
+			$ ("#ibm-content-main > *:first").before ('<p class="ibm-ind-error">' + t);	
+			return;
+		}		
+	};
+	
+	$ (document).ready (function () {
+		bulletin.init ($ ('#ibm-rotating-link-box'));
+	});
+
+}) (jQuery);
+
+// ------------------------------------------------------------------------------------- Rotating box
+</script>
+
+
+
+<script type="text/javascript">
+ /*COURTAIN EFFECTS BEGIN*/
+ var troy_curtain=function(b){
+	
+	
+	console.log("create all variables");
+	
+	var j=dojo.query("#ibm-ad");
+	var e=dojo.query("#ibm-ad-modal-onload");
+	var i=dojo.byId("ibm-pcon");
+	dojo.byId("ibm-pcon");
+	var k=dojo.query("#ibm-ad-close a");
+	var a=dojo.query("#ibm-ad-leadspace div.ibm-ad-body."+b);
+	var g=dojo.query("#ibm-ad-content div.ibm-ad-body."+b);	
+	
+	
+	//setTimeout( function() {  }, 5500 );
+			
+			
+	console.log("after create all variables");
+	
+	console.log("length J: "+j.length);
+	console.log("length E: "+e.length);
+	console.log("length I: "+i.length);
+	console.log("length K: "+k.length);
+	console.log("length A: "+a.length);
+	console.log("length G: "+g.length);
+	
+	//if(j.length==1&&e.length==1&&i&&k.length==1&&a.length==1&&g.length==1){
+	if(j.length==1&&e.length==1&&k.length==1&&a.length==1&&g.length==1){
+	
+		console.log("block all the content");
+	
+		j[0].style.display="block";
+		e[0].style.display="block";
+		a[0].style.display="block";
+		g[0].style.display="block";
+		
+		var d=dojo.connect(window,"onscroll",function(){
+			var l=(self.pageYOffset)?self.pageYOffset:(document.documentElement&&document.documentElement.scrollTop)?document.documentElement.scrollTop:(document.body)?document.body.scrollTop:0;
+			dojo.style(i,"paddingTop",l+"px")});
+			var h=function(n,m){dojo.disconnect(d);
+			dojo.disconnect(f);
+				if(n){
+					dojo.stopEvent(n);
+					window.scroll(0,0)
+				}
+				dojo.style(i,"paddingTop","0px");
+				var l=dojo.byId("ibm-ad-content");
+				l.style.overflow="hidden";
+				dojo.animateProperty({node:l,properties:{height:{start:dojo.style(l,"height"),end:0,unit:"px"}},duration:790,onEnd:function(){dojo.animateProperty({node:dojo.byId("ibm-ad"),properties:{opacity:{start:1,end:0}},duration:520,onEnd:function(){dojo.query("#ibm-ad").orphan()}}).play();dojo.animateProperty({node:dojo.byId("ibm-ad-modal-onload"),properties:{opacity:{start:1,end:0}},duration:520,onEnd:function(){dojo.query("#ibm-ad-modal-onload").orphan();if(m){m()}}}).play()}}).play()};
+				
+				if(b=="ad-message-3"){
+					var f=dojo.connect(k[0],"onclick",function(l){
+						dojo.stopEvent(l);
+						h(null,function(){
+							troy.adjustByHash("tab:expert-integrated-systems/subtab:ptab-expert-integrated-systems-rpanel-overview-link")}
+						)}
+				)}
+				else{
+					var f=dojo.connect(k[0],"onclick",h)}
+					var c=dojo.query("#ibm-ad a.ibm-troy-in");
+						if(c.length>0){
+							c.forEach(function(l){dojo.connect(l,"onclick",function(o){dojo.stopEvent(o);var m=l.getAttribute("href");var n=m.replace("#","");h(null,function(){troy.adjustByHash(n)})})})}}};var troy_url=document.location.href;
+
+ 
+	dojo.ready(function(){  
+	var troy_url=document.location.href;
+		if(troy_url.indexOf('ad=messagedetect-1') > -1){
+			troy_curtain('ad-message-1');	
+		}
+	});
+
+troy_url = null;
+
+</script>
+
+
+<style type="text/css">
+/* AD LEADSPACE */
+.ibm-ad-leadspace-head ad-message-1{
+background:url("/systems/data/flash/pureflex/images/TL_Intel_Flex_System_LP_Header_Graphic_28no_copy_29.png") no-repeat scroll right center transparent;
+min-height:270px !important;
+}
+
+#ibm-ad .ibm-ad-close-link {
+	font-size: 0.9em;
+}
+#ibm-ad #ibm-ad-leadspace p.ibm-ad-title {
+	font-size: 2.2em;
+	color:#D32D85;
+}
+#ibm-ad #ibm-ad-leadspace a.ibm-ad-btn {
+	font-size: 0.9em;
+}
+#ibm-ad .ibm-ad-main h2 {
+	font-size: 1.4em;
+}
+#ibm-ad .ibm-ad-main p {
+	font-size: 0.9em;
+}
+#ibm-ad .ibm-ad-sidebar h2 {
+	font-size: 0.9em;
+}
+#ibm-ad .ibm-ad-sidebar p {
+	font-size: 0.7em;
+}
+#ibm-ad .ibm-ad-sidebar p.ibm-ad-link a {
+	font-size: 1.2em;
+}
+
+#ibm-ad .ibm-ad-body.ad-message-4 .ibm-ad-sidebar p{
+font-size: 0.9em;
+}
+
+#ibm-ad .ibm-ad-body.ad-message-4 .ibm-ad-sidebar ul.ibm-portrait-module-list p{
+font-size: 0.8em;
+}
+
+#ibm-ad{top:-297px!important;}
+
+#ibm-ad {
+	position: relative;
+	top: -165px;	
+	display: none;
+}
+#ibm-ad #ibm-ad-leadspace {
+	min-height: 270px;
+	width: 100%;
+	background: url("/systems/data/flash/pureflex/images/gray_v17_bg_1x300.jpg") repeat scroll 0 0 transparent;
+}
+
+
+#ibm-ad #ibm-ad-leadspace .ibm-ad-leadspace-head.ad-message-1{
+background: url("/systems/data/flash/pureflex/images/gray_v17_bg_1x300.jpg") repeat scroll 0 0 transparent
+}
+
+#ibm-ad #ibm-ad-leadspace .ibm-ad-leadspace-head.ad-message-2{
+background: url(http://www.ibm.com/ibm/puresystems/i/ad_leadspace_bg.jpg) no-repeat 50% 0px;
+}
+
+#ibm-ad #ibm-ad-leadspace .ibm-ad-leadspace-head.ad-message-3{
+background: url(http://www.ibm.com/ibm/puresystems/i/ad_leadspace_bg.jpg) no-repeat 50% 0px;
+}
+
+#ibm-ad #ibm-ad-leadspace .ibm-ad-leadspace-head.ad-message-4{
+background: url(http://www.ibm.com/ibm/puresystems/i/i/ad_leadspace_bg.jpg) no-repeat 50% 0px;
+}
+
+
+#ibm-ad .ibm-ad-body {
+	margin: 0px auto;
+	padding: 0px 10px;
+	width: 960px;
+    display: none;
+}
+#ibm-ad #ibm-ad-leadspace .ibm-ad-body {
+	position: relative;
+	height: 176px;
+}
+#ibm-ad #ibm-ad-leadspace p.ibm-ad-title {
+        font-size:2.2em;
+}
+#ibm-ad #ibm-ad-leadspace p.ibm-ad-title {
+	color: #FFF;
+	padding: 20px 10px;
+    font-family: "ITCLubalinGraphW01-Bk" !important;
+    display: block;
+    font-weight: normal;
+}
+#ibm-ad #ibm-ad-leadspace p.ibm-ad-sub {
+	color: #FFF;	
+	padding: 0px 10px;
+}
+#ibm-ad #ibm-ad-leadspace a.ibm-ad-btn {
+	color: #FFF;
+	padding: 4px 10px;
+	margin-right: 5px;
+	text-decoration: none;
+	background: #90C;
+	border-radius: 10px; 
+	-moz-border-radius: 10px; 
+	-webkit-border-radius: 10px; 
+}
+#ibm-ad #ibm-ad-leadspace a.ibm-ad-btn span {
+    font-family: "ITCLubalinGraphW01-Bk" !important;
+	padding-right: 15px;
+	background: url(http://www.ibm.com/ibm/puresystems/i/sprites/ad_leadspace_icons.png) no-repeat 100% 4px;
+}
+
+#ibm-ad ul.ibm-portrait-module-list{
+padding-left: 0;
+list-style-type: none;
+}
+
+
+#ibm-ad ul.ibm-portrait-module-list li, #ibm-ad ul.ibm-thumbnail-list li {
+    background: none repeat scroll 0 0 transparent !important;
+    clear: both;
+    display: block;
+    height: 1%;
+    min-height: 45px;
+    padding: 5px 0;
+	list-style-type: none;
+}
+
+#ibm-ad ul.ibm-portrait-module-list img, #ibm-ad ul.ibm-thumbnail-list img {
+    float: left;
+	padding: 3px 10px 10px 0;
+   }
+
+#ibm-ad .ibm-ad-body.ad-message-4 .ibm-ad-sidebar h2 {
+padding-top: 0 !important;
+}
+
+#ibm-ad ul.ibm-portrait-module-list p, #ibm-ad ul.ibm-thumbnail-list p {
+    margin-left: 70px;
+    padding: 0 !important;
+}
+
+#ibm-ad #ibm-ad-content {
+	background: #FFF;
+}
+#ibm-ad .ibm-ad-main {
+	width: 620px;
+	padding: 40px 10px 20px 10px;
+	float: left;
+	clear: none;
+}
+#ibm-ad .ibm-ad-main h2 {
+	font-size:1.4em;
+	color: #939;
+}
+
+#ibm-ad .ibm-ad-close-link {
+	position: absolute;
+	background: #E4E4E4;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#E4E4E4');
+    background: -webkit-linear-gradient(#FFFFFF, #E4E4E4);
+    background: -moz-linear-gradient(#FFFFFF, #E4E4E4);
+    background: -o-linear-gradient(#FFFFFF, #E4E4E4);
+	border-radius: 5px 5px 0px 0px;
+	-moz-border-radius: 5px 5px 0px 0px;
+	-webkit-border-radius: 5px 5px 0px 0px;
+	box-shadow: 2px -1px 0px -1px rgba(0,0,0,.4);
+	-moz-box-shadow: 2px -1px 0px -1px rgba(0,0,0,.4);
+	-webkit-box-shadow: 2px -1px 0px -1px rgba(0,0,0,.4);
+	right: 20px;
+	bottom: 0px;
+}
+#ibm-ad .ibm-ad-close-link a {
+	display: block;
+	background: url(http://www.ibm.com/ibm/puresystems/i/sprites/ad_leadspace_icons.png) no-repeat 0px -300px;
+	padding: 8px 25px 6px 30px;
+	color: #444 !important;
+	text-decoration: none;
+}
+
+#ibm-ad .ibm-ad-sidebar {
+	width: 300px;
+	padding: 40px 10px 20px 10px;
+	float: left;
+	clear: none;
+}
+#ibm-ad .ibm-ad-main p {
+	font-size:0.9em;
+	color: #666;
+	line-height: 1.4em;
+	padding: 10px 0px;
+}
+#ibm-ad .ibm-ad-sidebar h2 {
+	padding-top: 10px;
+}
+#ibm-ad .ibm-ad-sidebar p {
+	font-size:0.8em !important;
+	color: #666;
+	line-height: 1.4em;
+	padding: 5px 0px;
+}
+#ibm-ad .ibm-ad-sidebar p.ibm-ad-link a {
+	background: url(http://www.ibm.com/ibm/puresystems/i/sprites/ad_leadspace_icons.png) no-repeat 100% -100px;
+	color: #939;
+	padding: 0px 15px 0px 0px;
+	text-decoration: none;
+	font-weight: bold;
+}
+#ibm-ad-close {
+	height: 40px;
+	width: 100%;
+	border-top: 1px solid #CCC;
+    border-bottom: 1px solid #CCC;
+    background: #DEDEDE;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F9F9F9', endColorstr='#DEDEDE');
+    background: -webkit-linear-gradient(#F9F9F9, #DEDEDE);
+    background: -moz-linear-gradient(#F9F9F9, #DEDEDE);
+    background: -o-linear-gradient(#F9F9F9, #DEDEDE);
+}
+#ibm-ad-close p {
+	text-align: center;
+	padding: 10px 0px;
+}
+#ibm-ad-close p a {
+	background: url(http://www.ibm.com/ibm/puresystems/i/sprites/ad_leadspace_icons.png) no-repeat 0% -200px;
+	padding-left: 30px;
+	text-decoration: none;
+	color: #666;
+	font-weight: bold;
+}
+#ibm-ad .ibm-ad-body:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+#ibm-ad-modal-onload {
+	display: none;
+	z-index: -1;
+	filter: alpha(opacity=60);
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=60);
+	-moz-opacity: .60;
+	-khtml-opacity: 0.6;
+	opacity: 0.6;
+	background-color: #000;
+	position: fixed; 
+	top: 0px; 
+	left: 0px; 
+	width: 100%; 
+	height: 100%; 
+	color: #FFF; 
+	text-align: center; 
+	vertical-align: middle;
+	visibility: visible;
+}
+/*COURTAIN EFFECTS FINISH*/
+</style>
+
+
+<style type="text/css">
+/* ribbon card styles */
+.ibm-card-data h3{
+margin-left:110px !important;
+font-size:14px !important;
+}
+
+div.ibm-card-data p{
+font-size:12px !important;
+}
+
+.ibm-card-data p a{
+font-size:12px !important;
+}
+.ibm-ribbon{
+margin-bottom:16px !important;
+}
+.ibm-ribbon-next{
+right:270px !important;
+margin-top:1px !important;
+}
+.ibm-ribbon-prev{
+margin-top: 132px !important;
+left:270px !important;
+}
+
+.right-column{
+margin-left:-50px;
+margin-top:-6px;
+}
+
+
+/* SHARE THE EVENT STYLES */
+#ibm-content .ibm-share-this {
+	border-top: 0px !important;
+	display: block !important;
+	clear: both;
+}
+#ibm-content .ibm-share-this ul {
+	padding-bottom: 0px !important;
+	width:200px;
+	margin:auto;
+}
+#ibm-content .ibm-share-this ul li {
+	background-image: none !important;
+	padding-right: 0px !important;
+	padding-left: 2px !important;
+}
+#ibm-content .ibm-share-this ul li:first-child {
+	padding-left: 0px !important;	
+}
+#ibm-content .ibm-share-this ul li p.ibm-share-info {
+	padding: 0px 5px 0px 0px !important;
+	color: #666;
+	font-size: 12px !important;
+	line-height: 0.9em;
+	text-align: right;
+}
+
+#ibm-content .ibm-share-this ul li a {
+	background:url("//www.ibm.com/systems/data/flash/expert-integrated-systems/i/_share_icons.png") no-repeat 0px 0px;
+	width: 26px;
+	height: 27px;
+	opacity: 1;
+}
+#ibm-content .ibm-share-this ul li a.ibm-share-facebook {
+	background-position: 0px 0px;
+}
+#ibm-content .ibm-share-this ul li a.ibm-share-twitter {
+	background-position: 0px -54px;
+}
+#ibm-content .ibm-share-this ul li a.ibm-share-linkedin {
+	background-position: 0px -27px;
+}
+#ibm-content .ibm-share-this ul li a.ibm-share-facebook:hover {
+	background-position: -26px 0px;
+}
+#ibm-content .ibm-share-this ul li a.ibm-share-twitter:hover {
+	background-position: -26px -54px;
+}
+#ibm-content .ibm-share-this ul li a.ibm-share-linkedin:hover {
+	background-position: -26px -27px;
+}
+#ibm-content .ibm-share-this ul li a.ibm-share-facebook:active {
+	background-position: -52px 0px;
+}
+#ibm-content .ibm-share-this ul li a.ibm-share-twitter:active {
+	background-position: -52px -54px;
+}
+#ibm-content .ibm-share-this ul li a.ibm-share-linkedin:active {
+	background-position: -52px -27px;
+}
+/* SHARE THE EVENT STYLES */
+</style>
+<!-- END CUSTOM SCRIPTS -->
+<script charset="utf-8" id="dojoIoScript1" src="//1.www.s81c.com/common/js/dynamicnav/www/usen-utf8.js" type="text/javascript"></script><script charset="utf-8" id="dojoIoScript2" src="https://www.ibm.com/gateway/secstate/?&amp;cc=us&amp;lc=en&amp;format=json&amp;ts=1367624503093&amp;industry=ZZ&amp;dc_subject=HW180&amp;currenturl=%2F%2Fwww.ibm.com%2Fsystems%2Fpureflex%2Fflex_overview.html&amp;ctype=CT505&amp;ww=&amp;cb=100%3A__tcb81972%40109%3A__tcb57236%40102%3A__tcb72846%40106%3A__tcb34994" type="text/javascript"></script><script src="//1.www.s81c.com/common/js/dojo/1.6/ibmweb/ibm-form.xd.js" charset="utf-8" type="text/javascript"></script><script src="//1.www.s81c.com/common/js/dojo/1.6/ibmweb/dyntabs.xd.js" charset="utf-8" type="text/javascript"></script><script src="//service.maxymiser.net/cdn/ibm/js/mmcore.js" type="text/javascript"></script><script src="//1.www.s81c.com/common/js/dojo/1.6/ext/expertise/AbstractExpertiseV17Widget.xd.js" charset="utf-8" type="text/javascript"></script><script src="//1.www.s81c.com/common/js/dojo/1.6/ext/expertise/Six2V17Widget.xd.js" charset="utf-8" type="text/javascript"></script><script src="//1.www.s81c.com/common/js/dojo/1.6/ext/media/_base.xd.js" charset="utf-8" type="text/javascript"></script><script src="//1.www.s81c.com/common/js/dojo/1.6/ibmweb/table.xd.js" charset="utf-8" type="text/javascript"></script><script src="//1.www.s81c.com/common/js/dojo/1.6/ibmweb/nls/ibm-form_en-us.xd.js" charset="utf-8" type="text/javascript"></script><script src="//1.www.s81c.com/common/js/dojo/1.6/ext/media/nls/_base_en-us.xd.js" charset="utf-8" type="text/javascript"></script><script charset="utf-8" type="text/javascript" src="http://service.maxymiser.net/cg/v5us/?fv=dmn%3Dibm.com%3Bref%3D%3Burl%3Dhttp%253A//www-03.ibm.com/systems/pureflex/flex_overview.html%253Fad%253Dmessagedetect-1%2526cmp%253D601LE%2526cm%253Db%2526csr%253Dagus_leintel%2526cr%253Didgtechnetwork%2526ct%253D601LE301%2526cn%253Dflex_system%3Bscrw%3D1280%3Bscrh%3D1024%3Bclrd%3D24%3Bcok%3D1%3B&amp;tst=0.098&amp;pd=1064747305%257CAQAAAAoBQqW9/CcKCaWW82MBAO7O9LNcFtBIAAsAAADuzvSzXBbQSAAAAAD/////AAoJAQAAAAAAAQAAAAAA////////////////AAAAAAABRQ%253D%253D&amp;srv=cg3.use&amp;mmid=-269201975%7CAQAAAAqlvfwnCgkAAA%3D%3D&amp;jsver=5.8&amp;ri=1&amp;rul=" id="mmcore.1"></script><link href="//1.www.s81c.com/common/v17/css/external/expertise.css" rel="stylesheet" type="text/css"><script charset="utf-8" id="null" src="//www.ibm.com/common/translations/expertlocator/us/en/utf8.js" type="text/javascript"></script><script charset="utf-8" id="dojoIoScript3" src="https://www.ibm.com/gateway/secstate/?&amp;cc=us&amp;lc=en&amp;format=json&amp;ts=1367624504317&amp;type=expertsByList&amp;listId=18&amp;cat=E&amp;experpage=5&amp;cb=200%3A__tcb16073" type="text/javascript"></script><script src="http://sales.liveperson.net/visitor/addons/deploy2.asp?site=3815120&amp;d_id=ibmUSNew&amp;default=simpleDeploy" charset="iso-8859-1" type="text/javascript"></script></head>
+
+<body aria-busy="false" class="v17" id="ibm-com">
+
+
+<div id="ibm-top" class="ibm-landing-page"><img src="//1.www.s81c.com/i/v17/t/ibm_logo_print.png" id="ibm-print-masthead" alt="IBM Print" height="15" width="43">
+
+
+<!-- v17 SSIs: version 1.1 -->
+<!-- MASTHEAD_BEGIN -->
+<div role="banner" class="ibm-alternate-masthead" id="ibm-masthead">
+<div id="ibm-mast-options">
+<ul role="toolbar">
+<li role="presentation" id="ibm-geo"><a tabindex="0" aria-label="Choose location United States currently selected" role="button" href="http://www.ibm.com/planetwide/select/selector.html">United States</a></li><li role="presentation" id="ibm-sso"><span widgetid="ibmweb_dynnav_greeting_0" dojoattachpoint="containerNode">
+	<p id="ibm-welcome-msg" dojoattachpoint="welcomeMessageNode">Welcome </p>
+	<span dojoattachpoint="bNode" style="display: inline;"> <span class="ibm-greeting-hasp">[</span> <span dojoattachpoint="linksNode"><span class="ibm-sso-link"><a aria-describedby="ibm-welcome-msg" aria-label="IBM Sign in" role="button" class="ibm-sso-signin" dojoattrid="8" tabindex="-1" href="#">IBM Sign in</a></span><span class="ibm-sso-link"> / <a aria-describedby="ibm-welcome-msg" aria-label="Register" role="button" class="ibm-sso-register" tabindex="-1" href="#">Register</a></span></span> <span class="ibm-greeting-hasp">]</span> </span>
+</span></li>
+</ul>
+</div>
+<div aria-label="Site map" role="navigation" id="ibm-universal-nav">
+<ul role="presentation" id="ibm-unav-links">
+<li id="ibm-home"><a tabindex="0" href="http://www.ibm.com/us/en/">IBM®</a></li>
+</ul>
+<ul aria-label="Site map" role="toolbar" id="ibm-menu-links"><li role="presentation"><a tabindex="0" role="button" href="http://www.ibm.com/solutions/us/en/?lnk=mso-0-usen">Industries &amp; solutions</a></li><li role="presentation"><a tabindex="-1" role="button" href="http://www.ibm.com/technologyservices/us/en/?lnk=mse-0-usen">Services</a></li><li role="presentation"><a tabindex="-1" role="button" href="http://www.ibm.com/products/us/en/?lnk=mpr-0-usen">Products</a></li><li role="presentation"><a tabindex="-1" role="button" href="http://www.ibm.com/support/us/en/?lnk=msd-0-usen">Support &amp; downloads</a></li><li role="presentation"><a tabindex="-1" role="button" href="http://www.ibm.com/account/us/en/?lnk=mmi-0-usen">My IBM</a></li></ul>
+<div aria-label="IBM Search" role="search" id="ibm-search-module">
+<form id="ibm-search-form" action="http://www.ibm.com/Search/" method="get">
+<p>
+<label for="q"><span class="ibm-access">Search</span></label>
+<input maxlength="100" value="" name="q" id="q" type="text">
+<input value="17" name="v" type="hidden">
+<input value="utf" name="en" type="hidden">
+<input value="en" name="lang" type="hidden">
+<input value="us" name="cc" type="hidden">
+<input id="ibm-search" class="ibm-btn-search" value="Submit" type="submit">
+</p>
+</form>
+</div>
+</div><div style="display: none;" id="ibm-common-menu"><div widgetid="ibmweb_ribbon_0" id="ibmweb_ribbon_0" class="ibm-container-body" dojoattachpoint="ribbonContainer"><div class="ibm-menu-subtabs ibm-is-hidden"><ul role="toolbar"><li style="display: none;" role="presentation" class="subTab-0-0 ibm-active"><a role="button" href="#">Solution topics</a></li><li style="display: none;" role="presentation" class="subTab-0-1"><a role="button" href="#">Industry solutions</a></li><li style="display: none;" role="presentation" class="subTab-0-2"><a role="button" href="#">Business Partners and alliances</a></li></ul></div><a title="Previous" style="margin-top: -12px;" class="ibm-ribbon-prev ibm-disabled" dojoattachpoint="scrollLeftButton" role="button" href="#">Previous</a><div style="height: 0px;" class="ibm-ribbon-pane" dojoattachpoint="scrollContainer"><div id="ibmweb_ribbon_0_scrollable" aria-label="Site map" class="ibm-ribbon-section" dojoattachpoint="scrollableNode" role="region"><div aria-labelledby="ibm-rib-head-0" widgetid="ibmweb_ribbonSlide_0" id="ibmweb_ribbonSlide_0" class="ibm-columns" dojoattachpoint="containerNode" role="dialog"><h2 id="ibm-rib-head-0" class="ibm-access">Industries &amp; solutions</h2><div widgetid="ibmweb_ribbonItemAbstract_0" tabindex="0" role="group" id="ibmweb_ribbonItemAbstract_0" class="ibm-columns"><div style="padding-top: 0px;" class="ibm-col-5-4 ibm-menu-dynamic"><div role="menu" class="ibm-col-4-1"><h3 class="ibm-access"></h3><ul style="margin-top: 26px;" role="menu"><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/software/products/us/en/category/SW860?lnk=msoST-alma-usen">Application lifecycle management</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/software/products/us/en/category/SW222?lnk=msoST-aman-usen">Asset management</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="//www.ibm.com/software/products/us/en/category/SW600?lnk=msoST-ainf-usen">Application infrastructure</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/analytics/us/en/index.html?lnk=msoST-anly-usen">Big data and analytics</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="//www.ibm.com/software/products/us/en/category/bpm-software?lnk=msoST-bpma-usen">Business process management</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/cloud-computing/us/en/?lnk=msoST-ccom-usen">Cloud computing</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/software/products/us/en/category/SWH00?lnk=msoST-comm-usen">Commerce</a></li></ul></div><div role="menu" class="ibm-col-4-1"><h3 class="ibm-access"></h3><ul style="margin-top: 26px;" role="menu"><li role="presentation"><a role="menuitem" tabindex="-1" href="//www.ibm.com/software/products/us/en/category/SWV00?lnk=msoST-caes-usen">Complex and embedded systems</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="//www.ibm.com/software/products/us/en/category/SW666?lnk=msoST-cain-usen">Connectivity and integration</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/software/products/us/en/category/SWB00?lnk=msoST-dman-usen">Data management</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/software/products/us/en/category/SWM00?lnk=msoST-dwar-usen">Data warehousing</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="//www.ibm.com/green/?lnk=msoST-eaen-usen">Energy and environment</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="//www.ibm.com/software/products/us/en/category/SWN00?lnk=msoST-ecma-usen">Enterprise content management</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="//www.ibm.com/software/products/us/en/category/SWX00?lnk=msoST-emma-usen">Enterprise marketing management</a></li></ul></div><div role="menu" class="ibm-col-4-1"><h3 class="ibm-access"></h3><ul style="margin-top: 26px;" role="menu"><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/software/products/us/en/category/SWY00?lnk=msoST-emod-usen">Enterprise modernization</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/solutions/erp/?lnk=msoST-erpl-usen">Enterprise resource planning</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="//www.ibm.com/systems/data/flash/expert-integrated-systems/us/en/?lnk=msoST-eisy-usen">Expert integrated systems</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/software/products/us/en/category/SW111?lnk=msoST-proc-usen-usen">Procurement</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/software/plm/?lnk=msoST-plma-usen">Product lifecycle management</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="//www.ibm.com/software/products/us/en/category/SWI00?lnk=msoST-secu-usen">Security</a></li></ul></div><div role="menu" class="ibm-col-4-1 ibm-col-last"><h3 class="ibm-access"></h3><ul style="margin-top: 26px;" role="menu"><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/soa?lnk=msoST-soar-usen">Service oriented architecture (SOA)</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="//www.ibm.com/smartercomputing/?lnk=msoST-scom-usen">Smarter computing</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/software/products/us/en/category/SWD00?lnk=msoST-scol-usen">Social collaboration</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="//www.ibm.com/software/products/us/en/category/SWAAA?lnk=msoST-ucom-usen">Unified communications</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="//www.ibm.com/systems/virtualization/?lnk=msoST-virt-usen">Virtualization</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="//www.ibm.com/software/products/us/en/category/SWS00?lnk=msoST-wexp-usen">Web experience</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="//www.ibm.com/software/?lnk=msoST-mcap-usen#iss">More capabilities</a></li></ul></div></div><div style="display: none; padding-top: 0px;" class="ibm-col-5-4 ibm-menu-dynamic"><div role="menu" class="ibm-col-4-1"><h3 class="ibm-access"></h3><ul style="margin-top: 26px;" role="menu"><li role="presentation"><a role="menuitem" tabindex="-1" href="//www.ibm.com/industries/aerodefense/?lnk=msoIS-aade-usen">Aerospace and defense</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="//www.ibm.com/industries/automotive/?lnk=msoIS-auto-usen">Automotive</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="//www.ibm.com/industries/banking/?lnk=msoIS-bank-usen">Banking</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="//www.ibm.com/industries/chemicalspetroleum/?lnk=msoIS-cape-usen">Chemicals and petroleum</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="//www.ibm.com/industries/telecommunications/?lnk=msoIS-comm-usen">Communications</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="//www.ibm.com/industries/consumerproducts/?lnk=msoIS-cpro-usen">Consumer products</a></li></ul></div><div role="menu" class="ibm-col-4-1"><h3 class="ibm-access"></h3><ul style="margin-top: 26px;" role="menu"><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/industries/education/?lnk=msoIS-educ-usen">Education</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="//www.ibm.com/industries/electronics/?lnk=msoIS-elec-usen">Electronics</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="//www.ibm.com/industries/energy/?lnk=msoIS-eaut-usen">Energy and utilities</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="//www.ibm.com/industries/financialmarkets/?lnk=msoIS-fmar-usen">Financial markets</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="//www.ibm.com/industries/government/?lnk=msoIS-gove-usen">Government</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="//www.ibm.com/industries/healthcare/?lnk=msoIS-heal-usen">Healthcare</a></li></ul></div><div role="menu" class="ibm-col-4-1 ibm-col-last"><h3 class="ibm-access"></h3><ul style="margin-top: 26px;" role="menu"><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/industries/insurance/?lnk=msoIS-insu-usen">Insurance</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="//www.ibm.com/industries/lifesciences/?lnk=msoIS-lsci-usen">Life sciences</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="//www.ibm.com/industries/media/?lnk=msoIS-maen-usen">Media and entertainment</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="//www.ibm.com/industries/metalsmining?lnk=msoIS-mami-usen">Metals and mining</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="//www.ibm.com/industries/retail/?lnk=msoIS-reta-usen">Retail</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="//www.ibm.com/industries/travel/?lnk=msoIS-tatr-usen">Travel and transportation</a></li></ul></div></div><div style="display: none;" class="ibm-col-5-4 ibm-menu-dynamic"><div role="menu" class="ibm-col-4-1"><h3>Global alliances</h3><ul role="menu"><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/solutions/cisco/us/en/?lnk=msoBP-iaci-usen">IBM and Cisco</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="//www.ibm.com/solutions/3ds/us/en/?lnk=msoBP-iads-usen">IBM and Dassault Systèmes</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="//www.ibm.com/solutions/infor/us/en/?lnk=msoBP-iain-usen">IBM and Infor</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="//www.ibm.com/solutions/oracle/us/en/?lnk=msoBP-iaor-usen">IBM and Oracle</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="//www.ibm.com/solutions/sap/us/en/?lnk=msoBP-iasa-usen">IBM and SAP</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="//www.ibm.com/solutions/alliance/us/en/?lnk=msoBP-aaso-usen">All alliance solutions</a></li></ul></div><div role="menu" class="ibm-col-4-1"><h3>Solutions from IBM Business Partners</h3><ul role="menu"><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/partnerworld/gsd/showcase.do?lnk=msoBP-abps-usen">All Business Partner solutions</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="//www.ibm.com/partnerworld/wps/bplocator/search.jsp?lnk=msoBP-fabp-usen">Find a Business Partner</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/partnerworld/gsd/showcase.do?cd=SOCBUS&amp;lnk=msoBP-ibsb-usen">Solutions validated for IBM Social Business</a></li></ul></div><div role="menu" class="ibm-col-4-1 ibm-col-last"><h3>Create solutions</h3><ul role="menu"><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/partnerworld/wps/servlet/ContentHandler/pw_com_sol_index?lnk=msoBP-bpre-usen">Business Partner resources</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="//www.ibm.com/developerworks/?lnk=msoBP-dres-usen">Developer resources</a></li></ul></div></div><div class="ibm-col-5-1 ibm-menu-static"><h3>Related links</h3><ul role="menu"><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/smarterplanet/us/en/?lnk=msoRL-aspl-usen">A smarter planet</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/midmarket/us/en/?lnk=msoRL-samb-usen">Small and medium business</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/software/success/cssdb.nsf/topstoriesFM?OpenForm&amp;Site=corp&amp;cty=en_us&amp;lnk=msoRL-cstu-usen">Case studies</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/financing/us/?lnk=msoRL-foso-usen">Financing of solutions</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/solutions/us/en/?lnk=msoRL-asol-usen">All solutions</a></li></ul></div></div></div><div aria-labelledby="ibm-rib-head-1" widgetid="ibmweb_ribbonSlide_1" id="ibmweb_ribbonSlide_1" class="ibm-columns" dojoattachpoint="containerNode" role="dialog"><h2 id="ibm-rib-head-1" class="ibm-access">Services</h2><div widgetid="ibmweb_ribbonItemAbstract_1" tabindex="0" style="padding-top: 10px;" role="group" id="ibmweb_ribbonItemAbstract_1" class="ibm-columns"><div aria-label="Business services menu" role="menu" class="ibm-col-6-1"><h3 role="menuitem"><a tabindex="-1" href="http://www.ibm.com/services/us/gbs/consulting?lnk=mseBS-1-usen">Business services</a></h3><ul role="menu"><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/services/us/gbs/ais/?lnk=mseBS-ainn-usen">Application innovation</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/gbs/bao?lnk=mseBS-bana-usen">Business analytics</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/services/us/gbs/strategy?lnk=mseBS-bstr-usen">Business strategy</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/services/us/gbs/smartercommerce/?lnk=mseBS-ccon-usen">Commerce consulting</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/services/us/gbs/bus/html/bcs_midmarketexpertise.html?lnk=mseBS-me-usen">Midmarket expertise</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/services/us/gbs/consulting?lnk=mseBS-mexp-usen">All business services</a></li></ul></div><div aria-label="IT services menu" role="menu" class="ibm-col-6-1"><h3 role="menuitem"><a tabindex="-1" href="http://www.ibm.com/services/us/index.wss?lnk=mseIS-1-usen">IT services</a></h3><ul role="menu"><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/services/continuity/?lnk=mseIS-bcaa-usen">Business continuity and resiliency</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/services/us/en/it-services/cloud-services.html?lnk=mseIS-clou-usen">Cloud</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/services/us/en/it-services/data-center-services1.html?lnk=mseIS-dcen-usen">Data center</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/services/integratedcommunications/?lnk=mseIS-icom-usen">Integrated communications</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/services/us/en/it-services/mobility-services.html?lnk=mseIS-mser-usen">Mobility services</a></li></ul></div><div aria-label="IT services menu list 2" role="menu" class="ibm-col-6-1"><h3 class="ibm-access">IT services menu list 2</h3><ul role="menu" style="margin-top: 26px;"><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/services/security/?lnk=mseIS-secu-usen">Security</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/software/sw-services/?lnk=mseIS-soft-usen">Software</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/services/us/en/it-services/it-strategy-and-architecture-services.html?lnk=mseIS-sade-usen">Strategy and design</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/systems/services/labservices?lnk=mseIS-slab-usen">Systems lab</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/services/maintenance/?lnk=mseIS-tsup-usen">Technical support</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/services/enduser/?lnk=mseIS-work-usen">End user services</a></li></ul></div><div aria-label="Outsourcing services menu" role="menu" class="ibm-col-6-1"><h3 role="menuitem"><a tabindex="-1" href="http://www.ibm.com/services/us/en/it-services/outsourcing.html?lnk=mseOS-1-usen">Outsourcing services</a></h3><ul role="menu"><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/services/us/gbs/applicationmanagement/?lnk=mseOS-aout-usen">Application management</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/services/us/en/it-services/ibm-global-process-services.html?lnk=mseOS-gpse-usen">Global process services</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/services/us/en/it-services/it-outsourcing/it-infrastructure-services.html?lnk=mseOS-ioah-usen">IT infrastructure services</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/services/us/en/it-services/it-outsourcing/index.html?lnk=mseOS-itou-usen">IT outsourcing</a></li></ul></div><div aria-label="Training menu" role="menu" class="ibm-col-6-1"><h3 role="menuitem"><a tabindex="-1" href="http://www.ibm.com/training/?lnk=mseTR-1-usen">Training</a></h3><ul role="menu"><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/services/learning/ites.wss/us/en?pageType=page&amp;c=a0000048&amp;lnk=mseTR-offe-usen">Offerings</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/certify/?lnk=mseTR-cert-usen">Certification</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/services/learning/ites.wss/zz/en?pageType=page&amp;c=a0002173&amp;lnk=mseTR-c&amp;ev-usen">Conferences &amp; events</a></li></ul></div><div aria-label="Additional services menu" role="menu" class="ibm-col-6-1"><h3 role="menuitem"><a tabindex="-1" href="http://www.ibm.com/technologyservices/us/en/?lnk=mseAS-1-usen">Additional services</a></h3><ul role="menu"><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/services/us/gbs/alliances/?lnk=mseAS-call-usen">Consulting alliances</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/financing/us/lifecycle/acquire/itservices.html?lnk=mseAS-isfi-usen">IT services financing</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/financing/us/lifecycle/plan/projectfinancing.html?lnk=mseAS-pfin-usen">Project financing</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/financing/us/comfin/?lnk=mseAS-wcap-usen">Working capital</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/technologyservices/us/en/?lnk=mseAS-aser-usen">All services</a></li></ul></div></div></div><div aria-labelledby="ibm-rib-head-2" widgetid="ibmweb_ribbonSlide_2" id="ibmweb_ribbonSlide_2" class="ibm-columns" dojoattachpoint="containerNode" role="dialog"><h2 id="ibm-rib-head-2" class="ibm-access">Products</h2><div widgetid="ibmweb_ribbonItemAbstract_2" tabindex="0" style="padding-top: 10px;" role="group" id="ibmweb_ribbonItemAbstract_2" class="ibm-columns"><div aria-label="Software menu" role="menu" class="ibm-col-6-1"><h3 role="menuitem"><a tabindex="-1" href="http://www.ibm.com/software?lnk=mprSO-1-usen">Software</a></h3><ul role="menu"><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/software/products/us/en/?lnk=mprSO-pfin-usen">Product finder</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www14.software.ibm.com/webapp/download/home.jsp?lnk=mprSO-down-usen">Downloads</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/software/analytics/?lnk=mprSO-bana-usen">Business analytics (Cognos, SPSS)</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/software/data/content-management/?lnk=mprSO-ecma-usen">Enterprise content management</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/software/data?lnk=mprSO-iman-usen">Information management (DB2, Informix, InfoSphere)</a></li></ul></div><div aria-label="Software menu list 2" role="menu" class="ibm-col-6-1"><h3 class="ibm-access">Software menu list 2</h3><ul role="menu" style="margin-top: 26px;"><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/software/lotus?lnk=mprSO-lotu-usen">Lotus (collaboration)</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/software/rational?lnk=mprSO-rati-usen">Rational (software and systems delivery)</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/software/tivoli?lnk=mprSO-tivo-usen">Tivoli (service management)</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/software/websphere?lnk=mprSO-webs-usen">WebSphere (integration and optimization)</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/software/os/systemz/en_US/?lnk=mprSO-szso-usen">System z software</a></li></ul></div><div aria-label="Systems menu" role="menu" class="ibm-col-6-1"><h3 role="menuitem"><a tabindex="-1" href="http://www.ibm.com/systems?lnk=mprSY-1-usen">Systems</a></h3><ul role="menu"><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/ibm/puresystems/us/en/?lnk=mprSY-pure-usen">PureSystems</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/systems/power?lnk=mprSY-psys-usen">Power Systems (AIX, IBM i, Linux)</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/systems/z/?lnk=mprSY-sysz-usen">System z (Mainframe)</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/systems/x/?lnk=mprSY-sysx-usen">System x (xSeries)</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/systems/blade-server/?lnk=mprSY-bser-usen">Blade servers</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/systems/hardware/browse/unix/?lnk=mprSY-user-usen">UNIX servers</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/systems/software/?lnk=mprSY-ssof-usen">Systems software</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/networking/?lnk=mprAP-syne-usen">System Networking</a></li></ul></div><div aria-label="Storage menu" role="menu" class="ibm-col-6-1"><h3 role="menuitem"><a tabindex="-1" href="http://www.ibm.com/storage/?lnk=mprST-1-usen">Storage</a></h3><ul role="menu"><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/storage/disk/?lnk=mprST-dsys-usen">Disk systems</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/storage/tape/?lnk=mprST-tsys-usen">Tape systems</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/storage/snetwork/?lnk=mprST-sane-usen">Storage area networks</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/totalstorage/nas/?lnk=mprST-nast-usen">Network attached storage</a></li></ul></div><div aria-label="Additional products menu" role="menu" class="ibm-col-6-1"><h3 role="menuitem"><a tabindex="-1" href="http://www.ibm.com/products/us/en/?lnk=mprAP-1-usen">Additional products</a></h3><ul role="menu"><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/shop/usedsystems?lnk=mprAP-cusa-usen">Certified used servers and storage</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/shop/pc?lnk=mprAP-cupc-usen">Certified used personal computers</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/products/retail/?lnk=mprAP-posa-usen">Point of sale</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/security/?lnk=mprAP-secu-usen">Security</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/technology/?lnk=mprAP-semi-usen">Semiconductors</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/shop/americas/content/home/store_IBMPublicUSA/en_US/Upgrades.html?lnk=mprAP-uaap-usen">Upgrades, accessories and parts</a></li></ul></div><div aria-label="Additional products menu list 2" role="menu" class="ibm-col-6-1"><h3 class="ibm-access">Additional products menu list 2</h3><ul role="menu" style="margin-top: 26px;"><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/financing/us/lifecycle/acquire/hardware/?lnk=mprAP-hfin-usen">Hardware financing</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/financing/us/lifecycle/acquire/itsoftware.html?lnk=mprAP-sfin-usen">Software financing</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/financing/us/lifecycle/plan/gb/?lnk=mprAP-ffmb-usen">Financing for medium business</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/products/us/en/?lnk=mprAP-apro-usen">All products</a></li></ul></div></div></div><div aria-labelledby="ibm-rib-head-3" widgetid="ibmweb_ribbonSlide_3" id="ibmweb_ribbonSlide_3" class="ibm-columns" dojoattachpoint="containerNode" role="dialog"><h2 id="ibm-rib-head-3" class="ibm-access">Support &amp; downloads</h2><div widgetid="ibmweb_ribbonItemAbstract_3" tabindex="0" style="padding-top: 10px;" role="group" id="ibmweb_ribbonItemAbstract_3" class="ibm-columns"><div aria-label="Downloads menu" role="menu" class="ibm-col-6-1"><h3>Downloads</h3><ul role="menu"><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/support/entry/portal/us/en/Downloads?lnk=msdDO-fuad-usen">Fixes, updates and drivers</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www14.software.ibm.com/webapp/download/byproduct.jsp?lnk=msdDO-tade-usen">Trials and demos</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/servers/eserver/ess/index.wss?lnk=msdDO-enss-usen">Entitled Software Support</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="https://www14.software.ibm.com/webapp/ShopzSeries/ShopzSeries.jsp?lnk=msdDO-paad-usen">Shopz</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/software/howtobuy/passportadvantage?lnk=msdDO-shop-usen">Passport Advantage</a></li></ul></div><div aria-label="Technical support menu" role="menu" class="ibm-col-6-1"><h3 role="menuitem"><a tabindex="-1" href="http://www.ibm.com/support/us/en/?lnk=msdTS-1-usen">Technical support</a></h3><ul role="menu"><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/support/entry/portal/us/en/documentation?lnk=msdTS-docu-usen">Documentation</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/support/entry/portal/us/en/forums_communities?lnk=msdTS-comm-usen">Communities</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="//www.ibm.com/support/servicerequest/Home.action?lnk=msdTS-srap-usen">Service requests and PMRs</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/support/registration?lnk=msdTS-sure-usen">Support registrations</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/support/warranties/us/?lnk=msdTS-wali-usen">Warranties and licenses</a></li></ul></div><div aria-label="Developer support menu" role="menu" class="ibm-col-6-1"><h3>Developer support</h3><ul role="menu"><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/developerworks/?lnk=msdDS-deve-usen">developerWorks</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.alphaworks.ibm.com/?lnk=msdDS-etec-usen">Emerging technologies</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/design/?lnk=msdDS-daib-usen">Design at IBM</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/able/?lnk=msdDS-haaa-usen">Human ability and accessibility</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/support/publications/us/library/?lnk=msdDS-ical-usen">Information centers and libraries</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.redbooks.ibm.com/?lnk=msdDS-redb-usen">Redbooks</a></li></ul></div><div aria-label="Customer support menu" role="menu" class="ibm-col-6-1"><h3 role="menuitem"><a tabindex="-1" href="http://www.ibm.com/support/operations/us/en/?lnk=msdCS-1-usen">Customer support</a></h3><ul role="menu"><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/support/operations/us/en/contracts?lnk=msdCS-cagr-usen">Contracts, agreements</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/support/operations/us/en/orderdelivery?lnk=msdCS-ossh-usen">Order status, shipment</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/support/operations/us/en/inventory?lnk=msdCS-imst-usen">Inventory, maintenance status</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/support/operations/us/en/invoicespayments?lnk=msdCS-ipay-usen">Invoices, payments</a></li></ul></div><div aria-label="Supplier World Portal menu" role="menu" class="ibm-col-6-1"><h3 role="menuitem"><a tabindex="-1" href="http://www.ibm.com/partnerworld/wps/pub/pwes/SupplierWorld?lnk=msdSW-1-usen">Supplier World Portal</a></h3><ul role="menu"></ul></div><div aria-label="Former IBM products menu" role="menu" class="ibm-col-6-1"><h3>Former IBM products</h3><ul role="menu"><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.infoprint.com/internet/ipww.nsf/vwWebPublished/sup_support_en-usen">Printing systems from InfoPrint</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.lenovo.com/support/-usen">Lenovo ThinkPads and ThinkCentres</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.hgst.com/hdd/support/ibmredirect.htmllnk=-usen">Ultrastar, Deskstar, Travelstar, Microdrive storage</a></li></ul></div></div></div><div aria-labelledby="ibm-rib-head-4" widgetid="ibmweb_ribbonSlide_4" id="ibmweb_ribbonSlide_4" class="ibm-columns" dojoattachpoint="containerNode" role="dialog"><h2 id="ibm-rib-head-4" class="ibm-access">My IBM</h2><div widgetid="ibmweb_ribbonItemAbstract_4" tabindex="0" style="padding-top: 10px;" role="group" id="ibmweb_ribbonItemAbstract_4" class="ibm-columns"><div aria-label="My IBM menu" role="menu" class="ibm-col-6-1"><h3 role="menuitem"><a tabindex="-1" href="http://www.ibm.com/account/us/en/?lnk=mmiMI-1-usen">My IBM</a></h3><ul role="menu"><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/account/myaccounts/us/en/?lnk=mmiMI-acco-usen">Accounts</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.ibm.com/account/myibm/profile.do?cc=us&amp;lnk=mmiMI-prof-usen">Profile</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/account/mycommunity/us/en/?lnk=mmiMI-cspa-usen">Community spaces</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/voices?lnk=mmiMI-ivoi-usen">IBM Voices</a></li></ul></div><div aria-label="My IBM menu list 2" role="menu" class="ibm-col-6-1"><h3 class="ibm-access">My IBM menu list 2</h3><ul role="menu" style="margin-top: 26px;"><li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.ibm.com/support/entry/myportal/us/en/overview?lnk=mmiMI-tsup-usen">Technical support</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.ibm.com/shop/americas/webapp/wcs/stores/servlet/default/OrderItemDisplay?storeId=1&amp;catalogId=-840&amp;langId=-1-usen">Shopping cart</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www-148.ibm.com/bin/subscriptions/welcome.cgi?cl=usen&amp;lnk=mmiMI-subs-usen">Subscriptions</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/account/us/en/?lnk=mmiMI-amib-usen">All My IBM</a></li></ul></div><div aria-label="Customer support menu" role="menu" class="ibm-col-6-1"><h3 role="menuitem"><a tabindex="-1" href="http://www.ibm.com/support/operations/us/en/?lnk=mmiCS-1-usen">Customer support</a></h3><ul role="menu"><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/support/operations/us/en/contracts?lnk=mmiCS-cont-usen">Contracts</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/support/operations/us/en/orderdelivery?lnk=mmiCS-oade-usen">Orders and delivery</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/support/operations/us/en/inventory?lnk=mmiCS-iama-usen">Inventory and maintenance</a></li><li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.ibm.com/support/operations/us/en/invoicespayments?lnk=mmiCS-iapa-usen">Invoices and payments</a></li></ul></div><div aria-label="Interests menu" role="menu" class="ibm-col-6-1"><h3 role="menuitem"><a tabindex="-1" href="http://www.ibm.com/account/myibm/myinterestView.do?cc=uslc=en&amp;lnk=mmiIN-1-usen">Interests</a></h3><ul role="menu"><li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.ibm.com/account/myibm/profile.do?cc=uslc=enpage=int&amp;lnk=mmiIN-sint-usen">Select interests</a></li></ul></div></div></div></div></div><a title="Next" style="margin-top: -12px;" class="ibm-ribbon-next" dojoattachpoint="scrollRightButton" role="button" href="#">Next</a><div class="ibm-mm-close"><span tabindex="0" aria-label="Close" role="button" title="Close"></span></div></div></div>
+<div aria-label="Social tools" role="navigation" style="display: block;" id="ibm-social-tools"><ul role="toolbar"><li><a tabindex="0" role="button" dojoattrid="0" rel="print" href="#" title="Print this page" class="ibm-share-print">Print this page</a></li><li><a tabindex="-1" role="button" dojoattrid="1" rel="email" href="#" title="E-mail this page" class="ibm-share-email">E-mail this page</a></li><li><a tabindex="-1" role="button" dojoattrid="2" rel="digg" href="http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Fwww.ibm.com%2Fsystems%2Fpureflex%2Fflex_overview.html&amp;title=IBM%20Flex%20System%20overview" title="Digg" class="ibm-share-digg">Digg</a></li><li><a tabindex="-1" role="button" dojoattrid="3" rel="facebook" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.ibm.com%2Fsystems%2Fpureflex%2Fflex_overview.html&amp;t=IBM%20Flex%20System%20overview" title="Facebook" class="ibm-share-facebook">Facebook</a></li><li><a tabindex="-1" role="button" dojoattrid="4" rel="twitter" href="http://twitter.com/?status=http%3A%2F%2Fwww.ibm.com%2Fsystems%2Fpureflex%2Fflex_overview.html%20-%20IBM%20Flex%20System%20overview" title="Twitter" class="ibm-share-twitter">Twitter</a></li><li><a tabindex="-1" role="button" dojoattrid="5" rel="delicious" href="http://delicious.com/post?url=http%3A%2F%2Fwww.ibm.com%2Fsystems%2Fpureflex%2Fflex_overview.html&amp;title=IBM%20Flex%20System%20overview" title="Delicious" class="ibm-share-delicious">Delicious</a></li><li><a tabindex="-1" role="button" dojoattrid="6" rel="linkedin" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fwww.ibm.com%2Fsystems%2Fpureflex%2Fflex_overview.html&amp;title=IBM%20Flex%20System%20overview" title="Linked In" class="ibm-share-linkedin">Linked In</a></li><li><a tabindex="-1" role="button" dojoattrid="7" rel="stumble" href="http://www.stumbleupon.com/submit?url=http%3A%2F%2Fwww.ibm.com%2Fsystems%2Fpureflex%2Fflex_overview.html&amp;title=IBM%20Flex%20System%20overview" title="Stumbleupon" class="ibm-share-stumble">Stumbleupon</a></li></ul></div></div>
+<!-- MASTHEAD_END -->
+
+
+<div role="main" id="ibm-access-cntr"><div id="ibm-leadspace-head" class="ibm-alternate">
+<div id="ibm-leadspace-body" class="ibm-container-body">
+
+<!-- BEGIN BREADCRUMB -->
+<ul aria-label="Bread Crumbs" role="navigation" id="ibm-navigation-trail"><li class="ibm-first">
+<a href="/systems/">IBM Systems</a>
+</li></ul>
+<!-- END BREADCRUMB -->
+
+<!-- LEADSPACE_BEGIN -->
+<h1 class="ibm-small" style=" width: 100%;">IBM Flex System</h1>
+<!-- LEADSPACE_END -->
+</div>
+</div><div id="ibm-content-nav"> 
+
+<!-- BEGIN ADD TO MY INTERESTS -->
+
+<!-- END_ADD TO MY INTERESTS -->
+
+<!-- TABS BEGIN -->
+<div aria-label="Tab Navigation" role="navigation" id="ibm-primary-tabs">
+<ul role="tablist" class="ibm-tabs">
+<li role="presentation"><a aria-label="Announcement" aria-selected="false" role="tab" href="/systems/pureflex/index.html">Announcement</a></li>
+
+<li role="presentation"><a aria-label="Overview" aria-selected="false" role="tab" href="/systems/pureflex/overview.html">Overview</a></li>
+
+<li role="presentation"><a aria-label="IBM PureFlex System" aria-selected="false" role="tab" href="/systems/pureflex/pureflex_overview.html">IBM PureFlex System</a></li>
+
+<li role="presentation" class="ibm-active"><a aria-label="IBM Flex System" aria-selected="true" role="tab" href="/systems/pureflex/flex_overview.html">IBM Flex System</a></li>
+
+<li role="presentation"><a aria-label="Resources" aria-selected="false" role="tab" href="/systems/pureflex/resources.html">Resources</a></li>
+</ul>
+</div>
+
+<div style="display: block;" id="ibm-ad">
+<div id="ibm-ad-leadspace">
+<div class="ibm-ad-leadspace-head ad-message-1" style=" min-height: 270px !important; background: url(/systems/data/flash/pureflex/images/TL_Intel_FlexSystem_LPHeaderGraphic_nocopy_wV7000.png) no-repeat scroll center transparent;">
+<div style="display: block;" class="ibm-ad-body ad-message-1"><!--<p class="ibm-ad-title" style="color:#D32D85;">Simplicity. Flexibility. Control.<br />
+And lower management costs.</p>--><br>
+<br>
+<p style=" color: #801A7D; font-size: 27px;"><strong>Simplicity. Flexibility. Control.<br>
+And lower management costs.</strong></p>
+
+<br>
+<!-- <p class="ibm-ad-sub">Meet the sophisticated demands on your infrastructure<br/> with IBM Flex System.</p> --><br>
+<br>
+<br>
+<br>
+<p style=" font-size: 22px;"><strong>IBM Flex System</strong></p>
+
+<p class="ibm-ind-link"><a href="https://www14.software.ibm.com/webapp/iwm/web/signup.do?source=stg-web&amp;S_PKG=OV7447&amp;S_TACT=102LH04W" class="ibm-forward-link">Learn why Clabby Analytics believes it’s<br>
+the best blade offering available</a></p>
+</div>
+</div>
+</div>
+
+<div id="ibm-ad-content">
+<div style="display: block;" class="ibm-ad-body ad-message-1">
+<div class="ibm-ad-main">
+<p><span class="ibm-inset-img-caption"><img src="/systems/resources/systems_pureflex_intellogonew_61x46.jpg" alt="Intel Xeon" height="46" width="61"><br>
+<br>
+<br>
+<br>
+</span>IBM Flex System™ is a revolutionary step forward in blade server-based IT infrastructure – a clean-slate design for today’s increasingly virtualized, heterogeneous data centers. Offering the ability to custom build and tune a configuration to meet your specific requirements, it’s one of the most advanced blade servers available today. Featuring Intel® Xeon® processors, IBM Flex System is the right fit for your IT infrastructure.<sup><a target="" title="" href="#adoverlay_sup_1" onclick="ibmweb.overlay.show('overlay-1',this);return false;">1</a></sup></p>
+
+<ul class="ibm-bullet-list ibm-no-links">
+<li>
+<p><strong style=" color: #000000;">Simplicity.</strong> IBM Flex System is designed from the ground-up for fast, simple integration with a single management tool for all physical and virtual resources. Easily integrate compute, storage, and networking to support your most demanding IT solutions.</p>
+</li>
+
+<li>
+<p><strong style=" color: #000000;">Flexibility.</strong> Take advantage of a flexible and open choice of architectures, hypervisors, operating systems, storage, and networking technologies – all within the same chassis.</p>
+</li>
+
+<li>
+<p><strong style=" color: #000000;">Control.</strong> IBM Flex System Manager™ provides single-pane-of-glass management over the entire system via management integration of physical and virtual compute, storage and networking resources, from a single vantage point, enabling you to automate administration functions across multiple, heterogeneous resources.<sup><a target="" title="" href="#adoverlay_sup_1" onclick="ibmweb.overlay.show('overlay-1',this);return false;">2</a></sup></p>
+</li>
+</ul>
+
+<p>With IBM Flex System, the elements that make up IBM PureFlex™ System, you can build your own system to meet your unique IT requirements with a set of no-compromise compute, storage, networking and systems management components.</p>
+
+<p class="ibm-button-link-alternate"><a href="http://www.ibm.com/systems/pureflex/flex_overview.html">Learn more about IBM Flex System</a></p>
+
+<p class="ibm-ind-link"><a target="" title="" href="#adoverlay_sup_1" onclick="ibmweb.overlay.show('overlay-1',this);return false;" class="ibm-popup-link">Legal disclaimers</a></p>
+</div>
+
+<!-- BEGIN OVERLAY 1 -->
+<div class="ibm-common-overlay" id="overlay-1">
+<div class="ibm-head">
+<p><a target="" title="" href="#close" class="ibm-common-overlay-close">Close [x]</a></p>
+</div>
+
+<div class="ibm-body">
+<div class="ibm-main"><a class="ibm-access"><!-- Accessibility anchor --></a> 
+
+<div class="ibm-title"></div>
+
+<div class="ibm-container">
+<div class="ibm-container-body">
+<p><span class="ibm-item-note"><sup>1</sup> Based on IBM testing and documented in IBM System x Virtualization Server Consolidation sizing methodology. IBM Flex System x240 supports 2.7X more Peak Utilization Virtual Machines (VMs) than previous generation BladeCenter HS22V.</span></p>
+
+<p><span class="ibm-item-note"><sup>2</sup> Based on IDC White Paper "The Economics of Virtualization: Moving Toward an Application-Based Cost Model," Michelle Bailey, November 2009, <a href="//www.vmware.com/files/pdf/Virtualization-application-based-cost-model-WP-EN.pdf" class="ibm-external-link-alternate">http://www.vmware.com/files/pdf/Virtualization-application-based-cost-model-WP-EN.pdf</a> (PDF, 216KB)</span></p>
+
+<p>Optional IBM Flex System storage node available fourth quarter 2012.</p>
+
+<p>IBM, the IBM logo, PureFlex, IBM Flex System Manager and IBM Flex System are trademarks or registered trademarks of International Business Machines Corporation, registered in many jurisdictions worldwide. Other product and service names might be trademarks of IBM or other companies. For a current list of IBM trademarks, see <a href="//www.ibm.com/legal/copytrade.shtml">www.ibm.com/legal/copytrade.shtml</a>. Intel, the Intel logo, Xeon, and Xeon Inside are trademarks or registered trademarks of Intel Corporation in the U.S. and/or other countries. ©International Business Machines Corporation 2012. All rights reserved.</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="ibm-footer"></div>
+</div>
+
+<!-- END OVERLAY 1 -->
+<div class="ibm-ad-sidebar">
+<hr>
+<div id="ibm-contact-module"><!-- IBM Contact Module --><!--Component name:systems_pureflex_contact -->
+<div class="ibm-container ibm-live-assistance">
+<h2>Contact IBM</h2>
+
+<div class="ibm-container-body">
+<div class="ibm-portrait ibm-alternate"><img alt="" src="/systems/data/flash/pureflex/images/systems_contactmodule_6colWide_chat_v1.png" height="60" width="60"></div>
+
+<ul class="ibm-live-assistance-list" style=" left: 35px;">
+<li style=" list-style: none outside none;">
+<div id="lpbutton"><li class="ibm-access"></li></div>
+</li>
+
+<li style=" list-style: none outside none; padding-bottom: 10px; font-size: 0.8em ! important;"><a href="https://www.ibm.com/services/forms/signup.do?source=stg-mail&amp;S_PKG=us-en-stg-cm-pureflex" id="ste" class="ibm-email-link" style="text-decoration: none!important;"><strong>Email IBM</strong></a></li>
+
+<li style=" list-style: none outside none; padding-bottom: 10px; font-size: 0.8em ! important;"><a href="//www.ibm.com/partnerworld/wps/bplocator/" class="ibm-forward-link" style="text-decoration: none!important;"><strong>Find a Business Partner</strong></a></li>
+
+<li style=" list-style: none outside none; padding-bottom: 10px; font-size: 0.8em ! important;"><a href="https://www.ibm.com/services/forms/signup.do?source=stg-raq-us-stg-pflex&amp;S_PKG=us-en-stg-rq-pureflex" class="ibm-requestquote-link" style="text-decoration: none!important;"><strong>Request a quote</strong></a></li>
+
+<li style=" list-style: none outside none; padding-bottom: 10px;">
+<p class="ibm-call-info">Call IBM: <strong id="stp">1-866-261-3023</strong><br>
+Priority code: <strong id="stt">102LH02W</strong></p>
+</li>
+</ul>
+</div>
+</div>
+
+<script src="/systems/resources/systems_pureflex_mtagconfig.js" type="text/javascript"></script></div>
+
+<hr>
+<span class="ibm-inset-img-caption"> <img alt="Intel Xeon inside." src="/systems/data/flash/pureflex/images/thumbnail_adcurtain_60x60.png" style=" margin-bottom: 70px;" height="60" width="60"> </span> 
+
+<p>Learn why Clabby Analytics says IBM Flex System is the best blade offering in the market</p>
+
+<p class="ibm-button-link-alternate"><a href="https://www14.software.ibm.com/webapp/iwm/web/signup.do?source=stg-web&amp;S_PKG=OV7447&amp;S_TACT=102LH04W">Download report</a></p>
+</div>
+</div>
+
+<div id="ibm-ad-close">
+<p><a target="" title="" href="#">Continue to IBM Flex System site</a></p>
+</div>
+</div>
+
+<!--BEGIN OVERLAY-->
+<div class="ibm-common-overlay" id="adoverlay_sup_1">
+<div class="ibm-head">
+<p><a target="" title="" href="#close" class="ibm-common-overlay-close">Close [x]</a></p>
+</div>
+
+<div class="ibm-body">
+<div class="ibm-main"><a class="ibm-access"><!-- Accessibility anchor --></a> 
+
+<div class="ibm-title"></div>
+
+<div class="ibm-container">
+<div class="ibm-container-body">
+<p><span class="ibm-item-note"><sup>1</sup> Based on IBM testing and documented in IBM System x Virtualization Server Consolidation sizing methodology. IBM Flex System x240 supports 2.7X more Peak Utilization Virtual Machines (VMs) than previous generation BladeCenter HS22V.</span></p>
+
+<p><span class="ibm-item-note"><sup>2</sup> Based on IDC White Paper "The Economics of Virtualization: Moving Toward an Application-Based Cost Model," Michelle Bailey, November 2009, <a href="//www.vmware.com/files/pdf/Virtualization-application-based-cost-model-WP-EN.pdf" class="ibm-external-link-alternate">http://www.vmware.com/files/pdf/Virtualization-application-based-cost-model-WP-EN.pdf</a> (PDF, 216KB)</span></p>
+
+<p>IBM, the IBM logo, PureFlex, IBM Flex System Manager and IBM Flex System are trademarks or registered trademarks of International Business Machines Corporation, registered in many jurisdictions worldwide. Other product and service names might be trademarks of IBM or other companies. For a current list of IBM trademarks, see <a href="//www.ibm.com/legal/copytrade.shtml">www.ibm.com/legal/copytrade.shtml</a>. Intel, the Intel logo, Xeon, and Xeon Inside are trademarks or registered trademarks of Intel Corporation in the U.S. and/or other countries. ©International Business Machines Corporation 2012. All rights reserved.</p>
+</div>
+</div>
+</div>
+</div>
+
+<!--END OVERLAY-->
+<div style="display: block;" id="ibm-ad-modal-onload"></div>
+</div>
+</div>
+<!-- TABS END -->
+
+</div><div id="ibm-pcon">
+
+<!-- CONTENT_BEGIN -->
+<div id="ibm-content">
+
+<!-- CONTENT_BODY  -->
+<div id="ibm-content-body">
+
+<div id="ibm-content-main">
+
+<div class="ibm-columns">
+<div class="ibm-col-1-1">
+<!-- BEGIN_BODY_TEXT  -->
+
+</div>
+</div>
+
+<div class="ibm-columns">
+<div class="ibm-col-6-4">
+
+
+<div class="ibm-columns">
+<div class="ibm-col-6-2">
+<h2>IBM Flex System<br>
+Custom-build infrastructure to your requirements</h2>
+
+<p>You need an infrastructure solution that goes beyond blade servers with a flexible architecture to support your business needs today, but also designed to support multiple generations of future technologies. You need simple, integrated management to keep operational costs down, but you also want a no-compromise design with long-term investment protection.</p>
+
+<p>Starting with an innovative chassis designed for new levels of simplicity, reliability, and upgradability, IBM Flex System can help you go beyond blade servers. With a broad range of x86 and IBM POWER compute nodes, the Flex System V7000 storage node, enhanced networking capabilities and sophisticated system management capabilities, you can upgrade your existing blade server infrastructure and make your IT simpler, more flexible, more open, and more efficient.</p>
+</div>
+
+<div class="ibm-col-6-2">
+<h2 class="ibm-rule">Browse IBM Flex System elements</h2>
+
+<form class="ibm-jump-form" method="get" action="//www.ibm.com/links" id="form-management">
+<p style=" padding-top: 3px ! important;"><label for="select-management"><strong>Management</strong></label><br>
+<table aria-valuetext="Select one" widgetid="select-management" aria-disabled="false" tabindex="0" id="select-management" style="-moz-user-select: none; width: 100%;" class="dijit dijitReset dijitInline dijitLeft dijitSelect dijitDownArrowButton" dojoattachpoint="_buttonNode,tableNode,focusNode" role="combobox" aria-haspopup="true" cellpadding="0" cellspacing="0"><tbody role="presentation"><tr role="presentation"><td class="dijitReset dijitStretch dijitButtonContents dijitButtonNode" role="presentation"><span class="dijitReset dijitInline dijitButtonText" dojoattachpoint="containerNode,_popupStateNode"><span class="dijitReset dijitInline dijitSelectLabel">Select one</span></span><input name="url" dojoattachpoint="valueNode" value="" aria-hidden="true" type="hidden"></td><td class="dijitReset dijitRight dijitButtonNode dijitArrowButton dijitDownArrowButton" dojoattachpoint="titleNode" role="presentation"><div class="dijitReset dijitArrowButtonInner" role="presentation"></div><div class="dijitReset dijitArrowButtonChar" role="presentation">?</div></td></tr></tbody></table> </p>
+</form>
+
+<form class="ibm-jump-form" method="get" action="//www.ibm.com/links" id="form-chassis">
+<p style=" padding-top: 3px ! important;"><label for="select-Chassis"><strong>Chassis</strong></label><br>
+<table aria-valuetext="Select one" widgetid="select-chassis" aria-disabled="false" tabindex="0" id="select-chassis" style="-moz-user-select: none; width: 100%;" class="dijit dijitReset dijitInline dijitLeft dijitSelect dijitDownArrowButton" dojoattachpoint="_buttonNode,tableNode,focusNode" role="combobox" aria-haspopup="true" cellpadding="0" cellspacing="0"><tbody role="presentation"><tr role="presentation"><td class="dijitReset dijitStretch dijitButtonContents dijitButtonNode" role="presentation"><span class="dijitReset dijitInline dijitButtonText" dojoattachpoint="containerNode,_popupStateNode"><span class="dijitReset dijitInline dijitSelectLabel">Select one</span></span><input name="url" dojoattachpoint="valueNode" value="" aria-hidden="true" type="hidden"></td><td class="dijitReset dijitRight dijitButtonNode dijitArrowButton dijitDownArrowButton" dojoattachpoint="titleNode" role="presentation"><div class="dijitReset dijitArrowButtonInner" role="presentation"></div><div class="dijitReset dijitArrowButtonChar" role="presentation">?</div></td></tr></tbody></table> </p>
+</form>
+
+<form class="ibm-jump-form" method="get" action="//www.ibm.com/links" id="form-compute-nodes">
+<p style=" padding-top: 3px ! important;"><label for="select-compute"><strong>Compute Nodes</strong></label><br>
+<table aria-valuetext="Select one" widgetid="select-compute" aria-disabled="false" tabindex="0" id="select-compute" style="-moz-user-select: none; width: 100%;" class="dijit dijitReset dijitInline dijitLeft dijitSelect dijitDownArrowButton" dojoattachpoint="_buttonNode,tableNode,focusNode" role="combobox" aria-haspopup="true" cellpadding="0" cellspacing="0"><tbody role="presentation"><tr role="presentation"><td class="dijitReset dijitStretch dijitButtonContents dijitButtonNode" role="presentation"><span class="dijitReset dijitInline dijitButtonText" dojoattachpoint="containerNode,_popupStateNode"><span class="dijitReset dijitInline dijitSelectLabel">Select one</span></span><input name="url" dojoattachpoint="valueNode" value="" aria-hidden="true" type="hidden"></td><td class="dijitReset dijitRight dijitButtonNode dijitArrowButton dijitDownArrowButton" dojoattachpoint="titleNode" role="presentation"><div class="dijitReset dijitArrowButtonInner" role="presentation"></div><div class="dijitReset dijitArrowButtonChar" role="presentation">?</div></td></tr></tbody></table> </p>
+</form>
+
+<form class="ibm-jump-form" method="get" action="//www.ibm.com/links" id="form-expansion-nodes">
+<p style=" padding-top: 3px ! important;"><label for="select-expansion"><strong>Expansion Nodes</strong></label><br>
+<table aria-valuetext="Select one" widgetid="select-expansion" aria-disabled="false" tabindex="0" id="select-expansion" style="-moz-user-select: none; width: 100%;" class="dijit dijitReset dijitInline dijitLeft dijitSelect dijitDownArrowButton" dojoattachpoint="_buttonNode,tableNode,focusNode" role="combobox" aria-haspopup="true" cellpadding="0" cellspacing="0"><tbody role="presentation"><tr role="presentation"><td class="dijitReset dijitStretch dijitButtonContents dijitButtonNode" role="presentation"><span class="dijitReset dijitInline dijitButtonText" dojoattachpoint="containerNode,_popupStateNode"><span class="dijitReset dijitInline dijitSelectLabel">Select one</span></span><input name="url" dojoattachpoint="valueNode" value="" aria-hidden="true" type="hidden"></td><td class="dijitReset dijitRight dijitButtonNode dijitArrowButton dijitDownArrowButton" dojoattachpoint="titleNode" role="presentation"><div class="dijitReset dijitArrowButtonInner" role="presentation"></div><div class="dijitReset dijitArrowButtonChar" role="presentation">?</div></td></tr></tbody></table> </p>
+</form>
+
+<form class="ibm-jump-form" method="get" action="//www.ibm.com/links" id="form-storage">
+<p style=" padding-top: 3px ! important;"><label for="select-storage"><strong>Storage</strong></label><br>
+<table aria-valuetext="Select one" widgetid="select-storage" aria-disabled="false" tabindex="0" id="select-storage" style="-moz-user-select: none; width: 100%;" class="dijit dijitReset dijitInline dijitLeft dijitSelect dijitDownArrowButton" dojoattachpoint="_buttonNode,tableNode,focusNode" role="combobox" aria-haspopup="true" cellpadding="0" cellspacing="0"><tbody role="presentation"><tr role="presentation"><td class="dijitReset dijitStretch dijitButtonContents dijitButtonNode" role="presentation"><span class="dijitReset dijitInline dijitButtonText" dojoattachpoint="containerNode,_popupStateNode"><span class="dijitReset dijitInline dijitSelectLabel">Select one</span></span><input name="url" dojoattachpoint="valueNode" value="" aria-hidden="true" type="hidden"></td><td class="dijitReset dijitRight dijitButtonNode dijitArrowButton dijitDownArrowButton" dojoattachpoint="titleNode" role="presentation"><div class="dijitReset dijitArrowButtonInner" role="presentation"></div><div class="dijitReset dijitArrowButtonChar" role="presentation">?</div></td></tr></tbody></table> </p>
+</form>
+
+<form class="ibm-jump-form" method="get" action="//www.ibm.com/links" id="form-networking">
+<p style=" padding-top: 3px ! important;"><label for="select-networking"><strong>Networking</strong></label><br>
+<table aria-valuetext="Select one" widgetid="select-networking" aria-disabled="false" tabindex="0" id="select-networking" style="-moz-user-select: none; width: 100%;" class="dijit dijitReset dijitInline dijitLeft dijitSelect dijitDownArrowButton" dojoattachpoint="_buttonNode,tableNode,focusNode" role="combobox" aria-haspopup="true" cellpadding="0" cellspacing="0"><tbody role="presentation"><tr role="presentation"><td class="dijitReset dijitStretch dijitButtonContents dijitButtonNode" role="presentation"><span class="dijitReset dijitInline dijitButtonText" dojoattachpoint="containerNode,_popupStateNode"><span class="dijitReset dijitInline dijitSelectLabel">Select one</span></span><input name="url" dojoattachpoint="valueNode" value="" aria-hidden="true" type="hidden"></td><td class="dijitReset dijitRight dijitButtonNode dijitArrowButton dijitDownArrowButton" dojoattachpoint="titleNode" role="presentation"><div class="dijitReset dijitArrowButtonInner" role="presentation"></div><div class="dijitReset dijitArrowButtonChar" role="presentation">?</div></td></tr></tbody></table> </p>
+</form>
+
+<p>Whether you need to migrate an existing blade server infrastructure to simplify management and improve performance and flexibility, or implement new workloads, IBM Flex System can meet your needs.</p>
+
+<p class="ibm-ind-link"><a href="/systems/pureflex/resources.html" class="ibm-forward-link">View all IBM Flex System resources</a></p>
+</div>
+</div>
+
+<div class="ibm-container ibm-ribbon">
+<h2>Spotlight on IBM Flex System</h2>
+
+<div widgetid="ibmweb_ribbon_1" id="ibmweb_ribbon_1" class="ibm-container-body" dojoattachpoint="ribbonContainer"><a title="Previous" style="margin-top: 53px;" class="ibm-ribbon-prev ibm-disabled" dojoattachpoint="scrollLeftButton" role="button" href="#">Previous</a><div style="height: 130px;" class="ibm-ribbon-pane" dojoattachpoint="scrollContainer"><div id="ibmweb_ribbon_1_scrollable" class="ibm-ribbon-section" dojoattachpoint="scrollableNode" role="listbox"><div widgetid="ibmweb_ribbonSlide_5" id="ibmweb_ribbonSlide_5" class="ibm-columns" dojoattachpoint="containerNode" role="option"><div widgetid="ibmweb_ribbonItemAbstract_5" id="ibmweb_ribbonItemAbstract_5" tabindex="0" role="document" class="ibm-col-6-2" style=" margin: 0 -3px 0 12px;">
+<div class="ibm-card-data data-video"><a tabindex="0" href="//www.youtube.com/watch?v=Zw78raxMXp0" class="ibm-media"><span class="ibm-play-overlay">&nbsp;</span><img src="/systems/resources/systems_pureflex_flex1113video_100x110.png" alt="Play video" height="110" width="100"></a> 
+
+<h3>IBM Flex System</h3>
+
+<p>Go beyond blades with the latest enhancements to Flex System.</p>
+
+<p class="ibm-ind-link"><a tabindex="0" href="//www.youtube.com/watch?v=Zw78raxMXp0" class="ibm-video-link ibm-media">Play video <span class="ibm-item-note">(00:09:26)</span></a></p>
+</div>
+</div><div widgetid="ibmweb_ribbonItemAbstract_6" id="ibmweb_ribbonItemAbstract_6" tabindex="0" role="document" class="ibm-col-6-2">
+<div class="ibm-card-data"><img src="/systems/resources/systems_pureflex_cisco_card_100x110.png" alt="Read report" height="110" width="100">
+<h3>Dare to compare</h3>
+
+<p>Find out how Cisco’s UCS compares to IBM Flex System.</p>
+
+<p class="ibm-ind-link"><a tabindex="0" href="https://www14.software.ibm.com/webapp/iwm/web/signup.do?source=stg-web&amp;S_PKG=ov9262&amp;S_TACT=102LH04W" class="ibm-signin-link">Read report</a></p>
+</div>
+</div></div><div widgetid="ibmweb_ribbonSlide_6" id="ibmweb_ribbonSlide_6" class="ibm-columns" dojoattachpoint="containerNode" role="option"><div widgetid="ibmweb_ribbonItemAbstract_7" id="ibmweb_ribbonItemAbstract_7" tabindex="-1" role="document" class="ibm-col-6-2" style=" margin: 0 -3px 0 12px;">
+<div class="ibm-card-data"><img src="/systems/resources/systems_pureflex_FS_blade_card_100x110.png" alt="Learn more" height="110" width="100">
+<h3>Dare to compare</h3>
+
+<p>Why IBM Flex System is the best blade solution on the market.</p>
+
+<p class="ibm-ind-link"><a tabindex="-1" href="http://www.ibm.com/common/ssi/cgi-bin/ssialias?subtype=WH&amp;infotype=SA&amp;appname=STGE_WZ_WZ_USEN&amp;htmlfid=WZW12347USEN&amp;attachment=WZW12347USEN.PDF" class="ibm-pdf-link">Learn more <span class="ibm-item-note">(120KB)</span></a></p>
+</div>
+</div><div widgetid="ibmweb_ribbonItemAbstract_8" id="ibmweb_ribbonItemAbstract_8" tabindex="-1" role="document" class="ibm-col-6-2">
+<div class="ibm-card-data data-video"><a tabindex="-1" href="//www.youtube.com/watch?v=LHZ0zfoQ398" class="ibm-media"><span class="ibm-play-overlay">&nbsp;</span><img src="/systems/resources/systems_pureflex_fsmmobile_100x110.png" alt="Watch now (00:06:17)" height="110" width="100"></a> 
+
+<h3>See the difference</h3>
+
+<p>See how Flex System Manager compares versus a competitor.</p>
+
+<p class="ibm-ind-link"><a tabindex="-1" href="//www.youtube.com/watch?v=LHZ0zfoQ398" class="ibm-video-link ibm-media">Watch now <span class="ibm-item-note">(00:06:17)</span></a></p>
+</div>
+</div></div><div widgetid="ibmweb_ribbonSlide_7" id="ibmweb_ribbonSlide_7" class="ibm-columns" dojoattachpoint="containerNode" role="option"><div widgetid="ibmweb_ribbonItemAbstract_9" id="ibmweb_ribbonItemAbstract_9" tabindex="-1" role="document" class="ibm-col-6-2" style=" margin: 0 -3px 0 12px;">
+<div class="ibm-card-data"><img src="/systems/resources/systems_pureflex_FS_240_card_100x110.png" alt="Learn more" height="110" width="100">
+<h3>Leadership performance</h3>
+
+<p>IBM Flex System x240 delivers virtualization performance over the competition.</p>
+
+<p class="ibm-ind-link"><a tabindex="-1" href="/systems/flex/resources/benchmarks/news/index.html" class="ibm-forward-link">Learn more</a></p>
+</div>
+</div><div widgetid="ibmweb_ribbonItemAbstract_10" id="ibmweb_ribbonItemAbstract_10" tabindex="-1" role="document" class="ibm-col-6-2">
+<div class="ibm-card-data"><img src="/systems/resources/systems_pureflex_FSM_mobile_card_100x110.png" alt="Learn more" height="110" width="100">
+<h3>IBM Flex System</h3>
+
+<p>IBM Flex System Manager for Android, Blackberry and iOS.</p>
+
+<p class="ibm-ind-link"><a tabindex="-1" href="/systems/flex/fsm/mobile/index.html" class="ibm-forward-link">Learn more</a></p>
+</div>
+</div></div></div></div><a title="Next" style="margin-top: -77px;" class="ibm-ribbon-next" dojoattachpoint="scrollRightButton" role="button" href="#">Next</a><div class="ibm-ribbon-nav" dojoattachpoint="navNode" role="toolbar"><a class="ibm-active" tabindex="0" ibmcarouselindex="0" aria-controls="ibmweb_ribbon_1_scrollable" role="button" href="#">Show carousel 1</a><a tabindex="-1" ibmcarouselindex="1" aria-controls="ibmweb_ribbon_1_scrollable" role="button" href="#">Show carousel 2</a><a tabindex="-1" ibmcarouselindex="2" aria-controls="ibmweb_ribbon_1_scrollable" role="button" href="#">Show carousel 3</a></div></div>
+</div>
+
+<h2 class="ibm-rule">Go beyond blade servers with IBM Flex System</h2>
+
+<!-- dynamic tabs --> 
+
+<div aria-label="Tab Navigation" role="toolbar" id="ibm_dyntablist_0" class="ibm-container ibm-dyntabs">
+<div class="ibm-tab-section ibm-text">
+<ul role="tabList" class="ibm-tabs">
+<li aria-controls="compute-nodes" id="ibm_compute-nodes_tab" aria-selected="true" tabindex="0" role="tab" class="ibm-first-tab ibm-active">Compute nodes</li>
+
+<li aria-controls="networking-capabilities" id="ibm_networking-capabilities_tab" aria-selected="false" tabindex="-1" role="tab">Networking capabilities</li>
+
+<li aria-controls="storage-capabilities" id="ibm_storage-capabilities_tab" aria-selected="false" tabindex="-1" role="tab">Storage capabilities</li>
+
+<li aria-controls="management-integration" id="ibm_management-integration_tab" aria-selected="false" tabindex="-1" role="tab" class="ibm-last-tab">Management integration</li>
+</ul>
+</div>
+
+<div id="ibm_dyntablist_0_container" class="ibm-container-body">
+<div aria-hidden="false" style="display: block;" aria-labelledby="ibm_compute-nodes_tab" role="tabpanel" id="compute-nodes" name="compute-nodes" class="ibm-tabs-content">
+<div class="ibm-columns">
+<div class="ibm-col-6-1"><img src="/systems/resources/systems_pureflex_flex_fsnodes_100x110.png" alt="" height="110" width="100"></div>
+
+<div class="ibm-col-6-3 right-column">
+<h2>Compute nodes that go beyond blade servers</h2>
+
+<ul class="ibm-bullet-list">
+<li><a href="/systems/flex/compute-nodes/power/bto/index.html">POWER</a> and <a href="/systems/flex/compute-nodes/x86/bto/index.html">x86</a> options from price-optimized entry nodes to nodes providing maximum performance for your most demanding applications</li>
+
+<li>Available with the latest Intel processors and industry-leading memory capability for x86 based systems - up to 50 percent more memory than HP<sup>1</sup></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div aria-hidden="true" style="display: none;" aria-labelledby="ibm_networking-capabilities_tab" role="tabpanel" id="networking-capabilities" name="networking-capabilities" class="ibm-tabs-content">
+<div class="ibm-columns">
+<div class="ibm-col-6-1"><img src="/systems/resources/systems_pureflex_flex_fsnetwork_100x110.png" alt="" height="110" width="100"></div>
+
+<div class="ibm-col-6-3 right-column">
+<h2>Networking capabilities designed for virtualization and cloud</h2>
+
+<ul class="ibm-bullet-list">
+<li><a href="/systems/flex/networking/bto/fabric.html">Flex System Fabric</a>, designed to help simplify connectivity of your LAN and SAN infrastructure</li>
+
+<li><a href="/systems/flex/networking/bto/ethernet.html">Ethernet options</a> to fit into your current infrastructure while supporting next generation capabilities - up to 200 percent more networking bandwidth than HP<sup>3</sup></li>
+
+<li><a href="/systems/flex/networking/bto/fibrechannel.html">Fibre Channel switches</a> ranging from low-cost 8Gb solutions to highly scalable 16Gb switches for maximum performance</li>
+
+<li><a href="/systems/flex/networking/bto/infiniband.html">InfiniBand switches and adapters</a> to support the bandwidth and latency requirements for high performance computing and financial trading environments</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div aria-hidden="true" style="display: none;" aria-labelledby="ibm_storage-capabilities_tab" role="tabpanel" id="storage-capabilities" name="storage-capabilities" class="ibm-tabs-content">
+<div class="ibm-columns">
+<div class="ibm-col-6-1"><img src="/systems/resources/systems_pureflex_flex_fsstorage_100x110.png" alt="" height="110" width="100"></div>
+
+<div class="ibm-col-6-3 right-column">
+<h2>Storage capabilities optimized for efficiency and performance</h2>
+
+<ul class="ibm-bullet-list">
+<li>Up to 300 percent more dedicated storage for compute nodes compared to Dell<sup>2</sup></li>
+
+<li>Real-time Compression on the <a href="/systems/flex/storage/bto/v7000/index.html">Flex System v7000</a> reduces capacity needs and IBM Easy Tier automatically optimizes data on the tiered storage in the node</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div aria-hidden="true" style="display: none;" aria-labelledby="ibm_management-integration_tab" role="tabpanel" id="management-integration" name="management-integration" class="ibm-tabs-content">
+<div class="ibm-columns">
+<div class="ibm-col-6-1"><img src="/systems/resources/systems_pureflex_flex_fsmgmtintegration_100x110.png" alt="" height="110" width="100"></div>
+
+<div class="ibm-col-6-3 right-column">
+<h2>Management integration with <a href="/systems/flex/systems-management/bto/index.html">IBM Flex System Manager</a></h2>
+
+<ul class="ibm-bullet-list ibm-no-links">
+<li>Simple user interface and automation capabilities helps you bring new components online faster</li>
+
+<li>Cross-resource integration to manage applications and workloads instead of components</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- dynamic tabs end --> 
+
+<p class="ibm-ind-link"><a target="" title="" href="#systems_pureflex_overview_footnotes" onclick="ibmweb.overlay.show('systems_pureflex_overview_footnotes', this);return false;" class="ibm-popup-link">Legal disclaimers</a></p>
+
+<div class="ibm-container">
+<h2>The community speaks</h2>
+
+<div class="ibm-container-body">
+<div id="ibm-rotating-box" style="min-height: 180px; height: 100px; width: 620px; overflow: hidden; z-index: 0; position: relative;">
+<div style="position: absolute; top: 0px; left: 0px; z-index: 0; height: 100px; width: 620px;" class="box-content">
+<p>"Citrix XenDesktop on IBM Flex Systems allows customers to rapidly deploy proven market leading desktop virtualization solutions and go from concept to implementation with increased speed and flexibility."</p>
+
+<p align="right"><strong>- Krishna Subramanian, VP Marketing &amp; Business Development, Citrix</strong></p>
+</div>
+
+<div style="position: absolute; top: 0px; left: -620px; z-index: 0; height: 100px; width: 620px;" class="box-content">
+<p>There are many more voices describing the benefits of IBM PureFlex System and IBM Flex System.</p>
+
+<p class="ibm-ind-link"><a href="/systems/pureflex/solutions/quotes/index.html" class="ibm-forward-link">Read more ecosystem quotes</a></p>
+</div>
+
+<div style="position: absolute; top: 0px; left: -620px; z-index: 0; height: 100px; width: 620px;" class="box-content">
+<p>"VMware and IBM have worked closely together to develop an end-to-end virtual desktop solution for branch offices that can greatly simplify desktop deployment and management and can reduce the IT footprint at remote sites. This validated offering is built on the foundation of IBM's new Flex System running the VMware Branch Office Desktop solution, and can take the guesswork out of implementing a virtual desktop infrastructure."</p>
+
+<p align="right"><strong>- Mason Uyeda, Director, End User Computing Technical and Solution Marketing, VMware</strong></p>
+</div>
+</div><div style="text-align: center;" class="ibm-container-body" id="v16-bulletin-buttons"><p><strong><a style="background: url(&quot;http://www.ibm.com/common/js/rssdisplaymodule/buttons/default/back.png&quot;) no-repeat scroll 0px -1px transparent; height: 1%; padding: 0px 0px 0px 18px;" href="#' + bulletin.preferences.previous + '" class="bulletin-previous">Previous</a></strong><span class="ibm-sep"> | </span><strong><a style="background: url(&quot;http://www.ibm.com/common/js/rssdisplaymodule/buttons/default/next.png&quot;) no-repeat scroll right -1px transparent; height: 1%; padding: 0px 18px 0px 0px;" href="#' + bulletin.preferences.next + '" class="bulletin-next">Next</a></strong></p></div>
+</div>
+</div>
+
+<!--The Community Speaks-->&nbsp;<!-- Begin Legal disclaimers Overlay --> 
+
+<div class="ibm-common-overlay ibm-overlay-alt" id="systems_pureflex_overview_footnotes">
+<div class="ibm-head">
+<p><a target="" title="" href="#close" class="ibm-common-overlay-close">Close [x]</a></p>
+</div>
+
+<div class="ibm-body">
+<div class="ibm-main"><span class="ibm-access"><!-- Accessibility anchor --></span> 
+
+<div class="ibm-title">
+<h1>Legal disclaimers</h1>
+</div>
+
+<div class="ibm-container ibm-alternate">
+<div class="ibm-container-body">
+<p><sup>1</sup> IBM Flex System x240 (768GB) compared to HP BL 460c Gen8 (512GB)</p>
+
+<p><sup>2</sup> IBM Flex System Flash on the x240 supports up to 3.2TB compared to Dell M610 with 800GB</p>
+
+<p><sup>3</sup> IBM Flex System Fabric 10Gb switch 240Gb compared to HP 10Gb switch 80Gb</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="ibm-footer"></div>
+</div>
+
+<!-- End Legal disclaimers Overlay -->
+
+
+
+
+
+</div>
+<div class="ibm-col-6-2">
+<!-- RIGHT HAND NAV_BEGIN -->
+<div id="ibm-contact-module">
+<!-- IBM Contact Module -->
+<!-- Component name: systems_pureflex_contact -->
+<div class="ibm-container ibm-live-assistance">
+<h2>Contact IBM</h2>
+<div class="ibm-container-body">
+<div class="ibm-portrait ibm-alternate"><img src="/systems/resources/systems_contactmodule_6colWide_chat_v1.png" alt="" height="60" width="60"></div>
+
+<ul class="ibm-live-assistance-list">
+	<li><a href="https://www.ibm.com/services/forms/signup.do?source=stg-raq-us-stg-pflex&amp;S_PKG=us-en-stg-rq-pureflex" class="ibm-requestquote-link">Request a quote</a></li>
+	<li><a href="https://www.ibm.com/services/forms/signup.do?source=stg-mail&amp;S_PKG=us-en-stg-cm-pureflex" class="ibm-email-link" id="ste">Email IBM</a></li>
+	<li><a href="//www.ibm.com/partnerworld/wps/bplocator/" class="ibm-forward-link">Find a Business Partner</a>
+	</li><li><p class="ibm-call-info">Call IBM: <strong id="stp">1-866-261-3023</strong><br>
+	Priority code: <strong id="stt">102LH02W</strong></p></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Live Person configuration & variables loaded in here //-->
+<script src="/systems/resources/systems_pureflex_mtagconfig.js" type="text/javascript"></script>
+</div>
+
+<!-- component/systems_pureflex_united_portal_rightnav -->
+<!-- component/systems_pureflex_mustseehighlights -->
+
+<div class="ibm-container ibm-ribbon ibm-alternate" style="border-top: 2px solid #666;">
+<h2>Must see highlights</h2>
+
+<div widgetid="ibmweb_ribbon_2" id="ibmweb_ribbon_2" class="ibm-container-body" dojoattachpoint="ribbonContainer"><a title="Previous" style="margin-top: 105px;" class="ibm-ribbon-prev ibm-disabled" dojoattachpoint="scrollLeftButton" role="button" href="#">Previous</a><div style="height: 234px;" class="ibm-ribbon-pane" dojoattachpoint="scrollContainer"><div id="ibmweb_ribbon_2_scrollable" class="ibm-ribbon-section" dojoattachpoint="scrollableNode" role="listbox"><div widgetid="ibmweb_ribbonSlide_8" id="ibmweb_ribbonSlide_8" class="ibm-columns" dojoattachpoint="containerNode" role="option"><div widgetid="ibmweb_ribbonItemAbstract_11" id="ibmweb_ribbonItemAbstract_11" tabindex="0" role="document" class="ibm-col-6-1"><img src="/systems/resources/systems_pureflex_computenodes_140x64.png" alt="" height="64" width="140">
+<h3>IBM compute node in lead position</h3>
+
+<p>IBM Flex System x240 delivers leadership virtualization performance over the competition.</p>
+
+<p class="ibm-ind-link"><a tabindex="0" href="https://www.ibm.com/connections/blogs/ibmx86/entry/ibm_flex_system_x240_delivers_leadership_virtualization_performance_over_the_competition5?lang=en_us" class="ibm-forward-link">Read more</a></p>
+</div><div widgetid="ibmweb_ribbonItemAbstract_12" id="ibmweb_ribbonItemAbstract_12" tabindex="0" role="document" class="ibm-col-6-1"><img src="/systems/resources/systems_pureflex_cisco_140x64.png" alt="" height="64" width="140">
+<h3>Find out how Cisco’s UCS compares to IBM Flex System</h3>
+
+<p>This report compares the two approaches, showing how IBM continues to accelerate its lead.</p>
+
+<p class="ibm-ind-link"><a tabindex="0" href="https://www14.software.ibm.com/webapp/iwm/web/signup.do?source=stg-web&amp;S_PKG=ov9262&amp;S_TACT=102LH04W" class="ibm-signin-link">Read report</a></p>
+</div></div><div widgetid="ibmweb_ribbonSlide_9" id="ibmweb_ribbonSlide_9" class="ibm-columns" dojoattachpoint="containerNode" role="option"><div widgetid="ibmweb_ribbonItemAbstract_13" id="ibmweb_ribbonItemAbstract_13" tabindex="-1" role="document" class="ibm-col-6-1"><img src="/systems/resources/systems_pureflex_Edge2013_140x64.jpg" alt="" height="64" width="140">
+
+<h3>Edge2013 | June 10-14</h3>
+
+<p>Sharpen your IT skills.<br>
+Cloud, Storage, PureSystems<br>
+Mandalay Bay | Las Vegas, NV</p>
+
+<p class="ibm-ind-link"><a tabindex="-1" href="http://www.ibm.com/edge" class="ibm-forward-link">Register now</a></p>
+</div><div widgetid="ibmweb_ribbonItemAbstract_14" id="ibmweb_ribbonItemAbstract_14" tabindex="-1" role="document" class="ibm-col-6-1"><img src="/systems/resources/systems_pureflex_proginov_140x64.png" alt="" height="64" width="140">
+
+<h3>Customer success</h3>
+
+<p>Proginov invests in IBM Flex System to boost availability and performance.</p>
+
+<p class="ibm-ind-link"><a tabindex="-1" href="http://www.ibm.com/software/success/cssdb.nsf/CS/STRD-8XPKXR?OpenDocument&amp;Site=corp&amp;cty=en_us" class="ibm-forward-link">Learn more</a></p>
+</div></div></div></div><a title="Next" style="margin-top: -129px;" class="ibm-ribbon-next" dojoattachpoint="scrollRightButton" role="button" href="#">Next</a><div class="ibm-ribbon-nav" dojoattachpoint="navNode" role="toolbar"><a class="ibm-active" tabindex="0" ibmcarouselindex="0" aria-controls="ibmweb_ribbon_2_scrollable" role="button" href="#">Show carousel 1</a><a tabindex="-1" ibmcarouselindex="1" aria-controls="ibmweb_ribbon_2_scrollable" role="button" href="#">Show carousel 2</a></div></div>
+</div>
+
+<div class="ibm-container ibm-show-hide">
+
+<h2><a target="" title="" href="#show-hide" class="ibm-show-hide-link ibm-show-active">Explore PureFlex and IBM Flex System</a></h2>
+<div style="overflow: hidden;" class="ibm-container-body">
+<ul class="ibm-link-list">
+<li class="ibm-signin-link"><a href="https://www14.software.ibm.com/webapp/iwm/web/signup.do?source=stg-web&amp;S_PKG=ov12310&amp;S_TACT=103HJ">Protect your IT Systems with Next Generation Security</a></li>
+
+<li class="ibm-signin-link"><a href="https://www14.software.ibm.com/webapp/iwm/web/signup.do?source=stg-web&amp;S_PKG=500028959&amp;S_TACT=102LH04W">The Future of Datacenter Management</a></li>
+
+<li class="ibm-signin-link"><a href="https://www14.software.ibm.com/webapp/iwm/web/signup.do?source=stg-web&amp;S_PKG=500028965&amp;S_TACT=102LH04W">Take the next step in reducing IT expenses</a></li>
+
+<li class="ibm-signin-link"><a href="https://www14.software.ibm.com/webapp/iwm/web/signup.do?source=stg-web&amp;S_PKG=500028953&amp;S_TACT=102LH04W">Case for IBM PureFlex System for Cloud-Enabled SAP Enterprise Environments</a></li>
+
+<li class="ibm-signin-link"><a href="https://www14.software.ibm.com/webapp/iwm/web/signup.do?source=stg-web&amp;S_PKG=500028949&amp;S_TACT=102LH04W">IBM PureFlex Systems TCO Analysis</a></li>
+
+<li class="ibm-video-link"><a href="http://www.youtube.com/watch?v=cKeOb_r39I8" class="ibm-media">Discover IBM Flex System Manager</a> <span class="ibm-item-note">(00:08:00)</span></li>
+
+<li class="ibm-forward-link"><a href="/systems/pureflex/solutions/quotes/index.html">Hear what others are saying about IBM PureFlex System and IBM Flex System</a></li>
+</ul>
+</div>
+
+<h2><a target="" title="" href="#show-hide" class="ibm-show-hide-link">Special offers</a></h2>
+<div style="overflow: hidden; display: none; height: 1px;" class="ibm-container-body">
+<ul class="ibm-link-list">
+<li class="ibm-forward-link"><a href="http://www.ibm.com/financing/us/lifecycle/acquire/expert_integrated_systems.html">Up and running in hours without the upfront cost</a></li>
+
+<li class="ibm-forward-link"><a href="http://www.ibm.com/financing/us/hardware/fast_start.html">Think smart with 0% financing. Make your IBM solution acquisition more affordable.</a></li>
+</ul>
+</div>
+
+</div> 
+
+<div id="expertWidget"><div widgetid="ext_expertise_Six2V17Widget_0" id="ext_expertise_Six2V17Widget_0" class="ibm-el-W300px">
+    <!-- start widget -->
+    <div style="visibility: visible;" dojoattachpoint="expertWidgetTemplate">
+	<h2 class="ibm-rule ibm-el-H1" dojoattachpoint="widgetBanner">Forward Thinkers</h2>
+    
+    <!-- carousel -->
+    <div dojoattachpoint="coverImagesCont" class="ibm-el-carousel-cnt">
+    	<div style="visibility: visible;" dojoattachpoint="leftArrow" class="ibm-el-carousel-prev ibm-el-invisible" dojoattachevent="onclick:gotoPreviousPage"></div>
+        <div dojoattachpoint="coverImages" class="ibm-el-coverflowV17 ibm-el-six2CoverImage"><a href="#"><div class="ibm-el-hdthumbV17 first active"><img class="hdthumb-imgV17 active" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCABPAE4DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDm9wck5HP6UIrMSFfpyc96hWQuMADGOe1aGjvuvdioCAMnPqTgV5EY3djWMeZ2Rc003VzILW3h5BJZ3HAB7mustNMhWMB5SzDrjgfgKrQlbaIomAWOWYDG4/4VPE7cYPXvmuiKSPRhTSjqSzWduF+Ws+W1RwVcDaeh71oEsexqncZ565qnYtQRgahp0SIxmTfF/fA5WsBVSGcwOFdDzG+MhhXXyyHYVbkdDmuW161FvBviJVQcqQAdtJwUlY561PS4yWG3IORtJ9KYVit1G1iM020m+12qSZBbGDj1p0kRbA61z3cXY4btOxECFGQeAK3vDoiEcs7j5t2F/DjP86wEjdyNwAA61e0eZhNJECcKxH61pBdTooR986wsXAIznPAq7al+hX8aq2sDlN2Mg1eiYIQCCMdatXPR6Fg5wKp3Ksaub029RxVeeZB/EAPc1VxJO5mSR/KawdZYNYyJjtXRtc253AuD24rB1KJX3gcg9KcXqKorpo5bQjiOVGBwGyK1twzwDWfpapFLcRMACp5/WtAEZNc1b4zyJp3IdinB3kADmrnh+MSCSZjyXJJqpZX62bPI1tHcjb8ySDPHt71uaKlvNbyNaxsiOSQGPTNaw2Z20INLnFudYUMVDmNFGASew71SXUZ4nDx3TSIecEY4NXbrw87y78b4/wC6D1pRpkaRDNsI1XuzdapJWOtOV12NCzuGuLYzhiU7/Wsm8vGmlIO8hTwBnmtqztRBpRCcIz8Cq4s0kIChAeuSooLd+hjJfKiBRA8Y4ySpq4kbPb7mPBHrV19N8zAkEe32UUTrFDFsToBTZPK+pyawrFqdxJNuSHZjI6s3tUjbOgBx2qW4RZ5TjOBziom+VsbeMdzWVWxwYiEYxuZ9qoW4Usx2k4P410unTG0AiC4AJrn4oTHKhdcgMCR64rZ+1JcSPIF2ZP3fSmpaGmFl7vKzfi1IqeW4qLUNSV0GcBR1PpWEZpQSgB68HFNw0kTRN0bg54pqR6CSSOjt/EFg+mCJj8yNzis+LVUlk/cfN3I9Kx7fSPLVts6bSefmHWrq2kdryJAD7UyVJXNRdR3qVz83cGqztuzk1QCmaXzIH3c4ODVvaY4yXPNS2EmrFOOHzJJcEAquaxXMrHgkYq1qF79nuFVTgOCDjr2oRreTpdwg4ziQ4I/nVunKUbpHl4qV9CAapaupOduOmaih1RDckL909DnvXPXLEy4IAx2HSmK7KFweQf6V0ujC1kiacuV3PT7HZKqMcHIzUeq6OtwFljkaN1PYZGD7VgaDqpdRExO4dK7JXF1ChBwTgGuKzhKzPRUlJEOm2WoJAQlzbBSephGaTUbS6um2XN4WU9ViUL/LpWhFbL0bnFTtbxBTtU59a0THyq5mxW8FnahIYwiovWsfULpUQgda1b+YRR+WvU9a5HWLsRox9KjlcpWFKSimYWqXpkvg2c7afDICNyx7yaymYu5Zup5qaGXy1zk8+9elD3VY82b5nc//2Q==" dojoattrid="12" height="32"></div></a><a href="#"><div class="ibm-el-hdthumbV17 Six2Col"><img class="hdthumb-imgV17" src="https://www.ibm.com/connections/profiles/photo.do?key=f620d481-95d6-454b-a7d2-f4e4d25267ac" dojoattrid="13" height="32"></div></a><a href="#"><div class="ibm-el-hdthumbV17 Six2Col"><img class="hdthumb-imgV17" src="https://www.ibm.com/connections/profiles/photo.do?key=0cd3518e-0e3f-4907-be69-282a1e98010b" dojoattrid="14" height="32"></div></a><a href="#"><div class="ibm-el-hdthumbV17 Six2Col"><img class="hdthumb-imgV17" src="https://www.ibm.com/connections/profiles/photo.do?key=4ed2a318-3d5d-4d96-be57-fc7a6a35a78c" dojoattrid="15" height="32"></div></a><a href="#"><div class="ibm-el-hdthumbV17 Six2Col"><img class="hdthumb-imgV17" src="https://www.ibm.com/connections/profiles/photo.do?key=e402ea73-58ae-45db-b4e7-2fe0408b00e1" dojoattrid="16" height="32"></div></a></div>
+        <div style="visibility: visible;" dojoattachpoint="rightArrow" class="ibm-el-invisible ibm-el-carousel-next-active" dojoattachevent="onclick:gotoNextPage"></div>
+    </div>
+    
+    <!-- end carousel -->
+    
+    <div class="ibm-el-row ibm-el-MH122px">
+		<div class="ibm-el-image Six2Col" dojoattachpoint="mainImageCont"><img style="visibility: visible; opacity: 1;" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCABPAE4DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDm9wck5HP6UIrMSFfpyc96hWQuMADGOe1aGjvuvdioCAMnPqTgV5EY3djWMeZ2Rc003VzILW3h5BJZ3HAB7mustNMhWMB5SzDrjgfgKrQlbaIomAWOWYDG4/4VPE7cYPXvmuiKSPRhTSjqSzWduF+Ws+W1RwVcDaeh71oEsexqncZ565qnYtQRgahp0SIxmTfF/fA5WsBVSGcwOFdDzG+MhhXXyyHYVbkdDmuW161FvBviJVQcqQAdtJwUlY561PS4yWG3IORtJ9KYVit1G1iM020m+12qSZBbGDj1p0kRbA61z3cXY4btOxECFGQeAK3vDoiEcs7j5t2F/DjP86wEjdyNwAA61e0eZhNJECcKxH61pBdTooR986wsXAIznPAq7al+hX8aq2sDlN2Mg1eiYIQCCMdatXPR6Fg5wKp3Ksaub029RxVeeZB/EAPc1VxJO5mSR/KawdZYNYyJjtXRtc253AuD24rB1KJX3gcg9KcXqKorpo5bQjiOVGBwGyK1twzwDWfpapFLcRMACp5/WtAEZNc1b4zyJp3IdinB3kADmrnh+MSCSZjyXJJqpZX62bPI1tHcjb8ySDPHt71uaKlvNbyNaxsiOSQGPTNaw2Z20INLnFudYUMVDmNFGASew71SXUZ4nDx3TSIecEY4NXbrw87y78b4/wC6D1pRpkaRDNsI1XuzdapJWOtOV12NCzuGuLYzhiU7/Wsm8vGmlIO8hTwBnmtqztRBpRCcIz8Cq4s0kIChAeuSooLd+hjJfKiBRA8Y4ySpq4kbPb7mPBHrV19N8zAkEe32UUTrFDFsToBTZPK+pyawrFqdxJNuSHZjI6s3tUjbOgBx2qW4RZ5TjOBziom+VsbeMdzWVWxwYiEYxuZ9qoW4Usx2k4P410unTG0AiC4AJrn4oTHKhdcgMCR64rZ+1JcSPIF2ZP3fSmpaGmFl7vKzfi1IqeW4qLUNSV0GcBR1PpWEZpQSgB68HFNw0kTRN0bg54pqR6CSSOjt/EFg+mCJj8yNzis+LVUlk/cfN3I9Kx7fSPLVts6bSefmHWrq2kdryJAD7UyVJXNRdR3qVz83cGqztuzk1QCmaXzIH3c4ODVvaY4yXPNS2EmrFOOHzJJcEAquaxXMrHgkYq1qF79nuFVTgOCDjr2oRreTpdwg4ziQ4I/nVunKUbpHl4qV9CAapaupOduOmaih1RDckL909DnvXPXLEy4IAx2HSmK7KFweQf6V0ujC1kiacuV3PT7HZKqMcHIzUeq6OtwFljkaN1PYZGD7VgaDqpdRExO4dK7JXF1ChBwTgGuKzhKzPRUlJEOm2WoJAQlzbBSephGaTUbS6um2XN4WU9ViUL/LpWhFbL0bnFTtbxBTtU59a0THyq5mxW8FnahIYwiovWsfULpUQgda1b+YRR+WvU9a5HWLsRox9KjlcpWFKSimYWqXpkvg2c7afDICNyx7yaymYu5Zup5qaGXy1zk8+9elD3VY82b5nc//2Q==" dojoattachpoint="mainImage" height="79" width="78"></div>	
+		<div class="ibm-el-name-cnt-6-2" dojoattachpoint="expertHeader">
+	    	<div class="name" dojoattachpoint="expertName">David&nbsp;Tucker</div>
+	        <div class="title" dojoattachpoint="expertRole">FTSS For System X Kentucky And West Virginia</div>
+	    	<div class="ibm-el-emailContSix2"><a dojoattachpoint="email" href="" target="_blank"></a></div>
+	        <div class="ibm-el-MT10px ibm-el-H12px" dojoattachpoint="connectWithLinks"><a target="_blank" class="ibm-el-icons linkedin" href="http://www.linkedin.com/in/tuckerdl" dojoattrid="9"></a><a target="_blank" class="ibm-el-icons twitter" href="http://twitter.com/dltucker" dojoattrid="10"></a></div>
+	    </div>
+	</div>
+    <!-- about section -->
+   <div class="ibm-el-MT10px ibm-el-H28px"><a href="#" class="ibm-el-H4" dojoattachpoint="aboutDisp">About</a></div>
+    <div style="visibility: visible;" class="ibm-el-row ibm-el-MT5px ibm-el-MB10px intro" dojoattachpoint="expertDesc">I am a Field Technical Sales Specialist for the Commonwealth of Kentucky and the State of West Virginia. Contact me about PureSystems, BladeCenter, System x and our Cloud offerings. </div>
+    
+    
+    <!-- Recent activity section -->
+    <a style="display: none;" class="ibm-el-H2 ibm-el-MT10px expcol" href="#" dojoattachpoint="recActDisp">Recent activity</a>
+	<div style="display: none;" class="ibm-el-row ibm-el-MT5px ibm-el-recentAct" dojoattachpoint="blogDiv">
+	   	<p dojoattachpoint="blogTitle"></p>
+	    <p dojoattachpoint="blogSummaryNode"></p>
+	</div>
+    
+    <a style="display: block;" href="#" class="ibm-el-H2 ibm-el-MT10px expcol" dojoattachpoint="linksDisp">Links</a>
+    <div style="display: none;" class="ibm-el-row" dojoattachpoint="otherLink"><a target="_blank" class="ibm-el-icons external" href="http://dltucker.com" dojoattrid="11">My Blog</a></div>
+        
+    <!-- Terms section -->
+    <a href="#" class="ibm-el-H20px ibm-el-H3 ibm-el-MT10px expcol" dojoattachpoint="termsDisp">Terms</a>
+    <div style="display: none;" class="ibm-el-row ibm-el-MT5px ibm-el-terms" dojoattachpoint="ibmTermsContent">IBM is not responsible for, and does not validate or confirm, the correctness or accuracy of any user content posted.IBM does not endorse any user content.User content does not represent the view or opinions of IBM.IBM, in its solo discretion, reserves the right to remove any content.</div>
+    <div class="ibm-el-row ibm-el-MT10px"></div>
+    </div>
+    <!-- end widget -->
+</div></div>
+
+<div id="ibm-merchandising-module"></div>
+<!--RIGHT HAND NAV_END -->
+</div>
+</div>
+
+</div>  <!-- closes ibm-content-main -->
+
+<!-- END BODY TEXT -->
+</div> <!-- closes ibm-content-body -->
+
+</div> <!-- closes ibm-content -->
+<!-- CONTENT_END -->
+
+
+        </div></div>
+
+    <!-- closes ibm-content-nav -->   
+
+ <!-- closes ibm-pcon -->
+
+<div aria-label="Related Content" role="complementary" id="ibm-related-content">
+<!-- component/systems_pureflex_footer-module_v17 -->
+<div class="ibm-columns">
+
+
+<div class="ibm-col-5-1">
+<img src="/systems/resources/Pflex_literature2_172x64.png" alt="" height="64" width="172">
+<h2>IBM PureFlex literature</h2>
+<p class="ibm-ind-link"><a href="//www.ibm.com/common/ssi/apilite?infotype=PM&amp;infosubt=SP&amp;doctype=M0_SBR%20and%20XWA_*&amp;pubno=*USEN&amp;lastdays=1825&amp;ctvwcode=US&amp;appname=STGE_WA_WA_USEN_SB&amp;additional=summary&amp;contents=keeponlit" class="ibm-chevron-alternate-link">Learn more</a></p>
+</div>
+
+
+<div class="ibm-col-5-1"><img src="/systems/resources/capabilities_172x64.jpg" alt="" height="64" width="172">
+
+<h2> Compatibility Guide</h2>
+<p class="ibm-ind-link"><a href="//www.ibm.com/systems/info/x86servers/serverproven/compat/us/flex.html" class="ibm-chevron-alternate-link">Learn more</a></p>
+</div>
+
+<div class="ibm-col-5-1"><img src="/systems/resources/Flex_172x64.png" alt="" height="64" width="172">
+
+<h2>PureSystems financing</h2>
+<p class="ibm-ind-link"><a href="//www.ibm.com/financing/us/lifecycle/acquire/expert_integrated_systems.html" class="ibm-chevron-alternate-link">Learn more</a></p>
+</div>
+
+
+<div class="ibm-col-5-1"><img src="/systems/resources/PS_family_172x64.png" alt="" height="64" width="172">
+
+<h2>IBM PureSystem family</h2>
+<p class="ibm-ind-link"><a href="//www.ibm.com/puresystems/" class="ibm-chevron-alternate-link">Learn more</a></p>
+</div>
+
+<div class="ibm-col-5-1"><img src="/systems/resources/systems_smartercomputing_17.jpg" alt="" height="64" width="172">
+
+<h2>Smarter Computing</h2>
+<p class="ibm-ind-link"><a href="//www.ibm.com/smartercomputing" class="ibm-chevron-alternate-link">Learn more</a></p>
+</div>
+</div>
+
+</div>
+
+
+<!-- v17 SSIs: version 1.1 -->
+<!-- FOOTER_BEGIN -->
+<div role="complementary" aria-labelledby="ibm-footer-res" class="ibm-active" style="min-height: 150px;" id="ibm-footer-module"><h2 class="ibm-access" id="ibm-footer-res">Resources</h2><div class="ibm-columns"><div aria-label="Connect with us" class="ibm-col-6-1"><h3>Connect with us</h3><ul><li><a tabindex="0" href="http://www.ibm.com/shop/americas/content/home/store_IBMPublicUSA/en_US/graph.html?lnk=fco-capr-usen">Create a profile</a></li><li><a tabindex="0" href="http://www.ibm.com/communities/service/html/allcommunities?lnk=fco-comm-usen">Communities</a></li><li><a tabindex="0" href="http://www.ibm.com/developerworks/university/?lnk=fco-acol-usen">Academic collaboration</a></li><li><a tabindex="0" href="http://www.research.ibm.com/FOAK/?lnk=fco-rcol-usen">Research collaboration</a></li><li><a tabindex="0" href="http://www.ibm.com/ibm/greateribm/?lnk=fco-ipap-usen">IBMers past and present</a></li><li><a tabindex="0" href="http://www.ibm.com/voices?lnk=fco-ivoi-usen">IBM Voices</a></li></ul></div><div aria-label="Key topics" class="ibm-col-6-1"><h3>Key topics</h3><ul><li><a tabindex="0" href="http://www.ibm.com/smarterplanet/us/en/?lnk=fkt-aspl-usen">A smarter planet</a></li><li><a tabindex="0" href="http://www.ibm.com/analytics/us/en/index.html?lnk=fkt-anly-usen">Big data and analytics</a></li><li><a tabindex="0" href="http://www.ibm.com/cloud-computing/us/en/?lnk=fkt-ccom-usen">Cloud computing</a></li><li><a tabindex="0" href="http://www.ibm.com/smarterplanet/us/en/business_resilience_management/overview/index.html?lnk=fkt-sare-usen">Security and resilience</a></li><li><a tabindex="0" href="http://www.ibm.com/smarterplanet/us/en/smarter_commerce/overview/?lnk=fkt-scom-usen">Smarter commerce</a></li><li><a tabindex="0" href="http://www.ibm.com/smarter-computing/?lnk=msoST-scom-usen">Smarter Computing</a></li><li><a tabindex="0" href="http://www.ibm.com/ibm/green/?lnk=fkt-sust-usen">Sustainability</a></li><li><a tabindex="0" href="http://www.ibm.com/smarterplanet/cities?lnk=fkt-scit-usen">Smarter Cities</a></li></ul></div><div aria-label="Information for" class="ibm-col-6-1"><h3>Information for</h3><ul><li><a tabindex="0" href="http://www.ibm.com/services/c-suite/insights/?lnk=fif-cexe-usen">C-suite executives</a></li><li><a tabindex="0" href="http://www.ibm.com/services/us/gbs/industries/?lnk=fif-indu-usen">Industries</a></li><li><a tabindex="0" href="http://www.ibm.com/businesscenter/smb/us/en/?lnk=fif-samb-usen">Small and medium business</a></li><li><a tabindex="0" href="http://www.ibm.com/developerworks/?lnk=fif-deve-usen">Developers</a></li><li><a tabindex="0" href="http://www.ibm.com/partnerworld?lnk=fif-ibpa-usen">IBM Business Partners</a></li><li><a tabindex="0" href="http://www.ibm.com/investor/?lnk=fif-inve-usen">Investors</a></li><li><a tabindex="0" href="http://www.ibm.com/employment/?lnk=fif-jsee-usen">Job seekers</a></li></ul></div><div aria-label="Shop &amp;amp; buy" class="ibm-col-6-1"><h3>Shop &amp; buy</h3><ul><li><a tabindex="0" href="http://www.ibm.com/products/specialoffers/us/en/?lnk=fsb-soff-usen">Special offers</a></li><li><a tabindex="0" href="http://www.ibm.com/shop/usedpcs?lnk=fsb-pcom-usen">Personal computers</a></li><li><a tabindex="0" href="http://www.ibm.com/readytobuy?lnk=fsb-rtbu-usen">Ready to buy?</a></li><li><a tabindex="0" href="http://www.ibm.com/financing/us/?lnk=fsb-fina-usen">Financing</a></li><li><a tabindex="0" href="http://www.ibm.com/connect/ibm/us/en/?lnk=fsb-fasr-usen">Find a sales rep</a></li><li><a tabindex="0" href="http://www.ibm.com/partnerworld/wps/bplocator/search.jsp?lnk=fsb-fabp-usen">Find a Business Partner</a></li><li><a tabindex="0" href="http://www.ibm.com/smarterplanet/us/en/shopibmcollection/?lnk=fsb-ilme-usen">IBM logo merchandise</a></li></ul></div><div aria-label="About IBM" class="ibm-col-6-1"><h3>About IBM</h3><ul><li><a tabindex="0" href="http://www.ibm.com/press/us/en/index.wss?lnk=fai-lnew-usen">Latest news</a></li><li><a tabindex="0" href="http://www.ibm.com/ibm100/us/en/?lnk=fai-icen-usen">IBM's Centennial</a></li><li><a tabindex="0" href="http://www.research.ibm.com/?lnk=fai-ires-usen">IBM Research</a></li><li><a tabindex="0" href="http://www.ibm.com/ibm/responsibility/?lnk=fai-cres-usen">Corporate responsibility</a></li><li><a tabindex="0" href="http://www.ibm.com/contact/employees/us/?lnk=fai-edir-usen">Employee directory</a></li><li><a tabindex="0" href="http://www.ibm.com/ibm/us/en/?lnk=fai-maib-usen">More about IBM</a></li></ul></div><div aria-label="Popular links" class="ibm-col-6-1"><h3>Popular links</h3><ul><li><a tabindex="0" href="http://www.ibm.com/employment/?lnk=fpl-care-usen">Careers</a></li><li><a tabindex="0" href="http://www.ibm.com/support/fixcentral/?lnk=fpl-fcen-usen">Fix central</a></li><li><a tabindex="0" href="http://www.ibm.com/software/howtobuy/passportadvantage/?lnk=fpl-padv-usen">Passport Advantage</a></li><li><a tabindex="0" href="http://www.ibm.com/security/secure-engineering/bulletins.html?lnk=fpl-psbu-usen">Product security bulletins</a></li><li><a tabindex="0" href="http://www.ibm.com/software/?lnk=fpl-soft-usen">Software</a></li><li><a tabindex="0" href="http://www.ibm.com/systems/x/?lnk=fpl-sx-usen">System x</a></li><li><a tabindex="0" href="http://www.ibm.com/innovation/us/watson/?lnk=fpl-wats-usen">Watson</a></li></ul></div></div></div>
+<div aria-label="Footer" role="contentinfo" id="ibm-footer">
+<h2 class="ibm-access">Footer links
+</h2>
+<ul><li><a href="http://www.ibm.com/contact/us/en/?lnk=flg-cont-usen">Contact</a></li><li><a href="http://www.ibm.com/privacy/us/en/?lnk=flg-priv-usen">Privacy</a></li><li><a href="http://www.ibm.com/legal/us/en/?lnk=flg-tous-usen">Terms of use</a></li><li><a href="http://www.ibm.com/accessibility/us/en/?lnk=flg-acce-usen">Accessibility</a></li></ul>
+</div>
+<!-- FOOTER_END -->
+
+
+</div> <!-- closes ibm-top -->
+
+<!-- BEGIN stats -->
+<div id="ibm-metrics">
+<script src="//www.ibm.com/common/stats/stats.js" type="text/javascript">//</script>
+</div>
+<!-- END stats -->
+
+<!-- BEGIN BOTTOM CODE -->
+
+<!-- END BOTTOM CODE -->
+
+
+
+
+
+
+
+
+
+</body>

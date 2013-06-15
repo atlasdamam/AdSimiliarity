@@ -1,0 +1,921 @@
+<head><script src="//ct1.addthis.com/static/r07/auth013.js" type="text/javascript"></script><script src="//ct1.addthis.com/static/r07/lang23/fr.js" type="text/javascript"></script><link media="all" href="//ct1.addthis.com/static/r07/widget114.css" type="text/css" rel="stylesheet"><base href="http://www.tv5.org/cms/chaine-francophone/"><meta http-equiv="Edge-Control" content="!no-store,max-age=900s"><meta http-equiv="Cache-Control" content="max-age=900,!no-cache,!no-store">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>TV5MONDE : TV internationale francophone : Info, Jeux, Programmes TV, Météo, Dictionnaire.</title>
+	<link href="/cms/css//cms/modules/facebook/install/module.css,/cms/template/css/style.css,/cms/template/css/thickbox-ewm.css,/cms/../TV5Site/alexandria/alexandriaMemodata.css,/cms/template/css/navigation.css,/cms/template/css/homepage.css" rel="stylesheet" type="text/css">
+<script src="/cms/javascript//cms/template/js/jquery-1.4.2.min.js,/cms/template/js/scroller_fade.js,/cms/template/js/jquery.scrollTo-1.3.3-min.js,/cms/template/js/jquery.serialScroll-ewm.js,/cms/template/js/tv5.js,/cms/core/js/inc_fct.js,/cms/core/js/jsfunc.validateform.js,/cms/template/js/thickbox-ewm.js,/cms/template/js/jquery-galleryview-1.1/jquery.easing.1.3.js,/cms/template/js/jquery-galleryview-1.1/jquery.easing.compatibility.js,/cms/template/js/jquery-galleryview-1.1/jquery.timers-1.1.2.js,/cms/core/js/AC_ActiveX.js,/cms/core/js/AC_RunActiveContent.js,/cms/template/js/jquery.carouFredSel-5.4.1-packed.js,/cms/template/js/sitestat.js" language="JavaScript" type="text/javascript"></script>
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+	<script src="http://ad2play.ftv-publicite.fr/js/ad2play.js"></script>
+    
+	<meta name="Description" content="Le site de TV5MONDE  chaîne internationale de télévision francophone : Les émissions, les programmes, l'information en continu, la météo, la musique, les ressources pédagogiques, le guide des voyageurs et les cultures du monde. TV5 MONDE.">
+<meta name="Keywords" content="TV5MONDE, TV5 MONDE, TV5, chaine de television, chaine francophone, chaine internationale, chaine francaise, television francaise, television francophone, emissions francophones, programmes francophones, television publique, television educative, Agence intergouvernementale de la francophonie, Organisation internationale de la francophonie, programme tv, actualite mondiale, ressources francophones, mediatheque">
+
+<meta property="og:title" content="TV5MONDE : TV internationale francophone : Info, Jeux, Programmes TV, Météo, Dictionnaire.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://www.tv5.org">
+<meta property="og:image" content="">
+<meta property="og:description" content="">
+<meta property="og:site_name" content="TV5MONDE">
+<meta property="fb:app_id" content="252417881435807">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:url" content="http://www.tv5.org">
+<meta name="twitter:title" content="TV5MONDE : TV internationale francophone : Info, Jeux, Programmes TV, Météo, Dictionnaire.">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="">
+<meta name="twitter:site" content="@tv5monde">
+	<!-- marker : LANGUE -->
+    <style type="text/css">
+.footer_content .footer .footer_main #menu_footer_main .last {display: none;}
+body { background: #D3E9F6; }
+</style>
+    <!-- marker : CSS_FICHE -->
+
+	<script type="text/javascript" language="javascript">
+	/*<![CDATA[*/
+	<!--
+		var config_absolute_path = '/cms/';
+		var noMouseMoveEvent = 1;
+	//-->
+	/*]]>*/
+	</script>
+    
+	<script src="/cms/template/js/jquery-galleryview-1.1/jquery.galleryview-1.1.js" language="javascript" type="text/javascript"></script>
+	<link href="/cms/template/css/print.css" rel="stylesheet" type="text/css" media="print">
+    
+    
+	<script type="text/javascript" language="javascript">
+	/*<![CDATA[*/
+	
+	var signal = LireCookie('c_id_signal');
+	var zone = LireCookie('c_id_zone');
+	var langue = LireCookie('c_id_trad');
+	if(langue==null) langue=0;
+	if(!isDefined('langue')) langue=0;
+	if(signal==null) signal=0;
+	if(!isDefined('signal')) signal=0;
+	if(zone==null) zone=0;
+	if(!isDefined('zone')) zone=0;
+
+	var expcookies =new Date(2015,1,1,0,0,0);
+	//-->
+	/*]]>*/
+	</script>
+
+	
+	
+	<script type="text/javascript" language="javascript">
+	/*<![CDATA[*/
+	<!--
+		$(document).ready(function () {  
+			if(0 && (!LireCookie('c_id_zone') || !LireCookie('c_id_signal'))) choose_signal(0);
+		});
+	//-->
+	/*]]>*/
+	</script>
+	
+
+	<!-- marker : C_PAGE_STAT -->
+
+
+	<script type="text/javascript" language="javascript">
+	/*<![CDATA[*/
+	<!--
+		var intv5 = true;
+		function choose_signal(btclose) 
+		{
+			$("select").hide();
+			//$("object").hide();
+			$("embed").hide();
+			$(".video").hide();
+			$("#window").html('');
+			$("#overlay").show();
+			$("#window").css( "width", "598px");
+			$("#window").css( "height", "472px");
+			$("#window").css( "left",(($(window).width()-598)/2)+"px");
+			if(screen.height<900)
+				$("#window").css( "top", "10px");
+			else
+				$("#window").css( "top", "50px"); //(($(window).height()-400)/2)+"px");
+			$("#window").show();
+			$.ajax({type: "get", dataType:"html", url: "/cms/marker/signalzone.php", data: "id=21225&btclose="+btclose+"&signal="+LireCookie("c_id_signal")+"&zone="+LireCookie("c_id_zone")+"&trad_id="+LireCookie("c_id_trad"), success: function(content){$("#window").html(content);}}); 
+		}
+
+		function tipafriend()
+		{
+			$("select").hide();
+			//$("object").hide();
+			$("embed").hide();
+			$(".video").hide();
+			$("#window").html('');
+			$("#overlay").show();
+			$("#window").css( "width", "316px");
+			$("#window").css( "height", "472px");
+			$("#window").css( "left",(($(window).width()-400)/2)+"px");
+			if(screen.height<900)
+				$("#window").css( "top", "10px");
+			else
+				$("#window").css( "top", "50px"); //(($(window).height()-400)/2)+"px");
+			$("#window").show();
+			$.ajax({type: "get", dataType:"html", url: "/cms/marker/tip_form.php", data: "trad_id="+LireCookie("c_id_trad")+"&url="+escape(window.location.href), success: function(content){$("#window").html(content);}}); 
+		}
+		$(document).ready(
+			function () {
+
+				// over changement de signal/zone
+				$('#choixsignalzone').hover(function(){
+					$(this).addClass('act');
+				}, function(){
+					$(this).removeClass('act');
+				});
+				// click changement de signal/zone
+				$('#choixsignalzone').click(function(){
+					if(!$(this).hasClass('act')) $(this).addClass('act');
+					else $(this).removeClass('act');
+				});
+				// over du menu principal
+				$('#menutop > li').hover(function(){
+					k = $(this).attr('class').substring(2);
+					$(this).children('a').trigger('click');
+				}, function(){
+					$(this).removeClass('over');
+				});
+				$('#menutop > li > a').live ('touchend', function ( e, h) {
+					e.stopPropagation ();
+					k = $(this).parent().attr('class').substring(2);
+					lien = $(this).attr('href');
+					menutop_load( lien, k);
+				});
+				// chargement du footer "egalement"
+				$.ajax({type: "get", dataType:"html", url: "/cms/chaine-francophone/info/p-1908-Accueil.htm", data: "gabarit_main=standardv2_egalement_main.html&gabarit_content=fake_content.html", success: function(content){$("#egalement").html(content);}}); 
+				
+					
+			}
+		);
+	//-->
+	/*]]>*/
+	</script>
+<div id="_atssh" style="visibility: hidden; height: 1px; width: 1px; position: absolute; z-index: 100000;"><iframe src="//ct1.addthis.com/static/r07/sh114.html#" style="height: 1px; width: 1px; position: absolute; z-index: 100000; border: 0px none; left: 0px; top: 0px;" title="AddThis utility frame" id="_atssh745"></iframe></div><script src="http://ct1.addthis.com/static/r07/core077.js" type="text/javascript"></script><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}
+.fb_invisible{display:none}
+.fb_reset{background:none;border-spacing:0;border:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}
+.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}
+.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}
+.fb_dialog_content{background:#fff;color:#333}
+.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px;top:8px\9;right:7px\9}
+.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}
+.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}
+.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}
+.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}
+.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}
+.fb_dialog_top_left,
+.fb_dialog_top_right,
+.fb_dialog_bottom_left,
+.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}
+/* @noflip */
+.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}
+/* @noflip */
+.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}
+/* @noflip */
+.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}
+/* @noflip */
+.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right,
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right{width:10px;height:100%}
+.fb_dialog_vert_left{margin-left:-10px}
+.fb_dialog_vert_right{right:0;margin-right:-10px}
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{width:100%;height:10px}
+.fb_dialog_horiz_top{margin-top:-10px}
+.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}
+.fb_dialog_iframe{line-height:0}
+.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}
+.fb_dialog_content .dialog_title > span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif)
+no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}
+body.fb_hidden{-webkit-transform:none;height:100%;margin:0;left:-10000px;overflow:visible;position:absolute;top:-10000px;width:100%
+}
+.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif)
+white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}
+.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}
+#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}
+#fb-root #fb_dialog_ipad_overlay.hidden{display:none}
+.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}
+.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0 0, 0 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}
+.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%
+}
+.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0 0, 0 100%, from(#4966A6),
+color-stop(0.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset,
+rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}
+.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}
+.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}
+.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}
+#fb_dialog_loader_close{float:left}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}
+.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}
+.fb_iframe_widget iframe{position:absolute}
+.fb_iframe_widget_lift{z-index:1}
+.fb_hide_iframes iframe{position:relative;left:-10000px}
+.fb_iframe_widget_loader{position:relative;display:inline-block}
+.fb_iframe_widget_fluid{display:inline}
+.fb_iframe_widget_fluid span{width:100%}
+.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}
+.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_connect_bar_container div,
+.fb_connect_bar_container span,
+.fb_connect_bar_container a,
+.fb_connect_bar_container img,
+.fb_connect_bar_container strong{background:none;border-spacing:0;border:0;direction:ltr;font-style:normal;font-variant:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal;vertical-align:baseline}
+.fb_connect_bar_container{position:fixed;left:0 !important;right:0 !important;height:42px !important;padding:0 25px !important;margin:0 !important;vertical-align:middle !important;border-bottom:1px solid #333 !important;background:#3b5998 !important;z-index:99999999 !important;overflow:hidden !important}
+.fb_connect_bar_container_ie6{position:absolute;top:expression(document.compatMode=="CSS1Compat"? document.documentElement.scrollTop+"px":body.scrollTop+"px")}
+.fb_connect_bar{position:relative;margin:auto;height:100%;width:100%;padding:6px 0 0 0 !important;background:none;color:#fff !important;font-family:"lucida grande", tahoma, verdana, arial, sans-serif !important;font-size:13px !important;font-style:normal !important;font-variant:normal !important;font-weight:normal !important;letter-spacing:normal !important;line-height:1 !important;text-decoration:none !important;text-indent:0 !important;text-shadow:none !important;text-transform:none !important;white-space:normal !important;word-spacing:normal !important}
+.fb_connect_bar a:hover{color:#fff}
+.fb_connect_bar .fb_profile img{height:30px;width:30px;vertical-align:middle;margin:0 6px 5px 0}
+.fb_connect_bar div a,
+.fb_connect_bar span,
+.fb_connect_bar span a{color:#bac6da;font-size:11px;text-decoration:none}
+.fb_connect_bar .fb_buttons{float:right;margin-top:7px}
+.fb_edge_widget_with_comment{position:relative;*z-index:1000}
+.fb_edge_widget_with_comment span.fb_edge_comment_widget{position:absolute}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget{z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget .FB_Loader{left:0;top:1px;margin-top:6px;margin-left:0;background-position:50% 50%;background-color:#fff;height:150px;width:394px;border:1px #666 solid;border-bottom:2px solid #283e6c;z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.dark .FB_Loader{background-color:#000;border-bottom:2px solid #ccc}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.siderender
+.FB_Loader{margin-top:0}
+.fbpluginrecommendationsbarleft,
+.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}
+/* @noflip */
+.fbpluginrecommendationsbarleft{left:10px}
+/* @noflip */
+.fbpluginrecommendationsbarright{right:10px}</style></head>
+
+<body>
+	<!-- STATS -->
+	<!-- Begin Sitestat code -->
+<script type="text/javascript" language="javascript">
+<!--
+function sitestat(ns_l){// FromUrl v1.5 Copyright (c) 2001-2008 Nedstat B.V. All rights reserved.
+var ns_type=''          // leave empty for normal/ppc measurement, fill in for clickin, clickout or pdf
+var r=''                // yes=only parse url when there is a real document.referrer,
+                        // no=only parse url when there is no real document.referrer, empty=always parse url
+var t='?'               // tag in url where parameters follow; default '?' could be replaced by "#"
+var p=new Array();var w='';var l='';var d=document;var n=navigator;var ns_0=''
+;if(top!=self){if('\u0041'=='A'){var u=n.userAgent;if(u.indexOf('Safari')==-1)
+{var b=u.indexOf('Opera');if(b==-1||(u.charAt(b+6)+0)>5){b=u.indexOf('Mozilla'
+);var xb=b!=-1?u.charAt(b+8)>4:1;if(u.indexOf('compatible')!=-1||xb){var c=
+'try{ns_0=top.document.referrer}catch(e){}';eval(c);c=
+'try{l=top.document.location.href}catch(e){}';eval(c);}}}}}else{ns_0=
+d.referrer;l=d.location.href;}if(ns_0.lastIndexOf('/')==ns_0.length-1){ns_0=
+ns_0.substring(ns_0.lastIndexOf('/'),0);}var f=ns_l.indexOf('?');if(f!=-1){
+var q=ns_l.substring(f+1);ns_l=ns_l.substring(0,f);if(q){var m=q.indexOf('&');
+w=q.substring(0,m==-1?q.length:m);if(w.indexOf('=')!=-1){w='';}if(w){q=
+q.substring(m==-1?q.length:m+1);q+=(q?'&':'')+'ns_name='+w;}if(ns_0.length>0){
+q+=(q?'&':'')+'ns_referrer='+escape(ns_0);}var s=0;var e=0;while(q.length){e=
+q.indexOf('&');if(e==-1){e=q.length;}var o=q.substring(s,e);if(o.substring(0,4
+)=='amp;'){o=o.substring(4);}if(o)p[p.length]=o;q=q.substring(e+1);}}}var a=
+l.indexOf(t);a=a==-1?0:l.substring(a+1);var j;if(r=='yes')j=ns_0.length;else
+if(r=='no')j=!ns_0.length;else if(r=='')j=1;if(a&&j){while(a.length){var e=
+a.indexOf('&');if(e==-1){e=a.length;}var k=a.substring(0,a.substring(0,e)
+.indexOf('='));var v=a.substring(a.substring(0,e).indexOf('=')+1,e);if(
+k.substring(0,4)=='amp;'){k=k.substring(4);}while(v.substring(0,1)=='='){v=
+v.substring(1);}if(k=='ns_name'){w=v;}else if(k=='ns_or'){var g='ns_referrer='
+;for(var z=0;z<p.length;z++){if(p[z].substring(0,g.length)==g){p[z]=
+'ns_referrer='+v;}}}else{if(k.substring(0,3)=='ns_'&&v&&k){var h=0;for(var x=0
+;x<p.length;x++){if(p[x].substring(0,p[x].indexOf('='))==k){p[x]=k+"="+v;h=1}}
+if(!h){p[p.length]=k+"="+v;}}}a=a.substring(e+1);}}if(!w){return;}var s='';
+var y='';for(var i=0;i<p.length;i++)if(p[i].substring(0,8)!='ns_name='){if(p[i
+].substring(0,12)!='ns_referrer='){s+='&'+p[i];}else{y='&'+p[i];}}s+=ns_type?
+'&ns_type='+ns_type+'&ns_action=view':'';ns_pixelUrl=ns_l+'?'+w+"&ns__t="+(
+new Date()).getTime();ns_l=ns_pixelUrl+s+y;if(d.images){ns_1=new Image();
+ns_1.src=ns_l;}else{d.write('<img src='+ns_l+' width="1" height="1">');}}
+sitestat("http://fr.sitestat.com/aef/tv5monde-com/s?accueil");
+// -->
+</script>
+<noscript>
+<img src="http://fr.sitestat.com/aef/tv5monde-com/s?accueil" width="1" height="1" alt=""/>
+</noscript>
+<!-- End Sitestat code -->
+	<!-- div principal -->
+     <div id="top" class="d_tv5 d_1024">
+		<div id="metanav" class="clearfix">
+			<div id="b183995" class="blocewm nav_metanav bloc_coreliens media_default liens_"><div class="content"><div class="info"><ul class="bloc_lien_int"><li class="item1"><a href="/"><img src="/cms/userdata/c_bloc_lien/37/37365/origine16796_vignette_meta_tv5monde_2.png" alt="TV5MONDE" title="TV5MONDE" style="" height="36" width="90"><span>TV5MONDE</span></a></li><li class="item2"><a href="http://www.tv5mondeplus.com/" target="_self"><img src="/cms/userdata/c_bloc_lien/37/37364/origine16795_vignette_meta_tv5mondeplus_2.png" alt="TV5MONDE+" title="TV5MONDE+" style="" height="36" width="87"><span>TV5MONDE+</span></a></li><li class="item3"><a href="http://www.tv5mondeplusafrique.com/" target="_self"><img src="/cms/userdata/c_bloc_lien/37/37363/origine16794_vignette_meta_plusafrique_2.png" alt="+AFRIQUE" title="+AFRIQUE" style="" height="36" width="69"><span>+AFRIQUE</span></a></li><li class="item4"><a href="http://www.tivi5mondeplus.com/" target="_self"><img src="/cms/userdata/c_bloc_lien/37/37362/origine16793_vignette_meta_plusjeunesse_2.png" alt="+JEUNESSE" title="+JEUNESSE" style="" height="36" width="74"><span>+JEUNESSE</span></a></li><li class="item5"><a href="http://cinema.tv5monde.com/" target="_self"><img src="/cms/userdata/c_bloc_lien/37/37361/origine16792_vignette_meta_pluscinema_2.png" alt="+CINEMA" title="+CINEMA" style="" height="36" width="67"><span>+CINEMA</span></a></li><li class="item6 last-item"><a href="http://documentaire.tv5monde.com/" target="_self"><img src="/cms/userdata/c_bloc_lien/37/37360/origine16791_vignette_meta_plusdocumentaire_2.png" alt="+DOCUMENTAIRE" title="+DOCUMENTAIRE" style="" height="36" width="108"><span>+DOCUMENTAIRE</span></a></li></ul></div></div></div><!-- marker : PAGINATION_BLOC -->
+			<div id="choixsignalzone">Quel TV5MONDE regardez-vous ?<div id="choixsignalzone_change"><a href="#" onclick="choose_signal(1); return false;"><span>Modifier<br>votre signal</span></a></div></div>
+			<div id="b183996" class="blocewm nav_outils bloc_coreliens media_default liens_"><div class="content"><div class="info"><ul class="bloc_lien_int"><li class="item1 last-item"><a href="/cms/../TV5Site/reception/accueil.php" target="_self"><img src="/cms/userdata/c_bloc_lien/37/37367/origine16798_vignette_outils_reception.png" alt="Recevoir TV5MONDE" title="Recevoir TV5MONDE" style="" height="36" width="30"><span>Recevoir TV5MONDE</span></a></li></ul></div></div></div><!-- marker : PAGINATION_BLOC -->
+		</div>
+		<div id="logotv5" class="clearfix">
+			<a href="/" class="logotv5" title="Accueil TV5MONDE" accesskey="1"><img src="/cms/template/image/navigation/logo_tv5.png" alt="TV5MONDE" title="TV5MONDE" height="64" width="200"></a>
+			<div id="choixsitelocal" class="amasis-bol"></div>
+			<div id="b183998" class="blocewm noussuivre bloc_coreliens media_default liens_"><h2>Nous suivre</h2><div class="content"><div class="info"><ul class="bloc_lien_int"><li class="item1"><a href="http://www.facebook.com/tv5mondeofficiel" target="_blank"><img src="/cms/userdata/c_bloc_lien/37/37372/origine16803_vignette_suivre_facebook.png" alt="facebook" title="facebook" style="" height="20" width="20"><span>facebook</span></a></li><li class="item2"><a href="http://twitter.com/#!/TV5MONDE" target="_blank"><img src="/cms/userdata/c_bloc_lien/37/37371/origine16802_vignette_suivre_twitter.png" alt="twitter" title="twitter" style="" height="20" width="20"><span>twitter</span></a></li><li class="item3"><a href="https://plus.google.com/110618072081869946039/posts" target="_blank"><img src="/cms/userdata/c_bloc_lien/37/37377/origine16808_vignette_suivre_google.png" alt="google+" title="google+" style="" height="20" width="20"><span>google+</span></a></li><li class="item4"><a href="http://www.youtube.com/user/tv5monde" target="_blank"><img src="/cms/userdata/c_bloc_lien/37/37376/origine16807_vignette_suivre_youtube.png" alt="youtube" title="youtube" style="" height="20" width="20"><span>youtube</span></a></li><li class="item5"><a href="http://www.dailymotion.com/tv5monde" target="_blank"><img src="/cms/userdata/c_bloc_lien/37/37375/origine16806_vignette_suivre_dailymotion.png" alt="dailymotion" title="dailymotion" style="" height="20" width="20"><span>dailymotion</span></a></li><li class="item6"><a href="http://www.pinterest.com/tv5monde" target="_blank"><img src="/cms/userdata/c_bloc_lien/37/37532/origine37532_vignette_pinterest.png" alt="Pinterest" title="Pinterest" style="" height="20" width="20"><span>Pinterest</span></a></li><li class="item7"><a href="http://instagram.com/tv5monde" target="_self"><img src="/cms/userdata/c_bloc_lien/40/40563/origine40563_vignette_instagram.png" alt="Instagram" title="Instagram" style="" height="20" width="20"><span>Instagram</span></a></li><li class="item8"><a href="/cms/chaine-francophone/Widgets-et-flux-RSS/p-2067-Widgets-et-flux-RSS-les-essentiels-de-TV5MONDE.htm" target="_self"><img src="/cms/userdata/c_bloc_lien/37/37374/origine16805_vignette_suivre_rss.png" alt="rss" title="rss" style="" height="20" width="20"><span>rss</span></a></li><li class="item9"><a href="/cms/../TV5Site/abonnements/index.php" target="_self"><img src="/cms/userdata/c_bloc_lien/37/37373/origine16804_vignette_suivre_newsletter.png" alt="lettres d'information" title="lettres d'information" style="" height="20" width="20"><span>lettres d'information</span></a></li><li class="item10 last-item"><a href="/cms/../TV5Site/publication/publi-205-TV5MONDE_MOBILE.htm" target="_self"><img src="/cms/userdata/c_bloc_lien/37/37378/origine16809_vignette_suivre_mobile.png" alt="mobiles" title="mobiles" style="" height="20" width="20"><span>mobiles</span></a></li></ul></div></div></div><!-- marker : PAGINATION_BLOC -->
+			<div id="b183997" class="blocewm exergue bloc_coreliens media_default liens_"><div class="content"><div class="info"><ul class="bloc_lien_int"><li class="item1"><a href="/cms/chaine-francophone/meteo/p-139-La-meteo-internationale.htm?&amp;forcelg=1" target="_self"><span>Météo</span></a></li><li class="item2"><a href="http://dictionnaire.tv5.org/dictionnaires.asp" target="_self"><span>Dictionnaire</span></a></li><li class="item3 last-item"><a href="/cms/chaine-francophone/info/p-1909-L-actualite-en-video.htm" target="_self"><span>Les JT</span></a></li></ul></div></div></div><!-- marker : PAGINATION_BLOC -->
+		</div>
+		<div id="menumain" class="clearfix">
+			<ul id="menutop"><li class="li1"><a href="/cms/chaine-francophone/p-21231-programmes.htm" target="_self" onclick="menutop_load( this.href, 1); return false;"><span>programmes</span></a><div id="menutoplayer1" class="menutoplayer"></div></li><li class="li2"><a href="/cms/chaine-francophone/p-21230-information.htm" target="_self" onclick="menutop_load( this.href, 2); return false;"><span>information</span></a><div id="menutoplayer2" class="menutoplayer"></div></li><li class="li3"><a href="/cms/chaine-francophone/p-21229-langue-francaise.htm" target="_self" onclick="menutop_load( this.href, 3); return false;"><span>langue française</span></a><div id="menutoplayer3" class="menutoplayer"></div></li><li class="li4"><a href="/cms/chaine-francophone/p-21228-divertissement.htm" target="_self" onclick="menutop_load( this.href, 4); return false;"><span>divertissement</span></a><div id="menutoplayer4" class="menutoplayer"></div></li><li class="li5"><a href="/cms/chaine-francophone/p-21227-pratique.htm" target="_self" onclick="menutop_load( this.href, 5); return false;"><span>pratique</span></a><div id="menutoplayer5" class="menutoplayer"></div></li><li class="li6"><a href="/cms/chaine-francophone/p-21232-tv5monde-.htm" target="_self" onclick="menutop_load( this.href, 6); return false;"><span>tv5monde+</span></a><div id="menutoplayer6" class="menutoplayer"></div></li></ul><script type="text/javascript">
+	function menutop_load( url, layer)
+	{
+		if($("#menutop .li"+layer).hasClass("over")) $("#menutop .li"+layer).removeClass("over");
+		else
+		{
+			$("#menutop .li"+layer).addClass("over");
+			if(typeof(proxyTV5) != "undefined") url = proxyTV5+"?layer="+layer;
+			if(!$("#menutoplayer"+layer).html()) $.ajax({type: "get", dataType:"html", url: url, data: "", success: function(content){
+				$("#menutoplayer"+layer).html(content);}
+			}); 
+		}
+	}
+	</script>
+			<form id="globalsearch" name="globalsearch" action="/cms/chaine-francophone/p-21338-Recherche.htm" method="get">
+				<input id="globalsearch_txt" name="q" value="Rechercher sur le site" onfocus="if(this.value=='Rechercher sur le site') { this.value='';}" onblur="if(this.value=='') { this.value='Rechercher sur le site';}" placeholder="Rechercher sur le site" type="text">
+			   <input name="site" value="default_collection" type="hidden">
+			   <input name="client" value="tv5monde_front" type="hidden">
+			   <input name="output" value="xml_no_dtd" type="hidden">
+			   <input name="proxystylesheet" value="tv5monde_front" type="hidden">
+			   <!--<input type="hidden" name="filter" value="p" />-->
+			   <input name="getfields" value="*" type="hidden">
+			   <input name="oe" value="UTF-8" type="hidden">
+			   <input name="ie" value="UTF-8" type="hidden">
+			   <input name="entsp" value="a" type="hidden">
+			   <input name="ud" value="1" type="hidden">
+                <input id="globalsearch_submit" name="searchsubmit" value="" type="submit">
+			</form>
+		</div>
+		<!--<div id="pubtop" class="clearfix">
+				<div class="publicite" id="publiciteTop"></div>
+        </div>-->
+		<div id="pubtop" class="clearfix"><div class="publicite" id="publiciteTop">
+		<div id="pubCont_Top" class="pubCont">
+			
+
+<img src="http://pub.ftv-publicite.fr/5/www.tv5.org/accueil/L19/329347283/Top/OasDefault/2013045790544000101400101/Megaban_Series_Africaines.html/59747a707131475a52564d4141724d69?_RM_EMPTY_&amp;" style="display: none">
+		</div>
+	</div></div>
+		<!-- fil arianne -->
+		<div id="breadcrump" class="clearfix"><div class="breadcrump"><a href="/">Accueil</a> / TV internationale francophone : Info, Jeux, Programmes TV, Météo, Dictionnaire.</div><div class="d_tools"><!-- marker : CHOIX_LANGUE --> <div class="div_print"><a href="#" onclick="window.print(); return false;" title="Imprimer"><img src="/cms/template/image/icon_print.gif" alt="Imprimer" title="Imprimer" height="11" width="15"></a></div> <div class="div_tip"><a href="javascript:tipafriend()" title="envoyer à un ami"><img src="/cms/template/image/icon_send.gif" alt="envoyer à un ami" title="envoyer à un ami" height="11" width="14"></a></div> <div class="div_share">
+	<!-- AddThis Button BEGIN -->
+	<script type="text/javascript" language="javascript">
+	/*<![CDATA[*/
+	
+	var addthis_config =
+	{
+	   services_exclude: 'print,email',
+	   ui_language: 'fr',
+	   ui_click: true
+	}
+	
+	//-->
+	/*]]>*/
+	</script>
+	<div class="addthis_toolbox addthis_default_style"><a href="http://www.addthis.com/bookmark.php?v=250&amp;username=xa-4b69b4456fb5a45f" class="addthis_button_compact at300m"><span class="at16nc at300bs at15nc at15t_compact at16t_compact"><span class="at_a11y">More Sharing Services</span></span>Partager</a>
+	<a href="#" class="addthis_button_facebook at300b" title="Partager sur Facebook"><span class="at16nc at300bs at15nc at15t_facebook at16t_facebook"><span class="at_a11y">Share on facebook</span></span></a>
+	<a target="_blank" href="http://www.addthis.com/bookmark.php?v=300&amp;winname=addthis&amp;pub=xa-4b69b4456fb5a45f&amp;source=tbx-300&amp;lng=fr&amp;s=google&amp;url=http%3A%2F%2Fwww.tv5.org%2F&amp;title=TV5MONDE%20%3A%20TV%20internationale%20francophone%20%3A%20Info%2C%20Jeux%2C%20Programmes%20TV%2C%20M%C3%A9t%C3%A9o%2C%20Dictionnaire.&amp;ate=AT-xa-4b69b4456fb5a45f/-/-/519945631fea9ac1/2&amp;frommenu=1&amp;uid=519945637112dda0&amp;ct=1&amp;tt=0&amp;captcha_provider=nucaptcha" class="addthis_button_google at300b" title="Partager sur Google"><span class="at16nc at300bs at15nc at15t_google at16t_google"><span class="at_a11y">Share on google</span></span></a>
+	<a href="#" class="addthis_button_twitter at300b" title="Partager sur Twitter"><span class="at16nc at300bs at15nc at15t_twitter at16t_twitter"><span class="at_a11y">Share on twitter</span></span></a>
+	<a target="_blank" href="http://www.addthis.com/bookmark.php?v=300&amp;winname=addthis&amp;pub=xa-4b69b4456fb5a45f&amp;source=tbx-300&amp;lng=fr&amp;s=netvibes&amp;url=http%3A%2F%2Fwww.tv5.org%2F&amp;title=TV5MONDE%20%3A%20TV%20internationale%20francophone%20%3A%20Info%2C%20Jeux%2C%20Programmes%20TV%2C%20M%C3%A9t%C3%A9o%2C%20Dictionnaire.&amp;ate=AT-xa-4b69b4456fb5a45f/-/-/519945631fea9ac1/3&amp;frommenu=1&amp;uid=51994563c1f1f022&amp;ct=1&amp;tt=0&amp;captcha_provider=nucaptcha" class="addthis_button_netvibes at300b" title="Partager sur Netvibes"><span class=" at300bs at15nc at15t_netvibes"><span class="at_a11y">Share on netvibes</span></span></a><div class="atclear"></div></div>
+	<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=xa-4b69b4456fb5a45f"></script>
+	<!-- AddThis Button END -->
+	</div></div></div>
+        <!-- contenu -->
+		<h1>TV internationale francophone : Info, Jeux, Programmes TV, Météo, Dictionnaire.</h1>
+		<div class="d_content">
+        	<div class="main_content"><!-- marker : login check --><div id="homepage">
+    <div class="home1_content">
+        <a style="display: block;" class="home1_navfleche prev_home1" href="#"></a>
+        <a style="display: block;" class="home1_nav prev_home1" href="#"></a>
+        <a style="display: block;" class="home1_navfleche next_home1" href="#"></a>
+        <a style="display: block;" class="home1_nav next_home1" href="#"></a>
+        <div style="text-align: start; float: none; position: relative; top: auto; right: auto; bottom: auto; left: auto; width: 998px; height: 401px; margin: 0px; overflow: hidden;" class="caroufredsel_wrapper"><div style="text-align: left; float: none; position: absolute; top: 0px; left: -566px; margin: 0px; width: 9518px; height: 401px;" id="home1"><div style="margin-right: 1px;" id="b224971" class="blocewm une bloc_homepune media_default"><div class="content img_708x398_">
+  <div class="media"><a href="/cms/chaine-francophone/cultures/p-24817-Versailles.htm"> <img src="/cms/userdata/c_bloc/224/224971/224971_vignette_versailles2.jpg" alt="" style="" height="398" width="708"> </a></div>
+  <div class="info">
+    <div><h2><a href="/cms/chaine-francophone/cultures/p-24817-Versailles.htm"> Versailles, l'autre visite </a></h2><a href="/cms/chaine-francophone/cultures/p-24817-Versailles.htm"> <span>WebDoc</span> Un parcours inédit du Château à travers les objets qui ont vécu la grande Histoire. La clef des fontainiers, l'urinal de Louis XV, le lit du Général de Gaulle... Prêts pour une "autre" visite ?&nbsp; </a></div> 
+  </div>
+</div></div><div style="margin-right: 1px;" id="b231590" class="blocewm une bloc_homepune media_default"><div class="content img_708x398_">
+  <div class="media"><a href="/cms/chaine-francophone/Sports/tennis/Roland-Garros-2013/Les-chroniques-de-Florian-Giraud/p-25295-La-France-attend-ca-depuis-30-ans....htm" target="_blank" title="ce lien s'ouvre dans une nouvelle fenêtre"> <img src="/cms/userdata/c_bloc/231/231590/231590_vignette_roland2.jpg" alt="" style="" height="398" width="708"> </a></div>
+  <div style="display: block;" class="info">
+    <div><h2><a href="/cms/chaine-francophone/Sports/tennis/Roland-Garros-2013/Les-chroniques-de-Florian-Giraud/p-25295-La-France-attend-ca-depuis-30-ans....htm" target="_blank" title="ce lien s'ouvre dans une nouvelle fenêtre"> La France attend ça depuis 30 ans </a></h2><a href="/cms/chaine-francophone/Sports/tennis/Roland-Garros-2013/Les-chroniques-de-Florian-Giraud/p-25295-La-France-attend-ca-depuis-30-ans....htm" target="_blank" title="ce lien s'ouvre dans une nouvelle fenêtre"> <span>Roland Garros</span> Retour sur ce dimanche radieux à l'aube de l'été 1983 où un certain Yannick Noah remporte la finale de Roland Garros... </a></div> 
+  </div>
+</div></div><div style="margin-right: 1px;" id="b229327" class="blocewm une bloc_homepune media_default"><div class="content img_708x398_">
+  <div class="media"><a href="/cms/chaine-francophone/Revoir-nos-emissions/Acoustic/Episodes/p-25306-RACHID-TAHA.htm"> <img src="/cms/userdata/c_bloc/229/229327/229327_vignette_tahaf.jpg" alt="" style="" height="398" width="708"> </a></div>
+  <div class="info">
+    <div><h2><a href="/cms/chaine-francophone/Revoir-nos-emissions/Acoustic/Episodes/p-25306-RACHID-TAHA.htm"> Acoustic avec Rachid Taha </a></h2><a href="/cms/chaine-francophone/Revoir-nos-emissions/Acoustic/Episodes/p-25306-RACHID-TAHA.htm"> <span>Musique</span> "Zoom" est sans doute l'album le plus abouti et le plus cinématographique de Rachid Taha qu'il nous présente dans Acoustic.&nbsp; </a></div> 
+  </div>
+</div></div><div style="margin-right: 1px;" id="b231011" class="blocewm une bloc_homepune media_default"><div class="content img_708x398_">
+  <div class="media"><a href="/cms/chaine-francophone/sciences/Les-articles/p-25268-Bateau-Tara-2013-Cap-au-Nord-.htm" target="_blank" title="ce lien s'ouvre dans une nouvelle fenêtre"> <img src="/cms/userdata/c_bloc/231/231011/231011_vignette_tara1.jpg" alt="" style="" height="398" width="708"> </a></div>
+  <div class="info">
+    <div><h2><a href="/cms/chaine-francophone/sciences/Les-articles/p-25268-Bateau-Tara-2013-Cap-au-Nord-.htm" target="_blank" title="ce lien s'ouvre dans une nouvelle fenêtre"> Bateau Tara : Cap au Nord </a></h2><a href="/cms/chaine-francophone/sciences/Les-articles/p-25268-Bateau-Tara-2013-Cap-au-Nord-.htm" target="_blank" title="ce lien s'ouvre dans une nouvelle fenêtre"> <span>Sciences</span> Le 19 mai 2013, Tara reprend la mer et met le Cap au Nord pour sa nouvelle expédition. Objectif : observer l'état du plancton dans l'océan Arctique. Romain Troublé, de Tara Expéditions, nous en dit un peu plus. </a></div> 
+  </div>
+</div></div><div style="margin-right: 1px;" id="b227536" class="blocewm une bloc_homepune media_default"><div class="content img_708x398_">
+  <div class="media"><a href="/cms/chaine-francophone/Musique/p-25263-Les-artistes-francophones-en-concert-1995.htm" target="_blank" title="ce lien s'ouvre dans une nouvelle fenêtre"> <img src="/cms/userdata/c_bloc/227/227536/708x398_227536_vignette_1995.jpg" alt="" style="padding-left: 1px; padding-right: 1px;" height="398" width="706"> </a></div>
+  <div class="info">
+    <div><h2><a href="/cms/chaine-francophone/Musique/p-25263-Les-artistes-francophones-en-concert-1995.htm" target="_blank" title="ce lien s'ouvre dans une nouvelle fenêtre"> Vous regardez 1995 en concert </a></h2><a href="/cms/chaine-francophone/Musique/p-25263-Les-artistes-francophones-en-concert-1995.htm" target="_blank" title="ce lien s'ouvre dans une nouvelle fenêtre"> <span>Musique</span> Les rappeurs ont joué dans les plus grands festivals, mais n’ont jamais oublié leurs racines underground. D’où cette idée d'un concert secret dans une carrière souterraine aux portes de Paris... </a></div> 
+  </div>
+</div></div><div style="margin-right: 1px;" id="b231252" class="blocewm une bloc_homepune media_default"><div class="content img_708x398_">
+  <div class="media"><a href="/cms/chaine-francophone/cinema/FestivaldeCannes2013/p-25112-Concours-Cannes-2013.htm" target="_blank" title="ce lien s'ouvre dans une nouvelle fenêtre"> <img src="/cms/userdata/c_bloc/231/231252/231252_vignette_UNEJ1.jpg" alt="" style="" height="398" width="708"> </a></div>
+  <div class="info">
+    <div><h2><a href="/cms/chaine-francophone/cinema/FestivaldeCannes2013/p-25112-Concours-Cannes-2013.htm" target="_blank" title="ce lien s'ouvre dans une nouvelle fenêtre"> Concours Cannes </a></h2><a href="/cms/chaine-francophone/cinema/FestivaldeCannes2013/p-25112-Concours-Cannes-2013.htm" target="_blank" title="ce lien s'ouvre dans une nouvelle fenêtre"> <span>Evénement</span> Tous les jours pendant le festival, jouez avec nous et gagnez de nombreux cadeaux ! Répondez à la question du jour... </a></div> 
+  </div>
+</div></div></div></div><div class="overlaytop"></div><div class="overlaybas"></div>
+	</div>
+ 	<div id="ajax_alert"></div>
+	<div class="home_wrapleft">			
+	    <div class="home_info"><div class="home_info_left"><h2 class="titre_zone amasis-bol">INFORMATION</h2><div id="ajax_jt_tab"><ul class="jt_tabs"><li class="jt_monde"><a href="#" onclick="jtplayer('jt_monde'); return false;">JT</a></li><li class="jt_info"><a href="#" onclick="jtplayer('jt_info'); return false;">FLASH</a></li><li class="jt_afrique"><a href="#" onclick="jtplayer('jt_afrique'); return false;">AFRIQUE</a></li><li class="jt_eco"><a href="#" onclick="jtplayer('jt_eco'); return false;">ECO</a></li><li class="jt_plus"><a class="act" href="#" onclick="jtplayer('jt_plus'); return false;"><span>TV5MONDE+ info</span></a></li></ul><div id="ajax_player"><div><iframe src="http://www.tv5.org/cms/../player/index.html" id="filinfo" name="filinfo" frameborder="0" height="169" scrolling="no" width="300"></iframe></div><h2><a href="/cms/chaine-francophone/info/p-1909-L-actualite-en-video.htm?jt=jt_plus">Tous nos journaux en continu</a></h2></div></div></div><div class="home_info_right"> <a class="home_meteo dotted" href="/cms/chaine-francophone/meteo/p-139-La-meteo-internationale.htm?&amp;forcelg=1">La météo internationale</a><div id="home_afp" class="dotted"><h2><a href="/cms/chaine-francophone/info/p-1910-AFP-rubrique.htm">Les dernières dépêches</a></h2><a style="display: block;" class="ajax_afp_prev"></a><div style="text-align: start; float: none; position: relative; top: auto; right: auto; bottom: auto; left: auto; width: 249px; height: 45px; margin: 0px; overflow: hidden;" class="ajax_afp_content"><div style="text-align: left; float: none; position: absolute; top: 0px; left: 0px; margin: 0px; width: 5229px; height: 45px;" id="ajax_afp"><p><a href="/cms/chaine-francophone/info/p-1911-Heurts-sanglants-en-Tunisie-le-Premier-ministre-denonce-un-groupe-terroriste-.htm?&amp;rub=2&amp;xml=newsmlmmd.9cac025dae0d72ee862f93115d911684.5a1.xml">Heurts sanglants en Tunisie: le Premier ministre dénonce un groupe "terroriste"</a></p><p><a href="/cms/chaine-francophone/info/p-1911-Syrie-l-armee-attaque-la-ville-rebelle-de-Qousseir-Assad-inflexible.htm?&amp;rub=2&amp;xml=newsmlmmd.ff34636e8be027f34aa5f91b023eddb6.81.xml">Syrie: l'armée attaque la ville rebelle de Qousseir, Assad inflexible</a></p><p><a href="/cms/chaine-francophone/info/p-1911-Etats-Unis-Barack-Obama-maintient-sa-cote-de-popularite-malgre-les-polemiques.htm?&amp;rub=2&amp;xml=newsmlmmd.ff34636e8be027f34aa5f91b023eddb6.261.xml">Etats-Unis: Barack Obama maintient sa cote de popularité malgré les polémiques</a></p><p><a href="/cms/chaine-francophone/info/p-1911-Nigeria-l-armee-verrouille-Maiduguri-les-habitants-inquiets-pour-le-ravitaillement.htm?&amp;rub=2&amp;xml=newsmlmmd.bf6172c07676be8b1da5a1783532e6c7.871.xml">Nigeria: l'armée verrouille Maiduguri, les habitants inquiets pour le ravitaillement</a></p><p><a href="/cms/chaine-francophone/info/p-1911-Irak-la-guerre-des-mosquees-fait-rage.htm?&amp;rub=2&amp;xml=newsmlmmd.ff34636e8be027f34aa5f91b023eddb6.541.xml">Irak: la "guerre des mosquées" fait rage</a></p><p><a href="/cms/chaine-francophone/info/p-1911-Espagne-des-milliers-de-manifestants-a-Madrid-contre-la-privatisation-de-la-sante.htm?&amp;rub=2&amp;xml=newsmlmmd.ff34636e8be027f34aa5f91b023eddb6.231.xml">Espagne: des milliers de manifestants à Madrid contre la privatisation de la santé</a></p><p><a href="/cms/chaine-francophone/info/p-1911-Corees-nouveau-tir-de-missile-de-courte-portee-par-le-Nord-selon-Seoul.htm?&amp;rub=2&amp;xml=newsmlmmd.0821bd3fe02b19a6a1d4ffcbf4c18c4a.7d1.xml">Corées: nouveau tir de missile de courte portée par le Nord, selon Séoul</a></p><p><a href="/cms/chaine-francophone/info/p-1911-Thailande-20.000-rouges-commemorent-l-anniversaire-de-2010.htm?&amp;rub=2&amp;xml=newsmlmmd.ff34636e8be027f34aa5f91b023eddb6.2c1.xml">Thaïlande: 20.000 "rouges" commémorent l'anniversaire de 2010</a></p><p><a href="/cms/chaine-francophone/info/p-1911-Pour-emanciper-les-femmes-la-Suede-incite-les-peres-a-etre-a-la-maison.htm?&amp;rub=2&amp;xml=newsmlmmd.0821bd3fe02b19a6a1d4ffcbf4c18c4a.751.xml">Pour émanciper les femmes, la Suède incite les pères à être à la maison</a></p><p><a href="/cms/chaine-francophone/info/p-1911-Etats-Unis-un-gagnant-empoche-les-590-millions-de-dollars-de-la-loterie.htm?&amp;rub=2&amp;xml=newsmlmmd.0821bd3fe02b19a6a1d4ffcbf4c18c4a.431.xml">Etats-Unis: un gagnant empoche les 590 millions de dollars de la loterie</a></p></div></div><a style="display: block;" class="ajax_afp_next"></a></div><div id="ajax_redac" class="dotted"><div class="blocewm media_gauche"><div class="content"><div class="media"><a href="/cms/chaine-francophone/info/Les-dossiers-de-la-redaction/Francophonie/p-25313-Universite-francaise-l-anglais-trouble.htm"><img src="/cms/userdata/c_bloc/230/230730/180_230730_vignette_Capture-d-e-cran-2013-05-19-a-11.27.22.jpg" alt="Université française : l'anglais trouble" style="" height="83" width="180"></a></div><div class="info"><h2><a href="/cms/chaine-francophone/info/Les-dossiers-de-la-redaction/p-1916-Les-dossiers-et-articles-de-la-redaction.htm">L’œil de la rédaction</a></h2><div><a href="/cms/chaine-francophone/info/Les-dossiers-de-la-redaction/Francophonie/p-25313-Universite-francaise-l-anglais-trouble.htm">Université française : l'anglais trouble</a></div></div></div></div></div><div id="home_sport" class="dotted"><h2><a href="/cms/chaine-francophone/Sports/p-15304-Sports.htm">Sport</a></h2><p id="ajax_sport"><a href="/cms/chaine-francophone/Sports/football/p-15279-Les-Gunners-en-C1-la-C3-pour-les-Spurs.htm?&amp;item_id=26726"><span>Football</span> : Les Gunners en C1, la C3 pour les Spurs</a></p></div></div><div id="home_terrienne"><h2><a href="/cms/chaine-francophone/Terriennes/p-16162-Accueil.htm">Terriennes</a></h2><p id="ajax_terrienne"><a href="/cms/chaine-francophone/Terriennes/p-16162-Accueil.htm">L'armée américaine face à la surmultiplication des agressions sexuelles</a></p></div><script type="text/javascript" language="javascript">
+				/*<![CDATA[*/
+				<!--
+				$.ajax(
+						{	type: "get", 
+							dataType:"html", 
+							url: "/cms/modules/home_navigation/marker/ajax_homepage_jttab.php", 
+							data: "geobloc=US,GB&init=initplus",
+							success: function(content){
+								$("#ajax_jt_tab").html(content);								
+							},
+							complete: function(){
+								jtplayer(init);
+							}	
+						}
+					);
+				function jtplayer(jt){
+					$.ajax(
+						{	type: "get", 
+							dataType:"html", 
+							url: "/cms/modules/home_navigation/marker/ajax_homepage_jtplayer.php",
+							data: "jt="+jt+"&pageid=1909",
+							success: function(content){
+								$("#ajax_player").html(content); 	
+							}
+						}
+					);
+				};
+				
+				$.ajax(
+						{	type: "get", 
+							dataType:"html", 
+							url: "/cms/modules/home_navigation/marker/ajax_homepage_afp.php", 
+							data: "afppath=../TV5Site/info/afp/francais/journal/mon/index.xml&item_categ_id=2&page_id=1911" ,
+							success: function(content){
+								$("#ajax_afp").html(content);
+								$("#ajax_afp").carouFredSel({
+			  						auto:false,
+			  						items : 1,
+			  						height : "auto",  
+			  						prev 	: ".ajax_afp_prev",
+			  						next 	: ".ajax_afp_next"
+			  						},{ 	
+			  						wrapper : { 
+			  							element  	: "div",
+			  							classname 	: "ajax_afp_content"
+			  						}
+			  					});
+							}
+						}
+					);
+				
+				$.ajax(
+						{	type: "get", 
+							dataType:"html", 
+							url: "/cms/modules/home_navigation/marker/ajax_homepage_redac.php", 
+							data: "lien_rub=1916&page_id=1908",
+							success: function(content){
+								$("#ajax_redac").html(content);
+							}
+						}
+					);
+				
+				$.ajax(
+						{	type: "get", 
+							dataType:"html", 
+							url: "/cms/modules/home_navigation/marker/ajax_homepage_sport.php",
+							data: "football_id=15279&rugbyxv_id=15289&cyclisme_id=15301&tennis_id=15297&jo2012_id=22425", 
+							success: function(content){
+								$("#ajax_sport").html(content);
+							}
+						}
+					); 
+				
+				$.ajax(
+						{	type: "get", 
+							dataType:"html", 
+							url: "/cms/modules/home_navigation/marker/ajax_homepage_terrienne.php", 
+							data: "terrienne_id=16162" ,
+							success: function(content){
+								$("#ajax_terrienne").html(content);
+							}
+						}
+					);
+				//-->
+			/*]]>*/
+			</script></div>	    
+	    <div class="home_tv5plus"> <h2 class="titre_zone amasis-bol"><a href="http://www.tv5mondeplus.com/"></a><span>A vous de (re)voir</span></h2><div class="tv5plus_content"> <iframe src="http://www.tv5mondeplus.com/tv5monde/widget" border="no" frameborder="no" height="250" width="630"></iframe></div></div>     
+	    <div class="home_lf"><h2 class="titre_zone amasis-bol">Langue française</h2><div id="b183977" class="blocewm bloc_homepromov media_haut_gauche"><h2><a href="/cms/chaine-francophone/lf/p-7174-Langue-francaise.htm">DECOUVRIR</a></h2><div class="content img_195x90_"><div class="media"><a href="/cms/chaine-francophone/lf/p-24721-Votre-langue-est-le-francais.htm"><img src="/cms/userdata/c_bloc/183/183977/183977_vignette_lefrancais.jpg" alt="DECOUVRIR" style="" height="90" width="195"></a></div><div class="info"><div><h3 class="soustitre"><a href="/cms/chaine-francophone/lf/p-24721-Votre-langue-est-le-francais.htm">Votre langue est le français</a></h3><a href="/cms/chaine-francophone/lf/p-24721-Votre-langue-est-le-francais.htm">Des professeurs venus du monde entier illustrent les rapports croisés de leur langue maternelle avec le français.</a></div></div></div></div><div id="b183978" class="blocewm bloc_homepromov media_haut_gauche"><h2><a href="/cms/../TV5Site/enseigner-apprendre-francais/accueil_apprendre.php" target="_self">APPRENDRE</a></h2><div class="content img_195x90_"><div class="media"><a href="/cms/chaine-francophone/enseigner-apprendre-francais/Premiere-classe/p-2040-Apprendre-le-francais-en-ligne-avec-Premiere-classe.htm?&amp;forcelg=1"><img src="/cms/userdata/c_bloc/183/183978/183978_vignette_premiereclasse.jpg" alt="APPRENDRE" style="" height="90" width="195"></a></div><div class="info"><div><h3 class="soustitre"><a href="/cms/chaine-francophone/enseigner-apprendre-francais/Premiere-classe/p-2040-Apprendre-le-francais-en-ligne-avec-Premiere-classe.htm?&amp;forcelg=1">Première Classe</a></h3><a href="/cms/chaine-francophone/enseigner-apprendre-francais/Premiere-classe/p-2040-Apprendre-le-francais-en-ligne-avec-Premiere-classe.htm?&amp;forcelg=1">Vous débutez en français&nbsp;? Essayez "Première Classe" ! Le site pour apprendre le français gratuitement et avec plaisir dès les premiers cours.</a></div></div></div></div><div id="b183991" class="blocewm bloc_homepromov media_haut_gauche"><h2><a href="/TV5Site/enseigner-apprendre-francais/accueil_enseigner.php">ENSEIGNER</a></h2><div class="content img_195x90_"><div class="media"><a href="/TV5Site/enseigner-apprendre-francais/accueil_enseigner.php"><img src="/cms/userdata/c_bloc/183/183991/183991_vignette_7jours-nouvo.jpg" alt="ENSEIGNER" style="" height="90" width="195"></a></div><div class="info"><div><h3 class="soustitre"><a href="/TV5Site/enseigner-apprendre-francais/accueil_enseigner.php">A partir des émissions</a></h3><a href="/TV5Site/enseigner-apprendre-francais/accueil_enseigner.php">Invitez les cultures de la francophonie dans vos cours de FLE ! Trouvez ici des fiches pédagogiques pour utiliser la vidéo en classe. <br></a></div></div></div></div><!-- marker : PAGINATION_BLOC --></div>
+	    <div class="home_dico"><div class="motdj"><div><p>Le mot du jour :<a target="_blank" href="http://dictionnaire.tv5.org/dictionnaire/definition/aurélie">aurélie</a></p></div></div><form name="dicotv5" class="dicotv5" target="_blank" action="http://dictionnaire.tv5.org/DictionarySearch" method="POST">
+				<input name="che" value="1" type="hidden">
+				<input name="Action" id="Action" value="1" type="hidden">
+				<h2>Dictionnaire multifonctions</h2>
+				<input class="mot" maxlength="50" name="param" value="Saisir un mot ou une phrase" onfocus="if(this.value=='Saisir un mot ou une phrase') { this.value='';}" onblur="if(this.value=='') { this.value='Saisir un mot ou une phrase';}" type="text">
+				<ul>
+					<li><a title="définitions" href="http://dictionnaire.tv5.org/dictionnaires.asp" onclick="javascript:document.getElementById('Action').value='1'; document.dicotv5.submit(); return false;">définitions</a></li>
+					<li><a title="synonymes" href="http://dictionnaire.tv5.org/dictionnaires.asp" onclick="javascript:document.getElementById('Action').value='2'; document.dicotv5.submit(); return false;">synonymes</a></li>
+					<li><a title="conjugaison" href="http://dictionnaire.tv5.org/dictionnaires.asp" onclick="javascript:document.getElementById('Action').value='3'; document.dicotv5.submit(); return false;">conjugaison</a></li>
+					<li><a title="expression" href="http://dictionnaire.tv5.org/dictionnaires.asp" onclick="javascript:document.getElementById('Action').value='4'; document.dicotv5.submit(); return false;">expression</a></li>
+					<li><a title="français/anglais" href="http://dictionnaire.tv5.org/dictionnaires.asp" onclick="javascript:document.getElementById('Action').value='5'; document.dicotv5.submit(); return false;">français/anglais</a></li>
+					<li><a title="anglais/français" href="http://dictionnaire.tv5.org/dictionnaires.asp" onclick="javascript:document.getElementById('Action').value='6'; document.dicotv5.submit(); return false;">anglais/français</a></li>
+
+				</ul></form></div>
+	</div>    
+	<div class="home_wrapright">   
+		<div id="b183982" class="blocewm bloc_promo_middle media_default"><div class="content"><div class="outerBloc"><div id="pubMiddle" class="bloc_promomiddle"><script type="text/javascript">
+<!--
+
+//OAS_AD("Middle");
+//-->
+</script>
+		<iframe src="http://toqumedia.com/eas?camp=19591&amp;cre=mu&amp;target=blank&amp;ord=2895028548&amp;EASClick=http://pub.ftv-publicite.fr/RealMedia/ads/click_lx.ads/www.tv5.org/accueil/L19/1504364629/Middle/OasDefault/2013046572147000100200201/Pave_Aviaflying_mars2013.html/59747a707131475a52564d4141724d69?" marginheight="0" marginwidth="0" frameborder="0" height="250" scrolling="no" width="300">
+<a target=_blank href="http://pub.ftv-publicite.fr/RealMedia/ads/click_lx.ads/www.tv5.org/accueil/L19/1504364629/Middle/OasDefault/2013046572147000100200201/Pave_Aviaflying_mars2013.html/59747a707131475a52564d4141724d69?http://toqumedia.com/eas?camp=19591&ty=ct">
+<img src="http://toqumedia.com/eas?camp=19591&cre=img&ord=2895028548" border="0" alt="EmediateAd" width="300" height="250">
+</a>
+</iframe>
+<img src="http://pub.ftv-publicite.fr/5/www.tv5.org/accueil/L19/1504364629/Middle/OasDefault/2013046572147000100200201/Pave_Aviaflying_mars2013.html/59747a707131475a52564d4141724d69?_RM_EMPTY_&amp;" style="display: none">
+	</div></div></div></div>
+	    <h2 class="titre_zone amasis-bol">Nos émissions</h2>
+<div class="scrollzone">
+  <div class="shadow_top"></div>
+  <div class="shadow_bas"></div>
+  <div class="shadow_left"><a style="display: block;" href="" id="prevemi" class="prevzone navzone"></a></div>
+  <div class="shadow_right"><a style="display: block;" href="" id="nextemi" class="nextzone navzone"></a></div>
+  <div style="text-align: start; float: none; position: relative; top: auto; right: auto; bottom: auto; left: auto; width: 300px; height: 216px; margin: 0px; overflow: hidden;" class="scrollzone_content"><div style="text-align: left; float: none; position: absolute; top: 0px; left: 0px; margin: 0px; width: 8700px; height: 216px;" id="home_emission"><div style="margin-right: 0px;" id="b183994" class="blocewm bloc_emissionpresent media_gauche"><div class="content img_300x216_"><div class="media"><a href="/cms/chaine-francophone/Revoir-nos-emissions/L-invite/p-9990-Accueil.htm"><img src="/cms/userdata/c_page/25/25350/300x216_25350_vignette_Piccoli-SH.jpg" alt="Michel Piccoli" style="" height="194" width="300"></a></div><div class="info"><h2><a href="/cms/chaine-francophone/Revoir-nos-emissions/L-invite/p-9990-Accueil.htm">L'invité&nbsp;: Michel Piccoli</a></h2><div><a href="/cms/chaine-francophone/Revoir-nos-emissions/L-invite/p-9990-Accueil.htm">"Je n'ai jamais montré mes fesses dans la Grande Bouffe"</a></div></div></div></div><div id="b205265" class="blocewm bloc_emissionpresent media_gauche"><div class="content img_300x216_"><div class="media"><a href="/cms/chaine-francophone/Revoir-nos-emissions/Destination-Francophonie/p-23140-Accueil.htm"><img src="/cms/userdata/c_page/25/25322/300x216_25322_vignette_Capture-d-e-cran-2013-05-17-a-14.14.15.png" alt="Destination Pondichéry" style="" height="169" width="300"></a></div><div class="info"><h2><a href="/cms/chaine-francophone/Revoir-nos-emissions/Destination-Francophonie/p-23140-Accueil.htm">Destination Francophonie&nbsp;: Destination Pondichéry</a></h2><div><a href="/cms/chaine-francophone/Revoir-nos-emissions/Destination-Francophonie/p-23140-Accueil.htm">Destination Pondichéry où le français a une histoire à préserver et un avenir à...</a></div></div></div></div><div id="b215838" class="blocewm bloc_emissionpresent media_gauche"><div class="content img_300x216_"><div class="media"><a href="/cms/chaine-francophone/Revoir-nos-emissions/C-est-ca-l-Europe-/p-23896-Accueil.htm"><img src="/cms/userdata/c_page/25/25155/300x216_25155_vignette_cceavril.png" alt="L'Europe et le citoyen: le désamour?" style="" height="216" width="300"></a></div><div class="info"><h2><a href="/cms/chaine-francophone/Revoir-nos-emissions/C-est-ca-l-Europe-/p-23896-Accueil.htm">C'est ça l'Europe ?!&nbsp;: L'Europe et le citoyen: le désamour?</a></h2><div><a href="/cms/chaine-francophone/Revoir-nos-emissions/C-est-ca-l-Europe-/p-23896-Accueil.htm">Eurostat, le très sérieux office statistique des 27, a mesuré les sentiments...</a></div></div></div></div><div id="b183987" class="blocewm bloc_emissionpresent media_gauche"><div class="content img_300x216_"><div class="media"><a href="/cms/chaine-francophone/Revoir-nos-emissions/21eme-siecle/p-20536-Accueil.htm"><img src="/cms/userdata/c_page/24/24994/300x216_24994_vignette_21-home.jpg" alt="#1 Qatar : les ravages du diabète - #2Togo : quand la terre s'éclaire - #3 Mexique : les Maras sèment la terreur" style="" height="216" width="300"></a></div><div class="info"><h2><a href="/cms/chaine-francophone/Revoir-nos-emissions/21eme-siecle/p-20536-Accueil.htm">21ème siècle&nbsp;: #1 Qatar : les ravages du diabète - #2Togo : quand la terre ...</a></h2><div><a href="/cms/chaine-francophone/Revoir-nos-emissions/21eme-siecle/p-20536-Accueil.htm">Présentation : Charlotte Le Grix de La Salle. Depuis le siège de l'ONU, à New...</a></div></div></div></div><div id="b183979" class="blocewm bloc_emissionpresent media_gauche"><div class="content img_300x216_"><div class="media"><a href="/cms/chaine-francophone/Revoir-nos-emissions/Internationales/p-19922-accueil.htm"><img src="/cms/userdata/c_page/25/25348/300x216_25348_vignette_boutin-internationales-opt.jpg" alt="Christine Boutin" style="" height="216" width="300"></a></div><div class="info"><h2><a href="/cms/chaine-francophone/Revoir-nos-emissions/Internationales/p-19922-accueil.htm">Internationales&nbsp;: Christine Boutin</a></h2><div><a href="/cms/chaine-francophone/Revoir-nos-emissions/Internationales/p-19922-accueil.htm">Présidente du Parti chrétien-démocrate, Christine Boutin revient avec nous sur...</a></div></div></div></div><div id="b183980" class="blocewm bloc_emissionpresent media_gauche"><div class="content img_300x216_"><div class="media"><a href="/cms/chaine-francophone/Revoir-nos-emissions/Epicerie-fine/p-17332-accueil.htm?&amp;forcelg=1"><img src="/cms/userdata/c_page/25/25279/300x216_25279_vignette_ep-fin-cacao.jpg" alt="Le cacao de Martinique" style="" height="216" width="300"></a></div><div class="info"><h2><a href="/cms/chaine-francophone/Revoir-nos-emissions/Epicerie-fine/p-17332-accueil.htm?&amp;forcelg=1">Epicerie fine&nbsp;: Le cacao de Martinique</a></h2><div><a href="/cms/chaine-francophone/Revoir-nos-emissions/Epicerie-fine/p-17332-accueil.htm?&amp;forcelg=1">La Martinique, une ile de carte postale. Le ciel, le soleil, la mer... Les...</a></div></div></div></div><div id="b183981" class="blocewm bloc_emissionpresent media_gauche"><div class="content img_300x216_"><div class="media"><a href="/cms/chaine-francophone/Revoir-nos-emissions/Le-journal-de-l-economie/p-15756-Accueil.htm"><img src="/cms/userdata/c_page/25/25324/300x216_25324_vignette_ok-Capture-d-e-cran-2013-05-17-a-10.58.19.png" alt="Paris suivra l'argent de l'aide au Mali / Vers la disparition des petits centimes d'euro ?" style="" height="203" width="300"></a></div><div class="info"><h2><a href="/cms/chaine-francophone/Revoir-nos-emissions/Le-journal-de-l-economie/p-15756-Accueil.htm">Le journal de l'économie&nbsp;: Paris suivra l'argent de l'aide au Mali / Vers l...</a></h2><div><a href="/cms/chaine-francophone/Revoir-nos-emissions/Le-journal-de-l-economie/p-15756-Accueil.htm">- Paris promet un suivi de l'aide financière au Mali. Bamako va recevoir une...</a></div></div></div></div><div id="b184086" class="blocewm bloc_emissionpresent media_gauche"><div class="content img_300x216_"><div class="media"><a href="/cms/chaine-francophone/Revoir-nos-emissions/Afrique-Presse/p-18051-accueil.htm"><img src="/cms/userdata/c_page/25/25340/300x216_25340_vignette_vlcsnap-2013-05-17-14h56m58s0.jpg" alt="Nigeria: Goodluck Jonathan décrète l'état d'urgence dans trois Etats du Nord du pays." style="" height="216" width="300"></a></div><div class="info"><h2><a href="/cms/chaine-francophone/Revoir-nos-emissions/Afrique-Presse/p-18051-accueil.htm">Afrique Presse&nbsp;: Nigeria: Goodluck Jonathan décrète l'état d'urgence dans t...</a></h2></div></div></div><div id="b184084" class="blocewm bloc_emissionpresent media_gauche"><div class="content img_300x216_"><div class="media"><a href="/cms/chaine-francophone/Revoir-nos-emissions/Et-si-vous-me-disiez-toute-la-verite/p-18206-accueil.htm"><img src="/cms/userdata/c_page/25/25192/300x216_25192_vignette_SIDIBE-DEF.jpg" alt="Mali, en attendant le 31 juillet" style="" height="216" width="300"></a></div><div class="info"><h2><a href="/cms/chaine-francophone/Revoir-nos-emissions/Et-si-vous-me-disiez-toute-la-verite/p-18206-accueil.htm">Et si vous me disiez toute la vérité&nbsp;: Mali, en attendant le 31 juillet</a></h2><div><a href="/cms/chaine-francophone/Revoir-nos-emissions/Et-si-vous-me-disiez-toute-la-verite/p-18206-accueil.htm">Modibo Sidibé</a></div></div></div></div><div id="b184083" class="blocewm bloc_emissionpresent media_gauche"><div class="content img_300x216_"><div class="media"><a href="/cms/chaine-francophone/Revoir-nos-emissions/Coup-de-pouce-pour-la-planete/p-10939-Accueil.htm"><img src="/cms/userdata/c_page/25/25217/300x216_25217_vignette_C2P-11-05-13.png" alt="A chaque poubelle sa couleur" style="" height="216" width="300"></a></div><div class="info"><h2><a href="/cms/chaine-francophone/Revoir-nos-emissions/Coup-de-pouce-pour-la-planete/p-10939-Accueil.htm">Coup de pouce pour la planète&nbsp;: A chaque poubelle sa couleur</a></h2><div><a href="/cms/chaine-francophone/Revoir-nos-emissions/Coup-de-pouce-pour-la-planete/p-10939-Accueil.htm">  Revoir "Coup de Pouce pour la planète"   &gt; Voir l'émission   </a></div></div></div></div><div id="b184082" class="blocewm bloc_emissionpresent media_gauche"><div class="content img_300x216_"><div class="media"><a href="/cms/chaine-francophone/Revoir-nos-emissions/Le-Bar-de-l-Europe/p-10499-Accueil.htm"><img src="/cms/userdata/c_page/25/25259/300x216_25259_vignette_ltribotlaspie-re.jpg" alt="Loïc Tribot La Spière" style="" height="216" width="300"></a></div><div class="info"><h2><a href="/cms/chaine-francophone/Revoir-nos-emissions/Le-Bar-de-l-Europe/p-10499-Accueil.htm">Le Bar de l'Europe&nbsp;: Loïc Tribot La Spière</a></h2><div><a href="/cms/chaine-francophone/Revoir-nos-emissions/Le-Bar-de-l-Europe/p-10499-Accueil.htm">Loïc Tribot La Spière est fondateur du CEPS et co-auteur de "Bougeons...</a></div></div></div></div><div id="b184079" class="blocewm bloc_emissionpresent media_gauche"><div class="content img_300x216_"><div class="media"><a href="/cms/chaine-francophone/Revoir-nos-emissions/Acoustic/p-10366-Accueil.htm"><img src="/cms/userdata/c_page/25/25306/300x216_25306_vignette_RTaha326.jpg" alt="RACHID TAHA" style="" height="216" width="300"></a></div><div class="info"><h2><a href="/cms/chaine-francophone/Revoir-nos-emissions/Acoustic/p-10366-Accueil.htm">Acoustic&nbsp;: RACHID TAHA</a></h2><div><a href="/cms/chaine-francophone/Revoir-nos-emissions/Acoustic/p-10366-Accueil.htm">Rachid Taha nous ballade du Caire à Memphis. Bienvenue, c'est Acoustic !  </a></div></div></div></div><div id="b184078" class="blocewm bloc_emissionpresent media_gauche"><div class="content img_300x216_"><div class="media"><a href="/cms/chaine-francophone/Revoir-nos-emissions/Maghreb-Orient-Express/p-17492-accueil.htm?&amp;forcelg=1"><img src="/cms/userdata/c_page/25/25225/300x216_25225_vignette_moe1205.jpg" alt="Israël-Palestine : Apartheid, la fin d'un tabou ?" style="" height="216" width="300"></a></div><div class="info"><h2><a href="/cms/chaine-francophone/Revoir-nos-emissions/Maghreb-Orient-Express/p-17492-accueil.htm?&amp;forcelg=1">Maghreb-Orient Express&nbsp;: Israël-Palestine : Apartheid, la fin d'un tabou ?</a></h2><div><a href="/cms/chaine-francophone/Revoir-nos-emissions/Maghreb-Orient-Express/p-17492-accueil.htm?&amp;forcelg=1">Cette semaine, Maghreb-Orient Express donne la parole aux Israéliens qui...</a></div></div></div></div><div id="b184076" class="blocewm bloc_emissionpresent media_gauche"><div class="content img_300x216_"><div class="media"><a href="/cms/chaine-francophone/Revoir-nos-emissions/Kiosque/p-10745-Accueil.htm"><img src="/cms/userdata/c_page/25/25346/300x216_25346_vignette_site1.jpg" alt="Syrie, le choc des images" style="" height="216" width="299"></a></div><div class="info"><h2><a href="/cms/chaine-francophone/Revoir-nos-emissions/Kiosque/p-10745-Accueil.htm">Kiosque&nbsp;: Syrie, le choc des images</a></h2></div></div></div></div></div>
+</div>
+        <div class="reseaux"><h2 class="titre_zone amasis-bol">Retrouvez TV5MONDE sur</h2><div class="res_bg"><div class="res_content"><div class="blocewm ressocial bloc_fb_like media_"><div class="content"><div class="info"><script src="http://connect.facebook.net/fr_FR/all.js#xfbml=1"></script><fb:like class="fb_edge_widget_with_comment fb_iframe_widget" fb-xfbml-state="rendered" width="280" send="false" style="margin-bottom: 20px;" href="http://fr-fr.facebook.com/tv5mondeofficiel"><span style="height: 28px; width: 280px;"><iframe src="http://www.facebook.com/plugins/like.php?api_key=&amp;locale=fr_FR&amp;sdk=joey&amp;channel_url=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D24%23cb%3Df18191da823a412%26origin%3Dhttp%253A%252F%252Fwww.tv5.org%252Ff79eef5c6ae4ea%26domain%3Dwww.tv5.org%26relation%3Dparent.parent&amp;href=http%3A%2F%2Ffr-fr.facebook.com%2Ftv5mondeofficiel&amp;node_type=link&amp;width=280&amp;layout=standard&amp;colorscheme=light&amp;show_faces=true&amp;send=false&amp;extended_social_context=false" class="fb_ltr" title="Like this content on Facebook." style="border: medium none; overflow: hidden; height: 28px; width: 280px;" name="f3a2243c6840f52" id="fc5ee441952564" scrolling="no"></iframe></span></fb:like></div></div></div><div id="ajax_fb"><div class="blocewm ressocial fb media_ liens_"><h2><a href="http://www.facebook.com/tv5mondeofficiel" target="_blank">(Re)Voir Nec Plus Ultra spéciale Festival de Cannes - Page Officielle ! </a></h2><div class="content"><div class="info"><ul class="bloc_lien_int"><li class="item1 last-item"><a href="http://www.facebook.com/tv5mondeofficiel" target="_blank"><span>homepage_fb</span></a></li></ul></div></div></div></div><div id="ajax_tweet"><div class="blocewm ressocial twitter media_ liens_"><h2><a href="http://twitter.com/TV5MONDE/statuses/336226284361355267" target="_blank">TV5MONDE: RT @YvesBigot: Avec Marie-Christine #Saragosse, PDG de l AEF #redcarpet...</a></h2><div class="content"><div class="info"><ul class="bloc_lien_int"><li class="item1 last-item"><a href="http://twitter.com/#!/TV5MONDE" target="_blank"><span>twitter</span></a></li></ul></div></div></div></div><div id="ajax_google"><div class="blocewm ressocial google media_ liens_"><h2><a href="https://plus.google.com/110618072081869946039/posts/RD4f6cZUmsX" target="_blank"> #Photodujour &nbsp;-&nbsp;Un tigre de sibérie, au zoo de Gelsenkirchen, en Allemagne.&nbsp;(© 2013 AFP) [photo]</a></h2><div class="content"><div class="info"><ul class="bloc_lien_int"><li class="item1 last-item"><a href="https://plus.google.com/110618072081869946039/posts" target="_blank"><span>google+</span></a></li></ul></div></div></div></div><div id="ajax_youtube"><div class="blocewm resvideo media_gauche"><div class="content"><div class="media"><a href="http://www.youtube.com/watch?v=w8K591r6p2k&amp;feature=youtube_gdata" target="_blank"><img src="http://i.ytimg.com/vi/w8K591r6p2k/1.jpg" alt="Voir : Cannes : Di Caprio déclare ouvert le 66e festival du cinéma" style="" width="120"></a></div><div class="info"><h2><a href="http://www.youtube.com/watch?v=w8K591r6p2k&amp;feature=youtube_gdata" target="_blank">Dernière vidéo</a></h2><div><a href="http://www.youtube.com/watch?v=w8K591r6p2k&amp;feature=youtube_gdata" target="_blank">Cannes : Di Caprio déclare ouvert le 66e festival du cinéma</a></div><a class="play" target="_blank" href="http://www.youtube.com/watch?v=w8K591r6p2k&amp;feature=youtube_gdata"></a></div><div class="outerBloc"><ul class="bloc_lien_int">
+									<li><a class="youtube" target="_blank" href="http://www.youtube.com/user/tv5monde"><span>youtube</span></a></li>
+									<li><a class="daily" target="_blank" href="http://www.dailymotion.com/tv5monde"><span>dailymotion</span></a></li>
+									</ul></div></div></div></div><script type="text/javascript" language="javascript">
+				/*<![CDATA[*/
+				<!--
+				
+				$.ajax(
+						{	type: "get", 
+							dataType:"html", 
+							url: "/cms/modules/home_navigation/marker/ajax_homepage_fb.php", 
+							success: function(content){
+								$("#ajax_fb").html(content);
+							}
+						}
+					);		
+								
+				$.ajax(
+						{	type: "get", 
+							dataType:"html", 
+							url: "/cms/modules/home_navigation/marker/ajax_homepage_tweet.php", 
+							success: function(content){
+								$("#ajax_tweet").html(content);
+							}
+						}
+					);
+				$.ajax(
+						{	type: "get", 
+							dataType:"html", 
+							url: "/cms/modules/home_navigation/marker/ajax_homepage_google.php", 
+							success: function(content){
+								$("#ajax_google").html(content);
+							}
+						}
+					);		
+				$.ajax(
+						{	type: "get", 
+							dataType:"html", 
+							url: "/cms/modules/home_navigation/marker/ajax_homepage_youtube.php", 
+							success: function(content){
+								$("#ajax_youtube").html(content);
+							}
+						}
+					);
+				
+				//-->
+				/*]]>*/
+			</script></div></div></div>
+        <h2 class="titre_zone amasis-bol">Jeux et divertissement</h2>
+<div class="scrollzone">
+  <div class="shadow_top"></div>
+  <div class="shadow_bas"></div>
+  <div class="shadow_left"><a style="display: block;" href="" id="prevjeu" class="prevzone navzone"></a></div>
+  <div class="shadow_right"><a style="display: block;" href="" id="nextjeu" class="nextzone navzone"></a></div>
+  <div style="text-align: start; float: none; position: relative; top: auto; right: auto; bottom: auto; left: auto; width: 300px; height: 216px; margin: 0px; overflow: hidden;" class="scrollzone_content"><div style="text-align: left; float: none; position: absolute; top: 0px; left: 0px; margin: 0px; width: 4500px; height: 216px;" id="home_jeux"><div style="margin-right: 0px;" id="b219064" class="blocewm bloc_jeux bloc_homejeux media_default"><div class="content img_300x216_"><div class="media"><a href="/cms/chaine-francophone/cultures/Articles/p-25127-Versailles-le-concours.htm"><img src="/cms/userdata/c_bloc/219/219064/219064_vignette_664-vignette-CVO-7841n2w.jpg" alt="Concours Versailles" style="padding-left: 5px; padding-right: 5px;padding-top: 14px; padding-bottom: 14px;" height="188" width="290"></a></div><div class="info"><h2><a href="/cms/chaine-francophone/cultures/Articles/p-25127-Versailles-le-concours.htm">Concours Versailles</a></h2><div><a href="/cms/chaine-francophone/cultures/Articles/p-25127-Versailles-le-concours.htm">Gagnez un Ipad et des cadeaux du château de Versailles !&nbsp;</a></div></div></div></div><div id="b190344" class="blocewm bloc_jeux bloc_homejeux media_default"><div class="content img_300x216_"><div class="media"><a href="/cms/chaine-francophone/tivi5/p-13620-TiVi5-Concours-jeunesse.htm"><img src="/cms/userdata/c_bloc/190/190344/190344_vignette_bambi-home.jpg" alt="Concours Jeunesse" style="" height="216" width="300"></a></div><div class="info"><h2><a href="/cms/chaine-francophone/tivi5/p-13620-TiVi5-Concours-jeunesse.htm">Concours Jeunesse</a></h2><div><a href="/cms/chaine-francophone/tivi5/p-13620-TiVi5-Concours-jeunesse.htm">Gagne un an d'abonnement au magazine "Bambi"!</a></div></div></div></div><div id="b188820" class="blocewm bloc_jeux bloc_homejeux media_default"><div class="content img_300x216_"><div class="media"><a href="/cms/chaine-francophone/lf/Litterature/p-13795-Concours-litterature.htm"><img src="/cms/userdata/c_bloc/188/188820/188820_vignette_lire-1112.jpg" alt="Concours Littérature" style="" height="216" width="300"></a></div><div class="info"><h2><a href="/cms/chaine-francophone/lf/Litterature/p-13795-Concours-litterature.htm">Concours Littérature</a></h2><div><a href="/cms/chaine-francophone/lf/Litterature/p-13795-Concours-litterature.htm">Gagnez un an d'abonnement à un magazine littéraire !</a></div></div></div></div><div id="b185703" class="blocewm bloc_jeux bloc_homejeux media_default"><div class="content img_300x216_"><div class="media"><a href="/cms/chaine-francophone/sciences/Les-concours/p-19565-Concours-Unipresse-Sciences.htm"><img src="/cms/userdata/c_bloc/185/185703/185703_vignette_larecherche-home.jpg" alt="Concours Sciences" style="" height="216" width="300"></a></div><div class="info"><h2><a href="/cms/chaine-francophone/sciences/Les-concours/p-19565-Concours-Unipresse-Sciences.htm">Concours Sciences</a></h2><div><a href="/cms/chaine-francophone/sciences/Les-concours/p-19565-Concours-Unipresse-Sciences.htm">Gagnez un an d'abonnement au magazine "La Recherche"!</a></div></div></div></div><div id="b184512" class="blocewm bloc_jeux bloc_homejeux media_default"><div class="content img_300x216_"><div class="media"><a href="/cms/chaine-francophone/sciences/Jeux-d-entrainement-cerebral/p-11202-Jeux-d-entrainement-cerebral.htm"><img src="/cms/userdata/c_bloc/184/184512/300x216_184512_vignette_happyneuron.jpg" alt="Musclez votre cerveau !" style="" height="216" width="300"></a></div><div class="info"><h2><a href="/cms/chaine-francophone/sciences/Jeux-d-entrainement-cerebral/p-11202-Jeux-d-entrainement-cerebral.htm">Musclez votre cerveau !</a></h2><div><a href="/cms/chaine-francophone/sciences/Jeux-d-entrainement-cerebral/p-11202-Jeux-d-entrainement-cerebral.htm">Des exercices pour stimuler la mémoire et la concentration. <br></a></div></div></div></div><div id="b184488" class="blocewm bloc_jeux bloc_homejeux media_default"><div class="content img_300x216_"><div class="media"><a href="http://www.tv5.org/TV5Site/qpuc/qpuc_frameset.html" onclick="window.open(this.href, 'popup','width=764, height=645, scrollbars=1, resizable=1'); return false;"><img src="/cms/userdata/c_bloc/184/184488/300x216_184488_vignette_qpuc.jpg" alt="Questions pour un champion" style="" height="216" width="300"></a></div><div class="info"><h2><a href="http://www.tv5.org/TV5Site/qpuc/qpuc_frameset.html" onclick="window.open(this.href, 'popup','width=764, height=645, scrollbars=1, resizable=1'); return false;">Questions pour un champion</a></h2><div><a href="http://www.tv5.org/TV5Site/qpuc/qpuc_frameset.html" onclick="window.open(this.href, 'popup','width=764, height=645, scrollbars=1, resizable=1'); return false;">Jouez dans les conditions réelles du jeu télévisé <br></a></div></div></div></div><div id="b183984" class="blocewm bloc_jeux bloc_homejeux media_default"><div class="content img_300x216_"><div class="media"><a href="/cms/../TV5Site/boggle/index.php" target="_self"><img src="/cms/userdata/c_bloc/183/183984/300x216_183984_vignette_zigmo.jpg" alt="Zigmo" style="" height="216" width="300"></a></div><div class="info"><h2><a href="/cms/../TV5Site/boggle/index.php" target="_self">Zigmo</a></h2><div><a href="/cms/../TV5Site/boggle/index.php" target="_self">Trouvez un maximum de mots en un minimum de temps! <br></a></div></div></div></div></div></div>
+</div>
+   	</div>
+    <div class="clear"></div>
+</div>
+
+<script type="text/javascript" language="javascript">
+	/*<![CDATA[*/
+	<!--
+	
+	emissions_autostart = true;
+	jeux_autostart = true;	
+	
+	$(document).ready(function () {
+				
+		$(function() {	
+			$.ajax({
+				type: 'get', 
+				dataType:'html', 
+				url: config_absolute_path+'modules/home_navigation/marker/ajax_homepromo.php', 
+				data: 'id=21225&prg_fiche_id=80&signal='+(q_GET.get('signal')?q_GET.get('signal'):LireCookie('c_id_signal'))+'&zone='+(q_GET.get('zone')?q_GET.get('zone'):LireCookie('c_id_zone'))+'&langue='+LireCookie('c_id_trad')+(q_GET.get('dateprevisu')?'&dateprevisu='+q_GET.get('dateprevisu')+'&action=previsu&cp_diff='+q_GET.get('cp_diff'):''), 
+				success: function(content){
+					$('#home1').html(content);
+					$(".bloc_homepune:eq(0) .info").fadeIn("fast");	
+					$('#home1').carouFredSel({
+						width: 998,	
+						height: 'auto',
+						items: {
+							visible: 3,
+							start:-1					
+						},
+						prev: '.prev_home1',
+						next: '.next_home1',
+						auto: { 
+							pauseDuration: 7000					
+						},				
+						scroll: {
+							items: 1,
+							duration: 1000,				
+							pauseOnHover: true,
+							onBefore: function(oldItems, newItems) {
+								$(".bloc_homepune .info").fadeOut("fast");
+								oldItems.eq(1).removeClass("selected");
+								newItems.eq(1).addClass("selected");												
+							},
+							onAfter: function( oldItems, newItems ) {
+								$(".bloc_homepune.selected .info").fadeIn("fast");
+							}
+						}	
+					});
+					$.ajax({
+						type: 'get', 
+						dataType:'html', 
+						url: config_absolute_path+'modules/home_navigation/marker/ajax_homealerte.php',
+						data: 'id=21225&info_id=1908&signal='+(q_GET.get('signal')?q_GET.get('signal'):LireCookie('c_id_signal'))+'&zone='+(q_GET.get('zone')?q_GET.get('zone'):LireCookie('c_id_zone'))+'&langue='+LireCookie('c_id_trad')+(q_GET.get('dateprevisu')?'&dateprevisu='+q_GET.get('dateprevisu')+'&action=previsu':''),
+						success: function(content){
+							$('#ajax_alert').html(content);
+						} 
+					});	
+				}
+			});
+			
+			
+			
+			$("#home_emission").carouFredSel(
+			{
+				width: 300,	
+				height: 216,
+				prev: "#prevemi",
+				next: "#nextemi",
+				auto: {
+					play: emissions_autostart,
+					pauseDuration: 6000				
+				},				
+				scroll: {
+					pauseOnHover: true,
+					onBefore: function() {
+						$("#home_emission .info").fadeOut("fast");												
+							},
+					onAfter	: function() {
+						$("#home_emission .info").fadeIn("fast");
+					}
+				}	
+			},{
+				wrapper		: {
+				element			: "div",
+				classname		: "scrollzone_content"
+				}
+			});
+			
+			$("#home_jeux").carouFredSel({
+				width: 300,	
+				height: 216,
+				prev: "#prevjeu",
+				next: "#nextjeu",
+				auto: {
+					play: jeux_autostart,
+					pauseDuration: 5000				
+				},				
+				scroll: {
+					pauseOnHover: true,
+					onBefore: function() {
+						$("#home_jeux .info").fadeOut("fast");												
+							},
+					onAfter	: function() {
+						$("#home_jeux .info").fadeIn("fast");
+					}
+				}	
+			},{
+				wrapper		: {
+				element			: "div",
+				classname		: "scrollzone_content"
+				}
+			});
+			
+			$(".home1_nav").hover(function(){
+					$(this).css("opacity","0");
+				}, 
+				function(){
+					$(this).css("opacity","0.2");
+				});
+		});
+	});
+	//-->
+	/*]]>*/
+	</script>
+<!--
+## vBegin
+## Eclydre Web Manager v1.0.0
+## Dateversion 2012-03-01
+## File : ../../../homepage_content.html
+## Changelogs : nc;
+## vEnd
+--></div>
+        </div>
+		<!-- footers -->
+		<div id="breadcrumpbottom" class="clearfix"><div class="breadcrump"><a href="/">Accueil</a> / TV internationale francophone : Info, Jeux, Programmes TV, Météo, Dictionnaire.</div><div class="d_tools"><!-- marker : CHOIX_LANGUE --> <div class="div_print"><a href="#" onclick="window.print(); return false;" title="Imprimer"><img src="/cms/template/image/icon_print.gif" alt="Imprimer" title="Imprimer" height="11" width="15"></a></div> <div class="div_tip"><a href="javascript:tipafriend()" title="envoyer à un ami"><img src="/cms/template/image/icon_send.gif" alt="envoyer à un ami" title="envoyer à un ami" height="11" width="14"></a></div> <div class="div_share">
+	<!-- AddThis Button BEGIN -->
+	<script type="text/javascript" language="javascript">
+	/*<![CDATA[*/
+	
+	var addthis_config =
+	{
+	   services_exclude: 'print,email',
+	   ui_language: 'fr',
+	   ui_click: true
+	}
+	
+	//-->
+	/*]]>*/
+	</script>
+	<div class="addthis_toolbox addthis_default_style"><a href="http://www.addthis.com/bookmark.php?v=250&amp;username=xa-4b69b4456fb5a45f" class="addthis_button_compact at300m"><span class="at16nc at300bs at15nc at15t_compact at16t_compact"><span class="at_a11y">More Sharing Services</span></span>Partager</a>
+	<a href="#" class="addthis_button_facebook at300b" title="Partager sur Facebook"><span class="at16nc at300bs at15nc at15t_facebook at16t_facebook"><span class="at_a11y">Share on facebook</span></span></a>
+	<a target="_blank" href="http://www.addthis.com/bookmark.php?v=300&amp;winname=addthis&amp;pub=xa-4b69b4456fb5a45f&amp;source=tbx-300&amp;lng=fr&amp;s=google&amp;url=http%3A%2F%2Fwww.tv5.org%2F&amp;title=TV5MONDE%20%3A%20TV%20internationale%20francophone%20%3A%20Info%2C%20Jeux%2C%20Programmes%20TV%2C%20M%C3%A9t%C3%A9o%2C%20Dictionnaire.&amp;ate=AT-xa-4b69b4456fb5a45f/-/-/519945631fea9ac1/4&amp;frommenu=1&amp;uid=5199456355951d57&amp;ct=1&amp;tt=0&amp;captcha_provider=nucaptcha" class="addthis_button_google at300b" title="Partager sur Google"><span class="at16nc at300bs at15nc at15t_google at16t_google"><span class="at_a11y">Share on google</span></span></a>
+	<a href="#" class="addthis_button_twitter at300b" title="Partager sur Twitter"><span class="at16nc at300bs at15nc at15t_twitter at16t_twitter"><span class="at_a11y">Share on twitter</span></span></a>
+	<a target="_blank" href="http://www.addthis.com/bookmark.php?v=300&amp;winname=addthis&amp;pub=xa-4b69b4456fb5a45f&amp;source=tbx-300&amp;lng=fr&amp;s=netvibes&amp;url=http%3A%2F%2Fwww.tv5.org%2F&amp;title=TV5MONDE%20%3A%20TV%20internationale%20francophone%20%3A%20Info%2C%20Jeux%2C%20Programmes%20TV%2C%20M%C3%A9t%C3%A9o%2C%20Dictionnaire.&amp;ate=AT-xa-4b69b4456fb5a45f/-/-/519945631fea9ac1/5&amp;frommenu=1&amp;uid=51994563038fb190&amp;ct=1&amp;tt=0&amp;captcha_provider=nucaptcha" class="addthis_button_netvibes at300b" title="Partager sur Netvibes"><span class=" at300bs at15nc at15t_netvibes"><span class="at_a11y">Share on netvibes</span></span></a><div class="atclear"></div></div>
+	<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=xa-4b69b4456fb5a45f"></script>
+	<!-- AddThis Button END -->
+	</div></div></div>
+		<div id="egalement"><h2>également sur <span>TV5monde</span>.com</h2>
+<div id="b204018" class="blocewm bloc_navfooterbloc media_haut_gauche"><div class="content img_184x104_"><div class="media"><a href="/cms/chaine-francophone/info/Marseille-Provence-2013/p-24024-MP2013.htm"><img src="/cms/userdata/c_bloc/204/204018/204018_vignette_mp2013.jpg" alt="Marseille Provence 2013" style="" height="104" width="184"></a></div><div class="info"><h2><a href="/cms/chaine-francophone/info/Marseille-Provence-2013/p-24024-MP2013.htm">Marseille Provence 2013</a></h2></div></div></div><div id="b210781" class="blocewm bloc_navfooterbloc media_haut_gauche"><div class="content img_184x104_"><div class="media"><a href="http://numerique-tendance.tv5monde.com/"><img src="/cms/userdata/c_bloc/210/210781/210781_vignette_Numerique-tendance-footer.jpg" alt="Numérique Tendance" style="" height="104" width="184"></a></div><div class="info"><h2><a href="http://numerique-tendance.tv5monde.com/">Numérique Tendance</a></h2></div></div></div><div id="b184021" class="blocewm bloc_navfooterbloc media_haut_gauche"><div class="content img_184x104_"><div class="media"><a href="http://focus.tv5monde.com/femmesetsciences/" target="_blank"><img src="/cms/userdata/c_bloc/184/184021/184021_vignette_femmesetsciences.jpg" alt="Femmes et Sciences" style="" height="104" width="184"></a></div><div class="info"><h2><a href="http://focus.tv5monde.com/femmesetsciences/" target="_blank">Femmes et Sciences</a></h2></div></div></div><div id="b184023" class="blocewm bloc_navfooterbloc media_haut_gauche"><div class="content img_184x104_"><div class="media"><a href="/cms/chaine-francophone/Terriennes/p-16162-Accueil.htm"><img src="/cms/userdata/c_bloc/184/184023/184023_vignette_terriennes.jpg" alt="Terriennes : le portail consacré aux femmes" style="" height="104" width="184"></a></div><div class="info"><h2><a href="/cms/chaine-francophone/Terriennes/p-16162-Accueil.htm">Terriennes : le portail consacré aux femmes</a></h2></div></div></div><div id="b184024" class="blocewm bloc_navfooterbloc media_haut_gauche"><div class="content img_184x104_"><div class="media"><a href="/cms/chaine-francophone/lf/Tous-les-dossiers-et-les-publications-LF/Les-Fables-de-la-Fontaine/p-24847-Les-Fables-de-La-Fontaine.htm"><img src="/cms/userdata/c_bloc/184/184024/184024_vignette_fables.jpg" alt="Les Fables de La Fontaine" style="" height="104" width="184"></a></div><div class="info"><h2><a href="/cms/chaine-francophone/lf/Tous-les-dossiers-et-les-publications-LF/Les-Fables-de-la-Fontaine/p-24847-Les-Fables-de-La-Fontaine.htm">Les Fables de La Fontaine</a></h2></div></div></div><!-- marker : PAGINATION_BLOC -->
+</div>
+		<div id="footertv5" class="clearfix">
+			<div id="footeroutils"><h2>Nos services / Nos outils</h2>
+<div id="b184019" class="blocewm bloc_coreliens media_default liens_"><div class="content"><div class="info"><ul class="bloc_lien_int"><li class="item1"><a href="/cms/chaine-francophone/meteo/p-139-La-meteo-internationale.htm?&amp;forcelg=1" target="_self"><span>Météo internationale</span></a></li><li class="item2"><a href="/cms/../TV5Site/enseigner-apprendre-francais/accueil_enseigner.php" target="_self"><span>Enseigner le français</span></a></li><li class="item3"><a href="/cms/../TV5Site/enseigner-apprendre-francais/accueil_apprendre.php" target="_self"><span>Apprendre le français</span></a></li><li class="item4 last-item"><a href="http://dictionnaire.tv5.org/dictionnaires.asp" target="_self"><span>Dictionnaire</span></a></li></ul></div></div></div><div id="b184018" class="blocewm bloc_coreliens media_default liens_"><div class="content"><div class="info"><ul class="bloc_lien_int"><li class="item1"><a href="/cms/chaine-francophone/lf/p-9489-Jeux-de-lettres-interactifs-du-CCDMD.htm" target="_self"><span>Les jeux de lettres interactifs</span></a></li><li class="item2"><a href="/cms/../TV5Site/qpuc/qpuc_frameset.html" target="_self"><span>Questions pour un champion</span></a></li><li class="item3"><a href="/cms/chaine-francophone/jeunesse/p-14704-Lettris-le-tetris-des-lettres.htm" target="_self"><span>Lettris</span></a></li><li class="item4"><a href="/cms/chaine-francophone/sciences/Jeux-d-entrainement-cerebral/p-11202-Jeux-d-entrainement-cerebral.htm" target="_self"><span>Entraînement cérébral</span></a></li><li class="item5 last-item"><a href="/cms/../TV5Site/dictee/dictee.php" target="_self"><span>La dictée de Bernard Pivot</span></a></li></ul></div></div></div><!-- marker : PAGINATION_BLOC --></div>
+			<div id="footersuivre"><div id="b184025" class="blocewm noussuivre bloc_coreliens media_default liens_"><h2>Nous suivre</h2><div class="content"><div class="info"><ul class="bloc_lien_int"><li class="item1"><a href="http://www.facebook.com/tv5mondeofficiel" target="_blank"><img src="/cms/userdata/c_bloc_lien/37/37454/origine16858_vignette_footer_suivre_facebook.png" alt="facebook" title="facebook" style="" height="30" width="30"><span>facebook</span></a></li><li class="item2"><a href="http://twitter.com/#!/TV5MONDE" target="_blank"><img src="/cms/userdata/c_bloc_lien/37/37455/origine16859_vignette_footer_suivre_twitter.png" alt="twitter" title="twitter" style="" height="30" width="30"><span>twitter</span></a></li><li class="item3"><a href="https://plus.google.com/110618072081869946039/posts" target="_blank"><img src="/cms/userdata/c_bloc_lien/37/37456/origine16860_vignette_footer_suivre_google.png" alt="google+" title="google+" style="" height="30" width="30"><span>google+</span></a></li><li class="item4"><a href="http://www.youtube.com/user/tv5monde" target="_blank"><img src="/cms/userdata/c_bloc_lien/37/37457/origine16861_vignette_footer_suivre_youtube.png" alt="youtube" title="youtube" style="" height="30" width="30"><span>youtube</span></a></li><li class="item5"><a href="http://www.dailymotion.com/tv5monde" target="_blank"><img src="/cms/userdata/c_bloc_lien/37/37458/origine16862_vignette_footer_suivre_dailymotion.png" alt="dailymotion" title="dailymotion" style="" height="30" width="30"><span>dailymotion</span></a></li><li class="item6"><a href="http://www.pinterest.com/tv5monde" target="_blank"><img src="/cms/userdata/c_bloc_lien/37/37533/origine37533_vignette_pinterest-footer.png" alt="Pinterest" title="Pinterest" style="" height="30" width="30"><span>Pinterest</span></a></li><li class="item7"><a href="/cms/chaine-francophone/Widgets-et-flux-RSS/p-2067-Widgets-et-flux-RSS-les-essentiels-de-TV5MONDE.htm" target="_self"><img src="/cms/userdata/c_bloc_lien/37/37459/origine16863_vignette_footer_suivre_rss.png" alt="rss" title="rss" style="" height="30" width="30"><span>rss</span></a></li><li class="item8"><a href="/cms/../TV5Site/abonnements/index.php" target="_self"><img src="/cms/userdata/c_bloc_lien/37/37460/origine16864_vignette_footer_suivre_newsletter.png" alt="lettres d'information" title="lettres d'information" style="" height="30" width="30"><span>lettres d'information</span></a></li><li class="item9 last-item"><a href="#" onclick="return false;"><img src="/cms/userdata/c_bloc_lien/37/37461/origine16865_vignette_footer_suivre_mobile.png" alt="mobiles" title="mobiles" style="" height="30" width="30"><span>mobiles</span></a></li></ul></div></div></div><!-- marker : PAGINATION_BLOC --></div>
+			<div id="footerchaine"><div id="b184026" class="blocewm bloc_coreliens media_default liens_"><h2>La chaine</h2><div class="content"><div class="info"><ul class="bloc_lien_int"><li class="item1"><a href="/cms/chaine-francophone/tv5monde/p-5856-A-propos-de-TV5MONDE.htm" target="_self"><span>A propos de TV5MONDE</span></a></li><li class="item2"><a href="/cms/chaine-francophone/tv5monde/Espace-presse/p-5866-Tous-les-communiques-de-presse.htm" target="_self"><span>Presse</span></a></li><li class="item3"><a href="/cms/../TV5Site/reception/accueil.php" target="_self"><span>Réception</span></a></li><li class="item4"><a href="/cms/../TV5Site/publicite/index.php" target="_self"><span>Publicité</span></a></li><li class="item5"><a href="/cms/../TV5Site/contact/contact1.php" target="_self"><span>Contact</span></a></li><li class="item6"><a href="/cms/chaine-francophone/tv5monde/Marches-public/p-403-Les-consultations-de-TV5MONDE.htm" target="_self"><span>Marchés publics</span></a></li><li class="item7"><a href="/cms/../TV5Site/footer/fs_infos_legales.php" onclick="window.open(this.href, 'popup','width=490, height=750, scrollbars=1, resizable=1'); return false;"><span>Mentions légales</span></a></li><li class="item8 last-item"><a href="/cms/../TV5Site/footer/fs_credits.php" onclick="window.open(this.href, 'popup','width=490, height=640, scrollbars=1, resizable=1'); return false;"><span>Crédits</span></a></li></ul></div></div></div><!-- marker : PAGINATION_BLOC --></div>
+			<div class="footervod clearfix">
+				<h2>(re)voir TV5MONDE</h2>
+				<a href="http://www.tv5mondeplus.com/"><img src="/cms/template/image/navigation/footer_tv5mondeplus.png" title="tv5mondeplus" alt="tv5mondeplus"></a>
+				<div class="layervod">
+					<h3>WEBTV</h3>
+					<a href="http://www.tv5mondeplusafrique.com/"><img src="/cms/template/image/navigation/footer_vod_afrique.png" title="tv5mondeplusafrique" alt="tv5mondeplusafrique"></a>
+					<a href="http://www.tivi5mondeplus.com/"><img src="/cms/template/image/navigation/footer_vod_jeunesse.png" title="tivi5mondeplus" alt="tivi5mondeplus"></a>
+				</div>
+				<div class="layervod">
+					<h3>VOD</h3>
+					<a href="http://cinema.tv5monde.com/"><img src="/cms/template/image/navigation/footer_vod_cinema.png" title="cinema.tv5monde" alt="cinema.tv5monde"></a>
+					<a href="http://documentaire.tv5monde.com/"><img src="/cms/template/image/navigation/footer_vod_documentaire.png" title="documentaire.tv5monde" alt="documentaire.tv5monde"></a>
+				</div>
+			</div>
+		</div>
+		<div id="footertools" class="clearfix">
+			<div id="footerpartenaire"><div id="b184027" class="blocewm bloc_coreliens media_default liens_"><h2>Nos partenaires</h2><div class="content"><div class="info"><ul class="bloc_lien_int"><li class="item1"><a href="http://www.arte.fr" target="_blank"><img src="/cms/userdata/c_bloc_lien/37/37472/origine16876_vignette_arte.gif" alt="arte" title="arte" style="" height="28" width="42"><span>arte</span></a></li><li class="item2"><a href="http://www.francetelevisions.fr/" target="_blank"><img src="/cms/userdata/c_bloc_lien/37/37471/origine16875_vignette_ft.gif" alt="france television" title="france television" style="" height="28" width="65"><span>france television</span></a></li><li class="item3"><a href="http://www.francetelevisions.fr/" target="_blank"><img src="/cms/userdata/c_bloc_lien/37/37470/origine16874_vignette_aitv.gif" alt="aitv" title="aitv" style="" height="28" width="45"><span>aitv</span></a></li><li class="item4"><a href="http://www.ina.fr/archivespourtous" target="_blank"><img src="/cms/userdata/c_bloc_lien/37/37469/origine16873_vignette_ina.gif" alt="ina" title="ina" style="" height="28" width="33"><span>ina</span></a></li><li class="item5"><a href="http://radio-canada.ca/" target="_blank"><img src="/cms/userdata/c_bloc_lien/37/37468/origine16872_vignette_radiocanada.gif" alt="radio canada" title="radio canada" style="" height="28" width="69"><span>radio canada</span></a></li><li class="item6"><a href="http://www.rtbf.be/" target="_blank"><img src="/cms/userdata/c_bloc_lien/37/37467/origine16871_vignette_rtbf.be.png" alt="rtbf be" title="rtbf be" style="" height="28" width="60"><span>rtbf be</span></a></li><li class="item7"><a href="http://www.telequebec.qc.ca/" target="_blank"><img src="/cms/userdata/c_bloc_lien/37/37466/origine16870_vignette_telequebec.gif" alt="télé quebec" title="télé quebec" style="" height="28" width="85"><span>télé quebec</span></a></li><li class="item8 last-item"><a href="http://www.rts.ch/" target="_blank"><img src="/cms/userdata/c_bloc_lien/37/37465/origine37465_vignette_logo-rts.png" alt="rts" title="rts" style="" height="28" width="62"><span>rts</span></a></li></ul></div></div></div><!-- marker : PAGINATION_BLOC --></div>
+			<form id="fglobalsearch" name="fglobalsearch" action="/cms/chaine-francophone/p-21338-Recherche.htm" method="get">
+                <h2>Rechercher</h2>
+                <input id="fglobalsearch_txt" name="q" value="Rechercher sur le site" onfocus="if(this.value=='Rechercher sur le site') { this.value='';}" onblur="if(this.value=='') { this.value='Rechercher sur le site';}" placeholder="Rechercher sur le site" type="text">
+			   <input name="site" value="default_collection" type="hidden">
+			   <input name="client" value="tv5monde_front" type="hidden">
+			   <input name="output" value="xml_no_dtd" type="hidden">
+			   <input name="proxystylesheet" value="tv5monde_front" type="hidden">
+			   <!--<input type="hidden" name="filter" value="p" />-->
+			   <input name="getfields" value="*" type="hidden">
+			   <input name="oe" value="UTF-8" type="hidden">
+			   <input name="ie" value="UTF-8" type="hidden">
+			   <input name="entsp" value="a" type="hidden">
+			   <input name="ud" value="1" type="hidden">
+                <input id="fglobalsearch_submit" name="searchsubmit" value="" type="submit">
+			</form>
+		</div>
+	</div><div class=" fb_reset" id="fb-root"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe src="http://static.ak.facebook.com/connect/xd_arbiter.php?version=24#channel=f79eef5c6ae4ea&amp;origin=http%3A%2F%2Fwww.tv5.org&amp;channel_path=%2F%3Ffb_xd_fragment%23xd_sig%3Dfdc1ecfe6a7352%26" style="border: medium none;" tab-index="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_http" allowtransparency="true" name="fb_xdm_frame_http" frameborder="0" scrolling="no"></iframe><iframe src="https://s-static.ak.facebook.com/connect/xd_arbiter.php?version=24#channel=f79eef5c6ae4ea&amp;origin=http%3A%2F%2Fwww.tv5.org&amp;channel_path=%2F%3Ffb_xd_fragment%23xd_sig%3Dfdc1ecfe6a7352%26" style="border: medium none;" tab-index="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_https" allowtransparency="true" name="fb_xdm_frame_https" frameborder="0" scrolling="no"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
+	<script type="text/javascript">
+<!--
+//configuration
+OAS_url ='http://pub.ftv-publicite.fr/';
+OAS_listpos = 'Top,Middle,x01';
+OAS_query = '?';
+OAS_sitepage = 'www.tv5.org/accueil';
+nav = navigator.appName;
+//end of configuration
+OAS_rn = '001234567890';
+OAS_rns = '1234567890';
+OAS_rn = new String (Math.random());
+OAS_rns = OAS_rn.substring (2, 11);
+document.write('<sc'+'ript type="text/javascript" src="' + OAS_url + '4/' + OAS_sitepage + '/1' + OAS_rns + '@' + OAS_listpos + OAS_query + '"><\/'+'script>');
+(function (window, document, listPos, $, undef) {
+	//~ if (window.OAS_url || typeof window.OAS_sitepage !== 'string' || typeof listPos !== 'string') {
+		//~ throw new Error('Erreur d\'initialisation des publicités. ' +(window.OAS_url ? 'Multi chargement' : 'Paramètres manquants'));
+	//~ }
+	// Calcul de l'URL pour le chargement des pubs
+	window.OAS_url = 'http://pub.ftv-publicite.fr/RealMedia/ads/' +'adstream_mjx.ads/' +window.OAS_sitepage +'/1' +(Math.random() + '').substring(2, 11) +'@' +listPos;
+	// Appel du script de chargement des pubs
+	document.write('<script type="text/javascript" src="' + window.OAS_url + '"><\/script>');
+	window.OAS_AD = function (pos) {
+		var reg = new RegExp(pos + '(,|$)');
+		if (typeof window.OAS_RICH === 'function' && reg.test(listPos)) {
+			try {
+				window.OAS_RICH(pos);
+			}
+			catch (e) {}
+			listPos = listPos.replace(reg, '');
+		}
+	};
+	// Gestion du déplacement des pubs dans leur position finale dans la page, après le chargement
+	// complet de la page. Cette partie dépend de jQuery
+	if ($ === undef) {
+		throw new Error('Dépendence non satisfaite : jQuery');
+	}
+	var aListPos = listPos.split(',');
+	// Définition des sélecteurs permettant d'identifier la zone
+	// de génération et la zone de destination de chaque pub (définie par sa position OAS)
+	// Il est possible de spécifier plusieurs sélécteurs pour chaque zone. Ces sélecteur seront
+	// testés les uns après les autres, et le premier correspondant à un noeud DOM sera utilisé
+	positionsMoves = {
+			'Top'	:	{ from: '#adButton01', to: '#publiciteTop'},
+			'Middle':	{ from:'#adButton02', to:'#pubMiddle'},
+			'x01'   :	{ from: '#adSky01', to: '#adSkyscrapper01'}
+			};
+	// Fonction qui va déplacer une pub (spécifié par sa position OAS) vers sa destination dans le DOM.
+	function moveAd(position, addFrom, addTo) {
+		var from = '#eGetPub' + position,
+		to = '#eShowPub' + position + ' .adCtnt';
+		if (addFrom) {
+			from += ',' + (addFrom instanceof Array ? addFrom.join(',') : addFrom);
+		}
+		if (addTo) {
+			to += ',' + (addTo instanceof Array ? addTo.join(',') : addTo);
+		}
+		$(to)
+		    .eq(0)
+		    .append(
+			$(from)
+			    .eq(0)
+				.find('script')
+				    .remove()
+				.end()
+			    .contents()
+		    )
+		.each(function () {
+			if ($.browser.msie) {
+				$(this).css('visibility', 'visible');
+				if (position === 'Top' || position === 'x01' || position === 'Middle') {
+					$(this).css('zoom', '1');
+				}
+			}
+		});
+	}
+	function onWindowLoad() {
+		var i = aListPos.length;
+		while(i--) {
+			if (positionsMoves[aListPos[i]] !== undef) {
+				if($(positionsMoves[aListPos[i]].to).attr("id")!==undefined){
+					moveAd(aListPos[i], positionsMoves[aListPos[i]].from, positionsMoves[aListPos[i]].to);
+				}else{
+					$(positionsMoves[aListPos[i]].from).html("");
+				}
+			}
+		}
+	}
+	// On attend la fin du chargement de la page pour repositionner les pubs
+	$(window).load(onWindowLoad);
+}(this, this.document, this.OAS_listpos, this.jQuery));
+
+function log() {
+	if( window.console ){
+		console.debug.apply( console, arguments );
+	}
+}
+//-->
+</script><script type="text/javascript" src="http://pub.ftv-publicite.fr/4/www.tv5.org/accueil/1310434836@Top,Middle,x01?"></script><script type="text/javascript" src="http://pub.ftv-publicite.fr/RealMedia/ads/adstream_mjx.ads/www.tv5.org/accueil/1676937990@Top,Middle,x01"></script>
+	<div class="adCall" id="adButton01"></div>
+	<div class="adCall" id="adButton02"></div>
+	<div class="adCall" id="adSky01"></div>
+
+	<!-- POPUP JQUERY -->
+	<div id="overlay"></div>
+	<div id="window"></div>
+     <div id="windowtools"></div>
+	<div id="apprwindow"></div>
+    <div id="menuwindow"></div>
+
+
+
+
+</body>

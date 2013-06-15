@@ -1,0 +1,1107 @@
+<head><script>
+</script>
+
+ 
+
+
+	
+	
+	
+	
+	
+	
+
+
+
+ 
+
+
+
+
+
+
+ 
+   
+  
+  
+
+			<!-- Begin comScore Tag -->
+			<script>
+			    document.write(unescape("%3Cscript src='" + (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js' %3E%3C/script%3E"));
+			</script><script src="https://sb.scorecardresearch.com/beacon.js"></script>
+			
+			<script>
+			  COMSCORE.beacon({
+			    c1:2,
+			    c2:6034733,
+			    c3:"",
+			    c4:"",
+			    c5:"",
+			    c6:"",
+			    c15:""
+			  });
+			</script>
+			<noscript>
+			  <img src="http://b.scorecardresearch.com/b?c1=2&c2=6034733&c3=&c4=&c5=&c6=&c15=&cv=1.3&cj=1" style="display:none" width="0" height="0" alt="" />
+			</noscript>
+			<!-- End comScore Tag -->
+   
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+<title>Bicycling: Order Now!</title>
+
+
+
+<script language="JavaScript" src="/webapp/wcs/stores/servlet/oae/javascripts/tealeaf/TealeafSDKConfig.js" type="text/JavaScript"></script>
+<script language="JavaScript" src="/webapp/wcs/stores/servlet/oae/javascripts/tealeaf/TealeafSDK.js" type="text/JavaScript"></script>
+<script src="/webapp/wcs/stores/servlet/oae/javascripts/scripts.js"></script>
+<script language="javascript" src="/webapp/wcs/stores/servlet/oae/javascripts/dojo-release-1.6/dojo/dojo.js" djconfig="isDebug:false, parseOnLoad: true"></script>
+<script language="javascript" src="/webapp/wcs/stores/servlet/oae/javascripts/dojo-release-1.6/dojo/dojo-rodale-oae.js"></script>
+<script language="javascript" src="/webapp/wcs/stores/servlet/oae/javascripts//realtime.js"></script>
+<script type="text/javascript">
+dojo.require("dijit.ProgressBar");
+dojo.require("dojo.html");
+		function loadingMessage(flag){
+			if(flag)
+				dojo.attr("cpn_img", "src", "/wcsstore/oae/images/catalog/loader.gif");
+			else
+				dojo.attr("cpn_img", "src", "/wcsstore/oae/images/catalog/nothing.gif");
+		}
+function updateProgressBar(newVal,divid){
+	var curr = dijit.byId(divid).progress;
+	var max = dijit.byId(divid).maximum;
+	if(curr>max)
+	dijit.byId(divid).maximum = max+newVal;
+	dijit.byId(divid).update({'progress': curr+newVal});
+}
+function activateProgressBar(divid,max_time){
+ dijit.byId(divid).domNode.style.display = "block";
+ dijit.byId(divid).domNode.style.width = "300px";
+ dijit.byId(divid).update({'progress': '0'});
+ dijit.byId(divid).update({'maximum': max_time});
+ timerId = setInterval('updateProgressBar(25,"'+divid+'")',25);
+}
+</script>
+<script type="text/javascript">
+function validateForm(form)
+{
+	var errMessage="";
+	var errors = false;
+if(document.getElementById('actNoOfRecepients')){
+document.getElementById('actNoOfRecepients').value = '0';
+}
+	document.getElementById('errorMessages').innerHTML = '';
+	if(document.getElementById('paydiv'))
+	document.getElementById('paydiv').innerHTML = '';
+	if(document.getElementById('termsError'))
+	document.getElementById('termsError').innerHTML = '';
+	var giftrecep="";
+	if(document.getElementById('actNoOfRecepients')){
+	giftrecep = document.getElementById('actNoOfRecepients').value;
+	}
+	var gifts = giftrecep;
+	var giftsInOffer = 0;
+	for(var g=giftsInOffer; g>gifts; g--){
+ disableElements('ship'+g);
+	}
+	var bs = new Array();
+	bs[0] = 'bill';
+	for(var z=0; z<gifts; z++){
+		bs[(z+1)] = 'ship'+(z+1);
+	}
+	var x;
+	for(x in bs){
+		setErrorCSS('FIRSTNAME_'+bs[x],'','');
+		setErrorCSS('LASTNAME_'+bs[x],'','');
+		setErrorCSS('ADDRESS_'+bs[x],'','');
+		setErrorCSS('CITY_'+bs[x],'','');
+		setErrorCSS('STATE_'+bs[x],'','');
+		setErrorCSS('ZIP_'+bs[x],'','');
+		setErrorCSS('PHONE_'+bs[x],'','');
+		setErrorCSS('EMAIL1_'+bs[x],'','');
+		setErrorCSS('EMAIL1CONF_'+bs[x],'','');
+		setErrorCSS('EMAIL2_'+bs[x],'','');
+		setErrorCSS('GIFT_'+bs[x],'','');
+	}
+	setErrorCSS('YEARS','','');
+	setErrorCSS('TERMS','','');
+	setErrorCSS('DIABETES','','');
+	setErrorCSS('PREGNANT','','');
+	setErrorCSS('CCBRAND','','');
+	setErrorCSS('CCNUMBER','','');
+	setErrorCSS('CCEXPIRY','','');
+	setErrorCSS('CCCVC','','');
+	setErrorCSS('USERNAME','','');
+	setErrorCSS('PASSWORD','','');
+	setErrorCSS('CONFIRMPASSWORD','','');
+	setErrorCSS('VOUCHER','','');
+	setErrorCSS('GENDER','','');
+	setErrorCSS('DOB','','');
+	setErrorCSS('HEIGHT','','');
+	setErrorCSS('WEIGHT','','');
+	setErrorCSS('DESCRIBEU','','');
+	setErrorCSS('COUPONCD','','');
+	setErrorCSS('BMI','','');
+	setErrorCSS('KRAFTHEALTH','','');
+	setErrorCSS('shrtSz','','');
+	setErrorCSS('extPrem','','');
+	setErrorCSS('raceDt','','');
+	for(i=0; i<1; i++) {
+		setErrorCSS('SUBOPTION_'+i,'','');
+	}
+	var i;
+	for(i in bs){
+		var strType = '';
+		if(bs[i]!='bill')
+		strType = "Recipient's";
+		if(document.getElementById('fname_'+bs[i]) ){
+			 document.getElementById('fname_'+bs[i]).value = trim(document.getElementById('fname_'+bs[i]).value);
+			 if(document.getElementById('fname_'+bs[i]).value=='' || !(/^[a-zA-Z ]{2,35}$/.test(document.getElementById('fname_'+bs[i]).value))){
+				errMessage=errMessage + "&middot; "+strType+" First Name is required. Only letters allowed (min 2)<br />";
+				errors = true;
+				setErrorCSS('FIRSTNAME_'+bs[i],'errorBgColor','errorMessage');
+			 }
+		}
+		if(document.getElementById('lname_'+bs[i])){
+			document.getElementById('lname_'+bs[i]).value = trim(document.getElementById('lname_'+bs[i]).value);
+			if(document.getElementById('lname_'+bs[i]).value=='' || !(/^[a-zA-Z ]{2,35}$/.test(document.getElementById('lname_'+bs[i]).value))){
+				errMessage=errMessage + "&middot; "+strType+" Last Name is required. Only letters allowed (min 2)<br />";
+				errors = true;
+				setErrorCSS('LASTNAME_'+bs[i],'errorBgColor','errorMessage');
+			}
+		}
+		if(document.getElementById('adr1_'+bs[i])){
+			document.getElementById('adr1_'+bs[i]).value = trim(document.getElementById('adr1_'+bs[i]).value);
+			if(document.getElementById('adr1_'+bs[i]).value=='' || !(/^.{5,50}$/.test(document.getElementById('adr1_'+bs[i]).value))){
+				errMessage=errMessage + "&middot; "+strType+" Address Line 1 is required (min 5 characters)<br />";
+				errors = true;
+				setErrorCSS('ADDRESS_'+bs[i],'errorBgColor','errorMessage');
+			}
+		}
+		if(document.getElementById('adr2_'+bs[i]))
+		document.getElementById('adr2_'+bs[i]).value = trim(document.getElementById('adr2_'+bs[i]).value);
+		if(document.getElementById('cty_'+bs[i])){
+			document.getElementById('cty_'+bs[i]).value = trim(document.getElementById('cty_'+bs[i]).value);
+			if(document.getElementById('cty_'+bs[i]).value=='' || !(/^[a-zA-Z ]{2,24}$/.test(document.getElementById('cty_'+bs[i]).value))){
+				errMessage=errMessage + "&middot; "+strType+" City is required. Only characters allowed (min 2 characters).<br />";
+				errors = true;
+				setErrorCSS('CITY_'+bs[i],'errorBgColor','errorMessage');
+			}
+		}
+		if(document.getElementById('state_'+bs[i]) && document.getElementById('state_'+bs[i]).selectedIndex==0){
+			errMessage=errMessage + "&middot; "+strType+" State from the dropdown is required<br />";
+			errors = true;
+			setErrorCSS('STATE_'+bs[i],'errorBgColor','errorMessage');
+		}
+		if(document.getElementById('zip_'+bs[i])){
+			document.getElementById('zip_'+bs[i]).value = trim(document.getElementById('zip_'+bs[i]).value);
+			if(document.getElementById('zip_'+bs[i]).value=='' || !(/^\d{5}(-\d{4})?$/.test(document.getElementById('zip_'+bs[i]).value))){
+				errMessage=errMessage + "&middot; "+strType+" US ZIP code in the format 99999 or 99999-9999 is required<br />";
+				errors = true;
+				setErrorCSS('ZIP_'+bs[i],'errorBgColor','errorMessage');
+			}
+		}
+		if(document.getElementById('eml1_'+bs[i])){
+			document.getElementById('eml1_'+bs[i]).value = trim(document.getElementById('eml1_'+bs[i]).value);
+			if(document.getElementById('eml1_'+bs[i]).value=='' || !(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/.test(document.getElementById('eml1_'+bs[i]).value))){
+				errMessage=errMessage + "&middot; "+strType+" Email address is required<br />";
+				errors = true;
+				setErrorCSS('EMAIL1_'+bs[i],'errorBgColor','errorMessage');
+			}
+			if(document.getElementById('eml1c_'+bs[i])){
+				document.getElementById('eml1c_'+bs[i]).value = trim(document.getElementById('eml1c_'+bs[i]).value);
+				var eml = document.getElementById('eml1_'+bs[i]).value;
+				var emlconf = document.getElementById('eml1c_'+bs[i]).value;
+				if(emlconf=='' || eml!=emlconf){
+					errMessage=errMessage + "&middot; "+strType+" Please Confirm Your Email Address. It must match with the email address you entered earlier.<br />";
+					errors = true;
+					setErrorCSS('EMAIL1CONF_'+bs[i],'errorBgColor','errorMessage');
+				}
+			}
+		}
+		if(form.elements['giftCard_'+bs[i]] && form.elements['giftCard_'+bs[i]].value=='true'){
+			if(document.getElementById('eml2_'+bs[i])){
+				document.getElementById('eml2_'+bs[i]).value = trim(document.getElementById('eml2_'+bs[i]).value);
+				if(document.getElementById('eml2_'+bs[i]).value=='' || !(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/.test(document.getElementById('eml2_'+bs[i]).value))){
+					errMessage=errMessage + "&middot; "+strType+" Email address is required<br />";
+					errors = true;
+					setErrorCSS('EMAIL2_'+bs[i],'errorBgColor','errorMessage');
+				}
+			}
+			if(!dijit.byId(bs[i]+'date').isValid()){
+				errMessage = errMessage + "&middot; '+dijit.byId(bs[i]+'date').invalidMessage+'<br />";
+				errors = true;
+				setErrorCSS('GIFT_'+bs[i],'errorBgColor','errorMessage');
+			}
+		}else{
+		}
+		if(document.getElementById('ph1_'+bs[i])){
+			document.getElementById('ph1_'+bs[i]).value = trim(document.getElementById('ph1_'+bs[i]).value);
+			if(document.getElementById('ph1_'+bs[i]).value=='' || !(/^[1-9]\d{2}\-?\d{3}\-?\d{4}$/.test(document.getElementById('ph1_'+bs[i]).value))){
+				errMessage=errMessage + "&middot; "+strType+" Phone number is required (10 digit format with or without hyphens)<br />";
+				errors = true;
+				setErrorCSS('PHONE_'+bs[i],'errorBgColor','errorMessage');
+			}
+		}
+	}
+if(document.getElementById('username')){
+	document.getElementById('username').value = trim(document.getElementById('username').value);
+	if(document.getElementById('username').value==''){
+		errMessage=errMessage + "&middot; Please create a site username<br />";
+		errors = true;
+		setErrorCSS('USERNAME','errorBgColor','errorMessage');
+	}
+}
+if(document.getElementById('username') && document.getElementById('username').value!='' && !(/^[a-zA-Z0-9_]{6,15}$/.test(document.getElementById('username').value))){
+	errMessage=errMessage + "&middot; Your site username needs to include 6-15 characters (only letters and/or numbers, no spaces). Please try a different username.<br />";
+	document.getElementById('username').value = trim(document.getElementById('username').value);
+	errors = true;
+	setErrorCSS('USERNAME','errorBgColor','errorMessage');
+}
+if(document.getElementById('password')){
+	document.getElementById('password').value = trim(document.getElementById('password').value);
+	if(document.getElementById('password').value==''){
+		errMessage=errMessage + "&middot; Please create a site password<br />";
+		errors = true;
+		setErrorCSS('PASSWORD','errorBgColor','errorMessage');
+	}
+}
+if(document.getElementById('confirmPassword')){
+	document.getElementById('confirmPassword').value = trim(document.getElementById('confirmPassword').value);
+	if(document.getElementById('confirmPassword').value==''){
+		errMessage=errMessage + "&middot; Please confirm your site password.<br />";
+		errors = true;
+		setErrorCSS('CONFIRMPASSWORD','errorBgColor','errorMessage');
+	}
+}
+if(document.getElementById('password') && document.getElementById('password').value!='' && !(/^[a-zA-Z0-9_]{6,15}$/.test(document.getElementById('password').value))){
+	errMessage=errMessage + "&middot; Your site password needs to include 6-15 characters (only letters and/or numbers, no spaces). Please try a different password.<br />";
+	document.getElementById('password').value = trim(document.getElementById('password').value);
+	errors = true;
+	setErrorCSS('PASSWORD','errorBgColor','errorMessage');
+}else{
+	if(document.getElementById('password') && document.getElementById('confirmPassword')){
+		if(document.getElementById('password').value!='' && document.getElementById('confirmPassword').value!='' && document.getElementById('confirmPassword').value!=document.getElementById('password').value){
+			errMessage=errMessage + "&middot; The password you created and the password you confirmed do not match. Please try again.<br />";
+			document.getElementById('confirmPassword').value = trim(document.getElementById('confirmPassword').value);
+			document.getElementById('password').value = trim(document.getElementById('password').value);
+			errors = true;
+			setErrorCSS('PASSWORD','errorBgColor','errorMessage');
+			setErrorCSS('CONFIRMPASSWORD','errorBgColor','errorMessage');
+		}
+	}
+}
+if(document.getElementById('voucher') && !(/^[a-zA-Z0-9]{11,11}$/.test(document.getElementById('voucher').value))){
+	errMessage=errMessage + "&middot; Voucher is required. Please enter a valid voucher number.<br />";
+	document.getElementById('voucher').value = trim(document.getElementById('voucher').value);
+	errors = true;
+	setErrorCSS('VOUCHER','errorBgColor','errorMessage');
+}
+obj = document.getElementById('bmicheck');
+if (obj && !obj.checked) {
+	errMessage=errMessage + "&middot; BMI condition is required to proceed with this order<br />";
+	errors = true;
+	setErrorCSS('BMI','errorBgColor','errorMessage');
+}
+var kraftcheck = false;
+for(i=0;i<17; i++){
+	obj = document.getElementById('kchk_'+i);
+	if (obj && obj.checked) {
+	kraftcheck = true;
+	}
+}
+if(kraftcheck){
+	errMessage=errMessage + "&middot; You cannot proceed with this order if you have any of the mentioned health conditions<br />";
+	errors = true;
+	setErrorCSS('KRAFTHEALTH','errorBgColor','errorMessage');
+}
+obj = document.getElementById('termsOK');
+if (obj && !obj.checked) {
+	errMessage=errMessage + "&middot; You must agree to the terms & conditions before proceeding with this order<br />";
+	errors = true;
+	setErrorCSS('TERMS','errorBgColor','errorMessage');
+}
+var pregy = document.getElementById('pregnantY');
+var pregn = document.getElementById('pregnantN');
+if (pregy && pregn && !pregy.checked && !pregn.checked) {
+	errMessage=errMessage + "&middot; It is important that you answer the pregnancy related question before we can proceed.<br />";
+	errors = true;
+	setErrorCSS('PREGNANT','errorBgColor','errorMessage');
+}
+if (pregy && pregy.checked) {
+	errMessage=errMessage + "&middot; Sorry, this program is not customized for consumers who are pregnant or nursing, so we cannot let you sign up.  Please consult with your doctor before starting any diet program.<br />";
+	errors = true;
+	setErrorCSS('PREGNANT','errorBgColor','errorMessage');
+}
+var diaby = document.getElementById('diabetesY');
+var diabn = document.getElementById('diabetesN');
+if(diaby && diabn && !diaby.checked && !diabn.checked){
+	errMessage=errMessage + "&middot; It is important that you answer the diabetes related question before we can proceed.<br />";
+	errors = true;
+	setErrorCSS('DIABETES','errorBgColor','errorMessage');
+}
+if (diaby && diaby.checked) {
+	errMessage=errMessage + "&middot; Sorry, this program is not customized for consumers with Type 1 Diabetes, so we cannot let you sign up. Please consult with your doctor before starting any diet program.<br />";
+	errors = true;
+	setErrorCSS('DIABETES','errorBgColor','errorMessage');
+}
+obj = document.getElementById('genderm');
+var obj1 = document.getElementById('genderf');
+if (obj && obj1) {
+	if((!obj.checked && !obj1.checked) || (obj.checked && !(/^[M|F]$/.test(obj.value))) || (obj1.checked && !(/^[M|F]$/.test(obj1.value)))){
+		errMessage=errMessage + "&middot; You must provide your gender before proceeding with this order<br />";
+		errors = true;
+		setErrorCSS('GENDER','errorBgColor','errorMessage');
+	}
+}
+obj = document.getElementById('wt');
+if (obj) {
+	obj.value = trim(obj.value);
+	if(!(/^[5-9][0-9]$|^[1-9]\d{2}$/.test(obj.value))){
+		errMessage=errMessage + "&middot; You must provide a valid weight value in lbs (between 50 and 999 lbs) before proceeding with this order<br />";
+		errors = true;
+		setErrorCSS('WEIGHT','errorBgColor','errorMessage');
+	}
+}
+obj = document.getElementById('htft');
+if (obj) {
+	obj.value = trim(obj.value);
+	if(!(/^[3-7]$/.test(obj.value))){
+		errMessage=errMessage + "&middot; You must provide a valid height in feet (between 3 and 7 feet) before proceeding with this order<br />";
+		errors = true;
+		setErrorCSS('HEIGHT','errorBgColor','errorMessage');
+	}
+}
+obj = document.getElementById('htin');
+if (obj) {
+	obj.value = trim(obj.value);
+	if(!(/^[0-9]$|^1[0-1]{1}$/.test(obj.value))){
+		errMessage=errMessage + "&middot; You must provide a valid height in inches (between 0 and 11 inches) before proceeding with this order<br />";
+		errors = true;
+		setErrorCSS('HEIGHT','errorBgColor','errorMessage');
+	}
+}
+obj = document.getElementById('extPrem');
+if (obj) {
+	if(obj.selectedIndex==0){
+		errMessage=errMessage + "&middot; You must select a free book before proceeding with this order<br />";
+		errors = true;
+		setErrorCSS('extPrem','errorBgColor','errorMessage');
+	}
+}
+obj = document.getElementById('raceDt');
+if (obj) {
+	obj.value = trim(obj.value);
+	if(!(/^(0?[1-9]|1[0-2])[/](0?[1-9]|[12][0-9]|3[0-1])[/](18|19|20)\d{2}$/.test(obj.value))){
+		errMessage=errMessage + "&middot; You must provide a race date in valid format before proceeding<br />";
+		errors = true;
+		setErrorCSS('raceDt','errorBgColor','errorMessage');
+	}else{
+		var enteredDate = new Date();
+		enteredDate.setFullYear(Number(obj.value.substring(6,10)),Number(obj.value.substring(0,2))-1,Number(obj.value.substring(3,5)));
+		var currDate = new Date();
+		currDate.setFullYear(2013,4,24)
+		if(enteredDate<currDate){
+			errMessage=errMessage + "&middot; Race date cannot be before today<br />";
+			errors = true;
+			setErrorCSS('raceDt','errorBgColor','errorMessage');
+		}
+		if(Number(obj.value.substring(6,10))>Number(0)){
+			errMessage=errMessage + "&middot; Race date cannot be after 0<br />";
+			errors = true;
+			setErrorCSS('raceDt','errorBgColor','errorMessage');
+		}
+ }
+}
+obj = form.descQ;
+if (obj) {
+	var chosenVal = '';
+ var checkedVal = false;
+	if(obj.length){
+		var len = obj.length;
+		for(i=0;i<len; i++){
+			if(obj[i].checked){
+				checkedVal = true;
+				chosenVal = obj[i].value;
+			}
+		}
+		if(!checkedVal){
+			errMessage=errMessage + "&middot; Before proceeding, you will need to answer this question in the form below: \"Which of the Following Best Describes You?\"<br />";
+			errors = true;
+			setErrorCSS('DESCRIBEU','errorBgColor','errorMessage');
+		}
+	}else{
+		if(!obj.checked){
+			errMessage=errMessage + "&middot; Before proceeding, you will need to answer this question in the form below: \"Which of the Following Best Describes You?\"<br />";
+			errors = true;
+			setErrorCSS('DESCRIBEU','errorBgColor','errorMessage');
+		}
+	}
+	if(chosenVal=='other' && form.descQText.value==''){
+		errMessage=errMessage + "&middot; If you selected other, please use the text box to provide some details<br />";
+		errors = true;
+		setErrorCSS('DESCRIBEU','errorBgColor','errorMessage');
+	}
+}
+	obj=form.subscriptionOption;
+	if(obj){
+		var hasSelected = false;
+		//alert(form.subscriptionOption.value);
+		if(obj.length){
+		for(i=0; i<obj.length; i++) {
+			if (obj[i].checked) hasSelected=true;
+		}
+		}else{
+		if (obj.checked) hasSelected=true;
+		}
+		if (!hasSelected) {
+			errMessage=errMessage + "&middot; Please select your preferred term.<br />";
+		for(i=0; i<1; i++) {
+			setErrorCSS('SUBOPTION_'+i,'errorBgColor','errorMessage');
+		}
+			errors = true;
+		}
+	}
+	obj = document.getElementById('creditCardPayment');
+	if (obj && ((obj.type=='hidden' && obj.value=='CC') || (obj.type=='radio' && obj.checked && obj.value=='CC')) ) {
+	var cardBrand =  document.getElementById('cardBrand');
+	if(cardBrand && cardBrand.selectedIndex==0){
+		errMessage=errMessage + "&middot; A valid credit card type from the dropdown is required<br />";
+		errors = true;
+		setErrorCSS('CCBRAND','errorBgColor','errorMessage');
+	}
+	if(document.getElementById('cardNumber'))
+	document.getElementById('cardNumber').value = trim(document.getElementById('cardNumber').value);
+	var cardNum = document.getElementById('cardNumber');
+	if(cardNum){
+		if(cardNum.value=='' || !(/^3[47]{1}[0-9]{13}$|^4[0-9]{15}$|^5[1-5]{1}[0-9]{14}$|^6011[02349]{1}[0-9]{11}$/.test(cardNum.value))){
+			errMessage=errMessage + "&middot; A valid credit card number is required <br />";
+			errors = true;
+			setErrorCSS('CCNUMBER','errorBgColor','errorMessage');
+		}else{
+			if(((/^3[47]{1}[0-9]{13}$/.test(cardNum.value)) && cardBrand.value!='American Express') || ((/^5[1-5]{1}[0-9]{14}$/.test(cardNum.value)) && cardBrand.value!='MasterCard') || ((/^4[0-9]{15}$/.test(cardNum.value)) && cardBrand.value!='VISA') || ((/^6011[02349]{1}[0-9]{11}$/.test(cardNum.value)) && cardBrand.value!='Discover')){
+				errMessage=errMessage + "&middot; Please select a valid card type <br />";
+				errors = true;
+				setErrorCSS('CCBRAND','errorBgColor','errorMessage');
+			}else
+				validCCRequest = true;
+		}
+	}
+	if (cardNum && cardNum.value!='' && !luhnCheck(cardNum.value)){
+		errMessage=errMessage + "&middot; The credit card number entered is not valid<br />";
+		errors = true;
+		setErrorCSS('CCNUMBER','errorBgColor','errorMessage');
+	}
+	var expMonth = document.getElementById('cardExpiryMonth');
+	var expYear = document.getElementById('cardExpiryYear');
+	if(expMonth && expMonth.selectedIndex==0){
+		errMessage=errMessage + "&middot; A valid card expiry month from the dropdown is required<br />";
+		errors = true;
+		setErrorCSS('CCEXPIRY','errorBgColor','errorMessage');
+	}
+	if(expYear && expYear.selectedIndex==0){
+		errMessage=errMessage + "&middot; A valid card expiry year from the dropdown is required<br />";
+		errors = true;
+		setErrorCSS('CCEXPIRY','errorBgColor','errorMessage');
+	}
+	if (expMonth && expYear && expYear.value!=''  && expMonth.value!=''){
+		var cardYear = new String(expYear.value);
+		var cardMonth = new String(expMonth.value);
+			if (parseInt(expMonth.value) == 0) cardMonth = expMonth.value.substr(1,1);
+		var dateNow = new Date();
+		var yearNow = dateNow.getFullYear();
+		var monthNow = dateNow.getMonth();
+		if((yearNow > parseInt(cardYear)) || (yearNow == parseInt(cardYear) && parseInt(cardMonth) < (monthNow + 1))){
+			errMessage=errMessage + "&middot; Your credit card expiration date has passed<br />";
+			errors = true;
+			setErrorCSS('CCEXPIRY','errorBgColor','errorMessage');
+		}
+	}
+	} // if CC is valid and checked
+	var fbd = document.getElementById('fbdId');
+	if(fbd && fbd.value=='E'){
+		errMessage=errMessage + "&middot; Unfortunately, our systems are temporarily unavailable at this time. We apologize for the inconvenience. If you have general questions about your account or the website, please e-mail us at customer_service@rodale.com and be sure to specify the website or online service. Again, we apologize for the inconvenience. Please check back frequently.<br />";
+		errors = true;
+		setErrorCSS('USERNAME','errorBgColor','errorMessage');
+		fbd.value='';
+	}
+	if(fbd && fbd.value=='-1002'){
+		errMessage=errMessage + "&middot; Sorry, that site username is already taken. Please try a different username.<br />";
+		errors = true;
+		setErrorCSS('USERNAME','errorBgColor','errorMessage');
+		fbd.value='';
+	}
+	var pid = document.getElementById('payId');
+	if(pid && pid.value=='D'){
+		//errMessage=errMessage + "<span class='errorMessage'>&middot; We're sorry; we cannot process your order with the information you've provided.  Please check the information and re-enter it, or use another credit card.  If you have checked the information and everything looks correct, contact your bank or credit card company.<br /></span>";
+		setErrorMessage('paydiv',"&middot; We're sorry; we cannot process your order with the information you've provided.  Please check the information and re-enter it, or use another credit card.  If you have checked the information and everything looks correct, contact your bank or credit card company.<br />");		errors = true;
+		pid.value='';
+		displayccError=true;
+		keepfocusOnSubmit=true;
+	}
+	if (!errors ) {
+		return true;
+	} else {
+		//alert(keepfocusOnSubmit);
+		if(!displayccError){
+			setErrorMessage('errorMessages',errMessage);
+		}else{
+			displayccError=false;
+		}
+		try{
+			if(keepfocusOnSubmit){
+				document.getElementById('placeOrderButton').scrollIntoView(true);
+				keepfocusOnSubmit = false;
+			}else
+			document.getElementById('errorMessages').scrollIntoView(true);
+		}catch(e){
+		}
+		return false;
+		//form.submit();
+	}
+}
+function trim(stringToTrim) {
+	if(stringToTrim=='')
+	return stringToTrim;
+	else
+	return stringToTrim.replace(/^\s+|\s+$/g,"");
+}
+function setErrorCSS(ide,row,col){
+	if(document.getElementById('TR'+ide)){
+		document.getElementById('TR'+ide).setAttribute('class',row);
+		document.getElementById('TR'+ide).setAttribute('className',row);
+		document.getElementById('TD'+ide).setAttribute('class',col);
+		document.getElementById('TD'+ide).setAttribute('className',col);
+	}
+}
+function chooseOffer(form, country, caOfferID) {
+	var yourDate = new Date();
+	abandon=false;
+	form.action="/webapp/wcs/stores/servlet/OaeEntryPage?storeId=10057&cm_mmc=Bicycling.com-_-Top Module-_-BKE Mod MDW Sale-_-OfferId_BKE60367_keycode_I3FW0A05&source=Rodale&parentMktOfferId=60367&keycode=I3FW0A05&mktOfferId=CAD60409";
+	form.submit();
+}
+function getPayId(){
+ document.getElementById('paydiv').innerHTML= '';
+ activateProgressBar('hangOnForPay','10000');
+var genesant = new com.rodale.js.Post('/webapp/wcs/stores/servlet/ValidatePayment',10000,'Payments',false);
+genesant.call('payments');
+}
+function setErrorMessage(div,val){
+		var errorhtml = '<table border="0" cellpadding="0" cellspacing="0" class="errorBgColor" width="100%">';
+		errorhtml += '<tr><td valign="top" rowspan="2"><img src="/wcsstore/oae/images/catalog/nothing.gif" width="6" height="6" /></td>';
+		errorhtml += '<td><img src="/wcsstore/oae/images/catalog/nothing.gif" class="entryFormErrorHTMLImg1" /></td>';
+		errorhtml += '<td><img src="/wcsstore/oae/images/catalog/nothing.gif" class="entryFormErrorHTMLImg2" /></td></tr>';
+		errorhtml += '<tr><td valign="top" class="entryFormErrorMessagePad1">';
+		errorhtml += '<img src="/wcsstore/oae/images/catalog/icon_error.gif" class="entryFormErrorMessageImageTag" /></td>';
+		errorhtml += '<td valign="top" class="errorMessage entryFormErrorMessagePad2">'+val+'<br />';
+		errorhtml += '</td></tr>';
+		errorhtml += '<tr><td valign="bottom"><img src="/wcsstore/oae/images/catalog/nothing.gif" width="6" height="6" /></td>';
+		errorhtml += '<td colspan="2"><img src="/wcsstore/oae/images/catalog/nothing.gif" width="6" height="15" /></td>';
+		errorhtml += '</tr></table>';
+	document.getElementById(div).innerHTML= errorhtml;
+}
+
+function showDiv(divName,val){
+if(document.getElementById('actNoOfRecepients').value == ''){
+document.getElementById('actNoOfRecepients').value = '1'
+}
+var recepNo = val.substr(val.length-1,val.length);
+var totalRecep = document.getElementById('actNoOfRecepients').value;
+var totalRecepTemp  = totalRecep;
+var totalRecepPlusOne = ++totalRecepTemp;
+if(recepNo - totalRecep > 1){
+alert("Please add recepient #"  + (totalRecepPlusOne) + " first");
+return false;
+}
+enableElements(val);
+var divNm = document.getElementById(divName + val);
+divNm.style.display = "block";
+document.getElementById('addrAddButton_' + val).style.display = "none";
+++document.getElementById('actNoOfRecepients').value;
+}
+
+function hideDiv(divName,val){
+var recepNo = val.substr(val.length-1,val.length);
+var totalRecep = document.getElementById('actNoOfRecepients').value;
+if(totalRecep - recepNo >= 1){
+alert("Please delete recepient #"  + (totalRecep) + " first");
+return false;
+}
+disableElements(val);
+var divNm = document.getElementById(divName + val);
+divNm.style.display = "none";
+document.getElementById('addrAddButton_' + val).style.display = "block";
+--document.getElementById('actNoOfRecepients').value;
+}
+function disableElements(val){
+	document.getElementById('adr1_'+ val).disabled=true;
+	document.getElementById('lname_'+ val).disabled=true;
+	document.getElementById('fname_'+ val).disabled=true;
+	document.getElementById('adr2_'+ val).disabled=true;
+	document.getElementById('cty_'+ val).disabled=true;
+	document.getElementById('state_'+ val).disabled=true;
+	document.getElementById('zip_'+ val).disabled=true;
+	if(document.getElementById('ph1_'+ val))
+		document.getElementById('ph1_'+ val).disabled=true;
+	if(document.getElementById('giftCrd_'+ val))
+		document.getElementById('giftCrd_'+ val).value='false';
+	if(document.getElementById(val+ 'date'))
+		document.getElementById(val+ 'date').disabled=true;
+	if(document.getElementById('eml1_'+ val))
+		document.getElementById('eml1_'+ val).disabled=true;
+	if(document.getElementById('eml2_'+ val))
+		document.getElementById('eml2_'+ val).disabled=true;
+	if(document.getElementById('eml1c_'+ val))
+		document.getElementById('eml1c_'+ val).disabled=true;
+	if(document.getElementById('country_'+ val))
+		document.getElementById('country_'+ val).disabled=true;
+}
+function enableElements(val){
+	document.getElementById('adr1_'+ val).disabled=false;
+	document.getElementById('lname_'+ val).disabled=false;
+	document.getElementById('fname_'+ val).disabled=false;
+	document.getElementById('adr2_'+ val).disabled=false;
+	document.getElementById('cty_'+ val).disabled=false;
+	document.getElementById('state_'+ val).disabled=false;
+	document.getElementById('zip_'+ val).disabled=false;
+	if(document.getElementById('ph1_'+ val))
+		document.getElementById('ph1_'+ val).disabled=false;
+	if(document.getElementById('giftCrd_'+ val))
+		document.getElementById('giftCrd_'+ val).value='true';
+	if(document.getElementById(val+ 'date'))
+		document.getElementById(val+ 'date').disabled=false;
+	if(document.getElementById('eml2_'+ val))
+		document.getElementById('eml2_'+ val).disabled=false;
+	if(document.getElementById('country_'+ val))
+		document.getElementById('country_'+ val).disabled=false;
+}
+function showAutoRenew(payment){
+	if(payment=='OA')
+    document.getElementById('autoRenewSection').innerHTML = '<center> Bill Me Order: I will be invoiced for the amount and term I\'ve selected above. If I decide not to continue my subscription, I will mark cancel on the invoice and return it to you within 30 days of receipt and owe nothing.  <\/center><br><center> ';
+ if(payment=='CC')
+    document.getElementById('autoRenewSection').innerHTML = '<center> Credit Card Orders: I authorize you to charge my credit card for the amount and term I\'ve selected above.  If I decide not to continue my subscription, I can cancel by contacting customer service via phone, email or online as listed below within 30 days of receipt and the full amount will be refunded to my credit card.   <\/center><br>';
+}
+function floridaRedirect(state){
+	if(state=='FL'){
+	}
+}
+</script>
+
+<style type="text/css">
+@import "/webapp/wcs/stores/servlet/oae/javascripts/dojo-release-1.6/dijit/themes/nihilo/nihilo.css";
+body {
+		background-color: #888886;
+		background-repeat: repeat;
+		background-position: center;
+		margin-left: 0px;
+		margin-top: 0px;
+		margin-right: 0px;
+		margin-bottom: 0px;
+}
+body, td, .info {
+	font-family: verdana, arial;
+	font-size: 11px;
+	color: #000000;
+}
+td a {
+	color: #000000;
+}
+.footerText {
+	color: #666666;
+}
+.regPrice {
+	font-family: verdana, arial;
+	font-size: 10px;
+	color: #666666;
+}
+.orderBold {
+	font-family: verdana, arial;
+	font-size: 10px;
+	color: #333333;
+	font-weight: bold;
+}
+.orderInfo {
+	font-family: verdana, arial;
+	font-size: 10px;
+	color: #333333;
+	padding: 3 0 3 0px;
+}
+a {
+	color: #0033FF;
+}
+a:hover {
+	color: #ff0000;
+	text-decoration: none;
+}
+.Hidden {
+	visibility: hidden;
+}
+.Visible {
+	visibility: visible;
+}
+.borderColor {
+	background-color: #FFFFFF;
+}  
+.offerHeadline {
+	font-family:Verdana,Arial,Helvetica,sans-serif;
+	font-size: 19px;
+	font-weight: bold;
+	color: #ee3226;
+}
+.offerHeadline a {
+	font-family:Verdana,Arial,Helvetica,sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #0033FF;
+}
+td a:hover {
+	color: #CC0099;
+}
+.salePriceLarge {
+	font-family:Verdana,Arial,Helvetica,sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #ee3226;
+}
+.salePriceMedium {
+	font-family:Verdana,Arial,Helvetica,sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #ee3226;
+}
+.priceInfo {
+	font-family:Verdana,Arial,Helvetica,sans-serif;
+	font-size: 10px;
+	color: #ee3226;
+}
+.subhead {
+	font-family:Verdana,Arial,Helvetica,sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #ee3226;
+}
+.subSubHead {
+	font-family:Verdana,Arial,Helvetica,sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #000000;
+}
+.on		{ display: block; }
+.off		{ display: none; }
+</style>
+
+
+<script>
+
+
+
+function debugForm(){
+var str = "";
+var elements = document.getElementById( "oaeForm" ).elements;
+	for( var i = 0 ; i < elements.length ; i++ ) {
+		str += elements[i].id + " : " + elements[i].value + "\n";
+	}
+	alert( str );
+}
+
+function submitForm(form){
+	if(!processing){
+		if(validateForm(form)){
+		
+		
+		
+		
+		if(validCCRequest && document.funnel.payId && document.funnel.payId.value==''){
+		getPayId();
+		}else{
+		
+		processing = true;
+		document.funnel.action="/webapp/wcs/stores/servlet/OaePleaseWait";
+		// debugForm();
+		document.funnel.submit();
+		
+		}
+		
+		
+		
+		}
+	}	
+}
+
+
+</script>
+
+
+
+<link rel="stylesheet" type="text/css" href="/webapp/wcs/stores/servlet/oae/css/landing.css">
+
+
+
+
+</head>
+
+<body onload="floridaRedirect(document.getElementById('state_bill').value)">
+<!-- BEGIN COREMETRICS SUPPORT -->
+<script language="javascript1.2" src="/webapp/wcs/stores/servlet/oae/javascripts/coremetrics/eluminate.js" type="text/javascript"></script>
+<script language="javascript1.2" src="/webapp/wcs/stores/servlet/oae/javascripts/coremetrics/cmdatatagutils.js" type="text/javascript"></script>
+<script language="javascript1.2" type="text/javascript">
+<!--
+cmSetProduction();
+cmCreatePageviewTag("OAE-BKE-60367-Landing", "OAE-BKE", null, null);
+
+//-->
+</script>
+<!-- END COREMETRICS -->
+	
+<form id="oaeForm" name="funnel" method="post" action="" autocomplete="off">
+<input name="authToken" value="82538157%2c91nJ3s8xSot94d4L3ARA6pAalUE%3d" type="hidden">
+<font color="#000000"> 
+
+
+<!--HEADER TABLE BEGINS-->
+<table class="entryFormHeaderTable" align="center" cellpadding="0" cellspacing="0">
+<tbody><tr><td class="entryFormHeaderTableTd"><!--HEADER CELL. INSERT CONTENT HERE &nbsp;-->
+	
+
+	
+
+
+   
+  	<img id="oqeBannerSection" style="display:block;" src="/wcsstore/oae/images/catalog/en_us/bke/mag/banners/2023623_BKE_oae_720.jpg">
+  </td></tr>	
+		
+		
+	
+</tbody></table>
+<!--HEADER TABLE ENDS--> <!--BODY TABLE BEGINS-->
+<table class="entryFormBodyTable" align="center" cellpadding="0" cellspacing="0">
+	<tbody><tr>
+		
+		<td class="entryFormBodyTableTd"><!--RIGHT SIDE TABLE BEGINS-->
+		<table width="100%" border="0" cellpadding="0" cellspacing="0">
+			<!--TABLE-->
+			<!-- Landing page supporting premium -->
+			<!-- End landing page supporting premium -->
+
+			<tbody><tr>
+				<td class="entryFormBodyTableTd"><!--OFFER COPY TABLE BEGINS-->
+				<table width="100%" align="center" bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0">
+					
+					<tbody><tr>
+						<td class="entryFormBodyTableTd"><!--OFFER COPY CELL. INSERT CONTENT HERE-->
+						
+								
+						
+							<div id="offerCopySection"></div>
+							
+						
+						</td>
+					</tr>
+				</tbody></table>
+				<!--OFFER TABLE ENDS--></td>
+			</tr>
+
+			<tr>
+				<td valign="top"><!--FORM TABLE BEGINS-->
+				<table width="100%" align="center" bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0">
+					
+						
+						
+							<input name="CmdName" value="/webapp/wcs/stores/servlet/OaeOrderProcessCmd" type="hidden"><input name="fromEntry" value="true" type="hidden"><input name="mktOfferId" value="60367" type="hidden"><input name="keycode" value="I3FW0A05" type="hidden"><input name="source" value="Rodale" type="hidden"><input name="splitId" value="" type="hidden"><input name="storeId" value="10057" type="hidden"><input name="userId" value="82538157" type="hidden"><input name="smartcode" value="DFP25977362173X16217533" type="hidden"><input name="mktOfferCategory" value="Magazines" type="hidden"><input name="mktOfferCountry" value="US" type="hidden"><input name="mktOfferBrand" value="BKE" type="hidden">
+						
+						
+						
+					<tbody><tr>
+						<td class="borderColor" colspan="3" height="10" valign="top"><img src="/wcsstore/oae/images/catalog/nothing.gif" height="6" width="6"></td>
+					</tr>
+					<tr>
+						<td class="borderColor entryFormBorder1"><img src="/wcsstore/oae/images/catalog/nothing.gif" height="1" width="10"></td>
+						<td class="entryFormBorder2"><img src="/wcsstore/oae/images/catalog/nothing.gif" height="3" width="6"></td>
+						<td style="padding: 6px">
+						<div id="errorMessages"></div><div id="recepientAddr_bill" style="display: block;"></div><table border="0" cellpadding="3" cellspacing="0"><input id="actNoOfRecepients" name="actNoOfRecepients" value="" type="hidden"><tbody><tr><td colspan="2"><table class="entryFormAddresstable" cellpadding="0" cellspacing="0"><tbody><tr><td class="subhead">Enter Your Address</td><td align="right"></td></tr></tbody></table></td></tr><tr><td colspan="2">Items marked with an asterisk (*) are required.</td></tr><tr><td width="130">Country*</td><td><select size="1" id="country_bill" name="country_bill" onchange="chooseOffer(document.funnel,this.value,'60409')"><option value="US" selected="">United States</option><option value="CA">Canada</option></select></td></tr><tr id="TRFIRSTNAME_bill"><td id="TDFIRSTNAME_bill">First Name*</td><td><input id="fname_bill" name="firstName_bill" size="15" maxlength="35" value="" type="text"></td></tr><tr id="TRLASTNAME_bill"><td id="TDLASTNAME_bill">Last Name*</td><td><input id="lname_bill" name="lastName_bill" size="15" maxlength="35" value="" type="text"></td></tr><tr id="TRADDRESS_bill"><td id="TDADDRESS_bill" nowrap="">Address Line 1*</td><td><input id="adr1_bill" name="address1_bill" size="30" maxlength="50" value="" type="text"></td></tr><tr><td nowrap="">Address Line 2</td><td><input id="adr2_bill" name="address2_bill" size="30" maxlength="50" value="" type="text"></td></tr><tr id="TRCITY_bill"><td id="TDCITY_bill">City*</td><td><input id="cty_bill" name="city_bill" size="24" maxlength="30" value="" type="text"></td></tr><tr id="TRSTATE_bill"><td id="TDSTATE_bill">State*</td><td><select id="state_bill" name="state_bill" onchange="floridaRedirect(this.value)"><option value="">Select State</option><option value="AL">Alabama</option><option value="AK">Alaska</option><option value="AS">American Samoa</option><option value="AZ">Arizona</option><option value="AR">Arkansas</option><option value="AA">Armed Forces Americas</option><option value="AE">Armed Forces Europe</option><option value="AP">Armed Forces Pacific</option><option value="CA">California</option><option value="CO">Colorado</option><option value="CT">Connecticut</option><option value="DE">Delaware</option><option value="DC">District of Columbia</option><option value="FL">Florida</option><option value="GA">Georgia</option><option value="GU">Guam</option><option value="HI">Hawaii</option><option value="ID">Idaho</option><option value="IL">Illinois</option><option value="IN">Indiana</option><option value="IA">Iowa</option><option value="KS">Kansas</option><option value="KY">Kentucky</option><option value="LA">Louisiana</option><option value="ME">Maine</option><option value="MD">Maryland</option><option value="MA">Massachusetts</option><option value="MI">Michigan</option><option value="MN">Minnesota</option><option value="MS">Mississippi</option><option value="MO">Missouri</option><option value="MT">Montana</option><option value="NE">Nebraska</option><option value="NV">Nevada</option><option value="NH">New Hampshire</option><option value="NJ">New Jersey</option><option value="NM">New Mexico</option><option value="NY">New York</option><option value="NC">North Carolina</option><option value="ND">North Dakota</option><option value="MP">Northern Mariana Islands</option><option value="OH">Ohio</option><option value="OK">Oklahoma</option><option value="OR">Oregon</option><option value="PW">Palau</option><option value="PA">Pennsylvania</option><option value="PR">Puerto Rico</option><option value="RI">Rhode Island</option><option value="SC">South Carolina</option><option value="SD">South Dakota</option><option value="TN">Tennessee</option><option value="TX">Texas</option><option value="VI">U.S. Virgin Islands</option><option value="UT">Utah</option><option value="VT">Vermont</option><option value="VA">Virginia</option><option value="WA">Washington</option><option value="WV">West Virginia</option><option value="WI">Wisconsin</option><option value="WY">Wyoming</option></select></td></tr><tr id="TRZIP_bill"><td id="TDZIP_bill">Zip Code*</td><td><input id="zip_bill" name="zipCode_bill" maxlength="10" size="10" value="" type="text"></td></tr><tr id="TRZIP_bill"><td id="TDZIP_bill" nowrap=""></td></tr><tr id="TREMAIL1_bill"><td id="TDEMAIL1_bill">Email Address*</td><td><input id="eml1_bill" name="email1_bill" size="40" maxlength="50" value="" type="text"></td></tr><tr><td></td><td class="privacyRights"><a href="http://www.rodaleinc.com/your-privacy-rights" target="_new">Your Privacy Rights</a></td></tr></tbody></table>
+						</td>
+					</tr>
+					
+					
+					<input name="optinBrand" value="Y" type="hidden">
+					
+					
+						<tr><td class="borderColor entryFormBorder1"><img src="/wcsstore/oae/images/catalog/nothing.gif" height="1" width="1"></td><td class="entryFormBorder2"><img src="/wcsstore/oae/images/catalog/nothing.gif" height="1" width="1"></td><td style="padding: 6px"><table border="0" cellpadding="3" cellspacing="0"><tbody><tr><td></td></tr></tbody></table><table border="0" cellpadding="3" cellspacing="0"></table><div id="copyAboveNewsletter" style="padding:0px 0px 5px 0px;"><table width="480" align="center" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td width="440"><p><font size="2.8"><font color="ee3226"><b>PRE-SUMMER BLOWOUT offer:</b></font><font size="2.8"> Get 1 year (11 issues) of Bicycling for just $11 plus FREE shipping. That's $1 an issue! </font></font></p><p><font size="2.8"><b> </b></font></p><center><font size="2.8"><b><font size="2.6"><font color="ee3226">SATISFACTION GUARANTEE:</font></font></b><font size="2.6"> If for any reason you are not 100% satisfied with your subscription you can cancel by contacting customer service within 30 days of your order and receive a full refund. </font><br>
+      <br>
+    <p></p></font></center></td>
+    <td width="20">&nbsp;</td>
+  </tr>
+</tbody></table></div><table border="0" cellpadding="3" cellspacing="0"><tbody><tr><td>&nbsp;</td><td colspan="2" valign="top"><table width="100%" border="0"><tbody><tr><td style="width:5%"><input name="news1" value="236" checked="" type="checkbox"></td><td valign="top">Get the latest information about wheels and deals straight from the editors, plus answers to cycling's most nagging questions on how to ride faster, train smarter, eat better, and maintain your bike like a pro.</td></tr></tbody></table></td></tr></tbody></table></td></tr>
+					
+					<!-- Begin Survey questions section -->
+					
+					<!-- End Survey questions section -->
+					<tr>
+						<td class="borderColor entryFormBorder1"><img src="/wcsstore/oae/images/catalog/nothing.gif" height="0" width="0"></td>
+						<td class="entryFormBorder2"><img src="/wcsstore/oae/images/catalog/nothing.gif" height="0" width="0"></td>
+						<td style="padding: 6px">
+						
+							<div id="paydiv"></div><input id="payId" name="payId" value="" type="hidden"> <div widgetid="hangOnForPay" style="display: none;" id="hangOnForPay" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" aria-describedby="hangOnForPay_label" class="dijitProgressBar dijitProgressBarEmpty" role="progressbar"><div style="width: 0%;" dojoattachpoint="internalProgress" class="dijitProgressBarFull"><div class="dijitProgressBarTile" role="presentation"></div><span style="visibility:hidden">&nbsp;</span></div><div dojoattachpoint="labelNode" class="dijitProgressBarLabel" id="hangOnForPay_label">0%</div><img src="/webapp/wcs/stores/servlet/oae/javascripts/dojo-release-1.6/dijit/themes/a11y/indeterminate_progress.gif" dojoattachpoint="indeterminateHighContrastImage" class="dijitProgressBarIndeterminateHighContrastImage" alt=""></div><table border="0" cellpadding="3" cellspacing="0"><tbody><tr>	<td colspan="2" class="subhead">Enter Your Payment Information</td></tr><tr>	<td colspan="3">		<table border="0" cellpadding="0" cellspacing="0">		<tbody><tr>			<td class="entryFormPaymentTableTd1">Payment Method</td>			<td class="entryFormPaymentTableTd2">			<input id="creditCardPayment" checked="checked" name="paymentMethod" value="CC" type="hidden"> Credit Card&nbsp;&nbsp;&nbsp;			</td>		</tr>		</tbody></table>		</td>	</tr></tbody></table><div id="paymentMethodDiv"></div><div id="ccPaymentMethodDiv"></div><div id="ccInfo" class="on"><table border="0" cellpadding="3" cellspacing="0"><tbody><tr id="TRCCIMAGE"><td id="TDCCIMAGE" class="entryFormPaymentTableTd1"></td><td><img src="/wcsstore/oae/images/catalog/credit_cards_icons.gif" alt="Accepted Credit Cards" border="0"></td></tr><tr id="TRCCBRAND"><td id="TDCCBRAND" class="entryFormPaymentTableTd1">Card Type*</td><td class="entryFormPaymentTableTd2"><select id="cardBrand" name="cardBrand"><option value="">Select One</option><option value="MasterCard">MasterCard</option><option value="VISA">VISA</option><option value="American Express">American Express</option><option value="Discover">Novus/Discover</option></select></td></tr><tr id="TRCCNUMBER"><td id="TDCCNUMBER">Card Number*</td><td><input id="cardNumber" name="cardNumber" size="24" value="" maxlength="16" type="text"></td></tr><tr id="TRCCEXPIRY"><td id="TDCCEXPIRY">Expiration Date*</td><td><select id="cardExpiryMonth" name="cardExpiryMonth"><option value="">Select Month</option><option value="01">01 January</option><option value="02">02 February</option><option value="03">03 March</option><option value="04">04 April</option><option value="05">05 May</option><option value="06">06 June</option><option value="07">07 July</option><option value="08">08 August</option><option value="09">09 September</option><option value="10">10 October</option><option value="11">11 November</option><option value="12">12 December</option></select> <select id="cardExpiryYear" name="cardExpiryYear"><option value="">Select Year</option><option value="2013">2013</option><option value="2014">2014</option><option value="2015">2015</option><option value="2016">2016</option><option value="2017">2017</option><option value="2018">2018</option><option value="2019">2019</option><option value="2020">2020</option><option value="2021">2021</option><option value="2022">2022</option></select></td></tr></tbody></table></div><div id="billingSchedule" class="off"><table border="0" cellpadding="3" cellspacing="0"></table></div>
+						
+						
+						<table width="100%" align="center" border="0" cellpadding="3" cellspacing="0">
+						
+						<tbody><tr>
+							<td colspan="2"><br></td>
+						</tr>
+						<tr>
+							<td colspan="2" align="left">
+								<table border="0" cellpadding="0" cellspacing="1"><tbody><tr><td style="width:5%"><input name="instant" value="284333" type="checkbox"></td><td>Yes!  Please add <b> Bicycling Training Journal</b> to my order.</td></tr></tbody></table><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td><img src="/wcsstore/oae/images/catalog/en_us/bks/instant_upsells/2020707__bktraining_IU.jpg "></td></tr></tbody></table>
+							</td>
+						</tr>
+						
+						
+							<tr>
+								<td colspan="2"><br></td>
+							</tr>
+							<tr>
+								<td colspan="2" align="left">
+
+
+<div id="autoRenewSection" style="border: .2em solid red;padding: 3px;"><center> Credit Card Orders: I authorize you to charge my credit card for the amount and term I've selected above.  If I decide not to continue my subscription, I can cancel by contacting customer service via phone, email or online as listed below within 30 days of receipt and the full amount will be refunded to my credit card.   </center><br></div>
+
+
+
+								</td>
+							</tr>
+						
+						
+							<tr><td colspan="2" align="center"><div id="oaInfo"><a id="placeOrderButton_main" href="javascript:void(0)" onclick="TeaLeaf.Event.tlFlushQueue(true);popwindow=true;submitForm(document.funnel,this); return false;"><img src="/wcsstore/oae/images/catalog/en_us/bke/mag/buttons/2023623_BKE_oae_place.gif" alt="Place Order" border="0"></a></div></td></tr>							
+							
+	
+								<tr>
+									<td colspan="2" align="center">
+										Order subject to approval
+									</td>
+								</tr>
+														
+						
+							<!-- footer -->
+							<tr>
+								<td colspan="2" align="center">
+									<table width="100%" bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0">
+										<tbody><tr>
+											<td><br style="line-height: 15px">
+											</td>
+										</tr>
+										<tr>
+											<td><br style="line-height: 20px">
+											</td>
+										</tr>
+										<tr>
+											<td align="center" bgcolor="#FFFFFF">
+											<span class="footerText"><script language="JavaScript">
+<!-- This script and many more are available free online at -->
+<!-- The JavaScript Source!! http://javascript.internet.com -->
+ 
+<!-- Begin
+function popUp(URL) {
+day = new Date();
+id = day.getTime();
+eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=yes,location=0,statusbar=0,menubar=0,resizable=yes,width=350,height=450');");
+}
+// End -->
+</script>
+											
+											</span></td>	
+										</tr>
+										
+										<tr>
+										   <td>	
+											
+												<table class="footerForMagTable" align="center" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="footer" valign="top" align="center">Your 100% Satisfaction is Our Goal. <br> Contact customer service with questions or to cancel a subscription. <br>400 South 10th Street • Emmaus, PA 18098 • (866) 387-0509 • <a href="http://www.rodaleinc.com/customer-service" target="_blank" class="footer"> http://www.rodaleinc.com/customer-service</a><br><a href=" http://www.rodale.com/cs/index.html" class="footer"> E-mail: customer_service@rodale.com</a><a href="http://www.rodaleinc.com/your-privacy-rights" target="_blank" class="footer"> • Your Privacy Rights <br></a> <br></td></tr></tbody></table>
+	
+												<br>
+										  </td>
+										</tr>  	
+
+								<tr>		
+								<td colspan="2" align="center">
+									<table width="100%" align="center">
+										<tbody><tr>
+											<td align="center"><script src="https://seal.verisign.com/getseal?host_name=secure.rodale.com&amp;size=M&amp;use_flash=YES&amp;use_transparent=YES"></script><a href="javascript:vrsn_splash()" tabindex="-1"><img name="seal" src="https://seal.verisign.com/getseal?at=0&amp;sealid=1&amp;dn=secure.rodale.com&amp;lang=en" oncontextmenu="return false;" alt="Click to Verify - This site has chosen an SSL Certificate to improve Web site security" border="true"></a>
+									
+									<!-- td# 2887&nbsp;&nbsp;&nbsp;
+									&nbsp;<a href="http://www.thedma.org" target="_new"><img
+										src="/wcsstore/oae/images/catalog/logo_dmaMember.gif" width="130"
+										height="86" border="0"/></a> -->
+											</td>
+										</tr>
+									</tbody></table>
+								</td>
+							</tr>									
+										
+	
+	
+						<tr>
+								<td colspan="2" align="center">
+									<table width="100%" align="center">
+										<tbody><tr>
+											<td align="center"><span class="footerText">© 2013 Rodale Inc. All rights reserved.</span> 
+											</td>
+										</tr>
+									</tbody></table>
+								</td>
+							</tr>									
+	
+										
+										
+										
+									</tbody></table>
+								</td>
+							</tr>
+							<!-- end footer -->
+						</tbody></table>
+						</td>
+					</tr>
+					<tr>
+						<td class="borderColor" colspan="3" height="10" valign="bottom"><img src="/wcsstore/oae/images/catalog/nothing.gif" height="10" width="10"></td>
+					</tr>
+					
+
+<script language="JavaScript">
+
+
+
+
+
+
+	
+	
+	
+
+
+
+ 
+	
+	
+	 
+
+
+
+</script>
+				</tbody></table>
+				<!--FORM TABLE ENDS--></td>
+			</tr>
+		</tbody></table>
+		<!--RIGHT SIDE TABLE ENDS--></td>
+		<!--SIDEBAR TABLE BEGINS--><td class="entryFormSidebarTableTd" bgcolor="#bbd1df"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="entryFormSidebarTableTd"><!--SIDEBAR CELL. INSERT CONTENT HERE --><div id="sideBarCopySection"></div><img src="/wcsstore/oae/images/catalog/en_us/bke/mag/products/2023623_BKE_oae_212.jpg"><br><br style="line-height: 5px"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td style="padding: 5 5 5 5px" valign="top"></td></tr></tbody></table></td></tr></tbody></table></td><!--SIDEBAR TABLE ENDS-->
+	</tr>
+</tbody></table>
+
+</font>
+
+
+
+
+
+</form>
+
+
+
+</body>

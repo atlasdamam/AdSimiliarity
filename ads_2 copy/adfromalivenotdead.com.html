@@ -1,0 +1,814 @@
+<head><title>
+	Habitat for Humanity China
+</title><link href="main.css" rel="stylesheet" type="text/css"><link href="default.css" rel="stylesheet" type="text/css"><link href="core.css" rel="stylesheet" type="text/css">
+    <script async="" type="text/javascript" src="http://static.woopra.com/js/woopra.js"></script><script src="http://www.google-analytics.com/ga.js" async="" type="text/javascript"></script><script src="../js/main/jquery-1.4.2.min.js"></script>
+    <script src="../js/normal/jsMain.js"></script>
+    <script>
+        var intIndex = 0;
+    </script>
+    <script type="text/JavaScript">
+    <!--
+            function MM_swapImgRestore() { //v3.0
+                var i, x, a = document.MM_sr; for (i = 0; a && i < a.length && (x = a[i]) && x.oSrc; i++) x.src = x.oSrc;
+            }
+
+            function MM_preloadImages() { //v3.0
+                var d = document; if (d.images) {
+                    if (!d.MM_p) d.MM_p = new Array();
+                    var i, j = d.MM_p.length, a = MM_preloadImages.arguments; for (i = 0; i < a.length; i++)
+                        if (a[i].indexOf("#") != 0) { d.MM_p[j] = new Image; d.MM_p[j++].src = a[i]; } 
+                }
+            }
+
+            function MM_findObj(n, d) { //v4.01
+                var p, i, x; if (!d) d = document; if ((p = n.indexOf("?")) > 0 && parent.frames.length) {
+                    d = parent.frames[n.substring(p + 1)].document; n = n.substring(0, p);
+                }
+                if (!(x = d[n]) && d.all) x = d.all[n]; for (i = 0; !x && i < d.forms.length; i++) x = d.forms[i][n];
+                for (i = 0; !x && d.layers && i < d.layers.length; i++) x = MM_findObj(n, d.layers[i].document);
+                if (!x && d.getElementById) x = d.getElementById(n); return x;
+            }
+
+            function MM_swapImage() { //v3.0
+                var i, j = 0, x, a = MM_swapImage.arguments; document.MM_sr = new Array; for (i = 0; i < (a.length - 2); i += 3)
+                    if ((x = MM_findObj(a[i])) != null) { document.MM_sr[j++] = x; if (!x.oSrc) x.oSrc = x.src; x.src = a[i + 2]; }
+        }
+        //-->
+/*
+        $(
+            function() {
+                $(".language").each(
+                    function() {
+                        $(this).mouseover(
+                            function() {
+
+                        //alert($(this).offset().left);
+                               
+                        $("#commingsoon").remove();
+                                
+                                objCom = $("<div id='commingsoon'><img src='images/coming2.gif' /></div>");
+                                $("body").append(objCom);
+
+                                objCom.css("position", "absolute");
+                                objCom.css("z-index", "1000");
+                                objCom.css("left", $(this).offset().left);
+                                objCom.css("top", $(this).offset().top + $(this).height());
+
+                            }
+                        );
+
+                        $(this).mouseout(
+                            function() {
+                        $("#commingsoon").remove();
+                            }
+                        );
+
+                    }
+                );
+            }
+        );
+        */
+        $(
+            function() {
+                //alert("??");
+                objLo = $("<div id='loginnow'></div>");
+                $("body").append(objLo);
+
+                objLo.css("position", "absolute");
+                objLo.css("z-index", "1000");
+               // objLo.css("background", "red");
+                objLo.css("width", "300");
+                objLo.css("height", "30");
+                objLo.css("top", 45);
+                objLo.css("text-align", "left");
+               // alert($("#hablogo").offset().left);
+                objLo.css("left", $("#hablogo").offset().left + 200); //($(window).width() - 1000) / 2 + 200);
+                objLo.load("tpl/logincheck.aspx");
+            }
+           );
+</script>
+    
+
+    
+
+<script>
+    $(
+        function() {
+            $("#leftbanner").load("leftbanner?i=5");
+
+        }
+    );
+</script>
+<style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}
+.fb_invisible{display:none}
+.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}
+.fb_reset > div{overflow:hidden}
+.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}
+.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}
+.fb_dialog_content{background:#fff;color:#333}
+.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px;top:8px\9;right:7px\9}
+.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}
+.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}
+.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}
+.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}
+.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}
+.fb_dialog_top_left,
+.fb_dialog_top_right,
+.fb_dialog_bottom_left,
+.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}
+/* @noflip */
+.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}
+/* @noflip */
+.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}
+/* @noflip */
+.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}
+/* @noflip */
+.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right,
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right{width:10px;height:100%}
+.fb_dialog_vert_left{margin-left:-10px}
+.fb_dialog_vert_right{right:0;margin-right:-10px}
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{width:100%;height:10px}
+.fb_dialog_horiz_top{margin-top:-10px}
+.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}
+.fb_dialog_iframe{line-height:0}
+.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}
+.fb_dialog_content .dialog_title > span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif)
+no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}
+body.fb_hidden{-webkit-transform:none;height:100%;margin:0;left:-10000px;overflow:visible;position:absolute;top:-10000px;width:100%
+}
+.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif)
+white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}
+.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}
+#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}
+#fb-root #fb_dialog_ipad_overlay.hidden{display:none}
+.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}
+.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0 0, 0 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}
+.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%
+}
+.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0 0, 0 100%, from(#4966A6),
+color-stop(0.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset,
+rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}
+.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}
+.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}
+.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}
+#fb_dialog_loader_close{float:left}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}
+.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}
+.fb_iframe_widget iframe{position:absolute}
+.fb_iframe_widget_lift{z-index:1}
+.fb_hide_iframes iframe{position:relative;left:-10000px}
+.fb_iframe_widget_loader{position:relative;display:inline-block}
+.fb_iframe_widget_fluid{display:inline}
+.fb_iframe_widget_fluid span{width:100%}
+.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}
+.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_connect_bar_container div,
+.fb_connect_bar_container span,
+.fb_connect_bar_container a,
+.fb_connect_bar_container img,
+.fb_connect_bar_container strong{background:none;border-spacing:0;border:0;direction:ltr;font-style:normal;font-variant:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal;vertical-align:baseline}
+.fb_connect_bar_container{position:fixed;left:0 !important;right:0 !important;height:42px !important;padding:0 25px !important;margin:0 !important;vertical-align:middle !important;border-bottom:1px solid #333 !important;background:#3b5998 !important;z-index:99999999 !important;overflow:hidden !important}
+.fb_connect_bar_container_ie6{position:absolute;top:expression(document.compatMode=="CSS1Compat"? document.documentElement.scrollTop+"px":body.scrollTop+"px")}
+.fb_connect_bar{position:relative;margin:auto;height:100%;width:100%;padding:6px 0 0 0 !important;background:none;color:#fff !important;font-family:"lucida grande", tahoma, verdana, arial, sans-serif !important;font-size:13px !important;font-style:normal !important;font-variant:normal !important;font-weight:normal !important;letter-spacing:normal !important;line-height:1 !important;text-decoration:none !important;text-indent:0 !important;text-shadow:none !important;text-transform:none !important;white-space:normal !important;word-spacing:normal !important}
+.fb_connect_bar a:hover{color:#fff}
+.fb_connect_bar .fb_profile img{height:30px;width:30px;vertical-align:middle;margin:0 6px 5px 0}
+.fb_connect_bar div a,
+.fb_connect_bar span,
+.fb_connect_bar span a{color:#bac6da;font-size:11px;text-decoration:none}
+.fb_connect_bar .fb_buttons{float:right;margin-top:7px}
+.fb_edge_widget_with_comment{position:relative;*z-index:1000}
+.fb_edge_widget_with_comment span.fb_edge_comment_widget{position:absolute}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget{z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget .FB_Loader{left:0;top:1px;margin-top:6px;margin-left:0;background-position:50% 50%;background-color:#fff;height:150px;width:394px;border:1px #666 solid;border-bottom:2px solid #283e6c;z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.dark .FB_Loader{background-color:#000;border-bottom:2px solid #ccc}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.siderender
+.FB_Loader{margin-top:0}
+.fbpluginrecommendationsbarleft,
+.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}
+/* @noflip */
+.fbpluginrecommendationsbarleft{left:10px}
+/* @noflip */
+.fbpluginrecommendationsbarright{right:10px}</style></head>
+<body data-twttr-rendered="true"><script charset="utf-8" src="http://tajs.qq.com/jiathis.php?uid=1626433&amp;dm=habitatchina.org"></script><link type="text/css" rel="stylesheet" href="http://v1.jiathis.com/code/css/jiathis_share.css"><iframe style="position: fixed; display: none; opacity: 0;" frameborder="0"></iframe><div style="position: absolute; z-index: 1000000000; display: none; top: 50%; left: 50%; overflow: auto;" class="jiathis_style"></div><div style="position: absolute; z-index: 1000000000; display: none; overflow: auto;" class="jiathis_style"></div><iframe src="http://v1.jiathis.com/code/jiathis_utility.html" style="display: none;" frameborder="0"></iframe>
+    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tbody><tr>
+        <td id="menubg" valign="middle" align="center" background="images/sub_bulebg.jpg">
+        <table "="" width="1000" border="0" cellpadding="0" cellspacing="0">
+          <tbody><tr>
+            <td valign="top" align="center" background="images/top_header.jpg">
+            <table width="1000" border="0" cellpadding="0" cellspacing="0">
+              <tbody><tr>
+                <td height="142" valign="top" width="24%"><a href="./default.aspx"><img id="hablogo" src="images/logo.gif" border="0"></a></td>
+                <td valign="top" width="76%"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                    <tbody><tr>
+                      <td height="32" align="right"><span class="language_current">English</span>  |  <a href="../changelang.aspx?lang=zh_TW" class="language">???</a>  | <a href="../changelang.aspx?lang=zh_CN" class="language">???</a> </td>
+                    </tr>
+                  </tbody></table>
+                  
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                    <tbody><tr>
+                      <td height="42" width="53%">&nbsp;</td>
+                      <td valign="top" width="26%" align="center">
+                      <table width="197" border="0" cellpadding="0" cellspacing="0">
+                      <tbody><tr>
+                        <td width="77%"><input id="sss" name="searchstr" class="search_input" value="Search" type="text"></td>
+                        <td width="23%"><a href="javascript:;" onclick="jsSearchContentNow()"><img src="images/search_icon.gif" height="24"></a></td>
+                      </tr>
+                    </tbody></table>
+                    
+                      
+                     
+<script>
+$(
+    function() {
+        $("#sss").focus(
+            function() {
+                if ($(this).val() == "Search")
+                    $(this).val("");
+                $(this).css('color' , '#000000');
+
+            }
+
+        );
+
+        $("#sss").blur(
+            function() {
+                if ($(this).val() == "")
+                    $(this).val("Search");
+                $(this).css('color', '#A4DEF5');
+
+
+            }
+
+        );
+
+        $("#sss").keypress(
+            function(e) {
+                if (e.keyCode == 13) {
+                    jsSearchContentNow()
+                }
+            }
+        );
+    }
+);
+
+    function jsSearchContentNow() {
+        if ($("#sss").val() != "" && $("#sss").val() != "Search") {
+            window.location.href = "search?q="+$("#sss").val();
+        }
+}
+</script>
+
+      </td>
+                      <td width="21%" align="right"><table width="142" border="0" cellpadding="0" cellspacing="0">
+                        <tbody><tr>
+                          <td width="28"><a href="http://www.facebook.com/habitatchina.fanpage" target="_blank"><img src="images/icon_facebook.gif" height="38" width="25"></a></td>
+                          <td width="28"><a href="http://weibo.com/habitatchina" target="_blank"><img src="images/icon_sina.gif" height="38" width="23"></a></td>
+                          <td width="28"><a href="http://www.flickr.com/photos/habitatchina/" target="_blank"><img src="images/icon_fr.gif" height="38" width="23"></a></td>
+                          <td width="28"><a href="http://u.youku.com/habitatchina" target="_blank"><img src="images/icon_youku.gif" height="38" width="23"></a></td>
+                          <td width="28"><a href="http://www.youtube.com/habitatchina" target="_blank"><img src="images/icon_youtube.gif" height="38" width="23"></a></td>
+                          <!--
+                          <td width="24"><img src="images/icon_rss.gif" width="23" height="38" /></td>
+                          -->
+                        </tr>
+                      </tbody></table></td>
+                    </tr>
+                  </tbody></table>
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                    <tbody><tr>
+                      <td height="38"><div class="menu">
+          <ul>
+	  	    <li><a class="hide" href="./">Home</a>  
+            </li><li><a class="hide" href="mission" a="corporate">About Habitat</a>         
+			      <ul class="left">						
+							    <li><a href="mission">Vision &amp; Mission</a></li>
+							    <li><a href="history">History</a></li>
+							    <li><a href="sitemap">Site Map</a></li>
+							    <li><a href="question"> Q &amp; A  </a></li>	
+			        </ul>
+            </li>
+            <li><a class="hide" href="where_bulit" a="our_business.html">Where We Build </a>
+                      
+
+			   	    <ul class="left">
+                        <li><a class="hide" href="built_hk" style="width:195px">Hong Kong</a>
+						    <ul id="ctl00_b1" class="left" style="margin-left:0px;"><li><a href="built_hk?i=85">Green Joyful Home</a></li> <li><a href="built_hk?i=19">Campus Beautification Program</a></li> <li><a href="built_hk?i=89">MW Habitat Fly for Hope</a></li> <li><a href="built_hk?i=18">Tai O Project</a></li> </ul>
+					    </li>
+                        <li><a class="hide" href="built_china" style="width:195px">China</a>
+						    <ul id="ctl00_b2" class="left" style="margin-left:0px;"><li><a href="built_chinaprojects?i=20">Shanghai</a></li> <li><a href="built_chinaprojects?i=21">Sichuan</a></li> <li><a href="built_chinaprojects?i=22">Yunnan</a></li> <li><a href="built_chinaprojects?i=23">Guangdong</a></li> <li><a href="built_chinaprojects?i=24">Guangxi</a></li> </ul>
+    					
+					    </li>
+                        <li><a class="hide" href="built_int" style="width:195px">International</a>
+						    	
+					    </li>
+					    <li><a href="response" style="width:195px">Disaster Rehabilitation Project</a></li>
+					    <li><a href="story" style="width:195px">Family Stories </a></li>
+                        
+                    </ul>
+    			 
+      
+            </li>
+            <li> <a class="hide" href="involved">Get Involved</a>
+				  <ul>
+					  <li><a class="hide" href="individual" style="width:153px">Individual</a> 
+							<ul id="ctl00_ind_section" class="left" style="margin-left:-42px"><li><a href="ind_detail?id=385" style="width:200px">Green Joyful Home</a></li><li><a href="ind_detail?id=372" style="width:200px">New Hope Build</a></li><li><a href="ind_detail?id=373" style="width:200px">Adopt A Brick</a></li><li><a href="ind_detail?id=154" style="width:200px">Global Village</a></li><li><a href="ind_detail?id=227" style="width:200px">Friends of Habitat</a></li><li><a href="ind_detail?id=153" style="width:200px">Tai O Project</a></li></ul>
+						</li>				   
+					   <li><a class="hide" href="corporations" style="width:153px">Corporation &amp; Associates</a>
+							<ul class="left" style="margin-left:-42px">
+								  <li><a href="company">Corporation</a></li>
+								 <li><a href="church">Church</a></li>
+								 <li><a href="school">School</a></li>
+							</ul>
+						</li>
+				   
+					<li><a href="partner" style="width:153px">Our Partners </a> </li>
+					<li><a href="global" style="width:153px">Global Village</a> </li>	
+				 </ul>
+        	</li>
+		    <li><a class="hide" href="news">What's New</a>
+              <ul>
+                    <li><a href="news_event">Up-coming Events</a></li> 
+				    <li><a href="news_latest">Latest News</a></li>
+				    <li><a href="news_press">Press Releases</a></li>
+				    <li><a href="news_publication">Publications</a></li>
+                </ul>
+             
+            </li>
+            <li><a class="hide" href="media">Media Center</a>  		
+			    <ul>
+				    <li><a class="hide" href="media_photo">Photos</a>	</li>		  
+				    <li><a class="hide" href="media_video">Videos</a> </li>
+				    <li><a class="hide" href="media_press">Press Releases</a> </li>	
+				    <li><a class="hide" href="media_publication">Publications</a> </li>
+			    </ul>
+	        </li>
+                    
+            <li><a class="hide" href="member">Member Zone</a>  				
+			    <ul>
+				   	  
+				    <li><a class="hide" href="reg">New User Registration</a> </li>
+				    <li><a class="hide" href="enews">Subscribe e-Newsletter</a></li>
+				     <li><a class="hide" href="construct">Sponsor A Friend</a>	</li>	
+				   		
+			    </ul>
+		    </li>
+           <li class="none_line"><a class="hide" href="info">Contact Us</a>
+			<ul>
+				<li><a class="hide" href="info">Company Info</a>	</li>		  
+				<li><a class="hide" href="careers">Careers</a> </li>
+				<li><a class="hide" href="enquiry">Online Enquiry</a> </li>					
+			</ul>
+		</li>
+		    <li class="last_menu"> <a class="hide" href="#" zz="donate">Donate Now</a>		
+			    <ul>
+				    <li><a href="donate">Donation Details</a>	</li>		  
+				    <li><a href="donation">Online Donation</a> </li>
+                    <li><a href="AdoptaBrick">Adopt a Brick</a> </li>				
+			    </ul>
+    		
+    		
+		    </li>
+            </ul>
+        </div>				  </td>
+                    </tr>
+                  </tbody></table></td>
+              </tr>
+            </tbody></table>
+              
+ <img src="images/banner_news.jpg" height="173" width="1000">
+          <table height="13" width="100%" border="0" cellpadding="0" cellspacing="0">
+            <tbody><tr>
+              <td height="13" valign="middle" align="center"><img src="images/banner_shadow.gif" height="13" width="1000"></td>
+            </tr>
+          </tbody></table>
+
+              </td>
+          </tr>
+        </tbody></table></td>
+      </tr>
+    </tbody></table>
+    
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td height="510" align="center"><table height="500" width="1000" border="0" cellpadding="0" cellspacing="0">
+      <tbody><tr>
+        <td valign="top" width="220" align="left">
+          <table width="207" border="0" cellpadding="0" cellspacing="0">
+            <tbody><tr>
+              <td class="white_titleA" height="31" width="245" align="center" background="images/left_titlebg.gif"><table width="200" border="0" cellpadding="0" cellspacing="0">
+                  <tbody><tr>
+                    <td height="24" width="30">&nbsp;</td>
+                    <td class="white_titleA" width="170" align="left">What’s New</td>
+                  </tr>
+                </tbody></table></td>
+            </tr>
+          </tbody></table>
+          <table class="borderB" height="235" width="207" border="0" cellpadding="0" cellspacing="0">
+            <tbody><tr>
+              <td height="234" valign="top" align="center" background="images/left_bulebg.gif"><table width="175" border="0" cellpadding="0" cellspacing="0">
+                <tbody><tr>
+                  <td width="21" align="center"><img src="images/circle_bule.jpg" height="6" width="7"></td>
+                  <td height="25" width="154" align="left"><a href="news_event" class="leftmenu_current">Up-coming Events </a></td>
+                </tr>
+                <tr>
+                  <td align="center"><img src="images/circle_gray.gif" height="6" width="7"></td>
+                  <td height="25" align="left"><a href="news_latest" class="leftmenu">Latest News </a></td>
+                </tr>
+                <tr>
+                  <td align="center"><img src="images/circle_gray.gif" height="6" width="7"></td>
+                  <td class="leftmenu" height="25" align="left"><a href="news_press">Press Releases </a></td>
+                </tr>
+                <tr>
+                  <td align="center"><img src="images/circle_gray.gif" height="6" width="7"></td>
+                  <td class="leftmenu" height="25" align="left"><a href="news_publication">Publications </a></td>
+                </tr>
+              </tbody></table>
+                </td>
+            </tr>
+          </tbody></table>
+          <p>&nbsp;</p>
+          <div id="donatepanel1">
+
+ <table width="207" border="0" cellpadding="0" cellspacing="0">
+            <tbody><tr>
+              <td class="white_titleA" height="31" width="245" align="center" background="images/left_titlebg.gif">
+              <table width="200" border="0" cellpadding="0" cellspacing="0">
+                <tbody><tr>
+                  <td height="24" width="30">&nbsp;</td>
+                  <td class="white_titleA" width="170" align="left">Online Donation </td>
+                </tr>
+              </tbody></table></td>
+            </tr>
+          </tbody></table>
+          <table width="202" border="0" cellpadding="0" cellspacing="0">
+            <tbody><tr>
+              <td width="202"><a href="donate"><img src="images/donate_now_s.gif" height="116" width="207" border="0"></a></td>
+            </tr>
+          </tbody></table>
+          <p>&nbsp;</p>
+          <table width="207" border="0" cellpadding="0" cellspacing="0">
+            <tbody><tr>
+              <td><a href="http://www.facebook.com/habitatchina.fanpage" target="_blank"><img src="images/btn_facebook.gif" height="79" width="41"></a></td>
+                <td><a href="http://weibo.com/habitatchina" target="_blank"><img src="images/btn_sina.gif" height="79" width="41"></a></td>
+                <td><a href="http://www.flickr.com/photos/habitatchina/" target="_blank"><img src="images/btn_fr.gif" height="79" width="41"></a></td>
+                <td><a href="http://u.youku.com/habitatchina" target="_blank"><img src="images/btn_youku.gif" height="79" width="41"></a></td>
+                <td><a href="http://www.youtube.com/habitatchina" target="_blank"><img src="images/btn_youtube.gif" height="79" width="41"></a></td>
+                <!--
+                <td><a href="#" target="_blank"><img src="images/btn_rss.gif" width="41" height="79" /></a></td>
+                -->
+            </tr>
+          </tbody></table></div>
+          <table height="110" width="77%" border="0" cellpadding="0" cellspacing="0">
+            <tbody><tr>
+              <td id="leftbanner">
+
+
+
+
+<table class="borderA" border="0" cellpadding="0" cellspacing="0">
+    <tbody><tr>
+    <td id="banners" align="center"><a href="bannergo.aspx?i=117&amp;s=5"><img style="display: inline;" src="/images/items/banner/5ab57eb47f776d18051110d02786e069.jpg" class="cssLeftBannerItems "></a><a href="bannergo.aspx?i=112&amp;s=5"><img style="display: none;" src="/images/items/banner/f3346ee9e66340ab620fdf08845b3124.jpg" class="cssLeftBannerItems "></a><a href="bannergo.aspx?i=113&amp;s=5"><img style="display: none;" src="/images/items/banner/44bcf5364a64eb1f047ffec24b699306.jpg" class="cssLeftBannerItems "></a><a href="bannergo.aspx?i=116&amp;s=5"><img style="display: none;" src="/images/items/banner/93901aad9a0a7f5ff27d01019cfa5eb5.jpg" class="cssLeftBannerItems "></a><a href="bannergo.aspx?i=115&amp;s=5"><img style="display: none;" src="/images/items/banner/857576d0f8e27583ebd8958872e5706c.jpg" class="cssLeftBannerItems "></a><a href="bannergo.aspx?i=120&amp;s=5"><img style="display: none;" src="/images/items/banner/70565aca3349eda845552504e54a5e53.jpg" class="cssLeftBannerItems "></a><a href="bannergo.aspx?i=121&amp;s=5"><img style="display: none;" src="/images/items/banner/2637136318611b634df565addfa273c1.jpg" class="cssLeftBannerItems "></a><a href="bannergo.aspx?i=103&amp;s=5"><img style="display: none;" src="/images/items/banner/86c29656acc14b6c3c044b17f61e01fb.gif" class="cssLeftBannerItems "></a><a href="bannergo.aspx?i=114&amp;s=5"><img style="display: none;" src="/images/items/banner/5d5ebffefc7804a98f2e59c7deff694b.jpg" class="cssLeftBannerItems "></a><a href="bannergo.aspx?i=118&amp;s=5"><img style="display: none;" src="/images/items/banner/76620e66e45d54655ed1ec726c1ca63f.jpg" class="cssLeftBannerItems "></a><a href="bannergo.aspx?i=75&amp;s=5"><img style="display: none;" src="/images/items/banner/63e38ca3bc24789b36a4a563a7d2492d.jpg" class="cssLeftBannerItems "></a><a href="bannergo.aspx?i=11&amp;s=5"><img style="display: none;" src="/images/items/banner/bc102e5dcf56df7e694b5c1f1907c93f.jpg" class="cssLeftBannerItems "></a><a href="bannergo.aspx?i=17&amp;s=5"><img style="display: none;" src="/images/items/banner/2fb156840729ed87b36502ad4c42e5bd.gif" class="cssLeftBannerItems "></a><img style="display: none;" src="/images/items/banner/ebc29ada2cd474cfeaf1c37d54643b18.jpg" class="cssLeftBannerItems "></td>
+
+        
+    </tr>
+    
+    <tr>
+        <td align="center"><a href="enews"><img src="images/btn_newsletter.gif"></a></td>
+    </tr>
+    
+</tbody></table>
+</td>
+            </tr>
+          </tbody></table></td>
+        <td valign="top" width="780" align="left"><table height="31" width="775" border="0" cellpadding="0" cellspacing="0">
+          <tbody><tr>
+            <td height="31" background="images/green_rightbg.gif"><span class="right_titleA">Up-coming Events </span></td>
+          </tr>
+        </tbody></table>
+
+          <table style="margin:10px 0 0 15px" width="750" border="0" cellpadding="0" cellspacing="0">
+          <tbody><tr>
+            <td>
+           <div id="ctl00_main_content_desc"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="bule_titleB" height="18" align="left">Under No Roof 2013</td></tr><tr><td class="grayA" height="18" align="left">2013.06.22 - 23</td></tr><tr><td class="news_text" align="left"><br><table id="Table_01" height="3743" width="737" border="0" cellpadding="0" cellspacing="0">
+	<tbody>
+		<tr>
+			<td colspan="4">
+				<img alt="" src="http://www.habitatchina.org/NoRoof2013/images/unr_web_2_en_01.jpg" height="624" width="737" border="0"></td>
+		</tr>
+		<tr>
+			<td colspan="4">
+				<img alt="" src="http://www.habitatchina.org/NoRoof2013/images/unr_web_2_en_02.jpg" height="550" width="737" border="0"></td>
+		</tr>
+		<tr>
+			<td colspan="4">
+				<img alt="" src="http://www.habitatchina.org/NoRoof2013/images/unr_web_2_en_03.jpg" height="524" width="737" border="0"></td>
+		</tr>
+		<tr>
+			<td colspan="4">
+				<img alt="" src="http://www.habitatchina.org/NoRoof2013/images/unr_web_2_en_04.jpg" height="375" width="737" border="0"></td>
+		</tr>
+		<tr>
+			<td colspan="4">
+				<img alt="" src="http://www.habitatchina.org/NoRoof2013/images/unr_web_2_en_05.jpg" height="393" width="737" border="0"></td>
+		</tr>
+		<tr>
+			<td colspan="4">
+				<img alt="" src="http://www.habitatchina.org/NoRoof2013/images/unr_web_2_en_06.jpg" height="683" width="737" border="0"></td>
+		</tr>
+		<tr>
+			<td>
+				<img alt="" src="http://www.habitatchina.org/NoRoof2013/images/unr_web_2_en_07.jpg" height="102" width="134" border="0"></td>
+			<td>
+				<a href="http://form.jotformpro.com/form/22762709856970" target="_blank"><img alt="" src="http://www.habitatchina.org/NoRoof2013/images/unr_web_2_en_08.jpg" height="102" width="205" border="0"></a></td>
+			<td>
+				<a href="http://form.jotformpro.com/form/22762840077961" target="_blank"><img alt="" src="http://www.habitatchina.org/NoRoof2013/images/unr_web_2_en_09.jpg" height="102" width="198" border="0"></a></td>
+			<td>
+				<a href="http://form.jotformpro.com/form/23261937343959" target="_blank"><img alt="" src="http://www.habitatchina.org/NoRoof2013/images/unr_web_2_en_10.jpg" height="102" width="200" border="0"></a></td>
+		</tr>
+		<tr>
+			<td>
+				<img alt="" src="http://www.habitatchina.org/NoRoof2013/images/unr_web_2_en_11.jpg" height="72" width="134" border="0"></td>
+			<td>
+				<a href="http://www.habitatchina.org/NoRoof2013/images/UNR-Ind-Reg-Form.pdf" target="_blank"><img alt="" src="http://www.habitatchina.org/NoRoof2013/images/unr_web_2_en_12.jpg" height="72" width="205" border="0"></a></td>
+			<td>
+				<a href="http://www.habitatchina.org/NoRoof2013/images/UNR-Group-Reg-Form.pdf" target="_new"><img alt="" src="http://www.habitatchina.org/NoRoof2013/images/unr_web_2_en_13.jpg" height="72" width="198" border="0"></a></td>
+			<td>
+				<a href="http://www.habitatchina.org/NoRoof2013/images/UNR-Family-Reg-Form.pdf" target="_blank"><img alt="" src="http://www.habitatchina.org/NoRoof2013/images/unr_web_2_en_14.jpg" height="72" width="200" border="0"></a></td>
+		</tr>
+		<tr>
+			<td>
+				<img alt="" src="http://www.habitatchina.org/NoRoof2013/images/unr_web_2_en_15.jpg" height="74" width="134" border="0"></td>
+			<td>
+				<img alt="" src="http://www.habitatchina.org/NoRoof2013/images/unr_web_2_en_16.jpg" height="74" width="205" border="0"></td>
+			<td>
+				<a href="http://www.habitatchina.org/NoRoof2013/images/UNR-Parents-Letter.pdf" target="_blank"><img alt="" src="http://www.habitatchina.org/NoRoof2013/images/unr_web_2_en_17.jpg" height="74" width="198" border="0"></a></td>
+			<td>
+				<img alt="" src="http://www.habitatchina.org/NoRoof2013/images/unr_web_2_en_18.jpg" height="74" width="200" border="0"></td>
+		</tr>
+		<tr>
+			<td colspan="4">
+				<img alt="" src="http://www.habitatchina.org/NoRoof2013/images/unr_web_2_en_19.jpg" height="346" width="737" border="0"></td>
+		</tr>
+	</tbody>
+</table>
+<table width="737" border="0" cellpadding="0" cellspacing="0">
+	<tbody>
+		<tr>
+			<td scope="col">
+				&nbsp;</td>
+			<td scope="col">
+				&nbsp;</td>
+			<td scope="col">
+				&nbsp;</td>
+			<td scope="col">
+				&nbsp;</td>
+		</tr>
+		<tr>
+			<td>
+				<p class="greenA">
+					Organizer:</p>
+			</td>
+			<td>
+				<p class="greenA">
+					Sponsored by:</p>
+			</td>
+			<td>
+				<p class="greenA">
+					Official Drink:</p>
+			</td>
+			<td>
+				&nbsp;</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="http://habitatchina.org/" target="_blank"><img src="http://habitatchina.org/images/items/article/93f1291154db447be3f88c2abb77f5a5.jpg" height="100" width="180" border="0"></a></td>
+			<td>
+				<a href="http://www.rotary3450.org/the-peak/" target="_blank"><img src="http://habitatchina.org/images/items/article/af52c81641b0a9b9558660590ef732cf.jpg" height="100" width="180" border="0"></a></td>
+			<td>
+				<a href="http://www.hungfooktong.com/" target="_blank"><img src="http://habitatchina.org/images/items/article/b50d6f9fef8e3950d7bb0488fd907088.jpg" height="100" width="180" border="0"></a></td>
+			<td>
+				&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	<a href="http://www.facebook.com/UnderNoRoof2013" target="_blank"><br>
+	Visit our Facebook Campaign Page</a><a href="https://www.facebook.com/media/set/?set=a.531287780234602.138057.521982684498445&amp;type=1&amp;ref=notif&amp;notif_t=photo_album_comment#!/media/set/?set=a.531287780234602.138057.521982684498445&amp;type=1" target="_blank"><img alt="" src="/images/items/article/60af0f2f1b031a8371e77d6f1d272732.jpg" style="border-width: 0px; border-style: solid; width: 737px; height: 1305px;"></a><br>
+	<br>
+	<br>
+	<br>
+	&nbsp;</p>
+</td></tr></tbody></table><br><br><br><table height="20" width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td><a class="green_titleA" href="javascript: history.go(-1)">« Back</a><br><br></td></tr><tr><td align="left"><table><tbody><tr> <td><div style="width:47px;height:24px;overflow:hidden"><iframe src="http://www.facebook.com/plugins/like.php?href=http://www.habitatchina.org/eng/events_detail.aspx?id=421&amp;send=false&amp;layout=standard&amp;width=450&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=80" style="border:none; overflow:hidden; width:450px; height:30px;" allowtransparency="true" frameborder="0" scrolling="no"></iframe></div></td><td>&nbsp;&nbsp;<iframe data-twttr-rendered="true" title="Twitter Tweet Button" style="width: 58px; height: 20px;" class="twitter-share-button twitter-count-none" src="http://platform.twitter.com/widgets/tweet_button.1368146021.html#_=1369447615082&amp;count=none&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=http%3A%2F%2Fhabitatchina.org%2Feng%2Fevents_detail.aspx%3Fid%3D421&amp;size=m&amp;text=Habitat%20for%20Humanity%20China&amp;url=http%3A%2F%2Flocalhost%3A32081%2Fevents_detail.aspx%3Fid%3D421" allowtransparency="true" frameborder="0" scrolling="no"></iframe><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></td><td><div id="ckepop"><a title="Share to Sina Weibo" class="jiathis_button_tsina"><span class="jiathis_txt jiathis_separator jtico jtico_tsina">Sina Weibo</span></a><a title="Share to QQ" class="jiathis_button_tqq"><span class="jiathis_txt jiathis_separator jtico jtico_tqq">QQ Weibo</span></a><a title="Share to RenRen" class="jiathis_button_renren"><span class="jiathis_txt jiathis_separator jtico jtico_renren">RenRen</span></a><a title="Share to Kaixin" class="jiathis_button_kaixin001"><span class="jiathis_txt jiathis_separator jtico jtico_kaixin001">Kaixin</span></a><a href="http://www.jiathis.com/share/" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank">Share To</a></div><script type="text/javascript" src="http://v1.jiathis.com/code/jia.js" charset="utf-8"></script><script type="text/javascript" src="http://v1.jiathis.com/code/plugin.client.js" charset="utf-8"></script></td></tr></tbody></table></td></tr></tbody></table></div></td></tr> </tbody></table><p>&nbsp;</p>
+                </td>
+                </tr>
+               </tbody></table>
+          </td>
+      </tr>
+    </tbody></table>
+      <p><br>
+      </p>
+      <p>&nbsp;</p>
+      <p><br>
+      </p>
+       <div id="partnerbanner"></div>
+    <br><br>
+  
+
+
+   <table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td height="28" align="center" background="images/footer_nav.jpg"><table width="1000" border="0" cellpadding="0" cellspacing="0">
+      <tbody><tr>
+        <td class="white_titleA" width="14%" align="left">About Habitat</td>
+        <td class="white_titleA" width="14%" align="left">Where We Build </td>
+        <td class="white_titleA" width="15%" align="left">Get Involved</td>
+        <td class="white_titleA" width="13%" align="left">What's New</td>
+        <td class="white_titleA" width="14%" align="left">Media Center</td>
+        <td class="white_titleA" width="14%" align="left">Member Zone</td>
+        <td class="white_titleA" width="16%" align="left">Follow Us </td>
+      </tr>
+      
+    </tbody></table></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td height="300" valign="top" align="center" background="images/footer_bg.jpg"><table width="1000" border="0" cellpadding="0" cellspacing="0">
+      <tbody><tr>
+        <td height="5"><img src="images/space.gif" height="1" width="1"></td>
+      </tr>
+    </tbody></table>
+      <table width="1000" border="0" cellpadding="0" cellspacing="0">
+      <tbody><tr>
+        <td height="25" width="14%" align="left"><a href="mission">Vision &amp; Mission</a></td>
+        <td width="14%" align="left"><a href="built_hk">Hong Kong</a></td>
+        <td width="15%" align="left"><a href="individual">Individual </a></td>
+        <td width="13%" align="left"><a href="news_event">Up-coming Events </a></td>
+        <td width="14%" align="left"><a href="media_photo">Photos</a></td>
+        <td align="left"><a href="member">New User Registration </a></td>
+        <td width="16%" align="left"><table width="100" border="0" cellpadding="0" cellspacing="0">
+            <tbody><tr>
+              <td><img src="images/icon_facebook_s.gif" height="20" width="20"></td>
+              <td valign="top"><a href="http://www.facebook.com/habitatchina.fanpage" target="_blank">Facebook</a> </td>
+            </tr>
+          </tbody></table>          </td>
+      </tr>
+      <tr>
+        <td height="25" align="left"><a href="history">History</a></td>
+        <td align="left"><a href="built_china">China</a></td>
+        <td align="left"><a href="corporations">Corporation &amp; Associates </a></td>
+        <td align="left"><a href="news_latest">Latest News </a></td>
+        <td align="left"><a href="media_video">Videos</a></td>
+        
+        <td align="left"><a href="enews">Subscribe e-Newsletter</a></td>
+        <td align="left"><table width="100" border="0" cellpadding="0" cellspacing="0">
+          <tbody><tr>
+            <td width="28"><img src="images/icon_sina_s.gif" height="20" width="20"></td>
+            <td valign="top" width="72"><a href="http://weibo.com/habitatchina" target="_blank">Weibo</a></td>
+          </tr>
+        </tbody></table></td>
+      </tr>
+      <tr>
+        <td height="25" align="left"><a href="sitemap">Site Map</a></td>
+        <td align="left"><a href="built_int">International </a></td>
+        <td align="left"><a href="partner">Our Partners </a></td>
+        <td align="left"><a href="news_press">Press Releases </a></td>
+        <td align="left"><a href="media_press">Press Releases </a></td>
+        
+        <td width="14%" align="left"><a href="construct">Sponsor A Friend </a></td>
+        <td align="left"><table width="100" border="0" cellpadding="0" cellspacing="0">
+          <tbody><tr>
+            <td width="28"><img src="images/icon_fr_s.gif" height="20" width="20"></td>
+            <td valign="top" width="72"><a href="http://www.flickr.com/photos/habitatchina/" target="_blank">Flickr</a> </td>
+          </tr>
+        </tbody></table></td>
+      </tr>
+      <tr>
+        <td height="25" align="left"><a href="question"> Q &amp; A </a></td>
+        <td align="left"><a href="response">Disaster Rehabilitation Project </a></td>
+        <td align="left"><a href="global">Global Village </a></td>
+        <td align="left"><a href="news_publication">Publications </a></td>
+        <td align="left"><a href="media_publication">Publications </a></td>
+        <td align="left">&nbsp;</td>
+        <td align="left"><table width="100" border="0" cellpadding="0" cellspacing="0">
+          <tbody><tr>
+            <td width="28"><img src="images/icon_youku_s.gif" height="20" width="20"></td>
+            <td valign="top" width="72"><a href="http://u.youku.com/habitatchina" target="_blank">YouKu</a></td>
+          </tr>
+        </tbody></table></td>
+      </tr>
+      <tr>
+        <td height="25" align="left">&nbsp;</td>
+        <td align="left"><a href="story">Family Stories </a></td>
+        <td align="left">&nbsp;</td>
+        <td align="left">&nbsp;</td>
+        <td align="left">&nbsp;</td>
+        <td align="left">&nbsp;</td>
+        <td align="left"><table width="100" border="0" cellpadding="0" cellspacing="0">
+          <tbody><tr>
+            <td><img src="images/icon_youtube_s.gif" height="20" width="20"></td>
+            <td valign="top"> <a href="http://www.youtube.com/habitatchina" target="_blank">YouTube</a> </td>
+          </tr>
+        </tbody></table></td>
+      </tr>
+      <tr>
+        <td height="25" align="left">&nbsp;</td>
+        <td align="left">&nbsp;</td>
+        <td align="left">&nbsp;</td>
+        <td align="left">&nbsp;</td>
+        <td align="left">&nbsp;</td>
+        <td align="left">&nbsp;</td>
+        <td valign="middle" align="left">
+        <!--
+        <table width="100" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="28"><img src="images/icon_rss_s.gif"  width="20" height="20" /></td>
+            <td width="72" valign="top"><a href="#">RSS</a></td>
+          </tr>
+        </table>          
+        -->
+        </td>
+      </tr>
+    </tbody></table>
+      <p>&nbsp;</p>
+      <table height="30" width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr>
+          <td align="center">Copyright © 2013 Habitat for Humanity China - All rights reserved.</td>
+        </tr>
+      </tbody></table>
+      <p>&nbsp;</p>
+       <table height="30" width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr>
+          <td align="center"><a href="pps" target="_blank">Privacy Policy</a></td>
+        </tr>
+      </tbody></table>
+      </td>
+  </tr>
+</tbody></table>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-23892060-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!-- Start of Woopra Code -->
+<script type="text/javascript">
+    var woo_settings = { idle_timeout: '300000', domain: 'habitat.org.cn' };
+    (function() {
+        var wsc = document.createElement('script');
+        wsc.src = document.location.protocol + '//static.woopra.com/js/woopra.js';
+        wsc.type = 'text/javascript';
+        wsc.async = true;
+        var ssc = document.getElementsByTagName('script')[0];
+        ssc.parentNode.insertBefore(wsc, ssc);
+    })();
+</script>
+<!-- End of Woopra Code -->
+
+<div class=" fb_reset" id="fb-root"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe src="http://static.ak.facebook.com/connect/xd_arbiter.php?version=24#channel=f20d13a889a8934&amp;origin=http%3A%2F%2Fhabitatchina.org&amp;channel_path=%2Feng%2Fevents_detail.aspx%3Fid%3D421%26fb_xd_fragment%23xd_sig%3Dfcf47fa7657a16%26" style="border: medium none;" tab-index="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_http" allowtransparency="true" name="fb_xdm_frame_http" frameborder="0" scrolling="no"></iframe><iframe src="https://s-static.ak.facebook.com/connect/xd_arbiter.php?version=24#channel=f20d13a889a8934&amp;origin=http%3A%2F%2Fhabitatchina.org&amp;channel_path=%2Feng%2Fevents_detail.aspx%3Fid%3D421%26fb_xd_fragment%23xd_sig%3Dfcf47fa7657a16%26" style="border: medium none;" tab-index="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_https" allowtransparency="true" name="fb_xdm_frame_https" frameborder="0" scrolling="no"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe src="https://www.facebook.com/connect/ping?client_id=201313463261138&amp;response_type=token%2Csigned_request%2Ccode&amp;domain=habitatchina.org&amp;origin=1&amp;redirect_uri=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D24%23cb%3Df11f37faa4887aa%26origin%3Dhttp%253A%252F%252Fhabitatchina.org%252Ff20d13a889a8934%26domain%3Dhabitatchina.org%26relation%3Dparent&amp;sdk=joey" style="display: none;" allowtransparency="true" name="f718ec77da09fe" frameborder="0" scrolling="no"></iframe></div></div></div><script src="http://connect.facebook.net/en_US/all.js#appId=201313463261138&amp;xfbml=1"></script>
+
+
+
+<div style="position: absolute; z-index: 1000; top: 45px; text-align: left; left: 323.5px;" id="loginnow">
+
+
+
+
+<title>
+
+</title>
+
+    <form name="form1" method="post" action="logincheck.aspx" id="form1">
+<div>
+<input name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE2MTY2ODcyMjlkZJyuxxK9URC8UhFtVyw94n94zDzQ" type="hidden">
+</div>
+
+    <div>
+    
+    </div>
+    </form>
+
+
+</div></body>

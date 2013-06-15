@@ -1,0 +1,778 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta property="og:title" content="Lobão | Manifesto do Nada na Terra do Nunca">
+<meta property="og:description" content="Após vender mais de 150 mil exemplares da autobiografia '50 anos a mil', Lobão retorna às letras com uma obra na qual aborda com clareza o 'estado de paralisia' em que se encontra o Brasil.">
+
+<title>Lobão | Manifesto do Nada na Terra do Nunca</title>
+
+<link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8">
+<link href="css/interna.php" rel="stylesheet" type="text/css">
+	
+<script src="http://www.google-analytics.com/ga.js" async="" type="text/javascript"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+
+<script src="js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="js/jquery.tweet.js"></script>
+<script src="js/slides.min.jquery.js" type="text/javascript"></script>
+
+
+<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+
+<!-- the jScrollPane script -->
+<link type="text/css" href="css/jquery.jscrollpane.css" rel="stylesheet" media="all">
+<script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
+
+
+<link href="skin/blue.monday/jplayer.blue.monday2.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
+<script type="text/javascript" src="js/jplayer.playlist.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$('.letras').jScrollPane({ verticalDragMaxHeight:34, verticalDragMinHeight:32,showArrows: true});
+	//alert('a');
+	
+	
+	var myPlaylist = new jPlayerPlaylist({
+		jPlayer: "#jquery_jplayer_N",
+		cssSelectorAncestor: "#jp_container_N"
+	}, [
+	
+				
+		{
+			title:"Você e a noite escura",
+			artist:"Lobão",
+			mp3:"http://www.lobao.com.br/site_novo/media/voceeanoiteescura.mp3"
+		} 			
+		
+	], {
+		playlistOptions: {
+			enableRemoveControls: false
+		},
+		swfPath: "js",
+		supplied: "mp3"
+	});
+	
+	
+	myPlaylist.play(0);
+});
+
+</script>
+
+
+<script src="js/mailnews.js" type="text/javascript"></script>
+	<script>
+	
+		$(function(){
+		
+			$('#pensamentos').slides({
+				generateNextPrev: true,
+				generatePagination:false,
+				next: 'pnext',
+				prev: 'pprev',
+				play:8000,
+				effect:'fade'
+			});
+			
+			$('#photos').slides({
+				generateNextPrev: true,
+				generatePagination:false,
+				play:5000,
+				effect:'slide,fade'
+			});
+			
+			$('#paginas').slides({
+				generateNextPrev: true,
+				generatePagination:false,
+				play:0,
+				effect:'slide,fade',
+				autoHeight: true,
+				slidesLoaded: function () { $('#paginas .slides_control').animate({height:$(".pagina:first").height() }); }
+			});
+			
+			
+				$("a[rel^='prettyPhoto']").prettyPhoto({ 
+			theme: 'light_square',
+			social_tools:false,
+			horizontal_padding:10,
+			markup: '<div class="pp_pic_holder"> \
+						<div class="ppt">&nbsp;</div> \
+						<a class="pp_close" href="#">Close</a> \
+						<div class="pp_top"> \
+							<div class="pp_left"></div> \
+							<div class="pp_middle"></div> \
+							<div class="pp_right"></div> \
+						</div> \
+						<div class="pp_content_container"> \
+							<div class="pp_left"> \
+							<div class="pp_right"> \
+								<div class="pp_content"> \
+									<div class="pp_loaderIcon"></div> \
+									<div class="pp_fade"> \
+										<a href="#" class="pp_expand" title="Expand the image">Expand</a> \
+										<div class="pp_hoverContainer"> \
+											<a class="pp_next" href="#">next</a> \
+											<a class="pp_previous" href="#">previous</a> \
+										</div> \
+										<div id="pp_full_res"></div> \
+										<div class="pp_details"> \
+											<p class="pp_description"></p> \
+											<p class="pp_description2"></p> \
+											<div class="pp_social">{pp_social}</div> \
+										</div> \
+									</div> \
+								</div> \
+							</div> \
+							</div> \
+						</div> \
+						<div class="pp_bottom"> \
+							<div class="pp_left"></div> \
+							<div class="pp_middle"></div> \
+							<div class="pp_right"></div> \
+						</div> \
+					</div> \
+					<div class="pp_overlay"></div>',
+					
+					gallery_markup : ''
+			
+			});
+			
+			
+			
+			$('.mailfeed').mailfeed({ 
+			concluido:'Seu email foi cadastrado. Aguarde novidades blá blá blá'
+			});
+			
+			
+	});
+  		</script>
+<style type="text/css">
+#presskit {
+	display: block;
+	width: 258px;
+	height: 26px;
+	background: url(images/manifesto/bt_presskit.png) no-repeat left top;
+	text-indent: -5000px;
+	margin-bottom: 25px;
+	margin-top: 15px;
+}
+#presskit:hover {
+	background-position: left bottom;
+}
+.bt_livraria {
+	display: block;
+	width: 141px;
+	height: 31px;
+	background: url(images/manifesto/bts_livrarias.gif) no-repeat;
+	float: left; margin-right: 15px;
+	margin-bottom: 15px;
+}
+
+#cultura		{ background-position: left top; }
+#curitiba		{ background-position: -160px 0px; }
+#travessa		{ background-position: -320px 0px; }
+#saraiva		{ background-position: -481px 0px; }
+#submarino		{ background-position: -641px 0px; }
+#fnac			{ background-position: -801px 0px; }
+
+#cultura:hover		{ background-position: left bottom; }
+#curitiba:hover		{ background-position: -160px -31px; }
+#travessa:hover		{ background-position: -320px -31px; }
+#saraiva:hover		{ background-position: -481px -31px; }
+#submarino:hover	{ background-position: -641px -31px; }
+#fnac:hover			{ background-position: -801px -31px; }
+#bt_sorteio {
+	background: url(images/manifesto/sorteio_bt2.png) no-repeat 0px 0px;
+	display: block;
+	width: 585px;
+	height: 130px;
+	text-indent: -5000px;
+	margin-top: 20px; margin-bottom: 20px;
+}
+#bt_sorteio:hover { background-position: 0px -142px; }
+#regulamento span { background-color: #fff; display: block; color: #000; width: 150px; padding: 2px 0px; margin: 10px 0px 5px 0px; font-size: 11px; text-transform: uppercase; }
+#regulamento p { padding: 0px; margin: 7px 0px; }
+#sigalb { color: #fff; text-decoration: none; }
+#sigalb:hover { text-decoration: underline; }
+
+ul.vencedores { margin: 0px; padding: 0px; list-style: none; }
+ul li { font: 12px Arial, Helvetica, sans-serif; color: #CCC; display: block; border-bottom: 1px dotted #666; padding: 5px; }
+ul li span { font: 12px Arial, Helvetica, sans-serif; font-weight: bold; color: #fff; display: inline-block; width: 25px; }
+ul li.vence { font-size: 14px; color: #fff; }
+ul li.vence span { font-size: 14px; }
+ul li a { color: #fff; font-weight: bold; text-decoration: none; }
+ul li a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div id="main" style="background-image: url(images/fundo_manifesto2.jpg);">
+ 
+<div id="topo">
+    
+    <h1><a href="index.php">LOBAO</a></h1>
+    <div id="pensamentos" style="background-position: 0px 0px; height: 90px; padding-left: 93px; padding-top: 13px;">
+	
+	
+	<a href="pensamentos.php" style="position: absolute; text-indent: -7000px; top: 85px; left: 255px; display: block; width: 67px; height: 27px; background: url(images/ver_todos.png) no-repeat;">Ver todos os pensamentos</a>
+	
+    <a href="#" class="pnext">next</a>
+    
+    <a href="#" class="pprev">prev</a><a href="#" class="pnext">Next</a>
+        <div class="slides_container" style="height: 77px; overflow: hidden; position: relative; display: block;">
+               <div style="position: relative; width: 660px; height: 62px; left: -220px;" class="slides_control"><div style="position: absolute; top: 0px; left: 220px; z-index: 0; display: block;" class="slides" "="">
+                    <p>
+						"Vingar-se mesmo que seja em pensamento, é colocar-se irremediavelmente aquém do absoluto! "
+												<a onclick="window.open('http://www.facebook.com/sharer.php?s=100&amp;p[title]=Pensamento+Lob%C3%A3o&amp;p[summary]=Vingar-se+mesmo+que+seja+em+pensamento%2C+%C3%A9+colocar-se+irremediavelmente+aqu%C3%A9m+do+absoluto%21+&amp;p[url]=http%3A%2F%2Fwww.lobao.com.br&amp;&amp;p[images][0]=http%3A%2F%2Fwww.lobao.com.br%2Fimages%2Ffb%2Fpensamentos.jpg', 'sharer', 'toolbar=0,status=0,width=548,height=425');" target="_parent" href="javascript: void(0)"><img src="images/icons/facebookthink.gif" alt="facebook" border="0"></a>
+						<!--<a onClick="window.open('https://twitter.com/share?text=Vingar-se+mesmo+que+seja+em+pensamento%2C+%C3%A9+colocar-se+irremediavelmente+aqu%C3%A9m+do+absoluto%21+&amp;via=lobaoeletrico&amp;url=', 'sharer', 'toolbar=0,status=0,width=548,height=425');" class="twitter-share-button" target="_parent" href="javascript: void(0)"><img src="images/icons/twitterthink.gif" alt="twitter"  border="0" /></a>-->
+						<a onclick="window.open('https://twitter.com/share?text=Vingar-se+mesmo+que+seja+em+pensamento%2C+%C3%A9+colocar-se+irremediavelmente+aqu%C3%A9m+do+absoluto%21+. via lobao.com.br&amp;url=', 'sharer', 'toolbar=0,status=0,width=548,height=425');" class="twitter-share-button" target="_parent" href="javascript: void(0)"><img src="images/icons/twitterthink.gif" alt="twitter" border="0"></a>
+						<a href="http://www.tumblr.com/share/quote?quote=Vingar-se+mesmo+que+seja+em+pensamento%2C+%C3%A9+colocar-se+irremediavelmente+aqu%C3%A9m+do+absoluto%21+&amp;source=http%3A%2F%2Fwww.lobao.com.br" title="Share on Tumblr" target="_blank"><img src="images/icons/tumblr.png" alt="tumblr" height="14" width="14" border="0"></a>
+					</p>
+						
+						
+						<!--
+                        <p class="links">lobão</p>
+						-->
+						
+           			 </div><div style="position: absolute; top: 0px; left: 220px; z-index: 0; display: none;" class="slides" "="">
+                    <p>
+						"Um pequeno vício é mais eficaz que uma grande virtude"
+												<a onclick="window.open('http://www.facebook.com/sharer.php?s=100&amp;p[title]=Pensamento+Lob%C3%A3o&amp;p[summary]=Um+pequeno+v%C3%ADcio+%C3%A9+mais+eficaz+que+uma+grande+virtude&amp;p[url]=http%3A%2F%2Fwww.lobao.com.br&amp;&amp;p[images][0]=http%3A%2F%2Fwww.lobao.com.br%2Fimages%2Ffb%2Fpensamentos.jpg', 'sharer', 'toolbar=0,status=0,width=548,height=425');" target="_parent" href="javascript: void(0)"><img src="images/icons/facebookthink.gif" alt="facebook" border="0"></a>
+						<!--<a onClick="window.open('https://twitter.com/share?text=Um+pequeno+v%C3%ADcio+%C3%A9+mais+eficaz+que+uma+grande+virtude&amp;via=lobaoeletrico&amp;url=', 'sharer', 'toolbar=0,status=0,width=548,height=425');" class="twitter-share-button" target="_parent" href="javascript: void(0)"><img src="images/icons/twitterthink.gif" alt="twitter"  border="0" /></a>-->
+						<a onclick="window.open('https://twitter.com/share?text=Um+pequeno+v%C3%ADcio+%C3%A9+mais+eficaz+que+uma+grande+virtude. via lobao.com.br&amp;url=', 'sharer', 'toolbar=0,status=0,width=548,height=425');" class="twitter-share-button" target="_parent" href="javascript: void(0)"><img src="images/icons/twitterthink.gif" alt="twitter" border="0"></a>
+						<a href="http://www.tumblr.com/share/quote?quote=Um+pequeno+v%C3%ADcio+%C3%A9+mais+eficaz+que+uma+grande+virtude&amp;source=http%3A%2F%2Fwww.lobao.com.br" title="Share on Tumblr" target="_blank"><img src="images/icons/tumblr.png" alt="tumblr" height="14" width="14" border="0"></a>
+					</p>
+						
+						
+						<!--
+                        <p class="links">lobão</p>
+						-->
+						
+           			 </div><div style="position: absolute; top: 0px; left: 220px; z-index: 0; display: none;" class="slides" "="">
+                    <p>
+						"Quem sabe, sabe, não chama jacaré de meu benzinho"
+												<a onclick="window.open('http://www.facebook.com/sharer.php?s=100&amp;p[title]=Pensamento+Lob%C3%A3o&amp;p[summary]=Quem+sabe%2C+sabe%2C+n%C3%A3o+chama+jacar%C3%A9+de+meu+benzinho&amp;p[url]=http%3A%2F%2Fwww.lobao.com.br&amp;&amp;p[images][0]=http%3A%2F%2Fwww.lobao.com.br%2Fimages%2Ffb%2Fpensamentos.jpg', 'sharer', 'toolbar=0,status=0,width=548,height=425');" target="_parent" href="javascript: void(0)"><img src="images/icons/facebookthink.gif" alt="facebook" border="0"></a>
+						<!--<a onClick="window.open('https://twitter.com/share?text=Quem+sabe%2C+sabe%2C+n%C3%A3o+chama+jacar%C3%A9+de+meu+benzinho&amp;via=lobaoeletrico&amp;url=', 'sharer', 'toolbar=0,status=0,width=548,height=425');" class="twitter-share-button" target="_parent" href="javascript: void(0)"><img src="images/icons/twitterthink.gif" alt="twitter"  border="0" /></a>-->
+						<a onclick="window.open('https://twitter.com/share?text=Quem+sabe%2C+sabe%2C+n%C3%A3o+chama+jacar%C3%A9+de+meu+benzinho. via lobao.com.br&amp;url=', 'sharer', 'toolbar=0,status=0,width=548,height=425');" class="twitter-share-button" target="_parent" href="javascript: void(0)"><img src="images/icons/twitterthink.gif" alt="twitter" border="0"></a>
+						<a href="http://www.tumblr.com/share/quote?quote=Quem+sabe%2C+sabe%2C+n%C3%A3o+chama+jacar%C3%A9+de+meu+benzinho&amp;source=http%3A%2F%2Fwww.lobao.com.br" title="Share on Tumblr" target="_blank"><img src="images/icons/tumblr.png" alt="tumblr" height="14" width="14" border="0"></a>
+					</p>
+						
+						
+						<!--
+                        <p class="links">lobão</p>
+						-->
+						
+           			 </div><div style="position: absolute; top: 0px; left: 220px; z-index: 0; display: none;" class="slides" "="">
+                    <p>
+						"Se pode fazer complicado, porque fazer simples?"
+												<a onclick="window.open('http://www.facebook.com/sharer.php?s=100&amp;p[title]=Pensamento+Lob%C3%A3o&amp;p[summary]=Se+pode+fazer+complicado%2C+porque+fazer+simples%3F&amp;p[url]=http%3A%2F%2Fwww.lobao.com.br&amp;&amp;p[images][0]=http%3A%2F%2Fwww.lobao.com.br%2Fimages%2Ffb%2Fpensamentos.jpg', 'sharer', 'toolbar=0,status=0,width=548,height=425');" target="_parent" href="javascript: void(0)"><img src="images/icons/facebookthink.gif" alt="facebook" border="0"></a>
+						<!--<a onClick="window.open('https://twitter.com/share?text=Se+pode+fazer+complicado%2C+porque+fazer+simples%3F&amp;via=lobaoeletrico&amp;url=', 'sharer', 'toolbar=0,status=0,width=548,height=425');" class="twitter-share-button" target="_parent" href="javascript: void(0)"><img src="images/icons/twitterthink.gif" alt="twitter"  border="0" /></a>-->
+						<a onclick="window.open('https://twitter.com/share?text=Se+pode+fazer+complicado%2C+porque+fazer+simples%3F. via lobao.com.br&amp;url=', 'sharer', 'toolbar=0,status=0,width=548,height=425');" class="twitter-share-button" target="_parent" href="javascript: void(0)"><img src="images/icons/twitterthink.gif" alt="twitter" border="0"></a>
+						<a href="http://www.tumblr.com/share/quote?quote=Se+pode+fazer+complicado%2C+porque+fazer+simples%3F&amp;source=http%3A%2F%2Fwww.lobao.com.br" title="Share on Tumblr" target="_blank"><img src="images/icons/tumblr.png" alt="tumblr" height="14" width="14" border="0"></a>
+					</p>
+						
+						
+						<!--
+                        <p class="links">lobão</p>
+						-->
+						
+           			 </div><div style="position: absolute; top: 0px; left: 220px; z-index: 0; display: none;" class="slides" "="">
+                    <p>
+						"Encontrar o "Lugar e a fórmula" confunde-se com "possuir a verdade numa alma e num corpo""
+												<a onclick="window.open('http://www.facebook.com/sharer.php?s=100&amp;p[title]=Pensamento+Lob%C3%A3o&amp;p[summary]=Encontrar+o+%22Lugar+e+a+f%C3%B3rmula%22+confunde-se+com+%22possuir+a+verdade+numa+alma+e+num+corpo%22&amp;p[url]=http%3A%2F%2Fwww.lobao.com.br&amp;&amp;p[images][0]=http%3A%2F%2Fwww.lobao.com.br%2Fimages%2Ffb%2Fpensamentos.jpg', 'sharer', 'toolbar=0,status=0,width=548,height=425');" target="_parent" href="javascript: void(0)"><img src="images/icons/facebookthink.gif" alt="facebook" border="0"></a>
+						<!--<a onClick="window.open('https://twitter.com/share?text=Encontrar+o+%22Lugar+e+a+f%C3%B3rmula%22+confunde-se+com+%22possuir+a+verdade+numa+alma+e+num+corpo%22&amp;via=lobaoeletrico&amp;url=', 'sharer', 'toolbar=0,status=0,width=548,height=425');" class="twitter-share-button" target="_parent" href="javascript: void(0)"><img src="images/icons/twitterthink.gif" alt="twitter"  border="0" /></a>-->
+						<a onclick="window.open('https://twitter.com/share?text=Encontrar+o+%22Lugar+e+a+f%C3%B3rmula%22+confunde-se+com+%22possuir+a+verdade+numa+alma+e+num+corpo%22. via lobao.com.br&amp;url=', 'sharer', 'toolbar=0,status=0,width=548,height=425');" class="twitter-share-button" target="_parent" href="javascript: void(0)"><img src="images/icons/twitterthink.gif" alt="twitter" border="0"></a>
+						<a href="http://www.tumblr.com/share/quote?quote=Encontrar+o+%22Lugar+e+a+f%C3%B3rmula%22+confunde-se+com+%22possuir+a+verdade+numa+alma+e+num+corpo%22&amp;source=http%3A%2F%2Fwww.lobao.com.br" title="Share on Tumblr" target="_blank"><img src="images/icons/tumblr.png" alt="tumblr" height="14" width="14" border="0"></a>
+					</p>
+						
+						
+						<!--
+                        <p class="links">lobão</p>
+						-->
+						
+           			 </div><div style="position: absolute; top: 0px; left: 220px; z-index: 0; display: none;" class="slides" "="">
+                    <p>
+						"Quem quer faz, quem não quer copia."
+												<a onclick="window.open('http://www.facebook.com/sharer.php?s=100&amp;p[title]=Pensamento+Lob%C3%A3o&amp;p[summary]=Quem+quer+faz%2C+quem+n%C3%A3o+quer+copia.&amp;p[url]=http%3A%2F%2Fwww.lobao.com.br&amp;&amp;p[images][0]=http%3A%2F%2Fwww.lobao.com.br%2Fimages%2Ffb%2Fpensamentos.jpg', 'sharer', 'toolbar=0,status=0,width=548,height=425');" target="_parent" href="javascript: void(0)"><img src="images/icons/facebookthink.gif" alt="facebook" border="0"></a>
+						<!--<a onClick="window.open('https://twitter.com/share?text=Quem+quer+faz%2C+quem+n%C3%A3o+quer+copia.&amp;via=lobaoeletrico&amp;url=', 'sharer', 'toolbar=0,status=0,width=548,height=425');" class="twitter-share-button" target="_parent" href="javascript: void(0)"><img src="images/icons/twitterthink.gif" alt="twitter"  border="0" /></a>-->
+						<a onclick="window.open('https://twitter.com/share?text=Quem+quer+faz%2C+quem+n%C3%A3o+quer+copia.. via lobao.com.br&amp;url=', 'sharer', 'toolbar=0,status=0,width=548,height=425');" class="twitter-share-button" target="_parent" href="javascript: void(0)"><img src="images/icons/twitterthink.gif" alt="twitter" border="0"></a>
+						<a href="http://www.tumblr.com/share/quote?quote=Quem+quer+faz%2C+quem+n%C3%A3o+quer+copia.&amp;source=http%3A%2F%2Fwww.lobao.com.br" title="Share on Tumblr" target="_blank"><img src="images/icons/tumblr.png" alt="tumblr" height="14" width="14" border="0"></a>
+					</p>
+						
+						
+						<!--
+                        <p class="links">lobão</p>
+						-->
+						
+           			 </div><div style="position: absolute; top: 0px; left: 220px; z-index: 0; display: none;" class="slides" "="">
+                    <p>
+						"O doido sem corrimão é um problema para a nação."
+												<a onclick="window.open('http://www.facebook.com/sharer.php?s=100&amp;p[title]=Pensamento+Lob%C3%A3o&amp;p[summary]=O+doido+sem+corrim%C3%A3o+%C3%A9+um+problema+para+a+na%C3%A7%C3%A3o.&amp;p[url]=http%3A%2F%2Fwww.lobao.com.br&amp;&amp;p[images][0]=http%3A%2F%2Fwww.lobao.com.br%2Fimages%2Ffb%2Fpensamentos.jpg', 'sharer', 'toolbar=0,status=0,width=548,height=425');" target="_parent" href="javascript: void(0)"><img src="images/icons/facebookthink.gif" alt="facebook" border="0"></a>
+						<!--<a onClick="window.open('https://twitter.com/share?text=O+doido+sem+corrim%C3%A3o+%C3%A9+um+problema+para+a+na%C3%A7%C3%A3o.&amp;via=lobaoeletrico&amp;url=', 'sharer', 'toolbar=0,status=0,width=548,height=425');" class="twitter-share-button" target="_parent" href="javascript: void(0)"><img src="images/icons/twitterthink.gif" alt="twitter"  border="0" /></a>-->
+						<a onclick="window.open('https://twitter.com/share?text=O+doido+sem+corrim%C3%A3o+%C3%A9+um+problema+para+a+na%C3%A7%C3%A3o.. via lobao.com.br&amp;url=', 'sharer', 'toolbar=0,status=0,width=548,height=425');" class="twitter-share-button" target="_parent" href="javascript: void(0)"><img src="images/icons/twitterthink.gif" alt="twitter" border="0"></a>
+						<a href="http://www.tumblr.com/share/quote?quote=O+doido+sem+corrim%C3%A3o+%C3%A9+um+problema+para+a+na%C3%A7%C3%A3o.&amp;source=http%3A%2F%2Fwww.lobao.com.br" title="Share on Tumblr" target="_blank"><img src="images/icons/tumblr.png" alt="tumblr" height="14" width="14" border="0"></a>
+					</p>
+						
+						
+						<!--
+                        <p class="links">lobão</p>
+						-->
+						
+           			 </div><div style="position: absolute; top: 0px; left: 220px; z-index: 0; display: none;" class="slides" "="">
+                    <p>
+						"A discrição é uma extravagância Zen."
+												<a onclick="window.open('http://www.facebook.com/sharer.php?s=100&amp;p[title]=Pensamento+Lob%C3%A3o&amp;p[summary]=A+discri%C3%A7%C3%A3o+%C3%A9+uma+extravag%C3%A2ncia+Zen.&amp;p[url]=http%3A%2F%2Fwww.lobao.com.br&amp;&amp;p[images][0]=http%3A%2F%2Fwww.lobao.com.br%2Fimages%2Ffb%2Fpensamentos.jpg', 'sharer', 'toolbar=0,status=0,width=548,height=425');" target="_parent" href="javascript: void(0)"><img src="images/icons/facebookthink.gif" alt="facebook" border="0"></a>
+						<!--<a onClick="window.open('https://twitter.com/share?text=A+discri%C3%A7%C3%A3o+%C3%A9+uma+extravag%C3%A2ncia+Zen.&amp;via=lobaoeletrico&amp;url=', 'sharer', 'toolbar=0,status=0,width=548,height=425');" class="twitter-share-button" target="_parent" href="javascript: void(0)"><img src="images/icons/twitterthink.gif" alt="twitter"  border="0" /></a>-->
+						<a onclick="window.open('https://twitter.com/share?text=A+discri%C3%A7%C3%A3o+%C3%A9+uma+extravag%C3%A2ncia+Zen.. via lobao.com.br&amp;url=', 'sharer', 'toolbar=0,status=0,width=548,height=425');" class="twitter-share-button" target="_parent" href="javascript: void(0)"><img src="images/icons/twitterthink.gif" alt="twitter" border="0"></a>
+						<a href="http://www.tumblr.com/share/quote?quote=A+discri%C3%A7%C3%A3o+%C3%A9+uma+extravag%C3%A2ncia+Zen.&amp;source=http%3A%2F%2Fwww.lobao.com.br" title="Share on Tumblr" target="_blank"><img src="images/icons/tumblr.png" alt="tumblr" height="14" width="14" border="0"></a>
+					</p>
+						
+						
+						<!--
+                        <p class="links">lobão</p>
+						-->
+						
+           			 </div><div style="position: absolute; top: 0px; left: 220px; z-index: 0; display: none;" class="slides" "="">
+                    <p>
+						"Ser exótico "fashion" é a maneira mais histérica de se reprovar."
+												<a onclick="window.open('http://www.facebook.com/sharer.php?s=100&amp;p[title]=Pensamento+Lob%C3%A3o&amp;p[summary]=Ser+ex%C3%B3tico+%22fashion%22+%C3%A9+a+maneira+mais+hist%C3%A9rica+de+se+reprovar.&amp;p[url]=http%3A%2F%2Fwww.lobao.com.br&amp;&amp;p[images][0]=http%3A%2F%2Fwww.lobao.com.br%2Fimages%2Ffb%2Fpensamentos.jpg', 'sharer', 'toolbar=0,status=0,width=548,height=425');" target="_parent" href="javascript: void(0)"><img src="images/icons/facebookthink.gif" alt="facebook" border="0"></a>
+						<!--<a onClick="window.open('https://twitter.com/share?text=Ser+ex%C3%B3tico+%22fashion%22+%C3%A9+a+maneira+mais+hist%C3%A9rica+de+se+reprovar.&amp;via=lobaoeletrico&amp;url=', 'sharer', 'toolbar=0,status=0,width=548,height=425');" class="twitter-share-button" target="_parent" href="javascript: void(0)"><img src="images/icons/twitterthink.gif" alt="twitter"  border="0" /></a>-->
+						<a onclick="window.open('https://twitter.com/share?text=Ser+ex%C3%B3tico+%22fashion%22+%C3%A9+a+maneira+mais+hist%C3%A9rica+de+se+reprovar.. via lobao.com.br&amp;url=', 'sharer', 'toolbar=0,status=0,width=548,height=425');" class="twitter-share-button" target="_parent" href="javascript: void(0)"><img src="images/icons/twitterthink.gif" alt="twitter" border="0"></a>
+						<a href="http://www.tumblr.com/share/quote?quote=Ser+ex%C3%B3tico+%22fashion%22+%C3%A9+a+maneira+mais+hist%C3%A9rica+de+se+reprovar.&amp;source=http%3A%2F%2Fwww.lobao.com.br" title="Share on Tumblr" target="_blank"><img src="images/icons/tumblr.png" alt="tumblr" height="14" width="14" border="0"></a>
+					</p>
+						
+						
+						<!--
+                        <p class="links">lobão</p>
+						-->
+						
+           			 </div><div style="position: absolute; top: 0px; left: 220px; z-index: 0; display: none;" class="slides" "="">
+                    <p>
+						"A cada dia que passa, o "exagero" torna-se uma redundância tediosa."
+												<a onclick="window.open('http://www.facebook.com/sharer.php?s=100&amp;p[title]=Pensamento+Lob%C3%A3o&amp;p[summary]=A+cada+dia+que+passa%2C+o+%22exagero%22+torna-se+uma+redund%C3%A2ncia+tediosa.&amp;p[url]=http%3A%2F%2Fwww.lobao.com.br&amp;&amp;p[images][0]=http%3A%2F%2Fwww.lobao.com.br%2Fimages%2Ffb%2Fpensamentos.jpg', 'sharer', 'toolbar=0,status=0,width=548,height=425');" target="_parent" href="javascript: void(0)"><img src="images/icons/facebookthink.gif" alt="facebook" border="0"></a>
+						<!--<a onClick="window.open('https://twitter.com/share?text=A+cada+dia+que+passa%2C+o+%22exagero%22+torna-se+uma+redund%C3%A2ncia+tediosa.&amp;via=lobaoeletrico&amp;url=', 'sharer', 'toolbar=0,status=0,width=548,height=425');" class="twitter-share-button" target="_parent" href="javascript: void(0)"><img src="images/icons/twitterthink.gif" alt="twitter"  border="0" /></a>-->
+						<a onclick="window.open('https://twitter.com/share?text=A+cada+dia+que+passa%2C+o+%22exagero%22+torna-se+uma+redund%C3%A2ncia+tediosa.. via lobao.com.br&amp;url=', 'sharer', 'toolbar=0,status=0,width=548,height=425');" class="twitter-share-button" target="_parent" href="javascript: void(0)"><img src="images/icons/twitterthink.gif" alt="twitter" border="0"></a>
+						<a href="http://www.tumblr.com/share/quote?quote=A+cada+dia+que+passa%2C+o+%22exagero%22+torna-se+uma+redund%C3%A2ncia+tediosa.&amp;source=http%3A%2F%2Fwww.lobao.com.br" title="Share on Tumblr" target="_blank"><img src="images/icons/tumblr.png" alt="tumblr" height="14" width="14" border="0"></a>
+					</p>
+						
+						
+						<!--
+                        <p class="links">lobão</p>
+						-->
+						
+           			 </div><div style="position: absolute; top: 0px; left: 220px; z-index: 0; display: none;" class="slides" "="">
+                    <p>
+						"O perigo da ligação com coisas grandes tem uma característica muito desagradável: as coisas mudam, mas o perigo permanece o mesmo."
+												<a onclick="window.open('http://www.facebook.com/sharer.php?s=100&amp;p[title]=Pensamento+Lob%C3%A3o&amp;p[summary]=O+perigo+da+liga%C3%A7%C3%A3o+com+coisas+grandes+tem+uma+caracter%C3%ADstica+muito+desagrad%C3%A1vel%3A+as+coisas+mudam%2C+mas+o+perigo+permanece+o+mesmo.&amp;p[url]=http%3A%2F%2Fwww.lobao.com.br&amp;&amp;p[images][0]=http%3A%2F%2Fwww.lobao.com.br%2Fimages%2Ffb%2Fpensamentos.jpg', 'sharer', 'toolbar=0,status=0,width=548,height=425');" target="_parent" href="javascript: void(0)"><img src="images/icons/facebookthink.gif" alt="facebook" border="0"></a>
+						<!--<a onClick="window.open('https://twitter.com/share?text=O+perigo+da+liga%C3%A7%C3%A3o+com+coisas+grandes+tem+uma+caracter%C3%ADstica+muito+desagrad%C3%A1vel%3A+as+coisas+mudam%2C+mas+o+perigo+permanece+o+mesmo.&amp;via=lobaoeletrico&amp;url=', 'sharer', 'toolbar=0,status=0,width=548,height=425');" class="twitter-share-button" target="_parent" href="javascript: void(0)"><img src="images/icons/twitterthink.gif" alt="twitter"  border="0" /></a>-->
+						<a onclick="window.open('https://twitter.com/share?text=O+perigo+da+liga%C3%A7%C3%A3o+com+coisas+grandes+tem+uma+caracter%C3%ADstica+muito+desagrad%C3%A1vel%3A+as+coisas+mudam%2C+mas+o+perigo+permanece+o+mesmo.. via lobao.com.br&amp;url=', 'sharer', 'toolbar=0,status=0,width=548,height=425');" class="twitter-share-button" target="_parent" href="javascript: void(0)"><img src="images/icons/twitterthink.gif" alt="twitter" border="0"></a>
+						<a href="http://www.tumblr.com/share/quote?quote=O+perigo+da+liga%C3%A7%C3%A3o+com+coisas+grandes+tem+uma+caracter%C3%ADstica+muito+desagrad%C3%A1vel%3A+as+coisas+mudam%2C+mas+o+perigo+permanece+o+mesmo.&amp;source=http%3A%2F%2Fwww.lobao.com.br" title="Share on Tumblr" target="_blank"><img src="images/icons/tumblr.png" alt="tumblr" height="14" width="14" border="0"></a>
+					</p>
+						
+						
+						<!--
+                        <p class="links">lobão</p>
+						-->
+						
+           			 </div><div style="position: absolute; top: 0px; left: 220px; z-index: 0; display: none;" class="slides" "="">
+                    <p>
+						"Por aqui, o rock não morreu, porque simplesmente, no Brasil, o rock não nasceu.Somos um país rebolativo. No Brasil não existe esse cenário. "
+												<a onclick="window.open('http://www.facebook.com/sharer.php?s=100&amp;p[title]=Pensamento+Lob%C3%A3o&amp;p[summary]=Por+aqui%2C+o+rock+n%C3%A3o+morreu%2C+porque+simplesmente%2C+no+Brasil%2C+o+rock+n%C3%A3o+nasceu.Somos+um+pa%C3%ADs+rebolativo.+No+Brasil+n%C3%A3o+existe+esse+cen%C3%A1rio.+&amp;p[url]=http%3A%2F%2Fwww.lobao.com.br&amp;&amp;p[images][0]=http%3A%2F%2Fwww.lobao.com.br%2Fimages%2Ffb%2Fpensamentos.jpg', 'sharer', 'toolbar=0,status=0,width=548,height=425');" target="_parent" href="javascript: void(0)"><img src="images/icons/facebookthink.gif" alt="facebook" border="0"></a>
+						<!--<a onClick="window.open('https://twitter.com/share?text=Por+aqui%2C+o+rock+n%C3%A3o+morreu%2C+porque+simplesmente%2C+no+Brasil%2C+o+rock+n%C3%A3o+nasceu.Somos+um+pa%C3%ADs+rebolativo.+No+Brasil+n%C3%A3o+existe+esse+cen%C3%A1rio.+&amp;via=lobaoeletrico&amp;url=', 'sharer', 'toolbar=0,status=0,width=548,height=425');" class="twitter-share-button" target="_parent" href="javascript: void(0)"><img src="images/icons/twitterthink.gif" alt="twitter"  border="0" /></a>-->
+						<a onclick="window.open('https://twitter.com/share?text=Por+aqui%2C+o+rock+n%C3%A3o+morreu%2C+porque+simplesmente%2C+no+Brasil%2C+o+rock+n%C3%A3o+nasceu.Somos+um+pa%C3%ADs+rebolativo.+No+Brasil+n%C3%A3o+existe+esse+cen%C3%A1rio.+. via lobao.com.br&amp;url=', 'sharer', 'toolbar=0,status=0,width=548,height=425');" class="twitter-share-button" target="_parent" href="javascript: void(0)"><img src="images/icons/twitterthink.gif" alt="twitter" border="0"></a>
+						<a href="http://www.tumblr.com/share/quote?quote=Por+aqui%2C+o+rock+n%C3%A3o+morreu%2C+porque+simplesmente%2C+no+Brasil%2C+o+rock+n%C3%A3o+nasceu.Somos+um+pa%C3%ADs+rebolativo.+No+Brasil+n%C3%A3o+existe+esse+cen%C3%A1rio.+&amp;source=http%3A%2F%2Fwww.lobao.com.br" title="Share on Tumblr" target="_blank"><img src="images/icons/tumblr.png" alt="tumblr" height="14" width="14" border="0"></a>
+					</p>
+						
+						
+						<!--
+                        <p class="links">lobão</p>
+						-->
+						
+           			 </div><div style="position: absolute; top: 0px; left: 220px; z-index: 0; display: none;" class="slides" "="">
+                    <p>
+						"A música pra mim é um processo de cura. Ela transforma o mundo. E o que vejo aqui não está mudando nada."
+												<a onclick="window.open('http://www.facebook.com/sharer.php?s=100&amp;p[title]=Pensamento+Lob%C3%A3o&amp;p[summary]=A+m%C3%BAsica+pra+mim+%C3%A9+um+processo+de+cura.+Ela+transforma+o+mundo.+E+o+que+vejo+aqui+n%C3%A3o+est%C3%A1+mudando+nada.&amp;p[url]=http%3A%2F%2Fwww.lobao.com.br&amp;&amp;p[images][0]=http%3A%2F%2Fwww.lobao.com.br%2Fimages%2Ffb%2Fpensamentos.jpg', 'sharer', 'toolbar=0,status=0,width=548,height=425');" target="_parent" href="javascript: void(0)"><img src="images/icons/facebookthink.gif" alt="facebook" border="0"></a>
+						<!--<a onClick="window.open('https://twitter.com/share?text=A+m%C3%BAsica+pra+mim+%C3%A9+um+processo+de+cura.+Ela+transforma+o+mundo.+E+o+que+vejo+aqui+n%C3%A3o+est%C3%A1+mudando+nada.&amp;via=lobaoeletrico&amp;url=', 'sharer', 'toolbar=0,status=0,width=548,height=425');" class="twitter-share-button" target="_parent" href="javascript: void(0)"><img src="images/icons/twitterthink.gif" alt="twitter"  border="0" /></a>-->
+						<a onclick="window.open('https://twitter.com/share?text=A+m%C3%BAsica+pra+mim+%C3%A9+um+processo+de+cura.+Ela+transforma+o+mundo.+E+o+que+vejo+aqui+n%C3%A3o+est%C3%A1+mudando+nada.. via lobao.com.br&amp;url=', 'sharer', 'toolbar=0,status=0,width=548,height=425');" class="twitter-share-button" target="_parent" href="javascript: void(0)"><img src="images/icons/twitterthink.gif" alt="twitter" border="0"></a>
+						<a href="http://www.tumblr.com/share/quote?quote=A+m%C3%BAsica+pra+mim+%C3%A9+um+processo+de+cura.+Ela+transforma+o+mundo.+E+o+que+vejo+aqui+n%C3%A3o+est%C3%A1+mudando+nada.&amp;source=http%3A%2F%2Fwww.lobao.com.br" title="Share on Tumblr" target="_blank"><img src="images/icons/tumblr.png" alt="tumblr" height="14" width="14" border="0"></a>
+					</p>
+						
+						
+						<!--
+                        <p class="links">lobão</p>
+						-->
+						
+           			 </div><div style="position: absolute; top: 0px; left: 220px; z-index: 0; display: none;" class="slides" "="">
+                    <p>
+						"Eu sempre achei que a música tinha que espalhar emoções aterrorizantemente belas...pois bem,depois de 35 anos tentando,acabei de conseguir"
+												<a onclick="window.open('http://www.facebook.com/sharer.php?s=100&amp;p[title]=Pensamento+Lob%C3%A3o&amp;p[summary]=Eu+sempre+achei+que+a+m%C3%BAsica+tinha+que+espalhar+emo%C3%A7%C3%B5es+aterrorizantemente+belas...pois+bem%2Cdepois+de+35+anos+tentando%2Cacabei+de+conseguir&amp;p[url]=http%3A%2F%2Fwww.lobao.com.br&amp;&amp;p[images][0]=http%3A%2F%2Fwww.lobao.com.br%2Fimages%2Ffb%2Fpensamentos.jpg', 'sharer', 'toolbar=0,status=0,width=548,height=425');" target="_parent" href="javascript: void(0)"><img src="images/icons/facebookthink.gif" alt="facebook" border="0"></a>
+						<!--<a onClick="window.open('https://twitter.com/share?text=Eu+sempre+achei+que+a+m%C3%BAsica+tinha+que+espalhar+emo%C3%A7%C3%B5es+aterrorizantemente+belas...pois+bem%2Cdepois+de+35+anos+tentando%2Cacabei+de+conseguir&amp;via=lobaoeletrico&amp;url=', 'sharer', 'toolbar=0,status=0,width=548,height=425');" class="twitter-share-button" target="_parent" href="javascript: void(0)"><img src="images/icons/twitterthink.gif" alt="twitter"  border="0" /></a>-->
+						<a onclick="window.open('https://twitter.com/share?text=Eu+sempre+achei+que+a+m%C3%BAsica+tinha+que+espalhar+emo%C3%A7%C3%B5es+aterrorizantemente+belas...pois+bem%2Cdepois+de+35+anos+tentando%2Cacabei+de+conseguir. via lobao.com.br&amp;url=', 'sharer', 'toolbar=0,status=0,width=548,height=425');" class="twitter-share-button" target="_parent" href="javascript: void(0)"><img src="images/icons/twitterthink.gif" alt="twitter" border="0"></a>
+						<a href="http://www.tumblr.com/share/quote?quote=Eu+sempre+achei+que+a+m%C3%BAsica+tinha+que+espalhar+emo%C3%A7%C3%B5es+aterrorizantemente+belas...pois+bem%2Cdepois+de+35+anos+tentando%2Cacabei+de+conseguir&amp;source=http%3A%2F%2Fwww.lobao.com.br" title="Share on Tumblr" target="_blank"><img src="images/icons/tumblr.png" alt="tumblr" height="14" width="14" border="0"></a>
+					</p>
+						
+						
+						<!--
+                        <p class="links">lobão</p>
+						-->
+						
+           			 </div><div style="position: absolute; top: 0px; left: 220px; z-index: 0; display: none;" class="slides" "="">
+                    <p>
+						"Viver bacana? Instintos fortes e regras simples."
+												<a onclick="window.open('http://www.facebook.com/sharer.php?s=100&amp;p[title]=Pensamento+Lob%C3%A3o&amp;p[summary]=Viver+bacana%3F+Instintos+fortes+e+regras+simples.&amp;p[url]=http%3A%2F%2Fwww.lobao.com.br&amp;&amp;p[images][0]=http%3A%2F%2Fwww.lobao.com.br%2Fimages%2Ffb%2Fpensamentos.jpg', 'sharer', 'toolbar=0,status=0,width=548,height=425');" target="_parent" href="javascript: void(0)"><img src="images/icons/facebookthink.gif" alt="facebook" border="0"></a>
+						<!--<a onClick="window.open('https://twitter.com/share?text=Viver+bacana%3F+Instintos+fortes+e+regras+simples.&amp;via=lobaoeletrico&amp;url=', 'sharer', 'toolbar=0,status=0,width=548,height=425');" class="twitter-share-button" target="_parent" href="javascript: void(0)"><img src="images/icons/twitterthink.gif" alt="twitter"  border="0" /></a>-->
+						<a onclick="window.open('https://twitter.com/share?text=Viver+bacana%3F+Instintos+fortes+e+regras+simples.. via lobao.com.br&amp;url=', 'sharer', 'toolbar=0,status=0,width=548,height=425');" class="twitter-share-button" target="_parent" href="javascript: void(0)"><img src="images/icons/twitterthink.gif" alt="twitter" border="0"></a>
+						<a href="http://www.tumblr.com/share/quote?quote=Viver+bacana%3F+Instintos+fortes+e+regras+simples.&amp;source=http%3A%2F%2Fwww.lobao.com.br" title="Share on Tumblr" target="_blank"><img src="images/icons/tumblr.png" alt="tumblr" height="14" width="14" border="0"></a>
+					</p>
+						
+						
+						<!--
+                        <p class="links">lobão</p>
+						-->
+						
+           			 </div><div style="position: absolute; top: 0px; left: 220px; z-index: 0; display: none;" class="slides" "="">
+                    <p>
+						"A sociedade brasileira é uma sociedade gelatinosa"
+												<a onclick="window.open('http://www.facebook.com/sharer.php?s=100&amp;p[title]=Pensamento+Lob%C3%A3o&amp;p[summary]=A+sociedade+brasileira+%C3%A9+uma+sociedade+gelatinosa&amp;p[url]=http%3A%2F%2Fwww.lobao.com.br&amp;&amp;p[images][0]=http%3A%2F%2Fwww.lobao.com.br%2Fimages%2Ffb%2Fpensamentos.jpg', 'sharer', 'toolbar=0,status=0,width=548,height=425');" target="_parent" href="javascript: void(0)"><img src="images/icons/facebookthink.gif" alt="facebook" border="0"></a>
+						<!--<a onClick="window.open('https://twitter.com/share?text=A+sociedade+brasileira+%C3%A9+uma+sociedade+gelatinosa&amp;via=lobaoeletrico&amp;url=', 'sharer', 'toolbar=0,status=0,width=548,height=425');" class="twitter-share-button" target="_parent" href="javascript: void(0)"><img src="images/icons/twitterthink.gif" alt="twitter"  border="0" /></a>-->
+						<a onclick="window.open('https://twitter.com/share?text=A+sociedade+brasileira+%C3%A9+uma+sociedade+gelatinosa. via lobao.com.br&amp;url=', 'sharer', 'toolbar=0,status=0,width=548,height=425');" class="twitter-share-button" target="_parent" href="javascript: void(0)"><img src="images/icons/twitterthink.gif" alt="twitter" border="0"></a>
+						<a href="http://www.tumblr.com/share/quote?quote=A+sociedade+brasileira+%C3%A9+uma+sociedade+gelatinosa&amp;source=http%3A%2F%2Fwww.lobao.com.br" title="Share on Tumblr" target="_blank"><img src="images/icons/tumblr.png" alt="tumblr" height="14" width="14" border="0"></a>
+					</p>
+						
+						
+						<!--
+                        <p class="links">lobão</p>
+						-->
+						
+           			 </div><div style="position: absolute; top: 0px; left: 220px; z-index: 0; display: none;" class="slides" "="">
+                    <p>
+						"O gordo é o elemento de equilíbrio diante do vazio existencial da nossa sociedade repleta de espíritos famintos"
+												<a onclick="window.open('http://www.facebook.com/sharer.php?s=100&amp;p[title]=Pensamento+Lob%C3%A3o&amp;p[summary]=O+gordo+%C3%A9+o+elemento+de+equil%C3%ADbrio+diante+do+vazio+existencial+da+nossa+sociedade+repleta+de+esp%C3%ADritos+famintos&amp;p[url]=http%3A%2F%2Fwww.lobao.com.br&amp;&amp;p[images][0]=http%3A%2F%2Fwww.lobao.com.br%2Fimages%2Ffb%2Fpensamentos.jpg', 'sharer', 'toolbar=0,status=0,width=548,height=425');" target="_parent" href="javascript: void(0)"><img src="images/icons/facebookthink.gif" alt="facebook" border="0"></a>
+						<!--<a onClick="window.open('https://twitter.com/share?text=O+gordo+%C3%A9+o+elemento+de+equil%C3%ADbrio+diante+do+vazio+existencial+da+nossa+sociedade+repleta+de+esp%C3%ADritos+famintos&amp;via=lobaoeletrico&amp;url=', 'sharer', 'toolbar=0,status=0,width=548,height=425');" class="twitter-share-button" target="_parent" href="javascript: void(0)"><img src="images/icons/twitterthink.gif" alt="twitter"  border="0" /></a>-->
+						<a onclick="window.open('https://twitter.com/share?text=O+gordo+%C3%A9+o+elemento+de+equil%C3%ADbrio+diante+do+vazio+existencial+da+nossa+sociedade+repleta+de+esp%C3%ADritos+famintos. via lobao.com.br&amp;url=', 'sharer', 'toolbar=0,status=0,width=548,height=425');" class="twitter-share-button" target="_parent" href="javascript: void(0)"><img src="images/icons/twitterthink.gif" alt="twitter" border="0"></a>
+						<a href="http://www.tumblr.com/share/quote?quote=O+gordo+%C3%A9+o+elemento+de+equil%C3%ADbrio+diante+do+vazio+existencial+da+nossa+sociedade+repleta+de+esp%C3%ADritos+famintos&amp;source=http%3A%2F%2Fwww.lobao.com.br" title="Share on Tumblr" target="_blank"><img src="images/icons/tumblr.png" alt="tumblr" height="14" width="14" border="0"></a>
+					</p>
+						
+						
+						<!--
+                        <p class="links">lobão</p>
+						-->
+						
+           			 </div><div style="position: absolute; top: 0px; left: 220px; z-index: 0; display: none;" class="slides" "="">
+                    <p>
+						"Acho que nesse caso ,o suicidio me soa mais como uma anorexia existencial"
+												<a onclick="window.open('http://www.facebook.com/sharer.php?s=100&amp;p[title]=Pensamento+Lob%C3%A3o&amp;p[summary]=Acho+que+nesse+caso+%2Co+suicidio+me+soa+mais+como+uma+anorexia+existencial&amp;p[url]=http%3A%2F%2Fwww.lobao.com.br&amp;&amp;p[images][0]=http%3A%2F%2Fwww.lobao.com.br%2Fimages%2Ffb%2Fpensamentos.jpg', 'sharer', 'toolbar=0,status=0,width=548,height=425');" target="_parent" href="javascript: void(0)"><img src="images/icons/facebookthink.gif" alt="facebook" border="0"></a>
+						<!--<a onClick="window.open('https://twitter.com/share?text=Acho+que+nesse+caso+%2Co+suicidio+me+soa+mais+como+uma+anorexia+existencial&amp;via=lobaoeletrico&amp;url=', 'sharer', 'toolbar=0,status=0,width=548,height=425');" class="twitter-share-button" target="_parent" href="javascript: void(0)"><img src="images/icons/twitterthink.gif" alt="twitter"  border="0" /></a>-->
+						<a onclick="window.open('https://twitter.com/share?text=Acho+que+nesse+caso+%2Co+suicidio+me+soa+mais+como+uma+anorexia+existencial. via lobao.com.br&amp;url=', 'sharer', 'toolbar=0,status=0,width=548,height=425');" class="twitter-share-button" target="_parent" href="javascript: void(0)"><img src="images/icons/twitterthink.gif" alt="twitter" border="0"></a>
+						<a href="http://www.tumblr.com/share/quote?quote=Acho+que+nesse+caso+%2Co+suicidio+me+soa+mais+como+uma+anorexia+existencial&amp;source=http%3A%2F%2Fwww.lobao.com.br" title="Share on Tumblr" target="_blank"><img src="images/icons/tumblr.png" alt="tumblr" height="14" width="14" border="0"></a>
+					</p>
+						
+						
+						<!--
+                        <p class="links">lobão</p>
+						-->
+						
+           			 </div><div style="position: absolute; top: 0px; left: 220px; z-index: 0; display: none;" class="slides" "="">
+                    <p>
+						"Insight : a inteligência é um imperativo cósmico do universo"
+												<a onclick="window.open('http://www.facebook.com/sharer.php?s=100&amp;p[title]=Pensamento+Lob%C3%A3o&amp;p[summary]=Insight+%3A+a+intelig%C3%AAncia+%C3%A9+um+imperativo+c%C3%B3smico+do+universo&amp;p[url]=http%3A%2F%2Fwww.lobao.com.br&amp;&amp;p[images][0]=http%3A%2F%2Fwww.lobao.com.br%2Fimages%2Ffb%2Fpensamentos.jpg', 'sharer', 'toolbar=0,status=0,width=548,height=425');" target="_parent" href="javascript: void(0)"><img src="images/icons/facebookthink.gif" alt="facebook" border="0"></a>
+						<!--<a onClick="window.open('https://twitter.com/share?text=Insight+%3A+a+intelig%C3%AAncia+%C3%A9+um+imperativo+c%C3%B3smico+do+universo&amp;via=lobaoeletrico&amp;url=', 'sharer', 'toolbar=0,status=0,width=548,height=425');" class="twitter-share-button" target="_parent" href="javascript: void(0)"><img src="images/icons/twitterthink.gif" alt="twitter"  border="0" /></a>-->
+						<a onclick="window.open('https://twitter.com/share?text=Insight+%3A+a+intelig%C3%AAncia+%C3%A9+um+imperativo+c%C3%B3smico+do+universo. via lobao.com.br&amp;url=', 'sharer', 'toolbar=0,status=0,width=548,height=425');" class="twitter-share-button" target="_parent" href="javascript: void(0)"><img src="images/icons/twitterthink.gif" alt="twitter" border="0"></a>
+						<a href="http://www.tumblr.com/share/quote?quote=Insight+%3A+a+intelig%C3%AAncia+%C3%A9+um+imperativo+c%C3%B3smico+do+universo&amp;source=http%3A%2F%2Fwww.lobao.com.br" title="Share on Tumblr" target="_blank"><img src="images/icons/tumblr.png" alt="tumblr" height="14" width="14" border="0"></a>
+					</p>
+						
+						
+						<!--
+                        <p class="links">lobão</p>
+						-->
+						
+           			 </div><div style="position: absolute; top: 0px; left: 220px; z-index: 0; display: none;" class="slides" "="">
+                    <p>
+						"A nossa sociedade em geral deveria investir pesado no espírito esportivo e parar com esses ódios oligóides externados por everybody"
+												<a onclick="window.open('http://www.facebook.com/sharer.php?s=100&amp;p[title]=Pensamento+Lob%C3%A3o&amp;p[summary]=A+nossa+sociedade+em+geral+deveria+investir+pesado+no+esp%C3%ADrito+esportivo+e+parar+com+esses+%C3%B3dios+olig%C3%B3ides+externados+por+everybody&amp;p[url]=http%3A%2F%2Fwww.lobao.com.br&amp;&amp;p[images][0]=http%3A%2F%2Fwww.lobao.com.br%2Fimages%2Ffb%2Fpensamentos.jpg', 'sharer', 'toolbar=0,status=0,width=548,height=425');" target="_parent" href="javascript: void(0)"><img src="images/icons/facebookthink.gif" alt="facebook" border="0"></a>
+						<!--<a onClick="window.open('https://twitter.com/share?text=A+nossa+sociedade+em+geral+deveria+investir+pesado+no+esp%C3%ADrito+esportivo+e+parar+com+esses+%C3%B3dios+olig%C3%B3ides+externados+por+everybody&amp;via=lobaoeletrico&amp;url=', 'sharer', 'toolbar=0,status=0,width=548,height=425');" class="twitter-share-button" target="_parent" href="javascript: void(0)"><img src="images/icons/twitterthink.gif" alt="twitter"  border="0" /></a>-->
+						<a onclick="window.open('https://twitter.com/share?text=A+nossa+sociedade+em+geral+deveria+investir+pesado+no+esp%C3%ADrito+esportivo+e+parar+com+esses+%C3%B3dios+olig%C3%B3ides+externados+por+everybody. via lobao.com.br&amp;url=', 'sharer', 'toolbar=0,status=0,width=548,height=425');" class="twitter-share-button" target="_parent" href="javascript: void(0)"><img src="images/icons/twitterthink.gif" alt="twitter" border="0"></a>
+						<a href="http://www.tumblr.com/share/quote?quote=A+nossa+sociedade+em+geral+deveria+investir+pesado+no+esp%C3%ADrito+esportivo+e+parar+com+esses+%C3%B3dios+olig%C3%B3ides+externados+por+everybody&amp;source=http%3A%2F%2Fwww.lobao.com.br" title="Share on Tumblr" target="_blank"><img src="images/icons/tumblr.png" alt="tumblr" height="14" width="14" border="0"></a>
+					</p>
+						
+						
+						<!--
+                        <p class="links">lobão</p>
+						-->
+						
+           			 </div><div style="position: absolute; top: 0px; left: 220px; z-index: 0; display: none;" class="slides" "="">
+                    <p>
+						"A perda do sentido de complexidade arruina uma sociedade"
+												<a onclick="window.open('http://www.facebook.com/sharer.php?s=100&amp;p[title]=Pensamento+Lob%C3%A3o&amp;p[summary]=A+perda+do+sentido+de+complexidade+arruina+uma+sociedade&amp;p[url]=http%3A%2F%2Fwww.lobao.com.br&amp;&amp;p[images][0]=http%3A%2F%2Fwww.lobao.com.br%2Fimages%2Ffb%2Fpensamentos.jpg', 'sharer', 'toolbar=0,status=0,width=548,height=425');" target="_parent" href="javascript: void(0)"><img src="images/icons/facebookthink.gif" alt="facebook" border="0"></a>
+						<!--<a onClick="window.open('https://twitter.com/share?text=A+perda+do+sentido+de+complexidade+arruina+uma+sociedade&amp;via=lobaoeletrico&amp;url=', 'sharer', 'toolbar=0,status=0,width=548,height=425');" class="twitter-share-button" target="_parent" href="javascript: void(0)"><img src="images/icons/twitterthink.gif" alt="twitter"  border="0" /></a>-->
+						<a onclick="window.open('https://twitter.com/share?text=A+perda+do+sentido+de+complexidade+arruina+uma+sociedade. via lobao.com.br&amp;url=', 'sharer', 'toolbar=0,status=0,width=548,height=425');" class="twitter-share-button" target="_parent" href="javascript: void(0)"><img src="images/icons/twitterthink.gif" alt="twitter" border="0"></a>
+						<a href="http://www.tumblr.com/share/quote?quote=A+perda+do+sentido+de+complexidade+arruina+uma+sociedade&amp;source=http%3A%2F%2Fwww.lobao.com.br" title="Share on Tumblr" target="_blank"><img src="images/icons/tumblr.png" alt="tumblr" height="14" width="14" border="0"></a>
+					</p>
+						
+						
+						<!--
+                        <p class="links">lobão</p>
+						-->
+						
+           			 </div><div style="position: absolute; top: 0px; left: 220px; z-index: 0; display: none;" class="slides" "="">
+                    <p>
+						"O simplório tem a sombria tendência de ficar ofendido"
+												<a onclick="window.open('http://www.facebook.com/sharer.php?s=100&amp;p[title]=Pensamento+Lob%C3%A3o&amp;p[summary]=O+simpl%C3%B3rio+tem+a+sombria+tend%C3%AAncia+de+ficar+ofendido&amp;p[url]=http%3A%2F%2Fwww.lobao.com.br&amp;&amp;p[images][0]=http%3A%2F%2Fwww.lobao.com.br%2Fimages%2Ffb%2Fpensamentos.jpg', 'sharer', 'toolbar=0,status=0,width=548,height=425');" target="_parent" href="javascript: void(0)"><img src="images/icons/facebookthink.gif" alt="facebook" border="0"></a>
+						<!--<a onClick="window.open('https://twitter.com/share?text=O+simpl%C3%B3rio+tem+a+sombria+tend%C3%AAncia+de+ficar+ofendido&amp;via=lobaoeletrico&amp;url=', 'sharer', 'toolbar=0,status=0,width=548,height=425');" class="twitter-share-button" target="_parent" href="javascript: void(0)"><img src="images/icons/twitterthink.gif" alt="twitter"  border="0" /></a>-->
+						<a onclick="window.open('https://twitter.com/share?text=O+simpl%C3%B3rio+tem+a+sombria+tend%C3%AAncia+de+ficar+ofendido. via lobao.com.br&amp;url=', 'sharer', 'toolbar=0,status=0,width=548,height=425');" class="twitter-share-button" target="_parent" href="javascript: void(0)"><img src="images/icons/twitterthink.gif" alt="twitter" border="0"></a>
+						<a href="http://www.tumblr.com/share/quote?quote=O+simpl%C3%B3rio+tem+a+sombria+tend%C3%AAncia+de+ficar+ofendido&amp;source=http%3A%2F%2Fwww.lobao.com.br" title="Share on Tumblr" target="_blank"><img src="images/icons/tumblr.png" alt="tumblr" height="14" width="14" border="0"></a>
+					</p>
+						
+						
+						<!--
+                        <p class="links">lobão</p>
+						-->
+						
+           			 </div><div style="position: absolute; top: 0px; left: 220px; z-index: 0; display: none;" class="slides" "="">
+                    <p>
+						"A complexidade atrofiada pare o simplório"
+												<a onclick="window.open('http://www.facebook.com/sharer.php?s=100&amp;p[title]=Pensamento+Lob%C3%A3o&amp;p[summary]=A+complexidade+atrofiada+pare+o+simpl%C3%B3rio&amp;p[url]=http%3A%2F%2Fwww.lobao.com.br&amp;&amp;p[images][0]=http%3A%2F%2Fwww.lobao.com.br%2Fimages%2Ffb%2Fpensamentos.jpg', 'sharer', 'toolbar=0,status=0,width=548,height=425');" target="_parent" href="javascript: void(0)"><img src="images/icons/facebookthink.gif" alt="facebook" border="0"></a>
+						<!--<a onClick="window.open('https://twitter.com/share?text=A+complexidade+atrofiada+pare+o+simpl%C3%B3rio&amp;via=lobaoeletrico&amp;url=', 'sharer', 'toolbar=0,status=0,width=548,height=425');" class="twitter-share-button" target="_parent" href="javascript: void(0)"><img src="images/icons/twitterthink.gif" alt="twitter"  border="0" /></a>-->
+						<a onclick="window.open('https://twitter.com/share?text=A+complexidade+atrofiada+pare+o+simpl%C3%B3rio. via lobao.com.br&amp;url=', 'sharer', 'toolbar=0,status=0,width=548,height=425');" class="twitter-share-button" target="_parent" href="javascript: void(0)"><img src="images/icons/twitterthink.gif" alt="twitter" border="0"></a>
+						<a href="http://www.tumblr.com/share/quote?quote=A+complexidade+atrofiada+pare+o+simpl%C3%B3rio&amp;source=http%3A%2F%2Fwww.lobao.com.br" title="Share on Tumblr" target="_blank"><img src="images/icons/tumblr.png" alt="tumblr" height="14" width="14" border="0"></a>
+					</p>
+						
+						
+						<!--
+                        <p class="links">lobão</p>
+						-->
+						
+           			 </div><div style="position: absolute; top: 0px; left: 220px; z-index: 0; display: none;" class="slides" "="">
+                    <p>
+						"É  porque  deus vira razão social diabo quando entra em férias"
+												<a onclick="window.open('http://www.facebook.com/sharer.php?s=100&amp;p[title]=Pensamento+Lob%C3%A3o&amp;p[summary]=%C3%89++porque++deus+vira+raz%C3%A3o+social+diabo+quando+entra+em+f%C3%A9rias&amp;p[url]=http%3A%2F%2Fwww.lobao.com.br&amp;&amp;p[images][0]=http%3A%2F%2Fwww.lobao.com.br%2Fimages%2Ffb%2Fpensamentos.jpg', 'sharer', 'toolbar=0,status=0,width=548,height=425');" target="_parent" href="javascript: void(0)"><img src="images/icons/facebookthink.gif" alt="facebook" border="0"></a>
+						<!--<a onClick="window.open('https://twitter.com/share?text=%C3%89++porque++deus+vira+raz%C3%A3o+social+diabo+quando+entra+em+f%C3%A9rias&amp;via=lobaoeletrico&amp;url=', 'sharer', 'toolbar=0,status=0,width=548,height=425');" class="twitter-share-button" target="_parent" href="javascript: void(0)"><img src="images/icons/twitterthink.gif" alt="twitter"  border="0" /></a>-->
+						<a onclick="window.open('https://twitter.com/share?text=%C3%89++porque++deus+vira+raz%C3%A3o+social+diabo+quando+entra+em+f%C3%A9rias. via lobao.com.br&amp;url=', 'sharer', 'toolbar=0,status=0,width=548,height=425');" class="twitter-share-button" target="_parent" href="javascript: void(0)"><img src="images/icons/twitterthink.gif" alt="twitter" border="0"></a>
+						<a href="http://www.tumblr.com/share/quote?quote=%C3%89++porque++deus+vira+raz%C3%A3o+social+diabo+quando+entra+em+f%C3%A9rias&amp;source=http%3A%2F%2Fwww.lobao.com.br" title="Share on Tumblr" target="_blank"><img src="images/icons/tumblr.png" alt="tumblr" height="14" width="14" border="0"></a>
+					</p>
+						
+						
+						<!--
+                        <p class="links">lobão</p>
+						-->
+						
+           			 </div></div>
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			        </div><a href="#" class="pprev">Prev</a><a href="#" class="pnext">Next</a>
+    </div>
+    
+    <div class="redes">
+    	<a href="http://www.facebook.com/lobaooficial" class="facebook" target="_blank" style="background-image: url(../images/facebook.gif); width: 77px;">facebook</a>
+        <a href="http://twitter.com/#!/lobaoeletrico" class="twitter" target="_blank">twitter</a>
+        <a href="http://josoylobon.tumblr.com/" class="tumblr" target="_blank">tumblr</a>
+        <a href="http://www.myspace.com/lobaouniversoparalelo" class="myspace" target="_blank">myspace</a>
+        
+    </div>
+    <form method="get" action="resultado_busca.php">
+    
+    <input name="buscar" id="busca" value="busca..." onfocus="clearText(this);" onblur="clearText(this);" type="text">
+    
+    <input value="" type="submit"> 
+    
+    </form>
+	
+	</div>
+
+<div id="principal" style="position: relative;">
+    <div class="blocoesquerdo">
+    
+    	<h1 style="display: none;">Manifesto do Nada na Terra do Nunca</h1>
+	
+		<img src="images/manifesto/topo_manifesto_do_nada.jpg" usemap="#Map" border="0">
+		<map name="Map" id="Map">
+			<area shape="rect" coords="321,356,583,445" href="agenda.php">
+		</map>
+		<img src="images/manifesto/techo.png">
+		<img src="images/manifesto/texto_1.png">
+		<p style="margin: 0px; padding: 0px; padding-top: 15px; font-size: 13px; line-height: 17px; color: #CCC;">
+			Manifesto do Nada na Terra do Nunca (Nova Fronteira) questiona as bandeiras da falta de caráter, preguiça e precariedade levantadas pela Semana de Arte Moderna de 22 e profundamente fincadas em nossa cultura desde então. Este, no entanto, é apenas o ponto de partida para um texto em nada convencional.
+			<br><br>
+			Tendo como base uma ampla pesquisa bibliográfica, além de sua não menos vasta experiência pessoal, Lobão, antes de promover qualquer polêmica, leva o leitor a pensar por conta própria e prova ser possível - e necessário - divergir com elegância.
+		</p>
+		<a href="images/manifesto/PRESSKIT_170513.zip" id="presskit">Download Press Kit</a>
+		
+		<div style="border-bottom: 1px dotted #aa7457; border-top: 1px dotted #aa7457; padding-top: 20px; padding-bottom: 20px;">
+			<img src="images/manifesto/livro.png" style="float: left;">
+			<div style="display: block; float: left; width: 470px; margin-left: 20px;">
+				<img src="images/manifesto/pvenda.png" style="padding: 20px 0px 20px 0px;">
+				<br style="clear: both;">
+				<a target="_blank" href="http://www.livrariacultura.com.br/Produto/LIVRO/LOBAO-MANIFESTO-DO-NADA-NA-TERRA-DO-NUNCA/42110391" class="bt_livraria" id="cultura"></a>
+				<a target="_blank" href="http://www.livrariascuritiba.com.br/lobao-manifesto-do-nada-na-terra-do-nunca-nova-fronteira,product,LV326453,3112.aspx" class="bt_livraria" id="curitiba"></a>
+				<a target="_blank" href="http://www.travessa.com.br/LOBAO_MANIFESTO_DO_NADA_NA_TERRA_DO_NUNCA/artigo/5af38ce0-b3da-4f9d-866e-a846ff13b94f" class="bt_livraria" id="travessa" style="margin-right: 0px;"></a>
+				<a target="_blank" href="http://www.livrariasaraiva.com.br/produto/4891350/lobao-manifesto-do-nada-na-terra-do-nunca/" class="bt_livraria" id="saraiva"></a>
+				<a target="_blank" href="http://www.submarino.com.br/produto/113210426/livro-lobao-manifesto-do-nada-na-terra-do-nunca" class="bt_livraria" id="submarino"></a>
+				<a target="_blank" href="http://www.fnac.com.br/lobao-manifesto-do-nada-na-terra-do-nunca--FNAC,,livro-636267-1.html" class="bt_livraria" id="fnac" style="margin-right: 0px;"></a>
+			</div><br style="clear: both;">
+		</div>
+		
+				<img src="images/manifesto/final_sot.png" style="margin-top: 15px;" id="imagem_link" border="0">
+		<img src="images/manifesto/final.png" style="margin-top: 15px; margin-bottom: 15px;" border="0">
+		
+		
+		<ul class="vencedores">
+			<li class="vence"><span>1º</span>@Meneceu</li>
+			<li><span>2º</span>@Alinebaladao</li>
+			<li><span>3º</span>@fegutspaim2777</li>
+			<li><span>4º</span>@brusjc</li>
+			<li><span>5º</span>@vinimcardoso</li>
+			<li><span>6º</span>@elianearruda</li>
+			<li><span>7º</span>@RockSocialClub_</li>
+			<li><span>8º</span>@FCprinceOficial</li>
+			<li><span>9º</span>@calilrodrigo</li>
+			<li><span>10º</span>@samucaneves1</li>
+			<li><span>11º</span>@Mauricio2ponto9</li>
+			<li><span>12º</span>@ronca_ferro</li>
+			<li><span>13º</span>@Andrechaves44</li>
+			<li><span>14º</span>@marciofido</li>
+			<li><span>15º</span>@milhomem13</li>
+			<li><span>16º</span>@Natt_Motta</li>
+			<li><span>17º</span>@AndersonPaschoa</li>
+			<li><span>18º</span>@tainahemmanuele</li>
+			<li><span>19º</span>@bandararde</li>
+			<li><span>20º</span>@brunobritolima</li>
+			<li>
+				Sobre o sorteio: O sorteio foi realizado dia 22/05 às 15h. Foram desclassificados 4 usuários, por não cumprimento do item 1.3 do regulamento abaixo, que especifica que o os participantes deverão seguir o perfil @lobaoeletrico. Sendo assim, foi realizado um segundo sorteio para substituir os participantes desclassificados. &nbsp;
+				<br><br>
+				Como o primeiro sorteado foi desclassificado, o segundo sorteado passou automaticamente ao posto de ganhador do amplificador, conforme item 2.1 do regulamento abaixo.
+				<br><br>
+				<a href="http://beta.sorteie.me/r/KrN" target="_blank">Link do primeiro sorteio: http://beta.sorteie.me/r/KrN</a>
+				<br>
+				<a href="http://beta.sorteie.me/r/KyD" target="_blank">Link do segundo sorteio: http://beta.sorteie.me/r/KyD</a>
+			</li>
+			<li style="background-color: #FFF; color: #000;">
+				Os sorteados da lista acima precisam seguir o perfil @lobaonews, conforme item2.3 do regulamento abaixo, para ser viável o envio da DM solicitando dados para que a premiação ocorra
+			</li>
+		</ul>
+		
+		<img src="images/manifesto/promo_ilustra.png" usemap="#Map2" style="margin-left: 75px;margin-top: 15px; margin-bottom: 15px;" border="0">
+		<map name="Map2" id="Map2">
+			<area shape="rect" coords="237,115,320,132" href="http://www.gatopretoclassics.com/product/viralata-conjunto/" target="_blank">
+			<area shape="rect" coords="163,131,321,148" href="http://www.gatopretoclassics.com" target="_blank">
+			<area shape="rect" coords="243,149,320,163" href="https://twitter.com/gpclassics" target="_blank">
+		</map>
+		<div style="padding: 40px; width: 526px; background-color: #333; height: 200px;">
+			<div style="display: block; width: 520px; height: 200px; overflow: auto;" id="regulamento">
+				<strong style="color: #999; font-size: 15px; text-transform: uppercase;">Regulamento</strong>
+				
+				<span>1. Da participação</span>
+				<p style="color: #999;">1.1. Os participantes deverão retwittar a mensagem indicada e publicada pelo perfil @lobaoeletrico referente à promoção (na íntegra) que apresenta como conteúdo o texto: Siga @lobaoeletrico e RT "Quero ganhar 1 amplificador + novo livro autografado #ManifestoDoNadaNaTerraDoNunca http://kingo.to/1gVU"</p>
+				<p style="color: #999;">1.2. Serão válidos os retwetts realizados conforme o item anterior até às 15 horas do dia 22 de maio de 2013;</p>
+				<p style="color: #999;">1.3. Os participantes deverão seguir o perfil @lobaoeletrico.</p>
+				
+				<span>2. Da premiação</span>
+				<p style="color: #999;">2.1 - Os 20 sorteados através da ferramenta Sortei.me serão premiados de acordo com a classificação a seguir;</p>
+				
+				<p style="color: #999;">1º sorteado: 1 amplificador (Gato Preto | Modelo Viralata | Potência 10W) + 1 livro Manifesto do Nada na Terra do Nunca autografado pelo Lobão;</p>
+				<p style="color: #999;">Do 2º ao 20º sorteado: 1 livro Manifesto do Nada na Terra do Nunca autografado pelo Lobão.</p>
+				<p style="color: #999;">2.2 - Os ganhadores serão anunciados através do perfil @lobaonews e receberão uma DM solicitando os dados para envio da premiação;</p>
+				<p style="color: #999;">2.3 - Após anuncio dos ganhadores, os mesmos deverão seguir o perfil @lobaonews para ser viável o envio de DM solicitando dados para que a premiação ocorra;</p>
+				<p style="color: #999;">2.4 - Os dados dos ganhadores deverão ser informados até o dia 26 de maio. O prêmio será entregue no endereço informado pelo ganhador em até 60 dias corridos.</p>
+				
+				<span>3. Outras informações</span>
+				<p style="color: #999;">3.1 - Em caso de suspeita de fraude, a exclusivo critério dos organizadores do concurso, o participante poderá ser desclassificado;</p>
+				<p style="color: #999;">3.2 - A organização que realiza este concurso desde já exclui de suas obrigações ora assumidas, quaisquer danos indiretos, incidentais ou lucros cessantes, decorrentes de quaisquer falhas no cumprimento ou na execução da presente proposta, seu regulamento e prestação dos serviços. </p>
+				<p style="color: #999;">3.3 - Este concurso é de caráter exclusivamente cultural, não estando vinculado à compra de produto.</p>
+				<p style="color: #999;">3.4 - A ação é válida apenas para residentes do território nacional.</p>
+
+			</div>
+	</div>
+    </div>
+    <div class="blocodireito">
+    	<ul id="menu" style="margin: 0px; padding: 0px; height: 235px;">
+
+			
+							<li><a href="index.php">Home</a></li>
+						
+        	<li><a href="biografia.php">Bio</a></li>
+            
+        	<li><a href="discografia.php">Discografia</a></li>
+            
+        	<li><a href="fotos.php">Fotos</a></li>
+            
+        	<li><a href="videos.php">Vídeos</a></li>
+            
+        	<li><a href="noticias.php">Notícias</a></li>
+            
+        	<li><a href="blog.php">Blog</a></li>
+            
+        	<li><a href="agenda.php">Agenda</a></li>
+        	
+            <li><a href="contrate.php">Contrate</a></li>
+            
+            <li style="height:26px;"><!--<a href="http://www.youtube.com/watch?v=EgRiIqi1nug" class="lobaoicon" rel="prettyPhoto[podCast]" ><img src="../images/livro_interna.png" style="display:none;" alt="Lobão PodCast" />João Luis, o Lobão</a> --></li>
+            
+            
+        </ul>    </div>
+   
+    
+</div>
+
+<div id="rodape">
+        <div class="mailfeed">
+<span class="separador"></span>
+
+<h3>Receba novidades por e-mail. <strong>Cadastre-se</strong></h3>
+
+<form method="post" name="mailfeed" action="/manifesto_do_nada_na_terra_do_nunca.php">
+<input name="nome" value="Nome" onfocus="clearText(this);" onblur="clearText(this);" type="text">
+<input name="email" value="Email" class="mail" onfocus="clearText(this);" onblur="clearText(this);" type="text">
+<input name="cidade" value="Cidade" onfocus="clearText(this);" onblur="clearText(this);" type="text">
+<input name="uf" value="UF" onfocus="clearText(this);" onblur="clearText(this);" class="uf" maxlength="2" type="text">
+<input name="enviar" value="enviar" type="submit">
+</form>
+<br class="clear">
+<span class="separador bottom"></span>
+
+<div style="height: 45px; width: 860px; display: none;" class="alerta"></div></div>          
+    
+    <div id="copyrights">
+        <a href="http://studiozilla.com.br/" target="_blank" class="zilla">Studiozilla</a>
+        ® 2012 LOBAO. TODOS OS DIREITOS RESERVADOS
+        <a href="http://www.facebook.com/joao.filho1" class="facebook" target="_blank">facebook</a>
+        <a href="http://twitter.com/#!/lobaoeletrico" class="twitter" target="_blank">twitter</a>
+        <a href="http://josoylobon.tumblr.com/" class="tumblr" target="_blank">tumblr</a>
+        <a href="http://www.myspace.com/lobaouniversoparalelo" class="myspace" target="_blank">myspace</a>
+    
+    </div>
+    <script type="text/javascript">
+	
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-31576108-1']);
+	  _gaq.push(['_trackPageview']);
+	
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	
+	</script></div>
+
+</div>
+
+
+</body>

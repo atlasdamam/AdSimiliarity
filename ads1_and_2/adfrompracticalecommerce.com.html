@@ -1,0 +1,185 @@
+<head>
+		<title>Credit Card Processing Diagram: How Credit Card Processing Works - Authorize.Net</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="description" content="The Authorize.Net credit card processing how it works diagram"><meta name="keywords" content="credit card processing diagram how it works authorize.net"><meta name="robots" content="ALL"><meta name="revisit-after" content="30 days"><meta name="author" content="Authorize.Net">
+		<link rel="stylesheet" href="/resources/css/common.css" type="text/css" media="all">
+		<link rel="stylesheet" href="/resources/css/onecol.css" type="text/css" media="all">
+		<link href="http://developer.authorize.net/stylesheets/developer/howitworks.css" media="all" rel="stylesheet" type="text/css">
+		<!--[if IE 7]><link rel="stylesheet" type="text/css" href="/resources/css/1col_ie7.css" title="IE7 Fixes" /><![endif]-->
+		<!--[if lt IE 7]><link rel="stylesheet" type="text/css" href="/resources/css/1col_ie6.css" title="IE6 Fixes" /><![endif]--> 
+		<style type="text/css">
+			h2 {
+				margin: 0;
+			}
+		</style>
+		<link rel="shortcut icon" type="image/ico" href="/resources/images/favicon.ico">
+		<script src="/elqNow/elqCfg.min.js" async="" type="text/javascript"></script><script src="http://www.google-analytics.com/ga.js" async="" type="text/javascript"></script><script type="text/javascript" src="/resources/js/jquery.js"></script>
+		<script type="text/javascript" src="/resources/js/jq_ui.js"></script>
+		<script type="text/javascript" src="/resources/js/rightclick_disable.js"></script>
+		<script type="text/javascript" src="/resources/js/Anet_jq_common.js"></script>
+		<script type="text/javascript">
+			//<![CDATA[
+			function disableButtons() {
+				$('#prev, #next').removeClass('disabled');
+				var index = $('#accordion h2.ui-state-active').index() / 2;
+				if (index == 0) {
+					$('#prev').addClass('disabled');
+				} else if (index * 2 + 1 == $('#accordion').children().length - 1) {
+					$('#next').addClass('disabled');
+				}
+			}
+    
+			$(function() {
+    
+				$('#accordion').accordion({
+					autoHeight: false,
+					navigation: true,
+					changestart: function(event, ui) {
+						$('.diagram li').hide();
+						$('.diagram li').eq(ui.newHeader.index() / 2).show();
+						disableButtons();
+					}
+				});
+    
+				disableButtons();
+    
+				$('#prev').click(function() {
+					var index = $('#accordion h2.ui-state-active').index() / 2;
+					var newIndex = index - 1;
+					if (index > 0) {
+						$('#accordion').accordion('activate', newIndex);
+					}
+				});
+    
+				$('#next').click(function() {
+					var index = $('#accordion h2.ui-state-active').index() / 2;
+					var newIndex = index + 1;
+					if (index * 2 + 1 != $('#accordion').children().length) {
+						$('#accordion').accordion('activate', newIndex);
+					}
+				});
+			});
+			//]]>
+		</script>
+		
+	</head>
+	<body>
+		
+		<div class="content all">
+			<div id="header"><div id="logo"><a href="/"><img src="/resources/images/authorizenet.png" alt="Authorize.Net" height="57" width="234"></a></div><div id="headerright"><div id="headerrightsearch"><div id="headerrighttop"></div><form action="http://search.cybersource.com/search" enctype="multipart/form-data" id="searchform" method="get"><fieldset class="search"><input class="box" id="q" name="q" onclick="this.value='';" value="" type="text"><input id="client" name="client" value="www_authorizenet_frontend" type="hidden"><input id="proxystylesheet" name="proxystylesheet" value="www_authorizenet_frontend" type="hidden"><input id="site" name="site" value="www_authorizenet" type="hidden"><input id="output" name="output" value="xml_no_dtd" type="hidden"></fieldset></form></div><div id="headerrightlinks"><img src="/resources/images/header/rd_corner.gif" alt="" style="float: left;" height="38" width="6"><ul id="topnav"><li class="top" id="topnav_support"><a class="top_link" id="topnav_info" href="https://support.authorize.net/"><span>SUPPORT</span></a><div class="sub"><ul><li><a href="https://support.authorize.net/">Merchant Support Center</a></li><li><a href="/solutions/resellersolutions/resellerprogram/resellersupport/">Reseller Support</a></li><li><a href="http://developer.authorize.net/affiliate/support/">Affiliate Reseller Support</a></li></ul></div></li><li class="top" id="topnav_login"><a class="top_link" id="topnav_lock" href="https://account.authorize.net/"><span>ACCOUNT LOGIN</span></a><div class="sub"><ul><li><a href="https://account.authorize.net/">Merchant Login</a></li><li><a href="https://account.authorize.net/interfaces/reseller/frontend/login.aspx">Reseller Login</a></li><li><a href="https://account.authorize.net/interfaces/reseller/frontend/login.aspx">Affiliate Login</a></li></ul></div></li></ul></div><div id="countrynav"><ul><li class="top"><a class="top_link"><span class="headerFlag us"></span>USA/CANADA<span class="flag_select"></span></a><div class="sub"><ul><li><a href="/en-GB/"><span class="headerFlag uk"></span>UK/EUROPE</a></li><li><a href="/international/"><span class="headerFlag other"></span>OTHER</a></li></ul></div></li></ul></div></div><ul id="mainnav"><li class="top"><a href="/solutions/merchantsolutions/" class="top_link"><span>ACCEPT PAYMENTS</span></a><div class="sub"><ul><li class="heading">WAYS TO ACCEPT PAYMENTS</li><li><a href="/solutions/merchantsolutions/onlinemerchantaccount/">Online</a></li><li><a href="/solutions/merchantsolutions/motomerchantaccount/">Mail Order / Telephone Order</a></li><li><a href="/solutions/merchantsolutions/retailmerchantaccount/">Retail Store</a></li><li><a href="/solutions/merchantsolutions/mobilemerchantaccount/">Mobile</a></li></ul><ul><li class="heading">VALUE-ADDING PRODUCTS</li><li><a href="/solutions/merchantsolutions/merchantservices/frauddetectionsuite/">Fraud Prevention</a></li><li><a href="/solutions/merchantsolutions/merchantservices/automatedrecurringbilling/">Recurring/Subscription Billing</a></li><li><a href="/solutions/merchantsolutions/merchantservices/cim/">Payment Data Tokenization</a></li><li><a href="/solutions/merchantsolutions/merchantservices/echeck/">E-check Processing</a></li></ul><ul><li class="heading">GETTING STARTED</li><li><a href="/solutions/merchantsolutions/pricing/">Pricing</a></li><li><a href="http://www.youtube.com/user/AuthorizeNet?feature=mhum&amp;v=8SQ3qst0_Pk&amp;rel=0" target="_blank">Credit Card Processing Video <img src="/resources/images/ext_link.png" alt="View Credit Card Processing Video on YouTube" height="12" width="12"></a></li><li><a href="/resources/howitworksdiagram/ ">Credit Card Processing Diagram</a></li><li><a href="/resources/pcicompliance/">Understanding PCI Compliance</a></li></ul><ul><li class="heading">FEATURES</li><li><a href="/solutions/merchantsolutions/merchantservices/simplecheckout/">Buy Now Buttons</a></li><li><a href="/solutions/merchantsolutions/onlinemerchantaccount/seal/">Website Payments Seal</a></li><li><a href="/solutions/merchantsolutions/merchantservices/virtualpos/">Virtual Point of Sale</a></li><li><a href="/solutions/merchantsolutions/merchantservices/mobileapp/">Mobile App</a></li></ul><ul><li class="heading">PARTNER SOLUTIONS</li><li><a href="/solutions/merchantsolutions/merchantservices/certifiedsolutiondirectory/?type=csstcart">Shopping Carts / Store Builders</a></li><li><a href="/solutions/merchantsolutions/merchantservices/certifiedsolutiondirectory/?type=csstmobile">Mobile Devices</a></li><li><a href="/solutions/merchantsolutions/merchantservices/certifiedsolutiondirectory/?type=csstpos">Point-of-Sale Systems / Kiosks</a></li><li><a href="/solutions/merchantsolutions/merchantservices/certifiedsolutiondirectory/?type=csstmoto">Mail / Telephone Order</a></li></ul><ul><li class="heading">FIND PARTNERS</li><li><a href="/solutions/merchantsolutions/merchantservices/certifieddeveloperdirectory/">Certified Developer Directory</a></li><li><a href="/solutions/merchantsolutions/merchantservices/certifiedsolutiondirectory/">Certified Solution Directory</a></li><li><a href="/solutions/merchantsolutions/toolbox/">Merchant Toolbox</a></li></ul></div></li><li class="top"><a href="/solutions/resellersolutions/" class="top_link"><span>RESELLER PROGRAMS</span></a><ul class="sub"><li><a href="/solutions/resellersolutions/resellerprogram/">Reseller Program</a></li><li><a href="http://developer.authorize.net/affiliate/">Affiliate Reseller Program</a></li></ul></li><li class="top"><a href="http://developer.authorize.net/" class="top_link"><span>DEVELOPER CENTER</span></a></li><li class="top"><a href="#" class="top_link" style="cursor: default;"><span>RESOURCES</span></a><ul class="sub"><li><a href="/resources/howitworksdiagram/">Credit Card Processing Diagram</a></li><li><a href="/videos/">Video Demos</a></li><li><a href="/resources/fraudprevention/">Fraud Prevention Center</a></li><li><a href="/resources/casestudies/">Case Studies</a></li><li><a href="/resources/documentlibrary/">Document Library</a></li><li><a href="/resources/glossary/">Glossary</a></li></ul></li><li class="top"><a href="/signupnow/" class="top_link" id="signupnow"><span>SIGN UP NOW</span></a><ul class="sub"><li><a id="whitePhone" class="phone" onclick="return false;" href="tel:1.888.323.4289"><span class="phoneNumber">1.888.323.4289</span></a></li><li><a href="/signupnow/">Apply Online</a></li><li><a href="/solutions/merchantsolutions/merchantinquiryform/">Send Us an Email</a></li><li><a href="/solutions/merchantsolutions/resellerdirectory/">Find a Reseller</a></li></ul></li></ul></div>
+			<div class="breadcrumb"></div>
+			<div class="container">
+				<div class="main">
+					<div style="margin-top: 25px"><h1 class="pagetitle">Credit Card Processing Diagram</h1></div><div class="diagram" style="width: 553px; margin-left: 25px;">
+<ul style="padding: 0; margin: 0;">
+<li style="display: block">
+<img alt="Step1" src="http://developer.authorize.net/resources/images/howitworks/step1.png" height="465" width="553">
+</li>
+<li>
+<img alt="Step2" src="http://developer.authorize.net/resources/images/howitworks/step2.png" height="465" width="553">
+</li>
+<li>
+<img alt="Step3" src="http://developer.authorize.net/resources/images/howitworks/step3.png" height="465" width="553">
+</li>
+<li>
+<img alt="Step4" src="http://developer.authorize.net/resources/images/howitworks/step4.png" height="465" width="553">
+</li>
+<li>
+<img alt="Step5" src="http://developer.authorize.net/resources/images/howitworks/step5.png" height="465" width="553">
+</li>
+<li>
+<img alt="Step6" src="http://developer.authorize.net/resources/images/howitworks/step6.png" height="465" width="553">
+</li>
+<li>
+<img alt="Step7" src="http://developer.authorize.net/resources/images/howitworks/step7.png" height="465" width="553">
+</li>
+</ul>
+</div>
+<div class="navigation" style="font-size: 12px;">
+<a class="disabled" id="prev">? Previous</a>
+<a id="next">Next ?</a>
+<div role="tablist" class="ui-accordion ui-widget ui-helper-reset ui-accordion-icons" id="accordion">
+<h2 tabindex="0" aria-selected="true" aria-expanded="true" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-state-active ui-corner-top"><span class="ui-icon ui-icon-triangle-1-s"></span>
+<a tabindex="-1" href="#step1">Step 1</a>
+</h2>
+<div role="tabpanel" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active">The customer submits his credit card for payment.</div>
+<h2 tabindex="-1" aria-selected="false" aria-expanded="false" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"><span class="ui-icon ui-icon-triangle-1-e"></span>
+<a tabindex="-1" href="#step2">Step 2</a>
+</h2>
+
+<div style="display: none;" role="tabpanel" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+Authorize.Net manages the complex routing of the data on behalf of the merchant through the following steps/entities.
+</div>
+<h2 tabindex="-1" aria-selected="false" aria-expanded="false" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"><span class="ui-icon ui-icon-triangle-1-e"></span>
+<a tabindex="-1" href="#step3">Step 3</a>
+</h2>
+<div style="display: none;" role="tabpanel" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+Authorize.Net passes the secure transaction information via a secure connection to the Processor.<br><br>
+
+The Merchant Bank's Processor submits the transaction to the credit card network (like Visa or MasterCard).
+The credit card network routes the transaction to the bank that issued the credit card to the customer.
+</div>
+<h2 tabindex="-1" aria-selected="false" aria-expanded="false" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"><span class="ui-icon ui-icon-triangle-1-e"></span>
+<a tabindex="-1" href="#step4">Step 4</a>
+
+</h2>
+<div style="display: none;" role="tabpanel" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+The issuing bank approves or declines the transaction based on the customer's available funds and passes
+the transaction results back to the credit card network.<br><br>
+
+The credit card network relays the transaction
+results to the merchant bank's processor. The processor relays the transaction results to Authorize.Net.
+</div>
+<h2 tabindex="-1" aria-selected="false" aria-expanded="false" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"><span class="ui-icon ui-icon-triangle-1-e"></span>
+<a tabindex="-1" href="#step5">Step 5</a>
+</h2>
+<div style="display: none;" role="tabpanel" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">Authorize.Net stores the transaction results and sends them to the website for the customer and merchant to see.</div>
+<h2 tabindex="-1" aria-selected="false" aria-expanded="false" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"><span class="ui-icon ui-icon-triangle-1-e"></span>
+<a tabindex="-1" href="#step6">Step 6</a>
+
+</h2>
+<div style="display: none;" role="tabpanel" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+The merchant delivers goods or services to the buyer.
+</div>
+<h2 tabindex="-1" aria-selected="false" aria-expanded="false" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"><span class="ui-icon ui-icon-triangle-1-e"></span>
+<a tabindex="-1" href="#step6">Step 7</a>
+</h2>
+<div style="display: none;" role="tabpanel" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+The issuing bank sends the appropriate funds for the transaction to the credit card network, which passes the
+funds to the merchant's bank.<br><br>
+
+The bank then deposits the funds into the merchant's bank account. This is called
+'settlement', and typically the transaction funds are deposited into the merchant's primary bank account within
+two to four business days.
+</div>
+</div>
+</div>
+					<div class="bottompagepadding">&nbsp;</div>
+				</div>
+				<div id="footer"><div id="footer_upper"><ul><li id="footer_bbb"><div><a id="bbblink" class="ruhzbum" href="http://www.bbb.org/utah/business-reviews/credit-card-processing-companies/authorizenet-a-cybersource-solution-in-american-fork-ut-2009493#bbblogo" title="Authorize.Net, A CyberSource Solution is a BBB Accredited Credit Card Processing Company" style="display: block;position: relative;overflow: hidden; width: 150px; height: 68px; margin: 0px; padding: 0px;"><img style="padding: 0px; border: none;" id="bbblinkimg" src="https://seal-utah.bbb.org/logo/ruhzbum/authorizenet-a-cybersource-solution-2009493.png" alt="Authorize.Net, A CyberSource Solution is a BBB Accredited Credit Card Processing Company" height="68" width="300"></a></div></li><li id="footer_trustwave"><a href="#" rel="nofollow"><img src="https://sealserver.trustkeeper.net/compliance/seal.php?code=3EEC6AF828BAF7F483319161DFC61A6E" onclick="javascript:window.open('https://sealserver.trustkeeper.net/compliance/cert.php?code=3EEC6AF828BAF7F483319161DFC61A6E', 'hATW', 'location=no, toolbar=no, resizable=no, scrollbars=yes, directories=no, status=no, width=590, height=499'); return false;" id="TWLogo" alt="Trustwave Seal" style="border: 0;"></a></li><li id="footer_eta"><img src="/resources/images/eta_logo.png" alt="Member of ETA" id="ETALogo" height="50" width="97"></li><li id="footer_seal"><a href="/solutions/merchantsolutions/onlinemerchantaccount/seal/"><img src="https://verify.authorize.net/anetseal/images/secure90x72.gif" alt="Verified Authorize.Net Merchant Seal" id="ANETLogo" height="72" width="90"></a></li><li><div id="footer_ace"></div></li></ul></div><div id="footer_lower"><table><tbody><tr><th>NEWS AND TIPS</th><th class="noline"></th><th>ABOUT US</th><th class="noline"></th><th>WEBSITES</th><th class="noline"></th><th>POLICIES</th><th class="noline"></th><th>SIGN UP NOW</th></tr><tr valign="top"><td><ul class="footer_news"><li id="footer_twitter"><a href="https://twitter.com/authorizenet" target="_blank">Twitter</a></li><li id="footer_facebook"><a href="https://www.facebook.com/Authorize.Net" target="_blank">Facebook</a></li><li id="footer_blog"><a href="http://community.developer.authorize.net/t5/The-Authorize-Net-Developer-Blog/bg-p/DeveloperBlog" target="_blank">Developer Blog</a></li></ul></td><td></td><td><ul class="footer_about"><li><a href="/company/aboutus/">About Us</a></li><li><a href="/support/">Contact Us</a></li><li><a href="/company/whatwedo/">What We Do</a></li><li><a href="/company/events/">Events</a></li><li><a href="/company/careers/">Careers</a></li></ul></td><td></td><td><ul class="footer_websites"><li><a href="/sitemap/">Site Map</a></li><li><a href="http://developer.authorize.net/" onclick="_gaq.push(['_trackEvent', 'External Links', 'Developer Center']);">Developer Center</a></li><li><a href="http://reseller.authorize.net/" onclick="_gaq.push(['_trackEvent', 'External Links', 'Reseller Toolkit']);">Reseller Toolkit</a></li><li><a href="http://welcome.authorize.net/" onclick="_gaq.push(['_trackEvent', 'External Links', 'Welcome']);">New Customer Tour</a></li><li><a href="http://www.cybersource.com/" target="_blank" onclick="_gaq.push(['_trackEvent', 'External Links', 'CyberSource']);">CyberSource.com</a></li></ul></td><td></td><td><ul class="footer_policies"><li><a href="/company/terms/">Terms of Use</a></li><li><a href="/company/privacy/">Privacy</a></li><li><a href="/company/spampolicy/">Spam Policy</a></li><li><a href="/company/spamfaqs/">Spam FAQs</a></li><li class="shorten_text"><a href="/company/aboutus/intellectual_property_rights/">Intellectual Property Rights</a></li></ul></td><td></td><td><ul class="footer_signup"><li><strong>1.888.323.4289</strong> toll free</li><li><a href="/signupnow/">Apply Online</a></li><li><a href="/solutions/merchantsolutions/merchantinquiryform/">Email</a></li><li><a href="/solutions/merchantsolutions/resellerdirectory/">Find a Reseller</a></li><li>&nbsp;</li></ul></td></tr></tbody></table></div><div id="footercopyright">© 2012, 2013. Authorize.Net is a registered trademark of CyberSource, a Visa company. All rights reserved.</div></div>
+			</div>
+		</div>
+		<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-20120532-1']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script type="text/javascript">
+var _elqQ = _elqQ || [];
+_elqQ.push(['elqSetSiteId', '986383348']);
+_elqQ.push(['elqTrackPageView']);
+(function () {
+function async_load() {
+var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '/elqNow/elqCfg.min.js';
+var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+}
+if (window.addEventListener) window.addEventListener('DOMContentLoaded', async_load, false); else if (window.attachEvent) window.attachEvent('onload', async_load);
+})();
+</script>
+
+	
+</body>

@@ -1,0 +1,742 @@
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Webank - Vuoi di più</title>
+
+		<!-- Styles -->
+    <style type="text/css">
+    	@import url("/lndpage/assets/css/styles_aprile2013.css");
+    </style>
+
+		<!-- Script -->
+    <script type="text/javascript" src="/lndpage/assets/js/mootools-core_aprile2013.js"></script>
+    <script type="text/javascript" src="/lndpage/assets/js/Tabber_aprile2013.js"></script>
+    <script type="text/javascript">
+    	window.addEvent('domready',function(){
+				tabs = new Tabber({
+					togglers:	"#tabs .tabs li",
+					tabs:			"#tabs .contents>div",
+					classe:		'on',
+					start:		1
+				});
+			});
+    </script>
+		<script type="text/javascript">
+      var s_account='webankprodsuite';
+    </script>
+    <script type="text/javascript" src="/js/siteCatalyst.js"></script>
+	
+
+	<script type="text/javascript" src="/wscmn/js/jquery.js"></script>
+	<script type="text/javascript">
+function addEvent(o, n, h) {
+	// alert(o);
+	if (o.attachEvent){
+		// alert("attachEvent");
+		o.attachEvent("on" + n, h);
+	} else {
+		// alert("addEventListener " + n + h);
+		o.addEventListener(n, h, false);
+	}
+}
+function removeEvent(o, n, h) {
+	// alert(o);
+	if (o.attachEvent){
+		// alert("attachEvent");
+		o.detachEvent("on" + n, h);
+	} else {
+		// alert("addEventListener " + n + h);
+		o.removeEventListener(n, h, false);
+	}
+}
+
+
+//funzione che rende invisibili le tendine tranne quelle contenute nel div che risulta essere attivo (e nei suoi figli)
+function arrangeSelect (idElement)
+{
+	if (idElement)
+	{
+		var x = document.getElementsByTagName("select").length;	
+		x = document.getElementsByTagName("select");
+		for (i = x.length; i; x[--i].style.visibility='hidden');
+		var y = document.getElementById(idElement).getElementsByTagName('select');
+		for (i = y.length; i; x[--i].style.visibility='visible');
+	}
+	else
+	{
+		x = document.getElementsByTagName("select");
+		for (i = x.length; i; x[--i].style.visibility='visible');
+	}
+}
+
+//funzione che apre un popup con overlayer
+//mode = 'fixed' overlayer con margin-top fisso da css
+//mode = 'floating' overlayer sempre centrato nella pagina
+function openPopOverLayer (idElement, mode, opacitylevel)
+{
+	if (opacitylevel) {obscurateAll(opacitylevel)}
+	else {obscurateAll()}
+	
+	document.body.insertBefore(document.getElementById(idElement), document.body.getElementsByTagName('div')[0]);
+	document.getElementById(idElement).style.display='block';
+	
+	
+	//allocazione funzioni scrolling e resizing
+	popfixedalertresize = new Function ('document.getElementById(\''+ idElement + '\').style.marginLeft = Math.round((getPageWidth() - document.getElementById(\''+ idElement + '\').offsetWidth)/2) + \'px\';');
+	popalertscroll = new Function ('document.getElementById(\''+ idElement + '\').style.marginTop = getScrollY() + Math.round((getPageHeight() - document.getElementById(\''+ idElement + '\').offsetHeight)/2) + \'px\';');
+	popalertresize = new Function ('document.getElementById(\''+ idElement + '\').style.marginLeft = Math.round((getPageWidth() - document.getElementById(\''+ idElement + '\').offsetWidth)/2) + \'px\';document.getElementById(\''+ idElement + '\').style.marginTop = getScrollY() + Math.round((getPageHeight() - document.getElementById(\''+ idElement + '\').offsetHeight)/2) + \'px\';');
+	
+	//controlla se deve fissare la X o renderla dinamica
+	if (mode == 'fixed')
+	{
+		document.getElementById(idElement).style.marginLeft = Math.round((getPageWidth() - document.getElementById(idElement).offsetWidth)/2) + 'px';
+		//riallinea l'oggetto orizzontalmente sul resize
+		if (window.attachEvent)
+		{
+			window.attachEvent("onresize", popfixedalertresize);
+		}
+		else
+		{
+			window.addEventListener("resize", popfixedalertresize, false);
+		}
+	}
+	else
+	{
+		if(document.getElementById(idElement).offsetHeight < getPageHeight ())
+		{
+			document.getElementById(idElement).style.marginLeft = Math.round((getPageWidth() - document.getElementById(idElement).offsetWidth)/2) + 'px';
+			document.getElementById(idElement).style.marginTop = getScrollY() + Math.round((getPageHeight() - document.getElementById(idElement).offsetHeight)/2) + 'px';
+			//riallinea l'oggetto sia verticalmente che orizzontalmente
+			if (window.attachEvent)
+			{
+				window.attachEvent("onscroll", popalertscroll);
+				window.attachEvent("onresize", popalertresize);
+			}
+			else
+			{
+				window.addEventListener("scroll", popalertscroll, false);
+				window.addEventListener("resize", popalertresize , false);
+			}
+		}
+		else
+		{
+			document.getElementById(idElement).style.marginLeft = Math.round((getPageWidth() - document.getElementById(idElement).offsetWidth)/2) + 'px';
+			if (getScrollY() + getPageHeight() - document.getElementById(idElement).offsetHeight < 0)
+			{
+				document.getElementById(idElement).style.marginTop = '0px';
+			}
+			else
+			{
+				document.getElementById(idElement).style.marginTop = getScrollY() + getPageHeight() - document.getElementById(idElement).offsetHeight  + 'px';
+			}
+		}
+	}
+	arrangeSelect(idElement);
+	//Becca lo zIndex dell'overlay coprente
+	document.getElementById(idElement).style.zIndex = getNextHighestZindex();
+}
+
+//chiude l'overlayer + l'oscuratore
+function closePopOverLayer (idElement)
+{
+	if (window.attachEvent)
+		{
+			if (popfixedalertresize) window.detachEvent("onresize", popfixedalertresize);
+			if (popalertscroll) window.detachEvent("onscroll", popalertscroll);
+			if (popalertresize) window.detachEvent("onresize", popalertresize);
+		}
+		else
+		{
+			if (popfixedalertresize) window.removeEventListener("resize", popfixedalertresize, false);
+			if (popalertscroll) window.removeEventListener("scroll", popalertscroll, false);
+			if (popalertresize) window.removeEventListener("resize", popalertresize , false);
+		}
+
+	document.getElementById(idElement).style.display='none';
+	arrangeSelect();
+	unobscurateAll ();
+}
+
+//identifica la meta' orizzontale della pagina$
+function getPageWidth ()
+{
+	if (navigator.appName != "Microsoft Internet Explorer")
+	{
+		return document.body.clientWidth;
+	} 
+	else 
+	{
+		if(navigator.userAgent.indexOf("MSIE 5.5") > -1)
+		{
+			return document.body.offsetWidth;
+		}
+		else
+		{
+			return document.documentElement.clientWidth;
+		}
+	}
+}
+
+function getPageHeight ()
+{
+	if (navigator.appName != "Microsoft Internet Explorer")
+	{
+		return window.innerHeight;
+	} 
+	else 
+	{
+		if (navigator.userAgent.indexOf("MSIE 5.5") > -1)
+		{
+			return document.body.offsetHeight;
+		}
+		else
+		{
+			return document.documentElement.clientHeight;
+		}
+
+	}
+}
+
+//scrolling amount
+function getScrollY() {
+	if(navigator.appName != "Microsoft Internet Explorer"){
+		return window.pageYOffset;
+	}
+	else
+	{
+		if (navigator.userAgent.indexOf("MSIE 5.5") > -1)
+		{
+			return document.body.scrollTop;
+		}
+		else
+		{
+			return document.documentElement.scrollTop;
+		}
+	}
+}
+
+//oscura tutto
+function obscurateAll (opacitylevel)
+{
+	//controlla che tutto non sia gi? oscurato da qualcosa
+	if (!document.getElementById('layerpop'))
+	{
+		var layerpop = document.createElement('DIV');
+		layerpop.id='layerpop';
+		document.body.appendChild(layerpop);
+		if (document.getElementById('overlayerLight')) 
+			{ 
+				document.getElementById('layerpop').className = "overlayerchiaro"; 
+			}
+				
+		//document.body.appendChild(layerpop);
+		//imposta l'oscuratore layerpop al massimo dei livelli
+		document.getElementById('layerpop').style.zIndex = getNextHighestZindex();
+
+		//imposta l'altezza di layerpop a tutto schermo e appende le funzioni di scrolling e resizing all'oscuratore
+		if(navigator.appName != "Microsoft Internet Explorer")
+		{ 
+			document.getElementById('layerpop').style.height = window.height + 'px'; 
+			document.getElementById('layerpop').style.marginTop = getScrollY() + 'px';
+		} 
+		else 
+		{ 
+			document.getElementById('layerpop').style.height = getPageHeight() + 'px';  
+			document.getElementById('layerpop').style.marginTop = getScrollY() + 'px';
+		} 
+		
+		obscuratescroll = new Function ('document.getElementById(\'layerpop\').style.marginTop = getScrollY() + \'px\';');
+		obscurateresize = new Function ('document.getElementById(\'layerpop\').style.height = getPageHeight() + \'px\';');
+		
+		if (window.attachEvent)
+		{
+			window.attachEvent("onresize", obscurateresize);
+			window.attachEvent("onscroll", obscuratescroll);
+		}
+		else
+		{
+			window.addEventListener("scroll",obscuratescroll, false);
+			window.addEventListener("DOMMouseScroll", obscuratescroll, false);
+			window.addEventListener("resize", obscurateresize, false);
+		}		
+		
+		if (opacitylevel)
+		{
+			layerpop.style.opacity = opacitylevel/10;
+			layerpop.style.filter = 'alpha(opacity=' + opacitylevel * 10 + ')';
+		}
+	}
+}
+
+function unobscurateAll ()
+{
+	if (window.attachEvent)
+	{
+		window.detachEvent("onresize",obscurateresize);
+		window.detachEvent("onscroll", obscuratescroll);
+	}
+	else
+	{
+		window.removeEventListener("scroll", obscuratescroll, false);
+		window.removeEventListener("DOMMouseScroll", obscuratescroll, false);
+		window.removeEventListener("resize",obscurateresize, false);
+	}		
+	document.body.removeChild(document.getElementById('layerpop'));
+}
+
+// --------- Framework per overlayer e alert ------------//
+// Rileva il massimo z-index in tutto il documento corrente
+function getNextHighestZindex()
+{
+	var highestIndex = 0;
+	var currentIndex = 0;
+	var elArray = Array();
+	if (navigator.userAgent.indexOf("MSIE 5.5") > -1)
+	{
+		elArray = document.all;
+	}
+	else
+	{
+		elArray = document.getElementsByTagName('*');
+	}
+
+	for(var i=0; i < elArray.length; i++){
+		if(window.getComputedStyle){
+			currentIndex = parseFloat(document.defaultView.getComputedStyle(elArray[i],null).getPropertyValue('z-index'));
+			if(!isNaN(currentIndex) && currentIndex >= highestIndex && currentIndex < 16777271){highestIndex = currentIndex;}
+		}
+		if (elArray[i].currentStyle){
+			//stile dell'elemento
+			currentIndex = parseFloat(elArray[i].currentStyle['zIndex']);
+			if(!isNaN(currentIndex) && currentIndex >= highestIndex && currentIndex < 16777271){highestIndex = currentIndex;}
+		}
+		if (elArray[i].style.zIndex){
+			//stile dell'elemento
+			currentIndex = parseFloat(elArray[i].style.zIndex);
+			if(!isNaN(currentIndex) && currentIndex >= highestIndex && currentIndex < 16777271){highestIndex = currentIndex;}
+		}
+	}
+	return(highestIndex+1);
+}
+
+</script>
+<!-- COLLEGAMENTI A FILE ESTERNI -->
+<script type="text/javascript" src="/js/pub_hl_calc.js"></script>
+<link rel="stylesheet" href="/css/pub_hl_calc.css">
+<!-- Esiste anche il file html con i 3 calcolatori /css/pub_hl_calc.html -->
+<!-- FINE COLLEGAMENTI ESTERNI -->
+<style type="text/css">
+	#layerpop {background-color: #000000;height: 100%;left: 0;filter: alpha(opacity=70);-moz-opacity: .70;opacity: .70;position: absolute;top: 0;width: 100%;z-index: 1;}
+	.hCalc {font-family: Tahoma, tahoma, Arial, Sans serif;}
+	.hCalc p.footnote {float: left;padding: 0 25px 20px;margin: 0 30px;display: block;clear: left;float: left;width: 500px;font-size: 13px;color: #000;}
+	
+	/* CSS per la chat */
+	#head .landChat {float:right;display:block;margin:0;padding:0}
+	#head .landChat {width:103px;height:32px;position:absolute;right:10px;top:19px;border:none;overflow:hidden;}
+</style>
+</head>
+<body>
+
+		<script type="text/javascript">
+			var axel = Math.random() + "";
+			var a = axel * 10000000000000;
+			document.write('<iframe src="http://3466589.fls.doubleclick.net/activityi;src=3466589;type=landing;cat=lp_co585;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+    </script><iframe src="http://3466589.fls.doubleclick.net/activityi;src=3466589;type=landing;cat=lp_co585;ord=1286863028707.8098?" style="display:none" frameborder="0" height="1" width="1"></iframe>
+    <noscript>
+	    <iframe src="http://3466589.fls.doubleclick.net/activityi;src=3466589;type=landing;cat=lp_co585;ord=1?" width="1" height="1" frameborder="0" style="display:none"></iframe>
+    </noscript>
+
+    <!-- ClickTale Top part -->
+    <script type="text/javascript">
+	    var WRInitTime=(new Date()).getTime();
+    </script>
+    <!-- ClickTale end of Top part -->
+
+		<div id="webank">
+
+			<!-- HEAD -->
+      <div id="head">
+      	<h1>Webank</h1>
+        <!--button>Chat</button-->
+      </div>
+
+			<!-- MAIN CONTENT -->
+      <div id="main">
+
+				<!-- Claim -->
+      	<h3>PERCHÉ ACCONTENTARTI DI UN'OFFERTA ECCEZIONALE QUANDO PUOI AVERNE TRE?</h3>
+      	<h2><strong>3,5% LORDO ANNUO</strong>3, 6 E 12 MESI</h2>
+      	<h2><strong>BOLLI GRATIS</strong> SU CONTO CORRENTE E DEPOSITO TITOLI PER IL 2013</h2>
+        <h2><strong>ZERO CANONE</strong> SU CONTO CORRENTE E DEPOSITO TITOLI</h2>
+        <h3>CHI SCEGLIE CONTO WEBANK HA MOLTO DI PIÙ: UNA BANCA ECCEZIONALE!</h3>
+
+        <!-- Link e cta -->
+        <a href="javascript:;" class="button b1" onclick="simRendiOpen();">CALCOLA IL RENDIMENTO</a>
+        <a href="javascript:;" class="button b2" onclick="openPopOverLayer('cBolli');">CALCOLA IL RISPARMIO</a>
+        <a href="javascript:;" class="button b3" onclick="openPopOverLayer('cBonus');">SCOPRI DI PIÙ</a>
+        <a href="/doc/RegolamentoBancaEccezionale.pdf" class="link" target="_blank">Regolamento promozione</a>
+        <a href="/webankpub/wb/2l/do/aol/wbwsPUaol0.do?tabId=nav_pub_wb_conti_nw&amp;OBS_KEY=pro_wbn_apri_conto_webank" class="cta" target="_blank">Apri conto</a>
+		
+		<!-- Tabella costi -->
+        <div id="costi">
+        	<div class="content">
+          	<div class="big col"><strong>CANONE ANNUALE CONTO, BANCOMAT E CARTA DI CREDITO</strong> <span>0 €</span></div>
+          	<div class="big">PRELIEVI BANCOMAT ILLIMITATI IN AREA EURO <span>0 €</span></div>
+           	<div class="col">BONIFICI ITALIA <span>0 €</span></div>
+           	<div class="col">RICARICHE TELEFONICHE <span>0 €</span></div>
+						<div>PAGAMENTI MAV, RAV, F23 E F24 <span>0 €</span></div>
+            <div>BOLLETTINI POSTALI <span class="dida">1,20 €<span>+ spese postali</span></span></div>
+						<div class="col">TRASLOCO IN WEBANK <span>0 €</span></div>
+						<div class="col">APERTURA E CHIUSURA CONTO <span>0 €</span></div>
+          </div>
+        	<div class="bottom"></div>
+        </div>
+
+				<!-- Documenti -->
+        <div id="docs">
+        	<div class="content">
+            <p>SCARICA LA DOCUMENTAZIONE</p>
+            <ul>
+              <li><a href="https://www.webank.it/webankpub/aol/PDFFoglioInformativo.do?cod=1.02.0" target="_blank">Foglio informativo Conto Webank</a></li>
+              <li><a href="https://www.webank.it/webankpub/aol/PDFFoglioInformativo.do?cod=5.01.0" target="_blank">Foglio informativo servizio titoli a custodia e/o amministrazione</a></li>
+              <li><a href="https://www.webank.it/doc/COND_GENERALI_BANCA.pdf" target="_blank">Condizioni generali Conto Webank</a></li>
+              <li><a href="https://www.webank.it/doc/nsf/CondizioniGeneraliSI_fs.pdf" target="_blank">Condizioni generali servizi di investimento</a></li>
+              <li><a href="https://www.webank.it/doc/DDS_ALL_PRIVATI.pdf" target="_blank">Documento di sintesi Conto Webank</a></li>
+              <li><a href="https://www.webank.it/doc/DDSDepositoTitoli.pdf" target="_blank">Documento di sintesi deposito titoli</a></li>
+            </ul>
+          </div>
+          <div class="bottom"></div>
+        </div>
+
+      </div>
+
+			<!-- TABS -->
+      <div id="tabs">
+      	<ul class="tabs">
+        	<li class="vantaggi on"><h4>I vantaggi di conto Webank</h4></li>
+        	<li class="promo"><h4>Come aderire alla promozione</h4></li>
+        </ul>
+        <div class="contents">
+        	<div style="display: block;" class="vantaggi box">
+          	<div class="content">
+            	<table id="vantaggi">
+              	<tbody><tr>
+                	<td class="img"><img src="/img/vantaggio_trasloco_aprile2013.png"></td>
+                  <td class="txt">
+                    <h5>Trasloco in Webank, semplice e gratuito</h5>
+                    <p>
+                      <strong>Pensiamo a tutto noi:</strong> trasferiamo, gratuitamente, le bollette, l'accredito dello stipendio, i finanziamenti, i titoli e i fondi di investimento dal tuo vecchio conto al tuo nuovo Conto Webank.
+                    </p>                  
+                  </td>
+                </tr>
+                <tr class="sep"><td colspan="2"></td></tr>
+              	<tr>
+                	<td class="img"><img src="/img/vantaggio_carta_aprile2013.png"></td>
+                  <td class="txt">
+                    <h5>La carta giusta per ogni esigenza</h5>
+                    <p>
+                      <strong>Bancomat internazionale:</strong> zero canone e prelievi gratis in tutta l'area Euro.<br>
+                      <strong>Carta Je@ns:</strong> la prepagata ricaricabile, senza canone, ideale per gli acquisti online.<br>
+                      <strong>Cartimpronta ONE:</strong> la carta di credito gratuita e con l'addebito delle spese 15 giorni dopo la chiusura dell'estratto conto.
+                    </p>
+                  </td>
+                </tr>
+                <tr class="sep"><td colspan="2"></td></tr>
+              	<tr>
+                	<td class="img"><img src="/img/vantaggio_mobile_aprile2013.png"></td>
+                  <td class="txt">
+                    <h5>Webank Mobile</h5>
+                    <p>
+                      Con Webank accedi al tuo conto da <strong>smartphone</strong> e <strong>tablet</strong>.<br>
+                      Scegli l'app giusta per il tuo device: <strong>iPhone</strong>, <strong>iPad</strong>, <strong>dispositivi Android</strong> e <strong>Windows 8</strong>.
+                    </p>
+                  </td>
+                </tr>
+                <tr class="sep"><td colspan="2"></td></tr>
+              	<tr>
+                	<td class="img"><img src="/img/vantaggio_trading_aprile2013.png"></td>
+                  <td class="txt">
+                    <h5>Trading e Investimenti</h5>
+                    <p>
+                      Hai a disposizione oltre <strong>30.000 titoli</strong> negoziabili su <strong>tutti i mercati italiani</strong>, sui <strong>principali<br>
+                      mercati internazionali e oltre 1.800 Fondi &amp; Sicav</strong> delle migliori Case di Gestione.
+                    </p>
+                  </td>
+                </tr>
+                <tr class="sep"><td colspan="2"></td></tr>
+              </tbody></table>
+              <table id="more">
+              	<caption><span>E in più</span></caption>
+                <tbody><tr>
+                	<td>
+                    <h5>Mutui</h5>
+                    <p>
+                      <strong>ZERO spese</strong> di attivazione e gestione, <strong>perizia gratuita</strong>, <strong>polizza casa gratuita</strong> e un <strong>consulente personale</strong> che ti segue in ogni fase. 
+                    </p>
+                  </td>
+                	<td>
+                    <h5>Sicurezza a 360°</h5>
+                    <p>
+                      Grazie ai sistemi avanzati impiegati nel <strong>Programma Sicurezza</strong>, adottiamo tutte le misure necessarie per garantire la protezione dei dati e delle transazioni.
+                    </p>
+                  </td>
+                </tr>
+              </tbody></table>
+            </div>
+            <div class="bottom"></div>
+          </div>
+          <div style="display: none;" class="promo box">
+          	<div class="content">
+            	<div>
+                <p>Aderire alla promozione è semplice:</p>
+                <ul>
+                  <li class="l1"><strong>richiedi</strong> l'apertura di Conto Webank entro il <strong>28/06/2013</strong></li>
+                  <li class="l2"><strong>ottieni</strong> il <strong>tasso</strong> promozionale del <strong>3,5%</strong> lordo annuo attivando le <strong>linee vincolate</strong> a <strong>3</strong>, <strong>6</strong> e <strong>12 mesi</strong> entro il <strong>31/07/2013</strong></li>
+                </ul>
+              </div>
+              <div>
+                <h5>Per avere l'imposta di bollo gratis sul conto corrente per il 2013:</h5>
+                <ul>
+                  <li class="l1"><strong>richiedi</strong> l'apertura di Conto Webank entro il <strong>28/06/2013</strong></li>
+                  <li class="l2">richiedi <strong>l'accredito</strong> dello <strong>stipendio</strong> oppure della <strong>pensione</strong> entro il <strong>31/07/2013</strong></li>
+                </ul>
+              </div>
+              <div>
+                <h5>Per avere i bolli gratis sul deposito titoli per il 2013:</h5>
+                <ul>
+                  <li class="l1"><strong>richiedi l'apertura</strong> del <strong>conto corrente e del deposito titoli</strong> entro il <strong>28/06/2013</strong></li>
+                  <li class="l2"><strong>attiva</strong> il <strong>Portafoglio Extra</strong> (il servizio di Prestito Titoli di Webank) entro il <strong>31/07/2013 e mantienilo attivo per il 2013</strong></li>
+                  <li class="l3">ti ricordiamo che, alla fine di ogni periodo di riferimento e al 31/12/2013, dovrai avere una giacenza complessiva di almeno 10.000 Euro tra Titoli e/o Fondi</li>
+                </ul>
+              </div>
+            </div>
+            <div class="bottom"></div>
+          </div>
+        </div>
+      </div>
+
+			<!-- APRI CONTO -->
+      <div id="conto" class="box">
+      	<h4>APRI CONTO WEBANK IN POCHI MINUTI</h4>
+      	<div class="content">
+        	<table>
+          	<tbody><tr>
+            	<td class="img"><img src="/img/ico_documenti_aprile2013.png"></td>
+              <td class="txt">
+                <h5><b>Tieni a portata di mano</b></h5>
+                il <strong>documento d'identità</strong>, il <strong>codice fiscale</strong> e l'<strong>IBAN</strong> di un conto corrente intestato a te.
+              </td>
+            	<td class="img"><img src="/img/ico_contratto_aprile2013.png"></td>
+              <td class="txt">
+	              <h5>
+                	<b>Stampa, firma<br>
+									e spedisci il contratto</b>
+                </h5>
+              </td>
+            </tr>
+          </tbody></table>
+          <a href="http://www.webank.it/webankpub/wb/2l/do/aol/wbwsPUaol0.do?tabId=nav_pub_wb_conti_nw&amp;OBS_KEY=pro_wbn_apri_conto_webank" target="_blank">Apri conto</a>
+        </div>
+        <div class="bottom"></div>
+      </div>
+
+			<!-- SOCIAL -->
+			<div id="social" class="box">
+      	<div class="content">
+          <a href="https://www.facebook.com/webank" class="fb" target="_blank">Facebook</a>
+          <a href="https://twitter.com/Webank" class="tw" target="_blank">Twitter</a>
+        </div>
+        <div class="bottom"></div>
+      </div>
+
+			<!-- Footer -->
+			<div id="footer">
+      	<p>
+Messaggio pubblicitario<br>
+Condizioni praticate per i nuovi clienti che richiedono l'apertura del conto e del deposito titoli e servizi di investimento dal 20/4/2013 al 28/6/2013. Sono esclusi dall'iniziativa i titolari di un conto corrente presso una banca del gruppo Bipiemme o che lo abbiano chiuso dopo il 1/11/2012. <br>
+TASSO ANNUO LORDO DEL 3,5% sulle linee vincolate a 3, 6, 12 mesi da attivare entro il 31/07/2013; Importo massimo vincolabile per conto: 1.000.000 €. Interessi liquidati alla scadenza. In caso di svincolo anticipato, anche parziale, remunerazione al tasso del deposito libero dalla data di costituzione del vincolo. 
+ZERO BOLLI PER IL 2013: esclusione addebito dell'imposta di bollo relativa per all'anno 2013. Per il conto corrente  a fronte di  accredito stipendio o pensione entro il 31/07/2013. Per strumenti finanziari e altri prodotti finanziari su deposito titoli a fronte i) di un controvalore titoli e fondi presenti alla fine di ogni Periodo di Riferimento fino al 31/12/2013 pari ad almeno 10.000 €, nonch´ ii) dell'attivazione, da effettuarsi entro il 31/07/2013, del  servizio accessorio Portafoglio Extra (servizio prestito titoli a favore della banca), da mantenere attivo per tutto il 2013.
+        </p>
+        <p>
+          Per ulteriori dettagli e condizioni leggi il Regolamento, i Fogli informativi e la documentazione precontrattuale e contrattuale disponibile su www.webank.it.
+        </p>
+        <h2>Gruppo Bipiemme</h2>
+      </div>
+
+    </div>
+	
+	
+<!--
+Start of DoubleClick Floodlight Tag: Please do not remove
+Activity name of this tag: LP_Conto_Display_Eccezionale_Aprile2013
+URL of the webpage where the tag is expected to be placed: http://www.webank.it/lndpage/eccezionale.html 
+This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+Creation Date: 04/15/2013
+-->
+
+
+<!-- End of DoubleClick Floodlight Tag: Please do not remove -->	
+	
+	
+
+		<script language="JavaScript" type="text/javascript">
+			<!--
+			/* You may give each page an identifying name, server, and channel on
+			the next lines. */
+			s.pageName='Display Promo Aprile';
+			s.channel='landing page conto';
+			s.hier1='';
+			s.events='';
+			/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+			var s_code=s.t();if(s_code)document.write(s_code)//-->
+    </script>
+    <script language="JavaScript" type="text/javascript"><!--
+    if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+    //--></script><noscript><img src="https://webank.d3.sc.omtrdc.net/b/ss/webankprodsuite/1/H.23.8--NS/0"
+    height="1" width="1" border="0" alt="" /></noscript><!--/DO NOT REMOVE/-->
+    <!-- End SiteCatalyst code version: H.23.8. -->	
+    <script type="text/javascript">
+      function overwritePageName(newPageName) {
+        s.pageName=newPageName;
+        s_code=s.t();
+        if(s_code)document.write(s_code);
+        //if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-');
+      }
+    </script>
+
+    <!-- ClickTale Bottom part -->
+    <div id="ClickTaleDiv" style="display: none;"></div>
+    <script type="text/javascript">
+			if(document.location.protocol!='https:')
+			document.write(unescape("%3Cscript%20src='http://s.clicktale.net/WRe0.js'%20type='text/javascript'%3E%3C/script%3E"));
+    </script><script src="http://s.clicktale.net/WRe0.js" type="text/javascript"></script>
+    <script type="text/javascript">
+	    if(typeof ClickTale=='function') ClickTale(22421,0.0015,"www14");
+    </script>
+    <!-- ClickTale end of Bottom part -->
+
+  
+
+<!-- CALCOLATORE BOLLI -->
+<div id="cBolli" class="hCalc" style="display:none">
+	<a href="javascript:;" onclick="closePopOverLayer('cBolli');" class="close">&nbsp;</a>
+	<h3>Bolli gratis per il 2013</h3>
+	<div id="simulatoreBollo">
+		<div class="par">
+			<h4>Sul conto corrente</h4>
+			<p>Richiedi l'accredito dello stipendio oppure della pensione entro il 31/07/2013.<br>
+				La gratuità dei bolli si riferisce al periodo successivo alla data di accredito dello stipendio o della pensione.
+			</p>
+		</div>
+		<div class="par">
+			<h4>Sul deposito titoli</h4>
+			<p>Attiva il Portafoglio Extra (il servizio di Prestito Titoli di Webank) entro il 31/07/2013 e mantienilo attivo per tutto il 2013.<br>
+			Per avere la gratuità dei bolli relativi al deposito titoli devi avere una giacenza complessiva pari ad almeno 10.000 ad ogni data di addebito dell'imposta di bollo e al 31/12/13.</p>
+			<div class="box verde">
+				<div class="console">
+					<form autocomplete="off" action="javascript:;">
+						<label>Giacenza complessiva €</label>
+						<a href="javascript:;" id="simulaBolloMeno" onclick="simulaBolloSet('-');" class="disabled" title="Diminuisci di 1000 €">&nbsp;</a>
+						<input maxlength="15" onkeyup="simulaBollo();" id="simulaBolloValore" placeholder="inserisci importo" type="text">
+						<a href="javascript:;" id="simulaBolloPiu" class="plus" onclick="simulaBolloSet('+');" title="Aumenta di 1000 €">&nbsp;</a>
+					</form>
+				</div>
+				<span>Risparmi fino a <span id="v_total">--</span> €</span>
+			</div>
+			<!--
+			<div class="box result">
+				<span>Lorem ipsum <span id="">34,20</span> &euro;</span>
+			</div>-->
+		</div>
+		<p class="footnote">La gratuità dei bolli è prevista per tutti coloro che effettueranno la richiesta di apertura conto dal 20/04/13 al 28/06/13.<br>
+		<a href="/doc/RegolamentoBancaEccezionale.pdf" target="_blank">Regolamento promozione "Scegli una banca eccezionale"</a>.
+		</p>
+	</div>
+</div>
+
+<!-- CALCOLATORE INVESTIMENTI -->
+<div id="cInv" class="hCalc" style="display:none">
+	<a href="javascript:;" onclick="closePopOverLayer('cInv');" class="close">&nbsp;</a>
+	<h3>Apri Conto Webank entro il 28/06/2013 <br> e ottieni il 3,5% lordo annuo sui vincoli<br> a 3, 6 e 12 mesi</h3>
+	<form autocomplete="off">
+	<div id="calcinv_console" class="console">
+		<label>Importo vincolato €</label>
+		<a href="javascript:;" onclick="plusMin(this)" class="minus" id="plusminmin" title="Lorem ipsum">&nbsp;</a>
+		<input name="" onchange="simRendiCalcola();" onkeyup="checkIntero(this); checkLimit(this); simRendiCalcola();" id="simRendiValore" maxlength="7" placeholder="inserisci" value="10000" type="">
+		<a href="javascript:;" class="plus" onclick="plusMin(this)" id="plusminplus" title="Lorem ipsum">&nbsp;</a>
+	</div>
+	</form>
+	<div class="contbox">
+		<span class="title">Interessi netti a scadenza</span>
+		<div class="invbox"> 
+			<!--
+			<div class="lordo">
+				<span class="valore" id="rendiLordo3">&nbsp;</span>
+				<span>lordo annuo</span>
+			</div>
+			-->
+			<div class="netto">
+				<span>Vincolo a 3 mesi</span>
+				<span class="valore" id="rendiNetto3">70 €</span>
+			</div>
+		</div>
+		<div class="invbox">
+			<!--
+			<div class="lordo">
+				<span class="valore" id="rendiLordo6">&nbsp;</span>
+				<span>lordo annuo</span>
+			</div>
+			-->
+			<div class="netto">
+				<span>Vincolo a 6 mesi</span>
+				<span class="valore" id="rendiNetto6">140 €</span>
+			</div>
+		</div>
+		<div class="invbox">
+			<!--
+			<div class="lordo">
+				<span class="valore" id="rendiLordo12">&nbsp;</span>
+				<span>lordo annuo</span>
+			</div>
+			-->
+			<div class="netto">
+				<span>Vincolo a 12 mesi</span>
+				<span class="valore" id="rendiNetto12">280 €</span>
+			</div>
+		</div>
+	</div>
+	<p class="footnote">Gli interessi verranno liquidati alla scadenza. In caso di svincolo anticipato, anche parziale, la remunerazione sulla parte svincolata sarà pari al tasso del deposito libero calcolato dalla data di costituzione del vincolo.<br>
+	<a href="/doc/RegolamentoBancaEccezionale.pdf" target="_blank">Regolamento promozione "Scegli una banca eccezionale"</a>.</p>
+</div>
+<!-- calcolatore bonus -->
+<div id="cBonus" class="hCalc" style="display:none">
+	<a href="javascript:;" onclick="closePopOverLayer('cBonus');" class="close">&nbsp;</a>
+	<h3>ZERO CANONE sul conto corrente</h3>
+	<div class="box">
+		<div class="left">
+			<img src="/img/hlcalc_zero.gif" alt="€">
+		</div>
+		<div class="right">
+			<ul>
+				<li>Zero spese di apertura e chiusura conto</li>
+				<li>Prelievi bancomat gratuiti e illimitati in area Euro</li>
+				<li>Bonifici online Italia e ricariche telefoniche gratis</li>
+				<li>Pagamenti MAV, RAV, F23 e F24 gratuiti</li>
+			</ul>
+		</div>
+	</div>
+	<h3>ZERO CANONE sul deposito titoli</h3>
+	<div class="box">
+		<div class="left">
+			<img src="/img/hlcalc_zero.gif" alt="€">
+		</div>
+		<div class="right">
+			<ul>
+				<li>Accesso ai principali mercati</li>
+				<li>Oltre 30.000 titoli negoziabili</li>
+				<li>1.800 Fondi &amp; Sicav delle migliori Case di Gestione</li>
+				<li>Accesso alle piattaforme web e mobile gratuito.</li>
+			</ul>
+		</div>
+	</div>
+	<p class="footnote"><a href="/doc/RegolamentoBancaEccezionale.pdf" target="_blank">Regolamento promozione "Scegli una banca eccezionale"</a></p>
+</div></body>

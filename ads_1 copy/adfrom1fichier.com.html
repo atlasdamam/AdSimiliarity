@@ -1,0 +1,244 @@
+<head>
+  <title>Envoyez et partagez vos fichiers</title>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta name="keywords" content="stockage, stocker, stockez, fichier, fichiers, données, volumineuses, gratuit, FTP, upload, download, télécharger, téléchargement, téléchargements, rapide, illimité, en ligne, online, stockage de fichiers" lang="fr">
+  <meta name="Description" content="Page d'accueil: envoi des fichiers">
+  <meta http-equiv="content-language" content="bg,cn,en,es,fr,hi,pl">
+  <meta name="category" content="Stockage de fichiers" lang="fr">
+  <link rel="stylesheet" href="http://www.1fichier.com/css/css2.css" type="text/css">
+  <link href="http://www.1fichier.com/css/jquery.ui.css" rel="stylesheet" type="text/css" media="screen">
+  <script src="http://cc.chango.com/c/1367703809519/o?p=http%3A%2F%2F1fichier.com%2F&amp;r=&amp;pid=1714&amp;__js__=true" async="" type="text/javascript"></script><script src="http://cc.chango.com/static/o.js" async="" type="text/javascript"></script><script src="http://cc.chango.com/c/1367703809133/o?p=http%3A%2F%2F1fichier.com%2F&amp;r=&amp;pid=1714&amp;__js__=true" async="" type="text/javascript"></script><script src="http://cc.chango.com/c/1367703809125/o?p=http%3A%2F%2F1fichier.com%2F&amp;r=&amp;pid=1714&amp;__js__=true" async="" type="text/javascript"></script><script src="http://cc.chango.com/static/o.js" async="" type="text/javascript"></script><script src="http://cc.chango.com/static/o.js" async="" type="text/javascript"></script><script src="http://4t1jvkym4n.b.ad6media.fr/?d=1367703807757&amp;s1=1&amp;r=" async="" type="text/javascript"></script><script type="text/javascript" src="http://www.1fichier.com/css/jquery.js"></script>
+	<script type="text/javascript">
+		<!-- 
+			function disp( obj )
+			{
+				var dv = document.getElementById( obj );
+				if( dv.style.display == "none" ) dv.style.display = "block"; else dv.style.display = "none";
+				return false;
+			}
+		$(document).ready( function() {
+			$('div.add_more').click(function()
+			{
+				var br = document.createElement("br");
+				var fu = document.createElement("input");
+				fu.setAttribute("type", "file"); fu.setAttribute("name", "file[]");	fu.setAttribute("multiple", "multiple"); fu.setAttribute("size", "50");
+				$('div.add_more').prepend( br ).prepend( fu );
+			});
+
+			function ajx()
+			{
+				$.ajax({
+			    url: '/up.pl',
+			    type: 'GET',
+					dataType: 'html',
+					beforeSend: function(xhr) { xhr.setRequestHeader("X-Id", "H56mV"); },
+			    error: function(){ $('div.res').html('Status de l\'émission erronée.<br/>Le fichier est toujours en cours d\'envoi.<br/>La progression ne sera pas mise à jour.'); },
+			    success: function(data){
+						  if( data.match(/fin$/) ) top.document.location = "http://up2.1fichier.com/end.pl?xid=H56mV";
+    	        else { $('div.res').html( data ); setTimeout(function(){ ajx();}, 3000 ); }
+    			}
+				});
+			}
+
+			$('input:submit').button();
+			$('input:submit').click( function() {
+    	    $('#thetd, #cadre2').hide(); $('div.loading').show();
+          setTimeout(function(){ ajx();}, 2000);
+					return true;
+			 });
+
+			$("input:file").attr('multiple', 'multiple');
+			$('.ui-state-default').hover( 	function(){ $(this).addClass('ui-state-hover'); }, function(){ $(this).removeClass('ui-state-hover'); }	);
+			
+		});
+		// -->
+	</script>
+	<script type="text/javascript" src="http://c.ad6media.fr/l.js"></script>
+</head>
+<body>
+<div id="masterdiv">
+
+<div class="ph">
+	<div style="float:left;text-align:left">
+	<a href="/bg"><img alt="" src="http://www.1fichier.com/img/flags/bg.png" class="flag" height="11" width="16">&nbsp;?????????</a>
+	<a href="/cn"><img alt="" src="http://www.1fichier.com/img/flags/cn.png" class="flag" height="11" width="16">&nbsp;??????</a>
+	<a href="/en"><img alt="" src="http://www.1fichier.com/img/flags/en.png" class="flag" height="11" width="16">&nbsp;English</a>
+	<a href="/es"><img alt="" src="http://www.1fichier.com/img/flags/es.png" class="flag" height="11" width="16">&nbsp;Español</a>
+	<a href=""><img alt="" src="http://www.1fichier.com/img/flags/fr.png" class="flag" height="11" width="16">&nbsp;Francais</a>
+	<a href="/in"><img alt="" src="http://www.1fichier.com/img/flags/in.png" class="flag" height="11" width="16">&nbsp;?????</a>
+	<a href="/pl"><img alt="" src="http://www.1fichier.com/img/flags/pl.png" class="flag" height="11" width="16">&nbsp;Polski</a>
+</div>
+ 
+	<div style="float:right;text-align:right">
+		
+	    <a href="http://www.1fichier.com/login.pl" title="Connexion à votre interface de gestion">Connexion</a><a href="https://www.1fichier.com/register.pl" title="Inscription à 1fichier.com">Inscription</a>
+ 		
+	</div>
+</div>
+<div class="header">
+	<div style="float:left;text-align:left">
+		<div><a href="http://www.1fichier.com" title="1fichier.com"><img src="http://www.1fichier.com/img/logo4.png" alt="1fichier.com" height="44" width="300"></a></div>
+		<div>
+		 <a href="http://www.1fichier.com" title="Acceder à la page d'acceuil">Accueil</a>&nbsp;|&nbsp;
+		 <a href="http://www.1fichier.com/premium.html" title="Premium" style="font-weight:bold;color:#FF1111">Premium</a>&nbsp;|&nbsp;
+		 <a href="http://www.1fichier.com/liens.html" title="Adresses à connaitre">Liens</a>&nbsp;|&nbsp;
+		 <a href="http://www.1fichier.com/hlp.html" title="FAQ et aide sur l'usage du site">Aide</a>&nbsp;|&nbsp;
+		 <a href="http://www.1fichier.com/contact.html" title="Contactez-nous !">Contact</a>&nbsp;
+		</div>
+	</div>
+	<div style="float:right;width:470px;overflow:hidden;height:60px;padding:2px 5px 2px 2px;text-align:right;border:1px solid #bbbbbb">
+		<script type="text/javascript">ad6b468('4t1jvkym4n');</script><div style="width: 100%; text-align:center;"><div id="ad6b_d4t1jvkym4n" style="position: relative; width: 468px; height: 60px; margin: 0px auto; display: inline-block;"><iframe src="javascript:parent.ad6b.adFrame(this, document, 0, 'http://1fichier.com/', '')" style="visibility: visible;" id="ad6b_f4t1jvkym4n" frameborder="0" height="60" scrolling="no" width="468"></iframe></div></div>
+	</div>
+</div>
+
+<form enctype="multipart/form-data" id="files" action="http://up2.1fichier.com/upload.cgi?id=H56mV" method="post">
+<div id="frdiv">
+
+	<div id="cadre2" style="float:left;width:690px">
+		<div style="float:left;width:300px;padding:5px;margin:5px" class="ui-widget-content ui-corner-all">Remote Upload <a href="http://www.1fichier.com/login.pl" title="Console de gestion">sur votre compte</a></div>
+		<div style="float:right;width:300px;padding:5px;margin:5px" class="ui-widget-content ui-corner-all"><a href="/register.pl">Inscrivez-vous</a> et envoyez vos fichiers par FTP !</div>
+		<div id="thetd" style="clear:both;margin-top:50px">
+			<div style="font-weight:bold;color:#0000CC;font-size:15px">Selectionnez les fichiers à envoyer</div>
+
+			<div>
+				<input multiple="multiple" name="file[]" size="50" title="Selectionnez le fichier à envoyer" type="file">
+				<br><input multiple="multiple" name="file[]" size="50" title="Selectionnez le fichier à envoyer" type="file">
+				<br><input multiple="multiple" name="file[]" size="50" title="Selectionnez le fichier à envoyer" type="file">
+				<div class="add_more">D'autres fichiers ? Cliquez Ici (ou <a href="http://neembuuuploader.sourceforge.net/" target="new">NeembuUploader</a>)</div>
+			</div>
+
+		<div id="updiv">
+			<div style="float:left;width:350px;line-height:27px;text-align:right;font-weight:bold">				
+				<label>Heberger les fichiers sur le domaine</label>
+				<br><label>Recevoir le lien par email <span style="font:12px normal italic">(facultatif)</span></label>
+				<br><label>Mot de passe d'accès aux fichiers <span style="font:12px normal italic">(facultatif)</span></label>
+			</div>
+			<div style="float:right;line-height:26px;width:290px">
+				&nbsp;<select name="domain" style="margin:2px">
+				<option value="0">1fichier.com</option>
+        <option value="1">alterupload.com</option>
+        <option value="2">cjoint.net</option>
+        <option value="3">desfichiers.com</option>
+   	    <option value="4">dfichiers.com</option>
+				<option value="5">megadl.fr</option>
+				<option value="6">mesfichiers.org</option>
+				<option value="7">piecejointe.net</option>
+				<option value="8">pjointe.com</option>
+				<option value="9">tenvoi.com</option>
+				<option value="10">dl4free.com</option>
+				</select>
+				<br>&nbsp;<input name="mail" value="" size="40" maxlength="255" style="width:260px" title="Pour recevoir une confirmation par email" type="text">
+				<br>&nbsp;<input name="dpass" value="" size="40" maxlength="32" style="width:260px" title="Pour proteger les liens au téléchargement par mot de passe" type="password">
+			</div>
+		</div>
+
+		<div style="clear:both;margin:auto;padding-top:20px">
+			<a href="#" onclick="disp('noti');return false" style="text-decoration:none;font-weight:bold"><img src="http://www.1fichier.com/img/add.png" alt="" height="16" width="16">&nbsp;Envoyer le lien à mes amis</a>
+			<br>&nbsp;
+			<div id="noti" style="display:none">
+				<div style="float:left;width:320px;text-align:center;margin:auto;margin-left:5px">
+					<label>Adresses emails&nbsp;&nbsp;<span style="font:12px normal italic">(facultatif, 1 par ligne - 20 max.)</span></label>
+					&nbsp;<br><textarea style="margin:2px;padding:2px;resize:none;width:98%" name="mails" rows="3" cols="35"></textarea>&nbsp;
+				</div>
+     	  <div style="float:right;width:320px;text-align:center;margin:auto;margin-right:5px">
+ 	 	      <label>Message à transmettre&nbsp;&nbsp;<span style="font:12px normal italic">(facultatif, 2000 car. max.)</span></label>
+					<br><textarea style="margin:2px;padding:2px;resize:none;width:98%" name="message" rows="3" cols="35"></textarea>
+ 	      </div>
+			</div>
+			<div style="clear:both"></div>	
+		</div>		
+
+		<input aria-disabled="false" role="button" class="ui-button ui-widget ui-state-default ui-corner-all" id="sub" name="submit" value="Envoyer" type="submit">
+		<br>&nbsp;
+		<br>
+			<small>Le fait d'envoyer des fichiers vaut acceptation de nos <a href="http://www.1fichier.com/cgu.html">Conditions d'Utilisation</a>
+				<br>Les fichiers des membres sont éffacés après 90 jours sans téléchargements, 60 jours pour les non-membres.
+				<br>La taille d'un fichier est limitée à 10Go par envoi web et à 20Go par FTP/Remote Upload.</small>
+      <div style="margin:auto;padding:30px">Network Usage<br><img src="/img/small.png" alt="network usage"></div>
+		</div>
+	</div>
+	<div style="width:600px;float:left;margin:auto;display:none" class="loading"><img src="/img/loading.gif" alt="">&nbsp;Envoi en cours...<br>&nbsp;<div class="res" style="text-align:left;margin: auto;height:300px;overflow:auto">&nbsp;</div></div>
+	<div style="float:right;width:300;height:600px">
+		<script type="text/javascript">ad6b300('52fl4a6b06');</script><div style="width: 100%; text-align:center;"><div id="ad6b_d52fl4a6b06" style="position: relative; width: 300px; height: 250px; margin: 0px auto; display: inline-block;"><iframe src="javascript:parent.ad6b.adFrame(this, document, 0, 'http://1fichier.com/', '')" style="visibility: visible;" id="ad6b_f52fl4a6b06" frameborder="0" height="250" scrolling="no" width="300"></iframe></div></div>
+		<br>
+		<script type="text/javascript">ad6b300('daqze3mlcx');</script><div style="width: 100%; text-align:center;"><div id="ad6b_ddaqze3mlcx" style="position: relative; width: 300px; height: 250px; margin: 0px auto; display: inline-block;"><iframe src="javascript:parent.ad6b.adFrame(this, document, 0, 'http://1fichier.com/', '')" style="visibility: visible;" id="ad6b_fdaqze3mlcx" frameborder="0" height="250" scrolling="no" width="300"></iframe></div></div>
+	</div>
+
+
+<div id="footer">
+ 	<a href="http://twitter.com/1fichiercom" title="Suivez 1fichier.com sur Twitter !"><img src="http://www.1fichier.com/img/twitter.gif" alt="Suivez nous sur Twitter" height="20" width="120"></a>&nbsp;&nbsp;
+	<a href="http://www.1fichier.com/abus.html" style="text-decoration:none">Abus</a>&nbsp;
+	|&nbsp;<a href="http://www.1fichier.com/cgu.html" style="text-decoration:none">Conditions d'Utilisation</a>&nbsp;
+	|&nbsp;<a href="http://www.dstorage.fr" style="text-decoration:none">DStorage SAS © 2012</a>
+</div>
+
+</div></form>
+
+
+</div><script type="text/javascript">
+
+	if(document.getElementById('cto_mg_div') == null && typeof(cto_conf)=='undefined'){
+		var cto_conf = { a:true, i: '330', kw: "" };
+		(function (){
+			var c = document.createElement('script');
+			c.type = 'text/javascript';
+			c.async = true;
+			c.src = document.location.protocol+'//static.criteo.net/js/kwp/criteo_ld_kw.js';
+			document.getElementsByTagName('body')[0].appendChild(c);
+		})();
+	}
+
+var __cho__ = {'pid':'1714'};
+(function() {
+    var c = document.createElement('script');
+    c.type = 'text/javascript';
+    c.async = true;
+    c.src = document.location.protocol + '//cc.chango.com/static/o.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(c, s);
+})();
+</script><script src="http://static.criteo.net/js/kwp/criteo_ld_kw.js" async="" type="text/javascript"></script><iframe src="http://dap.criteo.com/dis/dis.aspx?t1=sendData&amp;kpid=330&amp;kw=&amp;cb=56317864375&amp;ref=&amp;sc_r=1280x1024&amp;sc_d=24" style="display: none;" height="1px" width="1px"></iframe><script type="text/javascript">
+
+	if(document.getElementById('cto_mg_div') == null && typeof(cto_conf)=='undefined'){
+		var cto_conf = { a:true, i: '330', kw: "" };
+		(function (){
+			var c = document.createElement('script');
+			c.type = 'text/javascript';
+			c.async = true;
+			c.src = document.location.protocol+'//static.criteo.net/js/kwp/criteo_ld_kw.js';
+			document.getElementsByTagName('body')[0].appendChild(c);
+		})();
+	}
+
+var __cho__ = {'pid':'1714'};
+(function() {
+    var c = document.createElement('script');
+    c.type = 'text/javascript';
+    c.async = true;
+    c.src = document.location.protocol + '//cc.chango.com/static/o.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(c, s);
+})();
+</script><script type="text/javascript">
+
+	if(document.getElementById('cto_mg_div') == null && typeof(cto_conf)=='undefined'){
+		var cto_conf = { a:true, i: '330', kw: "" };
+		(function (){
+			var c = document.createElement('script');
+			c.type = 'text/javascript';
+			c.async = true;
+			c.src = document.location.protocol+'//static.criteo.net/js/kwp/criteo_ld_kw.js';
+			document.getElementsByTagName('body')[0].appendChild(c);
+		})();
+	}
+
+var __cho__ = {'pid':'1714'};
+(function() {
+    var c = document.createElement('script');
+    c.type = 'text/javascript';
+    c.async = true;
+    c.src = document.location.protocol + '//cc.chango.com/static/o.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(c, s);
+})();
+</script></body>

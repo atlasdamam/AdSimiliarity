@@ -1,0 +1,1798 @@
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="As-Safir Arabic Political Daily" name="Description"><meta name="Keywords" content="As-Safir newspaper, Safir newspaper, News, e-paper, epaper, e-?????, Newspaper, ??? ????? ?? ??? ???, ????? ??????, ??????, Newspapers, Arabic, Lebanon, ejareedeh, e-jareedeh, ejarideh, e-jarideh, ejareedah, e-jaridah, talal salman, ???? ?????, ?????? ???? ?????, Middle east, Lebanese, Media, Assafir, Alsafir, As-Safir, As-Safir Online, Daily, Beirut, politics"><meta name="verify-v1" content="A1ZH4AUS8ezukV3hHC7Bj8ROG3yYliHhN4UFVKWiLjk="><link id="_ctl0_ssDefault" rel="stylesheet" type="text/css" href="/Style.css"><link href="/css/jquery-ui-1.8.6.custom.css" rel="stylesheet" type="text/css"><link href="/css/colorbox.css" rel="stylesheet" type="text/css"><link href="/css/coda-slider-2.0.css" rel="stylesheet" type="text/css"><link rel="shortcut icon" type="image/x-icon" href="http://assafir.com/icons/favicon.ico"><link rel="icon" type="image/ico" href="http://assafir.com/icons/favicon.ico"><link rel="img_src" href="/Images/Logo.png"><meta name="application-name" content="????? ??????"><meta name="msapplication-tooltip" content="????? ?????? - ?????? ??????"><meta name="msapplication-starturl" content="http://assafir.com/"><meta name="msapplication-task" content="name=????? ??????;action-uri=http://assafir.com/;icon-uri=http://assafir.com/icons/favicon.ico"><meta name="msapplication-task" content="name=e-?????;action-uri=http://www.assafir.com/pdf/templatechannelpdf/index.htm;icon-uri=http://assafir.com/icons/epaper.ico"><meta name="msapplication-task" content="name=???? ??????;action-uri=http://shabab.assafir.com/;icon-uri=http://assafir.com/icons/shabab.ico"><meta name="msapplication-task" content="name=??????;action-uri=http://palestine.assafir.com/;icon-uri=http://assafir.com/icons/palestine.ico"><meta name="msapplication-task" content="name=?????? ??????;action-uri=http://arabi.assafir.com/;icon-uri=http://assafir.com/icons/arabi.ico"><link rel="alternate" type="application/rss+xml" title="?????? ??????" href="../rss.aspx?Channel=FirstPage"><link rel="alternate" type="application/rss+xml" title="????? ?????/?????" href="../rss.aspx?Channel=politics"><link rel="alternate" type="application/rss+xml" title="????? ?????/??????" href="../rss.aspx?Channel=local"><link rel="alternate" type="application/rss+xml" title="????? ?? ?????" href="../rss.aspx?Channel=LebanonSports"><link rel="alternate" type="application/rss+xml" title="????? ??????" href="../rss.aspx?Channel=Makalat"><link rel="apple-touch-icon" href="/images/assafir.png">
+    <script src="http://me-cdn.effectivemeasure.net/em.js" async="" type="text/javascript"></script><script src="/ypSlideOutMenus.js" type="text/javascript"></script>
+    <script src="/ypSlideOutMenus2.js" type="text/javascript"></script>
+    <script src="/functions.js" type="text/javascript"></script>
+    <script src="/js/jquery-1.4.2.min.js" type="text/javascript"></script>
+    <script src="/js/jquery-ui-1.8.6.custom.min.js" type="text/javascript"></script>
+    <script src="/js/jquery.colorbox-min.js" type="text/javascript"></script>
+	<script src="/Scripts/swfobject_modified.js" type="text/javascript"></script>
+    <style type="text/css">
+        .MulhakUL
+        {
+            margin:0px 18px 5px 3px;
+            -webkit-padding-start:0px;
+            padding:7px 0px 5px 0px;
+            background-color:transparent !important;
+        }
+        .MulhakUL li
+        {
+            margin-bottom:7px;
+            list-style-image:url(/Images/Arrow-left.gif);
+        }
+        li
+        {
+            font-family:Tahoma;
+            font-size:12px;
+        }
+        .ui-tabs, .ui-tabs-panel{padding-right:0.5em !important;}
+        .ui-accordion-content{height:170px;}
+        .ui-dialog .ui-dialog-title {
+            direction: rtl;
+            float: right;
+            margin: 0.1em 0 0.2em 16px;
+        }
+        .ui-dialog .ui-dialog-titlebar-close 
+        {
+            float:left;
+            left: 0.3em;
+            right:auto;
+        }
+    </style>
+    <script type="text/javascript">
+        var WeatherData;
+        var HeaderTitle;
+
+        $(function () {
+            $("#SpecialDiv").accordion({
+                active: 0,
+                collapsible: true,
+                change: function (event, ui) {
+                    if (ui.newHeader.index() == -1) {
+                        if (ui.oldHeader.index() == 0) {
+                            $('#SpecialDiv').accordion('activate', 1);
+                        } else {
+                            $('#SpecialDiv').accordion('activate', 0);
+                        }
+                    }
+                }
+            });
+            $("#divTools").accordion({
+                autoHeight: false,
+                active: 0,
+                collapsible: false,
+                change: function (event, ui) {
+                    if (ui.oldHeader.index() == 0) {
+                        ui.oldHeader.html('<span class="ui-icon ui-icon-triangle-1-e"/><a class="ParagraphTitle" tabIndex="-1" href="#">???? ????? &nbsp;&nbsp;&nbsp;&nbsp;<span dir="ltr">' + $("#spnCurrTemp").html() + '</span> <img src="' + $("#imgIcon").attr("src") + '" alt="" align="left" width="16" border="0" /></a>');
+                    } else {
+                        ui.newHeader.html('<span class="ui-icon ui-icon-triangle-1-s"/><a class="ParagraphTitle" tabIndex="-1" href="#">???? ?????</a>');
+                    }
+                }
+            });
+        });
+
+        function OpenLatestNews() {
+            $("#example").html("");
+            $("#example").load('/Ajax/AjaxLiveNews.aspx').dialog({
+                title: "??? ???????",
+                modal: true,
+                autoOpen: true,
+                height: 500,
+                width: 490
+            });
+        }
+        function OpenEyes() {
+            $("#example").html("");
+            $("#example").load('/windows/EyesArticles.aspx?t=').dialog({
+                title: "????",
+                modal: true,
+                autoOpen: true,
+                height: 500,
+                width: 490
+            });
+        }
+    </script>
+    
+<title>
+	As-Safir Newspaper - ???? ???: ???? ??????? 3	
+</title><script src="http://www9.effectivemeasure.net/v4/em_js?flag=0&amp;v=cf298f93e47c087631f24bc648a551a143cfe90575-3751269851a14ad4&amp;vt=9a3695d581eae0047fa55949fd5151a134e8768f67-7205217551a14ad4&amp;hl=&amp;sv=0&amp;pv=&amp;pn=&amp;p=aHR0cDovL2Fzc2FmaXIuY29tL011bGhhay8%2FU3VwcGxlbWVudElEPTg%3D&amp;r=&amp;f=0&amp;ns=_em&amp;rnd=0.5184640156885316&amp;u=&amp;sf=1&amp;tzos=5&amp;" async="" type="text/javascript"></script></head>
+<body style="background-image:url(/Images/bg_Page2.gif)"><div style="display: none;" id="cboxOverlay"></div><div class="" id="colorbox" style="padding-bottom: 42px; padding-right: 42px; display: none;"><div style="" id="cboxWrapper"><div style=""><div style="float: left;" id="cboxTopLeft"></div><div style="float: left;" id="cboxTopCenter"></div><div style="float: left;" id="cboxTopRight"></div></div><div style="clear: left;"><div style="float: left;" id="cboxMiddleLeft"></div><div style="float: left;" id="cboxContent"><div class="" style="width: 0px; height: 0px; overflow: hidden;" id="cboxLoadedContent"></div><div class="" style="" id="cboxLoadingOverlay"></div><div class="" style="" id="cboxLoadingGraphic"></div><div class="" style="" id="cboxTitle"></div><div class="" style="" id="cboxCurrent"></div><div class="" style="" id="cboxNext"></div><div class="" style="" id="cboxPrevious"></div><div class="" style="" id="cboxSlideshow"></div><div class="" style="" id="cboxClose"></div></div><div style="float: left;" id="cboxMiddleRight"></div></div><div style="clear: left;"><div style="float: left;" id="cboxBottomLeft"></div><div style="float: left;" id="cboxBottomCenter"></div><div style="float: left;" id="cboxBottomRight"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div></div>
+	<script type="text/javascript">
+	  (function() {
+		var em = document.createElement('script'); em.type = 'text/javascript'; em.async = true;
+		em.src = ('https:' == document.location.protocol ? 'https://me-ssl' : 'http://me-cdn') + '.effectivemeasure.net/em.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(em, s);
+	  })();
+	</script>
+	<noscript>
+		<img src="//me.effectivemeasure.net/em_image" alt="" style="position:absolute; left:-5px;" />
+	</noscript>
+	<div style="display:none" id="_em_stage__em"></div><form name="aspnetForm" method="post" action="default.aspx?SupplementID=8" id="aspnetForm">
+<input name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTM5OTI5NjE2Mg9kFgJmD2QWBGYPZBYCAgQPFgIeBGhyZWYFCi9TdHlsZS5jc3NkAgEPZBYQAgEPZBYCAgEPZBYEZg8PFgIeBFRleHQFCjI1LzA1LzIwMTNkZAIBDw8WAh8BBRHYp9mE2LnYr9ivOiAxMjQ4N2RkAgMPZBYCAgEPZBYGZg9kFgJmD2QWAgIBDxYCHgdvbmNsaWNrBYcBTU1fb3BlbkJyV2luZG93KCcvV2luZG93cy9QcmludFNlY3Rpb24uYXNweD9FZGl0aW9uSWQ9MjQ2OSZDaGFubmVsSWQ9LTEmcmVmdHlwZT1tZW51JnJlZj1ybScsJ1NlY3Rpb25QcmludCcsJ3Njcm9sbGJhcnM9eWVzLHdpZHRoPTQ2NycpZAIBD2QWAmYPZBYCAgEPFgIfAgW1AU1NX29wZW5CcldpbmRvdygnL3BkZi90ZW1wbGF0ZWNoYW5uZWxwZGYvaW5kZXguaHRtP3JlZnR5cGU9bWVudSZyZWY9cm0nLCdlcGFwZXInLCd0b29sYmFyPXllcyxsb2NhdGlvbj15ZXMsc3RhdHVzPXllcyxtZW51YmFyPXllcyxzY3JvbGxiYXJzPXllcyxyZXNpemFibGU9eWVzLHdpZHRoPTgwMCxoZWlnaHQ9NDAwJylkAgQPZBYCZg9kFgICAQ8WAh8CBUBkb2N1bWVudC5sb2NhdGlvbi5ocmVmPScvVmlld1NlbGVjdGlvbi5hc3B4P3JlZnR5cGU9bWVudSZyZWY9cm0nZAIHD2QWBgIBDxYCHgNzcmMFF0ltYWdlcy9TdXBwbGVtZW50XzguanBnZAIDDxYCHgtfIUl0ZW1Db3VudAIHFg5mD2QWEAIBDw8WAh8BZWRkAgIPFQECOTVkAgMPDxYCHwEF2wI0MDE2ICDZhdmE2YrZiNmGINiv2YjZhNin2LEg2YXZiNis2YjYr9in2Kog2YXYtdin2LHZgSDYp9mE2KfYs9iq2KvZhdin2LEg2KrYtNmD2YQgMiw2JSDZhdmGINit2KzZhSDYp9mE2YLYt9in2LkNCjExODEg2YXZhNmK2YjZhtin2Ysg2KrYs9mE2YrZgdin2Kog2KfZhNmF2LXYp9ix2YEg2KfZhNin2LPYqtir2YXYp9ix2YrYqSDYqNiq2LHYp9is2LkgMSw1ICUg2LnZhiAgMjAwOQ0KMTYgINmF2LXYsdmB2KfZiyDYqtmF2YTZgyAxNiDZgdix2LnYp9mLINij2YPYq9ix2YfYpyDZitiq2KjYuSDYp9mE2YXYtdin2LHZgSDYp9mE2KrYrNin2LHZitipINmB2Yog2KfZhNmF2YTZg9mK2Kkg2YjYp9mE2YbYtNin2LcNCmRkAgUPDxYCHghJbWFnZVVybAU2L0FydGljbGVQaG90by83MDFlNDZmNy1iOTA3LTQ1MjAtOWVkYi1mYzVmZjlkOGYzZDguanBnZGQCBg8VAQI5NWQCBw8PFgIfAQWMBtiq2KTZg9ivINmG2KrYp9im2Kwg2YjZhti02KfYt9in2Kog2KfZhNmF2LXYp9ix2YEg2KfZhNin2LPYqtir2YXYp9ix2YrYqSDZiNin2YTZhdiq2K7Ytdi12Kkg2YHZiiDZhNio2YbYp9mGINin2YbZh9inINiq2K3Yqtin2Kwg2KfZhNmJINin2YTZhdiy2YrYryDZhdmGINin2YTYqtmB2LnZitmEINmE2YTZgtmK2KfZhSDYqNiv2YjYsdmH2Kcg2KfZhNiq2YbZhdmI2Yog2YTYrNmH2Kkg2KfZhNiq2LTYrNmK2Lkg2YjYp9mE2YXYtNin2LHZg9ipINmB2Yog2KrYudiy2YrYsiDZgdix2LUg2KfZhNin2LPYqtir2YXYp9ixLiDZh9iw2Ycg2KfZhNmG2KrYp9im2Kwg2YjYp9mE2YjZgtin2KbYuSDYp9mE2YXZgtin2LHZhtipINmF2Lkg2K3YrNmFINin2YTZgti32KfYuSDYp9mE2YXYtdix2YHZiiDYp9mE2KrYrNin2LHZiiDYp9mE2LDZiiDZitmG2YXZiCDYqNi02YPZhCDYo9mD2KjYsSAg2KjZg9ir2YrYsSDZhdmGINmF2LXYp9ix2YEg2KfZhNin2LPYqtir2YXYp9ix2Iwg2KrYpNmD2K8gINin2YTYrdin2KzYqSDYp9mE2Ykg2LbYsdmI2LHYqSDYqti52LLZitiyINmG2LTYp9i32KfYqiDZh9iw2Ycg2KfZhNmF2LXYp9ix2YEg2KfZhNin2LPYqtir2YXYp9ix2YrYqSDZiNin2YTZhdiq2K7Ytdi12KnYjCDZhdi5INin2YTYudmF2YQg2LnZhNmJINiq2YHYudmK2YQg2KfZhNij2LPZiNin2YIg2KfZhNmF2KfZhNmK2Kkg2KjYudivINil2YLYsdin2LEgINmF2LTYsdmI2Lkg2YLYp9mG2YjZhiDYqtmB2LnZitmEINin2YTYp9iz2YjYp9mCINin2YTZhdin2YTZitipINmI2KXZhti02KfYoWRkAggPFQMCOTUAAGQCCQ8PFgQfBWUeB1Zpc2libGVoZGQCAQ9kFhACAQ8PFgIfAWVkZAICDxUBAzEwMmQCAw8PFgIfAQXFAcKr2YHYsdmG2LPZjtio2YbZgyDZhNmE2KPYudmF2KfZhMK7INmK2KvYqNiqINmC2K/Ysdiq2Ycg2LnZhNmJINiq2K3ZgtmK2YIg2KfZhNil2YbYrNin2LLYp9iqDQrZhtiv2YrZhSDYp9mE2YLYtdin2LE6INmG2YjYp9i12YQg2KrYt9mI2YrYsSDYp9mE2K7Yr9mF2KfYqiDZiNin2YTZhdmG2KrYrNin2Kog2KfZhNin2LPYqtir2YXYp9ix2YrYqQ0KZGQCBQ8PFgIfBQU2L0FydGljbGVQaG90by9hMWJiYjA5Mi0xYzMwLTRkYzktODMzZS1hYTdiNmIxMmU4MjAuanBnZGQCBg8VAQMxMDJkAgcPDxYCHwEFtwXZiti52YjYryDYpdmG2LTYp9ihINmF2LXYp9ix2YEg2KfZhNin2LPYqtir2YXYp9ixINmB2Yog2YTYqNmG2KfZhiDZhNio2LbYuSDYs9mG2YjYp9iqINiu2YTYqiDYudmG2K/ZhdinINij2YbYtNij2Kog2KjYudi2INin2YTZhdi12KfYsdmBINin2YTYqtis2KfYsdmK2Kkg2KfZhNmD2KjYsdmJINmH2LDZhyDYp9mE2YXYtdin2LHZgSDZg9ij2LDYsdi5INin2LPYqtir2YXYp9ix2YrYqSDZhNmH2KcuINmI2KrYtNmD2YQg2YfYsNmHINin2YTYo9i52YXYp9mEINin2YTYp9iz2KrYq9mF2KfYsdmK2Kkg2KfYs9iq2YPZhdin2YTYp9mLINmE2KfYs9iq2LHYp9iq2YrYrNmK2Kkg2KrYrdmI2YQg2KfZhNmF2LXYp9ix2YEg2KfZhNiq2KzYp9ix2YrYqSDYpdmE2Ykg2YXYtdin2LHZgSDYtNin2YXZhNipLiDZhdmGINir2YUg2KrZhSDYpdmG2LTYp9ihINmB2Yog2KfZhNiz2YbZiNin2Kog2KfZhNmC2YTZitmE2Kkg2KfZhNmF2KfYttmK2Kkg2KjYudi2INmF2LXYp9ix2YEg2KfZhNin2LPYqtir2YXYp9ixINin2YTZhdiz2KrZgtmE2KnYjCDZiNmE2YPZhiDYudiv2K8g2YfYsNmHINin2YTZhdi12KfYsdmBINmF2Kcg2LLYp9mEINmF2K3Yr9mI2K/Yp9mLINis2K/Yp9mL2Iwg2YjZhdinINiy2KfZhNiqINin2YTYp9i62YTYqNmK2Kkg2KfZhNiz2KfYrdmC2Kkg2KrYp9io2LnYqSDZhNmE2YXYtdin2LHZgSDYp9mE2KrYrNin2LHZitipLmRkAggPFQMDMTAyP2h0dHA6Ly93d3cuZnJhbnNhYmFuay5jb20vRW5nbGlzaC9QYWdlcy9Db3Jwb3JhdGUtSG9tZXBhZ2UuYXNweABkAgkPDxYCHwUFLi9Mb2dvLzE5NjE1ZTM1LTI2NDQtNDFjNy05ZjA5LTE5NTQzYjAxZTc3My5qcGdkZAICD2QWEAIBDw8WAh8BZWRkAgIPFQEDMTAxZAIDDw8WAh8BBYcBwqvYqNmG2YMg2YXZitivwrs6INiz2YrYp9iz2Kkg2KXYr9in2LHYqSDZhdiu2KfYt9ixINmF2YTYp9im2YXYqQ0K2KrYudi32Yog2KfZhNmF2LPYqtir2YXYsSDZhtiz2KjYqSDYo9i52YTZiSDZhdmGINin2YTYt9mF2KPZhtmK2YbYqQ0KZGQCBQ8PFgIfBQU2L0FydGljbGVQaG90by8wODc4MzUwMy02NjlkLTRmZDQtYWEwMi1lNTQxOTZiOTI4ZmYuanBnZGQCBg8VAQMxMDFkAgcPDxYCHwEF7wTYqtio2YbZiiDZhdi12KfYsdmBINin2YTYo9i52YXYp9mEINmI2KfZhNmF2KTYs9iz2KfYqiDYp9mE2YXYp9mE2YrYqSDZgdmKINmE2KjZhtin2YYg2LPZhdi52KrZh9inINin2YTYt9mK2KjYqSDZg9i12YjYsdipINmF2LnYp9mD2LPYqSDZhNmE2YLYt9in2Lkg2KfZhNmF2LXYsdmB2Yog2KfZhNmE2KjZhtin2YbZiiDYp9mE2LHYp9im2K8g2YjYp9mE2YXYrdi12YbYjCDYsdi62YUg2KfZhNi52YjYp9i12YEg2KfZhNmF2K3Ziti32Kkg2KjZhyDZgdmKINmF2YbYt9mC2Kkg2KfZhNi02LHZgiDYp9mE2KPZiNiz2Lcg2YjYp9mE2LnYp9mE2YUg2YXZhiDYrNix2KfYoSDYp9mE2KPYstmF2Kkg2KfZhNmF2KfZhNmK2Kkg2KfZhNi52KfZhNmF2YrYqdiMINmE2YPZhtmH2Kcg2KrYrNmH2K8g2YHZiiDYo9mGINiq2K3ZgtmCINin2LPYqtir2YXYp9ix2KfYqiDZhdi12LHZgdmK2Kkg2YLZitin2LPZitipINi52YTZiSDYp9mE2LXYudmK2K8g2KfZhNmF2K3ZhNmKINmD2YXYpyDZgdmKINmF2YbYt9mC2Kkg2KfZhNi02LHZgiDYp9mE2KPZiNiz2Lcg2YjYp9mE2LnYp9mE2YXYjCDZgdmF2Kcg2YfZiiDYp9mE2LXYudmI2KjYp9iqINin2YTYqtmKINiq2YjYp9is2YfZg9mFINmH2LDZhyDYp9mE2KPZitin2YXYn2RkAggPFQMDMTAxLGh0dHA6Ly93d3cuYmFua21lZC5jb20ubGIvUGFnZXMvZGVmYXVsdC5hc3B4AGQCCQ8PFgIfBQUuL0xvZ28vNTJmMTJkYjAtOGE0Ni00YTIwLWJmZGUtN2E5YTc4M2EzOGQwLmpwZ2RkAgMPZBYQAgEPDxYCHwFlZGQCAg8VAQMxMDBkAgMPDxYCHwEFjAEi2KjZhtmDINi52YjYr9mHINiz2LHYp9iv2KfYsSDZhNmE2K7Yr9mF2KfYqiDYp9mE2K7Yp9i12ZHYqSI6DQrYp9i52KrYsdin2YEg2K/ZiNmE2Yog2KjYrdiz2YYg2KfZhNij2K/Yp9ihINmI2KfZhNin2YTYqtiy2KfZhSDYp9mE2K/Yp9im2YUNCmRkAgUPDxYCHwUFNi9BcnRpY2xlUGhvdG8vMzNmZDgyNDUtZTVjNS00NmFiLThiNmItZjNjNThiMjUzM2JmLmpwZ2RkAgYPFQEDMTAwZAIHDw8WAh8BBaMFItmE2YrYsyDZgdmC2Lcg2KPZhtmRINij2K/Yp9ihINio2YbZgyDYudmI2K/ZhyDYs9ix2KfYr9in2LEg2YTZhNiu2K/Zhdin2Kog2KfZhNiu2KfYtdipINi42YTZkSDYpdmK2KzYp9io2YrZkdin2Ysg2LHYutmFINmB2KrYsdin2Kog2KfZhNin2LbYt9ix2KfYqCDYp9mE2YXYrdmE2YrZkdipINmI2KfZhNil2YLZhNmK2YXZitmR2KnYjCDYqNmEINil2YbZkSDYp9mE2YXYtdix2YEg2KfYs9iq2YHYp9ivINij2YrYttin2Ysg2YXZhiDYqNmC2KfYoSDZhNio2YbYp9mGINmG2LPYqNmK2ZHYp9mLINio2YXZhtij2YnZiyDYudmGINin2YTYo9iy2YXYqSDYp9mE2YXYp9mE2YrZkdipINin2YTYo9iu2YrYsdipItiMINio2K3Ys9ioINmF2Kcg2KPZiNi22K0g2KfZhNmF2K/ZitixINin2YTYudin2YUg2YTZhNmF2LXYsdmB2Iwg2KrZiNmB2YrZgiDYudmI2ZHYp9ivLiAi2YHZgtivINit2YLZkdmCINin2YTZhdi12LHZgSDYo9mH2K/Yp9mB2Ycg2KfZhNmF2KfZhNmK2ZHYqSDYp9mE2YXYrdiv2ZHYr9ipINmE2LnYp9mFIDIwMTIg2YjZhtis2K0g2YHZiiDYp9mE2K3Zgdin2Lgg2LnZhNmJINin2LPYqtmC2LHYp9ixINit2KzZhSDYo9i12YjZhNmHINin2YTZhdmP2K/Yp9ix2Kkg2KfZhNiq2Yog2KjZhNi62Kog2K3ZiNin2YTZiiAyLDcg2YXZhNmK2KfYsSDYr9mI2YTYp9ixINij2YXZitix2YPZii4iZGQCCA8VAwMxMDApd3d3LmJhbnF1ZWF1ZGkuY29tL1BhZ2VzL0RlZmF1bHQuYXNweGh0dHAAZAIJDw8WAh8FBS4vTG9nby80OGI4NTg4OS03ZTRkLTQxYmItOTBjZi04YTYzZDI5YmQ0MzkuanBnZGQCBA9kFhACAQ8PFgIfAWVkZAICDxUBAjk5ZAIDDw8WAh8BBagB2YXYr9mK2LEg2KfZhNiu2K/Zhdin2Kog2KfZhNmF2LXYsdmB2YrYqSDYp9mE2K7Yp9i12Kkg2YHZiiAi2KjZhNmI2YUg2KjZhtmDIjoNCtmF2KTYp9iy2LHYqSDZhdiq2YPYp9mF2YTYqSDYqNmK2YYg2KfZhNiu2K/Zhdin2Kog2KfZhNiu2KfYtdipINmI2KfZhNin2LPYqtir2YXYp9ix2YrYqQ0KZGQCBQ8PFgQfBWUfBmhkZAIGDxUBAjk5ZAIHDw8WAh8BBYUG2KfYs9iq2YHYp9ivINin2YTYudmF2YTYp9ihINin2YTZhNio2YbYp9mG2YrZiNmGINmF2YYg2LPZitin2LPYqSDZgdmI2KfYptivINiq2YHYttmK2YTZitip2Iwg2YHZiiDYrtmE2KfZhCDYp9mE2LPZhtmI2KfYqiDYp9mE2YAyMCDYp9mE2YXZhti12LHZhdipLiDZiNin2YTZitmI2YXYjCDYp9iz2KrZgtixINmF2LnYr9mR2YQg2KrYr9in2YjZhCDYp9mE2YTZitix2Kkg2KfZhNmE2KjZhtin2YbZitipINmF2YLYp9io2YQg2KfZhNiv2YjZhNin2LEg2KfZhNij2YXZitix2YPZiiDYpdmE2Ykg2K3YryDZg9io2YrYsdiMINio2KfZhNin2LbYp9mB2Kkg2YTZhdi52K/ZhCDYp9mE2KrYttiu2YUg2KfZhNiw2Yog2KrYrti32ZHZiSDYp9mE2YA0INmB2Yog2KfZhNmF2KbYqSDZhdmF2ZHYpyDYrNi52YQg2KfZhNmF2YjYr9i52YrZhiDZgdmKINit2YrYsdipINio2LTYo9mGINiq2YjYuNmK2YHYp9iq2YfZhdiMINmI2YHZgiDZhdinINmK2LTYsditINmF2K/ZitixINin2YTYrtiv2YXYp9iqINin2YTZhdi12LHZgdmK2Kkg2YHZiiAi2KjZhNmI2YUg2KjZhtmDIiDYrNmI2LHYrCDYudio2YjYr9iMINin2YTYsNmKINmK2YLZiNmEOiDZh9mD2LDYp9iMINij2LXYqNit2Kog2KfZhNit2KfYrNipINil2YTZiSDYqtit2YjZitmEINmI2K/Yp9im2Lkg2KfZhNi52YXZhNin2KEg2KXZhNmJINij2LXZiNmEINio2K/ZitmE2Kkg2YXYq9mF2LHYqSDZiNiw2YTZgyDZhdmGINij2KzZhCDYp9mE2YXYrdin2YHYuNipINi52YTZiSDYp9mE2YLYr9ix2Kkg2KfZhNi02LHYp9im2YrYqS5kZAIIDxUDAjk5I3d3dy5ibG9tYmFuay5jb20vZW5nbGlzaC9pbmRleC5hc3B4AGQCCQ8PFgIfBQUuL0xvZ28vNjk5NzlmMWYtNDRkOC00MzQ1LWJkZDYtYzlkYzRhNTYyNDg3LmpwZ2RkAgUPZBYQAgEPDxYCHwFlZGQCAg8VAQI5OGQCAw8PFgIfAQVu2KPYr9in2KEg2KfZhNmF2LXYp9ix2YEg2KfZhNiq2KfYqNi52Kkv2KfZhNi02LHZitmD2Kkg2YTZhdi12KfYsdmBINmE2KjZhtin2YbZitipINmB2Yog2LPZiNix2YrYqQ0KMjAwNy0yMDEyDQpkZAIFDw8WAh8FBTYvQXJ0aWNsZVBob3RvL2YwZWU0ZDYyLWI1MDQtNDU2YS05OTM2LTk2NjkyY2Q5ZmI1MS5qcGdkZAIGDxUBAjk4ZAIHDw8WAh8BBaYEDQrYp9iq2ZHYrNmH2Kog2KfZhNij2YbYuNin2LEg2YHZiiDYp9mE2KLZiNmG2Kkg2KfZhNij2K7Zitix2Kkg2KXZhNmJINmF2K3Ziti3INmE2KjZhtin2YYg2KfZhNil2YLZhNmK2YXZiiDYp9mE2LDZiiDYtNmH2K8g2KPZiNi22KfYudin2Ysg2LrZitixINmF2LPYqtmC2LHZkdip2Iwg2YjYo9mK2LbYp9mLINil2YTZiSDYp9mE2YXYtdin2LHZgSDYp9mE2KrYp9io2LnYqSDYo9mIINin2YTYtNix2YrZg9ipINmE2YTZhdi12KfYsdmBINin2YTZhNio2YbYp9mG2YrYqSDYp9mE2LnYp9mF2YTYqSDZgdmKINmH2LDYpyDYp9mE2YXYrdmK2LfYjCDZiNin2YTYqtmKINmD2KfZhtiqINi52LHYttip2Ysg2YTYtti62YjYtyDYs9mK2KfYs9mK2Kkg2YjYp9mC2KrYtdin2K/ZitipINmI2KPZhdmG2YrYqSDZhdiq2YbZiNmR2LnYqdiMINiu2LXZiNi12Kcg2YbYrdmIINiz2YjYsdmK2Kkg2KjYp9i52KrYqNin2LHZh9inINil2K3Yr9mJINij2YfZhSDZhtmC2KfYtyDYp9mE2KrZhdix2YPYsiDYp9mE2YXYtdix2YHZiiDYp9mE2YTYqNmG2KfZhtmKINmB2Yog2KfZhNiu2KfYsdisLmRkAggPFQMCOTgAAGQCCQ8PFgQfBWUfBmhkZAIGD2QWEAIBDw8WAh8BZWRkAgIPFQECOTdkAgMPDxYCHwEFVdin2YTYp9mG2KrYtNin2LEg2KfZhNmF2LXYsdmB2Yog2KfZhNmE2KjZhtin2YbZiiDZgdmKINin2YTZgtin2LHYqSDYp9mE2KPZgdix2YrZgtmK2KlkZAIFDw8WBB8FZR8GaGRkAgYPFQECOTdkAgcPDxYCHwEFxAXZhdmG2LAg2KfZhNmC2K/ZhdiMINiq2YjYp9mD2Kgg2KfZhNmF2LXYp9ix2YEg2KfZhNmE2KjZhtin2YbZitipINi52YXZhNin2KHZh9inINmB2Yog2KfZhNiv2KfYrtmEINmI2KfZhNiu2KfYsdisINmI2KrZgtiv2ZHZhSDZhNmH2YUg2YXZhtiq2KzYp9iqINmI2K7Yr9mF2KfYqiDYqtiq2YXYp9i02Ykg2YXYuSDYo9io2LHYsiDYp9mE2YXYs9iq2KzYr9mR2KfYqiDYp9mE2YXYtdix2YHZitipINin2YTYudin2YTZhdmK2KkuINmI2YLYryDYudix2YEg2YjYrNmI2K/Zh9inINmB2Yog2KfZhNiu2KfYsdisINiq2LfZiNix2KfZiyDYs9ix2YrYudin2YvYjCDYrti12YjYtdin2Ysg2YXZhtiwINmF2LfZhNi5INin2YTYudin2YUgMjAwMC4g2YXZhiDYp9mE2KPYs9io2KfYqCDYp9mE2YPYp9mF2YbYqSDZiNix2KfYoSDZh9iw2Kcg2KfZhNiq2YjYs9mR2Lkg2LbZitmCINin2YTYs9mI2YIg2KfZhNmF2K3ZhNmKINmI2KfZhNit2KfYrNipINil2YTZiSDYqtmI2LLZiti5INin2YTZhdiu2KfYt9ix2Iwg2YjYp9mE2KjYrdirINi52YYg2YHYsdi1INmF2KzYr9mK2Kkg2YHZiiDYo9iz2YjYp9mCINmI2KfYudiv2Kkg2YjZhdmC2KjZhNipINi52YTZiSDYp9iy2K/Zh9in2LEuINmI2LPYp9mH2YUg2YHZiiDZh9iw2Kcg2KfZhNiq2YjYs9mR2Lkg2KrYtNis2YrYuSDYp9mE2LPZhNi32KfYqiDYp9mE2YbZgtiv2YrYqSDZiNin2YTYsdmC2KfYqNmK2Kkg2YTZhy5kZAIIDxUDAjk3AABkAgkPDxYEHwVlHwZoZGQCBQ8UKwAjFgIfBmgCMgIBCylgU2l0ZVV0aWxzLlBhZ2luZ01vZGVUeXBlLCBDb2xsZWN0aW9uUGFnZXIsIFZlcnNpb249MC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1udWxsAQUEUGFnZQU+Ym9yZGVyOnNvbGlkIDFweCBibGFjaztmb250LXNpemU6MTJweDt3aWR0aDozNjBweDtoZWlnaHQ6MTdweDsFDENoYW5uZWxQYWdlcgIKZwUlX2N0bDA6Q29udGVudFBsYWNlSG9sZGVyMTpycHRBcnRpY2xlcwUTcGFkZGluZy1ib3R0b206NHB4OwUV2LXZgdit2KkgezB9INmF2YYgezF9CyllU2l0ZVV0aWxzLlJlc3VsdHNMb2NhdGlvblR5cGUsIENvbGxlY3Rpb25QYWdlciwgVmVyc2lvbj0wLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPW51bGwCBRJGT05ULVdFSUdIVDogYm9sZDtoBQjYtdmB2K3YqWULKWhTaXRlVXRpbHMuUGFnZU51bWJlcnNEaXNwbGF5VHlwZSwgQ29sbGVjdGlvblBhZ2VyLCBWZXJzaW9uPTAuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49bnVsbAAFAS1nZQspZVNpdGVVdGlscy5CYWNrTmV4dERpc3BsYXlUeXBlLCBDb2xsZWN0aW9uUGFnZXIsIFZlcnNpb249MC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1udWxsAQspZlNpdGVVdGlscy5CYWNrTmV4dExvY2F0aW9uVHlwZSwgQ29sbGVjdGlvblBhZ2VyLCBWZXJzaW9uPTAuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49bnVsbAJnBQ48ICZuYnNwOyZuYnNwOwUOJm5ic3A7Jm5ic3A7ID4FDzw8ICZuYnNwOyZuYnNwOwUPJm5ic3A7Jm5ic3A7ID4+ZQUBLWcCCmhlZWQCCQ8PFgIfBmhkZAILDw8WAh8GaGRkAg0PDxYCHwZoZGQCDw9kFgICAQ9kFgJmD2QWAmYPZBYQAgEPFgIfBAIFFgpmD2QWBgIBDxYCHwEFT9io2LTYp9ixINin2YTYo9iz2K8g2LHYptmK2LPYp9mLINiu2Lcg2KPYrdmF2LEgLi4g2YHZhNmK2LPYqtmF2LEg2KfZhNmC2KrYp9mEDQpkAgMPDxYEHgtOYXZpZ2F0ZVVybAU7L0FydGljbGUuYXNweD9B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aXRlPWFzc2FmaXImcmVmdHlwZT1sZWZ0bWVudSZyZWZ6b25lPXN3aXRjaGVyZBYCZg8VAT/Yo9iz2KjYp9ioINmB2YLYsSDYp9mE2K7Zitin2YQg2LnZhtivINis2YXYp9i52Kkg2KfZhNil2K7ZiNin2YZkAgMPZBYCAgEPDxYCHwcFXmh0dHA6Ly9hcmFiaS5hc3NhZmlyLmNvbS9BcnRpY2xlLmFzcD9haWQ9OTA4JnJlZnNpdGU9YXNzYWZpciZyZWZ0eXBlPWxlZnRtZW51JnJlZnpvbmU9c3dpdGNoZXJkFgJmDxUBTtmF2LXYsTog2KfZhNi12K3Yp9mB2Kkg2KjZitmGINin2YTZhdi12KfZhNitINin2YTYs9mK2KfYs9mK2Kkg2YjYp9mE2KjZitiy2YbYs2QCBA9kFgICAQ8PFgIfBwVeaHR0cDovL2FyYWJpLmFzc2FmaXIuY29tL0FydGljbGUuYXNwP2FpZD05MTQmcmVmc2l0ZT1hc3NhZmlyJnJlZnR5cGU9bGVmdG1lbnUmcmVmem9uZT1zd2l0Y2hlcmQWAmYPFQFG2LPZiNix2YrYpzog2KfZhNmC2YHYstipINin2YTZhNmK2KjYsdin2YTZitipLi4uINil2YTZiSDYp9mE2YfYp9mI2YrYqWQCBw8PFgIfBQUrL1BERi90ZW1wbGF0ZWNoYW5uZWxwZGYvVGh1bWJzLzI2MDUyMDEzLmpwZ2RkAgkPZBYCZg9kFgQCAw9kFgJmDxYCHwIFI2RvY3VtZW50LmxvY2F0aW9uLmhyZWY9Jy9oZWxwLmFzcHgnZAIED2QWAmYPFgIfAgWHAU1NX29wZW5CcldpbmRvdygnL1dpbmRvd3MvUHJpbnRTZWN0aW9uLmFzcHg/RWRpdGlvbklkPTI0NjkmQ2hhbm5lbElkPS0xJnJlZnR5cGU9bWVudSZyZWY9bG0nLCdTZWN0aW9uUHJpbnQnLCdzY3JvbGxiYXJzPXllcyx3aWR0aD00NjcnKWQCCw8PFgIfBwVgamF2YXNjcmlwdDpNTV9vcGVuQnJXaW5kb3coJy9XaW5kb3dzL0V5ZXNBcnRpY2xlcy5hc3B4JywnTGF0ZXN0TmV3cycsJ3Njcm9sbGJhcnM9eWVzLHdpZHRoPTQ2NycpZGQCEQ9kFgJmD2QWBGYPDxYCHwEFBDYyNDZkZAIBDw8WAh8BBQYxMTA0MzdkZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WAwUVX2N0bDA6SGVhZGVyMTpidG5TcmNoBStfY3RsMDpMZWZ0TWVudTE6X2N0bDE6TGVmdE1lbnVMaW5rczM6YnRuTWluBStfY3RsMDpMZWZ0TWVudTE6X2N0bDE6TGVmdE1lbnVMaW5rczM6YnRuTWF4P2yxzqZSR6tC09OMOUbqnoR7ImQ=" type="hidden">
+
+        <div>
+            <table width="960" align="center" border="0" cellpadding="0" cellspacing="0">
+                <tbody><tr>
+                    <td>
+                        <table width="960" align="center" cellpadding="0" cellspacing="0">
+                            <tbody><tr valign="top">
+                                <td>
+                                    
+<script type="text/javascript" src="/js/dom-drag.js"></script>
+
+<style type="text/css">
+    .tblCont
+    {
+        height:70px;
+        border-top:solid 3px #dcdcdc;
+        border-right:solid 1px #dcdcdc;
+        border-bottom:solid 3px #dcdcdc;
+        width:480px;
+    }
+    #divCont
+    {
+        height:64px;
+        overflow:auto;
+        padding:2px;
+    }
+	#divTopBanner div, #divMiddleBanner div
+	{
+		position:relative!important;
+	}
+	#div-gpt-ad-1359970304445-0_ad_container{
+		width:728px;
+		margin:0px auto;
+	}
+</style>
+<script type="text/javascript">
+    $(function() {
+        $("#divCont").load('/Ajax/ucAjaxUpdates.aspx');
+    });
+</script>
+<script type="text/javascript">
+	(function() {
+		var useSSL = 'https:' == document.location.protocol;
+		var src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+		document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+	})();
+</script><script src="http://www.googletagservices.com/tag/js/gpt.js"></script>
+
+<script type="text/javascript">
+	googletag.defineSlot('/7229/assafir/', [728, 90], 'div-gpt-ad-1359970304445-0').addService(googletag.pubads());
+	googletag.defineSlot('/7229/assafir/',  [300, 250], 'div-gpt-ad-1359970304445-1').addService(googletag.pubads());
+	googletag.pubads().enableSyncRendering();
+	googletag.pubads().enableSingleRequest();
+	googletag.enableServices();
+</script><script type="text/javascript" src="http://partner.googleadservices.com/gampad/google_ads_gpt.js"></script>
+
+<div id="divTopBanner" style="text-align:center;background-color:#f7f2f2;padding-bottom:8px;">
+	<!-- begin ad tag (tile=1) -->
+	<div id="div-gpt-ad-1359970304445-0"></div>
+	<script type="text/javascript">
+		googletag.cmd.push(function() {
+		googletag.display('div-gpt-ad-1359970304445-0');
+	});
+	</script><script type="text/javascript" src="http://pubads.g.doubleclick.net/gampad/ads?gdfp_req=1&amp;correlator=2298638103292119&amp;output=json_html&amp;callback=googletag.impl.pubads.setAdContentsBySlotForSync&amp;impl=ss&amp;json_a=1&amp;eid=108809002&amp;iu_parts=7229%2Cassafir&amp;enc_prev_ius=%2F0%2F1%2F%2C%2F0%2F1%2F&amp;prev_iu_szs=728x90%2C300x250&amp;cookie=ID%3Df6d59b16d7b5ec87%3AT%3D1369524948%3AS%3DALNI_MZwFognoF02EnupzYDqIA0YIR1adA&amp;lmt=1369524976&amp;dt=1369524977913&amp;cc=100&amp;biw=1184&amp;bih=323&amp;oid=3&amp;gut=v2&amp;ifi=1&amp;u_tz=-300&amp;u_his=50&amp;u_h=1024&amp;u_w=1280&amp;u_ah=984&amp;u_aw=1280&amp;u_cd=24&amp;u_sd=1&amp;flash=0&amp;url=http%3A%2F%2Fassafir.com%2FMulhak%2F%3FSupplementID%3D8&amp;adks=555540324%2C275631904&amp;vrg=21&amp;vrp=21&amp;ga_vid=1905377292.1369524974&amp;ga_sid=1369524974&amp;ga_hid=733553274&amp;ga_fc=true"></script>
+	<!-- end ad tag -->	
+</div>
+<table style="height:100px;background-color:#f7f2f2;width:100%;" cellpadding="0" cellspacing="0">
+	<tbody><tr>
+		<td style="width:215px" align="left">
+            <a href="/default.aspx" title="??????"><img alt="??????" src="/Images/Logo.png" width="200" align="bottom" border="0"></a>
+        </td>
+        <td style="width:200px;padding-bottom:10px;" valign="bottom">
+            <div>
+			    <table style="height:50px" width="156" cellpadding="0" cellspacing="0">
+				    <tbody><tr>
+					    <td id="_ctl0_Header1_tdChannelLogo" class="bg_NoRepeat header_date" style="background-position:left center" valign="bottom">&nbsp;</td>
+
+				    </tr>
+			    </tbody></table>
+            </div>
+            
+<script src="/Scripts/jquery.ui.datepicker-ar.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(function() {
+        $("#menuOldEditionsContent").datepicker({
+            onSelect: function(dateText, inst) {
+                $.ajax({
+                    type: "POST",
+                    url: '/Webservices.asmx/GetEdition',
+                    contentType: "application/json; charset=utf-8",
+                    data: '{\'EditionDate\':"' + escape(dateText) + '"}',
+                    dataType: "json",
+                    success: function(msg) {
+                        if (msg.d == -1) {
+                            alert("????? ??? ?????");
+                        } else {
+                            document.location.href = msg.d;
+                        }
+                    },
+                    error: function(error) {
+                        alert(error.responseText);
+                    }
+                })
+            },
+            minDate: -30, 
+            maxDate: +0,
+            defaultDate: '05/25/2013'
+        });
+        $('#menuOldEditions').hide();
+    });
+
+	function ShowMenu(elID) {
+	    $(elID).show();
+	}
+
+	function HideMenu(elID) {
+	    $(elID).hide();
+	}
+</script>
+<table width="100%" cellpadding="0" cellspacing="0">
+    <tbody><tr>
+        <td>
+            <img src="/images/pixel.gif" alt="" id="menuEditionsPixel1" height="1" width="5">
+        </td>
+        <td>
+            <img alt="" src="/Images/arrow_Down.gif" border="0">
+        </td>
+        <td class="topmenu" onmouseover="ShowMenu('#menuOldEditions')" onmouseout="HideMenu('#menuOldEditions')" nowrap="nowrap">
+            <span id="_ctl0_Header1_MenuOldEditions1_lblEditionDate" class="header_date">25/05/2013</span>
+            <span id="_ctl0_Header1_MenuOldEditions1_lblEditionNumber" class="header_date" style="font-weight:normal;">?????: 12487</span>
+            <div id="menuOldEditions" style="display: none;">
+                <div class="hasDatepicker" id="menuOldEditionsContent" style="background-color:#fff;position:absolute;z-index:9999"><div class="ui-datepicker-inline ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all ui-datepicker-rtl"><div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all"><a class="ui-datepicker-next ui-corner-all ui-state-disabled" title="??????>"><span class="ui-icon ui-icon-circle-triangle-w">??????&gt;</span></a><a class="ui-datepicker-prev ui-corner-all" onclick="DP_jQuery_1369524977643.datepicker._adjustDate('#menuOldEditionsContent', -1, 'M');" title="<??????"><span class="ui-icon ui-icon-circle-triangle-e">&lt;??????</span></a><div class="ui-datepicker-title"><span class="ui-datepicker-month">????</span>&nbsp;<span class="ui-datepicker-year">2013</span></div></div><table class="ui-datepicker-calendar"><thead><tr><th><span title="???????">??</span></th><th><span title="????????">??</span></th><th><span title="????????">??</span></th><th><span title="??????">??</span></th><th><span title="??????">??</span></th><th class="ui-datepicker-week-end"><span title="?????">??</span></th><th class="ui-datepicker-week-end"><span title="?????">??</span></th></tr></thead><tbody><tr><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" " onclick="DP_jQuery_1369524977643.datepicker._selectDay('#menuOldEditionsContent',4,2013, this);return false;"><a class="ui-state-default" href="#">1</a></td><td class=" " onclick="DP_jQuery_1369524977643.datepicker._selectDay('#menuOldEditionsContent',4,2013, this);return false;"><a class="ui-state-default" href="#">2</a></td><td class=" " onclick="DP_jQuery_1369524977643.datepicker._selectDay('#menuOldEditionsContent',4,2013, this);return false;"><a class="ui-state-default" href="#">3</a></td><td class=" ui-datepicker-week-end " onclick="DP_jQuery_1369524977643.datepicker._selectDay('#menuOldEditionsContent',4,2013, this);return false;"><a class="ui-state-default" href="#">4</a></td><td class=" ui-datepicker-week-end " onclick="DP_jQuery_1369524977643.datepicker._selectDay('#menuOldEditionsContent',4,2013, this);return false;"><a class="ui-state-default" href="#">5</a></td></tr><tr><td class=" " onclick="DP_jQuery_1369524977643.datepicker._selectDay('#menuOldEditionsContent',4,2013, this);return false;"><a class="ui-state-default" href="#">6</a></td><td class=" " onclick="DP_jQuery_1369524977643.datepicker._selectDay('#menuOldEditionsContent',4,2013, this);return false;"><a class="ui-state-default" href="#">7</a></td><td class=" " onclick="DP_jQuery_1369524977643.datepicker._selectDay('#menuOldEditionsContent',4,2013, this);return false;"><a class="ui-state-default" href="#">8</a></td><td class=" " onclick="DP_jQuery_1369524977643.datepicker._selectDay('#menuOldEditionsContent',4,2013, this);return false;"><a class="ui-state-default" href="#">9</a></td><td class=" " onclick="DP_jQuery_1369524977643.datepicker._selectDay('#menuOldEditionsContent',4,2013, this);return false;"><a class="ui-state-default" href="#">10</a></td><td class=" ui-datepicker-week-end " onclick="DP_jQuery_1369524977643.datepicker._selectDay('#menuOldEditionsContent',4,2013, this);return false;"><a class="ui-state-default" href="#">11</a></td><td class=" ui-datepicker-week-end " onclick="DP_jQuery_1369524977643.datepicker._selectDay('#menuOldEditionsContent',4,2013, this);return false;"><a class="ui-state-default" href="#">12</a></td></tr><tr><td class=" " onclick="DP_jQuery_1369524977643.datepicker._selectDay('#menuOldEditionsContent',4,2013, this);return false;"><a class="ui-state-default" href="#">13</a></td><td class=" " onclick="DP_jQuery_1369524977643.datepicker._selectDay('#menuOldEditionsContent',4,2013, this);return false;"><a class="ui-state-default" href="#">14</a></td><td class=" " onclick="DP_jQuery_1369524977643.datepicker._selectDay('#menuOldEditionsContent',4,2013, this);return false;"><a class="ui-state-default" href="#">15</a></td><td class=" " onclick="DP_jQuery_1369524977643.datepicker._selectDay('#menuOldEditionsContent',4,2013, this);return false;"><a class="ui-state-default" href="#">16</a></td><td class=" " onclick="DP_jQuery_1369524977643.datepicker._selectDay('#menuOldEditionsContent',4,2013, this);return false;"><a class="ui-state-default" href="#">17</a></td><td class=" ui-datepicker-week-end " onclick="DP_jQuery_1369524977643.datepicker._selectDay('#menuOldEditionsContent',4,2013, this);return false;"><a class="ui-state-default" href="#">18</a></td><td class=" ui-datepicker-week-end " onclick="DP_jQuery_1369524977643.datepicker._selectDay('#menuOldEditionsContent',4,2013, this);return false;"><a class="ui-state-default" href="#">19</a></td></tr><tr><td class=" " onclick="DP_jQuery_1369524977643.datepicker._selectDay('#menuOldEditionsContent',4,2013, this);return false;"><a class="ui-state-default" href="#">20</a></td><td class=" " onclick="DP_jQuery_1369524977643.datepicker._selectDay('#menuOldEditionsContent',4,2013, this);return false;"><a class="ui-state-default" href="#">21</a></td><td class=" " onclick="DP_jQuery_1369524977643.datepicker._selectDay('#menuOldEditionsContent',4,2013, this);return false;"><a class="ui-state-default" href="#">22</a></td><td class=" " onclick="DP_jQuery_1369524977643.datepicker._selectDay('#menuOldEditionsContent',4,2013, this);return false;"><a class="ui-state-default" href="#">23</a></td><td class=" " onclick="DP_jQuery_1369524977643.datepicker._selectDay('#menuOldEditionsContent',4,2013, this);return false;"><a class="ui-state-default" href="#">24</a></td><td class=" ui-datepicker-week-end ui-datepicker-days-cell-over  ui-datepicker-current-day ui-datepicker-today" onclick="DP_jQuery_1369524977643.datepicker._selectDay('#menuOldEditionsContent',4,2013, this);return false;"><a class="ui-state-default ui-state-highlight ui-state-active ui-state-hover" href="#">25</a></td><td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">26</span></td></tr><tr><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">27</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">28</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">29</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">30</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">31</span></td><td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td></tr></tbody></table></div></div>
+            </div>
+        </td>
+    </tr>
+</tbody></table>
+        </td>
+		<td style="width:596px;padding-left:20px;" valign="middle" align="left">
+			<iframe id="ifTopBanner" marginheight="0" marginwidth="0" src="/TopBanners.aspx?ChannelNameProp=" frameborder="0" height="60" scrolling="no" width="468">
+			</iframe>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4" height="22">
+			<table width="100%" cellpadding="0" cellspacing="0">
+				<tbody><tr>
+					<td style="background-image:url(/Images/Bg_headerMenu4.gif)" width="121"><a href="/Default.aspx"><img src="/Images/headerMenuCell1.gif" alt="" height="22" width="121" border="0"></a></td>
+					<td width="530">
+<!-- Start of Main Menu -->
+<script language="javascript" type="text/javascript">
+<!--
+var menus = [new ypSlideOutMenu('menu1', 'down', 'auto', 4, 170, 360),new ypSlideOutMenu('menu2', 'down', 'auto', 4, 170, 360),new ypSlideOutMenu('menu3', 'down', 'auto', 4, 170, 360),new ypSlideOutMenu('menu4', 'down', 'auto', 4, 170, 360),new ypSlideOutMenu('menu5', 'down', 'auto', 4, 170, 360),new ypSlideOutMenu('menu6', 'down', 'auto', 4, 170, 360)];
+//-->
+</script><style type="text/css">#menu1Container { visibility:hidden; top: 4px; overflow:hidden; }#menu1Container, #menu1Content { position:absolute; width:170px; height:360px; clip:rect(0 170 360 0); }</style><style type="text/css">#menu2Container { visibility:hidden; top: 4px; overflow:hidden; }#menu2Container, #menu2Content { position:absolute; width:170px; height:360px; clip:rect(0 170 360 0); }</style><style type="text/css">#menu3Container { visibility:hidden; top: 4px; overflow:hidden; }#menu3Container, #menu3Content { position:absolute; width:170px; height:360px; clip:rect(0 170 360 0); }</style><style type="text/css">#menu4Container { visibility:hidden; top: 4px; overflow:hidden; }#menu4Container, #menu4Content { position:absolute; width:170px; height:360px; clip:rect(0 170 360 0); }</style><style type="text/css">#menu5Container { visibility:hidden; top: 4px; overflow:hidden; }#menu5Container, #menu5Content { position:absolute; width:170px; height:360px; clip:rect(0 170 360 0); }</style><style type="text/css">#menu6Container { visibility:hidden; top: 4px; overflow:hidden; }#menu6Container, #menu6Content { position:absolute; width:170px; height:360px; clip:rect(0 170 360 0); }</style>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+	<tbody><tr class="menubar">
+	    <td>
+		    <table id="_ctl0_Header1_Menu1_dlChannel" style="border-width:0px;width:100%;border-collapse:collapse;" border="0" cellpadding="0" cellspacing="0">
+	<tbody><tr>
+		<td>
+				    
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                        <tbody><tr>
+				            <td><img src="/images/pixel.gif" alt="" id="MenuPixel1" height="1" width="5"></td>
+				            
+				            <td id="_ctl0_Header1_Menu1_dlChannel__ctl0_Td1" class="TopMenuSel" onmouseover="mRoll(this,'TopMenuSel')" onclick="document.location.href='/homepage.aspx?EditionId=2469&amp;ChannelId=59463'" onmouseout="mRoll(this,'TopMenu');" nowrap="nowrap" width="100%">
+					            
+					            
+					            ?????? ??????
+							    
+				            </td>
+		
+				        </tr>
+				    </tbody></table>
+			    </td><td>
+				    
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                        <tbody><tr>
+				            <td><img src="/images/pixel.gif" alt="" id="MenuPixel2" height="1" width="5"></td>
+				            <td id="_ctl0_Header1_Menu1_dlChannel__ctl1_ArrowDown"><img src="/Images/arrow_Down.gif" alt="" align="middle" border="0"></td>
+		
+				            <td id="_ctl0_Header1_Menu1_dlChannel__ctl1_Td1" class="TopMenu" onmouseover="TimeoutID=window.setTimeout(&quot;ypSlideOutMenu.showMenu('menu2')&quot;,500);mRoll(this,'TopMenuSel'); " onmouseout="ypSlideOutMenu.hideMenu('menu2');mRoll(this,'TopMenu');window.clearTimeout(TimeoutID);" onclick="document.location.href='javascript://'" nowrap="nowrap" width="100%">
+					            
+					            
+					            ????? ?????
+							    <div id="_ctl0_Header1_Menu1_dlChannel__ctl1_pnlSubchannel" style="position:relative;">
+			
+					            <div id="menu2Container" style="width: 140px; height: 250px; visibility: hidden;">
+						            <div style="top: -360px;" id="menu2Content">
+							            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+								            <tbody><tr bgcolor="#ff9933">
+									            <td>
+						                            <div id="_ctl0_Header1_Menu1_dlChannel__ctl1_dlSubChannel" style="display:inline-block;border-width:0px;width:100%;"><div>
+								                            
+						                                    <div id="_ctl0_Header1_Menu1_dlChannel__ctl1_dlSubChannel__ctl0_pnlSubChannelItem" class="LayerMenu" style="height:20px;padding-right:15px;" onmouseover="mRoll(this,'LayerMenuOvr')" onmouseout="mRoll(this,'LayerMenu')">
+						                                        <a href="/channels.aspx?EditionId=2469&amp;ChannelId=59465" class="TopSubMenu" style="width:100%;height:100%">?????</a>
+						                                    </div>
+						                                    
+							                            </div><div>
+								                            
+						                                    <div id="_ctl0_Header1_Menu1_dlChannel__ctl1_dlSubChannel__ctl1_pnlSubChannelItem" class="LayerMenu" style="height:20px;padding-right:15px;" onmouseover="mRoll(this,'LayerMenuOvr')" onmouseout="mRoll(this,'LayerMenu')">
+						                                        <a href="/channels.aspx?EditionId=2469&amp;ChannelId=59466" class="TopSubMenu" style="width:100%;height:100%">???????</a>
+						                                    </div>
+						                                    
+							                            </div></div>
+								                </td>
+								            </tr>
+								            <tr>
+									            <td height="1"></td>
+								            </tr>
+								            <tr>
+									            <td height="10" bgcolor="#79390f"></td>
+								            </tr>
+							            </tbody></table>
+						            </div>
+					            </div>
+							    
+		</div>
+				            </td>
+		
+				        </tr>
+				    </tbody></table>
+			    </td><td>
+				    
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                        <tbody><tr>
+				            <td><img src="/images/pixel.gif" alt="" id="MenuPixel3" height="1" width="5"></td>
+				            
+				            <td id="_ctl0_Header1_Menu1_dlChannel__ctl2_Td1" class="TopMenu" onmouseover="TimeoutID=window.setTimeout(&quot;ypSlideOutMenu.showMenu('menu3')&quot;,500);mRoll(this,'TopMenuSel'); " onmouseout="ypSlideOutMenu.hideMenu('menu3');mRoll(this,'TopMenu');window.clearTimeout(TimeoutID);" onclick="document.location.href='/channels.aspx?EditionId=2469&amp;channelId=59467'" nowrap="nowrap" width="100%">
+					            
+					            
+					            ???? ?????
+							    
+				            </td>
+		
+				        </tr>
+				    </tbody></table>
+			    </td><td>
+				    
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                        <tbody><tr>
+				            <td><img src="/images/pixel.gif" alt="" id="MenuPixel4" height="1" width="5"></td>
+				            
+				            <td id="_ctl0_Header1_Menu1_dlChannel__ctl3_Td1" class="TopMenu" onmouseover="TimeoutID=window.setTimeout(&quot;ypSlideOutMenu.showMenu('menu4')&quot;,500);mRoll(this,'TopMenuSel'); " onmouseout="ypSlideOutMenu.hideMenu('menu4');mRoll(this,'TopMenu');window.clearTimeout(TimeoutID);" onclick="document.location.href='/channels.aspx?EditionId=2469&amp;channelId=59468'" nowrap="nowrap" width="100%">
+					            
+					            
+					            ??????
+							    
+				            </td>
+		
+				        </tr>
+				    </tbody></table>
+			    </td><td>
+				    
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                        <tbody><tr>
+				            <td><img src="/images/pixel.gif" alt="" id="MenuPixel5" height="1" width="5"></td>
+				            <td id="_ctl0_Header1_Menu1_dlChannel__ctl4_ArrowDown"><img src="/Images/arrow_Down.gif" alt="" align="middle" border="0"></td>
+		
+				            <td id="_ctl0_Header1_Menu1_dlChannel__ctl4_Td1" class="TopMenu" onmouseover="TimeoutID=window.setTimeout(&quot;ypSlideOutMenu.showMenu('menu5')&quot;,500);mRoll(this,'TopMenuSel'); " onmouseout="ypSlideOutMenu.hideMenu('menu5');mRoll(this,'TopMenu');window.clearTimeout(TimeoutID);" onclick="document.location.href='javascript://'" nowrap="nowrap" width="100%">
+					            
+					            
+					            ?????
+							    <div id="_ctl0_Header1_Menu1_dlChannel__ctl4_pnlSubchannel" style="position:relative;">
+			
+					            <div id="menu5Container" style="width: 140px; height: 250px; visibility: hidden;">
+						            <div style="top: -360px;" id="menu5Content">
+							            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+								            <tbody><tr bgcolor="#ff9933">
+									            <td>
+						                            <div id="_ctl0_Header1_Menu1_dlChannel__ctl4_dlSubChannel" style="display:inline-block;border-width:0px;width:100%;"><div>
+								                            
+						                                    <div id="_ctl0_Header1_Menu1_dlChannel__ctl4_dlSubChannel__ctl0_pnlSubChannelItem" class="LayerMenu" style="height:20px;padding-right:15px;" onmouseover="mRoll(this,'LayerMenuOvr')" onmouseout="mRoll(this,'LayerMenu')">
+						                                        <a href="/channels.aspx?EditionId=2469&amp;ChannelId=59470" class="TopSubMenu" style="width:100%;height:100%">????? ?? ?????</a>
+						                                    </div>
+						                                    
+							                            </div><div>
+								                            
+						                                    <div id="_ctl0_Header1_Menu1_dlChannel__ctl4_dlSubChannel__ctl1_pnlSubChannelItem" class="LayerMenu" style="height:20px;padding-right:15px;" onmouseover="mRoll(this,'LayerMenuOvr')" onmouseout="mRoll(this,'LayerMenu')">
+						                                        <a href="/channels.aspx?EditionId=2469&amp;ChannelId=59471" class="TopSubMenu" style="width:100%;height:100%">????? ?? ??????</a>
+						                                    </div>
+						                                    
+							                            </div></div>
+								                </td>
+								            </tr>
+								            <tr>
+									            <td height="1"></td>
+								            </tr>
+								            <tr>
+									            <td height="10" bgcolor="#79390f"></td>
+								            </tr>
+							            </tbody></table>
+						            </div>
+					            </div>
+							    
+		</div>
+				            </td>
+		
+				        </tr>
+				    </tbody></table>
+			    </td><td>
+				    
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                        <tbody><tr>
+				            <td><img src="/images/pixel.gif" alt="" id="MenuPixel6" height="1" width="5"></td>
+				            
+				            
+				        </tr>
+				    </tbody></table>
+			    </td>
+	</tr>
+</tbody></table>
+		</td>
+	</tr>
+</tbody></table>
+<!-- End of Main Menu --></td>
+					<td class="TopMenu" style="width:60px;background-image:url(/Images/Bg_headerMenu4.gif)" align="center"><a id="_ctl0_Header1_HyperLink1" class="TopMenuBlack" href="/archive.aspx">???????</a></td>
+					<td class="TopMenuBlack" style="background-image:url(/Images/Bg_headerMenu5.gif)" align="center"><input name="_ctl0:Header1:btnSrch" id="_ctl0_Header1_btnSrch" src="/Images/btn_Search.gif" type="image" border="0"></td>
+					<td width="180" bgcolor="#c1c1b6">
+					    <input name="_ctl0:Header1:SrchField" id="_ctl0_Header1_SrchField" class="HTMLTextbox16" onclick="showKeyboard(this.id);" style="height:18px;width:180px;background-image:url(/Images/MenuHeader.png);width:178px;" type="text">
+					</td>
+				</tr>
+			</tbody></table>
+		</td>
+	</tr>
+</tbody></table>
+<div onblur="hideKeyboard()" style="position: absolute; text-align: center; display: none; width: 425px; height: 130px; z-index: 999999; left: 0px; top: 0px;" id="keyboardLayer">
+    <div style="background-color:#000000;font-family:Tahoma;text-align:left;width:424px;">
+        <table id="tblkey" width="100%">
+            <tbody><tr>
+                <td id="handle" width="95%">
+                    <a style="color:#FFFFFF;text-decoration:none;font-size:10px;font-weight:bold;display:block;cursor:move" href="javascript://">???? ???????? - As-Safir Newspaper</a>            
+                </td>
+                <td width="5%">
+                    <a style="color:#FFFFFF;text-decoration:none;font-size:10px;font-weight:bold" href="javascript:hideKeyboard()">&nbsp;X</a>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>
+    <iframe src="/controls/keyboard.html" id="kiframe" marginwidth="0" marginheight="0" frameborder="0" height="130" scrolling="no" width="425"></iframe>
+</div>
+<script language="javascript" type="text/javascript">
+    var theHandle = document.getElementById("handle");
+    var theRoot = document.getElementById("keyboardLayer");
+    Drag.init(theHandle, theRoot);
+</script>
+                                    
+<script type="text/javascript">
+    function ShowSideBar() {
+        MM_showHideLayers('SideLayer', '', 'show');
+    }
+</script>
+<div id="SideLayer" style="visibility: hidden; position: absolute; top: 211px; margin-right: 1px;" onmouseover="stopTime();P7_Snap('SideMenuPixel','SideLayer',131,150); MM_showHideLayers('SideLayer','','show');" onmouseout="startTime();window.clearTimeout(TimeoutID)">
+    <table id="_ctl0_SideBar1_tblSideBar" cellpadding="0" cellspacing="0">
+	<tbody><tr>
+		<td>
+                <a href="javascript://">
+                    <img src="/images/SideBar_Image1.gif" id="_ctl0_SideBar1_imgPrintFriendly" title="???? ???????" onclick="MM_openBrWindow('/Windows/PrintSection.aspx?EditionId=2469&amp;ChannelId=-1&amp;reftype=menu&amp;ref=rm','SectionPrint','scrollbars=yes,width=467')" width="50" border="0"></a>
+            </td>
+	</tr>
+	<tr>
+		<td>
+                <a href="javascript://">
+                    <img src="/images/SideBar_Image3.gif" id="_ctl0_SideBar1_imgViewPDF" title="?????-e" onclick="MM_openBrWindow('/pdf/templatechannelpdf/index.htm?reftype=menu&amp;ref=rm','epaper','toolbar=yes,location=yes,status=yes,menubar=yes,scrollbars=yes,resizable=yes,width=800,height=400')" width="50" border="0"></a>
+            </td>
+	</tr>
+	<tr>
+		<td>
+                <a href="javascript://">
+                    <img src="/images/SideBar_Image4.gif" id="_ctl0_SideBar1_imgSendArticle" title="????? ??????" width="50" border="0"></a>
+            </td>
+	</tr>
+	<tr>
+		<td>
+                <a href="javascript://">
+                    <img src="/images/SideBar_Image6.gif" id="_ctl0_SideBar1_imgAddToSelection" title="????? ??? ?????????" width="50" border="0"></a>
+            </td>
+	</tr>
+	<tr>
+		<td>
+                <a href="javascript://">
+                    <img src="/images/SideBar_Image5.gif" id="_ctl0_SideBar1_imgViewSelection" title="??????? ?????" onclick="document.location.href='/ViewSelection.aspx?reftype=menu&amp;ref=rm'" width="50" border="0"></a>
+            </td>
+	</tr>
+</tbody></table>
+
+    <map name="Map2Map" id="Map2Map">
+        <area shape="rect" alt="" coords="9,85,24,260" href="#" onmouseout="window.clearTimeout(TimeoutID)" onmouseover="P7_Snap('SideMenuPixel','SideLayer',131,150);TimeoutID=window.setTimeout('ShowSideBar()',500);">
+    </map>
+</div>
+
+                                </td>
+                                <td style="background-color:#c1c1b6"></td>
+                                <td style="background-image:url(/Images/bg_left.jpg);"></td>
+                            </tr>
+                            <tr valign="top">
+                                <td style="background-image:url(/Images/bg_page.gif);background-position:right; background-repeat:repeat-y;">
+                                    <table width="100%" cellpadding="0" cellspacing="0">
+                                        <tbody><tr valign="top">
+                                            <td class="WhiteBack" style="width:767px;height:100%">
+                                                
+<!-- Start of submenu -->
+<script type="text/javascript">
+    var menusrow2 = [new ypSlideOutMenu('menurow21', 'down', 'auto', 4, 185, 360),new ypSlideOutMenu('menurow22', 'down', 'auto', 4, 185, 360),new ypSlideOutMenu('menurow23', 'down', 'auto', 4, 185, 360),new ypSlideOutMenu('menurow24', 'down', 'auto', 4, 185, 360),new ypSlideOutMenu('menurow25', 'down', 'auto', 4, 185, 360),new ypSlideOutMenu('menurow26', 'down', 'auto', 4, 185, 360),new ypSlideOutMenu('menurow27', 'down', 'auto', 4, 185, 360),new ypSlideOutMenu('menurow28', 'down', 'auto', 4, 185, 360),new ypSlideOutMenu('menurow29', 'down', 'auto', 4, 185, 360),new ypSlideOutMenu('menurow210', 'down', 'auto', 4, 185, 360)];
+    for (var i = 0; i < menusrow2.length; i++){
+        menusrow2[i].onactivate = new Function("document.getElementById('actrow2" + i + "').className='active';");
+        menusrow2[i].ondeactivate = new Function("document.getElementById('actrow2" + i + "').className='';");
+    }
+</script><style type="text/css">#menurow21Container { visibility:hidden; top: 4px; overflow:hidden; }#menurow21Container, #menurow21Content { position:absolute; width:185px; height:360px; clip:rect(0 185 360 0); }</style><style type="text/css">#menurow22Container { visibility:hidden; top: 4px; overflow:hidden; }#menurow22Container, #menurow22Content { position:absolute; width:185px; height:360px; clip:rect(0 185 360 0); }</style><style type="text/css">#menurow23Container { visibility:hidden; top: 4px; overflow:hidden; }#menurow23Container, #menurow23Content { position:absolute; width:185px; height:360px; clip:rect(0 185 360 0); }</style><style type="text/css">#menurow24Container { visibility:hidden; top: 4px; overflow:hidden; }#menurow24Container, #menurow24Content { position:absolute; width:185px; height:360px; clip:rect(0 185 360 0); }</style><style type="text/css">#menurow25Container { visibility:hidden; top: 4px; overflow:hidden; }#menurow25Container, #menurow25Content { position:absolute; width:185px; height:360px; clip:rect(0 185 360 0); }</style><style type="text/css">#menurow26Container { visibility:hidden; top: 4px; overflow:hidden; }#menurow26Container, #menurow26Content { position:absolute; width:185px; height:360px; clip:rect(0 185 360 0); }</style><style type="text/css">#menurow27Container { visibility:hidden; top: 4px; overflow:hidden; }#menurow27Container, #menurow27Content { position:absolute; width:185px; height:360px; clip:rect(0 185 360 0); }</style><style type="text/css">#menurow28Container { visibility:hidden; top: 4px; overflow:hidden; }#menurow28Container, #menurow28Content { position:absolute; width:185px; height:360px; clip:rect(0 185 360 0); }</style><style type="text/css">#menurow29Container { visibility:hidden; top: 4px; overflow:hidden; }#menurow29Container, #menurow29Content { position:absolute; width:185px; height:360px; clip:rect(0 185 360 0); }</style><style type="text/css">#menurow210Container { visibility:hidden; top: 4px; overflow:hidden; }#menurow210Container, #menurow210Content { position:absolute; width:185px; height:360px; clip:rect(0 185 360 0); }</style>
+<table style="background-color:#dcdac6" width="100%" cellpadding="0" cellspacing="0">
+	<tbody><tr>
+		<td height="24" width="20"><img alt="" src="/Images/pixel.gif" height="1" width="1"></td>
+		<td>
+		    <table id="_ctl0_SubMenu1_dlChannel" style="border-width:0px;width:100%;border-collapse:collapse;" border="0" cellpadding="0" cellspacing="0">
+	<tbody><tr>
+		<td>
+			        <table width="100%" cellpadding="0" cellspacing="0">
+			            <tbody><tr>
+				            <td><img src="/images/pixel.gif" alt="" id="MenuPixelSecRow1" height="1" width="5"></td>
+				            
+				            <td class="TopSubMenu" id="actrow20" onmouseover="TimeoutID=window.setTimeout(&quot;ypSlideOutMenu.showMenu('menurow21')&quot;,500)" onmouseout="ypSlideOutMenu.hideMenu('menurow21');window.clearTimeout(TimeoutID);" onclick="document.location.href='/channels.aspx?EditionId=2469&amp;channelId=59472'" nowrap="nowrap">
+					            
+					            
+					            
+					            
+					            <a id="_ctl0_SubMenu1_dlChannel__ctl0_hlChannel" class="TopSubMenu" href="/channels.aspx?EditionId=2469&amp;channelId=59472">?????</a>
+								
+				            </td>
+		
+			            </tr>
+				    </tbody></table>
+			    </td><td>
+			        <table width="100%" cellpadding="0" cellspacing="0">
+			            <tbody><tr>
+				            <td><img src="/images/pixel.gif" alt="" id="MenuPixelSecRow2" height="1" width="5"></td>
+				            
+				            <td class="TopSubMenu" id="actrow21" onmouseover="TimeoutID=window.setTimeout(&quot;ypSlideOutMenu.showMenu('menurow22')&quot;,500)" onmouseout="ypSlideOutMenu.hideMenu('menurow22');window.clearTimeout(TimeoutID);" onclick="document.location.href='/channels.aspx?EditionId=2469&amp;channelId=59473'" nowrap="nowrap">
+					            
+					            
+					            
+					            
+					            <a id="_ctl0_SubMenu1_dlChannel__ctl1_hlChannel" class="TopSubMenu" href="/channels.aspx?EditionId=2469&amp;channelId=59473">??? ?????</a>
+								
+				            </td>
+		
+			            </tr>
+				    </tbody></table>
+			    </td><td>
+			        <table width="100%" cellpadding="0" cellspacing="0">
+			            <tbody><tr>
+				            <td><img src="/images/pixel.gif" alt="" id="MenuPixelSecRow3" height="1" width="5"></td>
+				            
+				            <td class="TopSubMenu" id="actrow22" onmouseover="TimeoutID=window.setTimeout(&quot;ypSlideOutMenu.showMenu('menurow23')&quot;,500)" onmouseout="ypSlideOutMenu.hideMenu('menurow23');window.clearTimeout(TimeoutID);" onclick="document.location.href='/Opinions.aspx?EditionId=2469&amp;channelId=59474'" nowrap="nowrap">
+					            
+					            
+					            
+					            
+					            <a id="_ctl0_SubMenu1_dlChannel__ctl2_hlChannel" class="TopSubMenu" href="/Opinions.aspx?EditionId=2469&amp;channelId=59474">????? ?????</a>
+								
+				            </td>
+		
+			            </tr>
+				    </tbody></table>
+			    </td><td>
+			        <table width="100%" cellpadding="0" cellspacing="0">
+			            <tbody><tr>
+				            <td><img src="/images/pixel.gif" alt="" id="MenuPixelSecRow4" height="1" width="5"></td>
+				            
+				            <td class="TopSubMenu" id="actrow23" onmouseover="TimeoutID=window.setTimeout(&quot;ypSlideOutMenu.showMenu('menurow24')&quot;,500)" onmouseout="ypSlideOutMenu.hideMenu('menurow24');window.clearTimeout(TimeoutID);" onclick="document.location.href='/Critics.aspx?EditionId=2469&amp;channelId=59475'" nowrap="nowrap">
+					            
+					            
+					            
+					            
+					            <a id="_ctl0_SubMenu1_dlChannel__ctl3_hlChannel" class="TopSubMenu" href="/Critics.aspx?EditionId=2469&amp;channelId=59475">????? ??????</a>
+								
+				            </td>
+		
+			            </tr>
+				    </tbody></table>
+			    </td><td>
+			        <table width="100%" cellpadding="0" cellspacing="0">
+			            <tbody><tr>
+				            <td><img src="/images/pixel.gif" alt="" id="MenuPixelSecRow5" height="1" width="5"></td>
+				            
+				            <td class="TopSubMenu" id="actrow24" onmouseover="TimeoutID=window.setTimeout(&quot;ypSlideOutMenu.showMenu('menurow25')&quot;,500)" onmouseout="ypSlideOutMenu.hideMenu('menurow25');window.clearTimeout(TimeoutID);" onclick="document.location.href='/Comics.aspx?EditionId=2469&amp;channelId=59476'" nowrap="nowrap">
+					            
+					            
+					            
+					            
+					            <a id="_ctl0_SubMenu1_dlChannel__ctl4_hlChannel" class="TopSubMenu" href="/Comics.aspx?EditionId=2469&amp;channelId=59476">???</a>
+								
+				            </td>
+		
+			            </tr>
+				    </tbody></table>
+			    </td><td>
+			        <table width="100%" cellpadding="0" cellspacing="0">
+			            <tbody><tr>
+				            <td><img src="/images/pixel.gif" alt="" id="MenuPixelSecRow6" height="1" width="5"></td>
+				            
+				            <td class="TopSubMenu" id="actrow25" onmouseover="TimeoutID=window.setTimeout(&quot;ypSlideOutMenu.showMenu('menurow26')&quot;,500)" onmouseout="ypSlideOutMenu.hideMenu('menurow26');window.clearTimeout(TimeoutID);" onclick="document.location.href='/channels.aspx?EditionId=2469&amp;channelId=59477'" nowrap="nowrap">
+					            
+					            
+					            
+					            
+					            <a id="_ctl0_SubMenu1_dlChannel__ctl5_hlChannel" class="TopSubMenu" href="/channels.aspx?EditionId=2469&amp;channelId=59477">?????? ???????</a>
+								
+				            </td>
+		
+			            </tr>
+				    </tbody></table>
+			    </td><td>
+			        <table width="100%" cellpadding="0" cellspacing="0">
+			            <tbody><tr>
+				            <td><img src="/images/pixel.gif" alt="" id="MenuPixelSecRow7" height="1" width="5"></td>
+				            <td id="_ctl0_SubMenu1_dlChannel__ctl6_ArrowDown" valign="middle"><img alt="" src="/Images/arrow_Down.gif" align="middle" border="0"></td>
+		
+				            <td class="TopSubMenu" id="actrow26" onmouseover="TimeoutID=window.setTimeout(&quot;ypSlideOutMenu.showMenu('menurow27')&quot;,500)" onmouseout="ypSlideOutMenu.hideMenu('menurow27');window.clearTimeout(TimeoutID);" onclick="document.location.href='javascript://'" nowrap="nowrap">
+					            
+					            
+					            
+					            
+					            <a id="_ctl0_SubMenu1_dlChannel__ctl6_hlChannel" class="TopSubMenu" href="javascript://">??? ???????</a>
+								<div id="_ctl0_SubMenu1_dlChannel__ctl6_pnlSubchannel" style="position:relative;z-index:999;">
+			
+					            <div id="menurow27Container" style="z-index: 999; visibility: hidden;">
+						            <div id="menurow27Content" style="z-index: 999; top: -360px;">
+							            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+								            <tbody><tr bgcolor="#ff9933">
+									            <td>
+				                                    <div id="_ctl0_SubMenu1_dlChannel__ctl6_dlSubChannel" style="display:inline-block;border-width:0px;width:100%;"><div>
+						                                    																			
+								                            
+						                                    <div id="_ctl0_SubMenu1_dlChannel__ctl6_dlSubChannel__ctl0_pnlSubChannelItem" class="LayerMenu" style="height:20px;padding-right:15px;" onmouseover="mRoll(this,'LayerMenuOvr')" onmouseout="mRoll(this,'LayerMenu')">
+								                                <a id="_ctl0_SubMenu1_dlChannel__ctl6_dlSubChannel__ctl0_lnkChannel" class="TopSubMenu" href="/WeeklyChannel.aspx?EditionId=2469&amp;ChannelId=13605" style="width:100%;height:100%">???? ?? ????? ????? (???????)</a>
+						                                    </div>
+						                                    
+							                            </div><div>
+						                                    																			
+								                            
+						                                    <div id="_ctl0_SubMenu1_dlChannel__ctl6_dlSubChannel__ctl1_pnlSubChannelItem" class="LayerMenu" style="height:20px;padding-right:15px;" onmouseover="mRoll(this,'LayerMenuOvr')" onmouseout="mRoll(this,'LayerMenu')">
+								                                <a id="_ctl0_SubMenu1_dlChannel__ctl6_dlSubChannel__ctl1_lnkChannel" class="TopSubMenu" href="/WeeklyChannel.aspx?EditionId=2469&amp;ChannelId=13606" style="width:100%;height:100%">????? ?????? (????????)</a>
+						                                    </div>
+						                                    
+							                            </div><div>
+						                                    																			
+								                            
+						                                    <div id="_ctl0_SubMenu1_dlChannel__ctl6_dlSubChannel__ctl2_pnlSubChannelItem" class="LayerMenu" style="height:20px;padding-right:15px;" onmouseover="mRoll(this,'LayerMenuOvr')" onmouseout="mRoll(this,'LayerMenu')">
+								                                <a id="_ctl0_SubMenu1_dlChannel__ctl6_dlSubChannel__ctl2_lnkChannel" class="TopSubMenu" href="/WeeklyChannel.aspx?EditionId=2469&amp;ChannelId=13607" style="width:100%;height:100%">???? (????????)</a>
+						                                    </div>
+						                                    
+							                            </div><div>
+						                                    																			
+								                            
+						                                    <div id="_ctl0_SubMenu1_dlChannel__ctl6_dlSubChannel__ctl3_pnlSubChannelItem" class="LayerMenu" style="height:20px;padding-right:15px;" onmouseover="mRoll(this,'LayerMenuOvr')" onmouseout="mRoll(this,'LayerMenu')">
+								                                <a id="_ctl0_SubMenu1_dlChannel__ctl6_dlSubChannel__ctl3_lnkChannel" class="TopSubMenu" href="/WeeklyChannel.aspx?EditionId=2469&amp;ChannelId=13608" style="width:100%;height:100%">???? (????????)</a>
+						                                    </div>
+						                                    
+							                            </div><div>
+						                                    																			
+								                            
+						                                    <div id="_ctl0_SubMenu1_dlChannel__ctl6_dlSubChannel__ctl4_pnlSubChannelItem" class="LayerMenu" style="height:20px;padding-right:15px;" onmouseover="mRoll(this,'LayerMenuOvr')" onmouseout="mRoll(this,'LayerMenu')">
+								                                <a id="_ctl0_SubMenu1_dlChannel__ctl6_dlSubChannel__ctl4_lnkChannel" class="TopSubMenu" href="/WeeklyChannel.aspx?EditionId=2469&amp;ChannelId=13609" style="width:100%;height:100%">?????? ?????? (??????)</a>
+						                                    </div>
+						                                    
+							                            </div><div>
+						                                    																			
+								                            
+						                                    <div id="_ctl0_SubMenu1_dlChannel__ctl6_dlSubChannel__ctl5_pnlSubChannelItem" class="LayerMenu" style="height:20px;padding-right:15px;" onmouseover="mRoll(this,'LayerMenuOvr')" onmouseout="mRoll(this,'LayerMenu')">
+								                                <a id="_ctl0_SubMenu1_dlChannel__ctl6_dlSubChannel__ctl5_lnkChannel" class="TopSubMenu" href="/WeeklyChannel.aspx?EditionId=2469&amp;ChannelId=13610" style="width:100%;height:100%">?????? ??????? (??????)</a>
+						                                    </div>
+						                                    
+							                            </div></div>
+									            </td>
+								            </tr>
+								            <tr>
+									            <td height="1"></td>
+								            </tr>
+								            <tr>
+									            <td height="10" bgcolor="#79390f"></td>
+								            </tr>
+							            </tbody></table>
+						            </div>
+					            </div>
+								
+		</div>
+				            </td>
+		
+			            </tr>
+				    </tbody></table>
+			    </td><td>
+			        <table width="100%" cellpadding="0" cellspacing="0">
+			            <tbody><tr>
+				            <td><img src="/images/pixel.gif" alt="" id="MenuPixelSecRow8" height="1" width="5"></td>
+				            <td id="_ctl0_SubMenu1_dlChannel__ctl7_ArrowDown" valign="middle"><img alt="" src="/Images/arrow_Down.gif" align="middle" border="0"></td>
+		
+				            <td class="TopSubMenu" id="actrow27" onmouseover="TimeoutID=window.setTimeout(&quot;ypSlideOutMenu.showMenu('menurow28')&quot;,500)" onmouseout="ypSlideOutMenu.hideMenu('menurow28');window.clearTimeout(TimeoutID);" onclick="document.location.href='javascript://'" nowrap="nowrap">
+					            
+					            
+					            
+					            
+					            <a id="_ctl0_SubMenu1_dlChannel__ctl7_hlChannel" class="TopSubMenu" href="javascript://">????? ???????</a>
+								<div id="_ctl0_SubMenu1_dlChannel__ctl7_pnlSubchannel" style="position:relative;z-index:999;">
+			
+					            <div id="menurow28Container" style="z-index: 999; visibility: hidden;">
+						            <div id="menurow28Content" style="z-index: 999; top: -360px;">
+							            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+								            <tbody><tr bgcolor="#ff9933">
+									            <td>
+				                                    <div id="_ctl0_SubMenu1_dlChannel__ctl7_dlSubChannel" style="display:inline-block;border-width:0px;width:100%;"><div>
+						                                    																			
+								                            
+						                                    
+						                                    <div id="_ctl0_SubMenu1_dlChannel__ctl7_dlSubChannel__ctl0_pnlSubChannelDirectLink" class="LayerMenu" style="height:20px;padding-right:15px;" onmouseover="mRoll(this,'LayerMenuOvr')" onmouseout="mRoll(this,'LayerMenu')">
+						                                        <a href="/YourSide/" target="_blank" class="TopSubMenu" style="width:100%;height:100%">??? ???</a>
+						                                    </div>
+							                            </div><div>
+						                                    																			
+								                            
+						                                    
+						                                    <div id="_ctl0_SubMenu1_dlChannel__ctl7_dlSubChannel__ctl1_pnlSubChannelDirectLink" class="LayerMenu" style="height:20px;padding-right:15px;" onmouseover="mRoll(this,'LayerMenuOvr')" onmouseout="mRoll(this,'LayerMenu')">
+						                                        <a href="/Redir.aspx?Redir=taslia.pdf" target="_blank" class="TopSubMenu" style="width:100%;height:100%">?????</a>
+						                                    </div>
+							                            </div><div>
+						                                    																			
+								                            
+						                                    
+						                                    <div id="_ctl0_SubMenu1_dlChannel__ctl7_dlSubChannel__ctl2_pnlSubChannelDirectLink" class="LayerMenu" style="height:20px;padding-right:15px;" onmouseover="mRoll(this,'LayerMenuOvr')" onmouseout="mRoll(this,'LayerMenu')">
+						                                        <a href="/WeeklyPhotoGallery.aspx" target="_blank" class="TopSubMenu" style="width:100%;height:100%">??????? ??????</a>
+						                                    </div>
+							                            </div></div>
+									            </td>
+								            </tr>
+								            <tr>
+									            <td height="1"></td>
+								            </tr>
+								            <tr>
+									            <td height="10" bgcolor="#79390f"></td>
+								            </tr>
+							            </tbody></table>
+						            </div>
+					            </div>
+								
+		</div>
+				            </td>
+		
+			            </tr>
+				    </tbody></table>
+			    </td><td>
+			        <table width="100%" cellpadding="0" cellspacing="0">
+			            <tbody><tr>
+				            <td><img src="/images/pixel.gif" alt="" id="MenuPixelSecRow9" height="1" width="5"></td>
+				            <td id="_ctl0_SubMenu1_dlChannel__ctl8_ArrowDown" valign="middle"><img alt="" src="/Images/arrow_Down.gif" align="middle" border="0"></td>
+		
+				            <td class="TopSubMenu" id="actrow28" onmouseover="TimeoutID=window.setTimeout(&quot;ypSlideOutMenu.showMenu('menurow29')&quot;,500)" onmouseout="ypSlideOutMenu.hideMenu('menurow29');window.clearTimeout(TimeoutID);" onclick="document.location.href='javascript://'" nowrap="nowrap">
+					            
+					            
+					            
+					            
+					            <a id="_ctl0_SubMenu1_dlChannel__ctl8_hlChannel" class="TopSubMenu" href="javascript://">???? ??????</a>
+								<div id="_ctl0_SubMenu1_dlChannel__ctl8_pnlSubchannel" style="position:relative;z-index:999;">
+			
+					            <div id="menurow29Container" style="z-index: 999; visibility: hidden;">
+						            <div id="menurow29Content" style="z-index: 999; top: -360px;">
+							            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+								            <tbody><tr bgcolor="#ff9933">
+									            <td>
+				                                    <div id="_ctl0_SubMenu1_dlChannel__ctl8_dlSubChannel" style="display:inline-block;border-width:0px;width:100%;"><div>
+						                                    																			
+								                            
+						                                    
+						                                    <div id="_ctl0_SubMenu1_dlChannel__ctl8_dlSubChannel__ctl0_pnlSubChannelDirectLink" class="LayerMenu" style="height:20px;padding-right:15px;" onmouseover="mRoll(this,'LayerMenuOvr')" onmouseout="mRoll(this,'LayerMenu')">
+						                                        <a href="/Redir.aspx?Redir=classify.pdf" target="_blank" class="TopSubMenu" style="width:100%;height:100%">????????? ???????</a>
+						                                    </div>
+							                            </div><div>
+						                                    																			
+								                            
+						                                    
+						                                    <div id="_ctl0_SubMenu1_dlChannel__ctl8_dlSubChannel__ctl1_pnlSubChannelDirectLink" class="LayerMenu" style="height:20px;padding-right:15px;" onmouseover="mRoll(this,'LayerMenuOvr')" onmouseout="mRoll(this,'LayerMenu')">
+						                                        <a href="/Redir.aspx?Redir=rasmiya.pdf" target="_blank" class="TopSubMenu" style="width:100%;height:100%">????????? ???????</a>
+						                                    </div>
+							                            </div><div>
+						                                    																			
+								                            
+						                                    
+						                                    <div id="_ctl0_SubMenu1_dlChannel__ctl8_dlSubChannel__ctl2_pnlSubChannelDirectLink" class="LayerMenu" style="height:20px;padding-right:15px;" onmouseover="mRoll(this,'LayerMenuOvr')" onmouseout="mRoll(this,'LayerMenu')">
+						                                        <a href="/Redir.aspx?Redir=wafiyat.pdf" target="_blank" class="TopSubMenu" style="width:100%;height:100%">???????</a>
+						                                    </div>
+							                            </div></div>
+									            </td>
+								            </tr>
+								            <tr>
+									            <td height="1"></td>
+								            </tr>
+								            <tr>
+									            <td height="10" bgcolor="#79390f"></td>
+								            </tr>
+							            </tbody></table>
+						            </div>
+					            </div>
+								
+		</div>
+				            </td>
+		
+			            </tr>
+				    </tbody></table>
+			    </td><td>
+			        <table width="100%" cellpadding="0" cellspacing="0">
+			            <tbody><tr>
+				            <td><img src="/images/pixel.gif" alt="" id="MenuPixelSecRow10" height="1" width="5"></td>
+				            
+				            <td class="TopSubMenu" id="actrow29" onmouseover="TimeoutID=window.setTimeout(&quot;ypSlideOutMenu.showMenu('menurow210')&quot;,500)" onmouseout="ypSlideOutMenu.hideMenu('menurow210');window.clearTimeout(TimeoutID);" onclick="javascript://; document.location.href='/English/'" nowrap="nowrap">
+					            
+					            
+					            
+					            
+					            <a id="_ctl0_SubMenu1_dlChannel__ctl9_hlChannel" class="TopSubMenu" href="/English/">English</a>
+								
+				            </td>
+		
+			            </tr>
+				    </tbody></table>
+			    </td>
+	</tr>
+</tbody></table>
+		</td>
+	</tr>
+</tbody></table>
+<!-- End of submenu -->
+                                                
+    <div style="margin-right: 3px;">
+        <div style="padding: 3px 0px 10px 0px;" align="center">
+            <img src="Images/Supplement_8.jpg" id="_ctl0_ContentPlaceHolder1_imgHeader"></div>
+        
+                <div class="ArticleBox" style="padding: 0px 50px 0px 50px;">
+                    <span id="_ctl0_ContentPlaceHolder1_rptArticles__ctl0_lblShortTitle" class="Paragraph"></span>
+                    <a href="/Mulhak/ViewArticle.aspx?ArticleID=95" style="text-decoration: none;">
+                        <span id="_ctl0_ContentPlaceHolder1_rptArticles__ctl0_lblLongTitle" class="ParagraphTitle">4016  ????? ????? ??????? ????? ????????? ???? 2,6% ?? ??? ??????
+1181 ??????? ??????? ??????? ??????????? ?????? 1,5 % ??  2009
+16  ?????? ???? 16 ????? ?????? ???? ??????? ???????? ?? ??????? ???????
+</span></a>
+                    <br><br>
+                    <img id="_ctl0_ContentPlaceHolder1_rptArticles__ctl0_imgArticlePhoto" src="/ArticlePhoto/701e46f7-b907-4520-9edb-fc5ff9d8f3d8.jpg" style="width:100px;margin:0px 0px 0px 10px;" align="right" border="0">
+                    <a href="/Mulhak/ViewArticle.aspx?ArticleID=95" style="text-decoration: none;
+                        color: Black;">
+                        <span id="_ctl0_ContentPlaceHolder1_rptArticles__ctl0_lblSummary">???? ????? ??????? ??????? ??????????? ????????? ?? ????? ???? ????? ??? ?????? ?? ??????? ?????? ?????? ??????? ???? ??????? ????????? ?? ????? ??? ?????????. ??? ??????? ???????? ???????? ?? ??? ?????? ??????? ??????? ???? ???? ???? ????  ????? ?? ????? ?????????? ????  ?????? ??? ????? ????? ?????? ??? ??????? ??????????? ?????????? ?? ????? ??? ????? ??????? ??????? ??? ?????  ????? ????? ????? ??????? ??????? ??????</span></a>
+                    <div style="text-align: left;">
+                        <a href="/Mulhak/ViewArticle.aspx?ArticleID=95">
+                            <img src="Images/assafir-almazid.png" border="0"></a>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <div style="text-align: center; margin-top: 7px;">
+                        <a href="" title="" target="_blank">
+                            </a>
+                    </div>
+                    <div style="padding: 15px 0px 15px 0px;">
+                        <img src="Images/assafir-seperator.png"></div>
+                </div>
+            
+                <div class="ArticleBox" style="padding: 0px 50px 0px 50px;">
+                    <span id="_ctl0_ContentPlaceHolder1_rptArticles__ctl1_lblShortTitle" class="Paragraph"></span>
+                    <a href="/Mulhak/ViewArticle.aspx?ArticleID=102" style="text-decoration: none;">
+                        <span id="_ctl0_ContentPlaceHolder1_rptArticles__ctl1_lblLongTitle" class="ParagraphTitle">«???????? ???????» ???? ????? ??? ????? ?????????
+???? ??????: ????? ????? ??????? ????????? ???????????
+</span></a>
+                    <br><br>
+                    <img id="_ctl0_ContentPlaceHolder1_rptArticles__ctl1_imgArticlePhoto" src="/ArticlePhoto/a1bbb092-1c30-4dc9-833e-aa7b6b12e820.jpg" style="width:100px;margin:0px 0px 0px 10px;" align="right" border="0">
+                    <a href="/Mulhak/ViewArticle.aspx?ArticleID=102" style="text-decoration: none;
+                        color: Black;">
+                        <span id="_ctl0_ContentPlaceHolder1_rptArticles__ctl1_lblSummary">???? ????? ????? ????????? ?? ????? ???? ????? ??? ????? ????? ??? ??????? ???????? ?????? ??? ??????? ????? ????????? ???. ????? ??? ??????? ??????????? ????????? ??????????? ???? ??????? ???????? ??? ????? ?????. ?? ?? ?? ????? ?? ??????? ??????? ??????? ??? ????? ????????? ????????? ???? ??? ??? ??????? ?? ??? ??????? ????? ??? ???? ???????? ??????? ????? ??????? ????????.</span></a>
+                    <div style="text-align: left;">
+                        <a href="/Mulhak/ViewArticle.aspx?ArticleID=102">
+                            <img src="Images/assafir-almazid.png" border="0"></a>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <div style="text-align: center; margin-top: 7px;">
+                        <a href="http://www.fransabank.com/English/Pages/Corporate-Homepage.aspx" title="" target="_blank">
+                            <img id="_ctl0_ContentPlaceHolder1_rptArticles__ctl1_imgLogo" src="/Logo/19615e35-2644-41c7-9f09-19543b01e773.jpg" style="border-width:0px;"></a>
+                    </div>
+                    <div style="padding: 15px 0px 15px 0px;">
+                        <img src="Images/assafir-seperator.png"></div>
+                </div>
+            
+                <div class="ArticleBox" style="padding: 0px 50px 0px 50px;">
+                    <span id="_ctl0_ContentPlaceHolder1_rptArticles__ctl2_lblShortTitle" class="Paragraph"></span>
+                    <a href="/Mulhak/ViewArticle.aspx?ArticleID=101" style="text-decoration: none;">
+                        <span id="_ctl0_ContentPlaceHolder1_rptArticles__ctl2_lblLongTitle" class="ParagraphTitle">«??? ???»: ????? ????? ????? ??????
+???? ???????? ???? ???? ?? ?????????
+</span></a>
+                    <br><br>
+                    <img id="_ctl0_ContentPlaceHolder1_rptArticles__ctl2_imgArticlePhoto" src="/ArticlePhoto/08783503-669d-4fd4-aa02-e54196b928ff.jpg" style="width:100px;margin:0px 0px 0px 10px;" align="right" border="0">
+                    <a href="/Mulhak/ViewArticle.aspx?ArticleID=101" style="text-decoration: none;
+                        color: Black;">
+                        <span id="_ctl0_ContentPlaceHolder1_rptArticles__ctl2_lblSummary">???? ????? ??????? ????????? ??????? ?? ????? ?????? ?????? ????? ?????? ?????? ??????? ???????? ?????? ???????? ??? ??????? ??????? ?? ?? ????? ????? ?????? ??????? ?? ???? ?????? ??????? ????????? ????? ???? ?? ?? ???? ????????? ?????? ?????? ??? ?????? ?????? ??? ?? ????? ????? ?????? ???????? ??? ?? ???????? ???? ??????? ??? ???????</span></a>
+                    <div style="text-align: left;">
+                        <a href="/Mulhak/ViewArticle.aspx?ArticleID=101">
+                            <img src="Images/assafir-almazid.png" border="0"></a>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <div style="text-align: center; margin-top: 7px;">
+                        <a href="http://www.bankmed.com.lb/Pages/default.aspx" title="" target="_blank">
+                            <img id="_ctl0_ContentPlaceHolder1_rptArticles__ctl2_imgLogo" src="/Logo/52f12db0-8a46-4a20-bfde-7a9a783a38d0.jpg" style="border-width:0px;"></a>
+                    </div>
+                    <div style="padding: 15px 0px 15px 0px;">
+                        <img src="Images/assafir-seperator.png"></div>
+                </div>
+            
+                <div class="ArticleBox" style="padding: 0px 50px 0px 50px;">
+                    <span id="_ctl0_ContentPlaceHolder1_rptArticles__ctl3_lblShortTitle" class="Paragraph"></span>
+                    <a href="/Mulhak/ViewArticle.aspx?ArticleID=100" style="text-decoration: none;">
+                        <span id="_ctl0_ContentPlaceHolder1_rptArticles__ctl3_lblLongTitle" class="ParagraphTitle">"??? ???? ?????? ??????? ???????":
+?????? ???? ???? ?????? ????????? ??????
+</span></a>
+                    <br><br>
+                    <img id="_ctl0_ContentPlaceHolder1_rptArticles__ctl3_imgArticlePhoto" src="/ArticlePhoto/33fd8245-e5c5-46ab-8b6b-f3c58b2533bf.jpg" style="width:100px;margin:0px 0px 0px 10px;" align="right" border="0">
+                    <a href="/Mulhak/ViewArticle.aspx?ArticleID=100" style="text-decoration: none;
+                        color: Black;">
+                        <span id="_ctl0_ContentPlaceHolder1_rptArticles__ctl3_lblSummary">"??? ??? ??? ???? ??? ???? ?????? ??????? ?????? ??? ????????? ??? ????? ???????? ???????? ???????????? ?? ??? ?????? ?????? ????? ?? ???? ????? ??????? ?????? ?? ?????? ???????? ???????"? ???? ?? ???? ?????? ????? ??????? ????? ?????. "??? ???? ?????? ?????? ???????? ???????? ???? 2012 ???? ?? ?????? ??? ??????? ??? ????? ???????? ???? ???? ????? 2,7 ????? ????? ??????."</span></a>
+                    <div style="text-align: left;">
+                        <a href="/Mulhak/ViewArticle.aspx?ArticleID=100">
+                            <img src="Images/assafir-almazid.png" border="0"></a>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <div style="text-align: center; margin-top: 7px;">
+                        <a href="www.banqueaudi.com/Pages/Default.aspxhttp" title="" target="_blank">
+                            <img id="_ctl0_ContentPlaceHolder1_rptArticles__ctl3_imgLogo" src="/Logo/48b85889-7e4d-41bb-90cf-8a63d29bd439.jpg" style="border-width:0px;"></a>
+                    </div>
+                    <div style="padding: 15px 0px 15px 0px;">
+                        <img src="Images/assafir-seperator.png"></div>
+                </div>
+            
+                <div class="ArticleBox" style="padding: 0px 50px 0px 50px;">
+                    <span id="_ctl0_ContentPlaceHolder1_rptArticles__ctl4_lblShortTitle" class="Paragraph"></span>
+                    <a href="/Mulhak/ViewArticle.aspx?ArticleID=99" style="text-decoration: none;">
+                        <span id="_ctl0_ContentPlaceHolder1_rptArticles__ctl4_lblLongTitle" class="ParagraphTitle">???? ??????? ???????? ?????? ?? "???? ???":
+?????? ??????? ??? ??????? ?????? ????????????
+</span></a>
+                    <br><br>
+                    
+                    <a href="/Mulhak/ViewArticle.aspx?ArticleID=99" style="text-decoration: none;
+                        color: Black;">
+                        <span id="_ctl0_ContentPlaceHolder1_rptArticles__ctl4_lblSummary">?????? ??????? ?????????? ?? ????? ????? ???????? ?? ???? ??????? ???20 ????????. ??????? ????? ????? ????? ?????? ????????? ????? ??????? ???????? ??? ?? ????? ???????? ????? ?????? ???? ????? ???4 ?? ????? ???? ??? ???????? ?? ???? ???? ?????????? ??? ?? ???? ???? ??????? ???????? ?? "???? ???" ???? ????? ???? ????: ????? ????? ?????? ??? ????? ????? ??????? ??? ???? ????? ????? ???? ?? ??? ???????? ??? ?????? ????????.</span></a>
+                    <div style="text-align: left;">
+                        <a href="/Mulhak/ViewArticle.aspx?ArticleID=99">
+                            <img src="Images/assafir-almazid.png" border="0"></a>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <div style="text-align: center; margin-top: 7px;">
+                        <a href="www.blombank.com/english/index.aspx" title="" target="_blank">
+                            <img id="_ctl0_ContentPlaceHolder1_rptArticles__ctl4_imgLogo" src="/Logo/69979f1f-44d8-4345-bdd6-c9dc4a562487.jpg" style="border-width:0px;"></a>
+                    </div>
+                    <div style="padding: 15px 0px 15px 0px;">
+                        <img src="Images/assafir-seperator.png"></div>
+                </div>
+            
+                <div class="ArticleBox" style="padding: 0px 50px 0px 50px;">
+                    <span id="_ctl0_ContentPlaceHolder1_rptArticles__ctl5_lblShortTitle" class="Paragraph"></span>
+                    <a href="/Mulhak/ViewArticle.aspx?ArticleID=98" style="text-decoration: none;">
+                        <span id="_ctl0_ContentPlaceHolder1_rptArticles__ctl5_lblLongTitle" class="ParagraphTitle">???? ??????? ???????/??????? ?????? ??????? ?? ?????
+2007-2012
+</span></a>
+                    <br><br>
+                    <img id="_ctl0_ContentPlaceHolder1_rptArticles__ctl5_imgArticlePhoto" src="/ArticlePhoto/f0ee4d62-b504-456a-9936-96692cd9fb51.jpg" style="width:100px;margin:0px 0px 0px 10px;" align="right" border="0">
+                    <a href="/Mulhak/ViewArticle.aspx?ArticleID=98" style="text-decoration: none;
+                        color: Black;">
+                        <span id="_ctl0_ContentPlaceHolder1_rptArticles__ctl5_lblSummary">
+?????? ??????? ?? ?????? ??????? ??? ???? ????? ???????? ???? ??? ??????? ??? ???????? ?????? ??? ??????? ??????? ?? ??????? ??????? ????????? ??????? ?? ??? ??????? ????? ???? ????? ????? ?????? ????????? ?????? ???????? ????? ??? ????? ????????? ???? ??? ???? ??????? ??????? ???????? ?? ??????.</span></a>
+                    <div style="text-align: left;">
+                        <a href="/Mulhak/ViewArticle.aspx?ArticleID=98">
+                            <img src="Images/assafir-almazid.png" border="0"></a>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <div style="text-align: center; margin-top: 7px;">
+                        <a href="" title="" target="_blank">
+                            </a>
+                    </div>
+                    <div style="padding: 15px 0px 15px 0px;">
+                        <img src="Images/assafir-seperator.png"></div>
+                </div>
+            
+                <div class="ArticleBox" style="padding: 0px 50px 0px 50px;">
+                    <span id="_ctl0_ContentPlaceHolder1_rptArticles__ctl6_lblShortTitle" class="Paragraph"></span>
+                    <a href="/Mulhak/ViewArticle.aspx?ArticleID=97" style="text-decoration: none;">
+                        <span id="_ctl0_ContentPlaceHolder1_rptArticles__ctl6_lblLongTitle" class="ParagraphTitle">???????? ??????? ???????? ?? ?????? ?????????</span></a>
+                    <br><br>
+                    
+                    <a href="/Mulhak/ViewArticle.aspx?ArticleID=97" style="text-decoration: none;
+                        color: Black;">
+                        <span id="_ctl0_ContentPlaceHolder1_rptArticles__ctl6_lblSummary">??? ?????? ????? ??????? ????????? ??????? ?? ?????? ??????? ?????? ??? ?????? ?????? ?????? ?? ???? ?????????? ???????? ????????. ??? ??? ?????? ?? ?????? ?????? ??????? ?????? ??? ???? ????? 2000. ?? ??????? ??????? ???? ??? ??????? ??? ????? ?????? ??????? ??? ????? ???????? ?????? ?? ??? ????? ?? ????? ????? ?????? ??? ??????. ????? ?? ??? ??????? ????? ??????? ??????? ????????? ??.</span></a>
+                    <div style="text-align: left;">
+                        <a href="/Mulhak/ViewArticle.aspx?ArticleID=97">
+                            <img src="Images/assafir-almazid.png" border="0"></a>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <div style="text-align: center; margin-top: 7px;">
+                        <a href="" title="" target="_blank">
+                            </a>
+                    </div>
+                    <div style="padding: 15px 0px 15px 0px;">
+                        <img src="Images/assafir-seperator.png"></div>
+                </div>
+            
+        <div style="text-align: center">
+            <center>
+                
+            </center>
+        </div>
+        <br>
+    </div>
+
+                                                <br style="clear:both;">
+                                                
+                                                <br>
+                                                
+                                                <br>
+                                                
+                                            </td>
+                                            <td style="width:180px; background: white url(/Images/Bar_Vert.gif) repeat-y right;" valign="top">
+                                                
+<!-- Start of left side bar-->
+
+<table style="height:100%" width="100%" cellpadding="0" cellspacing="0">
+	<tbody><tr>
+		<td colspan="2" valign="top" bgcolor="#ffffff">
+			
+<style type="text/css">
+    #LeftTabs ul{background: #bbb9ba !important;border:none 0px !Important;}
+    #LeftTabs ul li{float: right;}
+    #LeftTabs .ui-tabs-panel{height:100px;overflow: auto;}
+    .TitleHeader
+    {
+        height:19px;
+        background-image:url(/Images/RedBack_167x24.png);
+        padding-top:5px;
+        padding-right:5px;
+        font-size:12px !important;
+        background-position:left top;
+        width:163px;
+    }
+    .LeftList
+    {
+        padding-top:3px;
+        padding-right:8px;
+    }
+    #divLeftCol
+    {
+        width:180px;
+        clear:both;
+        background-color:white;
+    }
+    .OnSite
+    {
+        color:Black !important;
+        background-image:url(/Images/OnSiteBack.png);
+        height:24px;
+        padding-right:15px;
+        text-align:center;
+    }
+    .divRightBar
+    {
+        width:162px;
+        background-repeat: repeat-y;
+        background-image:url(/Images/Bar_Vert.gif);
+        background-position:right top;
+        padding-right:12px;
+    }
+</style>
+<div id="divLeftCol">
+    <div class="ParagraphTitle OnSite">
+        <span id="_ctl0_LeftMenu1__ctl1_LeftMenuLinks3_lblTitle">??? ??????</span>
+    </div>
+    <div class="divRightBar">
+        <div class="TitleHeader ParagraphTitle">?????? ?????</div>
+        <div class="LeftList">
+            
+                    <div style="margin-bottom:3px;">
+                        
+                        <img src="/Images/NewBullet.png" alt="" align="bottom">&nbsp;
+                        <a id="_ctl0_LeftMenu1__ctl1_LeftMenuLinks3_rptMostRead__ctl0_hlLongTitle" class="LeftMenuText" title="???? ????? ?????? ?? ???? .. ??????? ??????
+" href="/Article.aspx?ArticleId=2007&amp;EditionId=2469&amp;ChannelId=59463">???? ????? ??????</a>&nbsp;
+                        11%
+                    </div>
+                
+                    <div style="margin-bottom:3px;">
+                        
+                        <img src="/Images/NewBullet.png" alt="" align="bottom">&nbsp;
+                        <a id="_ctl0_LeftMenu1__ctl1_LeftMenuLinks3_rptMostRead__ctl1_hlLongTitle" class="LeftMenuText" title="?????? «?????»" href="/Article.aspx?ArticleId=1955&amp;EditionId=2469&amp;ChannelId=59466">?????? «?????»</a>&nbsp;
+                        6%
+                    </div>
+                
+                    <div style="margin-bottom:3px;">
+                        
+                        <img src="/Images/NewBullet.png" alt="" align="bottom">&nbsp;
+                        <a id="_ctl0_LeftMenu1__ctl1_LeftMenuLinks3_rptMostRead__ctl2_hlLongTitle" class="LeftMenuText" title="??? ??«14 ????»: ??? «??????» .. ?? ??????? ??????" href="/Article.aspx?ArticleId=2004&amp;EditionId=2469&amp;ChannelId=59463">??? ??«14 ????»:</a>&nbsp;
+                        6%
+                    </div>
+                
+                    <div style="margin-bottom:3px;">
+                        
+                        <img src="/Images/NewBullet.png" alt="" align="bottom">&nbsp;
+                        <a id="_ctl0_LeftMenu1__ctl1_LeftMenuLinks3_rptMostRead__ctl3_hlLongTitle" class="LeftMenuText" title="????? ???? ?????
+???? ?????? ???????" href="/Article.aspx?ArticleId=2009&amp;EditionId=2469&amp;ChannelId=59463">????? ????</a>&nbsp;
+                        5%
+                    </div>
+                
+                    <div style="margin-bottom:3px;">
+                        
+                        <img src="/Images/NewBullet.png" alt="" align="bottom">&nbsp;
+                        <a id="_ctl0_LeftMenu1__ctl1_LeftMenuLinks3_rptMostRead__ctl4_hlLongTitle" class="LeftMenuText" title="???? ???..???? «???? ?? ?????»!" href="/Article.aspx?ArticleId=1998&amp;EditionId=2469&amp;ChannelId=59465">???? ???..????</a>&nbsp;
+                        4%
+                    </div>
+                
+            
+        </div>
+        <br>
+        <div role="tablist" class="ui-accordion ui-widget ui-helper-reset ui-accordion-icons" id="SpecialDiv" style="min-height:260px; overflow:visible;">
+            <h3 tabindex="0" aria-selected="true" aria-expanded="true" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-state-active ui-corner-top"><span class="ui-icon ui-icon-triangle-1-s"></span><a tabindex="-1" href="#"><img src="/Images/taghtia_03.png" alt="" width="122" border="0"></a></h3>
+            <div role="tabpanel" style="height: 170px;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active">
+<table width="100%" cellpadding="0" cellspacing="0">
+    <tbody><tr>
+        <td colspan="2">
+            <div class="LeftList">
+                
+                        <div style="margin-bottom:3px;">
+                            <a id="_ctl0_LeftMenu1__ctl1_LeftMenuLinks3_ucMulhakList1_rptMulhak__ctl0_HyperLink1" class="LeftMenuText" href="/MulhakArticleList.aspx?EditionId=2469&amp;MulhakId=5840">
+								<img src="/Images/NewBullet.png" alt="" align="bottom" border="0">&nbsp;
+                                English</a>
+                        </div>
+                    
+                        <div style="margin-bottom:3px;">
+                            <a id="_ctl0_LeftMenu1__ctl1_LeftMenuLinks3_ucMulhakList1_rptMulhak__ctl1_HyperLink1" class="LeftMenuText" href="/MulhakArticleList.aspx?EditionId=2469&amp;MulhakId=5841">
+								<img src="/Images/NewBullet.png" alt="" align="bottom" border="0">&nbsp;
+                                ??????</a>
+                        </div>
+                    
+                        <div style="margin-bottom:3px;">
+                            <a id="_ctl0_LeftMenu1__ctl1_LeftMenuLinks3_ucMulhakList1_rptMulhak__ctl2_HyperLink1" class="LeftMenuText" href="/MulhakArticleList.aspx?EditionId=2469&amp;MulhakId=5842">
+								<img src="/Images/NewBullet.png" alt="" align="bottom" border="0">&nbsp;
+                                ???</a>
+                        </div>
+                    
+                        <div style="margin-bottom:3px;">
+                            <a id="_ctl0_LeftMenu1__ctl1_LeftMenuLinks3_ucMulhakList1_rptMulhak__ctl3_HyperLink1" class="LeftMenuText" href="/MulhakArticleList.aspx?EditionId=2469&amp;MulhakId=5843">
+								<img src="/Images/NewBullet.png" alt="" align="bottom" border="0">&nbsp;
+                                ?????</a>
+                        </div>
+                    
+                        <div style="margin-bottom:3px;">
+                            <a id="_ctl0_LeftMenu1__ctl1_LeftMenuLinks3_ucMulhakList1_rptMulhak__ctl4_HyperLink1" class="LeftMenuText" href="/MulhakArticleList.aspx?EditionId=2469&amp;MulhakId=5844">
+								<img src="/Images/NewBullet.png" alt="" align="bottom" border="0">&nbsp;
+                                ???????</a>
+                        </div>
+                    
+                        <div style="margin-bottom:3px;">
+                            <a id="_ctl0_LeftMenu1__ctl1_LeftMenuLinks3_ucMulhakList1_rptMulhak__ctl5_HyperLink1" class="LeftMenuText" href="/MulhakArticleList.aspx?EditionId=2469&amp;MulhakId=5845">
+								<img src="/Images/NewBullet.png" alt="" align="bottom" border="0">&nbsp;
+                                ?????? ??????? ?????????? </a>
+                        </div>
+                    
+                        <div style="margin-bottom:3px;">
+                            <a id="_ctl0_LeftMenu1__ctl1_LeftMenuLinks3_ucMulhakList1_rptMulhak__ctl6_HyperLink1" class="LeftMenuText" href="/MulhakArticleList.aspx?EditionId=2469&amp;MulhakId=5846">
+								<img src="/Images/NewBullet.png" alt="" align="bottom" border="0">&nbsp;
+                                ?????? ??? ???? ??????</a>
+                        </div>
+                    
+            </div>
+        </td>
+        <td valign="top" width="19" align="left">
+            <img src="/Images/table_CrossUpLeft.gif" alt="" width="19">
+        </td>
+    </tr>
+</tbody></table></div>
+            <h3 tabindex="-1" aria-selected="false" aria-expanded="false" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"><span class="ui-icon ui-icon-triangle-1-e"></span><a tabindex="-1" href="#"><img src="/Images/Shabab.png" alt="" width="122" border="0"></a></h3>
+            <div role="tabpanel" style="height: 170px; display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+<table width="100%" cellpadding="0" cellspacing="0">
+    <tbody><tr>
+        <td colspan="2">
+            
+            <div class="LeftList">
+                
+                        <div style="margin-bottom:3px;">
+                            <img src="/Images/NewBullet.png" alt="" align="bottom">&nbsp;
+                            <a id="_ctl0_LeftMenu1__ctl1_LeftMenuLinks3_ucShababArticles1_rptShabab__ctl0_hlLongTitle" class="LeftMenuText" href="http://shabab.assafir.com/Article.aspx?ArticleId=7090&amp;ref=1" target="_blank">???? ????.. ??? ?????? ???????</a>
+                        </div>
+                    
+                        <div style="margin-bottom:3px;">
+                            <img src="/Images/NewBullet.png" alt="" align="bottom">&nbsp;
+                            <a id="_ctl0_LeftMenu1__ctl1_LeftMenuLinks3_ucShababArticles1_rptShabab__ctl1_hlLongTitle" class="LeftMenuText" href="http://shabab.assafir.com/Article.aspx?ArticleId=7079&amp;ref=1" target="_blank">??????.. ??? ?? ??????? </a>
+                        </div>
+                    
+                        <div style="margin-bottom:3px;">
+                            <img src="/Images/NewBullet.png" alt="" align="bottom">&nbsp;
+                            <a id="_ctl0_LeftMenu1__ctl1_LeftMenuLinks3_ucShababArticles1_rptShabab__ctl2_hlLongTitle" class="LeftMenuText" href="http://shabab.assafir.com/Article.aspx?ArticleId=7095&amp;ref=1" target="_blank">???? ?????? ???????:
+«???? ?????» vs «???? ???????»</a>
+                        </div>
+                    
+                        <div style="margin-bottom:3px;">
+                            <img src="/Images/NewBullet.png" alt="" align="bottom">&nbsp;
+                            <a id="_ctl0_LeftMenu1__ctl1_LeftMenuLinks3_ucShababArticles1_rptShabab__ctl3_hlLongTitle" class="LeftMenuText" href="http://shabab.assafir.com/Article.aspx?ArticleId=7092&amp;ref=1" target="_blank">?? ?? ???? ?????</a>
+                        </div>
+                    
+                        <div style="margin-bottom:3px;">
+                            <img src="/Images/NewBullet.png" alt="" align="bottom">&nbsp;
+                            <a id="_ctl0_LeftMenu1__ctl1_LeftMenuLinks3_ucShababArticles1_rptShabab__ctl4_hlLongTitle" class="LeftMenuText" href="http://shabab.assafir.com/Article.aspx?ArticleId=7087&amp;ref=1" target="_blank">?? ??? ????? ?? ?????</a>
+                        </div>
+                    
+            </div>
+        </td>
+        <td valign="top" width="19" align="left">
+            <img src="/Images/table_CrossUpLeft.gif" alt="" width="19">
+        </td>
+    </tr>
+</tbody></table></div>
+            <h3 tabindex="-1" aria-selected="false" aria-expanded="false" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"><span class="ui-icon ui-icon-triangle-1-e"></span><a tabindex="-1" href="#"><img src="/Images/palestine.gif" alt="" width="122" border="0"></a></h3>
+            <div role="tabpanel" style="height: 170px; display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+<table width="100%" cellpadding="0" cellspacing="0">
+    <tbody><tr>
+        <td colspan="2">
+            <div class="LeftList">
+                
+                        <div style="margin-bottom:3px;">
+                            <img src="/Images/NewBullet.png" alt="" align="bottom">&nbsp;
+                            <a id="_ctl0_LeftMenu1__ctl1_LeftMenuLinks3_ucPalestine1_rptPalestine__ctl0_hlArticle" class="LeftMenuText" href="http://palestine.assafir.com/Article.asp?ref=1&amp;aid=1328" target="_blank">???????? ?? ???? ???</a>
+                        </div>
+                    
+                        <div style="margin-bottom:3px;">
+                            <img src="/Images/NewBullet.png" alt="" align="bottom">&nbsp;
+                            <a id="_ctl0_LeftMenu1__ctl1_LeftMenuLinks3_ucPalestine1_rptPalestine__ctl1_hlArticle" class="LeftMenuText" href="http://palestine.assafir.com/Article.asp?ref=1&amp;aid=1330" target="_blank">????? ???? ??? ????</a>
+                        </div>
+                    
+                        <div style="margin-bottom:3px;">
+                            <img src="/Images/NewBullet.png" alt="" align="bottom">&nbsp;
+                            <a id="_ctl0_LeftMenu1__ctl1_LeftMenuLinks3_ucPalestine1_rptPalestine__ctl2_hlArticle" class="LeftMenuText" href="http://palestine.assafir.com/Article.asp?ref=1&amp;aid=1337" target="_blank">???????? ?? ??????</a>
+                        </div>
+                    
+                        <div style="margin-bottom:3px;">
+                            <img src="/Images/NewBullet.png" alt="" align="bottom">&nbsp;
+                            <a id="_ctl0_LeftMenu1__ctl1_LeftMenuLinks3_ucPalestine1_rptPalestine__ctl3_hlArticle" class="LeftMenuText" href="http://palestine.assafir.com/Article.asp?ref=1&amp;aid=1348" target="_blank">??????? ????????? ?????????</a>
+                        </div>
+                    
+                        <div style="margin-bottom:3px;">
+                            <img src="/Images/NewBullet.png" alt="" align="bottom">&nbsp;
+                            <a id="_ctl0_LeftMenu1__ctl1_LeftMenuLinks3_ucPalestine1_rptPalestine__ctl4_hlArticle" class="LeftMenuText" href="http://palestine.assafir.com/Article.asp?ref=1&amp;aid=1343" target="_blank">???? ??? ?? 28/5/1964?</a>
+                        </div>
+                    
+            </div>
+        </td>
+        <td valign="top" width="19" align="left">
+            <img src="/Images/table_CrossUpLeft.gif" alt="" width="19">
+        </td>
+    </tr>
+</tbody></table></div>
+			<h3 tabindex="-1" aria-selected="false" aria-expanded="false" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"><span class="ui-icon ui-icon-triangle-1-e"></span><a tabindex="-1" href="#"><img src="/Images/Arabi.png" alt="" width="122" border="0"></a></h3>
+            <div role="tabpanel" style="height: 170px; display: none;" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+<table width="100%" cellpadding="0" cellspacing="0">
+    <tbody><tr>
+        <td colspan="2">
+            <div class="LeftList">
+                
+                        <div style="margin-bottom:3px;">
+                            <img src="/Images/NewBullet.png" alt="" align="bottom">&nbsp;
+                            <a id="_ctl0_LeftMenu1__ctl1_LeftMenuLinks3_ucArabi2_rptArabi__ctl0_hlArticle" class="LeftMenuText" href="http://arabi.assafir.com/Article.asp?aid=915&amp;refsite=assafir&amp;reftype=leftmenu&amp;refzone=switcher" target="_blank">????? ????????? ?????? ????????</a>
+                        </div>
+                    
+                        <div style="margin-bottom:3px;">
+                            <img src="/Images/NewBullet.png" alt="" align="bottom">&nbsp;
+                            <a id="_ctl0_LeftMenu1__ctl1_LeftMenuLinks3_ucArabi2_rptArabi__ctl1_hlArticle" class="LeftMenuText" href="http://arabi.assafir.com/Article.asp?aid=912&amp;refsite=assafir&amp;reftype=leftmenu&amp;refzone=switcher" target="_blank">??????? ??????? ?????? ????????</a>
+                        </div>
+                    
+                        <div style="margin-bottom:3px;">
+                            <img src="/Images/NewBullet.png" alt="" align="bottom">&nbsp;
+                            <a id="_ctl0_LeftMenu1__ctl1_LeftMenuLinks3_ucArabi2_rptArabi__ctl2_hlArticle" class="LeftMenuText" href="http://arabi.assafir.com/Article.asp?aid=900&amp;refsite=assafir&amp;reftype=leftmenu&amp;refzone=switcher" target="_blank">????? ??? ?????? ??? ????? ???????</a>
+                        </div>
+                    
+                        <div style="margin-bottom:3px;">
+                            <img src="/Images/NewBullet.png" alt="" align="bottom">&nbsp;
+                            <a id="_ctl0_LeftMenu1__ctl1_LeftMenuLinks3_ucArabi2_rptArabi__ctl3_hlArticle" class="LeftMenuText" href="http://arabi.assafir.com/Article.asp?aid=908&amp;refsite=assafir&amp;reftype=leftmenu&amp;refzone=switcher" target="_blank">???: ??????? ??? ??????? ???????? ????????</a>
+                        </div>
+                    
+                        <div style="margin-bottom:3px;">
+                            <img src="/Images/NewBullet.png" alt="" align="bottom">&nbsp;
+                            <a id="_ctl0_LeftMenu1__ctl1_LeftMenuLinks3_ucArabi2_rptArabi__ctl4_hlArticle" class="LeftMenuText" href="http://arabi.assafir.com/Article.asp?aid=914&amp;refsite=assafir&amp;reftype=leftmenu&amp;refzone=switcher" target="_blank">?????: ?????? ??????????... ??? ???????</a>
+                        </div>
+                    
+            </div>
+        </td>
+        <td valign="top" width="19" align="left">
+            <img src="/Images/table_CrossUpLeft.gif" alt="" width="19">
+        </td>
+    </tr>
+</tbody></table></div>
+            <h3 tabindex="-1" aria-selected="false" aria-expanded="false" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all" dir="ltr"><span class="ui-icon ui-icon-triangle-1-e"></span><a tabindex="-1" href="#"><img src="/Images/AssafirEnglish.png" alt="" width="122" border="0"></a></h3>
+            <div role="tabpanel" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" dir="ltr" style="padding-left: 3px; height: 170px; display: none;">
+<table dir="ltr" width="100%" cellpadding="0" cellspacing="0">
+    <tbody><tr>
+        <td colspan="2">
+            
+            <div class="LeftList">
+                
+                        <div style="margin-bottom:3px;">
+                            <img src="/Images/NewBullet.png" alt="" align="bottom">&nbsp;
+                            <a id="_ctl0_LeftMenu1__ctl1_LeftMenuLinks3_ucEnglish1_rptEnglish__ctl0_hlArticle" class="LeftMenuText" href="/MulhakArticle.aspx?EditionId=2469&amp;MulhakId=5840&amp;MulhakArticleId=1452902">US Tax Laws Raise Concerns Among Lebanese Banks</a>
+                        </div>
+                    
+                        <div style="margin-bottom:3px;">
+                            <img src="/Images/NewBullet.png" alt="" align="bottom">&nbsp;
+                            <a id="_ctl0_LeftMenu1__ctl1_LeftMenuLinks3_ucEnglish1_rptEnglish__ctl1_hlArticle" class="LeftMenuText" href="/MulhakArticle.aspx?EditionId=2469&amp;MulhakId=5840&amp;MulhakArticleId=1452903">Bahrain Opposition Rejects Discovery of 'Terrorist Cell'</a>
+                        </div>
+                    
+                        <div style="margin-bottom:3px;">
+                            <img src="/Images/NewBullet.png" alt="" align="bottom">&nbsp;
+                            <a id="_ctl0_LeftMenu1__ctl1_LeftMenuLinks3_ucEnglish1_rptEnglish__ctl2_hlArticle" class="LeftMenuText" href="/MulhakArticle.aspx?EditionId=2469&amp;MulhakId=5840&amp;MulhakArticleId=1452904">Christians, Muslims Coexist Amid Chaos in Syria</a>
+                        </div>
+                    
+                        <div style="margin-bottom:3px;">
+                            <img src="/Images/NewBullet.png" alt="" align="bottom">&nbsp;
+                            <a id="_ctl0_LeftMenu1__ctl1_LeftMenuLinks3_ucEnglish1_rptEnglish__ctl3_hlArticle" class="LeftMenuText" href="/MulhakArticle.aspx?EditionId=2469&amp;MulhakId=5840&amp;MulhakArticleId=1452905">Is Russia Seeking New Allies In the Arab World?</a>
+                        </div>
+                    
+                        <div style="margin-bottom:3px;">
+                            <img src="/Images/NewBullet.png" alt="" align="bottom">&nbsp;
+                            <a id="_ctl0_LeftMenu1__ctl1_LeftMenuLinks3_ucEnglish1_rptEnglish__ctl4_hlArticle" class="LeftMenuText" href="/MulhakArticle.aspx?EditionId=2469&amp;MulhakId=5840&amp;MulhakArticleId=1452906">Yemeni Revolution Enters Third Year</a>
+                        </div>
+                    
+            </div>
+        </td>
+    </tr>
+</tbody></table></div>
+        </div>
+        <br style="clear:both;">
+		<script type="text/javascript"><!--//<![CDATA[
+		   var m3_u = (location.protocol=='https:'?'https://ads.assafir.com/www/delivery/ajs.php':'http://ads.assafir.com/www/delivery/ajs.php');
+		   var m3_r = Math.floor(Math.random()*99999999999);
+		   if (!document.MAX_used) document.MAX_used = ',';
+		   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+		   document.write ("?zoneid=34&amp;source=&amp;target=_blank");
+		   document.write ('&amp;cb=' + m3_r);
+		   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+		   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+		   document.write ("&amp;loc=" + escape(window.location));
+		   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+		   if (document.context) document.write ("&context=" + escape(document.context));
+		   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+		   document.write ("'><\/scr"+"ipt>");
+		//]]>--></script><script type="text/javascript" src="http://ads.assafir.com/www/delivery/ajs.php?zoneid=34&amp;source=&amp;target=_blank&amp;cb=6539401821&amp;charset=UTF-8&amp;loc=http%3A//assafir.com/Mulhak/%3FSupplementID%3D8"></script><a href="http://ads.assafir.com/www/delivery/ck.php?oaparams=2__bannerid=96__zoneid=34__cb=9c3a42e0de__oadest=http%3A%2F%2Fassafir.com%2FMulhak%2F%3FSupplementID%3D8" target="_blank"><img src="/banners/DMSSupplement_160x90_6_masaref_ala3mal.jpg" alt="" title="" height="90" width="160" border="0"></a><div id="beacon_9c3a42e0de" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="http://ads.assafir.com/www/delivery/lg.php?bannerid=96&amp;campaignid=28&amp;zoneid=34&amp;loc=http%3A%2F%2Fassafir.com%2FMulhak%2F%3FSupplementID%3D8&amp;cb=9c3a42e0de" alt="" style="width: 0px; height: 0px;" height="0" width="0"></div>
+<noscript><a href='http://ads.assafir.com/www/delivery/ck.php?n=ae8a2a6c&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://ads.assafir.com/www/delivery/avw.php?zoneid=34&amp;source=&amp;target=_blank&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=ae8a2a6c' border='0' alt='' /></a></noscript>
+		<script type="text/javascript"><!--//<![CDATA[
+		   var m3_u = (location.protocol=='https:'?'https://ads.assafir.com/www/delivery/ajs.php':'http://ads.assafir.com/www/delivery/ajs.php');
+		   var m3_r = Math.floor(Math.random()*99999999999);
+		   if (!document.MAX_used) document.MAX_used = ',';
+		   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+		   document.write ("?zoneid=35&amp;source=&amp;target=_blank");
+		   document.write ('&amp;cb=' + m3_r);
+		   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+		   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+		   document.write ("&amp;loc=" + escape(window.location));
+		   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+		   if (document.context) document.write ("&context=" + escape(document.context));
+		   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+		   document.write ("'><\/scr"+"ipt>");
+		//]]>--></script><script type="text/javascript" src="http://ads.assafir.com/www/delivery/ajs.php?zoneid=35&amp;source=&amp;target=_blank&amp;cb=22838178970&amp;charset=UTF-8&amp;loc=http%3A//assafir.com/Mulhak/%3FSupplementID%3D8"></script><noscript><a href='http://ads.assafir.com/www/delivery/ck.php?n=ae8a2a6c&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://ads.assafir.com/www/delivery/avw.php?zoneid=35&amp;source=&amp;target=_blank&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=ae8a2a6c' border='0' alt='' /></a></noscript>		
+		<br>
+        <a href="/pdf/templatechannelpdf/index.htm" target="_blank">
+            <img src="/Images/e4s.gif" alt="?????-e" border="0">
+            <img id="_ctl0_LeftMenu1__ctl1_LeftMenuLinks3_imgEpaperThumb" src="/PDF/templatechannelpdf/Thumbs/26052013.jpg" border="0">
+        </a>
+		<br>
+        <div style="margin:6px 0px -10px 0px;">
+            
+<link rel="stylesheet" type="text/css" href="/CSS/jquery.ad-gallery.css">
+<script type="text/javascript" src="/Scripts/jquery.ad-gallery.js"></script>
+<script type="text/javascript">
+    $(function () {
+        var galleries = $('.ad-gallery').adGallery();
+    });
+</script>
+<div id="gallery" class="ad-gallery" dir="ltr">
+    <div class="ad-nav"><div style="opacity: 1;" class="ad-back"></div>
+        <div class="ad-thumbs">
+            <ul style="width: 286px;" class="ad-thumb-list">
+                <li><a class="ad-thumb0" href="http://assafir.com/facebook/?reftype=assafir&amp;ref=scrollmenu" title="Facebook" onclick="window.open('http://assafir.com/facebook/?reftype=assafir&amp;ref=scrollmenu','popup','width=600,height=700,scrollbars=yes'); return false">
+                    <img src="/images/Nashra_fb.png" style="margin-right: 1px; margin-left: 1px;" alt="" border="0">
+                </a></li>
+                <li><a class="ad-thumb1" href="http://assafir.com/twitter/?reftype=assafir&amp;ref=scrollmenu" title="Twitter" onclick="window.open('http://assafir.com/twitter/?reftype=assafir&amp;ref=scrollmenu','popup','width=600,height=700,scrollbars=yes'); return false">
+                    <img src="/images/Nashra_Twitter.png" style="margin-right: 1px;" alt="" border="0">
+                </a></li>
+                <li><a class="ad-thumb2" href="http://assafir.com/email/?reftype=assafir&amp;ref=scrollmenu" title="?????? ??????????" onclick="window.open('http://assafir.com/email/?reftype=assafir&amp;ref=scrollmenu','popup','width=600,height=700,scrollbars=yes'); return false">
+                    <img src="/images/Nashra_Email.png" style="margin-right: 1px;" alt="" border="0">
+                </a></li>
+                <li><a class="ad-thumb3" href="http://assafir.com/android/?reftype=assafir&amp;ref=scrollmenu" title="Android" onclick="window.open('http://assafir.com/android/?reftype=assafir&amp;ref=scrollmenu','popup','width=600,height=700,scrollbars=yes'); return false">
+                    <img src="/images/Nashra_android.png" style="margin-right: 1px;" alt="" border="0">
+                </a></li>
+                <li><a class="ad-thumb4" href="http://assafir.com/ipad/?reftype=assafir&amp;ref=scrollmenu" title="iPad" onclick="window.open('http://assafir.com/ipad/?reftype=assafir&amp;ref=scrollmenu','popup','width=600,height=700,scrollbars=yes'); return false">
+                    <img src="/images/Nashra_Ipad.png" style="margin-right: 1px;" alt="" border="0">
+                </a></li>
+                <li><a class="ad-thumb5" href="http://assafir.com/iphone/?reftype=assafir&amp;ref=scrollmenu" title="iPhone" onclick="window.open('http://assafir.com/iphone/?reftype=assafir&amp;ref=scrollmenu','popup','width=600,height=700,scrollbars=yes'); return false">
+                    <img src="/images/Nashra_iphone.png" style="margin-right: 1px;" alt="" border="0">
+                </a></li>
+                <li><a class="ad-thumb6" href="http://assafir.com/mobile/?reftype=assafir&amp;ref=scrollmenu" title="Mobile" onclick="window.open('http://assafir.com/mobile/?reftype=assafir&amp;ref=scrollmenu','popup','width=600,height=700,scrollbars=yes'); return false">
+                    <img src="/images/Nashra_mobile.png" style="margin-right: 1px;" alt="" border="0">
+                </a></li>
+                <li><a class="ad-thumb7" href="http://assafir.com/rss/?reftype=assafir&amp;ref=scrollmenu" title="RSS" onclick="window.open('http://assafir.com/rss/?reftype=assafir&amp;ref=scrollmenu','popup','width=600,height=700,scrollbars=yes'); return false">
+                    <img src="/images/Nashra_RSS.png" style="margin-right: 1px;" alt="" border="0">
+                </a></li>
+            </ul>
+        </div>
+    <div style="opacity: 1;" class="ad-forward"></div></div>
+</div>
+
+        </div>
+        <br>
+    </div>
+    <img alt="" src="/images/MenuSep1.png">
+    <div class="divRightBar" style="text-align:center">
+        <br>
+	    <table id="_ctl0_LeftMenu1__ctl1_LeftMenuLinks3_tblChannel" cellpadding="0" cellspacing="0">
+	<tbody><tr>
+		<td><input name="_ctl0:LeftMenu1:_ctl1:LeftMenuLinks3:btnMin" id="_ctl0_LeftMenu1__ctl1_LeftMenuLinks3_btnMin" title="????? ?????" src="/images/icons_07.gif" type="image" border="0"></td>
+		<td><input name="_ctl0:LeftMenu1:_ctl1:LeftMenuLinks3:btnMax" id="_ctl0_LeftMenu1__ctl1_LeftMenuLinks3_btnMax" title="????? ?????" src="/images/icons_06.gif" type="image" border="0"></td>
+		<td><img src="/images/icons_15.gif" id="_ctl0_LeftMenu1__ctl1_LeftMenuLinks3_img1" class="AddHand" onclick="MM_openBrWindow('/RSS/?reftype=menu&amp;ref=lm','RSS','scrollbars=yes,width=467,height=430')" title="??.??.??" border="0"></td>
+		<td><img src="/Images/icons_14.gif" id="_ctl0_LeftMenu1__ctl1_LeftMenuLinks3_imgHelp" class="AddHand" title="??????" onclick="document.location.href='/help.aspx'" border="0"></td>
+		<td><img src="/images/icons_13.gif" id="_ctl0_LeftMenu1__ctl1_LeftMenuLinks3_imgSectionPrint" class="AddHand" title="????? ??????" onclick="MM_openBrWindow('/Windows/PrintSection.aspx?EditionId=2469&amp;ChannelId=-1&amp;reftype=menu&amp;ref=lm','SectionPrint','scrollbars=yes,width=467')" border="0"></td>
+	</tr>
+</tbody></table>
+
+	    
+        <br>
+	    <a id="_ctl0_LeftMenu1__ctl1_LeftMenuLinks3_lnkEyesArticleList" onclick="MM_openBrWindow('/windows/EyesArticles.aspx','Eyes','scrollbars=yes,width=500,height=490');return false;" href="javascript:MM_openBrWindow('/Windows/EyesArticles.aspx','LatestNews','scrollbars=yes,width=467')">
+		    <img src="/Images/Left_01.gif" alt="" border="0">
+	    </a>
+        <br>
+        <a href="/YourSide">
+		    <img src="/Images/Left_02.gif" alt="" border="0">
+	    </a>
+        <br>
+	    <a href="/WeeklyPhotoGallery.aspx">
+		    <img src="/Images/Left_03.gif" alt="" border="0">
+	    </a>
+        <br>
+	    <a href="javascript://" onclick="MM_openBrWindow('/Windows/ContactAssafir.aspx?action=Comment','Comment','scrollbars=yes,width=600,height=600')">
+		    <img src="/images/Left-04.gif" alt="???? ?????????? ??????????" border="0">
+	    </a>
+        <br>&nbsp;
+    </div>
+</div>
+			
+<table width="100%" cellpadding="0" cellspacing="0">
+	<tbody><tr>
+		<td colspan="2"><img alt="" src="/images/MenuSep1.png"></td>
+	</tr>
+	<tr style="height:3px">
+        <td style="background-repeat: repeat-y; background-image:url(/Images/Bar_Vert.gif);width:12px"></td>
+        <td style="width:168px" class="ParagraphTitle" height="2"></td>
+	</tr>
+	<tr>
+        <td style="background-repeat: repeat-y; background-image:url(/Images/Bar_Vert.gif);width:12px"></td>
+		<td style="width:168px; padding-bottom:8px;" valign="top">
+            <div role="tablist" class="ui-accordion ui-widget ui-helper-reset ui-accordion-icons" id="divTools">
+                <h3 tabindex="0" aria-selected="true" aria-expanded="true" role="tab" class="ui-accordion-header ui-helper-reset ui-state-default ui-state-active ui-corner-top"><span class="ui-icon ui-icon-triangle-1-s"></span><a tabindex="-1" href="#" class="ParagraphTitle">???? ?????</a></h3>
+                <div role="tabpanel" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active" id="WeatherPanel" style="height:auto !important;">
+<script type="text/javascript">
+    function HideThis() {
+        window.setTimeout("document.getElementById('cities').style.display='none'", 500);
+        $("#WeatherPanel").css("height", "auto");
+    }
+    function ShowThis() {
+        document.getElementById('cities').style.display = 'block';
+        $("#WeatherPanel").css("height", "auto");
+        $('#cities').focus();
+    }
+    function RollIn(el) {
+        document.getElementById(el).style.bgColor = '000000';
+    }
+    function RollOut(el) {
+        document.getElementById(el).style.bgColor = 'White';
+    }
+    function SelectCity(el, city) {
+        $('#spnCity').html($(el).html());
+        City = city;
+        GetData();
+        HideThis();
+    }
+    var City = "MEA|LB|LE002|BEIRUT";
+    function GetData() {
+        var Metric = "C";
+        $.ajax({
+            type: "POST",
+            url: "/Ajax/AxWeather.aspx/GetWeather",
+            contentType: "application/json; charset=utf-8",
+            data: '{\'City\':"' + City + '",\'Metric\':"' + Metric + '"}',
+            dataType: "json",
+            success: function(data) {
+                $("#spnCurrTemp").html(data.d.curr_temp + '°C');
+                $("#imgIcon").attr("src", "/Images/Weather/" + data.d.curr_icon + ".png");
+            },
+            error: function(data) {
+                //alert(data.responseText);
+            }
+        });
+    }
+
+    $(function () {
+        $('body').keyup(function (event) {
+            if (event.keyCode == '27') {
+                event.preventDefault();
+                HideThis();
+            }
+        });
+        $('#cities').blur(function () {
+            HideThis();
+        });
+        $("#spnCity").html("?????");
+        GetData();
+    });
+</script>
+
+<style type="text/css">
+    .CityLink
+    {
+        font-family: Tahoma;
+        font-size: 11px;
+        font-weight: bold;
+        color: Black;
+        text-decoration: none;
+        display: block;
+        width: 89%;
+        padding-right: 8px;
+    }
+    .CityLink:hover
+    {
+        background-color:Orange;
+    }
+    .CityLabel
+    {
+        color:Black;
+        text-decoration:none;
+    }
+    #WeatherPanel
+    {
+        height:auto !important;
+    }
+    #cities
+    {
+        display:none;
+        background-color:White;
+        width:70px;
+        border:solid 1px black;
+    }
+</style>
+<table style="width: 160px;" border="0" cellpadding="2" cellspacing="2">
+    <tbody><tr valign="top">
+        <td style="width:64px;background-color:White;" align="right">
+            <img src="/Images/Weather/35.png" id="imgIcon" alt="" width="64">
+        </td>
+        <td>
+            <a class="CityLabel" href="javascript:ShowThis();">
+                <b><span id="spnCity">?????</span></b> ?
+            </a>
+            <div onfocusout="HideThis()" id="cities">
+                <a href="javascript://" class="CityLink" onclick="SelectCity(this,'MEA|LB|LE002|BEIRUT');">?????</a>
+                <a href="javascript://" class="CityLink" onclick="SelectCity(this,'AFR|MA|MO030|RABAT');">??????</a>
+                <a href="javascript://" class="CityLink" onclick="SelectCity(this,'MEA|SA|SA007|RIYADH');">??????</a>
+                <a href="javascript://" class="CityLink" onclick="SelectCity(this,'AFR|EG|EG011|CAIRO');">???????</a>
+                <a href="javascript://" class="CityLink" onclick="SelectCity(this,'MEA|IL|IS006|JERUSALEM');">?????</a>
+                <a href="javascript://" class="CityLink" onclick="SelectCity(this,'AFR|CI|IV002|ABIDJAN');">???????</a>
+                <a href="javascript://" class="CityLink" onclick="SelectCity(this,'EUR|FR|FR012|PARIS');">?????</a>
+                <a href="javascript://" class="CityLink" onclick="SelectCity(this,'EUR|DE|GM003|BERLIN');">?????</a>
+                <a href="javascript://" class="CityLink" onclick="SelectCity(this,'NAM|CA|ON|TORONTO');">???????</a>
+                <a href="javascript://" class="CityLink" onclick="SelectCity(this,'MEA|AE|AE005|DUBAI');">???</a>
+                <a href="javascript://" class="CityLink" onclick="SelectCity(this,'MEA|SY|SY008|DAMASCUS');">????</a>
+                <a href="javascript://" class="CityLink" onclick="SelectCity(this,'OCN|AU|NSW|SYDNEY');">?????</a>
+                <a href="javascript://" class="CityLink" onclick="SelectCity(this,'AFR|NG|NI024|LAGOS');">?????</a>
+                <a href="javascript://" class="CityLink" onclick="SelectCity(this,'EUR|UK|UK001|LONDON');">????</a>
+                <a href="javascript://" class="CityLink" onclick="SelectCity(this,'ASI|RU|RS052|MOSKVA');">?????</a>
+                <a href="javascript://" class="CityLink" onclick="SelectCity(this,'NAM|CA|QC|MONTREAL');">????????</a>
+                <a href="javascript://" class="CityLink" onclick="SelectCity(this,'NAM|US|NY|NEW YORK');">???????</a>
+            </div><br style="clear:both">
+            <span id="spnCurrTemp" dir="ltr">19°C</span>
+        </td>
+    </tr>
+</tbody></table></div>
+                <!--<h3><a href="#" class="ParagraphTitle">????? ??? ???????</a></h3>
+                <div id="CurrenciesPanel"></div>-->
+            </div>
+        </td>
+	</tr>
+</tbody></table>
+			<table width="100%" cellpadding="0" cellspacing="0">
+	            <tbody><tr>
+		            <td colspan="3"><img alt="" src="/images/MenuSep1.png"></td>
+	            </tr>
+	            <tr>
+                    <td style="BACKGROUND-REPEAT: repeat-y; width:12px; background-image:url(/Images/Bar_Vert.gif);"></td>
+                    <td colspan="2" style="width:168px;"><br></td>
+	            </tr>
+            </tbody></table>
+		</td>
+	</tr>
+	<tr style="height:100%" bgcolor="#ffffff">
+		<td>
+	        <table style="height:100%" width="100%" cellpadding="0" cellspacing="0">
+	            <tbody><tr>
+		            <td style="BACKGROUND-REPEAT: repeat-y;width:12px;" background="/Images/Bar_Vert.gif">&nbsp;</td>		
+		            <td valign="top" align="center">
+						<script type="text/javascript"><!--//<![CDATA[
+						   var m3_u = (location.protocol=='https:'?'https://ads.assafir.com/www/delivery/ajs.php':'http://ads.assafir.com/www/delivery/ajs.php');
+						   var m3_r = Math.floor(Math.random()*99999999999);
+						   if (!document.MAX_used) document.MAX_used = ',';
+						   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+						   document.write ("?zoneid=17&amp;source=front");
+						   document.write ('&amp;cb=' + m3_r);
+						   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+						   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+						   document.write ("&amp;loc=" + escape(window.location));
+						   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+						   if (document.context) document.write ("&context=" + escape(document.context));
+						   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+						   document.write ("'><\/scr"+"ipt>");
+						//]]>--></script><script type="text/javascript" src="http://ads.assafir.com/www/delivery/ajs.php?zoneid=17&amp;source=front&amp;cb=56980419473&amp;charset=UTF-8&amp;loc=http%3A//assafir.com/Mulhak/%3FSupplementID%3D8"></script><a href="http://ads.assafir.com/www/delivery/ck.php?oaparams=2__bannerid=108__zoneid=17__source=front__cb=623b3fc1a6__oadest=https%3A%2F%2Fwww.facebook.com%2Fevents%2F364046470378792%2F" target="_blank"><img src="/banners/MetroMadina_21_Uncle_Rama_160x250.jpg" alt="" title="" height="250" width="160" border="0"></a><div id="beacon_623b3fc1a6" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="http://ads.assafir.com/www/delivery/lg.php?bannerid=108&amp;campaignid=32&amp;zoneid=17&amp;source=front&amp;loc=http%3A%2F%2Fassafir.com%2FMulhak%2F%3FSupplementID%3D8&amp;cb=623b3fc1a6" alt="" style="width: 0px; height: 0px;" height="0" width="0"></div><script type="text/javascript">document.context='YTo0fA=='; </script>
+<noscript><a href='http://ads.assafir.com/www/delivery/ck.php?n=a62dad5d&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://ads.assafir.com/www/delivery/avw.php?zoneid=17&amp;source=front&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=a62dad5d' border='0' alt='' /></a></noscript>
+						<script type="text/javascript"><!--//<![CDATA[
+						   var m3_u = (location.protocol=='https:'?'https://ads.assafir.com/www/delivery/ajs.php':'http://ads.assafir.com/www/delivery/ajs.php');
+						   var m3_r = Math.floor(Math.random()*99999999999);
+						   if (!document.MAX_used) document.MAX_used = ',';
+						   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+						   document.write ("?zoneid=39&amp;source=front");
+						   document.write ('&amp;cb=' + m3_r);
+						   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+						   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+						   document.write ("&amp;loc=" + escape(window.location));
+						   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+						   if (document.context) document.write ("&context=" + escape(document.context));
+						   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+						   document.write ("'><\/scr"+"ipt>");
+						//]]>--></script><script type="text/javascript" src="http://ads.assafir.com/www/delivery/ajs.php?zoneid=39&amp;source=front&amp;cb=20057686494&amp;charset=UTF-8&amp;loc=http%3A//assafir.com/Mulhak/%3FSupplementID%3D8&amp;context=YTo0fA%3D%3D"></script><script type="text/javascript">document.context='YTo0fA=='; </script>
+<noscript><a href='http://ads.assafir.com/www/delivery/ck.php?n=a750a71d&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://ads.assafir.com/www/delivery/avw.php?zoneid=39&amp;source=front&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=a750a71d' border='0' alt='' /></a></noscript>
+					</td>
+	            </tr>
+	        </tbody></table>
+		</td>
+	</tr>
+</tbody></table>
+<!-- End of left Side bar -->
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+                                </td>
+                                <td style="background-color:#c1c1b6"></td>
+                                <td style="width:10px;background-image:url(/Images/bg_left.jpg);"></td>
+                            </tr>
+                            <tr valign="top">
+                                <td style="background-image:url(/Images/Bg_Footer.gif);height:27px">
+                                    
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+    <tbody><tr class="Footer">
+        <td class="FooterWhite" height="27" width="115" bgcolor="#818285">
+            &nbsp;&nbsp;2013© ????? ??????
+        </td>
+        <td width="0%">
+            &nbsp;
+        </td>
+        <td nowrap="nowrap" align="center">
+            <a href="/about.aspx" class="Footer">??? ??????&nbsp;&nbsp;</a>
+        </td>
+        <td valign="top" width="0%">
+            <img src="/Images/Separator_Footer.gif" alt="" height="27" width="1">
+        </td>
+        <td nowrap="nowrap" align="center">
+            <a href="javascript://" class="Footer" onclick="MM_openBrWindow('bookview.aspx','','scrollbars=yes,width=650,height=600')">
+                ??? ??????</a>&nbsp;&nbsp;
+        </td>
+        <td valign="top" width="0%">
+            <img src="/Images/Separator_Footer.gif" alt="" height="27" width="1">
+        </td>
+        <td align="center">
+            <a href="javascript://" onclick="MM_openBrWindow('/Windows/ContactAssafir.aspx','ContactAssafir','scrollbars=yes,width=600,height=600')" class="Footer">????</a>&nbsp;
+        </td>
+        <td valign="top" width="0%">
+            <img src="/Images/Separator_Footer.gif" alt="" height="27" width="1">
+        </td>
+        <td align="center">
+            <a href="javascript://" onclick="MM_openBrWindow('/Windows/ContactAdv.aspx','ContactAdv','scrollbars=yes,width=600,height=600')" class="Footer">&nbsp;?????????&nbsp;</a>
+        </td>
+        <td valign="top" width="0%">
+            <img src="/Images/Separator_Footer.gif" alt="" height="27" width="1">
+        </td>
+        <td align="center">
+            <a href="/subscriptions.aspx" class="Footer">&nbsp;??????????&nbsp;</a>
+        </td>
+        <td valign="top" width="0%">
+            <img src="/Images/Separator_Footer.gif" alt="" height="27" width="1">
+        </td>
+        <td align="center">
+            <a href="/help.aspx" class="Footer">&nbsp;??????&nbsp;</a>
+        </td>
+        <td valign="top" width="0%">
+            <img src="/Images/Separator_Footer.gif" alt="" height="27" width="1">
+        </td>
+        <td align="center">
+            <a href="javascript://" onclick="MM_openBrWindow('/Windows/Terms.aspx','ContactAdv','scrollbars=yes,width=450,height=450')" class="Footer">&nbsp;???? ?????????&nbsp;</a>
+        </td>
+        <td valign="top" width="0%">
+            <img src="/Images/Separator_Footer.gif" alt="" height="27" width="1">
+        </td>
+        <td class="FooterWhite" width="100" align="center">??? ??????? ??????</td>
+        <td width="300">
+            <table width="300" border="0" cellpadding="0" cellspacing="0">
+                <tbody><tr>
+                    <td>
+                        <img src="/Images/footerBar1.gif" alt="" height="12" width="1">
+                    </td>
+                    <td class="Footer2" height="12" align="center">
+                        ?????
+                    </td>
+                    <td>
+                        <img src="/Images/footerBar3.gif" alt="" height="12" width="1">
+                    </td>
+                    <td class="Footer2" height="12" align="center">
+                        ??????
+                    </td>
+                    <td>
+                        <img src="/Images/footerbar3.gif" alt="" height="12" width="1">
+                    </td>
+                    <td class="Footer2" align="center">
+                        ??????
+                    </td>
+                    <td>
+                        <img src="/Images/footerbar3.gif" alt="" height="12" width="1">
+                    </td>
+                    <td class="Footer2" align="center">
+                        ?????????? ???????
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="/Images/footerbar2.gif" alt="" height="15" width="1">
+                    </td>
+                    <td class="Footer2" style="color: #990000;" title="???? ????? ??????????? ?? ???? 2006" align="center" background="/Images/Bg_footerTable1.gif">
+                        1292
+                    </td>
+                    <td>
+                        <img src="/Images/footerbar4.gif" alt="" height="15" width="1">
+                    </td>
+                    <td class="Footer2" title="??? ?????? ??????? ??????" align="center" background="/Images/Bg_footerTable2.gif">
+                        <span id="_ctl0_Footer1_lblPalestine" style="color:#990000;">6246</span>
+                    </td>
+                    <td>
+                        <img src="/Images/footerbar4.gif" alt="" height="15" width="1">
+                    </td>
+                    <td class="Footer2" title="??? ??? ???????? ????????" align="center" background="/Images/Bg_footerTable2.gif">
+                        <span id="_ctl0_Footer1_lblIraq" style="color:#990000;">110437</span>
+                    </td>
+                    <td>
+                        <img src="/Images/footerbar4.gif" alt="" height="15" width="1">
+                    </td>
+                    <td class="Footer2" style="background-color:white;color: #990000;" title="??? ??? ??????" align="center">
+                        ????
+                    </td>
+                </tr>
+            </tbody></table>
+        </td>
+    </tr>
+</tbody></table>
+<map id="Map2" name="Map2">
+    <area shape="RECT" coords="-36,83,22,258" href="#" onmouseover="P7_Snap('MenuPixel','SideLayer',-300,99);MM_showHideLayers('SideLayer','','show')">
+</map>
+<div style="display: none">
+    <iframe src="/Defibrillator.aspx" frameborder="no" height="0" width="0"></iframe>
+</div>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+<script type="text/javascript">
+    _uacct = "UA-2314375-1";
+    urchinTracker();
+</script>
+                                </td>
+                                <td style="width:3px;background-color:#c1c1b6"></td>
+                                <td style="width:3px;background-image:url(/Images/bg_left.jpg)"></td>
+                            </tr>
+                        </tbody></table>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        <div id="example"></div>
+		<img src="/Images/SafirLogo.png" height="0" width="0">
+    </form>
+
+<div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div><div class="ad-preloads"><img src="http://assafir.com/facebook/?reftype=assafir&amp;ref=scrollmenu"></div></body>

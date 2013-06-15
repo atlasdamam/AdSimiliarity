@@ -1,0 +1,385 @@
+<head>
+        
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="description" content="Get Digital Journal on your mobile device!">
+    <title>Digital Journal</title>
+    <link href="/assets/desktop.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+     //   
+    </style>
+    
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      // You may specify partial version numbers, such as "1" or "1.3",
+      //  with the same result. Doing so will automatically load the 
+      //  latest version matching that partial revision pattern 
+      //  (e.g. 1.3 would load 1.3.2 today and 1 would load 1.4.4).
+      google.load("jquery", "1.4.4");
+     
+      google.setOnLoadCallback(function() {
+        // Place init code here instead of $(document).ready()
+      });
+    </script><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript"></script>
+    
+    <script type="text/javascript">
+    
+    $(document).ready(function(){
+    
+    var _counter = 0;
+    $(".deviceShellWrapper").each(function(){
+       _counter ++;
+    
+    });
+    
+    
+    _class = "devices" + _counter;    
+    $(".deviceShellWrapper").addClass(_class);    
+    
+    $('#appLogo img').load(function() {
+    
+           var ah = $('#appLogo img').attr("height");
+           	var ph = $('#appLogo img').parent().height();
+           	var mh = ((ph - ah) / 2);
+        
+           	$('#appLogo img').css('margin-top', mh);
+    
+    });
+    
+    
+    	
+    function autoFit(){
+             
+            _totalWidth = $("#mainContainer").width();
+            _width = (_totalWidth / _counter) * 0.9;
+            if (_width >= 250) {_width = 250;}
+            
+            _height = _width * 1.6;
+            
+            if (_counter != 1){
+            
+            _margin = ((_totalWidth - (_width * _counter))/(_counter - 1)) / (_counter + 3);
+            
+            _padding = ((_totalWidth - (_width * _counter)) + (_margin * (_counter - 1))) / 2;
+            
+            }
+            
+            $(".deviceShellWrapper").css("width", _width);
+            $(".deviceShellWrapper").css("height", _height);
+            $(".deviceShellWrapper").css("marginLeft", _margin );
+            $(".deviceShellWrapper").css("marginTop", _counter * _counter * 4 );
+            
+            $(".deviceShellWrapper:first").css("marginLeft", _padding / 1.5);
+            
+            
+            if (_counter == 1) {
+                $(".deviceShellWrapper").css("marginLeft", "auto" );
+                $(".deviceShellWrapper").css("marginRight", "auto");
+            }
+    }
+    
+    });
+    </script>
+
+    <style>
+    #bodyWrapper{
+        background-color:  #000000;
+    }
+    #appDescription {
+    	color: #222222;
+    }
+    #footer A:hover {
+    	color: #222222;/* <--- PRIMARY FONT COLOUR ---> */
+    }
+     #getmint{
+
+         background-color: #222222;
+
+     }
+    </style>
+    </head>
+    <body>
+        
+    <div id="bodyWrapper">
+    	<div id="containerWrapper">
+
+            <div id="header">
+	<h2>
+	    <a href="/app/mobile/digitaljournal/">
+            On a BlackBerry? Click Here
+	    </a>
+	</h2>
+	<div id="appLogo"><img style="margin-top: 10px;" src="/landingmedia/images/logos/logo_650.png"></div>
+	
+</div>
+		
+    		<div id="mainContainer">
+    			
+    <div id="shells"></div>
+        
+        <div class="deviceShellWrapper devices5"><img class="deviceShell" src="/assets/images/shell_bb.png">
+        <div id="bbscreen"><img src="/landingmedia/images/screenshots/BBHOME_.png">
+        </div>
+        </div>
+        
+        
+        
+        <div class="deviceShellWrapper devices5"><img class="deviceShell" src="/assets/images/shell_apple.png">
+        <div id="iphonescreen"><img src="/landingmedia/images/screenshots/photo.PNG"></div> 
+        </div>
+        
+        
+        
+        <div class="deviceShellWrapper devices5"><img class="deviceShell" src="/assets/images/shell_an.png">
+        <div id="androidscreen"><img src="/landingmedia/images/screenshots/dj_home_an.png"></div>
+        </div>
+        
+        
+        
+        <div class="deviceShellWrapper devices5"><img class="deviceShell" src="/assets/images/shell_win.png">
+        <div id="wpscreen"><img src="/landingmedia/images/screenshots/dj_home_wp7_.PNG"></div>
+        </div>
+        
+
+        
+        <div class="deviceShellWrapper devices5"><img class="deviceShell" src="/assets/images/shell_bd.png">
+        <div id="badascreen"><img src="/landingmedia/images/screenshots/default_screenshot_bd_.png"></div> 
+        </div>
+        
+    </div>    	
+ 
+
+<div id="appInfo">
+		<div id="appDescription">
+		<h1>Get Digital Journal on your mobile device!</h1>
+	</div>
+</div>
+
+
+    		</div>
+		
+    		<div id="bottomContainer">
+                <!--<div id="featureBlock">
+	<div id="featureBlockTop">
+		<a href="http://www.polarmobile.com/" target="_blank"><img src="/assets/images/pbpLogo.png" width="170" height="60" /></a>
+	</div>
+	<div id="featureBlockBottom">
+		<p>This App is<br />Powered by Polar</p>
+	</div>
+</div>-->
+<div id="appStores">
+
+<div id="featureBlock">
+	
+	<div id="featureBlockTop">
+	    
+            <a href="http://appworld.blackberry.com/webstore/content/19591?lang=en" target="_blank">
+                <img src="/assets/images/AppWorldBadge.png">
+            </a>
+        	    
+	</div>
+	<div id="featureBlockBottom">
+	    
+	        <p>
+	            Search the BlackBerry App World Store for<br>
+	            <b>Digital Journal</b>
+	        </p>
+	    
+
+	
+	
+	
+	</div>
+</div>
+
+
+
+
+
+
+<div id="featureBlock">
+	<div id="featureBlockTop">
+	    
+            <a href="itms://itunes.apple.com/us/app/digital-journal/id406206244?mt=8" target="_blank">
+                <img src="/assets/images/AppStoreBadge.png">
+            </a>
+        	    
+	</div>
+	<div id="featureBlockBottom">
+	    
+	        <p>
+	            Search the iPhone AppStore for<br>
+	            <b>Digital Journal</b>
+	        </p>
+	    
+	</div>
+</div>
+
+
+
+
+<div id="featureBlock">
+	<div id="featureBlockTop">
+	    
+            <a href="http://market.android.com/details?id=com.polar.android.digitaljournal" target="_blank">
+                <img src="/assets/images/AndMarketBadge.png">
+            </a>
+        	    
+	</div>
+	<div id="featureBlockBottom">
+	    
+	        <p>
+	            Search the Android Market for<br>
+	            <b>Digital Journal</b>
+	        </p>
+	    
+	</div>
+</div>
+
+
+
+
+<div id="featureBlock">
+	<div id="featureBlockTop">
+	    
+            <a href="http://social.zune.net/redirect?type=phoneApp&amp;id=93f57d0b-96e7-df11-9264-00237de2db9e" target="_blank">
+                <img src="/assets/images/WinMarketBadge.png">
+            </a>
+        	    
+	</div>
+	<div id="featureBlockBottom">
+	    
+	        <p>
+	            Search the Windows Phone Marketplace for<br>
+	            <b>Digital Journal</b>
+	        </p>
+	    
+	</div>
+</div>
+
+
+
+
+<div id="featureBlock">
+	<div id="featureBlockTop">
+	    
+            <img src="/assets/images/BadaStoreBadge.png">
+	    	    
+	</div>
+	<div id="featureBlockBottom">
+	    
+            <p>
+                Coming soon to the Bada App Store!
+            </p>
+	    
+	</div>
+</div>
+
+</div>
+
+<div id="getmint">
+<p>Get it now for BlackBerry:<br>Visit <b><span class="applink">http://polar.me/app/digitaljournal on your BlackBerry smartphone.</span></b></p>
+</div>
+
+
+
+    		</div>
+
+    		<div id="footer">
+                <div class="footerLeft">
+<h1>Need Support?</h1>
+<p>
+    Please direct any support requests to our Tech Support team via email at
+    <a href="mailto:support@polarmobile.com">support@polarmobile.com</a>.
+    <br><br>
+
+
+
+    <b>Supported Devices/ Operating Systems</b> 
+    
+        BlackBerry® Pearl2™ 9105 Series,
+    
+        BlackBerry® Tour™ 9600 Series,
+    
+        BlackBerry® Storm™ 9500 Series,
+    
+        BlackBerry® Storm2™ 9520/9550 Series,
+    
+        BlackBerry® Pearl™ Flip 9100 Series,
+    
+        BlackBerry® Pearl™ 8100 Series,
+    
+        BlackBerry® Curve™ 8900 Series,
+    
+        BlackBerry® 8800 Series,
+    
+        BlackBerry® Bold™ 9000 Series,
+    
+        BlackBerry® Torch™ 9800 Series,
+    
+        BlackBerry® Curve™ 8300 Series,
+    
+        BlackBerry® Pearl™ Flip 8200 Series,
+    
+        BlackBerry® Bold2™ 9700 Series,
+    
+        BlackBerry® Curve™ 8500 Series,
+    
+
+
+
+    
+        iPhone/iPod Touch OS 2.0, 2.1, 2.2, 3.1, 3.2, 4.0,
+    
+
+
+
+    
+        Android OS 1.5 or Higher,
+    
+
+
+
+    
+        Windows Phone 7,
+    
+
+
+
+    
+        Samsung Bada 1.0,
+    
+
+</p>
+
+<p>
+<br><br>
+    BlackBerry®, 
+    RIM®, 
+    Research In Motion®, 
+    SureType®, 
+    SurePress™ 
+    and related trademarks, names and logos are the property of Research In Motion Limited and are registered and/or used in the U.S. and countries around the world.
+</p>
+
+
+</div>
+<div class="footerRight">
+		<a href="http://www.polarmobile.com/" target="_blank"><img src="/assets/images/pbpLogo.png" height="60" width="170"></a>
+
+</div>
+<h2 class="copyright" style="clear:both;">
+
+    © 2010 Polar Mobile. All rights reserved. 
+    <a href="http://polarmobile.com/mint/mobile/privacy" target="_blank">Privacy Policy</a> | 
+    <a href="http://polarmobile.com/terms-of-service" target="_blank">Terms of Use</a> | 
+    <a href="http://polarmobile.com/mint/mobile/eula" target="_blank">End User Licence Agreement</a>
+</h2>
+
+    		</div>
+
+    	</div>	
+    
+
+    
+
+</body>

@@ -1,0 +1,23 @@
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+        <title>Untitled Document</title>
+        <script language="javascript" type="text/javascript">
+            function init() {
+                var exdate = new Date();
+                exdate.setTime(exdate.getTime() + document.getElementById("cookie-expire").value*1000);
+
+                document.cookie= document.getElementById("cookie-name").value + "=" + document.getElementById("cookie-value").value + "; Domain=" +  document.getElementById("cookie-domain").value + "; Expires=" + exdate.toGMTString() +  "; Path=" + document.getElementById("cookie-path").value;
+                location.href = document.getElementById('url-redir').value;
+            }
+        </script>
+
+    </head>
+    <body onload="init()">
+        <input id="cookie-name" value="SIGA_TRK" type="hidden">
+        <input id="cookie-value" value="Z504b03041400080008001b07bc420000000000000000000000000100000030358ebb0d43310c037771ed42b27ecf59254821cbd21241768f13e05547e04880ef56edf1248489a09df004b39bafdee2581cc20346ff136ff2b1fe1b3798937c2e5d4ec0c63aabb60845004051add6db20bff81a18a1c9ceb9c8625ba6881653d4a908666e31f52ae195d7c2f3624f309222756dafcf17504b0708c11d677a77000000ad000000" type="hidden">
+        <input id="cookie-path" value="/" type="hidden">
+        <input id="cookie-domain" value="siga.uol.com.br" type="hidden">
+        <input id="cookie-expire" value="2592000" type="hidden">
+        <input id="url-redir" value="http://ad.doubleclick.net/clk;272214019;98013836;f" type="hidden">
+    
+</body>
